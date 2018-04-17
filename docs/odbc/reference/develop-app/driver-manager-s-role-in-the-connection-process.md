@@ -1,15 +1,16 @@
 ---
-title: "驱动程序管理器 &#39; s 角色在连接过程 |Microsoft 文档"
-ms.custom: 
+title: 驱动程序管理器&#39;连接过程中的 s 角色 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>驱动程序管理器 &#39; s 连接过程中的角色
+# <a name="driver-manager39s-role-in-the-connection-process"></a>驱动程序管理器&#39;连接过程中的 s 角色
 请记住，应用程序请勿直接调用驱动程序函数。 相反，这些驱动程序管理器具有相同名称的函数调用，驱动程序管理器调用驱动程序函数。 通常情况下，发生这种情况几乎立即。 例如，在应用程序调用**SQLExecute**驱动程序管理器中之后，一些错误检查，驱动程序管理器调用**SQLExecute**驱动程序中。  
   
  在连接过程是不同的。 在应用程序调用**SQLAllocHandle**使用 SQL_HANDLE_ENV 和 SQL_HANDLE_DBC 选项，该函数分配句柄仅在驱动程序管理器。 驱动程序管理器不调用此函数在驱动程序中的，因为它不知道要调用的驱动程序。 同样，如果应用程序将传递一个未连接到连接的句柄**SQLSetConnectAttr**或**SQLGetConnectAttr**、 只驱动程序管理器执行的函数。 它将存储或从其连接的属性值处理和返回尚未设置的属性获取的值和适用于哪些 ODBC 的 SQLSTATE 08003 （连接未打开），获取未定义默认值。  

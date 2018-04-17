@@ -1,31 +1,32 @@
 ---
-title: "设置属性-SMO |Microsoft 文档"
-ms.custom: 
+title: 设置属性-SMO |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SMO [SQL Server], properties
 - SQL Server Management Objects, properties
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd919d2a53a2731e348c1570ef80ffe1714ff0e5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 64a3bbc63ef3d776133488a138a772bfb4f0b017
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-properties---smo"></a>设置属性-SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/12/2018
  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法设置其余应用程序或重置应用程序后的属性加载行为。 你可以通过使用保存的原始行为<xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A>方法并将其还原为必需。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>在 Visual Basic 中获取和设置属性  

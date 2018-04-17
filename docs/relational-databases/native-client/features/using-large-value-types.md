@@ -1,15 +1,15 @@
 ---
-title: "使用较大的值类型 |Microsoft 文档"
-ms.custom: 
+title: 使用较大的值类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -19,22 +19,23 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54bc0998f8a275de6a0fb03398c461917a67a8e9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>使用大值类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大型值数据类型是那些超过 8 KB 的最大行大小。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引入**max**说明符**varchar**， **nvarchar**和**varbinary**数据类型，以允许的值存储最大为 2 ^31-1字节数。 表列和[!INCLUDE[tsql](../../../includes/tsql-md.md)]变量可以指定**varchar （max)**， **nvarchar (max)**或**varbinary （max)**数据类型。  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大型值数据类型是那些超过 8 KB 的最大行大小。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入**max**说明符**varchar**， **nvarchar**和**varbinary**数据类型，以允许的值存储最大为 2 ^31-1字节数。 表列和[!INCLUDE[tsql](../../../includes/tsql-md.md)]变量可以指定**varchar （max)**， **nvarchar (max)**或**varbinary （max)**数据类型。  
   
 > [!NOTE]  
 >  大值数据类型的最大大小可以介于 1 到 8 KB 之间，也可以指定为不限制其大小。  

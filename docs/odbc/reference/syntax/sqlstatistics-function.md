@@ -2,7 +2,7 @@
 title: SQLStatistics 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d18b910da6bf23aa507c3fecc7994a59cf74e705
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函数
 **一致性**  
@@ -68,7 +68,7 @@ SQLRETURN SQLStatistics(
  *NameLength1*  
  [输入]以字符为单位的长度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [输入]架构名称。 如果驱动程序支持的架构，对于某些表但没有为其他，如当驱动程序检索数据从不同 Dbms，空字符串 ("") 指示没有架构的那些表。 *SchemaName*不能包含字符串的搜索模式。  
   
  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *SchemaName*视为标识符和其大小写并不重要。 如果它是 SQL_FALSE， *SchemaName*是的普通自变量; 它原义，处理和其大小写很重要。  
@@ -76,7 +76,7 @@ SQLRETURN SQLStatistics(
  *NameLength2*  
  [输入]以字符为单位的长度 **SchemaName*。  
   
- *表名*  
+ *TableName*  
  [输入]表名。 此参数不能为 null 指针。 *SchemaName*不能包含字符串的搜索模式。  
   
  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *TableName*视为标识符和其大小写并不重要。 如果它是 SQL_FALSE， *TableName*是的普通自变量; 它原义，处理和其大小写很重要。  
@@ -87,7 +87,7 @@ SQLRETURN SQLStatistics(
  *唯一*  
  [输入]类型的索引： SQL_INDEX_UNIQUE 或 SQL_INDEX_ALL。  
   
- Reserved  
+ *保留*  
  [输入]指示基数和页中的列的结果集的重要性。 以下选项会影响返回的基数和页仅限列;如果即使基数和页不会返回，则返回索引信息。  
   
  SQL_ENSURE 请求该驱动程序无条件地检索统计信息。 （仅符合 Open Group 标准和不支持 ODBC 扩展驱动程序将不能支持 SQL_ENSURE。）  
@@ -107,7 +107,7 @@ SQLRETURN SQLStatistics(
 |24000|无效的游标状态|在打开游标的*StatementHandle*，和**SQLFetch**或**SQLFetchScroll**已调用一样。 此错误返回由驱动程序管理器中，如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA 和在驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 SQL_NO_DATA。<br /><br /> 在打开游标的*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**不调用一样。|  
 |40001|序列化失败|事务已回滚，由于资源死锁与另一个事务。|  
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数已在上再次*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY009|不允许使用 null 指针|*TableName*自变量是空指针。<br /><br /> SQL_ATTR_METADATA_ID 语句属性已设置为 SQL_TRUE， *CatalogName*自变量为 null 指针和 SQL_CATALOG_NAME*信息类型*支持中返回该目录名称。<br /><br /> (DM) SQL_ATTR_METADATA_ID 语句属性已设置为 SQL_TRUE，和*SchemaName*自变量是空指针。|  
@@ -145,7 +145,7 @@ SQLRETURN SQLStatistics(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|适用于的统计信息或索引; 表的目录名称如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|适用于的统计信息或索引; 表的目录名称如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|适用于的统计信息或索引; 表的架构名称如果不适用于数据源为 NULL。 如果驱动程序支持架构对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有架构这些表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|表的统计信息或索引适用的表的名称。|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|指示是否索引不允许重复的值：<br /><br /> 如果索引值可以是唯一的 SQL_TRUE。<br /><br /> 如果索引值必须是唯一的 SQL_FALSE。<br /><br /> 如果类型是 SQL_TABLE_STAT，则返回 NULL。|  

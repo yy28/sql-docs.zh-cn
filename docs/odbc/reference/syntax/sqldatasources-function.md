@@ -2,7 +2,7 @@
 title: SQLDataSources 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6de6bf96c05925e9044be5955036cd9c663501a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 函数
 **一致性**  
@@ -77,7 +77,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [输出]指向要返回的字符 （不包括 null 终止字符） 总数在其中缓冲区的指针可用于返回在\* *ServerName*。 可用于返回的字符数是否大于或等于*BufferLength1*中的数据源名称\* *ServerName*截断为*BufferLength1*减 null 终止字符的长度。  
   
- *说明*  
+ *Description*  
  [输出]指向要返回与数据源关联的驱动程序的说明在其中的缓冲区的指针。 例如，dBASE 或 SQL Server。  
   
  如果*说明*为 NULL， *NameLength2Ptr*仍将返回的字符 （不包括字符数据的 null 终止字符） 总数可用于返回指向的缓冲区中*说明*。  

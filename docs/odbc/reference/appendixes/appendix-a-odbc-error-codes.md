@@ -1,31 +1,32 @@
 ---
-title: "附录 a: ODBC 错误代码 |Microsoft 文档"
-ms.custom: 
+title: '附录 a: ODBC 错误代码 |Microsoft 文档'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error codes [ODBC]
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 59a42d5183add7c67b8d6f506b79f860248478dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-a-odbc-error-codes"></a>附录 A：ODBC 错误代码
 本主题讨论为 ODBC 3 的 SQLSTATE 值。*x*。 有关 ODBC 3 的详细信息。*x* SQLSTATE 值，请参阅[SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |01007|未授予的权限|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
 |01S00|无效的连接字符串属性|**SQLBrowseConnect**<br /><br /> **SQLDriverConnec**|  
 |01S01|行中的错误|**SQLBulkOperations**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLSetPos**|  
-|01S02 的警告|选项值已更改|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
+|01S02|选项值已更改|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
 |01S06|尝试的结果集返回第一个行集之前提取|**SQLExtendedFetch**<br /><br /> **SQLFetchScroll**|  
 |01S07|小数部分组成的截断|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |01S08|保存文件 DSN 时出错|**SQLDriverConnect**|  

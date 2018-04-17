@@ -1,16 +1,16 @@
 ---
-title: "sys.database_permissions (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.database_permissions (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_permissions
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_permissions catalog view
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e499f4dbcda2415ee4631585be2de284721bc1ec
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4d1655b9d7a4f0f7502b06b506865f7082e4cf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,15 +44,15 @@ ms.lasthandoff: 11/21/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**类**|**tinyint**|标识权限所在的类。<br /><br /> 0 = 数据库<br />1 = 对象或列名<br />3 = 架构<br />4 = 数据库主体<br />5 = 程序集-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />6 = 类型<br />10 = XML 架构集合的 <br />                      **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />15 = 消息类型-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />16 = 服务协定的**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />17 = 服务-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />18 = 远程服务绑定-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />19 = 路由-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />23 = 的全文目录-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />24 = 对称密钥-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />25 = 证书-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />26 = 非对称密钥-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|class|**tinyint**|标识权限所在的类。<br /><br /> 0 = 数据库<br />1 = 对象或列名<br />3 = 架构<br />4 = 数据库主体<br />5 = 程序集-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />6 = 类型<br />10 = XML 架构集合的 <br />                      **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />15 = 消息类型-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />16 = 服务协定的**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />17 = 服务-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />18 = 远程服务绑定-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />19 = 路由-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />23 = 的全文目录-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />24 = 对称密钥-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />25 = 证书-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />26 = 非对称密钥-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**class_desc**|**nvarchar(60)**|权限所针对的类的说明。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|存在权限的对象的 ID，根据类解释。 通常情况下， **major_id**是只需种适用于此类表示的 ID。 <br /><br /> 0 = 数据库本身 <br /><br /> > 0 = 用户对象的对象 Id <br /><br /> \<0 = 系统对象的对象 Id |  
 |**minor_id**|**int**|存在权限的对象的辅助 ID，根据类解释。 通常情况下， **major_id**为零，因为不没有可用于对象的类的任何子类别。 否则，它为表的列 ID。|  
 |**grantee_principal_id**|**int**|向其授予权限的数据库主体 ID。|  
 |**grantor_principal_id**|**int**|这些权限的授权者的数据库主体 ID。|  
-|**type**|**char(4)**|数据库权限类型。 有关权限类型的列表，请参阅下一个表。|  
-|**permission_name**|**nvarchar （128)**|权限名称。|  
-|**状态**|**char （1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
+|**类型**|**char(4)**|数据库权限类型。 有关权限类型的列表，请参阅下一个表。|  
+|**permission_name**|**nvarchar(128)**|权限名称。|  
+|**状态**|**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
 |**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>数据库权限   
@@ -118,7 +119,7 @@ ms.lasthandoff: 11/21/2017
 |DL|DELETE|DATABASE、OBJECT、SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|在运行 CREATE 语句前执行|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
-|IM|IMPERSONATE|User|  
+|IM|IMPERSONATE|USER|  
 |IN|Insert|DATABASE、OBJECT、SCHEMA|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、SCHEMA、SYMMETRIC KEY、TYPE、XML SCHEMA COLLECTION|  
@@ -134,7 +135,7 @@ ms.lasthandoff: 11/21/2017
 |VWCT|VIEW CHANGE TRACKING|TABLE、SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以查看自己的权限。 要查看其他用户的权限，需要获取 VIEW DEFINITION、ALTER ANY USER 或任何相关的用户权限。 要查看用户定义的角色，需要获取 ALTER ANY ROLE 或相关的角色（如公共）成员身份。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

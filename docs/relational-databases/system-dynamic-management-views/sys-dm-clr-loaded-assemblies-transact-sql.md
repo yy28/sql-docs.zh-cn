@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_clr_loaded_assemblies (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_clr_loaded_assemblies (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_clr_loaded_assemblies
@@ -22,28 +22,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5c24a05e1f33512234edafd3fb6d2672a8eee6a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0a54b95a43d4ccc4d834b4d71614cde5fd1295f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为加载到服务器地址空间的每个托管用户程序集返回一行。 使用此视图以了解和解决 CLR 集成管理在中执行的数据库对象[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 程序集是用于定义托管数据库对象并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中部署的托管代码 DLL 文件。 只要用户执行了这些托管数据库对象中的一个，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 便会加载其中定义了托管数据库对象的程序集（及其引用）。 将加载的程序集保留在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可提高性能，以便将来可调用程序集中包含的托管数据库对象而无需重新加载该程序集。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 面临内存不足的压力时才会卸载该程序集。 有关程序集和 CLR 集成的详细信息，请参阅[CLR 托管环境](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)。 有关托管的数据库对象的详细信息，请参阅[使用公共语言运行时 &#40; 生成数据库对象CLR &#41;集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。  
+ 程序集是用于定义托管数据库对象并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中部署的托管代码 DLL 文件。 只要用户执行了这些托管数据库对象中的一个，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 便会加载其中定义了托管数据库对象的程序集（及其引用）。 将加载的程序集保留在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可提高性能，以便将来可调用程序集中包含的托管数据库对象而无需重新加载该程序集。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 面临内存不足的压力时才会卸载该程序集。 有关程序集和 CLR 集成的详细信息，请参阅[CLR 托管环境](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)。 有关托管的数据库对象的详细信息，请参阅[与公共语言运行时生成数据库对象&#40;CLR&#41;集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。  
 
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|已加载程序集的 ID。 **Assembly_id**可用于查找有关中的程序集的详细信息[sys.assemblies &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)目录视图。 请注意， [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)目录显示当前数据库中的程序集。 **Sqs.dm_clr_loaded_assemblies**视图会显示服务器上所有已加载的程序集。|  
+|**assembly_id**|**int**|已加载程序集的 ID。 **Assembly_id**可用于查找有关中的程序集的详细信息[sys.assemblies &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)目录视图。 请注意， [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)目录显示当前数据库中的程序集。 **Sqs.dm_clr_loaded_assemblies**视图会显示服务器上所有已加载的程序集。|  
 |**appdomain_address**|**int**|应用程序域的地址 (**AppDomain**) 在程序集被加载。 单个用户所拥有的所有程序集始终都在同一个加载**AppDomain**。 **Appdomain_address**可以用于查找有关的详细信息**AppDomain**中[sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)视图。|  
 |**load_time**|**datetime**|程序集的加载时间。 请注意，该程序集保持加载直到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有内存压力和卸载**AppDomain**。 你可以监视**load_time**频率了解[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内存紧张和卸载**AppDomain**。|  
   
@@ -75,6 +75,6 @@ WHERE appdomain_address =
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [公共语言运行时相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

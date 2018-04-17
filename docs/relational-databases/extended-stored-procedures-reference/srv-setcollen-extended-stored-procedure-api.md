@@ -1,16 +1,16 @@
 ---
-title: "srv_setcollen（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_setcollen（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_setcollen
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_setcollen
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e6ae488fb188a0243ebca59b69641facafd2ecf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c698585ef0fa584f855cc768a67295b5b942eef3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  指定长度可变的列或允许 NULL 值的列的当前数据长度（以字节为单位）。  
   
@@ -61,7 +61,7 @@ len
  srvproc  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- column  
+ *column*  
  指示指定其数据长度的列的编号。 列的编号从 1 开始。  
   
  len  

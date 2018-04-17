@@ -1,16 +1,16 @@
 ---
-title: "sp_helplinkedsrvlogin (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helplinkedsrvlogin (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplinkedsrvlogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a7d16799315c62c025087c64cc11339c19af01
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a24ad8e479001e3fb9b8be606c6a7b829c30b811
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rmtsrvname=**] *rmtsrvname*  
+ [  **@rmtsrvname=**] *****rmtsrvname*****  
  登录映射所应用于的链接服务器的名称。 *rmtsrvname*是**sysname**，默认值为 NULL。 如果为 NULL，则返回针对所有链接服务器定义的所有登录映射，这些链接服务器在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地计算机中定义。  
   
- [  **@locallogin=**] *locallogin*  
+ [  **@locallogin=**] *****locallogin*****  
  是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有到链接服务器的映射的本地服务器上的登录名*rmtsrvname*。 *locallogin*是**sysname**，默认值为 NULL。 NULL 指定所有登录名映射定义上*rmtsrvname*返回。 如果不是 NULL 的映射*locallogin*到*rmtsrvname*必须已存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 对于 Windows 用户来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -68,7 +68,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="remarks"></a>注释  
  删除登录名映射之前，请使用**sp_helplinkedsrvlogin**以确定所涉及的链接的服务器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  将不检查任何权限。  
   
 ## <a name="examples"></a>示例  
@@ -133,9 +133,9 @@ Sales            Mary          0               sa
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

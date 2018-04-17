@@ -1,31 +1,31 @@
 ---
-title: "什么 &#39; s CLR 集成中的新增功能 |Microsoft 文档"
+title: 什么&#39;CLR 集成中的新增功能的 s |Microsoft 文档
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4aaa1e92c83d16c951989a12f962fcfe45aec447
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2215d703e3284d0216693d7abb94a4fc11f2225f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="clr-integration---what39s-new"></a>CLR 集成的新增功能; s 新
+# <a name="clr-integration---what39s-new"></a>CLR 集成-什么&#39;新 s
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-以下是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中 CLR 集成的新功能：  
+  以下是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中 CLR 集成的新功能：  
   
 -   在 CLR 版本 4 中，CLR 数据库对象不再捕获损坏的状态异常。 这些异常现在在 CLR 集成承载层中捕获。 这些异常仍由 CLR 数据库组件通过设置 code 属性捕获 ([\<legacyCorruptedStateExceptionsPolicy > 元素](http://go.microsoft.com/fwlink/?LinkId=204954))。 但是，我们建议不要这样做，因为损坏的状态异常发生时结果不可靠。  
   

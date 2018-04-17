@@ -1,16 +1,16 @@
 ---
-title: "检索未用完数据使用 sql:overflow-字段 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 检索未用完数据使用 sql:overflow-字段 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1801fcd260dd674489a851361044ff6c9110c63
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c82c157d5d76a2b6dfd005bf7984bd3e60cb69e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 检索未用完的数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 当通过使用带批注的架构，可以从数据库检索数据时，你可以指定**sql:overflow-字段**属性用于标识在其中存储的溢出数据的表中的列。 **Sql:overflow-字段**上指定属性**\<元素 >**。  
+  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 当通过使用带批注的架构，可以从数据库检索数据时，你可以指定**sql:overflow-字段**属性用于标识在其中存储的溢出数据的表中的列。 **Sql:overflow-字段**上指定属性**\<元素 >**。  
   
  然后，可以通过以下方式检索此数据：  
   

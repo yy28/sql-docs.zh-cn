@@ -1,16 +1,16 @@
 ---
-title: "sys.database_principals (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.database_principals (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 10/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_principals catalog view
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f742ceebbb7c996f5e1a1d09e78352d26d10a37
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d6d3cd64336d3374e74e5df05310e2e337ded062
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**名称**|**sysname**|主体名称，在数据库中唯一。|  
 |**principal_id**|**int**|主体 ID，在数据库中唯一。|  
-|**type**|**char （1)**|主体类型：<br /><br /> A = 应用程序角色<br /><br /> C = 映射到证书的用户<br /><br /> E = 从 Azure Active Directory 的外部用户<br /><br /> G = Windows 组<br /><br /> K = 映射到非对称密钥的用户<br /><br /> R = 数据库角色<br /><br /> S = SQL 用户<br /><br /> U = Windows 用户<br /><br /> X = 从 Azure Active Directory 组或应用程序的外部组|  
+|**类型**|**char(1)**|主体类型：<br /><br /> A = 应用程序角色<br /><br /> C = 映射到证书的用户<br /><br /> E = 从 Azure Active Directory 的外部用户<br /><br /> G = Windows 组<br /><br /> K = 映射到非对称密钥的用户<br /><br /> R = 数据库角色<br /><br /> S = SQL 用户<br /><br /> U = Windows 用户<br /><br /> X = 从 Azure Active Directory 组或应用程序的外部组|  
 |**type_desc**|**nvarchar(60)**|主体类型的说明。<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|用于 SQL 名称未指定架构的名称。 对于非 S、U 或 A 类型的主体，为 Null。|  
 |**create_date**|**datetime**|主体的创建时间。|  
@@ -54,12 +55,12 @@ ms.lasthandoff: 11/21/2017
 |**authentication_type_desc**|**nvarchar(60)**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 身份验证类型说明。 以下是可能的值以及及其说明。<br /><br /> NONE： 无身份验证<br />实例： 实例身份验证<br />数据库： 数据库身份验证<br />WINDOWS: Windows 身份验证|  
 |**default_language_name**|**sysname**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示此主体的默认语言。|  
 |**default_language_lcid**|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示此主体的默认 LCID。|  
-|**allow_encrypted_value_modifications**|**bit**|**适用于**:[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作中的服务器上的加密元数据检查。 这使加密始终加密，之间使用的表或数据库，而无需解密数据的大容量复制数据的用户。 默认为 OFF。 |      
+|**allow_encrypted_value_modifications**|**bit**|适用范围：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作期间对服务器进行加密元数据检查。 这使加密始终加密，之间使用的表或数据库，而无需解密数据的大容量复制数据的用户。 默认为 OFF。 |      
   
 ## <a name="remarks"></a>注释  
  *PasswordLastSetTime*属性可用于所有支持的配置的 SQL Server，但当 SQL Server 正在运行 Windows Server 2003 或更高版本和 CHECK_POLICY 和 CHECK_ 上时，其他属性才可用启用过期。 请参阅[密码策略](../../relational-databases/security/password-policy.md)有关详细信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以查看自己的用户名称、系统用户和固定的数据库角色。 要查看其他用户，需要获取 ALTER ANY USER 或相关的用户权限。 要查看用户定义的角色，需要获取 ALTER ANY ROLE 或相关的角色成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -94,7 +95,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-listing-all-the-permissions-of-database-principals"></a>C： 列出所有的数据库主体权限  
  以下查询将列出明确对数据库主体授予或拒绝的权限。  

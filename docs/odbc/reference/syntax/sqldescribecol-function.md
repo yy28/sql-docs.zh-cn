@@ -2,7 +2,7 @@
 title: SQLDescribeCol 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 函数
 **一致性**  
@@ -63,7 +63,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [输入]结果数据的列数按不断增加的列顺序，从 1 开始按顺序排序。 *ColumnNumber*自变量也可以设置为 0 来描述书签列。  
   
- *列名称*  
+ *ColumnName*  
  [输出]指向以 null 结尾的缓冲区中要返回的列名称。 从 IRD SQL_DESC_NAME 字段读取此值。 如果列是未命名或无法确定列名称，该驱动程序将返回空字符串。  
   
  如果*ColumnName*为 NULL， *NameLengthPtr*仍将返回的字符 （不包括字符数据的 null 终止字符） 总数可用于返回指向的缓冲区中*ColumnName*。  

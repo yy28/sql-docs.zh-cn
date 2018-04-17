@@ -1,16 +1,16 @@
 ---
-title: "sp_updatestats (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_updatestats (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_updatestats_TSQL
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9a735dd514a7a7ca2b99dcbd4db92e165266bc2c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0ba0a2d4ccfe5250e75b113acd3b407fc4b50c9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   对当前数据库中所有用户定义表和内部表运行 UPDATE STATISTICS。  
   
- 有关更新统计信息的详细信息，请参阅[更新统计信息 &#40;Transact SQL &#41;](../../t-sql/statements/update-statistics-transact-sql.md). 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
+ 有关更新统计信息的详细信息，请参阅[更新统计信息&#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)。 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
     
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +52,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0（成功）或 1（失败）  
   
 ## <a name="arguments"></a>参数  
- [  **@resample**  =]**对重新取样**  
+ [ **@resample** =]**对重新取样**  
  指定**sp_updatestats**将使用的重新取样选项[更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)语句。 如果**对重新取样**未指定， **sp_updatestats**通过使用默认采样来更新统计信息。 **对重新取样**是**varchar(8)**默认值为 no。  
   
 ## <a name="remarks"></a>注释  
@@ -63,9 +64,9 @@ sp_updatestats [ [ @resample = ] 'resample']
   
  **sp_updatestats**可以触发重新编译的存储的过程或其他已编译的代码。 但是， **sp_updatestats**可能不会导致重新编译，如果只有一个查询计划所引用的表和它们的索引。 在这些情况下，即便更新了统计信息也不必进行重新编译。  
   
- 数据库兼容性级别为 90，执行以下**sp_updatestats**不保留特定的统计信息的最新 NORECOMPUTE 设置。 对于兼容性级别为 90 或更高版本的数据库，sp_updatestats 未保留特定的统计信息的最新 NORECOMPUTE 选项。 有关禁用并重新启用统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
+ 数据库兼容性级别为 90，执行以下**sp_updatestats**不保留特定的统计信息的最新 NORECOMPUTE 设置。 对于兼容性级别为 90 或更高版本的数据库，sp_updatestats 未保留特定的统计信息的最新 NORECOMPUTE 选项。 有关禁用和重新启用统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定服务器角色或数据库的所有权 (**dbo**)。  
   
 ## <a name="examples"></a>示例  
@@ -82,8 +83,8 @@ EXEC sp_updatestats;
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
  [系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,15 +1,15 @@
 ---
-title: "创建、 更改和删除数据库 |Microsoft 文档"
-ms.custom: 
+title: 创建、 更改和删除数据库 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - databases [SMO]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - databases [SMO], modifying
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
-caps.latest.revision: 
+caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf0867f9ed104a2a04cbdc0b9a0c16093cee59a9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e4da86f881d0dac51f639d1eefa94774a312e1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-databases"></a>创建、更改和删除数据库
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/12/2018
  不必创建 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象便可修改或删除数据库。 通过使用集合可以引用数据库。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除数据库  
  此代码示例创建了一个新数据库。 将为该数据库自动创建文件和文件组。  

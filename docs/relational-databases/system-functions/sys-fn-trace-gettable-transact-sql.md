@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_trace_gettable (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.fn_trace_gettable (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2624c7ea8a3c118f1bb1da2e456bd03cbbdbe968
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 461807f1d79032c85316551adb5229d02aa67b06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ fn_trace_gettable ( 'filename' , number_files )
 ```  
   
 ## <a name="arguments"></a>参数  
- '*filename*'  
+ *filename*  
  指定要读取的初始跟踪文件。 *filename*是**nvarchar(256)**，无默认值。  
   
  *number_files*  
  指定要读取的滚动更新文件数。 此数字包括中指定的初始文件*filename*。 *number_files*是**int**。  
   
 ## <a name="remarks"></a>注释  
- 如果*number_files*指定为**默认**， **fn_trace_gettable**读取所有滚动更新文件，直到它达到跟踪的末尾。 **fn_trace_gettable**返回包含所有列的表对指定的跟踪有效。 有关详细信息，请参阅[sp_trace_setevent &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ 如果*number_files*指定为**默认**， **fn_trace_gettable**读取所有滚动更新文件，直到它达到跟踪的末尾。 **fn_trace_gettable**返回包含所有列的表对指定的跟踪有效。 有关详细信息，请参阅[sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
  请注意 fn_trace_gettable 函数将不会加载滚动更新文件 (如果通过指定此选项*number_files*自变量) 原始跟踪文件名称与一条下划线和数字值的结束位置。 （这不适用于在文件滚动更新时自动追加的下划线和数字。）作为一种解决方法，您可以重命名这些跟踪文件以便删除原始文件名中的下划线。 例如，如果原始文件命名为**Trace_Oct_5.trc**和滚动更新文件命名为**Trace_Oct_5_1.trc**，你可以重命名的文件**TraceOct5.trc**和**TraceOct5_1.trc**。  
   
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  

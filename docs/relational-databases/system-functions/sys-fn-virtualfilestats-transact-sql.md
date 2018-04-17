@@ -1,16 +1,16 @@
 ---
-title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fn_virtualfilestats (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19ef497fad4032f1e0bdb0b40c2f2a850ad40cdf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49517833bb4869ae3eb72f078207e68caa09e98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +51,9 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>参数  
  *database_id* |NULL  
- 是数据库的 ID。 *database_id*是**int**，无默认值。 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。  
+ 是数据库的 ID。 database_id 的数据类型为 int，无默认值。 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。  
   
- *file_id* | NULL  
+ *file_id* |NULL  
  文件的 ID。 *file_id*是**int**，无默认值。 指定 NULL 可为数据库中的所有文件返回信息。  
   
 ## <a name="table-returned"></a>返回的表  
@@ -69,7 +70,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**BytesWritten**|**bigint**|对文件写入的字节数。|  
 |**IoStallWriteMS**|**bigint**|用户等待文件的写入 I/O 完成所费的总时间（以毫秒为单位）。|  
 |**IoStallMS**|**bigint**|总和**IoStallReadMS**和**IoStallWriteMS**。|  
-|**FileHandle**|**bigint**|文件句柄的值。|  
+|**文件句柄**|**bigint**|文件句柄的值。|  
 |**BytesOnDisk**|**bigint**|磁盘上的物理文件大小（以字节为单位）。<br /><br /> 对于数据库文件，这将是相同的值**大小**中**sys.database_files**，但是在字节，而不是页表示。<br /><br /> 对于数据库快照备用文件，它是操作系统用于文件的空间。|  
   
 ## <a name="remarks"></a>注释  
@@ -108,8 +109,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [改用 FILE_IDEX &#40;Transact SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [DB_ID &#40;Transact SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
+ [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

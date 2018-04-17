@@ -1,16 +1,16 @@
 ---
-title: "sp_detach_schedule 将 (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_detach_schedule 将 (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_detach_schedule
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 784a8439519ad3a99edd35a085f306e838227151
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 01ea4f9566f3a50b37f782b5e601b0aae734df19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ sp_detach_schedule
  [ **@schedule_id=** ] *schedule_id*  
  要从作业中删除的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] *****schedule_name*****  
  要从作业中删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
  指定是否删除未使用的作业计划。 *delete_unused_schedule*是**位**，默认值为**0**，这意味着，将保留所有计划，即使没有作业引用它们。 如果设置为**1**，如果没有作业引用它们则会删除未使用的作业计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -89,7 +89,7 @@ sp_detach_schedule
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检查以确定用户是否拥有计划。 只有的成员**sysadmin**固定的服务器角色可以分离从另一个用户拥有的作业的计划。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将进行检查以确定用户是否拥有计划。 只有的成员**sysadmin**固定的服务器角色可以分离从另一个用户拥有的作业的计划。  
   
 ## <a name="examples"></a>示例  
  以下示例将删除 `'NightlyJobs'` 计划和 `'BackupDatabase'` 作业之间的关联。  
@@ -105,8 +105,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

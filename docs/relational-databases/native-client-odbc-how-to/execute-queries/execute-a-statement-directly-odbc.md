@@ -1,29 +1,30 @@
 ---
-title: "执行语句直接 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 执行语句直接 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4471b9f4d85240a51d456ea90973c852f5e5db76
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 62baf5b9fb39df2db9ae9bb3d5ae0766a5ebdff9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-a-statement-directly-odbc"></a>直接执行语句 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -95,6 +96,6 @@ ms.lasthandoff: 01/25/2018
  **请注意**按列和按行绑定更通常使用结合[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)和[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)比使用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>另请参阅  
- [正在执行查询操作指南主题 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [正在执行查询操作指南主题 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

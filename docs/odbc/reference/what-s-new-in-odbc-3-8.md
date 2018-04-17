@@ -1,29 +1,30 @@
 ---
-title: "什么 &#39; s ODBC 3.8 中的新增功能 |Microsoft 文档"
-ms.custom: 
+title: 什么&#39;ODBC 3.8 中的新增功能的 s |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 463da92c55e4d00285d5348eabb7d8480e3cc073
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 19e8cddd2224bf487a48391ec1e92d2b63ddfd56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what39s-new-in-odbc-38"></a>什么 &#39; s ODBC 3.8 中的新增功能
+# <a name="what39s-new-in-odbc-38"></a>什么&#39;s ODBC 3.8 中的新增功能
 Windows 8 中包含 ODBC 3.8 的更新的版本。 Windows 8 中的 ODBC 3.8 包括以下功能：  
   
 -   [识别驱动程序的连接池](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)  

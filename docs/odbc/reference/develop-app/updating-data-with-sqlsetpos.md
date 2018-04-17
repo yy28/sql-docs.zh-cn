@@ -1,31 +1,32 @@
 ---
-title: "使用 SQLSetPos 更新数据 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQLSetPos 更新数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating data
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a86647a0086c322918d8dc650d4f840b09326d6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d23f0292665d7e1cfbd4ce0c32e5cf254e8e4fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-with-sqlsetpos"></a>使用 SQLSetPos 更新数据
 应用程序可以更新或删除任何行集中的行与**SQLSetPos**。 调用**SQLSetPos**是一个便捷替代方式构造和执行 SQL 语句。 它可让 ODBC 驱动程序支持定位的更新，即使数据源不支持定位的 SQL 语句。 它是范例的通过函数调用实现完整的数据库访问的一部分。  

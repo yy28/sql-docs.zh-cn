@@ -1,16 +1,16 @@
 ---
-title: "backupmediafamily (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: backupmediafamily (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupmediafamily
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - backupmediafamily system table
 - backup media [SQL Server], backupmediafamily system table
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac82ec09c8051fae6614f19aad5ad2fb518bf710
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 9623fe08ccd9c3688cc7e0bda460e196f85de6d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 03/08/2018
     
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**media_set_id**|**int**|标识该簇所属介质集的唯一标识号。 References **backupmediaset(media_set_id)**|  
+|**media_set_id**|**int**|标识该簇所属介质集的唯一标识号。 引用**backupmediaset(media_set_id)**|  
 |**family_sequence_number**|**tinyint**|该介质簇在介质集中的位置。|  
 |**media_family_id**|**uniqueidentifier**|标识介质簇的唯一标识号。 可以为 NULL。|  
 |**media_count**|**int**|介质簇中的介质数。 可以为 NULL。|  
@@ -60,6 +60,6 @@ ms.lasthandoff: 03/08/2018
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [系统表&#40;Transact SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

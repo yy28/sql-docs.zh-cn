@@ -1,16 +1,16 @@
 ---
-title: "sp_addumpdevice (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addumpdevice (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 444dbea29259eca54e815ce49c73df3986db8e11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 |“值”|Description|  
 |-----------|-----------------|  
 |**disk**|硬盘文件作为备份设备。|  
-|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|**磁带**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
   
  [ **@logicalname =** ] **'***logical_name***'**  
  在 BACKUP 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name*是**sysname**，无默认值，并不能为 NULL。  

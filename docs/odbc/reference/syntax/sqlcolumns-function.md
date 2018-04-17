@@ -2,7 +2,7 @@
 title: SQLColumns 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 86cf72d9a0f061b4cdec3416df315c1e8f9fe91b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 函数
 **一致性**  
@@ -69,7 +69,7 @@ SQLRETURN SQLColumns(
  *NameLength1*  
  [输入]以字符为单位的长度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [输入]架构名称的字符串的搜索模式。 如果驱动程序支持的架构，对于某些表但没有为其他，如当驱动程序检索数据从不同 Dbms，空字符串 ("") 指示没有架构的那些表。  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ SQLRETURN SQLColumns(
  *NameLength2*  
  [输入]以字符为单位的长度 **SchemaName*。  
   
- *表名*  
+ *TableName*  
  [输入]表名称的字符串的搜索模式。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  [输入]以字符为单位的长度 **TableName*。  
   
- *列名称*  
+ *ColumnName*  
  [输入]列名称的字符串的搜索模式。  
   
 > [!NOTE]  
@@ -164,9 +164,9 @@ SQLRETURN SQLColumns(
   
  下表列出在结果集中的列。 可通过该驱动程序定义列 18 (IS_NULLABLE) 之外的其他列。 应用程序应访问驱动程序的特定列的倒计时从结尾处的结果集而不是指定显式的序号位置。 有关详细信息，请参阅[目录函数返回数据](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)。  
   
-|列名|“列”<br /><br /> number|数据类型|注释|  
+|列名|列<br /><br /> number|数据类型|注释|  
 |-----------------|-----------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有架构这些表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|表名。|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar 不为 NULL|列名称。 该驱动程序返回的列没有名称为空字符串。|  

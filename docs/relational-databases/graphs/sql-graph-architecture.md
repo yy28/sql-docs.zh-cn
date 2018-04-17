@@ -1,31 +1,32 @@
 ---
-title: "SQL Graph 体系结构 |Microsoft 文档"
-ms.custom: 
+title: SQL Graph 体系结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 40a1cf05c5c17be3c11d25cd5e8792eb504c2fa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -143,7 +144,7 @@ ms.lasthandoff: 03/19/2018
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 现已扩展来支持创建 AS 节点或 AS 边缘表。 请注意边缘表可能或可能没有任何用户定义属性。  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|节点和边缘表可以更改关系表，使用的相同方式`ALTER TABLE`。 用户可以添加或修改用户定义的列、 索引或约束。 但是，更改内部 graph 列，就像`$node_id`或`$edge_id`，将导致错误。  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |用户可以对伪列和用户定义的节点和边缘表的列创建索引。 支持所有索引类型，包括聚集和非聚集列存储索引。  |
-|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |可以删除节点和边缘表的关系表，使用的相同方式`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点，并支持的边缘，在删除节点或节点表时的级联的删除。 建议，如果删除节点表后，则用户将断开任何连接到该节点表手动维护的关系图的完整性中节点的边缘。  |
+|DROP TABLE |[DROP TABLE &#40;Transact SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |可以删除节点和边缘表的关系表，使用的相同方式`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点，并支持的边缘，在删除节点或节点表时的级联的删除。 建议，如果删除节点表后，则用户将断开任何连接到该节点表手动维护的关系图的完整性中节点的边缘。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>数据操作语言 (DML) 语句

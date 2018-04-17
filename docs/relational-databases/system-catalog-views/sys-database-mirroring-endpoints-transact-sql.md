@@ -1,16 +1,16 @@
 ---
-title: "sys.database_mirroring_endpoints (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.database_mirroring_endpoints (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_endpoints_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9bc0c2229fe72265957d39991f2b67a1b395f0b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b52d5a18294171a5da03c10d78307a3c478b89bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.lasthandoff: 02/03/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<继承列 >**|—|继承中的列**sys.endpoints** (有关详细信息，请参阅[sys.endpoints &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**角色**|**tinyint**|镜像角色，为以下值之一：<br /><br /> **0** = None<br /><br /> **1** = Partner<br /><br /> **2** = Witness<br /><br /> **3** = all<br /><br /> 注意： 此值是仅针对数据库镜像相关。|  
+|**\<继承列 >**|—|继承中的列**sys.endpoints** (有关详细信息，请参阅[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
+|**角色**|**tinyint**|镜像角色，为以下值之一：<br /><br /> **0** = none<br /><br /> **1** = partner<br /><br /> **2** = 见证服务器<br /><br /> **3** = all<br /><br /> 注意： 此值是仅针对数据库镜像相关。|  
 |**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **合作伙伴**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> 注意： 此值是仅针对数据库镜像相关。|  
 |**is_encryption_enabled**|**bit**|**1**意味着启用加密。<br /><br /> **0**表示该加密处于禁用状态。|  
-|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE|  
+|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|连接到此端点所需的身份验证类型的说明，为以下值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|身份验证所用证书的 ID（如果有）。<br /><br /> 0 = 使用 Windows 身份验证。|  
 |**encryption_algorithm**|**tinyint**|加密算法，为以下值之一：<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – 无、 RC4<br /><br /> **4** – 无、 AES<br /><br /> **5** – RC4、 AES<br /><br /> **6** – AES、 RC4<br /><br /> **7** – 无、 RC4、 AES<br /><br /> **8** – 无、 AES RC4|  
@@ -65,11 +65,11 @@ ms.lasthandoff: 02/03/2018
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [指定终结点 URL 添加或修改可用性副本 &#40; 时SQL server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
- [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [sys.database_mirroring &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [数据库镜像终结点 &#40;SQL server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [指定终结点 URL 添加或修改可用性副本时&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
+ [sys.availability_replicas (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.database_mirroring &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [数据库镜像终结点 & #40;SQL server& #41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文档"
-ms.custom: 
+title: 使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db4a853206e402228eb9d76dca72a421444ed042
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 895eb4b04b974c66f64e4ded31b84890cf19e076
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索诊断信息。 这些函数接受一个环境、 连接、 语句或描述符句柄，并从上次使用该句柄的函数返回诊断。 使用该句柄调用新函数时，将被丢弃登录特定句柄的诊断。 如果该函数返回多个诊断记录，在应用程序调用这些函数多次;通过调用检索的状态记录总数**SQLGetDiagField** SQL_DIAG_NUMBER 选项的标头记录 （记录 0）。  

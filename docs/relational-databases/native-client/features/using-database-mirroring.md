@@ -1,15 +1,15 @@
 ---
-title: "使用数据库镜像 |Microsoft 文档"
-ms.custom: 
+title: 使用数据库镜像 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63e362b186725b5e9adf15721fcfd4154be3148d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5b7bdad805cf9ebcfead0df42cd847db741f41ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-database-mirroring"></a>使用数据库镜像
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]使用[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]相反。  
   
- 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据库镜像是一种提高数据库可用性和改善数据冗余性的解决方案。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端提供隐式支持数据库镜像，以便开发人员不需要编写任何代码或配置数据库后执行任何其他操作。  
+ 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据库镜像是一种提高数据库可用性和改善数据冗余性的解决方案。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端提供隐式支持数据库镜像，以便开发人员不需要编写任何代码或配置数据库后执行任何其他操作。  
   
  数据库镜像，基于每个数据库实现，保留一份[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]备用服务器上的生产数据库。 该服务器根据数据库镜像会话的配置和状态，充当热备用或温备用服务器。 热备用服务器支持快速故障转移且不会丢失已提交事务，温备用服务器支持强制服务（可能丢失数据）。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  指定镜像数据库名称时可以使用别名。  
   
 > [!NOTE]  
->  有关初始连接尝试和将尝试重新连接到镜像数据库的信息，请参阅[将客户端连接到数据库镜像会话 &#40;SQL server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  有关初始连接尝试和将尝试重新连接到镜像数据库的信息，请参阅[将客户端连接到数据库镜像会话&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ## <a name="programming-considerations"></a>编程时的注意事项  
  当主体数据库服务器失败时，客户端应用程序则接收错误以响应 API 调用，这指示与数据库之间的连接已丢失。 发生此种情况时，对数据库执行的任何未提交的更改将丢失，并回滚当前事务。 如果发生这种情况，应用程序应关闭连接（或释放数据源对象），然后再重新打开它。 连接将以透明方式重新定向到镜像数据库，该数据库现在充当主体服务器。  

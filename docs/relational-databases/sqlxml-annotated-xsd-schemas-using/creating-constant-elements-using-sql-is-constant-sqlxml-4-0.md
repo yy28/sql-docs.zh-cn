@@ -1,16 +1,16 @@
 ---
-title: "创建常量元素使用 sql： 是的常量 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 创建常量元素使用 sql： 是的常量 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a4557495db906f4f13a5b5346c11047166002df
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ff5fac71ef48053e57ae3410adfadb3a2b46cbe7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-指定常量元素-即未映射到任何数据库表或列的 XSD 架构中的某个元素-你可以使用**sql： 是常量**批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 **Sql： 是常量**批注可以指定在不具有任何特性的元素上。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
+  指定常量元素-即未映射到任何数据库表或列的 XSD 架构中的某个元素-你可以使用**sql： 是常量**批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 **Sql： 是常量**批注可以指定在不具有任何特性的元素上。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
   
  **Sql： 是常量**批注可以用于：  
   

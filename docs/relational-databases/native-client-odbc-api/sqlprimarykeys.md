@@ -1,30 +1,31 @@
 ---
-title: SQLPrimaryKeys | Microsoft Docs
-ms.custom: 
+title: SQLPrimaryKeys |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 471b21b88cea924970a6c168c0e1c48262325374
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7f4a3309af7a9eadf8eb2ecceefda41b7fbd4e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/24/2018
 ## <a name="sqlprimarykeys-and-table-valued-parameters"></a>SQLPrimaryKeys 和表值参数  
  如果语句属性 SQL_SOPT_SS_NAME_SCOPE 具有值 SQL_SS_NAME_SCOPE_TABLE_TYPE，而不是 SQL_SS_NAME_SCOPE_TABLE 其默认值，SQLPrimaryKeys 将返回有关主键列的表类型的信息。 SQL_SOPT_SS_NAME_SCOPE 的详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
- 有关表值参数的详细信息，请参阅[表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[表值参数 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLPrimaryKeys 函数](http://go.microsoft.com/fwlink/?LinkId=59361)   

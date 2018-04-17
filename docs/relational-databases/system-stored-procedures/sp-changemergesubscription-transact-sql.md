@@ -1,16 +1,16 @@
 ---
-title: "sp_changemergesubscription (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changemergesubscription (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3fef5efe16fbc6a3684e077ef8dfca38b839753
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eda4f52de6d6b072f8250a00dcff82623badb43c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,25 +49,25 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  要更改的发布的名称。 *发布*是**sysname**，默认值为 NULL。 此发布必须已经存在且必须符合标识符规则。  
   
- [  **@subscriber=**] *订阅服务器*  
+ [  **@subscriber=**] *****订阅服务器*****  
  订阅服务器的名称。 *订阅服务器*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db=**] *subscriber_db*  
+ [  **@subscriber_db=**] *****subscriber_db*****  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
- [  **@property=**] *属性*  
+ [  **@property=**] *****属性*****  
  是要更改给定发布的属性。 *属性*是**sysname**，并且可以为表中的值之一。  
   
- [  **@value=**] *值*  
+ [  **@value=**] *****值*****  
  是指定的新值*属性*。 *值*是**nvarchar （255)**，并且可以为表中的值之一。  
   
-|属性|值|Description|  
+|属性|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**说明**||对该合并订阅的说明。|  
-|**优先级**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  
+|**priority**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  
 |**merge_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**merge_job_password**||用来运行代理的 Windows 帐户的密码。|  
 |**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。|  
@@ -92,13 +92,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergesubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addmergesubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

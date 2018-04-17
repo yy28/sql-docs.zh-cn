@@ -1,16 +1,16 @@
 ---
-title: "sp_apply_job_to_targets (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_apply_job_to_targets (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0a9b3cca205dc3af412ae9c0dfd426b18c05a4fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,14 +64,14 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@target_servers=** ] **'***target_servers***'**  
  以逗号分隔的目标服务器的列表，指定的作业将应用于这些服务器。 *target_servers*是**nvarchar(2048)**，默认值为 NULL。  
   
- [ **@operation=** ]  **'***operation***'**  
+ [  **@operation=** ] *****操作*****  
  确定是将指定的作业应用于指定的目标服务器或目标服务器组，还是将其从指定的目标服务器或目标服务器组中移除。 *操作*是**varchar(7)**，默认值为应用。 有效的操作是**应用**和**删除**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>注释  
- **sp_apply_job_to_targets**可以轻松地应用 （或删除） 作业从多个目标服务器，并且调用的替代方法**sp_add_jobserver** (或**sp_delete_jobserver**) 一次针对每个所需的目标服务器。  
+ **sp_apply_job_to_targets**可以轻松地应用 （或删除） 作业从多个目标服务器，并且调用的替代方法**sp_add_jobserver** (或**sp_delete_jobserver**)一次为每个所需的目标服务器。  
   
 ## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行此过程。  
@@ -93,7 +93,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

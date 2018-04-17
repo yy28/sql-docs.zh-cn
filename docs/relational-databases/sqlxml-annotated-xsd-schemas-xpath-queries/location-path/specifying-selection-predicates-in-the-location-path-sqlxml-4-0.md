@@ -1,16 +1,16 @@
 ---
-title: "指定选择谓词中的位置路径 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 指定选择谓词中的位置路径 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -20,25 +20,26 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 67cbd749cf3293b6a20b55581648ff6cbfa6ddf5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路径中指定选择谓词 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-谓词筛选与轴有关的节点集（类似于 SELECT 语句中的 WHERE 子句）。 在方括号之间指定谓词。 对于要筛选的节点集中的每个节点，将使用该节点作为上下文节点并使用节点集中的节点数作为上下文大小来对谓词表达式求值。 如果对于该节点谓词表达式求值为 TRUE，则该节点将包含在结果节点集中。  
+  谓词筛选与轴有关的节点集（类似于 SELECT 语句中的 WHERE 子句）。 在方括号之间指定谓词。 对于要筛选的节点集中的每个节点，将使用该节点作为上下文节点并使用节点集中的节点数作为上下文大小来对谓词表达式求值。 如果对于该节点谓词表达式求值为 TRUE，则该节点将包含在结果节点集中。  
   
  XPath 还允许基于位置的筛选。 求值结果为数字的谓词表达式选择该序数节点。 例如，位置路径 `Customer[3]` 返回第三个客户。 不支持此类数字谓词。 只支持返回布尔值结果的谓词表达式。  
   
 > [!NOTE]  
->  有关 XPath 的该 XPath 实现的限制信息和与 W3C 规范之间的差异，请参阅[简介使用 XPath 查询 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  有关 XPath 的该 XPath 实现的限制信息和与 W3C 规范之间的差异，请参阅[使用 XPath 查询简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
 ## <a name="selection-predicate-example-1"></a>选定谓词： 示例 1  
  下面的 XPath 表达式 （位置路径） 选择从当前上下文节点所有**\<客户 >**元素子级具有**CustomerID**值为 ALFKI 的属性：  
@@ -122,7 +123,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>选择谓词：示例 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 包括支持的 XPath 查询的包含跨产品在谓词中，如下面的示例中所示：  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 可以支持谓词中包含叉积的 XPath 查询，如以下示例中所示：  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  
@@ -131,7 +132,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
  此查询选择具有以下 `Order` 的所有客户：其 `OrderDate` 等于任意 `ShipDate` 的 `Order`。  
   
 ## <a name="see-also"></a>另请参阅  
- [批注的 XSD 架构 &#40; 简介SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [客户端的 XML 格式 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [客户端的 XML 格式 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

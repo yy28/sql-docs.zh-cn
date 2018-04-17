@@ -1,31 +1,32 @@
 ---
-title: "特定于驱动程序的类型的数据，描述符，信息，诊断 |Microsoft 文档"
-ms.custom: 
+title: 特定于驱动程序的类型的数据，描述符，信息，诊断 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver-specific diagnostic values [ODBC]
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 184ad1369e8f37def7baa2f1ed8ff4677b2a85f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 025ba90e13555eeac1db0d598cb1bf98b40c539d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性
 驱动程序可以为以下分配特定于驱动程序的值：  

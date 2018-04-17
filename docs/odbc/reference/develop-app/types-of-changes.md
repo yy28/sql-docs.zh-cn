@@ -1,30 +1,31 @@
 ---
-title: "类型的更改 |Microsoft 文档"
-ms.custom: 
+title: 类型的更改 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], types of changes
 - backward compatibility [ODBC], types of changes
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7801d7bf8e7add5425ee6a8a97c4b1b17c556674
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3db03bfda3e464ebc422cbbc009c586e83863b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="types-of-changes"></a>类型的更改
 三种类型的更改都在 ODBC 3。*x* （和 ODBC 的任何版本）。 其中每个以不同的方式会影响向后兼容性，并且以不同的方式处理。 这些更改以下表所述。  

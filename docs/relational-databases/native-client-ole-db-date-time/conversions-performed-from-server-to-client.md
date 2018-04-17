@@ -1,29 +1,30 @@
 ---
-title: "转换执行从服务器到客户端 |Microsoft 文档"
-ms.custom: 
+title: 转换执行从服务器到客户端 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d336c8e61a51967c84535bac977f2cd85fbcf570
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1913574b817d21eb896618161a1618424665a72f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,12 +37,12 @@ ms.lasthandoff: 01/25/2018
   
 |目标 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日期|1,7|确定|-|-|1|1,3|1,7|-|OK (VT_BSTR)|确定|确定|4|4|  
-|Time|5,6,7|-|9|确定|6|3,6|5,6|-|OK (VT_BSTR)|确定|确定|4|4|  
+|日期|1,7|确定|-|-|1|1,3|1,7|-|确定 (VT_BSTR)|确定|确定|4|4|  
+|Time|5,6,7|-|9|确定|6|3,6|5,6|-|确定 (VT_BSTR)|确定|确定|4|4|  
 |Smalldatetime|7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|确定|4|4|  
 |日期时间|5,7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|确定|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK (VT_BSTR)|确定|确定|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|确定|5,7,11|-|OK (VT_BSTR)|确定|确定|4|4|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|确定 (VT_BSTR)|确定|确定|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|确定|5,7,11|-|确定 (VT_BSTR)|确定|确定|4|4|  
 |Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12,9|12|12|12|7,13|N/A|N/A|N/A|N/A|N/A|N/A|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|确定|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|确定|4|4|  
@@ -71,6 +72,6 @@ ms.lasthandoff: 01/25/2018
 |13|字符串分析为 ISO 文字并转换为目标类型。 如果上述操作失败，该字符串则分析为 OLE 日期文字（还包含时间部分），并从 OLE 日期 (DBTYPE_DATE) 转换为目标类型。 除非目标为 DBTYPE_DATE 或 DBTYPE_DBTIMESTAMP，否则该字符串必须符合日期时间文字的语法。 在这种情况下，允许日期时间或时间文字，以便成功分析 ISO 格式。 若要成功分析 OLE，字符串必须符合可由 OLE 识别的语法。 如果无法分析该字符串，则设置 DBSTATUS_E_CANTCONVERTVALUE。 如果任一部分的值超出范围，则设置 DBSTATUS_E_DATAOVERFLOW。|  
   
 ## <a name="see-also"></a>另请参阅  
- [绑定和转换 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [绑定和转换&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

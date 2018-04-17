@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_xtp_merge_checkpoint_files (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.sp_xtp_merge_checkpoint_files (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_merge_checkpoint_files_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2ea57de40e24824a71d4d89ad954fb19fe21e29
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2d5c65c7ca692f341f2fba488254a06cdce3d57e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  数据库的名称，将对该数据库调用合并。 如果数据库没有内存中表，则此过程将返回用户错误。 如果数据库处于离线状态，则它恢复错误。  
   
  *lower_bound_Tid*  
- 为数据文件中所示的事务 (bigint) 下限[sys.dm_db_xtp_checkpoint_files &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)对应于启动检查点文件的合并。 对于无效的 transactonId 值将生成错误。  
+ 为数据文件中所示的事务 (bigint) 下限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)对应于启动检查点文件的合并。 对于无效的 transactonId 值将生成错误。  
   
  *upper_bound_Tid*  
- 为数据文件中所示的事务 (bigint) 上限[sys.dm_db_xtp_checkpoint_files &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). 对于无效的 transactonId 值将生成错误。  
+ 为数据文件中所示的事务 (bigint) 上限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)。 对于无效的 transactonId 值将生成错误。  
   
 ## <a name="return-code-values"></a>返回代码值  
  InclusionThresholdSetting  

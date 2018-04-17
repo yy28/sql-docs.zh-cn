@@ -1,16 +1,16 @@
 ---
-title: "sp_setapprole (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_setapprole (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setapprole
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_setapprole
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc1376391dcf0fefd0fb621d73817b8257b95bf9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4c87856430cfad29f8494bf1ed5f5269d0f0dce7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_setapprole [ @rolename = ] 'role',
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] *角色*  
+ [  **@rolename =** ] *****角色*****  
  当前数据库中定义的应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
   
  [  **@password =** ] **{加密 N***密码***}**  
@@ -62,7 +62,7 @@ sp_setapprole [ @rolename = ] 'role',
 > [!IMPORTANT]  
 >  ODBC**加密**函数不提供加密。 您不应当依赖该函数来保护通过网络传输的密码。 如果通过网络传输该信息，则使用 SSL 或者 IPSec。  
   
- **@encrypt= 'none'**  
+ **@encrypt = 'none'**  
  指定不使用任何模糊代码。 密码以明文形式传递到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这是默认设置。  
   
  **@encrypt= odbc**  
@@ -72,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
  指定是否创建 cookie。 **true**隐式转换为 1。 **false**隐式转换为 0。  
   
  [  **@cookie =** ]  **@cookie输出**  
- 指定包含 cookie 的输出参数。 仅当生成该 cookie 的值 **@fCreateCookie** 是**true**。 **varbinary （8000)**  
+ 指定包含 cookie 的输出参数。 仅当生成该 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
   
 > [!NOTE]  
 >  **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 应用程序应继续保留**varbinary （8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增加的未来版本中。  
@@ -90,7 +90,7 @@ sp_setapprole [ @rolename = ] 'role',
 >   
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC**加密**选项不受**SqlClient**。 如果必须存储凭据，请使用加密 API 函数对这些凭据进行加密。 参数*密码*存储为单向哈希。 若要保留与早期版本的兼容性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不强制密码复杂性策略**sp_addapprole**。 若要强制实施密码复杂性策略，请使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**公共**和角色的密码的知识。  
   
 ## <a name="examples"></a>示例  
@@ -124,9 +124,9 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [删除应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_unsetapprole &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_unsetapprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
   
   

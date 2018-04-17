@@ -1,27 +1,28 @@
 ---
-title: "ODBC 驱动程序行为更改时处理字符转换 |Microsoft 文档"
-ms.custom: 
+title: ODBC 驱动程序行为更改时处理字符转换 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a16cbebca3c625fc5ed54241842b62c21c42b34f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0572713491c7fbc0a2bbf767b3ffd7f63b04f3c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>处理字符转换时 ODBC 驱动程序行为的变化
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
   
  下面说明当您使用不正确的模式时驱动程序变化的影响。 此应用程序查询**varchar**列和为 Unicode (SQL_UNICODE/SQL_WCHAR) 的绑定：  
   
- 查询：`select convert(varchar(36), '123')`  
+ 查询：  `select convert(varchar(36), '123')`  
   
 ```  
 SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
@@ -84,7 +85,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 ```  
   
 ## <a name="sqlbindcol-behavior"></a>SQLBindCol 行为  
- 查询：`select convert(varchar(36), '1234567890')`  
+ 查询：  `select convert(varchar(36), '1234567890')`  
   
 ```  
 SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecting String Data Right Truncation behavior  
@@ -96,7 +97,7 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|**SQLFetch**报告数据右侧被截断。<br /><br /> 长度指示 -4 (SQL_NO_TOTAL)，因为数据的其余部分未转换。<br /><br /> 缓冲区中存储的数据为 123\0。 - 缓冲区被保证为以 NULL 结束。|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter（OUTPUT 参数行为）  
- 查询：`create procedure spTest @p1 varchar(max) OUTPUT`  
+ 查询：  `create procedure spTest @p1 varchar(max) OUTPUT`  
   
  `select @p1 = replicate('B', 1234)`  
   

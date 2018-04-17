@@ -1,15 +1,16 @@
 ---
-title: "更新数据概述 |Microsoft 文档"
-ms.custom: 
+title: 更新数据概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587233467dbc265be12a009b34ce0376acfd0911
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e5accaa3a443f7cc850fd6b4012430043d402203
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-overview"></a>更新数据概述
 应用程序可以更新数据，通过执行 SQL 语句或通过调用**SQLSetPos**或**SQLBulkOperations**。 **更新**，**删除**，和**插入**语句直接在数据源上执行操作和驱动程序通常支持。 搜索 update 和 delete 语句包含要更改的行的说明。 定位更新和 delete 语句和**SQLSetPos**作用于数据源通过游标和不太受广泛支持。  

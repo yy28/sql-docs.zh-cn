@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_text_query_plan (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 10/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_text_query_plan
@@ -22,21 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8521e394e35d7762084f28c44426cd7cb25284cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 查询计划指定的计划句柄可以处于缓存或当前正在执行。 此表值函数是类似于[sys.dm_exec_query_plan &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)，但有以下不同：  
+  为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 查询计划指定的计划句柄可以处于缓存或当前正在执行。 此表值函数是类似于[sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)，但有以下不同：  
   
 -   查询计划的输出以文本格式返回。  
   
@@ -94,7 +95,7 @@ sys.dm_exec_text_query_plan
 |**dbid**|**int**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。<br /><br /> 此列可为空值。|  
 |**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席和已准备好的批处理，此列为**null**。<br /><br /> 此列可为空值。|  
 |**number**|**int**|为存储过程编号的整数。 例如，一组过程**订单**应用程序可能名为**orderproc; 1**， **orderproc; 2**，依次类推。 对于即席和已准备好的批处理，此列为**null**。<br /><br /> 此列可为空值。|  
-|**encrypted**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
+|**加密**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
 |**query_plan**|**nvarchar(max)**|包含与指定的查询执行计划的编译时显示计划表示*plan_handle*。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
 ## <a name="remarks"></a>注释  

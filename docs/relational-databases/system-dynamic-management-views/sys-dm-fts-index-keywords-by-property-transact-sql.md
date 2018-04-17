@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_fts_index_keywords_by_property (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_fts_index_keywords_by_property (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords_by_property
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0257f4a6ce50ff3e28497e3e27bdd704e40cbf84
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 603ff2cfed32a6a8ecfb4f55467b697307009822
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>参数  
  db_id('*database_name*')  
- 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受的数据库名称，并返回哪些 sys.dm_fts_index_keywords_by_property 用于查找指定的数据库的数据库 ID。 如果*database_name*是省略，则返回当前数据库 ID。  
+ 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受的数据库名称，并返回哪些 sys.dm_fts_index_keywords_by_property 用于查找指定的数据库的数据库 ID。 如果省略 database_name，则返回当前数据库 ID。  
   
  object_id('*table_name*')  
  调用[OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md)函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
@@ -141,11 +141,11 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [改进全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
- [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
- [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_document &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

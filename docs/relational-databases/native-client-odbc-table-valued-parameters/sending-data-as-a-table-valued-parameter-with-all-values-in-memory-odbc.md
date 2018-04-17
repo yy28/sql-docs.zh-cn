@@ -1,35 +1,36 @@
 ---
-title: "内存 (ODBC) 中的所有值的表值参数将其作为发送数据 |Microsoft 文档"
-ms.custom: 
+title: 内存 (ODBC) 中的所有值的表值参数将其作为发送数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b78fe6215d4d612b787cdd53316c66e30478fc34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9ba83ff39d4d5012655c31502fd99139b5a23aad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[使用表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>前提条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  

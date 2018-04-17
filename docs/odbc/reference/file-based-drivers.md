@@ -1,31 +1,32 @@
 ---
-title: "基于文件的驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 基于文件的驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - file-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], file-based drivers
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9873f0b61364bd12bca0823ba66749513a4342c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e63c8026b31140f5ad1f94c99f143670d31c5c78
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-based-drivers"></a>基于文件的驱动程序
 基于文件的驱动程序用于 dBASE 等的数据源，不提供要使用的驱动程序的独立数据库引擎。 这些驱动程序直接访问物理数据，而且必须实现过程 SQL 语句的数据库引擎。 标准做法是，基于文件的驱动程序中的数据库引擎实现定义的最小的 SQL 一致性级别; ODBC SQL 的子集有关此一致性级别中的 SQL 语句的列表，请参阅[附录 c: SQL 语法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
@@ -34,4 +35,4 @@ ms.lasthandoff: 12/21/2017
   
  下图显示了网络文件服务器上的基于文件的驱动程序的数据位于本地，其中它所在的其他两个不同的配置。  
   
- ![两个配置文件的 &#45; 基于驱动程序](../../odbc/reference/media/pr06.gif "pr06")
+ ![两个配置文件的&#45;基于驱动程序](../../odbc/reference/media/pr06.gif "pr06")

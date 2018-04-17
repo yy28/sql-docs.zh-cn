@@ -1,16 +1,16 @@
 ---
-title: "sys.objects (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.objects (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 0/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.objects_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - user-defined table types [SQL Server]
 - table types [SQL Server]
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99d4a8338f389fcabbff4a7ffa5bcb594a9149c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e233f72cc5198a594278ff503f33b56b7f38f02c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  sys.objects 不显示 DDL 触发器，因为它们不是架构范围内的对象。 在中找到所有触发器，DML 和 DDL， [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)。 sys.triggers 支持对各种触发器应用混合名称范围规则。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|对象名。|  
 |object_id|**int**|对象标识号。 是一个数据库中唯一的。|  
 |principal_id|**int**|如果不是架构所有者，则为单个所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定备用所有者。<br /><br /> 如果没有备用的单个所有者，则为 NULL。<br /><br /> 如果对象类型为下列类型之一，则为 NULL：<br /><br /> C = CHECK 约束<br /><br /> D = DEFAULT（约束或独立）<br /><br /> F = FOREIGN KEY 约束<br /><br /> PK = PRIMARY KEY 约束<br /><br /> R = 规则（旧式，独立）<br /><br /> TA = 程序集（CLR 集成）触发器<br /><br /> TR = SQL 触发器<br /><br /> UQ = UNIQUE 约束|  
 |schema_id|**int**|包含该对象的架构的 ID。<br /><br /> 始终包含在 sys 或 INFORMATION_SCHEMA 架构中的架构范围内的系统对象。|  
 |parent_object_id|**int**|此对象所属对象的 ID。<br /><br /> 0 = 不是子对象。|  
-|类型|**char(2)**|对象类型：<br /><br /> AF = 聚合函数 (CLR)<br /><br /> C = CHECK 约束<br /><br /> D = DEFAULT（约束或独立）<br /><br /> F = FOREIGN KEY 约束<br /><br /> FN = SQL 标量函数<br /><br /> FS = 程序集 (CLR) 标量函数<br /><br /> FT = 程序集 (CLR) 表值函数<br /><br /> IF = SQL 内联表值函数<br /><br /> IT = 内部表<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> PG = 计划指南<br /><br /> PK = PRIMARY KEY 约束<br /><br /> R = 规则（旧式，独立）<br /><br /> RF = 复制筛选过程<br /><br /> S = 系统基表<br /><br /> SN = 同义词<br /><br /> SO = 序列对象<br /><br /> U = 表（用户定义类型）<br /><br /> V = 视图<br /><br /> <br /><br /> **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> SQ = 服务队列<br /><br /> TA = 程序集 (CLR) DML 触发器<br /><br /> TF = SQL 表值函数<br /><br /> TR = SQL DML 触发器<br /><br /> TT = 表类型<br /><br /> UQ = UNIQUE 约束<br /><br /> X = 扩展存储过程<br /><br /> <br /><br /> **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]， [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。<br /><br /> <br /><br /> ET = 外部表|  
+|type|**char(2)**|对象类型：<br /><br /> AF = 聚合函数 (CLR)<br /><br /> C = CHECK 约束<br /><br /> D = DEFAULT（约束或独立）<br /><br /> F = FOREIGN KEY 约束<br /><br /> FN = SQL 标量函数<br /><br /> FS = 程序集 (CLR) 标量函数<br /><br /> FT = 程序集 (CLR) 表值函数<br /><br /> IF = SQL 内联表值函数<br /><br /> IT = 内部表<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> PG = 计划指南<br /><br /> PK = PRIMARY KEY 约束<br /><br /> R = 规则（旧式，独立）<br /><br /> RF = 复制筛选过程<br /><br /> S = 系统基表<br /><br /> SN = 同义词<br /><br /> SO = 序列对象<br /><br /> U = 表（用户定义类型）<br /><br /> V = 视图<br /><br /> <br /><br /> **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> SQ = 服务队列<br /><br /> TA = 程序集 (CLR) DML 触发器<br /><br /> TF = SQL 表值函数<br /><br /> TR = SQL DML 触发器<br /><br /> TT = 表类型<br /><br /> UQ = UNIQUE 约束<br /><br /> X = 扩展存储过程<br /><br /> <br /><br /> **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]， [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。<br /><br /> <br /><br /> ET = 外部表|  
 |type_desc|**nvarchar(60)**|对对象类型的说明：<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|对象的创建日期。|  
 |modify_date|**datetime**|通过使用 ALTER 语句上次修改对象的日期。 如果对象为表或视图，则创建或修改表或视图的聚集索引时，modify_date 也会随之更改。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
@@ -168,11 +169,11 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.all_objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
- [sys.system_objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.all_objects &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
+ [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [查询的 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.internal_tables &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
+ [sys.internal_tables &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

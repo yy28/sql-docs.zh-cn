@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_column_store_segments (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/28/2018
 ms.prod: ''
@@ -20,13 +20,14 @@ author: hirokib
 ms.author: elbutter;barbkess
 manager: jrj
 ms.workload: Inactive
-ms.openlocfilehash: 8e3daa47eea78bb90c736a42e7e541bea62e5ac4
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 6096185bec4378bd5d6b2f478796f8a2e34f5e1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 对于 columnstore 索引中的每列包括一行。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/30/2018
 | **row_count**               | **int**    | 行组中的行数。                             |
 | **has_nulls**               | **int**    | 1 如果列段具有 Null 值。                     |
 | **base_id**                 | **bigint** | 如果使用的编码类型 1 的基础值 ID。  如果编码类型 1 未使用，base_id 设置为 1。 |
-| **magnitude**               | **float**  | 如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为 1。 |
+| **量值**               | **float**  | 如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为 1。 |
 | **primary__dictionary_id**  | **int**    | 主要字典的 ID。 一个非零值到本地字典中此列将在当前段 （即行组） 的点。 值-1 指示没有为此段没有本地字典。 |
 | **secondary_dictionary_id** | **int**    | 辅助字典中的 ID。 一个非零值到本地字典中此列将在当前段 （即行组） 的点。 值-1 指示没有为此段没有本地字典。 |
 | **min_data_id**             | **bigint** | 中的列段的最小数据 ID。                       |
@@ -91,7 +92,7 @@ ORDER BY    table_nm
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [创建列存储索引&#40;Transact SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 
   
 

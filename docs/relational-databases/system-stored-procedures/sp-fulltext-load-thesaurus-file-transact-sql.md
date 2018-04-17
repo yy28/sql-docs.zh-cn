@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_load_thesaurus_file (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_fulltext_load_thesaurus_file (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de4468120488b4f7d8942ecf540c36370a36de7f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6001b06b6caef3819b6243b7029a082f19257228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>参数  
  *lcid*  
- 映射某种语言的区域设置标识符 (LCID) 的整数，您要为该语言加载同义词库 XML 定义。 若要获取的服务器实例可用的语言的 Lcid，使用[sys.fulltext_languages &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目录视图。  
+ 映射某种语言的区域设置标识符 (LCID) 的整数，您要为该语言加载同义词库 XML 定义。 若要获取的服务器实例可用的语言的 Lcid，使用[sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目录视图。  
   
  **@loadOnlyIfNotLoaded** = *action*  
  指定是否即使在同义词库文件已加载的情况下也将它加载到内部同义词库表中。 *操作*是之一：  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FULLTEXTSERVICEPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [为配置和管理同义词库文件的全文搜索](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  

@@ -1,16 +1,16 @@
 ---
-title: "sp_createstats (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_createstats (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_createstats_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c89f3aed714fba775e2271425fb86949e3f26ac
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17d061eec260c1553fb03623ed392444f02ea939
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
  在查询执行时间很重要并且不能等待查询优化器以生成单列统计信息时，sp_createstats 对于基准确定之类的应用程序十分有用。 在大多数情况下，它不需要使用 sp_createstats;查询优化器生成的单列统计信息，根据需要以改进查询计划时**AUTO_CREATE_STATISTICS**选项设置为 on。  
   
- 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。 有关生成的单列统计信息的详细信息，请参阅**AUTO_CREATE_STATISTICS**选项[ALTER DATABASE SET 选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。 有关生成的单列统计信息的详细信息，请参阅**AUTO_CREATE_STATISTICS**选项[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +78,7 @@ sp_createstats
   
  当表包含列集时，sp_createstats 不会在稀疏列上创建统计信息。 有关列集和稀疏列的详细信息，请参阅[使用列集](../../relational-databases/tables/use-column-sets.md)和[使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ## <a name="examples"></a>示例  
@@ -105,7 +106,7 @@ GO
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

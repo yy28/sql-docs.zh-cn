@@ -2,7 +2,7 @@
 title: SQLSetDriverConnectInfo 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb945dfbc748c955a1e44467b72dd1c8025171c7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6d9477fa4c5016f3de9bbc3aa96384ace6962ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 函数
 **一致性**  
@@ -58,7 +58,7 @@ SQLRETURN SQLSetDriverConnectInfo(
 ## <a name="diagnostics"></a>诊断  
  与相同[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)只不过驱动程序管理器将使用与任何输入的验证错误时，相关**HandleType**的 SQL_HANDLE_DBC_INFO_TOKEN 和**处理**的*hDbcInfoToken*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  每当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE，驱动程序管理器会将错误返回到应用程序 (在[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)或[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
   
  每当驱动程序返回 SQL_SUCCESS_WITH_INFO，驱动程序管理器将获取诊断信息从*hDbcInfoToken*，并返回到中的应用程序的 SQL_SUCCESS_WITH_INFO [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)。  

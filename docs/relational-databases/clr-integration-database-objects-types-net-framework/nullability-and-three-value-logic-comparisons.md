@@ -1,15 +1,15 @@
 ---
-title: "为 null 性和三值逻辑比较 |Microsoft 文档"
-ms.custom: 
+title: 为 null 性和三值逻辑比较 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - precision [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abef06c62b28aa2e25f61127d8dd23551652b12c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f2765043127179ee7578cd4258e909351198e727
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>为 Null 性和三值逻辑比较
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-如果你熟悉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，你将找到相似的语义和精度**System.Data.SqlTypes**中的命名空间[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 但是，这些数据类型之间存在一些不同之处，本主题介绍了这些不同之处中最重要的内容。  
+  如果你熟悉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，你将找到相似的语义和精度**System.Data.SqlTypes**中的命名空间[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 但是，这些数据类型之间存在一些不同之处，本主题介绍了这些不同之处中最重要的内容。  
   
 ## <a name="null-values"></a>NULL 值  
  本机公共语言运行时 (CLR) 数据类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之间的一个主要不同就是前者不允许 NULL 值，而后者提供了完整 NULL 语义。  

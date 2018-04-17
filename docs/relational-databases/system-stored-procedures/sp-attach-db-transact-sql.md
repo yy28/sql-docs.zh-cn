@@ -1,16 +1,16 @@
 ---
-title: "sp_attach_db (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_attach_db (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b17a11f31faff52e2519d2c10d34af88108f0399
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 460d9eab90fb65f4d271829d76d72dfa26f0b1b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  要附加到该服务器的数据库的名称。 该名称必须是唯一的。 *dbname*是**sysname**，默认值为 NULL。  
   
  [ **@filename1=** ] **'***filename_n***'**  
- 数据库文件的物理名称，包括路径。 *filename_n*是**nvarchar(260)**，默认值为 NULL。 最多可以指定 16 个文件名。 参数名称开始 **@filename1** 和递增到 **@filename16** 。 文件名列表至少必须包括主文件。 主文件中包含指向数据库中其他文件的系统表。 该列表还必须包括在数据库分离之后移动的所有文件。  
+ 数据库文件的物理名称，包括路径。 *filename_n*是**nvarchar(260)**，默认值为 NULL。 最多可以指定 16 个文件名。 参数名称开始**@filename1**和递增到**@filename16**。 文件名列表至少必须包括主文件。 主文件中包含指向数据库中其他文件的系统表。 该列表还必须包括在数据库分离之后移动的所有文件。  
   
 > [!NOTE]  
 >  此参数映射到 CREATE DATABASE 语句的 FILENAME 参数。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -85,14 +85,14 @@ sp_attach_db [ @dbname= ] 'dbname'
   
 -   如果将数据库附加到与原始数据库相同的服务器实例和版本，则不需要执行其他步骤。  
   
--   如果将数据库附加到同一个服务器实例，但你必须执行的升级版本[sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)之后附加操作已完成升级复制。  
+-   如果将数据库附加到同一个服务器实例，但是版本已升级，则必须执行 [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) 才能在附加操作完成后升级复制。  
   
--   如果将数据库附加到不同的服务器实例，无论何种版本，则必须执行[sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)附加操作完成后删除复制。  
+-   如果将数据库附加到不同的服务器实例，而不考虑版本，则必须执行 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 才能在附加操作完成后删除复制。  
   
  当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 **OPEN MASTER KEY** 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 **ALTER MASTER KEY REGENERATE** 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。  
   
 ## <a name="permissions"></a>权限  
- 有关附加数据库时，如何处理权限的信息，请参阅[CREATE DATABASE &#40;SQL Server Transact SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ 有关附加数据库时，如何处理权限的信息，请参阅[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  下例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的文件附加到当前服务器。  
@@ -107,9 +107,9 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
   
 ## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_removedbreplication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

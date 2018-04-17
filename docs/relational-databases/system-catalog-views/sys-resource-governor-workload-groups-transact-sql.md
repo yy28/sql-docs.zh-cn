@@ -1,16 +1,16 @@
 ---
-title: "sys.resource_governor_workload_groups (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.resource_governor_workload_groups (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_workload_groups
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_workload_groups catalog view
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2bc9e45c38c8dbe50d9bd7c5d6a8c79203c4fed
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 199ef10970da1f2bb9b10e716ecc5e9f894aa448
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcegovernorworkloadgroups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |external_pool_id|**int**|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此工作负荷组使用的外部资源池的 ID。|  
   
 ## <a name="remarks"></a>注释  
- 目录视图显示存储的元数据。 若要查看内存中配置，请使用相应的动态管理视图中， [sys.dm_resource_governor_workload_groups &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
+ 目录视图显示存储的元数据。 若要查看内存中配置，请使用相应的动态管理视图中， [sys.dm_resource_governor_workload_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  
   
  如果资源调控器配置已发生更改，但尚未应用 ALTER RESOURCE GOVERNOR RECONFIGURE 语句，则存储的配置和内存中的配置可能会不同。  
   
@@ -60,8 +60,8 @@ ms.lasthandoff: 02/03/2018
  若要查看内容，则需要拥有 VIEW ANY DEFINITION 权限；若要更改内容，则需要拥有 CONTROL SERVER 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [资源调控器目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
+ [资源调控器目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

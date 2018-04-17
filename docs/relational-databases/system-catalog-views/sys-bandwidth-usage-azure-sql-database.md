@@ -1,16 +1,16 @@
 ---
-title: "sys.bandwidth_usage （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.bandwidth_usage （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b61df6847269b609ba6a474b0ad87a355d5abe9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,11 +51,11 @@ ms.lasthandoff: 11/21/2017
 |**time**|占用带宽的时间（小时）。 此视图中的各行以小时为单位。 例如，2009-09-19 02:00:00.000 表示占用带宽的时间是 2009 年 9 月 19 日的凌晨 2:00  到凌晨 3:00。|  
 |**database_name**|占用带宽的数据库的名称。|  
 |**方向**|占用带宽的类型，为以下选项之一：<br /><br /> 入口： 正在移入数据[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 出口： 正在移出数据[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
-|**类**|占用带宽的类别，为以下选项之一：<br />正在移 Azure 平台中的内部： 数据。<br />正在移出 Azure 平台的外部： 数据。<br /><br /> 当数据库参与区域之间的连续复制关系后，才返回此类 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. 有关详细信息，请参阅本主题后面的“备注”部分。|  
+|class|占用带宽的类别，为以下选项之一：<br />正在移 Azure 平台中的内部： 数据。<br />正在移出 Azure 平台的外部： 数据。<br /><br /> 当数据库参与区域之间的连续复制关系后，才返回此类 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. 有关详细信息，请参阅本主题后面的“备注”部分。|  
 |**time_period**|使用情况的发生时的时间段是峰值或高峰。 The Peak time is based on the region in which the server was created. 例如，如果在“US_Northwest”地区创建了服务器，则高峰期时间定义为 PST 时间上午 10:00 点 到下午 6:00 太平洋标准时间。|  
 |**数量**|占用的带宽量 (KB)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图选项仅适用于**master**与服务器级别主体登录名的数据库。  
   
 ## <a name="remarks"></a>注释  

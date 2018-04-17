@@ -1,16 +1,16 @@
 ---
-title: "sys.types (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.types (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - types
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0fab5cee5706b0d8a00638f35c3b91d639efb3b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17230214cbcbe4061de77ec01fbf848d3826914c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,11 +45,11 @@ ms.lasthandoff: 11/21/2017
 |**名称**|**sysname**|类型的名称。 在架构内是唯一的。|  
 |**system_type_id**|**tinyint**|类型的内部系统类型的 ID。|  
 |**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id** = **system_type_id**。|  
-|**schema_id**|**int**|类型所属架构的 ID。|  
+|schema_id|**int**|类型所属架构的 ID。|  
 |**principal_id**|**int**|如果个体所有者与架构所有者不同，则表示该所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定备用所有者。<br /><br /> 如果没有另外的个体所有者，则值为 NULL。|  
 |**max_length**|**int**|类型的最大长度（字节）。<br /><br /> 为-1 = 的列数据类型为**varchar （max)**， **nvarchar (max)**， **varbinary （max)**，或**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16。|  
 |**精度**|**tinyint**|如果类型基于数值，则表示类型的最大精度；否则，该值为 0。|  
-|**缩放**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
+|**小数位数**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称；否则，该值为 NULL。|  
 |**is_nullable**|**bit**|类型可以为 Null。|  
 |**is_user_defined**|**bit**|1 = 用户定义类型。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。|  
@@ -57,13 +58,13 @@ ms.lasthandoff: 11/21/2017
 |**rule_object_id**|**int**|通过使用绑定到类型的独立规则 ID [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)。<br /><br /> 0 = 不存在规则。|  
 |**is_table_type**|**bit**|指示该类型为表。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [标量类型目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [标量类型目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

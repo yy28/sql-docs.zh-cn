@@ -1,30 +1,31 @@
 ---
 title: SQLPutData | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-caps.latest.revision: 
+caps.latest.revision: 49
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf27150c9e6c0da3f32cd3295c358c80da44b767
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8d9dffe53e18bf63951f6204435bd684844adc61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/24/2018
   
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
-|22026|字符串数据，长度不匹配|如果以字节为单位发送的数据的长度已由应用程序，例如，使用指定 SQL_LEN_DATA_AT_EXEC (*n*) 其中 *n* 大于 0 的总数给定应用程序通过 SQLPutData 字节必须匹配指定的长度。|  
+|22026|字符串数据，长度不匹配|如果以字节为单位发送的数据的长度已由应用程序，例如，使用指定 SQL_LEN_DATA_AT_EXEC (*n*) 其中*n*大于 0，总应用程序通过给定的字节数SQLPutData 必须与匹配的指定的长度。|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData 和表值参数  
  使用表值参数中使用变量的行绑定时，应用程序使用 SQLPutData。 *StrLen_Or_Ind*参数指示它将可供驱动程序以收集数据的下一步的行或行的表值参数数据，或是否提供了更多的行：  
@@ -61,15 +62,15 @@ ms.lasthandoff: 01/24/2018
   
  如果*StrLen_Or_Ind*具有 SQL_DEFAULT_PARAM 或介于 0 和 SQL_PARAMSET_SIZE 以外的任何值 (即， *columnsize 类型*SQLBindParameter 参数)，则会出错。 此错误导致 SQLPutData 返回 SQL_ERROR：SQLSTATE=HY090，“字符串或缓冲区长度无效”。  
   
- 有关表值参数的详细信息，请参阅[表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[表值参数 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>SQLPutData 对增强的日期和时间功能的支持  
  日期/时间类型的参数值将转换中所述[从 C 到 SQL 转换](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。  
   
- 有关详细信息，请参阅[日期和时间改进 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData 对大型 CLR UDT 的支持  
- **SQLPutData**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLPutData**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLPutData 函数](http://go.microsoft.com/fwlink/?LinkId=59365)   

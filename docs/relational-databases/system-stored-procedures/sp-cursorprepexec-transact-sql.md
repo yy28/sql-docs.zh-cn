@@ -1,16 +1,16 @@
 ---
-title: "sp_cursorprepexec (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_cursorprepexec (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorprepexec_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5264e1c645cf1716d01e352f2b248b3b80a038d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e1c6bf7c30ae4dbb39c1c3f05f48d6890b7e4482
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,17 +65,17 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  用于指定 stmt 值的规则是不同于为 sp_cursoropen，出现异常， *stmt*字符串数据类型必须为**ntext**。  
   
- *选项*  
+ *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项*需要具备以下**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  滚动选项。 *scrollopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -97,7 +97,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
@@ -124,10 +124,10 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  如果*params*返回一个 NULL 值，则该语句不参数化。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_cursoropen &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorexecute &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursorprepare &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
- [sp_cursorfetch &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursorprepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

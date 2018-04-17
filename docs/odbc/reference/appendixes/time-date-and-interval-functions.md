@@ -1,15 +1,16 @@
 ---
-title: "时间、 日期和时间间隔函数 |Microsoft 文档"
-ms.custom: 
+title: 时间、 日期和时间间隔函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], time functions
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d32dc500c2f57919757224d64b3f5c21c6f6423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数
 下表列出了 ODBC 标量函数集中包含的日期和时间函数。 应用程序可以确定由驱动程序支持的日期和时间函数，应调用**SQLGetInfo**与*信息类型*SQL_TIMEDATE_FUNCTIONS。  

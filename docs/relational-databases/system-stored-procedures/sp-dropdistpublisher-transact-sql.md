@@ -1,16 +1,16 @@
 ---
-title: "sp_dropdistpublisher (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_dropdistpublisher (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8060e5788004b743e58e0d0d424dcc0910459573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b1697fb1a53bc30b0e432440877bf24e0dd4b662
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] *发布服务器*  
+ [  **@publisher=** ] *****发布服务器*****  
  要删除的发布服务器。 *发布服务器*是**sysname**，无默认值。  
   
  [  **@no_checks=** ] *no_checks*  
@@ -56,7 +56,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  如果**0**，复制验证远程发布服务器已卸载本地服务器作为分发服务器。 如果发布服务器是本地服务器，则复制将验证没有发布对象或分发对象保留在本地服务器上。  
   
- 如果**1**，即使无法访问远程发布服务器删除分发发布服务器与关联的所有复制对象。 执行此操作后，远程发布服务器必须卸载复制使用[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)与 **@ignore_distributor**   =  **1**。  
+ 如果**1**，即使无法访问远程发布服务器删除分发发布服务器与关联的所有复制对象。 执行此操作后，远程发布服务器必须卸载复制使用[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)与**@ignore_distributor**  =  **1**。  
   
  [  **@ignore_distributor=** ] *ignore_distributor*  
  指定删除发布服务器时是否将分发对象保留在分发服务器中。 *ignore_distributor*是**位**和可以是下列值之一：  
@@ -76,12 +76,12 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_dropdistpublisher**。  
   
 ## <a name="see-also"></a>另请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

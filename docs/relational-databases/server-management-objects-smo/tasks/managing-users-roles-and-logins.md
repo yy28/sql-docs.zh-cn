@@ -1,31 +1,32 @@
 ---
-title: "管理用户、 角色和登录名 |Microsoft 文档"
-ms.custom: 
+title: 管理用户、 角色和登录名 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - logins [SMO]
 - roles [SMO]
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47c2cf548bdc703f86a7ff90f2e32e44fceb9a7f
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bf373c1fb741dc21686340e898ce994d9b0b8cc4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-users-roles-and-logins"></a>管理用户、角色和登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,10 +37,10 @@ ms.lasthandoff: 01/12/2018
   
  每个<xref:Microsoft.SqlServer.Management.Smo.Database>对象具有<xref:Microsoft.SqlServer.Management.Smo.UserCollection>指定数据库中的所有用户的对象。 每个用户都与一个登录名相关联。 一个登录名可以与多个数据库中的用户相关联。 <xref:Microsoft.SqlServer.Management.Smo.Login>对象的<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>方法可以用于列出与登录相关联的每个数据库中的所有用户。 另外，<xref:Microsoft.SqlServer.Management.Smo.User> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 属性可指定与用户关联的登录名。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库还具有指定一组让用户执行特定任务的数据库级别特权的角色。 与服务器角色不同，数据库角色不是固定的。 可以创建、修改和删除数据库角色。 可以将特权和用户分配给数据库角色以进行大容量管理。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库还具有指定一组让用户执行特定任务的数据库级别特权的角色。 与服务器角色不同，数据库角色不是固定的。 可以创建、修改和删除数据库角色。 可以将特权和用户分配给数据库角色以进行大容量管理。  
   
 ## <a name="example"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>在 Visual C# 中枚举登录名和关联的用户  
  数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例创建一个登录名和用户在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库以确保没有要枚举的映射信息。  

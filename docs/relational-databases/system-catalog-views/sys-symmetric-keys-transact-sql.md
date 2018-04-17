@@ -1,16 +1,16 @@
 ---
-title: "sys.symmetric_keys (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.symmetric_keys (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - symmetric_keys
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.symmetric_keys catalog view
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dbfdb1c6b128c1a596f092f500ce5c3cf85d2e7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7dae3699cb464bf224986f3904d1df9b6d416bd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,13 +49,13 @@ ms.lasthandoff: 11/21/2017
 |**algorithm_desc**|**nvarchar(60)**|对于密钥所用算法的说明：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL（仅限于可扩展密钥管理算法）|  
 |**create_date**|**datetime**|密钥的创建日期。|  
 |**modify_date**|**datetime**|密钥的修改日期。|  
-|**key_guid**|**uniqueidentifier**|与密钥关联的全局唯一标识符 (GUID)。 对于持久化密钥，此标识符是自动生成的。 临时密钥的 GUID 从用户提供的通行短语中派生。|  
+|key_guid|**uniqueidentifier**|与密钥关联的全局唯一标识符 (GUID)。 对于持久化密钥，此标识符是自动生成的。 临时密钥的 GUID 从用户提供的通行短语中派生。|  
 |**key_thumbprint**|**sql_variant**|密钥的 SHA-1 哈希。 该哈希是全局唯一的。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
 |**provider_type**|**nvarchar(120)**|加密提供程序的类型：<br /><br /> CRYPTOGRAPHIC PROVIDER = 可扩展密钥管理密钥<br /><br /> NULL = 非可扩展密钥管理密钥|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|加密提供程序的 GUID。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
 |**cryptographic_provider_algid**|**sql_variant**|加密提供程序的算法 ID。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>注释  

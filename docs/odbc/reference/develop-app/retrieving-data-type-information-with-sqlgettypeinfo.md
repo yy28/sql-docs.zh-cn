@@ -1,15 +1,16 @@
 ---
-title: "检索的数据类型信息与 SQLGetTypeInfo |Microsoft 文档"
-ms.custom: 
+title: 检索的数据类型信息与 SQLGetTypeInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL data types [ODBC], identifiers
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3ae7606967ce0f77fea638a69a8b44f0e175a48
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7e89297c8fb0cdd7cc048fd19a24810c67b2d271
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>检索 SQLGetTypeInfo 的数据类型信息
 ODBC 基础 SQL 数据类型从到 ODBC 类型标识符的映射是近似值，因为提供函数 (**SQLGetTypeInfo**) 通过该驱动程序可以完全描述了每个数据源中的 SQL 数据类型。 此函数将返回一个结果集，其中每个行所说明的一种数据类型，例如名称、 类型标识符、 精度、 小数位数和可为 null 的特征。  

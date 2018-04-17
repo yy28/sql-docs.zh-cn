@@ -1,16 +1,16 @@
 ---
-title: "CHANGETABLE (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: CHANGETABLE (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ CHANGETABLE (
   
  如果值为 NULL，则返回所有跟踪的更改。  
   
- *last_sync_version*应验证以确保它是不太旧，因为某些或所有的更改信息可能已清除了根据为该数据库配置的保持期。 有关详细信息，请参阅[CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)和[ALTER DATABASE SET 选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *last_sync_version*应验证以确保它是不太旧，因为某些或所有的更改信息可能已清除了根据为该数据库配置的保持期。 有关详细信息，请参阅[CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)和[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  版本*表*，{< primary_key_values >}  
  返回指定行的最新更改跟踪信息。 主键值必须标识该行。 <primary_key_values> 标识主键列并指定这些值。 可以按任意顺序指定主键列名称。  
@@ -84,7 +85,7 @@ CHANGETABLE (
  *Value*  
  是主键的值。 与列显示的对话框中，如果有多个主键列，必须以相同的顺序中指定的值*column_name*列表。  
   
- [AS] *table_alias* [ (*column_alias* [ ,...*n* ] ) ]  
+ [一样]*table_alias* [(*column_alias* [，...*n* ])]  
  为 CHANGETABLE 返回的结果提供名称。  
   
  *table_alias*  
@@ -219,8 +220,8 @@ WHERE
 ## <a name="see-also"></a>另请参阅  
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

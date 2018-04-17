@@ -1,31 +1,32 @@
 ---
-title: "按行绑定 |Microsoft 文档"
-ms.custom: 
+title: 按行绑定 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>按行绑定
 在使用按行绑定时，应用程序定义结构包含一个或两个，或在某些情况下三种模型，每个列的数据是要返回的元素。 第一个元素包含数据值，和第二个元素包含长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，该结构包含第三个元素。 然后，应用程序分配一个数组这些结构，其中包含有行的行集中的所有元素。  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  其中为行编号从 1 到行集的大小。 （一个减去的行号因为 C 中的索引的数组是从零开始。）下图显示行绑定的原理。 通常情况下，将绑定的列包括在结构中。 该结构可以包含不相关产生集列的字段。 列可以按任意顺序结构中放置，但为清楚起见的连续顺序显示。  
   
- ![显示行 &#45; 明智的做法绑定](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![显示行&#45;明智的做法绑定](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  例如，下面的代码创建一个结构中用于返回数据 OrderID、 销售人员，和状态列中，并且长度/销售人员和状态列指示符的元素。 它分配 10 这些结构，并将它们绑定到 OrderID、 销售人员，和状态列。  
   

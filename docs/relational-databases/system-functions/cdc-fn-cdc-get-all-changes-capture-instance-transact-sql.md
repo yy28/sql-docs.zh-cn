@@ -1,16 +1,16 @@
 ---
-title: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e56ac770a416d4597fd766d0d8e8612cccac262
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dc2457099b01c10da59eeff031b6532d2b8a4ace
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
+# <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为在指定日志序列号 (LSN) 范围内应用到源表的每项更改返回一行。 如果源行在该间隔内有多项更改，则每项更改都会表示在返回的结果集中。 除了返回更改数据外，四个元数据列还提供了将更改应用到另一个数据源所需的信息。 行筛选选项可控制元数据列的内容以及结果集中返回的行。 当指定“all”行筛选选项时，针对每项更改将只有一行来标识该更改。 当指定“all update old”选项时，更新操作会表示为两行：一行包含更新之前已捕获列的值，另一行包含更新之后已捕获列的值。  
@@ -57,12 +57,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *from_lsn*  
  LSN 值，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn*是**binary （10)**。  
   
- 仅行[cdc。 &#91; capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与**__ $start_lsn**大于或等于*from_lsn*中包括结果集。  
+ 仅行[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与**__ $start_lsn**大于或等于*from_lsn*包含在结果集。  
   
  *to_lsn*  
  LSN 值，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn*是**binary （10)**。  
   
- 仅行[cdc。 &#91; capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与**__ $start_lsn**小于或等于*from_lsn*或等于*to_lsn*包含在结果集。  
+ 仅行[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与**__ $start_lsn**小于或等于*from_lsn*于或等于*to_lsn*包括在结果集中。  
   
  <row_filter_option> ::= { all | all update old }  
  控制元数据列的内容和结果集中所返回的行的选项。  
@@ -118,7 +118,7 @@ GO
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
  [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

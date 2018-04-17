@@ -1,16 +1,16 @@
 ---
-title: "记录生成过程 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 记录生成过程 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], record generation process
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7e494f0d849834bfe4434f42da1de8fddb9d10d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>记录生成过程 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 大容量加载处理 XML 输入数据并为 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的相应表准备记录。 XML 大容量加载中的逻辑确定何时生成新记录、要将哪些子元素或属性值复制到记录的字段以及何时完成记录并可以发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  
+  XML 大容量加载处理 XML 输入数据并为 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的相应表准备记录。 XML 大容量加载中的逻辑确定何时生成新记录、要将哪些子元素或属性值复制到记录的字段以及何时完成记录并可以发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  
   
  XML 大容量加载不将整个 XML 输入数据加载到内存中，在将数据发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前不生成完整的记录集。 这是因为 XML 输入数据可能是大文档，将整个文档加载到内存代价过大。 XML 大容量加载改为执行以下操作：  
   
@@ -50,7 +51,7 @@ XML 大容量加载处理 XML 输入数据并为 Microsoft [!INCLUDE[ssNoVersion
  XML 大容量加载处理常见映射架构批注，包括列和表映射（通过使用批注显式指定或通过默认映射隐式指定）以及联接关系。  
   
 > [!NOTE]  
->  此处假定您熟悉带批注的 XSD 或 XDR 映射架构。 有关架构的详细信息，请参阅[简介批注 XSD 架构 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)或[批注 XDR 架构 &#40; 弃用在 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  此处假定您熟悉带批注的 XSD 或 XDR 映射架构。 有关架构的详细信息，请参阅[简介批注 XSD 架构&#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)或[批注 XDR 架构&#40;SQLXML 4.0 中弃用&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
  了解记录生成需要了解以下概念：  
   
@@ -226,7 +227,7 @@ XML 大容量加载处理 XML 输入数据并为 Microsoft [!INCLUDE[ssNoVersion
 ## <a name="exceptions-to-the-record-generation-rule"></a>记录生成规则的例外情况  
  如果节点属于 IDREF 或 IDREFS 类型，则在它进入作用域时，XML 大容量加载不为该节点生成记录。 您必须确保在架构的同一位置存在记录的完整描述。 **Dt: type ="nmtokens"**批注将被忽略，就像忽略 IDREFS 类型。  
   
- 例如，考虑下面的 XSD 架构描述**\<客户 >**和**\<顺序 >**元素。 **\<客户 >**元素包括**OrderList** IDREFS 类型的属性。 **\<Sql:relationship >**标记指定的客户和订单的列表之间的一个对多关系。  
+ 例如，考虑下面的 XSD 架构描述**\<客户 >**和**\<顺序 >**元素。 **\<客户 >**元素包括**OrderList** IDREFS 类型的属性。  **\<Sql:relationship >**标记指定的客户和订单的列表之间的一个对多关系。  
   
  以下是架构：  
   

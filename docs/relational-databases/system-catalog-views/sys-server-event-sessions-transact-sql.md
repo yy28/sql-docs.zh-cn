@@ -1,16 +1,16 @@
 ---
-title: "sys.server_event_sessions (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.server_event_sessions (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_event_sessions
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.server_event_sessions catalog view
 - xe
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd3b975a1f19481a2a6ee4c5efcd2cfd4558cf1a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d667301ca24752c0ea7b723e630c0fe124b8cf6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservereventsessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/27/2017
 |track_causality|**bit**|启用或禁用因果关系跟踪。 如果设置为 1 (ON)，跟踪会被启用且不同服务器连接上的相关事件可以建立关联。 默认设置为 0 (OFF)。 不可为 null。|  
 |startup_state|**bit**|值可以确定服务器启动时是否自动启动会话。 默认值为 0。 不可为 null。 是之一：<br /><br /> 0 (OFF)。 服务器启动时不启动会话。<br /><br /> 1 (ON)。 服务器启动时启动事件会话。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

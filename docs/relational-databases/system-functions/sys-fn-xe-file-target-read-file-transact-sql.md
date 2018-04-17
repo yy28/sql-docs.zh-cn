@@ -1,16 +1,16 @@
 ---
-title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fn_xe_file_target_read_file (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6284bd7690c715ed47177b42a5a1f5beb4b4b6a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   读取扩展事件异步文件目标创建的文件。 每行返回一个 XML 格式的事件。  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]接受 XEL 和 XEM 格式生成的跟踪结果。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]扩展事件仅支持跟踪结果的 XEL 格式。 我们推荐您使用 SQL Server Management Studio 来读取 XEL 格式的跟踪结果。    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]接受 XEL 和 XEM 格式生成的跟踪结果。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 扩展事件仅支持跟踪结果的 XEL 格式。 我们推荐您使用 SQL Server Management Studio 来读取 XEL 格式的跟踪结果。    
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +54,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>参数  
- *path*  
+ path  
  要读取的文件的路径。 *路径*可以包含通配符，并将文件的名称。 *路径*是**nvarchar(260)**。 没有默认值。 在 Azure SQL 数据库的上下文中，此值是指向 Azure 存储中的文件 HTTP URL。
   
  *mdpath*  
@@ -81,7 +82,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|XML 格式的事件内容。 不可为 null。|  
 |file_name|nvarchar(260)|包含事件的文件的名称。 不可为 null。|  
 |file_offset|**bigint**|包含事件的块在文件中的偏移位置。 不可为 null。|  
-|timestamp_utc|**datetime2**|**适用于**:[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />日期和事件的时间 （UTC 时区）。 不可为 null。|  
+|timestamp_utc|**datetime2**|适用范围：[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />日期和事件的时间 （UTC 时区）。 不可为 null。|  
 
   
 ## <a name="remarks"></a>注释  

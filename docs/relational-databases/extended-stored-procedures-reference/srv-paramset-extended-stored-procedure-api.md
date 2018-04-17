@@ -1,16 +1,16 @@
 ---
-title: "srv_paramset（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_paramset（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramset
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramset
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df6b781d289ec3420ff83f2cc344005627e93d0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  设置远程存储过程调用返回参数的值。 此函数已被 srv_paramsetoutput 函数取代。  
   
@@ -74,7 +74,7 @@ len
  指定要返回的数据的实际长度。 如果参数的数据类型的长度为常量且该数据类型不允许 null 值（例如 srvbit 或 srvint1），则将会忽略 len。  
   
 ## <a name="returns"></a>返回  
- 如果参数值设置成功，则返回 SUCCEED，否则返回 FAIL。 如果属于以下情况则返回 FAIL：无当前远程存储过程、没有第 n 个远程存储过程参数、参数不是返回参数以及 len 参数是非法的。  
+ 如果参数值设置成功，则返回 SUCCEED，否则返回 FAIL。 在没有任何当前的远程存储的过程，在没有时才时才返回 FAIL 没有*n*th 远程存储过程参数，该参数不是返回的参数，以及*len*参数不是合法。  
   
  如果 len 为 0，则返回 NULL。 将 len 设置为 0 是将 NULL 返回给客户端的唯一方法。  
   

@@ -1,28 +1,29 @@
 ---
-title: "sys.dm_xe_database_sessions （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.dm_xe_database_sessions （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85584709967e1ef7988a12389b5b40e30ee47a7d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: e06a13a3c12048b9f4005fc34fdfa3f2f3e9dd7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |From|若要|关系|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|多对一|  
-|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
+|sys.dm_xe_database_session_events.event_package_guid、 sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
 [Azure SQL 数据库中的扩展的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  

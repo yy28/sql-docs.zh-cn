@@ -1,16 +1,16 @@
 ---
-title: sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_cryptographic_provider_sessions (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_sessions
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b60590005ab185f4f03256a0e3845d9a4a61bee
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5ef45b73870f777c283481818e9e5e27cd6a6aa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,8 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|加密提供程序的标识号。|  
 |**session_handle**|**varbytes(8)**|加密会话句柄。|  
-|**identity**|**nvarchar(128)**|用于送至加密提供程序进行身份验证的标识。|  
-|**spid**|**short**|连接的会话 ID SPID。 有关详细信息，请参阅[@@SPID &#40;Transact SQL &#41;](../../t-sql/functions/spid-transact-sql.md).|  
+|**标识**|**nvarchar(128)**|用于送至加密提供程序进行身份验证的标识。|  
+|**spid**|**short**|连接的会话 ID SPID。 有关详细信息，请参阅 [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md)。|  
   
 ## <a name="remarks"></a>注释  
  **Sys.dm_cryptographic_provider_sessions**视图是对当前连接的公共可见。 若要查看所有加密的连接，你必须**控件**server 权限。  

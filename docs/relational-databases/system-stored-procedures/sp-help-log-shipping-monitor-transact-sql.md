@@ -1,16 +1,16 @@
 ---
-title: "sp_help_log_shipping_monitor (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_log_shipping_monitor (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d48e5d889890c9ab657733aec2d564bb1c2f7eb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,8 +61,8 @@ sp_help_log_shipping_monitor
 |**database_name**|**sysname**|数据库名称。|  
 |**time_since_last_backup**|**int**|最后一次备份日志以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_backup_file**|**nvarchar(500)**|上一个成功的备份日志文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
-|**backup_threshold**|**int**|上一次备份到引发 threshold_alert 错误之间的时间，以分钟为单位。 **backup_threshold**是**int**，默认值为**60 分钟**。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 可以使用更改此值[sp_add_log_shipping_primary_database &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
-|**is_backup_alert_enabled**|**bit**|指定是否将是警报时引发**backup_threshold**超出。 值之一 (**1**)，默认情况下，意味着将会引发警报。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 可以使用更改此值[sp_add_log_shipping_primary_database &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**backup_threshold**|**int**|上一次备份到引发 threshold_alert 错误之间的时间，以分钟为单位。 **backup_threshold**是**int**，默认值为**60 分钟**。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 可以使用更改此值[sp_add_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)。|  
+|**is_backup_alert_enabled**|**bit**|指定是否将是警报时引发**backup_threshold**超出。 值之一 (**1**)，默认情况下，意味着将会引发警报。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 可以使用更改此值[sp_add_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)。|  
 |**time_since_last_copy**|**int**|上次复制日志备份以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_copied_file**|**nvarchar(500)**|上一次成功复制的日志备份文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**time_since_last_restore**|**int**|上一次还原日志备份以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
@@ -78,7 +78,7 @@ sp_help_log_shipping_monitor
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sysmail_configure_sp (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sysmail_configure_sp (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 934f108783b76e070a15723543cafae59b80b705
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 91e53d75d3cf0b39e44d8832b7f629426f530beb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
  [**@parameter_value** = ] **'***parameter_value***'**  
  参数的新值。  
   
- [**@description** = ] **'***description***'**  
+ [**@description** =] *****说明*****  
  参数的说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -74,7 +74,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DatabaseMailExeMinimumLifeTime*|外部邮件进程保持活动状态的最少时间（以秒为单位）。 如果数据库邮件要发送多个邮件，增加此值可以使数据库邮件保持活动状态，避免频繁启动和停止的开销。|**600**|  
 |*DefaultAttachmentEncoding*|电子邮件附件的默认编码。|MIME|  
 |*MaxFileSize*|附件的最大大小（以字节为单位）。|**1000000**|  
-|*ProhibitedExtensions*|一组以逗号分隔的扩展名，具有这些扩展名的文件不能作为电子邮件附件发送。|**exe,dll,vbs,js**|  
+|*ProhibitedExtensions*|一组以逗号分隔的扩展名，具有这些扩展名的文件不能作为电子邮件附件发送。|**exe、 dll、 vbs、 js**|  
 |*LoggingLevel*|指定数据库邮件日志中要记录的消息。 以下数字值之一：<br /><br /> 1 - 表示正常模式。 仅记录错误。<br /><br /> 2 - 表示扩展模式。 记录错误、警告和信息性消息。<br /><br /> 3 - 表示详细模式。 记录错误、警告、信息性消息、成功消息和其他内部消息。 该模式用于进行故障排除。|**2**|  
   
  存储的过程**sysmail_configure_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
@@ -103,7 +103,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
   
 ## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
- [sysmail_help_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
- [数据库邮件存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [sysmail_help_configure_sp &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
+ [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

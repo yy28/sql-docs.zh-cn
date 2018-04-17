@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubscriber (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changesubscriber (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b52c51d2e516b8d4c4f787c8e5d56d95922b2d4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fd7a0652f2c1f00ec2d577d0c8e74efdc19558d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,17 +65,17 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber=**] *订阅服务器*  
+ [  **@subscriber=**] *****订阅服务器*****  
  要更改其上的选项的订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
   
  [  **@type=**]*类型*  
  订阅服务器类型。 *类型*是**tinyint**，默认值为 NULL。 **0**指示[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 数据源服务器订阅服务器。  
   
- [  **@login=**] *登录*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 ID。 *登录名*是**sysname**，默认值为 NULL。  
+ [  **@login=**] *****登录*****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 ID。 login 的数据类型为 sysname，默认值为 NULL。  
   
- [  **@password=**] *密码*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证密码。 *密码*是**sysname**，默认值为 **%** 。 **%**指示密码属性不变。  
+ [  **@password=**] *****密码*****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证密码。 *密码*是**sysname**，默认值为**%**。 **%** 指示密码属性不变。  
   
  [  **@commit_batch_size=**] *commit_batch_size*  
  支持它仅仅是为了保持向后兼容。  
@@ -89,7 +89,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  安排分发任务所使用的频率。 *frequency_type*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|按需|  
@@ -106,7 +106,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  分发任务的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|第一个|  
 |**2**|第二个|  
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  在指定期内重新安排计划的频率。 *frequency_subday*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二个|  
@@ -142,18 +142,18 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@active_end_date=**] *active_end_date*  
  停止安排分发任务的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [  **@description=**] *说明*  
+ [  **@description=**] *****说明*****  
  可选文本说明。 *说明*是**nvarchar （255)**，默认值为 NULL。  
   
  [  **@security_mode=**] *security_mode*  
  所实现的安全模式。 *security_mode*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证|  
 |**1**|Windows 身份验证|  
   
- [  **@publisher** =] *发布服务器*  
+ [ **@publisher**=] *****发布服务器*****  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -165,14 +165,14 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="remarks"></a>注释  
  **sp_changesubscriber**在所有类型的复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changesubscriber**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addsubscriber &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

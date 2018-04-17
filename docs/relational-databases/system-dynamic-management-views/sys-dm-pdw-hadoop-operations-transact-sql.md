@@ -1,30 +1,31 @@
 ---
-title: sys.dm_pdw_hadoop_operations (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_pdw_hadoop_operations (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
-caps.latest.revision: 
+caps.latest.revision: 5
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ccb851fc349e31206ca5e76f050a1413c8c7405
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: c5275136bbe6ab34a9bfa5aca85a45a1af683b6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,14 +34,14 @@ ms.lasthandoff: 02/03/2018
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|对于此外部 Hadoop 操作的 ID。|中的 ID 相同[sys.dm_pdw_exec_requests &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|指此 Hadoop 操作的查询步骤的索引。|与在 step_index 相同[sys.dm_pdw_request_steps &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|request_id|**nvarchar(32)**|对于此外部 Hadoop 操作的 ID。|中的 ID 相同[sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|step_index|**int**|指此 Hadoop 操作的查询步骤的索引。|与在 step_index 相同[sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |operation_type|**nvarchar(255)**|描述外部操作的类型。|外部 Hadoop Operation|  
 |operation_name|**nvarchar(4000)**|Map-reduce 作业，作业 ID。 此值由 Hadoop 后返回[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]提交作业。||  
 |map_progress|**float**|到目前为止消耗了映射作业的输入数据的百分比。|一个浮点数字之间，以及包括 0 和 100 之间。|  
 |reduce_progress|**int**|化简作业已完成百分比...|一个浮点数字之间，以及包括 0 和 100 之间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [系统视图 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

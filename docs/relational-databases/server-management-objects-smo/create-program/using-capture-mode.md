@@ -1,31 +1,32 @@
 ---
-title: "使用捕获模式 |Microsoft 文档"
-ms.custom: 
+title: 使用捕获模式 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, capture mode
 - capture mode [SMO]
 - SMO [SQL Server], capture mode
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6452457dfb60a0a99f405907fb2ae01658b30412
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d2c40023b2a4bab78f6d3d68c059ba7c8e8f2232
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-capture-mode"></a>使用捕获模式
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
   SMO 程序可以捕获和记录该程序发出的等效 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，代替（或外加）该程序执行的语句。 通过使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象，或者通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server> 属性，启用捕获模式。  
   
 ## <a name="example"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="enabling-capture-mode-in-visual-basic"></a>在 Visual Basic 中启用捕获模式  

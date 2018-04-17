@@ -1,16 +1,16 @@
 ---
-title: "sys.security_predicates (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.security_predicates (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - sys.security_predicates catalog view
 - security_predicates catalog view
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 472c9c6504b010d6abfea0d3161ada98e9e0f5f6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 51799910d0e240d14b231c0d2c8d97f36cca66d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |操作|**int**|为谓词指定的操作的类型：<br /><br /> NULL = 所有适用的操作<br /><br /> 1 = 后插入<br /><br /> 2 = 更新后<br /><br /> 3 = 更新前<br /><br /> 4 = 之前删除|  
 |operation_desc|**nvarchar(60)**|为谓词指定的操作的类型：<br /><br /> NULL<br /><br /> 后插入<br /><br /> AFTER UPDATE<br /><br /> 更新之前<br /><br /> 在删除之前|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有主体**ALTER ANY SECURITY POLICY**权限有权访问此目录视图，以及具有任何人都中的所有对象**VIEW DEFINITION**对象上。  
   
 ## <a name="see-also"></a>另请参阅  

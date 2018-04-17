@@ -1,15 +1,16 @@
 ---
-title: "获取长整型数据 |Microsoft 文档"
-ms.custom: 
+title: 获取长整型数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb349dd9bc791659dc518aa66cbc40e958dbe66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ff0a11691216d03edc80d5be16c18f428664e7b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-long-data"></a>获取长整型数据
 Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 255 个字符的二进制数据。 此数据可能已经足够小，无法存储在单个缓冲区中，例如有几个千位字符的一部分描述。 但是，它可能太长，无法存储在内存中，如长文本文档或位图。 由于此类数据不能存储在单个缓冲区，可从使用部件中的驱动程序检索**SQLGetData**已提取的行中的其他数据之后。  

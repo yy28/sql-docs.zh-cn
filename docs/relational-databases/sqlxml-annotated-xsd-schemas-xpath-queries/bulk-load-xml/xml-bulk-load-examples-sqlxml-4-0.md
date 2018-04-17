@@ -1,16 +1,16 @@
 ---
-title: "XML 大容量加载示例 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: XML 大容量加载示例 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - overflow-field annotation
@@ -34,20 +34,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大容量加载示例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-以下示例说明 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 XML 大容量加载功能。 每个示例都提供了 XSD 架构及其等效的 XDR 架构。  
+  以下示例说明 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 XML 大容量加载功能。 每个示例都提供了 XSD 架构及其等效的 XDR 架构。  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Bulk Loader 脚本 (ValidateAndBulkload.vbs)  
  以下脚本，以编写[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual Basic Scripting Edition (VBScript)，将 XML 文档加载到 XML DOM; 针对架构; 对它进行验证并，如果文档是有效的执行 XML 大容量加载到负载 XML 插入到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。 此脚本可用于本主题后面提到它的每个单独示例。  

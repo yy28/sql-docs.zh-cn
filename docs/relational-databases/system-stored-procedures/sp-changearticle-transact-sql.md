@@ -1,16 +1,16 @@
 ---
-title: "sp_changearticle (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changearticle (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 
+caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9f5c5722d588d864d698772c063efc64425d679d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,25 +52,25 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  包含项目的发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [  **@article=**] *文章*  
+ [  **@article=**] *****文章*****  
  将更改其属性的项目的名称。 *文章*是**sysname**，默认值为 NULL。  
   
- [  **@property=**] *属性*  
+ [  **@property=**] *****属性*****  
  要更改的项目属性。 *属性*是**nvarchar(100)**。  
   
- [  **@value=**] *值*  
+ [  **@value=**] *****值*****  
  项目属性的新值。 *值*是**nvarchar （255)**。  
   
  下表说明项目的属性和这些属性的值。  
   
-|“属性”|值|Description|  
+|属性|值|Description|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
-|**description**||项目的新说明项。|  
+|**说明**||项目的新说明项。|  
 |**dest_object**||提供该列是为了向后兼容。 使用**dest_table**。|  
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
@@ -83,7 +83,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**无**|不使用命令。|  
 ||**拖放**|删除目标表。|  
 ||**删除**|删除目标表。|  
-||**截断**|截断目标表。|  
+||**truncate**|截断目标表。|  
 |**pub_identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**schema_option**||为给定项目指定架构生成选项的位图。 *schema_option*是**binary （8)**。 有关详细信息，请参阅本主题后面的备注一节。|  
 ||**0x00**|通过快照代理禁用脚本。|  
@@ -124,7 +124,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[将脚本执行之前和之后应用快照](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
 ||**0x1000000000**|将公共语言运行时 (CLR) 用户定义类型 (Udt) 大于 8000 个字节转换**varbinary （max)**以便类型 UDT 的列可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||**0x2000000000**|将转换**hierarchyid**数据类型设置为**varbinary （max)**以便类型的列**hierarchyid**可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关如何使用**hierarchyid**列中复制的表，请参阅[hierarchyid &#40;Transact SQL &#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|将转换**hierarchyid**数据类型设置为**varbinary （max)**以便类型的列**hierarchyid**可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关如何使用**hierarchyid**列中复制的表，请参阅[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|复制表的任何筛选的索引。 有关筛选的索引的详细信息，请参阅[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。|  
 ||**0x8000000000**|将转换**geography**和**几何图形**数据类型到**varbinary （max)** ，以便这些类型的列可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|复制类型的列的索引**geography**和**几何图形**。|  
@@ -141,7 +141,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**字符串文本**|使用字符串文字值将更改传播给订阅服务器。|  
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
 |**表空间**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
-|**阈值**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
+|**threshold**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
 |**类型**||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
 ||**logbased manualboth**|具有手动筛选器和手动视图并且基于日志的项目。 此选项需要*sync_object*和*筛选器*属性也进行设置。 Oracle 发布服务器不支持。|  
@@ -163,7 +163,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要生成新快照的属性，请参阅“备注”部分。  
   
- [  **@force_reinit_subscription=]***force_reinit_subscription*  
+ [**@force_reinit_subscription=] * * * force_reinit_subscription*  
  确认此存储过程执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
   
  **0**指定文章的更改不会导致要重新初始化的订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
@@ -172,7 +172,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要重新初始化所有现有订阅的属性，请参阅“备注”部分。  
   
- [  **@publisher** =] *发布服务器*  
+ [ **@publisher**=] *****发布服务器*****  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -181,7 +181,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **sp_changearticle**快照复制和事务复制中使用。  
   
  当项目所属的发布，支持对等事务复制时，可以仅更改**说明**， **ins_cmd**， **upd_cmd**，和**del_cmd**属性。  
@@ -255,10 +255,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="see-also"></a>另请参阅  
  [查看和修改项目属性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_enumeratependingschemachanges (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_enumeratependingschemachanges (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumeratependingschemachanges
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63ad21e40d524e2374434d733e1cc4357d6a9b23
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e6f388bbfa451adeef2a30d04160688037b268b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] *发布*  
+ [  **@publication=** ] *****发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@starting_schemaversion=** ] *starting_schemaversion*  
@@ -72,11 +72,11 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
  **sp_enumeratependingschemachanges**、 用于[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)、 适用于合并复制可支持性和应仅当其他纠正措施，如重新初始化，无法纠正这种情况。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_enumeratependingschemachanges**。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;Transact SQL &#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;Transact SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

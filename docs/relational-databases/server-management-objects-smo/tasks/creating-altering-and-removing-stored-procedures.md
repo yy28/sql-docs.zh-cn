@@ -1,29 +1,30 @@
 ---
-title: "创建、 更改和删除存储的过程 |Microsoft 文档"
-ms.custom: 
+title: 创建、 更改和删除存储的过程 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22ab7b6ab6ee687a0d5dba1c37be5f72f308b117
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 66805029b98ddcf7a94729e982f012cba638f43e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>创建、更改和删除存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义该存储的过程的脚本。 这些参数需要 @ 前缀，必须分别使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象创建并且将其添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合中。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除存储过程  
  此代码示例演示如何创建一个存储的过程作为[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 如果提供了雇员的 ID 号，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  

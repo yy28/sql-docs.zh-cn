@@ -2,7 +2,7 @@
 title: SQLFetchScroll 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll Function（SQLFetchScroll 函数）
 **一致性**  
@@ -169,7 +169,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
-|*开始之前*|@shouldalert|  
+|*开始之前*|1|  
 |*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*在结束后*|  
 |*在结束后*|*在结束后*|  
@@ -200,8 +200,8 @@ SQLRETURN SQLFetchScroll(
 |*(开始操作之前和 FetchOffset > 0)或者 (后端和 FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart 和 FetchOffset < = 0*|*开始之前*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*开始之前*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124;FetchOffset &#124;> RowsetSize* <sup>[3]</sup>|*开始之前*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124;FetchOffset &#124;< = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*开始之前*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*在结束后*|  
 |*在结束和 FetchOffset 后 > = 0*|*在结束后*|  
@@ -217,9 +217,9 @@ SQLRETURN SQLFetchScroll(
   
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124;FetchOffset &#124;< = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 AND &#124;FetchOffset &#124;> LastResultRow AND &#124;FetchOffset &#124;> RowsetSize* <sup>[2]</sup>|*开始之前*|  
-|*FetchOffset < 0 AND &#124;FetchOffset &#124;> LastResultRow AND &#124;FetchOffset &#124;< = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*开始之前*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*开始之前*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*在结束后*|  
@@ -294,9 +294,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |插入行 21 到 22 之间的行|PRIOR|0|11 到 20|  
 |插入行 20 和 21 之间的行|PRIOR|0|12 到 20 插入的行|  
 |删除第 21 行|RELATIVE|0|22 到 31<sup>[2]</sup>|  
-|删除第 21 行|RELATIVE|@shouldalert|22 到 31|  
+|删除第 21 行|RELATIVE|1|22 到 31|  
 |插入行 21 到 22 之间的行|RELATIVE|0|21，插入的行，22 到 29 个|  
-|插入行 21 到 22 之间的行|RELATIVE|@shouldalert|22 到 31|  
+|插入行 21 到 22 之间的行|RELATIVE|1|22 到 31|  
 |删除第 21 行|ABSOLUTE|21|22 到 31<sup>[2]</sup>|  
 |删除行 22|ABSOLUTE|21|21，23 到 31|  
 |插入行 21 到 22 之间的行|ABSOLUTE|22|插入的行，22 到 29 个|  
@@ -338,7 +338,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驱动程序  
  在应用程序调用**SQLFetchScroll** ODBC 2.x 驱动程序，在驱动程序管理器将映射到此调用**SQLExtendedFetch**。 它将传递的自变量的以下值**SQLExtendedFetch**。  
   
-|SQLExtendedFetch 自变量|ReplTest1|  
+|SQLExtendedFetch 自变量|“值”|  
 |-------------------------------|-----------|  
 |StatementHandle|中的 StatementHandle **SQLFetchScroll**。|  
 |FetchOrientation|中的 FetchOrientation **SQLFetchScroll**。|  

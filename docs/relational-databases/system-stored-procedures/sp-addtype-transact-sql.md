@@ -1,16 +1,16 @@
 ---
-title: "sp_addtype (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addtype (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addtype
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61a5e94d0e57bdaaac63181c9257defdfd87d8eb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   创建别名数据类型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,34 +62,34 @@ sp_addtype [ @typename = ] type,
 |**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
 |**float**|**image**|**int**|  
-|**money**|**nchar （n)**|**ntext**|  
-|**numeric**|**nvarchar （n)**|**real**|  
+|**money**|**nchar(n)**|**ntext**|  
+|**numeric**|**nvarchar(n)**|**real**|  
 |**smalldatetime**|**int**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
- 如果参数中嵌入有空格或标点符号，则必须用引号将该参数引起来。 有关可用的数据类型的详细信息，请参阅[数据类型 &#40;Transact SQL &#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ 如果参数中嵌入有空格或标点符号，则必须用引号将该参数引起来。 有关可用的数据类型的详细信息，请参阅[数据类型&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
  *n*  
  非负整数，指示所选数据类型的长度。  
   
  *P*  
- 非负整数，指示可保留的最大十进制位数，包括小数点前面和后面的数字。 有关详细信息，请参阅[小数和数值 &#40;Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ 非负整数，指示可保留的最大十进制位数，包括小数点前面和后面的数字。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  *s*  
- 非负整数，指示小数点后面的小数数字可保留的最大十进制位数，它必须小于或等于精度值。 有关详细信息，请参阅[小数和数值 &#40;Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ 非负整数，指示小数点后面的小数数字可保留的最大十进制位数，它必须小于或等于精度值。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
- [  **@nulltype =** ] *null_type*  
- 指示别名数据类型处理空值的方式。 *null_type*是**varchar (**8**)**，默认值为 NULL，并且必须括在单引号 （'NULL'、 'NOT NULL'，或 NONULL）。 如果*null_type*未显式定义**sp_addtype**，设置为当前默认为空。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果 **@phystype** 是**位**，和 **@nulltype** 未指定，则默认值不是 NULL。  
+ [  **@nulltype =** ] *****null_type*****  
+ 指示别名数据类型处理空值的方式。 *null_type*是**varchar (**8**)**，默认值为 NULL，并且必须括在单引号 （'NULL'、 'NOT NULL'，或 NONULL）。 如果*null_type*未显式定义**sp_addtype**，设置为当前默认为空。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果**@phystype**是**位**，和**@nulltype**未指定，则默认值不是 NULL。  
   
 > [!NOTE]  
->  *Null_type*参数仅定义此数据类型的默认值为 null。 如果在创建表的过程中使用别名数据类型时显式地定义了为空性，那么该为空性优先于已定义的为空性。 有关详细信息，请参阅[ALTER TABLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)和[创建 TABLE &#40;Transact SQL &#41;](../../t-sql/statements/create-table-transact-sql.md).  
+>  *Null_type*参数仅定义此数据类型的默认值为 null。 如果在创建表的过程中使用别名数据类型时显式地定义了为空性，那么该为空性优先于已定义的为空性。 有关详细信息，请参阅[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  别名数据类型名称在数据库中必须是唯一的，但是名称不同的别名数据类型可以有相同的定义。  
@@ -103,7 +103,7 @@ sp_addtype [ @typename = ] type,
   
  别名数据类型不能定义使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**，**表**， **xml**， **varchar （max)**， **nvarchar (max)**或**varbinary （max)**数据类型。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**或**db_ddladmin**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -142,16 +142,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindefault &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_bindrule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_droptype &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_bindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_droptype &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [sp_unbindrule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindefault &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

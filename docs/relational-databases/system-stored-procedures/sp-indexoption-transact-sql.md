@@ -1,16 +1,16 @@
 ---
-title: "sp_indexoption (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_indexoption (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_indexoption
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2cfe32d5260c2c6e26feb52fbb985ac2ec4db79f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/02/2018
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 自动从页级锁、行级锁或表级锁中进行选择。 您不必手动设置这些选项。 **sp_indexoption**为适当的特定类型的锁是始终明确地知道专家用户提供。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]请改用[ALTER INDEX &#40;Transact SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 请改用[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,26 +53,26 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@IndexNamePattern=**] *table_or_index_name*  
+ [  **@IndexNamePattern=**] *****table_or_index_name*****  
  用户定义的表或索引的限定或非限定名称。 *table_or_index_name*是**nvarchar(1035)**，无默认值。 仅当指定限定索引或表名时，才需要使用引号。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 如果指定表名时未使用索引，则将为该表中的所有索引和表本身设置指定的选项（前提是不存在聚集索引）。  
   
- [  **@OptionName =**] *option_name*  
+ [  **@OptionName =**] *****option_name*****  
  索引选项名。 *option_name*是**varchar （35)**，无默认值。 *option_name*可以具有以下值之一。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|如果为 TRUE，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。 如果为 FALSE，则不使用行锁。 默认值为 TRUE。|  
 |**AllowPageLocks**|如果为 TRUE，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。 如果为 FALSE，则不使用页锁。 默认值为 TRUE。|  
 |**DisAllowRowLocks**|如果为 TRUE，则不使用行锁。 如果为 FALSE，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。|  
 |**DisAllowPageLocks**|如果为 TRUE，则不使用页锁。 如果为 FALSE，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。|  
   
- [  **@OptionValue =**] *值*  
+ [  **@OptionValue =**] *****值*****  
  指定是否*option_name*设置是启用 （TRUE，在是或 1） 还是禁用 (FALSE，关闭否，则为 0)。 *值*是**varchar(12)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或大于 0（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  不支持 XML 索引。 如果指定 XML 索引，或指定了不包含索引名的表名，且该表包含 XML 索引，则该语句将失败。 若要设置这些选项，使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)相反。  
   
  若要显示的当前行和页锁定属性，请使用[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)或[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_refreshsqlmodule (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_refreshsqlmodule (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a95c2e905efa377edb83fd82a104758853b18271
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0a5979dd6b797ced4b4785fedd068671ae9e05f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name=** ] *模块名*  
+ [  **@name=** ] *****模块名*****  
  是存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *模块名*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *模块名*不能绑定到架构的。 *模块名*是**nvarchar**，无默认值。 *模块名*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。  
   
  [ **，** @**命名空间**=]  \<类 >   
@@ -86,7 +87,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  在运行时，将删除与对象关联的任何签名**sp_refreshsqlmodule**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对相应模块拥有 ALTER 权限，对该对象引用的任何 CLR 用户定义类型和 XML 架构集合拥有 REFERENCES 权限。 当指定的模块是数据库级 DDL 触发器时，需要在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限。 当指定的模块是服务器级 DDL 触发器时，需要拥有 CONTROL SERVER 权限。  
   
  此外，对于使用 EXECUTE AS 子句定义的模块，要求对指定主体拥有 IMPERSONATE 权限。 通常，刷新对象不会更改其 EXECUTE AS 主体，除非模块是使用 EXECUTE AS USER 定义的，并且主体的用户名现在解析为与创建模块时的用户不同的用户。  
@@ -177,7 +178,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_refreshview &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

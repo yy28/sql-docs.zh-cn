@@ -1,15 +1,16 @@
 ---
-title: "编写 ODBC 3.x 应用程序 |Microsoft 文档"
-ms.custom: 
+title: 编写 ODBC 3.x 应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application upgrades [ODBC], about upgrading
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da096dd38c87131259f9ea626fa874c0b83b7b95
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c9a713564688e97c4b9b649880e989598a58179f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-odbc-3x-applications"></a>编写 ODBC 3.x 应用程序
 当一个 ODBC 2。*x*应用程序升级到 ODBC 3。*x*，以便它适用于这两个 ODBC 2 应编写它。*x*和 3。*x*驱动程序。 应用程序应满足条件的代码，以充分利用 ODBC 3。*x*功能。  

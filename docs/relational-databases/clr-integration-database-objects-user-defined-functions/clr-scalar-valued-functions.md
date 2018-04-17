@@ -1,15 +1,15 @@
 ---
-title: "CLR 标量值函数 |Microsoft 文档"
-ms.custom: 
+title: CLR 标量值函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - SVF
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
-caps.latest.revision: 
+caps.latest.revision: 81
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4715f0f4133c80276a11d5c10902a2cbc906b0d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 250b86d882caab50c5c7862ee55c358f4ff06c2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 标量值函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。您可以使用任何 .NET Framework 编程语言以托管代码形式创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成和托管代码之间进行选择的优势的信息和[!INCLUDE[tsql](../../includes/tsql-md.md)]，请参阅[CLR 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+  标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。您可以使用任何 .NET Framework 编程语言以托管代码形式创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成和托管代码之间进行选择的优势的信息和[!INCLUDE[tsql](../../includes/tsql-md.md)]，请参阅[CLR 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 标量值函数的要求  
  在 .NET Framework 程序集中 .NET Framework  SVF 将实现为类的方法。 输入的参数，并从 SVF 返回的类型可以是任何支持的标量数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除**varchar**， **char**， **rowversion**， **文本**， **ntext**，**映像**，**时间戳**，**表**，或**光标**. SVF 必须确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和实现方法的返回数据类型相匹配。 类型转换有关的详细信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/09/2018
 >  在输入值相同且数据库状态相同的情况下，如果某函数并不总是产生相同的输出值，请不要将该函数标记为确定性函数。 如果函数不具备真正的确定性而将其标记为确定性函数，将可能产生损坏的索引视图和计算列。 通过设置标记为确定性函数**IsDeterministic**属性为 true。  
   
 ### <a name="table-valued-parameters"></a>表值参数  
- 表值参数 (TVP) 即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 TVP 提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 TVP 还有助于减少到服务器的往返次数。 可以将数据作为 TVP 发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关 Tvp 的详细信息，请参阅[使用表值参数 &#40; 数据库引擎 &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 表值参数 (TVP) 即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 TVP 提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 TVP 还有助于减少到服务器的往返次数。 可以将数据作为 TVP 发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关 Tvp 的详细信息，请参阅[使用表值参数 & #40; 数据库引擎 & #41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>CLR 标量值函数示例  
  下面是访问数据并返回一个整数值的 SVF 示例：  

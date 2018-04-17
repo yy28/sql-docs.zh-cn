@@ -1,16 +1,16 @@
 ---
-title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_fts_index_keywords_by_document (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_index_keywords_by_document_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - sys.dm_fts_index_keywords_by_document dynamic management function
 - full-text search [SQL Server], viewing keywords
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2662effefa1c05c33364923342e0f73829a1df3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 51026e420e509cfe4af315dfaee767c45f04bcbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -62,7 +63,7 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="arguments"></a>参数  
  db_id('*database_name*')  
- 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受数据库名称并返回数据库 ID，sys.dm_fts_index_keywords_by_document 使用此 ID 来查找指定的数据库。 如果*database_name*是省略，则返回当前数据库 ID。  
+ 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受数据库名称并返回数据库 ID，sys.dm_fts_index_keywords_by_document 使用此 ID 来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID。  
   
  object_id('*table_name*')  
  调用[OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md)函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
@@ -86,7 +87,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   关键字在整个全文索引中出现了多少次，即：  
   
-     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE **keyword**=*keyword_value* )  
+     ([总和](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) 其中**关键字**=*keyword_value* )  
   
 -   关键字在给定文档或行中出现了多少次。  
   
@@ -125,7 +126,7 @@ GO
  下面的示例显示 `HumanResources.JobCandidate` 示例数据库中的 `AdventureWorks2012` 表的文档级全文索引内容。  
   
 > [!NOTE]  
->  你可以通过执行提供的示例创建此索引`HumanResources.JobCandidate`表中[CREATE FULLTEXT INDEX &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  你可以通过执行提供的示例创建此索引`HumanResources.JobCandidate`表中[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)。  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   
@@ -134,11 +135,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [全文搜索和语义搜索动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)   
- [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
- [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [改进全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   
   

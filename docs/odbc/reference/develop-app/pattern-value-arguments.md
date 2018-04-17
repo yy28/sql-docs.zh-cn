@@ -1,31 +1,32 @@
 ---
-title: "模式值自变量 |Microsoft 文档"
-ms.custom: 
+title: 模式值自变量 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 39e6bf4734a63c79b09a78178e567900ff636bd3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pattern-value-arguments"></a>模式值自变量
 在目录中的某些参数函数，如*TableName*中的参数**SQLTables**，接受搜索模式。 这些自变量接受搜索模式如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;它们是如果此属性设置为 SQL_TRUE 不接受的搜索模式的标识符参数。  

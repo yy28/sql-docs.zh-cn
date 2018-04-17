@@ -1,15 +1,15 @@
 ---
-title: sp_rxPredict | Microsoft Docs
-ms.custom: 
+title: sp_rxPredict |Microsoft 文档
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -22,18 +22,18 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cef37349cd363ad7baea6300f3d236eefafd0046
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 生成基于存储模型的预测的值。
 
-提供在机器学习模型中几乎实时上评分。 `sp_rxPredict`为存储的过程用作包装器`rxPredict`函数中[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。 它用 C + 编写的并专门针对计分操作进行了优化。 它支持这两个 R 或 Python 机器学习模型。
+提供在机器学习模型中几乎实时上评分。 `sp_rxPredict` 为存储的过程用作包装器`rxPredict`函数中[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。 它用 C + 编写的并专门针对计分操作进行了优化。 它支持这两个 R 或 Python 机器学习模型。
 
 **本主题适用于**:  
 - SQL Server 2017  
@@ -98,9 +98,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-除了成为有效的 SQL 查询中的输入数据 *@inputData* 必须在存储模型中包括列与列兼容。
+除了成为有效的 SQL 查询中的输入数据*@inputData*必须在存储模型中包括列与列兼容。
 
-`sp_rxPredict`仅支持以下.NET 列类型： 双精度型、 float、 short、 ushort，long、 ulong 和字符串。 你可能需要使用实时评分之前筛选出你输入的数据中不支持的类型。 
+`sp_rxPredict` 仅支持以下.NET 列类型： 双精度型、 float、 short、 ushort，long、 ulong 和字符串。 你可能需要使用实时评分之前筛选出你输入的数据中不支持的类型。 
 
   有关相应 SQL 类型的信息，请参阅[SQL CLR 类型映射](https://msdn.microsoft.com/library/bb386947.aspx)或[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
 

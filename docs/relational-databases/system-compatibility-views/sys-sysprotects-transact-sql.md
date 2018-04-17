@@ -1,16 +1,16 @@
 ---
-title: "sys.sysprotects (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.sysprotects (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysprotects
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sysprotects compatibility view
 - sysprotects system table
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abde43e1d699c32b2a9cd21459d823692952e059
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 40aab84e4085bf0a8efb377f6e36952f60ad4b55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 |**grantor**|**int**|发出 GRANT 或 DENY 权限的用户的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
   
 ## <a name="see-also"></a>另请参阅  
- [将系统表映射到系统视图 &#40;Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [将系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

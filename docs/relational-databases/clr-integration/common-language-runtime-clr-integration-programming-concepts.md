@@ -1,15 +1,15 @@
 ---
-title: "公共语言运行时 (CLR) 集成编程概念 |Microsoft 文档"
-ms.custom: 
+title: 公共语言运行时 (CLR) 集成编程概念 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server]
 - .NET Framework [SQL Server]
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
-caps.latest.revision: 
+caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef0f1548b77e570bf41c8a5d0b720794e2329918
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c5617d2587af5fba42ed2dee3a0b96a674a7f579
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>公共语言运行时 (CLR) 集成编程概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集成了用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的 .NET Framework 的公共语言运行时 (CLR) 组件。 这意味着现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#）来编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合和流式表值函数。  
+  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集成了用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的 .NET Framework 的公共语言运行时 (CLR) 组件。 这意味着现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#）来编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合和流式表值函数。  
   
  Microsoft.SqlServer.Server 命名空间包括在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行 CLR 编程的核心功能。 但是，有关 Microsoft.SqlServer.Server 命名空间的文档位于 .NET Framework SDK。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书不包括该文档。  
   
@@ -43,13 +43,13 @@ ms.lasthandoff: 02/09/2018
   
  下表列出了本节的主题。  
   
- [公共语言运行时 &#40;CLR &#41;集成概述](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [公共语言运行时 & #40;CLR & #41;集成概述](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  提供 CLR 的简短概述，并说明如何以及为什么在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用该技术。 描述使用 CLR 创建数据库对象的好处。  
   
  [程序集（数据库引擎）](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用程序集来部署用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时 (CLR) 中驻留的一种托管代码语言（而非 [!INCLUDE[tsql](../../includes/tsql-md.md)]）编写的函数、存储过程、触发器、用户定义聚合和用户定义类型。  
   
- [使用公共语言运行时 &#40; 生成数据库对象CLR &#41;集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [使用公共语言运行时 & #40; 生成数据库对象CLR & #41;集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  描述可以使用 CLR 生成的对象种类，并说明生成 CLR 数据库对象时所要满足的要求。  
   
  [从 CLR 数据库对象进行数据访问](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -70,11 +70,11 @@ ms.lasthandoff: 02/09/2018
  [监视和故障排除管理数据库对象](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  介绍用于对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行的托管数据库对象和程序集进行监视和故障排除的工具的相关信息。  
   
- [使用方案和示例的公共语言运行时 &#40;CLR &#41;集成](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [使用方案和示例的公共语言运行时 & #40;CLR & #41;集成](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  描述使用 CLR 对象的应用场景和代码示例。  
   
 ## <a name="see-also"></a>另请参阅  
- [程序集 &#40; 数据库引擎 &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [程序集 & #40; 数据库引擎 & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [安装.NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

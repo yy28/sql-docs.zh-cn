@@ -1,15 +1,16 @@
 ---
-title: "书签 C 数据类型 |Microsoft 文档"
-ms.custom: 
+title: 书签 C 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C data types [ODBC], bookmark C data type
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e1547dd65d0a604e36f4a11280cfc3d38ee88f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 43a9c02694e121eb653d70693587d5728931f747
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bookmark-c-data-type"></a>书签 C 数据类型
 书签 C 数据类型允许应用程序检索书签。 书签 C 类型仅用于检索书签可以是长度; 中的变量的值它们不应转换为其他数据类型。 应用程序中检索结果的第 0 列从设置的书签**SQLBulkOperations** （与 SQL_ADD 的操作）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 有关详细信息，请参阅[书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  
@@ -40,4 +41,4 @@ ms.lasthandoff: 12/21/2017
 |C 类型标识符|ODBC C typedef|C 类型|  
 |-----------------------|--------------------|------------|  
 |SQL_C_BOOKMARK<br />（不推荐使用）|书签|无符号长整数|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|无符号 char *|
+|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|

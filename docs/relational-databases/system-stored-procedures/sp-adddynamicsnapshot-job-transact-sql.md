@@ -1,16 +1,16 @@
 ---
-title: "sp_adddynamicsnapshot_job (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_adddynamicsnapshot_job (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3b2201611c5b58b795063dd06ecc7c0918c57f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6590dad37937cb5b937ac49e541e2264a266de8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  为其添加筛选数据快照作业的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@suser_sname** =] *suser_sname*  
+ [ **@suser_sname**=] *****suser_sname*****  
  是在创建订阅的已筛选的数据快照将按值进行筛选时使用的值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)订阅服务器上的函数。 *suser_sname*是**sysname**，无默认值。 *suser_sname*应为 NULL，如果此函数不用于动态筛选发布。  
   
- [  **@host_name** =] *host_name*  
+ [ **@host_name**=] *****host_name*****  
  是在创建订阅的已筛选的数据快照将按值进行筛选时使用的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数。 *host_name*是**sysname**，无默认值。 *host_name*应为 NULL，如果此函数不用于动态筛选发布。  
   
- [  **@dynamic_snapshot_jobname** =] *dynamic_snapshot_jobname*  
+ [ **@dynamic_snapshot_jobname**=] *****dynamic_snapshot_jobname*****  
  创建的筛选数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，使用默认值为 NULL，而是可选的输出参数。 如果指定， *dynamic_snapshot_jobname*必须解析为分发服务器上唯一作业。 如果不指定，则将自动生成并在结果集中返回一个作业名，该名称的创建方式如下：  
   
 ```  
@@ -84,13 +84,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  生成动态快照作业的名称时，您可以截断标准快照作业的名称。  
   
- [  **@dynamic_snapshot_jobid** =] *dynamic_snapshot_jobid*  
+ [ **@dynamic_snapshot_jobid**=] *****dynamic_snapshot_jobid*****  
  创建的筛选数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，使用默认值为 NULL，而是可选的输出参数。  
   
  [  **@frequency_type=**] *frequency_type*  
  安排筛选数据快照作业所用的频率。 *frequency_type*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|按需|  
@@ -108,16 +108,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval*未使用。|  
 |**4** （默认值）|每个*frequency_interval*天，默认值为每日。|  
-|**8**|*frequency_interval*是一个或多个以下 (结合[&#124; &#40;按位 OR 运算符 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符):<br /><br /> **1** = 星期日 &#124;**2** = 星期一 &#124;**4** = 星期二 &#124;**8** = 星期三 &#124;**16** = 星期四 &#124;**32** = 星期五 &#124;**64** = 星期六|  
+|**8**|*frequency_interval*是一个或多个以下 (结合[ &#124; &#40;按位 OR&#41; &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符):<br /><br /> **1** = 星期日&#124; **2** = 星期一&#124; **4** = 星期二&#124; **8** = 星期三&#124; **16** =星期四&#124; **32** = 星期五&#124; **64** = 星期六|  
 |**16**|上*frequency_interval*天的月份。|  
-|**32**|*frequency_interval*是以下之一：<br /><br /> **1** = 星期日 &#124;**2** = 星期一 &#124;**3** = 星期二 &#124;**4** = 星期三 &#124;**5** = 星期四 &#124;**6** = 星期五 &#124;**7** = 星期六 &#124;**8** = 天 &#124;**9** = 工作日 &#124;**10** = 休息日|  
+|**32**|*frequency_interval*是以下之一：<br /><br /> **1** = 星期日&#124; **2** = 星期一&#124; **3** = 星期二&#124; **4** = 星期三&#124; **5** =星期四&#124; **6** = 星期五&#124; **7** = 星期六&#124; **8** = 日&#124; **9** = 工作日&#124; **10** = 休息日|  
 |**64**|*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  
   
  [  **@frequency_subday=**] *frequency_subday*  
  指定的单位*frequency_subday_interval*。 *frequency_subday*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二个|  
@@ -130,7 +130,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  每月中筛选数据快照作业的发生情况。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**1** （默认值）|第一个|  
 |**2**|第二个|  
@@ -155,7 +155,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>结果集  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识中的已筛选的数据快照作业[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系统表。|  
 |**dynamic_snapshot_jobname**|**sysname**|已筛选数据快照作业的名称。|  
@@ -170,13 +170,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_adddynamicsnapshot_job**。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [sp_dropdynamicsnapshot_job &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [sp_helpdynamicsnapshot_job &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [sp_dropdynamicsnapshot_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

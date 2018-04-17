@@ -1,35 +1,35 @@
 ---
-title: "程序集 （数据库引擎） |Microsoft 文档"
-ms.custom: 
+title: 程序集 （数据库引擎） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7e6626da65db973b6d8726518be357985a164b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aebb2c3aaadbae1a9c4ff158f8747624459b5eb9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies-database-engine"></a>程序集（数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本节中的主题旨在帮助您了解、设计和实现程序集。  
+  本节中的主题旨在帮助您了解、设计和实现程序集。  
   
  程序集是实例中使用的 DLL 文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来部署函数、 存储的过程、 触发器、 用户定义聚合和用一种由承载的托管的代码语言编写的用户定义类型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]而不是中的公共语言运行时 (CLR) [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   

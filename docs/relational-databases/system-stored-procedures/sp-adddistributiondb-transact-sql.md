@@ -1,16 +1,16 @@
 ---
-title: "sp_adddistributiondb (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_adddistributiondb (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6657074bade1db3cb050d6ca0c33e358d05e5f0c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +63,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**]*数据库*  
  要创建的分发数据库的名称。 *数据库*是**sysname**，无默认值。 如果指定的数据库已经存在并且尚未标记为分发数据库，那么将安装启用分发所需的对象并将数据库标记为分发数据库。 如果指定的数据库已经作为分发数据库启用，则返回错误。  
   
- [  **@data_folder=**] *data_folder*  
+ [  **@data_folder=**] *** * * data_folder*  
  用于存储分发数据库数据文件的目录的名称。 *data_folder*是**nvarchar （255)**，默认值为 NULL。 如果为 NULL，则使用该 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据目录，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
   
- [  **@data_file=**] *data_file*  
+ [  **@data_file=**] *****data_file*****  
  数据库文件的名称。 *data_file*是**nvarchar （255)**，默认值为**数据库**。 如果为 NULL，存储过程将使用数据库名称来构造文件名。  
   
  [  **@data_file_size=**] *data_file_size*  
  初始数据文件大小，以兆字节 (MB) 为单位。 *data_file_size 我*s **int**，默认值为 5 MB。  
   
- [  **@log_folder=**] *log_folder*  
+ [  **@log_folder=**] *****log_folder*****  
  数据库日志文件所在目录的名称。 *log_folder*是**nvarchar （255)**，默认值为 NULL。 如果为 NULL，则使用该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据目录，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
   
- [  **@log_file=**] *log_file*  
+ [  **@log_file=**] *****log_file*****  
  日志文件的名称。 *log_file*是**nvarchar （255)**，默认值为 NULL。 如果为 NULL，存储过程将使用数据库名称来构造文件名。  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -93,16 +93,16 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *security_mode*  
  同步时连接到分发服务器所使用的安全模式。 *security_mode*是**int**，默认值为 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证;**1**指定 Windows 集成身份验证。  
   
- [  **@login=**] *登录*  
- 连接到分发服务器以创建分发数据库时使用的登录名。 如果这是必需*security_mode*设置为**0**。 *登录名*是**sysname**，默认值为 NULL。  
+ [  **@login=**] *****登录*****  
+ 连接到分发服务器以创建分发数据库时使用的登录名。 如果这是必需*security_mode*设置为**0**。 login 的数据类型为 sysname，默认值为 NULL。  
   
- [  **@password=**] *密码*  
+ [  **@password=**] *****密码*****  
  连接到分发服务器时使用的密码。 如果这是必需*security_mode*设置为**0**。 *密码*是**sysname**，默认值为 NULL。  
   
  [  **@createmode=**] *createmode*  
  *createmode*是**int**，默认值为 1，并且可以为以下值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** （默认值）|CREATE DATABASE 或使用现有数据库，然后将应用**instdist.sql**文件以创建分发数据库中的复制对象。|  
@@ -177,13 +177,13 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_adddistributiondb**。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  

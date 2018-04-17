@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_index_usage_stats (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_db_index_usage_stats (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_usage_stats_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_usage_stats dynamic management view
 ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71a2bd78604cb106f4b686cc82058082d803b0e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/14/2018
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。  
   
 > [!NOTE]  
->  **sys.dm_db_index_usage_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[sys.dm_db_xtp_index_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+>  **sys.dm_db_index_usage_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[sys.dm_db_xtp_index_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
   
 > [!NOTE]  
 >  调用此视图从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用**sys.dm_pdw_nodes_db_index_usage_stats**。  
@@ -88,9 +89,9 @@ ms.lasthandoff: 02/14/2018
 
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
   

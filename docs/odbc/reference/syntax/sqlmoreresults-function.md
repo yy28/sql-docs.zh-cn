@@ -2,7 +2,7 @@
 title: SQLMoreResults 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1905665f1505cd484a6d2ab5c1f83008efc2298
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 032a1976d87f46072f594eb4e2336f9c1877dfdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 函数
 **一致性**  
@@ -61,7 +61,7 @@ SQLRETURN SQLMoreResults(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|在处理更改为批处理语句属性的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|在处理更改为批处理语句属性的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |40001|序列化失败|事务已回滚，因为资源死锁与另一个事务。|  
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  

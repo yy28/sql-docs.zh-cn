@@ -1,30 +1,31 @@
 ---
-title: "在 SMO 中配置 SQL Server |Microsoft 文档"
-ms.custom: 
+title: 在 SMO 中配置 SQL Server |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server, configuring
 - configuration options [SMO]
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f64bb51a733898d89f4c1cd67c2615fce6266a69
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 78c24369616a2af2abd279bbaa4788c80b157ea9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中配置 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/12/2018
  中的配置选项的所有<xref:Microsoft.SqlServer.Management.Smo.Configuration>对象必须由系统管理员更改。  
   
 ## <a name="examples"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>在 Visual Basic 中修改 SQL Server 配置选项  
  此代码示例说明如何在 Visual Basic .NET 中更新配置选项。 它还检索并显示指定配置选项的最大值和最小值的相关信息。 最后，程序会通知用户如果动态，进行更改，或之前的实例存储[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]重新启动。  

@@ -1,31 +1,32 @@
 ---
-title: "诊断 |Microsoft 文档"
-ms.custom: 
+title: 诊断 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC]
 - functions [ODBC], diagnostic information
 - diagnostic information [ODBC], about diagnostic information
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efbc34be3dc532b329863a98305952d90adcc9f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b6ffbcdac7a478f8edd6560610811ddff6952b0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostics"></a>诊断
 ODBC 中的函数返回了两种方式的诊断信息。 返回代码指示的总体成功或失败的函数，诊断记录提供有关函数的详细的信息。 至少一个诊断记录-标头记录 — 即使如果函数成功，则返回。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_changepublication (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changepublication (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f05323e102e4f68d7281dd517eaee00abfcdcdc7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8db735195ad0667944ca3e3710e629791662fd7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +50,18 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =** ] *发布*  
+ [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [  **@property =** ] *属性*  
+ [  **@property =** ] *****属性*****  
  要更改的发布属性。 *属性*是**nvarchar （255)**。  
   
- [  **@value =** ] *值*  
+ [  **@value =** ] *****值*****  
  新属性值。 *值*是**nvarchar （255)**，默认值为 NULL。  
   
  下表说明了可以更改的发布属性以及对这些属性值的限制。  
   
-|属性|值|Description|  
+|属性|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|可以为给定的发布中，创建匿名订阅和*immediate_sync*还必须是**true**。 对于对等发布，无法更改此属性。|  
 ||**false**|不能为给定发布创建匿名订阅。 对于对等发布，无法更改此属性。|  
@@ -118,8 +118,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|快照文件存储在指定的备用位置*alt_snapshot_folder*。|  
 |**status**|**活动**|发布创建后，发布数据立即可用于订阅服务器。 Oracle 发布服务器不支持。|  
 ||**非活动状态**|发布创建后，发布数据不可用于订阅服务器。 Oracle 发布服务器不支持。|  
-|**sync_method**|**本机**|同步订阅时，使用所有表的本机模式大容量复制输出。|  
-||**字符**|同步订阅时，使用所有表的字符模式大容量复制输出。|  
+|**sync_method**|**native**|同步订阅时，使用所有表的本机模式大容量复制输出。|  
+||**character**|同步订阅时，使用所有表的字符模式大容量复制输出。|  
 ||**并发**|在快照生成期间生成所有表的本机模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 ||**concurrent_c**|在快照生成期间生成所有表的字符模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 |**taskid**||不推荐使用该属性，也不再支持该属性。|  
@@ -138,7 +138,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0**指定文章的更改不会导致要重新初始化的订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   - **1**指定文章的更改导致现有订阅重新初始化订阅，可以授予权限，重新初始化订阅发生。  
   
-[  **@publisher**  =] *发布服务器*  
+[ **@publisher** = ] **'***publisher***'**  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
   > [!NOTE]  
@@ -174,14 +174,14 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changepublication](../../relational-databases/replication/codesnippet/tsql/sp-changepublication-tra_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changepublication**。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

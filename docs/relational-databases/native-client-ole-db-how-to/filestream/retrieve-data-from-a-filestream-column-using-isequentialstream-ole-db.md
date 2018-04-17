@@ -1,27 +1,28 @@
 ---
-title: "从使用 ISequentialStream (OLE DB) 的 FILESTREAM 列中检索数据 |Microsoft 文档"
-ms.custom: 
+title: 从使用 ISequentialStream (OLE DB) 的 FILESTREAM 列中检索数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a06aefdd07996a6e287a391d20673bc6837e4fbe
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5fc3b411c47c3caed5e5ed68b92a0fda325605da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,16 +30,16 @@ ms.lasthandoff: 01/24/2018
 
   此示例显示如何使用 ICommandText 接口中的 ISequentialStream 接口从 Filestream 列检索单个记录。  
   
- 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
  请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
   
  使用以下示例之一创建此示例读取的表：  
   
--   [将数据发送到 FILESTREAM 列使用 ISequentialStream 绑定到 ICommandText 参数 &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [将数据发送到 FILESTREAM 列使用 ISequentialStream 绑定到 ICommandText 参数 & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [将数据发送到 FILESTREAM 列使用 IRowsetFastUpload &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [将数据发送到 FILESTREAM 列使用 IRowsetFastUpload & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  复制第一个代码列表，并将其粘贴到名为 ISSHelper.h 的文件中。  
   

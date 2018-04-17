@@ -1,16 +1,16 @@
 ---
-title: "通过使用 CommandStream 属性执行模板文件 |Microsoft 文档"
-ms.custom: 
+title: 通过使用 CommandStream 属性执行模板文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - templates [SQLXML], SQLXML Managed Classes
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fbbbce8c44103da6a216ea2bcd973b8d464a374
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: be8ac123cdac0096c601aed3874ce4cab045d2e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>使用 CommandStream 属性执行模板文件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-此示例说明如何通过使用 SqlXmlCommand 对象的 CommandStream 属性指定 SQL 或 XPath 查询的包含的模板文件。 在此应用程序，FileStreamobject 打开命令文件，并将文件流分配作为执行 CommandStream。  
+  此示例说明如何通过使用 SqlXmlCommand 对象的 CommandStream 属性指定 SQL 或 XPath 查询的包含的模板文件。 在此应用程序，FileStreamobject 打开命令文件，并将文件流分配作为执行 CommandStream。  
   
  在下面的示例中，CommandType 属性被指定为 SqlXmlCommandType.Template （而不是作为 TemplateFile)。  
   

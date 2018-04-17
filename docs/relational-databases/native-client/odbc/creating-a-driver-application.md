@@ -1,15 +1,15 @@
 ---
-title: "创建 SQL Server Native Client ODBC 驱动程序应用程序 |Microsoft 文档"
-ms.custom: 
+title: 创建 SQL Server Native Client ODBC 驱动程序应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, architecture
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - ODBC, driver extensions
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da19702624b06775bd63dc3dc7d12bf6b7cd7a14
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 61fa9d1d5d8fb848f508aef50c9e6d3ea996eaec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-driver-application"></a>创建驱动程序应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,19 +86,19 @@ ms.lasthandoff: 01/25/2018
   
  许多 ODBC 驱动程序，包括[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序，则提供特定于驱动程序的 ODBC 扩展。 若要利用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的扩展，应用程序应包括 sqlncli.h 标头文件。 此头文件包含：  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的连接属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的连接属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序的特定语句属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端 ODBC 驱动程序的特定语句属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序的特定列属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端 ODBC 驱动程序的特定列属性。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的数据类型。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的用户定义数据类型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特有[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)类型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特有[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)类型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序诊断字段。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序诊断字段。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的诊断动态函数代码。  
   
@@ -125,6 +126,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [多线程应用程序](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client & #40; ODBC & #41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

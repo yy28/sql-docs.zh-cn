@@ -1,16 +1,16 @@
 ---
-title: "sp_check_dynamic_filters (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_check_dynamic_filters (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -31,16 +31,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 096c6ff70b712b283191afeddbb7e9d9c6afd36a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2ef3aff82bb8cb2223d77beaf7eb3ba72b3700be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication** =] *发布*  
+ [ **@publication**=] *****发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
@@ -81,12 +81,12 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
  如果已将发布定义为具有参数化行筛选器，但未找到参数化行筛选器，则将返回错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_check_dynamic_filters**。  
   
 ## <a name="see-also"></a>另请参阅  
  [为参数化筛选器与合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
- [sp_check_subset_filter &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
+ [sp_check_join_filter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_subset_filter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

@@ -1,29 +1,30 @@
 ---
-title: "在 SMO 中使用链接的服务器 |Microsoft 文档"
-ms.custom: 
+title: 在 SMO 中使用链接的服务器 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - linked servers [SQL Server], SMO
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53a4b6d33d1413673f4991fcaf0f4ce3687a2712
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5e14e7516cbf5998c89165efe6b55775d8da9ecb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-linked-servers-in-smo"></a>在 SMO 中使用链接服务器
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/12/2018
  在 SMO 中，已安装的 OLE-DB 访问接口由 <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings> 对象的集合表示。  
   
 ## <a name="example"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-c"></a>在 Visual C# 中创建指向 OLE-DB 访问接口服务器的链接  
  代码示例演示如何创建一个链接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]OLE DB，通过使用异类数据源<xref:Microsoft.SqlServer.Management.Smo.LinkedServer>对象。 通过指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]作为产品名称中，数据链接服务器上使用访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Client OLE DB 访问接口，这是正式 OLE DB 访问接口为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

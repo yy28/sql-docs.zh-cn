@@ -1,31 +1,32 @@
 ---
-title: "光标特征和游标类型 |Microsoft 文档"
-ms.custom: 
+title: 光标特征和游标类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f54cc2f954a67d7a9cb3a4dfa6f6a006b652611d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>光标特征和游标类型
 应用程序可以指定而不是指定游标类型 （只进、 静态、 键集驱动的或动态） 游标的特性。 为此，应用程序选择光标的可滚动性 （通过设置 SQL_ATTR_CURSOR_SCROLLABLE 语句属性） 和大小写 （通过设置 SQL_ATTR_CURSOR_SENSITIVITY 语句属性） 在打开将光标放在该语句之前句柄。 然后将驱动程序选择的最有效地提供特征的光标类型请求的应用程序。  

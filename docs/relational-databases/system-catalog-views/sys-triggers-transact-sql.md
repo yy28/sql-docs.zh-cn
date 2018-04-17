@@ -1,16 +1,16 @@
 ---
-title: "sys.triggers (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.triggers (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - triggers
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.triggers catalog view
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab5788614af71fe9fa4cab1a4f22e81d5a19a6d8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9649e579c74ee745b7649e7a812c39a6ce8557f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |**parent_class**|**tinyint**|触发器的父类。<br /><br /> 0 = DDL 触发器的数据库。<br /><br /> 1 = DML 触发器的对象或列。|  
 |**parent_class_desc**|**nvarchar(60)**|触发器的父类的说明。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|触发器的父实体的 ID，如下所示：<br /><br /> 0 = 父实体为数据库的触发器。<br /><br /> 对于 DML 触发器，这是**object_id**的表或在其定义的 DML 触发器的视图。|  
-|**type**|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|**类型**|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**type_desc**|**nvarchar(60)**|对象类型的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|触发器的创建日期。|  
 |**modify_date**|**datetime**|通过使用 ALTER 语句上次修改对象的日期。|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 |**is_not_for_replication**|**bit**|触发器是作为 NOT FOR REPLICATION 创建的。|  
 |**is_instead_of_trigger**|**bit**|1 = INSTEAD OF 触发器。<br /><br /> 0 = AFTER 触发器。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,31 +1,32 @@
 ---
-title: "标识符参数 |Microsoft 文档"
-ms.custom: 
+title: 标识符参数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - identifier arguments [ODBC]
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a6800d7cb73790c61ec94acaffdeb291fa6b475
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a4aed40268b5e9bb3dd3d4a37d43b45a7b6856ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identifier-arguments"></a>标识符的自变量
 如果带引号的标识符参数中的字符串，该驱动程序中删除前导空格和尾随空格，并将按原义在引号内的字符串。 如果不带引号的字符串，该驱动程序将删除尾随空白和折叠为大写的字符串。 设置标识符的参数为 null 指针返回 SQL_ERROR 和 SQLSTATE HY009 （不允许使用 null 指针），除非自变量是一个目录名称，并且不支持目录。  

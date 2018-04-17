@@ -1,15 +1,16 @@
 ---
-title: "可序列化性 |Microsoft 文档"
-ms.custom: 
+title: 可序列化性 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction isolation [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19a70f6afcceeac41ef983a5756409fabcb428af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aa983da3ad05b6f4c4ac29fbdf986a7a8a350e34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="serializability"></a>可序列化性
 理想情况下，事务应*可序列化*。 事务可认为是如果同时运行事务的结果是否相同按顺序运行它们的结果，可序列化-一个接一个，即。 它并不重要的事务，则首先执行，仅，结果不会反映任何事务的混合。  

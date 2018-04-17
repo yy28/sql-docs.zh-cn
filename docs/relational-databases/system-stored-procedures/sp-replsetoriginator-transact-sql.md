@@ -1,16 +1,16 @@
 ---
-title: "sp_replsetoriginator (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_replsetoriginator (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c4fc0aa2ee6dcb1b410c55977469d7d62c6f1dd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4ca4bc8e242989d15efbd0979e9024e6503bddfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@server_name=**] *server_name*  
+ [  **@server_name=**] *****server_name*****  
  要应用事务的服务器的名称。 *originating_server*是**sysname**，无默认值。  
   
- [  **@database_name=**] *database_name*  
+ [  **@database_name=**] *****database_name*****  
  要应用事务的数据库的名称。 *originating_db*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -59,7 +59,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="remarks"></a>注释  
  **sp_replsetoriginator**执行由分发代理记录应用复制事务的源。 该信息用于为具有环回属性集的双向事务订阅调用环回检测。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**发布服务器的成员上的固定的服务器角色**db_owner**固定的数据库角色上的发布数据库或在发布访问列表 (PAL) 的用户可以执行**sp_replsetoriginator**。  
   
 ## <a name="see-also"></a>另请参阅  

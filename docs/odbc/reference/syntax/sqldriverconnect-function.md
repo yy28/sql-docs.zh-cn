@@ -2,7 +2,7 @@
 title: SQLDriverConnect 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函数
 **一致性**  
@@ -109,7 +109,7 @@ SQLRETURN SQLDriverConnect(
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|缓冲区\* *OutConnectionString*不是否足够大以返回整个连接字符串，因此连接字符串已被截断。 在中返回未截断的连接字符串的长度 **StringLength2Ptr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S00|无效的连接字符串属性|连接字符串中指定了无效的属性关键字 (*InConnectionString*)，但该驱动程序时能够是否仍要连接到数据源。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|该驱动程序不支持指定的值的指向*ValuePtr*中的参数**SQLSetConnectAttr**和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|该驱动程序不支持指定的值的指向*ValuePtr*中的参数**SQLSetConnectAttr**和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S08|保存文件 DSN 时出错|中的字符串 *\*InConnectionString*包含**FILEDSN**关键字，但.dsn 文件未保存。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S09|无效的关键字|(DM) 中的字符串 *\*InConnectionString*包含**SAVEFILE**关键字而不是**驱动程序**或**FILEDSN**关键字。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08001|客户端无法建立连接|该驱动程序无法建立与数据源的连接。|  
@@ -151,11 +151,11 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>注释  
  连接字符串具有以下语法：  
   
- *连接字符串*:: =*空字符串*[;] &#124;*属性*[;] &#124;*属性*;*连接字符串*  
+ *连接字符串*:: =*空字符串*[;]&#124; *属性*[;]&#124; *属性*;*连接字符串*  
   
  *空字符串*:: =*属性*:: =*属性关键字*=*属性值*&#124;驱动程序 = [{}]*属性值*[}]  
   
- *零个以上*:: = DSN &#124;UID &#124;PWD &#124;*驱动程序的定义的零个以上*  
+ *零个以上*:: = DSN &#124; UID &#124; PWD &#124; *驱动程序的定义的零个以上*  
   
  *属性值*:: =*字符串*  
   

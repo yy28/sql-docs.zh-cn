@@ -1,16 +1,16 @@
 ---
-title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_fts_index_keywords_position_by_document (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_index_keywords_position_by_document_TSQL
@@ -22,18 +22,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afb129fac832bafca777747b078d4f44e18f2422
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cad111ec2dcfa8b0248c8dbd5e6e3842882f32b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
+# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回在索引文档中的关键字的位置信息。  
@@ -100,9 +100,9 @@ WHERE document_id = 7 AND display_term = 'performance';
 ## <a name="see-also"></a>另请参阅  
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [改进全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
- [全文搜索和语义搜索函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
- [全文搜索和语义搜索动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [全文搜索和语义搜索存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [全文搜索和语义搜索函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
+ [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文搜索和语义搜索存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.dm_fts_index_keywords_by_document (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: "使用 ODBC 表值参数 |Microsoft 文档"
-ms.custom: 
+title: 使用 ODBC 表值参数 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 050d0e33419b2f73fba8e5e7fd011d786fcb9f21
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dc60cd2dba6917fca0d2836112801a7a1477ecf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 表值参数的用法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/24/2018
   
  有时，应用程序将表值参数用于动态 SQL，此时必须提供该表值参数的类型名称。 如果是这种情况和连接的当前默认架构中未定义表值参数，则 SQL_CA_SS_TYPE_CATALOG_NAME 和 SQL_CA_SS_TYPE_SCHEMA_NAME 必须通过使用 SQLSetDescField 设置。 由于表类型定义和表值参数必须位于同一数据库中，在应用程序使用表值参数时不能设置 SQL_CA_SS_TYPE_CATALOG_NAME。 否则，SQLSetDescField 将报告错误。  
   
- 对于此方案的示例代码是在过程中`demo_fixed_TVP_binding`中[使用表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 对于此方案的示例代码是在过程中`demo_fixed_TVP_binding`中[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>行流式处理情况下的表值参数（使用执行时数据将数据作为 TVP 发送）  
  在此情况下，应用程序在驱动程序请求行时向其提供行，并且这些行流向服务器。 这样就无需将所有行缓存在内存中。 这是大容量插入/更新时的典型情况。 表值参数提供了介于参数数组和大容量复制之间的某个性能点。 也就是说：表值参数可以像参数数组那样易于编程，但它们在服务器端提供更高的灵活性。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/24/2018
   
  处理完所有表值参数列后，驱动程序将返回到表值参数以处理更多的表值参数数据行。 因此，对于执行时数据表值参数，驱动程序不遵循通常的顺序扫描绑定参数的方式。 将轮询绑定的表值参数，直到使用调用 SQLPutData *StrLen_Or_IndPtr*等于 0，在这段时间的驱动程序跳过表值参数列和将移到下一步的实际存储的过程参数。  当 SQLPutData 通过指示器值大于或等于 1 时，该驱动程序处理表值参数列和行按顺序直到其所有绑定的行和列的值。 然后驱动程序返回到表值参数。 从 SQLParamData 接收表值参数的标记，表值参数调用 SQLPutData (hstmt，NULL，n)，应用程序必须设置表值参数构成的列数据和指标的缓冲区内容下一步的行或行要传递到服务器。  
   
- 对于此方案的示例代码位于例程`demo_variable_TVP_binding`中[使用表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 对于此方案的示例代码位于例程`demo_variable_TVP_binding`中[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>从系统目录中检索表值参数元数据  
  当应用程序需要具有表值参数参数的过程 SQLProcedureColumns 时，DATA_TYPE 将返回如 SQL_SS_TABLE 和类型 _ 名称是表值参数的表类型的名称。 两个其他列添加到 SQLProcedureColumns 所返回的结果集： SS_TYPE_CATALOG_NAME 返回其中定义表值参数的表类型，并 SS_TYPE_SCHEMA_NAME 返回的架构名称的目录的名称，其中定义表值参数的表类型。 符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 出现在之前的早期版本中已添加的所有驱动程序特定列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和之后由 ODBC 本身规定的所有列。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/24/2018
   
  应用程序使用 SQLColumns 对于持久表，但必须首先设置 SQL_SOPT_SS_NAME_SCOPE 以指示它正在使用表类型，而不是实际的表相同的方式确定的表类型的列。 此外可以与表类型，使用 SQL_SOPT_SS_NAME_SCOPE 再次使用 SQLPrimaryKeys。  
   
- 对于此方案的示例代码位于例程`demo_metadata_from_catalog_APIs`中[使用表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 对于此方案的示例代码位于例程`demo_metadata_from_catalog_APIs`中[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>检索准备的语句的表值参数元数据  
  在此方案中，应用程序使用 SQLNumParameters 和 SQLDescribeParam 来检索元数据的表值参数。  
@@ -90,9 +91,9 @@ ms.lasthandoff: 01/24/2018
   
  应用程序使用 SQLColumns 检索列元数据，表值参数在此方案中，过，因为 SQLDescribeParam 并不返回表值参数列的列的元数据。  
   
- 对此用例的示例代码位于例程`demo_metadata_from_prepared_statement`中[使用表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 对此用例的示例代码位于例程`demo_metadata_from_prepared_statement`中[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

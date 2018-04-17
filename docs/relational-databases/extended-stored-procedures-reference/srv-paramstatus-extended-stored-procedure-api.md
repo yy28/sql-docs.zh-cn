@@ -1,16 +1,16 @@
 ---
-title: "srv_paramstatus（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_paramstatus（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramstatus
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramstatus
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ca30a57ad4196eb66c6cf9b7ea262d092fe5936
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: f091544fe79d09664350a312973e9d26a1a90cab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  返回特定远程存储过程调用参数的状态。  
   
@@ -62,7 +62,7 @@ n
  指示参数的编号。 第一个参数的编号为 1。  
   
 ## <a name="returns"></a>返回  
- 包含参数的状态标志的 int。 目前，只有一个标志：如果位 0 设置为 1，则参数为一个返回参数。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1。  
+ 包含参数的状态标志的 int。 目前，只有一个标志：如果位 0 设置为 1，则参数为一个返回参数。 如果没有任何*n*th 参数，或者如果没有远程存储的过程，返回-1。  
   
 ## <a name="remarks"></a>注释  
  此例程返回远程存储过程调用参数的状态标志。  

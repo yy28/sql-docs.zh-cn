@@ -1,16 +1,16 @@
 ---
-title: "sp_check_for_sync_trigger (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_check_for_sync_trigger (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 586498365ee695ee5dc92252af47ad7706e1adfb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 38dfc81498173fe6024095889d06d222d4d98201
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [ **@trigger_op =** ]*trigger_output_parameters*输出  
  指定输出参数是否返回正在调用它的触发器的类型。 *trigger_output_parameters*是**char （10)**和可以是下列值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**单元**|INSERT 触发器|  
 |**Upd**|UPDATE 触发器|  
@@ -65,7 +65,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  指定执行存储过程的位置。 *fonpublisher*是**位**，默认值为 0。 如果为 0，则在订阅服务器上执行；如果为 1，则在发布服务器上执行。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0 指示在即时更新触发器的上下文中未调用此存储过程。 1 表示它立即更新触发器的上下文中调用，并且是在所返回的触发器的类型 *@trigger_op* 。  
+ 0 指示在即时更新触发器的上下文中未调用此存储过程。 1 表示它立即更新触发器的上下文中调用，并且是在所返回的触发器的类型*@trigger_op*。  
   
 ## <a name="remarks"></a>注释  
  **sp_check_for_sync_trigger**快照复制和事务复制中使用。  
@@ -95,7 +95,7 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  **sp_check_for_sync_trigger**可以通过拥有 SELECT 权限中的任何用户执行存储的过程[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)系统视图。  
   
 ## <a name="see-also"></a>另请参阅  

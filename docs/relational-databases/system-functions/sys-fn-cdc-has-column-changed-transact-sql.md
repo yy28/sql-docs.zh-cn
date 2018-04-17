@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_cdc_has_column_changed (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.fn_cdc_has_column_changed (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22c44bf41cbb88098135f8a44432cad0acbc1fea
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4edeab1edc7b34978c7173a87cafdff7baf23c30
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
   *capture_instance*   
  是捕获实例的名称。 *capture_instance*是**sysname**。  
   
- **'** *column_name* **'**  
+  *column_name*   
  要报告的指定捕获实例中的已捕获列。 *column_name*是**sysname**。  
   
  *update_mask*  
@@ -72,7 +72,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [cdc.&#60;capture_instance&#62;_CT &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
- [cdc.captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
+ [cdc。&#60;capture_instance&#62;_CT &#40;Transact SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
+ [cdc.captured_columns &#40;Transact SQL&#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
   
   

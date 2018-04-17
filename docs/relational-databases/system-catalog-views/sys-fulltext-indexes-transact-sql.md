@@ -1,16 +1,16 @@
 ---
-title: "sys.fulltext_indexes (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.fulltext_indexes (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fulltext_indexes
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.fulltext_indexes catalog view
 - full-text indexes [SQL Server], properties
 ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6f19f05239629553594f52f30fe2eb4ef0854cb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0093c3dd80757e1321882710d1901b128f891249
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 |**incremental_timestamp**|**binary(8)**|要用于下一次增量爬网的时间戳值。<br /><br /> NULL = 无。|  
 |**stoplist_id**|**int**|ID[非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)此全文索引与该键相关联。|  
 |**data_space_id**|**int**|此全文索引所在的文件组。|  
-|**property_list_id**|**int**|与此全文索引关联的搜索属性列表的 ID。 NULL 表示没有与全文索引关联的搜索属性列表。 若要获取有关此搜索属性列表的详细信息，请使用[sys.registered_search_property_lists &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)目录视图。|  
+|**property_list_id**|**int**|与此全文索引关联的搜索属性列表的 ID。 NULL 表示没有与全文索引关联的搜索属性列表。 若要获取有关此搜索属性列表的详细信息，请使用[sys.registered_search_property_lists &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)目录视图。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/03/2018
  以下示例在 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks2012` 表中使用全文索引。 该示例返回表的对象 ID、搜索属性列表 ID 以及全文索引使用的非索引字表的非索引字表 ID。  
   
 > [!NOTE]  
->  创建此全文索引中的代码示例，请参阅"示例"一节的[CREATE FULLTEXT INDEX &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  创建此全文索引中的代码示例，请参阅"示例"一节的[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,13 +76,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
+ [sys.fulltext_index_fragments &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
  [sys.fulltext_index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
- [sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [sys.fulltext_index_catalog_usages &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT INDEX &#40;Transact SQL &#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT INDEX & #40;Transact SQL & #41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

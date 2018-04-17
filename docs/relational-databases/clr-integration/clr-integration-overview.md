@@ -1,15 +1,15 @@
 ---
-title: "CLR 集成的概述 |Microsoft 文档"
-ms.custom: 
+title: CLR 集成的概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -20,27 +20,27 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 
+caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fce42787904d67dbe7e023321138fb57bd74b408
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e0dd551de6b8ac7c9174d6cbccdb8378d195854
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration---overview"></a>CLR 集成的概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-公共语言运行时 (CLR) 是 Microsoft .NET Framework 的核心，它为所有 .NET Framework 代码提供执行环境。 在 CLR 中运行的代码称为托管代码。 CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全、异常处理、线程管理和安全性。  有关详细信息，请参阅 .NET Framework SDK。  
+  公共语言运行时 (CLR) 是 Microsoft .NET Framework 的核心，它为所有 .NET Framework 代码提供执行环境。 在 CLR 中运行的代码称为托管代码。 CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全、异常处理、线程管理和安全性。  有关详细信息，请参阅 .NET Framework SDK。  
   
  使用在 Microsoft SQL Server 中驻留的 CLR（称为 CLR 集成），可以在托管代码中编写存储过程、触发器、用户定义函数、用户定义类型和用户定义聚合。 由于托管代码在执行之前才编译为本机代码，因此在某些情形下可以大幅提高性能。  
   
  托管代码使用代码访问安全性 (CAS) 来阻止程序集执行某些操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 CAS 来帮助保护托管代码，并阻止对操作系统或数据库服务器的侵害。  
   
 ## <a name="advantages-of-clr-integration"></a>CLR 集成的优点  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 被专为直接数据访问和操作数据库中。 虽然 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在数据访问和管理方面表现很好，但它不是完整的编程语言。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] 不支持数组、集合、for-each 循环、移位或类。 虽然可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中模拟某些这样的构造，但托管代码已经集成了对这些构造的支持。 根据具体情况，这些功能足以为在托管代码中实现某些数据库功能提供充分理由。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 是为了在数据库中直接进行数据访问和操纵而专门设计的。 虽然 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在数据访问和管理方面表现很好，但它不是完整的编程语言。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] 不支持数组、集合、for-each 循环、移位或类。 虽然可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中模拟某些这样的构造，但托管代码已经集成了对这些构造的支持。 根据具体情况，这些功能足以为在托管代码中实现某些数据库功能提供充分理由。  
   
  Microsoft Visual Basic .NET 和 Microsoft Visual C# 提供面向对象的功能，例如封装、继承和多态。 现在可以很容易将相关代码组织到类和命名空间中。 如果正在处理大量服务器代码，这将允许您更容易组织和维护代码。  
   

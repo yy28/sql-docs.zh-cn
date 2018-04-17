@@ -1,16 +1,16 @@
 ---
-title: "sp_update_proxy (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_update_proxy (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_proxy
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - ALTER PROXY statement
 - sp_update_proxy
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be0c172698bd3fa45b124f40aab261c5840304bb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7e9c6054e3ed59d9c026272669193fdaa80897a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,28 +60,28 @@ sp_update_proxy
  [ **@proxy_name**= ] **'***proxy_name***'**  
  要更改的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。  
   
- [ **@credential_name** = ] **'***credential_name***'**  
+ [ **@credential_name** =] *****credential_name*****  
  代理的新凭据的名称。 *Credential_name*是**sysname**，默认值为 NULL。 任一*credential_name*或*credential_id*可指定。  
   
  [ **@credential_id** = ] *credential_id*  
  代理的新凭据的标识号。 *Credential_id*是**int**，默认值为 NULL。 任一*credential_name*或*credential_id*可指定。  
   
- [ **@new_name**= ] **'***new_name***'**  
+ [ **@new_name**=] *****new_name*****  
  代理的新名称。 *New_name*是**sysname**，默认值为 NULL。 该过程提供信息时，更改到代理服务器的名称*new_name*。 当此参数为 NULL 时，代理名称保持不变。  
   
  [ **@enabled** = ] *is_enabled*  
  是否启用代理。 *Is_enabled*标志**tinyint**，默认值为 NULL。 当*is_enabled*是**0**，代理未启用，并且不能通过作业步骤。 当此参数为 NULL 时，代理的状态保持不变。  
   
- [ **@description**= ] **'***description***'**  
+ [ **@description**=] *****说明*****  
  代理的新说明。 *说明*是**nvarchar(512)**，默认值为 NULL。 当此参数为 NULL 时，代理的说明保持不变。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>注释  
- 任一 **@proxy_name** 或 **@proxy_id** 必须指定。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
+ 任一**@proxy_name**或**@proxy_id**必须指定。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
   
- 任一 **@credential_name** 或 **@credential_id** 必须指定要更改代理的凭据。 如果两个参数均被指定，则它们必须引用相同的凭据，否则存储过程将失败。  
+ 任一**@credential_name**或**@credential_id**必须指定要更改代理的凭据。 如果两个参数均被指定，则它们必须引用相同的凭据，否则存储过程将失败。  
   
  此过程将更改代理，但不更改对代理的访问权限。 若要更改对代理的访问权限，请使用**sp_grant_login_to_proxy**和**sp_revoke_login_from_proxy**。  
   
@@ -102,10 +102,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 代理存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [实现 SQL Server 代理安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

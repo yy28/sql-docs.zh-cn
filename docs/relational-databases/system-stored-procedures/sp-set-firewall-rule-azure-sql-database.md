@@ -1,16 +1,16 @@
 ---
-title: "sp_set_firewall_rule （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sp_set_firewall_rule （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_firewall_rule
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_set_firewall_rule
 - firewall_rules, setting server rules
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38ef5788aba91bfde21df091321a69dbacbeb8e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: ebfeaead5a1cce95aa2378f15f8ffaa73410509d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>参数  
  下表演示了支持的参数和选项中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-|Name|数据类型|Description|  
+|名称|数据类型|Description|  
 |----------|--------------|-----------------|  
 |[@name =] 'name'|**NVARCHAR （128)**|用来描述和区分服务器级防火墙设置的名称。|  
 |[@start_ip_address =] 'start_ip_address|**VARCHAR(50)**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
@@ -63,9 +64,9 @@ sp_set_firewall_rule [@name =] 'name',
   
  添加服务器级防火墙设置的起始和结束 IP 地址都等于`0.0.0.0`，启用对你[!INCLUDE[ssSDS](../../includes/sssds-md.md)]从 Azure 的服务器。 向提供值*名称*参数将帮助你记住服务器级防火墙设置是什么。  
   
- 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 登录数据需要进行身份验证连接和服务器级防火墙规则暂时缓存在每个数据库。 定期刷新此缓存。 若要强制执行身份验证缓存的刷新，并确保数据库具有登录名表的最新版本，执行[DBCC FLUSHAUTHCACHE &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录名表，请执行 [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有服务器级别主体登录名由设置过程创建或指定为管理员可以创建或修改服务器级防火墙规则的 Azure Active Directory 主体。 用户必须连接到 master 数据库才能执行 sp_set_firewall_rule。  
   
 ## <a name="examples"></a>示例  
@@ -91,4 +92,4 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
 ## <a name="see-also"></a>另请参阅  
  [Azure SQL 数据库防火墙](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [如何： 配置防火墙设置 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sys.firewall_rules &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)
+ [sys.firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

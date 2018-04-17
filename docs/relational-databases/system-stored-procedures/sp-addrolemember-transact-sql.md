@@ -1,16 +1,16 @@
 ---
-title: "sp_addrolemember (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addrolemember (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addrolemember_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_addrolemember
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
-caps.latest.revision: 
+caps.latest.revision: 59
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1781efa697597d05cbbc734f0c531ce5e9f40633
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6824949456bebb7c06ad188664b5911eae52b3d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,9 +74,9 @@ sp_addrolemember 'role', 'security_account'
   
  sp_addrolemember 无法向角色添加固定的数据库角色、 固定的服务器角色或 dbo。 sp_addrolemember 不能在用户定义的事务内执行。  
   
- 只能使用 sp_addrolemember 将向数据库角色添加成员。 若要将成员添加到服务器角色，使用[sp_addsrvrolemember &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
+ 只能使用 sp_addrolemember 将向数据库角色添加成员。 若要将成员添加到服务器角色，使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  为灵活的数据库角色添加成员需要满足以下条件之一：  
   
 -   Db_securityadmin 或 db_owner 固定的数据库角色的成员身份。  
@@ -108,7 +109,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 添加 Windows 登录名  
  下面的示例添加登录名`LoginMary`到`AdventureWorks2008R2`数据库作为用户`UserMary`。 用户 `UserMary` 随即被添加到 `Production` 角色中。  
@@ -132,9 +133,9 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)  

@@ -1,31 +1,32 @@
 ---
-title: "符合标准的应用程序和驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 符合标准的应用程序和驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - standards-compliant applications and drivers [ODBC]
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14d3ca332605e2d40d967e0e8b27b54e82613f46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 43630c2a9cc12d90927862c6de30b0c9fa85e8b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>符合标准的应用程序和驱动程序
 符合标准的应用程序或驱动程序是一个符合打开组 CAE 规范"数据管理:: SQL 调用级界面 (CLI)，"和 ISO/IEC 9075-3:1995 (E) 调用级接口 (SQL/CLI)。  

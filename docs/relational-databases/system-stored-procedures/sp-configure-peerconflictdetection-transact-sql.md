@@ -2,7 +2,7 @@
 title: sp_configure_peerconflictdetection (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fed4cb47795554df26deb08f496edba86b5a4d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a3a79fda8a5fa7ce29713e9c47ab8d136f24c1ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication=] '*publication*'  
+ [ @publication=] '*发布*  
  要配置冲突检测的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ @action= ] '*action*'  
+ [ @action=] '*操作*  
  指定是否为发布启用或禁用冲突检测。 *操作*是**nvarchar(5)**，和可以是以下值之一。  
   
 |“值”|Description|  

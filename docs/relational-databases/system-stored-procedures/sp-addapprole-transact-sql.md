@@ -1,16 +1,16 @@
 ---
-title: "sp_addapprole (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addapprole (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addapprole_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addapprole
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7556f2f78890a0e52efde7758077fbf124ed3bac
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 926876ae171180b8a148d80fdbc0d34de4d4af6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   向当前数据库中添加应用程序角色。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +49,12 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] *角色*  
+ [  **@rolename =** ] *****角色*****  
  新应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须是有效的标识符，并且不能存在于当前数据库。  
   
  应用程序角色名称可以包含 1 到 128 个字符，包括字母、符号及数字。 角色名称不能包含反斜杠 (\\) 也不为 NULL 或空字符串 （"）。  
   
- [  **@password =** ] *密码*  
+ [  **@password =** ] *****密码*****  
  激活应用程序角色所需的密码。 *密码*是**sysname**，无默认值。 *密码*不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -78,7 +78,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 > [!IMPORTANT]  
 >  Microsoft ODBC**加密**选项不受**SqlClient**。 如果您可以，请在运行时提示用户输入应用程序角色凭据。 不要将凭据存储在一个文件中。 如果必须使凭据持久化，请使用 CryptoAPI 函数将它们加密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。 如果尚未存在具有与新角色相同名称和所有者的架构，则还需要拥有对该数据库的 CREATE SCHEMA 权限。  
   
 ## <a name="examples"></a>示例  
@@ -90,6 +90,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

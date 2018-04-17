@@ -2,7 +2,7 @@
 title: SQLPrimaryKeys 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc6e16493a91ee6d03efea376bdb0fcb5212549f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91fc4454f033cef139e50b8cd7cfbf4c21842c61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 函数
 **一致性**  
@@ -66,7 +66,7 @@ SQLRETURN SQLPrimaryKeys(
  *NameLength1*  
  [输入]以字符为单位的长度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [输入]架构名称。 如果驱动程序支持的架构，对于某些表但没有为其他，如当驱动程序检索数据从不同 Dbms，空字符串 ("") 表示没有架构的那些表。 *SchemaName*不能包含字符串的搜索模式。  
   
  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *SchemaName*视为标识符和其大小写并不重要。 如果它是 SQL_FALSE， *SchemaName*是的普通自变量; 它原义，处理和其大小写并不重要。  
@@ -74,7 +74,7 @@ SQLRETURN SQLPrimaryKeys(
  *NameLength2*  
  [输入]以字符为单位的长度 **SchemaName*。  
   
- *表名*  
+ *TableName*  
  [输入]表名。 此参数不能为 null 指针。 *TableName*不能包含字符串的搜索模式。  
   
  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *TableName*视为标识符和其大小写并不重要。 如果它是 SQL_FALSE， *TableName*是的普通自变量; 它原义，处理和其大小写并不重要。  
@@ -129,7 +129,7 @@ SQLRETURN SQLPrimaryKeys(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|主键表目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|主键表目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|主键表架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有架构这些表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|主键表名称。|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar 不为 NULL|主键列名称。 该驱动程序返回的列没有名称为空字符串。|  

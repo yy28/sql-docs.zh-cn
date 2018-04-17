@@ -1,16 +1,16 @@
 ---
-title: "sp_articlecolumn (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_articlecolumn (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlecolumn
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46f11aed06db044c4868a2d7d186bd9f78b8095d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: beda788bf05dea8368210311fb0b2f458da23967
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  包含此项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *文章*  
+ [  **@article=**] *****文章*****  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@column=**] *列*  
+ [  **@column=**] *****列*****  
  要添加或删除的列的名称。 *列*是**sysname**，默认值为 NULL。 如果为 NULL，则发布所有列。  
   
- [  **@operation=**] *操作*  
+ [  **@operation=**] *****操作*****  
  指定在项目中添加还是删除列。 *操作*是**nvarchar(5)**，默认值为添加。 **添加**将标记为复制的列。 **删除**取消标记列。  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -89,13 +89,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0**指定文章的更改不会导致要重新初始化的订阅。 如果该存储过程检测到更改将需要重新初始化订阅，则会发生错误，并且不进行任何更改。 **1**指定文章更改导致现有订阅重新初始化订阅，可以授予权限，重新初始化订阅发生。  
   
- [  **@publisher=** ] *发布服务器*  
+ [  **@publisher=** ] *****发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不应与使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
- [  **@internal=** ] *内部*  
+ [  **@internal=** ] *****内部*****  
  仅限内部使用。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -109,19 +109,19 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_articlecolumn**。  
   
 ## <a name="see-also"></a>另请参阅  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [定义和修改列筛选器](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)   
- [sp_addarticle &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_addarticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articleview &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [sp_helparticlecolumns &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

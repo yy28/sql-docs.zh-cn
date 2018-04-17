@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_filestream_file_io_requests (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_filestream_file_io_requests (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_file_io_requests
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35d32705c8bce23a9cd46c5844fdc1a20c0cf7c3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0e2115473a557df341cb1e1244d4b6378a69c15b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/03/2018
 |**request_id**|**int**|显示驱动程序分配给此请求的唯一请求 ID。 不可为 null。|  
 |**irp_id**|**int**|显示唯一 IRP ID。 该值用于标识与给定 IRP 相关的所有 I/O 请求。 不可为 null。|  
 |**handle_id**|**int**|指示命名空间句柄 ID。 这是 NSO 特定的标识符，并且在实例之间是唯一的。 不可为 null。|  
-|**client_thread_id**|**varbinary(8)**|显示源自该请求的客户端应用程序的线程 ID。<br /><br /> **\*\*警告\* \*** 这是有意义，仅当客户端应用程序运行在 SQL Server 的同一台计算机上。 远程，运行客户端应用程序时**client_thread_id**显示代表远程客户端适用某些系统进程的线程 ID。<br /><br /> 可以为 Null。|  
+|**client_thread_id**|**varbinary(8)**|显示源自该请求的客户端应用程序的线程 ID。<br /><br /> **\*\* 警告\* \*** 这是有意义，仅当客户端应用程序运行在 SQL Server 的同一台计算机上。 远程，运行客户端应用程序时**client_thread_id**显示代表远程客户端适用某些系统进程的线程 ID。<br /><br /> 可以为 Null。|  
 |**client_process_id**|**varbinary(8)**|如果客户端应用程序在 SQL Server 所在的同一台计算机上运行，则显示客户端应用程序的进程 ID。 对于远程客户端，这将显示代表客户端应用程序工作的系统进程 ID。 可以为 Null。|  
 |**handle_context_address**|**varbinary(8)**|显示与客户端的句柄相关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID 以及与该句柄相关联的所有请求。 它是通过返回的值**get_filestream_transaction_context**函数。 可以为 Null。|  
@@ -56,6 +56,6 @@ ms.lasthandoff: 02/03/2018
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [Filestream 和 FileTable 的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Filestream 和 FileTable 的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

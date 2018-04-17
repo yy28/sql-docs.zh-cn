@@ -1,16 +1,16 @@
 ---
-title: "sp_cursorprepare (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_cursorprepare (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b588770141c5d5593ef209e190203354c0ae4891
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1134a3edbbbf1a838207a122e43bbafb5ac0e18b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,17 +65,17 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  指定的规则*stmt*值是否不同于为 sp_cursoropen，出现异常， *stmt*字符串数据类型必须为**ntext**。  
   
- *选项*  
+ *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项*需要具备以下**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  滚动选项。 *scrollopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -97,7 +97,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
@@ -116,7 +116,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>注释  
  RPC 状态参数为以下值之一：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失败|  
@@ -125,12 +125,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="examples"></a>示例  
  当*stmt*进行参数化和*scrollopt* PARAMETERIZED_STMT 值为 ON，字符串的格式为，如下所示：  
   
- { *\<本地变量的名称 >**\<数据类型 >* } [，...*n* ]  
+ { *\<本地变量的名称 > * *\<数据类型 >* } [，...*n* ]  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_cursorexecute &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

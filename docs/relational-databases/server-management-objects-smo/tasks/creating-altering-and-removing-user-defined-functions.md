@@ -1,41 +1,43 @@
 ---
-title: "创建、 更改和删除用户定义函数 |Microsoft 文档"
-ms.custom: 
+title: 创建、 更改和删除用户定义函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79a796d469d9e5ccd686a526f18bb16ed972cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 03700168dc8531c438a6814463a20bbf9fb51a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>创建、更改和删除用户定义函数
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>对象提供的功能可使用户能以编程方式管理中的用户定义函数[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 用户定义函数支持输入和输出参数，还支持对表列的直接引用。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>对象提供的功能可使用户能以编程方式管理中的用户定义函数[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 用户定义函数支持输入和输出参数，还支持对表列的直接引用。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要在这些数据库中注册程序集。 可以使用存储过程中，用户定义函数、 触发器和用户定义数据类型。 SMO 使用 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 对象支持此项功能。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要在这些数据库中注册程序集。 可以使用存储过程中，用户定义函数、 触发器和用户定义数据类型。 SMO 使用 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 对象支持此项功能。  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>对象引用.NET 程序集<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>， <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>，和<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A>属性。  
   
  当<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>对象引用.NET 程序集，必须通过创建注册该程序集<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>对象并将其添加到<xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>了属于对象<xref:Microsoft.SqlServer.Management.Smo.Database>对象。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>在 Visual Basic 中创建标量用户定义函数  
  此代码示例演示如何创建和删除的输入的标量用户定义函数<xref:System.DateTime>对象参数和一个整数返回类型中的[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]。 在创建用户定义函数[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 该示例创建了用户定义函数 ISOweek，此函数带有一个日期参数，用于计算 ISO 周号。 要使此函数能正确计算，必须在调用此函数之前将数据库 DATEFIRST 选项设置为 1。  

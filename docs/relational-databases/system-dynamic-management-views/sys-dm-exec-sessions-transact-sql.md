@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_sessions_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: 
+caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7452644412b76854a82d7c6a41c2b15de22db48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/20/2018
 |client_version|**int**|客户端连接到服务器所用接口的 TDS 协议版本。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |client_interface_name|**nvarchar(32)**|客户端用于与服务器通信库/驱动程序的名称。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |security_id|**varbinary(85)**|与登录名关联的 Microsoft Windows 安全 ID。 不可为 null。|  
-|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在其下会话当前正在执行的登录名。 有关创建此会话的原始登录名，请参阅 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]经过身份验证登录名或 Windows 身份验证的域用户名。 不可为 null。|  
+|login_name|**nvarchar(128)**|当前执行的会话所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 有关创建此会话的原始登录名，请参阅 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]经过身份验证登录名或 Windows 身份验证的域用户名。 不可为 null。|  
 |nt_domain|**nvarchar(128)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 客户端的 Windows 域（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
 |nt_user_name|**nvarchar(128)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 客户端的 Windows 用户名（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
 |status|**nvarchar(30)**|会话的状态。 可能的值：<br /><br /> **运行**-当前正在运行一个或多个请求<br /><br /> **睡眠**-当前没有运行任何请求<br /><br /> **休眠**– 会话因连接池而重置和现在处于登录前状态。<br /><br /> **Preconnect** -会话处于资源调控器分类器。<br /><br /> 不可为 null。|  
@@ -85,8 +86,8 @@ ms.lasthandoff: 02/20/2018
 |deadlock_priority|**int**|会话的 DEADLOCK_PRIORITY 设置。 不可为 null。|  
 |row_count|**bigint**|到目前为止会话返回的行数。 不可为 null。|  
 |prev_error|**int**|会话返回的最近一个错误的 ID。 不可为 null。|  
-|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与 original_login_name 相关联的 Windows 安全 ID。 不可为 null。|  
-|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端用于创建此会话的登录名。 可以是经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名、经过 Windows 身份验证的域用户名，也可以是包含数据库用户。 请注意，此会话在初次连接后可能已进行多次隐式或显式上下文切换。 例如，如果[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)使用。 不可为 null。|  
+|original_security_id|**varbinary(85)**|与 original_login_name 关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全 ID。 不可为 null。|  
+|original_login_name|**nvarchar(128)**|客户端用于创建此会话的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 可以是经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名、经过 Windows 身份验证的域用户名，也可以是包含数据库用户。 请注意，此会话在初次连接后可能已进行多次隐式或显式上下文切换。 例如，如果[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)使用。 不可为 null。|  
 |last_successful_logon|**datetime**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 当前会话开始前 original_login_name 上一次成功登录的时间。|  
 |last_unsuccessful_logon|**datetime**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 当前会话开始前，original_login_name 上一次登录失败的时间。|  
 |unsuccessful_logons|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 在 last_successful_logon 和 login_time 之间 original_login_name 的登录失败次数。|  
@@ -190,7 +191,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

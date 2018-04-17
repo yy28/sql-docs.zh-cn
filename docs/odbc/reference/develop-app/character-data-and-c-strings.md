@@ -1,15 +1,16 @@
 ---
-title: "字符数据和 C 字符串 |Microsoft 文档"
-ms.custom: 
+title: 字符数据和 C 字符串 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ea6f6c65e1250a999d019e7cf8b81510b227831
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="character-data-and-c-strings"></a>字符数据和 C 字符串
 引用 （如列名称、 动态参数和字符串特性值） 的长度可变的字符数据的输入的参数具有一个关联的长度参数。 如果在应用程序终止 null 字符，在 C 中的典型的字符串，它提供了作为自变量中，以字节为单位的 （不包括 null 终止符） 的字符串的长度，或者 sql_nts 以 （Null-Terminated 字符串）。 非负长度参数指定的关联字符串的实际长度。 长度参数可能为 0 以指定一个零长度字符串，它是不同于 NULL 值。 负值 sql_nts 以指示要通过定位 null 终止字符确定字符串的长度的驱动程序。  

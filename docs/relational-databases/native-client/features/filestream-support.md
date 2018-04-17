@@ -1,36 +1,36 @@
 ---
-title: "FILESTREAM 支持 |Microsoft 文档"
-ms.custom: 
+title: FILESTREAM 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ca2ec81cacec47dba4247f8c1c61ad2cf5d3d92
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bf5a3a4c62b8ba11aecd5b62f38bec9913816402
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强 FILESTREAM 支持的详细信息，请参阅[FILESTREAM &#40;SQL server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
+  FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强 FILESTREAM 支持的详细信息，请参阅[FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)。  
   
  当打开数据库连接时， **@@TEXTSIZE** 将设置为-1 （"无限制"），默认情况下。  
   
@@ -38,9 +38,9 @@ ms.lasthandoff: 01/25/2018
   
  有关详细信息，请参阅以下主题：  
   
--   [FILESTREAM 支持 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM 支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [FILESTREAM 支持 &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [FILESTREAM 支持&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

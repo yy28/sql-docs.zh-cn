@@ -1,16 +1,16 @@
 ---
-title: "DiffGram 示例 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: DiffGram 示例 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], examples
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - diffgr:parentID
 - parentID annotation
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bba1fe2e0a141d9bbac3ae67ece5d7e32d0b197
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e9d54edb652ab38ff92de8d439507555b1401d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 示例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主题中的示例包括用于对数据库执行插入、更新和删除操作的多个 DiffGram。 在使用这些示例前，请注意以下事项：  
+  本主题中的示例包括用于对数据库执行插入、更新和删除操作的多个 DiffGram。 在使用这些示例前，请注意以下事项：  
   
 -   示例中使用两个表（Cust 和 Ord）；要测试 DiffGram 示例，必须创建这两个表：  
   
@@ -107,7 +108,7 @@ ms.lasthandoff: 02/12/2018
 </ROOT>  
 ```  
   
- 在**\<之前 >**块中，没有**\<顺序 >**元素 (**diffgr: id ="顺序排列 1"**) 和一个 **\<客户 >**元素 (**diffgr: id ="Customer1"**)。 这些元素表示数据库中的现有记录。 **\<DataInstance >**元素不具有相应的记录 (具有相同**diffgr: id**)。 这指示一个删除操作。  
+ 在**\<之前 >**块中，没有**\<顺序 >**元素 (**diffgr: id ="顺序排列 1"**) 和一个 **\<客户 >**元素 (**diffgr: id ="Customer1"**)。 这些元素表示数据库中的现有记录。  **\<DataInstance >**元素不具有相应的记录 (具有相同**diffgr: id**)。 这指示一个删除操作。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
@@ -246,7 +247,7 @@ ms.lasthandoff: 02/12/2018
 </ROOT>  
 ```  
   
- **\<之前 >**块包括**\<客户 >**元素 (**diffgr: id ="Customer1"**)。 **\<DataInstance >**块包含相应**\<客户 >**具有相同的元素**id**。**\<客户 >**中的元素 **\<NewDataSet >**还指定**diffgr:hasChanges ="修改"**。 这表示更新操作，并且中的客户记录**Cust**相应地更新表。 请注意，如果**diffgr:hasChanges**属性未指定，DiffGram 处理逻辑会忽略此元素，则不执行任何更新。  
+ **\<之前 >**块包括**\<客户 >**元素 (**diffgr: id ="Customer1"**)。  **\<DataInstance >**块包含相应**\<客户 >**具有相同的元素**id**。**\<客户 >**中的元素 **\<NewDataSet >**还指定**diffgr:hasChanges ="修改"**。 这表示更新操作，并且中的客户记录**Cust**相应地更新表。 请注意，如果**diffgr:hasChanges**属性未指定，DiffGram 处理逻辑会忽略此元素，则不执行任何更新。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
@@ -353,9 +354,9 @@ ms.lasthandoff: 02/12/2018
   
 -   **\<之前 >**块都有**\<客户 >**元素 (**diffgr: id ="Customer2"**) 其中没有相应**\<客户 >**中的元素 **\<DataInstance >** （具有相同的 ID) 的块。 中的元素 **\<DataInstance >**块指定**diffgr:hasChanges ="修改"**。 这是在其中客户 ANATR，CompanyName 和 ContactName 信息更新 Cust 表使用中指定的值中的更新操作 **\<DataInstance >**块。  
   
--   **\<DataInstance >**块都有**\<客户 >**元素 (**diffgr: id ="Customer3"**) 和 **\<顺序 >**元素 (**diffgr: id ="Order3"**)。 任一这些元素指定**diffgr:hasChanges**属性。 因此，DiffGram 处理逻辑将忽略这些元素。  
+-    **\<DataInstance >**块都有**\<客户 >**元素 (**diffgr: id ="Customer3"**) 和 **\<顺序 >**元素 (**diffgr: id ="Order3"**)。 任一这些元素指定**diffgr:hasChanges**属性。 因此，DiffGram 处理逻辑将忽略这些元素。  
   
--   **\<DataInstance >**块都有**\<客户 >**元素 (**diffgr: id ="Customer4"**) 和 **\<顺序 >**元素 (**diffgr: id ="Order4"**) 为其有中的没有相应元素\<之前 > 块。 在这些元素 **\<DataInstance >**块指定**diffgr:hasChanges ="插入"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
+-    **\<DataInstance >**块都有**\<客户 >**元素 (**diffgr: id ="Customer4"**) 和 **\<顺序 >**元素 (**diffgr: id ="Order4"**) 为其有中的没有相应元素\<之前 > 块。 在这些元素 **\<DataInstance >**块指定**diffgr:hasChanges ="插入"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   

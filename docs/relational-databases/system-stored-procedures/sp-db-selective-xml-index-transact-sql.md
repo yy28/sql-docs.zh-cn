@@ -1,16 +1,16 @@
 ---
-title: "sp_db_selective_xml_index (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_db_selective_xml_index (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_db_selective_xml_index_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf8718ae7eb50b12a6c8e203f43799fb8a8c413
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 703f15ded73d193e721a2244cc482878f16dd5b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上启用和禁用选择性 XML 索引功能。 如果不带任何参数调用，则当在特定数据库上启用选择性 XML 索引时，存储过程返回 1。  
   
 > [!NOTE]  
->  若要禁用使用此存储的过程的选择性 XML 索引，必须将数据库置于简单恢复模式下使用[ALTER DATABASE SET 选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令。  
+>  若要禁用使用此存储的过程的选择性 XML 索引，必须将数据库置于简单恢复模式下使用[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 01/02/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@ db_name =** ] *db_name*  
+ [ **@ db_name =** ] *****db_name*****  
  要对其启用或禁用选择性 XML 索引的数据库名称。 如果*db_name*为 NULL，则假定当前数据库。  
   
- [  **@action =** ] *操作*  
+ [  **@action =** ] *****操作*****  
  确定是启用还是禁用该索引。 如果传递了“on”、“true”、“off”或“false”之外的其他值，则会引发错误。  
   
 ```  

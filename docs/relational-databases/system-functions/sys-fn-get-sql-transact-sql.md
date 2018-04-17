@@ -1,16 +1,16 @@
 ---
-title: sys.fn_get_sql (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fn_get_sql (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d2f4572bfe948456f98e446d05e8c5601490431c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   返回指定 SQL 句柄的 SQL 语句的文本。  
   
 > [!IMPORTANT]  
->  后续版本的 Microsoft SQL Server 将删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 sys.dm_exec_sql_text。 有关详细信息，请参阅[sys.dm_exec_sql_text &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  后续版本的 Microsoft SQL Server 将删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 sys.dm_exec_sql_text。 有关详细信息，请参阅[sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
   
  
   
@@ -67,11 +67,11 @@ sys.fn_get_sql ( SqlHandle )
 |dbid|**int**|数据库 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。|  
 |objectid|**int**|数据库对象的 ID。 对于特殊 SQL 语句为 NULL。|  
 |number|**int**|指示组的编号（如果过程已分组）。<br /><br /> 0 = 项不是过程。<br /><br /> NULL = 特殊 SQL 语句。|  
-|encrypted|**bit**|指示对象是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密|  
+|encrypted|**bit**|指示对象是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密|  
 |text|**text**|SQL 语句的文本。 对于已加密对象为 NULL。|  
   
 ## <a name="remarks"></a>注释  
- 你可以从的 sql 句柄列获取有效的 SQL 句柄[sys.dm_exec_requests &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)动态管理视图。  
+ 你可以从的 sql 句柄列获取有效的 SQL 句柄[sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)动态管理视图。  
   
  如果你将句柄传递，不再存在在缓存中，fn_get_sq**l**返回空结果集。 如果传递的句柄无效，则批处理将停止，并返回一条错误消息。  
   
@@ -101,8 +101,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DBCC INPUTBUFFER &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [DBCC INPUTBUFFER &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

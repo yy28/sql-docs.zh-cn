@@ -1,16 +1,16 @@
 ---
-title: "sp_dropmergepublication (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_dropmergepublication (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ec45802cc2784b46022ab061cc48f5985b7eaee
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 225b5424b12bba73e975fdd17ca3d374e4c9b9a4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  是要删除的名称。 *发布*是**sysname**，无默认值。 如果**所有**，所有现有合并发布删除以及与之关联的快照代理作业。 如果指定一个特定的值*发布*，仅该发布和其关联的快照代理作业被删除。  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
@@ -74,12 +74,12 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergepublication**。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除发布](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

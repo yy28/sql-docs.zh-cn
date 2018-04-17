@@ -2,7 +2,7 @@
 title: SQLGetData 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函数
 **一致性**  
@@ -134,7 +134,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync**尚未调用以完成此句柄上的上一个异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING，如果启用了通知模式， **SQLCompleteAsync**必须在要执行的后处理工作并完成该操作的句柄上调用。|  
   
 ## <a name="comments"></a>注释  
- **SQLGetData**返回指定列中的数据。 **SQLGetData**仅之后从结果集中提取的一个或多个行时，才可以调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**. 如果长度可变的数据量太大，对单个调用中返回**SQLGetData** （由于应用程序中的限制）， **SQLGetData**可以检索它在部件中。 可以将绑定中的行和调用的某些列**SQLGetData**对于其他操作系统，尽管这会受到某些限制。 有关详细信息，请参阅[获取长整型数据](../../../odbc/reference/develop-app/getting-long-data.md)。  
+ **SQLGetData**返回指定列中的数据。 **SQLGetData**仅之后从结果集中提取的一个或多个行时，才可以调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**。 如果长度可变的数据量太大，对单个调用中返回**SQLGetData** （由于应用程序中的限制）， **SQLGetData**可以检索它在部件中。 可以将绑定中的行和调用的某些列**SQLGetData**对于其他操作系统，尽管这会受到某些限制。 有关详细信息，请参阅[获取长整型数据](../../../odbc/reference/develop-app/getting-long-data.md)。  
   
  有关使用信息**SQLGetData**与经过流处理的 output 参数，请参阅[检索输出参数使用 SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   

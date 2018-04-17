@@ -1,35 +1,36 @@
 ---
-title: sys.dm_pdw_node_status (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_pdw_node_status (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7374f3cf3924ad12fc7077ec8fdc46fa91ec295
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2ff2f23fcfc6314d06f55bca2b918d954f43514e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
+# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  保存的其他信息 (通过[sys.dm_pdw_nodes &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 有关的性能和状态的所有设备节点。 它列出每个设备中的节点的一行。  
+  保存的其他信息 (通过[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 有关的性能和状态的所有设备节点。 它列出每个设备中的节点的一行。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
@@ -49,6 +50,6 @@ ms.lasthandoff: 02/03/2018
 |error_id|**nvarchar(36)**|此节点发生的最后一个错误的唯一标识符。||  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

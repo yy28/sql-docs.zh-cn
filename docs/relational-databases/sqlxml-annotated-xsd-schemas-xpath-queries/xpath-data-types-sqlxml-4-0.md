@@ -1,16 +1,16 @@
 ---
-title: "XPath 数据类型 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: XPath 数据类型 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -30,25 +30,26 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d36d141e552750650ede74ba2aba92b203825558
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2d52d84c175b7f7f3975645c385934a3c89be0d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架构 (XSD) 具有相差很大的数据类型。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关映射的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型与 XSD 数据类型，请参阅[数据类型强制和 sql: datatype 批注 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架构 (XSD) 具有相差很大的数据类型。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关映射的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型与 XSD 数据类型，请参阅[数据类型强制和 sql: datatype 批注&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
  XPath 有三种数据类型：**字符串**，**数**，和**布尔**。 **数**数据类型始终是 IEEE 754 双精度浮点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)**数据类型是最接近 XPath**数**。 但是， **float(53)** IEEE 754 预览并不完全。 例如，NaN（非数字）和 infinity 均未使用。 尝试将转换到非数字字符串**数**和尝试除以零会产生错误。  
   
 ## <a name="xpath-conversions"></a>XPath 转换  
- 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 XPath 语言规范（XML Path 语言 (XPath) 版本 1.0 W3C 推荐建议，1999 年 10 月 8 日）可在 W3C 网站（网址为 http://www.w3.org/TR/1999/PR-xpath-19991008.html）上找到。  
+ 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 XPath 语言规范中，XML 路径语言 (XPath) 版本 1.0 W3C 建议建议 1999 年 10 月 8，可以在 W3C Web 站点找到http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
   
  XPath 运算符分为四个类别：  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 02/12/2018
  节点集转换并非始终都是直观的。 节点集转换为**字符串**采用集中只有第一个节点的字符串值。 节点集转换为**数**通过将其转换为**字符串**，然后将转换**字符串**到**数**。 节点集转换为**布尔**通过测试其是否存在。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会在节点集上执行位置的选择： 例如，以下 XPath 查询`Customer[3]`意味着第三个客户; 中不支持此类型的位置选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，节点的设置-到-**字符串**或节点的设置-到-**数**未实现由 XPath 规范所述的转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，基于 W3C XPath 规范，XPath 查询`Order[OrderDetail/@UnitPrice > 10.0]`与第一个选择这些订单**OrderDetail**具有**UnitPrice**大于 10.0。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此 XPath 查询选择与任意这些订单**OrderDetail**具有**UnitPrice**大于 10.0。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，节点的设置-到-**字符串**或节点的设置-到-**数**未实现由 XPath 规范所述的转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，基于 W3C XPath 规范，XPath 查询`Order[OrderDetail/@UnitPrice > 10.0]`与第一个选择这些订单**OrderDetail**具有**UnitPrice**大于 10.0。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此 XPath 查询选择与任意这些订单**OrderDetail**具有**UnitPrice**大于 10.0。  
   
  转换为**布尔**生成是否存在测试; 因此，XPath 查询`Products[@Discontinued=true()]`等效于 SQL 表达式"Products.Discontinued is not null"，不是 SQL 表达式"Products.Discontinued = 1"。 若要使查询等效于后一种 SQL 表达式，第一次节点-将该集转换为非**布尔**类型，如**数**。 例如， `Products[number(@Discontinued) = true()]`。  
   
@@ -133,7 +134,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
 ||||||  
 |-|-|-|-|-|  
-||X 未知|X is **string**|X 是**数**|X 是**布尔**|  
+||X 未知|X 是**字符串**|X 是**数**|X 是**布尔**|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
 |boolean(X)|-|LEN(X) > 0|X != 0|-|  

@@ -1,16 +1,16 @@
 ---
-title: "sys.server_principals (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.server_principals (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_principals catalog view
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a37a7a41cfb219ec584c03b932cfe450cead48c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3705caa0221d2e0f4a6b93b6d2ffffb9b2fcb9e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |**名称**|**sysname**|主体名称。 是在服务器内唯一的。|  
 |**principal_id**|**int**|主体的 ID 号。 是在服务器内唯一的。|  
 |**sid**|**varbinary(85)**|主体的 SID（安全标识符）。 如果是 Windows 主体，则它与 Windows SID 匹配。|  
-|**type**|**char （1)**|主体类型：<br /><br /> S = SQL 登录名<br /><br /> U = Windows 登录名<br /><br /> G = Windows 组<br /><br /> R = 服务器角色<br /><br /> C = 映射到证书的登录名<br /><br /> K = 映射到非对称密钥的登录名|  
+|**类型**|**char(1)**|主体类型：<br /><br /> S = SQL 登录名<br /><br /> U = Windows 登录名<br /><br /> G = Windows 组<br /><br /> R = 服务器角色<br /><br /> C = 映射到证书的登录名<br /><br /> K = 映射到非对称密钥的登录名|  
 |**type_desc**|**nvarchar(60)**|主体类型的说明：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 禁用登录名。|  
 |**create_date**|**datetime**|主体的创建时间。|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |**owning_principal_id**|**int**|**Principal_id**的服务器角色的所有者。 如果主体不是服务器角色，则为 NULL。|  
 |**is_fixed_role**|**bit**|如果主体是固定服务器角色之一，则返回 1。 有关详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何登录都可以查看自己的登录名称、系统登录和固定的数据库角色。 要查看其他登录，需要获取 ALTER ANY LOGIN 或有关登录的权限。 要查看用户定义的服务器角色，需要获取 ALTER ANY SERVER ROLE 或相关的角色成员身份。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

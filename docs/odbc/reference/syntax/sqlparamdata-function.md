@@ -2,7 +2,7 @@
 title: SQLParamData 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 395cf795659b47398639f30fbd863b1f2d385e55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 函数
 **一致性**  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
  如果**SQLParamData**称为时发送 SQL 语句中的参数的数据，它可能会返回任何可通过调用执行语句的函数返回的 SQLSTATE (**SQLExecute**或**SQLExecDirect**)。 如果发送的列的数据时调用正在更新或添加与**SQLBulkOperations**或与正在更新**SQLSetPos**，它可返回可以由任何 SQLSTATE **SQLBulkOperations**或**SQLSetPos**。  
   
 ## <a name="comments"></a>注释  
- **SQLParamData**可以调用以进行提供两种用法的数据在执行数据： 将对的调用中使用的参数数据**SQLExecute**或**SQLExecDirect**，或将使用的列数据当更新或通过调用添加某行**SQLBulkOperations**或通过调用更新**SQLSetPos**。 在执行时， **SQLParamData**将返回到应用程序驱动程序需要使用哪些数据的指示符。  
+ **SQLParamData**可以调用以进行提供两种用法的数据在执行数据： 将对的调用中使用的参数数据**SQLExecute**或**SQLExecDirect**，或将列数据时使用更新或通过调用添加某行**SQLBulkOperations**或通过调用更新**SQLSetPos**。 在执行时， **SQLParamData**将返回到应用程序驱动程序需要使用哪些数据的指示符。  
   
  在应用程序调用**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**，驱动程序返回 SQL_NEED_如果它需要数据在执行数据的数据。 应用程序然后调用**SQLParamData**来确定要发送的数据。 如果驱动程序需要参数的数据，该驱动程序将返回在 *\*ValuePtrPtr*输出缓冲区的应用程序放置在行集的缓冲区中的值。 应用程序可以使用此值以确定该驱动程序正在请求的参数数据。 如果该驱动程序需要列数据，该驱动程序返回中 *\*ValuePtrPtr*缓冲列最初已，如下所示绑定到的地址：  
   

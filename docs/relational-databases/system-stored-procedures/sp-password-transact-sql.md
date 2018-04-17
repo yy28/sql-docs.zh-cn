@@ -1,16 +1,16 @@
 ---
-title: "sp_password (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_password (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_password
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_password
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b461f601e94756d1406da13f1da99f8b1df50198
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77671ef00e8a801e7606cd62660e4d4f373474f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   添加或更改的密码[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,27 +51,27 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@old=** ] *old_password*  
+ [  **@old=** ] *****old_password*****  
  是的旧密码。 *old_password*是**sysname**，默认值为 NULL。  
   
- [  **@new=** ] *new_password*  
+ [  **@new=** ] *****new_password*****  
  是的新密码。 *new_password*是**sysname**，无默认值。 *old_password*必须是否不使用命名的参数指定。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
- [  **@loginame=** ] *登录*  
- 受密码更改影响的登录名。 *登录名*是**sysname**，默认值为 NULL。 *登录名*必须已经存在并且可以指定只能由成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
+ [  **@loginame=** ] *****登录*****  
+ 受密码更改影响的登录名。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在并且可以指定只能由成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>注释  
- **sp_password**调用 ALTER LOGIN。 此语句支持附加选项。 有关更改密码的信息，请参阅[ALTER LOGIN &#40;Transact SQL &#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+ **sp_password**调用 ALTER LOGIN。 此语句支持附加选项。 有关更改密码的信息，请参阅[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
  **sp_password**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。 还需要 CONTROL SERVER 权限才能重置密码而无需提供旧密码，或者所更改的登录名具有 CONTROL SERVER 权限。  
   
  主体可更改其自己的密码。  
@@ -97,7 +97,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
-title: sp_add_proxy (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_add_proxy (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_proxy
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bc9f2a111a69be48a2fb4f67cd4ec6e48f27926
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 30bc146258fadeec366c392b43bcfd65fa693300
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,16 +59,16 @@ sp_add_proxy
  [ **@enabled** = ] *is_enabled*  
  指定是否启用代理。 *Is_enabled*标志**tinyint**，默认值为 1。 当*is_enabled*是**0**，代理未启用，并且不能通过作业步骤。  
   
- [ **@description**= ] **'***description***'**  
+ [ **@description**=] *****说明*****  
  代理说明。 该说明仅**nvarchar(512)**，默认值为 NULL。 该说明便于您记录代理，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理不会在其他地方使用该说明。 因此，该参数是可选的。  
   
- [ **@credential_name** = ] **'***credential_name***'**  
+ [ **@credential_name** =] *****credential_name*****  
  代理凭据的名称。 *Credential_name*是**sysname**，默认值为 NULL。 任一*credential_name*或*credential_id*必须指定。  
   
  [ **@credential_id** = ] *credential_id*  
  代理帐户的标识号。 *Credential_id*是**int**，默认值为 NULL。 任一*credential_name*或*credential_id*必须指定。  
   
- [ **@proxy_id**= ] *id* OUTPUT  
+ [ **@proxy_id**=] *id*输出  
  成功创建代理时分配给代理的代理标识号。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -85,10 +85,10 @@ sp_add_proxy
 ## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的安全角色可以执行此过程。  
   
- 成员**sysadmin**固定的安全角色可以创建使用任何代理的作业步骤。 使用存储的过程[sp_grant_login_to_proxy &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)其他登录名访问授予代理。  
+ 成员**sysadmin**固定的安全角色可以创建使用任何代理的作业步骤。 使用存储的过程[sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)其他登录名访问授予代理。  
   
 ## <a name="examples"></a>示例  
- 该示例为 `CatalogApplicationCredential` 凭据创建一个代理。 代码假定凭据已经存在。 有关凭据的详细信息，请参阅[CREATE CREDENTIAL &#40;Transact SQL &#41;](../../t-sql/statements/create-credential-transact-sql.md).  
+ 该示例为 `CatalogApplicationCredential` 凭据创建一个代理。 代码假定凭据已经存在。 有关凭据的详细信息，请参阅[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)。  
   
 ```  
 USE msdb ;  

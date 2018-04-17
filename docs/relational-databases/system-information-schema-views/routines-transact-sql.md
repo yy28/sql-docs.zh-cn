@@ -1,16 +1,16 @@
 ---
-title: "例程 (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: 例程 (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-information-schema-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ROUTINES_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 159bcda90286cfe2582cd88f41c39e682bf2097e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: caf1f7cc37ab428b4f5c0ec1c57fdb0fbed4b214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,51 +45,51 @@ ms.lasthandoff: 11/21/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|SPECIFIC_CATALOG|**nvarchar (**128**)**|特定的目录名称。 该名称与 ROUTINE_CATALOG 相同。|  
-|SPECIFIC_SCHEMA|**nvarchar (**128**)**|特定的架构名称。<br /><br /> **\*\*重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
-|SPECIFIC_NAME|**nvarchar (**128**)**|特定的目录名称。 该名称与 ROUTINE_NAME 相同。|  
-|ROUTINE_CATALOG|**nvarchar (**128**)**|函数的目录名。|  
-|ROUTINE_SCHEMA|**nvarchar (**128**)**|包含此函数的架构的名称。<br /><br /> **\*\*重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
-|ROUTINE_NAME|**nvarchar (**128**)**|函数的名称。|  
+|SPECIFIC_CATALOG|**nvarchar(**128**)**|特定的目录名称。 该名称与 ROUTINE_CATALOG 相同。|  
+|SPECIFIC_SCHEMA|**nvarchar(**128**)**|特定的架构名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|SPECIFIC_NAME|**nvarchar(**128**)**|特定的目录名称。 该名称与 ROUTINE_NAME 相同。|  
+|ROUTINE_CATALOG|**nvarchar(**128**)**|函数的目录名。|  
+|ROUTINE_SCHEMA|**nvarchar(**128**)**|包含此函数的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|ROUTINE_NAME|**nvarchar(**128**)**|函数的名称。|  
 |ROUTINE_TYPE|**nvarchar (**20**)**|为存储过程返回 PROCEDURE；为函数返回 FUNCTION。|  
-|MODULE_CATALOG|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|MODULE_SCHEMA|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|MODULE_NAME|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|UDT_CATALOG|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|UDT_SCHEMA|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|UDT_NAME|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|DATA_TYPE|**nvarchar (**128**)**|函数返回值的数据类型。 返回**表**如果表值函数。|  
+|MODULE_CATALOG|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|MODULE_SCHEMA|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|MODULE_NAME|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|UDT_CATALOG|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|UDT_SCHEMA|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|UDT_NAME|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|DATA_TYPE|**nvarchar(**128**)**|函数返回值的数据类型。 返回**表**如果表值函数。|  
 |CHARACTER_MAXIMUM_LENGTH|**int**|以字符为单位的最大长度（如果返回类型是字符类型）。<br /><br /> -1 表示**xml**和大值类型数据。|  
 |CHARACTER_OCTET_LENGTH|**int**|以字节为单位的最大长度（如果返回类型是字符类型）。<br /><br /> -1 表示**xml**和大值类型数据。|  
-|COLLATION_CATALOG|**nvarchar (**128**)**|始终返回 NULL。|  
-|COLLATION_SCHEMA|**nvarchar (**128**)**|始终返回 NULL。|  
-|COLLATION_NAME|**nvarchar (**128**)**|返回值的排序规则名。 对于非字符类型，返回 NULL。|  
-|CHARACTER_SET_CATALOG|**nvarchar (**128**)**|始终返回 NULL。|  
-|CHARACTER_SET_SCHEMA|**nvarchar (**128**)**|始终返回 NULL。|  
-|CHARACTER_SET_NAME|**nvarchar (**128**)**|返回值字符集的名称。 对于非字符类型，返回 NULL。|  
+|COLLATION_CATALOG|**nvarchar(**128**)**|始终返回 NULL。|  
+|COLLATION_SCHEMA|**nvarchar(**128**)**|始终返回 NULL。|  
+|COLLATION_NAME|**nvarchar(**128**)**|返回值的排序规则名。 对于非字符类型，返回 NULL。|  
+|CHARACTER_SET_CATALOG|**nvarchar(**128**)**|始终返回 NULL。|  
+|CHARACTER_SET_SCHEMA|**nvarchar(**128**)**|始终返回 NULL。|  
+|CHARACTER_SET_NAME|**nvarchar(**128**)**|返回值字符集的名称。 对于非字符类型，返回 NULL。|  
 |NUMERIC_PRECISION|**int**|返回值的数字精度。 对于非数字类型，则返回 NULL。|  
 |NUMERIC_PRECISION_RADIX|**int**|返回值的数字精度基数。 对于非数字类型，返回 NULL。|  
 |NUMERIC_SCALE|**int**|返回值的小数位数。 对于非数字类型，返回 NULL。|  
 |DATETIME_PRECISION|**int**|如果返回值的类型是一秒的小数精度**datetime**。 否则，返回 NULL。|  
 |INTERVAL_TYPE|**nvarchar (**30**)**|NULL。 保留供将来使用。|  
 |INTERVAL_PRECISION|**int**|NULL。 保留供将来使用。|  
-|TYPE_UDT_CATALOG|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|TYPE_UDT_SCHEMA|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|TYPE_UDT_NAME|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|SCOPE_CATALOG|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|SCOPE_SCHEMA|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
-|SCOPE_NAME|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
+|TYPE_UDT_CATALOG|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|TYPE_UDT_SCHEMA|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|TYPE_UDT_NAME|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|SCOPE_CATALOG|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|SCOPE_SCHEMA|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
+|SCOPE_NAME|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
 |MAXIMUM_CARDINALITY|**bigint**|NULL。 保留供将来使用。|  
-|DTD_IDENTIFIER|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
+|DTD_IDENTIFIER|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
 |ROUTINE_BODY|**nvarchar (**30**)**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，返回 SQL；对于外部编写的函数，返回 EXTERNAL。<br /><br /> 函数将始终是 SQL 函数。|  
 |ROUTINE_DEFINITION|**nvarchar (**4000**)**|如果函数或存储过程未加密，返回函数或存储过程的定义文本最前面的 4000 字符。 否则，返回 NULL。<br /><br /> 若要确保你获得的完整定义，查询[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函数或中的定义列[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图。|  
-|EXTERNAL_NAME|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
+|EXTERNAL_NAME|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
 |EXTERNAL_LANGUAGE|**nvarchar (**30**)**|NULL。 保留供将来使用。|  
 |PARAMETER_STYLE|**nvarchar (**30**)**|NULL。 保留供将来使用。|  
 |IS_DETERMINISTIC|**nvarchar (**10**)**|如果例程是确定性的，则返回 YES。<br /><br /> 如果例程是不确定性的，则返回 NO。<br /><br /> 对于存储过程，始终返回 NO。|  
 |SQL_DATA_ACCESS|**nvarchar (**30**)**|返回以下值之一：<br /><br /> NONE = 函数不包含 SQL。<br /><br /> CONTAINS = 函数可能包含 SQL。<br /><br /> READS = 函数可能读取 SQL 数据。<br /><br /> MODIFIES = 函数可能修改 SQL 数据。<br /><br /> 为所有函数返回 READS，为所有存储过程返回 MODIFIES。|  
 |IS_NULL_CALL|**nvarchar (**10**)**|指示如果例程的任一参数为 NULL，是否将调用该例程。|  
-|SQL_PATH|**nvarchar (**128**)**|NULL。 保留供将来使用。|  
+|SQL_PATH|**nvarchar(**128**)**|NULL。 保留供将来使用。|  
 |SCHEMA_LEVEL_ROUTINE|**nvarchar (**10**)**|如果是架构级函数，则返回 YES；如果不是架构级函数，则返回 NO。<br /><br /> 始终返回 YES。|  
 |MAX_DYNAMIC_RESULT_SETS|**int**|例程返回的最大动态结果集数。<br /><br /> 如果是函数，则返回 0。|  
 |IS_USER_DEFINED_CAST|**nvarchar (**10**)**|如果是用户定义的转换函数，则返回 YES；如果不是用户定义的转换函数，则返回 NO。<br /><br /> 始终返回 NO。|  
@@ -97,10 +98,10 @@ ms.lasthandoff: 11/21/2017
 |LAST_ALTERED|**datetime**|最后一次修改函数的时间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [系统视图 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [信息架构视图 &#40;Transact SQL &#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [信息架构视图&#40;Transact SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.procedures (Transact-SQL)](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   

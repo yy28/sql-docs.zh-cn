@@ -1,32 +1,33 @@
 ---
-title: "概述 (SMO) |Microsoft 文档"
-ms.custom: 
+title: 概述 (SMO) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b8fc017c4005021ca22350feb8c6e19a869b5bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-smo"></a>概述 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO) 是用于以编程方式管理的对象[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以使用 SMO 生成自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理应用程序。 尽管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用广泛的强大应用程序，但有时 SMO 应用程序可能对您更为适用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 是用于以编程方式管理的对象[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以使用 SMO 生成自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理应用程序。 尽管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用广泛的强大应用程序，但有时 SMO 应用程序可能对您更为适用。  
   
  例如，可能需要简化控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理任务的用户应用程序，以满足新用户的需要并且降低培训成本。 您可能需要创建自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，或创建用于创建和监控索引效率的应用程序。 还可以使用 SMO 应用程序将第三方硬件或软件无缝纳入数据库管理应用程序。  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 01/12/2018
   
 -   旨在提高并发性的快照隔离和行级版本控制。 有关详细信息，请参阅[使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
--   XML 架构集合、XML 索引和 XML 数据类型提供对 XML 数据的验证和存储。 有关详细信息，请参阅[XML 架构集合 &#40;SQL server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)和[使用 XML 架构](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。  
+-   XML 架构集合、XML 索引和 XML 数据类型提供对 XML 数据的验证和存储。 有关详细信息，请参阅[XML 架构集合&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)和[使用 XML 架构](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。  
   
 -   用于创建数据库只读副本的快照数据库。  
   
 -   针对基于消息的通信的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 支持。 有关详细信息，请参阅[SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)。  
   
--   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象的多个名称的同义词支持。 有关详细信息，请参阅[同义词 &#40; 数据库引擎 &#41;](../../relational-databases/synonyms/synonyms-database-engine.md)。  
+-   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象的多个名称的同义词支持。 有关详细信息，请参阅[同义词&#40;数据库引擎&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)。  
   
 -   数据库邮件的管理，允许您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建电子邮件服务器、电子邮件配置文件和电子邮件帐户。 有关详细信息，请参阅 [数据库邮件](../../relational-databases/database-mail/database-mail.md)。  
   

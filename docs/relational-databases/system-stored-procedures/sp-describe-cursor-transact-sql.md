@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_cursor (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_describe_cursor (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38eae1442b8058b6596efd525196f2f76b4b6dce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce7ca0bb9efe8f00cb65dfe9c8cc1dd1d383544b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  与打开的游标关联的游标变量的名称。 *input_cursor_variable*是**nvarchar （128)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="cursors-returned"></a>返回的游标  
  sp_describe_cursor 封装在中设置其结果[!INCLUDE[tsql](../../includes/tsql-md.md)]**光标**输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这也意味着无法直接从数据库 API 函数调用该过程。 **光标**输出参数必须绑定到程序变量中，但数据库 Api 不支持绑定**光标**参数或变量。  
@@ -89,10 +89,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |并发|**tinyint**|1 = 只读的<br /><br /> 2 = 滚动锁<br /><br /> 3 = 乐观|  
 |scrollable|**tinyint**|0 = 只进<br /><br /> 1 = 可滚动|  
 |open_status|**tinyint**|0 = 关闭的<br /><br /> 1 = 打开的|  
-|cursor_rows|**decimal(10,0)**|限定行的数目在结果集中。 有关详细信息，请参阅[@@CURSOR_ROWS &#40;Transact SQL &#41;](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**int**|对此游标上次提取的状态。 有关详细信息，请参阅[@@FETCH_STATUS &#40;Transact SQL &#41;](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = 提取成功。<br /><br /> -1 = 提取失败或超出游标的界限。<br /><br /> -2 = 缺少所请求的行。<br /><br /> -9 = 尚未对游标进行提取。|  
+|cursor_rows|**decimal(10,0)**|限定行的数目在结果集中。 有关详细信息，请参阅 [@@CURSOR_ROWS (Transact-SQL)](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
+|fetch_status|**int**|对此游标上次提取的状态。 有关详细信息，请参阅 [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)。<br /><br /> 0 = 提取成功。<br /><br /> -1 = 提取失败或超出游标的界限。<br /><br /> -2 = 缺少所请求的行。<br /><br /> -9 = 尚未对游标进行提取。|  
 |column_count|**int**|游标结果集中的列数。|  
-|row_count|**decimal(10,0)**|受游标的上次操作影响的行数。 有关详细信息，请参阅[@@ROWCOUNT &#40;Transact SQL &#41;](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**decimal(10,0)**|受游标的上次操作影响的行数。 有关详细信息，请参阅 [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)。|  
 |last_operation|**tinyint**|对游标执行的最后一个操作：<br /><br /> 0 = 没有对游标执行操作。<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = 插入<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|服务器范围内的游标唯一值。|  
   
@@ -101,7 +101,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
  DECLARE CURSOR 语句可以请求一个游标类型，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法使用 DECLARE CURSOR 中包含的 SELECT 语句支持该游标类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以将该游标隐式转换为它可用 SELECT 语句支持的类型。 如果在 DECLARE CURSOR 语句中指定了 TYPE_WARNING，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将向应用程序发送一条信息性消息，说明转换已完成。 然后，可以调用 sp_describe_cursor 来确定的已实现的游标类型。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -145,10 +145,10 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [游标](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;Transact SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_cursor_list &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_columns &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [sp_describe_cursor_tables &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [sp_cursor_list &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_columns &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

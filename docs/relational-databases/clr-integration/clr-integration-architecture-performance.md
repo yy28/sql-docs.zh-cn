@@ -1,35 +1,35 @@
 ---
-title: "CLR 集成的性能 |Microsoft 文档"
-ms.custom: 
+title: CLR 集成的性能 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: 
+caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 285df1ab327617437fa9edf32f21b84b2499e0ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 集成体系结构的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题讨论一些增强的性能的设计选择[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与集成[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework 公共语言运行时 (CLR)。  
+  本主题讨论一些增强的性能的设计选择[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与集成[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework 公共语言运行时 (CLR)。  
   
 ## <a name="the-compilation-process"></a>编译过程  
  在编译 SQL 表达式时，如果遇到对托管例程的引用，则生成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中间语言 (MSIL) 存根。 该存根包含的代码用于将例程参数从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封送到 CLR、调用函数并返回结果。 该“粘附”代码基于参数类型和参数方向（向内、向外或引用）。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/09/2018
 >  建议您不要开发新的扩展存储过程，因为已不推荐使用此功能。  
   
 ### <a name="native-serialization-for-user-defined-types"></a>用户定义类型的本机序列化  
- 用户定义类型 (UDT) 是作为标量类型系统的扩展性机制设计的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]udt 调用实现序列化格式**Format.Native**。 在编译期间，检查该类型的结构以便生成针对该特定类型定义自定义的 MSIL。  
+ 用户定义类型 (UDT) 是作为标量类型系统的扩展性机制设计的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] udt 调用实现序列化格式**Format.Native**。 在编译期间，检查该类型的结构以便生成针对该特定类型定义自定义的 MSIL。  
   
  本机序列化是针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实现。 用户定义序列化调用由类型作者定义的方法来执行序列化。 **Format.Native**序列化应尽可能以获得最佳性能。  
   

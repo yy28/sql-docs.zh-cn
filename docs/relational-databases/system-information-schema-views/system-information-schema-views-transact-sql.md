@@ -1,16 +1,16 @@
 ---
-title: "系统信息架构视图 (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: 系统信息架构视图 (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-information-schema-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,19 +21,19 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 361e6385eb14d6ea3ae2826c1b8aa184c167e50a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 13c8c27fc41e567bd7fab020b537a6d0b8d081f7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-information-schema-views-transact-sql"></a>系统信息架构视图 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   信息架构视图是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的几种获取元数据的方法之一。 信息架构视图提供独立于系统表的内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据视图。 尽管已经对基础系统表进行了重要的修改，信息架构视图仍然可使应用程序正常工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含的信息架构视图符合 ISO 标准中的信息架构定义。  
   
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统视图 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

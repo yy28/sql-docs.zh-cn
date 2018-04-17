@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergearticlecolumn (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpmergearticlecolumn (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52f1f848b8c3fd5ae2432041387739c355c2ab08
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f2a604ba09b1599113b01367f83fe3f721a3f2fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  为发布的名称。*发布*是**sysname**，无默认值。  
   
- [  **@article=**] *文章*  
+ [  **@article=**] *****文章*****  
  是表或视图的项目在其上检索信息的名称。*文章*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
@@ -58,7 +58,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|标识列。|  
-|**column_name**|**sysname**|表或视图的列名。|  
+|column_name|**sysname**|表或视图的列名。|  
 |**发布**|**bit**|指定是否发布列名称。<br /><br /> **1**指定列正在发布。<br /><br /> **0**指定未发布。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -67,7 +67,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>注释  
  **sp_helpmergearticlecolumn**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**replmonitor**分发数据库或发布的发布访问列表中的固定的数据库角色可以执行**sp_helpmergearticlecolumn**。  
   
 ## <a name="see-also"></a>另请参阅  

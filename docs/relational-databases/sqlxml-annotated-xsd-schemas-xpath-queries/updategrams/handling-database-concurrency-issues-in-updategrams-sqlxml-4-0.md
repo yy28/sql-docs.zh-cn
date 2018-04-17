@@ -1,16 +1,16 @@
 ---
-title: "处理 Updategram (SQLXML 4.0) 中的数据库并发问题 |Microsoft 文档"
-ms.custom: 
+title: 处理 Updategram (SQLXML 4.0) 中的数据库并发问题 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e19d8397d59b4c85d60593c63faa5bc6f0f2ea4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 328bb2b98ffe4a6a266463aa8fe0d8348ebbd975
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram 中处理数据库并发问题 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-与其他数据库更新机制一样，updategram 必须处理多用户环境下对数据的并发更新。 Updategram 使用乐观并发控制，该模式将选择字段数据与快照进行比较，以确保要更新的数据自从在数据库中读取后，其他用户应用程序未更改过该数据。 Updategram 包括这些快照值**\<之前 >** updategram 的块。 在更新数据库之前, 属的 updategram 检查中指定的值**\<之前 >**块针对当前中数据库后，以确保更新是有效的值。  
+  与其他数据库更新机制一样，updategram 必须处理多用户环境下对数据的并发更新。 Updategram 使用乐观并发控制，该模式将选择字段数据与快照进行比较，以确保要更新的数据自从在数据库中读取后，其他用户应用程序未更改过该数据。 Updategram 包括这些快照值**\<之前 >** updategram 的块。 在更新数据库之前, 属的 updategram 检查中指定的值**\<之前 >**块针对当前中数据库后，以确保更新是有效的值。  
   
  乐观并发控制在 updategram 中提供三种保护级别：低（无）、中间和高。 通过相应指定 updategram，可以确定需要的保护级别。  
   
@@ -195,6 +196,6 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [属的 Updategram 安全注意事项 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

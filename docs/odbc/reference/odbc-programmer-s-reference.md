@@ -1,8 +1,8 @@
 ---
-title: ODBC 程序员 &#39; s 引用 |Microsoft 文档
+title: ODBC 程序员&#39;的参考 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC 程序员 &#39; s 引用
+# <a name="odbc-programmer39s-reference"></a>ODBC 程序员&#39;的参考
 *ODBC 程序员参考*包含以下各节。  
   
 -   [What's New in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md)列出已添加 Windows 8 SDK 中的新 ODBC 功能。  
@@ -54,15 +54,15 @@ ms.lasthandoff: 12/21/2017
   
  将使用以下排字约定。  
   
-|“格式”|用于|  
+|格式|用于|  
 |------------|--------------|  
 |选择 * 从|大写字母指示 SQL 语句、 宏名称和在操作系统命令级别使用的术语。|  
 |`RETCODE SQLFetch(hdbc)`|等宽字体用于示例命令行和程序代码。|  
-|*自变量*|斜体字表示编程参数，用户或应用程序必须提供，或者 word 强调的信息。|  
+|argument|斜体字表示编程参数，用户或应用程序必须提供，或者 word 强调的信息。|  
 |**SQLEndTran**|粗体类型指示必须严格按所示，包括函数名称键入语法。|  
 |&#124;|竖线分隔的语法行中的两个互相排斥的选项。|  
 |...|省略号表示自变量可以重复多次。|  
-|实例时都提供 SQL Server 登录名。 实例时都提供 SQL Server 登录名。 实例时都提供 SQL Server 登录名。|三个点的一列指示延续前面的代码行。|  
+|。 。 。|三个点的一列指示延续前面的代码行。|  
   
 ## <a name="about-the-code-examples"></a>有关代码示例  
  本指南中的代码示例旨在仅用于说明目的。 因为它们编写主要是为了演示 ODBC 原则，效率有时在一旁为了清楚起见。 此外，代码的整个部分有时省略了为清楚起见。 其中包括非 ODBC 函数 （其名称不会启动与"SQL"这些函数） 和大多数的错误处理的定义。  

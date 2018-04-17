@@ -1,16 +1,16 @@
 ---
-title: "sp_cursorfetch (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_cursorfetch (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorfetch
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9b33361094966dc180939f0cdf92ac951922139
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3a018fe2a3ebf5aaa53e1ed5f04112f0b512c712
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  指定要提取的游标缓冲区。 *fetchtype*是需要一个以下整数输入值的可选参数。  
   
-|值|Name|Description|  
+|“值”|名称|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|提取的第一个缓冲区*nrows*行。 如果*nrows*等于 0 游标位于结果集之前，会返回任何行。|  
 |0x0002|NEXT|提取的下一个缓冲区*nrows*行。|  
@@ -140,7 +140,7 @@ sp_cursorfetch cursor
   
  RPC 状态参数设置为下表中显示的值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |0|过程已成功执行。|  
 |0x0001|过程失败。|  
@@ -149,7 +149,7 @@ sp_cursorfetch cursor
   
  这些行将作为典型的结果集返回，也即：列格式 (0x2a)、行 (0xd1)，后跟完成 (0xfd)。 元数据标记使用与为 sp_cursoropen 指定的相同格式发送，也即：对于 SQL Server 7.0 用户为 0x81、0xa5 和 0xa4 等。 行状态指示器在具有列名称 rowstat 和数据类型 INT4 的每一行的末尾作为隐藏列发送（类似于 BROWSE 模式）。 此 rowstat 列具有下表中显示的值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -199,7 +199,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_cursoropen &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

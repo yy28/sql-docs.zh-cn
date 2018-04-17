@@ -1,31 +1,32 @@
 ---
-title: "检索输出参数使用 SQLGetData |Microsoft 文档"
-ms.custom: 
+title: 检索输出参数使用 SQLGetData |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92903e38c31af40c7d2cf375cad6695a23acb010
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>检索输出参数使用 SQLGetData
 在 ODBC 3.8 之前应用程序只能无法检索具有绑定的输出缓冲区的查询的输出参数。 但是，很难参数值的大小是非常大 （例如，较大的图像） 时，将分配一个非常大的缓冲区。 ODBC 3.8 引入了检索部分中的输出参数的新方法。 现在，应用程序可以调用**SQLGetData**使用较小的缓冲区多次检索大型参数值。 这是类似于检索大型列数据。  

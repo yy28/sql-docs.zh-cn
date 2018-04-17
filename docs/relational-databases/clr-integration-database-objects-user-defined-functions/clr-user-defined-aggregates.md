@@ -1,15 +1,15 @@
 ---
-title: "CLR 用户定义聚合 |Microsoft 文档"
-ms.custom: 
+title: CLR 用户定义聚合 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - aggregate functions [CLR integration]
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - calculations [CLR integration]
 - user-defined functions [CLR integration]
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a21a1ef44ac6898740b75daf5b087e76415d904
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7b536d0f4e45d7ec3d312778e242a5401be73726
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-user-defined-aggregates"></a>CLR 用户定义聚合
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-聚合函数对一组值执行计算，并返回单个值。 传统上， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有支持仅内置聚合函数，如**总和**或**最大**的一组输入标量值进行操作，并且生成单个聚合从该组的值。 通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时 (CLR) 的集成，现在开发人员能够利用托管代码创建自定义聚合函数，并且使这些函数可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码访问。  
+  聚合函数对一组值执行计算，并返回单个值。 传统上， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有支持仅内置聚合函数，如**总和**或**最大**的一组输入标量值进行操作，并且生成单个聚合从该组的值。 通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时 (CLR) 的集成，现在开发人员能够利用托管代码创建自定义聚合函数，并且使这些函数可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码访问。  
   
  下表列出了本节的主题。  
   

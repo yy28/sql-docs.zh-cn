@@ -1,16 +1,16 @@
 ---
-title: "sp_deletetracertokenhistory (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_deletetracertokenhistory (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9e130ffe0853d899bcacd63c35d7987c9981329
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 25f264f72042b6d26b3ebc5c677bc9ed4a981751
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  删除跟踪令牌记录从[MStracer_tokens &#40;Transact SQL &#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)和[MStracer_history &#40;Transact SQL &#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md)系统表。 此存储过程在发布服务器上的发布数据库中执行，或者在分发服务器上的分发数据库中执行。  
+  删除跟踪令牌记录从[MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)和[MStracer_history &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md)系统表。 此存储过程在发布服务器上的发布数据库中执行，或者在分发服务器上的分发数据库中执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] *发布*  
+ [  **@publication=** ] *****发布*****  
  已插入跟踪令牌的发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@tracer_id=** ] *tracer_id*  
@@ -59,13 +59,13 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  [  **@cutoff_date=** ] *cutoff_date*  
  指定一个截止日期，以便删除在该日期之前插入发布的所有跟踪令牌。 *cutoff_date*是日期时间，默认值为 NULL。  
   
- [  **@publisher=** ] *发布服务器*  
+ [  **@publisher=** ] *****发布服务器*****  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  此参数应仅为指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
- [  **@publisher_db=** ] *publisher_db*  
+ [  **@publisher_db=** ] *****publisher_db*****  
  发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 如果在发布服务器上执行该存储过程，将忽略此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -78,13 +78,13 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
   
  如果你不会执行**sp_deletetracertokenhistory**若要删除跟踪令牌元数据，信息将被删除时执行定期计划历史记录清理。  
   
- 跟踪令牌 Id 可以由执行[sp_helptracertokens &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)也可以通过查询[MStracer_tokens &#40;Transact SQL &#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)系统表。  
+ 跟踪令牌 Id 可以由执行[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)也可以通过查询[MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)系统表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色、 **db_owner**在发布数据库中，固定数据库角色或**db_owner**固定的数据库或**replmonitor**分发数据库中的角色可以执行**sp_deletetracertokenhistory**。  
   
 ## <a name="see-also"></a>另请参阅  
  [为事务复制测量滞后时间和验证连接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_helptracertokenhistory &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)  
+ [sp_helptracertokenhistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)  
   
   

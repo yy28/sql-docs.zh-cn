@@ -1,33 +1,34 @@
 ---
-title: "使用大型 CLR Udt (OLE DB) |Microsoft 文档"
-ms.custom: 
+title: 使用大型 CLR Udt (OLE DB) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c71b1fbe580694098b58381d396266723a339f89
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f02ac3083752ad961de06b8a1c009d1ead52a78a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息，请参阅[Large CLR User-Defined 类型 &#40; OLE DB &#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
+  此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
   
 ## <a name="example"></a>示例  
  此示例包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 该表中的一个列将属于该程序集中定义的一个类型。默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  

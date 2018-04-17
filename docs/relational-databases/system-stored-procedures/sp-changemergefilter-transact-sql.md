@@ -1,16 +1,16 @@
 ---
-title: "sp_changemergefilter (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changemergefilter (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411485fc255b3d10219773131f3e69ac31106d03
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 152fa21dbcbac8fbefd2dcae4b0f5bacf78eb5b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,24 +52,24 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] *发布*  
+ [  **@publication=** ] *****发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=** ] *文章*  
+ [  **@article=** ] *****文章*****  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@filtername=** ] *filtername*  
+ [  **@filtername=** ] *****filtername*****  
  筛选器的当前名称。 *filtername*是**sysname**，无默认值。  
   
- [  **@property=** ] *属性*  
+ [  **@property=** ] *****属性*****  
  要更改的属性的名称。 *属性*是**sysname**，无默认值。  
   
- [  **@value=**] *值*  
+ [  **@value=**] *****值*****  
  是的指定属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|Description|  
+|属性|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|联接筛选器。<br /><br /> 若要支持 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器，此选项是必需的。|  
 ||**2**|逻辑记录关系。|  
@@ -100,18 +100,18 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>注释  
  **sp_changemergefilter**合并复制中使用。  
   
- 更改对合并项目的筛选需要重新创建快照（如果存在快照）。 通过设置执行此操作 **@force_invalidate_snapshot** 到**1**。 而且，如果该项目有订阅，则需要重新初始化订阅。 这可通过设置 **@force_reinit_subscription** 到**1**。  
+ 更改对合并项目的筛选需要重新创建快照（如果存在快照）。 通过设置执行此操作**@force_invalidate_snapshot**到**1**。 而且，如果该项目有订阅，则需要重新初始化订阅。 这可通过设置**@force_reinit_subscription**到**1**。  
   
  若要使用逻辑记录，发布和项目必须满足许多要求。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergefilter**。  
   
 ## <a name="see-also"></a>另请参阅  
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

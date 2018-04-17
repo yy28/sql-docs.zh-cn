@@ -1,16 +1,16 @@
 ---
-title: "srv_setcoldata（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_setcoldata（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_setcoldata
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_setcoldata
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8be41b91658e1eeb2b5da1c361d64b76829e6126
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: a8f7ce6ef6686ee9da6fa71fcf634960d7c1a5f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvsetcoldata-extended-stored-procedure-api"></a>srv_setcoldata（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  指定列的数据的当前地址。  
   
@@ -61,7 +61,7 @@ data
  srvproc  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- column  
+ *column*  
  指示指定其地址的列的编号。 列的编号从 1 开始。  
   
  *data*  

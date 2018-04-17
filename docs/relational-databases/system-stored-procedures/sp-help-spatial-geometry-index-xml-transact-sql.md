@@ -1,16 +1,16 @@
 ---
-title: "sp_help_spatial_geometry_index_xml (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_spatial_geometry_index_xml (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_index_xml_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index_xml procedure
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b345a5b87ffc78c47052210a055ab3ee157effc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 75d4a07808aa47e748a0bd814587d19d34f74ce3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="properties"></a>属性  
  请参阅[自变量和空间索引的属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须是属于**公共**角色。 需要服务器和对象的 READ ACCESS 权限。  
   
 ## <a name="remarks"></a>注释  
@@ -78,7 +78,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
  类似于[sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)，此存储的过程提供更简单的空间索引的属性以编程方式访问和报表中 XML 的结果集。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
   
 ## <a name="see-also"></a>另请参阅  
  [自变量和属性的空间索引的存储的过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   

@@ -1,30 +1,31 @@
 ---
-title: SQLColumns | Microsoft Docs
-ms.custom: 
+title: SQLColumns |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-caps.latest.revision: 
+caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 661c678e8d98d1b4d3f88c29d6d0b786b4e686d4
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8e48fa527d745b920e2a664f8e8982b18cc53038
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,29 +73,29 @@ ms.lasthandoff: 01/24/2018
 |SS_IS_COMPUTED|Smallint|对于 TABLE_TYPE 中的列，如果该列是一个计算列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_IDENTITY|Smallint|如果该列为标识列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
   
- 有关表值参数的详细信息，请参阅[表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[表值参数 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>SQLColumns 对日期和时间增强功能的支持  
  有关为日期/时间类型返回的值的信息，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 有关详细信息，请参阅[日期和时间改进 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns 对大型 CLR UDT 的支持  
- **SQLColumns**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColumns**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
  两个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定列已添加到结果集中为 SQLColumns:  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
-|SS_IS_COLUMN_SET|**Smallint**|如果该列为**column_set**列中，这是 SQL_TRUE; 否则为 SQL_FALSE。|  
+|SS_IS_SPARSE|**smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
+|SS_IS_COLUMN_SET|**smallint**|如果该列为**column_set**列中，这是 SQL_TRUE; 否则为 SQL_FALSE。|  
   
  符合 ODBC 规范，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 出现在之前已添加到的所有驱动程序的特定列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，和之后由 ODBC 本身规定的所有列。  
   
  SQLColumns 所返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
- 有关 ODBC 中的稀疏列的详细信息，请参阅[稀疏列支持 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ 有关 ODBC 中的稀疏列的详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLColumns 函数](http://go.microsoft.com/fwlink/?LinkId=59336)   

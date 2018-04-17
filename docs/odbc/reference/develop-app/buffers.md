@@ -1,15 +1,16 @@
 ---
-title: "缓冲区 |Microsoft 文档"
-ms.custom: 
+title: 缓冲区 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - input buffers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buffers"></a>缓冲区
 缓冲区是用于应用程序和驱动程序之间传递数据的应用程序任何的内存部分。 例如，应用程序缓冲区可以关联，或*绑定到*结果集具有列**SQLBindCol**。 是提取每个行，在这些缓冲区中的每个列返回数据。 *输入缓冲区*用于将数据传递到该驱动程序; 应用程序从*输出缓冲区*用于将数据从驱动程序返回到应用程序。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  这些缓冲区通常成对出现。 *数据缓冲区*是用来传递数据本身，而*长度/指示器缓冲区*用于传递数据缓冲区或如 SQL_NULL_DATA，指示数据为 NULL 的特殊值中的数据的长度。 数据缓冲区中的数据的长度是不同的数据缓冲区本身的长度。 下图显示的数据缓冲区和长度/指示器缓冲区之间的关系。  
   
- ![数据缓冲区和长度 &#47; 指示器缓冲区](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![数据缓冲区和长度&#47;指示器缓冲区](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
  每当数据缓冲区包含可变长度数据，如字符或二进制数据，长度/指示器缓冲区是必需的。 如果数据缓冲区包含固定长度的数据，如整数或日期结构中，长度/指示器缓冲区只有才需要将传递指示器值，因为已经知道数据的长度。 如果应用程序使用与固定长度的数据的长度/指示器缓冲区，该驱动程序将忽略在它传递任何长度。  
   

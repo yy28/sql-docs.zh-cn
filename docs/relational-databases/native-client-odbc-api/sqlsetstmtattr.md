@@ -1,30 +1,31 @@
 ---
 title: SQLSetStmtAttr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ccde3758ee43b69112e9d91bdaa7c26f2be01dd5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +46,10 @@ ms.lasthandoff: 01/24/2018
   
  有关详细信息，请参阅[准备语句的表值参数元数据](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)。  
   
- 有关表值参数的详细信息，请参阅[表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[表值参数 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>SQLSetStmtAttr 对稀疏列的支持  
- SQLSetStmtAttr 可以用于设置 SQL_SOPT_SS_NAME_SCOPE。 有关详细信息，请参阅 SQL_SOPT_SS_NAME_SCOPE 部分中的，本主题中后面。有关稀疏列的详细信息，请参阅[稀疏列支持 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ SQLSetStmtAttr 可以用于设置 SQL_SOPT_SS_NAME_SCOPE。 有关详细信息，请参阅 SQL_SOPT_SS_NAME_SCOPE 部分中的，本主题中后面。有关稀疏列的详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="statement-attributes"></a>语句属性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序还支持以下特定于驱动程序的语句属性。  

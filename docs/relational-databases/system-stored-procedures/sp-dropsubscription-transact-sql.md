@@ -1,16 +1,16 @@
 ---
-title: "sp_dropsubscription (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_dropsubscription (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43185571b06705011346dc08ded48e587a624311
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 85d2d9188f84d4d2dac6167180013d1e659de3de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +51,22 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] *发布*  
+ [  **@publication=** ] *****发布*****  
  关联的发布的名称。 *发布*是**sysname**，默认值为 NULL。 如果**所有**，为指定的订阅服务器的所有发布的所有订阅，则会都取消。 *发布*参数是必需的。  
   
- [  **@article=** ] *文章*  
+ [  **@article=** ] *****文章*****  
  项目的名称。 *文章*是**sysname**，默认值为 NULL。 如果**所有**，每个订阅的所有项目指定删除发布和订阅服务器。 使用**所有**允许即时的发布更新。  
   
- [  **@subscriber=** ] *订阅*r  
+ [  **@subscriber=** ] *** **订阅*r*** *  
  要删除其订阅的订阅服务器名。 *订阅服务器*是**sysname**，无默认值。 如果**所有**，将删除所有订阅服务器的所有订阅。  
   
- [  **@destination_db=** ] *destination_db*  
+ [  **@destination_db=** ] *****destination_db*****  
  目标数据库的名称。 *destination_db*是**sysname**，默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] *保留*  
+ [  **@reserved=** ] *****保留*****  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -80,13 +80,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色、 **db_owner**固定的数据库角色或创建订阅的用户可以执行**sp_dropsubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

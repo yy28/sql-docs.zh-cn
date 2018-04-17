@@ -1,16 +1,16 @@
 ---
-title: "sp_help_fulltext_catalogs (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_fulltext_catalogs (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalogs_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalogs
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01a0a7337f482de5899d358afc9b0df22fe59a5b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 746da327860b8e593b028e1316e5cfd43e2c9b1e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**int**|全文目录的标识符。|  
-|**NAME**|**sysname**|全文目录的名称。|  
+|**名称**|**sysname**|全文目录的名称。|  
 |PATH|nvarchar(260)|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
-|**STATUS**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪<br /><br /> NULL = 用户没有对全文目录的 VIEW 权限，或者未全文启用数据库，或者未安装全文组件。|  
+|**状态**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪<br /><br /> NULL = 用户没有对全文目录的 VIEW 权限，或者未全文启用数据库，或者未安装全文组件。|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|与目录关联的全文索引表的数量。|  
   
 ## <a name="permissions"></a>权限  
@@ -80,9 +80,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FULLTEXTCATALOGPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_catalog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY & #40;Transact SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [sp_fulltext_catalog &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

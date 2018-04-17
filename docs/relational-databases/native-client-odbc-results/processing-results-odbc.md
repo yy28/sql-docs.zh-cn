@@ -1,15 +1,15 @@
 ---
-title: "处理结果 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 处理结果 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], about result sets
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - result sets [ODBC]
 - COMPUTE BY clause
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f96430e6dee07e1c3bd385bb68b5057637974217
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 44484fe30b7dd6f672310fe69f3ba3a5c0e7bd89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processing-results-odbc"></a>处理结果 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,20 +74,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [确定的特征的结果集 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [确定的特征的结果集 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
 -   [分配存储](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
   
 -   [提取结果数据](../../relational-databases/native-client-odbc-results/fetching-result-data.md)  
   
--   [映射数据类型 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
+-   [数据类型映射&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
   
 -   [数据类型用法](../../relational-databases/native-client-odbc-results/data-type-usage.md)  
   
 -   [字符数据的自动转换](../../relational-databases/native-client-odbc-results/autotranslation-of-character-data.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [处理结果操作指南主题 &#40; ODBC &#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [处理结果操作指南主题 & #40; ODBC & #41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "CLR 托管环境 |Microsoft 文档"
-ms.custom: 
+title: CLR 托管环境 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 
+caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5beddb30dcf9948c2e11d0ad3110e21d485b14cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 集成体系结构-CLR 托管环境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
  不应允许用户代码执行损害数据库引擎进程完整性的操作，例如弹出请求用户响应的消息框或退出进程。 用户代码应不能覆盖数据库引擎内存缓冲区或内部数据结构。  
   
 ###### <a name="scalability"></a>可伸缩性  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 具有不同的内部模型，用于计划和内存管理。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持协作、非抢先的线程模型，在此模型中，线程将定期或在等待锁或 I/O 时主动生成执行。 CLR 则支持抢先的线程化模型。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内运行的用户代码可以直接调用操作系统线程化基元，就不能很好地与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 任务计划程序集成，可能降低系统的可伸缩性。 CLR 不区分虚拟内存和物理内存，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直接管理物理内存并要求在可配置的限制范围内使用物理内存。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 具有用于计划和内存管理的不同内部模型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持协作、非抢先的线程模型，在此模型中，线程将定期或在等待锁或 I/O 时主动生成执行。 CLR 则支持抢先的线程化模型。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内运行的用户代码可以直接调用操作系统线程化基元，就不能很好地与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 任务计划程序集成，可能降低系统的可伸缩性。 CLR 不区分虚拟内存和物理内存，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直接管理物理内存并要求在可配置的限制范围内使用物理内存。  
   
  不同的线程化、计划和内存管理的模型给需要支持成千上万的并发用户会话的关系数据库管理系统 (RDBMS) 带来了集成挑战。 体系结构应确保直接调用线程化、内存和同步基元的应用程序编程接口 (API) 的用户代码不损害系统的可伸缩性。  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 02/09/2018
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中驻留时，按以下方式处理这类线程中止：CLR 在发生线程中止的应用程序域中检测所有共享状态。 CLR 通过检查同步对象的存在来做到这点。 如果应用程序域中存在共享状态，则卸载应用程序域本身。 卸载应用程序域将停止当前在该应用程序域中运行的数据库事务。 由于共享状态的存在可能将这类严重异常的影响扩大到触发异常的用户会话之外的其他用户会话，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 采取了一些措施来减少共享状态出现的可能性。 有关详细信息，请参阅 .NET Framework 文档。  
   
 ###### <a name="security-permission-sets"></a>安全性：权限集  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许用户指定部署到数据库的代码的可靠性和安全性要求。 当程序集上载到数据库中时，程序集作者可为该程序集指定以下三个权限集中的一个：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许用户指定部署到数据库中的代码的可靠性和安全性要求。 当程序集上载到数据库中时，程序集作者可为该程序集指定以下三个权限集中的一个：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
   
 |||||  
 |-|-|-|-|  
@@ -142,7 +142,7 @@ ms.lasthandoff: 02/09/2018
   
  EXTERNAL_ACCESS 提供了一个中间安全选项，允许代码访问数据库外部的资源，而且仍然具有与 SAFE 相同的可靠性。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用主机级 CAS 策略层来设置授予权限的权限集存储在基于三个集之一的主机策略[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录。 在数据库内运行的托管代码始终获取这些代码访问权限集中的一个。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用宿主级 CAS 策略层设置宿主策略，该宿主策略根据存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录中的权限集授予三个权限集之一。 在数据库内运行的托管代码始终获取这些代码访问权限集中的一个。  
   
 ### <a name="programming-model-restrictions"></a>编程模型限制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中托管代码的编程模型涉及编写这样的函数、过程和类型：它们一般不需要使用跨多个调用保持的状态或在多个用户会话之间共享状态。 而且，如前文所述，共享状态的存在可导致能够影响应用程序的可伸缩性和可靠性的严重异常。  

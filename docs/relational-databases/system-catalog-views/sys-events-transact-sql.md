@@ -1,16 +1,16 @@
 ---
-title: "sys.events (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.events (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.events_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.events catalog view
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8479e77d947936c027dfe9e656a0f7847cc7d3a1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a8c0bf976f87b2d5c2d5ba7a4a616240bbdd58bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +42,14 @@ ms.lasthandoff: 11/27/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|触发器或事件通知的 ID。 此值，与一起**类型**唯一地标识一行。|  
-|**type**|**int**|导致触发器激发的事件。|  
+|**类型**|**int**|导致触发器激发的事件。|  
 |**type_desc**|**nvarchar(60)**|导致触发器激发的事件的说明。|  
 |**is_trigger_event**|**bit**|1 = 触发器事件。<br /><br /> 0 = 通知事件。|  
 |**event_group_type**|**int**|要对其创建触发器或事件通知的事件组，如果未对事件组中创建触发器或事件通知，则为 Null。|  
 |**event_group_type_desc**|**nvarchar(60)**|创建触发器或事件通知的事件组的说明，如果未在事件组中创建触发器或事件通知，则为 Null。|  
   
 ## <a name="see-also"></a>另请参阅  
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_helpsort (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpsort (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsort_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 876399ba0a92df4ac0cc7a4268d9d5605fce07ad
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 942165c6982d117377c0bbf3c8f6f895f033fdc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_helpsort
 ## <a name="remarks"></a>注释  
  实例时，如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装使用排序规则指定了与以前安装的兼容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **sp_helpsort**返回空结果。 在这种情况，你可以通过查询 SERVERPROPERTY 对象，如确定的排序规则： `SELECT SERVERPROPERTY ('Collation');`。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -74,7 +75,7 @@ sp_helpsort;
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)  

@@ -1,16 +1,16 @@
 ---
-title: "sp_dropmergearticle (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_dropmergearticle (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergearticle
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 902a28f31abdc9dd501c6352acd4b2bee4042fd0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 201699ce0cbbc40d1a255ab628558c174b02a136
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  要从中删除项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *文章*  
+ [  **@article=**] *****文章*****  
  要从给定发布中删除的项目的名称。 *文章*是**sysname**，无默认值。 如果**所有**，将删除指定的合并发布中的所有现有项目。 即使*文章*是**所有**，发布仍必须单独从删除文章。  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
@@ -82,7 +82,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **sp_dropmergearticle**合并复制中使用。 有关删除的项目的详细信息，请参阅[添加项目和从现有发布删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
  执行**sp_dropmergearticle**以从发布删除项目不会删除该对象从发布数据库或从订阅数据库的相应对象。 如果需要，可以使用 `DROP <object>` 手动删除这些对象。  
@@ -171,7 +171,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [删除项目](../../relational-databases/replication/publish/delete-an-article.md)   
  [向现有发布添加项目和从中删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

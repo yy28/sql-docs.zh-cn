@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdistributor_properties (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpdistributor_properties (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5ce0b5b3e7e7bdb03fd0e36927a48c9dfcc8e7a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a738c9c7e8791295848799c50ccf2a6340f7595a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ sp_helpdistributor_properties
 ## <a name="remarks"></a>注释  
  **sp_helpdistributor_properties**用于所有类型的复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色，成员的**db_owner**或**replmonitor**上的分发数据库和中的用户的固定的数据库角色使用此分发服务器的发布的发布访问列表 (PAL) 可以执行**sp_helpdistributor_properties**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_changedistributor_property &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+ [sp_changedistributor_property &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

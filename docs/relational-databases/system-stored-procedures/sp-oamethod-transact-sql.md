@@ -1,16 +1,16 @@
 ---
-title: "sp_OAMethod (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_OAMethod (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dcf9235953ca1e907c4bae97562d5ea0a00049b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1a2ed3efb39a681e2f3cb4e935e7b7e6d8d41a75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,18 +71,18 @@ sp_OAMethod objecttoken , methodname
   
 -   方法返回一个数组作为输出参数。  
   
- [  *@parametername*   **=**  ]*参数*[**输出**]  
+ [  *@parametername* * * =**]*参数*[**输出**]  
  一个方法参数。 如果指定，*参数*必须是适当的数据类型的值。  
   
  若要获取输出参数，返回值*参数*必须适当的数据类型，是本地变量和**输出**必须指定。 如果指定常量参数，或如果**输出**未指定，则任何返回值从一个输出参数将被忽略。  
   
- 如果指定， *parametername*必须是的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意，  **@**  *parametername*不[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。 At 符号 (**@**) 被删除，和*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定， *parametername*必须是的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意，  **@** *parametername*不[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。At 符号 (**@ * *) 被删除，和*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  
   
 > [!NOTE]  
->  *@parametername*可以是方法的一个命名的参数，因为它是方法的指定的一部分，并通过传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
+>  *@parametername* 可以是方法的一个命名的参数，因为它是方法的指定的一部分，并通过传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败），是由 OLE 自动化对象返回的 HRESULT 整数值。  
@@ -112,7 +112,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="remarks"></a>注释  
  你还可以使用**sp_OAMethod**来获取属性值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -145,7 +145,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE 自动化存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE 自动化存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_physical_stats
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: 
+caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048961489aee9c369c8b01a04a083eba32d255dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]
 > 如果你查询**sys.dm_db_index_physical_stats**承载 Alwayson 的服务器实例上[可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)，可能会遇到 REDO 阻塞问题。 这是因为此动态管理视图获取指定用户表或视图的 IS 锁，而该锁可能阻止 REDO 线程对该用户表或视图的 X 锁请求。  
   
- **sys.dm_db_index_physical_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[sys.dm_db_xtp_index_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **sys.dm_db_index_physical_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[sys.dm_db_xtp_index_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -68,19 +69,19 @@ sys.dm_db_index_physical_stats (
   
  内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 如果在不指定数据库名称的情况下使用 DB_ID，则当前数据库的兼容级别必须是 90 或更高。  
   
- *object_id* | NULL | 0 | DEFAULT  
+ *object_id* |NULL |0 |默认值  
  索引所在的表或视图的对象 ID。 *object_id* 是 **int**。  
   
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，有效的输入也包括 service broker 队列名称或队列内部表名称。 何时应用默认参数 （即所有对象，所有索引，等等），对于所有队列的碎片信息包含在结果集。  
   
  指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果指定 NULL 为*object_id*，还必须指定为 NULL *index_id*和*partition_number*。  
   
- *index_id* | 0 | NULL | -1 | DEFAULT  
- 是索引的 ID。 *index_id*是**int**。有效输入包括索引，0 的 ID 号，如果*object_id*是堆，NULL，则为-1 或默认值。 默认值为-1。 为 NULL，-1，并且默认值是此上下文中的等效值。  
+ *index_id* | 0 |NULL |为-1 |默认值  
+ 索引的 ID。 *index_id*是**int**。有效输入包括索引，0 的 ID 号，如果*object_id*是堆，NULL，则为-1 或默认值。 默认值为-1。 为 NULL，-1，并且默认值是此上下文中的等效值。  
   
  指定 NULL 可返回基表或视图的所有索引的信息。 如果指定 NULL 为*index_id*，还必须指定为 NULL *partition_number*。  
   
- *partition_number* | NULL | 0 | DEFAULT  
+ *partition_number* |NULL |0 |默认值  
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
   
  指定 NULL，以返回有关所属对象的所有分区的信息。  
@@ -116,7 +117,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均记录大小（字节）。<br /><br /> 对于索引，为 IN_ROW_DATA 分配单元中 b 树当前级别的平均记录大小。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的平均记录大小。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中的平均记录大小。<br /><br /> 为 NULL 时*模式*= LIMITED。|  
 |forwarded_record_count|**bigint**|堆中具有指向另一个数据位置的转向指针的记录数。 （在更新过程中，如果在原始位置存储新行的空间不足，将会出现此状态。）<br /><br /> 除 IN_ROW_DATA 分配单元外，对于堆的其他所有分配单元都为 NULL。<br /><br /> 为 NULL 堆时*模式*= LIMITED。|  
 |compressed_page_count|**bigint**|压缩页的数目。<br /><br /> 对于堆，新分配的页未进行 PAGE 压缩。 堆在以下两种特殊情况下进行 PAGE 压缩：大量导入数据时和重新生成堆时。 导致页分配的典型 DML 操作不会进行 PAGE 压缩。 当 compressed_page_count 值增长到超过您所需的阈值时，将重新生成堆。<br /><br /> 对于具有聚集索引的表，compressed_page_count 值表示 PAGE 压缩的效率。|  
-|hobt_id|bigint|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 对于仅限列存储索引，这是一个跟踪分区内部的列存储数据的行集的 ID。 行集是存储为堆数据或二进制树。 它们具有相同父列存储索引的索引 ID。 有关详细信息，请参阅[sys.internal_partitions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> 如果|  
+|hobt_id|bigint|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 对于仅限列存储索引，这是一个跟踪分区内部的列存储数据的行集的 ID。 行集是存储为堆数据或二进制树。 它们具有相同父列存储索引的索引 ID。 有关详细信息，请参阅[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果|  
 |column_store_delete_buffer_state|tinyint|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
 |column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> NOT_APPLICABLE – 父索引不是列存储索引。<br /><br /> 打开 – deleters 和扫描仪的步骤使用此方法。<br /><br /> 正在清空 – deleters 排出但扫描仪仍使用它。<br /><br /> 刷新 – 缓冲区已关闭，并且正在缓冲区中的行写入到删除位图。<br /><br /> 停用 – 中的已关闭的删除缓冲区的行写入到删除位图，但因为扫描仪仍在使用它没有被截断缓冲区。 新扫描仪无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 准备好 – 此删除缓冲区是可供使用。|  
   
@@ -183,7 +184,7 @@ GO
   
  **逻辑碎片**  
   
- 这是索引的叶级页中出错页所占的百分比。 无序页是为其分配给索引下一步物理页不是指向下一步页的页的页*e*当前叶级页中的指针。  
+ 这是索引的叶级页中出错页所占的百分比。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页指针所指向的页。  
   
  **区碎片**  
   
@@ -240,7 +241,7 @@ GO
   
  拒绝 VIEW DATABASE STATE 将禁止返回数据库中的所有对象，而不管对特定对象授予的任何 CONTROL 权限。 此外，当数据库通配符 @*database_id*= 指定 NULL，则省略数据库。  
   
- 有关详细信息，请参阅[动态管理视图和函数 &#40;Transact SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ 有关详细信息，请参阅[动态管理视图和函数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -300,7 +301,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. 使用脚本中的 sys.dm_db_index_physical_stats 重新生成或重新组织索引  
- 以下示例将自动重新组织或重新生成数据库中平均碎片超过 10％ 的所有分区。 执行此查询需要 VIEW DATABASE STATE 权限。 此示例在不指定数据库名称的情况下，指定 `DB_ID` 作为第一个参数。 如果当前数据库的兼容级别为 80 或更低，则会产生错误。 若要纠正此错误，请用有效的数据库名称替换 `DB_ID()`。 有关数据库兼容性级别的详细信息，请参阅[ALTER DATABASE 兼容级别 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ 以下示例将自动重新组织或重新生成数据库中平均碎片超过 10％ 的所有分区。 执行此查询需要 VIEW DATABASE STATE 权限。 此示例在不指定数据库名称的情况下，指定 `DB_ID` 作为第一个参数。 如果当前数据库的兼容级别为 80 或更低，则会产生错误。 若要纠正此错误，请用有效的数据库名称替换 `DB_ID()`。 有关数据库兼容性级别的详细信息，请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -432,11 +433,11 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [系统视图 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

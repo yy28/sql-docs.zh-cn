@@ -1,31 +1,32 @@
 ---
-title: "计划 Automatic Administrative Tasks in SQL Server 代理 |Microsoft 文档"
-ms.custom: 
+title: 计划 Automatic Administrative Tasks in SQL Server 代理 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - scheduling administrative tasks [SMO]
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-caps.latest.revision: 
+caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86868dc6aa08ed947e97764df7d8caaf9df57fbc
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fbad99f9b9049fbed2e9f5f0aa11fe7609ec14c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/12/2018
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理对象位于 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空间中。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理，必须包括**使用**语句来限定代理命名空间。 插入后的其他语句**使用**语句，在该应用程序，任何声明之前如：
   

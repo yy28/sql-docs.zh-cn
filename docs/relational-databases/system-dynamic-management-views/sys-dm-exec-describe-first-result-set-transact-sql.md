@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_describe_first_result_set (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 203db81a3bf752b071ee63453330ac08fc9db8a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   此动态管理函数采用[!INCLUDE[tsql](../../includes/tsql-md.md)]语句作为参数并描述了为该语句设置的第一个结果元数据。  
   
- **sys.dm_exec_describe_first_result_set**具有相同的结果集与定义[sys.dm_exec_describe_first_result_set_for_object &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，它类似于[sp_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set**具有相同的结果集与定义[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，它类似于[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,7 +56,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  *@params*  
  @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
   
- 一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n* 是一个占位符，表示附加参数定义。 必须在定义在 stmt 中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
+ 一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是一个占位符，表示附加参数定义。 必须在定义在 stmt 中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
   
  *@include_browse_information*  
  如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 将返回其他键列和源表信息。  
@@ -85,8 +86,8 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**xml_collection_schema**|**sysname**|包含定义与此类型关联的 XML 架构集合的架构。 如果返回的类型与 XML 架构集合不关联，则该列返回 NULL。|  
 |**xml_collection_name**|**sysname**|包含与此类型关联的 XML 架构集合的名称。 如果返回的类型与 XML 架构集合不关联，则该列返回 NULL。|  
 |**is_xml_document**|**bit**|如果返回的数据类型为 XML，并且保证该类型是完整的 XML 文档（包含根节点，与 XML 片段相对），则返回 1。 否则，返回 0。|  
-|**is_case_sensitive**|**bit**|如果列具有区分大小写的字符串类型，则返回 1。 如果它不，返回 0。|  
-|**is_fixed_length_clr_type**|**bit**|如果列具有固定长度 CLR 类型，则返回 1。 如果它不，返回 0。|  
+|**is_case_sensitive**|**bit**|如果列具有区分大小写的字符串类型，则返回 1。 反之，则返回 0。|  
+|**is_fixed_length_clr_type**|**bit**|如果列具有固定长度 CLR 类型，则返回 1。 反之，则返回 0。|  
 |**source_server**|**sysname**|源服务器（如果它来自远程服务器）的名称。 在 sys.servers 中所示，未提供名称。 如果列来自本地服务器或无法确定它来自的服务器，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_database**|**sysname**|此结果中的列返回的源数据库的名称。 如果无法确定该数据库，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_schema**|**sysname**|此结果中的列返回的源架构的名称。 如果无法确定该架构，则返回 NULL。 仅在请求浏览信息填充。|  
@@ -108,7 +109,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|包含一个简短的大写字符串，它表示返回的错误。 映射到 error_type。 请参阅“备注”中的列表。|  
   
 ## <a name="remarks"></a>注释  
- 此函数使用相同的算法为**sp_describe_first_result_set**。 有关详细信息，请参阅[sp_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ 此函数使用相同的算法为**sp_describe_first_result_set**。 有关详细信息，请参阅[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  下表列出了错误类型及其说明。  
   
@@ -132,7 +133,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  需要有权执行@tsql自变量。  
   
 ## <a name="examples"></a>示例  
- 主题中的其他示例[sp_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可以进行适配以便使用**sys.dm_exec_describe_first_result_set**。  
+ 主题中的其他示例[sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可以进行适配以便使用**sys.dm_exec_describe_first_result_set**。  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 返回有关单个 Transact-SQL 语句的信息  
  以下代码返回有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句结果的信息。  
@@ -176,8 +177,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sp_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

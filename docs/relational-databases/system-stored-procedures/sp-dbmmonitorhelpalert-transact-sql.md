@@ -1,16 +1,16 @@
 ---
-title: "sp_dbmmonitorhelpalert (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_dbmmonitorhelpalert (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa31d747ebfd9fbf56aee874f477468212bc161b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d2c0a90791e36d7628d99335116067143b1db0d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_dbmmonitorhelpalert database_name
 |4|镜像提交开销|指定在主体服务器上生成警告之前，每个事务可允许的平均延迟的毫秒数。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。 该值只适用于高安全模式。|  
 |5|保持期|用于控制数据库镜像状态表中的行保留多长时间的元数据。|  
   
- 有关与警告对应的事件 Id 的信息，请参阅[使用警告阈值和警报镜像性能度量 &#40;SQL server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ 有关与警告对应的事件 Id 的信息，请参阅[使用警告阈值和警报镜像性能度量&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
  InclusionThresholdSetting  
@@ -104,11 +104,11 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
   
 ## <a name="see-also"></a>另请参阅  
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangealert &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitordropalert &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
- [sp_dbmmonitorupdate &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangealert &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitordropalert &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
+ [sp_dbmmonitorupdate &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

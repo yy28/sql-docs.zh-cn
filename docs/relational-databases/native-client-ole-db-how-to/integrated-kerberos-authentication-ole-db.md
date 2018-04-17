@@ -1,27 +1,28 @@
 ---
-title: "集成的 Kerberos 身份验证 (OLE DB) |Microsoft 文档"
-ms.custom: 
+title: 集成的 Kerberos 身份验证 (OLE DB) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eaed0b0527d89b31ab6bd55b56915d9bbf8ec419
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d8703bc159c277812d1a045179eb5ae6ce86fee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/24/2018
 
   此示例显示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 获得 Kerberos 相互身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
   
- 有关 Spn 和 Kerberos 身份验证的详细信息，请参阅[服务主体名称 &#40;SPN &#41;中的客户端连接支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关 Spn 和 Kerberos 身份验证的详细信息，请参阅[服务主体名称&#40;SPN&#41;中客户端连接支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  必须指定一个服务器。 在 .cpp 文件中，将“MyServer”更改为具有 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）实例的计算机名称。  

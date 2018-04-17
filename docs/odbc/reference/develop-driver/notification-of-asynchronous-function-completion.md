@@ -1,27 +1,28 @@
 ---
-title: "异步函数完成通知的 |Microsoft 文档"
-ms.custom: 
+title: 异步函数完成通知的 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbccf95ca62f3a77618f36f69523e28e5d85c17a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e5b0c8ceb6924171e304f3bc14d3c0438baa3306
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>异步函数完成通知的
 在 Windows 8 SDK 中，ODBC 添加一种机制，以通知应用程序，一个异步操作完成后，我们将称为"通知在完成"。 (请参阅[异步执行 （通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)有关详细信息。)本主题将讨论的一些问题的驱动程序开发人员。  

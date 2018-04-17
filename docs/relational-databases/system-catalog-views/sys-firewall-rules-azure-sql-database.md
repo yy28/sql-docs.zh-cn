@@ -1,16 +1,16 @@
 ---
-title: "sys.firewall_rules （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.firewall_rules （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.firewall_rules
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f06eef87553a1a97851a3252faaf0f8057158c2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 3f3f25541c1c60e4a9dad3dcfdaff037c7a7bcde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  `sys.firewall_rules` 视图包含以下各列：  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|服务器级防火墙设置的标识符。|  
 |name|**NVARCHAR （128)**|您选择用来描述和区分服务器级防火墙设置的名称。|  
@@ -51,17 +52,17 @@ ms.lasthandoff: 11/21/2017
 |modify_date|**日期时间**|上次修改服务器级防火墙设置时的 UTC 日期和时间。|  
   
 ## <a name="remarks"></a>注释  
- 若要删除数据库防火墙规则，请使用[sp_delete_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). 若要设置单个数据库的防火墙规则，请参阅[sys.database_firewall_rules &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). 若要返回有关现有防火墙规则的信息，请查询 sys.firewall_rules （Azure SQL 数据库）。  
+ 若要删除数据库防火墙规则，请使用[sp_delete_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)。 若要设置单个数据库的防火墙规则，请参阅[sys.database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。 若要返回有关现有防火墙规则的信息，请查询 sys.firewall_rules （Azure SQL 数据库）。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对此视图的只读访问可供所有用户有权连接到**master**数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.database_firewall_rules &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
- [sp_set_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
+ [sp_set_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [Configure a Firewall for FILESTREAM 访问](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
- [为报表服务器访问配置防火墙](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [如何：配置防火墙设置（Azure SQL 数据库）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "分配的语句句柄 |Microsoft 文档"
-ms.custom: 
+title: 分配的语句句柄 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc701ff4419fdb60f2b954333aa2af7ec9845521
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab0eaf1961372521c13c89d1a37b132d1f76a146
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-a-statement-handle"></a>分配的语句句柄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,11 +46,11 @@ ms.lasthandoff: 01/25/2018
   
  调用**SQLSetStmtAttr**与*fOption*设置为 SQL_ATTR_QUERY_TIMEOUT 设置查询超时间隔，以帮助防止查询长时间运行的服务器和用户。  
   
- 调用**SQLSetStmtAttr**与*fOption*的量进行限制设置为 SQL_ATTR_MAX_LENGTH**文本**和**映像**数据，可以检索单独的语句。 调用**SQLSetStmtAttr**与*fOption*设置为 SQL_ATTR_MAX_ROWS 还限制到第一个行集 *n* 行，则所有应用程序需要。 请注意，设置 SQL_ATTR_MAX_ROWS 会导致驱动程序向服务器发出 SET ROWCOUNT 语句。 这会影响所有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句，其中包括触发器和更新。  
+ 调用**SQLSetStmtAttr**与*fOption*的量进行限制设置为 SQL_ATTR_MAX_LENGTH**文本**和**映像**数据，可以检索单独的语句。 调用**SQLSetStmtAttr**与*fOption*设置为 SQL_ATTR_MAX_ROWS 还限制到第一个行集*n*行，则所有应用程序需要。 请注意，设置 SQL_ATTR_MAX_ROWS 会导致驱动程序向服务器发出 SET ROWCOUNT 语句。 这会影响所有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句，其中包括触发器和更新。  
   
  当您设置这些选项时，请务必小心。 最好是连接句柄中的所有语句句柄对于 SQL_ATTR_MAX_LENGTH 和 SQL_ATTR_MAX_ROWS 都具有相同的设置。 如果驱动程序从一个语句句柄切换到另一个对于这些选项具有不同值的语句句柄，则驱动程序必须生成适当的 SET TEXTSIZE 和 SET ROWCOUNT 语句以更改这些设置。 驱动程序无法将这些语句与用户 SQL 语句放在相同的批中，因为用户 SQL 语句可能包含必须为批中第一条语句的语句。 驱动程序必须在单独的批中发送 SET TEXTSIZE 和 SET ROWCOUNT 语句，这会自动生成到服务器的一次附加往返。  
   
 ## <a name="see-also"></a>另请参阅  
- [正在执行查询 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [执行查询&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "从程序变量大容量复制 |Microsoft 文档"
-ms.custom: 
+title: 从程序变量大容量复制 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 255e91a51f92c09f8ed1ba872cb5c8bdc052fd52
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5f00c8542691fcbdd66e5a35151161b3a901f439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copying-from-program-variables"></a>从程序变量执行大容量复制
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/25/2018
 |ODBC SQL 数据类型|ODBC C 数据类型|bcp_bind*类型*参数|SQL Server 数据类型|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **不同的字符**<br /><br /> **不同的 char**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **不同的字符**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未签名**tinyint**无符号**smallint**，或无符号**int**数据类型。 若要防止丢失数据值，在迁移这些数据类型时，创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与下一步的最大整数数据类型的表。 若要防止用户以后添加原始数据类型所允许范围之外的值，应对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列应用一条规则，将允许的值限定在原始源中的数据类型所支持的范围之内：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未签名**tinyint**无符号**smallint**，或无符号**int**数据类型。 若要防止丢失数据值，在迁移这些数据类型时，创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与下一步的最大整数数据类型的表。 若要防止用户以后添加原始数据类型所允许范围之外的值，应对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列应用一条规则，将允许的值限定在原始源中的数据类型所支持的范围之内：  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -111,7 +112,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接支持 interval 数据类型。 应用程序可以但是，将 interval 转义序列存储为中的字符字符串[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符列。 该应用程序可以读取它们供以后使用，但是它们无法用在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支持 interval 数据类型。 应用程序可以但是，将 interval 转义序列存储为中的字符字符串[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符列。 该应用程序可以读取它们供以后使用，但是它们无法用在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。  
   
  大容量复制函数可以用于数据快速加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已从 ODBC 数据源读取。 使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)若要绑定到程序变量设置结果的列，然后使用**bcp_bind**将相同的程序变量绑定到大容量复制操作。 调用[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**到程序变量和调用从 ODBC 数据源提取数据行[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)大容量复制数据从程序变量到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -120,6 +121,6 @@ GO
  无法读取数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到程序变量使用大容量复制; 没有一点也不像"bcp_readrow"函数。 只能将数据从应用程序发送到服务器。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行大容量复制操作 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [执行大容量复制操作&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

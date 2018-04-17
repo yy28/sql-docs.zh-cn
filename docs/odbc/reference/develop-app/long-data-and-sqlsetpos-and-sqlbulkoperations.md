@@ -1,15 +1,16 @@
 ---
-title: "Long 数据和 SQLSetPos 和 SQLBulkOperations |Microsoft 文档"
-ms.custom: 
+title: Long 数据和 SQLSetPos 和 SQLBulkOperations |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7684c15df244828211c2b87acd7314a7e05bea5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82a51c05c5f40c2f4b2fb24f8b3e43e09d6d4514
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 数据和 SQLSetPos 和 SQLBulkOperations
 当更新行与在 SQL 语句中使用参数情况一样，可以发送的长整型数据**SQLBulkOperations**或**SQLSetPos**或插入的行时**SQLBulkOperations**. 将数据发送在部件中，通过多个调用**SQLPutData**。 在执行时为其发送数据的列称为*执行中的数据列*。  

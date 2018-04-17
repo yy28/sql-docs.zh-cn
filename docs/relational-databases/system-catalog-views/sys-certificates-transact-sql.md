@@ -1,16 +1,16 @@
 ---
-title: "sys.certificates (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.certificates (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - certificates
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.certificates catalog view
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 60cb7a204aaa38a3aaaa24b8c04bb676715de783
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 812a342edbd7f8cca9ab594295fef42e4638fc44
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +50,15 @@ ms.lasthandoff: 11/21/2017
 |**issuer_name**|**nvarchar(442)**|证书颁发者的名称。|  
 |**cert_serial_number**|**nvarchar(64)**|证书的序列号。|  
 |**sid**|**varbinary(85)**|此证书的登录 SID。|  
-|**string_sid**|**nvarchar （128)**|此证书的登录 SID 的字符串表示形式。|  
-|**主题**|**nvarchar(4000)**|此证书的主题。|  
+|**string_sid**|**nvarchar(128)**|此证书的登录 SID 的字符串表示形式。|  
+|**subject**|**nvarchar(4000)**|此证书的主题。|  
 |**expiry_date**|**datetime**|证书的过期时间。|  
 |**start_date**|**datetime**|证书生效的时间。|  
 |**指纹**|**varbinary(32)**|证书的 SHA-1 哈希。 SHA-1 哈希在全局内唯一。|  
-|**attested_by**|**nvarchar(260)**|仅供系统使用。|  
+|**attested_by**|nvarchar(260)|仅供系统使用。|  
 |pvt_key_last_backup_date|**datetime**|上一次导出证书的私钥的日期和时间。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

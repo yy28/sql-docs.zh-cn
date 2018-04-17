@@ -1,16 +1,16 @@
 ---
-title: "转换批注 XDR 架构写入等效 XSD 架构 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 转换批注 XDR 架构写入等效 XSD 架构 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XDR schemas, converting schemas
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - mapping schema [SQLXML], conversions
 - XSD schemas [SQLXML], converting schemas
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b18c3effc0aa7177c34d52cf321f0f1cc046270d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad4fa67fc407c495dcbc7bd44271dce8c63e7faf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>将带批注的 XDR 架构转换为等效的 XSD 架构 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 架构定义 (XSD) 语言是精简 XML 数据 (XDR) 架构定义语言的后继版本。 随着在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中引入对 XSD 的支持，它假定新的带批注的架构是使用 XSD 创建的。 SQLXML 4.0 包括一个 XDR 到 XSD 转换器工具，此工具旨在帮助您将现有带批注的 XDR 架构转换为等效的 XSD 架构。  
+  XML 架构定义 (XSD) 语言是精简 XML 数据 (XDR) 架构定义语言的后继版本。 随着在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中引入对 XSD 的支持，它假定新的带批注的架构是使用 XSD 创建的。 SQLXML 4.0 包括一个 XDR 到 XSD 转换器工具，此工具旨在帮助您将现有带批注的 XDR 架构转换为等效的 XSD 架构。  
   
 > [!IMPORTANT]  
 >  仅当要将带批注的 XDR 架构转换为 XSD 以与 SQLXML 4.0 一起使用时才应使用此工具。 这并不是通用 XDR 到 XSD 转换器工具。 在其他环境中使用转换的 XSD 架构时，其行为可能与原始 XDR 架构的行为有所不同。  
@@ -64,7 +65,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  返回你可以使用指定的选项的列表**cvtschema**，以及说明。  
   
 ## <a name="see-also"></a>另请参阅  
- [XSD 数据类型映射到 XPath 数据类型 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
- [XSD 批注 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [将 XSD 数据类型映射到 XPath 数据类型&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
+ [XSD 批注&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

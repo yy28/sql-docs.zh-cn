@@ -2,7 +2,7 @@
 title: SQLSetConnectAttr 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函数
 **一致性**  
@@ -58,13 +58,13 @@ SQLRETURN SQLSetConnectAttr(
  *ConnectionHandle*  
  [输入]连接句柄。  
   
- *Attribute*  
+ *属性*  
  [输入]要设置，属性列在"注释"。  
   
  *ValuePtr*  
  [输入]指向要与之关联的值*属性*。 根据值*属性*， *ValuePtr*将无符号的整数值或将指向以 null 结尾的字符串。 请注意，整型类型*属性*自变量可能不会修复长度，请参阅备注部分以了解详细信息。  
   
- *StringLength*  
+ *stringLength*  
  [输入]如果*属性*是 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度 **ValuePtr*。 对于字符串数据，此自变量应包含在字符串中的字节数。  
   
  如果*属性*是 ODBC 定义的属性和*ValuePtr*是一个整数， *StringLength*将被忽略。  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08002|连接名称已在使用|*属性*自变量为 SQL_ATTR_ODBC_CURSORS，和驱动程序已连接到数据源。|  
 |08003|连接未打开|(DM)*属性*指定值，需要打开的连接，但*ConnectionHandle*当时不处于已连接状态。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
@@ -174,7 +174,7 @@ SQLRETURN SQLSetConnectAttr(
   
  *StringLength*将忽略自变量长度定义的属性，如果是 ODBC 2 中引入的所有特性如此*.x*或更早版本。  
   
-|*Attribute*|*ValuePtr*内容|  
+|*属性*|*ValuePtr*内容|  
 |-----------------|-------------------------|  
 |SQL_ATTR_ACCESS_MODE (ODBC 1.0)|一个 SQLUINTEGER 值。 SQL_MODE_READ_ONLY 用作由驱动程序或数据源连接不需要支持导致更新自动进行的 SQL 语句的指示器。 此模式可用于优化锁定策略、 事务管理或根据驱动程序或数据源的其他区域。 该驱动程序不需要阻止此类语句被提交到数据源。 驱动程序和数据源时要求处理不是只读的只读连接期间的 SQL 语句的行为是实现定义的。 默认值为 SQL_MODE_READ_WRITE。|  
 |SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3.8)|SQLPOINTER 值，一个事件句柄。<br /><br /> 异步函数完成通知的启用通过调用**SQLSetConnectAttr** SQL_ATTR_ASYNC_STMT_EVENT 属性和指定的事件句柄。 **注意：**游标库不支持通知方法。 如果它尝试启用通过 SQLSetConnectAttr，光标库，启用通知方法后，应用程序将收到错误消息。|  

@@ -1,16 +1,16 @@
 ---
-title: "srv_paramlen（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_paramlen（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramlen
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramlen
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c619d69e425f28c6a8416d2ef96bbc67602f311
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: ee85bd0792b31ea3d1dd759ad9effc96b0b2195b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  返回远程存储过程调用参数的数据长度。 此函数已被 srv_paraminfo 函数取代。  
   
@@ -62,7 +62,7 @@ n
  指示参数的编号。 第一个参数是 1。  
   
 ## <a name="returns"></a>返回  
- 参数数据的实际长度（字节）。 如果没有第 n 个参数或没有远程存储过程，则返回 -1。 如果第 n 个参数为 NULL，则返回 0。  
+ 参数数据的实际长度（字节）。 如果没有任何*n*th 参数或没有远程存储的过程，则返回-1。 如果*n*th 参数为 NULL，则返回 0。  
   
  如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系统数据类型之一，则此函数返回以下值。  
   

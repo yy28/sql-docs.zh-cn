@@ -1,16 +1,16 @@
 ---
-title: bcp_batch | Microsoft Docs
-ms.custom: 
+title: bcp_batch |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_batch
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1aa705c42846b02ae67eb66eba38660e724bf2e
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c5e0b6eff2bede06aa406fd55b26cb4274b7326d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpbatch"></a>bcp_batch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ DBINT bcp_batch (HDBC
 ## <a name="remarks"></a>注释  
  大容量复制批处理定义事务。 当应用程序使用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和**bcp_sendrow**大容量复制行从程序变量向 SQL Server 表，行时，将提交仅在程序调用**bcp_batch**或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)。  
   
- 你可以调用**bcp_batch**后每个 *n* 行或减缓 （如下所示的遥测应用程序） 的传入数据中时。 如果应用程序不会调用**bcp_batch**的大容量复制行进行提交时，才**bcp_done**调用。  
+ 你可以调用**bcp_batch**后每个*n*行或减缓 （如下所示的遥测应用程序） 的传入数据中时。 如果应用程序不会调用**bcp_batch**的大容量复制行进行提交时，才**bcp_done**调用。  
   
 ## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

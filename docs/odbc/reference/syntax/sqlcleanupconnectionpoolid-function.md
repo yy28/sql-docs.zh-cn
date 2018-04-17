@@ -2,7 +2,7 @@
 title: SQLCleanupConnectionPoolID 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4131ad3555a0206f500b28fc8df7b16a0f4ee707
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f825395406e4dcdedc9bf0577d32823afc9e7a46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 函数
 **一致性**  
@@ -56,7 +56,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  应用程序无法接收由驱动程序返回的错误消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **SQLCleanupConnectionPoolID**可以调用任何时候，但驱动程序管理器可保证其他任何线程都同时调用**SQLGetPoolID**和其他任何线程都同时调用**SQLRateConnection**和**SQLPoolConnect**与连接信息令牌分配有该池 id。 因此，该驱动程序必须确保此函数是线程安全。  
   
  驱动程序可以清除与池 id。 关联的资源  

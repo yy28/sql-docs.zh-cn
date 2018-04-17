@@ -2,7 +2,7 @@
 title: SQLFetch 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函数
 **一致性**  
@@ -112,7 +112,7 @@ SQLRETURN SQLFetch(
   
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
-|开始之前|@shouldalert|  
+|开始之前|1|  
 |*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|在结束后|  
 |在结束后|在结束后|  

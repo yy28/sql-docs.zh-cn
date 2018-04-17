@@ -1,16 +1,16 @@
 ---
-title: "sp_addscriptexec (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addscriptexec (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f3104f91c785252f573e653d3344a03091dd13
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9e4e889b50804ef94b09adf07d4d2646c55fc8d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,20 +49,20 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] *发布*  
+ [  **@publication=** ] *****发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@scriptfile=** ] *scriptfile*  
+ [  **@scriptfile=** ] *****scriptfile*****  
  SQL 脚本文件的完整路径。 *scriptfile*是**nvarchar （4000)**，无默认值。  
   
- [  **@skiperror=** ] *skiperror*  
+ [  **@skiperror=** ] *****skiperror*****  
  指示在脚本处理过程中遇到错误时是否停止分发代理或合并代理。 *SkipError*是**位**，默认值为 0。  
   
  **0** = 该代理将停止。  
   
  **1** = 代理会继续该脚本，将忽略该错误。  
   
- [  **@publisher=** ] *发布服务器*  
+ [  **@publisher=** ] *****发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -87,11 +87,11 @@ sp_addscriptexec [ @publication = ] publication
   
  使用**sp_addscriptexec**发布快照传递仅支持为使用 FTP 的发布的脚本文件[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addscriptexec**。  
   
 ## <a name="see-also"></a>另请参阅  
- [在同步 &#40; 期间执行脚本复制 TRANSACT-SQL 编程 &#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+ [在同步期间执行脚本&#40;复制 TRANSACT-SQL 编程&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [同步数据](../../relational-databases/replication/synchronize-data.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

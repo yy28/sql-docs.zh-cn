@@ -1,16 +1,16 @@
 ---
-title: "sys.key_encryptions (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.key_encryptions (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 07/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.key_encryptions
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.key_encryptions catalog view
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1c62078f0400436a21749b28c302d2f8a2509e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95c34b3e34789e9ff203aa06f154e5da93ad56b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |**crypt_type_desc**|**nvarchar(60)**|加密类型说明：<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(从[!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]，包括使用 CSS 的版本号。)<br /><br /> ENCRYPTION BY CERTIFICATE <br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 注意： 使用 Windows DPAPI 来保护服务主密钥。|  
 |**crypt_property**|**varbinary(max)**|标记位或加密位。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

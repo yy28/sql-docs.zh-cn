@@ -1,16 +1,16 @@
 ---
-title: "sp_mergearticlecolumn (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_mergearticlecolumn (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 083d6d27d9417a76f9cafc1c3726e3f7c10df6d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 383b9a3f9994fa8ad627e143b59beac666248596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] *发布*  
+ [  **@publication =**] *****发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article =**] *文章*  
+ [  **@article =**] *****文章*****  
  发布中的项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@column =**] *列*  
+ [  **@column =**] *****列*****  
  标识要在其中创建垂直分区的列。 *列*是**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 *列*不能为 NULL 时*操作*设置为**删除**。 若要从项目中排除列，请执行**sp_mergearticlecolumn**并指定*列*和`@operation = N'drop'`为每个要删除的列从指定*文章*.  
   
- [  **@operation =**] *操作*  
+ [  **@operation =**] *****操作*****  
  复制状态。 *操作*是**nvarchar(4)**，默认值为添加。 **添加**将标记为复制的列。 **删除**清除列。  
   
- [  **@schema_replication=**] *schema_replication*  
+ [  **@schema_replication=**] *****schema_replication*****  
  指定在合并代理运行时将传播架构更改。 *schema_replication*是**nvarchar(5)**，默认值为 FALSE。  
   
 > [!NOTE]  
@@ -77,7 +77,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1**指定合并项目的更改可能会导致快照无效，并且如果这是这种情况，值为**1**给予发生新的快照的权限。  
   
- [  **@force_reinit_subscription =]***force_reinit_subscription*  
+ [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
  启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*有一点默认值为**0**。  
   
  **0**指定合并项目的更改不会导致要重新初始化的订阅。  
@@ -99,7 +99,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_mergearticlecolumn**。  
   
 ## <a name="see-also"></a>另请参阅  

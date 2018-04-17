@@ -1,16 +1,16 @@
 ---
-title: "sp_add_log_shipping_secondary_primary (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_add_log_shipping_secondary_primary (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 223065b249eee4d6468e965f7626c7febe656011
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +60,16 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@primary_server** = ] '*primary_server*'  
+ [ **@primary_server** =] '*primary_server*  
  主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**和不能为 NULL。  
   
- [ **@primary_database** = ] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*  
  主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
   
  [ **@backup_source_directory** = ] '*backup_source_directory*'  
  存储主服务器的事务日志备份文件的目录。 *backup_source_directory*是**nvarchar(500)**和不能为 NULL。  
   
- [ **@backup_destination_directory** = ] '*backup_destination_directory*'  
+ [ **@backup_destination_directory** =] '*backup_destination_directory*  
  备份文件复制到的辅助服务器上的目录。 *backup_destination_directory*是**nvarchar(500)**和不能为 NULL。  
   
  [ **@copy_job_name** = ] '*copy_job_name*'  
@@ -78,13 +78,13 @@ sp_add_log_shipping_secondary_primary
  [ **@restore_job_name** = ] '*restore_job_name*'  
  是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将备份还原到辅助数据库的辅助服务器上的代理作业。 *restore_job_name*是**sysname**和不能为 NULL。  
   
- [ **@file_retention_period** = ] '*file_retention_period*'  
+ [ **@file_retention_period** =] '*file_retention_period*  
  总时间，以分钟为单位的备份文件将保留在指定的路径中的辅助服务器@backup_destination_directory之前正在删除的参数。 *history_retention_period*是**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
- [ **@monitor_server** = ] '*monitor_server*'  
+ [ **@monitor_server** =] '*monitor_server*  
  监视服务器的名称。 *Monitor_server*是**sysname**，无默认值，并不能为 NULL。  
   
- [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*  
  用于连接到监视服务器的安全模式。  
   
  1 = Windows 身份验证。  
@@ -93,19 +93,19 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode*是**位**和不能为 NULL。  
   
- [ **@monitor_server_login** = ] '*monitor_server_login*'  
+ [ **@monitor_server_login** =] '*monitor_server_login*  
  访问监视服务器所用的帐户的用户名。  
   
- [ **@monitor_server_password** = ] '*monitor_server_password*'  
+ [ **@monitor_server_password** =] '*monitor_server_password*  
  用于访问监视服务器的帐户的密码。  
   
- [ **@copy_job_id** = ] '*copy_job_id*' OUTPUT  
+ [ **@copy_job_id** =] '*copy_job_id*输出  
  与辅助服务器上的复制作业关联的 ID。 *copy_job_id*是**uniqueidentifier**和不能为 NULL。  
   
- [ **@restore_job_id** = ] '*restore_job_id*' OUTPUT  
+ [ **@restore_job_id** =] '*restore_job_id*输出  
  与辅助服务器上的还原作业关联的 ID。 *restore_job_id*是**uniqueidentifier**和不能为 NULL。  
   
- [  **@secondary_id**  =] '*secondary_id*输出  
+ [ **@secondary_id** =] '*secondary_id*输出  
  日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**和不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

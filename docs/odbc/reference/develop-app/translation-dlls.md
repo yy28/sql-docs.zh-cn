@@ -2,7 +2,7 @@
 title: 转换 Dll |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 284bc373cca1721ea66195115a320f5a4e53e797
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0aaed3a9ef5f4ae81cad3407cdecb0c18b753b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="translation-dlls"></a>转换 Dll
 应用程序和数据源通常将数据存储在不同的字符集。 ODBC 提供允许驱动程序会将数据从一个字符设置为另一个转换的泛型机制。 它包含实现的转换函数的 DLL **SQLDriverToDataSource**和**SQLDataSourceToDriver**，要将所有的数据源之间流动的数据转换的驱动程序时会调用它和驱动程序。 此 DLL 可由应用程序开发人员，驱动程序开发人员编写或第三方。  

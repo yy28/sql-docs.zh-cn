@@ -1,16 +1,16 @@
 ---
-title: "sp_set_session_context (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_set_session_context (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -23,16 +23,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_set_session_context
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a55ee31e1f4d9f5f98766550f60a16d3dd56843c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f65b004f7a41687f13a91d51599662b0ddb0ed14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -60,15 +61,15 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  [ @read_only= ] { 0 | 1 }  
  类型的标志**位**。 如果为 1，然后指定键的值无法再次更改此逻辑连接。 如果可以更改 0 （默认值），则值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户可以为其会话设置会话上下文。  
   
 ## <a name="remarks"></a>注释  
  与其他存储过程一样可以作为参数传递仅文本和变量 （不表达式或函数调用）。  
   
- 会话上下文的总大小被限制为 256 kb。 如果一个值，导致超过此限制的组，该语句将失败。 你可以监视中的总体内存使用情况[sys.dm_os_memory_objects &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ 会话上下文的总大小被限制为 256 kb。 如果一个值，导致超过此限制的组，该语句将失败。 你可以监视中的总体内存使用情况[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
- 你可以通过查询监视总体内存使用情况[sys.dm_os_memory_cache_counters &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) ，如下所示：`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 你可以通过查询监视总体内存使用情况[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) ，如下所示： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何设置，然后返回名为值为英语语言的会话上下文项。  
@@ -85,10 +86,10 @@ EXEC sp_set_session_context 'user_id', 4, @read_only = 1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CURRENT_TRANSACTION_ID &#40;Transact SQL &#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID (Transact-SQL)](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md)   
  [行级安全性](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40;Transact SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)   
- [设置 CONTEXT_INFO &#40;Transact SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
+ [CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)   
+ [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

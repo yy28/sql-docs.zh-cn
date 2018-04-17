@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_wait_stats （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.dm_db_wait_stats （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_wait_stats_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4d15404469382da4d8ab135e0619f4d6a9360d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 4e1545f2df00c9f3ddfb66d5b3b84424e5b3ce7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
-##  <a name="WaitTypes"></a>等待的类型  
+##  <a name="WaitTypes"></a> 等待的类型  
  资源等待  
  当某个工作线程请求访问某个不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生资源等待。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象。  
   
@@ -200,27 +201,27 @@ ms.lasthandoff: 02/03/2018
 |LATCH_SH|等待 SH（共享）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 sys.dm_os_latch_stats 中提供了 LATCH_* waits 的列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
 |LATCH_UP|等待 UP（更新）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 sys.dm_os_latch_stats 中提供了 LATCH_* waits 的列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
 |LAZYWRITER_SLEEP|当惰性编写器被挂起时出现。 正在等待的后台任务所用时间的度量值。 在查找用户阻隔点所时不要考虑该状态。|  
-|LCK_M_BU|当某任务正在等待获取大容量更新 (BU) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|当某任务正在等待获取意向共享 (IS) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|当某任务正在等待获取意向更新 (IU) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|当某任务正在等待获取意向排他 (IX) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|当某任务正在等待获取当前键值上的 NULL 锁以及当前键和上一个键之间的插入范围锁时出现。 键上的 NULL 锁是指立即释放的锁。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的插入范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的插入范围锁。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|当某任务正在等待获取当前键值上的排他锁以及当前键和上一个键之间的插入范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的共享范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|当某任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的更新范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的排他范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|当某任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的排他范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|当某任务正在等待获取当前键值上的排他锁以及当前键和上一个键之间的排他范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|当某任务正在等待获取共享锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|当某任务正在等待获取架构修改锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|当某任务正在等待获取架构共享锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|当某任务正在等待获取共享意向更新锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|当某任务正在等待获取共享意向排他锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|当某任务正在等待获取更新锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|当某任务正在等待获取更新意向排他锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|当某任务正在等待获取排他锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|当某任务正在等待获取大容量更新 (BU) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IS|当某任务正在等待获取意向共享 (IS) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IU|当某任务正在等待获取意向更新 (IU) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IX|当某任务正在等待获取意向排他 (IX) 锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_NL|当某任务正在等待获取当前键值上的 NULL 锁以及当前键和上一个键之间的插入范围锁时出现。 键上的 NULL 锁是指立即释放的锁。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_S|当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的插入范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_U|任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的插入范围锁。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_X|当某任务正在等待获取当前键值上的排他锁以及当前键和上一个键之间的插入范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RS_S|当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的共享范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RS_U|当某任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的更新范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_S|当某任务正在等待获取当前键值上的共享锁以及当前键和上一个键之间的排他范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_U|当某任务正在等待获取当前键值上的更新锁以及当前键和上一个键之间的排他范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_X|当某任务正在等待获取当前键值上的排他锁以及当前键和上一个键之间的排他范围锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_S|当某任务正在等待获取共享锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SCH_M|当某任务正在等待获取架构修改锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SCH_S|当某任务正在等待获取架构共享锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SIU|当某任务正在等待获取共享意向更新锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SIX|当某任务正在等待获取共享意向排他锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_U|当某任务正在等待获取更新锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_UIX|当某任务正在等待获取更新意向排他锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_X|当某任务正在等待获取排他锁时出现。 有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
 |LOG_RATE_GOVERNOR|在 DB 正在等待写入日志的配额时发生。|  
 |LOGBUFFER|当某任务正在等待日志缓冲区的空间以存储日志记录时出现。 连续的高值可能指示日志设备无法跟上服务器生成的日志量。|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

@@ -1,16 +1,16 @@
 ---
-title: "srv_paraminfo（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_paraminfo（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paraminfo
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paraminfo
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16ca2d41922461768b8edba1e12724e4bc852b15
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 008277d80aa0915f4578b24e6e85cdbe8a5fea4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  返回有关参数的信息。 此函数取代了以下函数：[srv_paramtype](../../relational-databases/extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md)、[srv_paramlen](../../relational-databases/extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md)、[srv_parammaxlen](../../relational-databases/extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md) 和 [srv_paramdata](../../relational-databases/extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md)。 srv_paraminfo 支持[数据类型](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)中的数据类型和长度为零的数据。  
   
@@ -92,7 +92,7 @@ pfNull
  指向 Null 标志的指针。如果参数的值为 NULL， *pfNull 设置为 TRUE。  
   
 ## <a name="returns"></a>返回  
- 如果成功获取参数信息，则返回 SUCCEED，否则返回 FAIL。 如果没有当前远程存储过程并且没有第 n 个远程存储过程参数，则返回 FAIL。  
+ 如果成功获取参数信息，则返回 SUCCEED，否则返回 FAIL。 没有当前的远程存储的过程时，并在没有时才返回 FAIL 没有*n*th 远程存储的过程参数。  
   
 ## <a name="remarks"></a>注释  
  **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  

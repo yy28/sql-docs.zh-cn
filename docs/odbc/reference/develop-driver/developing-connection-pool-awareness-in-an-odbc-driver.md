@@ -1,27 +1,28 @@
 ---
-title: "开发中的 ODBC 驱动程序的连接池感知 |Microsoft 文档"
-ms.custom: 
+title: 开发中的 ODBC 驱动程序的连接池感知 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b96e4ef1e53fec8361bd96dee81206efdf138538
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f7c6412263587f171c0b0281436364b2e54e46bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>开发中的 ODBC 驱动程序的连接池感知
 本主题讨论开发 ODBC 驱动程序，其中包含有关该驱动程序应如何提供连接池的服务的信息的详细信息。  

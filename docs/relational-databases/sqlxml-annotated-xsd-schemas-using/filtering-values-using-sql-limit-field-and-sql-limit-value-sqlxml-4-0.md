@@ -1,16 +1,16 @@
 ---
-title: "筛选值使用 sql:limit-字段和 sql:limit-值 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 筛选值使用 sql:limit-字段和 sql:limit-值 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16f6ae44bce9828525e10c49604ab224bc402446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-可以基于某些限制值来限制从数据库查询返回的行。 **Sql:limit-字段**和**sql:limit-值**批注用于标识包含限制值的数据库列并指定特定的限制值要用于筛选的数据返回。  
+  可以基于某些限制值来限制从数据库查询返回的行。 **Sql:limit-字段**和**sql:limit-值**批注用于标识包含限制值的数据库列并指定特定的限制值要用于筛选的数据返回。  
   
  **Sql:limit-字段**批注用于标识包含限制值的列; 每个映射的元素或属性上允许此属性。  
   
@@ -313,9 +314,9 @@ ms.lasthandoff: 02/12/2018
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [float 和 real &#40;Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar 和 nvarchar &#40;Transact SQL &#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar 和 nvarchar &#40;Transact SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [使用批注中查询 &#40; XSD 架构SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [使用批注在查询中的 XSD 架构&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

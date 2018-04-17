@@ -1,16 +1,16 @@
 ---
-title: "sp_helpextendedproc (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpextendedproc (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpextendedproc
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpextendedproc
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33f0e2db1462f79b3266ade3f57a1990bedd2384
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 30caf5cbd1ee34d1a8ea8a923f2fa4f2a572ef8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@funcname =**] *过程*  
+ [  **@funcname =**] *****过程*****  
  要报告其信息的扩展存储过程的名称。 *过程*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,7 +65,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ## <a name="remarks"></a>注释  
  当*过程*指定，则**sp_helpextendedproc**上指定的报表扩展存储的过程。 如果未提供此参数， **sp_helpextendedproc**所属的返回所有扩展存储的过程名称和到其中的每个扩展存储的过程 DLL 名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行的权限**sp_helpextendedproc**权限已授予**公共**。  
   
 ## <a name="examples"></a>示例  
@@ -91,8 +91,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addextendedproc &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_dropextendedproc &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

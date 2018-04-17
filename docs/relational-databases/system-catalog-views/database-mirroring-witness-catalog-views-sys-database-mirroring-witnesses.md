@@ -1,16 +1,16 @@
 ---
-title: "sys.database_mirroring_witnesses (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.database_mirroring_witnesses (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_witnesses
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ce23f7d9f763bf08842a1f121c881fb5fbdcee0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 42d31f59d652e7f92f4051dab3af741c6f161c73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>数据库镜像见证服务器目录视图-sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |**family_guid**|**uniqueidentifier**|数据库备份系列的标识符。 用于检测匹配的还原状态。|  
 |**is_suspended**|**bit**|数据库镜像挂起。|  
 |**is_suspended_sequence_number**|**int**|序列号设置**is_suspended**。|  
-|**partner_sync_state**|**tinyint**|镜像会话的同步状态：<br /><br /> 5 = 同步伙伴。 可以进行故障转移。 了解有关故障转移，请参阅要求[角色数据库镜像会话期间切换 &#40;SQL server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = 伙伴未同步。 现在无法进行故障转移。|  
+|**partner_sync_state**|**tinyint**|镜像会话的同步状态：<br /><br /> 5 = 同步伙伴。 可以进行故障转移。 了解有关故障转移，请参阅要求[角色数据库镜像会话期间切换&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。<br /><br /> 6 = 伙伴未同步。 现在无法进行故障转移。|  
 |**partner_sync_state_desc**|**nvarchar(60)**|镜像会话同步状态的说明：<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>权限  
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

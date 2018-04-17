@@ -1,15 +1,15 @@
 ---
-title: "使用 Dataadapter 更新 UDT 列 |Microsoft 文档"
-ms.custom: 
+title: 使用 Dataadapter 更新 UDT 列 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -25,20 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b27e47e8aa8563b004f0ad7b07163ecd3891ffb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>访问用户定义的类型-使用 Dataadapter 更新 UDT 的列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-通过使用支持用户定义类型 (Udt) **System.Data.DataSet**和**System.Data.SqlClient.SqlDataAdapter**来检索和修改数据。  
+  通过使用支持用户定义类型 (Udt) **System.Data.DataSet**和**System.Data.SqlClient.SqlDataAdapter**来检索和修改数据。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定你具有**点**定义具有以下结构和一些示例数据的表。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表和插入几行。  
@@ -92,7 +92,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  以下 ADO.NET 示例具有两个方法：  
   
--   **UserProvidedCommands**，用于演示如何提供**InsertCommand**， **UpdateCommand**，和**DeleteCommand**更新的对象**点**UDT**点**表 (不包含**时间戳**列)。  
+-   **UserProvidedCommands**，用于演示如何提供**InsertCommand**， **UpdateCommand**，和**DeleteCommand**更新对象**点**UDT**点**表 (不包含**时间戳**列)。  
   
 -   **CommandBuilder**，用于演示如何使用**SqlCommandBuilder**中**Points_ts**包含表**时间戳**列。  
   

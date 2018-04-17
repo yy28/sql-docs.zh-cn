@@ -2,7 +2,7 @@
 title: SQLSetConnectAttrForDbcInfo 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b71c2d308efd74f1ec2574d20d7f14455965715d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 函数
 **一致性**  
@@ -47,13 +47,13 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *hDbcInfoToken*  
  [输入]标记句柄。  
   
- *Attribute*  
+ *属性*  
  [输入]要设置的属性。 有效的属性的列表是特定的驱动程序和相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
  *ValuePtr*  
  [输入]指向要与之关联的值*属性*。 根据值*属性*， *ValuePtr*将成为一个 32 位无符号的整数值，或者将指向以 null 结尾的字符串。 请注意，如果*属性*参数是一个特定于驱动程序的值中的值*ValuePtr*可能是一个带符号的整数。  
   
- *StringLength*  
+ *stringLength*  
  [输入]如果*属性*是 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度 **ValuePtr*。 对于字符串数据，此自变量应包含在字符串中的字节数。  
   
  如果*属性*是 ODBC 定义的属性和*ValuePtr*是一个整数， *StringLength*将被忽略。  
@@ -74,7 +74,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="diagnostics"></a>诊断  
  与相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，只不过驱动程序管理器将使用**HandleType**的 SQL_HANDLE_DBC_INFO_TOKEN 和**处理**的*hDbcInfoToken*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **SQLSetConnectAttrForDbcInfo**相同**SQLSetConnectAttr**，但它将该属性设置连接信息令牌，而不是连接句柄。 例如，如果**SQLSetConnectAttr**无法识别的属性， **SQLSetConnectAttrForDbcInfo**还应该使 SQL_ERROR 返回该属性。  
   
  每当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE，驱动程序应忽略此属性来计算池 id。 此外，驱动程序管理器将获取诊断信息从*hDbcInfoToken*，并返回到中的应用程序的 SQL_SUCCESS_WITH_INFO [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). 因此，应用程序可以检索有关无法设置某些属性的原因的详细信息。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_columns_ex (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_columns_ex (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_columns_ex
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90ba287e14dc19afef8e19be65c81337c653fe48
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 034955aad1d0ad90f78b36704c6d202a23176ad2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,26 +51,26 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_server =** ] *table_server*  
+ [  **@table_server =** ] *****table_server*****  
  要返回列信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
   
- [  **@table_name =** ] *table_name*  
+ [  **@table_name =** ] *****table_name*****  
  要返回其列信息的表的名称。 *table_name*是**sysname**，默认值为 NULL。  
   
- [  **@table_schema =** ] *table_schema*  
+ [  **@table_schema =** ] *****table_schema*****  
  要返回其列信息的表的架构名。 *table_schema*是**sysname**，默认值为 NULL。  
   
- [  **@table_catalog =** ] *table_catalog*  
+ [  **@table_catalog =** ] *****table_catalog*****  
  要返回其列信息的表的目录名。 *table_catalog*是**sysname**，默认值为 NULL。  
   
- [  **@column_name =** ] *列*  
+ [  **@column_name =** ] *****列*****  
  要提供其信息的数据库列的名称。 *列*是**sysname**，默认值为 NULL。  
   
- [  **@ODBCVer =** ] *ODBCVer*  
+ [  **@ODBCVer =** ] *****ODBCVer*****  
  是正在使用的 ODBC 版本。 *ODBCVer*是**int**，默认值为 2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 有关版本 2 和 3 之间的行为差异的信息，请参阅 ODBC SQLColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -94,7 +94,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**CHAR_OCTET_LENGTH**|**int**|字符或整数数据类型的列的最大长度（字节）。 对于所有其他数据类型，该列返回 NULL。|  
 |**ORDINAL_POSITION**|**int**|列在表中的序号位置。 表中的第一列为 1。 该列始终返回值。|  
 |**IS_NULLABLE**|**varchar (**254**)**|表中的列的为 Null 性。 根据 ISO 规则确定为 Null 性。 遵从 ISO SQL 标准的 DBMS 不能返回空字符串。<br /><br /> YES = 列可以包含 NULL。<br /><br /> NO = 列不能包含 NULL。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 为此列返回的值不同，则返回该值**可以为 NULL**列。|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用扩展存储过程的数据类型。|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用扩展存储过程的数据类型。|  
   
  有关更多信息，请参见 Microsoft ODBC 文档。  
   
@@ -103,7 +103,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  **sp_columns_ex**返回空结果集，如果指定的链接服务器的 OLE DB 提供程序不支持列行集**IDBSchemaRowset**接口。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="remarks"></a>注释  
@@ -121,13 +121,13 @@ EXEC sp_columns_ex 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_catalogs &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_foreignkeys &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_catalogs &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_primarykeys &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

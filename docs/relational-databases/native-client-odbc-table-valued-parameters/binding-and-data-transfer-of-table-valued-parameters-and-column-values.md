@@ -1,29 +1,30 @@
 ---
-title: "绑定和数据传输的表值参数和列的值 |Microsoft 文档"
-ms.custom: 
+title: 绑定和数据传输的表值参数和列的值 |Microsoft 文档
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 738981ef92321f4989497b20d027667698065a75
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fe37d43513051134632215cc6b551d8ec471b736
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>表值参数和列值的绑定及数据传输
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/24/2018
 |*InputOutputType*|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 对于表值参数列，此属性设置必须与表值参数自身的设置相同。|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 此属性必须为 SQL_PARAM_INPUT。|  
 |*ValueType*|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> 此属性必须为 SQL_C_DEFAULT 或 SQL_C_BINARY。|  
 |*ParameterType*|IPD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|IPD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> 此属性必须为 SQL_SS_TABLE。|  
-|*ColumnSize*|IPD 中的 SQL_DESC_LENGTH 或 SQL_DESC_PRECISION。<br /><br /> 这取决于值*ParameterType*。|SQL_DESC_ARRAY_SIZE<br /><br /> 当参数焦点设置为表值参数时，也可以使用 SQL_ATTR_PARAM_SET_SIZE 进行设置。<br /><br /> 对于表值参数，此属性为表值参数列缓冲区内的行数。|  
+|*Columnsize 类型*|IPD 中的 SQL_DESC_LENGTH 或 SQL_DESC_PRECISION。<br /><br /> 这取决于值*ParameterType*。|SQL_DESC_ARRAY_SIZE<br /><br /> 当参数焦点设置为表值参数时，也可以使用 SQL_ATTR_PARAM_SET_SIZE 进行设置。<br /><br /> 对于表值参数，此属性为表值参数列缓冲区内的行数。|  
 |*DecimalDigits*|IPD 中的 SQL_DESC_PRECISION 或 SQL_DESC_SCALE。|未使用。 此属性必须为 0。<br /><br /> 如果此参数为不 0，SQLBindParameter 将返回 SQL_ERROR 和诊断记录将生成与 SQLSTATE = HY104 和消息"无效的精度或小数位数"。|  
 |*ParameterValuePtr*|APD 中的 SQL_DESC_DATA_PTR。|SQL_CA_SS_TYPE_NAME。<br /><br /> 此属性对于存储过程调用为可选的，并且如果不需要可以指定为 NULL。 对于非过程调用的 SQL 语句，必须指定此属性。<br /><br /> 在使用可变行绑定时，此参数还可作为应用程序用于标识该表值参数的唯一值。 有关详细信息，请参阅本主题后面的“可变表值参数行绑定”部分。<br /><br /> 当在 SQLBindParameter 调用指定的表值参数类型名称时，它必须指定为 Unicode 值，即使在应用程序生成为 ANSI 应用程序中。 用于参数的值*StrLen_or_IndPtr*应 sql_nts 以或乘以 sizeof(WCHAR) 的名称的字符串长度。|  
 |*BufferLength*|APD 中的 SQL_DESC_OCTET_LENGTH。|表值参数类型名称的长度（以字节为单位）。<br /><br /> 如果类型名称为以 NULL 值结束，则它可以是 SQL_NTS；如果不需要表值参数类型名称，则为 0。|  
@@ -99,6 +100,6 @@ ms.lasthandoff: 01/24/2018
 6.  再次调用该 SQLParamData。 如果没有任何表值参数列之间的数据在执行参数，这些结果将能识别的值*ValuePtrPtr* SQLParamData 返回。 当所有列的值可用时，将再次返回 SQLParamData *ParameterValuePtr*表值参数中，和应用程序的值重新开始。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

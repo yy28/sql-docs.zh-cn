@@ -1,15 +1,16 @@
 ---
-title: "使用情况计数 |Microsoft 文档"
-ms.custom: 
+title: 使用情况计数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - usage counts [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], usage counts
 - subkeys [ODBC], usage counts
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb6923a2e842241eea1434997194f6e6d19ce1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 066c96d8b4ab6617216f5e4b3f924386b42d7f60
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="usage-counting"></a>使用情况计数
 > [!NOTE]  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
  下表中显示文件使用情况计数值的格式。  
   
-|“属性”|数据类型|data|  
+|名称|数据类型|Data|  
 |----------|---------------|----------|  
 |*完整路径*|REG_DWORD|*计数*|  
   

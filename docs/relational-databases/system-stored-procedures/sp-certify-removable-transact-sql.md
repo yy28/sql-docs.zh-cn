@@ -1,16 +1,16 @@
 ---
-title: "sp_certify_removable (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_certify_removable (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ca484db8104c1c1e817d08be0cf2a72ada76822
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8c7120f6df78b4135f9c8932a88fe24d471f71d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
  [ **@dbname=**] **'***dbname***'**  
  指定要验证的数据库。 *dbname*是**sysname**。  
   
- [ **@autofix=**] **'auto'**  
+ [  **@autofix=**] **auto**  
  对系统管理员授予数据库及所有数据库对象的所有权，并除去任何用户创建的数据库用户及非默认的权限。 *自动*是**nvarchar(4)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -100,9 +100,9 @@ EXEC sp_certify_removable inventory, AUTO;
   
 ## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [sp_create_removable &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

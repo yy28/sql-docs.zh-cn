@@ -1,16 +1,16 @@
 ---
-title: "sp_cursoropen (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_cursoropen (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoropen
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f1b18a69dfb558963f8740313d94285bd5fad36e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  滚动选项。 *scrollopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,7 +81,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
@@ -124,7 +124,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  正在执行 FETCH 操作。  
   
- 仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，  
+ 指向  
  此游标已由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 取消分配而不可用。  
   
  当引发错误时，返回值可能不一致，无法确保准确性。  
@@ -218,7 +218,7 @@ sp_cursoropen cursor OUTPUT, stmt
  后续参数用于传递的值将替换为*局部变量名称*语句中。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_cursorfetch &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

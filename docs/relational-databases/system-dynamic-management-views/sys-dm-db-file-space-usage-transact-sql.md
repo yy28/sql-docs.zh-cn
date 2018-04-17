@@ -2,7 +2,7 @@
 title: sys.dm_db_file_space_usage (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65be93c18aed0f9c03ea781ee7de3069c4e99698
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75bc2c0256697c030fa369487407483de63c0c62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/05/2018
 |total_page_count|**bigint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 文件中的总页数。|  
 |allocated_extent_page_count|**bigint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 文件的已分配区中的总页数。|  
 |unallocated_extent_page_count|**bigint**|文件的未分配区中的总页数。<br /><br /> 不包括已分配区中的未使用页。|  
-|version_store_reserved_page_count|**bigint**|为版本存储分配的统一区中的总页数。 永远不会从混合区分配版本存储页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 有关详细信息，请参阅[sys.dm_tran_version_store &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
+|version_store_reserved_page_count|**bigint**|为版本存储分配的统一区中的总页数。 永远不会从混合区分配版本存储页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 有关详细信息，请参阅[sys.dm_tran_version_store & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
 |user_object_reserved_page_count|**bigint**|从统一区为数据库中的用户对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 你可以使用中的 total_pages 列[sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)目录视图以返回用户对象中的每个分配单元的保留的页计数。 但请注意，total_pages 列包括 IAM 页。|  
 |internal_object_reserved_page_count|**bigint**|从统一区为文件中的内部对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 不存在可返回每个内部对象的页计数的目录视图或动态管理对象。|  
 |mixed_extent_page_count|**bigint**|文件的已分配混合区中的已分配和未分配总页数。 混合区包含分配给不同对象的页。 此计数包含文件中的所有 IAM 页。|
@@ -126,5 +127,5 @@ FROM sys.dm_db_file_space_usage;
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [sys.dm_db_task_space_usage &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

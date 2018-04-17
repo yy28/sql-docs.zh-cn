@@ -1,16 +1,16 @@
 ---
-title: "sp_stored_procedures (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_stored_procedures (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stored_procedures_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c71f292c8d6d1b93e73b028ed6d2fc75e944386c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@sp_name =** ] *名称*  
+ [ **@sp_name =** ] **'***name***'**  
  用于返回目录信息的过程名。 *名称*是**nvarchar(390)**，默认值为 NULL。 支持通配符模式匹配。  
   
- [  **@sp_owner =** ] *架构*  
+ [  **@sp_owner =** ] *****架构*****  
  过程所属架构的名称。 *架构*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则应用基础 DBMS 的默认过程可见性的规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前架构包含具有指定名称的过程，则返回此过程。 如果指定了非限定存储过程，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]按以下顺序搜索此过程：  
@@ -63,10 +63,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   当前数据库中的 **dbo** 架构。  
   
- [  **@qualifier =** ] *限定符*  
+ [  **@qualifier =** ] *****限定符*****  
  过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持由三部分命名窗体中的表 (*限定符***。***架构***。***名称*。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示的数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
- [  **@fUsePattern =** ] *fUsePattern*  
+ [  **@fUsePattern =** ] *****fUsePattern*****  
  确定是否将下划线 (_)、百分号 (%) 或 方括号 ([ ]) 解释为通配符。 *fUsePattern*是**位**，默认值为 1。  
   
  **0** = 模式匹配处于关闭状态。  
@@ -74,7 +74,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = 模式匹配亮起。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -96,7 +96,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
  **sp_stored_procedures**等效于**SQLProcedures** ODBC 中。 返回对结果进行排序的**PROCEDURE_QUALIFIER**， **PROCEDURE_OWNER**，和**PROCEDURE_NAME**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
@@ -120,7 +120,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [目录存储的过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [目录存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

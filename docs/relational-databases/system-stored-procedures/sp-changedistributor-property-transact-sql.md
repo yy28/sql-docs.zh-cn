@@ -1,16 +1,16 @@
 ---
-title: "sp_changedistributor_property (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changedistributor_property (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributor_property
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93b2fb96996cbd23ea654941c860ae7c911fa6a2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ce29ed2cc6f4d6aefab614e75bcee406529f0367
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@property=**] *属性*  
+ [  **@property=**] *****属性*****  
  给定分发服务器的属性。 *属性*是**sysname**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**heartbeat_interval**|在不记录进度消息的情况下代理可以运行的最大分钟数。|  
 |NULL（默认值）|所有可用*属性*输出值。|  
   
- [  **@value=**] *值*  
+ [  **@value=**] *****值*****  
  给定分发服务器属性的值。 *值*是**varchar(255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -67,13 +67,13 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changedistributor_property**。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributor &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_dropdistributor &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_adddistributor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_dropdistributor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

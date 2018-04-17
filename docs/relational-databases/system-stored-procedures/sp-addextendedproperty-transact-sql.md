@@ -1,16 +1,16 @@
 ---
-title: "sp_addextendedproperty (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addextendedproperty (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addextendedproperty
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_addextendedproperty
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5788b9d376acd46d7e7b357d70a4dd93aaa58064
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f8d32e2f2b2c27b1e997438c0a1e06a3219786a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ sp_addextendedproperty
 ## <a name="schema-vs-user"></a>架构与User  
  建议不要在将扩展属性应用于数据库对象时指定 USER 作为级别 0 类型，因为这会导致名称解析不明确。 例如，假定用户 Mary 拥有两个架构（Mary 和 MySchema），并且这两个架构都包含名为 MyTable 的表。 如果将扩展的属性添加到表 MyTable Mary，并指定 **@level0type = n ''**，  **@level0name = Mary**，它不是扩展的属性应用到哪些表清除。 为了保持向后兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将属性应用于名为 Mary 的架构中包含的表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  db_owner 和 db_ddladmin 固定数据库角色的成员可以向任何对象添加扩展属性，但以下情况例外：db_ddladmin 不能向数据库本身添加属性，也不能向用户或角色中添加属性。  
   
  用户可以将扩展属性添加到他们所拥有的对象中，或者添加到他们对其具有 ALTER 或 CONTROL 权限的对象中。  
@@ -243,9 +244,9 @@ EXEC sys.sp_addextendedproperty
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

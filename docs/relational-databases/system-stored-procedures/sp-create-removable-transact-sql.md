@@ -1,16 +1,16 @@
 ---
-title: "sp_create_removable (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_create_removable (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,27 +71,27 @@ sp_create_removable
  [ **@sysphysical=** ] **'***sysphysical***'**  
  物理名称。 其中包含存放系统目录表的文件的完全限定路径。 *sysphysical*是**nvarchar(260)**。  
   
- [ **@syssize=** ] *syssize*  
+ [  **@syssize=** ] *syssize*  
  存放系统目录表的文件的大小 (MB)。 *syssize*是**int**。所需的最低*syssize*为 1。  
   
  [ **@loglogical=** ] **'***loglogical***'**  
  包含事务日志的文件的逻辑名称。 *loglogical*是**sysname**。  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+ [  **@logphysical=** ] *****logphysical*****  
  物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical*是**nvarchar(260)**。  
   
- [ **@logsize=** ] *logsize*  
+ [  **@logsize=** ] *logsize*  
  包含事务日志的文件的大小 (MB)。 *logsize*是**int**。所需的最低*logsize*为 1。  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+ [  **@datalogical1=** ] *****datalogical*****  
  包含数据表的文件的逻辑名称。 *datalogical*是**sysname**。  
   
  必须有 1 到 16 个数据文件。 通常，如果预计数据库很大，必须分布在多个磁盘上，则创建多个数据文件。  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+ [  **@dataphysical1=** ] *****dataphysical*****  
  物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical*是**nvarchar(260)**。  
   
- [ **@datasize1=** ] **'***datasize***'**  
+ [  **@datasize1=** ] *****datasize*****  
  包含数据表的文件的大小 (MB)。 *datasize*是**int**。所需的最低*datasize*为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -118,7 +118,7 @@ sp_create_removable
 |还原|分离|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不集数据和日志文件的权限。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不设置数据文件和日志文件权限。  
   
 ## <a name="examples"></a>示例  
  以下示例创建作为可移动数据库的数据库 `inventory`。  
@@ -137,12 +137,12 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

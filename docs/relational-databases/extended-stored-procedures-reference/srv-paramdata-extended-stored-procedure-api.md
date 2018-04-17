@@ -1,16 +1,16 @@
 ---
-title: "srv_paramdata（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_paramdata（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramdata
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5837ecf48a6e97f5408d86f20b39e057285d64b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  返回远程存储过程调用参数的值。 此函数已被 srv_paraminfo 函数取代。  
   
@@ -62,7 +62,7 @@ n
  表示参数的编号。 第一个参数的编号为 1。  
   
 ## <a name="returns"></a>返回  
- 一个指向参数值的指针。 如果第 n 个参数为 NULL，则没有第 n 个参数，或者没有任何远程存储过程，并返回 NULL。 如果参数值为字符串，则不能以 Null 值结束。 使用 srv_paramlen 确定字符串的长度。  
+ 一个指向参数值的指针。 如果*n*th 参数为 NULL，则没有*n*th 参数，或者没有任何远程存储的过程，返回 NULL。 如果参数值为字符串，则不能以 Null 值结束。 使用 srv_paramlen 确定字符串的长度。  
   
  如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一，则此函数返回以下值。 指针数据包括数据类型的指针是否为有效 (VP)、NULL 或不适用 (N/A)，以及指向的数据内容。  
   

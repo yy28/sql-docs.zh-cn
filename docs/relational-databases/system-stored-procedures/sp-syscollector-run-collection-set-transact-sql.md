@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_run_collection_set (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 749ab839921de15a534be8a091f98dee64197ae7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 768067dbc8616241003897c1791e0f2bae73706c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>注释  
  任一*collection_set_id*或*名称*必须具有一个值，都不能为 NULL。  
   
- 此过程将开始收集，并为指定的集合设置，并将立即启动集合代理作业，如果收集组已上载作业其 **@collection_mode** 设置为非缓存 (1)。 有关详细信息，请参阅[sp_syscollector_create_collection_set &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ 此过程将开始收集，并为指定的集合设置，并将立即启动集合代理作业，如果收集组已上载作业其**@collection_mode**设置为非缓存 (1)。 有关详细信息，请参阅[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 还可用于运行没有计划的收集组。  
   

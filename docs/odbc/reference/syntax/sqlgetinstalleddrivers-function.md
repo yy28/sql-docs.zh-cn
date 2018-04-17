@@ -2,7 +2,7 @@
 title: SQLGetInstalledDrivers 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64b8479b23f76c8af74be77b4f44e3bca6f8a6f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8526c90a0fb6ec801b06ce415ff906b6b42c090
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 函数
 **一致性**  
@@ -64,7 +64,7 @@ BOOL SQLGetInstalledDrivers(
  如果它成功，则返回 FALSE 如果失败，则函数将返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetInstalledDrivers**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLGetInstalledDrivers**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  

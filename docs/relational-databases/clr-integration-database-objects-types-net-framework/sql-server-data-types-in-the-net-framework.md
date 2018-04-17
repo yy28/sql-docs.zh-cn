@@ -1,15 +1,15 @@
 ---
-title: ".NET Framework 中的 SQL Server 数据类型 |Microsoft 文档"
-ms.custom: 
+title: .NET Framework 中的 SQL Server 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - System.Data library
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5b47f3caa1e500664560ff8e6683e6064575699
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d26491962f170206a5a3b441fcecf4d1050f812a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 中的 SQL Server 数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**SqlTypes**库是的基类库的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。 它设计为向数据类型提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中相同的语义和精度。 本主题介绍对.NET Framework 程序员来说，新的语义，并介绍了中实现的类型**System.Data.SqlTypes**中包含的命名空间**System.Data**库。  
+  **SqlTypes**库是的基类库的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。 它设计为向数据类型提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中相同的语义和精度。 本主题介绍对.NET Framework 程序员来说，新的语义，并介绍了中实现的类型**System.Data.SqlTypes**中包含的命名空间**System.Data**库。  
   
  下表列出了本节的主题。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
  [排序规则和 CLR 集成数据类型](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  介绍如何使用 CLR 集成处理排序规则。  
   
- [处理大型对象 &#40;LOB &#41;在 CLR 中的参数](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [处理大型对象 & #40;LOB & #41;在 CLR 中的参数](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之间传递 LOB 类型。  
   
  [映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

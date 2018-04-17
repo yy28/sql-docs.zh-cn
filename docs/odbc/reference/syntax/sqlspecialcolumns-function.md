@@ -2,7 +2,7 @@
 title: SQLSpecialColumns 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe2c39ee38986004947e52bb580a8f8864bb2abd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函数
 **一致性**  
@@ -80,7 +80,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength1*  
  [输入]以字符为单位的长度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [输入]表的架构名称。 如果驱动程序支持的架构，对于某些表但没有为其他，如当驱动程序检索数据从不同 Dbms，空字符串 ("") 表示没有架构的那些表。 *SchemaName*不能包含字符串的搜索模式。  
   
  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *SchemaName*视为标识符和其大小写并不重要。 如果它是 SQL_FALSE， *SchemaName*是的普通自变量; 它原义，处理和其大小写很重要。  
@@ -88,7 +88,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength2*  
  [输入]以字符为单位的长度 **SchemaName*。  
   
- *表名*  
+ *TableName*  
  [输入]表名。 此参数不能为 null 指针。 *TableName*不能包含字符串的搜索模式。  
   
  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *TableName*视为标识符和其大小写并不重要。 如果它是 SQL_FALSE， *TableName*是的普通自变量; 它原义，处理和其大小写很重要。  
@@ -125,7 +125,7 @@ SQLRETURN SQLSpecialColumns(
 |24000|无效的游标状态|在打开游标的*StatementHandle*，和**SQLFetch**或**SQLFetchScroll**已调用一样。 此错误返回由驱动程序管理器中，如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA 和在驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 SQL_NO_DATA。<br /><br /> 在打开游标的*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**不调用一样。|  
 |40001|序列化失败|事务已回滚，因为资源死锁与另一个事务。|  
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY009|不允许使用 null 指针|*TableName*自变量是空指针。<br /><br /> SQL_ATTR_METADATA_ID 语句属性已设置为 SQL_TRUE， *CatalogName*自变量为 null 指针和 SQL_CATALOG_NAME*信息类型*支持中返回该目录名称。<br /><br /> (DM) SQL_ATTR_METADATA_ID 语句属性已设置为 SQL_TRUE，和*SchemaName*自变量是空指针。|  
@@ -171,7 +171,7 @@ SQLRETURN SQLSpecialColumns(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|作用域 (ODBC 1.0)|@shouldalert|Smallint|Rowid 实际范围。 包含以下值之一：<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> 则返回 NULL *IdentifierType*是 SQL_ROWVER。 有关每个值的说明，请参阅说明*作用域*"语法中，"此部分中前面。|  
+|作用域 (ODBC 1.0)|1|Smallint|Rowid 实际范围。 包含以下值之一：<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> 则返回 NULL *IdentifierType*是 SQL_ROWVER。 有关每个值的说明，请参阅说明*作用域*"语法中，"此部分中前面。|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar 不为 NULL|列名称。 该驱动程序返回的列没有名称为空字符串。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar 不为 NULL|数据源 – 依赖于数据类型名称;例如，"CHAR"、"VARCHAR"、"货币"、"长 VARBINARY"或者"CHAR （） FOR BIT DATA"。|  

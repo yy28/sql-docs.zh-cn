@@ -1,15 +1,16 @@
 ---
-title: "驱动程序规范子项 |Microsoft 文档"
-ms.custom: 
+title: 驱动程序规范子项 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subkeys [ODBC], driver specification subkeys
@@ -17,24 +18,24 @@ helpviewer_keywords:
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52899dd2d473ac083d2d0effaca5b3b1726322c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specification-subkeys"></a>驱动程序规范子项
 中的 ODBC 驱动程序子项列出每个驱动程序都有自己的子项。 此子项具有同名的 ODBC 驱动程序子项下的相应值。 此子项下的值列表的驱动程序和驱动程序安装程序 Dll，返回的驱动程序关键字的值的完整路径**SQLDrivers**，和使用情况计数。 值的格式为下表中所示。  
   
-|“属性”|数据类型|data|  
+|名称|数据类型|Data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
 |CreateDSN|REG_SZ|*驱动程序说明*|  
 |驱动程序|REG_SZ|*驱动程序的 DLL 的路径*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  

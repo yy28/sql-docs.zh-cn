@@ -1,29 +1,30 @@
 ---
-title: "使用行集绑定 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 使用行集绑定 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91d372fbb5e63bff8782eaeef1fe21e510f8578b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ed4d2deee0992957e3896c847a327178f86e2252
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-rowset-binding-odbc"></a>使用行集绑定 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,8 +80,8 @@ ms.lasthandoff: 01/25/2018
 5.  每次调用[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)检索 R 行，并将数据传输到绑定的列。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用游标操作指南主题 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [使用游标操作指南主题 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [如何实现游标](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [使用游标 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+ [使用游标 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

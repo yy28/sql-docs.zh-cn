@@ -1,32 +1,33 @@
 ---
-title: "sys.dm_pdw_wait_stats (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_pdw_wait_stats (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
-caps.latest.revision: 
+caps.latest.revision: 7
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 146a38ad01e742fcd72dc144d5ce939e3579a2cb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: b038e289f515f196171c5fcbbad9e96d9c0fc26d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (Transact-SQL)
+# <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含与相关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OS 状态相关的不同节点上运行的实例。 等待类型和及其说明的列表，请参阅[sys.dm_os_wait_stats](http://msdn.microsoft.com/en-us/library/ms179984\(v=sql.120\).aspx)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 |**wait_time**|**bigint**|该等待类型的 millisecons 的总等待时间。 Signal_time 的非独占时间。||  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+ [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [sys.dm_pdw_waits &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   
   

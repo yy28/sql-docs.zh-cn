@@ -1,15 +1,15 @@
 ---
-title: "将 CLR 参数数据映射 |Microsoft 文档"
-ms.custom: 
+title: 将 CLR 参数数据映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 
+caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e47f4cf6d163921b5fb6a398c61c66e217e797a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 来中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空间，和中的本机CLR等效项[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
+  下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 来中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空间，和中的本机CLR等效项[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
   
 ||||  
 |-|-|-|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
 |**date**|**SqlDateTime**|**日期/时间，可以为 Null\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**日期/时间，可以为 Null\<DateTime >**|  
 |**datetime2**|InclusionThresholdSetting|**日期/时间，可以为 Null\<DateTime >**|  
-|**DATETIMEOFFSET**|**InclusionThresholdSetting**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
+|DATETIMEOFFSET|**InclusionThresholdSetting**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal、 可以为 Null\<十进制 >**|  
 |**float**|**SqlDouble**|**双精度，可以为 Null\<Double >**|  
 |**地理**|**SqlGeography**<br /><br /> **SqlGeography**中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|InclusionThresholdSetting|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
 |**ntext**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**numeric**|**SqlDecimal**|**Decimal、 可以为 Null\<十进制 >**|  
 |**nvarchar**|**对 SqlString**<br /><br /> **对**数据传输和访问权限，更好的匹配和**SQLString**是执行字符串操作的更好的匹配项。|**字符串，Char]**|  
-|**nvarchar(1), nchar(1)**|**对 SqlString**|**Char、 字符串，Char []，可以为 Null\<char >**|  
+|**nvarchar(1)、 nchar(1)**|**对 SqlString**|**Char、 字符串，Char []，可以为 Null\<char >**|  
 |**real**|**以**(的范围**以**，但是，大于**实际**)|**单个，为 Null\<单个 >**|  
 |**rowversion**|InclusionThresholdSetting|**Byte[]**|  
 |**int**|**SqlInt16**|**Int16，可以为 Null\<Int16 >**|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/09/2018
 |**text**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**time**|InclusionThresholdSetting|**时间跨度，可以为 Null\<TimeSpan >**|  
 |**timestamp**|InclusionThresholdSetting|InclusionThresholdSetting|  
-|**tinyint**|**SqlByte**|**字节，可以为 Null\<字节 >**|  
+|**tinyint**|**以**|**字节，可以为 Null\<字节 >**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid，可以为 Null\<Guid >**|  
 |**用户定义 type(UDT)**|InclusionThresholdSetting|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
 |**varbinary**|**对 SqlBinary**|**Byte[]**|  
@@ -117,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 数据类型 (SQL Server)**|**SQL Server 数据类型**|  
-|**Decimal**|smallmoney|  
+|**十进制**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**Decimal**|money|  
+|**十进制**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

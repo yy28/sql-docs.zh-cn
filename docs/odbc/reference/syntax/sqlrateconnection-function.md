@@ -2,7 +2,7 @@
 title: SQLRateConnection 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22f7e5c4181a0b36a862ab0e0b819891a3dee9fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 60a1cb0044b4368f0e985b5f258c01e07f21fd78
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 函数
 **一致性**  
@@ -66,7 +66,7 @@ SQLRETURN  SQLRateConnection(
 ## <a name="diagnostics"></a>诊断  
  驱动程序管理器将不处理此函数返回的诊断信息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **SQLRateConnection**生成介于 0 和 100 （含），该值指示一个现有的连接与请求匹配的程度之间的分数。  
   
 |分数|含义 （如果返回 SQL_SUCCESS）|  

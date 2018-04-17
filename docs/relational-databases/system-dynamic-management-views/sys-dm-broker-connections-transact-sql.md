@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_broker_connections (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_broker_connections (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_connections
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abe087369c6584f1548930cf25f8930a2e78bc8c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3818944074a84e2eb5c97fcb12e8b1da940c1a2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,8 @@ ms.lasthandoff: 02/03/2018
 |**login_state**|**int**|此连接的登录进程状态。 可能的值：<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = 联机<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|远程计算机的当前登录状态。 可能的值：<br /><br /> 连接握手正在初始化。<br /><br /> 连接握手正在等待“登录协商”消息。<br /><br /> 连接握手已初始化并发送了用于身份验证的安全上下文。<br /><br /> 连接握手已收到并接受用于身份验证的安全上下文。<br /><br /> 连接握手已初始化并发送了用于身份验证的安全上下文。 提供可用于对对等方进行身份验证的可选机制。<br /><br /> 连接握手已收到并发送了用于身份验证的已接受安全上下文。 提供可用于对对等方进行身份验证的可选机制。<br /><br /> 连接握手正在等待“初始化安全上下文确认”消息。<br /><br /> 连接握手正在等待“接受安全上下文确认”消息。<br /><br /> 连接握手正在等待失败的身份验证的 SSPI 拒绝消息。<br /><br /> 连接握手正在等待“预主密钥”消息。<br /><br /> 连接握手正在等待“验证”消息。<br /><br /> 连接握手正在等待“仲裁”消息。<br /><br /> 连接握手已完成，准备进行消息交换。<br /><br /> 连接错误。|  
 |**peer_certificate_id**|**int**|远程实例用来进行身份验证的证书的本地对象 ID。 该证书的所有者必须对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点拥有 CONNECT 权限。 可以为 NULL。|  
-|**encryption_algorithm**|**int**|用于此连接的加密算法。 可以为 NULL。 可能的值：<br /><br /> **值 &#124;说明 &#124;相应 DDL 选项**<br /><br /> 0 &#124;无 &#124;已禁用<br /><br /> 1 &#124;仅签名<br /><br /> 2 &#124;AES RC4 &#124;所需 &#124;所需的算法 RC4}<br /><br /> 3 &#124;AES &#124;所需的算法 AES<br /><br /> **注意：** RC4 算法仅支持向后兼容。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本，使用 RC4 或 RC4_128 加密的材料可以进行解密在任何兼容级别。|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的文本表示形式。 可以为 NULL。 可能的值：<br /><br /> **说明 &#124;相应 DDL 选项**<br /><br /> NONE &#124; Disabled<br /><br /> RC4 &#124;{所需 &#124;所需的算法 RC4}<br /><br /> AES &#124;所需的算法 AES<br /><br /> 无、 RC4 &#124;{支持 &#124;支持的算法 RC4}<br /><br /> 无、 AES &#124;支持的算法 RC4<br /><br /> RC4、 AES &#124;所需算法 RC4 AES<br /><br /> AES RC4 &#124;所需的算法 AES RC4<br /><br /> 无、 RC4、 AES &#124;支持算法 RC4 AES<br /><br /> 无、 AES、 RC4 &#124; 支持的算法 AES RC4|  
+|**encryption_algorithm**|**int**|用于此连接的加密算法。 可以为 NULL。 可能的值：<br /><br /> **值&#124;说明&#124;相应 DDL 选项**<br /><br /> 0&#124;无&#124;已禁用<br /><br /> 1&AMP;#124;仅签名<br /><br /> 2 &#124; AES、 RC4&#124;所需&#124;所需的算法 RC4}<br /><br /> 3 &#124; AES&#124;必需的算法 AES<br /><br /> **注意：** RC4 算法仅支持向后兼容。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本中，可以在任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的文本表示形式。 可以为 NULL。 可能的值：<br /><br /> **说明&#124;相应 DDL 选项**<br /><br /> 无&#124;已禁用<br /><br /> RC4 &#124; {所需&#124;所需算法 RC4}<br /><br /> AES&#124;所需算法 AES<br /><br /> 无、 RC4 &#124; {支持&#124;支持算法 RC4}<br /><br /> 无、 AES&#124;支持算法 RC4<br /><br /> RC4、 AES&#124;所需算法 RC4 AES<br /><br /> AES、 RC4&#124;所需算法 AES RC4<br /><br /> 无、 RC4、 AES&#124;支持算法 RC4 AES<br /><br /> 无、 AES RC4&#124;支持算法 AES RC4|  
 |**receives_posted**|**int**|尚未针对此连接完成的异步网络接收数。 可以为 NULL。|  
 |**is_receive_flow_controlled**|**bit**|网络接收是否由于流控制（因为网络忙）而推迟。 可以为 NULL。<br /><br /> 1 = True|  
 |**sends_posted**|**int**|尚未针对此连接完成的异步网络发送数。 可以为 NULL。|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 相关的动态管理视图 & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

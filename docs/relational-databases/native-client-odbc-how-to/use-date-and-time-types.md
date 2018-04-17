@@ -1,33 +1,34 @@
 ---
-title: "使用日期和时间类型 |Microsoft 文档"
-ms.custom: 
+title: 使用日期和时间类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c7686de390d8c01faa89146addb22507b511aa1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cd3277de60d7ab9d671f4715e9367ed75c771575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-date-and-time-types"></a>使用日期和时间类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此示例显示如何对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中增加的日期/时间数据结构进行初始化。 随后准备输入值、绑定参数，并执行查询。 有关使用这些类型的详细信息，请参阅[日期和时间改进 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+  此示例显示如何对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中增加的日期/时间数据结构进行初始化。 随后准备输入值、绑定参数，并执行查询。 有关使用这些类型的详细信息，请参阅[日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="example"></a>示例  
  您将需要一个名为 DateTime 的 ODBC 数据源。 DateTime 的默认数据库应为 tempdb。 此数据源必须基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驱动程序。  

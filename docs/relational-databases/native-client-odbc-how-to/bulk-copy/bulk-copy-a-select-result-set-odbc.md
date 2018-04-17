@@ -1,31 +1,32 @@
 ---
-title: "大容量复制选择的结果集 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 大容量复制选择的结果集 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd028d3d10f7bb2a5fb621d5a019331c21609068
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cf93291e22fc4da2d49d13b81a1fb3a56e4d9692
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大容量复制 SELECT 结果集 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行批量复制操作。  
   
- 按以上步骤操作时文件是以本机格式创建的。 你可以通过使用转换为其他数据类型的数据值[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 有关详细信息，请参阅[创建大容量复制格式化文件 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)。  
+ 按以上步骤操作时文件是以本机格式创建的。 你可以通过使用转换为其他数据类型的数据值[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 有关详细信息，请参阅[创建大容量复制格式化文件&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)。  
   
 ## <a name="example"></a>示例  
  需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
@@ -172,6 +173,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [大容量复制使用 SQL Server ODBC 驱动程序操作指南主题 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [大容量复制使用 SQL Server ODBC 驱动程序操作指南主题 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

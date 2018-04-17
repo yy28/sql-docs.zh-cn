@@ -2,7 +2,7 @@
 title: SQLBindCol 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函数
 **一致性**  
@@ -68,7 +68,7 @@ SQLRETURN SQLBindCol(
  你还可以指定扩展的 C 数据类型。 有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
  *TargetValuePtr*  
- [延迟的输入/输出]指向要将绑定到列的数据缓冲区的指针。 **SQLFetch**和**SQLFetchScroll**在此缓冲区中返回数据。 **SQLBulkOperations**返回数据，在此缓冲区时*操作*是 SQL_FETCH_BY_BOOKMARK; 它从此检索数据的缓冲区时*操作*SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK. **SQLSetPos**返回数据，在此缓冲区时*操作*是 SQL_REFRESH; 它从此检索数据的缓冲区时*操作*是 SQL_UPDATE。  
+ [延迟的输入/输出]指向要将绑定到列的数据缓冲区的指针。 **SQLFetch**和**SQLFetchScroll**在此缓冲区中返回数据。 **SQLBulkOperations**返回数据，在此缓冲区时*操作*是 SQL_FETCH_BY_BOOKMARK; 它从此检索数据的缓冲区时*操作*SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK。 **SQLSetPos**返回数据，在此缓冲区时*操作*是 SQL_REFRESH; 它从此检索数据的缓冲区时*操作*是 SQL_UPDATE。  
   
  如果*TargetValuePtr*是 null 指针，该驱动程序解除绑定列的数据缓冲区。 应用程序可以通过调用取消绑定所有列**SQLFreeStmt** SQL_UNBIND 选项。 应用程序可以取消绑定列的数据缓冲区，但如果仍有长度/指示器缓冲区列中，绑定*TargetValuePtr*对的调用中的自变量**SQLBindCol**是 null 指针，但*StrLen_or_IndPtr*参数是一个有效的值。  
   
@@ -125,7 +125,7 @@ SQLRETURN SQLBindCol(
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|(DM) *ColumnNumber*自变量为 0，和*TargetType*参数不为 SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK。|  
 |07009|无效的描述符索引|为参数指定的值*ColumnNumber*超出最大结果集中的列数。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY003|应用程序缓冲区类型无效|自变量*TargetType*已既不有效的数据类型，也不 SQL_C_DEFAULT。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLBindCol**调用。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 以异步方式执行的函数曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。|  

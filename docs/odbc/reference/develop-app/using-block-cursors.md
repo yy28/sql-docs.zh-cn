@@ -1,31 +1,32 @@
 ---
-title: "使用块状游标 |Microsoft 文档"
-ms.custom: 
+title: 使用块状游标 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb2662ac4dcfc6a1f0fa2362bfc71f7a173bcd9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4dc772c1f572c294bccd664cdd8aa013b85d985b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-block-cursors"></a>使用块状游标
 内置 ODBC 3，还可以为块游标的支持。*x*。 **SQLFetch**可以仅用于多行提取 ODBC 3 中调用时。*x*; 如果要将一个 ODBC 2。*x*应用程序调用**SQLFetch**，它将打开仅的单行更行、 只进游标。 当一个 ODBC 3。*x*应用程序调用**SQLFetch** ODBC 2 中。*x*驱动程序，它可以返回单个行，除非的驱动程序支持**SQLExtendedFetch**。 有关详细信息，请参阅[块状游标可滚动游标，向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)为了向后兼容的附录 g： 驱动程序准则中。  

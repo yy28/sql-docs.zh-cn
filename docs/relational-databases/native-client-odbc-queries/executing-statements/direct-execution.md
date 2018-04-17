@@ -1,15 +1,15 @@
 ---
-title: "指示执行 |Microsoft 文档"
-ms.custom: 
+title: 指示执行 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, statements
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b0dbe099a36f7571f024e34838337f38b5ddef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff1baa498a99f9e9279d1c104df179fa34cbea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="direct-execution"></a>直接执行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 显著提高了在多用户环境中直接执行通常执行的语句的性能；如果将 SQLExecDirect 与参数标记配合用于通常执行的 SQL 语句，其效率可接近准备好的执行。  
   
- 连接到的实例时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用[sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)传输的 SQL 语句或批处理上指定**SQLExecDirect**。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以通过逻辑来快速确定如果 SQL 语句或批处理执行与**sp_executesql**匹配的语句或批处理在内存中生成执行计划已存在。 如果匹配，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只需重用现有计划，而无需编译新计划。 这意味着，通常执行 SQL 语句的情况下执行**SQLExecDirect**具有许多用户的系统中将受益于许多了仅适用于早期版本的中的存储过程的计划重用优势[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ 连接到的实例时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用[sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)传输的 SQL 语句或批处理上指定**SQLExecDirect**。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以通过逻辑来快速确定如果 SQL 语句或批处理执行与**sp_executesql**匹配的语句或批处理在内存中生成执行计划已存在。 如果匹配，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只需重用现有计划，而无需编译新计划。 这意味着，通常执行 SQL 语句的情况下执行**SQLExecDirect**具有许多用户的系统中将受益于许多了仅适用于早期版本的中的存储过程的计划重用优势[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  仅当多个用户执行同一 SQL 语句或批处理时，才会从重用执行计划中受益。 请遵照以下编码约定，提高不同客户端执行的 SQL 语句的相似性，以便能够重用执行计划：  
   
@@ -51,6 +52,6 @@ ms.lasthandoff: 01/25/2018
  如果所有语句都执行使用**SQLExecDirect**被编码使用这些约定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以重复使用执行计划，一旦有机会。  
   
 ## <a name="see-also"></a>另请参阅  
- [正在执行语句 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [正在执行语句 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

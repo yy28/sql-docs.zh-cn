@@ -1,29 +1,30 @@
 ---
-title: "sql_variant 对日期和时间类型的支持 |Microsoft 文档"
-ms.custom: 
+title: sql_variant 对日期和时间类型的支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e7df17e376cad6f84580bc2593413a578db0608
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a5eec057cc9d11f1bae5eb4d50e5ab560f11f9ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>sql_variant 对日期和时间类型的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 
   本主题介绍如何**sql_variant**数据类型支持增强的日期和时间功能。  
   
- 列属性 SQL_CA_SS_VARIANT_TYPE 用于返回变体结果列的 C 类型。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了一个额外的属性，SQL_CA_SS_VARIANT_SQL_TYPE，实现行描述符 (IRD) 中设置的 SQL 类型的变体的结果列。 SQL_CA_SS_VARIANT_SQL_TYPE 还可实现参数描述符 (IPD) 中指定的 SQL 类型的 SQL_SS_TIME2 或 SQL_SS_TIMESTAMPOFFSET 参数具有 SQL_C_BINARY C 键入与类型 SQL_SS_VARIANT 绑定。  
+ 列属性 SQL_CA_SS_VARIANT_TYPE 用于返回变体结果列的 C 类型。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了一个额外的属性，SQL_CA_SS_VARIANT_SQL_TYPE，实现行描述符 (IRD) 中设置的 SQL 类型的变体的结果列。 SQL_CA_SS_VARIANT_SQL_TYPE 还可实现参数描述符 (IPD) 中指定的 SQL 类型的 SQL_SS_TIME2 或 SQL_SS_TIMESTAMPOFFSET 参数具有 SQL_C_BINARY C 键入与类型 SQL_SS_VARIANT 绑定。  
   
  可以通过 SQLColAttribute 设置 SQL_SS_TIME2 和 SQL_SS_TIMESTAMPOFFSET 的新类型。 可以通过 SQLGetDescField 返回 SQL_CA_SS_VARIANT_SQL_TYPE。  
   
@@ -67,6 +68,6 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|忽略 SQL_CA_SS_VARIANT_SQL_TYPE|  
   
 ## <a name="see-also"></a>另请参阅  
- [日期和时间改进 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

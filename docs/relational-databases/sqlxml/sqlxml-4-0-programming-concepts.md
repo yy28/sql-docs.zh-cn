@@ -1,37 +1,38 @@
 ---
-title: "SQLXML 4.0 编程概念 |Microsoft 文档"
-ms.custom: 
+title: SQLXML 4.0 编程概念 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99780e4985f2406d5f0a394ae427ad6342106bb6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4c318ef19e47b461f023ff8f7deb9e378ff72a20
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 编程概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SQLXML 3.0 作为 Web 版本提供，以提供附加客户端 XML 功能和现有功能的增强功能，例如带批注的 XSD 架构、XML 大容量加载、Web 服务 (SOAP) 支持和 updategram。  
+  SQLXML 3.0 作为 Web 版本提供，以提供附加客户端 XML 功能和现有功能的增强功能，例如带批注的 XSD 架构、XML 大容量加载、Web 服务 (SOAP) 支持和 updategram。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入 SQLXML 4.0，将继续提供相同的功能为 SQLXML 3.0 加上提供以适应与引入新功能的其他更新[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了 SQLXML 4.0，它继续提供与 SQLXML 3.0 相同的功能，另外还提供附加的更新以接纳随 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入的新功能。  
   
  本部分提供有关 SQLXML 4.0 的信息。  
   
@@ -50,7 +51,7 @@ SQLXML 3.0 作为 Web 版本提供，以提供附加客户端 XML 功能和现�
  [运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  介绍从所提供的 SQLXML 示例创建工作示例的要求。  
   
- [客户端和服务器端格式 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [客户端和服务器端格式设置&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  提供有关客户端和服务器端格式设置的信息以及二者的比较，包括用于构造 XML 文档的 FOR XML 命令。  
   
  [SQLXML 4.0 中的带批注的 XSD 架构](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -62,7 +63,7 @@ SQLXML 3.0 作为 Web 版本提供，以提供附加客户端 XML 功能和现�
  [使用 Updategram 在 SQLXML 4.0 中修改数据](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  提供有关 updategram 的信息，它通过处理由带批注的 XSD（或 XDR）架构提供的 XML 视图来修改数据库中的数据。  
   
- [执行大容量加载的 XML 数据 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [执行大容量加载的 XML 数据 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  介绍如何在 SQLXML 4.0 中大容量加载 XML。  
   
  [SQLXML 4.0 数据访问组件](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -71,7 +72,7 @@ SQLXML 3.0 作为 Web 版本提供，以提供附加客户端 XML 功能和现�
  [SQLXML 4.0 的.NET Framework 支持](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  介绍 SQLXML 4.0 对 .NET Framework 的支持。  
   
- [缓存的模板、 XSL，和架构 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [缓存模板、 XSL 和架构&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  介绍在 SQLXML 中提供的用于提高性能的缓存功能。  
   
  [SQLXML 4.0 安全注意事项](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  

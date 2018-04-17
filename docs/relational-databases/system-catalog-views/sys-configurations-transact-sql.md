@@ -1,16 +1,16 @@
 ---
-title: "sys.configurations (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.configurations (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.configurations_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38f44fb8d174d3fa32bea9d97e079fce0c3d1afc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6ca0a783ca85878e602e613fcf1887012e315efe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ ms.lasthandoff: 11/21/2017
 |**is_dynamic**|**bit**|1 = 执行 RECONFIGURE 语句时生效的变量。|  
 |**is_advanced**|**bit**|1 = 显示该变量时，才**显示 advancedoption**设置。|  
   
- 所有服务器配置选项的列表，请参阅[服务器配置选项 &#40;SQL server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 所有服务器配置选项的列表，请参阅[服务器配置选项&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 > [!NOTE]  
->  有关数据库级配置选项，请参阅[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). 若要配置 SOFT-NUMA，请参阅[SOFT-NUMA &#40;SQL server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  有关数据库级配置选项，请参阅[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 若要配置 SOFT-NUMA，请参阅[SOFT-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [服务器范围的配置目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [服务器范围的配置目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

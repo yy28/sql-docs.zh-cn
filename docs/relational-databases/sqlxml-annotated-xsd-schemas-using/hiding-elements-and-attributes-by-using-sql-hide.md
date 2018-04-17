@@ -1,16 +1,16 @@
 ---
-title: "通过使用 sql:hide 隐藏元素和属性 |Microsoft 文档"
-ms.custom: 
+title: 通过使用 sql:hide 隐藏元素和属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - hiding elements
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab705046d11a6290670fc8bb695643b297b5210
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fbef6a043fb1132da098541724a47d01d77d6a08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 隐藏元素和属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-针对 XSD 架构执行 XPath 查询时，生成的 XML 文档具有在架构中指定的元素和属性。 你可以指定某些元素和属性通过使用架构中隐藏**sql:hide**批注。 当查询的选择条件需要架构中的特定元素或属性，但是不希望在生成的 XML 文档中返回这些元素或属性时，该批注很有用。  
+  针对 XSD 架构执行 XPath 查询时，生成的 XML 文档具有在架构中指定的元素和属性。 你可以指定某些元素和属性通过使用架构中隐藏**sql:hide**批注。 当查询的选择条件需要架构中的特定元素或属性，但是不希望在生成的 XML 文档中返回这些元素或属性时，该批注很有用。  
   
  **Sql:hide**批注采用布尔值 (0 = false、 1 = true)。 可接受的值为 0、1、true 和 false。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/12/2018
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 对属性指定 sql:hide  
  在此示例中的 XSD 架构组成 **\<Person.Contact >**具有元素**ContactID**， **FirstName**，和**LastName**属性。  
   
- **\<Person.Contact >**元素的复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性 **\<Person.Contact >**元素属于简单类型，并将映射到与中 Person.Contacttable AdventureWorks 数据库中的相同名称的列。 在架构中， **sql:hide**上指定批注**ContactID**属性。 当针对此架构中，指定 XPath 查询**ContactID**不返回 XML 文档中。  
+  **\<Person.Contact >**元素的复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性 **\<Person.Contact >**元素属于简单类型，并将映射到与中 Person.Contacttable AdventureWorks 数据库中的相同名称的列。 在架构中， **sql:hide**上指定批注**ContactID**属性。 当针对此架构中，指定 XPath 查询**ContactID**不返回 XML 文档中。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

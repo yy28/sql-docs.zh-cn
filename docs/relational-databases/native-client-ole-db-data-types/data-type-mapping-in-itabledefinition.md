@@ -1,15 +1,15 @@
 ---
-title: "数据类型映射中 ITableDefinition |Microsoft 文档"
-ms.custom: 
+title: 数据类型映射中 ITableDefinition |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [OLE DB]
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - CreateTable function
 - OLE DB, data types
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6e67b2b12d10053478013d737df7120c2047f60
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5de94f9c92e7dcef540e40828fbc9209072f7fa0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/25/2018
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
 |DBTYPE_STR|**char**， **varchar**，**文本，**或**varchar （max)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于的值和版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将映射到类型**文本**。<br /><br /> 如果值*ulColumnSize*小于多字节字符数据类型列的最大长度则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMNDESC *rgPropertySets*成员。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将映射到类型**char**。 如果属性的值是 VARIANT_FALSE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将映射到类型**varchar**。 在任一情况下，DBCOLUMNDESC *ulColumnSize*成员确定的宽度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建列。|  
-|DBTYPE_UDT|**UDT**|在使用以下信息**DBCOLUMNDESC**结构通过**ITableDefinition::CreateTable**需要 UDT 列时：<br /><br /> *pwSzTypeName*将被忽略。<br /><br /> *rgPropertySets*必须包括**DBPROPSET_SQLSERVERCOLUMN**属性设置在上一部分中所述**DBPROPSET_SQLSERVERCOLUMN**中[使用用户定义类型](../../relational-databases/native-client/features/using-user-defined-types.md)。|  
+|DBTYPE_UDT|**UDT**|在使用以下信息**DBCOLUMNDESC**结构通过**ITableDefinition::CreateTable**需要 UDT 列时：<br /><br /> *pwSzTypeName*将被忽略。<br /><br /> *rgPropertySets*必须包括**DBPROPSET_SQLSERVERCOLUMN**属性设置在上一部分中所述**DBPROPSET_SQLSERVERCOLUMN**中[使用用户定义类型](../../relational-databases/native-client/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_WSTR|**nchar**， **nvarchar**， **ntext**或**nvarchar (max)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将映射到类型**ntext**。<br /><br /> 如果值*ulColumnSize*小于最大长度的 Unicode 字符数据类型列，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMNDESC *rgPropertySets*成员。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将映射到类型**nchar**。 如果属性的值是 VARIANT_FALSE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将映射到类型**nvarchar**。 在任一情况下，DBCOLUMNDESC *ulColumnSize*成员确定的宽度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建列。|  
 |DBTYPE_XML|**XML**||  
@@ -61,6 +62,6 @@ ms.lasthandoff: 01/25/2018
 >  创建新表时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口只映射前一个表中指定的 OLE DB 数据类型枚举值。 尝试创建其中某一列为任何其他 OLE DB 数据类型的表时将生成错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据类型 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+ [数据类型 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

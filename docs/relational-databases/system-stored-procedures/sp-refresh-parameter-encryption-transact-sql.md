@@ -1,16 +1,16 @@
 ---
-title: "sp_refresh_parameter_encryption (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_refresh_parameter_encryption (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_refresh_parameter_encryption
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 564d0bd6479d185ce37e1f4c293d73b87756edf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>参数
 
-[  **@name =** ] *模块名*   
+[  **@name =** ] *****模块名*****   
 是存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *模块名*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *模块名*不能绑定到架构的。 *模块名*是`nvarchar`，无默认值。 *模块名*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。
 
 [  **@namespace =** ]  < 类 >    
@@ -63,7 +64,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0（成功）或非零数字（失败）
 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注释
 
 模块的参数加密元数据将变得过期，，如果：   
 * 加密属性的模块引用，已更新的表中的列。 例如，某一列已被删除，已添加具有相同的名称，但不同的加密类型、 加密密钥或加密算法的新列。  
@@ -71,7 +72,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 如果修改了表的加密属性，`sp_refresh_parameter_encryption`为直接或间接引用表的所有模块都应运行。 未将移动到其调用方之前需要用户第一次刷新的内部模块的情况下，可以在这些模块按任意顺序调用此存储的过程。
 
-`sp_refresh_parameter_encryption`不会影响任何权限，扩展属性，或`SET`与对象相关联的选项。 
+`sp_refresh_parameter_encryption` 不会影响任何权限，扩展属性，或`SET`与对象相关联的选项。 
 
 若要刷新服务器级 DDL 触发器，可以在任何数据库的上下文中执行此存储过程。
 

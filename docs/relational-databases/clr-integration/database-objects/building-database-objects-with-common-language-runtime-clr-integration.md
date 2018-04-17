@@ -1,15 +1,15 @@
 ---
-title: "生成与公共语言运行时 (CLR) 集成的数据库对象 |Microsoft 文档"
-ms.custom: 
+title: 生成与公共语言运行时 (CLR) 集成的数据库对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - building database objects [CLR integration]
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: 
+caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bffc0c6796955eee2a23bc4885c3cfc23a7e9304
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c54c2eedd7ac1ff5e265378cc81ac366e58c2fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 集成来生成数据库对象。 托管代码的内部运行[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]简称为"CLR 例程"。 这些例程包括：  
+  可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 集成来生成数据库对象。 托管代码的内部运行[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]简称为"CLR 例程"。 这些例程包括：  
   
 -   标量值用户定义函数（标量 UDF）  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 02/09/2018
  说明如何实现和使用 CLR 触发器。  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR &#41;集成概述](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [公共语言运行时 & #40;CLR & #41;集成概述](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_refresh_log_shipping_monitor (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_refresh_log_shipping_monitor (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2cda4f72387da9f35824fe4747eb31a0d5ec454d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_refresh_log_shipping_monitor
   
  *agent_type*是**tinyint**和不能为 NULL。  
   
- [ **@database=** ] **'***database***'**  
+ [  **@database=** ] *****数据库*****  
  备份或还原代理进行日志记录时使用的主数据库或辅助数据库。  
   
  [ **@mode** ] *n*  
@@ -81,7 +81,7 @@ sp_refresh_log_shipping_monitor
  无。  
   
 ## <a name="remarks"></a>注释  
- **sp_refresh_log_shipping_monitor**刷新**log_shipping_monitor_primary**， **log_shipping_monitor_secondary**， **log_shipping_monitor_history_详细信息**，和**log_shipping_monitor_error_detail**与尚未转移的任何会话信息的表。 当监视已有一段时间不同步时，您便可以使监视服务器与主服务器或辅助服务器同步。 此外，如果需要，还可以从监视服务器中清除监视信息。  
+ **sp_refresh_log_shipping_monitor**刷新**log_shipping_monitor_primary**， **log_shipping_monitor_secondary**， **log_shipping_monitor_history_detail**，和**log_shipping_monitor_error_detail**与尚未转移的任何会话信息的表。 当监视已有一段时间不同步时，您便可以使监视服务器与主服务器或辅助服务器同步。 此外，如果需要，还可以从监视服务器中清除监视信息。  
   
  **sp_refresh_log_shipping_monitor**必须从运行**master**主或辅助服务器上的数据库。  
   
@@ -89,7 +89,7 @@ sp_refresh_log_shipping_monitor
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

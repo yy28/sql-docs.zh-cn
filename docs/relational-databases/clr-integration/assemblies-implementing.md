@@ -1,33 +1,33 @@
 ---
-title: "实现的程序集 |Microsoft 文档"
-ms.custom: 
+title: 实现的程序集 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0e295b80f737bbfcb3c9184974eb82e043da9b0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---implementing"></a>程序集的实现
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题提供有关以下方面的信息以帮助您在数据库中实现和使用程序集：  
+  本主题提供有关以下方面的信息以帮助您在数据库中实现和使用程序集：  
   
 -   创建程序集  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/09/2018
   
  **通过使用 SQL Server Management Studio 中创建一个程序集**  
   
--   [程序集属性 &#40;常规页 &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [程序集属性&#40;常规页&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>修改程序集  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ALTER ASSEMBLY 语句在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改程序集或者使用程序集辅助编辑器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中修改程序集。 当要执行以下操作时，可以修改程序集：  
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/09/2018
   
  **若要通过使用 SQL Server Management Studio 修改程序集**  
   
--   [程序集属性 &#40;常规页 &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [程序集属性&#40;常规页&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>删除、禁用和启用程序集  
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP ASSEMBLY 语句或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 删除程序集。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
-##  <a name="_managing"></a>管理程序集版本  
+##  <a name="_managing"></a> 管理程序集版本  
  将程序集上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，将在数据库系统目录中存储并管理该程序集。 中的程序集的定义进行任何更改[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]应传播到数据库目录中存储的程序集。  
   
  当必须修改程序集时，您必须发出 ALTER ASSEMBLY 语句以更新数据库中的程序集。 这将使该程序集更新为控制其实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本。  
@@ -93,14 +93,14 @@ ms.lasthandoff: 02/09/2018
   
 -   通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或方法直接或间接引用程序集中的方法的持久化计算列。  
   
--   依赖于该程序集，并且该类型实现的 CLR 用户定义类型的列**用户定制**(非**本机**) 序列化格式。  
+-   属于 CLR 用户定义类型且依赖于程序集的列，并且该类型实现的是 UserDefined（非 Native）序列化格式。  
   
 > [!CAUTION]  
 >  未指定 WITH UNCHECKED DATA 时，如果新的程序集版本对表、索引或其他持久性站点中的现有数据造成影响，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试阻止 ALTER ASSEMBLY 执行。 但是，当 CLR 程序集更新时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能保证计算列、索引、索引视图或表达式与基本例程和类型保持一致。 执行 ALTER ASSEMBLY 时一定要谨慎，以确保表达式的结果与程序集中存储的基于该表达式的值相互匹配。  
   
  只有的成员**db_owner**和**db_ddlowner**固定的数据库角色可以通过使用 WITH UNCHECKED DATA 子句执行 ALTER 运行程序集。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将消息发送到 Windows 应用程序事件日志，已使用表中的未选中数据进行修改的程序集。 然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将任何包含依赖于程序集的数据的表标记为带有未检查数据的表。 **Has_unchecked_assembly_data**列**sys.tables**目录视图包含包含未选中状态的数据，使用 0 表示不包含未选中状态数据的表的表的值 1。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将消息（程序集对表中的未检查数据已修改）投递给 Windows 应用程序事件日志。 然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将任何包含依赖于程序集的数据的表标记为带有未检查数据的表。 **Has_unchecked_assembly_data**列**sys.tables**目录视图包含包含未选中状态的数据，使用 0 表示不包含未选中状态数据的表的表的值 1。  
   
  若要解决的未选中状态数据的完整性，可针对具有每个表运行 DBCC CHECKDB 与 EXTENDED_LOGICAL_CHECKS 未选中状态的数据。 如果 DBCC CHECKDB 与 EXTENDED_LOGICAL_CHECKS 失败，你必须删除不是有效或修改的程序集代码以便解决问题的表行，，然后发出其他 ALTER ASSEMBLY 语句。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 02/09/2018
 -   [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [程序集 &#40; 数据库引擎 &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [程序集 & #40; 数据库引擎 & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [获取有关程序集的信息](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

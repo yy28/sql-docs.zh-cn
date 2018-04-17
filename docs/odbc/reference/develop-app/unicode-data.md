@@ -1,15 +1,16 @@
 ---
-title: "Unicode 数据 |Microsoft 文档"
-ms.custom: 
+title: Unicode 数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC], data
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3bb3278fe83922aee29aa8348d32b3fbc757511
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70b5a27c4c034cbb9c2d7ee1cfd10808f3aa323f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unicode-data"></a>Unicode 数据
 SQL Unicode 数据类型用于描述驻留在本机上 DBMS 为 Unicode 的数据。 C Unicode 数据类型可用于允许应用程序将数据绑定到 Unicode 缓冲区。 驱动程序管理器可以将数据转换从 Unicode C 类型 (SQL_C_WCHAR) 以使其带有 ANSI 驱动程序的函数。  

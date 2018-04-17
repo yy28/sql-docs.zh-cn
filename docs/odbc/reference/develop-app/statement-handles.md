@@ -1,30 +1,31 @@
 ---
-title: "语句句柄 |Microsoft 文档"
-ms.custom: 
+title: 语句句柄 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d80db9c7ce795514dd362e37170aa58cce817c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1691020070667876d56414b3d93dee384538ae8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-handles"></a>语句句柄
 A*语句*非常轻松地视为 SQL 语句，如**选择\*从员工**。 但是，一个语句是远不止一个 SQL 语句，它包含所有与该 SQL 语句，如所有结果集由该语句创建和执行语句中使用的参数关联的信息。 语句不甚至不需要具有应用程序定义 SQL 语句。 例如，目录的如函数时**SQLTables**执行上一条语句，它会执行返回表名称的列表的预定义的 SQL 语句。  

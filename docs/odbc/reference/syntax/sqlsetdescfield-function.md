@@ -2,7 +2,7 @@
 title: SQLSetDescField 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函数
 **一致性**  
@@ -89,7 +89,7 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|该驱动程序不支持在指定的值 *\*ValuePtr* (如果*ValuePtr*是一个指针) 或值在*ValuePtr* (如果*ValuePtr*是一个整数值)，或 *\*ValuePtr*无效由于实现工作条件，因此驱动程序替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|该驱动程序不支持在指定的值 *\*ValuePtr* (如果*ValuePtr*是一个指针) 或值在*ValuePtr* (如果*ValuePtr*是一个整数值)，或 *\*ValuePtr*无效由于实现工作条件，因此驱动程序替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07009|无效的描述符索引|*FieldIdentifier*自变量为记录字段中， *RecNumber*自变量为 0，和*DescriptorHandle*自变量引用 IPD 句柄。<br /><br /> *RecNumber*自变量为 0，小于和*DescriptorHandle* ARD 或 APD 引用自变量。<br /><br /> *RecNumber*参数为大于最大列数或数据源可以支持的参数和*DescriptorHandle*到 APD 或 ARD 引用自变量。<br /><br /> (DM) *FieldIdentifier*自变量为 SQL_DESC_COUNT，和 *\*ValuePtr*自变量为小于 0。<br /><br /> *RecNumber*自变量为等于 0，和*DescriptorHandle*隐式分配 APD 引用自变量。 （具有显式分配应用程序描述符，不会出现此错误因为并不知道显式分配应用程序描述符是 APD 或直到 ARD 执行时间。）|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |22001|字符串数据，右截断|*FieldIdentifier*自变量为 SQL_DESC_NAME，和*BufferLength*参数为大于 SQL_MAX_IDENTIFIER_LEN 的值。|  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  下表概述了标头字段的初始化。  
   
-|标头字段名称|类型|R/W|，则“默认”|  
+|标头字段名称|类型|R/W|默认|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R APD: R IRD: R IPD: R|ARD: 有关 SQL_DESC_ALLOC_AUTO 隐式或 SQL_DESC_ALLOC_USER 为显式<br /><br /> APD: 有关 SQL_DESC_ALLOC_AUTO 隐式或 SQL_DESC_ALLOC_USER 为显式<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: [1] APD: [1] IRD： 未使用的 IPD： 未使用|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: 0 APD: 0 IRD: 
   
  下表中所示，将为记录的字段的初始化。  
   
-|记录字段名称|类型|R/W|，则“默认”|  
+|记录字段名称|类型|R/W|默认|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  

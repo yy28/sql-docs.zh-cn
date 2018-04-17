@@ -1,16 +1,16 @@
 ---
-title: sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs
-ms.custom: 
+title: sys.dm_os_server_diagnostics_log_configurations |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_server_diagnostics_log_configurations
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_os_server_diagnostics_log_configurations
 - sys.dm_os_server_diagnostics_log_configurations
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f73f0e2c1fc3223801bdd95d96d5bba8c19351f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: feb0087a0b2e905464b5e353eb5a951d12c5f0db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosserverdiagnosticslogconfigurations"></a>sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 |is_enabled|**bit**|指示应启用还是禁用日志记录。<br /><br /> 1 - 启用诊断日志记录<br /><br /> 0 - 禁用诊断日志记录|  
 |max_size|**int**|在每个诊断日志可以增长到兆字节为单位的最大大小。 默认值为 100 MB。|  
 |max_files|**int**|可以存储在计算机上的诊断日志文件的最大数量，超过该数量后这些文件将被新的诊断日志所取代。|  
-|path|nvarchar(260)|指示诊断日志位置的路径。 默认位置是\<\MSSQL\Log > 中的安装文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例。|  
+|path|nvarchar(260)|指示诊断日志位置的路径。 默认位置是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的安装文件夹中的 \<\MSSQL\Log>。|  
   
 ## <a name="permissions"></a>权限  
  需要对 SQL Server 故障转移群集实例具有 VIEW SERVER STATE 权限。  

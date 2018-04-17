@@ -2,7 +2,7 @@
 title: SQLConfigDataSource 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f2c33bc5c946331057486719750086a1f962924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource Function
 **一致性**  
@@ -102,7 +102,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource**如果找不到或加载安装程序 DLL，或者如果用户取消对话框中，则返回 FALSE。 否则，它将返回它从收到的状态**ConfigDSN**。  
   
- **SQLConfigDataSource**映射系统 DSN *fRequest*到用户 DSN *fRequest*s (ODBC_ADD_SYS_DSN 到 ODBC_ADD_DSN、 ODBC_CONFIG_DSN，和 ODBC_REMOVE_SYS ODBC_CONFIG_SYS_DSN到 ODBC_REMOVE_DSN _DSN)。 若要区分用户和系统 Dsn **SQLConfigDataSource**设置配置模式下按下表的安装程序。 在返回前, **SQLConfigDataSource**将配置模式下重置为 BOTHDSN。 **ConfigDSN** （实现由驱动程序） 应调用**SQLWriteDSNToIni**和**SQLWritePrivateProfileString**以支持的系统 DSN。 有关详细信息，请参阅[ConfigDSN 函数](../../../odbc/reference/syntax/configdsn-function.md)。  
+ **SQLConfigDataSource**映射系统 DSN *fRequest*到用户 DSN *fRequest*s (ODBC_ADD_SYS_DSN 到 ODBC_ADD_DSN、 ODBC_CONFIG_DSN，和 ODBC_REMOVE_SYS_ ODBC_CONFIG_SYS_DSN到 ODBC_REMOVE_DSN DSN)。 若要区分用户和系统 Dsn **SQLConfigDataSource**设置配置模式下按下表的安装程序。 在返回前, **SQLConfigDataSource**将配置模式下重置为 BOTHDSN。 **ConfigDSN** （实现由驱动程序） 应调用**SQLWriteDSNToIni**和**SQLWritePrivateProfileString**以支持的系统 DSN。 有关详细信息，请参阅[ConfigDSN 函数](../../../odbc/reference/syntax/configdsn-function.md)。  
   
 |*fRequest*|配置模式|  
 |----------------|------------------------|  

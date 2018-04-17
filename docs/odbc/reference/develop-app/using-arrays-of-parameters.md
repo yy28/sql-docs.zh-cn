@@ -1,30 +1,31 @@
 ---
-title: "使用的参数数组 |Microsoft 文档"
-ms.custom: 
+title: 使用的参数数组 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3d5662b8eb85f994142aea0e4dff237fd9852b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-arrays-of-parameters"></a>使用参数的数组
 若要使用的参数，则应用程序调用数组**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAMSET_SIZE 可指定数目的参数集的自变量。 它调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAMS_PROCESSED_PTR 指定驱动程序可以在其中返回集的处理，参数个数的变量的地址的自变量包括错误设置。 它调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAM_STATUS_PTR 为指向数组中要返回其参数值的每一行的状态信息的自变量。 该驱动程序将这些地址存储在它还为该语句保留的结构。  

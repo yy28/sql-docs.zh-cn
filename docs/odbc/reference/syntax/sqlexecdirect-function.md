@@ -2,7 +2,7 @@
 title: SQLExecDirect 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e2db598d233bb36eadd8161dc63a6be9a8ac4be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b162ebac689c25f287d8f20e6ee449a60e87ff43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 函数
 **一致性**  
@@ -74,9 +74,9 @@ SQLRETURN SQLExecDirect(
 |01004|字符串数据，右截断|为输入/输出返回的字符串或二进制数据或输出参数导致的非空白字符或非 NULL 二进制数据截断。 如果它是一个字符串值，它是右侧被截断。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01006|未撤消特权|\**StatementText*包含**撤消**语句，然后用户没有指定的特权。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01007|未授予的权限|*\*StatementText*已**授予**语句，然后用户无法授予 %1 指定的特权。|  
-|01S02 的警告|选项值已更改|指定的语句属性由于实现工作条件无效，因此暂时替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值可用于*StatementHandle*直到游标关闭，此时语句属性将恢复为以前的值。 可以更改这些语句属性包括：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|指定的语句属性由于实现工作条件无效，因此暂时替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值可用于*StatementHandle*直到游标关闭，此时语句属性将恢复为以前的值。 可以更改这些语句属性包括：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S07|小数部分组成的截断|输入/输出返回的数据或输出参数中的内容已被截断，以便数值数据类型的小数部分被截断，或者时间组成部分的时间、 时间戳，还是间隔的数据类型的小数部分被截断。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07002|计数字段不正确|在指定的参数数目**SQLBindParameter**中包含的 SQL 语句中的参数数目少于\* *StatementText*。<br /><br /> **SQLBindParameter**调用时使用*ParameterValuePtr*设置为 null 指针， *StrLen_or_IndPtr*未设置为 SQL_NULL_DATA 或 SQL_DATA_AT_EXEC，和*InputOutputType*到 SQL_PARAM_OUTPUT，未设置，以便在指定的参数数目**SQLBindParameter**大于中包含的 SQL 语句中的参数数目 **StatementText*。|  
+|07002|计数字段不正确|在指定的参数数目**SQLBindParameter**中包含的 SQL 语句中的参数数目少于\* *StatementText*。<br /><br /> **SQLBindParameter**调用时使用*ParameterValuePtr*设置为 null 指针， *StrLen_or_IndPtr*未设置为 SQL_NULL_DATA 或 SQL_DATA_AT_EXEC，和*InputOutputType*到 SQL_PARAM_OUTPUT，未设置，以便在指定的参数数目**SQLBindParameter**大于中包含的 SQL 语句中的参数数目 **StatementText*.|  
 |07006|受限制的数据类型属性冲突|由标识的数据值*ValueType*中的参数**SQLBindParameter**对于无法转换的绑定的参数，标识的数据类型为*ParameterType*中的参数**SQLBindParameter**。<br /><br /> 绑定 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT 不无法转换为标识的数据类型的参数返回的数据值*ValueType*中的参数**SQLBindParameter**。<br /><br /> （如果无法转换一个或多个行的数据值，但没有成功返回一个或多个行，此函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07007|Restricted 的参数值冲突|参数类型 SQL_PARAM_INPUT_OUTPUT_STREAM 仅用于发送和接收数据部分中的参数。 此参数类型不允许输入绑定的缓冲区。<br /><br /> 当参数类型为 SQL_PARAM_INPUT_OUTPUT，和时，将出现此错误\* *StrLen_or_IndPtr*中指定**SQLBindParameter**是否不等于 SQL_NULL_DATA，SQL_DEFAULT_PARAM、 SQL_LEN_DATA_AT_EXEC(len) 或 SQL_DATA_AT_EXEC。|  
 |07S01|不允许使用默认参数|参数值，设置**SQLBindParameter**、 SQL_DEFAULT_PARAM，以及相应的参数没有默认值。|  
@@ -92,7 +92,7 @@ SQLRETURN SQLExecDirect(
 |22015|间隔字段溢出|*\*StatementText*包含准确的数值或间隔参数，当转换到 SQL 数据类型的时间间隔，导致重要数字丢失。<br /><br /> *\*StatementText*包含多个字段间隔参数，当转换为数值数据类型列中，没有表示形式具有数值数据类型。<br /><br /> *\*StatementText*包含已分配至间隔为 SQL 类型的参数数据，并且存在间隔 SQL 类型的 C 类型的值没有表示形式。<br /><br /> 分配为精确数字或时间间隔为间隔 C 类型导致重要数字丢失的 SQL 类型的输入/输出或输出参数。<br /><br /> 如果参数为输入/输出或输出已分配给间隔 C 结构中，没有间隔数据结构中的数据的表示形式。|  
 |22018|转换指定的的无效字符值|*\*StatementText*包含 C 类型，是准确或近似数字、 日期时间或间隔数据类型; 的 SQL 类型的列是字符数据类型; 并且列中的值不是有效的文本的绑定的 C 类型。<br /><br /> SQL 类型返回一个输入/输出或输出参数，如果未准确或近似数字、 日期时间或间隔数据类型;C 类型为 SQL_C_CHAR;并且列中的值不是有效的文本的绑定的 SQL 类型。|  
 |22019|无效的转义字符|\**StatementText*包含 SQL 语句包含**如**谓词和**转义**中**其中**子句和转义的长度之后的字符**转义**未等于 1。|  
-|22025|无效的转义序列|\**StatementText*包含了包含一个 SQL 语句"**如***模式值***转义***转义符*"中**其中**子句，并且后面模式值中的转义字符的字符不是之一"%"或"_"。|  
+|22025|无效的转义序列|\**StatementText*包含了包含一个 SQL 语句"**如***模式值***转义***转义符*"在**其中**子句，并且后面模式值中的转义字符的字符不是之一"%"或"_"。|  
 |23000|完整性约束冲突|**StatementText*包含了一个包含参数或文本的 SQL 语句。 参数值定义为 NOT NULL 关联的表列中的列为 NULL、 重复的值提供约束为仅包含唯一值，某一列或违反某些其他完整性约束。|  
 |24000|无效的游标状态|在光标*StatementHandle*通过**SQLFetch**或**SQLFetchScroll**。 此错误返回由驱动程序管理器中，如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，并且如果由驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 SQL_NO_DATA。<br /><br /> 但不是定位在打开游标的*StatementHandle*。<br /><br /> **StatementText*包含和定位的更新或删除语句，光标位于早于开始日期的结果集或结果集的结尾之后。|  
 |34000|无效的临时表名称|**StatementText*包含定位的更新或删除语句，且正在执行的语句所引用的游标未打开。|  
@@ -116,7 +116,7 @@ SQLRETURN SQLExecDirect(
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY090|字符串或缓冲区长度无效|(DM) 自变量*TextLength*小于或等于为 0，但与 sql_nts 以不相等。<br /><br /> 参数值，设置**SQLBindParameter**、 null 指针，以及参数长度值不是 0、 SQL_NULL_DATA、 SQL_DATA_AT_EXEC、 SQL_DEFAULT_PARAM，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 参数值，设置**SQLBindParameter**、 不是空指针; C 数据类型不 SQL_C_BINARY 或 SQL_C_CHAR; 和参数长度值是小于 0，但不是 sql_nts 以、 SQL_NULL_DATA、 SQL_DATA_AT_EXEC、 SQL_DEFAULT_PARAM，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 通过参数长度值绑定**SQLBindParameter**为设置为 SQL_DATA_AT_EXEC; SQL 类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源 – 特定数据类型; 以及 SQL_NEED_LONG_DATA_LEN 信息键入**SQLGetInfo**已"Y"。|  
 |HY105|无效的参数类型|为参数指定的值*InputOutputType*中**SQLBindParameter** SQL_PARAM_OUTPUT，且该参数为输入的参数。|  
-|HY109|无效的光标位置|\**StatementText*包含和定位的更新或删除语句，光标 (通过**SQLSetPos**或**SQLFetchScroll**) 上删除了或找不到行提取。|  
+|HY109|无效的光标位置|\**StatementText*包含和定位的更新或删除语句，光标 (通过**SQLSetPos**或**SQLFetchScroll**) 上已被删除，或者无法获取的行。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未实现的可选功能|驱动程序或数据源不支持 SQL_ATTR_CONCURRENCY 和 SQL_ATTR_CURSOR_TYPE 语句属性的当前设置的组合。<br /><br /> SQL_ATTR_USE_BOOKMARKS 语句属性已设置为 SQL_UB_VARIABLE，且 SQL_ATTR_CURSOR_TYPE 语句属性被设置为该驱动程序不支持书签游标类型。|  
 |HYT00|超时时间已到|查询超时期限过期之前的数据源返回了结果集。 通过设置的超时期限**SQLSetStmtAttr**，SQL_ATTR_QUERY_TIMEOUT。|  

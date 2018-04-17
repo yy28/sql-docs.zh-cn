@@ -2,7 +2,7 @@
 title: SQLForeignKeys 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 935c3236085794ef0d9cb4acb18568c4309fd191
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函数
 **一致性**  
@@ -177,7 +177,7 @@ SQLRETURN SQLForeignKeys(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|PKTABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|主键表目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
+|PKTABLE_CAT (ODBC 1.0)|1|Varchar|主键表目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
 |PKTABLE_SCHEM (ODBC 1.0)|2|Varchar|主键表架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有架构这些表。|  
 |PKTABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|主键表名称。|  
 |PKCOLUMN_NAME (ODBC 1.0)|4|Varchar 不为 NULL|主键列名称。 该驱动程序返回的列没有名称为空字符串。|  
@@ -211,19 +211,19 @@ SQLRETURN SQLForeignKeys(
   
 |TABLE_NAME|COLUMN_NAME|KEY_SEQ|  
 |-----------------|------------------|--------------|  
-|ORDERS|ORDERID|@shouldalert|  
+|ORDERS|ORDERID|1|  
   
  接下来，该示例调用**SQLForeignKeys**以获取其他引用 ORDERS 表的主键的表中的外键。 结果集将有一个行;下表中显示了重要的列。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|ORDERS|CUSTID|行|CUSTID|@shouldalert|  
+|ORDERS|CUSTID|行|CUSTID|1|  
   
  最后，该示例调用**SQLForeignKeys**若要获取由订单表中的外键引用的其他表的主键。 结果集将有一个行;下表中显示了重要的列。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|客户|CUSTID|ORDERS|CUSTID|@shouldalert|  
+|客户|CUSTID|ORDERS|CUSTID|1|  
   
 ```  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  

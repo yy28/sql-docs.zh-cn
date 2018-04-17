@@ -1,31 +1,32 @@
 ---
-title: "使用简洁函数 |Microsoft 文档"
-ms.custom: 
+title: 使用简洁函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - concise functions [ODBC]
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fecf227f991a3c9c6edfb1ce29f5b3b781898e45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 84e1a884406e4060b957279078b8bfb106b92661
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-concise-functions"></a>使用简洁的函数
 某些 ODBC 函数向描述符隐式访问。 应用程序编写器可能会发现它们比调用更方便**SQLSetDescField**或**SQLGetDescField**。 调用这些函数的*简洁*函数因为它们执行的许多功能，包括设置或获取描述符字段。 某些简洁函数允许应用程序设置或检索单个函数调用中的多个相关的描述符字段。  

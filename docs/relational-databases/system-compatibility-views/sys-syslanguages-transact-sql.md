@@ -1,16 +1,16 @@
 ---
-title: "sys.syslanguages (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.syslanguages (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syslanguages
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03708a28eb0cdd1a961035f95d89cc9476cfbd63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,12 +51,12 @@ ms.lasthandoff: 02/09/2018
 |months|**nvarchar(372)**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
 |shortmonths|**nvarchar(132)**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
 |days|**nvarchar(217)**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
-|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 语言的 Windows 区域设置 ID。|  
-|msglangid|**int**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 消息组 id。|  
+|lcid|**int**|语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置 ID。|  
+|msglangid|**int**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]包含下列已安装的语言。  
   
-|用英语表示的名称|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 消息组 ID|  
+|用英语表示的名称|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID|  
 |---------------------|------------------|-----------------------------------------|  
 |英语|2052|2052|  
 |德语|1031|1031|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 02/09/2018
 |泰国语|1054|1054|  
   
 ## <a name="see-also"></a>另请参阅  
- [兼容性视图 &#40;Transact SQL &#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [将系统表映射到系统视图 &#40;Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [兼容性视图&#40;Transact SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [将系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

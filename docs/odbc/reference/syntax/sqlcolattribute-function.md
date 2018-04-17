@@ -2,7 +2,7 @@
 title: SQLColAttribute 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函数
 **一致性**  
@@ -136,7 +136,7 @@ SQLRETURN SQLColAttribute (
   
  一个 ODBC 3。*x*驱动程序必须为每个描述符字段返回一个值。 如果描述符字段不适用于驱动程序或数据源和驱动程序除非另行说明，否则返回 0，在\* *StringLengthPtr*或空字符串中的 **CharacterAttributePtr*。  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>向后兼容性  
  ODBC 3。*x*函数**SQLColAttribute**替换不推荐使用的 ODBC 2。*x*函数**SQLColAttributes**。 映射时**SQLColAttributes**到**SQLColAttribute** (时 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序)，或映射**SQLColAttribute**到**SQLColAttributes** (时 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序)，或者驱动程序管理器的值传递*FieldIdentifier*通过，请将其映射到一个新值，或返回一个错误，，如下所示：  
   
 > [!NOTE]  

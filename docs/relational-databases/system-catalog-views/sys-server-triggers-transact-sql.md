@@ -1,16 +1,16 @@
 ---
-title: "sys.server_triggers (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.server_triggers (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_triggers
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_triggers catalog view
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efbd010533b9c11d974db2ae20c8455ce4274231
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ef59089135cded1ed557fd628cbe93d45fc0620
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ ms.lasthandoff: 11/27/2017
 |**parent_class**|**tinyint**|父级的类。 始终为：<br /><br /> 100 = 服务器|  
 |**parent_class_desc**|**nvarchar(60)**|父类的说明。 始终为：<br /><br /> SERVER。|  
 |**parent_id**|**int**|对 SERVER 上的触发器，此值始终为 0。|  
-|**type**|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|**类型**|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**type_desc**|**nvarchar(60)**|对象类型的类的说明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|触发器的创建日期。|  
 |**modify_date**|**datetime**|上一次使用 ALTER 语句修改触发器的日期。|  
 |**is_ms_shipped**|**bit**|由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件代表用户创建的触发器。|  
 |**is_disabled**|**bit**|1 = 触发器被禁用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

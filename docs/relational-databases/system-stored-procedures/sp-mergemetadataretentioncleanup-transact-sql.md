@@ -1,16 +1,16 @@
 ---
-title: "sp_mergemetadataretentioncleanup (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_mergemetadataretentioncleanup (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5ddc3ccb31599685dc9b41e383f29422b8b74e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 32a8e2654428569f189efd111839fbde7c6258f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +67,9 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>注释  
   
 > [!IMPORTANT]  
->  如果有多个发布上一个数据库，并且这些发布的任何一个使用无限发布保持期，请运行**sp_mergemetadataretentioncleanup**不清除合并复制更改跟踪数据库的元数据。 因此，要谨慎使用无限发布保持。 若要确定是否发布具有无限期保留期，执行[sp_helpmergepublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)在发布服务器并记下结果中的任何发布设置值为**0**为**保留**。  
+>  如果有多个发布上一个数据库，并且这些发布的任何一个使用无限发布保持期，请运行**sp_mergemetadataretentioncleanup**不清除合并复制更改跟踪数据库的元数据。 因此，要谨慎使用无限发布保持。 若要确定是否发布具有无限期保留期，执行[sp_helpmergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)在发布服务器并记下结果中的任何发布设置值为**0**为**保留**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**db_owner**固定数据库角色或发布访问列表中的用户的已发布的数据库可以执行**sp_mergemetadataretentioncleanup**。  
   
 ## <a name="see-also"></a>另请参阅  

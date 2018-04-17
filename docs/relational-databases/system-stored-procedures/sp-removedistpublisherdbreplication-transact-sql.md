@@ -1,16 +1,16 @@
 ---
-title: "sp_removedistpublisherdbreplication (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_removedistpublisherdbreplication (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0af4afd8eb0d9b5a3e20550121b7b3e7596d5c3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 111bf836a8b6a2f8ed2fd5347184064f905e7759
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] *发布服务器*  
+ [  **@publisher=** ] *****发布服务器*****  
  是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] *publisher_db*  
+ [  **@publisher_db=** ] *****publisher_db*****  
  发布数据库的名称。 *publisher_db*是**sysname**无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -69,7 +69,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 -   属于发布的所有复制代理作业的元数据。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色在分发服务器或成员的**db_owner**分发数据库中的固定的数据库角色可以执行**sp_removedistpublisherdbreplication**。  
   
 ## <a name="see-also"></a>另请参阅  

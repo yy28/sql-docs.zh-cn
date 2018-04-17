@@ -1,8 +1,8 @@
 ---
-title: sys.time_zone_info (Transact-SQL) | Microsoft Docs
+title: sys.time_zone_info (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/27/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-catalog-views
@@ -24,18 +24,19 @@ f1_keywords:
 helpviewer_keywords:
 - sys.time_zone_info system table
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d832e1aca65d9b129ff497579a7e2ab00f57ac9
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0d2eff1feb09046d592f88f63d3d12ad734eb930
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
+# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   返回有关受支持的时区信息。 在以下注册表配置单元存储在计算机上安装的所有时区：  
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/28/2018
 |**is_currently_dst**|**bit**|如果当前观察夏时制，则为 true。|  
   
 ## <a name="see-also"></a>另请参阅  
- [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
+ [GETUTCDATE &#40;Transact SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
  [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
  [服务器范围的配置目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  

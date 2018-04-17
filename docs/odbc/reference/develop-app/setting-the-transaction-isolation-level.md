@@ -1,31 +1,32 @@
 ---
-title: "将事务隔离级别设置 |Microsoft 文档"
-ms.custom: 
+title: 将事务隔离级别设置 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - isolation levels [ODBC]
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74c345bb8bdfae60a06576b43b655ef78e4a6dfc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96fff370bcde4b6cc63c7b9af97c3eced3061d85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-the-transaction-isolation-level"></a>将事务隔离级别设置
 若要设置的事务隔离级别，应用程序，请使用 SQL_ATTR_TXN_ISOLATION 连接属性。 如果数据源不支持所请求的隔离级别，该驱动程序或数据源可以设置更高的级别。 若要确定哪些事务隔离级别的数据源支持和默认隔离级别是，应用程序调用**SQLGetInfo**使用 SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 选项，分别。  

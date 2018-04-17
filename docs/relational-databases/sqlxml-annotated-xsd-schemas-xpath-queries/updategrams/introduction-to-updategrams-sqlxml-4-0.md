@@ -1,16 +1,16 @@
 ---
-title: "Updategram (SQLXML 4.0) 简介 |Microsoft 文档"
-ms.custom: 
+title: Updategram (SQLXML 4.0) 简介 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -25,27 +25,28 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-你可以修改 （插入、 更新或删除） 中的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从现有 XML 文档使用属的 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函数。  
+  你可以修改 （插入、 更新或删除） 中的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从现有 XML 文档使用属的 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函数。  
   
  OPENXML 函数通过拆分现有 XML 文档并提供可以传递给 INSERT、UPDATE 或 DELETE 语句的行集来修改数据库。 使用 OPENXML 时，直接针对数据库表进行操作。 因此，在行集提供程序（如表）可以显示为源时，最适合使用 OPENXML。  
   
  与 OPENXML 一样，updategram 允许您在数据库中插入、更新或删除数据；不过，updategram 针对带批注的 XSD（或 XDR）架构提供的 XML 视图进行操作，例如将更新应用于映射架构提供的 XML 视图。 而映射架构则具有将 XML 元素和属性映射到相应的数据库表和列所需的信息。 updategram 使用此映射信息更新数据库表和列。  
   
 > [!NOTE]  
->  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[简介批注 XSD 架构 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 有关使用 XDR 的旧版应用程序，请参阅[批注 XDR 架构 &#40; Deprecated in SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[简介批注 XSD 架构 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 有关使用 XDR 的旧版应用程序，请参阅[批注 XDR 架构&#40;SQLXML 4.0 中弃用&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Updategram 中必需的命名空间  
  属的 updategram 中的关键字如**\<同步 >**， **\<之前 >**，和**\<后 >**，存在于**urn： 架构-microsoft-com:xml-属的 updategram**命名空间。 您可以为该命名空间使用任意前缀。 在本文档中， **updg**前缀表示**属的 updategram**命名空间。  
@@ -110,7 +111,7 @@ ms.lasthandoff: 02/12/2018
   
  如果属的 updategram 执行复杂的更新 （例如，在基于映射架构中指定的父-子关系的多个表的插入记录） 时，必须通过使用显式提供映射架构**映射架构**针对其中属的 updategram 的执行属性。  
   
- 由于 updategram 是模板，因此为 updategram 中的映射架构指定的路径是相对于模板文件的位置而言（即相对于存储 updategram 的位置而言）。 有关详细信息，请参阅[属的 Updategram &#40; 中指定批注映射架构SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ 由于 updategram 是模板，因此为 updategram 中的映射架构指定的路径是相对于模板文件的位置而言（即相对于存储 updategram 的位置而言）。 有关详细信息，请参阅[指定批注映射架构中属的 Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ## <a name="element-centric-and-attribute-centric-mapping-in-updategrams"></a>Updategram 中以元素为中心的映射和以属性为中心的映射  
  使用默认映射（在 updategram 中未指定映射架构）时，如果是以元素为中心的映射，则 updategram 元素映射到表并且子元素映射到列。如果是以属性为中心的映射，则属性映射到列。  
@@ -180,6 +181,6 @@ ms.lasthandoff: 02/12/2018
 -   将其作为 OLE DB 命令提交。  
   
 ## <a name="see-also"></a>另请参阅  
- [属的 Updategram 安全注意事项 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

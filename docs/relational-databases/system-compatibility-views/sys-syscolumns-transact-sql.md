@@ -1,16 +1,16 @@
 ---
-title: sys.syscolumns (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.syscolumns (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-enginel, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscolumns
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syscolumns system table
 - sys.syscolumns compatibility view
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15de1e84d8b3dcbe9d1949cb0ba745cfea671287
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1f1f149934c0d92df8a1184bc57a5fcb02f7673c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,10 +56,10 @@ ms.lasthandoff: 02/09/2018
 |**colid**|**int**|列 ID 或参数 ID。|  
 |**xoffset**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**reserved**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**保留**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|此列的默认值的 ID。|  
-|**domain**|**int**|此列的规则或 CHECK 约束的 ID。|  
+|**域**|**int**|此列的规则或 CHECK 约束的 ID。|  
 |**number**|**int**|过程分组时的子过程号。<br /><br /> 0 = 非过程项|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -73,10 +74,10 @@ ms.lasthandoff: 02/09/2018
 |**iscomputed**|**int**|指示列是否为计算列的标志：<br /><br /> 0 = 非计算列。<br /><br /> 1 = 计算列。|  
 |**isoutparam**|**int**|指示过程参数是否为输出参数：<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**isnullable**|**int**|指示列是否允许空值：<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**collation**|**sysname**|列的排序规则的名称。 如果不是基于字符的列，则为 NULL。|  
+|**排序规则**|**sysname**|列的排序规则的名称。 如果不是基于字符的列，则为 NULL。|  
   
 ## <a name="see-also"></a>另请参阅  
- [将系统表映射到系统视图 &#40;Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [将系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

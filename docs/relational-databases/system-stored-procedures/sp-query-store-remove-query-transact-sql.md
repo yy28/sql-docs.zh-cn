@@ -1,16 +1,16 @@
 ---
-title: "sp_query_store_remove_query (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_query_store_remove_query (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SP_QUERY_STORE_REMOVE_QUERY
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.sp_query_store_remove_query
 - sp_query_store_remove_query
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
-caps.latest.revision: 
+caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8112286f4f0dc01e6c0071149d68dcf1912ae95
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8080c98a281d694dbff6f68c0e8ec42d912748d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
   
 ## <a name="remarks"></a>注释  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**执行**对数据库拥有权限和**删除**查询存储目录视图的权限。  
   
 ## <a name="examples"></a>示例  
@@ -81,12 +82,12 @@ EXEC sp_query_store_remove_query 3;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_query_store_force_plan &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_plan &#40;这 SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_unforce_plan &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [sp_query_store_reset_exec_stats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
+ [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
+ [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [sp_query_store_flush_db &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

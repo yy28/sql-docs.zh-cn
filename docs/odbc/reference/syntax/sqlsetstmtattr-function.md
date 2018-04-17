@@ -2,7 +2,7 @@
 title: SQLSetStmtAttr 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函数
 **一致性**  
@@ -58,7 +58,7 @@ SQLRETURN SQLSetStmtAttr(
  *StatementHandle*  
  [输入]语句句柄。  
   
- *Attribute*  
+ *属性*  
  [输入]若要设置的选项列在"注释"。  
   
  *ValuePtr*  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetStmtAttr(
   
  如果*属性*自变量是特定于驱动程序的值， *ValuePtr*可能是一个带符号的整数。  
   
- *StringLength*  
+ *stringLength*  
  [输入]如果*属性*是 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *ValuePtr*. 如果*属性*是 ODBC 定义的属性和*ValuePtr*是一个整数， *StringLength*将被忽略。  
   
  如果*属性*是驱动程序定义的属性，应用程序通过设置指示属性到驱动程序管理器的性质*StringLength*自变量。 *StringLength*可以具有下列值：  
@@ -104,7 +104,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*，或在指定的值*ValuePtr*无效由于实现工作条件，因此驱动程序替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值。)替换值可用于*StatementHandle*直到游标关闭，此时语句属性将恢复为以前的值。 可以更改这些语句属性包括：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*，或在指定的值*ValuePtr*无效由于实现工作条件，因此驱动程序替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值。)替换值可用于*StatementHandle*直到游标关闭，此时语句属性将恢复为以前的值。 可以更改这些语句属性包括：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |24000|无效的游标状态|*属性*SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR 或 SQL_ATTR_USE_BOOKMARKS，并且光标处于打开状态。|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  

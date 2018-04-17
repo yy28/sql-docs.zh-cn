@@ -1,16 +1,16 @@
 ---
-title: "sp_dropextendedproc (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_dropextendedproc (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 10/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropextendedproc
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c949cbe9e9c5e0f0c3bf7b823f47215cd5712b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5daedadaa3abe933de740958de5c4ccaf521dbd1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@functname =**] *过程*  
+ [  **@functname =**] *****过程*****  
  要删除的扩展存储过程的名称。 *过程*是**nvarchar(517)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  执行**sp_dropextendedproc**删除的用户定义的扩展存储的过程名称[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图中移除的项从和[sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)目录视图。 可以仅在运行此存储的过程**master**数据库。  
@@ -65,7 +65,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
   
  **sp_dropextendedproc**无法在事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_dropextendedproc**。  
   
 ## <a name="examples"></a>示例  
@@ -81,8 +81,8 @@ EXEC sp_dropextendedproc 'xp_hello';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addextendedproc &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "连接属性 |Microsoft 文档"
-ms.custom: 
+title: 连接属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], connection attributes
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - connecting to driver [ODBC], connection attributes
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8674cb60df26d15539beef1f46a74233bf838625
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d2fe93960b2a6cae6cf2916416f7ac6e122ac16
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-attributes"></a>连接属性
 连接属性是连接的特性。 例如，因为事务发生在连接级别，所以事务隔离级别就是一个连接属性。 同样，登录超时值或尝试时连接超时前, 等待的秒数是连接属性。  

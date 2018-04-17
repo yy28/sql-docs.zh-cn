@@ -1,30 +1,31 @@
 ---
-title: "发送的长整型数据 |Microsoft 文档"
-ms.custom: 
+title: 发送的长整型数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e60a23396a725f449b3b5f37f70bcb28284071d8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-long-data"></a>发送的长整型数据
 Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 254 个字符的二进制数据。 它可能不能将整个项的长整型数据存储在内存中，如当该项表示长文本文档或位图。 由于此类数据不能存储在单个缓冲区中，数据源将其发送到使用部件中的驱动程序**SQLPutData**时执行的语句。 在执行时为其发送数据的参数名为*执行中的数据参数*。  

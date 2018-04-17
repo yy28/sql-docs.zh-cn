@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscriber (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addsubscriber (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48dba20940cff922fa3bdacd78471d57fbec7707
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 364f88ae30fa71cd5f2a39dea897252b967d8228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,26 +69,26 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber=**] *订阅服务器*  
+ [  **@subscriber=**] *****订阅服务器*****  
  将作为有效订阅服务器添加到该服务器的发布中的订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
   
  [  **@type=**]*类型*  
  订阅服务器的类型。 *类型*是**tinyint**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|**0** （默认值）|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器|  
+|**0** （默认值）|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器|  
 |**1**|ODBC 数据源服务器|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 数据库|  
 |**3**|OLE DB 访问接口|  
   
- [  **@login=**] *登录*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。 *登录名*是**sysname**，默认值为 NULL。  
+ [  **@login=**] *****登录*****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。 login 的数据类型为 sysname，默认值为 NULL。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 在执行时现在基于每个订阅指定的属性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
- [  **@password=**] *密码*  
+ [  **@password=**] *****密码*****  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码。 *密码*是**nvarchar(524)**，默认值为 NULL。  
   
 > [!IMPORTANT]  
@@ -118,7 +118,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  安排复制代理的频率。 *frequency_type*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|按需|  
@@ -141,7 +141,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  复制代理的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**1** （默认值）|第一个|  
 |**2**|第二个|  
@@ -161,7 +161,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  在指定期内重新安排计划的频率。 *frequency_subday*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二个|  
@@ -201,7 +201,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 在执行时现在基于每个订阅指定的属性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
- [  **@description=**] *说明*  
+ [  **@description=**] *****说明*****  
  订阅服务器的文本说明。 *说明*是**nvarchar （255)**，默认值为 NULL。  
   
  [  **@security_mode=**] *security_mode*  
@@ -213,7 +213,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@encrypted_password=**] *encrypted_password*  
  此参数已弃用，因此仅设置为向后兼容性提供*encrypted_password*为任何值，但**0**将导致错误。  
   
- [  **@publisher** =] *发布服务器*  
+ [ **@publisher**=] *****发布服务器*****  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -229,14 +229,14 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
  **sp_addsubscriber**写入[MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)表中**分发**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_addsubscriber**。  
   
 ## <a name="see-also"></a>另请参阅  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

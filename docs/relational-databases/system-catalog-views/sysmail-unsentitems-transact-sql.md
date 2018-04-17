@@ -1,16 +1,16 @@
 ---
-title: "sysmail_unsentitems (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sysmail_unsentitems (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3a05add3c6c490a0b45e664389e6a49c59959d1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5891918cc9226c4bfdb458f2fe2689244c7a630f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
   
  如果要查看正在等待发送的消息数以及消息已在邮件队列中存在的时间，则请使用该视图。 通常的数**未发送**较低，消息。 请在正常操作过程中进行基准测试，以确定消息队列中合理的消息数以便进行操作。  
   
- 若要查看通过数据库邮件处理的所有消息，使用[sysmail_allitems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). 若要查看仅具有失败的状态消息，使用[sysmail_faileditems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 若要查看已发送的消息，使用[sysmail_sentitems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ 若要查看通过数据库邮件处理的所有消息，使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要查看仅具有失败的状态消息，使用[sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)。 若要查看已发送的消息，使用[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,19 +56,19 @@ ms.lasthandoff: 02/03/2018
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
 |**subject**|**nvarchar(510)**|消息的主题行。|  
-|**body**|**varchar(max)**|消息的正文。|  
+|**正文**|**varchar(max)**|消息的正文。|  
 |**body_format**|**varchar(20)**|消息正文的格式。 可能的值为**文本**和**HTML**。|  
-|**importance**|**varchar(6)**|**重要性**消息参数。|  
-|**sensitivity**|**varchar(12)**|**敏感度**消息参数。|  
+|**重要性**|**varchar(6)**|**重要性**消息参数。|  
+|**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
-|**query**|**varchar(max)**|邮件程序所执行的查询。|  
+|**查询**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|值为 1 时，查询结果将包含列标题。 0 值时，查询结果未包含列标题。|  
 |**query_result_width**|**int**|**Query_result_width**消息参数。|  
 |**query_result_separator**|**char(1)**|用于分隔查询输出中的各列的字符。|  
-|**exclude_query_output**|**bit**|**Exclude_query_output**消息参数。 有关详细信息，请参阅[sp_send_dbmail &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**exclude_query_output**|**bit**|**Exclude_query_output**消息参数。 有关详细信息，请参阅[sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
 |**append_query_error**|**bit**|**Append_query_error**消息参数。 0 指示如果查询中存在错误，则数据库邮件不应发送电子邮件。|  
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  
 |**send_request_user**|**sysname**|提交消息的用户。 这不是数据库邮件过程中，用户上下文**从**字段的消息。|  

@@ -1,16 +1,16 @@
 ---
-title: "sys.database_connection_stats （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.database_connection_stats （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -23,21 +23,22 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 0ab4255a4c13199a445335eef491ca0986ab3287
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含有关的统计信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库**连接**事件，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅中的事件类型[sys.event_log &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  包含有关的统计信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库**连接**事件，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅中的事件类型[sys.event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 |统计信息|类型|Description|  
 |---------------|----------|-----------------|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>间隔 start_time 和 end_time  
- 事件包含在某个聚合间隔在事件发生时*上*或*后***start_time**和*之前***end_time**该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
+ 事件包含在某个聚合间隔在事件发生时*上*或*后 * * * start_time** 和*之前 * * * end_time** 该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
   
 ```  
   
@@ -80,13 +81,13 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>未包括的错误  
  此视图可能并未包含所有连接和错误信息：  
   
--   此视图不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库无法发生，只有中的事件类型中指定的错误[sys.event_log &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   此视图不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库无法发生，只有中的事件类型中指定的错误[sys.event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 -   如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据中心内发生计算机故障，则事件表中可能缺少逻辑服务器的少量数据。  
   
 -   如果通过 DoSGuard 拦截了 IP 地址，则无法收集来自该 IP 地址的连接尝试事件，这些事件不会出现在此视图中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  有权访问用户**master**数据库具有对此视图的只读访问。  
   
 ## <a name="example"></a>示例  

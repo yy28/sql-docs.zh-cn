@@ -3,7 +3,7 @@ title: sys.dm_db_tuning_recommendations (Transact SQL) |Microsoft 文档
 description: 了解如何查找潜在的性能问题，建议在 SQL Server 和 Azure SQL 数据库的修补程序
 ms.custom: ''
 ms.date: 07/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -29,13 +29,14 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4f783c82d92aa0837ea9fbb90f9b3d2afc8c8d
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: fc933666e31c45fc78fb6d303ca1e7d3b5874d55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_tuning\_recommendations (Transact-SQL)
+# <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_优化\_建议 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   返回有关详细信息优化建议。  
@@ -48,20 +49,20 @@ ms.lasthandoff: 04/05/2018
 | **类型** | **nvarchar(4000)** | 生成的建议，例如，自动优化选项的名称 `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | 为什么提供此建议的原因。 |
 | **valid\_since** | **datetime2** | 首次生成此建议。 |
-| **last\_refresh** | **datetime2** | 此建议生成的最后一个时间。 |
+| **最后一个\_刷新** | **datetime2** | 此建议生成的最后一个时间。 |
 | **状态** | **nvarchar(4000)** | 描述的状态的建议的 JSON 文档。 将可使用以下字段：<br />-   `currentValue` -当前状态的建议。<br />-   `reason` – 介绍的推荐方法是在当前状态的原因的常量。|
 | **is\_executable\_action** | **bit** | 1 = 可以对通过数据库执行该建议[!INCLUDE[tsql_md](../../includes/tsql_md.md)]脚本。<br />0 = 不能对数据库执行该建议 (例如： 信息只有或已还原建议) |
-| **is\_revertable\_action** | **bit** | 1 = 建议可自动监视并还原数据库引擎。<br />0 = 不能自动监视和恢复的建议。 大多数&quot;可执行&quot;操作将受到&quot;revertable&quot;。 |
+| **是\_revertable\_操作** | **bit** | 1 = 建议可自动监视并还原数据库引擎。<br />0 = 不能自动监视和恢复的建议。 大多数&quot;可执行&quot;操作将受到&quot;revertable&quot;。 |
 | **execute\_action\_start\_time** | **datetime2** | 应用建议的日期。 |
 | **execute\_action\_duration** | **time** | 执行操作的持续时间。 |
-| **execute\_action\_initiated\_by** | **nvarchar(4000)** | `User` = 用户手动强制建议中的计划。 <br /> `System` = 系统自动应用建议。 |
-| **execute\_action\_initiated\_time** | **datetime2** | 应用建议的日期。 |
+| **执行\_操作\_启动\_通过** | **nvarchar(4000)** | `User` = 用户手动强制建议中的计划。 <br /> `System` = 系统自动应用建议。 |
+| **执行\_操作\_启动\_时间** | **datetime2** | 应用建议的日期。 |
 | **revert\_action\_start\_time** | **datetime2** | 已还原，建议的日期。 |
 | **revert\_action\_duration** | **time** | 还原操作的持续时间。 |
-| **revert\_action\_initiated\_by** | **nvarchar(4000)** | `User` = 用户手动 unforced 建议的计划。 <br /> `System` = 系统自动还原建议。 |
-| **revert\_action\_initiated\_time** | **datetime2** | 已还原，建议的日期。 |
+| **还原\_操作\_启动\_通过** | **nvarchar(4000)** | `User` = 用户手动 unforced 建议的计划。 <br /> `System` = 系统自动还原建议。 |
+| **还原\_操作\_启动\_时间** | **datetime2** | 已还原，建议的日期。 |
 | **score** | **int** | 估计值/影响此建议 0-100 上缩放 （越大越好） |
-| **details** | **nvarchar(max)** | 包含有关建议的更多详细信息的 JSON 文档。 将可使用以下字段：<br /><br />`planForceDetails`<br />-    `queryId` -查询\_回归的查询 id。<br />-    `regressedPlanId` -plan_id 回归的计划。<br />-   `regressedPlanExecutionCount` 的检测到查询中使用之前回归回归计划执行数。<br />-    `regressedPlanAbortedCount` -回归计划执行期间检测到的错误数。<br />-    `regressedPlanCpuTimeAverage` 的在检测到回归之前使用回归查询平均 CPU 时间。<br />-    `regressedPlanCpuTimeStddev` -检测到的前回归回归查询所使用的 CPU 时间标准偏差。<br />-    `recommendedPlanId` -plan_id 应强制的计划。<br />-   `recommendedPlanExecutionCount`-与在检测到回归之前应强制计划查询的执行数。<br />-    `recommendedPlanAbortedCount` -应强制计划执行期间检测到的错误数。<br />-    `recommendedPlanCpuTimeAverage` 的供 （计算之前检测到回归） 应强制计划执行的查询平均 CPU 时间。<br />-    `recommendedPlanCpuTimeStddev` 检测到的 CPU 时间之前回归回归的查询使用的标准偏差。<br /><br />`implementationDetails`<br />-  `method` 的应该用于更正回归方法。 值始终是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 应执行强制实施该建议的计划的脚本。 |
+| **详细信息** | **nvarchar(max)** | 包含有关建议的更多详细信息的 JSON 文档。 将可使用以下字段：<br /><br />`planForceDetails`<br />-    `queryId` -查询\_回归的查询 id。<br />-    `regressedPlanId` -plan_id 回归的计划。<br />-   `regressedPlanExecutionCount` 的检测到查询中使用之前回归回归计划执行数。<br />-    `regressedPlanAbortedCount` -回归计划执行期间检测到的错误数。<br />-    `regressedPlanCpuTimeAverage` 的在检测到回归之前使用回归查询平均 CPU 时间。<br />-    `regressedPlanCpuTimeStddev` -检测到的前回归回归查询所使用的 CPU 时间标准偏差。<br />-    `recommendedPlanId` -plan_id 应强制的计划。<br />-   `recommendedPlanExecutionCount`-与在检测到回归之前应强制计划查询的执行数。<br />-    `recommendedPlanAbortedCount` -应强制计划执行期间检测到的错误数。<br />-    `recommendedPlanCpuTimeAverage` 的供 （计算之前检测到回归） 应强制计划执行的查询平均 CPU 时间。<br />-    `recommendedPlanCpuTimeStddev` 检测到的 CPU 时间之前回归回归的查询使用的标准偏差。<br /><br />`implementationDetails`<br />-  `method` 的应该用于更正回归方法。 值始终是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 应执行强制实施该建议的计划的脚本。 |
   
 ## <a name="remarks"></a>注释  
  返回的信息`sys.dm_db_tuning_recommendations`时数据库引擎标识潜在的查询性能回归，而且不具有持久性，会更新。 建议保持仅直到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新启动。 如果他们想要将其保留在服务器回收后，数据库管理员应定期制作优化建议的备份副本。 
@@ -117,7 +118,7 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 
 ## <a name="see-also"></a>另请参阅  
  [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)   
- [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 支持](../../relational-databases/json/index.md)
  

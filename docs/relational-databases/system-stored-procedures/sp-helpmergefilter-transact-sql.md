@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergefilter (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpmergefilter (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ec2500e3fc16c2f6c78473fb97a6b1bf757ef52
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 35e478a3eb65b030d61f32ea57ed23510d1eb994
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *文章*  
- 项目的名称。 *文章*是**sysname**，默认值为 **%** ，其返回的所有项目的名称。  
+ [  **@article=**] *****文章*****  
+ 项目的名称。 *文章*是**sysname**，默认值为**%**，其返回的所有项目的名称。  
   
- [  **@filtername=**] *filtername*  
- 要返回其信息的筛选器名。 *filtername*是**sysname**，默认值为 **%** ，这将返回有关上项目或发布定义的所有筛选器信息。  
+ [  **@filtername=**] *****filtername*****  
+ 要返回其信息的筛选器名。 *filtername*是**sysname**，默认值为**%**，这将返回有关上项目或发布定义的所有筛选器信息。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -79,7 +79,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>注释  
  **sp_helpmergefilter**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergefilter**。  
   
 ## <a name="see-also"></a>另请参阅  

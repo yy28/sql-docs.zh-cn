@@ -1,15 +1,16 @@
 ---
-title: "转换器规范子项 |Microsoft 文档"
-ms.custom: 
+title: 转换器规范子项 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - translator subkey [ODBC]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - translator specification subkeys [ODBC]
 - subkeys [ODBC], translator specification subkeys
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86ba311eb458c1128a611b6d1cc2ed1c71329d3f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: de1d072bf36203fd8755726f5a06edbb786d7eb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="translator-specification-subkeys"></a>转换器规范子项
 ODBC 转换器子项中列出每个翻译人员都有自己的子项。 此子项具有相同名称，为 ODBC 转换器子项下相应的值。 此子项下的值列表转换器和转换器设置 Dll 和使用情况计数的完整的路径。 值的格式为下表中所示。  
   
-|“属性”|数据类型|data|  
+|名称|数据类型|Data|  
 |----------|---------------|----------|  
 |转换器|REG_SZ|*转换器的 DLL 的路径*|  
 |安装|REG_SZ|*安装程序的 DLL 的路径*|  

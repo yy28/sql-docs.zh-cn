@@ -2,7 +2,7 @@
 title: SQLPoolConnect 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd862492513daceda364205d965b1d00e6cb649f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 130c39d4aab986b5053192d2fe2c548e89ccef2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 函数
 **一致性**  
@@ -68,7 +68,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="diagnostics"></a>诊断  
  类似于[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)任何进行输入验证错误时，只不过驱动程序管理器将使用**HandleType**的 SQL_HANDLE_DBC_INFO_TOKEN 和**处理**的*hDbcInfoToken*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  驱动程序管理器可保证 HENV 处理的父*hDbc*和*hDbcInfoToken*相同。  
   
  与不同[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)，没有任何*DriverCompletion*参数，以提示用户输入连接信息。 一个提示对话框不允许在池的方案。  

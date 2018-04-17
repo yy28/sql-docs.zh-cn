@@ -1,16 +1,16 @@
 ---
-title: "sp_helpsrvrolemember (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpsrvrolemember (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsrvrolemember
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36c1ac793a550b453508928b6544e95ed20b37b5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91e88ec91181cff6e7129a5af41c3476604f7c76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@srvrolename =** ] *角色*  
+ [  **@srvrolename =** ] *****角色*****  
  是固定的服务器角色的名称。 *角色*是**sysname**，默认值为 NULL。 如果*角色*未指定，则结果集包括有关所有固定的服务器角色的信息。  
   
  *角色*可以是任何以下值。  
@@ -78,11 +78,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  所有登录名是公共的成员。 sp_helpsrvrolemember 无法识别 public 角色，因为，在内部，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不实现公共作为角色。  
   
- 若要添加或移除的成员的服务器角色，请参阅[ALTER SERVER ROLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ 若要添加或移除的成员的服务器角色，请参阅[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
- sp_helpsrvrolemember 将不会作为自变量的用户定义的服务器角色。 若要确定用户定义的服务器角色的成员，请参阅中的示例[ALTER SERVER ROLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember 将不会作为自变量的用户定义的服务器角色。 若要确定用户定义的服务器角色的成员，请参阅中的示例[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -93,10 +93,10 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_helprole &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

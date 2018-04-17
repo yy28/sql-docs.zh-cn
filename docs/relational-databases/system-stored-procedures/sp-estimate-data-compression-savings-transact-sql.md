@@ -1,16 +1,16 @@
 ---
-title: "sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acb61e6c699728902bc7ada6d5cfd7e12febb1c8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d93c3626e7177df5920cd2e8888ba75a2416fdfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ sp_estimate_data_compression_savings
  包含表或索引视图的数据库架构的名称。 *schema_name*是**sysname**。 如果*schema_name*为 NULL，则使用当前用户的默认架构。  
   
  [ @object_name=] '*object_name*  
- 索引所属的表或索引视图的名称。 *object_name*是**sysname**。  
+ 索引所属的表或索引视图的名称。 object_name 为 sysname。  
   
  [ @index_id=] '*index_id*  
- 是索引的 ID。 *index_id*是**int**，和可以是以下值之一： 索引，NULL，或者 0 的 ID 号*object_id*是堆。 若要返回基表或视图的所有索引的信息，请指定 NULL。 如果指定 NULL，则必须指定为 NULL *partition_number*。  
+ 索引的 ID。 *index_id*是**int**，和可以是以下值之一： 索引，NULL，或者 0 的 ID 号*object_id*是堆。 若要返回基表或视图的所有索引的信息，请指定 NULL。 如果指定 NULL，则必须指定为 NULL *partition_number*。  
   
  [ @partition_number=] '*partition_number*  
  对象中的分区号。 *partition_number*是**int**，和可以是以下值之一： 索引或堆、 NULL 或 1 个用于未分区的索引或堆的分区号。  
@@ -110,7 +110,7 @@ sp_estimate_data_compression_savings
   
  如果索引或分区 ID 不存在，将不返回任何结果。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对该表具有 SELECT 权限。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
@@ -129,8 +129,8 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.partitions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Unicode 压缩的实现](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

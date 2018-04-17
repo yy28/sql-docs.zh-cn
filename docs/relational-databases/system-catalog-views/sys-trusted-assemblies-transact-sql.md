@@ -1,16 +1,16 @@
 ---
-title: "sys.trusted_assemblies (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.trusted_assemblies (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trusted_assemblies_TSQL
@@ -21,17 +21,18 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.trusted_assemblies
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: tmullaney
 ms.author: thmullan
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d13ae733551a3c475176343250f9ee671756f3
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71e66e31adb43937fe4d1bfc5166b46fa5a69ba4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +44,10 @@ ms.lasthandoff: 03/19/2018
 
 |列名 |数据类型 |Description |
 |--- |--- |--- |
-|哈希 |varbinary(8000) |SHA2_512 哈希值的程序集内容。 |
+|哈希 |varbinary （8000) |SHA2_512 哈希值的程序集内容。 |
 |description |nvarchar(4000) |程序集的可选用户定义描述。 Microsoft 建议使用将编码简单名称、 版本号、 区域性、 公钥，以及要信任的程序集的体系结构的规范名称。 此值唯一标识一侧公共语言运行时 (CLR) 程序集，并在 sys.assemblies clr_name 值相同。 |
 |create_date |datetime2 |程序集添加到受信任的程序集列表的日期。 |
-|created_by |nvarchar(128) |程序集添加到列表的主体的登录名。 |
+|created_by |nvarchar （128) |程序集添加到列表的主体的登录名。 |
 | | | |
 
 

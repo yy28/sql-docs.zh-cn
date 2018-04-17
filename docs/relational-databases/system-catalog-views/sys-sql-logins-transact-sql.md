@@ -1,16 +1,16 @@
 ---
-title: "sys.sql_logins (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.sql_logins (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_logins_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_logins catalog view
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12dcc799255ebc44ed2b8d6401de80a98d83bcbb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ecff509ffd103928f6a3e73872f9c814c45fab5e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -43,16 +44,16 @@ ms.lasthandoff: 11/21/2017
 |**\<继承列 >**|--|继承自**sys.server_principals**。|  
 |**is_policy_checked**|**bit**|检查密码策略。|  
 |**is_expiration_checked**|**bit**|检查密码过期。|  
-|**password_hash**|**varbinary(256)**|SQL 登录密码的哈希。 开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 存储使用 sha-512 加盐密码的计算密码信息。|  
+|**password_hash**|**varbinary(256)**|SQL 登录密码的哈希。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。|  
   
- 该视图继承的列的列表，请参阅[sys.server_principals &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ 该视图继承的列的列表，请参阅[sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
 ## <a name="remarks"></a>注释  
- 若要查看两个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录名和 Windows 身份验证登录名，请参阅[sys.server_principals &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ 若要查看两个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录名和 Windows 身份验证登录名，请参阅[sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
- 当包含启用了数据库用户，则可不带登录名进行连接。 若要确定这些帐户，请参阅[sys.database_principals &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ 当包含启用了数据库用户，则可不带登录名进行连接。 若要确定这些帐户，请参阅[sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录都会显示各自的登录名称和 sa 登录信息。 要查看其他登录，需要获取 ALTER ANY LOGIN 或有关登录的权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

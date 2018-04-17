@@ -1,16 +1,16 @@
 ---
-title: "sp_cursor_list (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_cursor_list (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4ce00bf096ecbd0c40b723c017b21d6fa982d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a01fabe88b8e38c9495ebd349c6251fa2388fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope=] *cursor_scope*  
  指定要报告的游标级别。 *cursor_scope*是**int**，无默认值，并且可为这些值之一。  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |1|报告所有本地游标。|  
 |2|报告所有全局游标。|  
 |3|报告本地游标和全局游标。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="cursors-returned"></a>返回的游标  
  sp_cursor_list 返回的报告是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标输出参数，而不是结果集。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器便可以按一次一行的方式处理输出。 这还意味着无法直接从数据库 API 函数调用该过程。 游标输出参数必须绑定到程序变量，但是数据库 API 不支持绑定游标参数或变量。  
@@ -94,7 +94,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  使用 sp_describe_cursor_columns 对游标返回的结果集的属性进行说明。 使用 sp_describe_cursor_tables 报告游标引用的基表。 sp_describe_cursor 报告相同的信息作为 sp_cursor_list，但只针对指定的游标。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予 public 角色。  
   
 ## <a name="examples"></a>示例  

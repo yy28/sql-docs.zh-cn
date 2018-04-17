@@ -1,15 +1,15 @@
 ---
-title: "CLR Integration Code Access Security |Microsoft 文档"
-ms.custom: 
+title: CLR Integration Code Access Security |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b93a1955adb6f38eebd8de86599e1861a80ff75b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ebe23e9aa58308e404f8cf748abe3e903471cb11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-公共语言运行时 (CLR) 支持用于托管代码的一种称为代码访问安全性的安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 有关详细信息，请参阅 .NET Framework 软件开发包中的“代码访问安全性”部分。  
+  公共语言运行时 (CLR) 支持用于托管代码的一种称为代码访问安全性的安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 有关详细信息，请参阅 .NET Framework 软件开发包中的“代码访问安全性”部分。  
   
  决定授予程序集的权限的安全策略定义在三个不同的位置：  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 02/09/2018
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中运行时授予托管代码的代码访问安全性权限集为以上三种策略级别授予的权限集的交集。 即使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 向加载到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的程序集授予一个权限集，赋予用户代码的最终权限集仍可能受用户和计算机级别策略的进一步限制。  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主机策略级别权限集  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机策略级别授予程序集的代码访问安全性权限集由创建该程序集时指定的权限集决定。 有三个权限集：**安全**， **EXTERNAL_ACCESS**和**UNSAFE** (使用指定**的 PERMISSION_SET** 选项[创建程序集 &#40;Transact SQL &#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机策略级别授予程序集的代码访问安全性权限集由创建该程序集时指定的权限集决定。 有三个权限集：**安全**， **EXTERNAL_ACCESS**和**UNSAFE** (使用指定**的 PERMISSION_SET** 选项[创建程序集&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md))。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供托管; 的主机级安全策略级别设置为 CLR此策略是下面始终正在起作用的两个策略级别的其他策略级别。 会为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建的每个应用程序域设置此策略。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在承载 CLR 的同时向其提供了主机级别安全策略级别；该策略为始终有效的两个策略级别下的附加策略级别。 会为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建的每个应用程序域设置此策略。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 宿主级别策略组合了用于系统程序集的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固定策略和用于用户程序集的用户指定策略。  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 02/09/2018
   
 |||||  
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
+||**安全**|**EXTERNAL_ACCESS**|**不安全**|  
 |**代码访问安全性权限**|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
 |**编程模型限制**|是|是|无限制|  
 |**可验证性要求**|是|用户帐户控制|否|  

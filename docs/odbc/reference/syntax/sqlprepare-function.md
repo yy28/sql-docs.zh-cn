@@ -2,7 +2,7 @@
 title: SQLPrepare 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a1ad2c08c1b2df085e98581576fabfb93ba6236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 函数
 **一致性**  
@@ -69,7 +69,7 @@ SQLRETURN SQLPrepare(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|指定的语句属性由于实现工作条件无效，因此暂时替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值可用于*StatementHandle*直到关闭游标。 可以更改这些语句属性包括： SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|指定的语句属性由于实现工作条件无效，因此暂时替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值可用于*StatementHandle*直到关闭游标。 可以更改这些语句属性包括： SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |21S01|插入值列表与列列表不匹配|\**StatementText*包含**插入**语句，并要插入的值的数目与派生表的等级不匹配。|  
 |21S02|派生表的等级与列列表不匹配|\**StatementText*包含**CREATE VIEW**语句和的名称指定的数量并不与查询规范定义的派生表的相同程度。|  
@@ -87,7 +87,7 @@ SQLRETURN SQLPrepare(
 |42S12|找不到索引|\**StatementText*包含**DROP INDEX**语句，并指定的索引名称不存在。|  
 |42S21|已存在的列|\**StatementText*包含**ALTER TABLE**语句，并在指定的列**添加**子句不是唯一的或标识基表中的现有列。|  
 |42S22|找不到列|\**StatementText*包含**CREATE INDEX**语句，和一个或多个指定列列表中的名称不存在的列。<br /><br /> \**StatementText*包含**授予**或**撤消**语句，并指定的列名称不存在。<br /><br /> \**StatementText*包含**选择**，**删除**，**插入**，或**更新**语句，并指定的列名称不存在。<br /><br /> \**StatementText*包含**CREATE TABLE**语句，并指定约束 （引用的表而不正在创建） 中的列不存在。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数已在上再次*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY009|不允许使用 null 指针|(DM) *StatementText*是空指针。|  

@@ -1,16 +1,16 @@
 ---
-title: "sys.resource_governor_external_resource_pools (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.resource_governor_external_resource_pools (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_external_resource_pools
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sys.resource_governor_external_resource_pools
 - resource_governor_external_resource_pools
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4417140fcd35a27bee4364e336f73812b0fa42be
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9e36ae784d99ef51186c3bafccfea38a77dee444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>sys.resource_governor_external_resource_pools (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 返回中的存储的外部资源池配置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 视图的每一行都确定了一个池的配置。
   
@@ -47,21 +47,21 @@ ms.lasthandoff: 11/21/2017
 |max_processes|**int**|最大并发外部进程数。 默认值为 0，指定没有限制。 不可为 null。|
 |version|**bigint**|内部版本号。|
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要 VIEW SERVER STATE 权限。
 
 ## <a name="see-also"></a>另请参阅
 
-[SQL Server 中的机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)
+[SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
-[资源调控器目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+[资源调控器目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 
-[sys.dm_resource_governor_resource_pools &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
+[sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 
 [资源调控器](../../relational-databases/resource-governor/resource-governor.md)
 
-[sys.dm_resource_governor_resource_pool_affinity &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [“已启用外部脚本”服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

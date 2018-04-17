@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_db_log_stats (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_log_stats_TSQL
@@ -21,19 +21,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 86fef416f6fc07dad933d05cea6b477e813d1348
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
+# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 返回上的数据库的事务日志文件的摘要级别的特性和信息。 此信息用于监视和诊断的事务日志运行状况。   
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 
 *database_id* |NULL |**默认**
 
-是数据库的 ID。 `database_id` 为 `int`。 有效输入包括数据库的 ID 号`NULL`，或`DEFAULT`。 默认值为 `NULL`。 `NULL`和`DEFAULT`是当前数据库的上下文中的等效值。  
+是数据库的 ID。 `database_id` 为 `int`。 有效输入包括数据库的 ID 号`NULL`，或`DEFAULT`。 默认值为 `NULL`。 `NULL` 和`DEFAULT`是当前数据库的上下文中的等效值。  
 内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 使用时`DB_ID`不指定数据库名称，当前数据库的兼容性级别必须是 90 或更高版本。
 
   
@@ -105,7 +106,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 
 ## <a name="see-also"></a>另请参阅  
 [动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[与数据库相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

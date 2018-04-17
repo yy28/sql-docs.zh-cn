@@ -2,7 +2,7 @@
 title: SQLEndTran 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函数
 **一致性**  
@@ -81,7 +81,7 @@ SQLRETURN SQLEndTran(
 |25S03|事务回滚|该驱动程序无法保证无法以原子方式，完成全局事务中的所有工作，都适用于中的活动事务*处理*已回滚。|  
 |40001|序列化失败|事务已回滚，因为资源死锁与另一个事务。|  
 |40002|完整性约束冲突|*CompletionType* SQL_COMMIT，并引起完整性约束冲突的更改的承诺。 因此，事务已回滚。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*szMessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*szMessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*ConnectionHandle*。 已调用函数，和之前完成执行[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上调用了*ConnectionHandle*。 然后在再次调用该函数*ConnectionHandle*。<br /><br /> 已调用函数，和之前完成执行**SQLCancelHandle**上调用了*ConnectionHandle*从多线程应用程序中的不同线程。|  
 |HY010|函数序列错误|(DM) 为与关联的语句句柄调用以异步方式执行的函数*ConnectionHandle*和仍在执行时**SQLEndTran**调用。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*ConnectionHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**调用了与语句句柄关联*ConnectionHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*处理*与*HandleType*设置为 SQL_HANDLE_DBC 和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**与关联的语句句柄之一调用*处理*和返回的 SQL_PARAM_DATA_AVAILABLE。 数据已检索到的所有经过流处理参数之前调用此函数。|  
@@ -115,7 +115,7 @@ SQLRETURN SQLEndTran(
   
  如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等于 SQL_CB_DELETE， **SQLEndTran**关闭和删除与连接关联的所有语句上的所有打开的游标并放弃所有挂起结果。 **SQLEndTran**离开已分配的 （未准备好） 状态; 中存在任何语句应用程序可以重复使用它们的后续 SQL 请求中，也可以调用**SQLFreeStmt**或**SQLFreeHandle**与*HandleType* SQL_HANDLE_STMT 解除分配。  
   
- 如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等于 SQL_CB_CLOSE， **SQLEndTran**关闭所有打开的游标上与连接关联的所有语句。 **SQLEndTran**离开准备好的状态; 中存在任何语句应用程序可以调用**SQLExecute**为与连接，而第一个调用无关联的语句**SQLPrepare**.  
+ 如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等于 SQL_CB_CLOSE， **SQLEndTran**关闭所有打开的游标上与连接关联的所有语句。 **SQLEndTran**离开准备好的状态; 中存在任何语句应用程序可以调用**SQLExecute**为与连接，而第一个调用无关联的语句**SQLPrepare**。  
   
  如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等于 SQL_CB_PRESERVE， **SQLEndTran**不会影响与连接关联的打开的游标。 游标会保留在它们之前调用了指向行**SQLEndTran**。  
   

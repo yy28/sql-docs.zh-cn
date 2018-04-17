@@ -1,16 +1,16 @@
 ---
-title: "sp_article_validation (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_article_validation (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed9bf6e4375c3b7afb18ffa938ae29e8d1e9e48e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8bfe42f440f6311bf9a2badc368b8fd13811c91e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  包含该项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *文章*  
+ [  **@article=**] *****文章*****  
  要验证的项目的名称。 *文章*是**sysname**，无默认值。  
   
  [  **@rowcount_only=**] *type_of_check_requested*  
@@ -71,7 +71,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@full_or_fast=**] *full_or_fast*  
  用于计算行计数的方法。 *full_or_fast*是**tinyint**，并且可以为这些值之一。  
   
-|**值**|**Description**|  
+|**Value**|**Description**|  
 |---------------|---------------------|  
 |**0**|用 COUNT(*) 执行完整计数。|  
 |**1**|执行中的快速计数**sysindexes.rows**。 计算行数**sysindexes**快于计算实际的表中的行数。 但是， **sysindexes**延迟，更新和行计数可能不准确。|  
@@ -86,7 +86,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@reserved=**]*保留*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@publisher** =] *发布服务器*  
+ [ **@publisher**=] *****发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -100,14 +100,14 @@ sp_article_validation [ @publication = ] 'publication'
   
  **sp_article_validation**导致收集到指定的项目不验证信息并发布到事务日志的验证请求。 分发代理接收到该请求后，将该请求中的验证信息与订阅服务器表进行比较。 验证的结果显示在复制监视器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  仅具有的用户选择的可以执行所验证的文章在源表上的所有权限**sp_article_validation**。  
   
 ## <a name="see-also"></a>另请参阅  
  [验证复制的数据](../../relational-databases/replication/validate-replicated-data.md)   
- [sp_marksubscriptionvalidation &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

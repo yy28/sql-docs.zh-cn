@@ -1,34 +1,34 @@
 ---
-title: "正则 vs。上下文连接 |Microsoft 文档"
-ms.custom: 
+title: 正则 vs。上下文连接 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3134436f4b2e300152575c871bd1252af7fffd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eb077b2b6263044c6b6aec1ed6da27e5013cf24e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="context-connections-vs-regular-connections"></a>上下文连接 vs。常规连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-如果要连接到远程服务器，请始终使用常规连接，而不使用上下文连接。 如果您需要连接到存储过程或函数正在其上运行的同一台服务器，则在大多数情况下请使用上下文连接。 这具有一些优势，例如，在同一个事务空间中运行以及不必重新验证。  
+  如果要连接到远程服务器，请始终使用常规连接，而不使用上下文连接。 如果您需要连接到存储过程或函数正在其上运行的同一台服务器，则在大多数情况下请使用上下文连接。 这具有一些优势，例如，在同一个事务空间中运行以及不必重新验证。  
   
  此外，使用上下文连接通常会导致性能更佳和占用更少的资源。 上下文连接是纯进程内连接，因此，它可以跳过网络协议和传输层“直接”与服务器联系，以发送 Transact-SQL 语句和接收结果。 同时跳过验证过程。 下图显示的主要组件**SqlClient**托管提供程序，以及不同的组件时使用常规的连接，并使用上下文连接时进行相互的交互。  
   

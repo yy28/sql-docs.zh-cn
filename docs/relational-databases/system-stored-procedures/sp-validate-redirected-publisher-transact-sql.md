@@ -1,16 +1,16 @@
 ---
-title: "sp_validate_redirected_publisher (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_validate_redirected_publisher (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bafe71c88b5fc47c822275ebfb9be102db65b22b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d36b7578a9194b8220e1aeb771b47e7ef10bcd0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@original_publisher**  =] *original_publisher*  
+ [ **@original_publisher** =] *****original_publisher*****  
  最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher*是**sysname**，无默认值。  
   
- [  **@publisher_db**  =] *publisher_db*  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [  **@redirected_publisher**  =] *redirected_publisher*  
+ [ **@redirected_publisher** =] *****redirected_publisher*****  
  重定向的目标时指定**sp_redirect_publisher**为发布服务器/数据库对调用。 *redirected_publisher*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,19 +65,19 @@ ms.lasthandoff: 11/21/2017
  无。  
   
 ## <a name="remarks"></a>注释  
- 如果未输入任何发布服务器和发布数据库， **sp_validate_redirected_publisher**返回输出参数中的 null  *@redirected_publisher* 。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
+ 如果未输入任何发布服务器和发布数据库， **sp_validate_redirected_publisher**返回输出参数中的 null *@redirected_publisher*。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
   
  如果验证成功， **sp_validate_redirected_publisher**返回的成功指示。  
   
  如果验证失败，则会引发描述失败的错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  调用方必须要么是的成员**sysadmin**固定服务器角色、 **db_owner**固定的数据库角色的分发数据库中或定义发布一个发布访问列表的成员与发布服务器数据库。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_get_redirected_publisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

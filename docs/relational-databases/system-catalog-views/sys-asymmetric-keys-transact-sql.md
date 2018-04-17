@@ -1,16 +1,16 @@
 ---
-title: "sys.asymmetric_keys (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.asymmetric_keys (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - asymmetric_keys
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c42b7a6bcc17fff443fbbafd960baba6bc359ef
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 13e4e958d485fe7a098d3984dde2c459c6c2a042
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 |**algorithm_desc**|**nvarchar(60)**|对密钥所用算法的说明。<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|密钥的位长度。|  
 |**sid**|**varbinary(85)**|该密钥的登录 SID。 对于可扩展密钥管理密钥，此值将为 NULL。|  
-|**string_sid**|**nvarchar （128)**|密钥的登录 SID 的字符串表示形式。 对于可扩展密钥管理密钥，此值将为 NULL。|  
+|**string_sid**|**nvarchar(128)**|密钥的登录 SID 的字符串表示形式。 对于可扩展密钥管理密钥，此值将为 NULL。|  
 |**public_key**|**varbinary(max)**|公钥。|  
-|**attested_by**|**nvarchar(260)**|仅供系统使用。|  
+|**attested_by**|nvarchar(260)|仅供系统使用。|  
 |**provider_type**|**nvarchar(120)**|加密提供程序的类型：<br /><br /> CRYPTOGRAPHIC PROVIDER = 可扩展密钥管理密钥<br /><br /> NULL = 非可扩展密钥管理密钥|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|加密提供程序的 GUID。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
 |**cryptographic_provider_algid**|**sql_variant**|加密提供程序的算法 ID。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

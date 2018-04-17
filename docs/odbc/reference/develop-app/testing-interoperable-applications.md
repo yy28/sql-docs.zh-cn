@@ -1,30 +1,31 @@
 ---
-title: "测试可互操作的应用程序 |Microsoft 文档"
-ms.custom: 
+title: 测试可互操作的应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], testing interoperable applications
 - testing interoperable applications [ODBC]
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1acbc994449e61b879ca2223f3ed4eb394943b44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4cd98e6311d7d08b6faed0cb4759523642e70a5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="testing-interoperable-applications"></a>测试可互操作的应用程序
 测试可互操作的应用程序是在最耗时业务，也在坏的情况下无法由于市场上不断显示新的驱动程序。 但是，可能会测试很合理程度。 仅需要针对这些驱动程序，可确保以支持测试具有有限或低的互操作性的应用程序。 但是，它们必须进行完全测试针对这些驱动程序。  

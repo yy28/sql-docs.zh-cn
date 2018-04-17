@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_fts_parser (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_fts_parser (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494f1586f71d3dc475284e90721f2cc5fc8e502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +77,12 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是用户可读，但它是有用的相关给定的关键字输出返回的全文索引的内容，例如其他动态管理视图返回[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示指示文件或数据集的末尾的特殊字符。|  
 |group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1： 服务器<br />2: DB<br />3: DB|  
-|phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1 表示`multi`<br />1 表示`million`<br />2`multimillion`|  
-|occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1 表示`SQL`<br />2`Server`<br />3`query`<br />4`processor`|  
+|phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1 表示 `multi`<br />1 表示 `million`<br />2 `multimillion`|  
+|occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1 表示 `SQL`<br />2 `Server`<br />3 `query`<br />4 `processor`|  
 |special_term|**nvarchar(4000)**|包含有关断字符给出的字词特征的信息，可以是以下值之一：<br /><br /> Exact match<br /><br /> Noise word<br /><br /> End of Sentence<br /><br /> End of paragraph<br /><br /> End of Chapter|  
 |display_term|**nvarchar(4000)**|包含关键字的可读形式。 与旨在访问全文索引内容的函数一样，由于非规范化限制，此显示字词可能与原始字词并不完全相同。 不过，该字词应该具有足够高的准确性，可帮助您从原始输入中识别它。|  
 |expansion_type|**int**|包含有关给定字词的扩展特性的信息，可以是以下值之一：<br /><br /> 0 = 单个词的情况<br /><br /> 2 = 变形扩展<br /><br /> 4 = 同义词库扩展/替换<br /><br /> 例如，请考虑同义词库将 run 定义为 `jog` 扩展的情况：<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> 字词 `FORMSOF (FREETEXT, run)` 生成以下输出：<br /><br /> `run`，其中 expansion_type=0<br /><br /> `runs`，其中 expansion_type=2<br /><br /> `running`，其中 expansion_type=2<br /><br /> `ran`，其中 expansion_type=2<br /><br /> `jog`，其中 expansion_type=4|  
-|source_term|**nvarchar(4000)**|从中生成或分析给定字词的字词或短语。 例如，对 '"`word breakers" AND stemmers'` 的查询生成以下英语 source_term 值：<br /><br /> `word breakers`有关 display_term`word`<br />`word breakers`有关 display_term`breakers`<br />`stemmers`有关 display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|从中生成或分析给定字词的字词或短语。 例如，对 '"`word breakers" AND stemmers'` 的查询生成以下英语 source_term 值：<br /><br /> `word breakers` 有关 display_term`word`<br />`word breakers` 有关 display_term`breakers`<br />`stemmers` 有关 display_term`stemmers`|  
   
 ## <a name="remarks"></a>注释  
  **sys.dm_fts_parser**支持的语法和全文谓词的功能，如[CONTAINS](../../t-sql/queries/contains-transact-sql.md)和[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)，和函数，如[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)和[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。  
@@ -170,7 +170,7 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [全文搜索和语义搜索动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [为配置和管理同义词库文件的全文搜索](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

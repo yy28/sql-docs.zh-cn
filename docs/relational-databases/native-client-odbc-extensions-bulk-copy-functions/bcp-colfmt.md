@@ -1,16 +1,16 @@
 ---
 title: bcp_colfmt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_colfmt
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c19dd268f958bc35f6e41fd6a6283ca23beb60e9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 477fcbfa6eb2f4a25877ecd563a565ce857d4523
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +63,7 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  用户文件中此列的数据类型。 如果不同于数据库表中的相应列的数据类型 (*idxServerColumn*)，如有可能大容量复制将转换数据。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入了对 SQLXML 和 SQLUDT 数据类型令牌中支持*eUserDataType*参数。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了对 SQLXML 和 SQLUDT 数据类型令牌中支持*eUserDataType*参数。  
   
  *EUserDataType*参数枚举通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据类型标记、 不 ODBC C 数据类型枚举器。 例如，可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的类型 SQLCHARACTER 来指定一个 ODBC 类型 SQL_C_CHAR 的字符串。  
   
@@ -148,9 +149,9 @@ RETCODE bcp_colfmt (
  [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)函数可以用于持久保存的格式规范。  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>对增强的日期和时间功能的 bcp_colfmt 支持  
- 有关与使用的类型信息*eUserDataType*参数对于日期/时间类型，请参阅[增强日期和时间类型 &#40;（OLE DB 和 ODBC）; 的大容量复制更改](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+ 有关与使用的类型信息*eUserDataType*参数对于日期/时间类型，请参阅[增强日期和时间类型的大容量复制更改&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
- 有关详细信息，请参阅[日期和时间改进 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

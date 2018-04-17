@@ -1,16 +1,16 @@
 ---
-title: "sp_helpfilegroup (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpfilegroup (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpfilegroup_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab59a2912f51882954420a81514b0fe2089f9a8f
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6ed1c0b016b7e4c5af61f0667103f6b8cf9812f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@filegroupname =** ] *名称*  
+ [ **@filegroupname =** ] **'***name***'**  
  当前数据库中任意文件组的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*未指定，列出了当前数据库中的所有文件组，并显示仅在结果集部分中设置所示的第一个结果。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,7 +66,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|文件组中文件的逻辑名称。|  
 |**fileid**|**int**|数字文件标识符。|  
-|**文件名**|**nchar(260)**|文件的物理名称，包括目录路径。|  
+|**filename**|**nchar(260)**|文件的物理名称，包括目录路径。|  
 |size|**nvarchar(15)**|文件大小 (KB)。|  
 |**最大大小**|**nvarchar(15)**|文件的最大大小。<br /><br /> 这是文件可增长到的最大大小。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
@@ -97,11 +97,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpfile &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [sys.filegroups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)  
   

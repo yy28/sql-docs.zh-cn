@@ -1,16 +1,16 @@
 ---
-title: "sys.database_usage （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.database_usage （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_usage
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - database_usage
 - sys.database_usage
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 670c1a9c7028d495141247b5f2b8b35f85142d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: cbfb195c316dee403c307c90d50ef4f882f38abf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |sku|为数据库服务层的类型： **Web**，**业务**，**基本**，**标准**，**高级**|  
 |quantity|指定当天存在的 SKU 类型的数据库的最大数量。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对此视图的只读访问可供所有用户有权连接到**master**数据库。  
   
 ## <a name="remarks"></a>注释  

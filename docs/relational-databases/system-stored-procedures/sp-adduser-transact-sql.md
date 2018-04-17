@@ -1,16 +1,16 @@
 ---
-title: "sp_adduser (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_adduser (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_adduser
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_adduser
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d1a5e8a9041d32823a44f2f0329562741c2e253a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5b2530fa9b76e5aa46bda8a8eaaeb3ee6b70faba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   向当前数据库中添加新的用户。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ] *登录*  
+ [ **@loginame =** ] **'***login***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 Windows 登录的名称。 *登录名*是**sysname**，无默认值。 *登录名*必须是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。  
   
- [  **@name_in_db =** ] *用户*  
+ [  **@name_in_db =** ] *****用户*****  
  新数据库用户的名称。 *用户*是**sysname**，默认值为 NULL。 如果*用户*未指定，则新的数据库用户的名称默认为*登录*名称。 指定*用户*为新用户指定不同的服务器级别登录名从数据库中的名称。  
   
- [  **@grpname =** ] *角色*  
+ [  **@grpname =** ] *****角色*****  
  新用户成为其成员的数据库角色。 *角色*是**sysname**，默认值为 NULL。 *角色*必须是当前数据库中的有效的数据库角色。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -83,7 +83,7 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有数据库的所有权。  
   
 ## <a name="examples"></a>示例  
@@ -110,7 +110,7 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   

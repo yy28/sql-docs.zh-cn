@@ -1,31 +1,32 @@
 ---
-title: "显式数据类型转换函数 |Microsoft 文档"
-ms.custom: 
+title: 显式数据类型转换函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e86113ed304bc0876ce961e4c8691f53e9065d1b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explicit-data-type-conversion-function"></a>显式数据类型转换函数
 显式数据类型转换是根据 SQL 数据类型定义指定的。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  格式**转换**函数是：  
   
- **转换 (** *value_exp*， *data_type***)**  
+ **转换 (** *value_exp*， *data_type * * *)**  
   
  该函数返回指定的值*value_exp*转换为指定*data_type*，其中*data_type*是以下关键字之一：  
   

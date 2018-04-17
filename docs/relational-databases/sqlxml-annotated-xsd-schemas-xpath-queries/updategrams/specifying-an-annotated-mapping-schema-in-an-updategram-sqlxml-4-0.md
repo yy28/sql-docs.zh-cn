@@ -1,16 +1,16 @@
 ---
-title: "指定带批注的映射架构中属的 Updategram (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 指定带批注的映射架构中属的 Updategram (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -23,25 +23,26 @@ helpviewer_keywords:
 - mapping schema [SQLXML], updategrams
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7114229a879e05222d67cbb0147ced02628bfe9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7d9b0918551889ee6474e00bdfb46c83eb5598dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主题说明如何使用在 updategram 中指定的映射架构（XSD 或 XDR）来处理更新。 在属的 updategram，您可以提供用于将元素和属的 updategram 中的属性映射到表和列中的带批注的映射架构的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定映射架构时，updategram 中指定的元素和属性名称必须映射为该映射架构的元素和属性。  
+  本主题说明如何使用在 updategram 中指定的映射架构（XSD 或 XDR）来处理更新。 在属的 updategram，您可以提供用于将元素和属的 updategram 中的属性映射到表和列中的带批注的映射架构的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定映射架构时，updategram 中指定的元素和属性名称必须映射为该映射架构的元素和属性。  
   
  若要指定的映射架构，你可以使用**映射架构**属性**\<同步 >**元素。 以下示例显示两个 updategram：其中一个使用简单映射架构，而另一个使用较复杂的架构。  
   
 > [!NOTE]  
->  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[简介批注 XSD 架构 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 有关使用 XDR 的旧版应用程序，请参阅[批注 XDR 架构 &#40; Deprecated in SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[简介批注 XSD 架构 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 有关使用 XDR 的旧版应用程序，请参阅[批注 XDR 架构&#40;SQLXML 4.0 中弃用&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="dealing-with-data-types"></a>处理数据类型  
  如果架构指定**映像**，**二进制**，或**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型 (通过使用**sql: datatype**)，而不指定 XML 数据类型，含 updategram 假定 XML 数据类型是**二进制 base 64**。 如果你的数据**bin.base**类型，则必须显式指定类型 (**dt:type=bin.base**或**类型 ="xsd:hexBinary"**)。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用在映射架构中指定的父子关系插入记录  
- 架构元素可以相互关联。 **\<Sql:relationship >**元素指定的架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
+ 架构元素可以相互关联。  **\<Sql:relationship >**元素指定的架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
   
  下面的映射架构 (SampleSchema.xml) 包含两个元素， **\<顺序 >**和 **\<OD >**:  
   
@@ -238,7 +239,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. 使用在 XSD 架构中指定的父子关系和反转批注插入记录  
- 此示例演示如何属的 updategram 逻辑如何使用 XSD 中指定的父-子关系来处理更新，以及如何**逆**使用批注。 有关详细信息**逆**批注，请参阅[sql:relationship &#40; 上指定 sql:inverse 属性SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ 此示例演示如何属的 updategram 逻辑如何使用 XSD 中指定的父-子关系来处理更新，以及如何**逆**使用批注。 有关详细信息**逆**批注，请参阅[sql:relationship 上指定 sql:inverse 属性&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
  此示例假定以下表位于中**tempdb**数据库：  
   
@@ -331,6 +332,6 @@ ms.lasthandoff: 02/12/2018
      有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [属的 Updategram 安全注意事项 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

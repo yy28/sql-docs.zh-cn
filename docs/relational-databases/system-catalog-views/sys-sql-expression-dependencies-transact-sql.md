@@ -1,16 +1,16 @@
 ---
-title: "sys.sql_expression_dependencies (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.sql_expression_dependencies (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2e856435a18b89d9708112bd81ca2c8976371165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 |is_schema_bound_reference|**bit**|1 = 被引用的实体绑定到架构。<br /><br /> 0 = 被引用的实体未绑定到架构。<br /><br /> 不可为 null。|  
 |referenced_class|**tinyint**|被引用的实体的类。<br /><br /> 1 = 对象或列<br /><br /> 6 = 类型<br /><br /> 10 = XML 架构集合<br /><br /> 21 = 分区函数<br /><br /> 不可为 null。|  
 |referenced_class_desc|**nvarchar(60)**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可为 null。|  
-|referenced_server_name|**sysname**|被引用的实体的服务器的名称。<br /><br /> 此列是为通过指定由四个部分组成的有效名称所生成的跨服务器依赖关系填充的。 有关多部分名称的信息，请参阅[TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> 对于非绑定到架构的实体，如果实体被引用时没有指定由四个部分组成的名称，此列为 NULL。<br /><br /> 对于绑定到架构的实体为 NULL，因为它们必须是同一数据库中，因此可以仅使用定义两个部分构成 (*schema.object*) 名称。|  
+|referenced_server_name|**sysname**|被引用的实体的服务器的名称。<br /><br /> 此列是为通过指定由四个部分组成的有效名称所生成的跨服务器依赖关系填充的。 有关多部分名称的信息，请参阅[TRANSACT-SQL 语法约定&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 对于非绑定到架构的实体，如果实体被引用时没有指定由四个部分组成的名称，此列为 NULL。<br /><br /> 对于绑定到架构的实体为 NULL，因为它们必须是同一数据库中，因此可以仅使用定义两个部分构成 (*schema.object*) 名称。|  
 |referenced_database_name|**sysname**|被引用的实体的数据库的名称。<br /><br /> 此列是为通过指定由三个部分或四个部分组成的有效名称生成的跨数据库或跨服务器引用填充的。<br /><br /> 对于非绑定到架构的引用，当使用由一个部分或两个部分组成的名称指定时，此列为 NULL。<br /><br /> 对于绑定到架构的实体为 NULL，因为它们必须是同一数据库中，因此可以仅使用定义两个部分构成 (*schema.object*) 名称。|  
 |referenced_schema_name|**sysname**|被引用的实体所属的架构。<br /><br /> 对于非绑定到架构的引用，如果实体被引用时没有指定架构名称，此列为 NULL。<br /><br /> 对于绑定到架构的引用，此列永不为 NULL，原因在于必须使用由两部分组成的名称来定义和引用绑定到架构的实体。|  
 |referenced_entity_name|**sysname**|被引用的实体的名称。 不可为 null。|  
@@ -77,30 +78,30 @@ ms.lasthandoff: 11/21/2017
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
 |视图|是|是|  
-|筛选索引|是**|是|  
-|筛选统计信息|是**|是|  
+|筛选索引|是**|否|  
+|筛选统计信息|是**|否|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|是|是|  
-|CLR 存储过程|是|是|  
+|CLR 存储过程|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
-|CLR 用户定义函数|是|是|  
-|CLR 触发器（DML 和 DDL）|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|是|  
-|扩展存储过程|是|是|  
-|队列|是|是|  
-|同义词|是|是|  
-|类型（别名和 CLR 用户定义类型）|是|是|  
-|XML 架构集合|是|是|  
-|分区函数|是|是|  
+|CLR 用户定义函数|否|是|  
+|CLR 触发器（DML 和 DDL）|否|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|扩展存储过程|否|是|  
+|队列|否|是|  
+|同义词|否|是|  
+|类型（别名和 CLR 用户定义类型）|否|是|  
+|XML 架构集合|否|是|  
+|分区函数|否|是|  
   
- \*仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型时或定义中的计算的列、 CHECK 约束或默认约束的 XML 架构集合。  
+ \* 仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型时或定义中的计算的列、 CHECK 约束或默认约束的 XML 架构集合。  
   
  ** 筛选谓词中使用的每列都作为引用实体进行跟踪。  
   
  *** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 sys.sql_expression_dependencies 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 db_owner 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
   
 ## <a name="examples"></a>示例  

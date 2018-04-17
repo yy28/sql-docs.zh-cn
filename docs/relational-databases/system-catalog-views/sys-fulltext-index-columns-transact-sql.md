@@ -1,16 +1,16 @@
 ---
-title: sys.fulltext_index_columns (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fulltext_index_columns (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fulltext_index_columns
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - sys.fulltext_index_columns catalog view
 - full-text indexes [SQL Server], properties
 ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59a9d1791fccb3517ba0fbab091202f52a19314b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d57e7e6699a1b19cda97d0f4820fa67115850950
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfulltextindexcolumns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,14 +46,14 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|此对象所属对象的 ID。|  
 |**column_id**|**int**|构成全文索引的列的 ID。|  
 |**type_column_id**|**int**|存储给定行中文档的用户提供的文件扩展名（".doc"、".xls" 等）的类型列 ID。 类型列仅针对全文索引期间需要筛选其数据的列指定。 如果不适用，则为 NULL。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。|  
-|**language_id**|**int**|其断字符用于对该全文列创建索引的语言 LCID。<br /><br /> 0 = 非特定语言。<br /><br /> 有关详细信息，请参阅[sys.fulltext_languages &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).|  
+|**language_id**|**int**|其断字符用于对该全文列创建索引的语言 LCID。<br /><br /> 0 = 非特定语言。<br /><br /> 有关详细信息，请参阅[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。|  
 |**statistical_semantics**|**int**|1 = 此列在全文索引之外还启用了统计语义索引。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

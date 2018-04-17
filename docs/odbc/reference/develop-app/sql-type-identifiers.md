@@ -1,15 +1,16 @@
 ---
-title: "SQL 类型标识符 |Microsoft 文档"
-ms.custom: 
+title: SQL 类型标识符 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98754c574acd8dea29184fafa70e1df702925a2a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 046b9a9b8eda25dd0f3ecee885031423706742a4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-type-identifiers"></a>SQL 类型标识符
 每个数据源定义其自己的 SQL 数据类型。 ODBC 定义类型标识符，并描述了可能映射到每个类型标识符的 SQL 数据类型的一般特征。 它是驱动程序特定的基础数据源中的每个数据类型映射到 ODBC SQL 类型标识符的方式。  

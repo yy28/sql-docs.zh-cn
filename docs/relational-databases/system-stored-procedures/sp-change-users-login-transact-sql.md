@@ -1,16 +1,16 @@
 ---
-title: "sp_change_users_login (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_change_users_login (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 12/13/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_users_login
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_users_login
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 207272f7644ab39055b7c6bb330faf6053353601
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 065126113e8914d1f22959bbfacc3e341d8855c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  将现有数据库用户映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)相反。  
+  将现有数据库用户映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)相反。  
   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -54,7 +54,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action=] '*操作*  
  描述过程要执行的操作。 *操作*是**varchar(10)**。 *操作*可以具有以下值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**Auto_Fix**|将当前数据库的 sys.database_principals 系统目录视图中的用户项链接到同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果不存在同名的登录名，将会创建一个。 检查的结果**Auto_Fix**语句以确认事实上进行了正确的链接。 避免使用**Auto_Fix**在安全敏感的情况下。<br /><br /> 当你使用**Auto_Fix**，必须指定*用户*和*密码*如果不存在登录名，否则你必须指定*用户*但*密码*将被忽略。 *登录名*必须为 NULL。 *用户*必须是当前数据库中的有效用户。 不能将另一个用户映射到该登录名。|  
 |**报告**|列出当前数据库中未链接到任何登录名的用户以及相应的安全标识符 (SID)。 *用户*，*登录*，和*密码*必须为 NULL 或未指定。<br /><br /> 若要将替换为一个查询使用的系统表报表选项，比较中的条目**sys.server_prinicpals**与中的条目**sys.database_principals**。|  
@@ -64,9 +64,9 @@ sp_change_users_login [ @Action = ] 'action'
  当前数据库中的用户名。 *用户*是**sysname**，默认值为 NULL。  
   
  [ @LoginName=] '*登录*  
- 是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 *登录名*是**sysname**，默认值为 NULL。  
+ 是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 login 的数据类型为 sysname，默认值为 NULL。  
   
- [ @Password=] '*密码*  
+ [ @Password= ] '*password*'  
  是分配给一个新的密码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过指定创建的登录名**Auto_Fix**。 如果已存在匹配的登录名，映射的用户和登录名和*密码*将被忽略。 如果不存在匹配的登录名，创建一个新 sp_change_users_login[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名，并将分配*密码*为新登录名的密码。 *密码*是**sysname**，而且不能为 NULL。  
   
 > **重要说明!!** 始终使用[强密码 ！](../../relational-databases/security/strong-passwords.md)
@@ -90,7 +90,7 @@ sp_change_users_login [ @Action = ] 'action'
   
  不能在用户定义的事务中执行 sp_change_users_login。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。 只有 sysadmin 固定的服务器角色的成员可以指定**Auto_Fix**选项。  
   
 ## <a name="examples"></a>示例  
@@ -127,10 +127,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

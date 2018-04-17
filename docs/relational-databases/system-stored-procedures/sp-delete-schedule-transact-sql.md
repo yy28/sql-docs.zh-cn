@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_schedule (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_delete_schedule (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc8bc8efb8d9382a0e7c1ab1c24b5534ff6786f0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6f58b11385f92c34ba5ced00cb94517f737c4bdb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 > **注意：**任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] *****schedule_name*****  
  要删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
 > **注意：**任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  

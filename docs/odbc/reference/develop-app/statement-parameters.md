@@ -2,7 +2,7 @@
 title: 语句参数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08d2365291bf6c402ead138d6182c83de5f27896
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e848b55e9219ea8bd4994efc7ca5d746d0d71be9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-parameters"></a>语句参数
 A*参数*是中的 SQL 语句的变量。 例如，假设部件表具有名为 PartID、 描述和价格的列。 若要添加不带参数部件需要构造 SQL 语句，例如：  

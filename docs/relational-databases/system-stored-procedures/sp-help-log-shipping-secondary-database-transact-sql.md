@@ -1,16 +1,16 @@
 ---
-title: "sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bb243bd5d35293df828be305dba20cb405ad926
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 41799f0699fc85e23ea261b8b70593844f89fdbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@secondary_database =** ] '*secondary_database*'  
+ [  **@secondary_database =** ]*secondary_database*  
  辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
  [ **@secondary_id =** ] '*secondary_id*'  
@@ -74,7 +74,7 @@ sp_help_log_shipping_secondary_database
 |**monitor_server**|在日志传送配置中用作监视服务器的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的名称。|  
 |**monitor_server_security_mode**|用于连接到监视服务器的安全模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。<br /><br /> 0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**secondary_database**|日志传送配置中辅助数据库的名称。|  
-|**restore_delay**|辅助服务器在还原给定备份文件之前等待的时间（分钟）。 默认值为 0 分钟。|  
+|**restore_delay**|辅助服务器在还原给定备份文件之前等待的时间（分钟）。 默认为 0 分钟。|  
 |**restore_all**|如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。|  
 |**restore_mode**|辅助数据库的还原模式。<br /><br /> 0 = with NORECOVERY 还原日志。<br /><br /> 1 = 使用 STANDBY 还原日志。|  
 |**disconnect_users**|如果设置为 1，则在执行还原操作时，会断开用户与辅助数据库的连接。 默认值 = 0。|  
@@ -102,8 +102,8 @@ sp_help_log_shipping_secondary_database
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

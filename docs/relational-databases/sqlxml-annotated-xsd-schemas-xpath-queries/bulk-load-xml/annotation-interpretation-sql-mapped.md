@@ -1,16 +1,16 @@
 ---
-title: "sql： 映射 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: sql： 映射 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapped annotation
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9c73f8e4c26927904d1a5f9e65adc8c268e2b0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 288a045d5bea7da63ef058b749f4e92409be28ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释-sql： 映射
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 大容量加载进程**sql： 映射**中按预期方式的 XSD 架构的批注 — 也就是说，如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试将相关联的数据存储在相应的列。  
+  XML 大容量加载进程**sql： 映射**中按预期方式的 XSD 架构的批注 — 也就是说，如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试将相关联的数据存储在相应的列。  
   
  元素和未映射的属性，将忽略 XML 大容量加载 (或者是因为在架构中，没有描述它们进行批注的 XSD 架构中**sql： 映射 ="false"**)。 未映射的所有数据都将进入溢出列中，如果这样的列指定通过使用**sql:overflow-字段**。  
   

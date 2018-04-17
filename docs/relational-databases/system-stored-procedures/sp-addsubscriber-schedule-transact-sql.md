@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscriber_schedule (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addsubscriber_schedule (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a84145ac6088d56df3ad08eeff6aac2da038654
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4dd092a18fb8265e6ce8d29fe68d2f3b13445cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +58,13 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber =** ] *订阅服务器*  
+ [  **@subscriber =** ] *****订阅服务器*****  
  订阅服务器的名称。 *订阅服务器*是**sysname**。 订阅服务器的名称必须在数据库中唯一，不能已经存在，不能为 NULL。  
   
  [  **@agent_type =** ] *agent_type*  
  代理的类型。 *agent_type*是**smallint**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**0** （默认值）|分发代理|  
 |**1**|合并代理|  
@@ -72,7 +72,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_type =** ] *frequency_type*  
  安排分发代理计划的频率。 *frequency_type*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|按需|  
@@ -89,7 +89,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  分发代理的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**1** （默认值）|第一个|  
 |**2**|第二个|  
@@ -103,7 +103,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_subday =** ] *frequency_subday*  
  在指定期内重新安排计划的频率。 *frequency_subday*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二个|  
@@ -119,13 +119,13 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  停止安排分发代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 235959，这意味着 11:59:59 PM 根据在 24 小时制测量值。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  第一次安排分发代理的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为**0**。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  停止安排分发代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 99991231，这意味着年 12 月 31 日到 9999。  
   
- [  **@publisher =** ] *发布服务器*  
+ [  **@publisher =** ] *****发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -137,11 +137,11 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="remarks"></a>注释  
  **sp_addsubscriber_schedule**快照复制、 事务复制和合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_addsubscriber_schedule**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_changesubscriber_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
+ [sp_changesubscriber_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

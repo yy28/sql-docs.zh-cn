@@ -1,16 +1,16 @@
 ---
-title: "sp_update_notification (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_update_notification (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9574169f49b8ae2c0736a99d657fd7ef5d17cc48
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d9ecbf081dc432da8de3e071e49d6e9eb03ffb22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@alert_name =**] **'***alert***'**  
+ [  **@alert_name =**] *****警报*****  
  与该通知关联的警报的名称。 *警报*是**sysname**，无默认值。  
   
  [ **@operator_name =**]  **'***operator***'**  
  警报发生时要通知的操作员。 *运算符*是**sysname**，无默认值。  
   
- [ **@notification_method =**] *notification*  
+ [  **@notification_method =**]*通知*  
  通知操作员的方法。 *通知*是**tinyint**，无默认值，并且可将一个或多个这些值。  
   
 |“值”|说明|  
@@ -92,9 +92,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

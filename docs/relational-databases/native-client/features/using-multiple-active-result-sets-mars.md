@@ -1,15 +1,15 @@
 ---
-title: "使用多个活动结果集 (MARS) |Microsoft 文档"
-ms.custom: 
+title: 使用多个活动结果集 (MARS) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, MARS
@@ -20,22 +20,23 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - SQL Server Native Client ODBC driver, MARS
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-caps.latest.revision: 
+caps.latest.revision: 56
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 89795f3d6b11a93316a2a448dce2ed562db27d02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 33f2a5f9139621f426f6b1bcd12ba1f626dd40f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引入了支持多个活动结果集 (MARS) 访问的应用程序中[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本中，数据库应用程序无法在单个连接上保持多个活动语句。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认结果集时，应用程序必须先处理或取消从某一批处理生成的所有结果集，然后才能对该连接执行任何其他批处理。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了新的连接属性，该属性允许应用程序在每个连接上使用多个待定请求，具体而言，每个连接可以具有多个活动的默认结果集。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了支持多个活动结果集 (MARS) 访问的应用程序中[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本中，数据库应用程序无法在单个连接上保持多个活动语句。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认结果集时，应用程序必须先处理或取消从某一批处理生成的所有结果集，然后才能对该连接执行任何其他批处理。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了新的连接属性，该属性允许应用程序在每个连接上使用多个待定请求，具体而言，每个连接可以具有多个活动的默认结果集。  
   
  MARS 通过以下新功能简化了应用程序设计：  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/25/2018
  要避免这些问题，可使用 API 调用而不是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句来管理连接状态（SET、USE）和事务（BEGIN TRAN、COMMIT、ROLLBACK），方法是不在同样包含收获点的多语句批处理中包括这些语句，以及通过使用或取消所有结果来顺序执行此类批处理。  
   
 > [!NOTE]  
->  启用 MARS 时，启动手动或隐式事务的批处理或存储过程必须完成该事务，之后批处理才能退出。 如果不是这样，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将在批处理完成时回滚该事务所做的所有更改。 这种事务由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作为批范围的事务管理。 这是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 新引入的事务类型，用于在启用 MARS 时支持使用功能良好的现有存储过程。 有关批处理范围事务的详细信息，请参阅[Transaction 语句 &#40;Transact SQL &#41;](~/t-sql/statements/statements.md).  
+>  启用 MARS 时，启动手动或隐式事务的批处理或存储过程必须完成该事务，之后批处理才能退出。 如果不是这样，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将在批处理完成时回滚该事务所做的所有更改。 这种事务由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作为批范围的事务管理。 这是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 新引入的事务类型，用于在启用 MARS 时支持使用功能良好的现有存储过程。 有关批处理范围事务的详细信息，请参阅[Transaction 语句&#40;TRANSACT-SQL&#41;](~/t-sql/statements/statements.md)。  
   
  使用 MARS 从 ADO 的示例，请参阅[with SQL Server Native Client 中使用 ADO](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)。  
   
@@ -116,7 +117,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  **MARS 和列存储索引**  
   
- SQL Server （从 2016年开始） 与列存储索引支持 MARS。 SQL Server 2014 只读连接到具有列存储索引的表使用 MARS。    但是，SQL Server 2014 不支持具有列存储索引的表上的并发数据操作语言 (DML) 操作 MARS。 当发生这种情况时，SQL Server 将终止连接，中止事务。   SQL Server 2012 具有只读列存储索引和 MARS 不适用于它们。  
+ SQL Server （从 2016年开始） 与列存储索引支持 MARS。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 当发生这种情况时，SQL Server 将终止连接，中止事务。   SQL Server 2012 具有只读列存储索引和 MARS 不适用于它们。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持 MARS SSPROP_INIT_MARSCONNECTION 数据源初始化属性，用于实现 dbpropset_sqlserverdbinit 限设置的属性中添加了。 此外，新的连接字符串关键字， **MarsConn**，如已添加。 它接受**true**或**false**值;**false**是默认设置。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_filestream_force_garbage_collection (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_filestream_force_garbage_collection (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 07/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b567ffa4ac9b56074742999c602914ebe7d3934d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>Filestream 和 FileTable-sp_filestream_force_garbage_collection
+# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   强制运行 FILESTREAM 垃圾回收器，从而删除任何不需要的 FILESTREAM 文件。  
@@ -56,7 +56,7 @@ sp_filestream_force_garbage_collection
 >  *dbname*是**sysname**。 如果未指定，则假定为当前数据库。  
   
  **@filename** = *logical_file_name*  
- 指定要运行垃圾回收器的 FILESTREAM 容器的逻辑名称。 **@filename**是可选的。 如果不指定了任何逻辑文件名，垃圾回收器将清除指定数据库中的所有 FILESTREAM 容器。  
+ 指定要运行垃圾回收器的 FILESTREAM 容器的逻辑名称。 **@filename** 是可选的。 如果不指定了任何逻辑文件名，垃圾回收器将清除指定数据库中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>返回代码值  
   
@@ -113,6 +113,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2008 中的 FILESTREAM 存储](http://go.microsoft.com/fwlink/?LinkId=209156)  
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+<br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
+<br>[Filestream 和 FileTable 的动态管理视图 (Transact SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream 和 FileTable 的目录视图 (Transact SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[sp_kill_filestream_non_transacted_handles (TRANSACT-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

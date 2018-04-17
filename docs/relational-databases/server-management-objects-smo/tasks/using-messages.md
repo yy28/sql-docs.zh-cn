@@ -1,29 +1,30 @@
 ---
-title: "使用消息 |Microsoft 文档"
-ms.custom: 
+title: 使用消息 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ed18e9b9b7f91613a23d0146b79e0da2b056618
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95fea53553eea08880e2fa427dc34eaf81123fb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-messages"></a>使用消息
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  用户定义的消息在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 对象以编程方式表示。 可通过循环访问该集合来发现现有的用户定义的消息。 可以通过实例化一个新创建新的用户定义消息**UserDefinedMessage**对象并设置适当的属性。  
   
 ## <a name="examples"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>在 Visual Basic 中查找特殊系统消息  
  此代码示例说明如何通过 ID 号标识系统消息并显示该消息。  

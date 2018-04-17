@@ -1,16 +1,16 @@
 ---
-title: "sp_ivindexhasnullcols (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_ivindexhasnullcols (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dbdbe2a627eb49dbd2ab71bef5bc102f1b157d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b69b3557009b72579e579e9ca0400b1639d3787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@viewname** =] *view_name*  
+ [ **@viewname**=] *****view_name*****  
  要验证的视图的名称。 *view_name*是**sysname**，无默认值。  
   
- [  **@fhasnullcols** =] *field_has_null_columns*输出  
+ [ **@fhasnullcols**=] *field_has_null_columns*输出  
  指示视图索引是否具有允许 NULL 值的列的标志。 *view_name*是**sysname**，无默认值。 返回的值**1**的视图索引是否允许 NULL 的列。 返回的值**0**如果视图不包含允许 null 值的列。  
   
 > [!NOTE]  
@@ -64,7 +64,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
   
  默认情况下，发布中的索引视图项目创建为订阅服务器上的表。 但是，当索引列允许 NULL 值时，索引视图创建为订阅服务器上的索引视图而不是表。 通过执行此存储过程，可以警告用户当前索引视图中是否存在此问题。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_ivindexhasnullcols**。  
   
 ## <a name="see-also"></a>另请参阅  

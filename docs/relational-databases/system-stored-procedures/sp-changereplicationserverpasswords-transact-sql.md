@@ -1,16 +1,16 @@
 ---
-title: "sp_changereplicationserverpasswords (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changereplicationserverpasswords (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcd1cbfd5532703196e47d06f920ef7cfa81f019
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5a6e71440f8b167af8c875873f60da183ff3572
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,31 +49,31 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@login_type**  =] *login_type*  
+ [ **@login_type** =] *login_type*  
  提供的凭据的身份验证类型。 *login_type*是**tinyint**，无默认值。  
   
  **1** = Windows 集成身份验证  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证  
   
- [  **@login**  =] *登录*  
+ [ **@login** =] *****登录*****  
  要更改的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的名称。 *登录名*是**nvarchar(257)**，无默认值  
   
- [  **@password**  =] *密码*  
+ [ **@password** =] *****密码*****  
  是要存储的新密码指定*登录*。 *密码*是**sysname**，无默认值。  
   
 > [!NOTE]  
 >  更改复制密码后，必须停止并重新启动使用该密码的每个代理，这样代理的更改才能生效。  
   
- [  **@server**  =] *服务器*  
+ [ **@server** =] *****服务器*****  
  要为其更改存储密码的服务器连接。 *服务器*是**sysname**，并且可以为这些值之一：  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**分发服务器**|所有指向分发服务器的代理连接。|  
-|**发布服务器**|所有指向发布服务器的代理连接。|  
+|**publisher**|所有指向发布服务器的代理连接。|  
 |**订阅服务器**|所有指向订阅服务器的代理连接。|  
-|**%**（默认值）|指向复制拓扑中所有服务器的代理连接。|  
+|**%** （默认值）|指向复制拓扑中所有服务器的代理连接。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -81,7 +81,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="remarks"></a>注释  
  **sp_changereplicationserverpasswords**用于所有类型的复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changereplicationserverpasswords**。  
   
 ## <a name="see-also"></a>另请参阅  

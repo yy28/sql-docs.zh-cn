@@ -1,16 +1,16 @@
 ---
-title: "sp_bindrule (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_bindrule (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindrule_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 969ce21685f6a63bbab3e629fbf657710133a67e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: af3a7f2e9d0c891cd416db9eb5449e21e3b8aa06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/27/2017
   将规则绑定到列或别名数据类型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]使用[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)相反。 检查约束通过使用的 CHECK 关键字创建[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)或[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)语句。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)相反。 检查约束通过使用的 CHECK 关键字创建[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)或[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)语句。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +52,11 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rulename=**] *规则*  
+ [  **@rulename=**] *****规则*****  
  由 CREATE RULE 语句创建的规则的名称。 *规则*是**nvarchar(776)**，无默认值。  
   
- [  **@objname=**] *object_name*  
- 要绑定规则的表和列或别名数据类型。 无法将规则绑定到**文本**， **ntext**，**映像**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**，CLR 用户定义类型时，或**时间戳**列。 无法将规则绑定到计算列。  
+ [  **@objname=**] *****object_name*****  
+ 要绑定规则的表和列或别名数据类型。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
   
  *object_name*是**nvarchar(776)**无默认值。 如果*object_name*是一个部分名称，它被解析为别名数据类型。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，该别名数据类型的现有列继承*规则*除非规则已绑定到列的直接。  
   
@@ -65,7 +66,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  可以将针对使用别名数据类型的表达式创建的规则绑定到列或别名数据类型，但在引用这些规则时无法编译它们。 避免使用对别名数据类型创建的规则。  
   
- [  **@futureonly=** ] *futureonly_flag*  
+ [ **@futureonly=** ] **'***futureonly_flag***'**  
  仅当将规则绑定到别名数据类型时才能使用。 *future_only_flag*是**varchar(15)**默认值为 NULL。 当设置为此参数**futureonly**防止继承新规则的别名数据类型的现有列。 如果*futureonly_flag*为 NULL，新规则绑定到当前具有任何规则或使用该别名数据类型的现有规则别名数据类型的列。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -80,7 +81,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  当将规则绑定到列时，将相关的信息添加到**sys.columns**表。 当将规则绑定到别名数据类型时，将相关的信息添加到**sys.types**表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要将规则绑定到表列，您必须具有表的 ALTER 权限。 若要将规则绑定到别名数据类型，您需要具有别名数据类型的 CONTROL 权限或该类型所属架构的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -128,10 +129,10 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
- [删除规则 &#40;Transact SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_unbindrule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

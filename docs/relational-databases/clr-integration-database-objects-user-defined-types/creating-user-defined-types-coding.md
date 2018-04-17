@@ -1,15 +1,15 @@
 ---
-title: "编写用户定义类型 |Microsoft 文档"
-ms.custom: 
+title: 编写用户定义类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -33,20 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>创建用户定义的类型的编码
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-编写用户定义类型 (UDT) 的定义时，必须根据是要将 UDT 作为类还是作为结构实现以及您所选择的格式和序列化选项来实现各种功能。  
+  编写用户定义类型 (UDT) 的定义时，必须根据是要将 UDT 作为类还是作为结构实现以及您所选择的格式和序列化选项来实现各种功能。  
   
  本部分中的示例阐释了实现**点**作为 UDT**结构**(或**结构**在 Visual Basic 中)。 **点**UDT 包含 X 和 Y 坐标实现为属性过程。  
   
@@ -72,7 +72,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>指定属性  
  属性确定如何使用序列化来构造 UDT 的存储表示形式以及如何按值将 UDT 传输到客户端。  
   
- **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**是必需的。 **Serializable**属性是可选的。 你还可以指定**Microsoft.SqlServer.Server.SqlFacetAttribute**提供有关 UDT 的返回类型的信息。 有关详细信息，请参阅[对于 CLR 例程的自定义特性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)。  
+ **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**是必需的。 **Serializable**属性是可选的。 你还可以指定**Microsoft.SqlServer.Server.SqlFacetAttribute**提供有关 UDT 的返回类型的信息。 有关详细信息，请参阅 [CLR 例程的自定义属性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)。  
   
 ### <a name="point-udt-attributes"></a>Point UDT 属性  
  **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**设置的存储格式**点**到 UDT**本机**。 **IsByteOrdered**设置为**true**，这保证相同比较好像在托管代码中执行位置的比较结果都是相同 SQL Server 中。 用户定义的类型实现**System.Data.SqlTypes.INullable**界面，从而使 UDT null 感知。  
@@ -99,7 +99,7 @@ public struct Point : INullable
   
  你必须创建一个名为属性**IsNull**，需要确定一个值是否从 CLR 代码中为 null。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发现 UDT 的 Null 实例时，会使用正常的 Null 处理方法来保留 UDT。 如果服务器不必序列化或反序列化 UDT，它不会在这些方面浪费时间；此外，它也不会浪费空间来存储 Null UDT。 每次从 CLR 中引入 UDT 时都会执行这种 Null 检查，也就是说，始终都应可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 构造来检查有无 Null UDT。 **IsNull**属性还由服务器用来测试是否实例为 null。 一旦服务器确定 UDT 为 Null，它便可以使用其本机 Null 处理方法。  
   
- **Get （)**方法**IsNull**不以任何方式特殊情况。 如果**点**变量 **@p** 是**Null**，然后 **@p.IsNull**  ，默认情况下，计算结果将为"NULL"不"1"。 这是因为**SqlMethod(OnNullCall)**属性**IsNull get （)**方法默认值为 false。 由于此对象是**Null**，当对象不反序列化，不调用该方法，并返回的默认值为"NULL"请求属性。  
+ **Get （)**方法**IsNull**不以任何方式特殊情况。 如果**点**变量**@p**是**Null**，然后**@p.IsNull** ，默认情况下，计算结果将为"NULL"不"1"。 这是因为**SqlMethod(OnNullCall)**属性**IsNull get （)**方法默认值为 false。 由于此对象是**Null**，当对象不反序列化，不调用该方法，并返回的默认值为"NULL"请求属性。  
   
 ### <a name="example"></a>示例  
  在下面的示例中，`is_Null` 变量是私有的并且保存了 UDT 实例的 Null 状态。 您的代码必须保留 `is_Null` 的相应值。 用户定义的类型还必须具有名为的静态属性**Null**返回用户定义的类型的 null 值实例。 这样，如果该实例在数据库中确实为 Null，UDT 便可返回 Null 值。  

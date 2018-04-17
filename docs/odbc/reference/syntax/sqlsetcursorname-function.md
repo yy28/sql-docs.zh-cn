@@ -2,7 +2,7 @@
 title: SQLSetCursorName 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f416827e5f192599b35027d2a203b011b844f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2501a747df22295cd42b9820e7b80b1ee9716333
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函数
 **一致性**  
@@ -54,7 +54,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [输入]语句句柄。  
   
- *CursorName*  
+ *cursorName*  
  [输入]游标名称。 针对高效处理游标名称不应在游标名称，包括任何前导空格或尾随空格和如果游标名称包括分隔的标识符，应作为游标名称中的第一个字符位于分隔符。  
   
  *NameLength*  

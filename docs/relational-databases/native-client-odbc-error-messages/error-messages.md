@@ -1,15 +1,15 @@
 ---
-title: "错误消息 |Microsoft 文档"
-ms.custom: 
+title: 错误消息 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-error-messages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, errors
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - ODBC error handling, message types
 - errors [ODBC], types
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc53ffb6fb6bf2bc110154b7d5b43a0805daf03e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7f4e2f850e7671af448af6fc6467f9b5886c3ee8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-messages"></a>错误消息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/25/2018
  [Microsoft][SQL Server Native Client]  
  通过在引发这些错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。 如果没有名为 Net-Library 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他节点，驱动程序就会发生该错误。  
   
- [Microsoft][SQL Server Native Client][*Net-Transportname*]  
+ [Microsoft][SQL Server Native Client][*Net Transportname*]  
  通过在引发这些错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Net-library，其中*Net Transportname*是的显示名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端网络传输 （例如，命名管道、 共享内存、 TCP/IP 套接字或 VIA）。 错误消息的提醒内容含有调用的 Net-Library 函数以及 TDS 函数在基础网络 API 中调用的函数。 *PfNative*出现这些错误返回错误代码是基础的网络协议堆栈中的错误代码。  
   
  [Microsoft][SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  

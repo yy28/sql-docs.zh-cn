@@ -1,16 +1,16 @@
 ---
-title: "标识键列使用 sql:key-字段 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 标识键列使用 sql:key-字段 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nesting XML results
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 标识键列 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-针对 XSD 架构指定 XPath 查询时，大多数情况下必须有键信息才能获得结果中的正确嵌套。 指定**sql:key-字段**批注是一种确保生成相应的层次结构。  
+  针对 XSD 架构指定 XPath 查询时，大多数情况下必须有键信息才能获得结果中的正确嵌套。 指定**sql:key-字段**批注是一种确保生成相应的层次结构。  
   
 > [!NOTE]  
 >  若要确保正确嵌套，建议您指定**sql:key-字段**映射到表的元素。 所生成的 XML 对于基础结果集的排序敏感。 如果**sql:key-字段**未指定，则生成的 XML 格式可能不正确。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/12/2018
   
  请考虑以下架构。 该架构指定层次结构之间**\<顺序 >**和**\<客户 >**元素在其中**\<顺序 >**元素是父级和**\<客户 >**元素是子元素。  
   
- **\<Sql:relationship >**标记，用于指定的父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql:relationship >**不足以唯一方式标识父表 (Sales.SalesOrderHeader) 中的行。 因此，而无需**sql:key-字段**批注，生成的层次结构是不准确。  
+  **\<Sql:relationship >**标记，用于指定的父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql:relationship >**不足以唯一方式标识父表 (Sales.SalesOrderHeader) 中的行。 因此，而无需**sql:key-字段**批注，生成的层次结构是不准确。  
   
  与**sql:key-字段**上指定**\<顺序 >**、 批注唯一标识的父代 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现在下面其父级。  
   

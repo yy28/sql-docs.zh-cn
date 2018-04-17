@@ -1,15 +1,15 @@
 ---
-title: "快速只进游标 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 快速只进游标 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - cursors [ODBC], fast forward-only
 - ODBC cursors, fast forward-only
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2de4f780218dcb665f4a4a1336e5557615bcc1cd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 04cde52abf320d7fa99d4cb748d491e63bc0eb50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>快速只进游标 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +41,13 @@ ms.lasthandoff: 01/24/2018
   
  应用程序使用驱动程序特定的语句属性 SQL_SOPT_SS_CURSOR_OPTIONS 请求快速只进游标。 如果设置为 SQL_CO_FFO，则启用快速只进游标，不启用自动提取。 如果设置为 SQL_CO_FFO_AF，则同时启用自动提取选项。 有关自动提取的详细信息，请参阅[使用自动提取与 ODBC 游标](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)。  
   
- 启用了自动提取的快速只进游标可用于检索较小的结果集，只需进行一次服务器往返。 在这些步骤中，  *n* 是要返回的行数：  
+ 启用了自动提取的快速只进游标可用于检索较小的结果集，只需进行一次服务器往返。 在这些步骤中， *n*是要返回的行数：  
   
 1.  将 SQL_SOPT_SS_CURSOR_OPTIONS 设置为 SQL_CO_FFO_AF。  
   
-2.  设置为 SQL_ATTR_ROW_ARRAY_SIZE  *n*  + 1。  
+2.  设置为 SQL_ATTR_ROW_ARRAY_SIZE *n* + 1。  
   
-3.  将结果列绑定到的数组 *n*  + 1 个元素 (为安全起见如果 *n*  + 实际提取 1 行)。  
+3.  将结果列绑定到的数组*n* + 1 个元素 (为安全起见如果*n* + 实际提取 1 行)。  
   
 4.  使用打开游标**SQLExecDirect**或**SQLExecute**。  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 01/24/2018
 -   由于行集大小设置为比结果集中的行数大 1，因此服务器检测到游标末尾并关闭游标。  
   
 ## <a name="see-also"></a>另请参阅  
- [光标编程的详细信息 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [光标编程的详细信息&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

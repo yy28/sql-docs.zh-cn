@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_db_index_operational_stats (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_operational_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ed586d131f7cca843f3b43605496ab2c1ab02fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/03/2018
  内存优化索引不会出现在此 DMV 中。    
     
 > [!NOTE]    
->  **sys.dm_db_index_operational_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[sys.dm_db_xtp_index_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **sys.dm_db_index_operational_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[sys.dm_db_xtp_index_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。    
         
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -65,19 +66,19 @@ sys.dm_db_index_operational_stats (
     
  内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。    
     
- *object_id* | NULL | 0 | DEFAULT    
+ *object_id* |NULL |0 |默认值    
  索引所基于的表或视图的对象 ID。 *object_id* 是 **int**。    
     
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回指定数据库中的所有表和视图的缓存信息。 如果指定 NULL 为*object_id*，还必须指定为 NULL *index_id*和*partition_number*。    
     
- *index_id* | 0 | NULL | -1 | DEFAULT    
+ *index_id* | 0 |NULL |为-1 |默认值    
  索引的 ID。 *index_id*是**int**。有效输入包括索引，0 的 ID 号，如果*object_id*是堆，NULL，则为-1 或默认值。 默认值为 -1。在此上下文中，NULL、-1 和 DEFAULT 是等价值。    
     
  指定 NULL 可返回基表或视图的所有索引的缓存信息。 如果指定 NULL 为*index_id*，还必须指定为 NULL *partition_number*。    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* |NULL |0 |默认值    
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回索引或堆的所有分区的缓存信息。    
@@ -91,7 +92,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**int**|数据库 ID。|    
 |**object_id**|**int**|表或视图的 ID。|    
 |**index_id**|**int**|索引或堆的 ID。<br /><br /> 0 = 堆|    
-|**hobt_id**|**bigint**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 数据堆或 B 树行跟踪的列存储索引的内部数据集的 ID。<br /><br /> NULL – 这不是内部的列存储行集。<br /><br /> 有关更多详细信息，请参阅[sys.internal_partitions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 数据堆或 B 树行跟踪的列存储索引的内部数据集的 ID。<br /><br /> NULL – 这不是内部的列存储行集。<br /><br /> 有关更多详细信息，请参阅[sys.internal_partitions &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|    
 |**leaf_insert_count**|**bigint**|叶级插入的累积计数。|    
 |**leaf_delete_count**|**bigint**|叶级删除的累积计数。 已删除的记录不首先标记为虚影仅增加 leaf_delete_count。 首先，幻像的已删除的记录**leaf_ghost_count**改为递增。|    
@@ -181,12 +182,12 @@ sys.dm_db_index_operational_stats (
  列中的值**lob_fetch_in_pages**和**lob_fetch_in_bytes**可以是大于零的包含一个或多个 LOB 列作为包含列的非聚集索引。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。 同样，列中的值**row_overflow_fetch_in_pages**和**row_overflow_fetch_in_bytes**可以是大于 0 的非聚集索引，如果索引包含可推送的列行外。    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>如何重置元数据缓存中的计数器    
- 返回的数据**sys.dm_db_index_operational_stats**存在仅为表示堆或索引的元数据缓存对象可用。 此数据既不是持久性数据，也不是事务上一致的数据。 这意味着，不能使用这些计数器确定是否已使用索引，或确定上次使用索引的时间。 有关此信息，请参阅[sys.dm_db_index_usage_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ 返回的数据**sys.dm_db_index_operational_stats**存在仅为表示堆或索引的元数据缓存对象可用。 此数据既不是持久性数据，也不是事务上一致的数据。 这意味着，不能使用这些计数器确定是否已使用索引，或确定上次使用索引的时间。 有关此信息，请参阅[sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)。    
     
  只要堆或索引的元数据被载入元数据缓存，每列中的值就会被设置为零，且在从元数据缓存中删除缓存对象前会累积统计信息。 所以，活动堆或索引可能始终将其元数据放在缓存中，且累积计数可能反映自上次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以来的活动。 活动较少的堆或索引的元数据将在使用时移入和移出缓存。 因此，它可能有、也可能没有可用值。 删除索引将导致从内存中删除对应统计信息，且函数不再报告这些统计信息。 对索引执行的其他 DDL 操作可能导致统计信息的值被重置为零。    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系统函数指定参数值    
- 你可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)指定的值*database_id*和*object_id*参数。 但是，将无效的值传递给这些函数可能会导致意外结果。 请始终确保使用 DB_ID 或 OBJECT_ID 时返回了有效的 ID。 有关详细信息，请参阅备注部分中的[sys.dm_db_index_physical_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ 你可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)指定的值*database_id*和*object_id*参数。 但是，将无效的值传递给这些函数可能会导致意外结果。 请始终确保使用 DB_ID 或 OBJECT_ID 时返回了有效的 ID。 有关详细信息，请参阅备注部分中的[sys.dm_db_index_physical_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。    
     
 ## <a name="permissions"></a>权限    
  需要下列权限：    
@@ -201,7 +202,7 @@ sys.dm_db_index_operational_stats (
     
  拒绝 VIEW DATABASE STATE 将禁止返回数据库中的所有对象，而不管对特定对象授予的任何 CONTROL 权限。 此外，当数据库通配符 @*database_id*= 指定 NULL，则省略数据库。    
     
- 有关详细信息，请参阅[动态管理视图和函数 &#40;Transact SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
+ 有关详细信息，请参阅[动态管理视图和函数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。    
     
 ## <a name="examples"></a>示例    
     
@@ -209,7 +210,7 @@ sys.dm_db_index_operational_stats (
  下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的所有索引和分区的信息。 执行此查询至少需要对 `Person.Address` 表具有 CONTROL 权限。    
     
 > [!IMPORTANT]    
->  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回了有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 **Sys.dm_db_index_operational_stats**函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。    
+>  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回了有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 sys.dm_db_index_operational_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。    
     
 ```    
 DECLARE @db_id int;    
@@ -246,10 +247,10 @@ GO
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
- [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.allocation_units &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

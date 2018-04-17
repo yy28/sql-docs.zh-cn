@@ -1,15 +1,15 @@
 ---
-title: "更新 MDAC 从应用程序到 SQL Server Native Client |Microsoft 文档"
-ms.custom: 
+title: 更新 MDAC 从应用程序到 SQL Server Native Client |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MDAC [SQL Server]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], vs. MDAC
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: 
+caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72bd7a56555da46acacf9431fc82fe006f55cbb6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b5163ef5cea7268824b8b9f5e0fe35911ab4a2f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>将应用程序从 MDAC 更新到 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持访问以前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不包含 XML 集成。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端支持选择... XML 查询，但不支持任何其他 XML 功能。 但是，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端支持**xml**中引入的数据类型[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不包含 XML 集成。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端支持选择... XML 查询，但不支持任何其他 XML 功能。 但是，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端支持**xml**中引入的数据类型[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持仅使用连接字符串属性来配置客户端网络库。 如果需要更完整的网络库配置，您必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本时，服务器错误 16947 会作为 SQL_ERROR 返回。 定位更新无法更新行或定位删除无法删除行时，会出现此错误。 当 MDAC 连接到任何版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，服务器错误 16947 会作为警告 (SQL_SUCCESS_WITH_INFO) 返回。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现**IDBDataSourceAdmin**接口，这是可选的 OLE DB 接口，未以前的实现，但只有**CreateDataSource**这可选的方法接口实现。 [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端实现**IDBDataSourceAdmin**接口，这是可选的 OLE DB 接口，未以前的实现，但只有**CreateDataSource**这可选的方法接口实现。 [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   在 TABLE_TYPE 设置为 SYNONYM 的情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口返回 TABLES 和 TABLE_INFO 架构行集中的同义词。  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/25/2018
   
 -   MDAC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据类型将显示为与 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 兼容的数据类型，如下表所示。  
   
-    |SQL Server 2005 类型|SQL Server 2000 type|  
+    |SQL Server 2005 类型|SQL Server 2000 类型|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/25/2018
   
 -   如果使用 ODBC 或 OLE DB 调用来启动事务，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 的行为会有所不同；使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时将立即启动事务，但使用 MDAC 时事务将在第一次数据库访问后开始启动。 这可能会影响的存储的过程和批处理行为，因为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要@TRANCOUNT批处理或存储的过程和批处理或存储的过程开始时完成执行后必须相同。  
   
--   与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，ITransactionLocal::BeginTransaction 将导致事务要立即启动。 如果使用 MDAC，则事务会延迟，直到应用程序已执行要求事务处于隐式事务模式的语句后才启动。 有关详细信息，请参阅[SET IMPLICIT_TRANSACTIONS &#40;Transact SQL &#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，ITransactionLocal::BeginTransaction 将导致事务要立即启动。 如果使用 MDAC，则事务会延迟，直到应用程序已执行要求事务处于隐式事务模式的语句后才启动。 有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
   
 -   使用时，你可能会遇到错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端驱动程序与 System.Data.Odbc 访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]新的、 公开的服务器计算机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定的数据类型或功能。 System.Data.Odbc 提供通用的 ODBC 实现，并随后未公开供应商特定功能或扩展。 （[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序已更新为可本机支持最新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。）解决此问题，你可以还原到 MDAC，或将迁移到 System.Data.SqlClient。  
   

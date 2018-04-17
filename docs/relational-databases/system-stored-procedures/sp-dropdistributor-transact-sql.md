@@ -1,16 +1,16 @@
 ---
-title: "sp_dropdistributor (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_dropdistributor (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 456b01a864631247339e0a02259544bc8de872d0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dfb681d5022e5a5f9ada3f0815513ce020250e79
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,20 +67,20 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>注释  
  **sp_dropdistributor**在所有类型的复制中使用。  
   
- 如果在服务器上，存在其他发布服务器或分发对象**sp_dropdistributor**将失败，除非 **@no_checks** 设置为**1**。  
+ 如果在服务器上，存在其他发布服务器或分发对象**sp_dropdistributor**将失败，除非**@no_checks**设置为**1**。  
   
  必须通过执行删除分发数据库之后执行此存储的过程**sp_dropdistributiondb**。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_dropdistributor**。  
   
 ## <a name="see-also"></a>另请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

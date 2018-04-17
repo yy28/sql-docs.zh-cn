@@ -1,16 +1,16 @@
 ---
-title: "在.NET 环境中使用 SQLXML 大容量加载 |Microsoft 文档"
-ms.custom: 
+title: 在.NET 环境中使用 SQLXML 大容量加载 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], XML Bulk Load
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c7e12a75ecd120c99a2e658c47acb8b28ffb260
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0129128ffe989989531e874c7c8fabe14213309b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 的.NET Framework 支持-使用大容量加载
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主题说明如何在 .NET 环境中使用 XML 大容量加载功能。 有关 XML 大容量加载的详细信息，请参阅[执行大容量加载的 XML 数据 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  本主题说明如何在 .NET 环境中使用 XML 大容量加载功能。 有关 XML 大容量加载的详细信息，请参阅[执行大容量加载的 XML 数据 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  若要从托管环境使用 SQLXML 大容量加载 COM 对象，需要添加对此对象的项目引用。 这将围绕该大容量加载 COM 对象生成一个托管的包装接口。  
   
@@ -156,6 +157,6 @@ ms.lasthandoff: 02/12/2018
      这将创建可用于 .NET Framework 项目中的托管包装 DLL (SQLXMLBULKLOADLib.dll)。 在 .NET Framework 中，您添加对新创建的 DLL 的项目引用。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行大容量加载的 XML 数据 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [执行大容量加载的 XML 数据 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_stats_properties (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_db_stats_properties (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_stats_properties_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3406cfffce07260fc425c2850e548d006f9d796a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31a4637f2bdfdddc220ccb930dd4873956ddbf3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,13 +58,13 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要返回统计信息对象属性的对象（表或索引视图）的 ID。|  
 |stats_id|**int**|统计信息对象的 ID。 在表或索引视图中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
-|last_updated|**datetime2**|上次更新统计信息对象的日期和时间。 有关详细信息，请参阅[备注](#Remarks)在此页中的部分。|  
+|last_updated|**datetime2**|上次更新统计信息对象的日期和时间。 有关详细信息，请参阅此页中的[备注](#Remarks)部分。|  
 |rows|**bigint**|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。|  
 |rows_sampled|**bigint**|用于统计信息计算的抽样总行数。|  
 |步骤|**int**|直方图中的梯级数。 有关详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。|  
 |unfiltered_rows|**bigint**|应用筛选表达式（用于筛选的统计信息）之前表中的总行数。 如果未筛选统计信息，则 unfiltered_rows 等于行列中返回的值。|  
 |modification_counter|**bigint**|自上次更新统计信息以来前导统计信息列（构建直方图的列）的总修改次数。<br /><br /> 内存优化表： 正在启动[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]并在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]此列包含： 对表的最后一个时间统计信息已更新或重启了数据库后修改的总数。|  
-|persisted_sample_percent|**float**|保留用于未显式指定抽样百分比的统计信息更新的示例百分比。 如果值为零，则无持久化的示例百分比设置为此统计信息。<br /><br /> **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> 注释  
  **sys.dm_db_stats_properties**返回行集在任何以下情况下的为空：  
@@ -75,7 +76,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  此行为允许的安全用法**sys.dm_db_stats_properties**跨应用时视图中的行如**sys.objects**和**sys.stats**。  
  
-统计信息更新日期存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，而不是在元数据。 不读取任何数据以生成统计信息数据时, 未创建统计信息 blob，日期不可用，和*last_updated*列为 NULL。 这种情况的谓词不返回任何行，或为新的空表的筛选统计信息。
+统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 不读取任何数据以生成统计信息数据时, 未创建统计信息 blob，日期不可用，和*last_updated*列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
   
 ## <a name="permissions"></a>权限  
  要求用户对统计信息列拥有 select 权限，或用户拥有表，或用户是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。  

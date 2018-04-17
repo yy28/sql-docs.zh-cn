@@ -1,15 +1,16 @@
 ---
-title: "Update 和 Delete 语句模拟定位 |Microsoft 文档"
-ms.custom: 
+title: Update 和 Delete 语句模拟定位 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 116f99d1a2dd5e904586978de4345111df278dab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d89bd5919985a98d7e5ed59ee103be49cc40ab3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>模拟定位的 Update 和 Delete 语句
 如果数据源不支持定位的更新和 delete 语句，该驱动程序可以模拟这些。 例如，ODBC 游标库模拟定位的 update 和 delete 语句。 用于模拟定位的 update 和 delete 语句的常规策略是将定位的语句转换到搜索的。 这通过替换**WHERE CURRENT OF**子句的搜索**其中**标识当前行的子句。  

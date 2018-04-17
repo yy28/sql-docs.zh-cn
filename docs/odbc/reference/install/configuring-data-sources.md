@@ -2,7 +2,7 @@
 title: 配置数据源 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7e8c96fe9ce093f9a5d3d0f09b0dc6a35568d9e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf8e6b63991fa3ca850d0bda4793959548e5f691
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-data-sources"></a>配置数据源
 有关数据源信息存储在系统注册表中。 用户修改通过管理计划的数据源信息。 这可以是 ODBC 管理器、 ODBC 控制面板设备或由应用程序或驱动程序的开发人员编写的管理程序。  

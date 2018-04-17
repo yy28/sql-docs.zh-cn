@@ -3,7 +3,7 @@ title: 自动优化 |Microsoft 文档
 description: 了解有关在 SQL Server 和 Azure SQL 数据库的自动调整
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,6 +75,8 @@ ms.lasthandoff: 04/05/2018
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 自动检测到任何潜在的计划选择回归，其中包括应使用而不是错误的计划的计划。
 当[!INCLUDE[ssde_md](../../includes/ssde_md.md)]适用最后一个已知的很好的计划，自动监视强制计划的性能。 如果强制的计划不是回归计划更好的新的计划将 unforced 和[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将编译新的计划。 如果[!INCLUDE[ssde_md](../../includes/ssde_md.md)]验证强制的计划是回归的一个更好，强制的计划则会保留之前 （例如，在下一次的统计信息或架构更改） 重新编译优于回归的计划。
+
+注意： 强制任何计划自动执行不 persit 上重新启动 SQL Server 实例。
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>启用自动计划选择更正
 
@@ -135,13 +138,15 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | 脚本 (script) | query\_id | 当前计划\_id | 建议计划\_id | 估计\_获得 | 错误\_容易
+| reason | score | 脚本 (script) | 查询\_id | 当前计划\_id | 建议计划\_id | 估计\_获得 | 错误\_容易
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 从 3 ms 更改为 46 ms 的 CPU 时间 | 36 | EXEC sp\_查询\_存储\_强制\_计划 12，17; | 12 | 28 | 17 | 11.59 | 0
 
 `estimated_gain` 表示的估计如果建议的计划将执行而不是当前的计划将保存的秒数。 建议的计划应强制而不是当前的计划，如果提升大于 10 秒。 如果有多个错误 （例如，超时或已中止的执行） 比当前计划中建议的计划，列`error_prone`将设置为值`YES`。 错误容易计划是为什么建议的计划应强制而不是当前的另一个原因。
 
 尽管[!INCLUDE[ssde_md](../../includes/ssde_md.md)]提供标识计划选择回归; 连续监视和修复性能问题所需的所有信息可能都是一个乏味的过程。 自动优化可使此过程要容易得多。
+
+注意： 此 DMV 中的数据后重新启动 SQL Server 实例不保留。
 
 ## <a name="automatic-index-management"></a>自动索引管理
 
@@ -178,10 +183,10 @@ FROM sys.dm_db_tuning_recommendations
 
 ## <a name="see-also"></a>另请参阅  
  [ALTER 数据库集 AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 函数](../../relational-databases/json/index.md)

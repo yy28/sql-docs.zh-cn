@@ -2,7 +2,7 @@
 title: SQLPutData 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfe33eb04b4948dcba85aa2d9549c301eb65c8a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函数
 **一致性**  
@@ -106,7 +106,7 @@ SQLRETURN SQLPutData(
  如果**SQLPutData**称为时发送 SQL 语句中的参数的数据，它可能会返回任何可通过调用执行语句的函数返回的 SQLSTATE (**SQLExecute**或**SQLExecDirect**)。 如果发送的列的数据时调用正在更新或添加与**SQLBulkOperations**或与正在更新**SQLSetPos**，它可返回可以由任何 SQLSTATE **SQLBulkOperations**或**SQLSetPos**。  
   
 ## <a name="comments"></a>注释  
- **SQLPutData**可以调用来提供数据在执行数据的两个用途： 对的调用中使用的参数数据**SQLExecute**或**SQLExecDirect**，或列的行时使用的数据更新或通过调用添加**SQLBulkOperations**或通过调用更新**SQLSetPos**。  
+ **SQLPutData**可以调用来提供数据在执行数据的两个用途： 对的调用中使用的参数数据**SQLExecute**或**SQLExecDirect**，或更新行时使用的列数据或通过调用添加**SQLBulkOperations**或通过调用更新**SQLSetPos**。  
   
  在应用程序调用**SQLParamData**以便确定哪些数据应发送，该驱动程序返回应用程序可用于确定要发送的参数数据或可找到列数据的位置的指示器。 它还返回 SQL_NEED_DATA，是对应用程序应调用指示器**SQLPutData**发送数据。 在*DataPtr*参数**SQLPutData**，应用程序将指针传递到包含的参数或列的实际数据的缓冲区。  
   

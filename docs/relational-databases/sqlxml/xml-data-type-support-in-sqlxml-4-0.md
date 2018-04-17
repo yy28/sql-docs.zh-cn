@@ -1,44 +1,45 @@
 ---
-title: "xml SQLXML 4.0 中的数据类型支持 |Microsoft 文档"
-ms.custom: 
+title: xml SQLXML 4.0 中的数据类型支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 530cd1e4fef24d925af9a6079b6afeeb07ec463d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 中的 xml 数据类型支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 XML 类型化数据使用**xml**数据类型。 本主题提供有关 SQLXML 4.0 识别的实例的方式的信息**xml**数据类型和实现对它们的支持。  
+  开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 XML 类型化数据使用**xml**数据类型。 本主题提供有关 SQLXML 4.0 识别的实例的方式的信息**xml**数据类型和实现对它们的支持。  
   
 ## <a name="working-with-xml-data-types"></a>使用 xml 数据类型  
  若要了解有关如何使用实现的 SQL 表**xml**数据类型列，提供了以下示例：  
   
 |任务|示例|主题|  
 |----------|-------------|-----------|  
-|如何将映射以及包括**xml**在 XML 视图中的列|“将 XML 元素映射到 XML 数据类型列”|[默认映射的 XSD 元素和特性移动到表和列 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|如何将数据插入到**xml** updategram 的列|“将数据插入到 XML 数据类型列”|[使用 XML Updategram &#40; 插入数据SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|大容量加载 XML 数据读入**xml**列|“在 xml 数据类型列中执行大容量加载”|[XML 大容量加载示例 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|如何将映射以及包括**xml**在 XML 视图中的列|“将 XML 元素映射到 XML 数据类型列”|[XSD 元素和属性表和列的默认映射&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|如何将数据插入到**xml** updategram 的列|“将数据插入到 XML 数据类型列”|[使用 XML Updategram 插入数据&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|大容量加载 XML 数据读入**xml**列|“在 xml 数据类型列中执行大容量加载”|[XML 大容量加载示例 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>准则和限制  
   

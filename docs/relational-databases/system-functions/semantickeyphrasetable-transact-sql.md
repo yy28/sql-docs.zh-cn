@@ -1,16 +1,16 @@
 ---
-title: "semantickeyphrasetable (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: semantickeyphrasetable (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a88d9739edae602d00ec22123d19eb5861a9f744
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 621ecbfde7150cfba17f910a092ec894825362a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SEMANTICKEYPHRASETABLE
   
  此名称可由 1 到 4 个部分组成，但不允许使用远程服务器名称。  
   
- column  
+ **column**  
  应为其返回结果的索引列的名称。 列必须启用语义索引。  
   
  **column_list**  
@@ -79,7 +79,7 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|从中提取和索引当前的关键短语的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**document_key**|**\***<br /><br /> 此键与源表中的唯一键的类型相匹配。|从中对当前关键短语进行索引的文档或行的唯一键值。|  
 |**keyphrase**|**NVARCHAR**|在由 column_id 表示的列中找到的关键短语，与 document_key 指定的文档关联。|  
-|**score**|**实际**|一个相对值，用来表示此关键短语与索引列中同一文档的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
+|**score**|**REAL**|一个相对值，用来表示此关键短语与索引列中同一文档的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅[使用语义搜索在文档中查找关键短语](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  

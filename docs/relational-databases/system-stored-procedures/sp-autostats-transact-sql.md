@@ -1,16 +1,16 @@
 ---
-title: "sp_autostats (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_autostats (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_autostats_TSQL
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_autostats
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a73ac5060a62ba73bb05addc780fcd356ca9a102
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b57f708d24cff611e256915b9981e13ecf89d4e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   显示或更改索引、统计信息对象、表或索引视图的自动统计信息更新选项 AUTO_UPDATE_STATISTICS。  
   
- 有关 AUTO_UPDATE_STATISTICS 选项的详细信息，请参阅[ALTER DATABASE SET 选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[统计信息](../../relational-databases/statistics/statistics.md)。  
+ 有关 AUTO_UPDATE_STATISTICS 选项的详细信息，请参阅[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[统计信息](../../relational-databases/statistics/statistics.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +51,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tblname=** ] *table_or_indexed_view_name*  
+ [  **@tblname=** ] *****table_or_indexed_view_name*****  
  要对其显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name*是**nvarchar(776)**，无默认值。  
   
- [  **@flagc=** ] *stats_value*  
+ [  **@flagc=** ] *****stats_value*****  
  将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  
   
  **ON** = ON  
@@ -62,7 +63,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  当*stats_flag*是未指定，显示当前的 AUTO_UPDATE_STATISTICS 设置。 *stats_value*是**varchar(10)**，默认值为 NULL。  
   
- [  **@indname=** ] *statistics_name*  
+ [  **@indname=** ] *****statistics_name*****  
  要对其显示或更新 AUTO_UPDATE_STATISTICS 选项的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
   
  *statistics_name*是**sysname**，默认值为 NULL。  
@@ -88,7 +89,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  对于内存优化表，AUTO_UPDATE_STATISTICS 始终为 OFF。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要更改 AUTO_UPDATE_STATISTICS 选项需要成员身份 n **db_owner**固定数据库角色或 ALTER 权限*table_name*。若要显示 AUTO_UPDATE_STATISTICS 选项要求的成员身份**公共**角色。  
   
 ## <a name="examples"></a>示例  
@@ -126,11 +127,11 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [统计信息](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_createstats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_createstats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

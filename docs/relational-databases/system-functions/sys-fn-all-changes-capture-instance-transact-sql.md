@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f8837e835a1e7ef4d8a4ecdf16adea077a9f878
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c86286a8412f41dbc8c30bc5bcd68489aa27f99e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包装**所有更改**查询函数。 创建这些函数所必需的脚本由 sys.sp_cdc_generate_wrapper_function 存储过程生成。  
@@ -96,7 +96,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|与更改关联的事务的提交 LSN。 在同一个事务中提交的所有更改都共享同一个提交 LSN。|  
 |__CDC_SEQVAL|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  
-|\<中的列@column_list>|**varies**|在中标识的列*column_list* sp_cdc_generate_wrapper_function 时被调用以生成用于创建包装函数的脚本的自变量。|  
+|\<中的列@column_list>|**各不相同**|在中标识的列*column_list* sp_cdc_generate_wrapper_function 时被调用以生成用于创建包装函数的脚本的自变量。|  
 |__CDC_OPERATION|**nvarchar(2)**|操作代码，用于指示将行应用到目标环境时所必需的操作。 它取决于自变量的值*row_filter_option*调用中提供：<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> *row_filter_option* = all update old<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> 'UO' - 更新操作的旧值|  
 |\<中的列@update_flag_list>|**bit**|通过将 _uflag 追加到列名称的末尾所命名的位标记。 标志始终设置为 NULL 时\__CDC_OPERATION 具有，I，UO。 当\__CDC_OPERATION 是取消，如果更新生成的相应列的更改设置为 1。 否则为 0。|  
   
@@ -113,14 +113,14 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  通过在创建脚本时使用 @closed_high_end_point 参数，您可以生成包装以支持指定查询窗口中的闭合上限或开放上限。 就是说，您可以决定其提交时间等于提取间隔的上限的条目是否要包括在间隔中。 默认情况下，包括上限。  
   
- 结果集返回**所有更改**包装函数返回 __ $start_lsn 和\_ \_$seqval 列更改表的列作为\__CDC_STARTLSN 和\__CDC_SEQVAL，分别。 它遵循其仅这些中出现的跟踪的列与 *@column_list* 参数生成包装时间。 如果 *@column_list* 为 NULL，返回列的所有跟踪源。 源列后跟一个操作列， \__CDC_OPERATION，这是一个标识该操作的一个或两个字符列。  
+ 结果集返回**所有更改**包装函数返回 __ $start_lsn 和\_ \_$seqval 列更改表的列作为\__CDC_STARTLSN 和\__CDC_SEQVAL，分别。 它遵循其仅这些中出现的跟踪的列与*@column_list*参数生成包装时间。 如果*@column_list*为 NULL，返回列的所有跟踪源。 源列后跟一个操作列， \__CDC_OPERATION，这是一个标识该操作的一个或两个字符列。  
   
  然后，将位标志追加到在 @update_flag_list 参数中标识的每个列的结果集的末尾。 有关**所有更改**包装，位标志将始终为 NULL，__CDC_OPERATION 是否具有，I 或 UO。 如果\__CDC_OPERATION 是取消，该标志将设置为 1 或 0，具体取决于所更新的操作是否导致对列进行更改。  
   
  变更数据捕获配置模板“实例化架构的 CDC 包装 TVF”显示如何使用 sp_cdc_generate_wrapper_function 存储过程以获取某个架构的已定义查询函数的所有包装函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [sys.sp_cdc_generate_wrapper_function &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

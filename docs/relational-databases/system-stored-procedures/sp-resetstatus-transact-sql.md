@@ -1,16 +1,16 @@
 ---
-title: "sp_resetstatus (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_resetstatus (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_resetstatus
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_resetstatus
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc08cd1620acbf0fe7a65084b215de1ac62b1578
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 350363d420f55b814954db7287be34d478787c61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spresetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   重置可疑数据库的状态。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_resetstatus [ @dbname = ] 'database'
   
  数据库可能由于某些原因而变得可疑。 可能的原因包括操作系统拒绝对数据库资源的访问，以及一个或多个数据库文件不可用或已损坏。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -72,6 +72,6 @@ EXEC sp_resetstatus 'AdventureWorks2012';
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

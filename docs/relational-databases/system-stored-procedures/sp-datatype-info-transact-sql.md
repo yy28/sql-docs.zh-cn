@@ -1,16 +1,16 @@
 ---
-title: "sp_datatype_info (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_datatype_info (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_datatype_info_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32edf386d51ab28ae453db75c4adc8067c747cff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c93dec5dc4f6ed8ed01244cd3c30c8725e91efce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  所指定的数据类型的代码号。 若要获得所有数据类型的列表，请省略此参数。 *data_type*是**int**，默认值为 0。  
   
- [  **@ODBCVer=** ] *odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  所使用的 ODBC 的版本。 *odbc_version*是**tinyint**，默认值为 2。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -63,9 +63,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|与 DBMS 相关的数据类型。|  
 |DATA_TYPE|**int**|此类型的所有列所映射到的 ODBC 类型代码。|  
 |PRECISION|**int**|数据源中数据类型的最大精度。 数据类型的精度不适用时返回 NULL。 PRECISION 列的返回值以 10 为基数。|  
-|LITERAL_PREFIX|**varchar (**32**)**|常量前使用的一个或多个字符。 例如，一个单引号 () 字符类型和 0x 为二进制文件。|  
-|LITERAL_SUFFIX|**varchar (**32**)**|字符或字符用于终止常量。 例如，一个单引号 () 字符类型和二进制没有引号。|  
-|CREATE_PARAMS|**varchar (**32**)**|此数据类型的创建参数的说明。 例如，**十进制**是"精度和小数位数"， **float**为 NULL，和**varchar**是"max_length"。|  
+|LITERAL_PREFIX|**varchar(**32**)**|常量前使用的一个或多个字符。 例如，一个单引号 () 字符类型和 0x 为二进制文件。|  
+|LITERAL_SUFFIX|**varchar(**32**)**|字符或字符用于终止常量。 例如，一个单引号 () 字符类型和二进制没有引号。|  
+|CREATE_PARAMS|**varchar(**32**)**|此数据类型的创建参数的说明。 例如，**十进制**是"精度和小数位数"， **float**为 NULL，和**varchar**是"max_length"。|  
 |NULLABLE|**int**|指定为 Null 性。<br /><br /> 1 = 允许 Null 值。<br /><br /> 0 = 不允许 Null 值。|  
 |CASE_SENSITIVE|**int**|指定是否区分大小写。<br /><br /> 1 = 此类型的所有列都区分大小写（用于排序规则）。<br /><br /> 0 = 此类型的所有列都不区分大小写。|  
 |SEARCHABLE|**int**|指定列类型的搜索能力：<br /><br /> 1 = 不能搜索。<br /><br /> 2 = 可以使用 LIKE 进行搜索。<br /><br /> 3 = 可以使用 WHERE 进行搜索。<br /><br /> 4 = 可以使用 WHERE 或 LIKE 进行搜索。|  
@@ -84,7 +84,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>注释  
  sp_datatype_info 相当于 SQLGetTypeInfo ODBC 中。 返回的结果按 DATA_TYPE 排序，再按数据类型映射到相应 ODBC SQL 数据类型的紧密程度进行排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

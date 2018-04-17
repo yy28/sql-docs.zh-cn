@@ -1,16 +1,16 @@
 ---
-title: "sp_replqueuemonitor (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_replqueuemonitor (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd29cdd9e22873dd7d10db99078f25ce7e15d55f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d996f735cb105215deb6de44cc56533a42fe6c3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,26 +50,26 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher**  =] *发布服务器*  
+ [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 必须将该服务器配置为用于发布。 NULL 表示所有发布服务器。  
   
- [  **@publisherdb**  =] *publisher_db* ]  
+ [ **@publisherdb** =] *****publisher_db***** ]  
  发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 NULL 表示所有发布数据库。  
   
- [  **@publication**  =] *发布* ]  
+ [ **@publication** =] *****发布***** ]  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。 NULL 表示所有发布。   
   
- [  **@tranid**  =] *tranid* ]  
+ [ **@tranid** =] *****tranid***** ]  
  为事务 id。 *tranid*是**sysname**，默认值为 NULL。 NULL 表示所有事务。  
   
- [**@queuetype=** ] *queuetype* ]  
+ [**@queuetype=** ] *****queuetype***** ]  
  存储事务的队列类型。 *queuetype*是**tinyint**默认值为**0**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|所有队列类型|  
 |**1**|消息队列|  
-|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]队列|  
+|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 队列|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -77,7 +77,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>注释  
  **sp_replqueuemonitor**在快照复制或带有排队更新订阅的事务复制中使用。 不显示不包含 SQL 命令的队列消息，也不显示作为跨越式 SQL 命令的一部分的队列消息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_replqueuemonitor**。  
   
 ## <a name="see-also"></a>另请参阅  

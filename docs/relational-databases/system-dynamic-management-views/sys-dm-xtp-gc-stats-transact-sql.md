@@ -1,16 +1,16 @@
 ---
-title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_xtp_gc_stats (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_gc_stats
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76269043863211bc0c531cea9ea9a75915e5f6d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2440605950721a0b3a0555bebd250344b19d2cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   提供有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 垃圾回收进程的当前行为的信息（总体统计信息）。  
   
- 行在常规事务处理过程中或是由主垃圾回收线程（称为空闲工作线程）进行垃圾回收。 用户事务提交时，它中取消排队从垃圾收集队列中的一个工作项 ([sys.dm_xtp_gc_queue_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). 可以进行垃圾回收但是未由主用户事务访问的任何行都在灰尘角扫描（针对较少访问的索引区域的扫描）过程中由空闲工作线程进行垃圾回收。  
+ 行在常规事务处理过程中或是由主垃圾回收线程（称为空闲工作线程）进行垃圾回收。 用户事务提交时，它中取消排队从垃圾收集队列中的一个工作项 ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md))。 可以进行垃圾回收但是未由主用户事务访问的任何行都在灰尘角扫描（针对较少访问的索引区域的扫描）过程中由空闲工作线程进行垃圾回收。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
@@ -78,6 +78,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化表的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [内存优化表的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

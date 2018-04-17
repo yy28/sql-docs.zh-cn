@@ -1,32 +1,32 @@
 ---
-title: "sp_delete_backup_file_snapshot (TRANSACT-SQL) |Microsoft 文档"
+title: sp_delete_backup_file_snapshot (TRANSACT-SQL) |Microsoft 文档
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d62063bb3214534ccf8d1d99c46ae6129000cc9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bc483fd592743ada6a14548664888d44c2d0ade0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="snapshot-backup---spdeletebackupfilesnapshot"></a>快照备份-sp_delete_backup_file_snapshot
+# <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   从指定的数据库中删除指定的备份快照。 使用此系统存储过程结合**sys.fn_db_backup_file_snapshots**系统函数来标识和删除孤立的备份快照。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
@@ -44,7 +44,7 @@ sys.sp_delete_backup_file_snapshot
 ```  
   
 ## <a name="arguments"></a>参数  
- *[ @db_name = ] database_name*  
+ *[ @db_name =] database_name*  
  包含要删除、 提供为 Unicode 字符串的快照的数据库名称。  
   
  *[ @snapshot_url = ] snapshot_url*  
@@ -54,7 +54,7 @@ sys.sp_delete_backup_file_snapshot
  需要 ALTER ANY DATABASE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
+ [sys.fn_db_backup_file_snapshots &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   
   

@@ -1,30 +1,31 @@
 ---
-title: "驱动程序的角色 |Microsoft 文档"
-ms.custom: 
+title: 驱动程序的角色 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver error checking [ODBC]
 - diagnostic information [ODBC], driver error checking
 ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7381b239b87d4979545504e01f552a9be21fd694
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d05f69bd03e904745f4b4d3d81179472a7ff1375
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="role-of-the-driver"></a>该驱动程序的角色
 该驱动程序检查所有错误和警告不会检查由驱动程序管理器，并对它所生成的状态记录进行排序。 (一个 ODBC 2。*x*驱动程序不排序状态记录。)这包括数据截断、 数据转换、 语法和某些状态转换中的错误和警告。 错误和警告部分选中的驱动程序管理器，还可以检查驱动程序。 例如，尽管的驱动程序管理器检查是否的值*操作*中**SQLSetPos**是合法的该驱动程序必须检查是否支持。  

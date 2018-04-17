@@ -1,37 +1,38 @@
 ---
-title: "sp_pdw_add_network_credentials （SQL 数据仓库） |Microsoft 文档"
-ms.custom: 
+title: sp_pdw_add_network_credentials （SQL 数据仓库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
-caps.latest.revision: 
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87034c1db40e5762441871cc347eaf37d2c56ea3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 3d318447603f37153ecc62878061e0f44349347f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   这将存储中的网络凭据[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]并将它们与服务器相关联。 例如，使用此存储的过程以便[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]相应的读/写权限执行数据库备份和还原操作在目标服务器上，或创建用于 TDE 证书的备份。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +44,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>参数  
  '*target_server_name*'  
- 指定的目标服务器主机名或 IP 地址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将通过使用传递到此存储过程的用户名和密码凭据访问此服务器。  
+ 指定的目标服务器主机名或 IP 地址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将通过使用传递到此存储过程的用户名和密码凭据访问此服务器。  
   
  若要通过 InfiniBand 网络连接，请使用目标服务器的 InfiniBand IP 地址。  
   
@@ -54,7 +55,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  *user_name*定义为 nvarchar (513)。  
   
- '*password*ꞌ  
+ *密码*ꞌ  
  指定的密码*user_name*。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -69,10 +70,10 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="general-remarks"></a>一般备注  
  此存储的过程将网络凭据添加到的 NetworkService 帐户[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 NetworkService 帐户运行每个实例的 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]控制节点和计算节点上。 例如，备份操作运行时，管理节点和每个计算节点将使用 NetworkService 帐户凭据获取读取和写入到目标服务器的权限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 添加执行数据库备份的凭据  
- 下面的示例将域用户 seattle\david 用户名和密码凭据与具有 10.172.63.255 的 IP 地址的目标服务器相关联。 用户 seattle\david 具有到目标服务器的读/写权限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将存储这些凭据，并使用它们来读取和写入到和从目标服务器，根据需要进行备份和还原操作。  
+ 下面的示例将域用户 seattle\david 用户名和密码凭据与具有 10.172.63.255 的 IP 地址的目标服务器相关联。 用户 seattle\david 具有到目标服务器的读/写权限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将存储这些凭据，并使用它们来读取和写入到和从目标服务器，根据需要进行备份和还原操作。  
   
 ```  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
@@ -84,7 +85,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 >  要在 InfiniBand 执行数据库备份，请务必使用备份的服务器的 InfiniBand IP 地址。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_pdw_remove_network_credentials &#40;SQL 数据仓库 &#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

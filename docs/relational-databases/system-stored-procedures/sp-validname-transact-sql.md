@@ -1,16 +1,16 @@
 ---
-title: "sp_validname (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_validname (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_validname
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_validname
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00dc003905fb90ae819bc49eba68aeee2f1cdbb1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 521c3fc409157de59a3164a145cca96102eb49bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name=** ] *名称*  
+ [ **@name=** ] **'***name***'**  
  是的名称[标识符](../../relational-databases/databases/database-identifiers.md)对其进行检查有效性。 *名称*是**sysname**，无默认值。 *名称*不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
   
  [  **@raise_error=** ] *raise_error*  
@@ -56,15 +57,15 @@ sp_validname [@name =] 'name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [NCHAR &#40;Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [nchar 和 nvarchar &#40;Transact SQL &#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [ntext、 文本和图像 &#40;Transact SQL &#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
+ [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)   
+ [nchar 和 nvarchar &#40;Transact SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [ntext、 text 和 image &#40;Transact SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

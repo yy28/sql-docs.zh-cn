@@ -1,16 +1,16 @@
 ---
-title: "sp_addtabletocontents (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addtabletocontents (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a16b89e4d2567a24b8c61fdb5ce6830e2205f824
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 782c63304d43b0c4d7aa1c484bb8860102b714e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_name=**] *table_name*  
+ [ **@table_name=**] **'***table_name***'**  
  是表的名称。 *table_name*是**sysname**，无默认值。  
   
- [  **@owner_name=**] *owner_name*  
+ [  **@owner_name=**] *****owner_name*****  
  是表的名称。 *owner_name*是**sysname**，默认值为 NULL。  
   
- [  **@filter_clause=** ] *filter_clause*  
+ [  **@filter_clause=** ] *****filter_clause*****  
  指定一个筛选子句，该子句控制应将新加载的数据的哪些行添加到合并跟踪表。 *filter_clause*是**nvarchar （4000)**，默认值为 NULL。 如果*filter_clause*是**null**，所有大容量加载的行添加。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,7 +65,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
  中的行*table_name*由其**rowguidcol**和引用将添加到合并跟踪表。 **sp_addtabletocontents**应将数据复制到使用合并复制发布的表的大容量后使用。 该存储过程将启动对已复制行的跟踪，并确保下一次同步中包括这些新行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addtabletocontents**。  
   
 ## <a name="see-also"></a>另请参阅  

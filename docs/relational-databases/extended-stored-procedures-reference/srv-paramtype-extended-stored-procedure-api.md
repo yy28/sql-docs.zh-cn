@@ -1,16 +1,16 @@
 ---
-title: "srv_paramtype（扩展存储过程 API）| Microsoft Docs"
-ms.custom: 
+title: srv_paramtype（扩展存储过程 API）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramtype
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramtype
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53195012c558b438e24c95169fe373c08f8e37d5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: d47e3c7ef97358c908d511ee0d6eb1c18ffc601b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamtype-extended-stored-procedure-api"></a>srv_paramtype（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  返回远程存储过程调用参数的数据类型。  
   
@@ -62,7 +62,7 @@ n
  指示参数的编号。 第一个参数是 1。  
   
 ## <a name="returns"></a>返回  
- 参数的数据类型的标记值。 有关数据类型的信息，请参阅[数据类型（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1。  
+ 参数的数据类型的标记值。 有关数据类型的信息，请参阅[数据类型（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。 如果没有任何*n*th 参数，或者如果没有没有远程存储的过程，它将返回-1。  
   
  如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据类型之一，则此函数返回以下值。  
   

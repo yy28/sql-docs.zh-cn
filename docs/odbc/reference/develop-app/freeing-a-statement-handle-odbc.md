@@ -1,31 +1,32 @@
 ---
-title: "释放语句句柄 ODBC |Microsoft 文档"
-ms.custom: 
+title: 释放语句句柄 ODBC |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 - freeing statement handles [ODBC]
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a26d7745756904ab8da492cbb96b8714dd969e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c0b56bfd04724c8506b5ba0fe7b5fd01a57a02e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>释放语句句柄 ODBC
 如前所述，它会重用比删除它们并分配新的语句更加高效。 之前在一个语句上执行新的 SQL 语句，应用程序应确保当前的语句设置适合。 这些设置包括语句属性、参数绑定和结果集绑定。 通常情况下，参数和旧的 SQL 语句的结果集需要是未绑定 (通过调用**SQLFreeStmt**使用 SQL_RESET_PARAMS 和 SQL_UNBIND 选项) 和新的 SQL 语句的重新绑定。  

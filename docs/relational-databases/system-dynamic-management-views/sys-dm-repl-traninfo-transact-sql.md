@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_repl_traninfo (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_repl_traninfo (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_traninfo
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 62a96943b48eaa3c87924055c47d690e2af3354e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ ms.lasthandoff: 02/03/2018
 |**begin_lsn**|**nvarchar(64)**|事务的开始日志记录的日志序列号 (LSN)。|  
 |**commit_lsn**|**nvarchar(64)**|事务的提交日志记录的 LSN。|  
 |**dbid**|**int**|数据库 ID。|  
-|**rows**|**int**|事务中复制的命令的 ID。|  
+|**行**|**int**|事务中复制的命令的 ID。|  
 |**xdesid**|**nvarchar(64)**|事务 id。|  
 |**artcache_table_address**|**varbinary(8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
 |服务器|**nvarchar(514)**|服务器名称。|  
 |**server_len_in_bytes**|**int**|服务器名称的字符长度（字节）。|  
 |**database**|**nvarchar(514)**|数据库名称。|  
 |**db_len_in_bytes**|**int**|数据库名称的字符长度（字节）。|  
-|**originator**|**nvarchar(514)**|发起事务的服务器的名称。|  
+|**发起方**|**nvarchar(514)**|发起事务的服务器的名称。|  
 |**originator_len_in_bytes**|**int**|发起事务的服务器的字符长度（字节）。|  
 |**orig_db**|**nvarchar(514)**|发起事务的数据库的名称。|  
 |**orig_db_len_in_bytes**|**int**|发起事务的数据库的字符长度（字节）。|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与复制相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
+ [与复制相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [与变更数据捕获相关的动态管理视图 (Transact-SQL)](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   

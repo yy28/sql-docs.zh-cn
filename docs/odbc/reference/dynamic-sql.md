@@ -1,15 +1,16 @@
 ---
-title: "动态 SQL |Microsoft 文档"
-ms.custom: 
+title: 动态 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0dab9c38b5fe567664455462f0d229a8235ba99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dynamic-sql"></a>动态 SQL
 尽管静态 SQL 适用于许多情况下，但是没有该数据访问无法预先确定的应用程序的类。 例如，假设电子表格，用户可以输入一个查询，后者电子表格随后发送到 DBMS 中检索数据。 此查询的内容显然无法知道向程序员写入电子表格程序时。  

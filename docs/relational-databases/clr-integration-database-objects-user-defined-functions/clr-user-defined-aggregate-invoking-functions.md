@@ -1,15 +1,15 @@
 ---
-title: "调用 CLR 用户定义聚合函数 |Microsoft 文档"
-ms.custom: 
+title: 调用 CLR 用户定义聚合函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - invoking user-defined aggregate functions
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c15694986403c4b4eba39e7b4a70738fbf40cc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f09c3ba4dd4ccc1cedbd6ad3d2cc880191087e5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 用户定义聚合的调用函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，您可以根据适用于系统聚合函数的所有规则调用公共语言运行时 (CLR) 用户定义聚合。  
+  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，您可以根据适用于系统聚合函数的所有规则调用公共语言运行时 (CLR) 用户定义聚合。  
   
  应遵循下列附加规则：  
   

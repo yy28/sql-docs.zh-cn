@@ -1,15 +1,15 @@
 ---
-title: "使用用户定义类型 |Microsoft 文档"
-ms.custom: 
+title: 使用用户定义类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_DATASOURCEINFO property set
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8092282c18758860ee76f9e61108aa6db1551bc8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b498bf2030a3d3feecf061a932ba851e5fdb34bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-user-defined-types"></a>使用用户定义类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/25/2018
   
 |数据类型|到服务器<br /><br /> **UDT**|到服务器<br /><br /> **non-UDT**|从服务器<br /><br /> **UDT**|从服务器<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|支持<sup>6</sup>|错误<sup>1</sup>|支持<sup>6</sup>|Error<sup>5</sup>|  
+|DBTYPE_UDT|支持<sup>6</sup>|错误<sup>1</sup>|支持<sup>6</sup>|错误<sup>5</sup>|  
 |DBTYPE_BYTES|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_WSTR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_BSTR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/25/2018
 |ASSEMBLY_BINARY|DBTYPE_BYTES|程序集的二进制表示形式。|  
   
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 架构行集  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序公开描述指定的服务器的程序集依赖项的新提供程序特定的架构行集。 ASSEMBLY_SERVER 可由调用方指定为 DBTYPE_WSTR，但在该行集中不存在。 如果未指定，行集将默认使用当前服务器。 SQL_ASSEMBLY_DEPENDENCIES 架构行集在下表中定义。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序公开描述指定的服务器的程序集依赖项的新提供程序特定的架构行集。 ASSEMBLY_SERVER 可由调用方指定为 DBTYPE_WSTR，但在该行集中不存在。 如果未指定，行集将默认使用当前服务器。 SQL_ASSEMBLY_DEPENDENCIES 架构行集在下表中定义。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/25/2018
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|所引用的程序集的对象 ID。|  
   
 #### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES 架构行集  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口公开新架构行集，SQL_USER_TYPES，描述时添加指定的服务器已注册的 Udt。 UDT_SERVER 必须由调用方指定为 DBTYPE_WSTR，但它在该行集中不存在。 在下表中定义 SQL_USER_TYPES 架构行集。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开新架构行集，SQL_USER_TYPES，描述时添加指定的服务器已注册的 Udt。 UDT_SERVER 必须由调用方指定为 DBTYPE_WSTR，但它在该行集中不存在。 在下表中定义 SQL_USER_TYPES 架构行集。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
@@ -215,6 +216,6 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

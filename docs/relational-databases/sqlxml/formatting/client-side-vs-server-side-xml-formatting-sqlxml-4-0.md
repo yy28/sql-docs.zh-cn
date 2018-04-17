@@ -1,16 +1,16 @@
 ---
-title: "客户端 与服务器端 XML 格式 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: 客户端 与服务器端 XML 格式 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252164e0a5ce8b3eeae00549d36450acb1a7d44e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95088fe868d8e9e392613a147f61438e1818e643
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端 与服务器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主题说明在 SQLXML 中客户端与服务器端 XML 格式的一般差异。  
+  本主题说明在 SQLXML 中客户端与服务器端 XML 格式的一般差异。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>客户端格式中不支持多行集查询  
  使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，它具有两个 SELECT 语句中 **\<sql:query >**块：  
@@ -221,8 +222,8 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 -   当指定**客户端端 xml ="1"** (true) 模板中，您请求客户端的 XML 格式。 在这种情况下，可以指定 FOR XML NESTED。 即使在服务器端发生如果指定 FOR XML AUTO，XML 格式**客户端端 xml ="1"**模板中指定。  
   
 ## <a name="see-also"></a>另请参阅  
- [FOR XML 安全注意事项 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [客户端的 XML 格式 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [服务器端 XML 格式 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [有关 XML 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [客户端的 XML 格式&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [服务器端 XML 格式&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "调用存储的过程 (OLE DB) |Microsoft 文档"
-ms.custom: 
+title: 调用存储的过程 (OLE DB) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d756f34ea2ac9e5bf2803dc27b80a374ab9cd56
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 901bea0996dd993f8238df9c73301f2cc874f65e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures---calling"></a>存储的过程的调用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -123,7 +124,7 @@ ms.lasthandoff: 01/25/2018
 {rpc SalesByCategory}  
 ```  
   
- 有关演示 RPC 转义序列的示例应用，请参阅[执行存储过程 &#40;使用 RPC 语法 &#41;和处理返回代码和输出参数 &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ 有关演示 RPC 转义序列的示例应用，请参阅[执行存储过程 & #40;使用 RPC 语法 & #41;和处理返回代码和输出参数 & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 语句  
  ODBC 调用转义序列和 RPC 转义序列是首选的方法调用存储的过程而不是[执行](../../../t-sql/language-elements/execute-transact-sql.md)语句。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用的 RPC 机制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  

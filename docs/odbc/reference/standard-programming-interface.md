@@ -1,15 +1,16 @@
 ---
-title: "标准编程接口 |Microsoft 文档"
-ms.custom: 
+title: 标准编程接口 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - standardizing database access [ODBC], programming interface
 - programming interface standardization [ODBC]
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79cfb261e4ee433043794c864e7e02d93586c881
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c91448833c6dacecaadfa4b0c11892e1a0c5e439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="standard-programming-interface"></a>标准编程接口
 编程接口可能是标准化的最明显候选。 事实上，当开发 ODBC 时，ANSI 和 ISO 已提供标准嵌入 SQL 和 SQL 的模块。 虽然没有标准存在数据库 CLI，使用 SQL 访问组-数据库供应商行业联合会-已考虑是否要创建一个;更高版本的 ODBC 部分垃圾回收其工作的基础。  

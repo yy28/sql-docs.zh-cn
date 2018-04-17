@@ -28,11 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f1b2719813ecc58cc68477b47141a215f4880be
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 7b8087839e5ea151d69a18cdf46d19fa5c917e66
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/08/2018
 |start_time|**datetime**|UTC 指示五分钟报告间隔的起始时间。|  
 |end_time|**datetime**|该值指示五分钟报告间隔结束的 UTC 时间。|  
 |database_name|**varchar**|用户数据库的名称。|  
-|sku|**varchar**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium<br /><br />一般用途<br /><br />业务关键型|  
+|sku|**varchar**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium<br /><br />常规用途<br /><br />业务关键型|  
 |storage_in_megabytes|**float**|以兆字节为时间段，包括数据库数据、 索引、 存储的过程和元数据的最大存储大小。|  
 |avg_cpu_percent|**numeric**|平均计算使用率（以服务层限制的百分比表示）。|  
 |avg_data_io_percent|**numeric**|平均 I/O 使用率（以基于服务层限制的百分比表示）。|  

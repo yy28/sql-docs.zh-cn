@@ -1,8 +1,8 @@
 ---
-title: sp_executesql (Transact-SQL) | Microsoft Docs
+title: sp_executesql (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -26,11 +26,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29c2557584393605ba0e89f45dc079dea6d5ddb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +56,7 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @stmt= ] *statement*  
+ [ @stmt=]*语句*  
  是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理。 @stmt 必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定的 Unicode 常量，则它必须作为前缀**N**。例如，Unicode 常量**N sp_who**有效，但字符常量**sp_who**不是。 字符串的大小仅受可用数据库服务器内存限制。 64 位服务器上的字符串的大小被限制为 2 GB 的最大大小**nvarchar (max)**。  
   
 > [!NOTE]  
@@ -63,7 +64,7 @@ sp_executesql [ @stmt = ] statement
   
  @stmt 中包含的每个参数在 @params 参数定义列表和参数值列表中必须具有对应的条目。  
   
- [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
+ [ @params=] N'@*parameter_name * * data_type* [，...*n* ]  
  一个字符串，它包含 @stmt 中嵌入的所有参数的定义。字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是一个占位符，表示附加参数定义。 每个参数中指定@stmtmust中定义@params。 如果 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理不包含参数，则不需要使用 @params。 该参数的默认值为 NULL。  
   
  [ @param1= ] '*value1*'  

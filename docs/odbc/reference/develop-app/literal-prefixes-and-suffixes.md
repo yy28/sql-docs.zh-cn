@@ -1,31 +1,32 @@
 ---
-title: "文本的前缀和后缀 |Microsoft 文档"
-ms.custom: 
+title: 文本的前缀和后缀 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], literal prefixes and suffixes
 - literals [ODBC], prefixes and suffixes
 ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbc8e513c33f6b924175719008bb7d97ce39af69
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d1d836c086747cba5b42b0db5a1919575afcfaa2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="literal-prefixes-and-suffixes"></a>文本的前缀和后缀
 在 SQL 语句中，*文本*是实际数据值的字符表示。 例如，在下面的语句中，ABC、 FFFF 和 10 是文本：  

@@ -1,16 +1,16 @@
 ---
-title: sys.fn_trace_getfilterinfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fn_trace_getfilterinfo (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_getfilterinfo
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - fn_trace_getfilterinfo function
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-caps.latest.revision: 
+caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1af9d4794d952e1ecb82e28a225e782039aff901
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4a239707ff96af1364ecb844568c76c108b0b799
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ fn_trace_getfilterinfo ( trace_id )
  是的 ID。 *trace_id*是**int**，无默认值。  
   
 ## <a name="tables-returned"></a>返回的表  
- 返回以下信息。 有关列的详细信息，请参阅[sp_trace_setfilter &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md).  
+ 返回以下信息。 有关列的详细信息，请参阅[sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -67,7 +67,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**值**|**sql_variant**|指定应用筛选器的值。|  
   
 ## <a name="remarks"></a>注释  
- 用户集*trace_id*值来识别、 修改和控制跟踪。 传递特定的跟踪的 ID 时**fn_trace_getfilterinfo**返回该跟踪的任何筛选器信息。 如果指定的跟踪没有筛选器，则此函数将返回空行集。 传递无效 ID 时，此函数将返回空行集。 有关跟踪的类似信息，请参阅[sys.fn_trace_getinfo &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+ 用户集*trace_id*值来识别、 修改和控制跟踪。 传递特定的跟踪的 ID 时**fn_trace_getfilterinfo**返回该跟踪的任何筛选器信息。 如果指定的跟踪没有筛选器，则此函数将返回空行集。 传递无效 ID 时，此函数将返回空行集。 有关跟踪的类似信息，请参阅[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 ALTER TRACE 权限。  
@@ -85,11 +85,11 @@ GO
  [创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sys.fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys.fn_trace_gettable &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

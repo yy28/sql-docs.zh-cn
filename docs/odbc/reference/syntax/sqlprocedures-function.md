@@ -2,7 +2,7 @@
 title: SQLProcedures 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b919ad9ca1e42ea87e1ac4891870dc8091beb722
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5420d0adf427a95dec7cbfe224d4b77621c9a5d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函数
 **一致性**  
@@ -66,7 +66,7 @@ SQLRETURN SQLProcedures(
  *NameLength1*  
  [输入]以字符为单位的长度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [输入]过程的架构名称的字符串的搜索模式。 如果驱动程序支持架构有关的某些过程而不是其他人，如当驱动程序检索数据从不同 Dbms，空字符串 ("") 表示没有架构这些过程。  
   
  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *SchemaName*视为标识符和其大小写并不重要。 如果它是 SQL_FALSE， *SchemaName*是一个模式值参数; 它原义，处理和其大小写很重要。  
@@ -134,7 +134,7 @@ SQLRETURN SQLProcedures(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|@shouldalert|Varchar|过程目录标识符;如果不适用于数据源为 NULL。 如果驱动程序支持目录有关的某些过程而不是其他人，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 对于这些没有目录的过程。|  
+|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|过程目录标识符;如果不适用于数据源为 NULL。 如果驱动程序支持目录有关的某些过程而不是其他人，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 对于这些没有目录的过程。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|过程架构标识符;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于一些过程，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 对于这些没有架构的过程。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|Varchar 不为 NULL|过程标识符。|  
 |NUM_INPUT_PARAMS (ODBC 2.0)|4|N/A|保留供将来使用。 应用程序不应依赖于这些结果列中返回的数据。|  

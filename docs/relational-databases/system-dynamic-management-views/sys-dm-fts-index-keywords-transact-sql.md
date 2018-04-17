@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_fts_index_keywords (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_fts_index_keywords (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687a81711efdaf98f142a0d314db94a53cc74371
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 15f5d049e711e8c6a81c937edbaf5d17b82d4bf9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="arguments"></a>参数  
  db_id('*database_name*')  
- 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受数据库名称，并返回数据库 ID，其中**sys.dm_fts_index_keywords**用于查找指定的数据库。 如果*database_name*是省略，则返回当前数据库 ID。  
+ 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受数据库名称，并返回数据库 ID，其中**sys.dm_fts_index_keywords**用于查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID。  
   
  object_id('*table_name*')  
  调用[OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md)函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
@@ -63,7 +63,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**keyword**|**nvarchar(4000)**|十六进制表示形式存储于全文索引内的关键字。<br /><br /> 注意： OxFF 表示指示文件或数据集的末尾的特殊字符。|  
+|**关键字**|**nvarchar(4000)**|十六进制表示形式存储于全文索引内的关键字。<br /><br /> 注意： OxFF 表示指示文件或数据集的末尾的特殊字符。|  
 |**display_term**|**nvarchar(4000)**|关键字的可读格式。 这种格式是从十六进制格式派生的。<br /><br /> 注意： **display_term**值 OxFF 为"的文件结尾"。|  
 |**column_id**|**int**|从中对当前关键字进行全文索引的列的 ID。|  
 |**document_count**|**int**|包含当前字词的文档或行的数目。|  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [全文搜索和语义搜索动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.numbered_procedure_parameters (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.numbered_procedure_parameters (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - numbered_procedure_parameters_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.numbered_procedure_parameters catalog view
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8510807f4e06cb1f880be1bb982eee59db6994f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0d4a543f38711f966900a7b9a19533725fcfd7c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ ms.lasthandoff: 11/27/2017
 |**user_type_id**|**int**|为用户的参数定义的类型的 ID。|  
 |**max_length**|**int**|参数的最大长度（字节）。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max) 或 varbinary(max)。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
-|**缩放**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
+|**小数位数**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
 |**is_output**|**bit**|1 = 输出或返回参数；否则为 0|  
 |**is_cursor_ref**|**bit**|1 = 参数是一个光标引用参数。|  
   
 > [!NOTE]  
 >  带编号的过程不支持 XML 和 CLR 参数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

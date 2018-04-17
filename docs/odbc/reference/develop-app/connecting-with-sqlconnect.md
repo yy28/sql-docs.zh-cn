@@ -1,15 +1,16 @@
 ---
-title: "使用 SQLConnect 连接 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQLConnect 连接 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd3644acb609a041c53232a757fa27fc5b5a4bf1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcb591c8fb9e3921ad3788669f47290384c302e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 连接
 **SQLConnect**是最简单的连接函数。 它需要数据源名称，并接受可选的用户 ID 和密码。 它适用于应用程序，硬编码的数据源名称和不需要用户 ID 或密码。 也适用于很好地为想要的应用程序控制其自己"外观和感觉"或具有没有用户界面。 此类应用程序可以生成使用的数据源的列表**SQLDataSources**，提示用户输入数据源、 用户 ID 和密码，然后调用**SQLConnect**。  

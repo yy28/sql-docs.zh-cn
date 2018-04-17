@@ -1,30 +1,31 @@
 ---
-title: "事务 ODBC |Microsoft 文档"
-ms.custom: 
+title: 事务 ODBC |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 943c1240a9a9ad80c5787597f01917c517966005
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa56e9d1827b5a4335afb94fc8e69085e662009d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions-odbc"></a>ODBC 事务
 A*事务*是工作的单元，都将作为一个原子操作; 也就是说，此操作成功，要么作为一个整体失败。 例如，考虑将资金从一个银行帐户转移到另一个。 这涉及到两个步骤： 从第一个帐户中取出 money 和存储在第二个。 很重要，这两个步骤都成功;不是可接受的一个步骤，若要成功执行，另一个失败。 支持事务的数据库就能够保证这一点。  

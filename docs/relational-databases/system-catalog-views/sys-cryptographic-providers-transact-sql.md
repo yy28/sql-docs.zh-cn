@@ -1,16 +1,16 @@
 ---
-title: "sys.cryptographic_providers (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.cryptographic_providers (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cryptographic_providers
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.cryptographic_providers catalog view
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c453171a7378a0fb7201c8a2e577b207e5042337
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 30d84da2b80e4e9f2a65ee013cfa28356cb1078c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|加密提供程序的标识号。|  
 |**名称**|**sysname**|加密提供程序的名称。|  
-|**guid**|**uniqueidentifier**|唯一的提供程序 GUID。|  
+|**Guid**|**uniqueidentifier**|唯一的提供程序 GUID。|  
 |**version**|**nvarchar(50)**|格式提供程序的版本*aa.bb.cccc.dd*。|  
 |**dll_path**|**nvarchar(512)**|实现可扩展密钥管理 (EKM) 应用程序编程接口 (API) 的 DLL 的路径。|  
 |**is_enabled**|**bit**|服务器上是否启用了此提供程序。<br /><br /> 0 = 未启用（默认值）<br /><br /> 1 = 已启用|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>注释  
  **Sys.cryptographic_providers**视图是公开可见。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

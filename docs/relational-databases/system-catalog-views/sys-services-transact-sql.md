@@ -1,16 +1,16 @@
 ---
-title: "sys.services (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.services (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.services
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.services catalog view
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5525d2b97d55aad0453a61724bda0061cd7ad3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 78dc605705ec54d912adcf32a7c03441eacefa57
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/27/2017
 |**principal_id**|**int**|拥有此服务的数据库主体的标识符。 可以为 NULL。|  
 |**service_queue_id**|**int**|此服务使用的队列的对象 ID。 不可为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "CLR 集成编程模型限制 |Microsoft 文档"
-ms.custom: 
+title: CLR 集成编程模型限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a63ef5e4f3d2db6db5b90c91af4714fa035f45bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-在生成托管的存储的过程或其他托管的数据库对象时，还有一些代码检查由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，需要考虑。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管的代码程序集执行检查时首次将其注册在数据库中，使用**CREATE ASSEMBLY**语句，并还在运行时。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管的代码必须满足的要求取决于是否作为注册程序集**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**，**安全**正在严格，并如下所示。  
+  在生成托管的存储的过程或其他托管的数据库对象时，还有一些代码检查由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，需要考虑。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 托管的代码程序集执行检查时首次将其注册在数据库中，使用**CREATE ASSEMBLY**语句，并还在运行时。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管的代码必须满足的要求取决于是否作为注册程序集**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**，**安全**正在严格，并如下所示。  
   
  除了对托管代码程序集进行了限制，还授予了一些代码安全权限。 公共语言运行时 (CLR) 支持称为代码访问安全性 (CAS) 的托管代码安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 **安全**， **EXTERNAL_ACCESS**，和**UNSAFE**程序集具有不同的 CAS 权限。 有关详细信息，请参阅[CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
   

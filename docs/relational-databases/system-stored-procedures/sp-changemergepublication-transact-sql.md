@@ -1,16 +1,16 @@
 ---
-title: "sp_changemergepublication (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changemergepublication (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f1798cd29ac1ee4afc0d7323866e37711291851
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +50,18 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@property=**] *属性*  
+ [  **@property=**] *****属性*****  
  给定发布的要更改的属性。 *属性*是**sysname**，和可以值之一列出在后面的表。  
   
- [  **@value=**] *值*  
+ [  **@value=**] *****值*****  
  指定属性的新值。 *值*是**nvarchar （255)**，和可以值之一列出在后面的表。  
   
  下表介绍可以更改，并描述了对这些属性的值限制该发布的属性。  
   
-|属性|值|Description|  
+|属性|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|允许匿名订阅。|  
 ||**false**|不允许匿名订阅。|  
@@ -86,7 +86,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|冲突记录存储在冲突解决中落选的服务器上。 如果更改此属性，则必须重新初始化现有订阅服务器。|  
 |**compress_snapshot**|**true**|备用快照文件夹中的快照将压缩为 CAB 格式。 不能压缩默认快照文件夹中的快照。 若要更改此属性，则需要新的快照。|  
 ||**false**|默认情况下，不压缩快照。 若要更改此属性，则需要新的快照。|  
-|**conflict_logging**|**发布服务器**|在发布服务器上存储冲突记录。|  
+|**conflict_logging**|**publisher**|在发布服务器上存储冲突记录。|  
 ||**订阅服务器**|在导致冲突的订阅服务器上存储冲突记录。 不支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器*。*|  
 ||**两者**|在发布服务器和订阅服务器上都存储冲突记录。|  
 |**conflict_retention**||**Int** ，以天为单位，冲突将保留为其指定的保持期。 设置*conflict_retention*到**0**意味着不需要任何冲突清理。|  
@@ -114,10 +114,10 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**replicate_ddl**|**1**|复制发布服务器上执行的数据定义语言 (DDL) 语句。|  
 ||**0**|不复制 DDL 语句。|  
 |**保持期**||这是**int**表示数的*retention_period_unit*单位用于保存为给定的发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意： 合并发布的保持期具有一个 24 小时宽限期，以适应订阅服务器在不同时区。|  
-|**retention_period_unit**|**一天**|按天指定保持期。|  
-||**周**|按周指定保持期。|  
-||**月**|按月指定保持期。|  
-||**年**|按年指定保持期。|  
+|**retention_period_unit**|**day**|按天指定保持期。|  
+||**week**|按周指定保持期。|  
+||month|按月指定保持期。|  
+||year|按年指定保持期。|  
 |**snapshot_in_defaultfolder**|**true**|在默认快照文件夹中存储快照文件。|  
 ||**false**|快照文件存储在由指定的备用位置*alt_snapshot_folder*。 此组合指定将快照文件同时存储在默认位置和备用位置中。|  
 |**snapshot_ready**|**true**|用于发布的快照已准备就绪。|  
@@ -125,7 +125,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**活动**|发布处于活动状态。|  
 ||**非活动状态**|发布处于非活动状态。|  
 |**sync_mode**|**本机**或<br /><br /> **bcp 本机**|将所有表的本机模式大容量复制程序输出用于初始快照。|  
-||**字符**<br /><br /> 或**bcp 字符**|将所有表的字符模式大容量复制程序输出用于初始快照，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器必须执行此操作。|  
+||**character**<br /><br /> 或**bcp 字符**|将所有表的字符模式大容量复制程序输出用于初始快照，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器必须执行此操作。|  
 |**use_partition_groups**<br /><br /> 注意： 之后使用 partition_groups，如果你要恢复到使用**setupbelongs**，并设置**use_partition_groups = false**中**changemergearticle**，这可能不是正确反映后拍摄快照时。 快照生成的触发器符合分区组的要求。<br /><br /> 此方案的解决方法是将状态设置为非活动，请修改**use_partition_groups**，然后将状态设置为活动。|**true**|发布使用预计算分区。|  
 ||**false**|发布不使用预计算分区。|  
 |**validate_subscriber_info**||列出用于检索订阅服务器信息的函数。 然后，验证要用于订阅服务器的动态筛选条件以验证是否对信息进行了一致的分区。|  
@@ -197,14 +197,14 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergepublication**。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergepublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

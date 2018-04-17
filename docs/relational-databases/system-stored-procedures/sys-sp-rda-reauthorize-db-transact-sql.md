@@ -1,16 +1,16 @@
 ---
-title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_rda_reauthorize_db (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reauthorize_db
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3450d9d9dc491e0c3c57b560281148929d0ce907
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a62cae8b4c47975d7d0941458fefbafea7c6288a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  是与本地的已启用延伸的数据库相关联的数据库范围凭据。  
   
  @with_copy = *@with_copy*  
- 指定是否使远程数据的副本，连接到副本 （推荐）。 *@with_copy*是位。  
+ 指定是否使远程数据的副本，连接到副本 （推荐）。 *@with_copy* 是位。  
   
  @azure_servername = *@azure_servername*  
- 指定包含远程数据的 Azure 服务器的名称。 *@azure_servername*为 sysname。  
+ 指定包含远程数据的 Azure 服务器的名称。 *@azure_servername* 为 sysname。  
   
  @azure_databasename = *@azure_databasename*  
- 指定包含远程数据的 Azure 数据库的名称。 *@azure_databasename*为 sysname。  
+ 指定包含远程数据的 Azure 数据库的名称。 *@azure_databasename* 为 sysname。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
@@ -78,7 +78,7 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

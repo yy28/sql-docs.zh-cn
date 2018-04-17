@@ -1,36 +1,36 @@
 ---
-title: "扩展存储过程程序员引用 | Microsoft Docs"
-ms.custom: 
+title: 扩展存储过程程序员引用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], listed
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b01374dd2432bff534a6a795a15382d2a7ef494
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: d0035bdc69a5ccc8b5e5baef0c3590b54b614e2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>数据库引擎扩展存储过程 - 引用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展存储过程 API（以前是开放式数据服务的一部分）提供了基于服务器的应用程序编程接口 (API)，用于扩展 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 该 API 由用于生成应用程序的 C 和 C++ 函数及宏组成。  
   

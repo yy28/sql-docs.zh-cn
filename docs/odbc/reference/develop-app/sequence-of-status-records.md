@@ -1,31 +1,32 @@
 ---
-title: "状态记录的序列 |Microsoft 文档"
-ms.custom: 
+title: 状态记录的序列 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a101cf26b66f3556330354c0fa9ded4c6d9ad583
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0a45a5be0c99dd6389fd060cc53f5140c5e7c263
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sequence-of-status-records"></a>状态记录的序列
 如果返回了两个或多个状态记录，驱动程序管理器和驱动程序它们设置级别根据以下规则。 具有最高级别的记录是第一条记录。 记录 （驱动程序管理器、 驱动程序、 网关，等） 的源不会被视为时排名记录。  

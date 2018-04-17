@@ -1,15 +1,16 @@
 ---
-title: "状态转换 |Microsoft 文档"
-ms.custom: 
+title: 状态转换 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c94806fae462803c3323c3e3c5768751e53a5467
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="state-transitions"></a>状态转换
 ODBC 定义离散*状态*为每个环境，每个连接和每个语句。 例如，环境有三个可能的状态： 未分配的 （中都没有环境将分配），已分配 （在其中分配环境，但没有连接被分配） 和连接 （在其环境和一个或多个连接都是已分配）。 连接具有七个可能的状态;语句具有 13 可能的状态。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_audit_write (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_audit_write (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_audit_write
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10c74597481f6274485b894c30ac6946bb75fd8a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 398618005633883f9cdd7bac7c6d747a3b5b7a1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
 ## <a name="arguments"></a>参数  
  **@user_defined_event_id**  
- 用户定义的参数，并记录在**user_defined_event_id**审核日志的列。 *@user_defined_event_id*是类型**smallint**。  
+ 用户定义的参数，并记录在**user_defined_event_id**审核日志的列。 *@user_defined_event_id* 是类型**smallint**。  
   
  **@succeeded**  
- 用户为指示事件是否成功而传递的参数。 它将出现在审核日志的成功列中。 *@succeeded*是**位**。  
+ 用户为指示事件是否成功而传递的参数。 它将出现在审核日志的成功列中。 *@succeeded* 是**位**。  
   
  **@user_defined_information**  
- 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 *@user_defined_information*是**nvarchar （4000)**。  
+ 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 *@user_defined_information* 是**nvarchar （4000)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -66,7 +66,7 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
 ## <a name="remarks"></a>注释  
  当**USER_DEFINED_AUDIT_GROUP**被添加到服务器审核规范或数据库审核规范中，通过触发的事件**sp_audit_write**将包括在审核日志。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**公共**数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -89,7 +89,7 @@ EXEC sp_audit_write 27, 0;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   

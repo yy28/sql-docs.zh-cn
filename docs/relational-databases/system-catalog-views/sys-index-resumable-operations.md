@@ -1,16 +1,16 @@
 ---
-title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.index_resumable_operations (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.index_resumable_operations_TSQL
@@ -20,17 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53b6aad214f3d1760bb03ff340e5a5dab30c1067
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 5ab677122523c42f27aa206104911f213510d35e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/03/2018
 |**sql_text**|**nvarchar(max)**|DDL T-SQL 的语句文本|
 |**last_max_dop**|**int**|上次 MAX_DOP 使用 (默认值 = 0)|
 |**partition_number**|**int**|拥有索引或堆中的分区号。 对于未分区表和索引或用例中的所有分区都正在此列的重新生成值为 NULL。|
-|**状态**|**tinyint**|可恢复的索引的操作状态：<br /><br />0=Running<br /><br />1=Pause|
+|**状态**|**tinyint**|可恢复的索引的操作状态：<br /><br />0 = 运行<br /><br />1 = 暂停|
 |**state_desc**|**nvarchar(60)**|可恢复的索引 （运行或暂停） 的操作状态的说明|  
 |**start_time**|**datetime**|索引操作开始时间 (不可为 null)|
 |**last_pause_time**|**datatime**| 索引操作 (可以为 null) 的最后一个暂停时间。 如果操作已运行，而绝不会暂停，则为 NULL。|
@@ -65,11 +66,11 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
   
 ## <a name="see-also"></a>另请参阅 
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)    
- [目录视图 &#40;Transact SQL &#41;](catalog-views-transact-sql.md) [对象目录视图 &#40;Transact SQL &#41;](object-catalog-views-transact-sql.md) [sys.indexes &#40;Transact SQL &#41;](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;Transact SQL &#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
+ [目录视图&#40;TRANSACT-SQL&#41; ](catalog-views-transact-sql.md) [对象目录视图&#40;TRANSACT-SQL&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;TRANSACT-SQL&#41; ](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;Transact SQL&#41;](sys-index-columns-transact-sql.md)   
+ [sys.xml_indexes (Transact-SQL)](sys-xml-indexes-transact-sql.md)   
+ [sys.objects (Transact-SQL)](sys-index-columns-transact-sql.md)   
+ [sys.key_constraints &#40;Transact SQL&#41;](sys-key-constraints-transact-sql.md)   
+ [sys.filegroups (Transact-SQL)](sys-filegroups-transact-sql.md)   
+ [sys.partition_schemes (Transact-SQL)](sys-partition-schemes-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](querying-the-sql-server-system-catalog-faq.md)   
   

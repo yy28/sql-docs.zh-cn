@@ -1,39 +1,40 @@
 ---
-title: "sys.external_tables (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.external_tables (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c261068e68503ff01429c3b215261dffcb48053
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bf4bceb7932cb5f8a5f4f891015efb4e540d6cf9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
+# <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   包含当前数据库中每个外部表的行。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|\<继承列 >||该视图继承的列的列表，请参阅[sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
+|\<继承列 >||该视图继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。||  
 |max_column_id_used|**int**|为此表中曾经使用的最大的列 ID。||  
 |uses_ansi_nulls|**bit**|在创建表时，将 SET ANSI_NULLS 数据库选项设置为 ON。||  
 |data_source_id|**int**|外部数据源的对象 ID。||  
@@ -52,8 +53,8 @@ ms.lasthandoff: 02/03/2018
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys.external_data_sources &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+ [sys.external_file_formats &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys.external_data_sources &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

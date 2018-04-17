@@ -1,15 +1,15 @@
 ---
-title: "映射数据类型 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 映射数据类型 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [ODBC]
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sql_variant data type
 - SQL Server Native Client ODBC driver, data types
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f7d92d0580f7c56a17f1de332204622eee15948
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cf59cc129d6442d08154df95ff9b02f5d417c405
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-data-types-odbc"></a>映射数据类型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,6 +99,6 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
  **SQL_SS_VARIANT**，新数据类型特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序，使用数据发送到**sql_variant**列。 使用参数向服务器发送数据时 (例如，插入到 TableName 值 (？，？))， [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)用于指定包括 C 类型和相应的参数信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序会将 C 数据类型转换为相应之一**sql_variant**子类型。  
   
 ## <a name="see-also"></a>另请参阅  
- [处理结果 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [处理结果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

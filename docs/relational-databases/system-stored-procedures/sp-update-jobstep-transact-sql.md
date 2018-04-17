@@ -2,7 +2,7 @@
 title: sp_update_jobstep (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ sp_update_jobstep
  [ **@subsystem =**] **'***subsystem***'**  
  Microsoft SQL Server 代理用于执行的子系统*命令*。 *子系统*是**nvarchar （40)**，默认值为 NULL。  
   
- [ **@command =**] **'***command***'**  
+ [  **@command =**] *****命令*****  
  若要通过执行命令*子系统*。 *命令*是**nvarchar (max)**，默认值为 NULL。  
   
  [ **@additional_parameters =**] **'***parameters***'**  
@@ -199,8 +199,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [查看或修改的作业](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

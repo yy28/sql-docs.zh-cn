@@ -1,16 +1,16 @@
 ---
-title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_enum_login_for_proxy (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8235a8c0fa9febcad446f9a6c48eecf6c470d592
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1d8deedb9e4a534c5d30534cf874e8be8af17324
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name**= ] '*name*'  
+ [ **@name**=] '*名称*  
  名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主体、 登录名、 服务器角色或**msdb**到列表的代理的数据库角色。 名称是**nvarchar(256)**，默认值为 NULL。  
   
  [ **@proxy_id**= ] *id*  
@@ -68,7 +68,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**proxy_name**|**sysname**|代理服务器的名称。|  
 |**名称**|**sysname**|关联的安全主体服务器的名称。|  
-|**flags**|**int**|安全主体服务器的类型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名<br /><br /> **1** = 固定的系统角色<br /><br /> **2** = 中的数据库角色**msdb**|  
+|**flag**|**int**|安全主体服务器的类型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名<br /><br /> **1** = 固定的系统角色<br /><br /> **2** = 中的数据库角色**msdb**|  
   
 ## <a name="remarks"></a>注释  
  当未提供参数时， **sp_enum_login_for_proxy**列出有关实例中的所有登录名为每个代理的信息。  
@@ -108,7 +108,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

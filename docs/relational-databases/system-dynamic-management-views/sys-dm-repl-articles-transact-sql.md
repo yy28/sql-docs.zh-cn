@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_repl_articles (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_repl_articles (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2514ef1aea1e096a1bb543e7a1a815f923afaadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ ms.lasthandoff: 02/03/2018
 |**wszArtdesttable**|**nvarchar(514)**|目标中已发布对象的名称。|  
 |**wszArtdesttableowner**|**nvarchar(514)**|目标中已发布对象的所有者。|  
 |**wszArtinscmd**|**nvarchar(510)**|用于插入的命令或存储过程。|  
-|**cmdTypeIns**|**int**|用于插入存储过程的调用语法，可以为以下值之一。<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeIns**|**int**|用于插入存储过程的调用语法，可以为以下值之一。<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = 未知|  
 |**wszArtdelcmd**|**nvarchar(510)**|用于删除的命令或存储过程。|  
-|**cmdTypeDel**|**int**|用于删除存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeDel**|**int**|用于删除存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = 未知|  
 |**wszArtupdcmd**|**nvarchar(510)**|用于更新的命令或存储过程。|  
-|**cmdTypeUpd**|**int**|用于更新存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeUpd**|**int**|用于更新存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = 未知|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|用于部分更新的命令或存储过程。|  
 |**cmdTypePartialUpd**|**int**|用于部分更新存储过程的调用语法，可以为以下值之一。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|垂直筛选项目的分区中的列数。|  
-|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分更新|  
+|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = DELETE<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分更新|  
 |**artgeninscmd**|**nvarchar(510)**|基于项目中所包含列的 INSERT 命令模板。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE 命令模板，可以包括项目中包含的主键或列，具体取决于所使用的调用语法。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE 命令模板，可以包括主键、更新列或完整的列列表，具体取决于所使用的调用语法。|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与复制相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [与复制相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

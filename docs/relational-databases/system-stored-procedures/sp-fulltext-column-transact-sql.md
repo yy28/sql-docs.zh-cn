@@ -1,16 +1,16 @@
 ---
-title: sp_fulltext_column (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_fulltext_column (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_column_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1099b9ee7ebf38703701a2160e15d24b80ba859
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -62,16 +63,16 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建文本中存储的数据列的全文索引**varbinary （max)**或**映像**数据类型。 不对图像和图片进行索引。  
   
- [ **@action=** ] **'***action***'**  
+ [  **@action=** ] *****操作*****  
  要执行的操作。 *操作*是**varchar （20)**、 与没有默认值，可以是以下值之一。  
   
 |“值”|Description|  
 |-----------|-----------------|  
 |**add**|将添加*column_name*的*qualified_table_name*到表的非活动的全文索引。 此操作可启用列以进行全文索引。|  
-|**drop**|删除*column_name*的*qualified_table_name*从表的非活动的全文索引。|  
+|**拖放**|删除*column_name*的*qualified_table_name*从表的非活动的全文索引。|  
   
  [ **@language=** ] **'***language_term***'**  
- 存储在列中的数据的语言。 有关中包含的语言的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[sys.fulltext_languages &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ 存储在列中的数据的语言。 有关中包含的语言的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  如果列包含的数据使用了多种语言或不支持的语言，则使用“非特定语言”。 默认值通过配置选项“默认全文语言”指定。  
@@ -125,11 +126,11 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
   
 ## <a name="see-also"></a>另请参阅  
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
- [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
- [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_columns &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [全文搜索和语义搜索存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [全文搜索和语义搜索存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

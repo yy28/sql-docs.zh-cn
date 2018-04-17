@@ -1,16 +1,16 @@
 ---
-title: "sp_helparticledts (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helparticledts (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticledts
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26fef36faaa73d6e97e2b5cebc5548b8b2e1b8c3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 70823adfe5fe3cece72f0ac0a6fa492f646253ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] *发布*  
+ [  **@publication =**] *****发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *文章*  
+ [  **@article=**] *****文章*****  
  是发布中的名称。 *文章*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
@@ -70,7 +70,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
  在复制 Data Transformation Services (DTS) 程序中命名任务时，必须遵从复制代理所需的某些命名约定。 对于自定义任务（如执行 SQL 任务），名称是由项目名称、前缀和可选部分组成的串联字符串。 编写代码时，如果不能确定任务名，则结果集将给出应使用的任务名。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helparticledts**。  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_grant_proxy_to_subsystem (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_grant_proxy_to_subsystem (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_grant_login_to_subsystem_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df9499f7c562cf353e5bf2a71ba50b8ff6b33a36
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2cf2ce50f8e59c5c02b99a84bda91bd512dff522
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_grant_proxy_to_subsystem
   
 |“值”|说明|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> **\*\*重要\* \***  ActiveX 脚本子系统将不再从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中的代理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> **\*\* 重要\* \***  ActiveX 脚本子系统将不再从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中的代理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |**3**|操作系统 (**CmdExec**)|  
 |**4**|复制快照代理|  
 |**5**|复制日志读取器代理|  
@@ -124,9 +124,9 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [实现 SQL Server 代理安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
- [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_revoke_proxy_from_subsystem &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_update_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_update_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

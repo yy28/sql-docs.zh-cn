@@ -1,15 +1,16 @@
 ---
-title: "使用文件数据源连接 |Microsoft 文档"
-ms.custom: 
+title: 使用文件数据源连接 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70b0f5dd8c8ff133d1eb1b1a35c5ce24a7cc7ad5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>使用文件数据源连接
 .Dsn 文件中存储文件数据源的连接信息。 因此，可以重复使用单个用户或如果他们具有适当的驱动程序安装在多个用户之间共享的连接字符串。 该文件包含驱动程序名称 （或对于非共享的文件数据源的另一个数据源名称） 和 （可选） 可以使用的连接字符串**SQLDriverConnect**。 驱动程序管理器生成连接字符串，调用**SQLDriverConnect**从.dsn 文件中的关键字。  

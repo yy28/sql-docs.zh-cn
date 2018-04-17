@@ -1,16 +1,16 @@
 ---
-title: "sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.QUERY_STORE_RUNTIME_STATS_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - query_store_runtime_stats catalog view
 - sys.query_store_runtime_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cf026cb9beff10c6570a94bdd805aa2b78c0a4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59e280a58f0b220ea7bff6f530833f16ba69dfe3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|表示运行时执行统计信息的行标识符**plan_id**， **execution_type**和**runtime_stats_interval_id**。 它是唯一的仅为过去的运行时统计信息时间间隔。 对于当前处于活动状态的间隔可能会有表示引用的计划的运行时统计信息的多个行**plan_id**，与执行类型由**execution_type**。 通常情况下，一行表示运行时统计信息，将被刷新到磁盘，而其他 (s) 表示内存中状态。 因此，若要获得每个间隔的实际状态需要聚合度量值，通过分组**plan_id**， **execution_type**和**runtime_stats_interval_id**。 |  
-|**plan_id**|**bigint**|外键。 将联接到[sys.query_store_plan &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|外键。 将联接到[sys.query_store_runtime_stats_interval &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|外键。 将联接到[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
+|**runtime_stats_interval_id**|**bigint**|外键。 将联接到[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
 |**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0 – 常规执行 （成功完成）<br /><br /> 3 – 启动的客户端已中止执行<br /><br /> 4-异常已中止执行|  
-|**execution_type_desc**|**nvarchar （128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3 – 中止<br /><br /> 4-异常|  
+|**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3 – 中止<br /><br /> 4-异常|  
 |**first_execution_time**|**datetimeoffset**|聚合间隔内的查询计划的第一个执行时间。|  
 |**last_execution_time**|**datetimeoffset**|上次执行时间为查询计划在聚合时间间隔内。|  
 |**count_executions**|**bigint**|个聚合间隔内的查询计划的执行的总计数。|  
@@ -100,19 +101,19 @@ ms.lasthandoff: 11/21/2017
 |**max_log_bytes_used**|**bigint**|最大的查询计划，在聚合时间间隔内所使用的数据库日志中的字节数。  适用**仅到 Azure SQL Database**。| 
 |**stdev_log_bytes_used**|**float**|使用查询计划，在聚合时间间隔内的数据库日志中的字节数的标准偏差。  适用**仅到 Azure SQL Database**。|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW DATABASE STATE**权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.database_query_store_options &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询存储存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [查询存储存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

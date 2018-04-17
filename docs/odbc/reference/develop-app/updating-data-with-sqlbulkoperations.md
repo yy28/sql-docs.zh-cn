@@ -1,31 +1,32 @@
 ---
-title: "使用 SQLBulkOperations 更新数据 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQLBulkOperations 更新数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLBulkOperations function [ODBC], updating data
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a05bb864486c97c9b5debbc5022f3d62bb8b2fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df37a52b772c5bca3465e12d17ea425440a12a4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新数据
 应用程序可以执行大容量更新、 删除、 提取或插入操作上具有对的调用的数据源中的基础表**SQLBulkOperations**。 调用**SQLBulkOperations**是一个便捷替代方式构造和执行 SQL 语句。 它可让 ODBC 驱动程序支持定位的更新，即使数据源不支持定位的 SQL 语句。 它是范例的通过函数调用实现完整的数据库访问的一部分。  

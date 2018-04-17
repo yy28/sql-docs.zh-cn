@@ -1,15 +1,15 @@
 ---
-title: "客户端连接中的服务主体名称 (SPN) 支持 |Microsoft 文档"
-ms.custom: 
+title: 客户端连接中的服务主体名称 (SPN) 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, SPNs
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe0670bbb967a10d2d14750f2a32a321cc912fce
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9281aae9e4e6aef2a48c0f99362689512613b405
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 
   开头[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]，对服务主体名称 (Spn) 的支持已扩展为跨所有协议进行相互身份验证。 在以前版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，Spn 仅的受支持 Kerberos over TCP 时默认 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例已与 Active Directory 注册。  
   
- Spn 由身份验证协议，用于确定在其中帐户[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例运行。 如果实例帐户已知，则 Kerberos 身份验证可用于通过客户端和服务器提供相互身份验证。 如果实例帐户未知，则使用仅通过服务器提供客户端的身份验证的 NTLM 身份验证。 目前， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 执行身份验证查找，从实例名称和网络连接属性派生 SPN。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例将尝试启动时，注册 Spn，或者可以手动注册。 但是，如果尝试注册 SPN 的帐户的访问权限不足，则注册将失败。  
+ Spn 由身份验证协议，用于确定在其中帐户[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例运行。 如果实例帐户已知，则 Kerberos 身份验证可用于通过客户端和服务器提供相互身份验证。 如果实例帐户未知，则使用仅通过服务器提供客户端的身份验证的 NTLM 身份验证。 目前， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 执行身份验证查找，从实例名称和网络连接属性派生 SPN。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将尝试启动时，注册 Spn，或者可以手动注册。 但是，如果尝试注册 SPN 的帐户的访问权限不足，则注册将失败。  
   
- 域和计算机帐户在 Active Directory 中自动注册。 这些帐户可以用作 SPN，管理员也可以定义自己的 SPN。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以通过允许客户端直接指定要使用的 SPN 的安全身份验证更易于管理并且更可靠。  
+ 域和计算机帐户在 Active Directory 中自动注册。 这些帐户可以用作 SPN，管理员也可以定义自己的 SPN。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以通过允许客户端直接指定要使用的 SPN 的安全身份验证更易于管理并且更可靠。  
   
 > [!NOTE]  
 >  只有在使用 Windows 集成安全性进行连接时，才使用客户端应用程序指定的 SPN。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/25/2018
  新的连接行为由客户端实现，因此这种行为不特定于某个版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-servers-and-delegation"></a>链接服务器和委托  
- 在创建链接的服务器时，  **@provstr** 参数[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)可以用于指定的服务器和故障转移伙伴 Spn。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：建立使用 Kerberos 身份验证的连接更简单且更可靠。  
+ 在创建链接的服务器时， **@provstr**参数[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)可以用于指定的服务器和故障转移伙伴 Spn。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：建立使用 Kerberos 身份验证的连接更简单且更可靠。  
   
  使用链接服务器的委托要求 Kerberos 身份验证。  
   
@@ -111,9 +112,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>支持 SPN 的 ODBC 和 OLE DB 语法  
  有关特定于语法的信息，请参阅以下主题：  
   
--   [服务主体名称 &#40;Spn &#41;在客户端连接 &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [服务主体名称&#40;Spn&#41;客户端连接中&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [服务主体名称 &#40;Spn &#41;在客户端连接 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [服务主体名称&#40;Spn&#41;客户端连接中&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  有关演示此功能的示例应用程序的信息，请参阅 [SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
   

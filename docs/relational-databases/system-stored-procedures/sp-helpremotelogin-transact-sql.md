@@ -1,16 +1,16 @@
 ---
-title: "sp_helpremotelogin (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpremotelogin (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b34842bc6265d9a1615cb1f2e45d727b257a5c90
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1c47b54288d561377444ed8797b2e493c483f8bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @remoteserver  **=**  ] *远程服务器*  
+ [ @remoteserver **=** ] *****远程服务器*****  
  远程服务器，将返回其远程登录名信息。 *远程服务器*是**sysname**，默认值为 NULL。 如果*远程服务器*是未指定，返回有关本地服务器上定义的所有远程服务器的信息。  
   
- [ @remotename  **=**  ] *remote_name*  
+ [ @remotename **=** ] *****remote_name*****  
  远程服务器上的特定远程登录名。 *remote_name*是**sysname**，默认值为 NULL。 如果*remote_name*未指定，则为定义的所有远程用户信息*远程服务器*返回。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -71,7 +71,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ## <a name="remarks"></a>注释  
  使用 sp_helpserver 列出的本地服务器上定义的远程服务器的名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  将不检查任何权限。  
   
 ## <a name="examples"></a>示例  
@@ -91,10 +91,10 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addremotelogin &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpserver & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

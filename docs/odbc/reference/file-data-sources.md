@@ -1,30 +1,31 @@
 ---
-title: "文件数据源 |Microsoft 文档"
-ms.custom: 
+title: 文件数据源 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 254e859c8533625cb34f7d867c62f26bea5cd04d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-data-sources"></a>文件数据源
 *文件数据源*存储在文件中并允许重复使用单个用户或在多个用户之间共享连接信息。 当使用文件数据源时，驱动程序管理器使到使用.dsn 文件中的信息的数据源的连接。 此文件可以像任何其他文件一样操作。 文件数据源没有数据源名称，不机器数据源，以及未注册到任何一个用户或计算机。  

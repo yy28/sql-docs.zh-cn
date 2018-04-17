@@ -1,16 +1,16 @@
 ---
-title: "sys.stats_columns (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.stats_columns (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - stats_columns_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.stats_columns catalog view
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13114155ad4820ee293acdd11b7833083dafd9fc
-ms.sourcegitcommit: c4633058216bcf6748db0eaa0e815761dc98c24d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a22e3d8a70a3f556ebdd0f5c574dffc49730d587
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysstatscolumns-transact-sql"></a>sys.stats_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,12 +50,12 @@ ms.lasthandoff: 12/19/2017
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
  [统计信息](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
- [sys.stats &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
+ [sys.dm_db_stats_histogram &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.stats &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
   
   

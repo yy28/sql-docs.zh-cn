@@ -1,16 +1,16 @@
 ---
-title: "sys.event_log （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.event_log （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - event_log
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b8794f8e4268df504452ca8fe73f13eea371dda2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -55,10 +56,10 @@ ms.lasthandoff: 01/02/2018
 |**event_subtype_desc**|**nvarchar(64)**|事件子类型的说明。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
 |severity|**int**|错误的严重性。 可能的值有：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
 |**event_count**|**int**|次数发生此事件的指定数据库在指定时间间隔内 (**start_time**和**end_time**)。|  
-|**description**|**nvarchar(max)**|对事件的详细说明。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
+|**说明**|**nvarchar(max)**|对事件的详细说明。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
 |**additional_data**|**XML**|*注意： 此值始终为 NULL 的 Azure SQL 数据库 V12。请参阅[示例](#Deadlock)如何检索有关 V12 的死锁事件的部分。*<br /><br /> 有关**死锁**事件，此列包含死锁图。 对于其他事件类型，该列为 NULL。 |  
   
-##  <a name="EventTypes"></a>事件类型  
+##  <a name="EventTypes"></a> 事件类型  
  此视图中的每一行记录的事件由类别 (**event_category**)，事件类型 (**event_type**)，和子类型 (**event_subtype**)。 下表列出了此视图中收集的事件类型。  
   
  中的事件，**连接**类别，sys.database_connection_stats 视图中提供了摘要信息。  
@@ -66,11 +67,11 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]  
 >  此视图不包括所有可能发生的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库事件，而仅限此处列出的事件。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的未来版本中可能会添加其他类别、事件类型和子类型。  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity|**description**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity|**说明**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**连接**|**connection_successful**|0|**connection_successful**|0|已成功连接到数据库。|  
 |**连接**|**connection_failed**|0|**invalid_login_name**|2|登录名在此版本的 SQL Server 中无效。|  
-|**连接**|**connection_failed**|@shouldalert|**windows_auth_not_supported**|2|在此版本的 SQL Server 中不支持 Windows 登录名。|  
+|**连接**|**connection_failed**|1|**windows_auth_not_supported**|2|在此版本的 SQL Server 中不支持 Windows 登录名。|  
 |**连接**|**connection_failed**|2|**attach_db_not_supported**|2|用户已请求附加不受支持的数据库文件。|  
 |**连接**|**connection_failed**|3|**change_password_not_supported**|2|用户已请求更改不受支持的用户登录密码。|  
 |**连接**|**connection_failed**|4|**login_failed_for_user**|2|用户登录失败。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/02/2018
 |**连接**|**connection_failed**|8|**client_close**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 在建立连接时，客户端可能已超时。 尝试增加连接超时值。|  
 |**连接**|**connection_failed**|9|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
 |**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
-|**连接**|**connection_terminated**|@shouldalert|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
+|**连接**|**connection_terminated**|1|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
 |**连接**|**限制**|*\<原因代码 >*|**reason_code**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >*。 有关详细信息，请参阅[引擎限制](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/02/2018
 ## <a name="permissions"></a>权限  
  有权访问用户**master**数据库具有对此视图的只读访问。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 ### <a name="event-aggregation"></a>事件聚合  
  在 5 分钟的间隔内收集和聚合此视图的事件信息。 **Event_count**列表示的特定次数**event_type**和**event_subtype**某个给定的时间间隔内针对特定数据库发生。  
@@ -102,12 +103,12 @@ ms.lasthandoff: 01/02/2018
   
  例如，如果用户在 2/5/2012 (UTC) 的 11:00 到 11:05 之间由于登录名无效而七次均无法连接到数据库 Database1，则此信息将出现在此视图的单一行内：  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity|**event_count**|**description**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity|**event_count**|**说明**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>间隔 start_time 和 end_time  
- 事件包含在某个聚合间隔在事件发生时*上*或*后***start_time**和*之前***end_time**该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
+ 事件包含在某个聚合间隔在事件发生时*上*或*后 * * * start_time** 和*之前 * * * end_time** 该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
   
 ```  
 start_time                    end_time  
@@ -132,7 +133,7 @@ start_time                    end_time
   
 ## <a name="examples"></a>示例  
   
-### <a name="simple-examples"></a>简单的示例  
+### <a name="simple-examples"></a>简单示例  
  以下查询将返回在 9/25/2011 与 9/28/2011 (UTC) 之间发生的所有事件。 默认情况下，查询结果按排序**start_time** （升序）。  
   
 ```  
@@ -148,7 +149,7 @@ SELECT * FROM sys.event_log
 WHERE event_type = 'deadlock'   
     AND database_name = 'Database1';  
 ```  
-<a name="Deadlock"></a>以下查询返回的数据库 Database1 （仅适用于 Azure SQL 数据库 V12） 的所有死锁事件。  
+<a name="Deadlock"></a> 以下查询返回的数据库 Database1 （仅适用于 Azure SQL 数据库 V12） 的所有死锁事件。  
   
 ```  
 WITH CTE AS (  

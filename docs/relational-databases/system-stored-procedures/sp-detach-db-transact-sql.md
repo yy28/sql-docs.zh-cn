@@ -1,16 +1,16 @@
 ---
-title: "sp_detach_db (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_detach_db (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 09/30/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 
+caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*是**nvarchar(10)**默认值为值**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据会被丢弃，除非该数据库是只读的。 如果为 NULL 或**true**，全文索引相关元数据将保留。  
   
 > [!IMPORTANT]  
->  **@keepfulltextindexfile** 的未来版本中将删除参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
+>  **@keepfulltextindexfile**的未来版本中将删除参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -76,7 +76,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  分离数据库时，会删除其所有元数据。 如果该数据库是默认数据库的任何登录帐户， **master**将成为其默认数据库。  
   
 > [!NOTE]  
->  有关如何查看登录名的所有帐户的默认数据库的信息，请参阅[sp_helplogins &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). 如果你具有所需的权限，则可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)为登录名分配新的默认数据库。  
+>  有关如何查看登录名的所有帐户的默认数据库的信息，请参阅[sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果你具有所需的权限，则可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)为登录名分配新的默认数据库。  
   
 ## <a name="restrictions"></a>限制  
  如果符合下列任一条件，则无法分离数据库：  

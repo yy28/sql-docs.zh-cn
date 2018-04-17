@@ -1,16 +1,16 @@
 ---
-title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_os_host_info (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 02/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sys.dm_os_host_info
@@ -22,18 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23adfb73309f54720889b7eb3350bc6b5062f60
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e8e36375f534a187c749bbd4217fddd0a98f8fb9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 返回一行显示操作系统版本信息。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/23/2018
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |一种操作系统： Windows 或 Linux |
 |**host_distribution** |**nvarchar(256)** |操作系统的说明。 |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统发行版 （版本号）。 有关值和说明的列表，请参阅[操作系统版本 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)。 <br> 对于 Linux，返回一个空字符串。 |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统版本（版本号） 有关值和说明的列表，请参阅[操作系统版本 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)。 <br> 对于 Linux，返回一个空字符串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 操作系统的 Service Pack 级别。 <br> 对于 Linux，返回一个空字符串。 |  
 |**host_sku**|**int**|Windows 单品 (SKU) ID。 SKU Id 和说明的列表，请参阅[GetProductInfo 函数](http://msdn.microsoft.com/library/ms724358.aspx)。 可以为 Null。 <br> 适用于 Linux，则返回 NULL。 |  
 |**os_language_version**|**int**|操作系统的 Windows 区域设置标识符 (LCID)。 LCID 值和说明的列表，请参阅[由 Microsoft 分配的区域设置 Id](http://go.microsoft.com/fwlink/?LinkId=208080)。 不可为 null。|  

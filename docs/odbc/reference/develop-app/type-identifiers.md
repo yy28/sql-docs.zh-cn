@@ -1,15 +1,16 @@
 ---
-title: "类型标识符 |Microsoft 文档"
-ms.custom: 
+title: 类型标识符 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - identifiers [ODBC], type
 - type identifiers [ODBC], about type identifiers
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f28e9d5396184b5d83e75bc7fc772a5a208fcdaf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a3de97dbf1ce632f1204a2218ead0c7ddd8cdf2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-identifiers"></a>类型标识符
 若要描述 SQL 和 C 数据类型，ODBC 定义两套*类型标识符*。 类型标识符描述的 SQL 列或 C 缓冲区的类型。 它是**#define**值，和是通常作为函数自变量传递或在元数据中返回。  

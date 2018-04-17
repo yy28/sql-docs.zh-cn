@@ -1,16 +1,16 @@
 ---
-title: "sp_helpreplfailovermode (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpreplfailovermode (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 212775844dde7400ca3ddb17753091aa56b582f1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dd85f6f45b7104c73b83b08d6fc434eb14e9c70b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +50,22 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=**] *发布服务器*  
+ [ **@publisher=**] **'***publisher***'**  
  参与该订阅服务器的更新的发布服务器的名称。 *发布服务器*是**sysname**，无默认值。 必须已为发布配置了发布服务器。  
   
- [  **@publisher_db =**] *publisher_db*  
+ [  **@publisher_db =**] *****publisher_db*****  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  参与该订阅服务器的更新的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@failover_mode_id=**] *failover_mode_id***输出**  
+ [  **@failover_mode_id=**] *****failover_mode_id***输出**  
  返回的故障转移模式的整数值并且是**输出**参数。 *failover_mode_id*是**tinyint**默认值为**0**。 它将返回**0**即时更新和**1**为排队更新。  
   
- [**@failover_mode=**] *failover_mode***输出**  
+ [**@failover_mode=**] *****failover_mode***输出**  
  返回在订阅服务器中修改数据所用的模式。 *failover_mode*是**nvarchar(10)**默认值为 NULL。 是**输出**参数。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**立即**|立即更新：使用两阶段提交协议 (2PC)，将订阅服务器中的更新立即传播到发布服务器。|  
 |**排入队列**|排队更新：将订阅服务器中的更新存储在队列中。|  
@@ -76,10 +76,10 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>注释  
  **sp_helpreplfailovermode**的哪些订阅启用即时更新并用排队更新作为故障转移时，发生故障时，在快照复制或事务复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helpreplfailovermode**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_setreplfailovermode &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

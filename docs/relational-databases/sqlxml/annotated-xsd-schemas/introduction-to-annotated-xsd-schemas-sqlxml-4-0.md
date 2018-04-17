@@ -1,16 +1,16 @@
 ---
-title: "批注的 XSD 架构 (SQLXML 4.0) 简介 |Microsoft 文档"
-ms.custom: 
+title: 批注的 XSD 架构 (SQLXML 4.0) 简介 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af2a4c0523c6cc592105a016950a2b89e090ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f32ce7e230b3ba037eb60385173c9285c50a00bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>带批注的 XSD 架构简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-您可以通过使用 XML 架构定义 (XSD) 语言创建关系数据的 XML 视图。 然后可通过使用 XML Path 语言 (XPath) 查询对这些视图进行查询。 这是类似于通过使用 CREATE VIEW 语句，然后指定针对视图的 SQL 查询创建视图。  
+  您可以通过使用 XML 架构定义 (XSD) 语言创建关系数据的 XML 视图。 然后可通过使用 XML Path 语言 (XPath) 查询对这些视图进行查询。 这是类似于通过使用 CREATE VIEW 语句，然后指定针对视图的 SQL 查询创建视图。  
   
  XML 架构描述了 XML 文档的结构并且还描述了对文档中数据的各种约束。 针对该架构指定 XPath 查询时，返回的 XML 文档的结构由对其执行 XPath 查询的架构确定。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/12/2018
 </xsd:schema>  
 ```  
   
- **\<Xsd:schema >**元素派生自 http://www.w3.org/2001/XMLSchema 的 XML 架构命名空间规范。  
+  **\<Xsd:schema >**元素派生自的 XML 架构命名空间规范http://www.w3.org/2001/XMLSchema。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 架构的批注  
  您可以对 XSD 架构使用批注来描述数据库映射、查询数据库并返回 XML 文档形式的结果。 使用批注可将 XSD 架构映射到数据库表和列。 可以对 XSD 架构创建的 XML 视图指定 XPath 查询来查询数据库并获取 XML 形式的结果。  
@@ -126,18 +127,18 @@ ms.lasthandoff: 02/12/2018
 ## <a name="other-resources"></a>其他资源  
  有关 XML 架构定义语言 (XSD)、XML Path 语言 (XPath) 和可扩展样式表语言转换 (XSLT) 的详细信息，请访问以下网站：  
   
--   XML Schema Part 0: Primer, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
+-   XML 架构第 0 部分： 入门，W3C 建议 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML 架构第 1 部分： 结构，W3C 建议 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2:Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
+-   XML 架构第部分 2:Datatypes，W3C 建议 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XML 路径语言 (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
+-   XSL 转换 (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>另请参阅  
- [带批注的架构安全注意事项 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [带批注的 XDR 架构 &#40; 中不推荐使用的 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [批注架构安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [批注 XDR 架构&#40;在 SQLXML 4.0 中已过时&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

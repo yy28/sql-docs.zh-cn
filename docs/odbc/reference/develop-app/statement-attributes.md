@@ -1,30 +1,31 @@
 ---
-title: "语句属性 |Microsoft 文档"
-ms.custom: 
+title: 语句属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c5ccfeb2d7cf3ba4b0db5767ced1eeeee92c960
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3bfbfb4647d39a06bc3a722cba9a903815429100
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-attributes"></a>语句属性
 语句属性是语句的特性。 例如，若要使用书签和什么类型的光标若要使用的语句的结果集是否是语句属性。  

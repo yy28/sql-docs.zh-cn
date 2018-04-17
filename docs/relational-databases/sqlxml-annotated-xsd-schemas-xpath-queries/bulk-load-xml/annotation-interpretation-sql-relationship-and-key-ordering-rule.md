@@ -1,36 +1,37 @@
 ---
-title: "sql:relationship 和键排序规则 (SQLXML 4.0) |Microsoft 文档"
-ms.custom: 
+title: sql:relationship 和键排序规则 (SQLXML 4.0) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebc4669adf3d2bb468d653fbc0ccefd743bcf334
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 71ccab162c0281afc2237b79d8d1e682ff2d1ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>批注解释-sql:relationship 和键排序规则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-由于 XML 大容量加载在其节点进入作用域时会生成记录，并在其节点退出作用域时会将这些记录发送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，因此，有关记录的数据必须存在于节点的作用域中。  
+  由于 XML 大容量加载在其节点进入作用域时会生成记录，并在其节点退出作用域时会将这些记录发送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，因此，有关记录的数据必须存在于节点的作用域中。  
   
  请考虑以下 XSD 架构中的，在其中之间的一个对多关系**\<客户 >**和**\<顺序 >** （一个客户可以有多个订单） 的元素是使用指定 **\<sql:relationship >**元素：  
   

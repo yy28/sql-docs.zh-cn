@@ -1,29 +1,30 @@
 ---
-title: "更新应用程序从 SQL Server 2005 的本机客户端 |Microsoft 文档"
-ms.custom: 
+title: 更新应用程序从 SQL Server 2005 的本机客户端 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +34,12 @@ ms.lasthandoff: 01/25/2018
   
  从 Microsoft 数据访问组件 (MDAC) 升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时，也会看到一些行为差异。 有关详细信息，请参阅[更新到 SQL Server Native Client 应用程序从 MDAC](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 9.0 附带[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 附带[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 随 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 附带。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 随 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 附带。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端 9.0 附带[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 附带[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 随 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 附带。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 随 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 附带。  
   
 |自 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以来 SQL Server Native Client 中已更改的行为|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB 仅填充到定义的小数位数。|转换其中转换的数据发送到服务器，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 (从[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 填充尾随仅之前的最大长度的数据中的零**datetime**值。 SQL Server Native Client 9.0 则填充到 9 位数。|  
-|验证 ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 (从[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 实现的 OLE DB 要求*bScale*中 ICommandWithParameter::SetParameterInfo 以设 DBTYPE_DBTIMESTAMP 秒的小数部分的精度。|  
+|验证 ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端 (从[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 实现的 OLE DB 要求*bScale*中 ICommandWithParameter::SetParameterInfo 以设 DBTYPE_DBTIMESTAMP 秒的小数部分的精度。|  
 |**Sp_columns**存储过程现在返回**"否"**而不是**"否"** IS_NULLABLE 列。|从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])， **sp_columns**存储过程现在返回**"否"**而不是**"否"** IS_NULLABLE 列.|  
 |SQLSetDescRec、 SQLBindParameter 和 SQLBindCol 现在执行一致性检查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，设置 SQL_DESC_DATA_PTR 不会在 SQLSetDescRec、 SQLBindParameter 或 SQLBindCol 导致任何描述符类型的一致性检查。|  
 |SQLCopyDesc 现在执行描述符一致性检查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，SQLCopyDesc 未执行操作一致性检查特定的记录上设置 SQL_DESC_DATA_PTR 字段时。|  

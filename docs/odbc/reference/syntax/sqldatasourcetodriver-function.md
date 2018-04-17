@@ -2,7 +2,7 @@
 title: SQLDataSourceToDriver 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d09d649bc53a08ff7389413882bb338d9713ffc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcdad2099be94a719333d4e0754318f7c00572df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 函数
 **SQLDataSourceToDriver** supportstranslations ODBC 驱动程序。 不支持 ODBC 的应用程序; 调用此函数应用程序请求通过翻译**SQLSetConnectAttr**。 与关联的驱动程序*ConnectionHandle*中指定**SQLSetConnectAttr**调用指定的 DLL，若要执行的所有数据从数据源流向驱动程序的翻译。 ODBC 初始化文件中，可以指定默认转换 DLL。  

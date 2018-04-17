@@ -1,16 +1,16 @@
 ---
-title: sys.internal_partitions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.internal_partitions (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -18,21 +18,22 @@ applies_to:
 dev_langs:
 - TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3280403d6194bd3f5370985d31e672752ed8c25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 160441134e0f848d9b4c46d6501638e8d46e3244
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  返回为每个跟踪基于磁盘的表的列存储索引的内部数据的行集的一行。 这些行集是列存储索引的内部和跟踪删除行、 行组映射和增量存储行组。 他们可以为每个表分区; 每个跟踪数据每个表有至少一个分区。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它会重新生成列存储索引每次重新创建行集。   
+  返回为每个跟踪基于磁盘的表的列存储索引的内部数据的行集的一行。 这些行集是列存储索引的内部和跟踪删除行、 行组映射和增量存储行组。 他们可以为每个表分区; 每个跟踪数据每个表有至少一个分区。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 它会重新生成列存储索引每次重新创建行集。   
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +69,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

@@ -1,32 +1,32 @@
 ---
-title: "Filestream 和 FileTable 函数 (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: Filestream 和 FileTable 函数 (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - FileTables [SQL Server], system functions
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7382a9c4c4ed059651649cc2c5cc0e204da55c4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6fde3ca99dfeed1854c504d88876ab00baa7faf6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream 和 FileTable 函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +45,6 @@ ms.lasthandoff: 02/09/2018
  [PathName (Transact-SQL)](../../relational-databases/system-functions/pathname-transact-sql.md)  
  返回 FILESTREAM 二进制大型对象 (BLOB) 路径。  
   
- 有关 Filetable 的详细信息，请参阅[Filetable &#40;SQL server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ 有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
   

@@ -2,7 +2,7 @@
 title: SQLExecute 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1660fbd60346aff1c4ef24dcba32a778a00d5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: def8205423e1f79045cb54e80cf9bc33c4d8246d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 函数
 **一致性**  
@@ -66,9 +66,9 @@ SQLRETURN SQLExecute(
 |01004|字符串数据，右截断|字符串或为输出参数返回的二进制数据导致的非空白字符或非 NULL 二进制数据截断。 如果它是一个字符串值，它是右侧被截断。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01006|未撤消特权|已准备的语句与关联*StatementHandle*已**撤消**语句，然后用户没有指定的特权。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01007|未授予的权限|已准备的语句与关联*StatementHandle*已**授予**语句，然后用户无法授予 %1 指定的特权。|  
-|01S02 的警告|选项值已更改|指定的语句属性由于实现工作条件无效，因此暂时替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值可用于*StatementHandle*直到游标关闭，此时语句属性将恢复为以前的值。 可以更改这些语句属性包括： SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 SQL_ATTR_QUERY_TIMEOUT 和 SQL_ATTR_SIMULATE_CURSOR。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|指定的语句属性由于实现工作条件无效，因此暂时替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值可用于*StatementHandle*直到游标关闭，此时语句属性将恢复为以前的值。 可以更改这些语句属性包括： SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 SQL_ATTR_QUERY_TIMEOUT 和 SQL_ATTR_SIMULATE_CURSOR。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S07|小数部分组成的截断|输入/输出返回的数据或输出参数中的内容已被截断，以便数值数据类型的小数部分被截断，或者时间组成部分的时间、 时间戳，还是间隔的数据类型的小数部分被截断。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07002|计数字段不正确|在指定的参数数目**SQLBindParameter**中包含的 SQL 语句中的参数数目少于\* *StatementText*。<br /><br /> **SQLBindParameter**调用时使用*ParameterValuePtr*设置为 null 指针， *StrLen_or_IndPtr*未设置为 SQL_NULL_DATA 或 SQL_DATA_AT_EXEC，和*InputOutputType*到 SQL_PARAM_OUTPUT，未设置，以便在指定的参数数目**SQLBindParameter**大于中包含的 SQL 语句中的参数数目 **StatementText*。|  
+|07002|计数字段不正确|在指定的参数数目**SQLBindParameter**中包含的 SQL 语句中的参数数目少于\* *StatementText*。<br /><br /> **SQLBindParameter**调用时使用*ParameterValuePtr*设置为 null 指针， *StrLen_or_IndPtr*未设置为 SQL_NULL_DATA 或 SQL_DATA_AT_EXEC，和*InputOutputType*到 SQL_PARAM_OUTPUT，未设置，以便在指定的参数数目**SQLBindParameter**大于中包含的 SQL 语句中的参数数目 **StatementText*.|  
 |07006|受限制的数据类型属性冲突|由标识的数据值*ValueType*中的参数**SQLBindParameter**对于无法转换的绑定的参数，标识的数据类型为*ParameterType*中的参数**SQLBindParameter**。<br /><br /> 绑定 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT 不无法转换为标识的数据类型的参数返回的数据值*ValueType*中的参数**SQLBindParameter**。<br /><br /> （如果无法转换一个或多个行的数据值，但没有成功返回一个或多个行，此函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07007|Restricted 的参数值冲突|参数类型 SQL_PARAM_INPUT_OUTPUT_STREAM 仅用于发送和接收数据部分中的参数。 此参数类型不允许输入绑定的缓冲区。<br /><br /> 当参数类型为 SQL_PARAM_INPUT_OUTPUT，和时，将出现此错误\* *StrLen_or_IndPtr*中指定**SQLBindParameter**是否不等于 SQL_NULL_DATA，SQL_DEFAULT_PARAM、 SQL_LEN_DATA_AT_EXEC(len) 或 SQL_DATA_AT_EXEC。|  
 |07S01|不允许使用默认参数|参数值，设置**SQLBindParameter**、 SQL_DEFAULT_PARAM，以及相应的参数不是 ODBC 规范过程调用的参数。|  

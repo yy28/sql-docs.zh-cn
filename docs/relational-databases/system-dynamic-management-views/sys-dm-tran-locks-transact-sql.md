@@ -1,8 +1,8 @@
 ---
-title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_locks (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e4552d7acab5640a6e6b8210b73eff20bf963d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/05/2018
   
  在一个会话下运行的多个游标无法区分，被视为一个实体。  
   
- 与会话 ID 值没有关联的分布式事务是孤立事务，向该事务分配的会话 ID 值为 -2。 有关详细信息，请参阅[KILL &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md).  
+ 与会话 ID 值没有关联的分布式事务是孤立事务，向该事务分配的会话 ID 值为 -2。 有关详细信息，请参阅[KILL & #40;Transact SQL & #41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>资源详细信息  
  下表列出了在中表示的资源**resource_associated_entity_id**列。  
@@ -389,7 +390,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+ [sys.dm_tran_database_transactions &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

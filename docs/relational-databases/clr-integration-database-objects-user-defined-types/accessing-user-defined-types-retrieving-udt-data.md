@@ -1,15 +1,15 @@
 ---
-title: "检索 UDT 数据 |Microsoft 文档"
-ms.custom: 
+title: 检索 UDT 数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf8ac790f91779407bb60fa1f3cfe8f675a7e8f0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 50fb936da78338a86b47b08423585afccad1a5bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>访问用户定义的类型-检索 UDT 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-若要在客户端上创建用户定义类型 (UDT)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中作为 UDT 注册的程序集必须可供客户端应用程序使用。 UDT 程序集可位于该应用程序的相同目录中，也可以位于全局程序集缓存 (GAC) 中。 还可以在项目中设置对该程序集的引用。  
+  若要在客户端上创建用户定义类型 (UDT)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中作为 UDT 注册的程序集必须可供客户端应用程序使用。 UDT 程序集可位于该应用程序的相同目录中，也可以位于全局程序集缓存 (GAC) 中。 还可以在项目中设置对该程序集的引用。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>在 ADO.NET 中使用 UDT 的要求  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的程序集和客户端上的程序集必须兼容，以便在该客户端上创建 UDT。 使用定义的 Udt 的**本机**序列化格式的程序集必须结构兼容。 使用定义的程序集**用户定制**格式，该程序集必须在客户端上可用。  

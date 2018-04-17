@@ -1,16 +1,16 @@
 ---
-title: "XML 大容量加载 (SQLXML 4.0) 简介 |Microsoft 文档"
-ms.custom: 
+title: XML 大容量加载 (SQLXML 4.0) 简介 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nontransacted XML Bulk Load operations
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ebdbed96867a664fe64f6b8508c6a38e97d27166
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大容量加载简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 大容量加载为独立的 COM 对象，您可以将半结构化的 XML 数据加载到 Microsoft[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。  
+  XML 大容量加载为独立的 COM 对象，您可以将半结构化的 XML 数据加载到 Microsoft[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。  
   
  您可以使用 INSERT 语句和 OPENXML 函数将 XML 数据插入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库；但是，当需要插入大量 XML 数据时，大容量加载实用工具提供了更好的性能。  
   
@@ -46,9 +47,9 @@ XML 大容量加载为独立的 COM 对象，您可以将半结构化的 XML 数
   
  本部分假定您熟悉以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能：  
   
--   带批注的 XSD 架构和 XDR 架构。 有关带批注的 XSD 架构的详细信息，请参阅[简介带批注的 XSD 架构 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 有关带批注的 XDR 架构的信息，请参阅[带批注的 XDR 架构 &#40; Deprecated in SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+-   带批注的 XSD 架构和 XDR 架构。 有关带批注的 XSD 架构的详细信息，请参阅[简介带批注的 XSD 架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 有关带批注的 XDR 架构的信息，请参阅[带批注的 XDR 架构&#40;SQLXML 4.0 中弃用&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量插入机制，例如[!INCLUDE[tsql](../../../includes/tsql-md.md)]BULK INSERT 语句和 bcp 实用工具。 有关详细信息，请参阅[BULK INSERT &#40;Transact SQL &#41;](../../../t-sql/statements/bulk-insert-transact-sql.md)和[bcp 实用工具](../../../tools/bcp-utility.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量插入机制，例如 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT 语句和 bcp 实用工具。 有关详细信息，请参阅[大容量插入&#40;TRANSACT-SQL&#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md)和[bcp 实用工具](../../../tools/bcp-utility.md)。  
   
 ## <a name="streaming-of-xml-data"></a>对 XML 数据进行流式处理  
  由于源 XML 文档可能很大，因此无法将整个文档读入内存以进行大容量加载处理。 XML 大容量加载而是将 XML 数据解释为流并读取它。 当该实用工具读取数据时，该工具标识数据库表，并根据 XML 数据源生成相应记录，然后再将这些记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  

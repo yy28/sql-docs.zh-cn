@@ -1,29 +1,30 @@
 ---
-title: "增强的日期和时间类型与以前的 SQL Server 版本 (ODBC) 的行为 |Microsoft 文档"
-ms.custom: 
+title: 增强的日期和时间类型与以前的 SQL Server 版本 (ODBC) 的行为 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2acc8c52d6e16cf17c05cc421faf5ea52b20e71
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ca69cfb2db83f221e4071b8ba9a3e8b0ff40af89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   
  对下层客户端应用程序的运行时[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器的架构更改，以日期/时间类型进行了，预期的行为是，如下所示：  
   
-|SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
+|SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
 |日期时间|日期|SQL_C_TYPE_DATE|确定|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 ||Time(7)|SQL_C_TIME|失败 – 无效的时间文字。|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|失败 – 无效的时间文字。|确定 (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|确定|确定 (1)|  
-||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|确定|由客户端转换将值舍入到 1/300 秒。|  
+||Datetime2 （7)|SQL_C_TYPE_TIMESTAMP|确定|由客户端转换将值舍入到 1/300 秒。|  
 |Smalldatetime|日期|SQL_C_TYPE_DATE|确定|确定|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|确定|确定|  
@@ -118,6 +119,6 @@ ms.lasthandoff: 01/25/2018
  连接到版本早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，只要试图使用新的服务器类型或相关的元数据代码和描述符字段，都将导致返回 SQL_ERROR。 将生成以下诊断记录：具有 SQLSTATE HY004 和消息“SQL 数据类型对于连接的服务器版本无效”，或具有 07006 和消息“受限制的数据类型属性冲突”。  
   
 ## <a name="see-also"></a>另请参阅  
- [日期和时间改进 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -2,7 +2,7 @@
 title: SQLSetEnvAttr 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef21f18346ad21afbba42d282763db5a527029f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 函数
 **一致性**  
@@ -55,13 +55,13 @@ SQLRETURN SQLSetEnvAttr(
  *EnvironmentHandle*  
  [输入]环境句柄。  
   
- *Attribute*  
+ *属性*  
  [输入]要设置，属性列在"注释"。  
   
  *ValuePtr*  
  [输入]指向要与之关联的值*属性*。 根据值*属性*， *ValuePtr*将 32 位整数值或指向以 null 结尾的字符串。  
   
- *StringLength*  
+ *stringLength*  
  [输入]如果*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度 **ValuePtr*。 对于字符串数据，此自变量应包含在字符串中的字节数。  
   
  如果*ValuePtr*是一个整数， *StringLength*将被忽略。  
@@ -75,7 +75,7 @@ SQLRETURN SQLSetEnvAttr(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY009|不允许使用 null 指针|特性自变量标识所需的字符串值，环境属性和*ValuePtr*自变量是空指针。|  
@@ -96,7 +96,7 @@ SQLRETURN SQLSetEnvAttr(
   
  连接属性不能通过调用设置**SQLSetEnvAttr**。 尝试执行此操作将返回 SQLSTATE HY092 （无效的属性/选项标识符）。  
   
-|*Attribute*|*ValuePtr*内容|  
+|*属性*|*ValuePtr*内容|  
 |-----------------|-------------------------|  
 |SQL_ATTR_CONNECTION_POOLING (ODBC 3.8)|一个 32 位 SQLUINTEGER 值，启用或禁用连接池环境级别。 使用以下值：<br /><br /> SQL_CP_OFF = 连接池已关闭。 这是默认设置。<br /><br /> SQL_CP_ONE_PER_DRIVER = 单个连接池支持为每个驱动程序。 池中的每个连接都使用一个驱动程序相关联。<br /><br /> SQL_CP_ONE_PER_HENV = 单个连接池支持为每个环境。 池中的每个连接都与一个环境相关联。<br /><br /> SQL_CP_DRIVER_AWARE = 使用该驱动程序，连接池感知功能是否可用。 如果该驱动程序不支持连接池感知，忽略 SQL_CP_DRIVER_AWARE，而 SQL_CP_ONE_PER_HENV。 有关详细信息，请参阅[识别驱动程序的连接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。 在某些驱动程序支持，其中某些驱动程序不支持连接池感知的环境，SQL_CP_DRIVER_AWARE 可以启用连接池感知功能上是支持驱动程序，但它相当于 SQL_CP_ONE_PER_HENV 上的设置这些驱动程序不支持连接池感知功能。<br /><br /> 通过调用启用连接池**SQLSetEnvAttr**将 SQL_ATTR_CONNECTION_POOLING 特性设置为 SQL_CP_ONE_PER_DRIVER 或 SQL_CP_ONE_PER_HENV。 应用程序分配的连接池是启用的共享的环境之前，必须进行此调用。 对的调用中的环境句柄**SQLSetEnvAttr**设置为 null，这样 SQL_ATTR_CONNECTION_POOLING 了进程级别属性。 然后，应用程序启用连接池后，通过调用分配隐式的共享的环境**SQLAllocHandle**与*InputHandle*参数设置为 SQL_HANDLE_ENV。<br /><br /> 已启用连接池且已为应用程序选择了共享的环境后，SQL_ATTR_CONNECTION_POOLING 无法重置为该环境中，因为**SQLSetEnvAttr**称为 null 环境句柄时将此属性设置。 如果在共享环境上已启用连接池时设置此属性，该属性会影响仅随后分配的共享的环境。<br /><br /> 还有可能要启用连接池在该环境。 请注意下列有关环境连接池：<br /><br /> -启用连接池在 NULL 句柄是的进程级属性。 随后分配的环境将共享的环境中，并且将继承进程级连接池设置。<br />-分配环境后，应用程序仍可更改其连接池设置。<br />-如果启用环境连接池和连接的驱动程序使用驱动程序池，环境池采用首选项。<br /><br /> SQL_ATTR_CONNECTION_POOLING 实现驱动程序管理器内部。 驱动程序不需要实现 SQL_ATTR_CONNECTION_POOLING。 ODBC 2.0 和 3.0 的应用程序可以将此环境属性设置。<br /><br /> 有关详细信息，请参阅[ODBC 连接池](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)。|  
 |SQL_ATTR_CP_MATCH (ODBC 3.0)|32 位 SQLUINTEGER 值，该值确定如何从连接池中选择一个连接。 当**SQLConnect**或**SQLDriverConnect**是驱动程序管理器调用，确定从池中重复使用的连接。 驱动程序管理器尝试匹配该呼叫，设置了关键字和连接属性连接的应用程序池中的连接属性中的连接选项。 此属性的值确定匹配条件的精度的级别。<br /><br /> 以下值用于设置此属性的值：<br /><br /> SQL_CP_STRICT_MATCH = 完全匹配的调用中的连接选项的唯一连接和应用程序设置的特性会重复使用的连接。 这是默认设置。<br /><br /> SQL_CP_RELAXED_MATCH = 具有匹配，可以使用关键字的连接字符串的连接。 关键字必须匹配，但并非所有连接特性必须都匹配。<br /><br /> 有关如何驱动程序管理器在连接到已入池连接中执行匹配时的详细信息，请参阅[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)。 有关连接池的详细信息，请参阅[ODBC 连接池](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)。|  

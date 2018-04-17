@@ -2,7 +2,7 @@
 title: SQLGetDiagField 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函数
 **一致性**  
@@ -85,7 +85,7 @@ SQLRETURN SQLGetDiagField(
  如果*DiagInfoPtr*为 NULL， *StringLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回指向由的缓冲区中*DiagInfoPtr*。  
   
  *BufferLength*  
- [输入]如果*DiagIdentifier*是 ODBC 定义的诊断和*DiagInfoPtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *DiagInfoPtr*. 如果*DiagIdentifier*是一个 ODBC 定义的字段和\* *DiagInfoPtr*是一个整数， *BufferLength*将被忽略。 如果中的值* \*DiagInfoPtr*为 Unicode 字符串 (在调用时**SQLGetDiagFieldW**)，则*BufferLength*参数必须为偶数。  
+ [输入]如果*DiagIdentifier*是 ODBC 定义的诊断和*DiagInfoPtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *DiagInfoPtr*. 如果*DiagIdentifier*是一个 ODBC 定义的字段和\* *DiagInfoPtr*是一个整数， *BufferLength*将被忽略。 如果中的值 *\*DiagInfoPtr*为 Unicode 字符串 (在调用时**SQLGetDiagFieldW**)，则*BufferLength*参数必须为偶数。  
   
  如果*DiagIdentifier*是驱动程序定义的字段，该应用程序通过设置来指明字段到驱动程序管理器的性质*BufferLength*自变量。 *BufferLength*可以具有下列值：  
   
@@ -95,7 +95,7 @@ SQLRETURN SQLGetDiagField(
   
 -   如果*DiagInfoPtr*是指向字符字符串或二进制字符串以外的值的*BufferLength*应具有 SQL_IS_POINTER 的值。  
   
--   如果* \*DiagInfoPtr*包含固定长度的数据类型， *BufferLength*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，根据需要。  
+-   如果 *\*DiagInfoPtr*包含固定长度的数据类型， *BufferLength*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，根据需要。  
   
  *StringLengthPtr*  
  [输出]指向要返回的 （不包括所需的 null 终止字符的字节数） 的字节总数在其中缓冲区的指针可用于返回在\* *DiagInfoPtr*，为字符数据。 可用于返回的字节数是否大于或等于*BufferLength*中的文本\* *DiagInfoPtr*截断为*BufferLength*减null 终止字符的长度。  

@@ -2,7 +2,7 @@
 title: SQLBindParameter 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函数
 **一致性**  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  如果*ParameterNumber*对的调用中**SQLBindParameter**大于 SQL_DESC_COUNT，值**SQLSetDescField**调用以增加 SQL_DESC_ 的值计数到*ParameterNumber*。  
   
 ## <a name="inputoutputtype-argument"></a>InputOutputType 自变量  
- *InputOutputType*参数指定的参数的类型。 此参数设置为 IPD SQL_DESC_PARAMETER_TYPE 字段。 请勿调用过程，如的 SQL 语句中的所有参数**插入**语句，*输入**参数*。 在过程调用中的参数可作为输入、 输入/输出，或输出参数。 (应用程序调用**SQLProcedureColumns**来确定在过程调用; 参数的类型无法确定其类型参数都被认为是输入的参数。)  
+ *InputOutputType*参数指定的参数的类型。 此参数设置为 IPD SQL_DESC_PARAMETER_TYPE 字段。 请勿调用过程，如的 SQL 语句中的所有参数**插入**语句，*输入 * * 参数*。 在过程调用中的参数可作为输入、 输入/输出，或输出参数。 (应用程序调用**SQLProcedureColumns**来确定在过程调用; 参数的类型无法确定其类型参数都被认为是输入的参数。)  
   
  *InputOutputType*自变量是下列值之一：  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|在输入被忽略。|流式处理的输出|*ParameterValuePtr*可以是任何指针值，该值将返回**SQLParamData**如用户定义标记其值与传递*ParameterValuePtr*。|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|输入中的部件和输出绑定的缓冲区|*ParameterValuePtr*是输出缓冲区，还将通过返回的地址**SQLParamData**如用户定义标记其值与传递*ParameterValuePtr*。|  
 |SQL_PARAM_INPUT_OUTPUT|不 SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|输入绑定缓冲区和输出绑定的缓冲区|*ParameterValuePtr*是共享的输入/输出缓冲区的地址。|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|输入中的部件和流式处理的输出|*ParameterValuePtr*可以是任何非 null 指针值，该值将返回**SQLParamData**如用户定义标记其值与传递*ParameterValuePtr*两个输入和输出。|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|输入中的部件和流式处理的输出|*ParameterValuePtr*可以是任何非 null 指针值，该值将返回**SQLParamData**如用户定义标记其值与传递*ParameterValuePtr*为这两个输入和输出。|  
   
 > [!NOTE]  
 >  该驱动程序必须确定应用程序绑定的输出或输入输出参数，如流式传输时，允许哪些 SQL 类型。 驱动程序管理器将不会生成错误的 SQL 类型无效。  

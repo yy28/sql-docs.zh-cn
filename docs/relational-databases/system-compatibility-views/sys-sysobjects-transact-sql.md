@@ -1,16 +1,16 @@
 ---
-title: sys.sysobjects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sysobjects (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysobjects_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.sysobjects compatibility view
 - sysobjects system table
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
-caps.latest.revision: 
+caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58b3ba692fd946c15e3f00a7d1179f10df5d0b37
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4b9013273782ff103d0cb254ed6bec4b80461443
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/09/2018
 |name|**sysname**|对象名称|  
 |id|**int**|对象标识号|  
 |xtype|**char(2)**|对象类型。 可以是以下对象类型之一：<br /><br /> AF = 聚合函数 (CLR)<br /><br /> C = CHECK 约束<br /><br /> D = 默认值或 DEFAULT 约束<br /><br /> F = FOREIGN KEY 约束<br /><br /> L = 日志<br /><br /> FN = 标量函数<br /><br /> FS = 程序集 (CLR) 标量函数<br /><br /> FT = 程序集 (CLR) 表值函数<br /><br /> IF = 内联表函数<br /><br /> IT = 内部表<br /><br /> P = 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> PK = PRIMARY KEY 约束（类型为 K）<br /><br /> RF = 复制筛选存储过程<br /><br /> S = 系统表<br /><br /> SN = 同义词<br /><br /> SQ = 服务队列<br /><br /> TA = 程序集 (CLR) DML 触发器<br /><br /> TF = 表函数<br /><br /> TR = SQL DML 触发器<br /><br /> TT = 表类型<br /><br /> U = 用户表<br /><br /> UQ = UNIQUE 约束（类型为 K）<br /><br /> V = 视图<br /><br /> X = 扩展存储过程|  
-|uid|**int**|对象所有者的架构 ID。 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。<br /><br /> **\*\*重要\* \*** 如果你使用以下任一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL 语句，您必须使用[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录而不是 sys.sysobjects 的视图。<br /><br /> 创建 &#124;ALTER &#124;删除用户<br /><br /> 创建 &#124;ALTER &#124;删除角色<br /><br /> 创建 &#124;ALTER &#124;删除应用程序角色<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**int**|对象所有者的架构 ID。 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。<br /><br /> **\*\* 重要\* \*** 如果你使用以下任一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL 语句，您必须使用[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录而不是 sys.sysobjects 的视图。<br /><br /> 创建&AMP;#124;ALTER&AMP;#124;放用户<br /><br /> 创建&AMP;#124;ALTER&AMP;#124;删除角色<br /><br /> 创建&AMP;#124;ALTER&AMP;#124;删除应用程序角色<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 02/09/2018
 |缓存|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>另请参阅  
- [将系统表映射到系统视图 &#40;Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [将系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

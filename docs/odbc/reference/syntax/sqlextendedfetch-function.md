@@ -2,7 +2,7 @@
 title: SQLExtendedFetch 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100b877fb6adc71b0f42dd41a0bc8a8d437b1d1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函数
 **一致性**  
@@ -98,7 +98,7 @@ SQLRETURN SQLExtendedFetch(
 |22015|间隔字段溢出|将从精确数字或间隔 SQL 类型分配给间隔 C 类型由前导字段中的重要数字丢失。<br /><br /> 在提取到间隔 C 类型数据, 时没有间隔 C 类型中的 SQL 类型的值的表示形式。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |22018|转换指定的的无效字符值|C 类型已准确或近似数字、 日期时间或间隔数据类型;列的 SQL 类型是字符数据类型;并且列中的值不是有效的文本的绑定的 C 类型。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |24000|无效的游标状态|*StatementHandle*处于执行状态，但没有结果集与关联*StatementHandle*。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLError**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLError**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数已在上再次*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLExtendedFetch**调用函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 第一个调用已调用函数**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) **SQLExtendedFetch**曾为*StatementHandle*后**SQLFetch**或**SQLFetchScroll**调用和之前**SQLFreeStmt**调用时使用 SQL_CLOSE 选项。<br /><br /> (DM) **SQLBulkOperations**为语句之前调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**调用，并然后**SQLExtendedFetch**之前已调用**SQLFreeStmt**调用时使用 SQL_CLOSE 选项。|  
@@ -115,7 +115,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>注释  
  行为**SQLExtendedFetch**等同于的**SQLFetchScroll**，有以下例外：  
   
--   **SQLExtendedFetch**和**SQLFetchScroll**使用不同的方法返回的提取的行数。 **SQLExtendedFetch**返回中提取的行数* \*RowCountPtr*;**SQLFetchScroll**返回提取直接向通过 SQL_ATTR_ROWS_FETCHED_PTR 指向的缓冲区的行数。 有关详细信息，请参阅*RowCountPtr*自变量。  
+-   **SQLExtendedFetch**和**SQLFetchScroll**使用不同的方法返回的提取的行数。 **SQLExtendedFetch**返回中提取的行数 *\*RowCountPtr*;**SQLFetchScroll**返回提取直接向通过 SQL_ATTR_ROWS_FETCHED_PTR 指向的缓冲区的行数。 有关详细信息，请参阅*RowCountPtr*自变量。  
   
 -   **SQLExtendedFetch**和**SQLFetchScroll**的不同阵列中返回的每个行的状态。 有关详细信息，请参阅*RowStatusArray*自变量。  
   

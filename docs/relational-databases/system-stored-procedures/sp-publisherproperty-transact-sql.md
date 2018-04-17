@@ -1,16 +1,16 @@
 ---
-title: "sp_publisherproperty (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_publisherproperty (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 782dada24606bdd5ece4057bb47b7df6a6a9a9db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7446f507b688010f3044ff237d778f9b31b54fe8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher**  =] *发布服务器*  
+ [**@publisher** =] *****发布服务器*****  
  异类发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@propertyname**  =] *propertyname*  
+ [**@propertyname** =] *****propertyname*****  
  所设置的属性的名称。 *propertyname*是**sysname**，和可以是以下值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**xactsetbatching**|是否将发布服务器上的事务分组成在事务上一致的集合（称为 Xactset），以进行后续处理。 值为**启用**意味着 Xactsets 可以会创建，这是默认设置。 值为**禁用**创建现有 Xactsets 将由任何新 Xactsets 处理的方式。|  
 |**xactsetjob**|是否启用 Xactset 作业以创建 Xactset。 值为**启用**意味着，定期运行 Xactset 作业以在发布服务器创建 Xactsets。 值为**禁用**意味着，Xactsets 仅日志读取器代理在时创建它轮询更改的发布服务器。|  
@@ -62,14 +62,14 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  当*propertyname*省略返回的所有可设置属性。  
   
- [ **@propertyvalue**  =] *propertyvalue*  
+ [**@propertyvalue** =] *****propertyvalue*****  
  属性设置的新值。 *propertyvalue*是**sysname**，默认值为 NULL。 当*propertyvalue*省略，则当前的设置，则返回该属性。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**属性名**|**sysname**|返回以下可以设置的发布属性：<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
+|propertyname|**sysname**|返回以下可以设置的发布属性：<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**属性值**|**sysname**|是中的属性的当前设置**propertyname**列。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -86,7 +86,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  更改时**xactsetjobinterval**正在运行的作业的属性，你必须重新启动新间隔生效的作业。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**分发服务器上的固定的服务器角色可以执行**sp_publisherproperty**。  
   
 ## <a name="see-also"></a>另请参阅  

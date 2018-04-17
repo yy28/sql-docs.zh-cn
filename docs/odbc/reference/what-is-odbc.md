@@ -2,7 +2,7 @@
 title: 什么是 ODBC？ | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1cb1869039572d0d6da1302f66ce64abc3f2590
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ed2f843b8b3c5da54f339d0d3e7f4602246a8d69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-odbc"></a>什么是 ODBC？
 有关 ODBC 的许多错误理解中计算都存在。 向最终用户，它是 Microsoft® Windows® 控制面板中的图标。 对应用程序程序员，它是包含数据访问例程的库。 多个其他很出人意料的所有数据库访问权限问题的答案。  

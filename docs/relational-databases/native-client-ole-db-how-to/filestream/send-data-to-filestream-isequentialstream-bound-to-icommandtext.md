@@ -1,27 +1,28 @@
 ---
-title: "将数据发送到 FILESTREAM-ISequentialStream 绑定到 ICommandText |Microsoft 文档"
-ms.custom: 
+title: 将数据发送到 FILESTREAM-ISequentialStream 绑定到 ICommandText |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e47d0796d472c8eead741d0aa718caeaa6f288d9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c740208c12549083e36689160ba79f95be6f113e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>将数据发送到 FILESTREAM-ISequentialStream 绑定到 ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/24/2018
 
   此示例使用绑定到 ICommandText 参数的 ISequentialStream 接口向 filestream 列发送大小在 4MB 与 4GB 之间的数据。  
   
- 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
  编译并运行此示例之前，启用 FILESTREAM 的支持 ([启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
