@@ -20,24 +20,24 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>扩展的功能 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充功能
 
-中的扩展[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供更多的功能添加到基的简单办法[!INCLUDE[name-sos](../includes/name-sos-short.md)]安装。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充模組提供一個簡單的方式，可以新增更多功能至基礎 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。 
 
-（你 ！） 的第三方团体还扩展提供由 SQL Operations Studio 团队 (Microsoft)。 有关创建扩展的详细信息，请参阅[入门扩展性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
+擴充功能由 SQL Operations Studio 團隊 (Microsoft) 以及第 3 方社群（您 ！）提供。 如需有關建立擴充功能的詳細資訊，請參閱[開始使用擴充性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
 
 
 ## <a name="add-sql-operations-studio-extensions"></a>添加 SQL Operations Studio 扩展
 
-1. 若要打开的扩展管理器并访问可用的扩展，选择扩展图标，或选择**扩展**中**视图**菜单。
+1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
 2. 选择可用扩展以查看它的详细信息。
 
    ![扩展管理器](media/extensions/extension-manager.png)
 
 1. 选择你想要扩展的插件和**安装**它。
-2. 选择**重新加载**（才需要第一次安装的扩展） 启用扩展。
-1. 右键单击你的服务器或数据库并选择通过导航到你管理仪表板**管理**。
-2. 作为管理仪表板上的选项卡显示已安装的扩展：
+2. 選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
+1. 透過滑鼠右鍵點選伺服器或資料庫並點選**管理**，瀏覽您的管理儀表板。
+2. 已安裝的擴充功能會以索引標籤方式顯示在您的管理儀表板上：
 
    ![扩展管理器](media/extensions/dashboard-extensions.png)
 

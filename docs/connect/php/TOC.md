@@ -9,6 +9,7 @@
 
 # [概述](overview-of-the-php-sql-driver.md)
 ## [系统要求](system-requirements-for-the-php-sql-driver.md)
+## [下载 PHP Driver for SQL Server](download-drivers-php-sql-server.md)
 ## [加载驱动程序](loading-the-php-sql-driver.md)
 ## [配置 IIS](configuring-iis-for-php-sql-driver.md)
 ## [PHP Linux 和 Mac 驱动程序安装教程](installation-tutorial-linux-mac.md)

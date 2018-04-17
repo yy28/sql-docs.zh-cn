@@ -1,7 +1,7 @@
-# [适用于 SQL Server 的 OLE DB 驱动程序 (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [适用于 SQL Server 的 OLE DB 驱动程序编程](oledb-driver-for-sql-server-programming.md)
 
 # 特定区域
-## [适用于 SQL Server 的 OLE DB 驱动程序 +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [创建 OLE DB Driver for SQL Server 应用程序 +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [OLE DB 数据源对象 +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [命令 +](../../oledb/ole-db-commands/commands.md)
 ## [行集 +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [接口 +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [操作指南 +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [FILESTREAM 支持 (OLE DB)](filestream-support-ole-db.md)
-# [大型 CLR 用户定义类型 [OLE DB]](large-clr-user-defined-types-ole-db.md)
-# [架构行集支持 (OLE DB)](schema-rowset-support-ole-db.md)
+# [大型 CLR 用户定义类型](large-clr-user-defined-types-ole-db.md)
+# [架构行集支持](schema-rowset-support-ole-db.md)
 # [架构行集 - 分布式查询支持](schema-rowsets-distributed-query-support.md)
 # [架构行集 - LINKEDSERVERS 行集](schema-rowsets-linkedservers-rowset.md)
-# [客户端连接中的服务主体名称 (SPN) (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [稀疏列支持 (OLE DB)](sparse-columns-support-ole-db.md)
+# [客户端连接中的服务主体名称 (SPN)](service-principal-names-spns-in-client-connections-ole-db.md)
+# [稀疏列支持](sparse-columns-support-ole-db.md)
 # [存储过程 - 调用](stored-procedures-calling.md)
 # [存储过程 - 运行](stored-procedures-running.md)
 # [存储过程](stored-procedures.md)

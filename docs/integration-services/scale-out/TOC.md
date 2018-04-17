@@ -9,4 +9,5 @@
 # [更改 Scale Out 日志记录的帐户](change-logdb-account.md)
 # [管理 Scale Out 证书](deal-with-certificates-in-ssis-scale-out.md)
 # [Scale Out 的高可用性](scale-out-support-for-high-availability.md)
+# [通过 SQL Server 故障转移群集实例实现高可用性](scale-out-failover-cluster-instance.md)
 # [Scale Out 疑难解答](troubleshooting-scale-out.md)
