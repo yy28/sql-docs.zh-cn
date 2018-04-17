@@ -1,16 +1,16 @@
 ---
 title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_TEST_TSQL
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4009a151873bf989a39bc4fb91ec3a9963af9f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8efc420c62031b0106c16bc25c8a8fdaa3f039a7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回信息指示是否可以为指定锁所有者授予对某种资源的锁而不必获取锁。 APPLOCK_TEST 是应用程序锁函数，它对当前数据库执行操作。 应用程序锁的作用域是数据库。
+此函数返回信息指示是否可以为指定锁所有者授予对某种资源的锁，而不必获取锁。 作为应用程序锁函数，APPLOCK_TEST 对当前数据库执行操作。 数据库是应用程序锁的作用域。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,22 +50,22 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>参数  
 ' database_principal '  
-可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 该函数的调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员，才可成功调用该函数。
+可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员。
   
 **'** resource_name **'**  
-由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何。
+由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。  resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何。
   
 **'** lock_mode **'**  
-要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 该值可以是下列值之一：Shared、Update、IntentShared、IntentExclusive、Exclusive。
+要为特定资源获取的锁模式。 lock_mode 为 nvarchar(32)，无默认值。 lock_mode 可具有任何以下值：Shared、Update、IntentShared、IntentExclusive、Exclusive。
   
 **'** lock_owner **'**  
-锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 如果显式指定默认值或 Transaction，则必须从事务中执行 APPLOCK_TEST。
+锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session。 如果显式指定默认值或 Transaction，则必须从事务中执行 APPLOCK_TEST。
   
 ## <a name="return-types"></a>返回类型
 **int**
   
 ## <a name="return-value"></a>返回值
-如果无法将锁授予指定的所有者，则返回 0；如果可以授予锁，则返回 1。
+如果无法将锁授予指定的所有者，则为 0；如果可以授予锁，则为 1。
   
 ## <a name="function-properties"></a>函数属性
 **Nondeterministic**
@@ -75,7 +75,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 **Nonparallelizable**
   
 ## <a name="examples"></a>示例  
-在下面的示例中，具有不同会话的两个用户（用户 A 和用户 B）按以下顺序运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。
+具有不同会话的两个用户（用户 A 和用户 B）按以下顺序运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。
   
 用户 A 运行：
   

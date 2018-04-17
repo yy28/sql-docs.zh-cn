@@ -18,16 +18,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: af185275ebb9a886b929f0b91b12a46ad6d30c8b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,9 +105,7 @@ OGC 的 SQL 简单特征规范讨论了外环和内环，但此差别对 [!INCLU
 >  如果为圆弧线段指定 Z 值，则这些值对于圆弧线段中的所有点必须相同，才接受输入。 例如，接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但是不接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString 和 CircularString 的比较  
-下图显示相同的等腰三角形（三角形 A 使用直线线段定义，三角形 B 使用圆弧线段定义）：  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) 此示例显示如何使用 LineString 实例和 CircularString 实例来存储上述等腰三角形：  
+此示例显示如何使用 LineString 实例和 CircularString 实例存储完全相同的等腰三角形：  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -129,17 +127,13 @@ SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-此代码段将生成以下结果：  
+此代码片段生成以下结果：  
 ```
 LS LengthCS Length
 5.65685…6.28318…
 ```
 
-下图显示每种类型是如何存储的（红线显示 **LineString**`@g1`，蓝线显示 **CircularString**`@g2`）：  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-如上图所示， **CircularString** 实例与 **LineString** 实例相比，使用更少的点来存储曲线边界，而且更精确。 **CircularString** 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 **LineString** 实例则适合存储线性边界（如方形城市街区）。  
+与 LineString 实例相比，CircularString 实例使用更少的点来存储曲线边界，而且更精确。 **CircularString** 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 **LineString** 实例则适合存储线性边界（如方形城市街区）。  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比较  
 以下代码示例显示如何使用 **LineString** 和 **CompoundCurve** 实例存储相同的图形：

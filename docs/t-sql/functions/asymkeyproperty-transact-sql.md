@@ -1,16 +1,16 @@
 ---
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMKEYPROPERTY_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 808f7c8d840f18d9e09fe9906e366fb7feb76cff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回非对称密钥的属性。
+此函数返回非对称密钥的属性。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,7 +46,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>参数  
 Key_ID  
-是数据库中非对称密钥的 Key_ID。 若要查找您仅知道密钥名称的 Key_ID，请使用 ASYMKEY_ID。 Key_ID 为 int 数据类型。
+数据库中非对称密钥的 Key_ID。 如果仅知道密钥名称，请使用 ASYMKEY_ID 查找 Key_ID。 Key_ID 为 int 数据类型。
   
 **'**algorithm_desc**'**  
 指定输出应返回非对称密钥的算法说明。 仅适用于从 EKM 模块创建的非对称密钥。
@@ -61,7 +61,7 @@ Key_ID
 **sql_variant**
   
 ## <a name="permissions"></a>权限  
-需要对非对称密钥具有某些权限，并且调用方对非对称密钥的 VIEW 权限没有被拒绝。
+需要对非对称密钥具有相应的权限，并且调用方对非对称密钥的 VIEW 权限没有被拒绝。 有关非对称密钥权限的详细信息，请参阅 [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
 下面的示例返回 Key_ID 为 256 的非对称密钥的属性。

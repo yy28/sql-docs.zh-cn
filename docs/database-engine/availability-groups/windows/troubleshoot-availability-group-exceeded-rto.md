@@ -1,0 +1,72 @@
+---
+title: 故障排除：可用性组超过了 RTO (SQL Server) | Microsoft Docs
+ms.custom: ag-guide
+ms.date: 06/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
+caps.latest.revision: 7
+author: rothja
+ms.author: jroth
+manager: jhubbard
+ms.openlocfilehash: a70d141800d9d8d43d47f0703d64e03505015aa4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/05/2018
+---
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>故障排除：可用性组超过了 RTO
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  对可用性组进行自动故障转移或计划的手动故障转移（无数据丢失）后，可能会发现故障转移时间超过恢复时间目标 (RTO)。 或者，在使用[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)中的方法估计同步提交次要副本的故障转移时间时（如自动故障转移伙伴），发现该时间超过了 RTO。  
+  
+ 如果自动故障转移仍未完成，请参阅[故障排除 SQL Server 2012 Always On 环境中的自动故障转移问题](http://support.microsoft.com/kb/2833707)。  
+  
+ 以下各节介绍超过 RTO 的故障转移时间的常见原因。  
+  
+1.  [报告工作负荷阻止重做线程运行](#BKMK_REDOBLOCK)  
+  
+2.  [重做线程因资源争用而滞后](#BKMK_CONTENTION)  
+  
+##  <a name="BKMK_REDOBLOCK"></a>报告工作负荷阻止重做线程运行  
+ 一个长时间运行的只读查询阻止次要副本上的重做线程执行数据定义语言 (DDL) 更改。  
+  
+### <a name="explanation"></a>解释  
+ 在次要副本上，只读查询可获取架构稳定性 (`Sch-S`) 锁定。 这些 `Sch-S` 锁定可阻止重做线程获取架构修改 (`Sch-M`) 锁定并进行任何 DDL 修改。 必须先取消阻止重做线程才可应用日志记录。 取消阻止后，可继续追赶到日志结尾，并允许后续撤销和故障转移过程继续。  
+  
+### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
+ 如果阻止重做线程，将生成名为 `sqlserver.lock_redo_blocked` 的扩展事件。 此外，可在次要副本上查询 DMV sys.dm_exec_request，以找出哪个会话正在阻止重做线程，然后可以采取纠正措施。 下面的查询返回阻止重做线程的只读查询的会话 ID。  
+  
+```sql  
+select session_id, command, blocking_session_id, wait_time, wait_type, wait_resource   
+from sys.dm_exec_requests where command = 'DB STARTUP'  
+```  
+  
+ 可以让报告工作负荷在取消阻止重做线程的点完成，或者通过对阻止会话 ID 执行 [KILL (Transact-SQL)](~/t-sql/language-elements/kill-transact-sql.md) 命令，立即取消阻止重做线程。  
+  
+##  <a name="BKMK_CONTENTION"></a>重做线程因资源争用而滞后  
+ 次要副本上的大型报告工作负荷降低了次要副本的性能，且重做线程已滞后。  
+  
+### <a name="explanation"></a>解释  
+ 如果对次要副本应用日志记录，重做线程将读取日志磁盘中的日志记录，然后对于每个日志记录，该线程将访问数据页，以应用日志记录。 如果页面并非已在缓冲池中，页面访问可能受到 I/O 限制（访问物理磁盘）。 如果存在受到 I/O 限制的报告工作负荷，该工作负荷将与重做线程争用 I/O 资源，可能会降低重做线程的速度。  
+  
+### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
+ 可以使用以下 DMV 查询查看重做线程的滞后程度，方法是测量 `last_redone_lsn` 和 `last_received_lsn` 之间的差异。  
+  
+```sql  
+select recovery_lsn, truncation_lsn, last_hardened_lsn, last_received_lsn,   
+   last_redone_lsn, last_redone_time  
+from sys.dm_hadr_database_replica_states  
+  
+```  
+  
+ 如果重做线程确实滞后，需要调查次要副本性能降低的根本原因。 如果存在与报告工作负荷的 I/O 争用，可以使用 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) 来控制报告工作负荷所用的 CPU 周期，以在某种程度上间接控制采用的 I/O 周期。 例如，如果报告工作负荷要使用 10% 的 CPU，但工作负荷受到 I/O 限制，可以使用 Resource Governor 将 CPU 资源使用量限制为中止读取工作负荷的 5%，这可最大程度降低对 I/O 的影响。  
+  
+## <a name="next-steps"></a>后续步骤  
+ [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+  
+  

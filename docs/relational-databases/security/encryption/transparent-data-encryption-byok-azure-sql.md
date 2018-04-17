@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的“创建自己的密钥”（预览）支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.lasthandoff: 04/04/2018
 ### <a name="general-guidelines"></a>通用指导原则
 - 确保 Azure Key Vault 和 Azure SQL 数据库将在同一个租户中。  不支持跨租户的密钥保管库和服务器交互。
 - 选择所需资源将要使用的订阅 – 如果以后跨订阅移动服务器，则需要使用 BYOK 设置新的 TDE。
-- 使用 BYOK 配置 TDE 时，必须考虑重复的包装/解包操作在密钥保管库中放置的负载。 例如，由于与逻辑服务器关联的所有数据库都使用相同的 TDE 保护程序，因此该服务器的故障转移触发针对保管库的密钥操作次数等于该服务器中的数据库数目。 根据我们的经验以及记录的[密钥保管库服务限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建议在单个订阅中将最多 500 个标准数据库或 200 个高级数据库与一个 Azure Key Vault 关联，以确保在访问保管库中的 TDE 保护程序时实现一致的高可用性。 
+- 使用 BYOK 配置 TDE 时，必须考虑重复的包装/解包操作在密钥保管库中放置的负载。 例如，由于与逻辑服务器关联的所有数据库都使用相同的 TDE 保护程序，因此该服务器的故障转移触发针对保管库的密钥操作次数等于该服务器中的数据库数目。 根据我们的经验以及记录的[密钥保管库服务限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建议在单个订阅中将最多 500 个标准数据库/常规用途数据库或 200 个高级数据库/业务关键数据库与一个 Azure Key Vault 关联，以确保在访问保管库中的 TDE 保护程序时实现一致的高可用性。 
 - 建议：在本地保留 TDE 保护程序的副本。  这需要使用 HSM 设备在本地创建 TDE 保护程序和密钥托管系统，以存储 TDE 保护程序的本地副本。
 
 

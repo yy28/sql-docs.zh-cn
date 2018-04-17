@@ -1,16 +1,16 @@
 ---
 title: ASIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASIN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19cffa5a72ded3ac274fd032fd97a664bd57c09c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回以弧度表示的角，其正弦为指定 **float** 表达式。 也称为反正弦。
+一个函数，返回以弧度表示的角，其正弦为指定的 float 表达式。 也称为反正弦。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>参数  
 *float_expression*  
-类型为 **float** 或类型可以隐式转换为 float 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，其取值范围从 -1 到 1。 对超出此范围的值，将返回 NULL 并报告域错误。
+float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 仅介于 -1.00 到 1.00 之间的值有效。 对于超出此范围的值，将返回 NULL 且 ASIN 将报告域错误。
   
 ## <a name="return-types"></a>返回类型
 **float**
   
 ## <a name="examples"></a>示例  
-下面的示例采用 **float** 表达式并返回指定角的 ASIN 值。
+此示例采用 float 表达式并返回指定角的 ASIN 值。
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -96,13 +96,13 @@ The ASIN of the angle is: 0.147811
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-下面的示例返回 1.00 的反正弦。
+此示例返回 1.00 的反正弦。
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-下面的示例返回错误，因为它请求获得超出允许范围的值的反正弦。
+此示例返回错误，因为它请求获得超出允许范围的值的反正弦。
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  

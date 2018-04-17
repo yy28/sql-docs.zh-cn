@@ -1,31 +1,31 @@
 ---
-title: "描述的聚集索引和非聚集索引 | Microsoft Docs"
-ms.custom: 
+title: 描述的聚集索引和非聚集索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6d86d6830d5358efed863ba43efe2c76aa522625
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/12/2018
   
 -   群集  
   
-    -   聚集索引根据数据行的键值在表或视图中排序和存储这些数据行。 索引定义中包含聚集索引列。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序排序。  
+    -   聚集索引根据数据行的键值在表或视图中排序和存储这些数据行。 索引定义中包含聚集索引列。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序存储。  
   
     -   只有当表包含聚集索引时，表中的数据行才按排序顺序存储。 如果表具有聚集索引，则该表称为聚集表。 如果表没有聚集索引，则其数据行存储在一个称为堆的无序结构中。  
   

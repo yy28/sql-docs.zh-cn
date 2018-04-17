@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   列存储功能摘要可用于各个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、最新版 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
 
  > [!NOTE]
- > 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，列存储索引可用于 SQL 数据库高级层和标准层（S3 及更高）。 对于 SQL Server（2016 SP1 及更高版本），列存储索引可用于所有版本。 对于 SQL Server（2016 及更早版本），列存储索引仅可用于企业版。
+ > 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，列存储索引可用于 SQL 数据库高级层、标准层（S3 及更高）以及所有 vCore 层。 对于 SQL Server（2016 SP1 及更高版本），列存储索引可用于所有版本。 对于 SQL Server（2016 及更早版本），列存储索引仅可用于企业版。
  
 ## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
  此表概述了列存储索引的主要功能以及提供这些功能的产品。  
@@ -119,7 +119,8 @@ ms.lasthandoff: 03/22/2018
   
 ### <a name="limitations"></a>限制  
   
--   针对聚集列存储索引定义 B 树索引时，会禁用 MERGE。  
+
+  
 -   对于内存中表，列存储索引必须包括所有列；列存储索引不能有经过筛选的条件。  
 -   对于内存中表，基于列存储索引的查询仅在互操作模式下运行，不在内存中本机模式下运行。 支持并行执行。  
   

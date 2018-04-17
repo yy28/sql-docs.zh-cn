@@ -1,16 +1,16 @@
 ---
 title: AVG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVG_TSQL
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 40240e2c06055d61eb047c319349f4869b9979df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1d242be45c89ed55d5a1dfed3753676c90e314f3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回组中各值的平均值。 Null 值会被忽略。
+此函数返回组中各值的平均值。 将忽略 null 值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,13 +57,13 @@ DISTINCT
 指定 AVG 只在每个值的唯一实例上执行，而不管该值出现了多少次。
   
 *expression*  
-是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。
+精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。
   
-OVER ( [ partition_by_clause ] order_by_clause)  
+OVER ( [ partition_by_clause ] order_by_clause)*  
 partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-返回类型由 expression 的计算结果类型确定。
+expression 的计算结果确定返回类型。
   
 |表达式结果|返回类型|  
 |---|---|
@@ -76,16 +76,16 @@ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的
 |float 和 real 类别|**float**|  
   
 ## <a name="remarks"></a>Remarks  
-如果 expression 的数据类型是别名数据类型，则返回类型也具有别名数据类型。 但是，如果别名数据类型的基本数据类型得到提升（例如，从 tinyint 提升到 int），则返回值具有提升的数据类型，而非别名数据类型。
+如果 expression 的数据类型是别名数据类型，则返回类型也具有别名数据类型。 但是，如果别名数据类型的基本数据类型得到提升（例如，从 tinyint 提升到 int），则返回值将使用提升的数据类型，而非别名数据类型。
   
-AVG () 可计算一组值的平均值，方法是用一组值的总和除以非 Null 值的计数。 如果值的总和超过返回值数据类型的最大值，将返回错误。
+AVG () 可计算一组值的平均值，方法是用一组值的总和除以非 Null 值的计数。 如果总和超过返回值数据类型的最大值，AVG() 将返回错误。
   
 AVG 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. 使用 SUM 和 AVG 函数进行计算  
-以下示例计算 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的副总所用的平均休假小时数以及总的病假小时数。 对检索到的所有行，每个聚合函数都生成一个单独的汇总值。 该示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。
+以下示例计算 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的副总裁所用的平均休假小时数以及总的病假小时数。 对检索到的所有行，每个聚合函数都生成一个单独的汇总值。 该示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。
   
 ```sql
 SELECT AVG(VacationHours)AS 'Average vacation hours',   
@@ -105,7 +105,7 @@ Average vacation hours       Total sick leave hours
 ```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. 搭配 GROUP BY 子句使用 SUM 和 AVG 函数  
-当与 `GROUP BY` 子句一起使用时，每个聚合函数都针对每一组生成一个值，而不是针对整个表生成一个值。 以下示例针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的每个销售地区生成汇总值。 汇总中列出每个地区的销售人员得到的平均奖金以及每个地区的本年度销售总额。
+当与 `GROUP BY` 子句一起使用时，每个聚合函数都会针对每一组生成一个值，而不是针对整个表生成一个值。 以下示例针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的每个销售地区生成汇总值。 汇总中列出每个地区的销售人员得到的平均奖金以及每个地区的本年度销售总额。
   
 ```sql
 SELECT TerritoryID, AVG(Bonus)as 'Average bonus', SUM(SalesYTD) as 'YTD sales'  
@@ -135,7 +135,7 @@ NULL        0.00                  1252127.9471
 ```  
   
 ### <a name="c-using-avg-with-distinct"></a>C. 带 DISTINCT 使用 AVG  
-以下语句返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中产品的平均标价。 通过指定 DISTINCT，在计算时只考虑唯一值。
+此语句返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中产品的平均标价。 通过使用 DISTINCT，计算仅考虑唯一值。
   
 ```sql
 SELECT AVG(DISTINCT ListPrice)  
@@ -169,7 +169,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. 使用 OVER 子句  
-以下示例将 AVG 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的移动平均线。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着，将基于年度销售额为各区域计算 AVG 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的平均销售额，然后在计算中包括表示 2006 年销售额的第三行。
+以下示例将 AVG 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的移动平均线。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着，将基于年度销售额为各区域计算 AVG 函数。 请注意，对于 `TerritoryID` 1，2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的平均销售额，然后在计算中包括表示 2006 年销售额的第三行。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   
@@ -206,7 +206,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```  
   
-在这个例子中，OVER 子句未包含 PARTITION BY。 这意味着该函数将应用于查询所返回的所有行。 在 OVER 子句中指定的 ORDER BY 子句将确定应用 AVG 函数的逻辑顺序。 该查询将按年为在 WHERE 子句中指定的所有销售区域返回销售额的移动平均值。 在 SELECT 语句中指定的 ORDER BY 子句将确定显示查询行的顺序。
+在这个例子中，OVER 子句未包含 PARTITION BY。 这意味着该函数将应用于查询所返回的所有行。 在 OVER 子句中指定的 ORDER BY 子句将确定应用 AVG 函数的逻辑顺序。 该查询将按年为在 WHERE 子句中指定的所有销售区域返回销售额的移动平均值。 在 SELECT 语句中指定的 ORDER BY 子句将确定 SELECT 语句显示查询行的顺序。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

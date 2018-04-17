@@ -1,16 +1,16 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 07/29/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 
+caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ property
 |---|---|---|
 |排序规则|数据库的默认排序规则名称。|排序规则名称<br /><br /> NULL = 数据库没有启动。<br /><br /> 基本数据类型：nvarchar(128)|  
 |ComparisonStyle|排序规则的 Windows 比较样式。 ComparisonStyle 是通过对可能样式使用以下值计算得到的位图。<br /><br /> 忽略大小写：1<br /><br /> 忽略重音：2<br /><br /> 忽略假名：65536<br /><br /> 忽略宽度：131072<br /><br /> <br /><br /> 例如，196609 的默认值是将忽略大小写、忽略假名和忽略宽度选项合并在一起的结果。|返回比较样式。<br /><br /> 对所有二进制排序规则均返回 0。<br /><br /> 基本数据类型：int|  
-|版本|数据库版本或服务层。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> Web = Web Edition 数据库<br /><br /> Business = Business Edition 数据库<br /><br /> “基本”<br /><br /> Standard<br /><br /> Premium<br /><br /> 系统（针对 master 数据库）<br /><br /> NULL = 数据库没有启动。<br /><br /> 基本数据类型：nvarchar(64)|  
+|版本|数据库版本或服务层。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 常规用途<br /><br /> 业务关键型<br /><br /> “基本”<br /><br /> Standard<br /><br /> Premium<br /><br /> 系统（针对 master 数据库）<br /><br /> NULL = 数据库没有启动。<br /><br /> 基本数据类型：nvarchar(64)|  
 |IsAnsiNullDefault|数据库遵循 ISO 规则，允许 Null 值。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsAnsiNullsEnabled|所有与 Null 的比较将取值为未知。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsAnsiPaddingEnabled|在比较或插入前，字符串将被填充到相同长度。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  

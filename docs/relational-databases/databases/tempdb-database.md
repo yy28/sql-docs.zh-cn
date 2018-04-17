@@ -1,16 +1,16 @@
 ---
-title: "tempdb 数据库 | Microsoft Docs"
-description: "本主题提供有关在 SQL Server 和 Azure SQL 数据库中配置和使用 tempdb 数据库的详细信息"
+title: tempdb 数据库 | Microsoft Docs
+description: 本主题提供有关在 SQL Server 和 Azure SQL 数据库中配置和使用 tempdb 数据库的详细信息
 ms.custom: P360
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33bbb4114d0be681030d288851d169704210fcde
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或 SQL 数据库的所有用户使用。 tempdb 用于保留：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或 SQL 数据库的所有用户使用。 tempdb 用于保留：  
   
 - 显式创建的临时用户对象，例如：全局或局部临时表及索引、临时存储过程、表变量、表值函数返回的表或游标。  
 - 由数据库引擎创建的内部对象。 其中包括：
@@ -77,33 +78,36 @@ ms.lasthandoff: 01/18/2018
 |ANSI_PADDING|OFF|是|  
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
-|AUTO_CLOSE|OFF|是|  
+|AUTO_CLOSE|OFF|“否”|  
 |AUTO_CREATE_STATISTICS|ON|是|  
-|AUTO_SHRINK|OFF|是|  
+|AUTO_SHRINK|OFF|“否”|  
 |AUTO_UPDATE_STATISTICS|ON|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
-|CHANGE_TRACKING|OFF|是|  
+|CHANGE_TRACKING|OFF|“否”|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|是|  
 |CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> 是<br /><br /> 是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|“否”<br /><br /> 否<br /><br /> “否”|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|是|  
-|ENCRYPTION|OFF|是|  
-|MIXED_PAGE_ALLOCATION|OFF|是|  
+|DB_CHAINING|ON|“否”|  
+|ENCRYPTION|OFF|“否”|  
+|MIXED_PAGE_ALLOCATION|OFF|“否”|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|对于新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，为 CHECKSUM。<br /><br /> 对于升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，为 NONE。|是|  
 |PARAMETERIZATION|SIMPLE|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
-|READ_COMMITTED_SNAPSHOT|OFF|是|  
-|RECOVERY|SIMPLE|是|  
+|READ_COMMITTED_SNAPSHOT|OFF|“否”|  
+|RECOVERY|SIMPLE|“否”|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 选项|ENABLE_BROKER|是|  
-|TRUSTWORTHY|OFF|是|  
+|TRUSTWORTHY|OFF|“否”|  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 ## <a name="tempdb-database-in-sql-database"></a>SQL 数据库中的 Tempdb 数据库
+
+
+### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>基于 DTU 的服务层的 tempdb 大小
 
 |SLO|最大 tempdb 数据文件大小 (MB)|tempdb 数据文件数|最大 tempdb 数据大小 (MB)|
 |---|---:|---:|---:|
@@ -128,6 +132,9 @@ ms.lasthandoff: 01/18/2018
 |基本弹性池（所有 DTU 配置）|14,225|12|170,700| 
 ||||
 
+### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>基于 vCore 的服务层的 tempdb 大小
+
+请参阅基于 vCore 的资源限制 (https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
 ## <a name="restrictions"></a>限制  
  不能对 **tempdb** 数据库执行以下操作：  

@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -165,12 +165,12 @@ COLUMNSTORE_ARCHIVE
 ON  
    使用 ON 选项，您可为数据存储指定选项，例如分区架构、特定的文件组或默认文件组。 如果未指定 ON 选项，索引会使用现有表的分区设置或文件组设置。  
   
-   *partition_scheme_name* **(** *column_name* **)**  
+   partition_scheme_name ( column_name )   
    指定表的分区方案。 分区方案必须已在数据库中存在。 若要创建分区方案，请参阅 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)。  
  
    *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。  
 
-   *filegroup_name*  
+   filegroup_name  
    指定用于存储聚集列存储索引的文件组。 如果未指定位置并且表未分区，则索引将与基础表或视图使用相同的文件组。 该文件组必须已存在。  
 
    "default"  
@@ -181,10 +181,10 @@ ON
 CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 对存储为堆或聚集索引的行存储表创建内存中非聚集列存储索引。 该索引可以具有经过筛选的条件，并且不需要包含基础表的所有列。 列存储索引需要足够的空间来存储数据副本。 它是可更新的，在基础表发生更改时会进行更新。 聚集索引上的非聚集列存储索引可启用实时分析。  
   
-*index_name*  
+index_name  
    指定索引的名称。 *index_name* 在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- **(** *column*  [ **,**...*n* ] **)**  
+ ( column  [ ,...n ] )  
     指定要存储的列。 非聚集列存储索引限定为 1024 个列。  
    每个列都必须采用列存储索引支持的数据类型。 有关受支持数据类型的列表，请参阅[限制和局限](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
@@ -254,7 +254,7 @@ ON
    分区表的列存储索引必须实现分区对齐。  
    有关分区索引的详细信息，请参阅[已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
 
-*filegroup_name*  
+filegroup_name  
    指定要对其创建索引的文件组名称。 如果未指定 *filegroup_name* 并且该表未分区，则索引与基础表使用相同的文件组。 该文件组必须已存在。  
  
 "default"  
@@ -302,14 +302,14 @@ ON
 ##  <a name="LimitRest"></a> 限制和局限  
 
 **列存储索引中的每一列都必须是以下常见业务数据类型之一：** 
--   datetimeoffset [ ( *n* ) ]  
--   datetime2 [ ( *n* ) ]  
+-   datetimeoffset [ ( n ) ]  
+-   datetime2 [ ( n ) ]  
 -   DATETIME  
 -   smalldatetime  
 -   日期  
--   time [ ( *n* ) ]  
--   float [ ( *n* ) ]  
--   real [ ( *n* ) ]  
+-   time [ ( n ) ]  
+-   float [ ( n ) ]  
+-   real [ ( n ) ]  
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
@@ -319,15 +319,15 @@ ON
 -   smallint  
 -   TINYINT  
 -   bit  
--   nvarchar [ ( *n* ) ] 
--   nvarchar(max)（适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和位于高级定价层的 Azure SQL 数据库，仅限聚集列存储索引）   
--   nchar [ ( *n* ) ]  
--   varchar [ ( *n* ) ]  
--   varchar(max)（适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和位于高级定价层的 Azure SQL 数据库，仅限聚集列存储索引）
--   char [ ( *n* ) ]  
--   varbinary [ ( *n* ) ] 
--   varbinary (max)（适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和位于高级定价层的 Azure SQL 数据库，仅限聚集列存储索引）
--   binary [ ( *n* ) ]  
+-   nvarchar [ ( n ) ] 
+-   nvarchar(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）   
+-   nchar [ ( n ) ]  
+-   varchar [ ( n ) ]  
+-   varchar(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）
+-   char [ ( n ) ]  
+-   varbinary [ ( n ) ] 
+-   varbinary(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高）的 Azure SQL 数据库，以及所有 VCore 产品/服务层，仅限聚集列存储索引）
+-   binary [ ( n ) ]  
 -   uniqueidentifier（适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）
   
 如果基础表中包含的某一列的数据类型不受列存储索引支持，则必须从非聚集列存储索引中省略该列。  
@@ -349,7 +349,7 @@ ON
 -   不能使用 **ALTER INDEX** 语句进行更改。 若要更改非聚集索引，必须先删除该列存储索引，然后重新创建它。 可以使用 **ALTER INDEX** 禁用并重新生成列存储索引。  
 -   不能使用 **INCLUDE** 关键字创建。  
 -   不能包括用来对索引排序的 **ASC** 或 **DESC** 关键字。 根据压缩算法对列存储索引排序。 排序将抵销许多性能优势。  
--   不能在非聚集列存储索引中包含 nvarchar(max)、varchar(max) 和 varbinary(max) 类型的大型对象 (LOB) 列。 仅从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版本开始以及在高级定价层配置的 Azure SQL 数据库中，聚集列存储索引才支持 LOB 类型。 请注意，以前的版本不管是在聚集列存储索引还是非聚集列存储索引中都不支持 LOB 类型。
+-   不能在非聚集列存储索引中包含 nvarchar(max)、varchar(max) 和 varbinary(max) 类型的大型对象 (LOB) 列。 仅从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版本开始以及在高级层、标准层（S3 及更高）以及所有 VCore 产品/服务层配置的 Azure SQL 数据库中，聚集列存储索引才支持 LOB 类型。 请注意，以前的版本不管是在聚集列存储索引还是非聚集列存储索引中都不支持 LOB 类型。
 
 
  **列存储索引不能与以下功能结合使用：**  

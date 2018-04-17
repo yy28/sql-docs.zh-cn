@@ -1,16 +1,16 @@
 ---
-title: "跟踪数据更改 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 跟踪数据更改 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 99a8b9bc80dc23ab4d67d72acdb507447d8e9433
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,14 +64,14 @@ ms.lasthandoff: 02/09/2018
 |**跟踪的更改**|||  
 |DML 更改|是|是|  
 |**跟踪的信息**|||  
-|历史数据|是|是|  
+|历史数据|是|“否”|  
 |是否更改了列|是|是|  
 |DML 类型|是|是|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  变更数据捕获通过获取进行 DML 更改的方面和更改的实际数据，提供用户表的历史更改信息。 更改是使用异步进程捕获的，此进程读取事务日志，并且对系统造成的影响很小。  
   
- 正如下图所示，对用户表所做的更改是在相应更改表中捕获的。 这些更改表提供了更改随时间变化的历史视图。 借助于 [提供的](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)变更数据捕获 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，可以方便且系统地使用更改数据。  
+ 正如下图所示，对用户表所做的更改是在相应更改表中捕获的。 这些更改表提供了更改随时间变化的历史视图。 借助于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的[变更数据捕获](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)功能，可以方便且系统地使用更改数据。  
   
  ![变更数据捕获的概念图示](../../relational-databases/track-changes/media/cdcart1.gif "变更数据捕获的概念图示")  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 02/09/2018
 |列类型|在更改表中捕获更改|限制|  
 |--------------------|---------------------------------------|-----------------|  
 |稀疏列|是|不支持在使用列集时捕获更改。|  
-|计算列|是|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
+|计算列|“否”|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
 |XML|是|不跟踪对单个 XML 元素的更改。|  
 |timestamp|是|更改表中的数据类型将转换为 binary。|  
 |BLOB 数据类型|是|仅当 BLOB 列本身更改时才存储该列的上一映像。|  

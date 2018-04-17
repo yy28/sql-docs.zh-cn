@@ -1,16 +1,16 @@
 ---
-title: "列存储索引 - 概述 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2016
+title: 列存储索引 - 概述 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---overview"></a>列存储索引 - 概述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,16 @@ ms.lasthandoff: 02/12/2018
   
  若要减少列段的碎片和改进性能，列存储索引可能会将一些数据暂时存储于称作增量存储的聚集索引中，同时还存储针对已删除行的 ID 的 btree 列表。 增量存储操作在后台处理。 若要返回正确的查询结果，聚集列存储索引将合并来自列存储和增量存储的查询结果。  
   
- 增量存储  
- “增量存储”仅用于聚集列存储索引，它是一个聚集索引，可以不断地存储行，并在行数达到某个阈值后，将行移入列存储，从而提高列存储压缩率和性能。  
+ 增量行组  
+ “增量行组”仅用于列存储索引，它是一个聚集索引，可以不断地存储行，并在行数达到某个阈值后，将行移入列存储，从而提高列存储压缩率和性能。  
+
+ 在增量行组达到最大行数后，它会关闭。 元组移动进程会检查是否有已关闭行组。 在它找到已关闭行组后，会对其进行压缩并且将其存储到列存储中。  
   
- 在大容量加载期间，大多数行直接转到列存储，而不通过增量存储中转。 在大容量加载结束时，某些行的数量可能无法满足行组的最小大小要求（即 102,400 行）。 在发生这种情况时，将最后的这些行转到增量存储而非列存储中。 对于少于 102,400 行的较小的大容量加载，所有行都直接转到增量存储中。  
+增量存储：列存储索引可具有多个增量行组。  所有增量行组统称为增量存储。   
+
+在大容量加载期间，大多数行直接转到列存储，而不通过增量存储中转。 在大容量加载结束时，某些行的数量可能无法满足行组的最小大小要求（即 102,400 行）。 在发生这种情况时，将最后的这些行转到增量存储而非列存储中。 对于少于 102,400 行的较小的大容量加载，所有行都直接转到增量存储中。  
   
- 在增量存储达到最大行数后，它会关闭。 元组移动进程会检查是否有已关闭行组。 在它找到已关闭行组后，会对其进行压缩并且将其存储到列存储中。  
+
   
  非聚集列存储索引  
  “非聚集列存储索引”和聚集列存储索引在功能上相同。 不同之处在于，非聚集索引是在行存储表上创建的辅助索引，而聚集列存储索引是整个表的主存储。  

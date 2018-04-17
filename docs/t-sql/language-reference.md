@@ -1,16 +1,16 @@
 ---
-title: "Transact-SQL 参考（数据库引擎）| Microsoft Docs"
-ms.custom: 
+title: Transact-SQL 参考（数据库引擎）| Microsoft Docs
+ms.custom: ''
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.tsqlref.f1
@@ -18,7 +18,7 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/14/2018
 
  
 ## <a name="applies-to-references"></a>“适用范围”参考  
- T-SQL 参考主题涵盖 SQL Server 的多个版本（自 2008 起），还包含其他 Azure SQL 服务。 每个主题的顶部附近都有一个指示支持该主题要点的产品和服务的部分。 
+ T-SQL 参考主题涵盖 SQL Server 的多个版本（2008 版及更高版本），还包含其他 Azure SQL 服务。 每个主题的顶部附近都有一个指示支持该主题要点的产品和服务的部分。 
 
 例如，主题适用于所有版本，具有以下标签。 
   

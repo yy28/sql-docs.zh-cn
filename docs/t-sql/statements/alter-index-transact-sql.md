@@ -1,16 +1,16 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/24/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ ALTER INDEX { index_name | ALL }
   
 ```    
 ## <a name="arguments"></a>参数  
- *index_name*  
+ index_name  
  索引的名称。 索引名称在表或视图中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  ALL  
@@ -213,7 +213,7 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]支持由三部分组成的名称格式 database_name.[schema_name].table_or_view_name，其中 database_name 为当前数据库，或 database_name 为 tempdb，table_or_view_name 以 # 开头。  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH (\<rebuild_index_option> [ ,... n]) ]  
  指定将使用相同的列、索引类型、唯一性属性和排序顺序重新生成索引。 此子句等同于 [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)。 REBUILD 启用已禁用的索引。 重新生成聚集索引并不重新生成关联的非聚集索引，除非指定了关键字 ALL。 如果未指定索引选项，则应用存储在 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 中的现有索引选项值。 对于未在 **sys.indexes** 中存储值的任何索引选项，应用该选项的参数定义中指示的默认值。  
   
  如果指定 ALL 且基础表为堆，则重新生成操作对表没有任何影响。 重新生成与表相关联的所有非聚集索引。  
@@ -318,7 +318,7 @@ COMPRESS_ALL_ROW_GROUPS 提供将打开或关闭的增量行组强制到列存�
   
 -   OFF 将所有关闭的行组强制到列存储中。  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET ( \<set_index option> [ ,... n] )  
  指定不重新生成或重新组织索引的索引选项。 不能为已禁用的索引指定 SET。  
   
 PAD_INDEX = { ON | OFF }  
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 将所有打开和关闭的增量行组压缩到列存储中  
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- 命令 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 将每个打开和关闭的增量行组作为压缩行组压缩到列存储中。 这会清空增量存储，并强制所有行压缩到列存储中。 这在执行许多插入操作之后特别有用，因为这些操作将行存储在一个或多个增量存储中。  
+ 命令 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 将每个打开和关闭的增量行组作为压缩行组压缩到列存储中。 这会清空增量存储，并强制所有行压缩到列存储中。 这在执行许多插入操作之后特别有用，因为这些操作将行存储在一个或多个增量行组中。  
   
  REORGANIZE 会合并行组以填充最大行数 \<= 1,024,576 的行组。 因此，在压缩所有打开和关闭的行组时，最后不会得到与大量其中只包含少量行的压缩行组。 需要行组尽可能满，以减少压缩大小并提高查询性能。  
   

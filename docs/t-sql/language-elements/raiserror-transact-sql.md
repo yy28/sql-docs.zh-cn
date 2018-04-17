@@ -1,16 +1,16 @@
 ---
 title: RAISERROR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6102463ccd42e8057349b4480aa71d818aaafedf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 >  这些类型规范基于最初为 C 标准库中 printf 函数定义的规范。 RAISERROR 消息字符串中使用的类型规范映射到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据类型，而 printf 中使用的规范映射到 C 语言数据类型。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有与关联 C 数据类型类似的数据类型时，RAISERROR 不支持 printf 中使用的类型规范。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] 没有指针数据类型，因此 RAISERROR 不支持用于指针的 %p 规范。  
   
 > [!NOTE]  
->  要将值转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)]bigint 数据类型，请指定 %I64d。  
+>  要将值转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)] bigint 数据类型，请指定 %I64d。  
   
- @ local_variable  
- 是一个可以为任何有效字符数据类型的变量，其中包含的字符串的格式化方式与 msg_str 相同。@local_variable 必须为 char 或 varchar，或者能够隐式转换为这些数据类型。 *  
+ *@local_variable*  
+ 是一个可以为任何有效字符数据类型的变量，其中包含的字符串的格式化方式与 msg_str 相同。 @local_variable 必须为 char 或 varchar，或者能够隐式转换为这些数据类型。  
   
  severity  
  用户定义的与该消息关联的严重级别。 使用 msg_id 引发使用 sp_addmessage 创建的用户定义消息时，RAISERROR 上指定的严重性会替代 sp_addmessage 中指定的严重性。  

@@ -1,16 +1,16 @@
 ---
-title: "表提示 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 表提示 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+ WITH ( \<table_hint> ) [ [, ]...n ]  
  存在一些例外情况：只有在使用 WITH 关键字指定表提示时，才支持在 FROM 子句中使用这些提示。 指定表提示时必须使用括号。  
   
 > [!IMPORTANT]  
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  使用或不使用 WITH 关键字均可使用的表提示如下：NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT 和 NOEXPAND。 如果指定的表提示不含 WITH 关键字，则必须单独指定该提示。 例如：  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  如果指定的提示含其他选项，则指定的提示必须含 WITH 关键字：  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -155,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅“备注”。  
   
- INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+ INDEX  (index_value [,... n ] ) | INDEX =  ( index_value)**  
  INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多个索引的名称或 ID。 另一供选择的 INDEX = 语法指定单个索引值。 只能为每个表指定一个索引提示。  
   
  如果存在聚集索引，则 INDEX(0) 强制执行聚集索引扫描，INDEX(1) 强制执行聚集索引扫描或查找。 如果不存在聚集索引，则 INDEX(0) 强制执行表扫描，INDEX(1) 被解释为错误。  
@@ -186,7 +186,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  有关在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句中使用此提示的示例，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [ (index_value(index_column_name [ ,... n ] )) ]**  
  指定查询优化器仅使用索引查找操作作为表或视图中的数据的访问途径。 从 SQL Server 2008 R2 SP1 开始，还可以指定索引参数。 在这种情况下，查询优化器仅考虑通过指定的索引（至少使用指定的索引列）执行索引查找操作。  
   
  *index_value*  
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |与 INDEX 提示组合使用|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查询优化器仅考虑执行索引查找操作以通过指定的索引访问表或视图。|  
 |通过指定索引和索引列进行参数化|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|查询优化器仅考虑执行索引查找操作，以通过指定的索引（至少使用指定的索引列）访问表或视图。|  
   
- 使用 FORCESEEK 提示（具有或不带索引参数）时，考虑以下准则。  
+使用 FORCESEEK 提示（具有或不带索引参数）时，考虑以下准则。  
   
 -   该提示可以指定为表提示或查询提示。 有关查询提示的详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   如果 FORCESEEK 导致找不到计划，将返回错误 8622。  
   
- 使用索引参数指定 FORCESEEK 时，遵循以下准则和限制。  
+使用索引参数指定 FORCESEEK 时，遵循以下准则和限制。  
   
 -   不能为作为 INSERT、UPDATE 或 DELETE 语句的目标的表指定该提示。  
   
@@ -351,7 +351,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  内存优化表在 SNAPSHOT 隔离下访问。 SNAPSHOT 只能用于内存优化表 (不能用于基于磁盘的表)。 有关详细信息，请参阅[内存优化表简介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>筛选索引提示  
  筛选索引可用作表提示，但如果未涵盖查询选择的所有行，则会导致查询优化器产生错误 8622。 下面是一个无效筛选索引提示的示例。 该示例创建了筛选索引 `FIBillOfMaterialsWithComponentID`，然后将其用作 SELECT 语句的索引提示。 筛选索引谓词包含 ComponentID 为 533、324 和 753 的数据行。 查询谓词也包含 ComponentID 为 533、324 和 753 的数据行，但它扩展了结果集，使之包含 ComponentID 为 855 和 924 的数据行，而筛选索引中则不包含这两行。 因此，查询优化器无法使用此筛选索引提示，并产生错误 8622。 有关详细信息，请参阅 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. 使用 FORCESEEK 提示指定索引查找操作  
  以下示例使用未指定索引的 FORCESEEK 提示强制查询优化器对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Sales.SalesOrderDetail` 表执行索引查找操作。  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

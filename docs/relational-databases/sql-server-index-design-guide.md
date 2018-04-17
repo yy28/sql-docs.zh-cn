@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 索引设计指南 | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
+title: SQL Server 索引设计指南 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index design guide
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -630,7 +630,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 有关详细信息，请参阅[列存储索引概述](../relational-databases/indexes/columnstore-indexes-overview.md)。 
 
-**适用范围**： [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。
+有关详细信息，请参阅[列存储索引 - 新增功能](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)。
 
 ### <a name="columnstore-index-architecture"></a>列存储索引体系结构
 
@@ -649,7 +649,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 列存储索引还使用称为增量存储的行存储格式以物理方式存储某些行。 增量存储（也称为增量行组）是数量太少，不符合压缩到列存储中的条件的行的保存位置。 每个增量行组作为聚集 B 树索引实现。 
 
-- **增量存储**是数量太少，无法压缩到列存储中的行的保存位置。 增量存储是行存储。 
+- 增量存储是数量太少，无法压缩到列存储中的行的保存位置。 增量存储以行存储格式存储行。 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>针对行组和列段执行操作
 
