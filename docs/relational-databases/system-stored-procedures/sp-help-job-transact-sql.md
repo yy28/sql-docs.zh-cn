@@ -1,16 +1,16 @@
 ---
-title: "sp_help_job (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_job (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e195e4fb851b1b301b1ccac9501ae5be107e0689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_help_job { [ @job_id = ] job_id
  作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必须指定，但不能同时指定。  
+>  若要查看特定作业，或者*job_id*或*job_name*必须指定。  同时省略*job_id*和*job_name*返回有关所有作业的信息。
   
  [ **@job_aspect =**] **'***job_aspect***'**  
  要显示的作业属性。 *job_aspect*是**varchar(9)**，默认值为 NULL，并且可以为这些值之一。  
@@ -75,7 +75,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------|-----------------|  
 |**ALL**|作业特征信息|  
 |**JOB**|作业信息|  
-|**SCHEDULES**|计划信息|  
+|**计划**|计划信息|  
 |**STEPS**|作业步骤信息|  
 |**目标**|目标信息|  
   
@@ -91,10 +91,10 @@ sp_help_job { [ @job_id = ] job_id
  [ **@category_name =**] **'***category***'**  
  类别的名称。 *类别*是**sysname**，默认值为 NULL。  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**]*启用*  
  一个指示是为启用的作业还是为禁用的作业显示信息的数字。 *启用*是**tinyint**，默认值为 NULL。 **1**指示已启用的作业和**0**指示已禁用的作业。  
   
- [ **@execution_status =**] *status*  
+ [  **@execution_status =**]*状态*  
  作业的执行状态。 *状态*是**int**，默认值为 NULL，并且可以为这些值之一。  
   
 |“值”|说明|  
@@ -135,7 +135,7 @@ sp_help_job { [ @job_id = ] job_id
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
 |**category**|**sysname**|作业类别。|  
 |**所有者**|**sysname**|作业所有者。|  
-|**notify_level_eventlog**|**int**|**位掩码**，该值指示应在什么情况下在 Microsoft Windows 应用程序日志中记录通知事件。 可以是下列值之一：<br /><br /> **0** = Never<br /><br /> **1** = 当作业成功<br /><br /> **2** = 当作业失败时<br /><br /> **3** = 当作业完成 （不考虑作业结果中） 时|  
+|**notify_level_eventlog**|**int**|**位掩码**，该值指示应在什么情况下在 Microsoft Windows 应用程序日志中记录通知事件。 可以是下列值之一：<br /><br /> **0** = 从不<br /><br /> **1** = 当作业成功<br /><br /> **2** = 当作业失败时<br /><br /> **3** = 当作业完成 （不考虑作业结果中） 时|  
 |**notify_level_email**|**int**|**位掩码**，该值指示作业完成时应在哪些情况下发送通知电子邮件。 可能的值为相同**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|**位掩码**，该值指示在什么情况下作业完成时应发送一条网络消息。 可能的值为相同**notify_level_eventlog**。|  
 |**notify_level_page**|**int**|**位掩码**，该值指示作业完成时，则应发送在什么情况下一个页面。 可能的值为相同**notify_level_eventlog**。|  
@@ -170,7 +170,7 @@ sp_help_job { [ @job_id = ] job_id
 |**step_name**|**sysname**|步骤的名称。|  
 |**subsystem**|**nvarchar(40)**|执行步骤命令的子系统。|  
 |**command**|**nvarchar(3200)**|执行的命令。|  
-|**flags**|**nvarchar(4000)**|**位掩码**的值，用于控制步骤行为。|  
+|**flag**|**nvarchar(4000)**|**位掩码**的值，用于控制步骤行为。|  
 |**cmdexec_success_code**|**int**|有关**CmdExec**步骤中，这是成功命令的进程退出代码。|  
 |**on_success_action**|**nvarchar(4000)**|步骤成功时的操作：<br /><br /> **1** = 成功后退出。<br /><br /> **2** = 失败后退出。<br /><br /> **3** = 转到下一步。<br /><br /> **4** = 转到步骤。|  
 |**on_success_step_id**|**int**|如果**on_success_action**是**4**，这指示执行的下一步骤。|  
@@ -197,11 +197,11 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_id**|**int**|计划的标识符（对所有作业都是唯一的）。|  
 |**schedule_name**|**sysname**|计划的名称（只对该作业是唯一的）。|  
 |**enabled**|**int**|是否计划处于活动状态 (**1**) 或不 (**0**)。|  
-|**freq_type**|**int**|表示何时执行作业的值：<br /><br /> **1** = Once<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32**相对于 = 每月、 **freq_interval**<br /><br /> **64** = 运行时**SQLServerAgent**服务启动。|  
-|**freq_interval**|**int**|执行作业的天数。 值的值取决于**freq_type**。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_type**|**Int**|单位**freq_subday_interval**。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_interval**|**int**|数**freq_subday_type**期间发生的作业的每个执行之间。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_relative_interval**|**int**|计划作业的匹配项**freq_interval**中每个月。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_type**|**int**|表示何时执行作业的值：<br /><br /> **1** = 一次<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32**相对于 = 每月、 **freq_interval**<br /><br /> **64** = 运行时**SQLServerAgent**服务启动。|  
+|**freq_interval**|**int**|执行作业的天数。 值的值取决于**freq_type**。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_type**|**Int**|单位**freq_subday_interval**。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_interval**|**int**|数**freq_subday_type**期间发生的作业的每个执行之间。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_relative_interval**|**int**|计划作业的匹配项**freq_interval**中每个月。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_recurrence_factor**|**int**|作业的已计划执行日期之间的间隔月数。|  
 |**active_start_date**|**int**|开始执行作业的日期。|  
 |**active_end_date**|**int**|结束执行作业的日期。|  
@@ -284,8 +284,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

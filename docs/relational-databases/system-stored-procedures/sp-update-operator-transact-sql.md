@@ -2,7 +2,7 @@
 title: sp_update_operator (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a98f5a61c76e1e6ef0cd2dc2a17a445084dd15eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @name=] '*name*'  
+ [ @name=] '*名称*  
  要修改的操作员的名称。 *名称*是**sysname**，无默认值。  
   
  [ @new_name=] '*new_name*'  
  操作员的新名称。 此名称必须唯一。 *new_name*是**sysname**，默认值为 NULL。  
   
- [ @enabled=] *enabled*  
+ [ @enabled=]*启用*  
  一个数字，指示该运算符的当前状态 (**1**如果当前启用了， **0**如果没有)。 *启用*是**tinyint**，默认值为 NULL。 如果未启用，操作员将不接收警报通知。  
   
  [ @email_address=] '*email_address*'  
@@ -109,7 +109,7 @@ sp_update_operator
  [ @netsend_address=] '*netsend_address*'  
  要将网络消息发送到的操作员的网络地址。 *netsend_address*是**nvarchar(100)**，默认值为 NULL。  
   
- [ @category_name=] '*category*'  
+ [ @category_name=] '*类别*  
  该警报的类别名称。 *类别*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -140,9 +140,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

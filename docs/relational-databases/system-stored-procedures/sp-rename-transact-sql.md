@@ -1,16 +1,16 @@
 ---
-title: "sp_rename (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_rename (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rename_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3e8a506b800ebb81c1721175009c41d7f2a748d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  只有在指定了限定对象时才必须使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *object_name*是**nvarchar(776)**，无默认值。  
   
- [ @newname = ] '*new_name*'  
+ [ @newname =] '*new_name*  
  指定对象的新名称。 *new_name*必须是一个部分名称，并且必须遵循标识符规则。 *newname*是**sysname**，无默认值。  
   
 > [!NOTE]  
@@ -73,7 +74,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|用户定义数据库。 重命名数据库时需要此对象类型。|  
 |INDEX|用户定义索引。 重命名带统计信息的索引时，也会自动重命名统计信息。|  
 |OBJECT|类型的项中跟踪[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 例如，OBJECT 可用于重命名包含约束（CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY）、用户表和规则的对象。|  
-|STATISTICS|**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 由用户显式创建的统计信息或使用索引隐式创建的统计信息。 重命名索引的统计信息时，也会自动重命名索引。|  
+|STATISTICS|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 由用户显式创建的统计信息或使用索引隐式创建的统计信息。 重命名索引的统计信息时，也会自动重命名索引。|  
 |USERDATATYPE|A [CLR 用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)添加通过执行[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)或[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -213,6 +214,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_changemergearticle (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_changemergearticle (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/09/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-caps.latest.revision: 
+caps.latest.revision: 74
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c2b4b07b79b061b85e50cd51c4716173f073a6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1c50e76d1ecb9dbdf7c4f08e1d12c3a6d7aa1433
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
+ [ **@publication=**] **'***publication***'**  
  包含该项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *文章*  
+ [  **@article=**] *****文章*****  
  要更改的项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@property=**] *属性*  
+ [  **@property=**] *****属性*****  
  给定项目和发布的要更改的属性。 *属性*是**nvarchar (30)**，可以将其中一个值在表中列出。  
   
- [  **@value=**] *值*  
+ [  **@value=**] *****值*****  
  是的指定属性的新值。 *值*是**nvarchar(1000)**，可以将其中一个值在表中列出。  
   
  下表说明项目的属性和这些属性的值。  
@@ -76,11 +76,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x40**|将订阅服务器上的 DELETE 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
 |**column_tracking**|**true**|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意： 不使用列级跟踪，发布表具有多个 246 列时。|  
 ||**false**|关闭列级跟踪，保留行级冲突检测。 仅适用于表项目。|  
-|**是 compensate_for_errors**|**true**|同步过程中发生错误时执行补救措施。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
-||**false**|不执行补救措施，这是默认行为。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> **\*\*重要\* \*** 尽管受影响的行中的数据可能显示为不收敛，就会立即解决的任何错误，但可以应用更改并将聚合数据。 如果在另一个发布，则的值已发布文章的源表*compensate_for_errors*必须是相同的这两篇文章。|  
+|**compensate_for_errors**|**true**|同步过程中发生错误时执行补救措施。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+||**false**|不执行补救措施，这是默认行为。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> **\*\* 重要\* \*** 尽管受影响的行中的数据可能显示为不收敛，就会立即解决的任何错误，但可以应用更改并将聚合数据。 如果在另一个发布，则的值已发布文章的源表*compensate_for_errors*必须是相同的这两篇文章。|  
 |**creation_script**||用于在订阅数据库中创建项目的可选项目架构脚本的路径和名称。|  
 |**delete_tracking**|**true**|复制 DELETE 语句，这是默认行为。|  
-||**false**|不复制 DELETE 语句。<br /><br /> **\*\*重要\* \*** 设置**delete_tracking**到**false**非收敛和删除的行中的结果需要手动删除。|  
+||**false**|不复制 DELETE 语句。<br /><br /> **\*\* 重要\* \*** 设置**delete_tracking**到**false**非收敛和删除的行中的结果需要手动删除。|  
 |**说明**||项目的说明项。|  
 |**destination_owner**||在订阅数据库中，如果不是对象的所有者名称**dbo**。|  
 |**identity_range**||**bigint** ，指定将分配新标识值，如果该项目时要使用的范围大小**identityrangemanagementoption**设置为**自动**或**auto_identity_范围**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
@@ -97,9 +97,9 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**pre_creation_command**|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 ||**删除**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 ||**拖放**|删除该表，然后重新创建一个表。|  
-||**截断**|截断目标表。|  
+||**truncate**|截断目标表。|  
 |**processing_order**||**int** ，该值指示在合并发布中的项目的处理顺序。|  
-|**pub_identity_range**||**bigint** ，指定分配给订阅服务器使用服务器订阅，如果该项目的范围大小**identityrangemanagementoption**设置为**自动**或**自动_identity_range**设置为**true**。 此标识范围是为重新发布订阅服务器保留的，用于分配给其自身的订阅服务器。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+|**pub_identity_range**||**bigint** ，指定分配给订阅服务器使用服务器订阅，如果该项目的范围大小**identityrangemanagementoption**设置为**自动**或**auto_identity_range**设置为**true**。 此标识范围是为重新发布订阅服务器保留的，用于分配给其自身的订阅服务器。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 |**published_in_tran_pub**|**true**|项目也在事务发布中发布。|  
 ||**false**|项目不在事务发布中发布。|  
 |**resolver_info**||用于指定自定义冲突解决程序所需的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 **resolver_info**是**nvarchar （255)**，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
@@ -139,20 +139,20 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[将脚本执行之前和之后应用快照](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
 ||**0x1000000000**|将公共语言运行时 (CLR) 用户定义类型 (Udt) 转换为**varbinary （max)**以便类型 UDT 的列可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||**0x2000000000**|将转换**hierarchyid**数据类型设置为**varbinary （max)**以便类型的列**hierarchyid**可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关如何使用**hierarchyid**列中复制的表，请参阅[hierarchyid &#40;Transact SQL &#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|将转换**hierarchyid**数据类型设置为**varbinary （max)**以便类型的列**hierarchyid**可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关如何使用**hierarchyid**列中复制的表，请参阅[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|复制表的任何筛选的索引。 有关筛选的索引的详细信息，请参阅[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。|  
 ||**0x8000000000**|将转换**geography**和**几何图形**数据类型到**varbinary （max)** ，以便这些类型的列可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|复制类型的列的索引**geography**和**几何图形**。|  
 ||NULL|系统自动为项目生成一个有效的架构选项。|  
 |**status**|**活动**|用于发布表的初始处理脚本已运行。|  
 ||**未同步**|用于发布表的初始处理脚本在下一次运行快照代理时运行。|  
-|**stream_blob_columns**|**true**|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 *stream_blob_columns*设置为 true 时启用 FILESTREAM。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 项目不使用 blob 流，设置*stream_blob_columns*为 false。<br /><br /> **\*\*重要\* \*** 启用此内存优化可能会降低在同步期间合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
+|**stream_blob_columns**|**true**|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 *stream_blob_columns*设置为 true 时启用 FILESTREAM。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 项目不使用 blob 流，设置*stream_blob_columns*为 false。<br /><br /> **\*\* 重要\* \*** 启用此内存优化可能会降低在同步期间合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
 ||**false**|复制二进制大型对象列时不使用优化。|  
 |**subscriber_upload_options**|**0**|不限制在包含客户端订阅的订阅服务器上进行更新；将更改上载到发布服务器。 更改此属性可能需要重新初始化现有的订阅服务器。|  
 ||**1**|允许在包含客户端订阅的订阅服务器上进行更改，但不将更改上载到发布服务器。|  
 ||**2**|不允许在包含客户端订阅的订阅服务器上进行更改。|  
-|**subset_filterclause**||用于指定水平筛选的 WHERE 子句。 仅适用于表项目。<br /><br /> **\*\*重要\* \*** 出于性能原因，我们建议，你不将函数应用于参数化的行筛选器子句中的列名称如`LEFT([MyColumn]) = SUSER_SNAME()`。 如果你使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在筛选器子句和替代 HOST_NAME 值中，你可能需要将数据类型转换使用[转换](../../t-sql/functions/cast-and-convert-transact-sql.md)。 有关这种情况下的最佳实践的详细信息，请参阅"重写 host_name （） 值"一节中[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。|  
-|**阈值**||用于运行的订阅服务器的百分比值[!INCLUDE[ssEW](../../includes/ssew-md.md)]或早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **阈值**控制何时合并代理指派的新标识范围。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 使用时**identityrangemanagementoption**设置为**自动**或**auto_identity_range**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+|**subset_filterclause**||用于指定水平筛选的 WHERE 子句。 仅适用于表项目。<br /><br /> **\*\* 重要\* \*** 出于性能原因，我们建议，你不将函数应用于参数化的行筛选器子句中的列名称如`LEFT([MyColumn]) = SUSER_SNAME()`。 如果你使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在筛选器子句和替代 HOST_NAME 值中，你可能需要将数据类型转换使用[转换](../../t-sql/functions/cast-and-convert-transact-sql.md)。 有关这种情况下的最佳实践的详细信息，请参阅"重写 host_name （） 值"一节中[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。|  
+|**threshold**||用于运行的订阅服务器的百分比值[!INCLUDE[ssEW](../../includes/ssew-md.md)]或早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **阈值**控制何时合并代理指派的新标识范围。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 使用时**identityrangemanagementoption**设置为**自动**或**auto_identity_range**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 |**verify_resolver_signature**|**1**|通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 ||**0**|不通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 |NULL（默认值）||返回支持的值的列表*属性*。|  
@@ -248,13 +248,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergearticle**。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改项目属性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergearticle &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

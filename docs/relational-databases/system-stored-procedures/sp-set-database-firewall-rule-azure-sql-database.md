@@ -1,16 +1,16 @@
 ---
-title: "sp_set_database_firewall_rule （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sp_set_database_firewall_rule （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_set_database_firewall_rule
 - firewall_rules, setting database rules
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c83057218c015eb9d3488ea730e507ab795ddade
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 33ba0433400c5848cc3e96dd0afad6e8c402660d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@start_ip_address**  =] '*start_ip_address*  
  数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。 *start_ip_address*是**varchar(50)**无默认值。  
   
- [ **@end_ip_address**  =] '*end_ip_address*  
+ [**@end_ip_address** =] '*end_ip_address*  
  数据库级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。 *end_ip_address*是**varchar(50)**无默认值。  
   
  下表演示了支持的参数和选项中[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -69,8 +70,8 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
  添加数据库级防火墙设置的起始和结束 IP 地址都等于`0.0.0.0`，到中的数据库启用访问[!INCLUDE[ssSDS](../../includes/sssds-md.md)]从任何 Azure 资源的服务器。 向提供值*名称*参数将帮助你记住该防火墙设置属于什么。  
   
-## <a name="permissions"></a>Permissions  
- 需要**控件**对数据库拥有权限。  
+## <a name="permissions"></a>权限  
+ 需要针对数据库的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
  下面的代码创建的数据库级防火墙设置调用`Allow Azure`启用到你的数据库从 Azure 访问。  
@@ -95,8 +96,8 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
 ## <a name="see-also"></a>另请参阅  
  [Azure SQL 数据库防火墙](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [如何： 配置防火墙设置 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_delete_database_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [sp_set_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_delete_database_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   

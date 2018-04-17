@@ -1,16 +1,16 @@
 ---
-title: "sp_help_operator (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_operator (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_operator
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc89c5f6689b64aea7be0410850f373d75d876e6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 48495576db891a8acbd944578f45bfa5267fb9c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作员标识号。|  
 |**名称**|**sysname**|运算符名称。|  
-|**enabled**|**tinyint**|操作员可以接收到任何通知：<br /><br /> **1** = yes<br /><br /> **0** = No|  
+|**enabled**|**tinyint**|操作员可以接收到任何通知：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**email_address**|**nvarchar(100)**|操作员电子邮件地址。|  
 |**last_email_date**|**int**|上次用电子邮件通知操作员的日期。|  
 |**last_email_time**|**int**|上一次用电子邮件通知操作员的时间。|  
@@ -113,9 +113,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

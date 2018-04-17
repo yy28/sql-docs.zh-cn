@@ -24,13 +24,13 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc773e1770b907b6eba5e4d09372f0654054d47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 运算符
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.lasthandoff: 12/05/2017
   
 -   有关常规比较运算符 (=、 ！ =、 \<，>， \<=、 > =)  
   
- 有关这些运算符的详细信息，请参阅[比较表达式 &#40;XQuery &#41;](../xquery/comparison-expressions-xquery.md)  
+ 有关这些运算符的详细信息，请参阅[比较表达式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-general-operators"></a>A. 使用一般运算符  
  此查询说明了应用于序列和比较序列的一般运算符的使用方法。 查询检索从每个客户的电话号码序列**AdditionalContactInfo**列**联系人**表。 然后，将这个序列与两个电话号码（“111-111-1111”、“222-2222”）序列进行比较。  
   
- 该查询使用 **=** 比较运算符。 在右侧的序列中的每个节点 **=** 运算符比较与左侧序列中的每个节点。 如果匹配节点，节点比较将**TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
+ 该查询使用**=**比较运算符。 在右侧的序列中的每个节点**=**运算符比较与左侧序列中的每个节点。 如果匹配节点，节点比较将**TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -100,7 +100,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 因为两个操作数**eq**运算符原子值，在查询中使用值运算符。 你可以通过使用常规的比较运算符来编写相同的查询 (  **=**  )。  
+ 因为两个操作数**eq**运算符原子值，在查询中使用值运算符。 你可以通过使用常规的比较运算符来编写相同的查询 ( **=** )。  
   
 ## <a name="see-also"></a>另请参阅  
  [对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)   

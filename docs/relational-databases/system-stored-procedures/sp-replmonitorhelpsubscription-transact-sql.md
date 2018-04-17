@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorhelpsubscription (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_replmonitorhelpsubscription (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24254591967a08df8a46446e485af1be5760c862
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 44fccedae1010ec6b79268552a990c88ba5975a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,29 +53,29 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher**  =] *发布服务器*  
+ [ **@publisher** = ] **'***publisher***'**  
  正监视其状态的发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 如果**null**，使用分发服务器的所有发布服务器返回信息。  
   
- [  **@publisher_db**  =] *publisher_db*  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  已发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 如果为 NULL，则返回发布服务器上所有已发布数据库的信息。  
   
- [  **@publication**  =] *发布*  
+ [ **@publication** = ] **'***publication***'**  
  要监视的发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  发布的类型。 *publication_type*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|事务发布。|  
 |**1**|快照发布。|  
 |**2**|合并发布。|  
 |NULL（默认值）|由复制来确定发布类型。|  
   
- [  **@mode**  =]*模式*  
+ [ **@mode** =]*模式*  
  返回订阅监视信息时要使用的筛选模式。 *模式*是**int**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**0** （默认值）|返回所有订阅。|  
 |**1**|只返回带错误的订阅。|  
@@ -86,10 +86,10 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|只返回当前同步的订阅。|  
 |**7**|只返回当前不同步的订阅。|  
   
- [  **@topnum**  =] *topnum*  
+ [ **@topnum** =] *topnum*  
  将结果集限制为返回数据顶部的指定订阅编号。 *topnum*是**int**，无默认值。  
   
- [  **@exclude_anonymous**  =] *exclude_anonymous*  
+ [ **@exclude_anonymous** =] *exclude_anonymous*  
  指示是否从结果集中排除匿名请求订阅。 *exclude_anonymous*是**位**，默认值为**0**; 的值**1**匿名订阅已排除的方式以及值为**0**意味着它们将包含的。  
   
  [  **@refreshpolicy=** ] *refreshpolicy*  
@@ -123,8 +123,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|订阅的上次同步的传递速率。|  
 |**mergerunduration**|**int**|完成订阅的上次同步的时间长度。|  
 |**monitorranking**|**int**|用于对结果集中的订阅进行排序的排名值，可以是下列值之一：<br /><br /> 对于事务发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告： 关键的性能<br /><br /> **52** = 警告： 马上就要过期或已过期<br /><br /> **50** = 警告： 未初始化的订阅<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 未运行 （成功）<br /><br /> **20** = 运行 （从开始，运行或空闲）<br /><br /> 对于合并发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告： 关键的性能<br /><br /> **54** = 警告： 长时间运行的合并<br /><br /> **52** = 警告： 即将到期<br /><br /> **50** = 警告： 未初始化的订阅<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 运行 （从开始，运行或空闲）<br /><br /> **20** = 未运行 （成功）|  
-|**distributionagentjobid**|**binary （16)**|事务发布订阅的分发代理作业的 ID。|  
-|**mergeagentjobid**|**binary （16)**|合并发布订阅的合并代理作业的 ID。|  
+|**distributionagentjobid**|**binary(16)**|事务发布订阅的分发代理作业的 ID。|  
+|**mergeagentjobid**|**binary(16)**|合并发布订阅的合并代理作业的 ID。|  
 |**distributionagentid**|**int**|订阅的分发代理作业的 ID。|  
 |**distributionagentprofileid**|**int**|分发代理使用的代理配置文件的 ID。|  
 |**mergeagentid**|**int**|订阅的合并代理作业的 ID。|  
@@ -138,7 +138,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
  **sp_replmonitorhelpsubscription**基于状态的订阅，这由值的严重程度将结果集*monitorranking*。 例如，处于错误状态的所有订阅的各行排在处于警告状态的订阅的各行之上。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**db_owner**或**replmonitor**在分发数据库上的固定的数据库角色可以执行**sp_replmonitorhelpsubscription**。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,16 +1,16 @@
 ---
-title: "sp_help_alert (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_alert (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_alert
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1dc2217a34afadc5a105709ac294325ac9e80a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 070e37092c8683b1709ae878686a337df74f3232
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 当 **@legacy_format** 是**0**， **sp_help_alert**产生以下结果集。  
+ 当**@legacy_format**是**0**， **sp_help_alert**产生以下结果集。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -96,14 +96,14 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|为了响应警报而执行的作业的标识号。|  
 |**job_name**|**sysname**|为了响应警报而执行的作业的名称。|  
 |**has_notification**|**int**|如果将这个警报通知给一个或多个操作员，则为非零。 值为一个或多个以下值 （or 运算组合在一起）：<br /><br /> **1**= 具有电子邮件通知<br /><br /> **2**= 具有寻呼通知<br /><br /> **4**= 具有**网络发送**通知。|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|如果**类型**是**2**，此列显示性能条件的定义; 否则，该列为 NULL。|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 将始终为 [未分类] 为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将始终为“[Uncategorized]”。|  
 |**wmi_namespace**|**sysname**|如果**类型**是**3**，此列显示 WMI 事件的命名空间。|  
 |**wmi_query**|**nvarchar(512)**|如果**类型**是**3**，此列显示的查询的 WMI 事件。|  
 |**类型**|**int**|事件类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
   
- 当 **@legacy_format** 是**1**， **sp_help_alert**产生以下结果集。  
+ 当**@legacy_format**是**1**， **sp_help_alert**产生以下结果集。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -130,7 +130,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|作业标识号。|  
 |**job_name**|**sysname**|为了响应警报而执行的按需作业。|  
 |**has_notification**|**int**|如果将这个警报通知给一个或多个操作员，则为非零。 该值是下列值中的一个或多个（用 OR 连起来）：<br /><br /> **1**= 具有电子邮件通知<br /><br /> **2**= 具有寻呼通知<br /><br /> **4**= 具有**网络发送**通知。|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
+|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]中创建已分区表或索引。|  
 |**performance_condition**|**nvarchar(512)**|如果**类型**是**2**，此列显示性能条件的定义。 如果**类型**是**3**，此列显示的查询的 WMI 事件。 否则，该列为 NULL。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 将始终为**[未分类]**为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
 |**类型**|**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
@@ -156,7 +156,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_update_alert &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

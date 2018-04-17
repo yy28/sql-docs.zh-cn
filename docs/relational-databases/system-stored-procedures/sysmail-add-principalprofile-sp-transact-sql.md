@@ -1,16 +1,16 @@
 ---
-title: "sysmail_add_principalprofile_sp (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sysmail_add_principalprofile_sp (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_principalprofile_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d84d54c489b15a9fbe8f739efee5be02535a004
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8811ab095afe55a43b9b018e083d97f51525c2df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  [ **@principal_name** = ] **'***principal_name***'**  
  数据库用户或角色中的名称**msdb**关联的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 A *principal_name*的**'public'**使此配置文件的公共配置文件，向数据库中的所有主体授予访问权限。  
   
- [ **@profile_id** = ] *profile_id*  
+ [ **@profile_id** =] *profile_id*  
  关联的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
  [ **@profile_name** = ] **'***profile_name***'**  
@@ -67,11 +67,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>注释  
- 若要使公共配置文件，指定 **@principal_id** 的**0**或 **@principal_name** 的**公共**。 公共配置文件可供中的所有用户**msdb**数据库，但用户还必须是属于**DatabaseMailUserRole**执行**sp_send_dbmail**。  
+ 若要使公共配置文件，指定**@principal_id**的**0**或**@principal_name**的**公共**。 公共配置文件可供中的所有用户**msdb**数据库，但用户还必须是属于**DatabaseMailUserRole**执行**sp_send_dbmail**。  
   
- 数据库用户只能有一个默认的配置文件。 当 **@is_default** 是**1**和用户已与一个或多个配置文件相关联，指定的配置文件将成为用户的默认配置文件。 以前的默认配置文件仍与该用户关联，但不再是默认配置文件。  
+ 数据库用户只能有一个默认的配置文件。 当**@is_default**是**1**和用户已与一个或多个配置文件相关联，指定的配置文件将成为用户的默认配置文件。 以前的默认配置文件仍与该用户关联，但不再是默认配置文件。  
   
- 当 **@is_default** 是**0**并且没有其他关联存在，则存储的过程会返回错误。  
+ 当**@is_default**是**0**并且没有其他关联存在，则存储的过程会返回错误。  
   
  存储的过程**sysmail_add_principalprofile_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
   
@@ -104,6 +104,6 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [数据库邮件存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

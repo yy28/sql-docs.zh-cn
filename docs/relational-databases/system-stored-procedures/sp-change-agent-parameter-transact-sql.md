@@ -1,16 +1,16 @@
 ---
-title: "sp_change_agent_parameter (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_change_agent_parameter (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb615a76b87152c437d3ecc5667262df4e0120c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fd6da586c282cae6a963bec1ae0c76a1609ce4b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [  **@profile_id=**] *profile_id*，  
  配置文件的 ID。 *profile_id*是**int**，无默认值。  
   
- [  **@parameter_name=**] *parameter_name*  
+ [  **@parameter_name=**] *****parameter_name*****  
  为参数的名称。 *parameter_name*是**sysname**，无默认值。 对于系统配置文件，可以更改的参数取决于代理的类型。 若要了解哪种类型的代理这*profile_id*表示时，找到*profile_id*中的列**Msagent_profiles**表，并记下*agent_type*值。  
   
 > [!NOTE]  
@@ -73,7 +73,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **数据包大小**  
+-   **PacketSize**  
   
 -   **QueryTimeout**  
   
@@ -93,7 +93,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **数据包大小**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -129,7 +129,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **数据包大小**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -195,7 +195,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **数据包大小**  
+-   **PacketSize**  
   
 -   **ParallelUploadDownload**  
   
@@ -251,7 +251,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  若要查看为给定配置文件中定义了哪些参数，运行**sp_help_agent_profile**并记下*profile_name*与关联*profile_id*。 使用相应*profile_id*，接下来运行**sp_help_agent_parameters**使用该*profile_id*若要查看与配置文件相关联的参数。 通过执行，可以将参数添加到配置文件[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
- [  **@parameter_value=**] *parameter_value*  
+ [  **@parameter_value=**] *****parameter_value*****  
  为参数的新值。 *parameter_value*是**nvarchar （255)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -260,7 +260,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="remarks"></a>注释  
  **sp_change_agent_parameter**在所有类型的复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_change_agent_parameter**。  
   
 ## <a name="see-also"></a>另请参阅  
@@ -270,9 +270,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

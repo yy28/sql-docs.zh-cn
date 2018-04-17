@@ -1,16 +1,16 @@
 ---
-title: "sp_helpqreader_agent (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpqreader_agent (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50492a76e742459e7b883f9887026d0ce63d1eb1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0e7aeb2448ff44ef39a638ea61c64b72f0a7d123
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理程序的 ID。|  
 |**名称**|**nvarchar(100)**|代理的名称。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|是以格式返回的 Windows 帐户运行分发代理*域*\\*用户名*。|  
-|**job_password**|**sysname**|出于安全原因，值为 **\* \* \* \* \* \* \* \* \* \*** 始终返回。|  
+|**job_password**|**sysname**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \***始终返回。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -65,10 +65,10 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="remarks"></a>注释  
  **sp_helpqreader_agent**事务复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  时的值*frompublisher*是**1**，只有的成员**sysadmin**固定的服务器角色在发布服务器或成员的**db_owner**发布数据库上的固定的数据库角色可以执行**sp_helpqreader_agent**。 否则为只有的成员**sysadmin**固定的服务器角色在分发服务器或成员的**db_owner**在分发数据库上的固定的数据库角色可以执行**sp_helpqreader_代理**。  
   
 ## <a name="see-also"></a>另请参阅  
- [允许更新事务发布的订阅](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+ [对事务发布启用更新订阅](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

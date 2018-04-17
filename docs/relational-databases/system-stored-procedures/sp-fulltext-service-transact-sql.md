@@ -1,16 +1,16 @@
 ---
-title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_fulltext_service (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07e4a7e1832a91ebc2acd5da19839766b83619ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@action=**] **'***action***'**  
+ [  **@action=**] *****操作*****  
  要更改或重置的属性。 *操作*是**nvarchar(100)，**无默认值。 有关的列表*c*的服务和解决方案属性及其说明，可以设置的值，请参阅下的表*值*自变量。 该参数将返回下列属性：数据类型、当前运行值、最小值或最大值以及不推荐使用的状态（如果适用）。  
   
- [ **@value=**] *value*  
+ [  **@value=**]*值*  
  指定属性的值。 *值*是**sql_variant**，默认值为 NULL。 如果@value为 null， **sp_fulltext_service**返回当前设置。 此表列出了操作属性及其说明以及可设置的值。  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [全文搜索](../../relational-databases/search/full-text-search.md)   
- [FULLTEXTSERVICEPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

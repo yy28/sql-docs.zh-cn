@@ -1,16 +1,16 @@
 ---
-title: "sp_help_jobstep (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_jobstep (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f091fbfa1183b2decb8628984dd730ac4cd2ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_name**|**sysname**|作业中的步骤名称。|  
 |**subsystem**|**nvarchar(40)**|执行步骤命令的子系统。|  
 |**command**|**nvarchar(max)**|在步骤中执行的命令。|  
-|**flags**|**int**|控制步骤行为的值的位掩码。|  
+|**flag**|**int**|控制步骤行为的值的位掩码。|  
 |**cmdexec_success_code**|**int**|有关**CmdExec**步骤中，这是成功命令的进程退出代码。|  
 |**on_success_action**|**tinyint**|如果步骤成功，则采取下列某个后续操作：<br /><br /> **1** = 退出报告成功的作业。<br /><br /> **2** = 退出报告失败的作业。<br /><br /> **3** = 转到下一步。<br /><br /> **4** = 转到步骤。|  
 |**on_success_step_id**|**int**|如果**on_success_action**为 4，则这指示执行的下一步骤。|  
@@ -91,7 +91,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**int**|重试尝试的间隔（以分钟为单位）。|  
 |**os_run_priority**|**int**|保留。|  
 |**output_file_name**|**nvarchar(200)**|输出应写入到哪个命令的文件 ([!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**，和**PowerShell**仅步骤)。|  
-|**last_run_outcome**|**int**|步骤上一次运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = Retry<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
+|**last_run_outcome**|**int**|步骤上一次运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|步骤上一次运行的持续时间（以秒为单位）。|  
 |**last_run_retries**|**int**|步骤上一次运行时，重试命令的次数。|  
 |**last_run_date**|**int**|步骤上一次开始执行的日期。|  
@@ -142,10 +142,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

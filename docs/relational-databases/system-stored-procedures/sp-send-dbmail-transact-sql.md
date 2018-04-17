@@ -1,16 +1,16 @@
 ---
-title: sp_send_dbmail (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_send_dbmail (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sendmail_sp_TSQL
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_send_dbmail
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-caps.latest.revision: 
+caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7293e16e45c465fa2cfeda2d11888b4dc450d380
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1c33d72b5f89c73e409f82d9e8c851aa740dd54e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,17 +70,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@profile_name=** ] **'***profile_name***'**  
- 发送邮件的配置文件的名称。 *Profile_name*属于类型**sysname**，默认值为 NULL。 *Profile_name*必须是现有数据库邮件配置文件的名称。 如果没有*profile_name*指定，则**sp_send_dbmail**为当前用户使用默认的专用配置文件。 如果用户不具有默认私有配置文件， **sp_send_dbmail**使用的默认公共配置文件**msdb**数据库。 如果用户没有默认的专用配置文件，并且没有数据库，没有默认公共配置文件 **@profile_name** 必须指定。  
+ [  **@profile_name=** ] *****profile_name*****  
+ 发送邮件的配置文件的名称。 *Profile_name*属于类型**sysname**，默认值为 NULL。 *Profile_name*必须是现有数据库邮件配置文件的名称。 如果没有*profile_name*指定，则**sp_send_dbmail**为当前用户使用默认的专用配置文件。 如果用户不具有默认私有配置文件， **sp_send_dbmail**使用的默认公共配置文件**msdb**数据库。 如果用户没有默认的专用配置文件，并且没有数据库，没有默认公共配置文件**@profile_name**必须指定。  
   
- [ **@recipients=** ] **'***recipients***'**  
- 要向其发送邮件的电子邮件地址列表，以分号分隔。 收件人列表属于类型**varchar （max)**。 虽然此参数是可选的但至少一个 **@recipients** ，  **@copy_recipients** ，或 **@blind_copy_recipients** 必须指定或**sp_send_dbmail**返回错误。  
+ [  **@recipients=** ] *****收件人*****  
+ 要向其发送邮件的电子邮件地址列表，以分号分隔。 收件人列表属于类型**varchar （max)**。 虽然此参数是可选的但至少一个**@recipients**， **@copy_recipients**，或**@blind_copy_recipients**必须指定或**sp_send_dbmail**返回错误。  
   
- [ **@copy_recipients=** ] **'***copy_recipients***'**  
- 要向其抄送邮件的电子邮件地址列表，以分号分隔。 复制收件人列表属于类型**varchar （max)**。 虽然此参数是可选的但至少一个 **@recipients** ，  **@copy_recipients** ，或 **@blind_copy_recipients** 必须指定或**sp_send_dbmail**返回错误。  
+ [  **@copy_recipients=** ] *****copy_recipients*****  
+ 要向其抄送邮件的电子邮件地址列表，以分号分隔。 复制收件人列表属于类型**varchar （max)**。 虽然此参数是可选的但至少一个**@recipients**， **@copy_recipients**，或**@blind_copy_recipients**必须指定或**sp_send_dbmail**返回错误。  
   
  [ **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
- 要向其密件抄送邮件的电子邮件地址列表，以分号分隔。 密件抄送收件人列表属于类型**varchar （max)**。 虽然此参数是可选的但至少一个 **@recipients** ，  **@copy_recipients** ，或 **@blind_copy_recipients** 必须指定或**sp_send_dbmail**返回错误。  
+ 要向其密件抄送邮件的电子邮件地址列表，以分号分隔。 密件抄送收件人列表属于类型**varchar （max)**。 虽然此参数是可选的但至少一个**@recipients**， **@copy_recipients**，或**@blind_copy_recipients**必须指定或**sp_send_dbmail**返回错误。  
   
  [ **@from_address=** ] **'***from_address***'**  
  电子邮件的“from address”的值。 这是一个可选参数，用于覆盖邮件配置文件中的设置。 此参数属于类型**varchar （max)**。 SMTP 安全设置决定是否接受这些覆盖。 如果未指定参数，则默认值为 NULL。  
@@ -103,7 +103,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  默认为 TEXT。  
   
- [ **@importance=** ] **'***importance***'**  
+ [  **@importance=** ] *****重要性*****  
  邮件的重要性。 该参数属于类型**varchar(6)**。 该参数可能包含下列值之一：  
   
 -   Low  
@@ -114,7 +114,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  默认值为 Normal。  
   
- [ **@sensitivity=** ] **'***sensitivity***'**  
+ [  **@sensitivity=** ] *****敏感度*****  
  邮件的敏感度。 该参数属于类型**varchar(12)**。 该参数可能包含下列值之一：  
   
 -   Normal  
@@ -127,28 +127,28 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  默认值为 Normal。  
   
- [ **@file_attachments=** ] **'***file_attachments***'**  
+ [  **@file_attachments=** ] *****file_attachments*****  
  电子邮件附件的文件名列表，以分号分隔。 必须使用绝对路径指定列表中的文件。 附件列表属于类型**nvarchar (max)**。 默认情况下，数据库邮件会将文件附件限制在每个文件 1 MB 大小。  
   
- [ **@query=** ] **'***query***'**  
+ [  **@query=** ] *****查询*****  
  要执行的查询。 查询结果可以作为文件附加，或包含在电子邮件的正文中。 查询的类型是**nvarchar (max)**，并且可以包含任何有效[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 请注意在单独的会话，因此本地变量中的脚本调用中执行查询**sp_send_dbmail**均不可用于查询。  
   
  [ **@execute_query_database=** ] **'***execute_query_database***'**  
- 存储过程在其中运行查询的数据库上下文。 该参数属于类型**sysname**，默认值为当前数据库。 此参数才适用如果 **@query** 指定。  
+ 存储过程在其中运行查询的数据库上下文。 该参数属于类型**sysname**，默认值为当前数据库。 此参数才适用如果**@query**指定。  
   
  [ **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
  指定查询结果集是否作为附件返回。 *attach_query_result_as_file*属于类型**位**，默认值为 0。  
   
- 时的值为 0，查询结果中包含的电子邮件正文的内容后 **@body** 参数。 如果值为 1，结果将以附件形式返回。 此参数才适用如果 **@query** 指定。  
+ 时的值为 0，查询结果中包含的电子邮件正文的内容后**@body**参数。 如果值为 1，结果将以附件形式返回。 此参数才适用如果**@query**指定。  
   
  [ **@query_attachment_filename=** ] *query_attachment_filename*  
  指定查询结果集附件使用的文件名。 *query_attachment_filename*属于类型**nvarchar （255)**，默认值为 NULL。 忽略此参数时*attach_query_result*为 0。 当*attach_query_result*为 1，此参数为 NULL，数据库邮件创建一个任意的文件名。  
   
  [ **@query_result_header=** ] *query_result_header*  
- 指定查询结果是否包含列标题。 Query_result_header 值的类型是**位**。 如果该值为 1，则查询结果包含列标题。 如果该值为 0，则查询结果不包含列标题。 此参数默认为**1**。 此参数才适用如果 **@query** 指定。  
+ 指定查询结果是否包含列标题。 Query_result_header 值的类型是**位**。 如果该值为 1，则查询结果包含列标题。 如果该值为 0，则查询结果不包含列标题。 此参数默认为**1**。 此参数才适用如果**@query**指定。  
   
  [ **@query_result_width** = ] *query_result_width*  
- 用于设置查询结果的格式的线条宽度（字符）。 *Query_result_width*属于类型**int**，默认值为 256。 提供的值必须介于 10 和 32767 之间。 此参数才适用如果 **@query** 指定。  
+ 用于设置查询结果的格式的线条宽度（字符）。 *Query_result_width*属于类型**int**，默认值为 256。 提供的值必须介于 10 和 32767 之间。 此参数才适用如果**@query**指定。  
   
  [ **@query_result_separator=** ] **'***query_result_separator***'**  
  用于分隔查询输出中的列的字符。 该分隔符是类型的**char （1)**。 默认为“ ”（空格）。  
@@ -157,7 +157,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  指定是否使用电子邮件返回查询执行的输出。 **exclude_query_output**位，默认值为 0。 此参数为 0 时，执行**sp_send_dbmail**存储的过程将显示在控制台上作为查询执行的结果返回的消息。 当此参数为 1，执行**sp_send_dbmail**存储的过程不会在查询执行消息中的任何打印控制台。  
   
  [ **@append_query_error=** ] *append_query_error*  
- 指定是否将发送电子邮件，当从中指定的查询返回的错误时 **@query** 自变量。 **append_query_error**是**位**，默认值为 0。 如果此参数的值为 1，则数据库邮件会发送电子邮件，并在电子邮件的正文中包括查询错误消息。 此参数为 0 时，数据库邮件不发送电子邮件和**sp_send_dbmail**结尾返回代码 1，指示失败。  
+ 指定是否将发送电子邮件，当从中指定的查询返回的错误时**@query**自变量。 **append_query_error**是**位**，默认值为 0。 如果此参数的值为 1，则数据库邮件会发送电子邮件，并在电子邮件的正文中包括查询错误消息。 此参数为 0 时，数据库邮件不发送电子邮件和**sp_send_dbmail**结尾返回代码 1，指示失败。  
   
  [ **@query_no_truncate=** ] *query_no_truncate*  
  指定是否执行查询中使用的选项，可避免截断的大型可变长度数据类型 (**varchar （max)**， **nvarchar (max)**， **varbinary （max)****xml**，**文本**， **ntext**，**映像**，和用户定义数据类型)。 设置该选项后，查询结果将不包含列标题。 *Query_no_truncate*值的类型是**位**。 当该值为 0 或未指定时，查询中的列将截断为 256 个字符。 当该值为 1 时，不截断查询中的列。 此参数的默认值为 0。  
@@ -186,17 +186,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  **sysmail_stop_sp**停止数据库邮件通过停止外部程序使用的 Service Broker 对象。 **sp_send_dbmail**仍然接受邮件时数据库邮件已停止使用**sysmail_stop_sp**。 若要启动数据库邮件，使用**sysmail_start_sp**。  
   
- 当 **@profile** 未指定， **sp_send_dbmail**使用默认配置文件。 如果发送电子邮件的用户具有默认专用配置文件，则数据库邮件使用该配置文件。 如果用户具有没有默认专用配置文件， **sp_send_dbmail**使用默认公共配置文件。 如果用户没有默认专用配置文件，且没有默认公共配置文件， **sp_send_dbmail**返回错误。  
+ 当**@profile**未指定， **sp_send_dbmail**使用默认配置文件。 如果发送电子邮件的用户具有默认专用配置文件，则数据库邮件使用该配置文件。 如果用户具有没有默认专用配置文件， **sp_send_dbmail**使用默认公共配置文件。 如果用户没有默认专用配置文件，且没有默认公共配置文件， **sp_send_dbmail**返回错误。  
   
- **sp_send_dbmail**不支持无内容的电子邮件。 若要发送电子邮件，必须指定至少一个 **@body** ，  **@query** ，  **@file_attachments** ，或 **@subject**. 否则为**sp_send_dbmail**返回错误。  
+ **sp_send_dbmail**不支持无内容的电子邮件。 若要发送电子邮件，必须指定至少一个**@body**， **@query**， **@file_attachments**，或 **@subject**. 否则为**sp_send_dbmail**返回错误。  
   
- 数据库邮件使用当前用户的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全上下文控制对文件的访问。 因此，使用进行身份验证的用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证无法附加文件使用 **@file_attachments** 。 Windows 不允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从一台远程计算机向另一台远程计算机提供凭据。 所以，如果从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机以外的计算机运行该命令，则数据库邮件可能无法从网络共享附加文件。  
+ 数据库邮件使用当前用户的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全上下文控制对文件的访问。 因此，使用进行身份验证的用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证无法附加文件使用**@file_attachments**。 Windows 不允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从一台远程计算机向另一台远程计算机提供凭据。 所以，如果从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机以外的计算机运行该命令，则数据库邮件可能无法从网络共享附加文件。  
   
- 如果这两个 **@query** 和 **@file_attachments** 指定和找不到该文件，仍执行查询，但不是会发送电子邮件。  
+ 如果这两个**@query**和**@file_attachments**指定和找不到该文件，仍执行查询，但不是会发送电子邮件。  
   
  指定查询后，结果集的格式被设置为内联文本。 使用十六进制格式发送结果中的二进制数据。  
   
- 参数 **@recipients** ，  **@copy_recipients** ，和 **@blind_copy_recipients** 是以分号分隔的电子邮件地址的列表。 必须提供至少其中一个参数，或**sp_send_dbmail**返回错误。  
+ 参数**@recipients**， **@copy_recipients**，和**@blind_copy_recipients**是以分号分隔的电子邮件地址的列表。 必须提供至少其中一个参数，或**sp_send_dbmail**返回错误。  
   
  在执行时**sp_send_dbmail**事务上下文，数据库邮件启动而无需提交的隐式事务。 在执行时**sp_send_dbmail**从在现有事务，数据库邮件依赖于用户提交或回滚任何更改。 它不会启动内部事务。  
   
@@ -268,7 +268,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
 ## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [数据库邮件存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
+ [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_MSchange_snapshot_agent_properties (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_MSchange_snapshot_agent_properties (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c503aafed87719edd03996142ad6a47e34a68106
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b3219fc1832d781e3156ec4a2284c3a8e861db67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,19 +65,19 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher**  =] *发布服务器*  
+ [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] *publisher_db*  
+ [  **@publisher_db=** ] *****publisher_db*****  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [  **@publication =** ] *发布*  
+ [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@frequency_type =** ] *frequency_type*  
  执行快照代理的频率。 *frequency_type*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|按需|  
@@ -93,7 +93,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@frequency_subday =** ] *frequency_subday*  
  是的单位*freq_subday_interval*。 *frequency_subday*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二个|  
@@ -109,10 +109,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  是由重复因素*frequency_type*。 *frequency_recurrence_factor*是**int**，无默认值。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  第一次安排快照代理的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，无默认值。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  停止安排快照代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，无默认值。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
@@ -121,34 +121,34 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
  停止安排快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，无默认值。  
   
- [  **@snapshot_job_name =** ] *snapshot_agent_name*  
+ [  **@snapshot_job_name =** ] *****snapshot_agent_name*****  
  使用现有作业时现有快照代理作业的名称。 *snapshot_agent_name*是**nvarchar(100)**，无默认值。  
   
- [  **@publisher_security_mode** =] *publisher_security_mode*  
+ [ **@publisher_security_mode**=] *publisher_security_mode*  
  连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*是**int**，无默认值。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，和**1**指定 Windows 身份验证。 值为**0**必须为指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login** =] *publisher_login*  
- 连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，无默认值。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为空且发布者*_**security_mode*是**1**，然后中指定的 Windows 帐户*job_login*将连接到发布服务器时使用。  
+ [ **@publisher_login**=] *****publisher_login*****  
+ 连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，无默认值。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为空且发布者*_ * * security_mode*是**1**，然后中指定的 Windows 帐户*job_login*将连接到发布服务器时使用。  
   
- [  **@publisher_password** =] *publisher_password*  
+ [ **@publisher_password**=] *****publisher_password*****  
  连接到发布服务器时所使用的密码。 *publisher_password*是**nvarchar(524)**，无默认值。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [  **@job_login** =] *job_login*  
+ [ **@job_login**=] *****job_login*****  
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 *这不能更改为非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
   
- [  **@job_password** =] *job_password*  
+ [ **@job_password**=] *****job_password*****  
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [  **@publisher_type** =] *publisher_type*  
+ [ **@publisher_type**=] *****publisher_type*****  
  当发布服务器未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中运行时指定该发布服务器类型。 *publisher_type*是**sysname**，和可以是以下值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**ORACLE**|指定标准的 Oracle 发布服务器。|  
@@ -166,7 +166,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
  发布服务器实例上的运行时[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本，则应使用[sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)若要更改快照代理作业的属性。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**分发服务器上的固定的服务器角色可以执行**sp_MSchange_snapshot_agent_properties**。  
   
 ## <a name="see-also"></a>另请参阅  

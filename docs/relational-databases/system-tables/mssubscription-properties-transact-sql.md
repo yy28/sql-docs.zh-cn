@@ -1,16 +1,16 @@
 ---
-title: "MSsubscription_properties (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: MSsubscription_properties (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0811b4b8705fda92ff57e782d04f6543b9fd1ebb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7961762d6f498623c4762f894ab724ff0434d5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**发布服务器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = 事务。<br /><br /> **2** = 合并。|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 |**offload_server**|**sysname**|指定用于远程激活的服务器所在的网络的名称。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定保存快照文件的文件夹的路径。|  
 |**use_web_sync**|**bit**|指定能否通过 HTTP 同步订阅。 值为**1**意味着是否启用了此功能。|  
-|**internet_url**|**nvarchar(260)**|表示 Web 同步的复制侦听器所在位置的 URL。|  
+|**internet_url**|nvarchar(260)|表示 Web 同步的复制侦听器所在位置的 URL。|  
 |**internet_login**|**sysname**|合并代理连接到承载 Web 同步使用的 Web 服务器时使用的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_password**|**nvarchar(524)**|合并代理连接到承载 Web 同步使用的 Web 服务器时使用的登录名的密码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_security_mode**|**int**|连接到承载 Web 同步，其中的一个值的 Web 服务器时使用的身份验证模式**1**意味着 Windows 身份验证，并且值为**0**意味着[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
@@ -74,10 +74,10 @@ ms.lasthandoff: 11/21/2017
 |**主机名**|**sysname**|指定的值**HOST_NAME**当在中使用此函数**其中**的联接筛选器或逻辑记录关系子句。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [复制视图 &#40;Transact SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

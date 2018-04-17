@@ -1,16 +1,16 @@
 ---
-title: "sp_setdefaultdatatypemapping (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_setdefaultdatatypemapping (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28b267b8e03fed032811aeaa98bbbf8b7c4b515c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: acc35763731c38a7c0eddac9b89c2649ce88f176
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +66,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@mapping_id=** ] *mapping_id*  
  标识现有数据类型映射。  *mapping_id*是**int**，默认值为 NULL。 如果指定*mapping_id*，则剩余的参数不需要。  
   
- [  **@source_dbms** =] *source_dbms*  
+ [ **@source_dbms**=] *****source_dbms*****  
  从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，和可以是以下值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**ORACLE**|源为 Oracle 数据库。|  
@@ -77,10 +77,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  如果必须指定此参数*mapping_id*为 NULL。  
   
- [  **@source_version=** ] *source_version*  
+ [  **@source_version=** ] *****source_version*****  
  源 DBMS 的版本号。 *source_version*是**varchar(10)**，默认值为 NULL。  
   
- [  **@source_type** =] *source_type*  
+ [ **@source_type**=] *****source_type*****  
  源 DBMS 中的数据类型。 *source_type*是**sysname**。 如果必须指定此参数*mapping_id*为 NULL。  
   
  [  **@source_length_min=** ] *source_length_min*  
@@ -104,10 +104,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@source_nullable=** ] *source_nullable*  
  源 DBMS 中的数据类型是否支持 NULL 值。 *source_nullable*是**位**，默认值为 NULL。 **1**意味着支持 NULL 值。  
   
- [  **@destination_dbms**  =] *destination_dbms*  
+ [ **@destination_dbms** =] *****destination_dbms*****  
  目标 DBMS 的名称。 *destination_dbms*是**sysname**，和可以是以下值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**ORACLE**|目标为 Oracle 数据库。|  
@@ -115,10 +115,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|目标为 Sybase 数据库。|  
 |NULL（默认值）||  
   
- [  **@destination_version** =] *destination_version*  
+ [ **@destination_version**=] *****destination_version*****  
  是目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，默认值为 NULL。  
   
- [  **@destination_type** =] *destination_type*  
+ [ **@destination_type**=] *****destination_type*****  
  目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，默认值为 NULL。  
   
  [  **@destination_length=** ] *destination_length*  
@@ -141,12 +141,12 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  默认数据类型映射适用于所有包含指定 DBMS 的复制拓扑。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_setdefaultdatatypemapping**。  
   
 ## <a name="see-also"></a>另请参阅  
  [指定 Oracle 发布服务器的数据类型映射](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [sp_getdefaultdatatypemapping &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_helpdatatypemap &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
+ [sp_getdefaultdatatypemapping &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_helpdatatypemap &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

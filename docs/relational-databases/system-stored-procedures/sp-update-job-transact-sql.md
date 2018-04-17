@@ -1,16 +1,16 @@
 ---
-title: "sp_update_job (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_update_job (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f9b2702c847457fec32085efec94b0d25e840fa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,10 +74,10 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [ **@new_name =**] **'***new_name***'**  
  作业的新名称。 *new_name*是**nvarchar （128)**。  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**]*启用*  
  指定是否启用了作业 (**1**) 或未启用 (**0**)。 *启用*是**tinyint**。  
   
- [ **@description =**] **'***description***'**  
+ [  **@description =**] *****说明*****  
  作业的说明。 *说明*是**nvarchar(512)**。  
   
  [ **@start_step_id =**] *step_id*  
@@ -86,10 +86,10 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [ **@category_name =**] **'***category***'**  
  作业的类别。 *类别*是**nvarchar （128)**。  
   
- [ **@owner_login_name =**] **'***login***'**  
+ [  **@owner_login_name =**] *****登录*****  
  拥有该作业的登录的名称。 *登录名*是**nvarchar （128)**只有的成员**sysadmin**固定的服务器角色可以将作业所有权更改。  
   
- [ **@notify_level_eventlog =**] *eventlog_level*  
+ [  **@notify_level_eventlog =**] *eventlog_level*  
  指定何时将该作业的项放入 Microsoft Windows 应用程序日志。 *eventlog_level*是**int**，并且可以为这些值之一。  
   
 |“值”|说明（操作）|  
@@ -161,8 +161,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

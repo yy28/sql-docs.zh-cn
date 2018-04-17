@@ -1,16 +1,16 @@
 ---
-title: "sp_migrate_user_to_contained (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_migrate_user_to_contained (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_migrate_user_to_contained
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5630fe30f2841932a87293e3dd371b1a591e4223
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@username =** ] **N***用户*  
+ [ **@username =** ] **N***用户*****  
  当前包含的数据库中的用户名称，该用户将映射到经过身份验证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 值是**sysname**，默认值为**NULL**。  
   
- [ **@rename =** ] **N***copy_login_name* | **N** *keep_name*  
+ [ **@rename =** ] **N***copy_login_name***** | **N***keep_name*****  
  当基于登录名的数据库用户具有不同的用户名与登录名时，使用*keep_name*在迁移期间保留的数据库用户名称。 使用*copy_login_name*来替换该登录名，而不是用户的名称创建新的包含的数据库用户。 如果基于登录名的数据库用户具有与登录名相同的用户名，这两个选项将创建包含数据库用户而不更改名称。  
   
- [ **@disablelogin =** ] **N***disable_login* | **N** *do_not_disable_login*  
+ [ **@disablelogin =** ] **N***disable_login***** | **N***do_not_disable_login*****  
  *disable_login*禁用 master 数据库中的登录名。 若要连接禁用该登录名时，连接必须提供包含的数据库名称作为**初始目录**作为连接字符串的一部分。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **sp_migrate_user_to_contained**使用密码，而不考虑的属性或权限的登录名创建包含的数据库用户。 例如，过程可能会成功是否禁用该登录名，或者如果用户拒绝**连接**的数据库权限。  
   
  **sp_migrate_user_to_contained**具有以下限制。  
@@ -124,6 +124,6 @@ DEALLOCATE user_cursor ;
   
 ## <a name="see-also"></a>另请参阅  
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [包含的数据库](../../relational-databases/databases/contained-databases.md)  
+ [Contained Databases](../../relational-databases/databases/contained-databases.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_add_operator (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_add_operator (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c91f79397a84f6277f4bb891144a5fceb40d02ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_add_operator [ @name = ] 'name'
  [ **@name=** ] **'***name***'**  
  操作员（通知收件人）的名称。 此名称必须是唯一的并且不能包含百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
   
- [ **@enabled=** ] *enabled*  
+ [  **@enabled=** ]*启用*  
  指示操作员的当前状态。 *启用*是**tinyint**，默认值为**1** （启用）。 如果**0**，运算符未启用，并且不会收到通知。  
   
  [ **@email_address=** ] **'***email_address***'**  
@@ -96,7 +96,7 @@ sp_add_operator [ @name = ] 'name'
  [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
  此后的时间**SQLServerAgent**服务在星期日中不再将寻呼通知发送到指定的运算符。 *sunday_pager_end_time*是**int**，默认值为**180000**，指示下午 6:00 并且必须使用 HHMMSS 格式输入。  
   
- [ **@pager_days=** ] *pager_days*  
+ [  **@pager_days=** ] *pager_days*  
  表示操作员可以接收寻呼的天数（受限于指定的开始/结束时间）。 *pager_days*是**tinyint**，默认值为**0**指示运算符永远不会是可用于接收页。 有效值为从**0**通过**127**。 *pager_days*计算通过将各个值添加为所需的天数。 例如，从星期一到星期五是**2**+**4**+**8**+**16** + **32** = **62**。 下表列出了一周中每天的值。  
   
 |“值”|说明|  
@@ -150,9 +150,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_releaseapplock (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_releaseapplock (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_releaseapplock_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_releaseapplock
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5eb17b39125209ca15214356e84f832e2f8cbc73
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 503bfd0c13054852aeab822e3ec93d56a04bb4c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,15 +54,15 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*是**nvarchar （255)**无默认值。 *resource_name*是二进制文件相比，因此是区分大小写，无论当前数据库的排序规则设置如何。  
   
  [ @LockOwner=] '*lock_owner*  
- 所有者的锁定，这是*lock_owner*时请求该锁的值。 *lock_owner*是**nvarchar(32)**。 该值可以为**事务**（默认值） 或**会话**。 当*lock_owner*值是**事务**，也可由默认或显式指定，sp_getapplock 必须可从在事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*lock_owner*值是**事务**，也可由默认或显式指定，sp_getapplock 必须可从在事务内执行。  
   
  [ @DbPrincipal=] '*database_principal*  
- 对数据库中的对象具有权限的用户、角色或应用程序角色。 该函数的调用方必须是属于*database_principal*，dbo 或 db_owner 固定数据库角色，以成功调用函数。 默认值为 public。  
+ 对数据库中的对象具有权限的用户、角色或应用程序角色。 该函数的调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员，才可成功调用该函数。 默认值为 public。  
   
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功） 或 < 0 （失败）  
   
-|值|结果|  
+|“值”|结果|  
 |-----------|------------|  
 |0|成功释放锁。|  
 |-999|指示参数验证或其他调用错误。|  
@@ -71,7 +72,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
   
  服务器因任何原因而关闭时都将释放锁。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -87,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [APPLOCK_MODE &#40;Transact SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;Transact SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [APPLOCK_MODE &#40;Transact SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

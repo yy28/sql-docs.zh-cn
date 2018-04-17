@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_catalog (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_fulltext_catalog (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_catalog_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3dc2f734fd22d937c403dd63071e17430742ab3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3a247eaed97236d1605aada894c6ba3fa7c228bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  全文目录名称。 每个数据库的目录名称必须是唯一的。 *fulltext_catalog_name*是**sysname**。  
   
- [ **@action=**] **'***action***'**  
+ [  **@action=**] *****操作*****  
  要执行的操作。 *操作*是**varchar （20)**，并且可以为这些值之一。  
   
 > [!NOTE]  
@@ -72,7 +73,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  [ **@path=**] **'***root_directory***'**  
  适用的根目录 （不是完整物理路径）**创建**操作。 *root_directory*是**nvarchar(100)**和的默认值为空值，指示安装程序在指定的默认位置使用。 这是 Ftdata 子目录中的 Mssql 目录中;例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData。 指定的根目录必须驻留在同一台计算机的某一驱动器上，它不能只包含驱动器号，也不能是相对路径。 不支持使用网络驱动器、可移动驱动器、软盘和 UNC 路径。 全文目录必须在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联的本地硬盘上创建。  
   
- **@path**仅当*操作*是**创建**。 以外的其他操作**创建**(**停止**，**重新生成**，依次类推)，  **@path** 必须为 NULL 或被省略。  
+ **@path** 仅当*操作*是**创建**。 以外的其他操作**创建**(**停止**，**重新生成**，依次类推)， **@path**必须为 NULL 或被省略。  
   
  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例是群集中的虚拟服务器，则指定的目录所在目录需要位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源所属的共享磁盘驱动器上。 如果@path未指定，则默认目录所在目录的位置是已安装虚拟服务器时指定的目录中的共享的磁盘驱动器上。  
   
@@ -85,7 +86,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>注释  
  **Start_full**操作用于创建中的全文索引数据的完整快照*fulltext_catalog_name*。 **Start_incremental**操作用于重新编制索引仅在数据库中已更改的行。 仅当表中包含的类型列，则可以应用增量填充**时间戳**。 如果全文目录中的表不包含类型的列**时间戳**，表进行完全填充。  
   
- 全文目录及索引数据存储在某些文件中，这些文件是在全文目录所在目录中创建的。 全文目录路径创建为目录中指定的目录的子目录 **@path** 或服务器默认的全文目录目录中如果 **@path** 不是指定。 生成全文目录所在目录名称的方式可以保证它在服务器上是唯一的。 因此，一个服务器上所有的全文目录所在目录可以共享相同的路径。  
+ 全文目录及索引数据存储在某些文件中，这些文件是在全文目录所在目录中创建的。 全文目录路径创建为目录中指定的目录的子目录**@path**或服务器默认的全文目录目录中如果**@path**不是指定。 生成全文目录所在目录名称的方式可以保证它在服务器上是唯一的。 因此，一个服务器上所有的全文目录所在目录可以共享相同的路径。  
   
 ## <a name="permissions"></a>权限  
  调用方需要的成员**db_owner**角色。 具体取决于请求的操作，调用方应不拒绝 ALTER 或 CONTROL 权限 (其中**db_owner**具有) 对目标的全文目录。  
@@ -143,10 +144,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FULLTEXTCATALOGPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY & #40;Transact SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [sp_fulltext_database &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)  
   

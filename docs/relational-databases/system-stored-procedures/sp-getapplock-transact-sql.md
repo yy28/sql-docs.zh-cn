@@ -1,16 +1,16 @@
 ---
-title: "sp_getapplock (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_getapplock (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c7b65a7330a1b87e7ee81a4f76a715038cd3d6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 09977560a053f883aed8ffe42f593921d3203243
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +62,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
  [ @LockMode=] '*lock_mode*  
- 要为特定资源获取的锁模式。 *lock_mode*是**nvarchar(32)**和没有默认值。 该值可以为以下任一：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**独占**.  
+ 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 该值可以为以下任一：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**独占**.  
   
  [ @LockOwner=] '*lock_owner*  
- 所有者的锁定，这是*lock_owner*时请求该锁的值。 *lock_owner*是**nvarchar(32)**。 该值可以为**事务**（默认值） 或**会话**。 当*lock_owner*值是**事务**，也可由默认或显式指定，sp_getapplock 必须可从在事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*lock_owner*值是**事务**，也可由默认或显式指定，sp_getapplock 必须可从在事务内执行。  
   
  [ @LockTimeout=] '*值*  
  锁超时值（毫秒）。 默认值是返回的值相同@LOCK_TIMEOUT。 若要指示对于不能立即授予的请求，锁请求应返回一个错误，而不应等待锁，请指定 0。  
@@ -75,7 +76,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功） 或 < 0 （失败）  
   
-|值|结果|  
+|“值”|结果|  
 |-----------|------------|  
 |0|锁已同时成功授予。|  
 |1|在等待释放其他不兼容锁后成功授予锁。|  
@@ -142,7 +143,7 @@ GO
   
  使用 sys.dm_tran_locks 动态管理视图或 sp_lock 系统存储过程检查锁信息，或使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视锁。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -170,8 +171,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [APPLOCK_MODE &#40;Transact SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;Transact SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [APPLOCK_MODE &#40;Transact SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

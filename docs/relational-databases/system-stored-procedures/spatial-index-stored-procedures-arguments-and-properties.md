@@ -1,32 +1,32 @@
 ---
-title: "自变量和空间索引的属性存储过程 |Microsoft 文档"
-ms.custom: 
+title: 自变量和空间索引的属性存储过程 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0dda9bafb3f38648e2ab1de333d303c9b0e372c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b3aa1c3d1704fd8131265cc0567219edad43ccb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程的参数和属性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +38,24 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>语法  
  有关特定空间索引存储过程的语法，请参阅下列主题：  
   
--   [sp_help_spatial_geometry_index &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>参数  
- [  **@tabname =**] *tabname*  
+ [  **@tabname =**] *****tabname*****  
  已为其指定了空间索引的表的限定或非限定名称。  
   
  仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*是**nvarchar**(776)，无默认值。  
   
- [  **@indexname =** ] *indexname*  
+ [  **@indexname =** ] *****indexname*****  
  指定的空间索引的名称。 *indexname*是**sysname**无默认值。  
   
- [  **@verboseoutput =** ] *verboseoutput*  
+ [  **@verboseoutput =** ] *****verboseoutput*****  
  要返回的属性名称和值的范围。  
   
  0 = 核心属性  
@@ -64,14 +64,14 @@ ms.lasthandoff: 11/21/2017
   
  *verboseoutput*是**tinyint**无默认值。  
   
- [  **@query_sample =** ] *query_sample*  
+ [  **@query_sample =** ] *****query_sample*****  
  一个具有代表性的查询示例，可用于测试索引的有效性。 它可以是一个有代表性的对象或查询窗口。 *query_sample*是**几何图形**无默认值。  
   
- [  **@xml_output =** ] *xml_output*  
+ [  **@xml_output =** ] *****xml_output*****  
  一个在 XML 片段中返回结果集的输出参数。 *xml_output*是**xml**无默认值。  
   
 ## <a name="properties"></a>属性  
- 设置 **@verboseoutput**  = 0，则返回核心属性，如下面; 表中所示 **@verboseoutput**  > 0，则返回的空间索引的所有属性。  
+ 设置**@verboseoutput** = 0，则返回核心属性，如下面; 表中所示**@verboseoutput** > 0，则返回的空间索引的所有属性。  
   
  **Base_Table_Rows**  
  基表中的行数 值是**bigint**。  
@@ -309,7 +309,7 @@ ms.lasthandoff: 11/21/2017
  **Primary_Filter_Efficiency**  
  如果通过主筛选器和 O 选择 P 行的输出的行数百分比此 returnsO/P。 主要筛选器的效率越高，次要筛选所必须处理的误报就越少。 这是一个核心属性。 值是**浮点数。**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须是属于**公共**角色。 需要服务器和对象的 READ ACCESS 权限。 这适用于所有空间索引存储过程。  
   
 ## <a name="remarks"></a>注释  
@@ -318,19 +318,19 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>示例  
  有关示例，请参阅下列主题：  
   
--   [sp_help_spatial_geometry_index &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
   
 ## <a name="see-also"></a>另请参阅  
- [空间索引存储过程 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [空间索引存储过程&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基础知识](../../xquery/xquery-basics.md)   
  [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  

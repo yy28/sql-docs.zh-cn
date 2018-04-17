@@ -1,6 +1,6 @@
 ---
-title: 下载并安装 Microsoft SQL Operations Studio (preview) |Microsoft 文档
-description: 下载和安装 Microsoft SQL Operations Studio (preview) for Windows、 macOS 或 Linux
+title: 下载并安装 Microsoft SQL 操作 Studio （预览版） |Microsoft 文档
+description: 下载和安装 Microsoft SQL 操作 Studio （预览版） for Windows、 macOS 或 Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>下载并安装 SQL Operations Studio (preview)
+# <a name="download-and-install-sql-operations-studio-preview"></a>下载并安装 SQL 操作 Studio （预览版）
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上运行。
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/08/2018
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes.md)。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>获取 Windows SQL Operations Studio (preview)
+## <a name="get-sql-operations-studio-preview-for-windows"></a>获取 Windows SQL 操作 Studio （预览版）
 
 此版本的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括标准的 Windows 安装程序体验和.zip: 
 
@@ -51,16 +51,16 @@ ms.lasthandoff: 04/08/2018
 3. 运行 `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>获取 macOS SQL Operations Studio (preview)
+## <a name="get-sql-operations-studio-preview-for-macos"></a>获取 macOS SQL 操作 Studio （预览版）
 
 1. 下载[[!INCLUDE[name-sos](../includes/name-sos-short.md)]为 macOS](https://go.microsoft.com/fwlink/?linkid=870839)。
 2. 若要展开此 zip 的内容，请双击它。
 3. 若要使[!INCLUDE[name-sos](../includes/name-sos-short.md)]位于*快速启动板*，拖动*sqlops.app*到*应用程序*文件夹。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>获取适用于 Linux 的 SQL Operations Studio (preview)
+## <a name="get-sql-operations-studio-preview-for-linux"></a>获取适用于 Linux 的 SQL 操作 Studio （预览版）
 
-1. 下载 [！包括[名称 sos](../includes/name-sos-short.md)适用于 Linux 使用安装程序或 tar.gz 存档之一：
+1. 下载[!INCLUDE[name-sos](../includes/name-sos-short.md)]适用于 Linux 使用安装程序或 tar.gz 存档之一：
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>卸载 SQL Operations Studio (preview)
+## <a name="uninstall-sql-operations-studio-preview"></a>卸载 SQL 操作 Studio （预览版）
 
 如果你安装[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]使用 Windows 安装程序，然后卸载相同的方式删除所有 Windows 应用程序。
 

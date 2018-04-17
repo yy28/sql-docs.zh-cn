@@ -1,16 +1,16 @@
 ---
-title: "sp_change_log_shipping_secondary_database (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_change_log_shipping_secondary_database (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc7ed57e7f6f64f3fc2527cdaff3766690032489
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0edae5ffcd82e45c348cb382788e5ca6718419ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,19 +76,19 @@ sp_change_log_shipping_secondary_database
  [ **@disconnect_users =** ] '*disconnect_users*'  
  如果设置为 1，则在执行还原操作时，用户将与辅助数据库断开。 默认值 = 0。 *disconnect_users*是**位**和不能为 NULL。  
   
- [ **@block_size =** ] '*block_size*'  
+ [  **@block_size =** ]*block_size*  
  用作备份设备的块大小（字节）。 *block_size*是**int**默认值为-1。  
   
  [ **@buffer_count =** ] '*buffer_count*'  
  备份或还原操作使用的缓冲区总数。 *buffer_count*是**int**默认值为-1。  
   
- [ **@max_transfer_size =** ] '*max_transfer_size*'  
+ [  **@max_transfer_size =** ]*max_transfer_size*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。 *max_transfersize*是**int**而且可以为 NULL。  
   
- [ **@restore_threshold =** ] '*restore_threshold*'  
+ [  **@restore_threshold =** ]*restore_threshold*  
  两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。 *restore_threshold*是**int**和不能为 NULL。  
   
- [ **@threshold_alert =** ] '*threshold_alert*'  
+ [  **@threshold_alert =** ]*threshold_alert*  
  是超过还原阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14420。  
   
  [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
@@ -129,7 +129,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

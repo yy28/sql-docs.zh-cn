@@ -2,7 +2,7 @@
 title: sp_update_alert (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +75,13 @@ sp_update_alert
  [ **@new_name =**] **'***new_name***'**  
  警报的新名称。 该名称必须是唯一的。 *new_name*是**sysname**，默认值为 NULL。  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**]*启用*  
  指定是否启用了警报 (**1**) 或未启用 (**0**)。 *启用*是**tinyint**，默认值为 NULL。 必须启用警报，才能激发警报。  
   
  [ **@message_id =**] *message_id*  
  警报定义的新消息或错误号。 通常情况下， *message_id*对应于中的错误号**sysmessages**表。 *message_id*是**int**，默认值为 NULL。 可以使用 ID，仅当警报的严重性级别设置为一条消息**0**。  
   
- [ **@severity =**] *severity*  
+ [  **@severity =**]*严重性*  
  一个新的严重性级别 (从**1**通过**25**) 为该警报定义。 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息发送到指定的严重级别的 Windows 应用程序日志将激活警报。 *严重性*是**int**，默认值为 NULL。 可以使用的严重性级别，仅当警报的消息 ID 设置为**0**。  
   
  [ **@delay_between_responses =**] *delay_between_responses*  

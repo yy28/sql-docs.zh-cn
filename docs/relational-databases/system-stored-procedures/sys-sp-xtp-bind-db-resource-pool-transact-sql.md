@@ -1,16 +1,16 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xtp_bind_db_resource_pool_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bcac671ebd335be8e6f22a1385d0c038e61e365
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4428b64a6fa70004870eeac89ef61366fb4c891b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **数据库是一个系统数据库**  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 无法在系统数据库中创建表。  因此，为这种数据库创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存绑定是无效的。  返回以下错误：  
+ 无法在系统数据库中创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 表。  因此，为这种数据库创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存绑定是无效的。  返回以下错误：  
 *Database_name %s 是指系统数据库。资源池只能绑定到用户数据库。*  
   
 ```  
@@ -99,7 +99,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **数据库已绑定到另一个资源池**  
- 在任何时候，数据库都只能绑定至一个资源池。 必须显式删除与资源池的数据库绑定，才能将数据库绑定至其他池。 请参阅[sys.sp_xtp_unbind_db_resource_pool &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+ 在任何时候，数据库都只能绑定至一个资源池。 必须显式删除与资源池的数据库绑定，才能将数据库绑定至其他池。 请参阅[sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
 *数据库 %s 已绑定到资源池 %s。你必须解除绑定，然后才能创建新的绑定。*  
   
 ```  
@@ -122,7 +122,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  下次该数据库联机时，此绑定生效。  
  
- B. 上面的示例，其中包括一些基本的检查的扩展的示例。  执行以下操作[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. 上面的示例，其中包括一些基本的检查的扩展的示例。  执行以下操作[!INCLUDE[tsql](../../includes/tsql-md.md)]中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -160,6 +160,6 @@ END
   
 ## <a name="see-also"></a>另请参阅  
  [将具有内存优化表的数据库绑定至资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_unbind_db_resource_pool &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_unbind_db_resource_pool & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

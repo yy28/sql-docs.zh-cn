@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setfilter (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_trace_setfilter (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  将筛选应用于跟踪。 **sp_trace_setfilter**可能已停止的现有跟踪上执行 (*状态*是**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果在跟踪不存在或其上执行此存储的过程返回错误*状态*不**0**。  
+  将筛选应用于跟踪。 **sp_trace_setfilter**可能已停止的现有跟踪上执行 (*状态*是**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在跟踪不存在或其上执行此存储的过程返回错误*状态*不**0**。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
@@ -76,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|不类似于|  
   
- [ **@value=** ] *value*  
+ [  **@value=** ]*值*  
  指定要在其上进行筛选的值。 数据类型*值*必须匹配要筛选的列的数据类型。 例如，如果在对象 ID 列上设置筛选器，则**int**数据类型，*值*必须**int**。如果*值*是**nvarchar**或**varbinary**，它可以具有的最大长度为 8000。  
   
  比较运算符为 LIKE 或 NOT LIKE 时，逻辑运算符可以包括“%”或其他适合 LIKE 运算的筛选器。  

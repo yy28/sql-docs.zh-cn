@@ -1,16 +1,16 @@
 ---
-title: "sp_markpendingschemachange (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_markpendingschemachange (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1712e646a8efda1fdc4f06d912a1021a0beaff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fb7bcbed7f49c4b48adb5317f2e418f37d5264e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=** ] *发布*  
+ [**@publication=** ] *****发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@schemaversion=** ] *schemaversion*  
- 标识挂起的架构更改。 *schemaversion*是**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)以列出了对该发布的挂起的架构更改。  
+ 标识挂起的架构更改。 *schemaversion*是**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)以列出了对该发布的挂起的架构更改。  
   
- [  **@status=** ] *状态*  
+ [  **@status=** ] *****状态*****  
  是否将跳过挂起的架构更改。 *状态*是**nvarchar(10)**默认值为**active**。 如果值*状态*是**跳过**，则将不会复制所选的架构更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,10 +66,10 @@ sp_markpendingschemachange [@publication = ] 'publication'
   
  **sp_markpendingschemachange**是存储的过程适用于合并复制可支持性，并仅当其他纠正措施，例如重新初始化，无法纠正这种情况或过于昂贵中时，才应使用性能的条款。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_markpendingschemachange**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sysmergeschemachange &#40;Transact SQL &#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;Transact SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

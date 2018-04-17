@@ -1,7 +1,7 @@
 ---
 title: sp_addsubscription (Transact SQL) |Microsoft 文档
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,13 +82,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication=] '*publication*'  
+ [ @publication=] '*发布*  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ @article=] '*article*'  
+ [ @article=] '*文章*  
  发布所订阅的项目。 *文章*是**sysname**，默认值为所有。 如果为 all，则订阅将添加到该发布的所有项目中。 Oracle 发布服务器只支持 all 或 NULL 值。  
   
- [ @subscriber=] '*subscriber*'  
+ [ @subscriber=] '*订阅服务器*  
  订阅服务器的名称。 *订阅服务器*是**sysname**，默认值为 NULL。  
   
  [ @destination_db=] '*destination_db*'  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  始终会传输系统表和数据。  
   
- [ @status=] '*status*'  
+ [ @status=] '*状态*  
  订阅状态。 *状态*是**sysname**，默认值为 NULL。 当此参数未显式设置时，复制会自动将其设置为下列值之一。  
   
 |“值”|Description|  
@@ -135,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  请注意在被订阅该发布允许 DTS 是否不允许的值同步事务和排队的 tran。  
   
- [ @loopback_detection=] '*loopback_detection*'  
+ [ @loopback_detection=] '*loopback_detection*  
  指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*是**nvarchar(5)**，并且可以为这些值之一。  
   
 |“值”|Description|  
@@ -205,7 +205,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  要执行的可选命令提示符。 *optional_command_line*是**nvarchar （4000)**，默认值为 NULL。  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*保留*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -267,7 +267,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @fileidhint= ] *fileidhint*  
  标识要还原的备份集的序号值。 *fileidhint*是**int**，默认值为 NULL。  
   
- [ @unload= ] *unload*  
+ [ @unload=]*卸载*  
  指定在从备份进行的初始化完成后是否应取出磁带备份设备。 *卸载*是**位**，默认值为 1。 1 表示指定应卸载磁带。 *卸载*仅当使用*backupdevicetype*是磁带。  
   
  [ @subscriptionlsn= ] *subscriptionlsn*  
@@ -326,10 +326,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

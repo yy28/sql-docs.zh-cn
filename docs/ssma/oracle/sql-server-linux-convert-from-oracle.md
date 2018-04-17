@@ -1,24 +1,24 @@
 ---
-title: "将 Oracle HR 架构迁移到 SQL Server on Linux |Microsoft 文档"
-description: "将示例 Oracle 架构转换为在 Linux 上的 SQL Server"
+title: 将 Oracle HR 架构迁移到 SQL Server on Linux |Microsoft 文档
+description: 将示例 Oracle 架构转换为在 Linux 上的 SQL Server
 author: edmacauley
 ms.author: edmacauley
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f4ab25f440db693c0fd81093f6191fc0c3390ebb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aadea44e433473384c12472c93ec287aec5c0323
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>将 Oracle 架构迁移到使用 SQL Server Migration Assistant Linux 上的 SQL Server 2017
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 > * 将示例 HR 架构转换
 > * 迁移数据
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>必要條件
 
 - 实例的 Oracle 12c (12.2.0.1.0) **HR**架构安装
 - 在 Linux 上的 SQL Server 的工作实例

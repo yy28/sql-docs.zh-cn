@@ -1,16 +1,16 @@
 ---
-title: "sp_help_jobhistory (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_jobhistory (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 885f5e6cc09438ac8bc1f2341351ab08890019f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,10 +87,10 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  [ **@end_run_time=** ] *end_run_time*  
  作业完成执行的时间。 *end_run_time*是**int**，默认值为 NULL。 *end_run_time*必须在窗体中输入的 HHMMSS，其中 HH 为一天中的两个字符小时，MM 为两个字符每分钟一天，和 SS 是一天中的两个字符第二个。  
   
- [ **@minimum_run_duration=** ] *minimum_run_duration*  
+ [  **@minimum_run_duration=** ] *minimum_run_duration*  
  完成作业所用的最短时间。 *minimum_run_duration*是**int**，默认值为 NULL。 *minimum_run_duration*必须在窗体中输入的 HHMMSS，其中 HH 为一天中的两个字符小时，MM 为两个字符每分钟一天，和 SS 是一天中的两个字符第二个。  
   
- [ **@run_status=** ] *run_status*  
+ [  **@run_status=** ] *run_status*  
  作业的执行状态。 *run_status*是**int**，默认值为 NULL，并且可以为这些值之一。  
   
 |“值”|说明|  
@@ -102,16 +102,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|进行中的消息|  
 |**5**|Unknown|  
   
- [ **@minimum_retries=** ] *minimum_retries*  
+ [  **@minimum_retries=** ] *minimum_retries*  
  作业应该重试运行的最少次数。 *minimum_retries*是**int**，默认值为 NULL。  
   
- [ **@oldest_first=** ] *oldest_first*  
+ [  **@oldest_first=** ] *oldest_first*  
  表示是否从最早的作业开始显示输出。 *oldest_first*是**int**，默认值为**0**，其中首先显示的最新作业。 **1**首先显示最早的作业。  
   
  [ **@server=** ] **'***server***'**  
  执行作业的服务器名称。 *服务器*是**nvarchar (30)**，默认值为 NULL。  
   
- [ **@mode=** ] **'***mode***'**  
+ [  **@mode=** ] *****模式*****  
  为 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的摘要。 *模式*是**varchar(7)**，默认值为**摘要**。  
   
 ## <a name="return-code-values"></a>返回代码值  

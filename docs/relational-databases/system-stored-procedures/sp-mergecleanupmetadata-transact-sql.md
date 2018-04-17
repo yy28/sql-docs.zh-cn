@@ -1,16 +1,16 @@
 ---
-title: "sp_mergecleanupmetadata (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_mergecleanupmetadata (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f13d51e68d864410bab57b2723fd2e89cac18dd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f4d2e6e866cff9c4c48e874871f7cfdf113a0d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =** ] *发布*  
- 发布的名称。 *发布*是**sysname**，默认值为 **%** ，这会清理所有发布的元数据。 如果显式指定发布，则该发布必须已存在。  
+ [ **@publication =** ] **'***publication***'**  
+ 发布的名称。 *发布*是**sysname**，默认值为**%**，这会清理所有发布的元数据。 如果显式指定发布，则该发布必须已存在。  
   
- [  **@reinitialize_subscriber =** ] *订阅服务器*  
+ [  **@reinitialize_subscriber =** ] *****订阅服务器*****  
  指定是否重新初始化订阅服务器。 *订阅服务器*是**nvarchar(5)**，可以是**TRUE**或**FALSE**，默认值为**TRUE**。 如果**TRUE**，订阅标记为重新初始化。 如果**FALSE**，订阅不会标记为重新初始化。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,9 +65,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 > [!NOTE]  
 >  如果有多个发布上一个数据库，并且这些发布的任何一个使用无限发布保持期 (**@retention**=**0**)，运行**sp_mergecleanupmetadata**不清除合并复制更改跟踪的数据库的元数据。 因此，要谨慎使用无限发布保持。  
   
- 时执行此存储过程，你可以选择是否通过设置重新初始化订阅服务器 **@reinitialize_subscriber** 参数**TRUE** （默认值） 或**FALSE**. 如果**sp_mergecleanupmetadata**执行时使用 **@reinitialize_subscriber** 参数设置为**TRUE**，快照会重新应用于订阅服务器即使订阅已创建没有初始快照 （例如，如果快照数据和架构已手动应用或订阅服务器上已存在）。 将参数设置为**FALSE**应多加小心，因为如果发布不重新初始化订阅，则必须确保发布服务器和订阅服务器上的数据同步。  
+ 时执行此存储过程，你可以选择是否通过设置重新初始化订阅服务器**@reinitialize_subscriber**参数**TRUE** （默认值） 或**FALSE**. 如果**sp_mergecleanupmetadata**执行时使用**@reinitialize_subscriber**参数设置为**TRUE**，快照会重新应用于订阅服务器即使订阅已创建没有初始快照 （例如，如果快照数据和架构已手动应用或订阅服务器上已存在）。 将参数设置为**FALSE**应多加小心，因为如果发布不重新初始化订阅，则必须确保发布服务器和订阅服务器上的数据同步。  
   
- 无论的值如何 **@reinitialize_subscriber** ， **sp_mergecleanupmetadata**失败，如果有正在进行合并尝试将更改上载到发布服务器或在重新发布订阅服务器的进程调用存储的过程的时间。  
+ 无论的值如何**@reinitialize_subscriber**， **sp_mergecleanupmetadata**失败，如果有正在进行合并尝试将更改上载到发布服务器或在重新发布订阅服务器的进程调用存储的过程的时间。  
   
  **执行与 sp_mergecleanupmetadata @reinitialize_subscriber = TRUE:**  
   
@@ -121,14 +121,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_mergecleanupmetadata**。  
   
  若要使用此存储过程，发布服务器运行的必须是 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 订阅服务器必须运行下列任一[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，Service Pack 2。  
   
 ## <a name="see-also"></a>另请参阅  
- [MSmerge_genhistory &#40;Transact SQL &#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40;Transact SQL &#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;Transact SQL &#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

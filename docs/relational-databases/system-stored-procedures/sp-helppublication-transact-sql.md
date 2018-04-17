@@ -1,16 +1,16 @@
 ---
-title: "sp_helppublication (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helppublication (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa78ce2aa9ed1ba80a7ee733a2e458ba231d968f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =** ] *发布*  
- 要查看的发布的名称。 *发布*为 sysname，默认值为 **%** ，这将返回所有发布的相关信息。  
+ [ **@publication =** ] **'***publication***'**  
+ 要查看的发布的名称。 *发布*为 sysname，默认值为**%**，这将返回所有发布的相关信息。  
   
- [  **@found =** ] *找到*输出  
+ [  **@found =** ] *****找到*****输出  
  指示返回行的标志。 *找到*是**int**和输出参数，默认值为**23456**。 **1**表示找到发布。 **0**指示找不到发布。  
   
- [  **@publisher**  =] *发布服务器*  
+ [ **@publisher** = ] **'***publisher***'**  
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*为 sysname，默认值为 NULL。  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|表示快照代理是否生成了准备由新订阅使用的快照。 只有当发布被设置为始终有可用于新订阅或重新初始化订阅的快照，才定义此参数。|  
 |allow_sync_tran|**bit**|表示是否允许对发布使用立即更新订阅。|  
 |autogen_sync_procs|**bit**|表示是否自动生成存储过程以支持立即更新订阅。|  
-|snapshot_jobid|**binary （16)**|已计划任务 ID。|  
+|snapshot_jobid|**binary(16)**|已计划任务 ID。|  
 |retention|**int**|为给定的发布保存的更改量（小时）。|  
 |has subscription|**bit**|表示发布是否具有活动订阅。 **1**意味着发布具有活动订阅和**0**意味着发布没有任何订阅。|  
 |allow_queued_tran|**bit**|指定是否已启用在订阅服务器上禁用更改排队直到这些更改可以应用到发布服务器。 如果**0**，订阅服务器上的更改不会排队。|  
@@ -109,7 +109,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_het_sub|**int**|指定发布是否支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 值为**1**意味着该非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持订阅服务器。 值为**0**表示只有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持订阅服务器。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。|  
 |enabled_for_p2p_conflictdetection|**int**|指定分发代理是否为针对对等复制启用的发布检测冲突。 值为**1**意味着在检测到冲突。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |originator_id|**int**|指定对等拓扑中某个节点的 ID。 此 ID 用于冲突检测，如果**enabled_for_p2p_conflictdetection**设置为**1**。 有关已经使用过的 ID 的列表，请查询 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系统表。|  
-|p2p_continue_onconflict|**int**|指定检测到冲突时分发代理是否继续处理更改。 值为**1**意味着，代理将继续处理更改。<br /><br /> **\*\*警告： \* \*** 我们建议你使用的默认值**0**。 当此选项设置为**1**，分发代理尝试通过从具有最高的发起方 ID 的节点应用冲突行聚合拓扑中的数据 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。|  
+|p2p_continue_onconflict|**int**|指定检测到冲突时分发代理是否继续处理更改。 值为**1**意味着，代理将继续处理更改。<br /><br /> **\*\* 警告： \* \*** 我们建议你使用的默认值**0**。 当此选项设置为**1**，分发代理尝试通过从具有最高的发起方 ID 的节点应用冲突行聚合拓扑中的数据 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。|  
 |alllow_partition_switch|**int**|指定是否对已发布的数据库执行 ALTER TABLE…SWITCH 语句。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
 |replicate_partition_switch|**int**|指定是否应将对已发布的数据库执行的 ALTER TABLE…SWITCH 语句复制到订阅服务器。 此选项才有效才*allow_partition_switch*设置为**1**。|  
   
@@ -124,16 +124,16 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_helppublication](../../relational-databases/replication/codesnippet/tsql/sp-helppublication-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有发布服务器上的 sysadmin 固定服务器角色成员或发布数据库上的 db_owner 固定数据库角色成员，或者发布访问列表 (PAL) 中的用户才能执行 sp_helppublication。  
   
  对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，只有分发服务器上的 sysadmin 固定服务器角色成员或分发数据库上的 db_owner 固定数据库角色成员，或者 PAL 中的用户才能执行 sp_helppublication。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

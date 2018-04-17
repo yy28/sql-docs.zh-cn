@@ -1,16 +1,16 @@
 ---
-title: "syspublications （系统视图） (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: syspublications （系统视图） (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - syspublications view
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b67197861029cbd9b16e1c829e4570540ca377f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 978d352a45fd10fcb1945c9614f7b04154419ccd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications（系统视图）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 |**名称**|**sysname**|与发布关联的唯一名称。|  
 |**pubid**|**int**|为发布提供唯一 ID 的标识列。|  
 |**repl_freq**|**tinyint**|复制频率：<br /><br /> **0** = 基于的事务 （事务）。<br /><br /> **1** = 计划表刷新 （快照）。|  
-|**status**|**tinyint**|发布的状态：<br /><br /> **0** = Inactive.<br /><br /> **1** = 活动。|  
+|**status**|**tinyint**|发布的状态：<br /><br /> **0** = 处于非活动状态。<br /><br /> **1** = 活动。|  
 |**sync_method**|**tinyint**|同步方法包括：<br /><br /> **0** = 本机大容量复制程序实用工具 (BCP)。<br /><br /> **1** = 字符 BCP。<br /><br /> **3** = 并发，这意味着使用本机 BCP，但在快照期间不锁定表。<br /><br /> **4** = Concurrent_c，这意味着，在使用 BCP 字符但表未锁定在快照过程。|  
 |**snapshot_jobid**|**binary(16)**|标识计划生成初始快照的代理作业。|  
 |**independent_agent**|**bit**|指定是否为此发布一个独立的分发代理。<br /><br /> **0** = 发布使用共享的分发代理，并且每个发布服务器订阅服务器数据库/数据库对具有共享代理。<br /><br /> **1** = 此发布的独立分发代理。|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 |**immediate_sync_ready**|**bit**|指示快照代理是否已生成快照且该快照是否准备好用于新的订阅。 仅对于立即更新发布才有意义。 **1**指示快照已准备就绪。|  
 |**allow_sync_tran**|**bit**|指定是否对该发布允许立即更新订阅。 **1**表示允许立即更新订阅。|  
 |**autogen_sync_procs**|**bit**|指定是否在发布服务器中为立即更新订阅生成同步存储过程。 **1**意味着生成在发布服务器。|  
-|**retention**|**int**|对发布的更改在分发数据库中保留的时间（小时）。|  
+|**保持期**|**int**|对发布的更改在分发数据库中保留的时间（小时）。|  
 |**allow_queued_tran**|**bit**|指定是否启用在订阅服务器上对更改进行排队，直到更改可以在发布服务器上应用为止。 如果**1**，订阅服务器上的更改进行排队。|  
 |**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。 如果**0**，快照文件存储在指定的备用位置*alternate_snapshot_folder*。 如果为 1，则可以在默认文件夹中找到快照文件。|  
 |**alt_snapshot_folder**|**nvarchar(510)**|指定快照的备用文件夹的位置。|  
@@ -83,10 +83,10 @@ ms.lasthandoff: 02/03/2018
 |**originator_id**|**int**|为进行冲突检测标识对等复制拓扑中的每个节点。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

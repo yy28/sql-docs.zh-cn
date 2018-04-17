@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergeconflictrows (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpmergeconflictrows (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1658eea769d134222e673269084511ae1222057
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] *发布*  
- 发布的名称。 *发布*是**sysname**，默认值为 **%** 。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表具有冲突行**WA**和**CA**发布，发布名称传入**CA**检索冲突属于**CA**发布。  
+ [ **@publication=**] **'***publication***'**  
+ 发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表具有冲突行**WA**和**CA**发布，发布名称传入**CA**检索冲突属于**CA**发布。  
   
- [  **@conflict_table=**] *conflict_table*  
- 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表使用的格式名与 **MSmerge_conflict_*发布*_*文章** *，与每个已发布项目的一个表。  
+ [  **@conflict_table=**] *****conflict_table*****  
+ 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表使用的格式名与 **MSmerge_conflict_*发布*_*文章 * * *，与为每个发布的一个表文章。  
   
- [  **@publisher=**] *发布服务器*  
+ [ **@publisher=**] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
- [  **@publisher_db=**] *publisher_db*  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
@@ -83,11 +83,11 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>注释  
  **sp_helpmergeconflictrows**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色和**replmonitor**分发数据库中的角色可以执行**sp_helpmergeconflictrows**。  
   
 ## <a name="see-also"></a>另请参阅  
- [为合并发布 &#40; 查看冲突信息复制 TRANSACT-SQL 编程 &#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [查看合并发布的冲突信息&#40;复制 TRANSACT-SQL 编程&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

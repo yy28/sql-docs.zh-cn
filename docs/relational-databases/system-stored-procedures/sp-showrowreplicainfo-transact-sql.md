@@ -1,16 +1,16 @@
 ---
-title: "sp_showrowreplicainfo (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_showrowreplicainfo (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d584c011b61c8b8ad9e3fc55f10a1e7a2512fa97
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 87857390035273ca2350f90175cc4254f182bb7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@ownername** =] *ownername*  
+ [ **@ownername**=] *****ownername*****  
  表所有者的名称。 *ownername*是**sysname**，默认值为 NULL。 如果数据库包含多个同名的表，但每个表具有不同的所有者，则该参数对于区分这些表很有用。  
   
- [  **@tablename =**] *tablename*  
+ [  **@tablename =**] *****tablename*****  
  包含所返回的信息行的表的名称。 *tablename*是**sysname**，默认值为 NULL。  
   
  [  **@rowguid =**] *rowguid*  
  行的唯一标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
- [  **@show** =] *显示*  
+ [ **@show**=] *****显示*****  
  确定要在结果集中返回的信息量。 *显示*是**nvarchar(20)**默认值为两者。 如果**行**，返回仅行版本信息。 如果**列**，返回仅列版本信息。 如果**同时**，这两行，并返回列信息。  
   
 ## <a name="result-sets-for-row-information"></a>行信息的结果集  
@@ -69,7 +69,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  
-|**current_state**|**nvarchar(9)**|返回有关行的当前状态的信息。<br /><br /> **y** -行数据表示的行的当前状态。<br /><br /> **n**行数据不表示行的当前状态。<br /><br /> **\<n/a >** -不适用。<br /><br /> **\<未知 >** -无法确定当前状态。|  
+|**current_state**|**nvarchar(9)**|返回有关行的当前状态的信息。<br /><br /> **y** -行数据表示的行的当前状态。<br /><br /> **n** -行数据不表示行的当前状态。<br /><br /> **\<n/a >** -不适用。<br /><br /> **\<未知 >** -无法确定当前状态。|  
 |**rowversion_table**|**nchar(17)**|指示是否将行版本存储在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)表。|  
 |**注释**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
   
@@ -90,7 +90,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="remarks"></a>注释  
  **sp_showrowreplicainfo**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  **sp_showrowreplicainfo**只能由的成员执行**db_owner**固定的数据库角色的发布数据库上或通过发布访问列表 (PAL) 的发布数据库上的成员。  
   
 ## <a name="see-also"></a>另请参阅  

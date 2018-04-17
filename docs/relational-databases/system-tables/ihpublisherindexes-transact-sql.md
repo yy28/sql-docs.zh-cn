@@ -1,16 +1,16 @@
 ---
-title: "IHpublisherindexes (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: IHpublisherindexes (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8bf3c3e201c817fa76138df488eec70afb1173
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: afb9bb4d3dacab141e63bd330fd8bf6d2d67eb5a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.lasthandoff: 11/21/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**publisherindex_id**|**int**|标识已发布的索引。|  
-|**针对 table_id 所**|**int**|标识从表[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)索引所属。|  
+|**table_id**|**int**|标识从表[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)索引所属。|  
 |**publisher_id**|**int**|标识非 SQL Server 发布服务器从其发布索引。|  
 |**名称**|**sysname**|已发布的索引的名称。|  
-|**type**|**nvarchar(255)**|支持的索引类型从[IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md)系统表。|  
+|**类型**|**nvarchar(255)**|支持的索引类型从[IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md)系统表。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

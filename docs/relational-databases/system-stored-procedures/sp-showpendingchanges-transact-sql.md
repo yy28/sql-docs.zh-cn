@@ -1,16 +1,16 @@
 ---
-title: "sp_showpendingchanges (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_showpendingchanges (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80816191ac9ad2cd9a210c59268b23f4ea3a093
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54a87a2162049fe6e3ec450a60836afffa406973
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @destination_server  **=**  ] *destination_server*  
+ [ @destination_server **=** ] *****destination_server*****  
  应用复制更改的服务器的名称。 *destination_server*是**sysname**，默认值为 NULL。  
   
- [ @publication  **=**  ] *发布*  
+ [ @publication **=** ] *****发布*****  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。 当*发布*指定，结果则仅限于指定的发布。  
   
- [ @article  **=**  ] *文章*  
+ [ @article **=** ] *****文章*****  
  项目的名称。 *文章*是**sysname**，默认值为 NULL。 当*文章*指定，结果则仅限于指定的文章。  
   
- [ @show_rows  **=**  ] *show_rows*  
+ [ @show_rows **=** ] *show_rows*  
  指定结果集是否包含更具体的信息有关挂起的更改，默认值为**0**。 如果值为**1**指定，结果集包含的列 is_delete 和 rowguid。  
   
 ## <a name="result-set"></a>结果集  
@@ -90,7 +90,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  当为指定的项目*文章*不属于为指定的发布*发布，*对 pending_deletes 和 pending_ins_and_upd 返回的计数为 0。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有 sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员才能执行 sp_showpendingchanges。  
   
 ## <a name="see-also"></a>另请参阅  

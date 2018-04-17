@@ -1,16 +1,16 @@
 ---
-title: sys.fn_my_permissions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fn_my_permissions (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c83af3c3c59b52a4a7c9fb2e127ab3bd03fb87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7a650563bbfce5296e6a86a7abcb5fa712417aec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>参数  
  *securable*  
- 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 *安全*是类型的标量表达式**sysname**。 *安全*可以是多部分名称。  
+ 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式。 *安全*可以是多部分名称。  
   
  '*securable_class*'  
  为其列出权限的安全对象的类的名称。 *securable_class*是**sysname**。 *securable_class*必须是以下之一： 应用程序角色、 程序集、 非对称密钥、 证书、 协定、 数据库、 终结点、 FULLTEXT CATALOG、 登录名、 消息类型、 对象、 REMOTE SERVICE BINDING、 角色、 路由、 架构、 服务器、 服务对称密钥、 类型、 用户、 XML 架构集合。  
@@ -173,6 +173,6 @@ GO
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [执行 AS &#40;Transact SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

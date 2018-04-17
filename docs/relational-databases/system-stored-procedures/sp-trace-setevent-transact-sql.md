@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setevent (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_trace_setevent (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4d36c6512a23d69371767e75d179fbdbf5d695d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bf4e3f645a8480104fcb6f67790563fbb05d0480
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|关闭了先前由 ODBC、OLE DB 或 DB-Library 为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句打开的游标。|  
 |79|Missing Column Statistics|可能曾经对优化器有用的列统计信息不可用。|  
 |80|Missing Join Predicate|正在执行没有联接谓词的查询。 这可能导致长时间运行查询。|  
-|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存使用量增加或减少 1 兆字节 (MB) 或最大服务器内存的 5%，两者中较大。|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存的使用量已增加或减少了 1 MB 或最大服务器内存的 5%（两者中较大者）。|  
 |82-91|User Configurable (0-9)|用户定义的事件数据。|  
 |92|Data File Auto Grow|指示服务器已自动扩展了数据文件。|  
 |93|Log File Auto Grow|指示服务器已自动扩展了日志文件。|  
@@ -262,7 +262,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |8|**HostName**|发起请求的客户端计算机的名称。|  
 |9|**ClientProcessID**|客户端计算机分配给正在运行客户端应用程序的进程的 ID。|  
 |10|**ApplicationName**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|  
-|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端的登录名。|  
+|11|**LoginName**|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  
 |12|**SPID**|分配的服务器进程 ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到与客户端关联的进程。|  
 |13|**Duration**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
 |14|**StartTime**|事件开始的时间（如果可用）。|  
@@ -280,7 +280,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**ServerName**|实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， *servername*或*servername\instancename*，正在跟踪。|  
 |27|**EventClass**|被记录的事件类的类型。|  
 |28|**ObjectType**|对象（如表、函数或存储过程）的类型。|  
-|29|**NestLevel**|执行此存储过程所处的嵌套级。 请参阅[@@NESTLEVEL &#40;Transact SQL &#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|执行此存储过程所处的嵌套级。 请参阅[@@NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
 |30|**State**|发生错误时的服务器状态。|  
 |31|**错误**|错误号。|  
 |32|**模式**|获取的锁的锁模式。 通过将不填充此列**锁： 发布**事件。|  
@@ -291,7 +291,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|**OwnerName**|被引用对象的所有者名称。|  
 |38|**RoleName**|语句针对的数据库范围或服务器范围的角色的名称。|  
 |39|**TargetUserName**|某些操作的目标的用户名。|  
-|40|**DBUserName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端的数据库用户名。|  
+|40|**DBUserName**|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户名。|  
 |41|**LoginSid**|已登录的用户的安全标识符 (SID)。|  
 |42|**TargetLoginName**|某些操作的目标的登录名。|  
 |43|**TargetLoginSid**|某些操作的目标登录名的 SID。|  
@@ -317,14 +317,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 **sys.dm_exec_sql_text()** 以检索关联的 SQL 文本。|  
 |64|**SessionLoginName**|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
   
- **[ @on=]** *on*  
+ **[ @on=]** *上*  
  指定将事件设置为 ON (1) 还是 OFF (0)。 *上*是**位**，无默认值。  
   
  如果*上*设置为**1**，和*column_id*是 NULL，则事件被设置为 ON，并且所有列被都清除。 如果*column_id*不为 null，则为该事件将列设置为 ON。  
   
  如果*上*设置为**0**，和*column_id*为 NULL，则会将事件转变 OFF 并清除所有列。 如果*column_id*不为 null，则列打开 OFF。  
   
- 下表说明了之间的交互 **@on** 和 **@columnid** 。  
+ 下表说明了之间的交互**@on**和**@columnid**。  
   
 |@on|@columnid|结果|  
 |---------|---------------|------------|  
@@ -357,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 用户必须执行**sp_trace_setevent**为每个事件添加每个列。 每个在执行期间，如果 **@on** 设置为**1**， **sp_trace_setevent**将指定的事件添加到跟踪的事件的列表。 如果 **@on** 设置为**0**， **sp_trace_setevent**从列表中移除指定的事件。  
+ 用户必须执行**sp_trace_setevent**为每个事件添加每个列。 每个在执行期间，如果**@on**设置为**1**， **sp_trace_setevent**将指定的事件添加到跟踪的事件的列表。 如果**@on**设置为**0**， **sp_trace_setevent**从列表中移除指定的事件。  
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
@@ -367,9 +367,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   

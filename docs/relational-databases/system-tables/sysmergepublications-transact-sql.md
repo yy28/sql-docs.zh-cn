@@ -1,16 +1,16 @@
 ---
-title: "sysmergepublications (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sysmergepublications (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95059187ddd567212027d73dbd361e1ee9d2e7a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a359e3b0da52dcbd9e0fd3feea88b494432a0419
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**发布服务器**|**sysname**|默认服务器的名称。|  
+|**publisher**|**sysname**|默认服务器的名称。|  
 |**publisher_db**|**sysname**|默认发布服务器数据库的名称。|  
 |**名称**|**sysname**|发布的名称。|  
 |**说明**|**nvarchar(255)**|对发布的简短说明。|  
@@ -86,20 +86,20 @@ ms.lasthandoff: 11/21/2017
 |**dynamic_snapshot_queue_timeout**|**int**|指定使用参数化筛选器时，订阅服务器必须在队列中等待快照生成进程开始的分钟数。|  
 |**dynamic_snapshot_ready_timeout**|**int**|指定使用参数化筛选器时，订阅服务器在队列中等待快照生成进程完成的分钟数。|  
 |**分发服务器**|**sysname**|发布的分发服务器的名称。|  
-|**snapshot_jobid**|**binary （16)**|订阅服务器可以启动快照生成进程时，标识生成快照的代理作业。|  
+|**snapshot_jobid**|**binary(16)**|订阅服务器可以启动快照生成进程时，标识生成快照的代理作业。|  
 |**allow_web_synchronization**|**bit**|指定是否为 Web 同步启用发布其中**1**意味着，为该发布启用 Web 同步。|  
 |**web_synchronization_url**|**nvarchar(500)**|指定用于 Web 同步的 Internet URL 的默认值。|  
-|**allow_partition_realignment**|**bit**|指示对发布服务器上的行所做的修改导致了更改其分区时，是否向订阅服务器发送删除指令。<br /><br /> **0** = 从旧的数据分区将会留在订阅服务器，其中对此发布服务器上的数据所做的更改不会复制到此订阅服务器，但订阅服务器上所做的更改将复制到发布服务器上。<br /><br /> **1** = 到订阅服务器以反映分区更改的结果，通过删除不是更长的订阅服务器的分区的一部分的数据的删除。<br /><br /> 有关详细信息，请参阅[sp_addmergepublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> 注意： 如果此值为保留在订阅服务器上的数据**0**应被视为就像它是只读的; 但是，这不会严格强制进行复制系统。|  
+|**allow_partition_realignment**|**bit**|指示对发布服务器上的行所做的修改导致了更改其分区时，是否向订阅服务器发送删除指令。<br /><br /> **0** = 从旧的数据分区将会留在订阅服务器，其中对此发布服务器上的数据所做的更改不会复制到此订阅服务器，但订阅服务器上所做的更改将复制到发布服务器上。<br /><br /> **1** = 到订阅服务器以反映分区更改的结果，通过删除不是更长的订阅服务器的分区的一部分的数据的删除。<br /><br /> 有关详细信息，请参阅[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意： 如果此值为保留在订阅服务器上的数据**0**应被视为就像它是只读的; 但是，这不会严格强制进行复制系统。|  
 |**retention_period_unit**|**tinyint**|定义定义时使用的单位*保留*，它可以是下列值之一：<br /><br /> **0** = 某一天。<br /><br /> **1** = 周。<br /><br /> **2** = 月。<br /><br /> **3** = 年。|  
 |**decentralized_conflicts**|**int**|指示是否在导致冲突的订阅服务器上存储冲突记录：<br /><br /> **0** = 记录不会存储在订阅服务器上的冲突。<br /><br /> **1** = 记录存储在订阅服务器上的冲突。|  
 |**generation_leveling_threshold**|**int**|指定生成中包含的更改次数。 代次是传递到发布服务器或订阅服务器的更改的集合。|  
 |**automatic_reinitialization_policy**|**bit**|指示是否在进行自动重新初始化之前从订阅服务器上载更改。<br /><br /> **1** = 更改从订阅服务器自动重新初始化之前上载。<br /><br /> **0** = 更改不会自动重新初始化之前上载。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [复制视图 &#40;Transact SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

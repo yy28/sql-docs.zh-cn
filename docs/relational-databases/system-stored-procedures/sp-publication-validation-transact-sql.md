@@ -1,16 +1,16 @@
 ---
-title: "sp_publication_validation (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_publication_validation (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c08dc184475526abd962ab97f52ccfbb8c405e8f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0a2bca31164d91186426895fe4a25d0661400b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] *发布*  
+ [**@publication=**] *** * * 发布*  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [**@rowcount_only=**] *rowcount_only*  
  指示是否只返回表的行计数。 *rowcount_only*是**smallint**和可以是以下值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意： 当项目进行水平筛选时，将而不是校验和操作执行行计数操作。|  
 |**1** （默认值）|仅执行行计数检查。|  
@@ -65,7 +65,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [**@full_or_fast=**] *full_or_fast*  
  用于计算行计数的方法。 *full_or_fast*是**tinyint**和可以是以下值之一。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|使用 COUNT(*) 进行完整计数。|  
 |**1**|未快速从计数**sysindexes.rows**。 计算行数[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)比计算实际的表中的行数快得多。 但是，因为[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)是延迟更新，则行计数可能不准确。|  
@@ -74,7 +74,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  指示分发代理是否应在完成验证后立即关闭。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，复制代理不会关闭。 如果**1**，验证最后一篇文章之后，复制代理关闭。  
   
- [  **@publisher**  =] *发布服务器*  
+ [ **@publisher** = ] **'***publisher***'**  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -90,13 +90,13 @@ sp_publication_validation [ @publication = ] 'publication'
   
  如果应用程序的立即更新订阅服务器， **sp_publication_validation**可能会检测到虚假错误。 **sp_publication_validation**首先计算的行计数或校验和发布服务器上，然后在订阅服务器上。 由于在发布服务器中完成行计数或校验和之后，但在订阅服务器中完成行计数或校验和之前，即时更新触发器可以将更新从订阅服务器传播到发布服务器，因此值可能会更改。 若要确保在验证发布时，在订阅服务器和发布服务器中的值不发生更改，请在验证期间在发布服务器中停止 Microsoft 分布式事务处理协调器 (MS DTC) 服务。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_publication_validation**。  
   
 ## <a name="see-also"></a>另请参阅  
  [验证订阅服务器上的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

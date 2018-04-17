@@ -1,16 +1,16 @@
 ---
-title: "sp_helpsubscription (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpsubscription (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 201a7c412fbf01ca2600d3c9dc233eadfa33710b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 695442f30d62a651521dc5b90027a4d43daa7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,26 +49,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =** ] *发布*  
- 关联的发布的名称。 *发布*是**sysname**，默认值为 **%** ，这将返回为此服务器的所有订阅信息。  
+ [ **@publication =** ] **'***publication***'**  
+ 关联的发布的名称。 *发布*是**sysname**，默认值为**%**，这将返回为此服务器的所有订阅信息。  
   
- [  **@article=** ] *文章*  
- 项目的名称。 *文章*是**sysname**，默认值为 **%** ，这将返回所选的发布和订阅服务器的所有订阅信息。 如果**所有**，只有一个条目时会返回的完整订阅发布。  
+ [  **@article=** ] *****文章*****  
+ 项目的名称。 *文章*是**sysname**，默认值为**%**，这将返回所选的发布和订阅服务器的所有订阅信息。 如果**所有**，只有一个条目时会返回的完整订阅发布。  
   
- [  **@subscriber=** ] *订阅服务器*  
- 要在其上获取订阅信息的订阅服务器的名称。 *订阅服务器*是**sysname**，默认值为 **%** ，这将返回所选的发布和项目的所有订阅信息。  
+ [  **@subscriber=** ] *****订阅服务器*****  
+ 要在其上获取订阅信息的订阅服务器的名称。 *订阅服务器*是**sysname**，默认值为**%**，这将返回所选的发布和项目的所有订阅信息。  
   
- [  **@destination_db=** ] *destination_db*  
- 目标数据库的名称。 *destination_db*是**sysname**，默认值为 **%** 。  
+ [  **@destination_db=** ] *****destination_db*****  
+ 目标数据库的名称。 *destination_db*是**sysname**，默认值为**%**。  
   
- [  **@found=** ] *找到*输出  
+ [  **@found=** ] *****找到*****输出  
  指示返回行的标志。 *找到*是**int**和输出参数，默认值为 23456。  
   
  **1**表示找到发布。  
   
  **0**指示找不到发布。  
   
- [  **@publisher** =] *发布服务器*  
+ [ **@publisher**=] *****发布服务器*****  
  发布服务器的名称。 *发布服务器*是**sysname**，，默认值为当前的服务器的名称。  
   
 > [!NOTE]  
@@ -80,16 +80,16 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**发布**|**sysname**|发布的名称。|  
-|**文章**|**sysname**|项目的名称。|  
+|**article**|**sysname**|项目的名称。|  
 |**目标数据库**|**sysname**|用于存放复制数据的目标数据库的名称。|  
 |**订阅状态**|**tinyint**|订阅状态：<br /><br /> **0** = 处于非活动状态<br /><br /> **1** = 订阅<br /><br /> **2** = 活动|  
 |**同步类型**|**tinyint**|订阅同步类型：<br /><br /> **1** = automatic<br /><br /> **2** = none|  
 |**订阅类型**|**int**|订阅的类型：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
-|**完全订阅**|**bit**|指示是否订阅发布中的所有项目：<br /><br /> **0** = 否<br /><br /> **1** = yes|  
+|**完全订阅**|**bit**|指示是否订阅发布中的所有项目：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |**订阅名称**|**nvarchar(255)**|订阅的名称。|  
 |**更新模式**|**int**|**0** = 只读的<br /><br /> **1** = 即时更新订阅|  
-|**分发作业 id**|**binary （16)**|分发代理的作业 ID。|  
-|**loopback_detection**|**bit**|环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0**回 = 发送。<br /><br /> **1** = 不发回。<br /><br /> 与双向事务复制一起使用。 有关详细信息，请参阅 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
+|**分发作业 id**|**binary(16)**|分发代理的作业 ID。|  
+|**loopback_detection**|**bit**|环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0**回 = 发送。<br /><br /> **1** = 不发回。<br /><br /> 与双向事务复制一起使用。 有关详细信息，请参阅[双向事务复制](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |**offload_enabled**|**bit**|指定复制代理的卸载执行是否已设置为在订阅服务器上运行。<br /><br /> 如果**0**，代理运行在发布服务器。<br /><br /> 如果**1**，代理运行在订阅服务器上。|  
 |**offload_server**|**sysname**|启用了远程代理激活的服务器的名称。 如果为 NULL，当前 offload_server 列出在[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)使用表。|  
 |**dts_package_name**|**sysname**|指定 Data Transformation Services (DTS) 包的名称。|  
@@ -113,13 +113,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>注释  
  **sp_helpsubscription**快照和事务复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予**公共**角色。 只为用户返回他们创建的订阅的信息。 所有订阅的信息返回到的成员**sysadmin**固定的服务器角色在发布服务器或成员的**db_owner**发布数据库上的固定的数据库角色。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

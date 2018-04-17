@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_job (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_delete_job (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [ **@originating_server=** ] **'***server***'**  
  供内部使用。  
   
- [ **@delete_history=** ] *delete_history*  
+ [  **@delete_history=** ] *delete_history*  
  指定是否删除作业的历史记录。 *delete_history*是**位**，默认值为**1**。 当*delete_history*是**1**，删除该作业的作业历史记录。 当*delete_history*是**0**，作业历史记录不会被删除。  
   
  请注意，将删除的作业，不会删除历史记录时有关作业的历史信息将不显示在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理图形用户界面作业历史记录，但信息将仍驻留在**sysjobhistory**表中**msdb**数据库。  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
  指定是否删除附加到该作业的计划（如果这些计划没有附加到任何其他作业）。 *delete_unused_schedule*是**位**，默认值为**1**。 当*delete_unused_schedule*是**1**，如果没有其他作业引用计划则会删除附加到此作业计划。 当*delete_unused_schedule*是**0**，计划不会被删除。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -76,9 +76,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
- **@originating_server** 参数保留供内部使用。  
+ **@originating_server**参数保留供内部使用。  
   
- **@delete_unused_schedule** 自变量提供与以前版本的 SQL Server 的向后兼容性，通过自动删除未连接到任何作业的计划。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，你必须提供的值**0**作为 **@delete_unused_schedule** 自变量。  
+ **@delete_unused_schedule**自变量提供与以前版本的 SQL Server 的向后兼容性，通过自动删除未连接到任何作业的计划。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，你必须提供的值**0**作为**@delete_unused_schedule**自变量。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
@@ -111,8 +111,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_help_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

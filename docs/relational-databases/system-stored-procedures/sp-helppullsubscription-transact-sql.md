@@ -1,16 +1,16 @@
 ---
-title: "sp_helppullsubscription (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helppullsubscription (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e121aacbf65adc239f5474af32a863fc5d65f1f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54c20f748133b02604a59c96ae75004e7bbc6a93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,23 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=**] *发布服务器*  
- 远程服务器的名称。 *发布服务器*是**sysname**，默认值为 **%** ，它返回的所有发布服务器信息。  
+ [ **@publisher=**] **'***publisher***'**  
+ 远程服务器的名称。 *发布服务器*是**sysname**，默认值为**%**，它返回的所有发布服务器信息。  
   
- [  **@publisher_db=**] *publisher_db*  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 **%** ，这将返回所有发布服务器数据库。  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ 发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**，这将返回所有发布服务器数据库。  
   
- [  **@publication=**] *发布*  
- 发布的名称。 *发布*是**sysname**，默认值为 **%** ，这将返回所有发布。 如果此参数等于所有，唯一的请求订阅与 independent_agent = **0**返回。  
+ [ **@publication=**] **'***publication***'**  
+ 发布的名称。 *发布*是**sysname**，默认值为**%**，这将返回所有发布。 如果此参数等于所有，唯一的请求订阅与 independent_agent = **0**返回。  
   
- [  **@show_push=**] *show_push*  
+ [  **@show_push=**] *****show_push*****  
  指示是否返回所有推送订阅。 *show_push*是**nvarchar(5)**，默认值为 FALSE，这不会返回推送订阅。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**发布服务器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**发布服务器数据库**|**sysname**|发布服务器数据库名。|  
 |**发布**|**sysname**|发布的名称。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
@@ -78,8 +78,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**更新模式**|**tinyint**|允许的更新类型。|  
 |**分发代理 job_id**|**int**|分发代理的作业 ID。|  
 |**enabled_for_synmgr**|**int**|指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。|  
-|**订阅 guid**|**binary （16)**|全局标识符对该发布的订阅版本。|  
-|**subid**|**binary （16)**|匿名订阅全局标识符。|  
+|**订阅 guid**|**binary(16)**|全局标识符对该发布的订阅版本。|  
+|**subid**|**binary(16)**|匿名订阅全局标识符。|  
 |**immediate_sync**|**bit**|表示是否在每次快照代理运行时创建或重新创建同步文件。|  
 |**发布服务器登录名**|**sysname**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**发布服务器密码**|**nvarchar(524)**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
@@ -112,12 +112,12 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>注释  
  **sp_helppullsubscription**快照和事务复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helppullsubscription** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addpullsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

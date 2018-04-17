@@ -1,16 +1,16 @@
 ---
-title: "sp_tableoption (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_tableoption (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tableoption_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b468d62444bd3c9217cc7f931a2786034baec12
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +59,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*  
  表选项名称。 *option_name*是**varchar （35)**，无默认值为 NULL。 *option_name*可以是以下值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |table lock on bulk load|禁用时（默认值），使用户定义表的大容量处理获得行锁。 启用时，使用户定义表的大容量处理获得大容量更新锁。|  
 |insert row lock|不再支持。<br /><br /> 此选项对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的锁定行为没有影响，保留此选项只是为了与现有脚本和过程兼容。|  
 |text in row|如果为 OFF 或 0（禁用，默认值），则不更改当前行为，且在行中不存在 BLOB。<br /><br /> 如果指定和@OptionValue为 ON （启用） 或从 24 到 7000，新的整数值**文本**， **ntext**，或**映像**字符串直接存储在数据行。 现有的所有 BLOB (二进制大型对象：**文本**， **ntext**，或**映像**数据) 时，将更新 BLOB 值将更改为采用行格式的文本。 有关详细信息，请参阅“备注”。|  
-|large value types out of row|1 = **varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**和存储表中的大型用户定义类型 (UDT) 列在行外，用一个 16 字节指针指向根目录。<br /><br /> 0 = **varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**和大型 UDT 值直接存储在数据行，最大限制8000 个字节，只要记录中可以容纳该值值。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间内的行外。 0 是默认值。<br /><br /> 大型用户定义类型 (UDT) 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> 使用的 TEXTIMAGE_ON 选项[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)指定较大的数据类型的存储位置。 |  
-|Vardecimal 存储格式|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 为 TRUE、ON 或 1 时，将为 vardecimal 存储格式启用指定的表。 为 FALSE、OFF 或 0 时，将不为 vardecimal 存储格式启用此表。 可以启用 Vardecimal 存储格式，只有在使用具有 vardecimal 存储格式已启用数据库[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本， **vardecimal**存储格式已弃用。 请改用 ROW 压缩。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 0 是默认值。|  
+|large value types out of row|1 = **varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**和存储表中的大型用户定义类型 (UDT) 列在行外，用一个 16 字节指针指向根目录。<br /><br /> 0 = **varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**和大型 UDT 值直接存储在数据行，最大限制8000 个字节，只要记录中可以容纳该值值。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间内的行外。 默认值为 0。<br /><br /> 大型用户定义类型 (UDT) 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> 使用的 TEXTIMAGE_ON 选项[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)指定较大的数据类型的存储位置。 |  
+|Vardecimal 存储格式|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 为 TRUE、ON 或 1 时，将为 vardecimal 存储格式启用指定的表。 为 FALSE、OFF 或 0 时，将不为 vardecimal 存储格式启用此表。 可以启用 Vardecimal 存储格式，只有在使用具有 vardecimal 存储格式已启用数据库[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本， **vardecimal**存储格式已弃用。 请改用 ROW 压缩。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 默认值为 0。|  
   
  [ @OptionValue =] '*值*  
  是是否*option_name*启用 （TRUE、 ON 或 1） 或禁用 (FALSE、 OFF 或 0)。 *值*是**varchar(12)**，无默认值。 *值*是区分大小写。  
@@ -85,7 +86,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   text in row 已启用。  
   
--   字符串的长度小于中指定的限制@OptionValue  
+-   字符串的长度小于中指定的限制 @OptionValue  
   
 -   数据行中有足够的可用空间。  
   
@@ -109,7 +110,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  如果要将现有 LOB 数据类型列 （text、 ntext 或 image） 转换为小到中型较大的值类型 （varchar （max）、 nvarchar (max)，或 varbinary(max)) 和大多数语句是否不引用你的环境中的较大的值类型列，请考虑更改**large_value_types_out_of_row**到**1**以获得最佳性能。 当**large_value_types_out_of_row**选项值被更改，现有 varchar （max）、 nvarchar (max)、 varbinary （max），而不会立即转换 xml 值。 字符串的存储在随后更新时更改。 插入表的新值根据生效的表选项存储。 有关即时结果，可以使数据的副本，然后在更改后重新填充该表**large_value_types_out_of_row**设置或更新到其自身的每个小中较大的值类型列，以便的存储字符串会更改，而表选项生效。 考虑在更新或重新填充后重新生成表的索引，以压缩表格。 
     
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行 sp_tableoption 要求对表拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -143,6 +144,6 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

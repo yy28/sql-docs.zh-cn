@@ -2,7 +2,7 @@
 title: sp_columns (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 10/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +63,7 @@ sp_columns [ @table_name = ] object
  [ **@table_qualifier****=**] *qualifier*  
  对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名对象 (*限定符***。***所有者***。***名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
   
- [ **@column_name=**] *column*  
+ [  **@column_name=**]*列*  
  一个单独的列，当只需要目录信息的一列时可使用该参数。 *列*是**nvarchar(384)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示的列名称，如所示**syscolumns**表。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
   
  [ **@ODBCVer=**] *ODBCVer*  
@@ -86,8 +87,8 @@ sp_columns [ @table_name = ] object
 |**LENGTH**|**int**|传输的数据大小。<sup>1</sup>|  
 |**SCALE**|**int**|小数点右边的数字位数。|  
 |**RADIX**|**int**|数值数据类型的基数。|  
-|**NULLABLE**|**int**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
-|**REMARKS**|**varchar(254)**|该字段总是返回 NULL。|  
+|**可以为 NULL**|**int**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
+|**备注**|**varchar(254)**|该字段总是返回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|列的默认值。|  
 |**SQL_DATA_TYPE**|**int**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 此列等同于**DATA_TYPE**列中，除**datetime**和 SQL 92**间隔**数据类型。 该列始终返回值。|  
 |**SQL_DATETIME_SUB**|**int**|子类型代码**datetime**和 SQL 92**间隔**数据类型。 对于其他数据类型，该列返回 NULL。|  
@@ -125,7 +126,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [sp_tables &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [目录存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

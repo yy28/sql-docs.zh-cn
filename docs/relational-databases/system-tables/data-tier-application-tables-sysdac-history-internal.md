@@ -1,16 +1,16 @@
 ---
-title: "sysdac_history_internal (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sysdac_history_internal (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b8d735800315011eea29b123c8dc3e1652732a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6a6c3f5690f60fb1343df27db377af42938da805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>数据层应用程序表-sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,18 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|操作的标识符|  
 |**sequence_id**|**int**|标识某一操作内的步骤。|  
-|**instance_id**|**uniqueidentifier**|DAC 实例的标识符。 此列可以联接上**instance_id**中的列[dbo.sysdac_instances &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|操作类型的标识符：<br /><br /> **0** = deploy<br /><br /> **1** = 创建<br /><br /> **2** = 重命名<br /><br /> **3** = detach<br /><br /> **4** = delete|  
-|**action_type_name**|**varchar(19)**|操作类型的名称：<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **删除**|  
+|**instance_id**|**uniqueidentifier**|DAC 实例的标识符。 此列可以联接上**instance_id**中的列[dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)。|  
+|**action_type**|**tinyint**|操作类型的标识符：<br /><br /> **0** = 部署<br /><br /> **1** = 创建<br /><br /> **2** = 重命名<br /><br /> **3** = 分离<br /><br /> **4** = delete|  
+|**action_type_name**|**varchar(19)**|操作类型的名称：<br /><br /> **部署**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **删除**|  
 |**dac_object_type**|**tinyint**|受操作影响的对象类型的标识符：<br /><br /> **0** = dacpac<br /><br /> **1** = 登录名<br /><br /> **2** = 数据库|  
 |**dac_object_type_name**|**varchar(8)**|受操作影响的对象类型的名称：<br /><br /> **dacpac** = DAC 实例<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|标识当前操作状态的代码：<br /><br /> **0** = 挂起<br /><br /> **1** = 成功<br /><br /> **2** = 失败|  
-|**action_status_name**|**varchar(11)**|操作的当前状态：<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
+|**action_status_name**|**varchar(11)**|操作的当前状态：<br /><br /> **挂起**<br /><br /> **success**<br /><br /> **失败**|  
 |**必需**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]在回滚 DAC 操作时使用。|  
 |**dac_object_name_pretran**|**sysname**|在提交包含操作的事务前对象的名称。 仅用于数据库和登录名。|  
 |**dac_object_name_posttran**|**sysname**|在提交包含操作的事务后对象的名称。 仅用于数据库和登录名。|  
-|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 针对数据库或登录名实现操作的脚本。|  
-|**payload**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
+|**sqlscript**|**nvarchar(max)**|对数据库或登录名实现操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|  
+|**有效负载**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
 |**注释**|**varchar(max)**|记录接受了 DAC 升级中的潜在数据损失的用户的登录名。|  
 |**error_string**|**nvarchar(max)**|在操作遇到错误时生成的错误消息。|  
 |**created_by**|**sysname**|启动了创建此条目的操作的登录名。|  
@@ -88,7 +88,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40;Transact SQL &#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [dbo.sysdac_instances &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal &#40;Transact SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

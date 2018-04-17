@@ -1,16 +1,16 @@
 ---
-title: "sysreplicationalerts (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sysreplicationalerts (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46550c4b3cca05eb6d3c434562970084530d4063
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0b3cbb8ee462007f59eac4aea41a10e0253651b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +47,19 @@ ms.lasthandoff: 11/21/2017
 |**error_id**|**int**|存储在错误的 ID **MSrepl_errors**。|  
 |**alert_error_code**|**int**|将此记录记入日志时所引发警报的消息 ID。|  
 |**time**|**datetime**|插入记录的时间。|  
-|**发布服务器**|**sysname**|与激发此警报的代理相关联的发布服务器的名称。|  
+|**publisher**|**sysname**|与激发此警报的代理相关联的发布服务器的名称。|  
 |**publisher_db**|**sysname**|与激发此警报的代理相关联的发布服务器数据库。|  
 |**发布**|**sysname**|与激发此警报的代理相关联的发布。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = 快照。<br /><br /> **1** = 事务。<br /><br /> **2** = 合并。|  
 |**订阅服务器**|**sysname**|与激发此警报的代理相关联的订阅服务器的名称。|  
 |**subscriber_db**|**sysname**|与激发此警报的代理相关联的订阅服务器数据库的名称。|  
-|**文章**|**sysname**|与激发此警报的代理相关联的项目的名称。|  
+|**article**|**sysname**|与激发此警报的代理相关联的项目的名称。|  
 |**destination_object**|**sysname**|与此警报相关联的订阅表的名称。|  
 |**source_object**|**sysname**|与此警报相关联的已发布表的名称。|  
 |**alert_error_text**|**ntext**|警报的文本。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

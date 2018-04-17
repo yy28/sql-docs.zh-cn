@@ -1,16 +1,16 @@
 ---
-title: "MSreplication_subscriptions (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: MSreplication_subscriptions (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_subscriptions
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3840528a0a566f250eae99c2764f64766c4e0891
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76f05678e1f8c892fe20499142b270b0c87cdb77
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**发布服务器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
@@ -48,14 +48,14 @@ ms.lasthandoff: 11/21/2017
 |**说明**|**nvarchar(255)**|订阅的说明。|  
 |**transaction_timestamp**|**varbinary(16)**|仅供内部使用。|  
 |**update_mode**|**tinyint**|更新的类型。|  
-|**agent_id**|**binary （16)**|代理的 ID。|  
-|**subscription_guid**|**binary （16)**|发布上订阅版本的全局标识符。|  
-|**subid**|**binary （16)**|匿名订阅的全局标识符。|  
+|**agent_id**|**binary(16)**|代理的 ID。|  
+|**subscription_guid**|**binary(16)**|发布上订阅版本的全局标识符。|  
+|**subid**|**binary(16)**|匿名订阅的全局标识符。|  
 |**immediate_sync**|**bit**|指示每次运行快照代理时是否创建或重新创建同步文件。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [复制视图 &#40;Transact SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

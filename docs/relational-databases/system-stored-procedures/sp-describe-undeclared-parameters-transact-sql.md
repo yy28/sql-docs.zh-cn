@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回包含有关中的未声明参数的元数据的结果集[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 考虑每个参数中使用 **@tsql** 批处理，但不是声明中 **@params** 。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 该过程返回一个空结果集如果 **@tsql** 输入的批处理不具有参数声明中的除 **@params** 。  
+  返回包含有关中的未声明参数的元数据的结果集[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 考虑每个参数中使用**@tsql**批处理，但不是声明中**@params**。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 该过程返回一个空结果集如果**@tsql**输入的批处理不具有参数声明中的除**@params**。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,11 +49,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tsql =** ] *Transact SQL_batch*  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar (max)**。  
   
- [  **@params =** ] **N***参数*  
- @params为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (***n***)**或**nvarchar (max)**。  
+ [  **@params =** ] **N***参数*****  
+ @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (***n***)**或**nvarchar (max)**。  
   
  一个字符串，它包含的定义中嵌入的所有参数*Transact SQL_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 n 是表示附加参数定义的占位符。 如果 TRANSACT-SQL 语句中的批处理不包含参数，@params不是必需的。 该参数的默认值为 NULL。  
   
@@ -71,7 +72,7 @@ sp_describe_undeclared_parameters
 |**名称**|**sysname 不为 NULL**|包含参数的名称。|  
 |**suggested_system_type_id**|**int NOT NULL**|包含**system_type_id**的形式 sys.types 中指定的参数的数据类型。<br /><br /> 对于 CLR 类型，即使**system_type_name**列将返回 NULL，则此列将返回值 240。|  
 |**suggested_system_type_name**|**nvarchar (256) 为 NULL**|包含数据类型名称。 包含为参数数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义数据类型，则在此列中返回 NULL。 如果无法推断参数类型，则返回 NULL。|  
-|**suggested_max_length**|**smallint 不为 NULL**|请参阅 sys.columns。 有关**max_length**列说明。|  
+|**suggested_max_length**|**Smallint 不为 NULL**|请参阅 sys.columns。 有关**max_length**列说明。|  
 |**suggested_precision**|**tinyint 不为 NULL**|请参阅 sys.columns。 了解有关精度列的说明。|  
 |**suggested_scale**|**tinyint 不为 NULL**|请参阅 sys.columns。 了解有关小数位数列的说明。|  
 |**suggested_user_type_id**|**int NULL**|对于 CLR 和别名类型，包含在 sys.types 中指定的列数据类型的 user_type_id。 否则为 NULL。|  
@@ -234,7 +235,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     在这种情况下， **int**和**smallint**生成一个转换。 每种其他数据类型产生多次转换。 因为**int**优先于**smallint**， **int**用于@p。 有关数据类型优先级的详细信息，请参阅[数据类型优先级 &#40;Transact SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     在这种情况下， **int**和**smallint**生成一个转换。 每种其他数据类型产生多次转换。 因为**int**优先于**smallint**， **int**用于@p。 有关数据类型优先级的详细信息，请参阅[数据类型优先级&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
      只有在每种数据类型之间的隐式转换次数相同（按照规则 1）并且某种数据类型具有最高优先级时，此规则才适用。 如果没有隐式转换，数据类型推断将失败并发生错误。 例如在查询`SELECT @p FROM t`，数据类型推理失败，因为任何数据类型设置为@p是很好。 例如，没有隐式转换从**int**到**xml**。  
   
@@ -254,7 +255,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  作为最后一个示例中，对于查询`SELECT NULL + @p`， **int**为选择@p因为这会导致类型 (c) 转换。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要有权执行@tsql自变量。  
   
 ## <a name="examples"></a>示例  
@@ -280,8 +281,8 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

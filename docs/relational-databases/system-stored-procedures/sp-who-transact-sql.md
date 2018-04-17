@@ -1,16 +1,16 @@
 ---
-title: "sp_who (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_who (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_who_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99f8ff7ccfee468c0e9b3598167d6d9823e2bd61
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a46a146e022eb7ce0caa0cdb28579580bc789e93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ] *登录* | *会话 ID*  | **'ACTIVE'**  
+ [  **@loginame =** ] *****登录***** | *会话 ID* | **'ACTIVE'**  
  用于筛选结果集。  
   
  *登录名*是**sysname**标识属于特定的登录名的进程。  
@@ -66,13 +66,13 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |列|数据类型|Description|  
 |------------|---------------|-----------------|  
 |**spid**|**int**|会话 ID。|  
-|**ecid**|**int**|与特定会话 ID 相关联的给定线程的执行上下文 ID。<br /><br /> ECID = {0、 1、 2、 3，… *n* }，其中 0 始终表示主或父线程和 {1，2，3，… *n* } 表示子线程。|  
-|**status**|**nchar(30)**|进程状态。 可能的值有：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重置会话。<br /><br /> **运行**。 会话正在运行一个或多个批。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动结果集 &#40;MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **后台**。 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **回滚**。 会话具有正在处理的事务回滚。<br /><br /> **挂起**。 会话正在等待工作线程变为可用。<br /><br /> **可运行**。 会话的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop**。 会话的任务正在等待调节锁变为可用。<br /><br /> **挂起**。 会话正在等待事件（如 I/O）完成。|  
+|**ecid**|**int**|与特定会话 ID 相关联的给定线程的执行上下文 ID。<br /><br /> ECID = {0、 1、 2、 3，…*n*}，其中 0 始终表示主或父线程和 {1，2，3，…*n*} 表示子线程。|  
+|**status**|**nchar(30)**|进程状态。 可能的值有：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重置会话。<br /><br /> **运行**。 会话正在运行一个或多个批。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动结果集 & #40;MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **后台**。 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **回滚**。 会话具有正在处理的事务回滚。<br /><br /> **挂起**。 会话正在等待工作线程变为可用。<br /><br /> **可运行**。 会话的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop**。 会话的任务正在等待调节锁变为可用。<br /><br /> **挂起**。 会话正在等待事件（如 I/O）完成。|  
 |**loginame**|**nchar(128)**|与特定进程相关联的登录名。|  
 |**主机名**|**nchar(128)**|每个进程的主机或计算机名。|  
 |**blk**|**char(5)**|如果存在阻塞进程，则是该阻塞进程的会话 ID。 否则该列为零。<br /><br /> 当与指定会话 ID 相关联的事务受到孤立分布式事务的阻塞时，该列将对阻塞孤立事务返回“-2”。|  
 |**dbname**|**nchar(128)**|进程使用的数据库。|  
-|**cmd**|**nchar(16)**|为该进程执行的[!INCLUDE[ssDE](../../includes/ssde-md.md)]命令（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程等等）。|  
+|**Cmd**|**nchar(16)**|为该进程执行的[!INCLUDE[ssDE](../../includes/ssde-md.md)]命令（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程等等）。|  
 |**request_id**|**int**|特定会话中运行的请求的 ID。|  
   
  如果是并行处理，则会为特定的会话 ID 创建子线程。 主线程则以 `spid = <xxx>` 和 `ecid =0` 表示。 具有相同的其他子线程`spid = <xxx>`，但与**ecid** > 0。  
@@ -84,7 +84,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  查询**is_user_process** sys.dm_exec_sessions 将系统进程从用户进程中分隔列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 VIEW SERVER STATE 权限才能查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有正在执行的会话。 否则，用户只能查看当前会话。  
   
 ## <a name="examples"></a>示例  
@@ -128,8 +128,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_lock &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sysprocesses &#40;Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

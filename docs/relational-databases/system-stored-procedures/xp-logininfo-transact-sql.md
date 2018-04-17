@@ -1,16 +1,16 @@
 ---
-title: "xp_logininfo (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: xp_logininfo (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@acctname =** ] *account_name*  
+ [  **@acctname =** ] *****account_name*****  
  被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限的 Windows 用户或组的名称。 *account_name*是**sysname**，默认值为 NULL。 如果*account_name*未指定，则所有 Windows 组和 Windows 用户已被显式都授予登录权限报告。 *account_name*必须是完全限定的。 例如，“ADVWKS4\macraes”或“BUILTIN\Administrators”。  
   
  **'all'** | **成员**  
- 指定是报告有关帐户的所有权限路径的信息，还是报告有关 Windows 组成员的信息。 **@option**是**varchar(10)**，默认值为 NULL。 除非**所有**指定，则会显示仅的第一个权限路径。  
+ 指定是报告有关帐户的所有权限路径的信息，还是报告有关 Windows 组成员的信息。 **@option** 是**varchar(10)**，默认值为 NULL。 除非**所有**指定，则会显示仅的第一个权限路径。  
   
  [  **@privilege =** ] *variable_name*  
  返回指定 Windows 帐户的特权级别的输出参数。 *variable_name*是**varchar(10)**，默认值为不需要。 权限级别，则返回**用户**，**管理员**，或**null**。  
@@ -68,7 +68,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**帐户名称**|**sysname**|完全限定的 Windows 帐户名。|  
-|**type**|**char （8)**|Windows 帐户类型。 有效值为**用户**或**组**。|  
+|**类型**|**char （8)**|Windows 帐户类型。 有效值为**用户**或**组**。|  
 |**特权**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效值为**管理员**，**用户**，或**null**。|  
 |**映射的登录名**|**sysname**|为具有用户特权的用户帐户**映射登录名**显示映射的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]尝试使用在它之前添加此帐户使用的域名的映射的规则的帐户登录时。|  
 |**权限路径**|**sysname**|使帐户得到访问权限的组成员身份。|  
@@ -84,7 +84,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  **xp_logininfo**仅返回从 Active Director 全局组、 不通用组的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定服务器角色或中的成员身份**公共**中的固定的数据库角色**master**授予 EXECUTE 权限的数据库。  
   
 ## <a name="examples"></a>示例  
@@ -99,6 +99,6 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [常规扩展存储的过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [常规扩展存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

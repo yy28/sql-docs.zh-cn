@@ -1,16 +1,16 @@
 ---
-title: "sp_OACreate (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_OACreate (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OACreate
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36d46482582d877241d5ec621896d8aa4206fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2edb7db6bf8d8ce9b0c9f1699aa989aa4fceddf0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>参数  
  *progid*  
- 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串描述 OLE 对象的类，其形式： *OLEComponent***。***对象*  
+ 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串描述 OLE 对象的类，其形式： *****OLEComponent***。***对象*****  
   
  *OLEComponent*是 OLE 自动化服务器中，该组件名称和*对象*是 OLE 对象的名称。 指定的 OLE 对象必须是有效的和必须支持**IDispatch**接口。  
   
@@ -61,7 +61,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *objecttoken* **输出**  
  是返回的对象标记中，并且必须是数据类型的本地变量**int**。该对象令牌用于标识所创建的 OLE 对象，并用于调用其他 OLE 自动化存储过程。  
   
- *上下文*  
+ *context*  
  指定要运行新创建的 OLE 对象的执行上下文。 如果指定，则该值必须为下列值之一：  
   
  **1** = 仅进程 (.dll) OLE 服务器。  
@@ -89,7 +89,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  已创建的 OLE 对象在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句批处理结束时会自动破坏。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE 自动化存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE 自动化存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures 服务器配置选项](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

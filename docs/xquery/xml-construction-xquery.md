@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>XML 构造 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>其他直接 XML 构造函数  
  用于处理指令和 XML 注释的构造函数使用的语法与相应的 XML 构造使用的语法相同。 同时还支持文本节点的计算构造函数，但主要在 XML DML 中使用，用于构造文本节点。  
   
- **请注意**使用显式的文本节点构造函数的示例，请参阅中的特定示例[insert &#40;XML DML &#41;](../t-sql/xml/insert-xml-dml.md).  
+ **请注意**使用显式的文本节点构造函数的示例，请参阅中的特定示例[插入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
   
  在下面的查询中，构造的 XML 包括一个元素、两个属性、一个注释和一个处理指令。 注意，由于正在构造序列，因此要在 <`FirstLocation`> 前使用逗号。  
   
@@ -590,7 +590,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>使用计算构造函数  
- 实例时都提供 SQL Server 登录名。 本例中，指定了关键字来标识要构造的节点的类型。 仅支持下列关键字：  
+ 。 本例中，指定了关键字来标识要构造的节点的类型。 仅支持下列关键字：  
   
 -   element  
   

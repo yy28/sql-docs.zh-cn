@@ -2,7 +2,7 @@
 title: sp_create_plan_guide (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,15 +58,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @name = ] N'*plan_guide_name*'  
+ [ @name =] N*plan_guide_name*  
  是计划指南的名称。 计划指南名称的作用域限于当前数据库。 *plan_guide_name*必须遵从的规则[标识符](../../relational-databases/databases/database-identifiers.md)和不能以数字符号开头 （#）。 最大长度*plan_guide_name*为 124 个字符。  
   
- [ @stmt = ] N'*statement_text*'  
+ [ @stmt =] N*statement_text*  
  根据其创建计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查询优化器识别匹配的查询*statement_text*， *plan_guide_name*将生效。 创建计划指南来成功， *statement_text*必须出现在由指定的上下文@type， @module_or_batch，和@params参数。  
   
  *statement_text*必须允许查询优化器将其与批处理中提供的相应语句或模块由标识匹配的方式提供@module_or_batch和@params。 有关详细信息，请参阅"备注"部分。 大小*statement_text*仅受可用内存的服务器。  
   
- [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [@type =] N'{对象 |SQL |模板}  
  是实体在其中一种*statement_text*显示。 这将指定匹配的上下文*statement_text*到*plan_guide_name*。  
   
  OBJECT  
@@ -78,7 +78,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  指示计划指南适用于任何查询都会向窗体中所示对参数化*statement_text*。 如果指定模板，则只参数化 {FORCED |简单} 查询提示可以指定在@hints参数。 TEMPLATE 计划指南的详细信息，请参阅[通过使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
- [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' | N'*batch_text*' | NULL }  
+ [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*|N*batch_text*|NULL}  
  在其中指定的对象名称*statement_text*出现，或在其中的批处理文本*statement_text*显示。 批处理文本不能包括使用*数据库*语句。  
   
  计划指南，以匹配应用程序，从提交一批*batch_tex*t 必须提供相同的格式字符对字符，如提交给[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不会执行内部转换来帮助完成该匹配。 有关详细信息，请参见“备注”部分。  
@@ -343,6 +343,6 @@ GO
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys.fn_validate_plan_guide (Transact-SQL)](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
- [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
+ [sp_get_query_template &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

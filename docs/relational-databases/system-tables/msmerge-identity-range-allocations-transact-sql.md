@@ -1,16 +1,16 @@
 ---
-title: "MSmerge_identity_range_allocations (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: MSmerge_identity_range_allocations (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad5ad628c5f839c64d88c54e777aca7e0bc52b7e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d40c9b6fa376e4a6903d1d06a735b365e9ef4541
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/21/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**int**|发布服务器的 ID。|  
-|**publisher_db**|**nvarchar （128)**|发布数据库的名称。|  
-|**发布**|**nvarchar （128)**|发布的名称。|  
-|**文章**|**nvarchar （128)**|项目的名称。|  
-|**订阅服务器**|**nvarchar （128)**|订阅服务器的名称。|  
-|**subscriber_db**|**nvarchar （128)**|订阅数据库的名称。|  
+|**publisher_db**|**nvarchar(128)**|发布数据库的名称。|  
+|**发布**|**nvarchar(128)**|发布的名称。|  
+|**article**|**nvarchar(128)**|项目的名称。|  
+|**订阅服务器**|**nvarchar(128)**|订阅服务器的名称。|  
+|**subscriber_db**|**nvarchar(128)**|订阅数据库的名称。|  
 |**is_pub_range**|**bit**|列出是否将标识范围分配给发布服务器。|  
 |**ranges_allocated**|**tinyint**|已分配的标识范围数。|  
 |**range_begin**|**numeric(38)**|范围的起始值。|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 |**time_of_allocation**|**datetime**|执行分配的时间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

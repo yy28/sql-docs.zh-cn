@@ -2,7 +2,7 @@
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,18 +22,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
+# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   执行作为在外部位置的自变量提供的脚本。 必须在支持并已注册的语言中编写脚本。 若要执行**sp_execute_external_script**，必须先通过使用此语句，启用外部脚本`sp_configure 'external scripts enabled', 1;`。  
@@ -60,18 +60,18 @@ sp_execute_external_script
 
  有效值为`Python`或`R`。 
   
- @script = N'*script*'  
+ @script = N'*脚本*  
  外部语言指定为文字或变量输入脚本。 *脚本*是**nvarchar (max)**。  
   
- [ @input_data_1_name = N'*input_data_1_name*' ]  
+ [ @input_data_1_name = N'*input_data_1_name*']  
  指定用于表示所定义的查询的变量的名称@input_data_1。 外部脚本中的变量的数据类型取决于的语言。 如果 R，则输入的变量是数据帧。 对于 Python，输入必须是表格。 *input_data_1_name*是**sysname**。  
   
  默认值是`InputDataSet`。  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*']  
  指定使用的窗体中的外部脚本的输入的数据[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 数据类型*input_data_1*是**nvarchar (max)**。
   
- [ @output_data_1_name =  N'*output_data_1_name*' ]  
+ [ @output_data_1_name = N'*output_data_1_name*']  
  指定的变量名称中包含要返回到的数据的外部脚本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的存储的过程调用完成后。 外部脚本中的变量的数据类型取决于的语言。 对于 R，输出必须是数据帧。 对于 Python，输出必须是 pandas 数据帧。 *output_data_1_name*是**sysname**。  
   
  默认值为"OutputDataSet"。  

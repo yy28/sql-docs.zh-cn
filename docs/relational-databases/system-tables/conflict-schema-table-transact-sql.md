@@ -1,16 +1,16 @@
 ---
-title: "conflict_&lt;架构&gt;_&lt;表&gt;(Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: conflict_&lt;架构&gt;_&lt;表&gt;(Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfb2f078495256ee53d021bb09801323bdca094f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d9c5faa805785b856aca59ff2cd026b6ee9cf5c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;架构&gt;_&lt;表&gt;(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ ms.lasthandoff: 11/21/2017
 |__$pre_version|**varbinary (32)**|发起冲突更改的数据库的版本。|  
 |__$reason_code|**int**|冲突的解决代码。 可以是以下值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅**__ reason_text**。|  
 |__$reason_text|**nvarchar (720)**|冲突的解决情况。 可以是以下值之一：<br /><br /> 已解决 (1)<br /><br /> 未解决 (2)<br /><br /> 未知 (0)|  
-|__$update_bitmap|**varbinary (**  *n*  **)**。 大小不同而有所不同，具体取决于内容。|一个位图，指示在发生更新-更新冲突的情况下更新的列。|  
+|__$update_bitmap|**varbinary (** *n* **)**。 大小不同而有所不同，具体取决于内容。|一个位图，指示在发生更新-更新冲突的情况下更新的列。|  
 |__$inserted_date|**datetime**|将冲突行插入此表中的日期和时间。|  
 |__$row_id|**timestamp**|与导致冲突的行关联的行版本。|  
 |__$change_id|**binary (8)**|对于本地行，该值等于与本地行发生冲突的传入行的 __$row_id。 对于传入行，该值为 NULL。|  
 |\<基础表的列名称 >|\<基表列类型 >|在冲突表中，基表中的每一列都有一个对应的列。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
