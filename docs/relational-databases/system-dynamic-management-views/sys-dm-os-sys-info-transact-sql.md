@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_sys_info (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -29,11 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8eece5f005a956b0873abcdc2be653deb430373a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -83,8 +84,8 @@ ms.lasthandoff: 04/05/2018
 |**sql_memory_model_desc**|**nvarchar(120)**|**适用于： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4，且开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用于将内存分配的内存模型。 不可为 Null。<br /><br />**常规**= SQL Server 使用传统的内存模型分配内存。 如果 SQL Server 服务帐户不具有锁定页中内存的权限在启动期间，这是默认 sql 内存模型。<br />**LOCK_PAGES** = SQL 服务器正在使用在内存中的中锁定页面的分配内存。 当 SQL Server 服务帐户在 SQL Server 启动过程中内存特权拥有锁定页时，这是默认 sql 内存管理器。<br /> **LARGE_PAGES** = SQL Server 正在使用在内存中的大页面分配内存。 SQL Server 使用大型页分配器时 SQL Server 服务帐户拥有内存特权锁定页在服务器启动时以及在开启跟踪标志 834 时将仅有企业版的内存分配。|
 |**pdw_node_id**|**int**|**适用于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 此分布的节点标识符。|  
 |**socket_count** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** 。<br /><br />指定在系统上可用的处理器插槽数。 |  
-|**cores_per_socket** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定在系统上的每个可用的插槽的处理器数。 |  
-|**numa_node_count** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定在系统上可用的 numa 节点数。 此列包含物理 numa 节点，以及软 numa 节点。 |  
+|**cores_per_socket** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]**。<br /><br />指定在系统上的每个可用的插槽的处理器数。 |  
+|**numa_node_count** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]**。<br /><br />指定在系统上可用的 numa 节点数。 此列包含物理 numa 节点，以及软 numa 节点。 |  
   
 ## <a name="permissions"></a>权限
 
