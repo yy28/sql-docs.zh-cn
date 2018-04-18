@@ -1,16 +1,16 @@
 ---
-title: "sp_xp_cmdshell_proxy_account (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_xp_cmdshell_proxy_account (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xp_cmdshell_proxy_account
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sp_xp_cmdshell_proxy_account
 - xp_cmdshell
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2aa36f38df0fdf1f36e5cfddc48044222d9509c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3abbb6f6ac82cfba212f168fd4697f8c20c7f9d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  *account_name*  
  指定要成为代理的 Windows 登录名。  
   
- *密码*  
+ *password*  
  指定 Windows 帐户的密码。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -67,7 +68,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
   
  使用 NULL 选项中，执行时**sp_xp_cmdshell_proxy_account**将删除的代理凭据。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -89,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [xp_cmdshell &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+ [xp_cmdshell &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

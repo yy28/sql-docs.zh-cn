@@ -1,16 +1,16 @@
 ---
-title: "sp_get_distributor (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_get_distributor (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a9a52ebbb8e17ff88008b2b04208a0d383179ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4176c160e069dc1cb2061f2b3e6257e195b593b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_get_distributor
 ## <a name="remarks"></a>注释  
  **sp_get_distributor**主要由[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]快照、 事务和合并复制中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户可以执行**sp_get_distributor**。 非 NULL 返回的结果集时该存储过程执行的成员**db_owner**或**replmonitor**固定数据库角色的成员的分发数据库上**db_owner**至少一个已发布数据库上的固定的数据库角色。 非空结果集时也会返回此存储的过程执行的发布访问列表 (PAL) 中的用户至少一个发布数据库，或在分发数据库的非 SQL Server 发布服务器 PAL，还可以执行**sp_get_distributor**。  
   
 ## <a name="see-also"></a>另请参阅  
