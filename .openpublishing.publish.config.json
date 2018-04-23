@@ -6,6 +6,10 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "zh-cn",
+      "monikers": [],
+      "moniker_ranges": [
+        "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-analysis-services-2017 || >= sql-server-2014 || >= sql-server-2016 || >= sql-server-2017 || >= sql-server-linux-2017 || >= ssdt-15vs2017 || = sqlallproducts-allversions"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -17,7 +21,10 @@
       "version": 0
     }
   ],
-  "notification_subscribers": [],
+  "notification_subscribers": [
+    "CnE_Content_Brno@moravia.com",
+    "CnE_UE_Bugfixing_ENG@moravia.com"
+  ],
   "branches_to_filter": [
     "live-oldev",
     "live"
@@ -46,7 +53,8 @@
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
+      "branch": "master",
+      "branch_mapping": {}
     },
     {
       "path_to_root": "_repo.en-us",
