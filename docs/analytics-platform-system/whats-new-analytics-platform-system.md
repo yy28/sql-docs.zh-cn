@@ -1,23 +1,19 @@
 ---
-title: 什么是分析平台系统 – 向外扩展数据仓库中的新增功能
-author: happynicolle
-ms.author: nicw;barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 什么是分析平台系统 – 向外扩展数据仓库中的新增功能 |Microsoft 文档
 description: 请参阅什么是 Microsoft® 分析平台系统中的新增、 横向扩展本地承载 MPP SQL Server 并行数据仓库的设备。
-ms.date: 11/28/2016
-ms.topic: article
-ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4beb44ac45d95aa0338dc9dc0be0796a223d3243
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>什么是分析平台系统 2016，向外扩展 MPP 数据仓库中的新增功能
 请参阅什么是在 Microsoft® 分析平台系统 (AP) 2016年新、 最新的横向扩展的设备更新本地承载 MPP SQL Server 并行数据仓库的设备。 
@@ -32,7 +28,7 @@ AP 2016 支持这些 T-SQL 兼容性改进。  这些其他语言元素更加轻
 
 - [列级 SQL 排序规则][]现在支持除了 Windows 排序规则。
 - [聚集列存储索引的非聚集索引][]改进搜索聚集列存储索引中的特定值的查询性能。 
-- [SELECT...INTO][] 
+- [选择...到][] 
 - [sp_spaceused()][]显示磁盘空间使用，或保留表或数据库中。
 - [宽表][]支持等同于 SQL Server 2016。 行大小以前限制为 32k 不再存在。 
 
@@ -99,7 +95,7 @@ AP 2016 支持这些 T-SQL 兼容性改进。  这些其他语言元素更加轻
 [nvarchar (MAX)]:https://msdn.microsoft.com/library/ms186939.aspx
 [varbinary （max)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
+[选择...到]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [宽表]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx
