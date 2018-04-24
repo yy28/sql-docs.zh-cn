@@ -1,16 +1,16 @@
 ---
-title: "保护 SQL Server | Microsoft Docs"
-ms.custom: 
+title: 保护 SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Security [SQL Server]
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 07ab7d7c420d1b0c9809f58476d2bf8f6b4b0260
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="securing-sql-server"></a>保护 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-可将保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视为一系列步骤，它涉及四个方面：平台、身份验证、对象（包括数据）以及访问系统的应用程序。 下列主题将指导您完成创建和实现有效安全计划的过程。  
+  可将保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视为一系列步骤，它涉及四个方面：平台、身份验证、对象（包括数据）以及访问系统的应用程序。 下列主题将指导您完成创建和实现有效安全计划的过程。  
   
  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [网站上找到有关](http://go.microsoft.com/fwlink/?LinkID=31629) 安全性的详细信息。 此类信息包括最佳实践指南和安全清单。 此网站还包含最新的 Service Pack 信息和下载。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/02/2018
 |---------------------------|---------|  
 |为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |为使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|为使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[配置 Windows 防火墙以允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|为使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |打开防火墙上的特定端口以便启用对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |通过使用渠道绑定和服务绑定，配置对针对验证的扩展保护的支持|[使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   
@@ -132,7 +132,7 @@ GO
 |有关信息|请参阅|  
 |---------------------------|---------|  
 |连接、配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
-|连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在命令提示符下运行查询|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
+|连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在命令提示符下运行查询|[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)|  
 |网络配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)|  
 |使用基于策略的管理启用和禁用功能|[使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |操作报表服务器的对称密钥|[rskeymgmt 实用工具 (SSRS)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  

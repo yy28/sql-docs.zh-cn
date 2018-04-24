@@ -1,35 +1,37 @@
 ---
-title: "管理书签 | Microsoft Docs"
-ms.custom: 
+title: 管理书签 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.BookmarkWindow
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 933f5b57a1c6a5b8516ec9ca8985c800b3fa36b7
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2671d5b81a7bd99492df35047988444d420c8e4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-bookmarks"></a>管理书签
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在代码编辑器中工作时，使用“书签”窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  在代码编辑器中工作时，使用 **“书签”** 窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
   
  若要创建书签并在书签中导航，请单击位于“文本编辑器”工具栏上和“书签”窗口顶部的按钮。 可以添加和删除书签、激活或禁用书签以及按文件夹组织书签。 还可以从 **“书签”** 窗口的快捷菜单中使用某些命令。 若要添加或删除书签，请将插入点放到编辑器内所需的行中，再单击 **“切换书签”**。 若要激活某个书签，请在“书签”窗口中选中其复选框；若要禁用（但不删除）某个书签，请清除其复选框。  
   

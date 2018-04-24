@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67a253241fff3c1391fba522d6b3b659d03272bb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 30940f751b646723e6cac7565b468a54a26bb1ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-a-composite-domain"></a>管理复合域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用复合域。 有时候，单一域不会令人满意地表示字段中的数据，并且您只能通过组合单一域来表示这些数据。 为此，您创建复合域。 一个复合域由两个或更多的单一域构成，并且映射到一个由多个相关字词构成的数据字段，这些相关字词未进行分析，但包括在单个复合值中。 该值中的每个字词都将由不同的单一域表示。 在您将单一域包括在复合域中，然后将复合域映射到数据字段后，可以通过在单一域中生成知识，在知识库中生成与该字段中的数据有关的知识。 复合域（与单一域相似）是单个数据字段中数据的语义表示形式。  
   
  复合域中的单一域必须具有一个共同的知识范畴。 一个例子是具有街道、城市、省/市/自治区、国家/地区和邮政编码数据的地址字段。 此字段中不同字词可能具有不同的数据类型。 为处理这种情况，您将这些字词映射到不同的单一域。 另一个例子是具有名字、中间名和姓氏数据的全名字段。 若要使用某一复合域，您必须能够将字段中的数据分析到不同的单一域中，为字段创建复合域并且为字段部分创建单一域。  

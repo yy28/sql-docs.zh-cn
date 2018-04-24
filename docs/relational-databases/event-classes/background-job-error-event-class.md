@@ -1,34 +1,35 @@
 ---
-title: "Background Job Error 事件类 | Microsoft Docs"
-ms.custom: 
+title: Background Job Error 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1c2644233c06589a4a30970060d8d2c7df3930a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8ca1db9bcdc71a72d33be132223a43c3444e33f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-当后台作业异常终止时，会发生 **Background Job Error** 事件类。 这种情况可能需要引起系统管理员的注意。  
+  当后台作业异常终止时，会发生 **Background Job Error** 事件类。 这种情况可能需要引起系统管理员的注意。  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Background Job Error 事件类的数据列  
   
@@ -37,8 +38,8 @@ ms.lasthandoff: 02/12/2018
 |**DatabaseID**|**int**|作业指定的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
 |**错误**|**int**|上次尝试使用的错误号（仅限**EventSubClass** 1）。|31|是|  
-|**EventClass**|**int**|事件类型 = 193。|27|是|  
-|**EventSequence**|**int**|特定事件在请求中的顺序。|51|是|  
+|**EventClass**|**int**|事件类型 = 193。|27|“否”|  
+|**EventSequence**|**int**|特定事件在请求中的顺序。|51|“否”|  
 |**EventSubClass**|**int**|事件子类的类型。<br /><br /> 1 = 失败之后放弃的后台作业。<br /><br /> 2 = 已删除的后台作业 - 队列已满。<br /><br /> 3 = 返回一个错误的后台作业。|21|是|  
 |**IndexID**|**int**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|24|是|  
 |**IntegerData**|**int**|作业尝试的次数（仅限**EventSubClass** 1）。|25|是|  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbe05945d348179426de1ff3e01ffa506429d08a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: bad13d8ffc5b8668fbbdbbe8863e4363193cf330
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中从 .dqs 数据文件导入整个知识库。 您可以通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序内导出现有知识库来创建数据文件（请参阅 [将知识库导出到.dqs 文件](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)）。  
   
  使用 .dqs 数据文件导出知识库的内容，然后将内容导入到同一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 或不同 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中的另一个知识库，可以简化知识生成过程、节省时间并提高效率。 这样，您就可以与他人共享知识库及其知识，同时节省时间。 .dqs 文件将包含所有知识库信息，其中包括域和匹配策略，但附加的引用数据信息除外。 将导入已发布和未发布的数据。  

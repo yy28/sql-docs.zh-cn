@@ -1,34 +1,35 @@
 ---
-title: "Missing Join Predicate 事件类 | Microsoft Docs"
-ms.custom: 
+title: Missing Join Predicate 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Missing Join Predicate event class
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0488037cd24db843adab14f54ed3f57baae40efc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 221abecbd01d69146a277e9da70011757099bf99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Missing Join Predicate 事件类表示正在执行无联接谓词的查询。 这可能导致长时间运行查询。 有关联接谓词的详细信息，请参阅[谓词 (Transact-SQL)](~/t-sql/queries/predicates.md)。  
+  Missing Join Predicate 事件类表示正在执行无联接谓词的查询。 这可能导致长时间运行查询。 有关联接谓词的详细信息，请参阅[谓词 (Transact-SQL)](~/t-sql/queries/predicates.md)。  
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>Missing Join Predicate 事件类的数据列  
   
@@ -38,8 +39,8 @@ Missing Join Predicate 事件类表示正在执行无联接谓词的查询。 �
 |ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |DatabaseID|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
-|EventClass|**int**|事件类型 = 80。|27|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventClass|**int**|事件类型 = 80。|27|“否”|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
@@ -48,7 +49,7 @@ Missing Join Predicate 事件类表示正在执行无联接谓词的查询。 �
 |NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |NTUserName|**nvarchar**|Windows 用户名。|6|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  

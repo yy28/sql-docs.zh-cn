@@ -1,34 +1,34 @@
 ---
-title: "设置警告阈值 | Microsoft Docs"
-ms.custom: 
+title: 设置警告阈值 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 68e3835e69e5091d8fefd570035cadb0ba5b6d17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
+  使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
   
  该对话框尝试连接到两个服务器实例上。 将异步建立这两个连接。 对话框显示每个伙伴的连接状态。 如果伙伴没有连接，则可单击 **“连接”**。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="options"></a>“常规”  
  *服务器实例及其连接状态*  
- 伙伴服务器实例的名称格式为 SYSTEM\\INSTANCE_NAME。 对于默认服务器实例，只显示系统名。  
+ 伙伴服务器实例的名称格式为 SYSTEM\\INSTANCE_NAME**。 对于默认服务器实例，只显示系统名。  
   
  该字段还指示当前监视器是否连接至该服务器实例。 可能的连接状态为：  
   

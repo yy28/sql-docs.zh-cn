@@ -1,16 +1,16 @@
 ---
-title: "配置服务器启动选项（SQL Server 配置管理器）| Microsoft Docs"
-ms.custom: 
+title: 配置服务器启动选项（SQL Server 配置管理器）| Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - SQL Server services, setting startup options
 - SQL Server services, setting startup parameters
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff11f5d2ec4c086733793ebb13e54ab5448b9dd3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d95ee1d8202b26563814939d5f5af8a32eb1d5d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 服务 - 配置服务器启动选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次启动时将使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+  本主题介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次启动时将使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“SQL Server 服务”**。  
   
-3.  在右侧窗格中，右键单击 “SQL Server (<instance_name>)”，然后单击“属性”。  
+3.  在右侧窗格中，右键单击 “SQL Server (<instance_name>)”****，然后单击“属性”。  
   
 4.  在 **“启动参数”** 选项卡上的 **“指定启动参数”** 框中，键入该参数，然后单击 **“添加”**。  
   

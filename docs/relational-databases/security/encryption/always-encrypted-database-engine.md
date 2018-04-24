@@ -1,16 +1,16 @@
 ---
-title: "Always Encrypted（数据库引擎）| Microsoft Docs"
-ms.custom: 
+title: Always Encrypted（数据库引擎）| Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - encryption [SQL Server], Always Encrypted
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 
+caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9852b7f0bba5e1cb589403a1f0b43d74d1aa7aac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,10 +87,10 @@ ms.lasthandoff: 02/15/2018
 
 |任务|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|是|是|是|
+|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|是|是|“否”|
 |在数据库中创建密钥元数据。|是|是|是|
 |创建具有加密列的新表|是|是|是|
-|对选定的数据库列中的现有数据进行加密|是|是|是|
+|对选定的数据库列中的现有数据进行加密|是|是|“否”|
 
 > [!NOTE]
 > 请确保在安全环境中，在非托管数据库的计算机上运行密钥预配或数据加密工具。 否则，敏感数据或密钥可能会泄漏给服务器环境，这将减少使用“始终加密”功能的好处。  

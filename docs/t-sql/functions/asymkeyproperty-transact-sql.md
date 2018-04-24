@@ -2,7 +2,7 @@
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: 39a03b6b5f087305db6a5e795a532392bdd668a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 Key_ID  
 数据库中非对称密钥的 Key_ID。 如果仅知道密钥名称，请使用 ASYMKEY_ID 查找 Key_ID。 Key_ID 为 int 数据类型。
   
-**'**algorithm_desc**'**  
+**'** algorithm_desc **'**  
 指定输出应返回非对称密钥的算法说明。 仅适用于从 EKM 模块创建的非对称密钥。
   
 'string_sid'  
 指定输出应以 nvarchar() 格式返回非对称密钥的 SID。
   
-**'**sid**'**  
+**'** sid **'**  
 指定输出应以二进制格式返回非对称密钥的 SID。
   
 ## <a name="return-types"></a>返回类型  

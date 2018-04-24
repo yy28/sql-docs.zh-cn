@@ -1,16 +1,16 @@
 ---
 title: EXECUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXEC
@@ -33,16 +33,17 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 
+caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5246803f6ef63d130a0af894fb4230fad8644ae9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,13 +209,13 @@ Execute a character string
   
  在用于调用标量值用户定义函数时，@*return_status* 变量可以为任意标量数据类型。  
   
- *module_name*  
+ module_name  
  是要调用的存储过程或标量值用户定义函数的完全限定或者不完全限定名称。 模块名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 无论服务器的排序规则如何，扩展存储过程的名称总是区分大小写。  
   
  用户可以执行在另一数据库中创建的模块，只要运行模块的用户拥有此模块或具有在该数据库中执行该模块的适当权限。 用户可以在另一台运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器中执行模块，只要该用户有相应的权限使用该服务器（远程访问），并能在数据库中执行该模块。 如果指定了服务器名称但没有指定数据库名称，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会在用户的默认数据库中查找该模块。  
   
  ;*number*  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  是可选整数，用于对同名的过程分组。 该参数不能用于扩展存储过程。  
   
@@ -233,7 +234,7 @@ Execute a character string
   
  默认情况下，参数可为空值。  
   
- *值*  
+ *value*  
  传递给模块或传递命令的参数值。 如果参数名称没有指定，参数值必须以在模块中定义的顺序提供。  
   
  对链接服务器执行传递命令时，参数值的顺序取决于链接服务器的 OLE DB 访问接口。 大多数 OLE DB 访问接口按从左到右的顺序将值绑定到参数。  
@@ -271,7 +272,7 @@ Execute a character string
  指定执行语句的上下文。  
   
  Login  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定要模拟的上下文是登录名。 模拟范围为服务器。  
   
@@ -459,7 +460,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. 对远程存储过程使用 EXECUTE 语句  
  以下示例在远程服务器 `uspGetEmployeeManagers` 上执行 `SQLSERVER1` 存储过程，然后在 `@retstat` 中存储指示成功或失败的返回状态。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 DECLARE @retstat int;  
@@ -518,7 +519,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linkedservername"></a>G. 使用带 AT linked_server_name 的 EXECUTE  
  以下示例将一个命令字符串传递给远程服务器。 先创建一个链接服务器 `SeattleSales`，它指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一个实例，然后对该链接服务器执行 DDL 语句 (`CREATE TABLE`)。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -550,7 +551,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. 使用 EXECUTE 查询链接服务器上的 Oracle 数据库  
  以下示例在远程 Oracle 服务器上执行几个 `SELECT` 语句。 示例开始时添加 Oracle 服务器作为链接服务器，并创建链接服务器登录。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  
@@ -593,7 +594,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. 以 EXECUTE 和 AT linked_server_name 使用参数  
  以下示例使用问号 (`?`) 占位符作为参数向远程服务器传递命令字符串。 该示例先创建一个链接服务器 `SeattleSales`，它指向另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后对该链接服务器执行 `SELECT` 语句。 `SELECT` 语句使用问号作为 `ProductID` 参数 (`952`)（该参数在语句后提供）的占位符。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  

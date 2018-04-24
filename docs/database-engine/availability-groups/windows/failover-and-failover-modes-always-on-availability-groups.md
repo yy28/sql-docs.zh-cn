@@ -1,15 +1,16 @@
 ---
-title: "故障转移和故障转移模式（AlwaysOn 可用性组）| Microsoft Docs"
-ms.custom: 
+title: 故障转移和故障转移模式（AlwaysOn 可用性组）| Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1efc39104eb2b7f9840da16ffffeda16cabb4c53
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +88,11 @@ ms.lasthandoff: 01/18/2018
   
 ||异步提交模式|同步提交模式（手动故障转移模式）|同步提交模式（自动故障转移模式）|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|自动故障转移 (automatic failover)|是|是|是|  
-|计划的手动故障转移|是|是|是|  
+|自动故障转移 (automatic failover)|“否”|否|是|  
+|计划的手动故障转移|“否”|是|是|  
 |强制故障转移|是|是|是**\***|  
   
- **\***如果对已同步的辅助副本发出强制故障转移命令，辅助副本的行为与手动故障转移时的行为相同。  
+ **\*** 如果对已同步的辅助副本发出强制故障转移命令，辅助副本的行为与手动故障转移时的行为相同。  
   
  在故障转移过程中，数据库不可用的时间取决于故障转移的类型及其原因。  
   
@@ -264,9 +265,9 @@ ms.lasthandoff: 01/18/2018
   
 |辅助副本的可用性模式|数据库是否同步？|是否可能发生数据丢失？|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|同步提交|是|是|  
-|同步提交|是|是|  
-|异步提交|是|是|  
+|同步提交|是|“否”|  
+|同步提交|“否”|是|  
+|异步提交|“否”|是|  
   
  辅助数据库仅跟踪两个恢复分叉，因此，如果您执行多个强制故障转移，则确实已与先前的强制故障转移启动数据同步的任何辅助数据库都可能无法恢复运行。 如果发生这种情况，则需要从可用性组中删除无法恢复的所有辅助数据库，还原到正确的时间点，然后重新加入可用性组。 还原不能跨多个恢复分叉执行，因此请确保在执行多个强制故障转移后执行日志备份。  
   

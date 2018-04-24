@@ -2,7 +2,7 @@
 title: 将日志传送升级至 SQL Server 2016 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: log-shipping
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5d0824b800c75e627ecafb1be8d30b3d53fef00d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>将日志传送升级至 SQL Server 2016 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]当从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送配置升级至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务包，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累积更新时，以适当顺序升级日志传送服务器可保留日志传送灾难恢复解决方案。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  当从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送配置升级至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务包，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]累积更新时，以适当顺序升级日志传送服务器将保留日志传送灾难恢复解决方案。  
   
 > [!NOTE]  
 >  [中引入了](../../relational-databases/backup-restore/backup-compression-sql-server.md) 备份压缩 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]。 升级后的日志传送配置使用“备份压缩默认值”服务器级配置选项控制是否对事务日志备份文件使用备份压缩。 可以为每个日志传送配置指定日志备份的备份压缩行为。 有关详细信息，请参阅 [配置日志传送 (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。  

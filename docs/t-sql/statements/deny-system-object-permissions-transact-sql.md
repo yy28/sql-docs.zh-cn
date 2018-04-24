@@ -1,16 +1,16 @@
 ---
-title: "DENY 系统对象权限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 系统对象权限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - system objects [SQL Server]
 - cryptography [SQL Server], system objects
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d584aa3c7329b8f81e445f612e7041cd14e0747
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f1428cbd738588266c6090053dc8987724fbbf7a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 系统对象权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  [ **sys.**]  
  只有在引用目录视图和动态管理视图时才需要 sys 限定符。  
   
- *system_object*  
+ system_object  
  指定要对其拒绝权限的对象。  
   
- *principal*  
+ principal  
  指定要从中撤消权限的主体。  
   
 ## <a name="remarks"></a>Remarks  

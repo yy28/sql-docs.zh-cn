@@ -1,34 +1,36 @@
 ---
-title: "数据库镜像和 SQL Server 故障转移群集实例 | Microsoft Docs"
-ms.custom: 
+title: 数据库镜像和 SQL Server 故障转移群集实例 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - failover clustering [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 - high-availability mode [SQL Server]
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ae46bb5ff40113cb61d27882c86f84c87ef546
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5b3b9ace8303a31df5a374b7ef35d4cf61fcbb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>数据库镜像和 SQL Server 故障转移群集实例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]故障转移群集是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集服务 (MSCS) 群集组（称为资源组）中的一个或多个物理磁盘的组合，这些磁盘是群集的节点。 资源组配置为承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的故障转移群集实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例就好像是网络上的一台计算机，但是它可以提供故障转移服务，当一个节点不可用时，可以从该节点故障转移到另一个节点。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  故障转移群集是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集服务 (MSCS) 群集组（称为资源组）中的一个或多个物理磁盘的组合，这些磁盘是群集的节点。 资源组配置为承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的故障转移群集实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例就好像是网络上的一台计算机，但是它可以提供故障转移服务，当一个节点不可用时，可以从该节点故障转移到另一个节点。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
  与为单个数据库提供高可用性支持的数据库镜像相反，故障转移群集可为整个 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供高可用性支持。 数据库镜像可以在故障转移群集之间进行，也可以在故障转移群集与非群集计算机之间进行。  
   

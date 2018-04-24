@@ -1,33 +1,35 @@
 ---
-title: "Transact-SQL 调试器 | Microsoft Docs"
-ms.custom: 
+title: Transact-SQL 调试器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3c6f549295b5e97a9a6b83a9db4160934c3ff76
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e42e548f35aadcdbe3661444b6523117e6ddc047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 调试器
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器通过调查代码的运行时行为可以帮助你查找 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的错误。 将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口设置为调试模式后，可在特定的代码行上暂停执行，并检查那些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用和返回的信息和数据。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器通过调查代码的运行时行为可以帮助您查找 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的错误。 将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口设置为调试模式后，可在特定的代码行上暂停执行，并检查那些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用和返回的信息和数据。  
   
 ## <a name="stepping-through-transact-sql-code"></a>单步执行 Transact-SQL 代码  
  当 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口处于调试模式时，可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器提供的以下选项逐个导航 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 代码：  

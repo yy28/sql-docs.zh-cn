@@ -1,16 +1,16 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50bda05bd0487a60e9a909500be2ea3d65fed92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40b95f6475239b533811526025dedf3055b5c09b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +113,7 @@ column_name <data_type>
 *精度*  
  指定的数据类型的精度。 有关有效精度值的详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-*小数位数*  
+*scale*  
  是指定数据类型的小数位数。 有关有效小数位数值的详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 max  
@@ -163,7 +164,7 @@ WITH VALUES
  指定 DEFAULT constant_expression 中给定的值将存储在添加到现有行的新列中。 如果添加的列允许空值并指定了 WITH VALUES，则在添加到现有行的新列中存储默认值。 如果没有为允许空值的列指定 WITH VALUES，则在现有行的新列中存储 NULL 值。 如果新列不允许 Null 值，那么不论是否指定 WITH VALUES，都将在新行中存储默认值。  
   
 IDENTITY  
- 指定新列为标识列。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]为该列提供唯一的增量值。 当你向现有表中添加标识符列时，还会将标识号添加到具有种子值和增量值的现有表行中。 无法保证行的更新顺序。 也会为添加的任何新行生成标识号。  
+ 指定新列为标识列。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]为该列提供唯一的增量值。 当您向现有表中添加标识符列时，还会将标识号添加到具有种子值和增量值的现有表行中。 无法保证行的更新顺序。 也会为添加的任何新行生成标识号。  
   
  标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、bigint、decimal(p,0) 或 numeric(p,0) 列。 每个表只能创建一个标识列。 DEFAULT 关键字和绑定默认值不能用于标识列。 要么同时指定种子和增量，要么都不指定。 如果二者都未指定，则取默认值 (1,1)。  
   

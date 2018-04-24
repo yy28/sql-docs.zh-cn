@@ -1,34 +1,36 @@
 ---
-title: "升级镜像实例 | Microsoft Docs"
-ms.custom: 
+title: 升级镜像实例 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 329c2a8f2fb61ed3691d83b289bcb3fb9ea4f4e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>升级镜像实例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 镜像实例升级到新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务包或积累更新，或升级到新 Windows 服务包或积累更新时，可以通过执行滚动升级将每个镜像数据库的停机时间降低到仅需一次手动故障转移（如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，然后对镜像数据库进行手动故障转移，升级以前的主体 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，并恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例上运行的镜像会话的编号和布局。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 镜像实例升级到新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务包或积累更新，或升级到新 Windows 服务包或积累更新时，可以通过执行滚动升级将每个镜像数据库的停机时间降低到仅需一次手动故障转移（如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，然后对镜像数据库进行手动故障转移，升级以前的主体 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，并恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例上运行的镜像会话的编号和布局。  
   
 > [!NOTE]  
 >  有关在迁移过程中使用数据库镜像与日志传送的信息，请下载此 [数据库镜像和日志传送白皮书](https://t.co/RmO6ruCT4J)。  

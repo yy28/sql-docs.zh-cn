@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: ''
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c9fe7a9614c1b389362edd0b40284508329fc1b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: cc6cc423dc00cb7a9615102217bfd3736d8ca7a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-matching-policy"></a>创建匹配策略
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中生成匹配策略。 您可以通过对示例数据运行“匹配策略”活动在 DQS 中准备匹配过程。 在此活动中，您在策略中创建和测试一个或多个匹配规则，然后发布知识库以使匹配的规则可供公开使用。 知识库中只能有一个匹配策略，但该策略可以包含多个匹配规则。  
   
  创建匹配规则分为三个阶段：一个映射过程，您可以在其中确定数据源并将域映射到列；一个匹配策略过程，您可以在其中创建一个或多个匹配规则并单独测试每个匹配规则；以及一个匹配结果过程，您可以在其中一起运行所有匹配规则；如果您对结果感到满意，则将该策略添加到知识库。 将在“匹配策略”活动向导的单独页面上执行上述每个过程，这使您可以在不同页面之间来回移动，重新运行过程，并结束特定的匹配策略过程和返回到过程的相同阶段。 在一起测试所有规则之后，如果需要，您可以返回到 **“匹配策略”** 页，调整单个规则，再次单独测试此规则，然后返回到 **“匹配结果”** 页面以再次同时运行所有规则。 DQS 向您提供有关源数据、匹配规则和匹配结果的统计信息，使您能够针对匹配策略制定明智的决策，从而优化此策略。  

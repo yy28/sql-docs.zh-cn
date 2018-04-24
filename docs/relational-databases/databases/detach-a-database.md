@@ -2,7 +2,7 @@
 title: 分离数据库 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: databases
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1a3d6dec6dcaff890cb3cd8bfd05af33556d06d3
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: bed081d2271178f8f251d3d8c55a4d2cae5abc53
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="detach-a-database"></a>分离数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/10/2018
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要分离数据库，可使用：**  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/10/2018
      **保留全文目录**  
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
-     **状态**  
+     **“状态”**  
      显示以下状态之一： **“就绪”** 或 **“未就绪”**。  
   
      **消息**  
@@ -106,11 +106,11 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-detach-a-database"></a>分离数据库  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例将分离 AdventureWorks2012 数据库，同时将 skipchecks 设置为 true。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将分离 AdventureWorks2012 数据库，同时将 skipchecks 设置为 true。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

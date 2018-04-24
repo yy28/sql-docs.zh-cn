@@ -1,30 +1,33 @@
 ---
-title: "测试用户权限 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 测试用户权限 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-caps.latest.revision: 
+caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5c84a7d6c678f7bf98d62ed63e78b6922243c7e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 976e97062190e15de03a01dff0595fed79312a61
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>测试用户权限 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以创建测试用户并登录到 Web 应用程序以测试权限。当某个用户尝试访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] URL 时，将会对该用户的凭据进行身份验证。 在 Internet Explorer 中，安全设置控制是否自动进行身份验证，或者用户是否必须输入用户名和密码。 若要更改这些设置，请完成以下步骤：  
   
 ### <a name="to-test-a-users-security"></a>测试用户的安全设置  

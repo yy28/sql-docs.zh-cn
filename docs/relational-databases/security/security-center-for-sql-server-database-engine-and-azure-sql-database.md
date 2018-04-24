@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 数据库引擎和 Azure SQL Database 的安全中心 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 数据库引擎和 Azure SQL Database 的安全中心 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: security
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Security [SQL Server]
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e08477e178143b8d37a55c3e01cfc3a0c5145fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 09c051ece663a046a9286b27ddfd5356ab534e7a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL Database 的安全中心
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |**授予、撤消和拒绝权限**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 安全对象类<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 具体服务器权限<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 具体数据库权限|[权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [权限](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [安全对象](../../relational-databases/security/securables.md)<br /><br /> [数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
-|**按角色分类的安全性**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 服务器级别角色<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 数据库级别角色|[服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)|  
+|**按角色分类的安全性**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 服务器级别角色<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 数据库级别角色|[服务器级角色](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**限制对所选数据元素的数据访问**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 使用视图/过程限制数据访问<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 行级别安全性<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 动态数据掩码<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 已签名的对象|使用 [视图](../../relational-databases/views/views.md) 和 [过程](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)限制数据访问<br /><br /> [行级别安全性 (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [行级别安全性 (Azure SQL Database)](http://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [动态数据掩码 (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [动态数据掩码 (Azure SQL Database)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [签名的对象](../../t-sql/statements/add-signature-transact-sql.md)|  
   
 ##  <a name="Encrypt"></a> 加密：存储机密数据  

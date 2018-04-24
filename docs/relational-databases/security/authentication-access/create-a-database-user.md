@@ -1,16 +1,16 @@
 ---
-title: "创建数据库用户 | Microsoft Docs"
-ms.custom: 
+title: 创建数据库用户 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.user.securables.f1
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2fce0eac03c6b1c68d1b6bb91637135c3bf8f13c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  可以向作为安全主体的用户授予权限。 用户的作用域是数据库。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  需要对数据库拥有 **ALTER ANY USER** 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SSMS 创建用户  
@@ -132,10 +133,10 @@ ms.lasthandoff: 11/21/2017
 -   **“扩展属性”** 页允许您向数据库用户添加自定义属性。 此页还提供以下选项：  
   
      **数据库**  
-     显示所选数据库的名称。 此字段是只读的。  
+     显示所选数据库的名称。 此字段为只读。  
   
      **排序规则**  
-     显示用于所选数据库的排序规则。 此字段是只读的。  
+     显示用于所选数据库的排序规则。 此字段为只读。  
   
      **属性**  
      查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在“标准”  菜单栏上，单击“新建查询” 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  

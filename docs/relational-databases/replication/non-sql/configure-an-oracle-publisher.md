@@ -1,30 +1,30 @@
 ---
-title: "配置 Oracle 发布服务器 | Microsoft Docs"
-ms.custom: 
+title: 配置 Oracle 发布服务器 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 115247323429a5a981fdeff76ebb4d0f6d33581f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 047adf6cf134fabfaf3964fc620c68c68a83618c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/08/2018
 > [!NOTE]  
 >  删除 **MSSQLSERVERDISTRIBUTOR** 公共同义词和用 **CASCADE** 选项配置的 Oracle 复制用户，会删除 Oracle 发布服务器上的所有复制对象。  
   
- 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 后，该脚本位于以下目录下：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql。 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
+ 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 后，该脚本位于以下目录下：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql。 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
   
  使用具有 DBA 权限的帐户连接到 Oracle 数据库并执行此脚本。 此脚本将提示输入复制管理用户架构的用户名和密码以及用于创建对象的默认表空间（此表空间必须已存在于 Oracle 数据库中）。 有关为对象指定其他表空间的信息，请参阅[管理 Oracle 表空间](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以任选用户名和强密码，但要将它们记下来，因为以后将 Oracle 数据库配置为发布服务器时必须提供此信息。 建议只将此架构用于复制所需的对象，而不要在此架构下创建要发布的表。  
   

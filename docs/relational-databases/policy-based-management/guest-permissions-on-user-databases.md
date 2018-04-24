@@ -1,33 +1,34 @@
 ---
-title: "对用户数据库的 Guest 权限 | Microsoft Docs"
-ms.custom: 
+title: 对用户数据库的 Guest 权限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcfa237b26d7a2bf27598483bb4b8889111f7255
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3f60f2892375b18623924a0dcefe57f18d66b8a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guest-permissions-on-user-databases"></a>对用户数据库的 Guest 权限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此规则确定 guest 用户是否有权访问数据库。 此规则仅适用于用户数据库。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此规则确定 guest 用户是否有权访问数据库。 此规则仅适用于用户数据库。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  
  如果 guest 用户不需要访问数据库，请撤消其访问数据库的权限。  

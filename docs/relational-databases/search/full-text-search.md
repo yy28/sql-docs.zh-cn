@@ -1,33 +1,33 @@
 ---
-title: "全文搜索 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/29/2016
-ms.prod: sql-non-specified
+title: 全文搜索 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
-ms.tgt_pltfrm: 
+ms.technology: database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31862df0971da8de6e6ced430f7095587f9f7926
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="full-text-search"></a>全文搜索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。
   
 ## <a name="basic-tasks"></a>基本任务
@@ -139,7 +139,7 @@ ms.lasthandoff: 02/13/2018
 ###  <a name="indexing"></a> 全文索引过程  
  全文填充（也称为爬网）开始后，全文引擎会将大批数据存入内存并通知筛选器后台程序宿主。 宿主对数据进行筛选和断字，并将转换的数据转换为倒排词列表。 然后，全文搜索从词列表中提取转换的数据，对其进行处理以删除非索引字，然后将某一批次的词列表永久保存到一个或多个倒排索引中。  
   
- 对存储在 **varbinary(max)** 或 **image** 列中的数据编制索引时，筛选器（实现 **IFilter** 接口）将基于为该数据指定的文件格式（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word）来提取文本。 在某些情况下，筛选器组件要求将 **varbinary(max)**或 **image** 数据写入 filterdata 文件夹中，而不是将其存入内存。  
+ 对存储在 **varbinary(max)** 或 **image** 列中的数据编制索引时，筛选器（实现 **IFilter** 接口）将基于为该数据指定的文件格式（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word）来提取文本。 在某些情况下，筛选器组件要求将 **varbinary(max)** 或 **image** 数据写入 filterdata 文件夹中，而不是将其存入内存。  
   
  在处理过程中，通过断字符将收集到的文本数据分隔成各个单独的标记或关键字。 用于词汇切分的语言将在列级指定，或者也可以通过筛选器组件在 **varbinary(max)**、 **image**或 **xml** 数据内标识。  
   

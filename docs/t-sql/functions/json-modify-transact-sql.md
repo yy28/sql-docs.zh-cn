@@ -1,28 +1,28 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 16
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0c4f5c0f65e6f7ae8b532cb42d117fa49fc83b00
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a0e15872ca8e161a75b2506b098ede4dd324cf3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ JSON_MODIFY ( expression , path , newValue )
 |现有的值|路径存在|宽松模式|严格模式|  
 |--------------------|-----------------|--------------|-----------------|  
 |不为 NULL|是|更新现有值。|更新现有值。|  
-|不为 NULL|是|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `$.user` 或 `$.user.settings` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `theme`。|错误 – INVALID_PROPERTY|  
+|不为 NULL|“否”|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `$.user` 或 `$.user.settings` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `theme`。|错误 – INVALID_PROPERTY|  
 |NULL|是|删除现有属性。|将现有值设置为 NULL。|  
-|NULL|是|无操作。 返回第一个参数作为结果。|错误 – INVALID_PROPERTY|  
+|NULL|“否”|无操作。 返回第一个参数作为结果。|错误 – INVALID_PROPERTY|  
   
  在宽松模式下，JSON_MODIFY 会尝试创建新的键:值对，但在某些情况下可能会失败。  
   

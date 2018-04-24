@@ -1,34 +1,35 @@
 ---
-title: "Performance Statistics 事件类 | Microsoft Docs"
-ms.custom: 
+title: Performance Statistics 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3b788ea13beced99f19a35707591ecf90c5dd5d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 02db411f94695499fa0fdc3ad061ff8e0e5effe4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Performance Statistics 事件类可用于监视正在执行的查询、存储过程和触发器的性能。 六个事件子类分别表示系统内查询、存储过程和触发器的生存期内的一个事件。 使用这些事件子类的组合以及关联的 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 动态管理视图，可以重新构建任何给定查询、存储过程或触发器的性能历史记录。  
+  Performance Statistics 事件类可用于监视正在执行的查询、存储过程和触发器的性能。 六个事件子类分别表示系统内查询、存储过程和触发器的生存期内的一个事件。 使用这些事件子类的组合以及关联的 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 动态管理视图，可以重新构建任何给定查询、存储过程或触发器的性能历史记录。  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 事件类的数据列  
  下表介绍了与下面每个事件子类关联的事件类数据列：EventSubClass 0、EventSubClass 1、EventSubClass 2、EventSubClass 3、EventSubClass 4 和 EventSubClass 5。  
@@ -40,7 +41,7 @@ Performance Statistics 事件类可用于监视正在执行的查询、存储过
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**图像**|NULL|2|是|  
 |DatabaseID|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |EventSubClass|**int**|事件子类的类型。<br /><br /> 0 = 当前未存在于缓存中的新批处理 SQL 文本。<br /><br /> 下列 EventSubClass 类型是在即席批查询的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 0 的查询|21|是|  
 |IntegerData2|**int**|NULL|55|是|  
 |ObjectID|**int**|NULL|22|是|  
@@ -59,9 +60,9 @@ Performance Statistics 事件类可用于监视正在执行的查询、存储过
 |BigintData1|**bigint**|重新编译此计划的累积次数。|52|是|  
 |BinaryData|**图像**|已编译计划的二进制 XML。|2|是|  
 |DatabaseID|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
-|EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 存储过程中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在存储过程的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> *n* 个类型 1 的查询|21|是|  
+|EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 存储过程中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在存储过程的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的存储过程：<br /><br /> *n* 个类型 1 的查询|21|是|  
 |IntegerData2|**int**|存储过程内语句的结尾。<br /><br /> 对于存储过程的结尾，此值为 -1。|55|是|  
 |ObjectID|**int**|系统分配的对象 ID。|22|是|  
 |Offset|**int**|存储过程或批查询中的语句的起始偏移量。|61|是|  
@@ -83,7 +84,7 @@ Performance Statistics 事件类可用于监视正在执行的查询、存储过
 |BigintData1|**bigint**|重新编译此计划的累积次数。|52|是|  
 |BinaryData|**图像**|已编译计划的二进制 XML。|2|是|  
 |DatabaseID|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |EventSubClass|**int**|事件子类的类型。<br /><br /> 2 = 临时 SQL 语句中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在即席批查询的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> *n* 个类型 2 的查询|21|是|  
 |IntegerData2|**int**|批处理内语句的结尾。<br /><br /> 对于批处理的结尾，此值为 -1。|55|是|  
@@ -106,9 +107,9 @@ Performance Statistics 事件类可用于监视正在执行的查询、存储过
 |BigintData1|**bigint**|重新编译此计划的累积次数。|52|是|  
 |BinaryData|**图像**|NULL|2|是|  
 |DatabaseID|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
-|EventSubClass|**int**|事件子类的类型。<br /><br /> 3 = 保存在缓存中的某一查询已被破坏，与此计划相关的历史性能数据也将被破坏。<br /><br /> 下列 EventSubClass 类型是在跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 3 的查询（当从缓存中刷新查询时）<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 3 的查询（当从缓存中刷新查询时）。|21|是|  
+|EventSubClass|**int**|事件子类的类型。<br /><br /> 3 = 保存在缓存中的某一查询已被破坏，与此计划相关的历史性能数据也将被破坏。<br /><br /> 下列 EventSubClass 类型是在跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 3 的查询（当从缓存中刷新查询时）<br /><br /> 对于有 *n* 次查询的存储过程：<br /><br /> 1 个类型 3 的查询（当从缓存中刷新查询时）。|21|是|  
 |IntegerData2|**int**|存储过程或批处理中的语句的结尾。<br /><br /> 对于存储过程或批处理的结尾，此值为 -1。|55|是|  
 |ObjectID|**int**|NULL|22|是|  
 |Offset|**int**|存储过程或批查询中的语句的起始偏移量。<br /><br /> 对于存储过程或批处理的开始，此值为 0。|61|是|  
@@ -126,7 +127,7 @@ Performance Statistics 事件类可用于监视正在执行的查询、存储过
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**图像**|NULL|2|是|  
 |DatabaseID|**int**|给定存储过程所在的数据库的 ID。|3|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |EventSubClass|**int**|事件子类的类型。<br /><br /> 4 = 缓存的存储过程已从缓存中删除，与它关联的历史性能数据也即将销毁。|21|是|  
 |IntegerData2|**int**|NULL|55|是|  
@@ -146,7 +147,7 @@ Performance Statistics 事件类可用于监视正在执行的查询、存储过
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**图像**|NULL|2|是|  
 |DatabaseID|**int**|给定触发器所在的数据库的 ID。|3|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |EventSubClass|**int**|事件子类的类型。<br /><br /> 5 = 缓存的触发器已从缓存中删除，与它关联的历史性能数据也即将销毁。|21|是|  
 |IntegerData2|**int**|NULL|55|是|  

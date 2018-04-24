@@ -1,30 +1,31 @@
 ---
-title: "PolyBase 连接配置 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: PolyBase 连接配置 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 
+caps.latest.revision: 14
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6beb362dd1761eae50afae27483db00d311714f
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e2e898fcfce83f0d9d4472271c4eae7fc46bd72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -54,7 +55,7 @@ RECONFIGURE
  [ **@configname=** ] **'***option_name***'**  
  配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 如果未指定该参数，则返回选项的完整列表。  
   
- [ @configvalue= ] 'value'  
+ [ @configvalue= ] 'value'****  
  新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
  **“hadoop 连接”**  

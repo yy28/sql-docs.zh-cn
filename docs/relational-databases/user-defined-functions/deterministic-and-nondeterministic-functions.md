@@ -1,16 +1,16 @@
 ---
-title: "确定性函数和不确定性函数 | Microsoft Docs"
-ms.custom: 
+title: 确定性函数和不确定性函数 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: udf
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - built-in functions [SQL Server]
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 
+caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ed8857c6a48193a31aacf948efbcf3cedbf4db7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b17fada9d7eb14e94d6a9ea175f50f85dde0bcc7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-只要使用特定的输入值集并且数据库具有相同的状态，那么不管何时调用，确定性函数始终都会返回相同的结果。 即使访问的数据库的状态不变，每次使用特定的输入值集调用非确定性函数都可能会返回不同的结果。 例如，函数 AVG 对上述给定的限定条件始终返回相同的值，但返回当前 datetime 值的 GETDATE 函数始终会返回不同的结果。  
+  只要使用特定的输入值集并且数据库具有相同的状态，那么不管何时调用，确定性函数始终都会返回相同的结果。 即使访问的数据库的状态不变，每次使用特定的输入值集调用非确定性函数都可能会返回不同的结果。 例如，函数 AVG 对上述给定的限定条件始终返回相同的值，但返回当前 datetime 值的 GETDATE 函数始终会返回不同的结果。  
   
  有多个用户定义函数的属性通过对调用函数的计算列进行索引或通过引用函数的索引视图确定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为函数的结果建立索引的功能。 函数的确定性是一个属性。 例如，如果一个视图引用了任何不确定性函数，则无法对该视图创建聚集索引。 有关函数属性（包括函数确定性）的详细信息，请参阅 [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)。  
   

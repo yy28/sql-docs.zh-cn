@@ -1,32 +1,32 @@
 ---
-title: "比较用于存储 Blob 的选项 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 比较用于存储 Blob 的选项 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 386447067f95fb40f0b8cae87325df348e4ec8c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比较用于存储 Blob 的选项 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储文件和文档的选项。  
+  讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储文件和文档的选项。  
   
 ##  <a name="Expectations"></a> 在数据库中存储文件 - 好处和期望  
  很大比例的企业数据本质上是非结构化的，通常作为文件和文档存储在文件系统中。 大多数此类数据由应用程序生成、管理和使用，应用程序通过 Windows API 访问这些文件。 企业通常将此类数据保存在文件系统中，同时将文件的相关元数据存储在关系数据库中。  
@@ -55,13 +55,13 @@ ms.lasthandoff: 02/13/2018
   
 |功能|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**用于管理任务的单个存储区**|是|是|**是**|  
-|**单组服务**：搜索、报告、查询等|是|是|**是**|  
-|**集成的安全模型**|是|是|**是**|  
-|**FILESTREAM 数据的就地更新**|是|是|**是**|  
-|**在数据库中维护文件和目录层次结构**|是|是|**是**|  
-|**Windows 应用程序兼容性**|是|是|**是**|  
-|**对文件属性的关系访问**|是|是|**是**|  
+|**用于管理任务的单个存储区**|“否”|是|**是**|  
+|**单组服务**：搜索、报告、查询等|“否”|是|**是**|  
+|**集成的安全模型**|“否”|是|**是**|  
+|**FILESTREAM 数据的就地更新**|是|“否”|**是**|  
+|**在数据库中维护文件和目录层次结构**|“否”|“否”|**是**|  
+|**Windows 应用程序兼容性**|是|“否”|**是**|  
+|**对文件属性的关系访问**|“否”|“否”|**是**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 和远程 BLOB 存储区 (RBS) 的比较  
  有关这两种功能的比较，请参阅来自 RBS 团队的以下博客： [SQL Server 远程 BLOB 存储区和 FILESTREAM 功能比较](http://go.microsoft.com/fwlink/?LinkId=210317)。  

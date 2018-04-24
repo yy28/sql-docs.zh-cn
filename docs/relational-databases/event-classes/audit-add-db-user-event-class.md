@@ -1,34 +1,35 @@
 ---
-title: "Audit Add DB User 事件类 | Microsoft Docs"
-ms.custom: 
+title: Audit Add DB User 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77357183147cf4fc5e6a651fae6543bd4d7743a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: dc431cdbbd76447fd98b0889bed6592342371a50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 **Audit Add DB User** 事件类。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess****sp_adduser** 和 **sp_dropuser** 存储过程。  
+  将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 **Audit Add DB User** 事件类。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess****sp_adduser** 和 **sp_dropuser** 存储过程。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本中可能会删除此事件类。 建议使用 **Audit Database Principal Management** 事件类。  
   
@@ -42,8 +43,8 @@ ms.lasthandoff: 02/12/2018
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在添加或删除用户名的数据库的名称。|35|是|  
 |**DBUserName**|**nvarchar**|颁发者在数据库中的用户名。|40|是|  
-|**EventClass**|**int**|事件类型 = 109。|27|是|  
-|**EventSequence**|**int**|给定事件在请求中的顺序。|51|是|  
+|**EventClass**|**int**|事件类型 = 109。|27|“否”|  
+|**EventSequence**|**int**|给定事件在请求中的顺序。|51|“否”|  
 |**EventSubClass**|**int**|事件子类的类型。<br /><br /> 1 = 添加<br /><br /> 2 = 删除<br /><br /> 3 = 授予数据库访问权限<br /><br /> 4 = 撤消数据库访问权限|21|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  

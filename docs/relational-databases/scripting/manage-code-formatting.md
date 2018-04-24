@@ -1,16 +1,16 @@
 ---
-title: "管理代码格式 | Microsoft Docs"
-ms.custom: 
+title: 管理代码格式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -29,19 +29,21 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96141b7eb166d6ffd8e082890ce005a0cc52c650
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39aa0603bd5932c9b36185abacc56cc01e2aff19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-code-formatting"></a>管理代码格式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用编辑器可以通过缩进、隐藏文本、URL 等来设置代码的格式。 还可以使用智能缩进在键入时自动格式化代码。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  使用编辑器可以用缩进、隐藏文本、URL 等来设置代码的格式。 还可以使用智能缩进在键入时自动格式化代码。  
   
 ## <a name="indenting"></a>缩进  
  可以选择三种不同样式的文本缩进。 此外，还可以指定由多少个空格组成一个缩进或制表符，以及在缩进时编辑器是使用制表符，还是使用空格。  

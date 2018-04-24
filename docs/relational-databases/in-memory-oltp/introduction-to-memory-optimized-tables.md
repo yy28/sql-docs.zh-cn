@@ -1,28 +1,29 @@
 ---
-title: "内存优化表简介 | Microsoft Docs"
-ms.custom: 
+title: 内存优化表简介 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: dd9c5d4b5071ef158cf630d6124e49266329067f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/12/2018
 |功能|使用本机编译的存储过程访问|解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问|CLR 访问|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |内存优化的表|是|是|否*|  
-|内存优化的表类型|是|是|是|  
+|内存优化的表类型|是|是|“否”|  
 |本机编译的存储过程|现在支持嵌套本机编译存储过程。 只要引用的过程也是本机编译过程，则可以在存储过程中使用 EXECUTE 语法。|是|否*|  
   
  *无法从上下文连接（执行 CLR 模块时与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接）访问内存优化表或本机编译存储过程。 但是，可以创建和打开能够访问内存优化的表和本机编译的存储过程的其他连接。  

@@ -1,33 +1,34 @@
 ---
-title: "master 数据库 | Microsoft Docs"
-ms.custom: 
+title: master 数据库 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master database [SQL Server], about
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1aa6ee5488e19e8189b98203bef688af46935487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="master-database"></a>master 数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] master  数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **master** 数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
   
 ## <a name="physical-properties-of-master"></a>master 数据库的物理属性  
  下表列出了 **master** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
@@ -44,34 +45,34 @@ ms.lasthandoff: 01/18/2018
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|是|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|“否”|  
 |ANSI_NULL_DEFAULT|OFF|是|  
 |ANSI_NULLS|OFF|是|  
 |ANSI_PADDING|OFF|是|  
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
-|AUTO_CLOSE|OFF|是|  
+|AUTO_CLOSE|OFF|“否”|  
 |AUTO_CREATE_STATISTICS|ON|是|  
-|AUTO_SHRINK|OFF|是|  
+|AUTO_SHRINK|OFF|“否”|  
 |AUTO_UPDATE_STATISTICS|ON|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
-|CHANGE_TRACKING|OFF|是|  
+|CHANGE_TRACKING|OFF|“否”|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|是|  
 |CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> 是<br /><br /> 是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|“否”<br /><br /> 否<br /><br /> “否”|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|是|  
-|ENCRYPTION|OFF|是|  
-|MIXED_PAGE_ALLOCATION|ON|是|  
+|DB_CHAINING|ON|“否”|  
+|ENCRYPTION|OFF|“否”|  
+|MIXED_PAGE_ALLOCATION|ON|“否”|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM|是|  
 |PARAMETERIZATION|SIMPLE|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
-|READ_COMMITTED_SNAPSHOT|OFF|是|  
+|READ_COMMITTED_SNAPSHOT|OFF|“否”|  
 |RECOVERY|SIMPLE|是|  
 |RECURSIVE_TRIGGERS|OFF|是|  
-|Service Broker 选项|DISABLE_BROKER|是|  
+|Service Broker 选项|DISABLE_BROKER|“否”|  
 |TRUSTWORTHY|OFF|是|  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  

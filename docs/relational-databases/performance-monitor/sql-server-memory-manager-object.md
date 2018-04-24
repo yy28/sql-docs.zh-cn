@@ -1,34 +1,35 @@
 ---
-title: "SQL Server - Memory Manager 对象 | Microsoft Docs"
-ms.custom: 
+title: SQL Server - Memory Manager 对象 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2abe6f643c448be8411dfc4894b827eaedeb927d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server Memory Manager 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 Memory Manager 对象提供了监视总体的服务器内存使用情况的计数器。 监视总体的服务器内存使用情况，以估计用户活动和资源使用，有助于查明性能瓶颈。 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例使用的内存有助于确定：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Microsoft **中的** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了监视总体的服务器内存使用情况的计数器。 监视总体的服务器内存使用情况，以估计用户活动和资源使用，有助于查明性能瓶颈。 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例使用的内存有助于确定：  
   
 -   瓶颈的存在是否是因为物理内存不足以存储缓存中被频繁访问的数据。 如果内存不足， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须从磁盘检索数据。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/18/2018
 |**Memory Grants Outstanding**|指定成功获得工作空间内存授权的进程总数。|  
 |**Memory Grants Pending**|指定等待工作空间内存授权的进程总数。|  
 |**Optimizer Memory (KB)**|指定服务器正用于查询优化的动态内存总数。|  
-|**Reserved Server Memory (KB)**|指示服务器保留供将来使用的内存量。 此计数器显示最初授予（显示在 **Granted Workspace Memory (KB)**中）但当前未使用的内存量。|  
+|**Reserved Server Memory (KB)**|指示服务器保留供将来使用的内存量。 此计数器显示最初授予（显示在 **Granted Workspace Memory (KB)** 中）但当前未使用的内存量。|  
 |**SQL Cache Memory (KB)**|指定服务器正用于动态 SQL 缓存的动态内存总数。|  
 |**Stolen Server Memory (KB)**|指定服务器当前正用于除数据库页面之外的其他用途的内存量。|  
 |**Target Server Memory (KB)**|指示服务器能够使用的理想内存量。|  

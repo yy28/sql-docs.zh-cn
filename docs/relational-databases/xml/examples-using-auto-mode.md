@@ -1,34 +1,34 @@
 ---
-title: "示例：使用 AUTO 模式 | Microsoft Docs"
-ms.custom: 
+title: 示例：使用 AUTO 模式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edb1a03183a36c6308b2b7d14253179ac52d9494
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d26865f69632ee8656e5519e0f0469cdccaba8cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-auto-mode"></a>示例：使用 AUTO 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-下列示例说明了 AUTO 模式的使用。 这些查询中有许多都针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
+  下列示例说明了 AUTO 模式的使用。 这些查询中有许多都针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>示例：检索客户、订单和订单详细信息  
  此查询检索特定客户的客户、订单和订单详细信息。  

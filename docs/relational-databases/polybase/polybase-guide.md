@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 指南 | Microsoft Docs"
+title: PolyBase 指南 | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
 - PolyBase
@@ -18,24 +18,24 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 - PolyBase, overview
-- "Hadoop import ×"
+- Hadoop import ×
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 
+caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d5aa107a95505e4132f24aa2cf20952a4d7fcf10
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-PolyBase 是一种可通过 t-sql 语言访问数据库外部数据的技术。  在 SQL Server 2016 中，可以对 Hadoop 中的外部数据运行查询或将数据导入/导出 Azure Blob 存储。 查询会进行优化以将计算推送到 Hadoop。 在 Azure SQL 数据仓库中，可以将数据导入/导出 Azure Blob 存储和 Azure Data Lake Store。
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+  PolyBase 是一种可通过 t-sql 语言访问数据库外部数据的技术。  在 SQL Server 2016 中，可以对 Hadoop 中的外部数据运行查询或将数据导入/导出 Azure Blob 存储。 查询会进行优化以将计算推送到 Hadoop。 在 Azure SQL 数据仓库中，可以将数据导入/导出 Azure Blob 存储和 Azure Data Lake Store。
   
   
  若要使用 Polybase，请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)。  

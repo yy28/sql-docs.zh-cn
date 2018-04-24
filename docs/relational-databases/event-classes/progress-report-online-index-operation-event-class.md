@@ -1,34 +1,35 @@
 ---
-title: "Progress Report: Online Index Operation 事件类 | Microsoft Docs"
-ms.custom: 
+title: 'Progress Report: Online Index Operation 事件类 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'Progress Report: Online Index Operation event class [SQL Server]'
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d73b8780e9a9e9c0d28bbac5c5a0f0ac20678acd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aef001f831877db7741297820481849ed4fcb4a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Progress Report: Online Index Operation 事件类指示在联机索引生成进程运行时联机索引生成操作的进度。  
+  Progress Report: Online Index Operation 事件类指示在联机索引生成进程运行时联机索引生成操作的进度。  
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation 事件类数据列  
   
@@ -42,8 +43,8 @@ Progress Report: Online Index Operation 事件类指示在联机索引生成进�
 |DatabaseName|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
 |Duration|**bigint**|事件占用的时间（微秒）。|13|是|  
 |EndTime|**datetime**|联机索引操作完成的时间。|15|是|  
-|EventClass|**int**|事件类型 = 190。|27|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventClass|**int**|事件类型 = 190。|27|“否”|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 启动<br /><br /> 2 = 阶段 1 执行开始<br /><br /> 3 = 阶段 1 执行结束<br /><br /> 4 = 阶段 2 执行开始<br /><br /> 5 = 阶段 2 执行结束<br /><br /> 6 = 已插入行计数<br /><br /> 7 = 完成<br /><br /> 阶段 1 表示基对象（聚集索引或堆）或者索引操作是否仅涉及一个非聚集索引。 在索引生成操作同时涉及原始重新生成以及附加的非聚集索引时，使用阶段 2。  例如，如果某一对象具有聚集索引和若干非聚集索引，则“全部重新生成”将生成所有索引。 基对象（聚集索引）在阶段 1 重新生成，然后，所有非聚集索引在阶段 2 重新生成。|21|是|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
@@ -57,7 +58,7 @@ Progress Report: Online Index Operation 事件类指示在联机索引生成进�
 |ObjectName|**nvarchar**|引用的对象名。|34|是|  
 |PartitionId|**bigint**|要生成的分区的 ID。|65|是|  
 |PartitionNumber|**int**|要生成的分区的序号。|25|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|事件的启动时间。|14|是|  

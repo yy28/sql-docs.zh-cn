@@ -1,16 +1,16 @@
 ---
-title: "Showplan 逻辑运算符和物理运算符参考 | Microsoft Docs"
-ms.custom: 
+title: Showplan 逻辑运算符和物理运算符参考 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
@@ -138,20 +138,21 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 605d3ff10ac725358ec51e28357f8b03cfcee094
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9fc11ac48b6827fcf0f92ceb4ab7e05d6699f10e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
+  运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
   
  运算符分为逻辑运算符和物理运算符。  
   
@@ -283,7 +284,7 @@ ms.lasthandoff: 02/09/2018
 |![Split 运算符图标](../relational-databases/media/split-32x.gif "Split 运算符图标")|**Split**|**Split** 运算符用于优化更新处理。 它将每个更新操作拆分成删除和插入操作。 **Split** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Spool 运算符图标](../relational-databases/media/spool-32x.gif "Spool 运算符图标")|**Spool**|**Spool** 运算符将中间查询结果保存到 **tempdb** 数据库中。|  
 |![Stream Aggregate 运算符图标](../relational-databases/media/stream-aggregate-32x.gif "Stream Aggregate 运算符图标")|**Stream Aggregate**|**Stream Aggregate** 运算符按一列或多列对行分组，然后计算由查询返回的一个或多个聚合表达式。 此运算符的输出可供查询中的后续运算符引用和/或返回到客户端。 **Stream Aggregate** 运算符要求输入在组中按列进行排序。 如果由于前面的 **Sort** 运算符或已排序的索引查找或扫描导致数据尚未排序，则优化器将在此运算符前面使用一个 **Sort** 运算符。 在 SHOWPLAN_ALL 语句或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划中，GROUP BY 谓词中的列会列在 **Argument** 列中，而聚合表达式则列在 **Defined Values** 列中。 **Stream Aggregate** 是一个物理运算符。|  
-|![Switch 运算符图标](../relational-databases/media/switch-32x.gif "Switch 运算符图标")|**开关**|**开关** 是一种特殊类型的串联迭代器，它具有 *n* 个输入。 有一个表达式与每个 **Switch** 运算符关联。 根据表达式的返回值（在 0 到 *n*-1 之间）， **开关** 将适当的输入流复制到输出流中。 **Switch** 的一种用途是与某些运算符（如 **TOP** 运算符）一起实现涉及快进游标的查询计划。 **Switch** 既是一个逻辑运算符，也是一个物理运算符。|  
+|![Switch 运算符图标](../relational-databases/media/switch-32x.gif "Switch 运算符图标")|**开关**|**Switch** 是一种特殊类型的串联迭代器，它具有 *n* 个输入。 有一个表达式与每个 **Switch** 运算符关联。 根据表达式的返回值（在 0 到 *n*-1 之间）， **Switch** 将适当的输入流复制到输出流中。 **Switch** 的一种用途是与某些运算符（如 **TOP** 运算符）一起实现涉及快进游标的查询计划。 **Switch** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Table Delete 运算符图标](../relational-databases/media/table-delete-32x.gif "Table Delete 运算符图标")|**Table Delete**|**Table Delete** 物理运算符删除查询执行计划的 **Argument** 列中所指定表中的行。|  
 |![Table Insert 运算符图标](../relational-databases/media/table-insert-32x.gif "Table Insert 运算符图标")|**Table Insert**|**Table Insert** 运算符将输入的行插入到在查询执行计划的 **Argument** 列指定的表中。 **Argument** 列还包含一个 SET:() 谓词，用于指示为每一列设置的值。 如果 **Table Insert** 的插入值没有子项，插入的行则来自 Insert 运算符本身。 **Table Insert** 是一个物理运算符。|  
 |![Table Merge 运算符](../relational-databases/media/table-merge-32x.gif "Table Merge 运算符")|**Table Merge**|**Table Merge** 运算符可将合并数据流应用到堆。 该运算符可在其 **Argument** 列中所指定的表中删除、更新或插入行。 执行的实际操作取决于该运算符的 **Argument** 列中指定的 **ACTION** 列的运行时值。 **Table Merge** 是一个物理运算符。|  
@@ -293,7 +294,7 @@ ms.lasthandoff: 02/09/2018
 |![Table-valued Function 运算符图标](../relational-databases/media/table-valued-function-32x.gif "Table-valued Function 运算符图标")|**Table-valued Function**|**Table-valued Function** 运算符计算表值函数（ [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR）并将结果行存储在 [tempdb](../relational-databases/databases/tempdb-database.md) 数据库中。 当父迭代器请求这些行时， **Table-valued Function** 将返回 **tempdb**中的行。<br /><br /> 调用表值函数的查询生成具有 **Table-valued Function** 迭代器的查询计划。 可以使用不同的参数值计算**Table-valued Function** ：<br /><br /> -<br />                    **Table-valued Function XML Reader** 输入 XML BLOB 作为参数，并生成一个按 XML 文档顺序表示 XML 节点的行集。 其他输入参数可能会将返回的 XML 节点限于 XML 文档的子集。<br /><br /> -**Table Valued Function XML Reader with XPath filter** 是一种特殊类型的 **XML Reader Table-valued Function** ，它将输出限于满足 XPath 表达式的 XML 节点。<br /><br /> **Table-valued Function** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Top 运算符图标](../relational-databases/media/top-32x.gif "Top 运算符图标")|**Top**|**Top** 运算符扫描输入，但仅基于排序顺序返回最前面的指定行数或行百分比。 **Argument** 列可以包含要检查重复值的列的列表。 在更新计划中， **Top** 运算符用于强制实施行计数限制。 **Top** 既是一个逻辑运算符，也是一个物理运算符。|  
 |InclusionThresholdSetting|**Top N Sort**|**Top N Sort** 与 **Sort** 迭代器类似，差别仅在于前者需要前 *N* 行，而不是整个结果集。 如果 *N*的值较小， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询执行引擎将尝试在内存中执行整个排序操作。 如果 *N*的值较大，查询执行引擎将使用更通用的排序方法（该方法不采用 *N* 作为参数）重新排序。|  
-|![扩展运算符 (UDX) 图标](../relational-databases/media/udx-32x.gif "扩展运算符 (UDX) 图标")|**UDX**|扩展运算符 (UDX) 可以实现 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的一种 XQuery 或 XPath 操作。 所有 UDX 运算符既是逻辑运算符，又是物理运算符。<br /><br /> 扩展运算符 (UDX) **FOR XML** 用于将其输入的关系行集序列化为 XML 表示形式，并以单个输出行、单个 BLOB 列的形式存储。 它是区分顺序的 XML 聚合运算符。<br /><br /> 扩展运算符 (UDX) **XML SERIALIZER** 是区分顺序的一种 XML 聚合运算符。 它以 XML 文档顺序输入表示 XML 节点或 XQuery 标量的行，并在单个输出行、单个 XML 列中生成序列化的 XML BLOB。<br /><br /> 扩展运算符 (UDX) **XML FRAGMENT SERIALIZER** 是一种特殊类型的 **XML SERIALIZER** ，用于处理表示在 XQuery 插入数据修改扩展中插入的 XML 片断的输入行。<br /><br /> 扩展运算符 (UDX) **XQUERY STRING** 计算表示 XML 节点的输入行的 XQuery 字符串值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含输入字符串值的 XQuery 标量。<br /><br /> 扩展运算符 (UDX) **XQUERY LIST DECOMPOSER** 是一个 XQuery 列表分解运算符。 对于表示 XML 节点的每个输入行，它至少生成表示 XQuery 标量的一个行，如果输入的是 XSD 列表类型的行，则每个行都包含一个列表元素值。<br /><br /> 扩展运算符 (UDX) **XQUERY DATA** 在表示 XML 节点的输入行上计算 XQuery fn:data() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:data()**结果的 XQuery 标量。<br /><br /> 扩展运算符 **XQUERY CONTAINS** 在表示 XML 节点的输入行上计算 XQuery fn:contains() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:contains()**结果的 XQuery 标量。<br /><br /> 扩展运算符 **UPDATE XML NODE** 更新 XML 类型上的 **modify()** 方法中 XQuery 替换数据修改扩展中的 XML 节点。|  
+|![扩展运算符 (UDX) 图标](../relational-databases/media/udx-32x.gif "扩展运算符 (UDX) 图标")|**UDX**|扩展运算符 (UDX) 可以实现 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的一种 XQuery 或 XPath 操作。 所有 UDX 运算符既是逻辑运算符，又是物理运算符。<br /><br /> 扩展运算符 (UDX) **FOR XML** 用于将其输入的关系行集序列化为 XML 表示形式，并以单个输出行、单个 BLOB 列的形式存储。 它是区分顺序的 XML 聚合运算符。<br /><br /> 扩展运算符 (UDX) **XML SERIALIZER** 是区分顺序的一种 XML 聚合运算符。 它以 XML 文档顺序输入表示 XML 节点或 XQuery 标量的行，并在单个输出行、单个 XML 列中生成序列化的 XML BLOB。<br /><br /> 扩展运算符 (UDX) **XML FRAGMENT SERIALIZER** 是一种特殊类型的 **XML SERIALIZER** ，用于处理表示在 XQuery 插入数据修改扩展中插入的 XML 片断的输入行。<br /><br /> 扩展运算符 (UDX) **XQUERY STRING** 计算表示 XML 节点的输入行的 XQuery 字符串值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含输入字符串值的 XQuery 标量。<br /><br /> 扩展运算符 (UDX) **XQUERY LIST DECOMPOSER** 是一个 XQuery 列表分解运算符。 对于表示 XML 节点的每个输入行，它至少生成表示 XQuery 标量的一个行，如果输入的是 XSD 列表类型的行，则每个行都包含一个列表元素值。<br /><br /> 扩展运算符 (UDX) **XQUERY DATA** 在表示 XML 节点的输入行上计算 XQuery fn:data() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:data()** 结果的 XQuery 标量。<br /><br /> 扩展运算符 **XQUERY CONTAINS** 在表示 XML 节点的输入行上计算 XQuery fn:contains() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:contains()** 结果的 XQuery 标量。<br /><br /> 扩展运算符 **UPDATE XML NODE** 更新 XML 类型上的 **modify()** 方法中 XQuery 替换数据修改扩展中的 XML 节点。|  
 |InclusionThresholdSetting|**Union**|**Union** 运算符扫描多个输入，输出扫描的每一行并删除重复项。 **Union** 是一个逻辑运算符。|  
 |![Update（数据库引擎）运算符图标](../relational-databases/media/update-32x.gif "Update（数据库引擎）运算符图标")|**Update**|**Update** 运算符更新在查询执行计划的 **Argument** 列中所指定对象中的每一输入行。 **Update** 是一个逻辑运算符。 物理运算符为 **Table Update**、 **Index Update**或 **Clustered Index Update**。|  
 |![While 语言元素图标](../relational-databases/media/while-32x.gif "While 语言元素图标")|**While**|**While** 运算符实现 [!INCLUDE[tsql](../includes/tsql-md.md)] while 循环。 **While** 是一个语言元素。|  

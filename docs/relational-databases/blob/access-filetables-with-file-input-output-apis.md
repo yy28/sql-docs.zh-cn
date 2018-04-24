@@ -1,34 +1,34 @@
 ---
-title: "使用文件输入/输出 API 访问 FileTable | Microsoft Docs"
-ms.custom: 
+title: 使用文件输入/输出 API 访问 FileTable | Microsoft Docs
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: d03a42d802d5e1da9b699f4edb3e6e40529d77b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-说明如何在 FileTable 上执行文件系统 I/O。  
+  说明如何在 FileTable 上执行文件系统 I/O。  
   
 ##  <a name="accessing"></a> 开始使用文件 I/O API 访问 FileTable  
  应主要通过 Windows 文件系统和文件 I/O API 来使用 FileTable。 FileTable 通过一组丰富的可用文件 I/O API 支持非事务性访问。  
@@ -113,25 +113,25 @@ ms.lasthandoff: 02/13/2018
 |功能|Supported|注释|  
 |----------------|---------------|--------------|  
 |**Oplocks**|是|支持级别 2、级别 1、批处理和筛选器 oplocks。|  
-|**扩展属性**|是||  
-|**重分析点**|是||  
-|**持久的 ACL**|是||  
-|**命名的流**|是||  
+|**扩展属性**|“否”||  
+|**重分析点**|“否”||  
+|**持久的 ACL**|“否”||  
+|**命名的流**|“否”||  
 |**稀疏文件**|是|只能对文件设置稀疏性，它影响数据流的存储方式。 由于 FILESTREAM 数据存储在 NTFS 卷上，因此 FileTable 功能支持通过将请求转发给 NTFS 文件系统来支持稀疏文件。|  
 |**压缩**|是||  
 |**加密**|是||  
-|**TxF**|是||  
-|**文件 ID**|是||  
-|**对象 ID**|是||  
-|**符号链接**|是||  
-|**硬链接**|是||  
-|**短名称**|是||  
-|**目录更改通知**|是||  
+|**TxF**|“否”||  
+|**文件 ID**|“否”||  
+|**对象 ID**|“否”||  
+|**符号链接**|“否”||  
+|**硬链接**|“否”||  
+|**短名称**|“否”||  
+|**目录更改通知**|“否”||  
 |**字节范围锁定**|是|将对字节范围的锁定请求传递给 NTFS 文件系统。|  
-|**内存映射文件**|是||  
+|**内存映射文件**|“否”||  
 |**取消 I/O**|是||  
-|**安全性**|是|实施 Windows 共享级安全性和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表以及列级安全性。|  
-|**USN 日志**|是|对 FileTable 中的文件和目录的元数据更改是对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 DML 操作。 因此，将它们记录在相应的数据库日志文件中。 但是，不将它们记录在 NTFS USN 日志（对大小的更改除外）中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改跟踪功能可用于捕获类似的信息。|  
+|**安全性**|“否”|实施 Windows 共享级安全性和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表以及列级安全性。|  
+|**USN 日志**|“否”|对 FileTable 中的文件和目录的元数据更改是对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 DML 操作。 因此，将它们记录在相应的数据库日志文件中。 但是，不将它们记录在 NTFS USN 日志（对大小的更改除外）中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改跟踪功能可用于捕获类似的信息。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将文件加载到 FileTable 中](../../relational-databases/blob/load-files-into-filetables.md)   

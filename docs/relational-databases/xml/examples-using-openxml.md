@@ -1,16 +1,16 @@
 ---
-title: "示例：使用 OPENXML | Microsoft Docs"
-ms.custom: 
+title: 示例：使用 OPENXML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0e9a46da6f60eeefced877db413a54f5f900ebb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
+  本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>示例  
  在检索数据时， *rowpattern* 可用于在确定行的 XML 文档中标识节点。 此外， *rowpattern* 是用实现 MSXML XPath 所采用的 XPath 模式语言表示的。 例如，如果模式以元素或属性结束，则为 *rowpattern*选择的每个元素或属性节点创建一行。  
@@ -302,7 +302,7 @@ LILAS      Carlos Gonzlez
   
 -   *flags* 参数值设置为 **1**，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中定义的行集列。  
   
--   在 WITH 子句的 *SchemaDeclaration* 中， **oid** 和 **amount** 行集列名与相应的 XML 属性名称相匹配。 因此，没有指定 *ColPattern* 参数。 对于行集中的 **comment** 列，XPath 函数 **text()**将被指定为 *ColPattern*。 这将覆盖在 *flags*参数中指定的以属性为中心的映射，而且列将包含元素内容的叶值字符串。  
+-   在 WITH 子句的 *SchemaDeclaration* 中， **oid** 和 **amount** 行集列名与相应的 XML 属性名称相匹配。 因此，没有指定 *ColPattern* 参数。 对于行集中的 **comment** 列，XPath 函数 **text()** 将被指定为 *ColPattern*。 这将覆盖在 *flags*参数中指定的以属性为中心的映射，而且列将包含元素内容的叶值字符串。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -531,7 +531,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 指定具有多个文本节点的 XML 文档  
- 如果在 XML 文档中有多个文本节点，则包含 *ColPattern*, **text()**的 SELECT 语句只返回第一个文本节点，而不是返回所有节点。 例如：  
+ 如果在 XML 文档中有多个文本节点，则包含 *ColPattern*, **text()** 的 SELECT 语句只返回第一个文本节点，而不是返回所有节点。 例如：  
   
 ```  
 DECLARE @h int  

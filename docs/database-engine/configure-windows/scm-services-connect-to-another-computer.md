@@ -1,34 +1,34 @@
 ---
-title: "连接到其他计算机（SQL Server 配置管理器）| Microsoft Docs"
-ms.custom: 
+title: 连接到其他计算机（SQL Server 配置管理器）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8e4014206abb4c84201724744ec30f1f39f4243
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 992b1cb431091e2eda20bfb8951abd6199b06873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服务 - 连接到其他计算机
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中连接到其他计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。  
+  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中连接到其他计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。  
   
 > [!NOTE]  
 >  远程连接时，某些程序无法由配置管理器执行。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/23/2018
   
 8.  在“添加/删除管理单元”  窗口中，单击“确定” 。  
   
-9. 依次展开“计算机管理（\<计算机名称>）”和“服务和应用程序”。  
+9. 依次展开“计算机管理（\<计算机名称>）”**** 和“服务和应用程序”。  
   
 10. 右键单击“SQL Server 配置管理器” ，再单击“从此处新建窗口” 。  
   

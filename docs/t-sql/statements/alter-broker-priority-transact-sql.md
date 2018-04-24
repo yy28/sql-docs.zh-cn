@@ -1,16 +1,16 @@
 ---
 title: ALTER BROKER PRIORITY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_BROKER_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 833c0bed38d02905b3a260f50824825c9859484f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 04f68cfeb31424ff09218f54e061e6036b8617bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ FOR CONVERSATION
 ```  
   
 ## <a name="arguments"></a>参数  
- *ConversationPriorityName*  
+ ConversationPriorityName  
  指定要更改的会话优先级的名称。 名称必须引用当前数据库中的一个会话优先级。  
   
  SET  
@@ -97,7 +97,7 @@ FOR CONVERSATION
   
  RemoteServiceName 是 nvarchar(256) 类型的文本。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 RemoteServiceName 字符串匹配。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
- '*RemoteServiceName*'  
+ 'RemoteServiceName'  
  指定将会话优先级分配给以下各项：  
   
 -   其关联目标服务名称与 RemoteServiceName 匹配的任何发起方会话端点。  

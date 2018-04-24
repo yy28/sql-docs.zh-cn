@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 事务日志体系结构和管理指南 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 事务日志体系结构和管理指南 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e6d9a9107e0ddb997492bec813938120e0fd6bf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -255,7 +256,7 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
 [事务日志备份 (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [配置恢复间隔服务器配置选项](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
+[sys.dm_db_log_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
 [SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  

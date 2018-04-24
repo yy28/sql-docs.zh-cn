@@ -1,16 +1,16 @@
 ---
-title: "创建索引视图 | Microsoft Docs"
-ms.custom: 
+title: 创建索引视图 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-views
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 
+caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 505c016f769a76c2908f607617db99a04e857ef1
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2212ab366b387a5382b37624964b14b96ebf1de7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,11 +95,11 @@ ms.lasthandoff: 03/19/2018
   
 -   创建索引时，`IGNORE_DUP_KEY` 选项必须设置为 OFF（默认设置）。    
   
--   在视图定义中，表必须由两部分组成的名称（即 schema.tablename）引用。    
+-   在视图定义中，表必须由两部分组成的名称（即 schema.tablename**）引用。    
   
 -   视图中引用的用户定义函数必须使用 `WITH SCHEMABINDING` 选项创建。    
   
--   视图中引用的任何用户定义的函数都必须由两部分组成的名称（即 \<schema>.\<function>）引用。   
+-   视图中引用的任何用户定义的函数都必须由两部分组成的名称（即 \<schema>.\<function>）引用**。   
   
 -   用户定义函数的数据访问属性必须是 `NO SQL`，外部访问属性必须是 `NO`。   
   

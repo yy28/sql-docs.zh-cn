@@ -1,30 +1,33 @@
 ---
-title: "自定义索引 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 自定义索引 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 190d8f1541fc13affddffa71859d37dbb4d4239b
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ddcb1f8799cd3428981003a9c7996c3b86061425
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-index-master-data-services"></a>自定义索引 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   自定义索引在实体中对某一特性（单个索引）或一系列特性（组合索引）创建非聚集索引。 通常索引可提高查询过程的性能。 有关 SQL Server 索引的详细信息，请参阅 [索引](../relational-databases/indexes/indexes.md)。  
   
 ## <a name="type-of-indexes"></a>索引类型  

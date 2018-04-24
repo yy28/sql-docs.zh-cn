@@ -1,34 +1,34 @@
 ---
-title: "注册镜像数据库 | Microsoft Docs"
-ms.custom: 
+title: 注册镜像数据库 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2cc26c426fc85a704c2b474fa2115a5772be10ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="register-mirrored-database"></a>注册镜像数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-使用此对话框，通过向数据库镜像监视器添加一个或多个数据库，可在给定的服务器实例中注册一个或多个镜像数据库。 添加数据库时，数据库镜像监视器会在本地缓存有关数据库及其伙伴的信息，以及如何将数据库连接到伙伴的信息。  
+  使用此对话框，通过向数据库镜像监视器添加一个或多个数据库，可在给定的服务器实例中注册一个或多个镜像数据库。 添加数据库时，数据库镜像监视器会在本地缓存有关数据库及其伙伴的信息，以及如何将数据库连接到伙伴的信息。  
   
 > [!IMPORTANT]  
 >  如果是主体服务器实例而不是镜像服务器实例上的 **sysadmin** 固定服务器角色的成员，那么只能查看主体服务器实例上的状态。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/23/2018
 |**注册**|检查您要注册的每个数据库。 如果正在监视数据库，则该数据库的复选框会被选中且禁用。<br /><br /> 注意：若要撤消注册某一数据库，请关闭“已注册镜像数据库”对话框，在导航树中选择该数据库，并从“操作”菜单中选择“撤消注册”。|  
 |**“数据库”**|选定服务器实例上的镜像数据库名称。|  
 |**当前角色**|选定服务器实例上的数据库的当前镜像角色，即主体或镜像。|  
-|**伙伴(连接为)**|数据库的故障转移伙伴的名称。 括号中显示“控制台用户的 Windows 身份验证”或“登录名‘\<登录名>’的 SQL Server 身份验证”。 如果之前已添加实例，则此内容为当前使用的身份验证信息；如果尚未将实例添加到监视器中，则此内容为将要使用的身份验证信息。|  
+|**伙伴(连接为)**|数据库的故障转移伙伴的名称。 括号中显示“控制台用户的 Windows 身份验证”或“登录名‘\<登录名>’的 SQL Server 身份验证”****。 如果之前已添加实例，则此内容为当前使用的身份验证信息；如果尚未将实例添加到监视器中，则此内容为将要使用的身份验证信息。|  
   
  **当单击“确定”后，显示“管理服务器连接”对话框。**  
  在默认情况下，对于以前未给定凭据的伙伴服务器实例，数据库镜像监视器将使用 Windows 身份验证凭据。 启用该选项，可在完成数据库注册后为一个或多个服务器实例更改凭据。  

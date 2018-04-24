@@ -1,34 +1,35 @@
 ---
-title: "SQL:BatchCompleted 事件类 | Microsoft Docs"
-ms.custom: 
+title: SQL:BatchCompleted 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:BatchCompleted event class
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b3336353df19adf186229e237592c9ae331076d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 94a5e848453d55957e62abc9be4a688fbd1df105
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SQL:BatchCompleted 事件类指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理已完成。  
+  SQL:BatchCompleted 事件类指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理已完成。  
   
 ## <a name="sqlbatchcompleted-event-class-data-columns"></a>SQL:BatchCompleted 事件类的数据列  
   
@@ -42,8 +43,8 @@ SQL:BatchCompleted 事件类指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] �
 |Duration|**bigint**|事件占用的时间（微秒）。|13|是|  
 |EndTime|**datetime**|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。|15|是|  
 |错误|**int**|事件的错误号。<br /><br /> 0 = 确定<br /><br /> 1 = 错误<br /><br /> 2 = 中止|31|是|  
-|EventClass|**int**|事件类型 = 12。|27|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventClass|**int**|事件类型 = 12。|27|“否”|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
@@ -54,7 +55,7 @@ SQL:BatchCompleted 事件类指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] �
 |Reads|**bigint**|批处理导致的页读取 I/O 数。|16|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
 |RowCounts|**bigint**|事件所影响的行数。|48|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  

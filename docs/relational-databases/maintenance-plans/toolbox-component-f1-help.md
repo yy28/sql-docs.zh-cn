@@ -1,35 +1,36 @@
 ---
-title: "工具箱组件的 F1 帮助 | Microsoft Docs"
-ms.custom: 
+title: 工具箱组件的 F1 帮助 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3b4a0a7f0aa62e57968fac4d2ca94d50c8ac5218
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱组件的 F1 帮助
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“工具箱”中显示有许多可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目中使用的项。 您可以从 **“视图”** 菜单打开 **“工具箱”** ，并根据需要停靠此窗口。 在停靠时， **“工具箱”** 可以始终是打开的并保持在固定位置，或设置为在未使用时 **“自动隐藏”** 。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **“工具箱”** 中显示有许多可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目中使用的项。 您可以从 **“视图”** 菜单打开 **“工具箱”** ，并根据需要停靠此窗口。 在停靠时， **“工具箱”** 可以始终是打开的并保持在固定位置，或设置为在未使用时 **“自动隐藏”** 。  
   
  可以通过拖放“工具箱”中的图标，或通过复制并粘贴这些图标，将其移至代码编辑器中或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计视图的图面上。  
   

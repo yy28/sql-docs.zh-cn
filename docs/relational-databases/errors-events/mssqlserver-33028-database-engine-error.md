@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_33028 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35fb1076d51f4b44016cb1ff4b47e9364bd0b7c0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a3060a0b85385d85f37342bd86a4ee4fcdd4de65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |错误代码|Description|  
 |--------------|---------------|  
 |0|成功。 没有错误。|  
-|1|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  
+|@shouldalert|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  
 |2|缓冲区不足。 无法为加密提供程序分配空间。|  
 |3|不提供支持。 此版本不支持该加密提供程序。 请选择其他加密提供程序。|  
 |4|找不到该加密提供程序。 指定的加密提供程序不存在或您无权访问这些文件。|  

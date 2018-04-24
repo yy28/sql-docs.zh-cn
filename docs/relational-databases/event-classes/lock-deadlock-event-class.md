@@ -1,34 +1,35 @@
 ---
-title: "Lock:Deadlock 事件类 | Microsoft Docs"
-ms.custom: 
+title: Lock:Deadlock 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b4cd55a7d886e6d3eb6f979898cbf7f85d0e9a6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4a3ba6839c66cb275f48e16a0734359a6394e521
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-当尝试获取锁的操作因属于死锁的一部分且已被选为死锁牺牲品而被取消时，将发生 Lock:Deadlock 事件类。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  当尝试获取锁的操作因属于死锁的一部分且已被选为死锁牺牲品而被取消时，将发生 Lock:Deadlock 事件类。  
   
  Lock:Deadlock 事件类用于监视死锁发生时间及涉及到的对象。 可以使用这些信息确定死锁是否会显著影响应用程序的性能。 然后可以检查应用程序代码，确定是否可更改以尽量减少死锁。  
   
@@ -43,8 +44,8 @@ ms.lasthandoff: 02/12/2018
 |DatabaseName|**nvarchar**|该锁被获取时所在的数据库的名称。|35|是|  
 |Duration|**bigint**|发出锁请求和发生死锁之间的时间间隔（微秒）。|13|是|  
 |EndTime|**datetime**|死锁结束时的时间。|15|是|  
-|EventClass|**int**|事件类型 = 25。|27|是|  
-|EventSequence|**int**|特定事件在请求中的顺序。|51|是|  
+|EventClass|**int**|事件类型 = 25。|27|“否”|  
+|EventSequence|**int**|特定事件在请求中的顺序。|51|“否”|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IntegerData|**int**|死锁编号。 从服务器启动时起，从 0 开始按递增顺序分配每个死锁的编号。|25|是|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 02/12/2018
 |ObjectID2|**bigint**|相关对象或实体的 ID（如果可用且适用）。|56|是|  
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|事件开始的时间（如果可用）。|14|是|  

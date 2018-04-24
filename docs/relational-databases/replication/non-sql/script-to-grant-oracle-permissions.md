@@ -1,34 +1,34 @@
 ---
-title: "授予 Oracle 权限的脚本 | Microsoft Docs"
-ms.custom: 
+title: 授予 Oracle 权限的脚本 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b7a63653fa16f51679e0b529bf6a7c1bb037bdc
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 2ec4f79f2b6f731e01268f5637e05631dacc4f2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="script-to-grant-oracle-permissions"></a>授予 Oracle 权限的脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<实例名称>*\MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
+  本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<实例名称>* \MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  该脚本包含 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`语句，事务复制所用的触发器需要这个语句。 如果您仅使用快照复制，请将该行从脚本中删除。  

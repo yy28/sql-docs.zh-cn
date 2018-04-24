@@ -1,16 +1,16 @@
 ---
-title: "填充全文索引 | Microsoft Docs"
-ms.custom: 
+title: 填充全文索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index populations [full-text search]
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 
+caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
+  创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
   
 ##  <a name="types"></a> Types of population  
 全文索引支持以下填充类型：
@@ -225,7 +226,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 爬网日志文件名的可变部分如下。
 -   <**DatabaseID**> - 数据库的 ID。 <dbid> 是一个带有前导零的五位数。  
 -   <**FullTextCatalogID**> - 全文目录 ID。 <catid>是一个带有前导零的五位数。  
--   <n> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
+-   <**n**> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
   
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  
 

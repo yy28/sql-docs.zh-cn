@@ -1,29 +1,30 @@
 ---
-title: "ALTER DATABASE（Azure SQL 数据仓库）| Microsoft Docs"
-ms.custom: 
+title: ALTER DATABASE（Azure SQL 数据仓库）| Microsoft Docs
+ms.custom: ''
 ms.date: 02/15/2018
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: 
+caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.openlocfilehash: b70750eebf7727348f9058bea2aecd0508d544bd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 893d777d40446be2feeb5583312877222be6707d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -74,7 +75,7 @@ MAXSIZE
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。  压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。 
   
 SERVICE_OBJECTIVE  
-指定性能级别。 有关 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 的服务对象的详细信息，请参阅[性能层](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
+指定性能级别。 有关 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 的服务目标的详细信息，请参阅[性能层](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
 ## <a name="permissions"></a>权限  
 需要以下权限：  

@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7b80a8efa3f80ba349144afa2b931e4d255ec1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 419f6ae4c8c7c5e19117aaeb86d730e1c625ee44
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS（内部）知识清理数据
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用数据质量项目清理您的数据。 可以使用已在 DQS 中针对高质量数据集生成的知识库对您的源数据执行数据清理。 有关详细信息，请参阅 [生成知识库](../data-quality-services/building-a-knowledge-base.md)。  
   
  执行数据清理分为四个阶段：  “映射”阶段：您确定要清理的数据源，并将其映射到知识库中的所需域；  “计算机辅助清理”阶段：DQS 将知识库应用于要清理的数据，然后对源数据建议/进行更改；  “交互式清理”阶段：数据专员可以分析数据更改，然后接受/拒绝数据更改；最后是  “导出”阶段：您可以导出清理的数据。 将在清理活动向导的单独页面上执行上述每个过程，这使您可以在不同页面之间来回移动，重新运行过程，并结束特定的清理过程和返回到过程的相同阶段。 DQS 向您提供有关源数据和清理结果的统计信息，使您能够针对数据清理制定明智的决策。  

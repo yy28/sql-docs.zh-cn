@@ -1,16 +1,16 @@
 ---
-title: "启用和禁用变更数据捕获 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 启用和禁用变更数据捕获 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 47b7707b2c4b9763066ac3375298f7cbd604bd60
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-本主题说明如何对数据库和表启用和禁用变更数据捕获。  
+  本主题说明如何对数据库和表启用和禁用变更数据捕获。  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>对数据库启用变更数据捕获  
  在为各个表创建捕获实例之前，必须先由 **sysadmin** 固定服务器角色的成员对数据库启用变更数据捕获。 通过在数据库上下文中运行 [sys.sp_cdc_enable_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) 存储过程可实现这一点。 若要确定数据库是否已启用此项功能，请在 **sys.databases** 目录视图中查询 **is_cdc_enabled** 列。  

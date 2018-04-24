@@ -1,16 +1,16 @@
 ---
-title: "Database Suspect Data Page 事件类 | Microsoft Docs"
-ms.custom: 
+title: Database Suspect Data Page 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event notifications [SQL Server], database mirroring
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb75bd05b77432f1ca68294bca96e79820f7642e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d062eace204c298285f39426f56a954a147e4783
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Database Suspect Data Page** 事件类指示何时将某页添加到 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 中的 [suspect_pages](../../relational-databases/databases/msdb-database.md)表中。 在监视是否出现可疑页的跟踪中包括此事件类。  
+  **Database Suspect Data Page** 事件类指示何时将某页添加到 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 中的 [suspect_pages](../../relational-databases/databases/msdb-database.md)表中。 在监视是否出现可疑页的跟踪中包括此事件类。  
   
 > [!NOTE]  
 >  将对应行插入到 **suspect_pages** 表中时，将异步触发此事件。 因此，侦听此事件的作业可能无法立即找到对应的 **suspect_pages** 项。  
@@ -43,8 +44,8 @@ ms.lasthandoff: 02/12/2018
 |数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|已为其引发可疑页事件的数据库 ID。 这与 **suspect_pages** 表的 **database_id** 列相同。|3|是|  
-|**EventClass**|**int**|事件类型为 213。|27|是|  
-|**EventSequence**|**int**|事件类在批处理中的顺序。|51|是|  
+|**EventClass**|**int**|事件类型为 213。|27|“否”|  
+|**EventSequence**|**int**|事件类在批处理中的顺序。|51|“否”|  
 |**SPID**|**int**|遇到可疑页的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 任务的 ID。|12|是|  
 |**StartTime**|**datetime**|事件发生的时间。|14|是|  
 |**Exchange Spill**|**int**|包含可疑页的数据库文件的 ID。 这与 **suspect_pages** 表的 **file_id** 列相同。|22|是|  

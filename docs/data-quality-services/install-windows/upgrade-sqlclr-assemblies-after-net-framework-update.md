@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-caps.latest.revision: ''
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a4db9d05a6094253d629d8cae28034036942535
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 338fc9c0e8d1e445ee23e45804a75c8ca4a138ed
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 更新后升级 SQLCLR 程序集
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是引用 Microsoft .NET Framework 4 程序集的 SQL 公共语言运行时 (SQLCR) 例程的集合。 如果在计算机上安装的任何 .NET Framework 更新影响任何此类引用的 .NET Framework 程序集，则将导致全局程序集缓存 (GAC) 中的程序集的模块版本 ID (MVID) 发生更改。 这样会导致 GAC 中的引用程序集与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的程序集之间的 MVID 不匹配。  
   
  如果 .NET Framework 更新要求您重新启动 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机，则受到影响的 SQLCLR 程序集将自动升级，以便修复在重新启动 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机时产生的 MVID 不匹配问题。 但是，对于不要求您重新启动 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机的 .NET Framework 更新，由于在您尝试使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 连接到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]时程序集的 MVID 中的不匹配，将出现错误：  

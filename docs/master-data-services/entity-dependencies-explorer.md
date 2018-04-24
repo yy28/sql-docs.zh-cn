@@ -1,32 +1,35 @@
 ---
-title: "实体依赖关系资源管理器 | Microsoft Docs"
-ms.custom: 
+title: 实体依赖关系资源管理器 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/06/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - master data services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
-caps.latest.revision: 
+caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46d01dfb6bf0a58d7da4e44ae0e96af0e4b3f9ac
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 649a73bbc5aee77f3a8dfc069949fc3b14d09cc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="entity-dependencies-explorer"></a>实体依赖关系资源管理器
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 将添加一个新的资源管理器页，即“实体依赖关系”，它提供了另一种方法，可在模型中按其基于域的属性 (DBA) 值将实体成员的关系可视化，而不必首先定义一个派生层次结构。   
   

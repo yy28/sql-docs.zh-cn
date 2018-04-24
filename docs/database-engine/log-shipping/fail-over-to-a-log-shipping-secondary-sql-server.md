@@ -1,15 +1,16 @@
 ---
-title: "故障转移到日志传送辅助服务器 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 故障转移到日志传送辅助服务器 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - primary databases [SQL Server]
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6358e0fe4be60bcb57441a864b30e036147e5eed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ada8976a3c51dcbe1a0a6c4b3c4cff6b3b399745
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果主服务器实例失败或需要维护，则在出现故障时转移到日志传送辅助服务器将十分有用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  如果主服务器实例失败或需要维护，则在出现故障时转移到日志传送辅助服务器将十分有用。  
   
 ## <a name="preparing-for-a-controlled-failover"></a>为受控故障转移做准备  
  通常，主数据库与辅助数据库不同步，因为主数据库在其最新的备份作业后会继续更新。 此外，在某些情况下，最新的事务日志备份尚未复制到辅助服务器实例中，或者某些已复制的日志备份可能尚未应用到辅助数据库中。 建议如有可能，首先将所有辅助数据库与主数据库同步。  

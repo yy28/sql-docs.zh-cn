@@ -1,31 +1,31 @@
 ---
-title: "查看脱机日志文件 | Microsoft Docs"
-ms.custom: 
+title: 查看脱机日志文件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e77911326a85724de1fbf901fe31f8d8f9cccca5
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: dde3ddfb7c994144c1fe85e3a6929667329b7ffd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.lasthandoff: 03/19/2018
   
     3.  输入远程计算机名称，然后单击 **“确定”**。  
   
-3.  右键单击“WMI 控制(本地)”或“WMI 控制(RemoteComputerName)”，然后单击“属性”。  
+3.  右键单击“WMI 控制(本地)”或“WMI 控制(RemoteComputerName)”，然后单击“属性”****。  
   
 4.  在 **“WMI 控制属性”** 对话框中，单击 **“安全”** 选项卡。  
   

@@ -1,36 +1,36 @@
 ---
-title: "将 EXPLICIT 模式与 FOR XML 一起使用 | Microsoft Docs"
-ms.custom: 
+title: 将 EXPLICIT 模式与 FOR XML 一起使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5d96f28856360f9a57b29d28086cc487f156320
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a42dfda57ae6b7b901d8e56341bf11a8ab5e88c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-如主题 [使用 FOR XML 构造 XML](../../relational-databases/xml/for-xml-sql-server.md)中所述，使用 RAW 和 AUTO 模式不能很好地控制从查询结果生成的 XML 的形状。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  
+  如主题 [使用 FOR XML 构造 XML](../../relational-databases/xml/for-xml-sql-server.md)中所述，使用 RAW 和 AUTO 模式不能很好地控制从查询结果生成的 XML 的形状。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  
   
  必须以特定的方式编写 EXPLICIT 模式查询，以便将有关所需的 XML 的附加信息（如 XML 中的所需嵌套）显式指定为查询的一部分。 根据所请求的 XML，编写 EXPLICIT 模式查询可能会很烦琐。 您会发现 [使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md) （具有嵌套）相对编写 EXPLICIT 模式查询而言更加简单。  
   

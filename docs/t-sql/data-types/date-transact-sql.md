@@ -1,16 +1,16 @@
 ---
 title: date (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - date_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - date data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bc3d838c81ea8d973cff90e2e57e4bfd8b443f69
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e42e51775c4967522561385af19e67fbe2fd3899
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +57,9 @@ ms.lasthandoff: 11/21/2017
 |精确度|一天|  
 |默认值|1900-01-01<br /><br /> 此值用于从 time 隐式转换到 datetime2 或 datetimeoffset 时追加的日期部分。|  
 |日历|公历|  
-|用户定义的秒的小数部分精度|是|  
-|时区偏移量感知和保留|是|  
-|夏时制感知|是|  
+|用户定义的秒的小数部分精度|“否”|  
+|时区偏移量感知和保留|“否”|  
+|夏时制感知|“否”|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>date 支持的字符串文字格式
 以下各表显示了适用于 date 数据类型的有效字符串文字格式。
@@ -106,73 +107,7 @@ date 符合公历的 ANSI SQL 标准定义：“备注 85 - Datetime 数据类�
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
   
 ## <a name="converting-date-and-time-data"></a>转换日期和时间数据
-当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 有关对日期和时间数据使用 CAST 和 CONVERT 函数的信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。
-  
-转换到 time(n) 时，转换失败，并引发错误消息 206：“操作数类型冲突: date 与 time 不兼容”。
-  
-转换到 datetime 时，会复制日期，时间部分设置为 00:00:00.000。 下面的代码显示将 `date` 值转换为 `datetime` 值的结果。  
-  
-```sql
-DECLARE @date date= '12-10-25';  
-DECLARE @datetime datetime= @date;  
-  
-SELECT @date AS '@date', @datetime AS '@datetime';  
-  
---Result  
---@date      @datetime  
------------- -----------------------  
---2025-12-10 2025-12-10 00:00:00.000  
---  
---(1 row(s) affected)  
-```  
-  
-如果转换到 smalldatetime，date 值位于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 范围中时，会复制日期部分，且时间部分设置为 00:00:00。 当 date 值不在 smalldatetime 值的范围内时，会引发错误消息 242：“从 date 数据类型到 smalldatetime 数据类型的转换生成超出范围的值。”，smalldatetime 值将设置为 NULL。 下面的代码显示将 `date` 值转换为 `smalldatetime` 值的结果。
-  
-```sql
-DECLARE @date date= '1912-10-25';  
-DECLARE @smalldatetime smalldatetime = @date;  
-  
-SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';  
-  
---Result  
---@date      @smalldatetime  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00  
---  
---(1 row(s) affected)  
-```  
-  
-转换到 datetimeoffset(n) 时，会复制日期，且时间设置为 00:00.0000000 +00:00。 下面的代码显示将 `date` 值转换为 `datetimeoffset(3)` 值的结果。
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetimeoffset datetimeoffset(3) = @date;  
-  
-SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';  
-  
---Result  
---@date      @datetimeoffset  
------------- ------------------------------  
---1912-10-25 1912-10-25 00:00:00.000 +00:00  
---  
---(1 row(s) affected)  
-```  
-  
-如果转换到 datetime2(n)，会复制日期，且时间部分设置为 00:00:00.00，不考虑 (n) 的值。 下面的代码显示将 `date` 值转换为 `datetime2(3)` 值的结果。
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetime2 datetime2(3) = @date;  
-  
-SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';  
-  
---Result  
---@date      @datetime2(3)  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00.00  
---  
---(1 row(s) affected)  
-```  
+当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 有关对日期和时间数据使用 CAST 和 CONVERT 函数的信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>将 date 转换为其他日期和时间类型
 本部分介绍当 date 数据类型转换为其他日期和时间数据类型时发生的情况。

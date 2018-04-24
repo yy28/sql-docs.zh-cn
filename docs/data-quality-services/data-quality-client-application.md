@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b86461302e64c244deb9dfd1da7b431fcb89685
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8b3e7ccdbcd056acfb0a49a1eb06a1280508a770
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-client-application"></a>数据质量客户端应用程序
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序允许您使用独立工具执行数据质量操作。 此应用程序使您能够创建知识库、创建和运行数据质量项目以及执行管理任务。  
   
  负责管理数据资产和维护高标准的数据质量的数据专员、数据专家或 IT 专业人员可以通过以下三个角色使用该客户端应用程序：DQS 知识库操作员（可以编辑和执行数据质量项目）、DQS 知识库编辑人员（可以执行项目功能、创建和编辑知识库）以及 DQS 管理员（可以执行项目和知识库功能以及管理系统）。 有关详细信息，请参阅 [DQS Security](../data-quality-services/dqs-security.md)。  

@@ -1,34 +1,35 @@
 ---
-title: "还原服务主密钥 | Microsoft Docs"
-ms.custom: 
+title: 还原服务主密钥 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a577b9da0c3c82cf286899641efa26a03246620
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2d2ec0aa50c360efe2c63a52d018f24390c099a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-the-service-master-key"></a>还原服务主密钥
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中还原服务主密钥。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中还原服务主密钥。  
   
 > [!WARNING]  
 >  您可能永远也不需要还原服务主密钥。 但如果进行此操作，应当格外谨慎。 有关详细信息，请参阅 [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   [使用 Transact-SQL 还原服务主密钥](#SSMSProcedure)  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  需要对服务器的 CONTROL SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 Transact-SQL  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  在标准菜单栏上，单击 **“新建查询”**。  
   
-4.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Restores the service master key from a backup file.  

@@ -1,34 +1,35 @@
 ---
-title: "SQL:StmtRecompile 事件类 | Microsoft Docs"
-ms.custom: 
+title: SQL:StmtRecompile 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df67c9972328d7e418a5f68315bcd46d8d60e369
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 64078643b1892d32d239e1016007ad428562cc06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SQL:StmtRecompile 事件类指示由下列所有类型的批处理引起的语句级重新编译：存储过程、触发器、即席批查询和查询。 可以通过使用 sp_executesql、动态 SQL、“准备”方法、“执行”方法或类似接口来提交查询。 应使用 SQL:StmtRecompile 事件类而不是 SP:Recompile 事件类。  
+  SQL:StmtRecompile 事件类指示由下列所有类型的批处理引起的语句级重新编译：存储过程、触发器、即席批查询和查询。 可以通过使用 sp_executesql、动态 SQL、“准备”方法、“执行”方法或类似接口来提交查询。 应使用 SQL:StmtRecompile 事件类而不是 SP:Recompile 事件类。  
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>SQL:StmtRecompile 事件类的数据列  
   
@@ -38,7 +39,7 @@ SQL:StmtRecompile 事件类指示由下列所有类型的批处理引起的语�
 |ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了进程 ID，则填充此数据列。|9|是|  
 |DatabaseID|**int**|正在运行存储过程的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|**nvarchar**|正在运行存储过程的数据库的名称。|35|是|  
-|EventSequence|**int**|事件在请求中的顺序。|51|是|  
+|EventSequence|**int**|事件在请求中的顺序。|51|“否”|  
 |EventSubClass|**int**|说明重新编译的原因：<br /><br /> 1 = 架构的更改<br /><br /> 2 = 统计信息的更改<br /><br /> 3 = 编译的延迟<br /><br /> 4 = 设置选项的更改<br /><br /> 5 = 临时表的更改<br /><br /> 6 = 远程行集的更改<br /><br /> 7 = For Browse 权限的更改<br /><br /> 8 = 查询通知环境的更改<br /><br /> 9 = 分区视图的更改<br /><br /> 10 = 游标选项的更改<br /><br /> 11 = 已请求选项（重新编译）|21|是|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|运行提交此语句的客户端的计算机名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
@@ -55,10 +56,10 @@ SQL:StmtRecompile 事件类指示由下列所有类型的批处理引起的语�
 |ObjectType|**int**|表示事件中涉及的对象类型的值。 有关详细信息，请参阅 [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md)。|28|是|  
 |Offset|**int**|在存储过程或批处理中导致重新编译的语句的起始偏移量。|61|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
-|ServerName|**nvarchar**|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的名称。|26|是|  
+|ServerName|**nvarchar**|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的名称。|26|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|连接的服务器进程 ID。|12|是|  
-|SqlHandle|**varbinary**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 sys.dm_exec_sql_text 以检索关联的 SQL 文本。|63|是|  
+|SqlHandle|**varbinary**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 sys.dm_exec_sql_text 以检索关联的 SQL 文本。|63|“否”|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |TextData|**ntext**|重新编译的 Transact-SQL 语句的文本。|@shouldalert|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  

@@ -1,16 +1,16 @@
 ---
-title: "保护发布服务器 | Microsoft Docs"
-ms.custom: 
+title: 保护发布服务器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], security
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8f879b708daa630f2809f249dfd305aeb114445
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 3f32e12afaffd5092bd45259264f654bfd4c9c3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="secure-the-publisher"></a>保护发布服务器的安全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/08/2018
  PAL 是用于保护发布服务器中发布的主要机制。 PAL 的功能与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 的访问控制列表相似。 创建发布时，复制将为该发布创建 PAL。 可把 PAL 配置为包含被授权访问发布的登录名和组的列表。 当一个代理连接到发布服务器或分发服务器并请求访问某个发布时，PAL 中的身份验证信息将与此代理提供的发布服务器登录名进行比较。 此过程为发布服务器提供了额外的安全性，方法是：阻止客户端工具使用发布服务器和分发服务器登录名在发布服务器中直接进行修改  
   
 > [!NOTE]  
->  复制操作在发布服务器中为每个发布创建一个角色，强制应用 PAL 成员身份。 对于合并复制，该角色的名称采用 Msmerge_\<PublicationID> 格式；对于事务性复制和快照复制，该角色的名称采用 MSReplPAL_\<PublicationDatabaseID>_\<PublicationID> 格式。  
+>  复制操作在发布服务器中为每个发布创建一个角色，强制应用 PAL 成员身份。 对于合并复制，该角色的名称采用 Msmerge_\<PublicationID> 格式；对于事务性复制和快照复制，该角色的名称采用 MSReplPAL_\<PublicationDatabaseID>_\<PublicationID>** 格式。  
   
  默认情况下，PAL 中包括的登录名是： **sysadmin** 固定服务器角色在创建发布时的成员，以及用于创建发布的登录名。 默认情况下，发布数据库中属于 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员的所有登录名都可订阅发布，而不用显式添加到 PAL 中。  
   

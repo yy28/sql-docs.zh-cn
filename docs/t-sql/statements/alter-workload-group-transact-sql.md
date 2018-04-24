@@ -1,16 +1,16 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  请注意，如果服务器没有足够的物理内存，则这两种情况都会出现超时错误 8645。  
   
- REQUEST_MAX_CPU_TIME_SEC = value  
+ REQUEST_MAX_CPU_TIME_SEC =value  
  指定请求可以使用的最长 CPU 时间，以秒为单位。 value 必须为 0 或一个正整数。 value 的默认设置为 0，也就是说无限制。  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  value 必须是正整数。 value 的默认设置为 0，表示使用基于查询开销的内部计算来确定最长时间。  
   
- MAX_DOP = value  
+ MAX_DOP =value  
  指定并行请求的最大并行度 (DOP)。 value 必须为 0 或正整数（1 到 255）。 value 为 0 时，服务器选择最大并行度。 这是默认设置，也是推荐设置。  
   
 > [!NOTE]  
@@ -139,7 +139,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  配置 DOP 后，只能在授予内存不足时降低它。 工作负荷组重新配置在授予内存队列中等待时不可见。  
   
- GROUP_MAX_REQUESTS = value  
+ GROUP_MAX_REQUESTS =value  
  指定在工作负荷组中允许执行的同时请求最大数。 value 必须为 0 或一个正整数。 value 的默认设置为 0，表示允许的请求数不限。 当达到最大并发请求数时，该组中的用户可以登录但置于等待状态，直至并发请求数降到指定值之下。  
   
  USING { pool_name | "default" }  

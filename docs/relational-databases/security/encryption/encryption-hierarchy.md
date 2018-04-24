@@ -1,16 +1,16 @@
 ---
-title: "加密层次结构 | Microsoft Docs"
-ms.custom: 
+title: 加密层次结构 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873a266bd722f6e5337abe94f615e2e82ea0e278
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7447398e55b4f3d8ad212dc506cafbb90512b15a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryption-hierarchy"></a>加密层次结构
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用分层加密和密钥管理基础结构来加密数据。 每一层都使用证书、非对称密钥和对称密钥的组合对它下面的一层进行加密。 非对称密钥和对称密钥可以存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的可扩展密钥管理 (EKM) 模块中。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用分层加密和密钥管理基础结构来加密数据。 每一层都使用证书、非对称密钥和对称密钥的组合对它下面的一层进行加密。 非对称密钥和对称密钥可以存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的可扩展密钥管理 (EKM) 模块中。  
   
  下图说明了加密层次结构的每一层是如何对它下面的一层进行加密的，并且显示了最常用的加密配置。 对层次结构的开始进行的访问通常受密码保护。  
   

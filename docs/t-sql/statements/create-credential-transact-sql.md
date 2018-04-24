@@ -1,16 +1,16 @@
 ---
 title: CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREDENTIAL_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 060ca4b7ae4b7a0304336ed4f1221fd51856e3a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -63,10 +64,10 @@ WITH IDENTITY = 'identity_name'
  credential_name  
  指定要创建的凭据的名称。 credential_name 不能以数字符号 (#) 开头。 系统凭据以 ## 开头。  使用共享访问签名 (SAS) 时，该名称必须与容器路径匹配，以 https 开头并且不能包含正斜杠。 请参见下面的示例 D。  
   
- IDENTITY ='identity_name'  
+ IDENTITY ='identity_name'****  
  指定从服务器外部进行连接时要使用的帐户名称。 当凭据用于访问 Azure Key Vault 时，IDENTITY 是该密钥保管库的名称。 请参阅以下示例 C。 凭据使用共享访问签名 (SAS) 时，IDENTITY 是 SHARED ACCESS SIGNATURE。 请参见下面的示例 D。  
   
- SECRET ='secret'  
+ SECRET ='secret'****  
  指定发送身份验证所需的机密内容。  
   
  当该凭据用于访问 Azure Key Vault 时，CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 Azure Active Directory 中服务主体的 \<Secret> 一起传递，且二者之间不留空格。 请参阅以下示例 C。 凭据使用共享访问签名时，SECRET 是共享访问签名令牌。 请参见下面的示例 D。  有关在 Azure 容器上创建存储访问策略和共享访问签名的详细信息，请参阅[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  

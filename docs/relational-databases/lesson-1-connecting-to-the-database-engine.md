@@ -1,28 +1,28 @@
 ---
-title: "第 1 课：连接到数据库引擎 | Microsoft Docs"
-ms.custom: 
+title: 第 1 课：连接到数据库引擎 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 
+caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
  - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
 
 ### <a name="basic-tools"></a>基本工具
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 SSMS 可以从 [Microsoft 下载中心](https://msdn.microsoft.com/library/mt238290.aspx)免费下载。 最新版本可同较旧版本的 [!INCLUDE[ssDE_md](../includes/ssde-md.md)] 一同使用。  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 SSMS 可以从 [Microsoft 下载中心](https://msdn.microsoft.com/library/mt238290.aspx)免费下载。 最新版本可同较旧版本的 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]一同使用。  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和客户端工具一起安装。 使用它，您可以启用服务器协议，配置协议选项（例如 TCP 端口），将服务器服务配置为自动启动，以及将客户端计算机配置为以所需的方式连接。 此工具会配置更高级的连接元素，但不会启用功能。  
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/09/2018
 1.  以 Administrators 组成员身份登录到 Windows，然后打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”**。  
 3.  如果未显示“已注册的服务器”，请在“视图”菜单中，单击“已注册的服务器”。
-4.  在“已注册的服务器”工具栏中选择“数据库引擎”后，展开“数据库引擎”，右键单击“本地服务器组”，指向“任务”，然后单击“注册本地服务器”。 将显示计算机上安装的所有[!INCLUDE[ssDE](../includes/ssde-md.md)]实例。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>*\sqlexpress。  
+4.  在“已注册的服务器”工具栏中选择“数据库引擎”后，展开“数据库引擎”，右键单击“本地服务器组”，指向“任务”，然后单击“注册本地服务器”。 将显示计算机上安装的所有[!INCLUDE[ssDE](../includes/ssde-md.md)]实例。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>* \sqlexpress。  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>验证数据库引擎是否正在运行
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 02/09/2018
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  在“服务器名称”框中，键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。 对于默认的 SQL Server 实例，服务器名称即计算机名称。 对于 SQL Server 的命名实例，服务器名称为 <computer_name>\\<instance_name>，如 ACCTG_SRVR\SQLEXPRESS。 以下屏幕截图显示连接到名为“PracticeComputer”的计算机上 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的默认（未命名）实例。 已登录到 Windows 的用户是 Contoso 域中的 Mary。 使用 Windows 身份验证时，无法更改用户名称。 
+3.  在“服务器名称”框中，键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。 对于默认的 SQL Server 实例，服务器名称即计算机名称。 对于 SQL Server 的命名实例，服务器名称为 <computer_name>\\<instance_name>，如 ACCTG_SRVR\SQLEXPRESS**。 以下屏幕截图显示连接到名为“PracticeComputer”的计算机上 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的默认（未命名）实例。 已登录到 Windows 的用户是 Contoso 域中的 Mary。 使用 Windows 身份验证时，无法更改用户名称。 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

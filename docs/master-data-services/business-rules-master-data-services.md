@@ -1,33 +1,36 @@
 ---
-title: "业务规则 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 业务规则 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 485f2694fe54000fc5784fdee26012de217ffd39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 76db0aa6de67cf1adaf21b4aa7024f7db4dc4a7d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="business-rules-master-data-services"></a>业务规则 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，业务规则是您用于确保主数据的质量和准确性的规则。 可以使用业务规则自动更新数据、发送邮件或启用业务流程或工作流。  
   
  若要查看业务规则示例，请参阅[业务规则示例 &#40;Master Data Services&#41;](../master-data-services/business-rule-examples-master-data-services.md)。  

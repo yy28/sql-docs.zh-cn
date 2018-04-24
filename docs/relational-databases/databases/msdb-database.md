@@ -1,16 +1,16 @@
 ---
-title: "msdb 数据库 | Microsoft Docs"
-ms.custom: 
+title: msdb 数据库 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - jobs [SQL Server], msdb database
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 85f6c7a0c44241b7a42d2b88671203fbebb7d58e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msdb-database"></a>msdb 数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/18/2018
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|是|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|“否”|  
 |ANSI_NULL_DEFAULT|OFF|是|  
 |ANSI_NULLS|OFF|是|  
 |ANSI_PADDING|OFF|是|  
@@ -67,20 +67,20 @@ ms.lasthandoff: 01/18/2018
 |AUTO_SHRINK|OFF|是|  
 |AUTO_UPDATE_STATISTICS|ON|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
-|CHANGE_TRACKING|OFF|是|  
+|CHANGE_TRACKING|OFF|“否”|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|是|  
 |CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> 是<br /><br /> 是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|“否”<br /><br /> 是<br /><br /> 是|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|ON|是|  
-|ENCRYPTION|OFF|是|  
-|MIXED_PAGE_ALLOCATION|ON|是|  
+|ENCRYPTION|OFF|“否”|  
+|MIXED_PAGE_ALLOCATION|ON|“否”|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM|是|  
 |PARAMETERIZATION|SIMPLE|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
-|READ_COMMITTED_SNAPSHOT|OFF|是|  
+|READ_COMMITTED_SNAPSHOT|OFF|“否”|  
 |RECOVERY|SIMPLE|是|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 选项|ENABLE_BROKER|是|  

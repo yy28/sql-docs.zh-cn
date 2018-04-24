@@ -2,7 +2,7 @@
 title: SQL Server 2016 中弃用的数据库引擎功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-engine
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 785a3740d27b57bc4aee02f3cfccfd22b95d987f
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f062de9b5ace5629a4c6b2a5eb2660727b802092
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |数据类型|**timestamp** 数据类型的 **rowversion** 语法|**rowversion** 数据类型语法|timestamp|158|  
 |数据类型|在 **timestamp** 列中插入 null 值的功能。|请改用 DEFAULT。|将 NULL 插入 TIMESTAMP 列|179|  
 |数据类型|“text in row”表选项|使用 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据类型。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|text in row 表选项|9|  
-|数据类型|数据类型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **图像**|使用 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)** 数据类型。|数据类型： **text**、 **ntext** 或 **image**|4|  
+|数据类型|数据类型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **图像**|使用 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。|数据类型： **text**、 **ntext** 或 **image**|4|  
 |数据库管理|sp_attach_db<br /><br /> sp_attach_single_file_db|使用 FOR ATTACH 选项的 CREATE DATABASE 语句。 若要在一个或多个日志文件有新位置的情况下重新生成这些日志文件，请使用 FOR ATTACH_REBUILD_LOG 选项。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |数据库对象|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 和 ALTER TABLE 中的 DEFAULT 关键字|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |数据库对象|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 和 ALTER TABLE 中的 CHECK 关键字|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  

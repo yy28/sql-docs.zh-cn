@@ -1,33 +1,34 @@
 ---
-title: "“导出为策略”对话框 | Microsoft Docs"
-ms.custom: 
+title: “导出为策略”对话框 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.exportaspolicy.f1
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d68124fea11952e85baeb531fd36241dbce4e0a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c1410d2640a0f15cd92d6f7919b439c3da6b4720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="export-as-policy-dialog-box"></a>“导出为策略”对话框
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此对话框可以将一组基于策略的管理方面属性保存为策略。 可以在 XML 文件中保存策略，也可以将其直接保存到当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此对话框可以将一组基于策略的管理方面属性保存为策略。 可以在 XML 文件中保存策略，也可以将其直接保存到当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
 ## <a name="options"></a>“常规”  
  **策略定义名称**  

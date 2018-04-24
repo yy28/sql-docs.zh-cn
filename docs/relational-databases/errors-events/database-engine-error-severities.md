@@ -1,16 +1,16 @@
 ---
-title: "数据库引擎错误严重性 | Microsoft Docs"
-ms.custom: 
+title: 数据库引擎错误严重性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -19,24 +19,25 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f48f4b4b774538f9ca388e8a8fbaf1e0f9b1aded
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-error-severities"></a>数据库引擎错误严重性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]当错误是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 引起时，此错误的严重性可说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所遇到问题的类型。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  当错误是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]引起时，此错误的严重性可说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所遇到问题的类型。  
   
 ## <a name="levels-of-severity"></a>严重性级别  
  下表列出并说明 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所引起错误的严重级别。  
   
-|严重级别|说明|  
+|严重级别|Description|  
 |--------------------|-----------------|  
 |0-9|返回不太严重的状态信息或报表错误的信息性消息。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会引起严重级别为 0 到 9 的系统错误。|  
 |10|返回不太严重的状态信息或报表错误的信息性消息。 由于兼容性原因， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在将错误信息返回到调用应用程序前将严重性级别从 10 转换为 0。|  

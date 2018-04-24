@@ -18,13 +18,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e10456b5254bc007420eb6850f00ede131f31aa
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6cd8e4f68f0167b9179d4108c59755da5619787e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>业务规则示例 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 本文演示 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的业务规则示例。 你会在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]安装附带的示例模型中找到这些示例。   
   
 有关如何部署示例模型的说明，请参阅 [Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  

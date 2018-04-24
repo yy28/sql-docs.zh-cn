@@ -2,7 +2,7 @@
 title: 内存管理体系结构指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -21,11 +21,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a623c59bbc78503c7cf6bcbf190ed342763727c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,10 +79,10 @@ ms.lasthandoff: 04/10/2018
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对内存管理的更改
 
 在 SQL Server 的早期版本 （[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，使用五种不同的机制分配内存：
--  **单页分配器 (SPA)**它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
+-  **单页分配器 (SPA)** 它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
 -  **多页分配器 (MPA)**，用于需要 8 KB 以上的内存分配。
 -  **CLR 分配器**，包含 CLR 初始化期间创建的 SQL CLR 堆及其全局分配。
--  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的**[线程堆栈](../relational-databases/memory-management-architecture-guide.md#stacksizes)**的内存分配。
+-  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的**[线程堆栈](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的内存分配。
 -  **直接 Windows 分配 (DWA)**，用于直接向 windows 进行的内存分配请求。 包括由加载到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的模块使用 Windows 堆和直接进行虚拟分配。 此类内存分配请求的示例包括从扩展存储过程 DLL 分配、使用自动化过程（sp_OA 调用）创建的对象以及从链接服务器提供程序分配。
 
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，单页分配、多页分配和 CLR 分配全部合并到“任意大小”页分配器中，受到由“max server memory (MB)”和“min server memory (MB)”配置选项控制的内存限制。 此更改使通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器的所有内存要求能更准确地调整大小。 
@@ -94,10 +95,10 @@ ms.lasthandoff: 04/10/2018
 |内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
 |单页分配|是|是，合并到“任意大小”页分配|
-|多页分配|否|是，合并到“任意大小”页分配|
-|CLR 分配|否|是|
-|线程堆栈内存|否|否|
-|从 Windows 直接分配|否|否|
+|多页分配|“否”|是，合并到“任意大小”页分配|
+|CLR 分配|“否”|是|
+|线程堆栈内存|“否”|“否”|
+|从 Windows 直接分配|“否”|“否”|
 
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能会分配比 max server memory 设置中指定的值更多的内存。 当 Total Server Memory (KB) 值已达到 Total Server Memory (KB)（由 max server memory 指定）时，可能会出现这种情况。 如果因内存碎片造成连续空闲内存不足，无法满足多页内存请求的需求（超过 8 KB），[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以执行超额承诺使用量，而不是拒绝内存请求。 
 
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/10/2018
 
 |内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
-|单页分配|否|否，合并到“任意大小”页分配|
+|单页分配|“否”|否，合并到“任意大小”页分配|
 |多页分配|是|否，合并到“任意大小”页分配|
 |CLR 分配|是|是|
 |线程堆栈内存|是|是|

@@ -1,16 +1,16 @@
 ---
-title: "将数据库注册为 DAC | Microsoft Docs"
-ms.custom: 
+title: 将数据库注册为 DAC | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.registerdacwizard.summary.f1
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c80a09793bae9691c25590b1c929a76f0da4e4b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-使用“注册数据层应用程序向导”  或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序 (DAC) 定义，并在 **msdb** 系统数据库（**中为** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]）中注册 DAC 定义。  
+  使用“注册数据层应用程序向导”  或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序 (DAC) 定义，并在 **msdb** 系统数据库（**中为** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]）中注册 DAC 定义。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 02/23/2018
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>验证对象  
- **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 SchemaName.ObjectName 确定当前正在验证的对象。  
+ **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 SchemaName.ObjectName** 确定当前正在验证的对象。  
   
  “<上一步”- 返回到“设置属性”页以便更改条目。  
   

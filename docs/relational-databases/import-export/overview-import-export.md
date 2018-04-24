@@ -1,29 +1,31 @@
 ---
-title: "在 SQL Server 和 Azure SQL 数据库中导入和导出数据 | Microsoft Docs"
-ms.custom: 
+title: 在 SQL Server 和 Azure SQL 数据库中导入和导出数据 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b8f4820fa0a48256d14e712f3228f3637b42ec67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>在 SQL Server 和 Azure SQL 数据库中导入和导出数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可通过多种方法在 SQL Server 和 Azure SQL 数据库中导入和导出数据。 这些方法包括 Transact-SQL 语句、命令行工具和向导。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+可通过多种方法将数据导入 SQL Server 和 Azure SQL 数据库，以及从 SQL Server 和 Azure SQL 数据库中导出数据。 这些方法包括 Transact-SQL 语句、命令行工具和向导。
 
 也可以各种数据格式导入和导出数据。 这些格式包括平面文件、Excel、主要关系数据库和各种云服务。
 

@@ -1,16 +1,16 @@
 ---
-title: "DENY 对象权限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 对象权限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc405b480d063ff6990182f9a66cc6f4e35c3a5a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc9a15f82d5a60bf63a0a745b4b7da794b21aa26
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 对象权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ DENY <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *permission*  
+ permission  
  指定可对架构包含的对象拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  ALL  
@@ -94,28 +94,28 @@ PRIVILEGES
  AS \<database_principal>  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。  
   
- *Database_user*  
+ Database_user  
  指定数据库用户。  
   
- *Database_role*  
+ Database_role  
  指定数据库角色。  
   
- *Application_role*  
+ Application_role  
  指定应用程序角色。  
   
- *Database_user_mapped_to_Windows_User*  
+ Database_user_mapped_to_Windows_User  
  指定映射到 Windows 用户的数据库用户。  
   
- *Database_user_mapped_to_Windows_Group*  
+ Database_user_mapped_to_Windows_Group  
  指定映射到 Windows 组的数据库用户。  
   
- *Database_user_mapped_to_certificate*  
+ Database_user_mapped_to_certificate  
  指定映射到证书的数据库用户。  
   
  Database_user_mapped_to_asymmetric_key  
  指定映射到非对称密钥的数据库用户。  
   
- *Database_user_with_no_login*  
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  

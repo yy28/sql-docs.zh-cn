@@ -1,15 +1,16 @@
 ---
-title: "暂停和恢复数据库镜像 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 暂停和恢复数据库镜像 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c4392842fd8993cf6569918a4e28f227112ad657
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暂停和恢复数据库镜像 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库所有者可以暂停并在以后随时恢复数据库镜像会话。 执行暂停操作将保留在挂起镜像时的会话状态。 当出现瓶颈时，暂停可能有利于提高主体服务器的性能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  数据库所有者可以暂停并在以后随时恢复数据库镜像会话。 执行暂停操作将保留在挂起镜像时的会话状态。 当出现瓶颈时，暂停可能有利于提高主体服务器的性能。  
   
  会话暂停后，主体数据库仍然可用。 暂停操作将镜像会话的状态设置为 SUSPENDED，并且镜像数据库不再与主体数据库保持一致，从而导致主体数据库公开运行。  
   

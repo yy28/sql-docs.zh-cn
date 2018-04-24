@@ -1,30 +1,31 @@
 ---
 title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc95a6505066b29b30e5916b1000c686ecad4907
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +76,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  filter_property_name  
  基于其限制结果的属性名称。 例如，如果想要基于会话 ID 实施限制，则 filter_property_name 应为 SessionId。 有关 filter_property_name 的可能值的列表，请参阅下面的 property_name。  
   
- *值*  
+ *value*  
  用于针对 filter_property_name 进行计算的值。 值类型必须与属性类型相匹配。 例如，如果属性类型是十进制，则值类型必须为十进制。  
   
  comp_type  

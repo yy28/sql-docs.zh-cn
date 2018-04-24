@@ -1,31 +1,32 @@
 ---
-title: "将查询提示附加到计划指南 | Microsoft Docs"
-ms.custom: 
+title: 将查询提示附加到计划指南 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c40b32936d616205850fe62877eb8b0dc7640486
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 282a867a7bd3013d99dbc0109fd0a1d82dd6c14e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>将查询提示附加到计划指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]计划指南中可以使用有效查询提示的任何组合。 当计划指南与某一查询匹配时，计划指南提示子句中指定的 OPTION 子句将先添加到该查询中，然后该查询才会进行编译和优化。 如果与计划指南匹配的查询已包含 OPTION 子句，则计划指南中指定的查询提示将替换查询中已存在的查询提示。 但是，对于要与已包含 OPTION 子句的查询匹配的计划指南，在 sp_create_plan_guide 语句中指定要匹配的查询文本时，必须包含查询的 OPTION 子句。 若要将计划指南中指定的提示添加到查询中已存在的提示，而不是替换已存在的提示，则必须在计划指南的 OPTION 子句中同时指定原始提示和附加提示。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  计划指南中可以使用有效查询提示的任何组合。 当计划指南与某一查询匹配时，计划指南提示子句中指定的 OPTION 子句将先添加到该查询中，然后该查询才会进行编译和优化。 如果与计划指南匹配的查询已包含 OPTION 子句，则计划指南中指定的查询提示将替换查询中已存在的查询提示。 但是，对于要与已包含 OPTION 子句的查询匹配的计划指南，在 sp_create_plan_guide 语句中指定要匹配的查询文本时，必须包含查询的 OPTION 子句。 若要将计划指南中指定的提示添加到查询中已存在的提示，而不是替换已存在的提示，则必须在计划指南的 OPTION 子句中同时指定原始提示和附加提示。  
   
 > [!CAUTION]  
 >  计划指南错用查询提示会导致出现编译、执行或性能问题。 因此计划指南应仅由经验丰富的开发人员和数据库管理员使用。  

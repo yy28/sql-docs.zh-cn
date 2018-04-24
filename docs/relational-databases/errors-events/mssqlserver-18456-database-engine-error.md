@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: da4c628ad102eb7115e0cab2e2ed7a73c7ed9c4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
 |State|Description|  
 |---------|---------------|  
-|1|无法获得错误信息。 此状态通常意味着您不拥有接收错误详细信息的权限。 请联系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员以获得详细信息。|  
+|@shouldalert|无法获得错误信息。 此状态通常意味着您不拥有接收错误详细信息的权限。 请联系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员以获得详细信息。|  
 |2|用户 ID 无效。|  
 |5|用户 ID 无效。|  
 |6|尝试同时使用 SQL Server 身份验证与 Windows 登录名。|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>示例  
 在此示例中，身份验证错误状态为 8。 这表示密码不正确。  
   
-|日期|数据源|消息|  
+|date|数据源|消息|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|登录|错误: 18456，严重性: 14，状态: 8。|  
 |2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端: <ip address>]|  

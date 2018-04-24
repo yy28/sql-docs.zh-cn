@@ -1,35 +1,36 @@
 ---
-title: "错误和事件参考（数据库引擎）| Microsoft Docs"
-ms.custom: 
+title: 错误和事件参考（数据库引擎）| Microsoft Docs
+ms.custom: ''
 ms.date: 05/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d421713ed83c3f73bd3d9b30f0549bceb692b40a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8ed5a2375cf1e5426f832254948064bb992114e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>错误和事件参考（数据库引擎）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本部分包含需做进一步说明的选定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本节包含需要进一步说明的所选的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据库引擎错事件和错误](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  下表提供了指向这些资源的链接并说明了这些资源。  
   
-|资源|说明|  
+|资源|Description|  
 |--------------|-----------------|  
 |[SQL Server 社区](http://go.microsoft.com/fwlink/?LinkId=42455)|此网站提供指向由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社区监视的新闻组和论坛的链接。 还列出了诸如博客和网站之类的社区信息资源。 尽管不能保证得到答案，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社区对于解决问题还是非常有帮助。|  
 |[SQL Server 开发人员中心社区](http://go.microsoft.com/fwlink/?LinkId=42456)|此站点专门提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开发人员有用的新闻组、论坛和其他社区资源。|  

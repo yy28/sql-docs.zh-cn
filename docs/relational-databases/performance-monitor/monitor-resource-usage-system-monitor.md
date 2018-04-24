@@ -1,16 +1,16 @@
 ---
-title: "监视资源使用情况（系统监视器）| Microsoft Docs"
-ms.custom: 
+title: 监视资源使用情况（系统监视器）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - tuning databases [SQL Server], resource usage
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e30f2d0f47d856cdb3c8732d6f4ab553b43d6393
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 64caaa19af879a07a19255991c6b948fd4b05cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>监视资源使用情况（系统监视器）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果运行的是 Microsoft Windows 服务器操作系统，可以使用系统监视器图形工具来测量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能。 可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象、性能计数器以及其他对象的行为，这些对象包括处理器、内存、缓存、线程和进程。 每个对象都有一个相关的计数器集，用于测量设备使用情况、队列长度、延时情况，另外还有吞吐量及内部拥塞指示器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  如果您运行的是 Microsoft Windows 服务器操作系统，则可以使用系统监视器图形工具来测量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的性能。 可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象、性能计数器以及其他对象的行为，这些对象包括处理器、内存、缓存、线程和进程。 每个对象都有一个相关的计数器集，用于测量设备使用情况、队列长度、延时情况，另外还有吞吐量及内部拥塞指示器。  
   
 > [!NOTE]  
 >  在 Windows NT 4.0 以后的版本，系统监视器替换了性能监视器。  

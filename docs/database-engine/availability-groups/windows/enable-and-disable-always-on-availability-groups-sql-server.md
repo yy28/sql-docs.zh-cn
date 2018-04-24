@@ -1,16 +1,16 @@
 ---
-title: "启用和禁用 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 启用和禁用 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c795cc98d8dffa44d7f9759b8f66e896f75123c4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: df71630d1e461b2d1757c558c3e1960135fd3aea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>启用和禁用 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  在“开始”  菜单上，依次指向“所有程序” 、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击“SQL Server 配置管理器” 。  
   
-3.  在 SQL Server 配置管理器中，单击“SQL Server 服务”，右键单击 “SQL Server (\<实例名>)”，其中 \<实例名> 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
+3.  在 SQL Server 配置管理器中，单击“SQL Server 服务”，右键单击 “SQL Server (\<实例名>)”****，其中 \<实例名>**** 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
   
 4.  选择“AlwaysOn 高可用性”选项卡。  
   
@@ -204,7 +204,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
-3.  在 SQL Server 配置管理器中，单击“SQL Server 服务”，右键单击 “SQL Server (\<实例名>)”，其中 >实例名>**\<** 是要禁用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
+3.  在 SQL Server 配置管理器中，单击“SQL Server 服务”，右键单击 “SQL Server (\<实例名>)”****，其中 >实例名>**\<** 是要禁用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
   
 4.  在“AlwaysOn 高可用性”选项卡上，取消选中“启用 AlwaysOn 可用性组”复选框，然后单击“确定”。  
   
@@ -260,9 +260,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |指定了 -NoServiceRestart 参数|指定了 -Force 参数|重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务？|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|是|是|默认情况。 但是 cmdlet 提示您以下信息：<br /><br /> **若要完成此操作，必须重新启动服务器实例“<instance_name>”的 SQL Server 服务。是否继续？**<br /><br /> **[Y] 是 [N] 否 [S] 挂起 [?] 帮助（默认值为“Y”）：**<br /><br /> 如果指定 **N** 或 **S**，则不重新启动该服务。|  
-|是|是|重新启动服务。|  
-|是|是|不重新启动服务。|  
+|“否”|“否”|默认情况。 但是 cmdlet 提示您以下信息：<br /><br /> **若要完成此操作，必须重新启动服务器实例“<instance_name>”的 SQL Server 服务。是否继续？**<br /><br /> **[Y] 是 [N] 否 [S] 挂起 [?] 帮助（默认值为“Y”）：**<br /><br /> 如果指定 **N** 或 **S**，则不重新启动该服务。|  
+|“否”|是|重新启动服务。|  
+|是|“否”|不重新启动服务。|  
 |是|是|不重新启动服务。|  
   
 ## <a name="see-also"></a>另请参阅  

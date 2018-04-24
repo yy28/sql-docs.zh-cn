@@ -1,15 +1,16 @@
 ---
-title: "数据库引擎服务启动选项 | Microsoft Docs"
-ms.custom: 
+title: 数据库引擎服务启动选项 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 47452c7a2f858dd72cf847f80f2352acace2d5a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]启动选项指定在启动期间所需的某些文件位置，并指定一些服务器范围的条件。 大多数用户不需要指定启动选项，除非您在排除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 故障或者具有不常见问题，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户支持指示使用启动选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  启动选项指定在启动期间所需的某些文件位置，并指定一些服务器范围的条件。 大多数用户不需要指定启动选项，除非您在排除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 故障或者具有不常见问题，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户支持指示使用启动选项。  
   
 > [!WARNING]  
 >  错误地使用启动选项可能会影响服务器性能并且可能阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动。  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/18/2018
 |**-g**  *memory_to_reserve*|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程之内但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池之外（通过 [max_server_memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 服务器设置进行设置）的内存分配保留的内存整数量 (MB)。 内存池以外的内存是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于加载诸如下列项目的区域：扩展过程 .dll 文件、分布式查询引用的 OLE DB 提供程序以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用的自动化对象。 默认值为 256 MB。<br /><br /> 使用此选项可帮助优化内存分配，但仅限于物理内存超过操作系统设置的应用程序可用虚拟内存配置限制时。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用要求异乎寻常，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的虚拟地址空间都在使用，则对于这样的大内存配置适合使用此选项。 对此选项的不当使用会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例无法启动或遇到运行时错误。<br /><br /> 除非你在 **错误日志中看到下列任何警告，否则请使用** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数的默认值：<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"<br /><br /> 这些消息可能指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正试图释放部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池空间，以便为扩展存储过程 .dll 文件或自动化对象等项目找到空间。 在这种情况下，可以考虑增加由 **-g** 开关保留的内存量。<br /><br /> 使用小于默认值的值将增加 SQL Server 内存管理器所管理的内存池和线程栈中的可用内存量；而在不使用很多扩展存储过程、分布式查询或自动化对象的系统中，这种方法可改善需要大量内存的工作负荷的性能。|  
 |**-m**|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，只能连接一个用户，并且不启动 CHECKPOINT 进程。 CHECKPOINT 保证将已完成的事务定期从磁盘缓存写入数据库设备。 （通常，在遇到需要修复的系统数据库问题时使用此选项。）启用 sp_configure allow updates 选项。 默认情况下，allow updates 处于禁用状态。 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使计算机本地 Administrators 组的任何成员作为 sysadmin 固定服务器角色的成员连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。有关单用户模式的详细信息，请参阅 [在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)。|  
 |**-mClient 应用程序名称**|将连接限制为指定的客户端应用程序。 例如， `-mSQLCMD`  将连接限制为单个连接并且该连接必须将自身标识为 SQLCMD 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 使用 `"Microsoft SQL Server Management Studio - Query" ` 与 SSMS 查询编辑器连接。 SSMS 查询编辑器选项不能使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 配置管理器进行配置，因为它包括该工具拒绝使用的短划线字符。<br /><br /> 客户端应用程序名称区分大小写。 如果应用程序名称包含空格或特殊字符，则需要使用双引号引起来。<br /><br />**从命令行启动时的示例：**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -mSQLCMD` <br /><br /> 安全说明：请勿将此选项作为安全功能使用。 客户端应用程序提供客户端应用程序名称，并且提供假名称来作为连接字符串的一部分。|  
-|**-n**|不要使用 Windows 应用程序日志来记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如果你使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **-n**实例，我们建议你同时使用 **-e** 启动选项。 否则，将不会记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。|  
+|**-n**|不要使用 Windows 应用程序日志来记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如果你使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **启动**实例，我们建议你同时使用 **-e** 启动选项。 否则，将不会记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。|  
 |**-s**|用于启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命名实例。 如果 **-s** 参数未设置，则系统会尝试启动默认实例。 必须先在命令提示符处切换到实例的相应 BINN 目录，然后才能启动 **sqlservr.exe**。 例如，如果 Instance1 为其二进制文件使用了 `\mssql$Instance1`，则用户必须位于 `\mssql$Instance1\binn` 目录中才能启动 sqlservr.exe -s instance1。|  
 |**-T**  *trace#*|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#*) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。<br /><br /> 重要提示：使用 -T 选项指定跟踪标志时，请使用大写“T”来传递跟踪标志号。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也可接受小写“t”，只是它用于设置仅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持工程师才需要的其他内部跟踪标志。 （不读取“控制面板”启动窗口中指定的参数。）|  
 |**-x**|禁用下列监视功能：<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能监视器计数器<br /> - 保留 CPU 时间和高速缓存命中率统计信息<br /> - 收集 DBCC SQLPERF 命令的信息<br /> - 收集某些动态管理视图的信息<br /> - 许多扩展事件事件点<br /><br /> 警告：使用 –x 启动选项会导致你在诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能和功能问题时获得的信息大大减少。|  

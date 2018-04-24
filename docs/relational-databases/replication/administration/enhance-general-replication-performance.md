@@ -1,16 +1,16 @@
 ---
-title: "增强常规复制性能 | Microsoft Docs"
-ms.custom: 
+title: 增强常规复制性能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - performance [SQL Server replication], general considerations
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0eee012274773cb6e0e0fd075aaa88447100d738
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d46c40043d2b6c25d16752bed12f7fb65c55a94a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 03/08/2018
   
 -   限制使用大型对象 (LOB) 数据类型。  
   
-     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)**。  
+     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)**。  
   
      对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

@@ -1,30 +1,33 @@
 ---
-title: "通过电子邮件发送快捷查询文件 (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: 
+title: 通过电子邮件发送快捷查询文件 (MDS Add-in for Excel) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbc5fe44566779dae76d3bb314c97a126630fd87
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 00d51ace2c2e5bb86acae6ccd18994c9a8de749c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果想要确保用户使用和你一样的数据，则可以通过电子邮件向他们发送快捷查询文件。 您应该共享查询，而不是将工作表保存并通过电子邮件发送。  
   
 ## <a name="prerequisites"></a>必备条件  

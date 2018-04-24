@@ -1,33 +1,35 @@
 ---
-title: "SQL Server 证书和非对称密钥 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 证书和非对称密钥 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eadfb0677c17e0c40d1b32ca01998c8079fcd238
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4d20aa5344127303df606b8dcaeb5722ce7d2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]公钥加密 (PKI) 是一种消息保密方式，在使用这种方式时用户将创建一个“公钥”和一个“私钥”。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 公钥用于加密数据，私钥用于解密数据。 使用公钥加密的消息只能使用正确的私钥来解密。 由于存在两个不同的密钥，因而这些密钥是“非对称的”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  公钥加密 (PKI) 是一种消息保密方式，在使用这种方式时用户将创建一个“公钥”和一个“私钥”。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 公钥用于加密数据，私钥用于解密数据。 使用公钥加密的消息只能使用正确的私钥来解密。 由于存在两个不同的密钥，因而这些密钥是“非对称的”。  
   
  证书和非对称密钥都属于非对称加密的使用方式。 证书通常用作非对称密钥的容器，因为它们可以包含更多信息，例如过期日期和颁发者。 这两种机制的加密算法之间存在差异，但相同密钥长度的加密强度是相同的。 通常，可以使用证书来加密数据库中其他类型的加密密钥，或者为代码模块签名。  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="using-a-certificate-in-sql-server"></a>在 SQL Server 中使用证书  
  证书可用来帮助确保连接的安全性（在数据库镜像中）、为包和其他对象签名或者加密数据或连接。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有关证书的其他资源。  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)|介绍用于创建证书的命令。|  
 |[使用数字签名标识包的源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|显示有关如何使用证书为软件包签名的信息。|  
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>在 SQL Server 中使用非对称密钥  
  非对称密钥可用来帮助确保数据的安全性或为纯文本签名。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有关非对称密钥的其他资源。  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|介绍用于创建非对称密钥的命令。|  
 |[SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)|显示用于为对象签名的选项。|  
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 |[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|创建证书。|  
 |[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|创建对称密钥的强名称。|  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  

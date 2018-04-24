@@ -2,7 +2,7 @@
 title: 创建统计信息 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: statistics
@@ -26,11 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 791e92681938ee0b198f3f6524354e7412ae371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-statistics"></a>创建统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/10/2018
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建统计信息，请使用：**  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求用户是表或索引视图所有者，或者是以下角色之一的成员： **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/10/2018
      **数据类型**  
      指示统计信息中所涉及列的数据类型。  
   
-     **Size**  
+     **大小**  
      显示每列的数据类型大小。  
   
      **标识**  
@@ -112,7 +113,7 @@ ms.lasthandoff: 04/10/2018
      **上移**  
      将所选列移动到统计信息网格中更靠前的位置。 网格中的位置会显著地影响统计信息的有效性。  
   
-     **下移**  
+     **“下移”**  
      将所选列移到统计信息网格中更后面的位置。  
   
      **上次更新了这些列的统计信息:**  
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/10/2018
      以下属性显示在“新建表table_name的统计信息”对话框的“筛选器”页面上。  
   
      **筛选表达式**  
-     定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     定义要将哪些数据行包含在筛选的统计信息中。 例如，使用 IPv4 地址 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  在“新建表table_name的统计信息”对话框的“常规”页面上，单击“添加”。  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 04/10/2018
      **数据类型**  
      指示统计信息中所涉及列的数据类型。  
   
-     **Size**  
+     **大小**  
      显示每列的数据类型大小。  
   
      **标识**  
@@ -153,11 +154,11 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-create-statistics"></a>创建统计信息  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;   

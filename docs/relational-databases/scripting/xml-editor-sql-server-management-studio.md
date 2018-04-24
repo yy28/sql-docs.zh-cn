@@ -2,7 +2,7 @@
 title: XML 编辑器 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-scripting
@@ -25,11 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b90d35941d80dae9ba0775a859cca3c764008987
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/10/2018
   
  该设计器提供了以下三种视图（或模式）来处理 XML 文件、XML 架构和数据集：  
   
-|视图|说明|支持的文件类型|  
+|“查看”|Description|支持的文件类型|  
 |----------|-----------------|--------------------------|  
 |**架构**|用于直观地创建和修改 XML 架构以及 ADO.NET 数据集。|.xsd|  
 |**数据**|用于在结构化数据网格中直观地修改 XML 数据文件。|.xml|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/10/2018
   
 -   单击希望显示在设计器中的最底部元素的减号图标。  
   
-## <a name="data-view"></a>“数据”视图  
+## <a name="data-view"></a>数据视图  
  “数据”视图提供一个可用于修改 .xml 文件的数据网格。 在“数据”视图中只能编辑 XML 文件中的内容（不包括标记和结构）。  
   
  “数据”视图中有两个单独的区域： **“数据表”** 和 **“数据”**。 “数据表”区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  

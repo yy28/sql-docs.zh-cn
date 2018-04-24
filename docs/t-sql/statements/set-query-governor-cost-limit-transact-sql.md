@@ -1,16 +1,16 @@
 ---
 title: SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET QUERY_GOVERNOR_COST_LIMIT
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - QUERY_GOVERNOR_COST_LIMIT option
 - overriding connection values
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
-caps.latest.revision: 
+caps.latest.revision: 27
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a96642c6a0dd50ccb8717e84a6defec516196d87
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2a93ac671cac3c7c033fcf7b8b41c5ed7b0f19f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-querygovernorcostlimit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
 ```  
   
 ## <a name="arguments"></a>参数  
- *值*  
+ *value*  
  数值或整数值，用于指定可以运行查询的最长时间。 这些值将向下舍入为最接近的整数， 负值向上舍入为 0。 查询调控器不允许执行估计开销超过该值的任何查询。 如果指定此选项为 0（默认），将关闭查询调控器，并且允许所有查询无限期运行。  
   
  “查询开销”是指在特定硬件配置中完成查询所需的估计占用时间（秒）。  

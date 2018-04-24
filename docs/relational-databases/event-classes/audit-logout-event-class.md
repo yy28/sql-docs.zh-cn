@@ -1,34 +1,35 @@
 ---
-title: "Audit Logout 事件类 | Microsoft Docs"
-ms.custom: 
+title: Audit Logout 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Logout event class
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d96ee2ea1cf3a53b0009d988b0927f922b6b4c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cc007ff8f869478e0cce06fc621b88bc0cf2c3d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Logout** 事件类指示用户已注销 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类中的事件由新连接或从连接池中重用的连接触发。  
+  **Audit Logout** 事件类指示用户已注销 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类中的事件由新连接或从连接池中重用的连接触发。  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Audit Logout 事件类的数据列  
   
@@ -41,8 +42,8 @@ ms.lasthandoff: 02/12/2018
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
 |**Duration**|**bigint**|用户自登录开始持续的时间（大约时间）。|13|是|  
 |**EndTime**|**datetime**|注销的结束时间。|15|是|  
-|**EventClass**|**int**|事件类型 = 15。|27|是|  
-|**EventSequence**|**int**|特定事件在请求中的顺序。|51|是|  
+|**EventClass**|**int**|事件类型 = 15。|27|“否”|  
+|**EventSequence**|**int**|特定事件在请求中的顺序。|51|“否”|  
 |**EventSubClass**|**int**|登录使用的连接类型。 1 = 非共用，2 = 共用。|21|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  

@@ -1,40 +1,41 @@
 ---
-title: "PreConnect:Starting 事件类 | Microsoft Docs"
-ms.custom: 
+title: PreConnect:Starting 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PreConnect:Starting Event Class
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 152fd1ce7d982e5ea987ab7adc47642aa1064695
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 38a53f2cff58a57205b1175f1a9a4f448cdb808c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-PreConnect:Starting事件类指示 LOGON 触发器或资源调控器分类器函数开始执行的时间。  
+  PreConnect:Starting事件类指示 LOGON 触发器或资源调控器分类器函数开始执行的时间。  
   
 ## <a name="preconnectstarting-event-class-data-columns"></a>PreConnect:Starting 事件类数据列  
   
 |数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|215|27|是|  
+|EventClass|**int**|215|27|“否”|  
 |SPID|**int**|激发此事件的服务器进程的 ID。|12|是|  
 |EventSubClass|**int**|1 表示用户定义的分类器函数。|21|是|  
 |StartTime|**datetime**|用户定义的分类器函数开始时间。|14|是|  

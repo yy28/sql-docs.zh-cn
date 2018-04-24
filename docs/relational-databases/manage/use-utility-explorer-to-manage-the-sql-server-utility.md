@@ -1,31 +1,32 @@
 ---
-title: "使用实用工具资源管理器管理 SQL Server 实用工具 | Microsoft Docs"
-ms.custom: 
+title: 使用实用工具资源管理器管理 SQL Server 实用工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c5714ee80d2c95fd89d2acf9e63f7784195e902
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用实用工具资源管理器管理 SQL Server 实用工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]实用工具资源管理器是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的一个组件，它连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例以便提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中所有对象的树视图。 实用工具资源管理器内容窗格提供了几种方法来查看与 SQL Server 的托管实例的运行状态有关的摘要数据和详细数据。 实用工具资源管理器还提供一个用户界面来查看和管理策略定义。 实用工具资源管理器的功能根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的对象而稍有不同，但通常包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的对象、数据和策略。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  实用工具资源管理器是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的一个组件，它连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例以便提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中所有对象的树视图。 实用工具资源管理器内容窗格提供了几种方法来查看与 SQL Server 的托管实例的运行状态有关的摘要数据和详细数据。 实用工具资源管理器还提供一个用户界面来查看和管理策略定义。 实用工具资源管理器的功能根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的对象而稍有不同，但通常包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的对象、数据和策略。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
 ## <a name="create-utility-control-point"></a>创建实用工具控制点  
  您必须首先创建实用工具控制点，然后才能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)或[创建 SQL Server 实用工具控制点（SQL Server 实用工具）](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)。  

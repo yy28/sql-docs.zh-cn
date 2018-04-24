@@ -1,34 +1,35 @@
 ---
-title: "RPC:Completed 事件类 | Microsoft Docs"
-ms.custom: 
+title: RPC:Completed 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/04/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f3dd125555180acb996579ff07f184a8092722c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9072aa25e0d5563aa4e632e0c6c2b3a72e409c7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-RPC:Completed 事件类指示某个远程过程调用已经完成。  
+  RPC:Completed 事件类指示某个远程过程调用已经完成。  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>RPC:Completed 事件类的数据列  
   
@@ -43,8 +44,8 @@ RPC:Completed 事件类指示某个远程过程调用已经完成。
 |Duration|**bigint**|事件占用的时间量。 单位为微秒，以 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]为开头。 单位为微秒，在早期版本中。|13|是|  
 |EndTime|**datetime**|远程过程调用的结束时间。|15|是|  
 |错误|**int**|给定事件的错误号。<br /><br /> 0 = 确定<br /><br /> 1 = 错误<br /><br /> 2 = 中止<br /><br /> 3 = 跳过|31|是|  
-|EventClass|**int**|事件类型 = 10。|27|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventClass|**int**|事件类型 = 10。|27|“否”|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  

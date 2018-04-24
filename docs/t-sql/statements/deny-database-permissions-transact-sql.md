@@ -1,16 +1,16 @@
 ---
-title: "DENY 数据库权限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 数据库权限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - database permissions [SQL Server], denying
 - denying permissions [SQL Server], databases
 ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47e308ae7c0b61af1c752a449abbff1876b87e2e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 372a418da64e17af15c07d92a38fa2242d145369
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 数据库权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +61,7 @@ DENY <permission> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *permission*  
+ permission  
  指定可对数据库拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  ALL  
@@ -75,13 +76,13 @@ DENY <permission> [ ,...n ]
  AS \<database_principal>  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。  
   
- *Database_user*  
+ Database_user  
  指定数据库用户。  
   
- *Database_role*  
+ Database_role  
  指定数据库角色。  
   
- *Application_role*  
+ Application_role  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定应用程序角色。  
@@ -89,16 +90,16 @@ DENY <permission> [ ,...n ]
  *Database_user_mapped_to_Windows_User*   
   指定映射到 Windows 用户的数据库用户。  
   
- *Database_user_mapped_to_Windows_Group*  
+ Database_user_mapped_to_Windows_Group  
   指定映射到 Windows 组的数据库用户。  
   
- *Database_user_mapped_to_certificate*  
+ Database_user_mapped_to_certificate  
   指定映射到证书的数据库用户。  
   
  Database_user_mapped_to_asymmetric_key  
   指定映射到非对称密钥的数据库用户。  
   
- *Database_user_with_no_login*  
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  

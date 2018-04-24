@@ -1,33 +1,35 @@
 ---
-title: "默认 SQL Server 网络协议配置 | Microsoft Docs"
-ms.custom: 
+title: 默认 SQL Server 网络协议配置 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3121357a686d3954cdf2d1fe389f40ce0015cb2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>默认 SQL Server 网络协议配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]为了增强安全性，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将对某些新的安装禁用网络连接。 如果你使用的是 Enterprise Edition、Standard Edition、Evaluation Edition 或 Workgroup Edition，或者存在以前安装的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，则不禁用 TCP/IP 网络连接。 对于所有的安装，将启用 shared memory 协议以允许本地到服务器的连接。 根据安装情况和安装选项， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器服务可能会停止。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+为了增强安全性， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将对某些新的安装禁用网络连接。 如果你使用的是 Enterprise Edition、Standard Edition、Evaluation Edition 或 Workgroup Edition，或者存在以前安装的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，则不禁用 TCP/IP 网络连接。 对于所有的安装，将启用 shared memory 协议以允许本地到服务器的连接。 根据安装情况和安装选项， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器服务可能会停止。
 
 安装之后，使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 配置管理器的“ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 网络配置”节点来配置网络协议。 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 配置管理器的“ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服务”节点以将 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器服务配置为自动启动。 有关详细信息，请参阅 [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 

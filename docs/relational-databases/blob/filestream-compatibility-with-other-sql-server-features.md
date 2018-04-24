@@ -1,35 +1,35 @@
 ---
-title: "FILESTREAM 与其他 SQL Server 功能的兼容性 | Microsoft Docs"
-ms.custom: 
+title: FILESTREAM 与其他 SQL Server 功能的兼容性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0eed847233401ffffc5e783e4de89b52e57910eb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d12643c8d4759283ff71efd29f9f84b55730a338
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 与其他 SQL Server 功能的兼容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-由于 FILESTREAM 数据存在于文件系统中，因此本主题提供了将 FILESTREAM 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的以下功能一起使用时的一些注意事项、指南和限制：  
+  由于 FILESTREAM 数据存在于文件系统中，因此本主题提供了将 FILESTREAM 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的以下功能一起使用时的一些注意事项、指南和限制：  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
   

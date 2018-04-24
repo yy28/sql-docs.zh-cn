@@ -1,31 +1,32 @@
 ---
-title: "配置具有 NVDIMM-N 回写式缓存的存储空间 | Microsoft Docs"
-ms.custom: 
+title: 配置具有 NVDIMM-N 回写式缓存的存储空间 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f44b4ff58ecef4ea1b7da5c9ceb7673368af194
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d24f8c39d4ab76c7887fb100a6235a1a8d775279
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>配置具有 NVDIMM-N 回写式缓存的存储空间
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Windows Server 2016 支持允许以极快地速度进行输入/输出 (I/O) 操作的 NVDIMM-N 设备。 使用这种设备的一种新颖方式是作为回写式缓存来实现低写入延迟。 本主题讨论如何将具有镜像 NVDIMM-N 回写式缓存的镜像存储空间设置为虚拟驱动器，以存储 SQL Server 事务日志。 如果你也打算利用其来存储数据表或其他数据，则你可能需在存储池中包含更多磁盘，或创建多个池（如果隔离很重要）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Windows Server 2016 支持允许以极快地速度进行输入/输出 (I/O) 操作的 NVDIMM-N设备。 使用这种设备的一种新颖方式是作为回写式缓存来实现低写入延迟。 本主题讨论如何将具有镜像 NVDIMM-N 回写式缓存的镜像存储空间设置为虚拟驱动器，以存储 SQL Server 事务日志。 如果你也打算利用其来存储数据表或其他数据，则你可能需在存储池中包含更多磁盘，或创建多个池（如果隔离很重要）。  
   
  若要使用此技术查看 Channel 9 视频，请查看 [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)（在 Windows Server 2016 中将稳定存储用作块存储）。  
   

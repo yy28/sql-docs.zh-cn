@@ -1,16 +1,16 @@
 ---
-title: "类型化的 XML 与非类型化的 XML 的比较 | Microsoft Docs"
-ms.custom: 
+title: 类型化的 XML 与非类型化的 XML 的比较 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - xml data type [SQL Server], variables
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 
+caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c6cde5809ed6f9a05ac01bf517f24ec5968d53d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-您可以创建 **xml** 类型的变量、参数和列。 您也可以将 XML 架构的集合与 **xml** 类型的变量、参数或列关联起来。 在这种情况下， **xml** 数据类型实例称作“类型化” 的实例。 否则，XML 实例称作“非类型化” 的实例。  
+  您可以创建 **xml** 类型的变量、参数和列。 您也可以将 XML 架构的集合与 **xml** 类型的变量、参数或列关联起来。 在这种情况下， **xml** 数据类型实例称作“类型化” 的实例。 否则，XML 实例称作“非类型化” 的实例。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正确的 XML 和 xml 数据类型  
  **xml** 数据类型可实现 ISO 标准的 **xml** 数据类型。 因此，它可以在非类型化的 XML 列中存储格式正确的 XML 1.0 版的文档以及具有文本节点和任意数量顶级元素的所谓的 XML 内容片段。 系统将检查数据格式是否正确，但不要求将列绑定到 XML 架构，并且拒绝在扩展意义上格式不正确的数据。 对于非类型化的 XML 变量和参数也是如此。  

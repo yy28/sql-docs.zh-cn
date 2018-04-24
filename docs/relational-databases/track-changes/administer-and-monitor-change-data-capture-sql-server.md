@@ -1,36 +1,36 @@
 ---
-title: "管理和监视变更数据捕获 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 管理和监视变更数据捕获 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: be4459a471c9b4530f2ef831b3fb5e1ce9b9ad28
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-本主题介绍如何管理和监视变更数据捕获。  
+  本主题介绍如何管理和监视变更数据捕获。  
   
 ##  <a name="Capture"></a> 捕获作业  
  可通过运行无参数的存储过程 **sp_MScdc_capture_job**来启动捕获作业。 此存储过程启动时，将从 msdb.dbo.cdc_jobs 中为捕获作业提取 *maxtrans*、 *maxscans*、 *continuous*和 *pollinginterval* 的配置值。 然后，这些配置值会作为参数传递到存储过程 **sp_cdc_scan**中。 该存储过程用于调用 **sp_replcmds** 以执行日志扫描。  

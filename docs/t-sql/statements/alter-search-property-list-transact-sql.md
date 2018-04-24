@@ -1,16 +1,16 @@
 ---
 title: ALTER SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SEARCH_PROPERTY_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], altering
 - ALTER SEARCH PROPERTY LIST statement
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b56d1ae0be7a8aaef93011d6ecfde378a3e8fe91
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be317f32f0308766e6ad50374d677c2784218ebc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ SELECT name FROM sys.registered_search_property_lists;
 > [!NOTE]  
 >  若要将给定搜索属性添加到搜索属性列表中，必须提供其属性集 GUID (property_set_guid) 和属性整数 ID (property_int_id)。 有关详细信息，请参阅本主题后面的“获取属性集 GUIDS 和标识符”。  
   
- *property_name*  
+ property_name  
  指定要用来标识全文查询中的属性的名称。 property_name 必须唯一标识属性集中的属性。 属性名称可以包含内部空格。 property_name 的最大长度为 256 个字符。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 System.Author 或 System.Contact.HomeAddress。  
   
  开发人员将需要使用你为 property_name 指定的值在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词中标识该属性。 因此，在添加属性时，务必指定一个在含义上可表示由指定的属性集 GUID (property_set_guid) 和属性标识符 (property_int_id) 定义属性的值。 有关属性名称的详细信息，请参阅本主题后面的“备注”。  

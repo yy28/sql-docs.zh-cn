@@ -1,16 +1,16 @@
 ---
-title: "增强合并复制性能 | Microsoft Docs"
-ms.custom: 
+title: 增强合并复制性能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - performance [SQL Server replication], merge replication
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4490561c6902497eba6d8a775790df1e19026a29
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 540fe157f33e4f5a9e597a9c1b5128a7acca26b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/08/2018
   
 -   考虑过度规范包括大型对象 (LOB) 数据类型的表。  
   
-     发生同步时，合并代理可能需要从分发服务器或订阅服务器读取和传输整个数据行。 如果该行包含使用 LOB 的列，即使这些列可能尚未更新，此过程也会要求增加内存分配并可能对性能产生负面影响。 为减少对性能产生负面影响的可能性，可考虑将 LOB 列放在一个单独的表中并对其余的行数据采用一对一关系。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)**。  
+     发生同步时，合并代理可能需要从分发服务器或订阅服务器读取和传输整个数据行。 如果该行包含使用 LOB 的列，即使这些列可能尚未更新，此过程也会要求增加内存分配并可能对性能产生负面影响。 为减少对性能产生负面影响的可能性，可考虑将 LOB 列放在一个单独的表中并对其余的行数据采用一对一关系。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)**。  
   
 ## <a name="publication-design"></a>发布设计  
   

@@ -2,7 +2,7 @@
 title: Windows 事件跟踪目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -20,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e48a2aa7178e80fd44eb27e0f61400328abbadc
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 424a671a4ee42865442d92e26b68f6941775c2ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/06/2018
     > [!IMPORTANT]  
     >  当第一个会话启动后不能再更改该文件路径。  
   
--   托管对象格式 (MOF) 文件位于 *\<安装路径>*\Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](http://go.microsoft.com/fwlink/?LinkId=92851) 。  
+-   托管对象格式 (MOF) 文件位于 *\<安装路径>* \Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](http://go.microsoft.com/fwlink/?LinkId=92851) 。  
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将 ETW 目标添加到扩展事件会话中，您必须在创建或更改事件会话时包括下面的语句：  

@@ -1,35 +1,35 @@
 ---
-title: "监视数据库镜像 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 监视数据库镜像 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 
+caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 96e9a421b1ec2ffd0e8b02cd24a9142fbc3fea07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本节介绍数据库镜像监视器和 **sp_dbmmonitor** 系统存储过程，说明数据库镜像监视的工作方式（包括“数据库镜像监视器作业”），并概括介绍可以监视的有关数据库镜像会话的信息。 此外，本节还介绍如何为一组预定义数据库镜像事件定义警告阈值，以及如何设置有关任意数据库镜像事件的警报。  
+  本节介绍数据库镜像监视器和 **sp_dbmmonitor** 系统存储过程，说明数据库镜像监视的工作方式（包括“数据库镜像监视器作业”），并概括介绍可以监视的有关数据库镜像会话的信息。 此外，本节还介绍如何为一组预定义数据库镜像事件定义警告阈值，以及如何设置有关任意数据库镜像事件的警报。  
   
  可以在镜像会话期间监视镜像数据库，以验证数据是否流动以及流动的情况。 若要对服务器实例上的一个或多个镜像数据库进行监视设置和管理，可以使用数据库镜像监视器或 **sp_dbmmonitor** 系统存储过程。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 02/23/2018
   
  创建 **“数据库镜像监视器作业”** 之后，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行，则默认情况下，每分钟调用一次作业。 然后，作业会调用 **sp_dbmmonitorupdate** 系统存储过程。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下，代理每分钟调用一次“数据库镜像监视器作业”，而作业随即调用 **sp_dbmmonitorupdate** 以更新状态表。 系统管理员可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程更改更新持续时间，他们还可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程查看当前的更新持续时间。 有关详细信息，请参阅 [sp_dbmmonitoraddmonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
+ 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理每分钟调用一次“数据库镜像监视器作业”，而作业随即调用 sp_dbmmonitorupdate 以更新状态表。 系统管理员可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程更改更新持续时间，他们还可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程查看当前的更新持续时间。 有关详细信息，请参阅 [sp_dbmmonitoraddmonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
   
 #### <a name="monitoring-database-mirroring-status-by-system-administrators"></a>监视数据库镜像状态（由系统管理员执行）  
  **sysadmin** 固定服务器角色成员可以查看和更新状态表。  
@@ -138,7 +138,7 @@ ms.lasthandoff: 02/23/2018
      系统管理员可以使用 **sp_dbmmonitorresults** 系统存储过程查看状态表，如果此状态表在前 15 秒内没有更新，则还可以选择对其进行更新。 此过程将调用 **sp_dbmmonitorupdate** 过程并返回一个或多个历史记录行，具体取决于过程调用中的请求量。 有关其结果集中状态的信息，请参阅 [sp_dbmmonitorresults (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)。  
   
 #### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>监视数据库镜像状态（由 dbm_monitor 成员执行）  
- 如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”页上的“主体日志 (\<时间>)”和“镜像日志 (\<时间>)”标签上查看时间。  
+ 如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”页上的“主体日志 (\<时间>)”**** 和“镜像日志 (\<时间>)”**** 标签上查看时间。  
   
  **dbm_monitor** 固定数据库角色成员使用“数据库镜像监视器作业”定期更新状态表。 如果作业不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，则状态便会迅速变旧，并且不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能分享相同的角色 - 主体或镜像。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
   

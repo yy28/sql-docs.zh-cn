@@ -1,16 +1,16 @@
 ---
 title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/19/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER CREDENTIAL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - authentication [SQL Server], credentials
 - ALTER CREDENTIAL statement
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f939a257a427007e4b0a101a933aafbff9e50546
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c323ab1cbda878a0bc31e0ebcce98d40ea8bf58f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,10 +57,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  credential_name  
  指定将要更改的凭据的名称。  
   
- IDENTITY ='identity_name'  
+ IDENTITY ='identity_name'****  
  指定从服务器外部进行连接时要使用的帐户名称。  
   
- SECRET ='secret'  
+ SECRET ='secret'****  
  指定发送身份验证所需的机密内容。 *secret* 是可选项。  
   
 ## <a name="remarks"></a>Remarks  
@@ -67,7 +68,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  使用服务主密钥对密码进行加密。 如果重新生成服务主密钥，则需要使用新服务主密钥对该密码重新加密。  
   
- 可以在 sys.credentials 目录视图中查看有关凭据的信息。  
+ 可以在 **sys.credentials** 目录视图中查看有关凭据的信息。  
   
 ## <a name="permissions"></a>权限  
  需要 ALTER ANY CREDENTIAL 权限。 如果该凭据是系统凭据，则要求具有 CONTROL SERVER 权限。  

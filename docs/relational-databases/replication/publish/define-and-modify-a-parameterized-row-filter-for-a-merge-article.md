@@ -1,16 +1,16 @@
 ---
-title: "定义和修改合并项目的参数化行筛选器 | Microsoft Docs"
-ms.custom: 
+title: 定义和修改合并项目的参数化行筛选器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - modifying filters, parameterized row
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25e02f17df0a17ac500eb4549f564b1b1f5f6200
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f459ae77584f5598ce5c71b3040f8bb2ecaa223d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/08/2018
         SELECT <published_columns> FROM [tableowner].[tablename] WHERE  
         ```  
   
-    -   默认文本无法更改；请使用标准的 SQL 语法在 WHERE 关键字后键入筛选子句。 参数化筛选器包括对系统函数 **HOST_NAME()** 和/或 **SUSER_SNAME()**的调用，或者对引用这两个函数之一或全部的用户定义函数的调用。 以下是参数化行筛选器的一个完整筛选子句的示例：  
+    -   默认文本无法更改；请使用标准的 SQL 语法在 WHERE 关键字后键入筛选子句。 参数化筛选器包括对系统函数 **HOST_NAME()** 和/或 **SUSER_SNAME()** 的调用，或者对引用这两个函数之一或全部的用户定义函数的调用。 以下是参数化行筛选器的一个完整筛选子句的示例：  
   
         ```  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  

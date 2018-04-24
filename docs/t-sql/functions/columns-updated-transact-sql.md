@@ -1,16 +1,16 @@
 ---
 title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLUMNS_UPDATED_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - column testing [SQL Server]
 - updated columns
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-caps.latest.revision: 
+caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a64b20ce0d429ccd257c178abdb7c04630e409ec
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0e825d73f773949618589618b522c0e4a8c09aa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ COLUMNS_UPDATED 针对多列执行的 UPDATE 或 INSERT 操作的进行测试。
   
 COLUMNS_UPDATED 返回一个或多个从左至右排序的字节，每字节中最不重要的位位于最右侧。 最左侧字节的最右侧位表示表中的第一列；向左的下一位表示第二列，依此类推。 如果创建了触发器的表包含八列以上，则 COLUMNS_UPDATED 返回多个字节，最左侧的为最不重要的字节。 在 INSERT 操作中 COLUMNS_UPDATED 将对所有列返回 TRUE，因为这些列插入了显式值或隐式 (NULL) 值。
   
-若要测试针对特定列的更新或插入操作，请遵循使用位运算符和所测试列的整数位掩码的语法。 例如，表 t1 包含列 C1、C2、C3、C4 和 C5。 若要验证列 C2、C3 和 C4 是否已全部更新（使用具有 UPDATE 触发器的表 t1），请遵循使用 &14;的语法。 若要测试是否只更新了列 C2，请指定 & 2。
+若要测试针对特定列的更新或插入操作，请遵循使用位运算符和所测试列的整数位掩码的语法。 例如，表 t1 包含列 C1、C2、C3、C4 和 C5。 若要验证列 C2、C3 和 C4 是否已全部更新（使用具有 UPDATE 触发器的表 t1），请遵循使用 & 14 的语法。 若要测试是否只更新了列 C2，请指定 & 2。
   
 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器内部的任意位置使用 COLUMNS_UPDATED。
   

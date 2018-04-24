@@ -1,35 +1,37 @@
 ---
-title: "插入外侧 Transact-SQL 代码段 | Microsoft Docs"
-ms.custom: 
+title: 插入外侧 Transact-SQL 代码段 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - snippets [Transact-SQL], surround with
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c1f1ec2e376c496e2b3dcdaf5ef032ba8c54745
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f45cb58ec7812a7e168fab577267c2d79fe54f4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入外侧 Transact-SQL 代码段
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]外侧代码段是一种模板，可将其作为在 BEGIN、IF 或 WHILE 块中插入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  外侧代码段是一种模板，可将其作为在 BEGIN、IF 或 WHILE 块中插入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
   
 ## <a name="inserting-surround-with-snippets"></a>插入外侧代码段  
  外侧代码段可以通过以下三种方式之一实现：键盘快捷键、“编辑”菜单和上下文菜单。  

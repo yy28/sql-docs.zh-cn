@@ -1,34 +1,35 @@
 ---
-title: "SP:StmtCompleted 事件类 | Microsoft Docs"
-ms.custom: 
+title: SP:StmtCompleted 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f236e410647dc6c00fb381d16e49e4bc268674f6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 61d52b494c13dece3d63b47b0597411d0f5ead2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SP:StmtCompleted 事件类指示存储过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已完成。  
+  SP:StmtCompleted 事件类指示存储过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已完成。  
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>SP:StmtCompleted 事件类的数据列  
   
@@ -41,8 +42,8 @@ SP:StmtCompleted 事件类指示存储过程中的 [!INCLUDE[tsql](../../include
 |DatabaseName|**nvarchar**|正在运行存储过程的数据库的名称。|35|是|  
 |Duration|**bigint**|事件占用的时间（微秒）。|13|是|  
 |EndTime|**datetime**|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。|15|是|  
-|EventClass|**int**|事件类型 = 45。|27|是|  
-|EventSequence|**int**|给定事件在请求中的顺序。|51|是|  
+|EventClass|**int**|事件类型 = 45。|27|“否”|  
+|EventSequence|**int**|给定事件在请求中的顺序。|51|“否”|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IntegerData|**int**|与在跟踪中捕获的事件类相关的整型值。|25|是|  
@@ -61,7 +62,7 @@ SP:StmtCompleted 事件类指示存储过程中的 [!INCLUDE[tsql](../../include
 |Reads|**bigint**|服务器代表事件所执行的逻辑磁盘读取次数。|16|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
 |RowCounts|**bigint**|受事件影响的行数。|48|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SourceDatabaseID|**int**|对象所在的数据库的 ID。|62|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  

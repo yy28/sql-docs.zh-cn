@@ -1,30 +1,31 @@
 ---
-title: "数据库引擎权限入门 | Microsoft Docs"
-ms.custom: 
+title: 数据库引擎权限入门 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,9 +165,9 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  上面列出的第一个权限 (`GRANT SELECT ON OBJECT::Region TO Ted;`) 的粒度最细，这就是说，该语句是授予 `SELECT`的可能的最少权限。 没有向它附带的从属对象授予权限。 好的主体始终会授予可能的最少权限，但（与此相反）以较高级别授权以简化授权系统。 因此，如果 Ted 需要对整个架构的权限，则只需在架构级别授予 `SELECT` 一次，而不是在表或视图级别授予 `SELECT` 多次。 数据库的设计对此策略可以有多成功的影响很大。 当数据库设计为需要相同权限的对象都包含在单个架构中时，此策略最有效。  
   
 ## <a name="list-of-permissions"></a>权限的列表  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 具有 230 个权限。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 拥有 219 个权限。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 拥有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 拥有 195 个权限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]和 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 拥有较少的权限，因为他们仅公开数据库引擎的一部分，且一些权限并不适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 下图显示了权限以及它们彼此之间的关系。 多次列出了某些更高级别的权限（如 `CONTROL SERVER`）。 在本主题中，海报太小了，因此无法查看。 单击图像下载 pdf 格式的**数据库引擎权限文章**。  
-  
-[![数据库引擎权限](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 具有 230 个权限。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 拥有 219 个权限。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 拥有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 拥有 195 个权限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]和 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 拥有较少的权限，因为他们仅公开数据库引擎的一部分，且一些权限并不适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  有关显示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 主体与服务器和数据库对象之间关系的图形，请参阅[权限层次结构（数据库引擎）](../../../relational-databases/security/permissions-hierarchy-database-engine.md)。  
   

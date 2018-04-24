@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: ae48076185149d0ba1306260459ec7b34dcc8123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中执行数据匹配。 该匹配过程基于匹配策略中的匹配规则标识匹配记录的群集，基于存活规则将每个群集中的一个记录指定为存活，并且导出结果。 DQS 还在计算机辅助过程中执行匹配过程（也称作消除重复），但您以交互方式创建匹配规则，并且从若干选择中选择存活规则，以便控制匹配过程。  
   
  执行匹配分为三个阶段：映射过程，在此过程中您可以确定数据源并将域映射到数据源；匹配过程，在此过程中您可以运行匹配分析；以及存活和导出过程，在此过程中您可以指定存活规则并导出匹配结果。 将在匹配活动向导的单独页面上执行上述每个过程，这使您可以在不同页面之间来回移动，重新运行过程，并结束特定的匹配过程和返回到过程的相同阶段。 DQS 向您提供有关源数据、匹配规则和匹配结果的统计信息，使您能够针对匹配制定明智的决策，从而优化匹配过程。  

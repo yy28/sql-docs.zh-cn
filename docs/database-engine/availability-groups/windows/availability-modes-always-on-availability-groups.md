@@ -2,7 +2,7 @@
 title: 可用性模式（AlwaysOn 可用性组）| Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd0254134d929dd14b1bddab09cae409b999b21d
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 5606780a525b57fa49093a85e33f62404fd6017a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,8 +75,8 @@ ms.lasthandoff: 04/03/2018
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 和 03|04|是|  
 |02|01|01 和 03|04|是|  
-|03||01 和 02|04|是|  
-|04|||01、02 和 03|是|  
+|03||01 和 02|04|“否”|  
+|04|||01、02 和 03|“否”|  
   
  通常，节点 04 作为异步提交副本，部署在灾难恢复站点中。 在故障转移到节点 04 后节点 01、02 和 03 保持在异步提交模式，这一情况有助于避免因两个站点之间网络延迟较长而导致您的可用性组中的性能下降。  
   

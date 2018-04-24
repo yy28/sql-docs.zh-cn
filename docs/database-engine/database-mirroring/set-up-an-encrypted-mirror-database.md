@@ -1,15 +1,16 @@
 ---
-title: "设置加密的镜像数据库 | Microsoft Docs"
-ms.custom: 
+title: 设置加密的镜像数据库 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cryptography [SQL Server], database mirroring
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - mirror database [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc5b70782957f25613b7f1cad25816cfe0df6eea
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: aa453036f6ebf920ee4d1e6b9139727216c86b94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>设置加密的镜像数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要对镜像数据库的数据库主密钥启用自动解密，必须提供用于加密该镜像服务器实例的主密钥的口令。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本包括传输密码的机制。 在开始数据库镜像之前，请使用 **sp_control_dbmasterkey_password** 为数据库主密钥创建一个凭据。 必须为要镜像的每个数据库重复此过程。 有关详细信息，请参阅 [sp_control_dbmasterkey_password (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  若要对镜像数据库的数据库主密钥启用自动解密，必须提供用于加密该镜像服务器实例的主密钥的口令。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本包括传输密码的机制。 在开始数据库镜像之前，请使用 **sp_control_dbmasterkey_password** 为数据库主密钥创建一个凭据。 必须为要镜像的每个数据库重复此过程。 有关详细信息，请参阅 [sp_control_dbmasterkey_password (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)。  
   
 > [!CAUTION]  
 >  对于 **sa** 和其他特权级别高的服务器主体无法访问的数据库，不要启用其故障转移解密功能。 可以对数据库进行配置，以便服务主密钥无法对其密钥层次结构进行解密。 对于包含 **sa** 或其他高特权服务器主体不应访问的信息的数据库来说，此选项是一项深层防御措施。 为此类数据库启用故障转移解密将解除此深层防御措施，使 **sa** 和其他高特权服务器主体能够解密该数据库。  

@@ -1,30 +1,33 @@
 ---
-title: "显示派生层次结构中的多对多关系 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 显示派生层次结构中的多对多关系 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e97bda2761c85e690bf43e568371d7dc25584b41
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: bbe98747dd35a5320ef2878a72908cae8825b595
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   派生层次结构 (DH) 不仅可显示一对多关系，现在还可以显示多对多关系。  
   
 ## <a name="many-to-many-m2m-relationships"></a>多对多 (M2M) 关系  
@@ -50,13 +53,13 @@ ms.lasthandoff: 03/05/2018
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- 现在预览将显示按注册的定型类进行分组的员工。 由于这是一个 M2M 关系，因此每个子成员可以拥有多个父级。 在上面的示例中，员工 **6 {Hillman，Reinout N}** 在 **1 {Master Data Services 101}** 和 **4 {Career-Limiting Moves}**这两个类中注册为了学生。  
+ 现在预览将显示按注册的定型类进行分组的员工。 由于这是一个 M2M 关系，因此每个子成员可以拥有多个父级。 在上面的示例中，员工 **6 {Hillman，Reinout N}** 在 **1 {Master Data Services 101}** 和 **4 {Career-Limiting Moves}** 这两个类中注册为了学生。  
   
  此映射关系也可以反转显示，即按学生将类进行分组：  
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- 同样，我们会看到子级在多个父级下的显示方式：定型类 **1 {Master Data Services 101}** 同时显示在 **6 {Hillman, Reinout N}** 和 **40 {Ford, Jeffrey L}**下方。  
+ 同样，我们会看到子级在多个父级下的显示方式：定型类 **1 {Master Data Services 101}** 同时显示在 **6 {Hillman, Reinout N}** 和 **40 {Ford, Jeffrey L}** 下方。  
   
  映射实体 **ClassRegistration** 的成员未在派生层次结构内的任何位置显示。 它们只用于定义层次结构中父级和子级成员之间的关系。  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 03/05/2018
 ### <a name="M2MSample"></a> 示例模型中的 M2M 关系  
 有关 M2M 关系的演示，请查看 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]附带的 Customer 示例模型中的 Region Climate 派生层次结构。   
   
-如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**关联。  
+如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 关联。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   

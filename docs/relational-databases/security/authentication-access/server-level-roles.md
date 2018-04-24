@@ -1,16 +1,16 @@
 ---
-title: "服务器级别角色 | Microsoft Docs"
-ms.custom: 
+title: 服务器级别角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.Security.NT_AUTHORITY.SYSTEM
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a095d9f3e7839a2f3cfa14a2bf49790776f0cd1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7c77f856173a581fbab9d462af15279b5cc983a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-level-roles"></a>服务器级别角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="fixed-server-level-roles"></a>服务器级的固定角色  
  下表显示了服务器级的固定角色及其权限。  
   
-|服务器级的固定角色|说明|  
+|服务器级的固定角色|Description|  
 |------------------------------|-----------------|  
 |**sysadmin**|sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。|  
 |**serveradmin**|**serveradmin** 固定服务器角色的成员可以更改服务器范围的配置选项和关闭服务器。|  
@@ -83,7 +84,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>使用服务器级角色  
  下表介绍了可以用于服务器级角色的命令、视图和功能。  
   
-|功能|类型|说明|  
+|功能|类型|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|元数据|返回服务器级角色的列表。|  
 |[sp_helpsrvrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|元数据|返回有关服务器级角色成员的信息。|  

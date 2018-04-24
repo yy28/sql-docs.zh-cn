@@ -1,16 +1,16 @@
 ---
-title: "使用插入的和删除的表 | Microsoft Docs"
-ms.custom: 
+title: 使用插入的和删除的表 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserted tables
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 297a59dd264361ece94525f1f8a046a0cccf2dad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
+  DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
   
  在 DML 触发器中，inserted 和 deleted 表主要用于执行以下操作：  
   
@@ -57,7 +58,7 @@ DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!I
 > [!NOTE]  
 >  如果触发器操作取决于数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext**或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext**或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  **在触发器中使用插入的表以强制实施业务规则的示例**  
   

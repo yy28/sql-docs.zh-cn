@@ -1,16 +1,16 @@
 ---
-title: "升级复制数据库 | Microsoft Docs"
-ms.custom: 
+title: 升级复制数据库 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 
+caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 670b4f90c0461de12718fcf5a8cf2dfc97817b4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-replicated-databases"></a>升级复制数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本升级复制数据库；在升级某一节点时，不需要停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则：  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制数据库；在升级某一节点时，不需要停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则：  
   
 -   分发服务器的版本可以是高于或等于发布服务器版本的任何版本（在许多情况下，分发服务器与发布服务器是同一个实例）。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/09/2018
     -   合并发布的订阅服务器版本可以是低于或等于发布服务器版本的任何版本。  
   
 > [!NOTE]  
->  在“安装帮助”文档和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中可以查看此文章。 “安装帮助”文档中显示为粗体文本的文章链接指向仅在联机丛书中提供的文章。 **可以使用[本帖](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**中所述的选项针对发布服务器、订阅服务器和分发服务器设计升级策略。 
+>  在“安装帮助”文档和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中可以查看此文章。 “安装帮助”文档中显示为粗体文本的文章链接指向仅在联机丛书中提供的文章。 **可以使用[本帖](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)** 中所述的选项针对发布服务器、订阅服务器和分发服务器设计升级策略。 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>在升级前先运行用于事务复制的日志读取器代理  
  升级 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 之前，必须确保已发布表中的所有已提交事务已由日志读取器代理进行了处理。 若要确保所有事务均得到处理，请针对包含事务发布的每个数据库执行以下步骤：  

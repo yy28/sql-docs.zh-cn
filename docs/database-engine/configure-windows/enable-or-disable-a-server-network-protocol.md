@@ -1,16 +1,16 @@
 ---
-title: "启用或禁用服务器网络协议 | Microsoft Docs"
-ms.custom: 
+title: 启用或禁用服务器网络协议 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
@@ -23,26 +23,26 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd18129e43db63cf01623e6b5706c34d79f4ba8e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8245d396dac75dc09fdc3ae6bab41d582ef1c790
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所有网络协议都是由  安装程序安装的，可以启用也可以禁用这些网络协议。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或 PowerShell，在  中启用或禁用服务器网络协议。 必须停止并重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，更改才能生效。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所有网络协议都是由  安装程序安装的，可以启用也可以禁用这些网络协议。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或 PowerShell，在  中启用或禁用服务器网络协议。 必须停止并重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，更改才能生效。  
   
 > [!IMPORTANT]  
 >  在安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 过程中，为 BUILTIN\Users 组添加一个登录名。 这可以使计算机的所有通过身份验证的用户作为 public 角色成员访问 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例。 可以安全地删除 BUILTIN\Users 登录名，以限制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对具有单独登录名或为使用此登录名的其他 Windows 组成员的计算机用户的访问。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至 [!INCLUDE[sssql14](../../includes/sssql14-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据提供商在默认情况下仅支持 TLS 1.0 和 SSL 3.0。 如果通过更改操作系统 SChannel 层强制使用其他协议（如 TLS 1.1 或 TLS 1.2），与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接可能会失败，除非已安装相应的更新，将 TLS 1.1 和 1.2 的支持添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，<a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">此处</a>列出了这些更新。 从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，SQL Server 的所有发布版本均包括 TLS 1.2 支持，无需安全其他更新。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至 [!INCLUDE[sssql14](../../includes/sssql14-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据提供商在默认情况下仅支持 TLS 1.0 和 SSL 3.0。 如果通过更改操作系统 SChannel 层强制使用其他协议（如 TLS 1.1 或 TLS 1.2），与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接可能会失败，除非已安装相应的更新，将 TLS 1.1 和 1.2 的支持添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，<a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">此处</a>列出了这些更新。 从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，SQL Server 的所有发布版本均包括 TLS 1.2 支持，无需安全其他更新。
   
  **本主题内容**  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/23/2018
   
 4.  在控制台窗格中，单击“SQL Server 服务”。  
   
-5.  在详细信息窗格中，右键单击“SQL Server (\<实例名称>)”，然后单击“重启”，停止并重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+5.  在详细信息窗格中，右键单击“SQL Server (\<实例名称>)”****，然后单击“重启”，停止并重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   

@@ -1,36 +1,36 @@
 ---
-title: "数据库镜像监视器概述 | Microsoft Docs"
-ms.custom: 
+title: 数据库镜像监视器概述 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3a15bc793ad97e19a80e13d6b79a74f6bf677592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-如果有适当的权限，您可以使用数据库镜像监视器来监视服务器实例上的镜像数据库的任何子集。 通过监视可以验证数据库镜像会话中是否有数据流动以及数据流动的方式。 数据库镜像监视还有助于排查数据流减少的原因。  
+  如果有适当的权限，您可以使用数据库镜像监视器来监视服务器实例上的镜像数据库的任何子集。 通过监视可以验证数据库镜像会话中是否有数据流动以及数据流动的方式。 数据库镜像监视还有助于排查数据流减少的原因。  
   
  可以在每个故障转移伙伴上分别注册要监视的镜像数据库。 注册数据库时，数据库镜像监视器将缓存有关数据库的以下信息：  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/23/2018
   
  *<SYSTEM_NAME>*[**\\***<instance_name>*]  
   
- 其中，<SYSTEM_NAME> 是服务器实例所在系统的名称。 对于非默认服务器实例，实例名也显示为：<SYSTEM_NAME>\\<instance_name>。  
+ 其中，<SYSTEM_NAME> 是服务器实例所在系统的名称。 对于非默认服务器实例，实例名也显示为：<SYSTEM_NAME>\\<instance_name>**。  
   
  *<MIRROR_SERVER>*  
  当前作为镜像服务器实例的伙伴的名称。 格式与主体服务器的格式相同。  

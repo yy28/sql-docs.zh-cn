@@ -2,7 +2,7 @@
 title: 确定有效的数据库引擎权限 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -16,16 +16,17 @@ helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d4142a9779b689d26d775d33926496e78fec7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>确定有效的数据库引擎权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,9 +92,8 @@ SELECT DP1.name AS DatabaseRoleName,
 
 此系统具有弹性，这意味着，如果将它设置得很精确，它可能会变得很复杂。 为了简化操作，它可以帮助创建角色、将权限分配给角色，然后将用户组添加到角色。 如果数据库开发团队按架构划分活动，然后向整个架构而不是单个表或过程授予角色权限，则操作就会更容易。 实际方案很复杂，且业务需求可创建意外的安全要求。   
 
-下图显示了权限以及它们彼此之间的关系。 多次列出了某些更高级别的权限（如 `CONTROL SERVER`）。 在本文中，海报太小了，因此无法查看。 单击图像下载 pdf 格式的**数据库引擎权限文章**。  
-  
- [![数据库引擎权限](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+
 
 ### <a name="security-classes"></a>安全类
 

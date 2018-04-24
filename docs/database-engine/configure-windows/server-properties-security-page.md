@@ -2,7 +2,7 @@
 title: 服务器属性（“安全性”页）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba93d13e40d98ff36933bb18353b249c7b0e32ba
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 620776f8d4f968be1811da4637c123d03364cea6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---security-page"></a>服务器属性 -“安全性”页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看或修改服务器安全选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此页可以查看或修改服务器安全选项。  
   
 ## <a name="server-authentication"></a>服务器身份验证  
  **Windows 身份验证模式**  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="options"></a>“常规”  
  **启用 C2 审核跟踪**  
- 审核对语句和对象的所有访问尝试，并记录到文件中，对于默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，该文件位于 \MSSQL\Data 目录中，对于*命名实例，该文件位于 \MSSQL$*instancename [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Data 目录中。 有关详细信息，请参阅 [c2 审核模式服务器配置选项](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)。  
+ 审核对语句和对象的所有访问尝试，并记录到文件中，对于默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，该文件位于 \MSSQL\Data 目录中，对于*命名实例，该文件位于 \MSSQL$* instancename [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Data 目录中。 有关详细信息，请参阅 [c2 审核模式服务器配置选项](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)。  
   
  **跨数据库所有权链接**  
  选中此项将允许数据库成为跨数据库所有权链的源或目标。 有关详细信息，请参阅 [跨数据库所有权链接服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  

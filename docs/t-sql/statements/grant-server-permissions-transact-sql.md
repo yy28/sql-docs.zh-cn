@@ -1,16 +1,16 @@
 ---
-title: "GRANT 服务器权限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT 服务器权限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - granting permissions [SQL Server], servers
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 424bb9cf8db72c399a733d1e4ffe3eb55bd14427
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3239f78d4e3114d652892e7de9ab3dfe1adb93e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 服务器权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *permission*  
+ permission  
  指定可对服务器授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  TO \<grantee_principal> 指定要向其授予权限的主体。  
@@ -87,7 +87,7 @@ GRANT permission [ ,...n ]
  SQL_Server_login_mapped_to_asymmetric_key  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *server_role*  
+ server_role  
  指定用户定义的服务器角色。  
   
 ## <a name="remarks"></a>Remarks  

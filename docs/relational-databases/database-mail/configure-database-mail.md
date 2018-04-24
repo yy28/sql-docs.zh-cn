@@ -2,7 +2,7 @@
 title: 配置数据库邮件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -47,11 +47,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -225,7 +225,7 @@ ms.lasthandoff: 04/10/2018
  **基本身份验证**  
  指定 SMTP 服务器要求的用户名和密码。  
   
- **用户名**  
+ **User name**  
  查看或更新数据库邮件登录 SMTP 服务器所用的用户名。 如果 SMTP 服务器要求基本身份验证，则需要提供用户名。  
   
  **密码**  
@@ -293,7 +293,7 @@ ms.lasthandoff: 04/10/2018
  **“上移”**  
  提高所选帐户的故障转移优先级。  
   
- **下移**  
+ **“下移”**  
  降低所选帐户的故障转移优先级。  
   
  **Priority**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 04/10/2018
   
  配置文件可以是默认的配置文件。 在这种情况下，用户或角色可以使用该配置文件发送电子邮件，而无需显式指定配置文件。 如果发送电子邮件的用户或角色具有默认的专用配置文件，则数据库邮件将使用该配置文件。 如果用户或角色没有默认的专用配置文件，则 **sp_send_dbmail** 将使用 **msdb** 数据库的默认公共配置文件。 如果用户或角色没有默认的专用配置文件，且该数据库也没有默认的公共配置文件，则 **sp_send_dbmail** 将返回错误。  
   
- **用户名**  
+ **User name**  
  在 **msdb** 数据库中选择用户或角色的名称。  
   
  **访问**  

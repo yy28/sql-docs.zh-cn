@@ -1,16 +1,16 @@
 ---
-title: "估计表的大小 | Microsoft Docs"
-ms.custom: 
+title: 估计表的大小 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - pages [SQL Server], space
@@ -28,19 +28,21 @@ helpviewer_keywords:
 - reserved free rows per page [SQL Server]
 - calculating table size
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7adc1ecdbfa4ebcd55c905fae800d8d6301f1463
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2d66d53e24fc3fa8a5f44c2b7d6042ff8efab7ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="estimate-the-size-of-a-table"></a>估计表的大小
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可以使用下列步骤估计表中存储数据所需的空间：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  可以使用下列步骤估计在表中存储数据所需的空间：  
   
 1.  按照 [估计堆的大小](../../relational-databases/databases/estimate-the-size-of-a-heap.md) 或 [估计聚集索引的大小](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)中的说明来计算堆或聚集索引所需空间。  
   

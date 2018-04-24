@@ -1,31 +1,32 @@
 ---
-title: "行压缩的实现 | Microsoft Docs"
-ms.custom: 
+title: 行压缩的实现 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: compression
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-compression
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c6e9c100866e8a73e890d3c32e9abf7ad560aa18
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9647bcc33bb751e2e658d75c4f53fa7dc6893a85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/18/2018
   
 |数据类型|是否影响存储？|Description|  
 |---------------|--------------------------|-----------------|  
-|**tinyint**|是|1 个字节是所需的最小存储单位。|  
+|**tinyint**|“否”|1 个字节是所需的最小存储单位。|  
 |**int**|是|如果值使用 1 个字节即可存储，则将只使用 1 个字节。|  
 |**int**|是|只使用所需字节数。 例如，如果值可以用 1 个字节存储，则将只占用 1 个字节的存储空间。|  
 |**bigint**|是|只使用所需字节数。 例如，如果值可以用 1 个字节存储，则将只占用 1 个字节的存储空间。|  
@@ -59,29 +60,29 @@ ms.lasthandoff: 01/18/2018
 |**money**|是|使用 8 字节整数表示整数数据。 货币值乘以 10000，并在存储生成的整数值时删除小数点之后的所有位数。 此类型的范围比 **smallmoney**更大。 此类型具有类似于整数类型存储优化的存储优化。|  
 |**float**|是|不存储带零的最低有效字节。 **float** 压缩主要适用于尾数中的非小数值。|  
 |**real**|是|不存储带零的最低有效字节。 **real** 压缩主要适用于尾数中的非小数值。|  
-|**smalldatetime**|是|使用两个 2 字节整数表示整数数据。 日期占用 2 个字节。 它是自 1901 年 1 月 1 日以来经过的天数。 从 1902 年起便需要 2 个字节。 因此，自该时间之后的日期不会节省任何空间。<br /><br /> 时间是自午夜以来经过的分钟数。 超过 4AM 后，时间值就开始使用第二个字节。<br /><br /> 如果 **smalldatetime** 只用于表示日期（常见情况），则时间为 0.0。 通过为行压缩以最高有效字节格式存储时间，压缩操作可节省 2 个字节。|  
+|**smalldatetime**|“否”|使用两个 2 字节整数表示整数数据。 日期占用 2 个字节。 它是自 1901 年 1 月 1 日以来经过的天数。 从 1902 年起便需要 2 个字节。 因此，自该时间之后的日期不会节省任何空间。<br /><br /> 时间是自午夜以来经过的分钟数。 超过 4AM 后，时间值就开始使用第二个字节。<br /><br /> 如果 **smalldatetime** 只用于表示日期（常见情况），则时间为 0.0。 通过为行压缩以最高有效字节格式存储时间，压缩操作可节省 2 个字节。|  
 |**datetime**|是|使用两个 4 字节整数表示整数数据。 此整数值表示自 1900 年 1 月 1 日以来经过的天数。 前 2 个字节最高可以表示 2079 年。 在 2079 年之前，此类压缩始终可以节省 2 个字节。 每个整数值表示 3.33 毫秒。 压缩在前五分钟只占用前 2 个字节，在 4PM 之后将使用第四个字节。 因此，压缩在 4PM 之后只能节省 1 个字节。 当 **datetime** 像任何其他整数一样进行压缩时，压缩可在日期方面节省 2 个字节。|  
-|**date**|是|使用 3 个字节表示整数数据。 这表示自 0001 年 1 月 1 日起的日期。 对于当代日期，行压缩使用所有 3 个字节。 这不会节省任何空间。|  
-|**time**|是|使用 3 到 6 个字节表示整数数据。 有从 0 到 9 的各种精度，会占用 3 到 6 个字节。 压缩后的空间按如下方式使用：<br /><br /> **精度 = 0。字节数 = 3**。 每个整数值表示一秒。 使用 2 个字节，压缩最长可表示到 6PM，这样可以节省 1 个字节。<br /><br /> **精度 = 1。字节数 = 3**。 每个整数值表示 1/10 秒。 在 2AM 之前，压缩使用第三个字节。 结果是只能节省很少的空间。<br /><br /> **精度 = 2。字节数 = 3**。 与前一情况类似，节省空间的可能性很小。<br /><br /> **精度 = 3。字节数 = 4**。 由于直到 5AM 都将使用前 3 个字节，因而节省的空间很小。<br /><br /> **精度 = 4。字节数 = 4**。 前 27 秒会使用前 3 个字节。 不会节省任何空间。<br /><br /> **精度 = 5，字节数 = 5**。 在中午 12 点之后，将使用第五个字节。<br /><br /> **精度 = 6 和 7，字节数 = 5**。 不能实现任何节省。<br /><br /> **精度 = 8，字节数 = 6**。 在 3AM 之后将使用第六个字节。<br /><br /> <br /><br /> 请注意，进行行压缩时存储不做任何更改。 总体上而言，压缩 **time** 数据类型不会获得很大的空间节省。|  
+|**date**|“否”|使用 3 个字节表示整数数据。 这表示自 0001 年 1 月 1 日起的日期。 对于当代日期，行压缩使用所有 3 个字节。 这不会节省任何空间。|  
+|**time**|“否”|使用 3 到 6 个字节表示整数数据。 有从 0 到 9 的各种精度，会占用 3 到 6 个字节。 压缩后的空间按如下方式使用：<br /><br /> **精度 = 0。字节数 = 3**。 每个整数值表示一秒。 使用 2 个字节，压缩最长可表示到 6PM，这样可以节省 1 个字节。<br /><br /> **精度 = 1。字节数 = 3**。 每个整数值表示 1/10 秒。 在 2AM 之前，压缩使用第三个字节。 结果是只能节省很少的空间。<br /><br /> **精度 = 2。字节数 = 3**。 与前一情况类似，节省空间的可能性很小。<br /><br /> **精度 = 3。字节数 = 4**。 由于直到 5AM 都将使用前 3 个字节，因而节省的空间很小。<br /><br /> **精度 = 4。字节数 = 4**。 前 27 秒会使用前 3 个字节。 不会节省任何空间。<br /><br /> **精度 = 5，字节数 = 5**。 在中午 12 点之后，将使用第五个字节。<br /><br /> **精度 = 6 和 7，字节数 = 5**。 不能实现任何节省。<br /><br /> **精度 = 8，字节数 = 6**。 在 3AM 之后将使用第六个字节。<br /><br /> <br /><br /> 请注意，进行行压缩时存储不做任何更改。 总体上而言，压缩 **time** 数据类型不会获得很大的空间节省。|  
 |**datetime2**|是|使用 6 到 9 个字节表示整数数据。 前 4 个字节表示日期。 时间占用的字节数将取决于指定的时间精度。<br /><br /> 此整数值表示自 0001 年 1 月 1 日以来经过的天数，上限为 9999 年 12 月 31 日。 若要表示 2005 年的日期，压缩操作将使用 3 个字节。<br /><br /> 对于时间则不会节省任何空间，这是因为压缩允许对于各种时间精度使用 2 到 4 个字节。 因此，当时间精度为一秒时，压缩使用 2 个字节来存储时间，在 255 秒之后将使用第二个字节。|  
 |**datetimeoffset**|是|类似于 **datetime2**，所不同的是格式为 HH:MM 的时区占用 2 个字节。<br /><br /> 就像 **datetime2**，压缩可以节省 2 个字节。<br /><br /> 对于时区值，在大多数情况下 MM 值都可能是 0。 因此，压缩可能会节省 1 个字节。<br /><br /> 进行行压缩时存储不做任何更改。|  
 |**char**|是|将删除尾随填充字符。 请注意，不管使用何种排序规则， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 均将插入相同的填充字符。|  
-|**varchar**|是|无效。|  
-|**text**|是|无效。|  
+|**varchar**|“否”|无效。|  
+|**text**|“否”|无效。|  
 |**nchar**|是|将删除尾随填充字符。 请注意，不管使用何种排序规则， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 均将插入相同的填充字符。|  
-|**nvarchar**|是|无效。|  
-|**ntext**|是|无效。|  
+|**nvarchar**|“否”|无效。|  
+|**ntext**|“否”|无效。|  
 |**binary**|是|将删除尾随的零。|  
-|**varbinary**|是|无效。|  
-|**图像**|是|无效。|  
-|**cursor**|是|无效。|  
+|**varbinary**|“否”|无效。|  
+|**图像**|“否”|无效。|  
+|**cursor**|“否”|无效。|  
 |**timestamp** / **rowversion**|是|使用 8 个字节表示整数数据。 每个数据库均维护有一个时间戳计数器，并且它的值从 0 开始。 会像压缩任何其他整数值一样压缩此值。|  
-|**sql_variant**|是|无效。|  
-|**uniqueidentifier**|是|无效。|  
-|**table**|是|无效。|  
-|**xml**|是|无效。|  
-|用户定义类型|是|这在内部表示为 **varbinary**。|  
-|FILESTREAM|是|这在内部表示为 **varbinary**。|  
+|**sql_variant**|“否”|无效。|  
+|**uniqueidentifier**|“否”|无效。|  
+|**table**|“否”|无效。|  
+|**xml**|“否”|无效。|  
+|用户定义类型|“否”|这在内部表示为 **varbinary**。|  
+|FILESTREAM|“否”|这在内部表示为 **varbinary**。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据压缩](../../relational-databases/data-compression/data-compression.md)   

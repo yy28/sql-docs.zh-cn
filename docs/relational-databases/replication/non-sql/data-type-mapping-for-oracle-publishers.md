@@ -1,32 +1,32 @@
 ---
-title: "Oracle 发布服务器的数据类型映射 | Microsoft Docs"
-ms.custom: 
+title: Oracle 发布服务器的数据类型映射 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 241e3a775bc00fbd1d8c9a773a75c9cf25138ae2
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: bc5541ca0f7c9e788c2baf0db663b4185236a86a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,30 +41,30 @@ ms.lasthandoff: 03/08/2018
 |CHAR([1-2000])|CHAR([1-2000])|是|  
 |CLOB|VARCHAR(MAX)|是|  
 |DATE|DATETIME|是|  
-|FLOAT|FLOAT|是|  
-|FLOAT([1-53])|FLOAT([1-53])|是|  
-|FLOAT([54-126])|FLOAT|是|  
+|FLOAT|FLOAT|“否”|  
+|FLOAT([1-53])|FLOAT([1-53])|“否”|  
+|FLOAT([54-126])|FLOAT|“否”|  
 |INT|NUMERIC(38)|是|  
 |INTERVAL|DATETIME|是|  
 |LONG|VARCHAR(MAX)|是|  
 |LONG RAW|IMAGE|是|  
-|NCHAR([1-1000])|NCHAR([1-1000])|是|  
+|NCHAR([1-1000])|NCHAR([1-1000])|“否”|  
 |NCLOB|NVARCHAR(MAX)|是|  
 |NUMBER|FLOAT|是|  
-|NUMBER([1-38])|NUMERIC([1-38])|是|  
+|NUMBER([1-38])|NUMERIC([1-38])|“否”|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|是|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|是|  
-|RAW([1-2000])|VARBINARY([1-2000])|是|  
-|real|FLOAT|是|  
-|ROWID|CHAR(18)|是|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|“否”|  
+|RAW([1-2000])|VARBINARY([1-2000])|“否”|  
+|real|FLOAT|“否”|  
+|ROWID|CHAR(18)|“否”|  
 |TIMESTAMP|DATETIME|是|  
 |TIMESTAMP(0-7)|DATETIME|是|  
 |TIMESTAMP(8-9)|DATETIME|是|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|是|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|是|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|“否”|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|是|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|是|  
-|UROWID|CHAR(18)|是|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|“否”|  
+|UROWID|CHAR(18)|“否”|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|是|  
   
 ## <a name="considerations-for-data-type-mapping"></a>数据类型映射注意事项  

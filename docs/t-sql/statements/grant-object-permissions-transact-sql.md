@@ -1,16 +1,16 @@
 ---
-title: "GRANT 对象权限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT 对象权限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - granting permissions [SQL Server], objects
 - GRANT statement, objects
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7346cb0ddd69277fd9a7336feaba766fb1ec5b0b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 238d5eb98aac1f1e73f911eff61cbd8a059f94a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 对象权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +63,7 @@ GRANT <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *permission*  
+ permission  
  指定可以授予的对架构包含的对象的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  ALL  
@@ -94,28 +95,28 @@ PRIVILEGES
   
  AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。  
   
- *Database_user*  
+ Database_user  
  指定数据库用户。  
   
- *Database_role*  
+ Database_role  
  指定数据库角色。  
   
- *Application_role*  
+ Application_role  
  指定应用程序角色。  
   
- *Database_user_mapped_to_Windows_User*  
+ Database_user_mapped_to_Windows_User  
  指定映射到 Windows 用户的数据库用户。  
   
- *Database_user_mapped_to_Windows_Group*  
+ Database_user_mapped_to_Windows_Group  
  指定映射到 Windows 组的数据库用户。  
   
- *Database_user_mapped_to_certificate*  
+ Database_user_mapped_to_certificate  
  指定映射到证书的数据库用户。  
   
  Database_user_mapped_to_asymmetric_key  
  指定映射到非对称密钥的数据库用户。  
   
- *Database_user_with_no_login*  
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  

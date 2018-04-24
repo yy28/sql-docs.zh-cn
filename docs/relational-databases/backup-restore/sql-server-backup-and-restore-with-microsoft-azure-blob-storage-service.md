@@ -1,28 +1,28 @@
 ---
-title: "使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原 | Microsoft Docs"
-ms.custom: 
+title: 使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16c41c9d1898303b58a40f6acce36968b571b299
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e3cc1e3989a977d3785426737e2f5783a4a33bf6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/18/2018
   
  [Microsoft Azure 价格计算器](http://go.microsoft.com/fwlink/?LinkId=277060) 可以帮助估算你的成本。  
   
- **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅 **定价详细信息** 文章中的[“数据管理”](http://go.microsoft.com/fwlink/?LinkId=277059) 一节。  
+ **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅[定价详细信息](http://go.microsoft.com/fwlink/?LinkId=277059)文章中的“数据管理”  一节。  
   
  **数据传输：** 传输到 Microsoft Azure 的入站数据是免费的。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](http://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
   

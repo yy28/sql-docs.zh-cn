@@ -1,16 +1,16 @@
 ---
-title: "使用 sqlcmd 实用工具 | Microsoft Docs"
-ms.custom: 
+title: 使用 sqlcmd 实用工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 
+caps.latest.revision: 50
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e11152d3dc2342bbad99be13742155422c929158
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]sqlcmd 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
   
 -   用户输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，请在 Windows 搜索中输入“cmd”，然后单击“命令提示符”将其打开。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
@@ -111,7 +113,7 @@ ms.lasthandoff: 01/24/2018
   
  在 **sqlcmd** 提示符中，可以键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 **sqlcmd** 命令，如 **GO** 和 **EXIT**。 每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在称为“语句缓存”的缓冲区中。 键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令并按 Enter 键后，这些语句将发送到 **GO** 。 若要退出 **sqlcmd**，请在新行的开头键入 **EXIT** 或 **QUIT** 。  
   
- 若要清除语句缓存，请键入 **:RESET**。 键入 **^C** 可使 **sqlcmd** 退出。 在发出**^C** 命令后，还可以用 **^C** 停止语句缓存的执行。  
+ 若要清除语句缓存，请键入 **:RESET**。 键入 **^C** 可使 **sqlcmd** 退出。 在发出 **^C** 命令后，还可以用 **^C** 停止语句缓存的执行。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **提示符中输入** :ED **sqlcmd** 提示符）。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入“GO”以运行修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   

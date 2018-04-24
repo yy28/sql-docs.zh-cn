@@ -1,16 +1,16 @@
 ---
-title: "DENY 架构权限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 架构权限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - permissions [SQL Server], schemas
 - DENY statement, schemas
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f74655c422b1a18068aa77b111f1d441bc517cce
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4b966b2f6fa61e3a1f5a60ce048fbfbf69bb9fb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 架构权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *permission*  
+ permission  
  指定可拒绝授予架构的权限。 有关这些权限的列表，请参阅本主题后面的“备注”部分。  
   
  ON SCHEMA :: schema_name  
  指定拒绝将其权限授予他人的架构。 需要使用作用域限定符 ::。  
   
- *database_principal*  
+ database_principal  
  指定要对其拒绝权限的主体。 database_principal 可以为以下各项之一：  
   
 -   数据库用户  
@@ -70,7 +70,7 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
-*denying_principal*  
+denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 *denying_principal* 可以为以下各项之一：  
   
 -   数据库用户  

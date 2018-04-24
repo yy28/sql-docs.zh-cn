@@ -1,33 +1,36 @@
 ---
-title: "叶成员临时表 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 叶成员临时表 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - members staging table [Master Data Services]
 - database [Master Data Services], members staging table
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-caps.latest.revision: 
+caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc938cf967c53c0705f3d7c616320d677d59cdc2
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: d8c636f2bace6377f6c06ac716bf29551806d6f8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>叶成员临时表 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的叶成员临时表 (stg.name_Leaf) 可以创建、更新、停用和删除叶成员。 您还可以使用它更新叶成员的属性值。  
   
 ##  <a name="TableColumns"></a> 表列  
@@ -44,7 +47,7 @@ ms.lasthandoff: 03/05/2018
 |**Code**<br /><br /> 必需，自动为 **ImportType1** 或 **2** 生成代码的情况除外。有关详细信息，请参阅[自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)|成员的唯一代码。||  
 |**名称**<br /><br /> 可选|成员的名称。||  
 |**NewCode**|仅当要更改成员代码时才使用。||  
-|\<属性名称>|实体中的每个属性对应的列。 对于 **ImportType** 为 **0** 或 **2**时使用它。 对于自由格式属性，请为该属性指定新的文本或字符串值。 对于基于域的属性，请为将要成为属性的成员指定代码。 对于链接属性，URL 必须以 **http://**开头。<br /><br /> 注意：不能暂存文件属性。||  
+|\<属性名称>|实体中的每个属性对应的列。 对于 **ImportType** 为 **0** 或 **2**时使用它。 对于自由格式属性，请为该属性指定新的文本或字符串值。 对于基于域的属性，请为将要成为属性的成员指定代码。 对于链接属性，URL 必须以 **http://** 开头。<br /><br /> 注意：不能暂存文件属性。||  
   
 ## <a name="see-also"></a>另请参阅  
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

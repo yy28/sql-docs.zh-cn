@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 实用工具的功能和任务 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 实用工具的功能和任务 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2e1a99ba452c1f923cfe9ae8dfaf59b33d96ab92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 实用工具的功能和任务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户具有作为一个整体管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境的要求，在此版本中通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的应用程序和多服务器管理概念满足了这一要求。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户具有作为一个整体管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境的要求，在此版本中通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的应用程序和多服务器管理概念满足了这一要求。  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 实用工具的优点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具在一个统一的视图中对组织的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关实体进行建模。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) 中的实用工具资源管理器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 实用工具视点通过用作实用工具控制点 (UCP) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例向管理员提供反映 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源运行状况的整体视图。 通过在 UCP 中为使用过度和使用不足策略以及多种重要参数提供的摘要和详细数据的组合，可以实现资源合并机会，并且能够轻松发现资源使用过度的情况。 运行状况策略是可以配置的，并且可以进行调整以便更改资源使用率阈值的上限和下限。 可以更改全局监视策略，或为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中管理的每个实体配置单独的监视策略。  

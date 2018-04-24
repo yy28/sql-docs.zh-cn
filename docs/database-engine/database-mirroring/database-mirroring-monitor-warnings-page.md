@@ -1,34 +1,34 @@
 ---
-title: "数据库镜像监视器（“警告”页）| Microsoft Docs"
-ms.custom: 
+title: 数据库镜像监视器（“警告”页）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b844e6e236cedb4c2317b765ab93235dc4f75f43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-显示数据库镜像事件所支持警告的只读列表和指定的警告阈值（如果有）。  
+  显示数据库镜像事件所支持警告的只读列表和指定的警告阈值（如果有）。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/23/2018
  有关详细信息，请参阅本主题后面的“备注”。  
   
 ## <a name="remarks"></a>Remarks  
- 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
+ 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”**。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/23/2018
  在给定的伙伴上，记录的事件取决于它当前的角色，即主体或镜像。 但是，我们建议您在两个伙伴中都为给定的事件设置警告阈值，以确保数据库进行故障转移时警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。  
   
 > [!NOTE]  
->  也可以使用 **sp_dbmmonitorchangealertt** 系统存储过程来为等价的事件（如未发送日志、未恢复日志、最早的未发送事务和镜像提交开销）配置阈值。 有关详细信息，请参阅 [sp_dbmmonitorchangealert &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)。  
+>  也可以使用 **sp_dbmmonitorchangealertt** 系统存储过程来为等价的事件（如未发送日志、未恢复日志、最早的未发送事务和镜像提交开销）配置阈值。 有关详细信息，请参阅 [sp_dbmmonitorchangealert & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)。  
   
  下表显示与每个警告关联的事件 ID。  
   

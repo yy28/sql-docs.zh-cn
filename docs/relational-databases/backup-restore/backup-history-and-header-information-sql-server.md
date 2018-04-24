@@ -1,16 +1,16 @@
 ---
-title: "备份历史记录和标头信息 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 备份历史记录和标头信息 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -36,19 +36,20 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d03a11e3048a65ef344b14dbcd2a7840a619b52f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]服务器实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作的完整历史记录存储在 msdb 数据库中。 本主题介绍备份和还原历史记录表以及用于访问备份历史记录的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 本主题还讨论何时列出数据库和事务日志文件有用，以及何时使用介质标头信息与何时使用备份标头信息的比较。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  服务器实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作的完整历史记录存储在 **msdb** 数据库中。 本主题介绍备份和还原历史记录表以及用于访问备份历史记录的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 本主题还讨论何时列出数据库和事务日志文件有用，以及何时使用介质标头信息与何时使用备份标头信息的比较。  
   
 > [!IMPORTANT]  
 >  为了规避丢失对备份和还原历史记录的最新更改的风险，请经常备份 **msdb** 。 有关必须备份哪些系统数据库的信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
