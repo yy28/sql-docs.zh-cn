@@ -1,27 +1,21 @@
 ---
-title: 分析平台处理和存储容量
-author: barbkess
-ms.author: barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 处理和存储容量的分析平台系统 |Microsoft 文档
 description: 你的业务需求确定数据缩放单位数和计算节点磁盘中你分析平台系统 (AP) 的设备所需的大小。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: 7
-ms.openlocfilehash: 68852344c65863ee051467e524eb0c3f09211483
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f552372ac108d219ad410b88ec9911ecaea63ab3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-processing-and-storage-capacity"></a>分析平台系统处理和存储容量
+# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>分析平台系统中的处理和存储容量
 你的业务需求确定数据缩放单位数和计算节点磁盘中你分析平台系统 (AP) 的设备所需的大小。 使用这些处理和存储的计算来指导你购买和规划决策的容量。  
   
   
@@ -91,7 +85,7 @@ ms.lasthandoff: 04/06/2018
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
 |HPE|3 TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
-|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|合 2160 TB|  
 |DELL|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
 |DELL|3 TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
   

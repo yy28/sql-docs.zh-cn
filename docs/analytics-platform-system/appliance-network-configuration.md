@@ -1,36 +1,29 @@
 ---
-title: 设备网络配置 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 设备网络配置-分析平台系统 |Microsoft 文档
+description: 生成和使用修复的一组 IP 地址在所有服务器和合适的设备从 IHV 的工厂配置分析平台系统 (AP) 设备。 在设备的传递，必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>设备网络配置
-SQL Server PDW 设备生成和使用修复的一组 IP 地址在所有服务器和合适的设备从 IHV 的工厂配置。 在设备的传递，必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>分析平台系统的设备的网络配置
+生成和使用修复的一组 IP 地址在所有服务器和合适的设备从 IHV 的工厂配置分析平台系统 (AP) 设备。 在设备的传递，必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。  
   
 > [!NOTE]  
 > PDW V1 需要 8 IP 外部 (*客户面向*) 地址提供给每个控件的外部连接机架的节点。 PDW 2012 (V2) 增强了通过公开通过 IP 地址从外部设备的每个组件的网络通信。 此方法提供了更可靠的设计，这将减少成本，并增加了灵活性，并增强了数据移动、 数据加载和 Hadoop 集成。 所需的 IP 地址数取决于设备中的节点数和 hdinsight 的功能存在。 若要适应此更大的批 IP 地址，客户应单独的子网为设置 PDW。 此子网内，将有足够 IP 地址空间 （最多 250 个地址） 来容纳最多 5 PDW 机架的组件。  
   
 **网络配置**页使你可以在分析平台系统设备上查看节点的面向外部的网络设置。 此页是只读的。  
   
-![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig 设备网络](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>若要更新你的设备上的网络配置  
 通过编辑更改 fabric 域、 工作负荷域和 HDInsight 域的 IP 地址**AplianceInfo.xml**文件，然后运行安装程序。 这是脱机操作。 PDW 和 （如果存在） 的 HDInsight 区域将自动停止 IP 地址更改过程。  

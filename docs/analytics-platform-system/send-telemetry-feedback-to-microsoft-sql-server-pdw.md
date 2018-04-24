@@ -1,35 +1,28 @@
 ---
-title: 将遥测反馈发送给 Microsoft (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 遥测反馈-分析平台系统 |Microsoft 文档
+description: 分析平台系统向 Microsoft 发送遥测反馈。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>向 Microsoft 发送遥测反馈
-分析平台系统具有一个可选的遥测功能，将管理控制台数据发送给 Microsoft。 我们建议你启用此选项可帮助我们改进产品。  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>分析平台系统向 Microsoft 发送遥测反馈
+分析平台系统具有一个可选的遥测功能，将管理控制台数据发送给 Microsoft。 
   
 > [!NOTE]  
 > 在此版本中，Microsoft 不主动监视的遥测数据。 仅用于分析收集数据。  
   
 ## <a name="privacy"></a>隐私  
-若要提供最大的隐私保护，AP 附带而不启用遥测。 在之前启用此功能，首先查看[Microsoft 分析平台系统隐私声明](http://go.microsoft.com/fwlink/?LinkId=400902)。 然后，为参加运行如下所述的 PowerShell 脚本。  
+若要提供最大的隐私保护，AP 附带而不启用遥测。 在之前启用此功能，首先查看[Microsoft 分析平台系统隐私声明](http://go.microsoft.com/fwlink/?LinkId=400902)。 若要选择加入，请运行如下所述的 PowerShell 脚本。  
   
 ## <a name="enable"></a>启用遥测  
 **DNS 转发：**向 Microsoft 发送遥测数据需要分析平台系统连接到在 internet 上通过 DNS 转发器。 若要启用此功能，必须启用转发所有主机和工作负荷 Vm 上的 DNS。 调用`Enable-RemoteMonitoring`命令`SetupDnsForwarder`选项正确配置 DNS 转发和启用遥测。 调用`Enable-RemoteMonitoring`命令而不`SetupDnsForwarder`选项在已配置 DNS 转发且你只想要启用检测信号监视。  
@@ -116,9 +109,10 @@ ms.lasthandoff: 04/06/2018
   
 不没有运行任何影响`Disable-RemoteMonitoring`命令多次。  
   
-## <a name="see-also"></a>另请参阅  
-[通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[使用系统视图来监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-views.md)  
-[使用 System Center Operations Manager 来监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[使用 DNS 转发器来解析非设备 DNS 名称&#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>后续步骤
+有关详细信息，请参阅：
+- [通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [使用系统视图来监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [使用 System Center Operations Manager 来监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [使用 DNS 转发器来解析非设备 DNS 名称&#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

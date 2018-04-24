@@ -1,28 +1,21 @@
 ---
-title: 设备拓扑 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 设备拓扑-分析平台系统 |Microsoft 文档
+description: 在整个分析平台系统上显示的摘要信息。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cd92c07e-4cee-4657-b23a-ed80bee07089
-caps.latest.revision: 4
-ms.openlocfilehash: c25767a922199b3f3af337d4720dfe611be162eb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9691da25c866e51e901aad1960b712b59fbd522b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-topology"></a>设备拓扑
+# <a name="appliance-topology---analytics-platform-system"></a>设备拓扑-分析平台系统
 在整个分析平台系统上显示的摘要信息。  
   
 展开此节可配置适用于整个设备的信息的元素。 选择要配置适用于仅设备该区域的信息的并行数据仓库拓扑或 HDInsight 拓扑节。  

@@ -1,31 +1,31 @@
 ---
-title: "使用 ADO 的脚本语言 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 使用 ADO 的脚本语言 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 的脚本语言
 在一个脚本编写环境 ADO 可以公开通过服务器端脚本的数据。 在此方案中，ADO，基础 OLE DB 提供程序，它使用，并引用给定的数据存储所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 使用 Active Server Pages (ASP)，ADO 是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历，或查看特定的数据。  

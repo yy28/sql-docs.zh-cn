@@ -1,31 +1,31 @@
 ---
-title: "通讯簿命令按钮 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 通讯簿命令按钮 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 531e10f28850e6da6f9863cb5f06e253793b1dee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05c3a221f32b7c9921746a13cc3c20d8244a3ff8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-command-buttons"></a>通讯簿命令按钮
 通讯簿应用程序包括以下的命令按钮：  
@@ -78,7 +78,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- 当`DC1.SubmitChanges`执行，远程数据服务包更新的所有信息并将其发送到通过 HTTP 服务器。 此更新是全盘接受或者全盘;如果成功更新的一部分，进行任何更改，并返回一条状态消息。 `DC1.Refresh`不需要后**SubmitChanges**与远程数据服务，但可确保刷新的数据。  
+ 当`DC1.SubmitChanges`执行，远程数据服务包更新的所有信息并将其发送到通过 HTTP 服务器。 此更新是全盘接受或者全盘;如果成功更新的一部分，进行任何更改，并返回一条状态消息。 `DC1.Refresh` 不需要后**SubmitChanges**与远程数据服务，但可确保刷新的数据。  
   
 ## <a name="cancel-changes-button"></a>取消更改按钮  
  单击**取消更改**激活 VBScript Cancel_OnClick Sub 过程中，执行[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的 (`DC1)` [正在执行](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法。  

@@ -1,30 +1,32 @@
 ---
-title: "配置 FailureConditionLevel 属性设置 | Microsoft Docs"
-ms.custom: 
+title: 配置 FailureConditionLevel 属性设置 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82cac1585f51fedbdf008be6b8ed1e0d3ae1c9f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5cc2b9c92f30af507ec9750e74a8ee3a3af331af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用 FailureConditionLevel 属性可以设置 AlwaysOn 故障转移群集实例 (FCI) 进行故障转移或重启的条件。 对此属性的更改会立即应用，而无需重新启动 Windows Server 故障转移群集 (WSFC) 服务或 FCI 资源。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 FailureConditionLevel 属性可以设置 AlwaysOn 故障转移群集实例 (FCI) 进行故障转移或重启的条件。 对此属性的更改会立即应用，而无需重新启动 Windows Server 故障转移群集 (WSFC) 服务或 FCI 资源。  
   
 -   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  

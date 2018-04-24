@@ -18,16 +18,17 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a6c3525ed89624bca7289bd76963cd932b9623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="failover-policy-for-failover-cluster-instances"></a>故障转移群集实例的故障转移策略
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 中，在给定的时间只有一个节点可以拥有 Windows Server 故障转移群集 (WSFC) 群集资源组。 客户端请求通过 FCI 中的此节点进行处理。 在发生故障和重新启动失败时，组的所有权将转移给 FCI 中的另一个 WSFC 节点。 此过程称为故障转移。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高了故障检测的可靠性，并提供灵活的故障转移策略。  
+# <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 中，在给定的时间只有一个节点可以拥有 Windows Server 故障转移群集 (WSFC) 群集资源组。 客户端请求通过 FCI 中的此节点进行处理。 在发生故障和重新启动失败时，组的所有权将转移给 FCI 中的另一个 WSFC 节点。 此过程称为故障转移。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高了故障检测的可靠性，并提供灵活的故障转移策略。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 依赖于基础 WSFC 服务进行故障转移检测。 因此，两个机制决定了 FCI 的故障转移行为：一个是本机 WSFC 功能，一个是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序带来的功能。  
   
@@ -99,10 +100,10 @@ ms.lasthandoff: 12/05/2017
   
  查看 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)，因为此系统存储过程在故障条件级别中起重要作用。  
   
-|Level|条件|说明|  
+|Level|条件|Description|  
 |-----------|---------------|-----------------|  
 |0|无自动故障转移或重新启动|表示对于任何故障条件将不自动触发故障转移或重新启动。 此级别仅适用于系统维护目的。|  
-|1|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  
+|@shouldalert|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  
 |2|服务器不响应时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。|  
 |3*|出现严重服务器错误时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“系统错误”。|  
 |4|出现中等服务器错误时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“系统错误”。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“资源错误”。|  

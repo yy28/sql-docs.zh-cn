@@ -4,7 +4,7 @@ description: 本文包含的发行说明，并支持在 Linux 上运行的 SQL S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/04/2018
+ms.date: 04/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 2e768322cf8dc33e9d8995012f87088902c2e705
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 786153cf6d3f9cee30a01d3b6e3a94646a75eecc
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -49,8 +49,9 @@ ms.lasthandoff: 04/05/2018
 
 | 发行版本 | 版本 | 发布日期 |
 |-----|-----|-----|
-| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
-| [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
+| [CU6](#CU6) | 14.0.3025.34 | 4 2018 |
+| [CU5](#CU5) | 14.0.3023.8 | 3 2018 |
+| [CU4](#CU4) | 14.0.3022.28 | 2 2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
@@ -66,6 +67,20 @@ ms.lasthandoff: 04/05/2018
 - [安装全文搜索包](sql-server-linux-setup-full-text-search.md)
 - [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU6"></a> CU6 (年 4 月 2018)
+
+这是 SQL Server 自 2017 年的累积更新 6 (CU6) 版本。 对于此版本的 SQL Server 引擎版本是 14.0.3025.34。 有关修补程序和此版本中的改进的信息，请参阅[ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动或脱机包安装，你可以下载的 RPM 包和 Debian 包使用下表中的信息：
+
+| “包” | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 14.0.3025.34-3 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 包 | 14.0.3025.34-3 | [mssql server 引擎 RPM 程序包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 包 | 14.0.3025.34-3 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU5"></a> CU5 (年 3 月 2018)
 

@@ -1,28 +1,21 @@
 ---
-title: 配置 SCOM 以便监视分析平台系统
-author: barbkess
-ms.author: barbkess
+title: 配置 SCOM 以便监视 Analytics Platform System |Microsoft 文档
+description: 请按照下列步骤为分析平台系统配置 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的分析平台系统所需管理包。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: 10
-ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4c2e8a42d488c18e705c9d7d8c1d53c9ff7c9cb8
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-scom-to-monitor-analytics-platform-system"></a>配置 SCOM 以便监视分析平台系统
+# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>配置 System Center Operations Manager (SCOM) 来监视分析平台系统
 请按照下列步骤为分析平台系统配置 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的分析平台系统所需管理包。  
   
 ## <a name="BeforeBegin"></a>开始之前  
@@ -33,13 +26,13 @@ System Center Operations Manager 2007 R2 必须已安装并且正在运行。
 必须安装和配置管理包。 请参阅[安装 SCOM 管理包&#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md)和[PDW SCOM 管理包导入&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 ## <a name="ConfigureRunAsProfile"></a>在 System Center 中配置运行方式配置文件  
-若要配置 System Center 必须执行以下步骤：  
+若要配置 System Center，您必须执行以下步骤：  
   
 -   创建运行方式帐户**AP 观察程序**域用户并将其映射到**AP 观察程序的 Microsoft 帐户。**  
   
 -   创建运行方式帐户**monitoring_user** AP 用户并将其映射到**Microsoft AP 操作帐户**。  
   
-下面是如何执行此操作的详细的说明：  
+以下是有关如何执行任务的详细的说明：  
   
 1.  创建**AP 观察程序**具有运行方式帐户**Windows**账户类型**AP 观察程序**域用户。  
   
@@ -53,15 +46,13 @@ System Center Operations Manager 2007 R2 必须已安装并且正在运行。
   
         ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
-    4.  上**凭据**页提供"AP 观察程序"域用户凭据。  
-  
-        ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
+    4.  上**凭据**页上， ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
   
     5.  上**分发安全性**页上，选择**安全级别较低**单击**创建**按钮以完成。  
   
         ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
   
-        1.  如果你决定使用**更安全**将分发你必须手动指定计算机连接到的凭据的选项。 为此，请创建运行方式帐户之后，右键单击它并选择**属性**。  
+        1.  如果你决定使用**更安全**选项，你必须手动指定凭据将分发到计算机。 为此，请创建运行方式帐户之后，右键单击它并选择**属性**。  
   
         2.  导航到**分发**选项卡和**添加**所需的计算机。  
   
@@ -93,9 +84,7 @@ System Center Operations Manager 2007 R2 必须已安装并且正在运行。
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   
-    2.  等待，直到该设备的列表中出现。 设备的名称应等于 1 注册表中指定。  
-  
-    发现完成后，你应看到列出，但不是受监视的所有设备。 有关监视工作按照后续步骤。  
+    2.  等待，直到该设备的列表中出现。 设备的名称应等于 1 注册表中指定。 发现完成后，你应看到列出，但不是受监视的所有设备。 若要启用监视，请按照下一步的步骤。  
   
     > [!NOTE]  
     > 正在等待初始设备发现完成时，可以并行完成后续步骤。  
@@ -108,7 +97,7 @@ System Center Operations Manager 2007 R2 必须已安装并且正在运行。
   
         ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
   
-    3.  上**凭据**页上提供有效凭据访问 AP 运行状况状态 Dmv。  
+    3.  上**凭据**页上，提供有效凭据访问 AP 运行状况状态 Dmv。  
   
         ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
@@ -116,7 +105,8 @@ System Center Operations Manager 2007 R2 必须已安装并且正在运行。
   
     1.  导航到**Microsoft AP 操作帐户**属性在步骤 2 中所述。  
   
-    2.  上**运行方式帐户**页上，单击**添加...** 并选择新创建的运行方式帐户。  
+    2.  上**运行方式帐户**页上，单击**添加...** 和 
+    3.  选择新创建的运行方式帐户。  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   

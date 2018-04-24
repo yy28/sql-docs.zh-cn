@@ -1,27 +1,21 @@
 ---
-title: 还原由并行数据仓库中的 TDE 保护的数据库
-author: barbkess
-ms.author: barbkess
+title: 还原受 TDE 的并行数据仓库数据库 |Microsoft 文档
+description: 使用以下步骤来还原数据库加密分析平台系统并行数据仓库中使用透明数据加密。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 使用以下步骤以还原通过透明数据加密加密的数据库。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: 4
-ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-a-database-protected-by-tde"></a>还原由 TDE 保护的数据库
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>还原由并行数据仓库中的 TDE 保护的数据库
 使用以下步骤以还原通过透明数据加密加密的数据库。  
   
 [使用透明数据加密](transparent-data-encryption.md#using-tde)示例具有代码上启用 TDE`AdventureWorksPDW2012`数据库。 下面的代码继续执行该示例中，在原始分析平台系统 (AP) 设备上创建数据库的备份和还原证书和一个不同的设备上的数据库。  

@@ -1,32 +1,32 @@
 ---
-title: "属性的属性示例 （VC + +） |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 属性的属性示例 （VC + +） |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b3b34098f0530cc9bf6b986a9f477e7075c4a98
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfb2d50d571095e12e2923858197fe4f6b14ace5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes-property-example-vc"></a>属性的属性示例 （VC + +）
 此示例演示[属性](../../../ado/reference/adox-api/attributes-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分不知道数据的记录和记录数据中不适用。  

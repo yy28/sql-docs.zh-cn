@@ -1,32 +1,32 @@
 ---
-title: "绝对和相对 Url |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 绝对和相对 Url |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - relative URLs [ADO]
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2482386f131b7e49134b5fdcbfaae7d0ec339b74
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 Url
 URL 指定存储在本地或网络的计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等*。*  
@@ -45,7 +45,7 @@ URL 指定存储在本地或网络的计算机上的目标的位置。 目标可
  服务器  
  指定的计算机的名称其中*资源*所在。  
   
- *path*  
+ path  
  指定目录，从而导致目标的序列。 如果*资源*是省略，目标为中的最后一个目录*路径*。  
   
  *resource*  

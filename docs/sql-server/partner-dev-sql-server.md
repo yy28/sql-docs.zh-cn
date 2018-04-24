@@ -1,32 +1,33 @@
 ---
-title: "开发 SQL Server 合作伙伴 | Microsoft Docs"
-description: "提供 SQL Server 开发解决方案的第三方合作伙伴列表。"
+title: 开发 SQL Server 合作伙伴 | Microsoft Docs
+description: 提供 SQL Server 开发解决方案的第三方合作伙伴列表。
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: f604e1c50e28e07274531e885ecd026097e9bca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 开发合作伙伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]要支持开发 SQL Server 数据库解决方案，请从各种行业领先工具中进行选择。  本文重点介绍提供 Microsoft SQL Server 开发解决方案的 Microsoft 合作伙伴公司。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+要支持开发 SQL Server 数据库解决方案，请从各种行业领先工具中进行选择。  本文重点介绍提供 Microsoft SQL Server 开发解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-development-partners"></a>我们的开发合作伙伴
 | Partner | Description | 链接 |

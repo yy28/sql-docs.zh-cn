@@ -1,29 +1,22 @@
 ---
-title: PDW 和装置 Fabric 物理组件 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 设备物理组件的分析平台系统 |Microsoft 文档
+description: 名称和 PDW 和装置 fabric 物理组件的说明。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: 17
-ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-and-appliance-fabric-physical-components"></a>PDW 和装置 Fabric 物理组件
-名称和 PDW 和装置 fabric 物理组件的说明。 PDW 区域不包含所有这些组件。  
+# <a name="appliance-physical-components---analytics-platform-system"></a>设备物理组件的分析平台系统
+名称和 PDW 和装置 fabric 物理组件的说明。 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   

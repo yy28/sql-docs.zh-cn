@@ -1,17 +1,17 @@
 ---
-title: "DeleteRecord 方法 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: DeleteRecord 方法 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5088293b3866f74f39e608a8de8f300d4e3980c1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 74a3a1dcbd909042ab52bb115cd7cd70c9dd3660
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 删除所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -44,7 +44,7 @@ Record.DeleteRecord Source, Async
  *数据源*  
  選擇性。 A**字符串**值，该值包含要删除的 URL 标识的实体 （例如，文件或目录）。 如果*源*省略或指定空字符串，表示由当前的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)被删除。 如果记录集合记录 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，如目录) 所有子项 （例如，子目录） 也将被都删除。  
   
- *Async*  
+ *异步*  
  選擇性。 A**布尔**值，当**True**，指定删除操作是异步。  
   
 ## <a name="remarks"></a>注释  

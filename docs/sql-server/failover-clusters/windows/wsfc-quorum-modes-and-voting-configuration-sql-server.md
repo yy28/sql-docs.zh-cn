@@ -1,34 +1,36 @@
 ---
-title: "WSFC 仲裁模式和投票配置 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: WSFC 仲裁模式和投票配置 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/03/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ee025e1435ea03fb5e9a9402eda86932268b84d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 13c6e85b191619c61c4a38ffabf4db6f3310af39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 Always On 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 Always On 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
   
  **本主题内容：**  
   

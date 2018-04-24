@@ -1,28 +1,21 @@
 ---
-title: 配置 Windows Server Update Services (WSUS) (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 配置 WSUS 的分析平台系统 |Microsoft 文档
+description: 这些说明将引导你完成使用 Windows Server Update Services (WSUS) 配置向导配置 WSUS 以分析平台系统的步骤。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>配置 Windows Server Update Services (WSUS)
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>分析平台系统中配置 Windows Server Update Services (WSUS)
 这些说明将引导你完成使用 Windows Server Update Services (WSUS) 配置向导配置 WSUS 以分析平台系统的步骤。 你需要先将软件更新应用到该设备配置 WSUS。 VMM 虚拟机的设备上已安装 WSUS。  
   
 有关将 WSUS 配置的详细信息，请参阅[WSUS 分步安装指南](http://go.microsoft.com/fwlink/?LinkId=202417)WSUS 网站上。 后配置 WSUS，请参阅[下载和应用 Microsoft 更新&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)以启动更新。  
@@ -113,7 +106,7 @@ ms.lasthandoff: 04/10/2018
   
     如果此服务器需要代理服务器，若要访问 Microsoft 更新或不同的上游服务器，你可以配置代理服务器设置此处;否则，请单击**下一步**。  
   
-    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS 代理](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>若要配置代理服务器设置  
   

@@ -1,30 +1,30 @@
 ---
-title: "配置 SQL Server 以向 Microsoft 发送反馈 | Microsoft Docs"
-description: 
+title: 配置 SQL Server 以向 Microsoft 发送反馈 | Microsoft Docs
+description: ''
 author: annashres
 ms.author: anshrest
-manager: jhubbard
+manager: craigg
 ms.date: 07/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: c379c070e94a9bd54ed98c439c6185430ac4e2a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c4de14abb12d3cdb74c9169d45b20093022b3db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>配置 SQL Server 以向 Microsoft 发送反馈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>“摘要”
 默认情况下，Microsoft SQL Server 收集有关其客户如何使用应用程序的信息。 具体来说，SQL Server 收集有关安装体验、使用情况和性能的信息。 此信息有助于 Microsoft 改进产品以更好地满足客户需求。 例如，Microsoft 收集有关客户遇到的错误代码类型信息，这样我们就可以修复相关 bug，改进关于如何使用 SQL Server 的文档，并确定是否应将功能添加到产品中以更好地为客户服务。
 
 具体而言，Microsoft 不会通过这种机制发送以下任何类型的信息：

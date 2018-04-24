@@ -1,15 +1,16 @@
 ---
-title: "升级 SQL Server 故障转移群集实例（安装程序）| Microsoft Docs"
-ms.custom: 
+title: 升级 SQL Server 故障转移群集实例（安装程序）| Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading clusters
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e35eab411af665d7758d76fa7e9f3f1353be7ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7bdf71944c3ac248ab61bb43fc07f2db7bc9eab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升级 SQL Server 故障转移群集实例（安装程序）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序 UI 或从命令提示符处将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集升级为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 故障转移群集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序 UI 或从命令提示符处将 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 故障转移群集升级为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
   
  对于本地安装，必须以管理员身份运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  使用 Windows 故障转移群集管理工具添加新子网的新 IP 地址，将 IP 地址资源依赖关系设置为 OR。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]后，请完成下列任务：  
   
 -   [完成数据库引擎升级](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
@@ -113,7 +115,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="see-also"></a>另请参阅  
  [升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
- [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [向 SQL Server 2016 的实例添加功能（安装程序）](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   
   

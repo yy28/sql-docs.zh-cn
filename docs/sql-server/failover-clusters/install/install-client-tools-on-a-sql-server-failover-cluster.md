@@ -1,30 +1,32 @@
 ---
-title: "在 SQL Server 故障转移群集上安装客户端工具 | Microsoft Docs"
-ms.custom: 
+title: 在 SQL Server 故障转移群集上安装客户端工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ceab14497f719a8bac3ee44c855f7f1f870d0d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 472e7d723efd5041a257c8655c398aa62f69bb75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]诸如 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的客户端工具是在同一台计算机上的所有实例间公用的共享功能。 它们与支持的、可并行安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本兼容。 在某一时刻，节点上只能存在客户端工具的一个版本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  诸如 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的客户端工具是在同一台计算机上的所有实例间公用的共享功能。 它们与支持的、可并行安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本兼容。 在某一时刻，节点上只能存在客户端工具的一个版本。  
   
  如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集的第一个节点上进行安装时安装了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具，它们将自动添加到稍后可能使用“添加节点”功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的任何节点。  
   
@@ -59,6 +61,6 @@ ms.lasthandoff: 12/05/2017
  它们在“控制面板”的“添加或删除程序”中显示为 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**，可从此处将其删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

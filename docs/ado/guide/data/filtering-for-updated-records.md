@@ -1,30 +1,30 @@
 ---
-title: "筛选更新记录 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 筛选更新记录 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: 
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6fee8a407c5cc01e768eb86854c07d215fc420d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5ee09a3242a6b406b5a921cdc12ca35786a71453
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filtering-for-updated-records"></a>筛选更新的记录
 在调用 UpdateBatch 之前，你可以使用要查看自该记录集打开后已更改的那些记录的记录集筛选器属性或 UpdateBatch 上次调用。 若要执行此操作，将筛选器设置为等于 adFilterPendingRecords 以确定将更新多少条记录下, 一节中的代码示例中所示。  

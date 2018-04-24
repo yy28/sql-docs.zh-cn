@@ -1,28 +1,28 @@
 ---
-title: "步骤 2： 初始化主列表框 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 步骤 2： 初始化主列表框 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60ece26fab2c6f691614b609d1dd3f07f42231e4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e8272c721c2717df494db5ead86716900f44c46e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步骤 2： 初始化主列表框
 若要声明全局记录和记录集对象，请将下面的代码插入 （常规） （声明） form1:  
@@ -52,7 +52,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 此代码实例化的全局的记录和记录集对象。 所记录的对象， `grec`，将打开，其中指定为 ActiveConnection 的 URL。 如果 URL 存在，则打开它;如果它尚不存在，则创建它。 请注意，应从你的环境中替换"http://servername/foldername/"与有效的 URL。  
+ 此代码实例化的全局的记录和记录集对象。 所记录的对象， `grec`，将打开，其中指定为 ActiveConnection 的 URL。 如果 URL 存在，则打开它;如果它尚不存在，则创建它。 请注意，应将"http://servername/foldername/"与来自你的环境的有效 URL。  
   
  记录集对象， `grs`，在该记录的子级上打开`grec`。 然后`lstMain`用于发布到 URL 的资源的文件名称填充。  
   

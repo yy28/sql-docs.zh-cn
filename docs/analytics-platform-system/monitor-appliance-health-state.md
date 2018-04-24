@@ -1,29 +1,22 @@
 ---
-title: 监视器设备运行状况状态 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 监视设备运行状况-分析平台系统
+description: 如何通过使用管理控制台中，或通过直接查询的并行数据仓库动态管理视图监视分析平台系统设备的状态。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>监视器设备运行状况状态
-本主题说明如何使用管理控制台中，或通过直接查询 SQL Server PDW 动态管理视图监视 SQL Server PDW 设备的状态。  
+此文章介绍了如何通过使用管理控制台中，或通过直接查询的并行数据仓库动态管理视图监视分析平台系统设备的状态。 
   
 ## <a name="to-monitor-the-appliance-state"></a>若要监视设备状态  
 系统管理员可以使用管理控制台或 SQL Server PDW 动态管理视图 (Dmv) 来检索的节点、 组件和软件的完整层次结构。 下图提供了 SQL Server PDW 监视的组件较高级别的了解。  

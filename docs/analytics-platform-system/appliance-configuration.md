@@ -1,28 +1,21 @@
 ---
-title: 设备配置 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 配置清单-分析平台系统 |Microsoft 文档
+description: 提供有关为你自己的环境配置 Analytics Platform System 所需的任务的清单。 你可以使用该设备，还需要执行这些配置任务。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
-caps.latest.revision: 43
-ms.openlocfilehash: 7500c7e8b0245e1342d97190af8587bf130e6be2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 37d07fe45768d40b74e3b48739590648867efd94
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-configuration"></a>设备配置
+# <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>针对分析平台系统的设备配置清单
 提供有关为你自己的环境配置 Analytics Platform System 所需的任务的清单。 你可以使用该设备，还需要执行这些配置任务。  
   
 > [!WARNING]  

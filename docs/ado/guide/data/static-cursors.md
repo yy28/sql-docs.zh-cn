@@ -1,31 +1,31 @@
 ---
-title: "静态游标 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 静态游标 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41af8e500710f3944f43f2408f00f24184204718
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 02867f7cfa2595f9d7427023092d1cdd9cae2754
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="static-cursors"></a>静态游标
 静态游标总是显示结果集和第一次打开游标时。 具体取决于实现，静态游标是只读或读/写和提供向前和向后滚动。 静态游标通常不会检测到成员资格、 顺序或值的结果集打开光标后所做的更改。 静态游标可能检测其自己的更新、 删除和插入，虽然不需要它们来这样做。  

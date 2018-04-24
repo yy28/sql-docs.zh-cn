@@ -1,33 +1,33 @@
 ---
-title: "在 JScript 中处理错误 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 在 JScript 中处理错误 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d6baf88299055da515c10763f4b821258ed2b9b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2f34566a3b97a1cfaf85e24966e897ae51ca6bfc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="handling-errors-in-jscript"></a>在 JScript 中处理错误
 你的 Microsoft® JScript® 代码必须检查**计数**属性**连接**对象的**错误**集合。 如果值大于 0，循环访问集合，并打印值，就像在任何其他语言。  

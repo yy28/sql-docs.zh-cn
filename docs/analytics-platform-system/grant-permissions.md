@@ -1,26 +1,22 @@
 ---
-title: “授予权限”
-author: barbkess
-ms.author: barbkess
+title: 授予 T-SQL 的权限-并行数据仓库 |Microsoft 文档
+description: 并行数据仓库中的数据库操作的授予 T-SQL 的权限。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>“授予权限”
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>并行数据仓库的授予 T-SQL 的权限
+并行数据仓库中的数据库操作的授予 T-SQL 的权限。
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>授予权限以提交数据库查询
 本部分介绍如何授予对数据库角色的权限，用户对 SQL Server PDW 设备上的查询数据。  

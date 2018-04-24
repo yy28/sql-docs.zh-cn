@@ -22,16 +22,17 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e0420ff4be2260855e1f15f9d1711df2a906ac0b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 11d507fb3b06da834f585834c394112a75e864c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 代理固定数据库角色
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,13 +63,13 @@ ms.lasthandoff: 03/22/2018
   
 |操作|运算符|本地作业<br /><br />（仅限于所拥有的作业）|作业计划<br /><br />（仅限于所拥有的计划）|代理|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
-|创建/修改/删除|是|是<br /><br />无法更改作业所有权。|是|是|  
+|创建/修改/删除|“否”|是<br /><br />无法更改作业所有权。|是|“否”|  
 |视图列表（枚举）|是<br /><br />可以获得可在 **sp_notify_operator** 和 Management Studio 的“作业属性”对话框中使用的可用运算符列表。|是|是|是<br /><br />只能在 Management Studio 的“作业步骤属性”对话框中使用代理列表。|  
-|启用/禁用|是|是|是|不适用|  
-|视图属性|是|是|是|是|  
+|启用/禁用|“否”|是|是|不适用|  
+|视图属性|“否”|是|是|“否”|  
 |执行/停止/开始|不适用|是|不适用|不适用|  
 |查看作业历史记录|不适用|是|不适用|不适用|  
-|删除作业历史记录|不适用|是<br /><br />必须为 **SQLAgentUserRole** 的成员显式授予对 **sp_purge_jobhistory** 的 EXECUTE 权限才能删除它们所拥有的作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。|不适用|不适用|  
+|删除作业历史记录|不适用|“否”<br /><br />必须为 **SQLAgentUserRole** 的成员显式授予对 **sp_purge_jobhistory** 的 EXECUTE 权限才能删除它们所拥有的作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。|不适用|不适用|  
 |附加/分离|不适用|不适用|是|不适用|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>SQLAgentReaderRole 权限  
@@ -81,14 +82,14 @@ ms.lasthandoff: 03/22/2018
   
 |操作|运算符|本地作业|多服务器作业|作业计划|代理|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
-|创建/修改/删除|是|是（仅拥有的作业）<br /><br />无法更改作业所有权。|是|是（仅拥有的计划）|是|  
+|创建/修改/删除|“否”|是（仅拥有的作业）<br /><br />无法更改作业所有权。|“否”|是（仅拥有的计划）|“否”|  
 |视图列表（枚举）|是<br /><br />可以获得可在 **sp_notify_operator** 和 Management Studio 的“作业属性”对话框中使用的可用运算符列表。|是|是|是|是<br /><br />只能在 Management Studio 的“作业步骤属性”对话框中使用代理列表。|  
-|启用/禁用|是|是（仅拥有的作业）|是|是（仅拥有的计划）|不适用|  
-|视图属性|是|是|是|是|是|  
-|编辑属性|是|是（仅拥有的作业）|是|是（仅拥有的计划）|是|  
-|执行/停止/开始|不适用|是（仅拥有的作业）|是|不适用|不适用|  
+|启用/禁用|“否”|是（仅拥有的作业）|“否”|是（仅拥有的计划）|不适用|  
+|视图属性|“否”|是|是|是|“否”|  
+|编辑属性|“否”|是（仅拥有的作业）|“否”|是（仅拥有的计划）|“否”|  
+|执行/停止/开始|不适用|是（仅拥有的作业）|“否”|不适用|不适用|  
 |查看作业历史记录|不适用|是|是|不适用|不适用|  
-|删除作业历史记录|不适用|是<br /><br />必须为 **SQLAgentReaderRole** 的成员显式授予对 **sp_purge_jobhistory** 的 EXECUTE 权限才能删除它们所拥有的作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。|是|不适用|不适用|  
+|删除作业历史记录|不适用|“否”<br /><br />必须为 **SQLAgentReaderRole** 的成员显式授予对 **sp_purge_jobhistory** 的 EXECUTE 权限才能删除它们所拥有的作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。|“否”|不适用|不适用|  
 |附加/分离|不适用|不适用|不适用|是（仅拥有的计划）|不适用|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole 权限  
@@ -105,14 +106,14 @@ ms.lasthandoff: 03/22/2018
   
 |操作|Alerts|运算符|本地作业|多服务器作业|作业计划|代理|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
-|创建/修改/删除|是|是|是（仅拥有的作业）<br /><br />无法更改作业所有权。|是|是（仅拥有的计划）|是|  
+|创建/修改/删除|“否”|“否”|是（仅拥有的作业）<br /><br />无法更改作业所有权。|“否”|是（仅拥有的计划）|“否”|  
 |视图列表（枚举）|是|是<br /><br />可以获得可在 **sp_notify_operator** 和 Management Studio 的“作业属性”对话框中使用的可用运算符列表。|是|是|是|是|  
-|启用/禁用|是|是|是<br /><br />**SQLAgentOperatorRole** 的成员可以通过使用存储过程 **sp_update_job** 并指定 **@enabled** 和 **@job_id** （或 **@job_name**）参数的值来启用或禁用它们尚未拥有的本地作业。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。|是|是<br /><br />**SQLAgentOperatorRole** 的成员可以通过使用存储过程 **sp_update_schedule** 并指定 **@enabled** 和 **@schedule_id** （或 **@name**）参数的值来启用或禁用它们尚未拥有的本地作业。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。|不适用|  
+|启用/禁用|“否”|否|是<br /><br />**SQLAgentOperatorRole** 的成员可以通过使用存储过程 **sp_update_job** 并指定 **@enabled** 和 **@job_id** （或 **@job_name**）参数的值来启用或禁用它们尚未拥有的本地作业。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。|“否”|是<br /><br />**SQLAgentOperatorRole** 的成员可以通过使用存储过程 **sp_update_schedule** 并指定 **@enabled** 和 **@schedule_id** （或 **@name**）参数的值来启用或禁用它们尚未拥有的本地作业。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。|不适用|  
 |视图属性|是|是|是|是|是|是|  
-|编辑属性|是|是|是（仅拥有的作业）|是|是（仅拥有的计划）|是|  
-|执行/停止/开始|不适用|不适用|是|是|不适用|不适用|  
+|编辑属性|“否”|“否”|是（仅拥有的作业）|“否”|是（仅拥有的计划）|“否”|  
+|执行/停止/开始|不适用|不适用|是|“否”|不适用|不适用|  
 |查看作业历史记录|不适用|不适用|是|是|不适用|不适用|  
-|删除作业历史记录|不适用|不适用|是|是|不适用|不适用|  
+|删除作业历史记录|不适用|不适用|是|“否”|不适用|不适用|  
 |附加/分离|不适用|不适用|不适用|不适用|是（仅拥有的计划）|不适用|  
   
 ## <a name="assigning-users-multiple-roles"></a>为用户分配多个角色  

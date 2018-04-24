@@ -1,33 +1,33 @@
 ---
-title: "聚合函数、 CALC 函数中和 NEW 关键字 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 聚合函数、 CALC 函数中和 NEW 关键字 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], functions
 - CALC function [ADO]
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2f490ca1a9e95f92d39367c3914b5a0ea5cf0c9a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、 CALC 函数中和 NEW 关键字
 数据成型支持以下功能。 分配给包含此列的章节来操作的名称是*章别名*。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 02/09/2018
 |SUM (*章别名*。*列名称*)|计算指定列中的所有值的总和。|  
 |AVG (*章别名*。*列名称*)|计算指定列中的所有值的平均值。|  
 |最大 (*章别名*。*列名称*)|计算指定的列中的最大值。|  
-|MIN(*chapter-alias*.*column-name*)|计算指定列中的最小值。|  
+|最小值 (*章别名*。*列名称*)|计算指定列中的最小值。|  
 |计数 (*章别名*[。*列名称*])|对指定的别名中的行数进行计数。 如果指定了某列，该列个为非 Null 的唯一行计数中包括。|  
-|STDEV(*chapter-alias*.*column-name*)|计算指定列中的标准偏差。|  
+|STDEV (*章别名*。*列名称*)|计算指定列中的标准偏差。|  
 |任何 (*章别名*。*列名称*)|指定列的值。 仅当列的值是相同的章节中的所有行时，任何具有可预测的值。<br /><br /> **请注意**如果列不包含所有章节中的行的相同值，该形状命令任意返回的值进行任何函数的值之一。|  
   
 |计算的表达式|Description|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
   
 |NEW 关键字|Description|  
 |-----------------|-----------------|  
-|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|将添加到指定的类型的空列**记录集**。|  
+|新*字段类型*[(*宽度* &#124; *缩放* &#124; *精度* &#124; *错误*[，*缩放* &#124; *错误*])]|将添加到指定的类型的空列**记录集**。|  
   
  *字段类型*传递与新的关键字可以是任何以下数据类型。  
   

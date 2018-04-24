@@ -1,32 +1,32 @@
 ---
-title: "属性的属性示例 (VB) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 属性的属性示例 (VB) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 736d3c89b24a4a7da05aa4e754f1776ffff53c92
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 324dc0c04bf0ca4aeeddcc37fc65c3ebcf9fd3d9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes-property-example-vb"></a>属性的属性示例 (VB)
 此示例演示[属性](../../../ado/reference/adox-api/attributes-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分不知道数据的记录和记录数据中不适用。  

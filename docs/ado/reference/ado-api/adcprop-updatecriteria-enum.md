@@ -1,33 +1,33 @@
 ---
-title: ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs
-ms.prod: sql-non-specified
+title: ADCPROP_UPDATECRITERIA_ENUM |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADCPROP_UPDATECRITERIA_ENUM
 helpviewer_keywords:
 - ADCPROP_UPDATECRITERIA_ENUM [ADO]
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf0c00fb7f353171686f57405879b3beb544aa1d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7bdd24f437d1bc0712e0e0222a8e99e999b1f3a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 指定哪些字段可用于在具有的数据源的行中的开放式更新过程中检测冲突[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
 |**adCriteriaUpdCols**|2|检测到冲突，如果任何数据源的列的行，对应于更新字段**记录集**已更改。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- Package: **com.ms.wfc.data**  
+ 包： **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

@@ -1,15 +1,16 @@
 ---
-title: "自动页修复（可用性组：数据库镜像）| Microsoft Docs"
-ms.custom: 
+title: 自动页修复（可用性组：数据库镜像）| Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatic page repair
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3977d1893d009b9a427a28d4f320d31c1e747d03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自动页修复（可用性组：数据库镜像）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 支持自动页修复。 在某些类型的错误导致页损坏，使其无法读取后，数据库镜像伙伴（主体或镜像）或可用性副本（主副本或辅助副本）将尝试自动修复该页。 无法读取该页的伙伴/副本将从其伙伴或从其他副本请求该页的新副本。 如果此请求成功，则将以可读副本替换不可读的页，并且这通常会解决该错误。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持自动页修复。 在某些类型的错误导致页损坏，使其无法读取后，数据库镜像伙伴（主体或镜像）或可用性副本（主副本或辅助副本）将尝试自动修复该页。 无法读取该页的伙伴/副本将从其伙伴或从其他副本请求该页的新副本。 如果此请求成功，则将以可读副本替换不可读的页，并且这通常会解决该错误。  
   
  一般来说，数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 以等效方式处理 I/O 错误。 下面将具体介绍几个差异。  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  数据库镜像自动页修复只尝试修复特定数据文件中的页，此数据文件是指对其执行的操作由于下表中列出的某一错误而失败的数据文件。  
   
-|错误号|说明|导致自动页修复尝试的实例|  
+|错误号|Description|导致自动页修复尝试的实例|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|仅当操作系统对数据执行循环冗余检查 (CRC) 失败时才执行此操作。|ERROR_CRC。 此错误的操作系统值为 23。|  
 |824|逻辑错误。|逻辑数据错误，例如残缺写或错误的页校验和。|  

@@ -1,6 +1,6 @@
 ---
 title: Visual c + + ADO 编程 |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 37c00d7256beef1041ee9c24484449971c3dceee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual c + + ADO 编程
 ADO API 参考描述 ADO 应用程序编程接口 (API) 使用到 Microsoft Visual Basic 类似的语法的功能。 ADO 程序员虽然目标的受众是所有用户，但采用 Visual Basic，Visual c + + 等各种语言 (具有和没有**#import**指令)，和 Visual J + + （与 ADO/WFC 类包）。  

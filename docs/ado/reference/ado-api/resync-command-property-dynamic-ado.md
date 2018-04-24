@@ -1,31 +1,31 @@
 ---
-title: "重新同步命令属性的动态 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 重新同步命令属性的动态 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43e3b1fdebfeb24233e36324f1225868353d25a8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8b3434c97e9548d5b37326a967f540f5f6d3a073
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resync-command-property-dynamic-ado"></a>重新同步命令属性的动态 (ADO)
 指定用户提供的命令字符串[重新同步](../../../ado/reference/ado-api/resync-method.md)要刷新中名为的表中的数据的方法问题[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)动态属性。  

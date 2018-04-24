@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab203bab4b9fd5d83a9ca71a1e32ae97577172c6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 1039464f1523ddfc2c80446e87a158c87692017f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="products-and-technologies-table"></a>产品和技术表
 下表列出了 Microsoft 产品、 工具和 ADO 程序员指南中讨论的技术。 它提供的链接，只要有可能，到指南中相关的主题。

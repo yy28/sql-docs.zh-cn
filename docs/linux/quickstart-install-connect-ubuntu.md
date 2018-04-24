@@ -1,6 +1,6 @@
 ---
-title: "要开始使用在 Ubuntu 上的 SQL Server 2017 |Microsoft 文档"
-description: "本快速入门演示如何在 Ubuntu 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
+title: 要开始使用在 Ubuntu 上的 SQL Server 2017 |Microsoft 文档
+description: 本快速入门演示如何在 Ubuntu 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fd3b175cd8440d17da0f341cd13f65bb044f45a0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门： 安装 SQL Server 并在 Ubuntu 上创建数据库
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/24/2018
 
 你必须具有的 Ubuntu 16.04 机**至少 2 GB**的内存。
 
-若要在您自己的计算机上安装 Ubuntu，请转到[http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)。 你还可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 的 Azure cli](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
+若要在您自己的计算机上安装 Ubuntu，请转到[ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server)。 你还可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 的 Azure cli](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
 
 > [!NOTE]
 > 在此期间，[适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标不支持 Windows 10。
@@ -96,29 +96,45 @@ ms.lasthandoff: 02/24/2018
 
 若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
 
-1. 导入公共存储库 GPG 密钥：
+使用以下步骤来安装**mssql 工具**在 Ubuntu 上。 
+
+1. 导入公共存储库 GPG 密钥。
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. 注册 Microsoft Ubuntu 存储库：
+1. 注册 Microsoft Ubuntu 存储库。
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. 更新源列表，然后运行 unixODBC 开发人员包的安装命令：
+1. 更新源列表，并使用 unixODBC 开发人员包运行安装命令。
 
    ```bash
-   sudo apt-get update
-   sudo apt-get install -y mssql-tools unixodbc-dev
+   sudo apt-get update 
+   sudo apt-get install mssql-tools unixodbc-dev
    ```
 
-1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**PATH**境变量。 这使您可以运行工具，而无需指定完整路径。 在登录会话和交互式/非登录会话中运行以下命令以修改**PATH**：
+   > [!Note] 
+   > 若要更新至最新版本的**mssql 工具**运行以下命令：
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
+
+1. **可选**： 添加`/opt/mssql-tools/bin/`到你**路径**bash shell 中的环境变量。
+
+   若要使**sqlcmd/bcp**访问登录会话 bash shell 中修改你**路径**中**~/.bash_profile**文件使用以下命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+
+   若要使**sqlcmd/bcp**访问交互式/非-登录会话 bash shell 中修改**路径**中**~/.bashrc**文件使用以下命令：
+
+   ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```

@@ -1,31 +1,31 @@
 ---
-title: "正式形状语法 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 正式形状语法 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9eb99feba381701f7e590add3906cd0285b2720
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0273d30952b35a4796e65cf0138d449a9f04185c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="formal-shape-grammar"></a>正式形状语法
 这是用于创建任何形状的命令的正式语法：  
@@ -49,26 +49,26 @@ ms.lasthandoff: 02/09/2018
 |术语|定义|  
 |----------|----------------|  
 |\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<形状命令 >) &#124;<br /><br /> 表\<带引号名称 > &#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|追加\<别名字段列表 > &#124;<br /><br /> 计算\<别名字段列表 > [BY\<字段列表 >]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
-|\<field-exp>|(\<关系 exp >) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relation-cond-list>|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<field-name> TO \<child-ref>|  
-|\<child-ref>|\<字段名称 > &#124;<br /><br /> PARAMETER \<param-ref>|  
+|\<table-exp>|{\<提供程序命令文本 >}&#124;<br /><br /> (\<形状命令 >)&#124;<br /><br /> 表\<带引号名称 >&#124;<br /><br /> \<带引号名称 >|  
+|\<shape-action>|追加\<别名字段列表 >&#124;<br /><br /> 计算\<别名字段列表 > [BY\<字段列表 >]|  
+|\<aliased-field-list>|\<使用别名字段 > [， \<...别名字段 >]|  
+|\<使用别名字段 >|\<field-exp> [[AS] \<alias>]|  
+|\<field-exp>|(\<关系 exp >)&#124;<br /><br /> \<计算 exp >&#124;<br /><br /> \<聚合 exp >&#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<表 exp > [[AS]\<别名 >]<br /><br /> 建立关系\<关系条件列表 >|  
+|\<relation-cond-list>|\<关系条件 > [，\<关系条件 >...]|  
+|\<关系条件 >|\<字段名称 > 收件人\<子 ref >|  
+|\<child-ref>|\<字段名称 >&#124;<br /><br /> 参数\<param ref >|  
 |\<param-ref>|\<number>|  
-|\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM (\<限定字段名称 >) &#124;<br /><br /> AVG (\<限定字段名称 >) &#124;<br /><br /> 最小值 (\<限定字段名称 >) &#124;<br /><br /> 最大 (\<限定字段名称 >) &#124;<br /><br /> 计数 (\<限定别名 > &#124;\<限定名称 >) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<field-list>|\<字段名称 > [，\<字段名称 >]|  
+|\<aggregate-exp>|SUM (\<限定字段名称 >)&#124;<br /><br /> AVG (\<限定字段名称 >)&#124;<br /><br /> 最小值 (\<限定字段名称 >)&#124;<br /><br /> 最大 (\<限定字段名称 >)&#124;<br /><br /> 计数 (\<限定别名 > &#124; \<限定名称 >)&#124;<br /><br /> STDEV (\<限定字段名称 >)&#124;<br /><br /> 任何 (\<限定字段名称 >)|  
 |\<calculated-exp>|CALC(\<expression>)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<quoted-name>|  
+|\<别名 >|\<带引号名称 >|  
 |\<field-name>|\<带引号名称 > [[AS]\<别名 >]|  
-|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
+|\<带引号名称 >|"\<string>" &#124;<br /><br /> \<字符串 >&#124;<br /><br /> [\<string>] &#124;<br /><br /> \<名称 >|  
 |\<qualified-name>|alias[.alias...]|  
-|\<name>|alpha [字母 &#124; 数字 &#124; _ &#124; # &#124;: &#124;...]|  
-|\<number>|digit [digit...]|  
+|\<名称 >|alpha [字母&#124;数字&#124;_ &#124; # &#124; : &#124; ...]|  
+|\<number>|数字 [...数字]|  
 |\<new-exp>|新\<字段类型 > [(\<数 > [，\<数 >])]|  
 |\<field-type>|OLE DB 或 ADO 数据类型。|  
 |\<string>|unicode char [unicode char...]|  

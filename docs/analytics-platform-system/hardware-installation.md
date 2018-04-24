@@ -1,29 +1,22 @@
 ---
-title: 硬件安装 （分析平台系统）
-author: barbkess
-ms.author: barbkess
+title: 硬件安装-分析平台系统 |Microsoft 文档
+description: 本文介绍如何将移动，请解压缩，并安装 SQL Server PDW 设备的硬件。 这篇文章仅供参考，旨在帮助你了解这一过程。 应打开包装后，安装，以及移交给你的它之前，请验证你的设备。 客户参与是必需的项目例如数据中心访问、 电源和以太网连接。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
-caps.latest.revision: 17
-ms.openlocfilehash: 24236e525efbc96c7e263a293f2a27582d700929
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-installation"></a>硬件安装
-本主题介绍如何将移动，请解压缩，并安装 SQL Server PDW 设备的硬件。 本主题仅供参考，旨在帮助你了解这一过程。 应打开包装后，安装，以及移交给你的它之前，请验证你的设备。 客户参与是必需的项目例如数据中心访问、 电源和以太网连接。  
+# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>针对分析平台系统设备的硬件安装
+本文介绍如何将移动，请解压缩，并安装 SQL Server PDW 设备的硬件。 这篇文章仅供参考，旨在帮助你了解这一过程。 应打开包装后，安装，以及移交给你的它之前，请验证你的设备。 客户参与是必需的项目例如数据中心访问、 电源和以太网连接。  
   
 ## <a name="BeforeMoving"></a>从加载停靠移动任何组件之前  
 移动、 解包，或机架的任何设备组件之前，请执行以下任务。  

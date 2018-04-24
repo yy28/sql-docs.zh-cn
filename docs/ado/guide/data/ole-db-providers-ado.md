@@ -1,31 +1,31 @@
 ---
-title: "OLE DB 提供程序 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: OLE DB 提供程序 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d00df80315489c2579646aa4faeafff2b57d8f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b077e7f0e7ff9a4ac46bab298586cb738850112e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供程序 (ADO)
 OLE DB 定义一组 COM 接口，提供在各种信息源中存储的数据进行统一访问的应用程序。 此方法允许数据源以共享其数据通过支持的 DBMS 功能适合于数据源数量的接口。 按照设计，OLE DB 的高性能体系结构基于其使用灵活的、 基于组件的服务模型。 而不是使规定的数量的应用程序的数据之间的中间层，OLE DB 只需要为所需的许多组件完成特定任务。  

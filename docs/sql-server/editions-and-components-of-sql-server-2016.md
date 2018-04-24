@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 2016 的各版本和支持的功能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2016 的各版本和支持的功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: 
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ac0bf2e29b087cb9256cef20657a1d977ff8c23f
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 8c4a2d253c27e648ee7c4214259b4ceb99e79e3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.lasthandoff: 02/24/2018
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定义|  
 |---------------------------------------|----------------|  
 |Enterprise|作为高级版本， [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能 - 可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于本地和云部 - 有助于以最少的 IT 资源获得高效的数据库管理。|  
-|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，Web 版本是一项总拥有成本较低的选择。|  
-|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 和测试应用程序的人员的理想之选。|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署 - 有助于以最少的 IT 资源获得高效的数据库管理。|  
+|Web|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择。|  
+|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 和测试应用程序的人员的理想之选。|  
 |Express 版本|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是 Express 的一种轻型版本，该版本具备所有可编程性功能，但在用户模式下运行，并且具有快速的零配置安装和必备组件要求较少的特点。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 Internet 服务器  
@@ -96,21 +96,21 @@ ms.lasthandoff: 02/24/2018
   
 |服务器组件|Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包括[!INCLUDE[ssDE](../includes/ssde-md.md)]（用于存储、处理和保护数据安全的核心服务）、复制、全文搜索、管理关系数据和 XML 数据的工具（以数据分析集成和用于访问 Hadoop 与其他异类数据源的 Polybase 集成的方式）以及 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 服务器。|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 包括用于创建和管理联机分析处理 (OLAP) 以及数据挖掘应用程序的工具。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包括 [!INCLUDE[ssDE](../includes/ssde-md.md)]、部分工具和 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 服务器，其中引擎是用于存储、处理和保护数据、复制及全文搜索的核心服务，工具用于管理数据库分析集成中和可访问 Hadoop 及其他异类数据源的 Polybase 集成中的关系数据和 XML 数据。|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 包括一些工具，可用于创建和管理联机分析处理 (OLAP) 以及数据挖掘应用程序。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|  
-|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一组图形工具和可编程对象，用于移动、复制和转换数据。 它还包括 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (DQS) 组件。|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 是针对主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 可以配置 MDS 来管理任何领域（产品、客户、帐户）；MDS 中可包括层次结构、各种级别的安全性、事务、数据版本控制和业务规则，以及可用于管理数据的 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]。|  
-|[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]|[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 支持在多个平台上部署使用多个企业数据源（包括 Linux、Hadoop 和 Teradata）的分布式、可缩放 R 解决方案。|  
+|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一组图形工具和可编程对象，用于移动、复制和转换数据。 它还包括 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) 组件。|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 是针对主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 可以配置 MDS 来管理任何领域（产品、客户、帐户）；MDS 中可包括层次结构、各种级别的安全性、事务、数据版本控制和业务规则，以及可用于管理数据的 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。|  
+|[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]|[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 支持在多个平台上使用可缩放的分布式 R 解决方案，并支持使用多个企业数据源（如 Linux、Hadoop 和 Teradata 等）。|  
   
 |管理工具|Description|  
 |----------------------|-----------------|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用于访问、配置、管理和开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件的集成环境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 使各种技术水平的开发人员和管理员都能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。<br /><br /> 从 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] [下载 SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 下载并安装|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用于访问、配置、管理和开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]组件的集成环境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 使各种技术水平的开发人员和管理员都能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。<br /><br /> 从 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 下载 SQL Server Management Studio  [中下载并安装](http://msdn.microsoft.com/library/mt238290.aspx)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务、服务器协议、客户端协议和客户端别名提供基本配置管理。|  
-|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 提供了一个图形用户界面，用于监视 [!INCLUDE[ssDE](../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。|  
+|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 提供了一个图形用户界面，用于监视 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。|  
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] 优化顾问|[!INCLUDE[ssDE](../includes/ssde-md.md)] 优化顾问可以协助创建索引、索引视图和分区的最佳组合。|  
 |数据质量客户端|提供了一个非常简单和直观的图形用户界面，用于连接到 DQS 数据库并执行数据清理操作。 它还允许您集中监视在数据清理操作过程中执行的各项活动。|  
-|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 提供 IDE 以便为以下商业智能组件生成解决方案：[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。<br /><br /> （以前称作 Business Intelligence Development Studio）。<br /><br /> [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 还包含“数据库项目”，为数据库开发人员提供集成环境，以便在 Visual Studio 内为任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台（包括本地和外部）执行其所有数据库设计工作。 数据库开发人员可以使用 Visual Studio 中功能增强的服务器资源管理器，轻松创建或编辑数据库对象和数据或执行查询。|  
+|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 提供 IDE 以便为以下商业智能组件生成解决方案： [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。<br /><br /> （以前称作 Business Intelligence Development Studio）。<br /><br /> [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 还包含“数据库项目”，为数据库开发人员提供集成环境，以便在 Visual Studio 内为任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台（包括本地和外部）执行其所有数据库设计工作。 数据库开发人员可以使用 Visual Studio 中功能增强的服务器资源管理器，轻松创建或编辑数据库对象和数据或执行查询。|  
 |连接组件|安装用于客户端和服务器之间通信的组件，以及用于 DB-Library、ODBC 和 OLE DB 的网络库。|  
   
 |文档|Description|  
@@ -129,11 +129,11 @@ ms.lasthandoff: 02/24/2018
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
 |单个实例使用的最大计算能力 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值| 
 |单个实例使用的最大计算能力 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
-|每个实例的缓冲池的最大内存 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|操作系统支持的最大值|128 GB|64 GB|1410 MB|1410 MB|
-|每个实例的列存储段缓存的最大内存 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|不受限制的内存| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-|每个数据库的最大内存优化数据大小 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|不受限制的内存| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-|每个实例利用的最大内存 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|操作系统支持的最大值|表格：16 GB<br /><br /> MOLAP：64 GB|N/A|N/A|N/A|  
-|每个实例利用的最大内存 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|操作系统支持的最大值|64 GB|64 GB|4 GB|N/A|
+|每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的缓冲池的最大内存|操作系统支持的最大值|128 GB|64 GB|1410 MB|1410 MB|
+|每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的列存储段缓存的最大内存|不受限制的内存| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中每个数据库的最大内存优化数据大小|不受限制的内存| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
+|每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|表格：16 GB<br /><br /> MOLAP：64 GB|N/A|N/A|N/A|  
+|每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|64 GB|64 GB|4 GB|N/A|
 |最大关系数据库大小|524 PB|524 PB|524 PB|10 GB|10 GB|  
   
 <sup>1</sup> 对于 Enterprise Edition 配合基于服务器 + 客户端访问许可证 (CAL) 的许可（对新协议不可用），每个 SQL Server 实例的内核数上限为 20。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
@@ -145,22 +145,22 @@ ms.lasthandoff: 02/24/2018
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Server Core 支持 <sup>1</sup>|是|是|是|是|是|  
-|日志传送|是|是|是|是|是|  
+|日志传送|是|是|是|否|“否”|  
 |数据库镜像|是|是<br /><br /> 仅完全安全|仅见证服务器|仅见证服务器|仅见证服务器| 
-|备份压缩|是|是|是|是|是| 
+|备份压缩|是|是|否|否|“否”| 
 |数据库快照|是|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|
-|AlwaysOn 故障转移群集实例|是<br /><br /> 节点数是操作系统支持的最大值|是<br /><br /> 支持 2 个节点|是|是|是|  
-|AlwaysOn 可用性组|是<br /><br /> 支持最多 8 个次要副本，包括 2 个同步次要副本|是|是|是|是|
-|基本可用性组 <sup>2</sup>|是|是<br /><br /> 支持 2 个节点|是|是|是|
-|联机页面和文件还原|是|是|是|是|是|
-|联机索引|是|是|是|是|是|
-|联机架构更改|是|是|是|是|是|
-|快速恢复|是|是|是|是|是|
-|镜像备份|是|是|是|是|是|
-|热插拔内存和 CPU|是|是|是|是|是|
+|AlwaysOn 故障转移群集实例|是<br /><br /> 节点数是操作系统支持的最大值|是<br /><br /> 支持 2 个节点|“否”|否|“否”|  
+|AlwaysOn 可用性组|是<br /><br /> 支持最多 8 个次要副本，包括 2 个同步次要副本|“否”|否|否|“否”|
+|基本可用性组 <sup>2</sup>|“否”|是<br /><br /> 支持 2 个节点|“否”|否|“否”|
+|联机页面和文件还原|是|否|否|否|“否”|
+|联机索引|是|否|否|否|“否”|
+|联机架构更改|是|否|否|否|“否”|
+|快速恢复|是|否|否|否|“否”|
+|镜像备份|是|否|否|否|“否”|
+|热插拔内存和 CPU|是|否|否|否|“否”|
 |数据库恢复顾问|是|是|是|是|是|
-|加密备份|是|是|是|是|是|
-|Microsoft Azure 的混合备份（URL 的备份）|是|是|是|是|是|  
+|加密备份|是|是|否|否|“否”|
+|Microsoft Azure 的混合备份（URL 的备份）|是|是|否|否|“否”|  
   
  <sup>1</sup> 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
 
@@ -179,12 +179,12 @@ ms.lasthandoff: 02/24/2018
 |多实例支持|50|50|50|50|50|
 |表和索引分区|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|  
 |数据压缩|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
-|Resource Governor|是|是|是|是|是|  
-|已分区表并行度|是|是|是|是|是|
+|Resource Governor|是|否|否|否|“否”|  
+|已分区表并行度|是|否|否|否|“否”|
 |多个 Filestream 容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
-|NUMA 感知、大型页内存和缓冲区数组分配|是|是|是|是|是|
-|缓冲池扩展|是|是|是|是|是|
-|IO 资源调控|是|是|是|是|是|  
+|NUMA 感知、大型页内存和缓冲区数组分配|是|否|否|否|“否”|
+|缓冲池扩展|是|是|否|否|“否”|
+|IO 资源调控|是|否|否|否|“否”|  
 |延迟持续性|是|是|是|是|是|
 
 <sup>1</sup> 内存中 OLTP 数据大小和列存储段缓存限制为“规模限制”部分中的版本所指定的内存量。 最大并行度是有限的。 对于 Standard Edition，索引生成的进程并行度 (DOP) 限制为 2 DOP，对于 Web 和 Express Edition，索引生成的进程并行度 (DOP) 限制为 1 DOP。 这是指在基于磁盘的表和内存优化表上创建的列存储索引。
@@ -201,26 +201,26 @@ ms.lasthandoff: 02/24/2018
 |动态数据屏蔽|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|   
 |基本审核|是|是|是|是|是| 
 |精细审核|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>| 
-|透明数据库加密|是|是|是|是|是|   
-|可扩展的密钥管理|是|是|是|是|是| 
+|透明数据库加密|是|否|否|否|“否”|   
+|可扩展的密钥管理|是|否|否|否|“否”| 
 |用户定义的角色|是|是|是|是|是| 
 |包含的数据库|是|是|是|是|是| 
-|备份加密|是|是|是|是|是|  
+|备份加密|是|是|否|否|“否”|  
 
 <sup>1</sup> 适用于 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。  
 ##  <a name="Replication"></a> Replication  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|异类订阅服务器|是|是|是|是|是|  
+|异类订阅服务器|是|是|否|否|“否”|  
 |合并复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
-|Oracle 发布|是|是|是|是|是| 
-|对等事务复制|是|是|是|是|是|   
+|Oracle 发布|是|否|否|否|“否”| 
+|对等事务复制|是|否|否|否|“否”|   
 |快照复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
 |SQL Server 变更跟踪|是|是|是|是|是| 
 |事务复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
-|事务复制到 Azure|是|是|是|是|是|   
-|事务复制可更新的订阅|是|是|是|是|是|  
+|事务复制到 Azure|是|是|否|否|“否”|   
+|事务复制可更新的订阅|是|否|否|否|“否”|  
   
 ##  <a name="SSMS"></a> Management Tools  
   
@@ -229,13 +229,13 @@ ms.lasthandoff: 02/24/2018
 |SQL 管理对象 (SMO)|是|是|是|是|是|  
 |SQL 配置管理器|是|是|是|是|是|   
 |SQL CMD（命令提示工具）|是|是|是|是|是|      
-|Distributed Replay - 管理工具|是|是|是|是|是|  
-|Distributed Replay - 客户端|是|是|是|是|是|  
-|分布式重播 - 控制器|支持（最多 16 个客户端）|支持（1 个客户端）|支持（1 个客户端）|是|是|   
+|Distributed Replay - 管理工具|是|是|是|是|“否”|  
+|Distributed Replay - 客户端|是|是|是|否|“否”|  
+|分布式重播 - 控制器|支持（最多 16 个客户端）|支持（1 个客户端）|支持（1 个客户端）|否|“否”|   
 |SQL Profiler|是|是|否 <sup>1</sup>|否 <sup>1</sup>|否 <sup>1</sup>|  
-|SQL Server 代理|是|是|是|是|是| 
-|Microsoft System Center Operations Manager 管理包|是|是|是|是|是|  
-|数据库优化顾问 (DTA)|是|是 <sup>2</sup>|是 <sup>2</sup>|是|是|      
+|SQL Server 代理|是|是|是|否|“否”| 
+|Microsoft System Center Operations Manager 管理包|是|是|是|否|“否”|  
+|数据库优化顾问 (DTA)|是|是 <sup>2</sup>|是 <sup>2</sup>|否|“否”|      
   
  <sup>1</sup> 可以使用 SQL Server Standard 和 SQL Server Enterprise 版本探查 SQL Server Web、SQL Server Express、SQL Server Express with Tools 和 SQL Server Express with Advanced Services。  
   
@@ -245,25 +245,25 @@ ms.lasthandoff: 02/24/2018
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|用户实例|是|是|是|是|是| 
-|LocalDB|是|是|是|是|是| 
+|用户实例|“否”|否|否|是|是| 
+|LocalDB|“否”|否|否|是|“否”| 
 |专用管理连接|是|是|是|支持（使用跟踪标志）|支持（使用跟踪标志）|   
 |PowerShell 脚本支持|是|是|是|是|是| 
 |SysPrep 支持 <sup>1</sup>|是|是|是|是|是| 
 |支持数据层应用程序组件操作 - 提取、部署、升级、删除|是|是|是|是|是| 
-|策略自动执行（检查计划和更改）|是|是|是|是|是|   
-|性能数据收集器|是|是|是|是|是| 
-|能够作为多实例管理中的托管实例注册|是|是|是|是|是|   
-|标准性能报表|是|是|是|是|是| 
-|计划指南和计划指南的计划冻结|是|是|是|是|是|   
+|策略自动执行（检查计划和更改）|是|是|是|否|“否”|   
+|性能数据收集器|是|是|是|否|“否”| 
+|能够作为多实例管理中的托管实例注册|是|是|是|否|“否”|   
+|标准性能报表|是|是|是|否|“否”| 
+|计划指南和计划指南的计划冻结|是|是|是|否|“否”|   
 |使用 NOEXPAND 提示的索引视图的直接查询|是|是|是|是|是| 
-|自动索引视图维护|是|是|是|是|是| 
-|分布式分区视图|是|是|是|是|是| 
-|并行索引操作|是|是|是|是|是|  
-|查询优化器自动使用索引视图|是|是|是|是|是| 
-|并行一致性检查|是|是|是|是|是| 
-|SQL Server 实用工具控制点|是|是|是|是|是|    
-|缓冲池扩展|是|是|是|是|是| 
+|自动索引视图维护|是|是|是|否|“否”| 
+|分布式分区视图|是|否|否|否|“否”| 
+|并行索引操作|是|否|否|否|“否”|  
+|查询优化器自动使用索引视图|是|否|否|否|“否”| 
+|并行一致性检查|是|否|否|否|“否”| 
+|SQL Server 实用工具控制点|是|否|否|否|“否”|    
+|缓冲池扩展|是|是|否|否|“否”| 
   
  <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
@@ -275,18 +275,18 @@ ms.lasthandoff: 02/24/2018
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Microsoft Visual Studio 集成|是|是|是|是|是| 
 |Intellisense（Transact-SQL 和 MDX）|是|是|是|是|是| 
-|SQL Server Data Tools (SSDT)|是|是|是|是|是|    
-|MDX 编辑、调试和设计工具|是|是|是|是|是|   
+|SQL Server Data Tools (SSDT)|是|是|是|是|“否”|    
+|MDX 编辑、调试和设计工具|是|是|否|否|“否”|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|基本 R 集成|是|是|是|是|是|   
-|高级 R 集成|是|是|是|是|是| 
-|R Server (Standalone)|是|是|是|是|是|   
+|基本 R 集成|是|是|是|是|“否”|   
+|高级 R 集成|是|否|否|否|“否”| 
+|R Server (Standalone)|是|否|否|否|“否”|   
 |Polybase 计算节点|是|是 <sup>1</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>, <sup>2</sup>| 
-|Polybase 头节点|是|是|是|是|是| 
+|Polybase 头节点|是|否|否|否|“否”| 
 |JSON|是|是|是|是|是|   
 |查询存储|是|是|是|是|是|   
 |临时|是|是|是|是|是|   
@@ -298,10 +298,10 @@ ms.lasthandoff: 02/24/2018
 |FileTable|是|是|是|是|是| 
 |日期和时间数据类型|是|是|是|是|是|  
 |国际化支持|是|是|是|是|是| 
-|全文和语义搜索|是|是|是|是|是| 
-|查询中的语言规范|是|是|是|是|是|   
+|全文和语义搜索|是|是|是|是|“否”| 
+|查询中的语言规范|是|是|是|是|“否”|   
 |Service Broker（消息传递）|是|是|不支持（仅客户端）|不支持（仅客户端）|不支持（仅客户端）|   
-|Transact-SQL 端点|是|是|是|是|是| 
+|Transact-SQL 端点|是|是|是|否|“否”| 
 
 <sup>1</sup> 具有多个计算节点的 Scale out 需要一个头节点。
 
@@ -319,13 +319,13 @@ ms.lasthandoff: 02/24/2018
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|在无需数据库的情况下创建多维数据集|是|是|是|是|是 |   
-|自动生成临时和数据仓库架构|是|是|是|是|是| 
-|变更数据捕获|是|是 <sup>1</sup>|是|是|是| 
-|星型联接查询优化|是|是|是|是|是| 
-|可扩展的只读 Analysis Services 配置|是|是|是|是|是| 
-|针对已分区表和索引的并行查询处理|是|是|是|是|是|   
-|全局批处理集成|是|是|是|是|是| 
+|在无需数据库的情况下创建多维数据集|是|是|否|否|“否” |   
+|自动生成临时和数据仓库架构|是|是|否|否|“否”| 
+|变更数据捕获|是|是 <sup>1</sup>|“否”|否|“否”| 
+|星型联接查询优化|是|否|否|否|“否”| 
+|可扩展的只读 Analysis Services 配置|是|否|否|否|“否”| 
+|针对已分区表和索引的并行查询处理|是|否|否|否|“否”|   
+|全局批处理集成|是|否|否|否|“否”| 
 
 <sup>1</sup> 适用于 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1。  
 ##  <a name="SSAS"></a> Analysis Services  
@@ -370,14 +370,14 @@ ms.lasthandoff: 02/24/2018
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移助手|是|是|是|是|是|   
-|数据库邮件|是|是|是|是|是| 
+|数据库邮件|是|是|是|否|“否”| 
   
 ##  <a name="Other"></a> Other Components  
   
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|是|是| 
-|StreamInsight HA|StreamInsight Premium Edition|是|是|是|是|   
+|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|“否”|“否”| 
+|StreamInsight HA|StreamInsight Premium Edition|“否”|否|否|“否”|   
   
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   

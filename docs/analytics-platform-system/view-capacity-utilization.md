@@ -1,28 +1,21 @@
 ---
-title: 查看容量使用率 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 查看分析平台系统中的容量利用率 |Microsoft 文档
+description: 查看分析平台系统中的容量利用率。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: 9
-ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="view-capacity-utilization"></a>查看容量使用率
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>查看分析平台系统中的容量使用率
 本主题说明如何查看 SQL Server PDW 设备中的容量利用率。  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>若要通过使用管理控制台来查看容量使用率  

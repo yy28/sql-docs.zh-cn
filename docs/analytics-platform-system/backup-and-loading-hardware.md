@@ -1,28 +1,22 @@
 ---
-title: 备份和加载 AP PDW 硬件概述
-author: barbkess
-ms.author: barbkess
+title: 备份和加载硬件-并行数据仓库
+description: 若要部署端到端数据仓库解决方案分析平台系统 (AP) 上并行数据仓库 (PDW)，你需要创建备份数据仓库和加载数据的计划。 使用本指南来获取和配置将根据业务需求的备份和加载服务器。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 若要部署端到端数据仓库解决方案分析平台系统 (AP) 与 SQL Server 并行数据仓库 (PDW)，你需要创建备份数据仓库和加载数据的计划。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
-caps.latest.revision: 9
-ms.openlocfilehash: 8979b0d7b14f3e6b3de2834fdc800c5281d057ad
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4d7f7b6b4edea9dacab7287a7936b7fd87fd7973
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-and-loading-hardware-overview"></a>备份和加载硬件概述
-若要部署端到端数据仓库解决方案分析平台系统 (AP) 与 SQL Server 并行数据仓库 (PDW)，你需要创建备份数据仓库和加载数据的计划。 使用本指南来获取和配置将根据业务需求的备份和加载服务器。  
+# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>备份和加载硬件概述-并行数据仓库
+若要部署端到端数据仓库解决方案分析平台系统 (AP) 上并行数据仓库 (PDW)，你需要创建备份数据仓库和加载数据的计划。 使用本指南来获取和配置将根据业务需求的备份和加载服务器。  
   
 ## <a name="acquire-and-configure-backup-servers"></a>获取和配置备份服务器  
 ![备份过程](media/backup-process.png "备份过程")  

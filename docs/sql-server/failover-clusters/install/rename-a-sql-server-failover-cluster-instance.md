@@ -1,15 +1,16 @@
 ---
-title: "重命名 SQL Server 故障转移群集实例 | Microsoft Docs"
-ms.custom: 
+title: 重命名 SQL Server 故障转移群集实例 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - virtual servers [SQL Server], failover clustering
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e57c999cd35129131f124aa6319b09b91ff99d9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: da7b8e146a9b5fb7d4ce98a8f31ecc48ca71c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包括在故障转移群集中，则重命名虚拟服务器的过程不同于重命名独立实例的过程。 有关详细信息，请参阅 [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包括在故障转移群集中，则重命名虚拟服务器的过程不同于重命名独立实例的过程。 有关详细信息，请参阅 [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
   
  虚拟服务器的名称始终与 SQL 网络名称（SQL 虚拟服务器的网络名称）相同。 尽管您可以更改虚拟服务器的名称，但不能更改实例名。 例如，您可以将名为 VS1\instance1 的虚拟服务器更改为其他名称（例如 SQL35\instance1），但是名称的实例部分 (instance1) 将保持不变。  
   

@@ -1,33 +1,33 @@
 ---
-title: "保存数据 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 保存数据 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 533801c5f6717ec32a821a79acadce3f953c8d71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 915f1d4e8ac954302c35eb430bb36bb72b33ef14
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="persisting-data"></a>保存数据
 （例如，使用便携式计算机） 的可移植计算已生成可以在连接和断开连接状态中运行的应用程序的需求。 ADO 通过让能够保存客户端游标的开发人员添加了对此支持**记录集**到磁盘，然后重新加载它更高版本。  

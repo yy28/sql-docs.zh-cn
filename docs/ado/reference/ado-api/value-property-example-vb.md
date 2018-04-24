@@ -1,32 +1,32 @@
 ---
-title: "值属性示例 (VB) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 值属性示例 (VB) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db32221c278eceafc9dd237b7e1fdb3140817e7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 80fddbfb0bcccdf5e5555cd76b3f9fb3c161f6b3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="value-property-example-vb"></a>值属性示例 (VB)
 此示例演示[值](../../../ado/reference/ado-api/value-property-ado.md)具有属性[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)通过显示的字段和属性值的对象***员工***表。  

@@ -1,28 +1,22 @@
 ---
-title: 备份和还原
-author: barbkess
-ms.author: barbkess
+title: 备份和还原-并行数据仓库 |Microsoft 文档
+description: 描述如何备份和还原可并行数据仓库 (PDW) 数据。 备份和还原操作用于灾难恢复。 备份和还原还可将数据库从一个设备复制到另一个设备。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 描述数据如何备份和还原的 SQL Server 并行数据仓库 (PDW) 的工作原理。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>备份和还原
-描述数据如何备份和还原的 SQL Server 并行数据仓库 (PDW) 的工作原理。 备份和还原操作用于灾难恢复。 备份和还原还可将数据库从一个设备复制到另一个设备。  
+描述如何备份和还原可并行数据仓库 (PDW) 数据。 备份和还原操作用于灾难恢复。 备份和还原还可将数据库从一个设备复制到另一个设备。  
     
 ## <a name="BackupRestoreBasics"></a>备份和还原的基础知识  
 PDW*数据库备份*是一份装置数据库，以便它可以用于将原始数据库还原到设备的格式存储。  

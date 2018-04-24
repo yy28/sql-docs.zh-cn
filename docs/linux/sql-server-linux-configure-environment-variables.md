@@ -1,6 +1,6 @@
 ---
-title: "使用环境变量配置 SQL Server 设置 |Microsoft 文档"
-description: "本文介绍如何使用环境变量来在 Linux 上配置特定的 SQL Server 2017 设置。"
+title: 使用环境变量配置 SQL Server 设置 |Microsoft 文档
+description: 本文介绍如何使用环境变量来在 Linux 上配置特定的 SQL Server 2017 设置。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 523959047c7b7cd7cce36138650b8cc52873f73e
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -53,6 +53,7 @@ ms.lasthandoff: 02/21/2018
 | **MSSQL_AGENT_ENABLED** | 启用 SQL Server 代理。 例如，启用了 'true' 和 'false' 为禁用。 默认情况下，禁用代理。  |
 | **MSSQL_MASTER_DATA_FILE** | 设置的 master 数据库数据文件的位置。 |
 | **MSSQL_MASTER_LOG_FILE** | 设置的 master 数据库日志文件的位置。 |
+| **MSSQL_ERROR_LOG_FILE** | 设置错误日志文件的位置。 |
 
 
 ## <a name="example-initial-setup"></a>示例： 初始设置

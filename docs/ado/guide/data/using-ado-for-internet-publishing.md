@@ -1,33 +1,33 @@
 ---
-title: "用于 Internet 发布的 ADO |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 用于 Internet 发布的 ADO |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, Internet publishing
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 609f4574c7f8cf9cb13fd2d5b21f3504ec3ce9fb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 642f4eb6f145b7488766688c758660521c74fa8f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-for-internet-publishing"></a>ADO 用于 Internet 发布
 [OLE DB Provider for Internet 发布](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)显示访问用 ADO 异类数据的特定示例。 尽管此部分中的示例将特定于使用 Internet 发布提供程序，与其他提供程序与异类数据，如到电子邮件存储区提供程序一起使用 ADO 时应类似演示的原则。  

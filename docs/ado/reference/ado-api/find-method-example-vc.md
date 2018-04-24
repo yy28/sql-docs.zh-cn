@@ -1,32 +1,32 @@
 ---
-title: "查找方法示例 （VC + +） |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 查找方法示例 （VC + +） |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587289df9a029732fade5c761b07037126c4877e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c8277c4fb811be2d0ae61ded434643aeda835a6a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-example-vc"></a>查找方法示例 （VC + +）
 此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法定位并计数业务中的标题数目**Pubs**数据库。 该示例假定基础提供程序不支持类似的功能。  

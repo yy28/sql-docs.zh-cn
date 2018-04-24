@@ -1,31 +1,31 @@
 ---
-title: "键集游标 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 键集游标 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c59e2b203f6b33d94a1f615c53c2507964a13a65
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88772fa9ede31acdf5b719cec7cb9311b15cb864
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="keyset-cursors"></a>键集游标
 键集游标提供的功能，以检测更改的静态和动态游标之间的功能。 如静态游标，它不始终检测到的成员资格和顺序的结果集的更改。 动态游标，像它未在结果集中检测更改的行的值。  

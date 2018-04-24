@@ -1,33 +1,33 @@
 ---
-title: SchemaEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: SchemaEnum |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - SchemaEnum
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a5f76b03c61f1ea8576df0bb74acccbc37f7d811
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的架构的类型**记录集**， [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法检索。  
@@ -50,8 +50,8 @@ ms.lasthandoff: 02/15/2018
 |**adSchemaCollations**|3|返回字符定义的排序规则在目录中与给定用户可访问。<br /><br /> （排序规则行集）|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  
 |**adSchemaColumnPrivileges**|13|在目录中定义的可指定用户或由给定的用户授权的表的列返回的权限。<br /><br /> （COLUMN_PRIVILEGES 行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|返回的表的列 （包括视图） 的目录中定义给定用户可以访问。<br /><br /> （列行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|返回目录中定义依赖于目录中定义和给定用户所拥有的域中的列。<br /><br /> (COLUMN_DOMAIN_USAGE Rowset)|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
-|**adSchemaConstraintColumnUsage**|6|返回由引用约束、 唯一约束、 check 约束和断言、 目录中定义和给定用户所拥有的列。<br /><br /> (CONSTRAINT_COLUMN_USAGE Rowset)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaColumnsDomainUsage**|11|返回目录中定义依赖于目录中定义和给定用户所拥有的域中的列。<br /><br /> （COLUMN_DOMAIN_USAGE 行集）|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
+|**adSchemaConstraintColumnUsage**|6|返回由引用约束、 唯一约束、 check 约束和断言、 目录中定义和给定用户所拥有的列。<br /><br /> （CONSTRAINT_COLUMN_USAGE 行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|返回由引用约束、 唯一约束、 check 约束和断言的目录中定义并由给定的用户拥有的表。<br /><br /> （CONSTRAINT_TABLE_USAGE 行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|在架构 （或目录，如果提供程序不支持架构） 中返回有关可用的多维数据集信息。<br /><br /> （多维数据集行集 *）|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
 |**adSchemaDBInfoKeywords**|30|返回提供程序特定关键字的列表。<br /><br /> (IDBInfo::GetKeywords)|\<无 >|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/15/2018
 |**adSchemaForeignKeys**|27|返回由给定用户在目录中定义的外键列。<br /><br /> （FOREIGN_KEYS 行集）|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|返回有关可用维度中的层次结构的信息。<br /><br /> （层次结构行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
 |**adSchemaIndexes**|12|返回由给定用户所拥有的索引的目录中定义。<br /><br /> （索引行集）|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME 类型 TABLE_NAME|  
-|**adSchemaKeyColumnUsage**|8|返回由给定用户约束为键的列的目录中定义。<br /><br /> (KEY_COLUMN_USAGE Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaKeyColumnUsage**|8|返回由给定用户约束为键的列的目录中定义。<br /><br /> （KEY_COLUMN_USAGE 行集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|返回有关可用维度中的级别的信息。<br /><br /> （级别行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|返回有关可用度量值的信息。<br /><br /> （度量值行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|返回有关可用的成员信息。<br /><br /> （成员行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE 树运算符。 有关详细信息，请参阅 OLE DB 的联机分析处理 (OLAP)。|  
@@ -81,12 +81,12 @@ ms.lasthandoff: 02/15/2018
 |**adSchemaTranslations**|21|返回给定的用户可以访问的字符转换的目录中定义。<br /><br /> （翻译行集）|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|保留供将来使用。||  
 |**adSchemaUsagePrivileges**|15|在目录中定义的可指定用户或授予由给定用户的对象上返回的使用情况特权。<br /><br /> （USAGE_PRIVILEGES 行集）|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE 授权者被授权者|  
-|**adSchemaViewColumnUsage**|24|返回所依据的列查看表、 在目录中定义并由给定用户拥有所依赖。<br /><br /> (VIEW_COLUMN_USAGE Rowset)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViewColumnUsage**|24|返回所依据的列查看表、 在目录中定义并由给定用户拥有所依赖。<br /><br /> （VIEW_COLUMN_USAGE 行集）|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|返回给定的用户可以访问的视图的目录中定义。<br /><br /> （视图行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaViewTableUsage**|25|返回在其上的表查看表、 目录中定义和归给定用户所依赖。<br /><br /> （VIEW_TABLE_USAGE 行集）|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- Package: **com.ms.wfc.data**  
+ 包： **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

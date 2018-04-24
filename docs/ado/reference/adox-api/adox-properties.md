@@ -1,31 +1,31 @@
 ---
-title: "ADOX 属性 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ADOX 属性 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 51fded3ef911f44a2f2f8e43e6df520af889f636
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-properties"></a>ADOX 属性
 |||  
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/09/2018
 |[群集](../../../ado/reference/adox-api/clustered-property-adox.md)|指示索引是否聚集索引。|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|指定 ADO**命令**可以用于创建或执行该过程的对象。|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
-|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|指示创建对象时的日期。|  
+|[时间](../../../ado/reference/adox-api/datecreated-property-adox.md)|指示创建对象时的日期。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|指示对象上次修改日期。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|指示列的规定的最大大小。|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|指示删除主键时，将执行的操作。|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/09/2018
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|指示列中数值的小数位数。|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|指定的父目录中的表或列，以提供对提供程序特定属性的访问。|  
 |[精度](../../../ado/reference/adox-api/precision-property-adox.md)|指示列中的数据值的最大精度。|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|指示索引是否表示表的主键。|  
+|[primaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|指示索引是否表示表的主键。|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|指示相关表 （仅限键列） 中的相关列的名称。|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|指示相关表的名称。|  
 |[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|指示列 （仅限索引列） 的排序顺序。|  

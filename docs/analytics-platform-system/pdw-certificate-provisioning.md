@@ -1,28 +1,21 @@
 ---
-title: PDW 证书设置 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: PDW 证书预配的分析平台系统 |Microsoft 文档
+description: 分析平台系统配置管理器中的 PDW 证书设置页导入，或者移除 PDW 区域使用的证书。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ea52c615f4629b579f5f239513c84d851de9e487
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>PDW 证书设置
+# <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 证书预配的分析平台系统
 **PDW 证书预配**Analytics Platform System 页**Configuration Manager**导入或删除 PDW 区域使用的证书。 使用，对通信进行加密的证书有助于给控制节点通过 SQL Server 客户端，使用 SQL Server PDW 驱动程序的工具的安全通信[管理控制台](monitor-the-appliance-by-using-the-admin-console.md)，并 Integration Services 将加载。  
   
 ## <a name="prerequisites"></a>必要條件  

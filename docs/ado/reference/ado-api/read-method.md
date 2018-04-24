@@ -1,17 +1,17 @@
 ---
-title: "Read 方法 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: Read 方法 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: reference
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Stream::raw_Read
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a702625e2bc1fbb00a8f7d1519d574a30d8df270
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e73ea6c8a837322b10aeea877eef10ba37a0b560
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="read-method"></a>Read 方法
 从二进制文件中读取指定的数目的字节[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -41,7 +41,7 @@ Variant = Stream.Read ( NumBytes)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *NumBytes*  
+ *变量*  
  選擇性。 A**长**值，该值指定要从文件中读取的字节数或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值**adReadAll**，这是默认设置。  
   
 ## <a name="return-value"></a>返回值  

@@ -1,16 +1,16 @@
 ---
-title: "刷新方法 (RDS) |Microsoft 文档"
+title: 刷新方法 (RDS) |Microsoft 文档
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Refresh
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26182bb5f3ec1d60b66e5c16bf403a1f427c8b87
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 89e9088aeec78213f7da9a79ba78255de4b94b97
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="refresh-method-rds"></a>刷新方法 (RDS)
 将重新查询中指定的数据源[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性和更新查询结果。  

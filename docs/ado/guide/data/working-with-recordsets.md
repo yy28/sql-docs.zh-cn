@@ -1,30 +1,30 @@
 ---
-title: "使用记录集 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 使用记录集 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-recordsets"></a>使用记录集
 **记录集**对象具有的内置功能，可让您重新排列结果集中的数据的顺序，来搜索特定记录根据你提供的条件并甚至优化使用索引这些搜索操作。 这些功能是否可供使用取决于提供程序以及在某些情况下 — 例如[索引](../../../ado/reference/ado-api/index-property.md)属性-数据源本身的结构。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
  比较运算符中的条件可以是"**>**"（大于）、"**\<**"（小于）、"="（等于）、"> ="（大于或等于），"< ="（小于或等于）、"<>"（不等于）、 或"LIKE"（模式匹配）。  
   
- 条件值可以是字符串、 浮点数或日期。 字符串值是用单引号引起来或"#"（数字符号） 标记分隔 (例如，"状态 = WA"或"状态 = #WA #")。 日期值分隔用"#"（数字符号） 标记 (例如，"start_date > #7/22/&#97;")。  
+ 条件值可以是字符串、 浮点数或日期。 字符串值是用单引号引起来或"#"（数字符号） 标记分隔 (例如，"状态 = WA"或"状态 = #WA #")。 日期值分隔用"#"（数字符号） 标记 (例如，"start_date > #7/22/97 #")。  
   
  如果"like"的比较运算符，字符串值可以包含一个星号 （*） 以找到一个或多个出现的任何字符或子字符串。 例如，"等状态正在\*"与缅因和麻省匹配。 前导和尾随星号还可用于查找的值中包含的子字符串。 例如，"状态，如\*作为\*"与阿拉斯加、 阿肯色和麻省。  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 02/09/2018
   
 -   *FieldName*必须是来自有效字段名称**记录集**。 如果字段名称包含空格，必须将名称括在方括号中。  
   
--   *运算符*必须是以下之一：  **\<** ，  **>** ，  **\< =** ，  **>=**  **<>** ，  **=** ，或**如**。  
+-   *运算符*必须是以下之一： **\<**， **>**， **\< =**， **>=****<>**， **=**，或**如**。  
   
 -   *值*是将与之比较的字段值的值 (例如， `'Smith'`， `#8/24/95#`， `12.345`，或`$50.00`)。 与字符串一起使用单引号 （'） 和井号 (`#`) 的日期。 对于数字，可以使用小数点、 美元符号和科学记数法。 如果*运算符*是**如**，*值*可以使用通配符。 只能星号 (\*) 和百分号 （%） 通配符允许使用字符，并且它们必须是字符串中的最后一个字符。 *值*不能为 null。  
   

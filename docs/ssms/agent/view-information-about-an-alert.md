@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edd9053514a593ea946a15d3d3071ad2b6e27093
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a6f1e0be2382e9981886616af207ab94185ee9f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/10/2018
   
 -   **开始之前：**  
   
-    [安全性](#Security)  
+    [Security](#Security)  
   
 -   **若要查看有关警报的信息，可使用：**  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

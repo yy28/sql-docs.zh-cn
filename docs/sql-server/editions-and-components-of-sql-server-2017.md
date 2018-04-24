@@ -39,13 +39,14 @@ ms.assetid: ''
 caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79abf7ae910138ff663966f421e0c6fa48046584
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9b2fc5b5571127ccab0a0dc4b4656a6d9378057d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -151,25 +152,25 @@ ms.lasthandoff: 03/22/2018
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Server Core 支持 <sup>1</sup>|是|是|是|是|是|  
-|日志传送|是|是|是|否|否|  
+|日志传送|是|是|是|否|“否”|  
 |数据库镜像|是|是<br /><br /> 仅完全安全|仅见证服务器|仅见证服务器|仅见证服务器| 
-|备份压缩|是|是|否|否|否| 
+|备份压缩|是|是|否|否|“否”| 
 |数据库快照|是|是|是|是|是|
-|AlwaysOn 故障转移群集实例<sup>2</sup>|是|是|否|否|否|  
-|AlwaysOn 可用性组<sup>3</sup>|是|否|否|否|否|
-|基本可用性组<sup>4</sup>|否|是|否|否|否|
-|联机页面和文件还原|是|否|否|否|否|
-|联机索引|是|否|否|否|否|
-|可恢复的联机索引重新生成|是|否|否|否|否|
-|联机架构更改|是|否|否|否|否|
-|快速恢复|是|否|否|否|否|
-|镜像备份|是|否|否|否|否|
-|热插拔内存和 CPU|是|否|否|否|否|
+|AlwaysOn 故障转移群集实例<sup>2</sup>|是|是|否|否|“否”|  
+|AlwaysOn 可用性组<sup>3</sup>|是|否|否|否|“否”|
+|基本可用性组<sup>4</sup>|“否”|是|否|否|“否”|
+|联机页面和文件还原|是|否|否|否|“否”|
+|联机索引|是|否|否|否|“否”|
+|可恢复的联机索引重新生成|是|否|否|否|“否”|
+|联机架构更改|是|否|否|否|“否”|
+|快速恢复|是|否|否|否|“否”|
+|镜像备份|是|否|否|否|“否”|
+|热插拔内存和 CPU|是|否|否|否|“否”|
 |数据库恢复顾问|是|是|是|是|是|
-|加密备份|是|是|否|否|否|
-|Microsoft Azure 的混合备份（URL 的备份）|是|是|否|否|否|
-|无群集的可用性组|是|是|否|否|否|否|
-|最小副本提交可用性组|是|是|是|否|否|否|
+|加密备份|是|是|否|否|“否”|
+|Microsoft Azure 的混合备份（URL 的备份）|是|是|否|否|“否”|
+|无群集的可用性组|是|是|否|否|否|“否”|
+|最小副本提交可用性组|是|是|是|否|否|“否”|
   
 
 <sup>1</sup> 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
@@ -187,23 +188,23 @@ ms.lasthandoff: 03/22/2018
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |列存储 <sup>1</sup>|是|是|是|是|是|  
 |聚集列存储索引中的大型对象二进制文件|是|是|是|是|是|  
-|联机非聚集列存储索引重新生成|是|否|否|否|否|
+|联机非聚集列存储索引重新生成|是|否|否|否|“否”|
 |内存中 OLTP <sup>1</sup>|是|是|是|是，<sup>2</sup>|是|
 |Stretch Database|是|是|是|是|是|
 |永久性主内存|是|是|是|是|是|
 |多实例支持|50|50|50|50|50|
 |表和索引分区|是|是|是|是|是|  
 |数据压缩|是|是|是|是|是|
-|资源调控器|是|否|否|否|否|  
-|已分区表并行度|是|否|否|否|否|
+|资源调控器|是|否|否|否|“否”|  
+|已分区表并行度|是|否|否|否|“否”|
 |多个 Filestream 容器|是|是|是|是|是|
-|NUMA 感知、大型页内存和缓冲区数组分配|是|否|否|否|否|
-|缓冲池扩展|是|是|否|否|否|
-|IO 资源调控|是|否|否|否|否|  
+|NUMA 感知、大型页内存和缓冲区数组分配|是|否|否|否|“否”|
+|缓冲池扩展|是|是|否|否|“否”|
+|IO 资源调控|是|否|否|否|“否”|  
 |延迟持续性|是|是|是|是|是|
-|自动优化|是|否|否|否|否|
-|批处理模式自适应联接|是|否|否|否|否|
-|批处理模式内存授予反馈|是|否|否|否|否|
+|自动优化|是|否|否|否|“否”|
+|批处理模式自适应联接|是|否|否|否|“否”|
+|批处理模式内存授予反馈|是|否|否|否|“否”|
 |多语句表值函数的交错执行|是|是|是|是|是|
 |大容量插入改进|是|是|是|是|是|
 
@@ -221,25 +222,25 @@ ms.lasthandoff: 03/22/2018
 |动态数据屏蔽|是|是|是|是|是|   
 |基本审核|是|是|是|是|是| 
 |精细审核|是|是|是|是|是| 
-|透明数据库加密|是|否|否|否|否|   
-|可扩展的密钥管理|是|否|否|否|否| 
+|透明数据库加密|是|否|否|否|“否”|   
+|可扩展的密钥管理|是|否|否|否|“否”| 
 |用户定义的角色|是|是|是|是|是| 
 |包含的数据库|是|是|是|是|是| 
-|备份加密|是|是|否|否|否|  
+|备份加密|是|是|否|否|“否”|  
 
 ##  <a name="Replication"></a> Replication  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|异类订阅服务器|是|是|否|否|否|  
+|异类订阅服务器|是|是|否|否|“否”|  
 |合并复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
-|Oracle 发布|是|否|否|否|否| 
-|对等事务复制|是|否|否|否|否|   
+|Oracle 发布|是|否|否|否|“否”| 
+|对等事务复制|是|否|否|否|“否”|   
 |快照复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
 |SQL Server 变更跟踪|是|是|是|是|是| 
 |事务复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
-|事务复制到 Azure|是|是|否|否|否|   
-|事务复制可更新的订阅|是|否|否|否|否|  
+|事务复制到 Azure|是|是|否|否|“否”|   
+|事务复制可更新的订阅|是|否|否|否|“否”|  
   
 ##  <a name="SSMS"></a>管理工具  
   
@@ -248,13 +249,13 @@ ms.lasthandoff: 03/22/2018
 |SQL 管理对象 (SMO)|是|是|是|是|是|  
 |SQL 配置管理器|是|是|是|是|是|   
 |SQL CMD（命令提示工具）|是|是|是|是|是|      
-|Distributed Replay - 管理工具|是|是|是|是|否|  
-|Distributed Replay - 客户端|是|是|是|否|否|  
-|分布式重播 - 控制器|支持（最多 16 个客户端）|支持（1 个客户端）|支持（1 个客户端）|否|否|   
+|Distributed Replay - 管理工具|是|是|是|是|“否”|  
+|Distributed Replay - 客户端|是|是|是|否|“否”|  
+|分布式重播 - 控制器|支持（最多 16 个客户端）|支持（1 个客户端）|支持（1 个客户端）|否|“否”|   
 |SQL Profiler|是|是|否 <sup>1</sup>|否 <sup>1</sup>|否 <sup>1</sup>|  
-|SQL Server 代理|是|是|是|否|否| 
-|Microsoft System Center Operations Manager 管理包|是|是|是|否|否|  
-|数据库优化顾问 (DTA)|是|是 <sup>2</sup>|是 <sup>2</sup>|否|否|      
+|SQL Server 代理|是|是|是|否|“否”| 
+|Microsoft System Center Operations Manager 管理包|是|是|是|否|“否”|  
+|数据库优化顾问 (DTA)|是|是 <sup>2</sup>|是 <sup>2</sup>|否|“否”|      
   
  <sup>1</sup> 可以使用 SQL Server Standard 和 SQL Server Enterprise 版本探查 SQL Server Web、SQL Server Express、SQL Server Express with Tools 和 SQL Server Express with Advanced Services。  
   
@@ -264,25 +265,25 @@ ms.lasthandoff: 03/22/2018
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|用户实例|否|否|否|是|是| 
-|LocalDB|否|否|否|是|否| 
+|用户实例|“否”|否|否|是|是| 
+|LocalDB|“否”|否|否|是|“否”| 
 |专用管理连接|是|是|是|支持（使用跟踪标志）|支持（使用跟踪标志）|   
 |SysPrep 支持 <sup>1</sup>|是|是|是|是|是| 
 |PowerShell 脚本支持<sup>2</sup>|是|是|是|是|是| 
 |支持数据层应用程序组件操作 - 提取、部署、升级、删除|是|是|是|是|是| 
-|策略自动执行（检查计划和更改）|是|是|是|否|否|   
-|性能数据收集器|是|是|是|否|否| 
-|能够作为多实例管理中的托管实例注册|是|是|是|否|否|   
-|标准性能报表|是|是|是|否|否| 
-|计划指南和计划指南的计划冻结|是|是|是|否|否|   
+|策略自动执行（检查计划和更改）|是|是|是|否|“否”|   
+|性能数据收集器|是|是|是|否|“否”| 
+|能够作为多实例管理中的托管实例注册|是|是|是|否|“否”|   
+|标准性能报表|是|是|是|否|“否”| 
+|计划指南和计划指南的计划冻结|是|是|是|否|“否”|   
 |使用 NOEXPAND 提示的索引视图的直接查询|是|是|是|是|是| 
-|自动索引视图维护|是|是|是|否|否| 
-|分布式分区视图|是|否|否|否|否| 
-|并行索引操作|是|否|否|否|否|  
-|查询优化器自动使用索引视图|是|否|否|否|否| 
-|并行一致性检查|是|否|否|否|否| 
-|SQL Server 实用工具控制点|是|否|否|否|否|    
-|缓冲池扩展|是|是|否|否|否| 
+|自动索引视图维护|是|是|是|否|“否”| 
+|分布式分区视图|是|否|否|否|“否”| 
+|并行索引操作|是|否|否|否|“否”|  
+|查询优化器自动使用索引视图|是|否|否|否|“否”| 
+|并行一致性检查|是|否|否|否|“否”| 
+|SQL Server 实用工具控制点|是|否|否|否|“否”|    
+|缓冲池扩展|是|是|否|否|“否”| 
   
  <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
@@ -293,20 +294,20 @@ ms.lasthandoff: 03/22/2018
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Microsoft Visual Studio 集成|是|是|是|是|是| 
 |Intellisense（Transact-SQL 和 MDX）|是|是|是|是|是| 
-|SQL Server Data Tools (SSDT)|是|是|是|是|否|    
-|MDX 编辑、调试和设计工具|是|是|否|否|否|   
+|SQL Server Data Tools (SSDT)|是|是|是|是|“否”|    
+|MDX 编辑、调试和设计工具|是|是|否|否|“否”|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|基本 R 集成|是|是|是|是|否|   
-|高级 R 集成|是|否|否|否|否| 
-|基本 Python 集成|是|是|是|是|否|
-|高级 Python 集成|是|否|否|否|否| 
-|机器学习服务器（独立）|是|否|否|否|否|   
+|基本 R 集成|是|是|是|是|“否”|   
+|高级 R 集成|是|否|否|否|“否”| 
+|基本 Python 集成|是|是|是|是|“否”|
+|高级 Python 集成|是|否|否|否|“否”| 
+|机器学习服务器（独立）|是|否|否|否|“否”|   
 |Polybase 计算节点|是|是 <sup>1</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>,|是 <sup>1</sup>, | 
-|Polybase 头节点|是|否|否|否|否| 
+|Polybase 头节点|是|否|否|否|“否”| 
 |JSON|是|是|是|是|是|   
 |查询存储|是|是|是|是|是|   
 |临时|是|是|是|是|是|   
@@ -318,10 +319,10 @@ ms.lasthandoff: 03/22/2018
 |FileTable|是|是|是|是|是| 
 |日期和时间数据类型|是|是|是|是|是|  
 |国际化支持|是|是|是|是|是| 
-|全文和语义搜索|是|是|是|是|否| 
-|查询中的语言规范|是|是|是|是|否|   
+|全文和语义搜索|是|是|是|是|“否”| 
+|查询中的语言规范|是|是|是|是|“否”|   
 |Service Broker（消息传递）|是|是|不支持（仅客户端）|不支持（仅客户端）|不支持（仅客户端）|   
-|Transact-SQL 端点|是|是|是|否|否| 
+|Transact-SQL 端点|是|是|是|否|“否”| 
 |图形|是|是|是|是|是|  
 
 
@@ -339,13 +340,13 @@ ms.lasthandoff: 03/22/2018
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|在无需数据库的情况下创建多维数据集|是|是|否|否|否 |   
-|自动生成临时和数据仓库架构|是|是|否|否|否| 
-|变更数据捕获|是|是|否|否|否| 
-|星型联接查询优化|是|否|否|否|否| 
-|可扩展的只读 Analysis Services 配置|是|否|否|否|否| 
-|针对已分区表和索引的并行查询处理|是|否|否|否|否|   
-|全局批处理集成|是|否|否|否|否| 
+|在无需数据库的情况下创建多维数据集|是|是|否|否|“否” |   
+|自动生成临时和数据仓库架构|是|是|否|否|“否”| 
+|变更数据捕获|是|是|否|否|“否”| 
+|星型联接查询优化|是|否|否|否|“否”| 
+|可扩展的只读 Analysis Services 配置|是|否|否|否|“否”| 
+|针对已分区表和索引的并行查询处理|是|否|否|否|“否”|   
+|全局批处理集成|是|否|否|否|“否”| 
 
 ##  <a name="SSAS"></a> Analysis Services  
   
@@ -389,14 +390,14 @@ ms.lasthandoff: 03/22/2018
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移助手|是|是|是|是|是|   
-|数据库邮件|是|是|是|否|否| 
+|数据库邮件|是|是|是|否|“否”| 
   
 ##  <a name="Other"></a>其他组件  
   
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|否|否| 
-|StreamInsight HA|StreamInsight Premium Edition|否|否|否|否|   
+|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|“否”|“否”| 
+|StreamInsight HA|StreamInsight Premium Edition|“否”|否|否|“否”|   
 
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**     
   
@@ -404,5 +405,6 @@ ms.lasthandoff: 03/22/2018
  [SQL Server 的产品规格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [安装 SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
-  
-  
+ [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

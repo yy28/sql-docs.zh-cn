@@ -1,26 +1,26 @@
 ---
-title: "ADO 动态属性索引 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ADO 动态属性索引 |Microsoft 文档
+ms.prod: sql
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d646865c5fc95ed032c0cc21e973a3204162201
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态 Property 索引
 数据提供程序、 服务提供商和服务组件可以添加到的动态属性**属性**集合的未打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 打开这些对象时，给定的提供程序还可能会插入其他属性。 中列出了这些属性的一些[ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)部分。 下列出中的特定提供程序的详细信息[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)部分。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 |线程处理模型的数据源对象|DBPROP_DSOTHREADMODEL|  
 |DBMS 名称|DBPROP_DBMSNAME|  
 |DBMS 版本|DBPROP_DBMSVER|  
-|扩展的属性|DBPROP_INIT_PROVIDERSTRING|  
+|扩展属性|DBPROP_INIT_PROVIDERSTRING|  
 |按支持进行分组|DBPROP_GROUPBY|  
 |异类表支持|DBPROP_HETEROGENEOUSTABLES|  
 |标识符区分大小写|DBPROP_IDENTIFIERCASE|  

@@ -1,28 +1,21 @@
 ---
-title: 密码重置 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 密码重置-分析平台系统 |Microsoft 文档
+description: 密码重置页，可更改 Analytics Platform System 所使用的管理员帐户的密码。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: 26
-ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="password-reset"></a>密码重置
+# <a name="password-reset---analytics-platform-system"></a>密码重置-分析平台系统
 **密码重置**页使你可以更改由分析平台系统使用的管理员帐户的密码。  
   
 > [!WARNING]  
@@ -30,7 +23,7 @@ ms.lasthandoff: 04/06/2018
   
 传递设备时，你可以分析平台系统密码。 当你拍摄负责你的设备时始终为新值更改的密码。 有三个密码更新。 密码不需要为每个其他相同。  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \Administrator**  
 **管理员**的设备域。  
   
 **.\Administrator**  
@@ -58,7 +51,7 @@ ms.lasthandoff: 04/06/2018
   
     对这些帐户所做的更改不会影响任何当前处于活动状态的会话，但将在每个用户下一次登录尝试应用。  
   
-    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![SQL Server DWConfig 密码](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>另请参阅  
 [在目录服务还原模式中设置管理员密码用于登录到 AD 节点&#40;DSRM&#41; &#40;分析平台系统&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  

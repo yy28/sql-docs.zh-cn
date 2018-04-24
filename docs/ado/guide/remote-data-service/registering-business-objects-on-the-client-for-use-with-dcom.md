@@ -1,30 +1,30 @@
 ---
-title: "注册 DCOM 使用的客户端上的业务对象 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 注册 DCOM 使用的客户端上的业务对象 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adba9240c501136d891686da3e5361be96e80ee0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c9f797023e5a6893dd6370ddf9245c066435227c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>注册 DCOM 使用的客户端上的业务对象
 自定义业务对象需要确保客户端可以将其程序名称 (ProgId) 映射到可以使用通过 DCOM 的标识符 (CLSID)。 因此，DCOM 对象的 ProgID 必须是在客户端注册表中，并且映射到的服务器端业务对象的类 ID。 对于其他支持的协议 （HTTP、 HTTPS 和进程内），这是不必要。  

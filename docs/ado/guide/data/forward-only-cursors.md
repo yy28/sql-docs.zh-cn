@@ -1,31 +1,31 @@
 ---
-title: "只进游标 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 只进游标 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84ab8335e94adecf130fd2301f697a02eceee37
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 90ca5c097080d09276bc66754264fcf6ada658ea
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="forward-only-cursors"></a>只进游标
 典型的默认游标类型，称为只进 （或非可滚动） 游标，可以仅向前移动结果集。 只进游标不支持滚动 （向前和向后移动结果集中的能力）;它仅支持从一开始的行提取到结果集的末尾。 与某些只进游标 (如与 SQL Server 光标库)，则所有 insert、 update 和 delete 语句所做的当前用户 （或由其他用户提交） 读取行时，在结果集中的影响行是否可见。 因为不能向后滚动光标，但是，提取行之后对数据库中的行所做的更改不会通过游标可见。  

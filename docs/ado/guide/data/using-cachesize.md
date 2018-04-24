@@ -1,31 +1,31 @@
 ---
-title: "使用 CacheSize |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 使用 CacheSize |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdce85373638fc8884f50ab7b81abfbbabfe2d47
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 701fd5ff1c5f9fd09eb9827b92c20770cd18612c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用**CacheSize**属性控制将在一次检索到从提供程序的本地内存的记录数。 例如，如果**CacheSize**后第一个左为 10，**记录集**对象，该提供程序检索前 10 条记录到本地内存。 当你移动通过**记录集**对象，该提供程序从本地内存缓冲区中返回数据。 一旦移过缓存中的最后一个记录，即会将提供程序会将从数据源的接下来的 10 的记录检索到缓存中。  

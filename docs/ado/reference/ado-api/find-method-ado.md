@@ -1,17 +1,17 @@
 ---
-title: "Find 方法 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: Find 方法 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定的搜索、 起始行和与起始行的偏移量的方向。 如果满足条件，则在找到记录; 设置当前行位置否则，该位置设置为的终点 （或起点）**记录集**。  
@@ -45,10 +45,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字符串**值，该值包含在搜索中指定要使用的列名称、 比较运算符和值的语句。  
   
  *SkipRows*  
- Optional*.* A**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将开始在当前行。  
+ 可选*。* A**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将开始在当前行。  
   
  *SearchDirection*  
- Optional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定是否应在当前行或搜索方向的下一步可用行上开始的搜索。 结尾处停止时的不成功的搜索**记录集**如果值为**adSearchForward**。 在开始时停止失败搜索**记录集**如果值为**adSearchBackward**。  
+ 可选*。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定是否应在当前行或搜索方向的下一步可用行上开始的搜索。 结尾处停止时的不成功的搜索**记录集**如果值为**adSearchForward**。 在开始时停止失败搜索**记录集**如果值为**adSearchBackward**。  
   
  *开始*  
  選擇性。 A **Variant**充当搜索的起始位置的书签。  
@@ -58,7 +58,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
  中的比较运算符*条件*可能"**>**"（大于）、"**\<**"（小于）、"="（等于）、"> ="（大于或等于）"< ="（小于或等于）、"<>"（不等于），或"like"（模式匹配）。  
   
- 中的值*条件*可能是字符串、 浮点数或日期。 字符串值不与单引号或"#"（数字符号） 标记分隔 (例如，"状态 = WA"或"状态 = #WA #")。 日期值分隔用"#"（数字符号） 标记 (例如，"start_date > #7/22/&#97;")。 这些值可以包含小时数、 分钟和秒以表示时间戳，但不是应包含毫秒或将发生错误。  
+ 中的值*条件*可能是字符串、 浮点数或日期。 字符串值不与单引号或"#"（数字符号） 标记分隔 (例如，"状态 = WA"或"状态 = #WA #")。 日期值分隔用"#"（数字符号） 标记 (例如，"start_date > #7/22/97 #")。 这些值可以包含小时数、 分钟和秒以表示时间戳，但不是应包含毫秒或将发生错误。  
   
  如果"like"的比较运算符，字符串值可能包含一个星号 （*） 以找到一个或多个出现的任何字符或子字符串。 例如，"等状态正在\*"与缅因和麻省匹配。 前导和尾随星号还可用于查找的值中包含的子字符串。 例如，"状态，如\*作为\*"与阿拉斯加、 阿肯色和麻省。  
   

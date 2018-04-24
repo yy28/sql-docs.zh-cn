@@ -1,33 +1,33 @@
 ---
-title: "构造分层记录集 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 构造分层记录集 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
 - hierarchical Recordsets [ADO]
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd8c5c97983fbfa0cbf10f302f992c1bd6c9a59f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 87c0e8c3b838e090e885de8ae0a75d2532a1c754
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>构造分层记录集
 下面的示例演示如何使用调整语法来定义为父、 子节点和孙级的列的数据生成分层记录集而无需基础数据源**记录集**。  

@@ -1,33 +1,35 @@
 ---
-title: "查看群集仲裁 NodeWeight 设置 | Microsoft Docs"
-ms.custom: 
+title: 查看群集仲裁 NodeWeight 设置 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 385e2336f322e3183e1dd6863fa3e9a98a058a66
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3d8b5e9259d1283c1aa7441385ec86b2ecf2d954
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>查看群集仲裁 NodeWeight 设置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何查看 Windows Server 故障转移群集 (WSFC) 群集中每个成员节点的 NodeWeight 设置。 在仲裁投票期间，使用 NodeWeight 设置来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的灾难恢复和多子网方案。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主题说明如何查看 Windows Server 故障转移群集 (WSFC) 群集中每个成员节点的 NodeWeight 设置。 在仲裁投票期间，使用 NodeWeight 设置来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的灾难恢复和多子网方案。  
   
 -   **准备工作：**[先决条件](#Prerequisites)、[安全性](#Security)  
   

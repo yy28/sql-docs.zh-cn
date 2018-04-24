@@ -1,28 +1,21 @@
 ---
-title: 下载并应用 Microsoft 更新 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 下载 Analytics Platform System 的 Microsoft 更新-|Microsoft 文档
+description: 本主题讨论如何从 Microsoft 更新目录到 Windows Server Update Services (WSUS) 下载更新并将这些更新应用于分析平台系统设备服务器。 Microsoft 更新将安装所有合适的更新，Windows 和 SQL Server。 VMM 虚拟机的设备上安装 WSUS。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b98a2be90f222fc2c531c1f1983f8882bdab640e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="download-and-apply-microsoft-updates"></a>下载并应用 Microsoft 更新
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下载并针对分析平台系统中应用 Microsoft 更新
 本主题讨论如何从 Microsoft 更新目录到 Windows Server Update Services (WSUS) 下载更新并将这些更新应用于分析平台系统设备服务器。 Microsoft 更新将安装所有合适的更新，Windows 和 SQL Server。 VMM 虚拟机的设备上安装 WSUS。  
   
 ## <a name="TOP"></a>开始之前  

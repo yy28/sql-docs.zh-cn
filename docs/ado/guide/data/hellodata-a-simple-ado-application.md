@@ -1,6 +1,6 @@
 ---
 title: HelloData： 一个简单的 ADO 应用程序 |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 7516198dba64e9567b39abecfe31948d38e846e1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData： 一个简单的 ADO 应用程序
 此简单的应用程序步骤通过每个四个主要的 ADO 操作： 获取、 检查、 编辑和更新数据。 对随附 Microsoft® SQL Server 的 Northwind 示例数据库执行这些操作。 若要专注于 ADO 的基础知识并避免出现代码混乱，该示例中的错误处理很小。  

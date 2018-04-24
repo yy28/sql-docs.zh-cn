@@ -1,30 +1,30 @@
 ---
-title: "编辑现有记录 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 编辑现有记录 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - editing data [ADO], existing records
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c003dc06c9f7e3c598eb73c883b8a0ea160be8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43faf0a4bd21513bd03f89814cdb03fd55347bc4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="editing-existing-records"></a>编辑现有记录
 若要编辑现有记录，移动到你想要编辑和更改的行**值**你想要更改的字段的属性。 有关详细信息**字段**对象的**值**属性，请参阅[检查数据](../../../ado/guide/data/examining-data.md)。 根据你的光标类型，你将使用**更新**或**UpdateBatch**若要将更改发送回数据源。 有关详细信息，请参阅[更新和保持数据](../../../ado/guide/data/updating-and-persisting-data.md)。  

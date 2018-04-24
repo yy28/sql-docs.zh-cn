@@ -1,28 +1,22 @@
 ---
-title: 获取和配置加载服务器 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 获取和配置加载服务器-并行数据仓库 |Microsoft 文档
+description: 本文介绍如何获取和将加载服务器配置为非设备 Windows 系统用于提交数据加载到并行数据仓库 (PDW)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 获取和将加载服务器配置为用于提交到 SQL Server 并行数据仓库的数据加载的非设备 Windows 系统。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: 19
-ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a796616ad76ba62ea4174cf22c1517c489305055
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-loading-server"></a>获取和配置加载服务器
-本主题介绍如何获取和将加载服务器配置为非设备 Windows 系统用于提交数据加载到 SQL Server 并行数据仓库 (PDW)。  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>获取和并行数据仓库的配置加载服务器
+本文介绍如何获取和将加载服务器配置为非设备 Windows 系统用于提交数据加载到并行数据仓库 (PDW)。  
   
 ## <a name="Basics"></a>基础知识  
 加载服务器中：  
@@ -50,7 +44,7 @@ ms.lasthandoff: 04/06/2018
   
 -   Windows Server 2012 或 Windows Server 2012 R2。 这些操作系统的系统要求 FDR 网络适配器。  
   
--   Windows Server 2008 R2. 此操作系统需要 DDR 网络适配器。  
+-   Windows Server 2008 R2。 此操作系统需要 DDR 网络适配器。  
   
 服务器必须使用 EN-US 区域设置，才能使用 dwloader 加载命令行工具。 dwloader 不支持其他区域设置。  
   

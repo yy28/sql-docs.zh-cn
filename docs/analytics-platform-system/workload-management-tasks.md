@@ -1,26 +1,22 @@
 ---
-title: 工作负荷管理任务
-author: barbkess
-ms.author: barbkess
+title: 工作负荷管理任务-分析平台系统 |Microsoft 文档
+description: 分析平台系统中的工作负荷管理任务。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 0a9c3ffd4768d78a4063ad40f7903dfe00b647e5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16206cb5cefd68b19e1640592b903890808b5a31
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management-tasks"></a>工作负荷管理任务
+# <a name="workload-management-tasks-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理任务
+分析平台系统中的工作负荷管理任务。
 
 ## <a name="view-login-members-of-each-resource-class"></a>查看登录名的每个资源类的新成员
 描述如何在 SQL Server PDW 中显示每个资源类服务器角色的登录名成员。 使用此查询以了解允许的提交的每个登录名的请求的资源的类。  
@@ -45,13 +41,13 @@ WHERE
   
 如果登录名不是此列表中，其请求将收到的默认资源。 如果登录名是多个资源类的成员，最大类具有优先级。  
   
-中列出的资源分配[工作负荷管理](workload-management.md)主题。  
+中列出的资源分配[工作负荷管理](workload-management.md)。  
   
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>更改分配给请求的系统资源
 描述如何找出哪些资源的 SQL Server PDW 请求运行时所使用的类以及如何更改该请求的系统资源。 更改资源请求需要更改已提交请求时，使用的登录名的资源类成员身份，以便[ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)语句。  
   
 ### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>步骤 1： 确定运行请求的登录名的资源类。  
-此查询显示哪些是资源类服务器角色成员身份的成员的登录名。 有三个资源类， **mediumrc**， **largerc**，和**xlargerc**。  
+此查询显示成员的资源类服务器角色成员身份的登录名。 有三个资源类， **mediumrc**， **largerc**，和**xlargerc**。  
   
 > [!IMPORTANT]  
 > 必须通过登录名具有执行此查询**CONTROL SERVER**权限。 如果执行者没有登录**CONTROL SERVER**权限，此查询仅返回当前的登录名的角色成员身份。  
@@ -71,9 +67,9 @@ WHERE
 GO  
 ```  
   
-如果没有资源类服务器角色的成员的登录名，则生成的表将为空。 在这种情况下，如果查询返回一个登录名 Ching，然后在 Ching 提交请求，请求将收到的默认系统资源，该值小于资源类系统资源。 如果登录名是多个资源类的成员，最大类具有优先级。  
+如果没有资源类服务器角色的成员的登录名，则生成的表将为空。 在这种情况下，如果查询返回一个登录名 Ching，然后在 Ching 提交请求，请求将收到小于资源类系统资源的默认系统资源。 如果登录名是多个资源类的成员，最大类具有优先级。  
   
-对于每个资源类的资源分配的列表，请参阅[工作负荷管理](workload-management.md)主题。  
+对于每个资源类的资源分配的列表，请参阅[工作负荷管理](workload-management.md)。  
   
 ### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>步骤 2： 使用不同的资源类成员资格运行下一个登录名的请求  
 有两种方法，以运行与任一放大或缩小系统资源的请求：  
@@ -90,7 +86,7 @@ ALTER SERVER ROLE xlargerc ADD MEMBER Ching;
   
 Ching 现 largerc 和 xlargerc 服务器角色的成员。 当 Ching 提交请求时，请求将收到 xlargerc 系统资源。  
   
-下面的示例移 Ching 回 mediumrc 服务器角色。  为此，她必须从被删除 xlargerc 和 largerc 服务器角色，并添加到 mediumrc 服务器角色。  
+下面的示例移 Ching 回 mediumrc 服务器角色。  若要将更改为新角色，必须从 xlargerc 和 largerc 服务器角色中删除该登录名并将其添加到 mediumrc 服务器角色。  
   
 ```sql  
 -- Move login Ching back to using medium system resources for requests.  
@@ -99,7 +95,7 @@ ALTER SERVER ROLE largerc DROP MEMBER Ching;
 ALTER SERVER ROLE mediumrc ADD MEMBER Ching;  
 ```  
   
-Ching 现 mediumrc 服务器角色的成员。  以下示例更改 Ching 能够她请求的默认系统资源。  
+Ching 现 mediumrc 服务器角色的成员。  以下示例更改 Ching 具有请求的默认系统资源。  
   
 ```sql  
 -- Move login Ching to use the default system resources for requests.  
@@ -109,13 +105,13 @@ ALTER SERVER ROLE mediumrc DROP MEMBER Ching;
 有关更改资源类角色成员身份的详细信息，请参阅[ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)。  
 
 ## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>将登录名更改为其请求的默认系统资源
-介绍如何更改分配给 SQL Server PDW 登录名添加到默认金额的系统资源分配。 这会影响 SQL Server PDW 将分配给请求提交的登录名的系统资源。  
+介绍如何更改分配给 SQL Server PDW 登录名添加到默认金额的系统资源分配。 
   
 资源类描述，请参阅[工作负荷管理](workload-management.md)  
   
 如果登录名不是任何资源类服务器角色的成员，提交的登录名的请求可获得默认的系统资源量。  
   
-假设 Matt 是当前的所有资源类服务器角色的成员，并且想要还原为其接收只有的默认资源的请求的登录名。  下面的示例通过删除所有三个资源类服务器角色的成员身份将默认资源分配给 Matt 的请求。  
+假设 Matt 是当前的所有资源类服务器角色的成员，并且想要恢复到具有接收只有的默认资源的请求的登录名。  下面的示例通过删除所有三个资源类服务器角色的成员身份将默认资源分配给 Matt 的请求。  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   
@@ -130,7 +126,7 @@ ALTER SERVER ROLE MediumRC DROP MEMBER Matt;
   
 有关详细信息，请参阅[工作负荷管理](workload-management.md)。  
   
-请求无法等待很长时间没有正在执行。 若要解决此问题的方法之一是查看请求需要的并发槽的数目。  下面的示例显示所需的每个正在等待的请求的并发槽数。  
+请求无法等待很长时间没有正在执行。 一种解决请求问题所查找的请求需要的并发槽的数目。  下面的示例显示所需的每个正在等待的请求的并发槽数。  
   
 ```sql  
 --Display the number of concurrency slots required   

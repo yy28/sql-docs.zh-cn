@@ -1,28 +1,21 @@
 ---
-title: 还原 Master 数据库 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 还原 master 数据库的分析平台系统 |Microsoft 文档
+description: 还原分析平台系统中的主数据库。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: 11
-ms.openlocfilehash: 0f1acb692198873897d5dc26e2074beab4517e44
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-the-master-database"></a>还原 Master 数据库
+# <a name="restore-the-master-database-in-analytics-platform-system"></a>还原 master 数据库中分析平台系统
 **还原 Master**页的 SQL Server PDW 配置管理器使你可以从备份还原 master 数据库。  
   
 ## <a name="before-you-begin"></a>开始之前  

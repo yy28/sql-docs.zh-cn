@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries [ADO]
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a3cb13dc0fd465b0a3a061d1fda12010f6d3df0
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 986367a4ad578c893cb7f9b13fc1272c038f6ae9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="referencing-the-ado-libraries"></a>引用 ADO 库
 ADO 的最新版本被打包为*msado15.dll*。 ADO MD 和 ADOX 的最新版本会打包为*msadom.dll*和*msadox.dll*分别。 默认情况下，在安装这些库*$installDir*，其中*$installDir*代表您的计算机已在其中安装 ADO 库的目录的路径。 若要使用应用程序中的 ADO 库，你必须显式在中引用它们的应用程序项目。  

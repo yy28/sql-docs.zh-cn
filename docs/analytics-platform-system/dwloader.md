@@ -1,27 +1,21 @@
 ---
-title: dwloader 并行数据仓库的命令行加载程序
-author: barbkess
-ms.author: barbkess
+title: dwloader 命令行加载器-并行数据仓库 |Microsoft 文档
+description: dwloader 是并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: '**dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。'
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>dwloader 命令行加载程序
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 并行数据仓库的命令行加载程序
 **dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。 当加载行时，可以将所有行都添加到表的末尾 (*追加模式*或*fastappend 模式*)、 追加新行和更新现有行 (*upsert 模式*)，或删除所有现有的行之前加载，然后将所有行都插入空表 (*重新加载模式*)。  
   
 **用于加载数据的过程**  
@@ -161,7 +155,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name。*[*架构*]。*table_name*  
 目标表由三部分名称。  
   
 **-I***source_data_location*  
@@ -240,7 +234,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 示例：  
   
--t "|"  
+-t"|"  
   
 -t ' '  
   
@@ -284,7 +278,7 @@ LF 的示例：
   
 -s 0x22  
   
-< fixed_width_column_options>  
+< fixed_width_column_options >  
 具有固定长度列的源数据文件有关的选项。 默认情况下， *source_data_file_name*包含可变长度列中的 ASCII 字符。  
   
 UTF8 – e 时，不支持固定的宽度列。  
@@ -402,7 +396,7 @@ dym
 fastappend  
 加载程序将行插入直接，而无需使用临时表，到目标表中的现有行的末尾。 fastappend 要求多事务 (– m) 选项。 使用 fastappend 时，不能指定一个临时数据库。 没有与 fastappend，这意味着从失败或已中止负载恢复必须由你自己的加载过程回滚。  
   
-upsert **-K**  *merge_column* [ ,...*n* ]  
+upsert **-K***merge_column* [，...*n* ]    
 加载程序将使用 SQL Server 合并语句以更新现有行和插入新行。  
   
 -K 选项指定的列或列要合并基础。 这些列构成合并键，它应表示唯一行。 如果合并密钥存在目标表中，更新行。 如果合并密钥不存在目标表中，追加行。  

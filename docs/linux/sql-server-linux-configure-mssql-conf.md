@@ -1,6 +1,6 @@
 ---
-title: "在 Linux 上配置 SQL Server 设置 |Microsoft 文档"
-description: "本文介绍如何使用 mssql conf 工具在 Linux 上配置 SQL Server 2017 设置。"
+title: 在 Linux 上配置 SQL Server 设置 |Microsoft 文档
+description: 本文介绍如何使用 mssql conf 工具在 Linux 上配置 SQL Server 2017 设置。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/21/2018
 | [内存限制](#memorylimit) | 设置 SQL Server 的内存限制。 |
 | [TCP 端口](#tcpport) | 更改 SQL Server 侦听的连接的端口。 |
 | [TLS](#tls) | 配置传输级安全。 |
-| [Traceflags](#traceflags) | 设置服务要使用这些跟踪标志。 |
+| [跟踪标志](#traceflags) | 设置服务要使用这些跟踪标志。 |
 
 > [!TIP]
 > 其中某些设置还可以使用环境变量配置。 有关详细信息，请参阅[与环境变量配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> 启用 SQL Server 代理
 
-**Sqlagent.enabled**设置可让[SQL Server 代理](sql-server-linux-run-sql-server-agent-job.md)。 默认情况下，SQL Server 代理为禁用状态。
+**Sqlagent.enabled**设置可让[SQL Server 代理](sql-server-linux-run-sql-server-agent-job.md)。 默认情况下，SQL Server 代理为禁用状态。 如果**sqlagent.enabled**中不存在 mssql.conf 设置文件，然后 SQL Server 内部假定是否启用了 SQL Server 代理。
 
 若要更改此设置，请使用以下步骤：
 
@@ -357,7 +357,7 @@ ms.lasthandoff: 02/21/2018
 
     | 类型 | Description |
     |-----|-----|
-    | **mini** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
+    | **迷你** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
     | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 和主机环境中，将以下的内存区域添加到转储的内部结构：</br></br> -各种全局函数</br> 的所有内存超过 64 TB</br> -All 名为区域中找到**/proc/$ pid/映射**</br> 双向从线程和堆栈的间接内存</br> 线程信息</br> -关联 Teb 的和 Peb 的</br> 模块信息</br> VMM 和 VAD 树 |
     | **filtered** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
     | **full** | 完整的整个过程转储中包括所有区域位于**/proc/$ pid/映射**。 这不受**coredump.captureminiandfull**设置。 |

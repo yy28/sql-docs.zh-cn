@@ -1,33 +1,33 @@
 ---
-title: "筛选器和 RecordCount 属性示例 (VB) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 筛选器和 RecordCount 属性示例 (VB) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0214769a09f0a7a2e572082d7972cd7606c27f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2a9369d44976f5cc4543277876ded62967a68702
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>筛选器和 RecordCount 属性示例 (VB)
 此示例中打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)中的发布服务器表***Pubs***数据库。 然后，它使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性可限制到特定的国家/地区中这些发布服务器的可见记录数。 **RecordCount**属性用于显示筛选和未筛选的记录集之间的差异。  

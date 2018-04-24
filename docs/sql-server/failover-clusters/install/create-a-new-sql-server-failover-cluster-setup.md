@@ -1,15 +1,16 @@
 ---
-title: "创建新的 SQL Server 故障转移群集（安装程序）| Microsoft Docs"
-ms.custom: 
+title: 创建新的 SQL Server 故障转移群集（安装程序）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 581129c04f1348b0fd66a9a5064c923324365d65
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a1553c7584ec6d90bcefbbdabf7c44788830740d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>创建新的 SQL Server 故障转移群集（安装程序）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要安装或升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，必须在故障转移群集的每个节点上运行安装程序。 若要向现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点，则必须在要添加至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。 不要在活动节点上运行安装程序以管理其他节点。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  若要安装或升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，必须在故障转移群集的每个节点上运行安装程序。 若要向现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点，则必须在要添加至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。 不要在活动节点上运行安装程序以管理其他节点。  
   
  根据节点建立群集的方式不同，按以下方式配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集：  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/05/2017
   
  有关在 Windows 故障转移群集中安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的详细信息，请参阅 [如何安装群集 SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  在开始之前，请查阅以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书主题：  
   
 -   [计划 SQL Server 安装](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -401,7 +403,7 @@ ms.lasthandoff: 12/05/2017
   
 19. 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。 完成此步骤后，为同一故障转移群集准备的所有节点就变为完成后的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的一部分。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  **配置新安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** - 为了减少系统的可攻击外围应用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将有选择地安装和启用一些关键服务和功能。 有关详细信息，请参阅 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)。  
   
  有关日志文件位置的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  

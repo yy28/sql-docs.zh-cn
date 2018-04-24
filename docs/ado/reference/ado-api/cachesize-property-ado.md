@@ -1,33 +1,33 @@
 ---
-title: "CacheSize 属性 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: CacheSize 属性 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::CacheSize
 helpviewer_keywords:
 - CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de4d82f2788ce1166e8b69cd13e8f214b6338688
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2aeb7b018a34e2efe17fde2b4aa3c7f7e7df9113
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 属性 (ADO)
 指示返回的记录数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)本地缓存在内存中的对象。  

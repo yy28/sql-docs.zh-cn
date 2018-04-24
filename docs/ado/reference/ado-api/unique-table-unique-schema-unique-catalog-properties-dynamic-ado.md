@@ -1,33 +1,33 @@
 ---
-title: "控件更改到记录集基表 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 控件更改到记录集基表 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Unique Table property [ADO]
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f62e184e4a51d82fc0b0369444ce78a9b2619039
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3a0fa10cb6b747a00c130c01d3883728be0e1be4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一表，唯一的架构，唯一目录属性的动态 (ADO)
 使您能够紧密控制特定基础表中的修改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的组上多个基表的联接操作而形成。  

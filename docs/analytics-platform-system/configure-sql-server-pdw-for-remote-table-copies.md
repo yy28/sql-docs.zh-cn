@@ -1,28 +1,21 @@
 ---
-title: 配置 SQL Server PDW 的远程表副本 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 配置远程表副本的并行数据仓库 |Microsoft 文档
+description: 描述如何配置并行数据仓库以使用远程表复制功能将表复制到非设备服务器上的 SMP SQL Server 数据库。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: 11
-ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f71a0c67639918820bca8f6f8f38b9f354154f3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-sql-server-pdw-for-remote-table-copies"></a>配置远程表副本的 SQL Server PDW
+# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>配置远程表副本的并行数据仓库
 描述如何配置 SQL Server PDW，若要使用远程表复制功能将表复制到非设备服务器上的 SMP SQL Server 数据库。  
   
 本主题介绍配置远程表复制的配置步骤之一。 有关所有配置步骤的列表，请参阅[远程表复制](remote-table-copy.md)。  

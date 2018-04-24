@@ -1,33 +1,33 @@
 ---
-title: "ConnectionString 属性 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ConnectionString 属性 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionString
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 68c7a10a4b674b9ff4092c37c332dffd7e5ff199
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 属性 (ADO)
 指示用于建立与数据源的连接的信息。  
@@ -42,10 +42,10 @@ ms.lasthandoff: 02/09/2018
   
 |参数|Description|  
 |--------------|-----------------|  
-|*Provider=*|指定要用于连接提供程序的名称。|  
+|*提供程序 =*|指定要用于连接提供程序的名称。|  
 |*文件名称 =*|指定的提供程序特定文件 （例如，持久化的数据源对象） 包含预设的连接信息的名称。|  
 |*远程提供程序 =*|指定要在打开的客户端连接时使用的提供程序的名称。 （仅限在远程数据服务中。）|  
-|*Remote Server=*|指定要在打开的客户端连接时使用的服务器的路径名称。 （仅限在远程数据服务中。）|  
+|*远程服务器 =*|指定要在打开的客户端连接时使用的服务器的路径名称。 （仅限在远程数据服务中。）|  
 |*URL=*|连接字符串指定为标识某个资源，例如文件或目录的绝对 URL。|  
   
  设置之后**ConnectionString**属性，然后打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，该提供程序可能例如，更改属性，此内容，通过将映射到的 ADO 定义自变量名称及其特定的提供程序的等效项。  

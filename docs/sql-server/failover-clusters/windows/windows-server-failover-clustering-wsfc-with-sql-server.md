@@ -1,16 +1,16 @@
 ---
-title: "Windows Server 故障转移群集与 SQL Server | Microsoft Docs"
-ms.custom: 
+title: Windows Server 故障转移群集与 SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1a0a35efc021adae73035bb98a62f2b3edd9291d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server 故障转移群集与 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共同协作以提高应用程序和服务的可用性。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服务和功能支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
+  Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共同协作以提高应用程序和服务的可用性。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服务和功能支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
   
    
 ##  <a name="TermsAndDefs"></a> 术语和定义  
@@ -83,7 +83,7 @@ Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共
  有关详细信息，请参阅： [故障转移群集概述 - Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 技术和 WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn 是一个充分利用 WSFC 的高可用性和灾难恢复解决方案。 Always On 功能提供一个灵活的集成解决方案，用于提高应用程序可用性，提供更好的硬件投资回报，并简化高可用性部署和管理。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]*Always On* 是一个充分利用 WSFC 的高可用性和灾难恢复解决方案。 Always On 功能提供一个灵活的集成解决方案，用于提高应用程序可用性，提供更好的硬件投资回报，并简化高可用性部署和管理。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例将 WSFC 用作一种平台技术，将组件注册为 WSFC 群集资源。  相关的资源合并为一个“角色”，这些资源可能依赖于其他 WSFC 群集资源。 这样，WSFC 就可以感测并标明是否需要重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，或自动将其故障转移到 WSFC 中的不同服务器节点上。  
   

@@ -1,28 +1,21 @@
 ---
-title: 用户会话 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 分析平台系统中的用户会话 |Microsoft 文档"
+description: 分析平台系统并行数据仓库中的用户会话。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
-caps.latest.revision: 15
-ms.openlocfilehash: 4ed0fab1fae1fe2d1a5a3ebb961d6c4d4747764f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fc2e759d77953f739d77f6ad4eb371cc9747efdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="user-sessions"></a>用户会话
+# <a name="user-sessions-in-analytics-platform-system"></a>分析平台系统中的用户会话
 具有适当的权限的登录名可以管理 SQL Server PDW 设备，包括执行这些操作的所有登录名的会话：  
   
 -   在设备，包括活动和空闲会话上查看当前会话。  

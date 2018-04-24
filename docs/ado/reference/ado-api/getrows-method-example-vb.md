@@ -1,32 +1,32 @@
 ---
-title: "GetRows 方法示例 (VB) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: GetRows 方法示例 (VB) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b962fb703230b94e72d8ba22893e970bd5f4f08
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59a7efc09b2883889195ffeaa98bcd0dcab50948
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 方法示例 (VB)
 此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索指定的数目的行从[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并使用生成的数据来填充数组。 **GetRows**方法将返回所需的行数少于在两种情况： 任一如果[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**只有第二种情况发生时。 有关运行此过程需要 GetRowsOK 函数。  

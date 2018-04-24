@@ -1,30 +1,30 @@
 ---
-title: "Synchronize 方法 (RDS) |Microsoft 文档"
+title: Synchronize 方法 (RDS) |Microsoft 文档
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: be0f2f4ef2df66cd0d6aa5387762bc55caef25c2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 将给定的记录集与在 ADO 2.5 及更高版本中使用的连接字符串指定的数据库同步。  

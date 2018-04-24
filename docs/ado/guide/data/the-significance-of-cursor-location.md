@@ -1,33 +1,33 @@
 ---
-title: "光标位置的重要性 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 光标位置的重要性 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - server-side cursors [ADO]
 - cursors [ADO], client-side
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71af2e383a1ee598e00789aae5045d5e475948e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bb82081d69a03cd7ab9b7a42cf5ed7fead811657
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-significance-of-cursor-location"></a>光标位置的重要性
 每个游标使用临时资源来保存其数据。 这些资源可以是内存、 磁盘页面文件、 临时磁盘文件或甚至临时存储在数据库中。 游标被称为*客户端*光标时这些资源都位于客户端计算机上。 游标被称为*服务器端*时这些资源位于服务器上的光标。  

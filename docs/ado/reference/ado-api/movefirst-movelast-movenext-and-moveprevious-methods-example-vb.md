@@ -1,17 +1,17 @@
 ---
-title: "将记录指针的记录集的示例 (VB) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 将记录指针的记录集的示例 (VB) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - MoveFirst method [ADO], Visual Basic example
 - MoveNext method [ADO], Visual Basic example
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6381260176277b418c4b04a083648387495a0ebc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 91af775e8967e5f743b86b2475502c665ce03b4e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法示例 (VB)
 此示例使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)，和[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法来移动记录指针[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于提供的命令。 有关运行此过程需要 MoveAny 过程。  

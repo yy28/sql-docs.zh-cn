@@ -1,33 +1,33 @@
 ---
-title: "使用 Visual c + + 扩展 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 使用 Visual c + + 扩展 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 80dd87f6946abc4cc37af7d75de6d36a8bb9980e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 接口
@@ -93,7 +93,7 @@ Update(CADORecordBinding *binding)
  有关详细信息，请参阅[附录 a： 数据类型](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程序员参考。
 
 ### <a name="begin-binding-entries"></a>开始绑定项
- **BEGIN_ADO_BINDING**(*Class*)
+ **BEGIN_ADO_BINDING**(*类*)
 
 ### <a name="fixed-length-data"></a>固定长度的数据
  **ADO_FIXED_LENGTH_ENTRY**(*序号、 数据类型、 缓冲区、 状态修改*)

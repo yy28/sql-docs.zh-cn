@@ -1,28 +1,21 @@
 ---
-title: 通过使用管理控制台 （分析平台系统） 来监视设备
-author: barbkess
-ms.author: barbkess
+title: 使用管理员控制台-分析平台系统进行监视 |Microsoft 文档
+description: 对于分析平台系统，管理控制台是一个 web 应用程序呈现的设备状态、 运行状况和性能信息。 用户连接到 internet 浏览器通过管理控制台。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: 26
-ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5f7c6ef68a8f91121a63def8e2153a5c38873aa3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-the-admin-console"></a>通过使用管理控制台监视设备
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>监视设备，但有管理员控制台-分析平台系统
 管理员控制台是一个 SQL Server PDW web 应用程序呈现的设备状态、 运行状况和性能信息。 用户连接到 Internet 资源管理器通过管理控制台。  
   
 ## <a name="About"></a>有关管理控制台  

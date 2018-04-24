@@ -1,33 +1,33 @@
 ---
-title: "Append 方法 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: Append 方法 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _DynaCollection::Append
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c7007b09de937c013f7da1605ea78093d7a4ce51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 将对象追加到集合。 如果该集合为[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，新[字段](../../../ado/reference/ado-api/field-object.md)追加到集合之前，可以创建对象。  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *collection*  
  一个集合对象。  
   
- *fields*  
+ *字段*  
  A**字段**集合。  
   
  *对象*  
@@ -78,7 +78,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*添加时，参数才有效**字段**对象传递给[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，不适用于**记录集**对象。 与**记录**对象，可以将字段追加，还可以在同一时间提供值。 与**记录集**对象，你必须创建时的字段**记录集**并已关闭，然后打开**记录集**并将值分配给字段。  
   
 > [!NOTE]
->  新**字段**已追加到的对象**字段**集合**记录**对象，[值](../../../ado/reference/ado-api/value-property-ado.md)属性必须设置在任何其他之前**字段**可以指定属性。 首先，为特定值**值**属性必须具有已分配和[更新](../../../ado/reference/ado-api/update-method.md)上**字段**名集合。 然后，其他属性，如[类型](../../../ado/reference/ado-api/type-property-ado.md)或[属性](../../../ado/reference/ado-api/attributes-property-ado.md)可访问。 **字段**以下数据类型的对象 (**DataTypeEnum**) 无法附加到**字段**集合并将会导致发生错误： **adArray**， **adChapter**， **adEmpty**， **adPropVariant**，和**adUserDefined**。 此外，以下数据类型不受 ADO: **adIDispatch**， **adIUnknown**，和**adIVariant**。 对于这些类型，不会发生错误时追加，但使用时会产生不可预知的结果，包括内存泄漏。  
+>  新**字段**已追加到的对象**字段**集合**记录**对象，[值](../../../ado/reference/ado-api/value-property-ado.md)属性必须设置在任何其他之前**字段**可以指定属性。 首先，为特定值**值**属性必须具有已分配和[更新](../../../ado/reference/ado-api/update-method.md)上**字段**名集合。 然后，其他属性，如[类型](../../../ado/reference/ado-api/type-property-ado.md)或[属性](../../../ado/reference/ado-api/attributes-property-ado.md)可访问。 **字段**以下数据类型的对象 (**DataTypeEnum**) 无法附加到**字段**集合并将会导致发生错误： **adArray**，**adChapter**， **adEmpty**， **adPropVariant**，和**adUserDefined**。 此外，以下数据类型不受 ADO: **adIDispatch**， **adIUnknown**，和**adIVariant**。 对于这些类型，不会发生错误时追加，但使用时会产生不可预知的结果，包括内存泄漏。  
   
 ## <a name="recordset"></a>记录集  
  如果你未设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性之前调用**追加**方法， **CursorLocation**将设置为**adUseClient** ([CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值) 时自动[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)调用对象。  

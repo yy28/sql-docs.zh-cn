@@ -1,31 +1,31 @@
 ---
-title: "ADO 属性 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ADO 属性 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 919d3573a0d5b1178d24af3befd553a39b3c0d3a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-properties"></a>ADO 属性
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|指示字段的值的实际长度。|  
 |[属性](../../../ado/reference/ado-api/attributes-property-ado.md)|指示一个或多个特征的对象。|  
 |[BOF 和 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**指示当前记录的位置是在记录集对象中的第一个记录之前。<br /><br /> **EOF**指示当前记录位置后记录集对象中的最后一个记录。|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|指示一个书签，用于唯一标识中的当前记录**记录集**对象或设置当前记录中**记录集**到由有效的书签记录的对象。|  
+|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|指示一个书签，用于唯一标识中的当前记录**记录集**对象或设置当前记录中**记录集**到由有效的书签记录的对象。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|指示返回的记录数**记录集**本地缓存在内存中的对象。|  
 |[章](../../../ado/reference/ado-api/chapter-property-ado.md)|获取或设置 OLE DB**章**对象从/上**ADORecordsetConstruction**对象。|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|指示设置到其中的字符文本的内容**流**应转换。|  
@@ -67,13 +67,13 @@ ms.lasthandoff: 02/09/2018
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|指示要用作文本中的行分隔符的二进制字符**流**对象。|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|指示编辑过程上记录放置锁的类型。|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|指示哪些记录要封送回服务器。|  
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|指示要返回到的记录的最大**记录集**从查询。|  
+|[最大记录](../../../ado/reference/ado-api/maxrecords-property-ado.md)|指示要返回到的记录的最大**记录集**从查询。|  
 |[模式](../../../ado/reference/ado-api/mode-property-ado.md)|指示在中修改数据的可用权限**连接**，**记录**，或**流**对象。|  
 |[名称](../../../ado/reference/ado-api/name-property-ado.md)|指示对象的名称。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|表示特定的提供程序特定的错误代码**错误**对象。|  
-|[Number](../../../ado/reference/ado-api/number-property-ado.md)|指示唯一标识的数字**错误**对象。|  
+|[数](../../../ado/reference/ado-api/number-property-ado.md)|指示唯一标识的数字**错误**对象。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|指示小数位数的数字值在**参数**或**字段**对象。|  
-|[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|指示的值**字段**进行任何更改之前存在的记录。|  
+|[originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|指示的值**字段**进行任何更改之前存在的记录。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|指示的数据的多少页面**记录集**对象包含。|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|指示多少条记录表示在一页**记录集**。|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|设置 OLE DB 的容器**行**对象上**ADORecordConstruction**对象，以便父行转换为 ADO**记录**对象。|  
@@ -84,9 +84,9 @@ ms.lasthandoff: 02/09/2018
 |[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)|指示提供程序名称**连接**对象。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|指示中的记录数**记录集**对象。|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|指示的一种**记录**对象。|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|获取或设置 OLE DB**行**对象从/上**ADORecordConstruction**对象。|  
+|[行](../../../ado/reference/ado-api/row-property-ado.md)|获取或设置 OLE DB**行**对象从/上**ADORecordConstruction**对象。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|获取或设置 OLE DB **RowPosition**对象从/上**ADORecordsetConstruction**对象。|  
-|[行集](../../../ado/reference/ado-api/rowset-property-ado.md)|获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。|  
 |[源 （ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)|指示最初生成了错误的应用程序的对象的名称。|  
 |[源 （ADO 记录）](../../../ado/reference/ado-api/source-property-ado-record.md)|指示所表示的实体**记录**对象。|  
 |[源 （ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)|指示中的数据的源**记录集**对象|  

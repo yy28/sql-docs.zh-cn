@@ -1,31 +1,21 @@
 ---
-title: T-SQL 语句分析平台系统并行数据仓库 |Microsoft 文档
-author: barbkess
-ms.author: barbkess
+title: T-SQL 语句的并行数据仓库 |Microsoft 文档
+description: T-SQL 语句有关分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
-documentationcenter: NA
-editor: ''
-ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="t-sql-topics"></a>T-SQL 的主题
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>并行数据仓库的 T-SQL 语句
 TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
 
 ## <a name="data-definition-language-ddl-statements"></a>数据定义语言 (DDL) 语句
@@ -35,7 +25,7 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓
 * [更改架构](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [创建列存储索引](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [创建数据库](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [创建数据库范围凭据](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [创建外部数据源](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [创建外部文件格式](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -105,7 +95,7 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [创建证书](../t-sql/statements/create-certificate-transact-sql.md)
-* [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
+* [创建数据库加密密钥](../t-sql/statements/create-database-encryption-key-transact-sql.md)
 * [创建登录名](../t-sql/statements/create-login-transact-sql.md)
 * [创建主密钥](../t-sql/statements/create-master-key-transact-sql.md)
 * [创建角色](../t-sql/statements/create-role-transact-sql.md)

@@ -1,27 +1,21 @@
 ---
-title: 加载
-author: barbkess
-ms.author: barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 数据加载到并行数据仓库 |Microsoft 文档
 description: 你可以加载或使用数据插入到 SQL Server 并行数据仓库 (PDW) Integration Services、 bcp 实用工具、 dwloader 或 SQL INSERT 语句。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
-caps.latest.revision: 22
-ms.openlocfilehash: 77bb7e3ba6a3377fe63decf06a872872eaa4ee61
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3fed89686683616164132cf0322e3709eab78f32
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-sql-server-pdw"></a>负载 (SQL Server PDW)
+# <a name="loading-data-into-parallel-data-warehouse"></a>数据加载到并行数据仓库
 可以加载，也可以使用数据插入到 SQL Server 并行数据仓库 (PDW) Integration Services， [bcp 实用工具](../tools/bcp-utility.md)， **dwloader**命令行加载程序或 SQL INSERT 语句。  
 
 ## <a name="loading-environment"></a>加载环境  

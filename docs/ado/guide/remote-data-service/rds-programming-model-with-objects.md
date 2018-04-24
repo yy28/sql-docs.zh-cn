@@ -1,31 +1,31 @@
 ---
-title: "RDS 的编程模型和对象 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: RDS 的编程模型和对象 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46dcfe88b0405eaf34a52f2b25e131b5ba72eafe
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da0fee3543f3e684f403f11bad5a613e9f4cac21
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 的编程模型和对象
 RDS 的目标是访问和更新数据源通过如 IIS 媒介。 编程模型指定实现此目标所需的活动序列。 对象模型指定其方法和属性会影响的编程模型的对象。  

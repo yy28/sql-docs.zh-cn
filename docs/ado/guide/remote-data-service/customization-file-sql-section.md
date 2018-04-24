@@ -1,31 +1,31 @@
 ---
-title: "自定义文件 SQL 部分 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 自定义文件 SQL 部分 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6294ab601f527527cf69ca017e3643dfe98a1336
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customization-file-sql-section"></a>自定义文件 SQL 部分
 **Sql**部分可以包含一个新的 SQL 字符串，将客户端的命令字符串。 如果部分中没有任何 SQL 字符串，则将忽略该节。  

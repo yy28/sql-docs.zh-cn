@@ -1,25 +1,25 @@
 ---
-title: "Linux 上的 SQL Server 概述 |Microsoft Docs"
-description: "本主题介绍了 SQL Server 如何在 Linux 上运行和提供有关如何若要了解详细信息。"
+title: Linux 上的 SQL Server 概述 |Microsoft Docs
+description: 本主题介绍了 SQL Server 如何在 Linux 上运行和提供有关如何若要了解详细信息。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 3ec35adddc04a42ed885600a2e8402121c86107c
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6542e86862b64b3c880cc3300a37384c28ab039d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -60,3 +60,5 @@ SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的底�
 > 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -1,30 +1,30 @@
 ---
-title: "ADO MD 基础知识 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ADO MD 基础知识 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, fundamentals
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c2097cbf365febffd6582fc31c0af753f929e21
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8160377b66ba6a781a92ef772795782eaa455478
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 基础知识
 Microsoft® ActiveX® 数据对象 （多维） (ADO MD) 轻松访问通过提供对多维数据等 Microsoft Visual Basic®，语言 Microsoft Visual C++®。 ADO MD 扩展 Microsoft ActiveX® 数据对象 (ADO) 要包括特定于多维数据的对象，如[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)和[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。 使用 ADO MD 中，您可以浏览多维架构、 查询多维数据集，并检索结果。  

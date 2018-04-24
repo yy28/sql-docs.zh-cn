@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB Provider for Oracle |Microsoft 文档"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for Oracle |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for Oracle
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 71ce9defd8d06a220da3c3f74c439d8a4a7ecc84
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概述
 > [!IMPORTANT]
@@ -74,7 +74,7 @@ MSDAORA
 |**窗口句柄**|指示要用于提示输入其他信息的窗口句柄。|
 |**区域设置标识符**|指示唯一的 32 位数字 （例如 1033年），指定与用户的语言首选项。 这些首选项指示如何格式化日期和时间，项按字母顺序排列，字符串进行比较，依次类推。|
 |**OLE DB 服务**|指示指定 OLE DB 服务启用或禁用的位掩码。|
-|**Prompt**|指示是否正在建立连接时提示用户。|
+|**提示符**|指示是否正在建立连接时提示用户。|
 |**扩展的属性**|包含提供程序特定的扩展的连接信息的字符串。 此属性仅用于不能通过属性机制所述的提供程序特定的连接信息。|
 
 ## <a name="see-also"></a>另请参阅

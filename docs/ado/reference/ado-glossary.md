@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -251,7 +251,7 @@ ms.lasthandoff: 04/03/2018
  ProgID （编程标识符）  
  唯一的名称映射到 Windows 注册表 COM 应用程序。 ADO 连接的 ProgID 为"ADODB。连接"。 另请参阅 CLSID，com。  
   
- proxy  
+ 代理  
  一个接口特定对象，其中提供的参数封送处理和通信所需的客户端能够调用运行在不同的执行环境中，如在另一个线程或另一个进程中的应用程序对象。 代理位于与客户端，并与相应的存根位于与调用的应用程序对象进行通信。 另请参阅存根 （stub）。  
   
 ## <a name="r"></a>R  
@@ -283,10 +283,10 @@ ms.lasthandoff: 04/03/2018
  存储过程  
  预编译的代码，例如 SQL 语句和可选的流控制语句的集合的名称存储，并作为一个单元处理。 存储的过程存储在一个数据库;它们可以通过从应用程序的一次调用执行，并且允许用户声明的变量、 条件执行和其他功能强大的编程功能。  
   
- stub  
+ 存根 （stub)  
  一个接口特定对象，其中提供的参数封送处理和通信所需的应用程序对象从运行在不同的执行环境中，如在另一个线程或另一个进程中的客户端接收调用。 存根 （stub） 位于与应用程序对象，并与相应的代理，它位于调用它的客户端进行通信。 另请参阅代理服务器。  
   
- sub-node  
+ 子节点  
  请参阅子级。  
   
  同步操作  

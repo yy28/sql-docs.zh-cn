@@ -1,30 +1,23 @@
 ---
-title: 外部 SMP SQL Server 配置为接收远程表副本 (PDW)
-author: barbkess
-ms.author: barbkess
+title: SQL Server 配置为接收远程表副本的并行数据仓库 |Microsoft 文档
+description: 描述如何配置一个外部 SMP SQL Server 实例，以便从并行数据仓库接收远程表副本。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: 13
-ms.openlocfilehash: 94b62dbae331c19fa97c1625a53804f4cd96bfa5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>配置外部 SMP SQL 服务器以接收远程表副本
-描述如何配置一个外部的 SQL Server 实例，以便从 SQL Server PDW 接收远程表副本。  
-  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>配置外部 SMP SQL 服务器以接收远程表副本的并行数据仓库
+描述如何配置一个外部的 SQL Server 实例，以便从并行数据仓库接收远程表副本。  
+
 本主题介绍配置远程表复制的配置步骤之一。 有关所有配置步骤的列表，请参阅[远程表复制](remote-table-copy.md)。  
   
 ## <a name="before-you-begin"></a>开始之前  

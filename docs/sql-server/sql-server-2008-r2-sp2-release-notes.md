@@ -1,33 +1,32 @@
 ---
-title: "SQL Server 2008 R2 SP2 发行说明 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SQL Server 2008 R2 SP2 发行说明 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+ms.technology: supportability
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a497aaec3879414fe2a7c6785a180ebf77ba25de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 08d28567a1984cae1fe5d563312caf656a31b438
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]本发行说明文档介绍了在安装 Microsoft SQL Server 2008 R2 Service Pack 2 或者解决其相关问题之前应该了解的一些已知问题。 本发行说明文档适用于 SQL Server 2008 R2 SP2 的所有版本且只以联机形式提供。 文本档定期更新。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+本发行说明文档介绍了在安装 Microsoft SQL Server 2008 R2 Service Pack 2 或者解决其相关问题之前应该了解的一些已知问题。 本发行说明文档适用于 SQL Server 2008 R2 SP2 的所有版本且只以联机形式提供。 文本档定期更新。  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Service Pack 2 中的新增功能  
 添加了动态管理视图 (DMV) **sys.dm_db_stats_properties**。 您可以使用此 DMV 为当前数据库中指定的表或索引视图返回统计信息属性。 例如，此 DMV 可返回取样的行数和直方图梯级数。  

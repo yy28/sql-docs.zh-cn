@@ -1,17 +1,17 @@
 ---
-title: "执行方法 （ADO 连接） |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 执行方法 （ADO 连接） |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::Execute
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05d1df49596da99bc98fba9cef7999772ea78f40
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-ado-connection"></a>执行方法 （ADO 连接）
 执行指定的查询、 SQL 语句、 存储的过程或提供程序特定的文本。  
@@ -54,7 +54,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *Options*  
  選擇性。 A**长**值，该值指示提供程序应如何评估 CommandText 自变量。 可以是一个位屏蔽的一个或多个[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值。  
   
- **请注意**使用**ExecuteOptionEnum**值**adExecuteNoRecords**以提高性能，通过最小化内部处理和要从 Visual Basic 移植的应用程序6.0。  
+ **请注意**使用**ExecuteOptionEnum**值**adExecuteNoRecords**以提高性能，通过最小化内部处理和要从 Visual Basic 6.0 移植的应用程序。  
   
  不要使用**adExecuteStream**与**执行**方法**连接**对象。  
   

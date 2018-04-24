@@ -1,29 +1,22 @@
 ---
-title: 与 System Center Operations Manager (AP) 的监视设备
-author: barbkess
-ms.author: barbkess
+title: 具有 SCOM-分析平台系统监视器，|Microsoft 文档
+description: 使用 System Center Operations Manager (SCOM) 来监视分析平台系统 (AP) 设备。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>使用 System Center Operations Manager 来监视设备
-介绍如何使用 System Center Operations Manager 来监视 SQL Server PDW 和 HDInsight。  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>与 System Center Operations Manager-分析平台系统监视器
+使用 System Center Operations Manager (SCOM) 来监视分析平台系统 (AP) 设备。
   
 ## <a name="before-you-begin"></a>开始之前  
   
@@ -33,7 +26,7 @@ ms.lasthandoff: 04/06/2018
   
 2.  必须安装 SQL Server 2008 R2 Native Client 或 SQL Server 2012 Native Client。  
   
-3.  必须安装、 导入，并配置管理包以监视 SQL Server PDW 和 HDInsight。 使用以下项作为说明来执行这些任务。  
+3.  必须安装、 导入，并配置管理包以监视 SQL Server PDW 和 HDInsight。 使用以下文章获得说明来执行这些任务。  
   
     -   [安装 SCOM 管理包&#40;分析平台系统&#41;](install-the-scom-management-packs.md)  
   
@@ -50,12 +43,12 @@ ms.lasthandoff: 04/06/2018
 ### <a name="alerts"></a>警报  
 警报是可在其中找到要管理的当前警报。  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![警报](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>设备  
-设备是，你会发现你的环境中的当前发现和监视 SQL Server PDW 设备。 如果设备未显示在此处，并且你已创建它的 ODBC 连接，然后可能有出现错误 PDWWatcher 帐户。 如果它们显示为"未监视"可能出现错误 PDWMonitor 帐户。 请保持耐心 SCOM 不的实时，进行更改，但是定期检查新的设备，以监视和定期将查询发送到监视的设备。  
+设备是，你会发现你的环境中的当前发现和监视 SQL Server PDW 设备。 如果设备未显示在此处，并且你已创建它的 ODBC 连接，然后可能有出现错误 PDWWatcher 帐户。 如果它们显示为"未监视"，可能有出现错误 PDWMonitor 帐户。 请耐心等待，因为 SCOM 不的实时，进行更改，但会定期检查用于新设备的监视和定期将查询发送到监视的设备。  
   
-![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![设备](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>设备关系图  
 设备关系图页是设备的你可以查看你与树视图的运行状况：  

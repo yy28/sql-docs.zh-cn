@@ -1,28 +1,21 @@
 ---
-title: Power AP 设备打开或关闭 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 电源设备打开或关闭-分析平台系统 |Microsoft 文档
+description: 用于分析平台系统的电源装置打开或关闭
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>打开或关闭电源 AP 设备
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>用于分析平台系统的电源装置打开或关闭
 本主题介绍如何开启或关闭你分析平台 Systemappliance 运行并行数据仓库，并根据需要运行的 HDInsight 区域。 使用本主题时移动分析平台系统设备，或 power 在设备上灾难性电源发生故障后。  
   
 打开和关闭电源设备不与启动和停止设备服务相同。 有关该主题的信息，请参阅[PDW 服务状态&#40;Analytics Platform System&#41;](pdw-services-status.md)。 有关电源打开或关闭 SQL Server 2008 并行数据仓库的信息，请参阅 SQL Server 2008 并行数据仓库帮助文件。 有关电源打开或关闭 SQL Server 2012 AU1 或 AU2 并行数据仓库的信息，请参阅这些版本的帮助文件。  

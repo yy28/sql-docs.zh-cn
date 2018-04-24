@@ -1,29 +1,22 @@
 ---
-title: 确定哪些群集节点失败 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 确定失败的群集节点的分析平台系统 |Microsoft 文档
+description: 本文介绍如何确定失败发生群集故障转移后引发了群集故障转移警报分析平台系统 (AP) 节点的名称。 作为故障排除群集故障转移的一部分，你必须确定联系 Microsoft 以帮助解决此问题之前失败的节点的名称。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>确定哪些群集节点失败
-本主题介绍如何确定失败发生群集故障转移后引发了群集故障转移警报的 SQL Server PDW 节点的名称。 作为故障排除群集故障转移的一部分，你必须确定联系 Microsoft 以帮助解决此问题之前失败的节点的名称。  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>确定哪些群集节点失败分析平台系统
+本主题介绍如何确定失败发生群集故障转移后引发了群集故障转移警报分析平台系统 (AP) 节点的名称。 作为故障排除群集故障转移的一部分，你必须确定联系 Microsoft 以帮助解决此问题之前失败的节点的名称。  
   
 ## <a name="Background"></a>背景  
 为 SQL Server PDW 中的高可用性，管理节点和计算节点被配置为 Windows 故障转移群集的主动或被动组件。 当一个活动的服务器失败时对关键系统请求作出响应时，被动服务器故障转移，并执行该故障服务器的功能。  

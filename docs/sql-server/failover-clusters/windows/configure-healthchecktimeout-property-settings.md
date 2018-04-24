@@ -1,30 +1,32 @@
 ---
-title: "配置 HealthCheckTimeout 属性设置 | Microsoft Docs"
-ms.custom: 
+title: 配置 HealthCheckTimeout 属性设置 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0165e046d479cab6f541dbc7cd81787ebd0accf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4130fd646080339fe0f62154742879290dbbe053
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]HealthCheckTimeout 设置用于指定以毫秒表示的一段时间，在这段时间内 SQL Server 资源 DLL 应等待 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 存储过程返回的信息，之后才能将 Always On 故障转移群集实例 (FCI) 报告为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  HealthCheckTimeout 设置用于指定以毫秒表示的一段时间，在这段时间内 SQL Server 资源 DLL 应等待 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 存储过程返回的信息，之后才能将 Always On 故障转移群集实例 (FCI) 报告为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
 -   **准备工作：**[限制和局限](#Limits)、[安全性](#Security)  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  

@@ -1,17 +1,17 @@
 ---
-title: "事件参数 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 事件参数 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Error parameter [ADO]
 - Object parameter [ADO]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43bea31384f503ea0e98d8e485002135f1cbbf57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-parameters"></a>事件参数
 每个事件处理程序有一个控制事件处理程序的状态参数。 对于完整事件，此参数还用于指示成功或失败的生成事件的操作。 最完整事件还具有一个错误参数，以便提供有关可能发生，任何错误以及一个或多个引用用来执行该操作的 ADO 对象的对象参数的信息。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包括对象参数**命令**，**记录集**，和**连接**对象与事件关联。 在以下的 Microsoft® Visual Basic® 示例中，你可以看到 pCommand、 pRecordset 和 pConnection 对象表示**命令**，**记录集**，和**连接**程序使用的对象**执行**方法。  

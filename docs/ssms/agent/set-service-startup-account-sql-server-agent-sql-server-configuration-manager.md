@@ -22,11 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 37582f52b59a254c12b7b8981b1298d525fa31fa
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ca3eaeb33891f605bd0cd15e834f95dad291b057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/10/2018
   
     [限制和局限](#Restrictions)  
   
-    [安全性](#Security)  
+    [Security](#Security)  
   
 -   [使用 SQL Server Management Studio 为 SQL Server 代理设置服务启动帐户](#SSMSProcedure)  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/10/2018
   
         2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”框中重新输入密码。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器中，单击 **“关闭”** 按钮。  
   

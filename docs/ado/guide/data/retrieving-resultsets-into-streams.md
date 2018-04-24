@@ -1,32 +1,32 @@
 ---
-title: "到流中检索结果集 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 到流中检索结果集 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO], retrieving query results
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34f1cc4730f984427d207162694c68e3641be575
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 16d1518d2ddbe5accc6b55fdc0b778a6381e1a5f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="retrieving-resultsets-into-streams"></a>到流中检索结果集
 而不是接收结果中的传统**记录集**对象，ADO 改为到流检索查询结果。 ADO**流**对象 (或其他支持 COM 的对象**IStream**接口，如 ASP**请求**和**响应**对象) 可以用于包含这些结果。 此功能的用途之一是检索 XML 格式的结果。 使用 SQL Server，例如，XML 可以返回结果在多个方面，例如使用 SQL SELECT 查询中使用 FOR XML 子句或使用 XPath 查询。  

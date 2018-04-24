@@ -1,28 +1,21 @@
 ---
-title: 启动配置管理器 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 启动分析平台系统的配置管理器-|Microsoft 文档
+description: 用于启动分析平台系统设备的配置管理器工具的说明。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: 22
-ms.openlocfilehash: 0ea02f539633233b462cc6c4cc3cc7ba5d452da9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d2e7a726386aa64d04f87f30cd22328900b1e5cd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="launch-the-configuration-manager"></a>启动配置管理器
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在分析平台系统中启动 Configuration Manager
 本主题提供用于启动说明**Configuration Manager**针对分析平台系统设备。  
   
 ## <a name="before-you-begin"></a>开始之前  

@@ -1,28 +1,21 @@
 ---
-title: 了解管理控制台警报 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 管理员控制台警报数-分析平台系统 |Microsoft 文档
+description: 了解管理控制台警报中分析平台系统 (AP)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>了解管理控制台警报
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>了解分析平台系统中的管理控制台警报
 警报显示在设备**管理控制台**并在**System Center Operations Manager** (SCOM)。 使用警报的此列表可帮助确定哪些警报需要进一步研究。  
   
 有关连接到**管理控制台**通过使用 Internet Explorer，请参阅[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 璝惠**SCOM**，请参阅[监视通过使用 System Center Operations Manager 设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
@@ -132,7 +125,7 @@ ms.lasthandoff: 04/06/2018
 |SAS 主机总线适配器具有失败条件。|是|失败|警告|SAS 主机总线适配器正在报告 HBA 的总体条件为处于失败状态，包括所有由它控制的物理驱动器。 这将需要要替换的组件 (供应商状态： 失败)。 供应商状态报告组件的"hba_device_rollup_status"属性中。|查看详细信息或联系设备制造商的节点的 Windows 事件日志。|  
 |SAS 主机总线适配器具有正常状态。|否|操作|信息|正常运行 SAS 主机总线适配器 (供应商状态: 确定)。 供应商状态报告组件的"hba_device_rollup_status"属性中。||  
 |SAS 主机总线适配器具有未知状态。|是|降级|警告|无法确定 SAS 主机总线适配器状态 (供应商状态： 其他)。 供应商状态报告组件的"hba_device_status"属性中。|查看详细信息或联系设备制造商的节点的 Windows 事件日志。|  
-|SQL Server 具有关键状态。|是|NonOperational|错误|此服务将处于严重状态和已停止工作 (状态： 已停止) 或正处于过渡状态要停止 (状态： StopPending)。  状态报告组件的"sql_server_service_status"属性中。|查看有关详细信息的节点的 Windows 事件日志。|  
+|SQL Server 具有关键状态。|是|保持非运行状态|错误|此服务将处于严重状态和已停止工作 (状态： 已停止) 或正处于过渡状态要停止 (状态： StopPending)。  状态报告组件的"sql_server_service_status"属性中。|查看有关详细信息的节点的 Windows 事件日志。|  
 |SQL Server 具有正常状态。|否|操作|信息|此服务未正常运行 (状态： 运行)。 状态报告组件的"sql_server_service_status"属性中。||  
 |存储机箱风扇具有已降级状态。|是|降级|警告|存储机箱风扇报告它已降级 (供应商状态： 10，15)。 供应商状态报告组件的"storage_fan_status"属性中。|查看详细信息或联系设备制造商的节点的 Windows 事件日志。|  
 |存储机箱风扇已失败状态。|是|失败|警告|存储机箱风扇不报告它处于失败状态。 这将需要要替换的组件 (供应商状态： 20,25)。 供应商状态报告组件的"storage_fan_status"属性中。|查看详细信息或联系设备制造商的节点的 Windows 事件日志。|  

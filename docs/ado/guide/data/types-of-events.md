@@ -1,6 +1,6 @@
 ---
 title: 类型的事件 |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EventComplete event [ADO]
 - events [ADO], types
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52d78d1a6ae1fc2ccb34ee6b8d810f1ca5ba1c22
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 504f6e97614e8688a0cf1b12206200c6f3519d71
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="types-of-events"></a>类型的事件
 有两种基本类型的事件。 "将事件，"在其调用操作开始之前，通常在其名称中包含"将"— 例如， **WillChangeRecordset**或**WillConnect**。 事件通常完成后调用的事件在其名称中包含"完成"— 例如， **RecordChangeComplete**或**ConnectComplete**。 存在例外-如**InfoMessage** -但这些关联的操作已完成后，执行。  

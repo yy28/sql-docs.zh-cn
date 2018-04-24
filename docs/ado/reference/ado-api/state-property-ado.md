@@ -1,33 +1,33 @@
 ---
-title: "State 属性 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: State 属性 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Command25::State
 helpviewer_keywords:
 - State property [ADO]
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8f1b832d0af4840bab697cbcd9b62eca4f90496
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c3f45b4aeb9cd16a2aa166008ac46bf01f5ba9df
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="state-property-ado"></a>State 属性 (ADO)
 对象的状态是打开还是已关闭，则指示为所有适用的对象。 如果该对象正在执行的异步方法，指示是连接、 执行，还是检索对象的当前状态。  

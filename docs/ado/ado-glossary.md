@@ -1,30 +1,30 @@
 ---
-title: "ADO 术语表 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ADO 术语表 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d327b5e991127a533d4b599daf8c52cfb2dba1ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 术语词汇表
 本主题定义与 ADO 相关的术语。
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="b"></a>B
  表中的字段和变量之间的绑定项的映射。 在 ADO 的 Visual c + + 扩展中，**记录集**字段映射到 C/c + + 变量。
 
- 位掩码的数字值供与其他数字值，通常标志中的选项参数或返回值的按位值比较。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中，  **&** 和**&#124;**在 c + +。
+ 位掩码的数字值供与其他数字值，通常标志中的选项参数或返回值的按位值比较。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中， **&**和**&#124;** c + + 中。
 
  例如，ADO **FieldAttributeEnum**值可以用作位掩码确定字段的特性。 假设你想要确定字段是否可更新。 无法使用以下表达式在 Visual Basic 中对此进行测试：`Field.Attributes AND adFldUpdatable`
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 02/09/2018
  特定于数据提供程序或游标服务的动态属性的属性。 **属性**自动使用这些填充的对象的集合 （"动态"）。 连接到数据源通过特定数据提供程序之前，对象将具有任何动态属性。 另请参阅数据提供程序、 光标。
 
 ## <a name="e"></a>E
- 枚举的已命名常数的列表。 枚举的值不需要是唯一的。 但是每个值的名称必须是在其中定义枚举的作用域内唯一的。 在 ADO 中，枚举用于数字参数和返回值，以添加到 ADO 代码的含义并屏蔽的开发人员的数字值 （这可能会更改版本之间的差异）。 例如，若要打开一个静态**记录集**，使用**adOpenStatic**枚举值：`Recordset.Open ,,adOpenStatic`
+ 枚举的已命名常数的列表。 枚举的值不需要是唯一的。 但是每个值的名称必须是在其中定义枚举的作用域内唯一的。 在 ADO 中，枚举用于数字参数和返回值，以添加到 ADO 代码的含义并屏蔽的开发人员的数字值 （这可能会更改版本之间的差异）。 例如，若要打开一个静态**记录集**，使用**adOpenStatic**枚举值： `Recordset.Open ,,adOpenStatic`
 
  也称为*枚举的常数*。 另请参阅*常量*。
 

@@ -1,31 +1,31 @@
 ---
-title: "通讯簿导航按钮 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 通讯簿导航按钮 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211e05c548d38ad364e8a7daa85f280e8ca62414
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ffad07e0672672bef56ff1d4914219a44b50b2f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-navigation-buttons"></a>通讯簿导航按钮
 通讯簿应用程序在 Web 页的底部显示导航按钮。 你可以使用导航按钮导航通过 HTML 网格显示中的数据通过选择第一个或最后一行数据或到当前选择相邻的行。  

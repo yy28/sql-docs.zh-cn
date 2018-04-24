@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 的最大容量规范 | Microsoft Docs"
+title: SQL Server 的最大容量规范 | Microsoft Docs
 ms.date: 11/6/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - objects [SQL Server]
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: "88"
+caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ec628362449c449d26005797e806e47b4614a79
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2b1465f6816523cd057aec54b6685a09141e2d72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/05/2017
 |存储过程源文本中的字节数||批处理大小中的较小者或 250 MB||  
 |每个 **varchar(max)**、 **varbinary(max)**、 **xml**、 **text**或 **image** 列的字节||2^31-1||  
 |每个 **ntext** 或 **nvarchar(max)** 列的字符||2^30-1||  
-|每个表的聚集索引数||1||  
+|每个表的聚集索引数||@shouldalert||  
 |GROUP BY、ORDER BY 中的列数||仅受字节数限制||  
 |GROUP BY WITH CUBE 或 WITH ROLLUP 语句中的列数或表达式数目||10||  
 |每个索引键的列数||32|如果表包含一个或多个 XML 索引，由于 XML 列被添加到主 XML 索引的聚集键，因此用户表的聚集键被限制为 31 列。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，可在非聚集索引中包括非键列以避免最多为 32 个键列的限制。 有关详细信息，请参阅 [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md)。|  
@@ -79,12 +80,12 @@ ms.lasthandoff: 12/05/2017
 |数据库大小||524,272 TB||  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |每个数据库的文件组个数||32,767||  
-|每个数据库的内存优化数据文件组个数||1||  
+|每个数据库的内存优化数据文件组个数||@shouldalert||  
 |每个数据库的文件个数||32,767||  
 |文件大小（数据）||16 TB||  
 |文件大小（日志）||2 TB||  
 |每个数据库的内存优化数据文件个数||[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 中为 4,096。 更高版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会施加这样的严格限制。||  
-|每个内存优化数据文件的差异文件||1||  
+|每个内存优化数据文件的差异文件||@shouldalert||  
 |每个表的外键表引用数||传出 = 253。 传入 = 10,000。|有关限制，请参阅 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)。|  
 |标识符长度（以字符计）||128||  
 |每台计算机的实例数||独立服务器上为 50 个实例。<br /><br /> 在使用共享群集磁盘作为您的群集安装的存储选项时，在故障转移群集上支持 25 个实例。如果您为群集安装选择 SMB 文件共享作为存储选项，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在故障转移群集上支持 50 个实例。||  
@@ -121,9 +122,9 @@ ms.lasthandoff: 12/05/2017
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例总数||200*|  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的用户数据库数（包括数据层应用程序）||50|  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的用户数据库总数||1,000|  
-|每个数据库的文件组数||1|  
-|每个文件组的数据文件数||1|  
-|每个数据库的日志文件数||1|  
+|每个数据库的文件组数||@shouldalert|  
+|每个文件组的数据文件数||@shouldalert|  
+|每个数据库的日志文件数||@shouldalert|  
 |每台计算机的卷数||3|  
   
  * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的最大数目将会依服务器的硬件配置而定。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](https://msdn.microsoft.com/library/ee210548.aspx)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。    
@@ -133,7 +134,7 @@ ms.lasthandoff: 12/05/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象||最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
 |------------------------------------------|-|------------------------------------------------------------------|  
-|每个 DAC 的数据库数||1|  
+|每个 DAC 的数据库数||@shouldalert|  
 |每个 DAC 的对象数*||受数据库中对象数或可用内存限制。|  
   
  *限制中包含的对象类型为用户、表、视图、存储过程、用户定义函数、用户定义数据类型、数据库角色、架构和用户定义表类型。  

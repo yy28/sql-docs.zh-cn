@@ -1,28 +1,22 @@
 ---
-title: 工作负荷管理 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 分析平台系统中的工作负荷管理 |Microsoft 文档
+description: 分析平台系统中的工作负荷管理。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management"></a>工作负荷管理
+# <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
+
 SQL Server PDW 工作负荷管理功能允许用户和管理员将分配请求用来预设置的内存和并发的配置。 使用工作负荷管理来提高指定工作负荷性能，一致或混合，允许进行合适的资源，不能始终使任何请求的请求。  
   
 例如，与 SQL Server PDW 的工作负荷管理技术，你可以：  

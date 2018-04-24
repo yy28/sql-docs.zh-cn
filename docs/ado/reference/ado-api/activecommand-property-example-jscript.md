@@ -1,32 +1,32 @@
 ---
-title: "ActiveCommand 属性示例 (JScript) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ActiveCommand 属性示例 (JScript) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ActiveCommand property [ADO], JScript example
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afd176de04dbdc6bbcab64469b3d88b63e156ccc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aec3a3d79de42a38b4282014b193c2784e5d543a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 属性示例 (JScript)
 此示例演示[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActiveCommandJS.asp**。  

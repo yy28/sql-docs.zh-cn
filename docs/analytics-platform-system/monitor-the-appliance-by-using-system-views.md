@@ -1,29 +1,22 @@
 ---
-title: 使用系统视图 （分析平台系统） 来监视设备
-author: barbkess
-ms.author: barbkess
+title: 具有系统视图的分析平台系统监视器，|Microsoft 文档
+description: 本文列出了可用于监视分析平台系统设备的系统视图。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>使用系统视图来监视设备
-本主题列出可用于监视 SQL Server PDW 的系统视图。  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>监视设备，但有系统视图的分析平台系统
+本文列出了可用于监视 SQL Server PDW 的系统视图。  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>若要使用系统视图来监视设备  
 SQL Server PDW 包括使你能够获取有关设备运行状况、 状态和性能的详细的信息的综合系统视图。 此表提供了可用于每个监视功能的系统视图的链接。  

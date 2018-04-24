@@ -1,33 +1,33 @@
 ---
-title: "Visual c + + 扩展标头 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: Visual c + + 扩展标头 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd4add0612acdf4d55dc8ba17d0ba13b9c2f804d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b4b2563ea21fa749a7ccb6aec797fee7f688d706
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions-header"></a>Visual c + + 扩展标头
 以下标头， **icrsint.h**，详细信息的接口，允许客户端检索字段从**记录集**到派生自的类中定义的变量**CADORecordBinding**. 必须指定你想要访问每个字段的 ADO 绑定宏。  

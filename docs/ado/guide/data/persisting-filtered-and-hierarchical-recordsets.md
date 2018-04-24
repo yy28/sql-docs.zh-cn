@@ -1,17 +1,17 @@
 ---
-title: "保留的筛选和分层记录集 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 保留的筛选和分层记录集 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - filtered Recordset persistence [ADO]
 - persisting data [ADO]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d7ad27e3694b7a92e560170e699f62d76d5e6b0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d945999ef7feb34ebe7de3b945868bc35c154589
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>持久化筛选和分层记录集
 如果[筛选器](../../../ado/reference/ado-api/filter-property.md)属性实际上是为**记录集**，保存筛选器访问的行。 如果**记录集**是分层的当前子**记录集**和其子都得到保存，包括父**记录集**。 如果**保存**方法的子**记录集**是调用子及其所有子级都保存，但不是父。 有关层次结构的详细信息**记录集**，请参阅[数据成型](../../../ado/guide/data/data-shaping.md)。  

@@ -1,29 +1,22 @@
 ---
-title: 配置 PolyBase 连接到外部数据 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 配置 PolyBase 连接-分析平台系统 |Microsoft 文档
+description: 说明如何在并行数据仓库连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源中配置 PolyBase。 使用 PolyBase 将运行集成来自多个源，包括 Hadoop、 Azure blob 存储和并行数据仓库的数据的查询。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 43
-ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>配置 PolyBase 连接到外部数据
-说明如何在 SQL Server PDW 连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源中配置 PolyBase。 使用 PolyBase 将运行集成来自多个源，包括 Hadoop、 Azure blob 存储和 SQL Server PDW 的数据的查询。  
+说明如何在并行数据仓库连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源中配置 PolyBase。 使用 PolyBase 将运行集成来自多个源，包括 Hadoop、 Azure blob 存储和并行数据仓库的数据的查询。  
   
 ### <a name="to-configure-connectivity"></a>若要配置的连接  
   

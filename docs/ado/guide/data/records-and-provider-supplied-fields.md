@@ -1,31 +1,31 @@
 ---
-title: "记录和提供程序提供的字段 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 记录和提供程序提供的字段 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fbde4c56512a93113e583f906d812e93f8b9e921
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 当[记录](../../../ado/reference/ado-api/record-object-ado.md)打开对象，其源可以是已打开的当前行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，绝对 URL 或相对 URL 结合打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象.  

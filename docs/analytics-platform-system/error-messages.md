@@ -1,29 +1,23 @@
 ---
-title: 错误消息 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 错误消息的并行数据仓库 |Microsoft 文档
+description: 并行数据仓库 (PDW) 错误消息中报告的错误和问题遇到的 PDW 组件，还可以包括通过 PDW 中加以表示的 SQL Server 错误。 这些错误消息使用一致的语法来显示信息。 了解此语法将允许你以确定并更正问题。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: 9
-ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 33bdf11388ae52959d264e2df091e9c9669b159b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="error-messages"></a>错误消息
-SQL Server PDW 错误消息中报告的错误和问题遇到的 SQL Server PDW 组件，还可以包括通过 SQL Server PDW 中加以表示的 SQL Server 错误。 这些错误消息使用一致的语法来显示信息。 了解此语法将允许你识别和更正 SQL Server PDW 上的问题。  
+# <a name="error-messages-in-parallel-data-warehouse"></a>并行数据仓库中的错误消息
+
+并行数据仓库 (PDW) 错误消息中报告的错误和问题遇到的 PDW 组件，还可以包括通过 PDW 中加以表示的 SQL Server 错误。 这些错误消息使用一致的语法来显示信息。 了解此语法将允许你识别和更正 SQL Server PDW 上的问题。  
   
 ## <a name="Basics"></a>错误消息基础知识  
 返回的错误消息遵循相同的语法。  

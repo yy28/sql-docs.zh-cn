@@ -1,35 +1,35 @@
 ---
-title: "使用多维数据 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 使用多维数据 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07cb3078fd8d47d9c843eec09b4ee6bc72c820db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常不超过四个轴，通常只有两个或三个集合。 *轴*是用于查找或筛选多维数据集中的特定值的一个或多个维度中的成员集合。  
   
- A*位置*是一个点沿 x 轴。 对于包含对单个维度的轴，这些位置是维度成员的子集。 如果一个轴包含多个维度，则每个位置是一个复合实体，它具有 *n* 部件 where  *n* 是沿该轴方向的维度数。 位置的每个部分是一个构成维度中的成员。  
+ A*位置*是一个点沿 x 轴。 对于包含对单个维度的轴，这些位置是维度成员的子集。 如果一个轴包含多个维度，则每个位置是一个复合实体，它具有*n*部件 where *n*是沿该轴方向的维度数。 位置的每个部分是一个构成维度中的成员。  
   
  例如，如果从包含销售数据多维数据集 Geography 和产品维度的方向沿 x 轴的单元集，此轴的位置可能包含成员"USA"和"计算机。 在此示例中，确定沿 x 轴的位置需要每个维度中的成员的方向的轴平行。  
   
@@ -37,7 +37,7 @@ A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常�
   
  例如，多维数据集具有以下六个维度 (请注意此多维数据集架构给出的示例会稍有不同[概述多维架构和数据](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Salesperson  
+-   销售人员  
   
 -   Geography （自然层次结构）-洲、 国家/地区、 州等  
   

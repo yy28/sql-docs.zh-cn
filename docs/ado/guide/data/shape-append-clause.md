@@ -1,32 +1,32 @@
 ---
-title: "调整 APPEND 子句 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 调整 APPEND 子句 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-append-clause"></a>形状 APPEND 子句
 形状命令 APPEND 子句将某一列或列追加**记录集**。 通常情况下，这些列即变为章节列，后者是指子**记录集**。  
@@ -49,7 +49,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   表关键字后, 跟的表中的数据提供程序的名称。  
   
- *parent-alias*  
+ *父别名*  
  可选别名引用父**记录集**。  
   
  *column-list*  

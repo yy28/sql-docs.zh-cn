@@ -1,30 +1,32 @@
 ---
-title: "查看和读取故障转移群集实例诊断日志 | Microsoft Docs"
-ms.custom: 
+title: 查看和读取故障转移群集实例诊断日志 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 853edff8b7e7e0713b3133d8819fa4537caea48a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bda925a4330ccd5a53e6176d8aaae4ca74c04412
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
   
 -   **开始之前：**  [建议](#Recommendations)、 [安全性](#Security)  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  运行 **fn_xe_file_target_read_file**需要 VIEW SERVER STATE 权限。  
   
  以管理员身份打开 SQL Server Management Studio  

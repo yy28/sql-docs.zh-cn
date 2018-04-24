@@ -1,15 +1,16 @@
 ---
-title: "删除 SQL Server 故障转移群集实例（安装程序）| Microsoft Docs"
-ms.custom: 
+title: 删除 SQL Server 故障转移群集实例（安装程序）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], removing failover clustered instance
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - uninstalling failover clustered instances
 - removing failover clustered instances
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75e968279a9ba006d3a40b766beda8eced6695b3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0abd325efbe3bfee606d4eb06dd0943539abf4ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remove-a-sql-server-failover-cluster-instance-setup"></a>删除 SQL Server 故障转移群集实例（安装程序）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此过程可以卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此过程可以卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
   
 > [!IMPORTANT]  
 >  若要更新或删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，则您必须是本地管理员，且具有以服务登录到故障转移群集的所有节点的权限。  
@@ -49,6 +51,6 @@ ms.lasthandoff: 12/05/2017
 1.  若要卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序提供的删除节点功能分别删除每个节点。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

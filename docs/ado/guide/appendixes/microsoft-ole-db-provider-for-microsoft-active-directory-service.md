@@ -1,33 +1,33 @@
 ---
-title: "Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
 - Active Directory Service Interfaces provider [ADO]
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 提供程序允许 ADO 连接到通过 ADSI 异类目录服务。 这可以让 ADO 应用程序只读访问的 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 的目录服务，除了任何 LDAP 兼容目录服务和 Novell 目录服务。 ADSI 本身基于一个提供程序模型，以便如果没有另一个目录到新的提供程序给定访问，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程和启用 Unicode。  
@@ -102,16 +102,16 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|只读|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|读/写|  
+|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|读/写|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|始终**adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
 |[筛选](../../../ado/reference/ado-api/filter-property.md)|读/写|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|  
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|  
+|[最大记录](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|只读|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|  
@@ -125,8 +125,8 @@ objectClass='user' AND objectCategory='Person'"
 |------------|----------------|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|否|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|  
+|[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|  
+|[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|  
 |[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
 |[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|  
 |[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
@@ -139,7 +139,7 @@ objectClass='user' AND objectCategory='Person'"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|是|  
 |[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|是|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|是|  
+|[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|是|  
 |[更新](../../../ado/reference/ado-api/update-method.md)|否|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  

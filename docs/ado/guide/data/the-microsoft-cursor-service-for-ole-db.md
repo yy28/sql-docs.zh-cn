@@ -1,31 +1,31 @@
 ---
-title: "用于 OLE DB Microsoft 游标服务 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 用于 OLE DB Microsoft 游标服务 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursor service for ole db [ADO]
 - cursors [ADO], cursor service for OLE DB
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5dd9f4b279bd38028bb529dcdd0a49f32ffd7cc7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 82b46c5c69210eb6cf23e90434db8f81a4cca130
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>用于 OLE DB Microsoft 游标服务
 当你选择客户端游标，或设置**CursorLocation**属性**adUseClient**，正在对于 OLE DB 调用 Microsoft 游标服务。 你可能还会看到"客户端游标引擎"，这是实质上是相同的 ADO 的上下文中的引用。 此服务将补充数据提供程序的光标支持函数。 因此，您就可以理解相对统一的功能，从所有数据提供程序。  

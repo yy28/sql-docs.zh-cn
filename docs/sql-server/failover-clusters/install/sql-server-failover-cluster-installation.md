@@ -1,37 +1,39 @@
 ---
-title: "SQL Server 故障转移群集安装 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 故障转移群集安装 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 045f941ca5f5de2703bbd315f862ecf2c1985902
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b01ae5041d57ef4f7937c0d1efbb61e8271d104a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，你必须通过运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来创建并配置一个故障转移群集实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须通过运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来创建并配置一个故障转移群集实例。  
   
 ## <a name="installing-a-failover-cluster"></a>安装故障转移群集  
  若要安装故障转移群集，您必须使用具有本地管理员权限的域帐户，拥有作为服务登录的权限，并且拥有在故障转移群集的所有节点上作为操作系统的一部分进行操作的权限。 若要通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来安装故障转移群集，请执行以下步骤：  
   
 1.  若要安装、配置和维护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
   
-    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 详细信息：  
+    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 详细信息：    
   
         -   [安装故障转移群集前的准备工作](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   

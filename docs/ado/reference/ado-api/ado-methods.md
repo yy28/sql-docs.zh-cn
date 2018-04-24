@@ -1,31 +1,31 @@
 ---
-title: "ADO 方法 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: ADO 方法 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4a2b180e8886931819dafe089e9012dcaa578694
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -35,8 +35,8 @@ ms.lasthandoff: 02/09/2018
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|将数据追加到较大文本或二进制数据**字段**，或**参数**对象。|  
 |[BeginTrans、 CommitTrans 和不](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理在内部处理的事务**连接**对象，如下所示：<br /><br /> **BeginTrans** -开始新事务。<br /><br /> **CommitTrans** -保存任何更改并结束当前事务。 它还可能会启动一个新的事务。<br /><br /> **如果不**-取消任何更改并结束当前事务。 它还可能会启动一个新的事务。|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消执行的挂起异步方法调用。|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消挂起的批更新。|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|取消对的当前或新行所做的任何更改**记录集**对象，或**字段**集合**记录**对象，然后再调用**更新**方法。|  
+|[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消挂起的批更新。|  
+|[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|取消对的当前或新行所做的任何更改**记录集**对象，或**字段**集合**记录**对象，然后再调用**更新**方法。|  
 |[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|中删除所有**错误**对象从**错误**集合。|  
 |[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|创建副本**记录集**从现有对象**记录集**对象。 （可选） 指定的克隆是只读的。|  
 |[关闭](../../../ado/reference/ado-api/close-method-ado.md)|关闭打开的对象和任何从属对象。|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 |[执行 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)|执行查询、 SQL 语句或存储的过程中指定**CommandText**属性。|  
 |[执行 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)|执行指定的查询、 SQL 语句、 存储的过程或提供程序特定的文本。|  
 |[查找](../../../ado/reference/ado-api/find-method-ado.md)|搜索**记录集**满足指定的条件的行。|  
-|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|强制的内容**流**与其的基础对象的 ADO 缓冲区中剩余**流**关联。|  
+|[刷新](../../../ado/reference/ado-api/flush-method-ado.md)|强制的内容**流**与其的基础对象的 ADO 缓冲区中剩余**流**关联。|  
 |[get_OLEDBCommand 方法](../../../ado/reference/ado-api/get-oledbcommand-method.md)|返回基础 OLEDB 命令，首先将传播到 OLEDB 命令在 ADO 命令上设置任何参数信息。|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|返回**记录集**其行表示的文件和表示此目录中的子目录**记录**。|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|返回所有或较大文本或二进制数据的内容的一部分**字段**对象。|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/09/2018
 |[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|加载到现有文件的内容**流**。|  
 |[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|移动中的当前记录的位置**记录集**对象。|  
 |[MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|将移动到第一个，最后，在指定的下一步，或上一个记录**记录集**对象并将该记录的当前记录。|  
-|[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|用于将文件或目录及其内容移到另一个位置。|  
+|[移动记录](../../../ado/reference/ado-api/moverecord-method-ado.md)|用于将文件或目录及其内容移到另一个位置。|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|清除当前**记录集**对象并返回下一个**记录集**方法通过一系列的命令。|  
 |[打开 （ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)|打开与数据源的连接。|  
 |[打开 （ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)|打开现有**记录**对象，或创建新文件或目录。|  
@@ -73,13 +73,13 @@ ms.lasthandoff: 02/09/2018
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|从文本文件中读取指定的数目的字符**流**对象。|  
 |[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)|更新以反映，从可用的对象的集合和特定中的对象，提供程序。|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|更新中的数据**记录集**通过重新执行的查询所基于的对象的对象。|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|刷新当前中的数据**记录集**对象，或**字段**集合**记录**对象，从基础数据库。|  
+|[重新同步](../../../ado/reference/ado-api/resync-method.md)|刷新当前中的数据**记录集**对象，或**字段**集合**记录**对象，从基础数据库。|  
 |[保存](../../../ado/reference/ado-api/save-method.md)|将保存**记录集**文件中或**流**对象。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|将保存的二进制内容组成**流**到文件。|  
-|[Seek](../../../ado/reference/ado-api/seek-method.md)|搜索的索引**记录集**快速找到的行与匹配的指定的值，并更改为该行的当前行位置。|  
+|[查找](../../../ado/reference/ado-api/seek-method.md)|搜索的索引**记录集**快速找到的行与匹配的指定的值，并更改为该行的当前行位置。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|设置为流的末尾的位置。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|在读取文本流时，将跳过一整行。|  
-|[Stat](../../../ado/reference/ado-api/stat-method.md)|获取有关打开的流的统计信息。|  
+|[stat](../../../ado/reference/ado-api/stat-method.md)|获取有关打开的流的统计信息。|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|确定指定**记录集**对象支持特定类型的功能。|  
 |[更新](../../../ado/reference/ado-api/update-method.md)|将保存的当前行的任何更改**记录集**对象，或**字段**集合**记录**对象。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|将写入磁盘的所有挂起的批更新。|  

@@ -1,17 +1,17 @@
 ---
-title: "组和用户追加，ChangePassword 方法示例 （VC + +） |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 组和用户追加，ChangePassword 方法示例 （VC + +） |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Append method [ADOX], VC++ example
 - Users Append method [ADOX], VC++ example
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5e0fc3a0e0979486f65b6719d36682d6a9f5466
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1753ee4f16598904514a414c56dde03b3b5d30c6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>组和用户追加，ChangePassword 方法示例 （VC + +）
 此示例演示[追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法[组](../../../ado/reference/adox-api/groups-collection-adox.md)，以及[追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法[用户](../../../ado/reference/adox-api/users-collection-adox.md)通过添加新[组](../../../ado/reference/adox-api/group-object-adox.md)和新[用户](../../../ado/reference/adox-api/user-object-adox.md)到系统。 新**组**追加到**组**的新集合**用户**。 因此，新**用户**添加到**组**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用于指定**用户**密码。  

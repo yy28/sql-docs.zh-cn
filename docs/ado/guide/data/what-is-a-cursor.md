@@ -1,30 +1,30 @@
 ---
-title: "游标是什么？ |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 游标是什么？ | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e467c01afe9ebdb53d5d66e4c939205a97ca4be7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1681bdc14576915d3c9a6833e99d6f0f1c3b95ab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-a-cursor"></a>游标是什么？
 关系数据库中的操作会对整个行集起作用。 由 SELECT 语句返回的行集包括满足该语句的 WHERE 子句中条件的所有行。 这种由语句返回的完整行集称为结果集。 应用程序，特别是那些处于交互式并处于联机状态，始终能有效地使用整个结果集作为一个单元。 这些应用程序需要一种机制以便每次处理一行或一部分行。 游标就是提供这种机制的对结果集的一种扩展。  

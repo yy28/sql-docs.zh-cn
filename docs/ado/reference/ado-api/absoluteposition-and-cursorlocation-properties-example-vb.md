@@ -1,33 +1,33 @@
 ---
-title: "AbsolutePosition 和 CursorLocation 属性示例 (VB) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: AbsolutePosition 和 CursorLocation 属性示例 (VB) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AbsolutePosition property [ADO], Visual Basic example
 - CursorLocation property [ADO], Visual Basic example
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bad290a12639f759fe5145176b4aaaa3b12ff77d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c9124f0ec3b45541efc2c550d96208109f6d5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 属性示例 (VB)
 此示例演示如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性可以跟踪枚举的所有记录的循环的进度[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**通过将光标设置为客户端游标的属性。  

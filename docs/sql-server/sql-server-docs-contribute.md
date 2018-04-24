@@ -1,6 +1,6 @@
 ---
 title: 如何参与编辑 SQL Server 文档 | Microsoft Docs
-ms.date: 03/19/2018
+ms.date: 04/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: ''
@@ -15,11 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1885c57cfcf21dcdb877fc4c59b229636b74c137
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a id="githubui"></a>在浏览器中编辑
 
-以下步骤提供了在浏览器中对 SQL Server 内容进行简单编辑的概述。 [次要更改或间歇更改的 GitHub 参与工作流](https://docs.microsoft.com/contribute/contribute/light-workflow)一文记录了完整过程。
+以下步骤提供了在浏览器中对 SQL Server 内容进行简单编辑的概述。 [次要更改或间歇更改的 GitHub 参与工作流](https://docs.microsoft.com/contribute/light-workflow)一文记录了完整过程。
 
 1. 包括本文在内的每篇文章右侧均有一个“编辑”按钮。 查找要更改的文章，然后单击“编辑”按钮开始编辑。
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/19/2018
    ![编辑按钮](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > 必须登录到 GitHub 才能编辑文章。 如果没有 GitHub 帐户，请参阅 [GitHub 帐户设置](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)。 创建新帐户后，还必须通过 GitHub 验证电子邮件地址，然后才能开始编辑。
+   > 必须登录到 GitHub 才能编辑文章。 如果没有 GitHub 帐户，请参阅 [GitHub 帐户设置](https://docs.microsoft.com/contribute/get-started-setup-github)。 创建新帐户后，还必须通过 GitHub 验证电子邮件地址，然后才能开始编辑。
 
 1. 在浏览器中编辑文章。 所有文章都是以 Markdown 编写的。 如需 Markdown 相关帮助，可以查看 [Markdown 基本信息](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)。 还可以通过观察发布的文章如何呈现现有 Markdown 进行了解。
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
    ![创建拉取请求](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-此时，系统应指导你在拉取请求的注释中完成此过程的剩余部分。 [参与者指南](https://docs.microsoft.com/contribute/contribute/light-workflow)中提供了完整过程和其他详细信息。
+此时，系统应指导你在拉取请求的注释中完成此过程的剩余部分。 [参与者指南](https://docs.microsoft.com/contribute/light-workflow)中提供了完整过程和其他详细信息。
 
 ## <a id="tools"></a>使用工具在本地编辑
 
@@ -73,10 +74,10 @@ ms.lasthandoff: 03/19/2018
 
 若要使用此方法参与编辑，请参阅以下文章：
 
-- [创建 GitHub 帐户](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [安装内容创作工具](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [设置本地 Git 存储库](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [使用工具参与编辑](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [创建 GitHub 帐户](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [安装内容创作工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [设置本地 Git 存储库](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [使用工具参与编辑](https://docs.microsoft.com/contribute/full-workflow)
 
 如果提交包含对文档的重大更改的拉取请求，则将在 GitHub 中收到一条注释，要求提交联机“贡献许可协议 (CLA)”。 必须先完成联机窗体，然后系统才会接受你的拉取请求。
 

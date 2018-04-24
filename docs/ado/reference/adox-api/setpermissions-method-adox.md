@@ -1,17 +1,17 @@
 ---
-title: "SetPermissions 方法 (ADOX) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: SetPermissions 方法 (ADOX) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - User25::SetPermissions
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7987ce08f242421d2c84766c575e4867e7e1b8c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3bcc44011a880f05489be5cc1fcf5e398629d01d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象上。  
@@ -55,7 +55,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *权限*  
  A**长**值可以是一个位屏蔽的一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量，指示设置的权限。  
   
- *Inherit*  
+ *继承*  
  選擇性。 A**长**值可以是之一的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常量，用于指定如何将对象将继承这些权限。 默认值是**adInheritNone**。  
   
  *ObjectTypeId*  

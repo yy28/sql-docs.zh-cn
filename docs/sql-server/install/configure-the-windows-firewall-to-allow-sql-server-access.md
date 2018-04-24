@@ -1,16 +1,16 @@
 ---
-title: "配置 Windows 防火墙以允许 SQL Server 访问 | Microsoft Docs"
-ms.custom: 
+title: 配置 Windows 防火墙以允许 SQL Server 访问 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Firewall ports
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -314,7 +314,7 @@ ms.lasthandoff: 02/09/2018
   
     2.  在命令提示符下，键入 **netstat -n -a**。  
   
-         可以从“控制面板”打开 **-n** 开关指示 **netstat** 以数字方式显示活动 TCP 连接的地址和端口号。 **-a** 开关指示 **netstat** 显示计算机正在侦听的 TCP 和 UDP 端口。  
+         **-n** 开关指示 **netstat** 以数字方式显示活动 TCP 连接的地址和端口号。 **-a** 开关指示 **netstat** 显示计算机正在侦听的 TCP 和 UDP 端口。  
   
 -   **PortQry** 实用工具可用于报告 TCP/IP 端口的状态（正在侦听、未在侦听或已筛选）。 （对于已筛选状态，端口可能正在侦听，也可能未在侦听；此状态指示实用工具没有收到端口的响应。）**PortQry** 实用工具可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=28590)下载。  
   

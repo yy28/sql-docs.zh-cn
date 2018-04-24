@@ -1,33 +1,33 @@
 ---
-title: "游标类型属性 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 游标类型属性 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::CursorType
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b2123fe185bd52947812bea251c7af4b46989a9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ae4864ef3b02ccd51c90cce85c15ca64ea150072
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cursortype-property-ado"></a>游标类型属性 (ADO)
 指示在中使用的游标类型[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -47,9 +47,9 @@ ms.lasthandoff: 02/09/2018
 |为此游标类型的记录集|这些常量的所有支持方法必须返回 True|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**adOpenForwardOnly**|none|  
-|**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
+|**adOpenKeyset**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
+|**adOpenStatic**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
   
 > [!NOTE]
 >  尽管**支持**(**adUpdateBatch**) 的可能是为动态和只进游标，批处理更新你应使用键集或静态游标。 设置[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性**adLockBatchOptimistic**和**CursorLocation**属性**adUseClient**启用光标用于 OLE DB，所需的批处理更新的服务。  

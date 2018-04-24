@@ -1,24 +1,21 @@
 ---
-title: 已更新-SQL Server 文档的分析平台系统 |Microsoft 文档
+title: 已更新-Analytics Platform System 文档 |Microsoft 文档
 description: 显示有关最近更改中的文档，为分析平台系统为 Microsoft SQL Server 的更新内容的代码段。
+author: mzaman1
 manager: craigg
-author: MightyPen
-ms.author: genemi
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: aps-pdw
-ms.date: 02/03/2018
-ms.openlocfilehash: f3a8a14c0c01ff99c8ad613bbc9f5e1e01955e7e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 94b7666476874e610991ebf838ad259f3d0bb85a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>新的和最近的更新： SQL Server 的分析平台系统
-
-
 
 几乎每日 Microsoft 及其现有的文章的一些上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文档网站。 这篇文章显示摘录最近已更新的文章。 可能还会列出链接到新的文章。
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 04/08/2018
 
 
 
-- 更新日期范围：2017-12-03 到 2018-02-03
+- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
 - *主题区域：* &nbsp; **for SQL Server 分析平台系统**。
 
 

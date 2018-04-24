@@ -1,31 +1,31 @@
 ---
-title: "访问在分层记录集中的行 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 访问在分层记录集中的行 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 829afb6aecaa50b521a86201351f6c071d934b5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e7767fdbd933884116c77a67d1930171edf8a878
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>访问分层记录集 （示例） 中的行
 下面的示例显示的步骤所必需的访问的行以分层[记录集](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -75,4 +75,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>另请参阅
- [数据定形概述](../../../ado/guide/data/data-shaping-overview.md)[字段对象](../../../ado/reference/ado-api/field-object.md)[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)[调整服务的 Microsoft 数据OLE DB （ADO 服务提供商）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [必需的提供程序数据成型](../../../ado/guide/data/required-providers-for-data-shaping.md)[调整 APPEND 子句](../../../ado/guide/data/shape-append-clause.md) [形状的命令通常](../../../ado/guide/data/shape-commands-in-general.md)[形状计算子句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic 应用程序函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [数据定形概述](../../../ado/guide/data/data-shaping-overview.md)[字段对象](../../../ado/reference/ado-api/field-object.md)[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)[调整用于 OLE DB 服务的 Microsoft 数据（ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [必需的提供程序数据成型](../../../ado/guide/data/required-providers-for-data-shaping.md)[调整 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)[形状中的命令常规](../../../ado/guide/data/shape-commands-in-general.md)[形状计算子句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic 应用程序函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

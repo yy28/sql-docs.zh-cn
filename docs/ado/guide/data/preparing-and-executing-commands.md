@@ -1,30 +1,30 @@
 ---
-title: "准备和执行命令 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 准备和执行命令 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9c8bce6735f6fb7db1f0c279514aca3420d3ba1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfe5be8b68fe701d5b44431ab6e10cf8445deda3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="preparing-and-executing-commands"></a>准备和执行命令
 命令是颁发给提供程序执行某些操作对基础数据源的说明。 SQL 语句，例如，是到 Microsoft SQL 数据提供程序的命令。 在 ADO 中，命令通常表示由**命令**对象，尽管还可以通过发出简单命令**连接**或**记录集**对象。  

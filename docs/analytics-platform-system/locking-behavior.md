@@ -1,29 +1,22 @@
 ---
-title: 锁定行为 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 锁定行为-并行数据仓库 |Microsoft 文档
+description: 了解如何并行数据仓库使用锁定以确保事务完整性并在多个用户同时访问数据时维护数据库的一致性。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: 27
-ms.openlocfilehash: db8b05abe5d3eea3a927cdf410e7aa8df5ed2032
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="locking-behavior"></a>锁定行为
-SQL Server PDW 使用锁定来确保事务完整性并在多个用户同时访问数据时维护数据库的一致性。  
+# <a name="locking-behavior-in-parallel-data-warehouse"></a>并行数据仓库中的锁定行为
+了解如何并行数据仓库使用锁定以确保事务完整性并在多个用户同时访问数据时维护数据库的一致性。  
   
 ## <a name="Basics"></a>锁定的基础知识  
 **模式**  

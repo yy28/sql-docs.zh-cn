@@ -1,15 +1,16 @@
 ---
-title: "高可用性解决方案 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 高可用性解决方案 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/19/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: "84"
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2e3eacea1174a805abe0cce4474634f091ecd6ab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e8a25e4cca326edaa40fb850f8b5deed0a175bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性解决方案 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍了几个提高服务器或数据库可用性的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高可用性解决方案。 高可用性解决方案可减少硬件或软件故障造成的影响，保持应用程序的可用性，从而将用户可以察觉到的停机时间减至最少。    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主题介绍了几个提高服务器或数据库可用性的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高可用性解决方案。 高可用性解决方案可减少硬件或软件故障造成的影响，保持应用程序的可用性，从而将用户可以察觉到的停机时间减至最少。    
     
    
 >  **注意！** 想要知道哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支持给定的高可用性解决方案？ 请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)中的“高可用性 (AlwaysOn)”部分。    

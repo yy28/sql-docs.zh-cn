@@ -22,11 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f46b6e05f402d43688ae6c11b821e7cea58b0a9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: eeeb066b7d8daeef9c22ccfffe5514cab8502e64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-job-category"></a>创建作业类别
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/10/2018
   
     [限制和局限](#Restrictions)  
   
-    [安全性](#Security)  
+    [Security](#Security)  
   
 -   **若要创建作业类别，可使用：**  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/10/2018
   
 6.  选中 **“显示所有作业”** 复选框。 通过选中作业对应的框来为新类别选择一个或多个作业。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  在“管理作业类别server_name” 对话框中，单击“刷新”，确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- creates a local job category named AdminJobs   

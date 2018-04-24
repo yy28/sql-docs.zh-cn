@@ -1,29 +1,22 @@
 ---
-title: 监视活动查询 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 监视活动查询的并行数据仓库 |Microsoft 文档
+description: 使用管理控制台和并行数据仓库系统视图来监视分析平台系统上的活动查询。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: 7
-ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 057e5448b68ea7a7f8f23bc57d1a3b0308b300d2
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitoring-active-queries"></a>监视活动查询
-本主题演示如何使用管理控制台和 SQL Server PDW 系统视图来监视活动查询。 请参阅[通过使用管理控制台监视设备](monitor-the-appliance-by-using-the-admin-console.md)和[系统视图](tsql-system-views.md)有关这些工具的信息。  
+# <a name="monitoring-active-queries---parallel-data-warehouse"></a>监视活动查询的并行数据仓库
+这篇文章演示如何使用管理控制台和 SQL Server PDW 系统视图来监视活动查询。 请参阅[通过使用管理控制台监视设备](monitor-the-appliance-by-using-the-admin-console.md)和[系统视图](tsql-system-views.md)有关这些工具的信息。  
   
 ## <a name="prerequisites"></a>必要條件  
 无论哪种方法，用于监视活动查询，该登录名必须具有"使用所有的管理控制台"中描述的权限[授予权限以使用管理控制台](grant-permissions.md#grant-permissions-to-use-the-admin-console)。  

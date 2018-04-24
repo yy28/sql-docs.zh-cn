@@ -1,33 +1,33 @@
 ---
-title: "检查数据 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 检查数据 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data [ADO]
 - examining data [ADO]
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e08bd9943a3744c5629ea47396a6574b9e23938
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 963b6846aeb4622bda9383046424620f695ac9dc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="examining-data"></a>检查数据
 [获取数据](../../../ado/guide/data/getting-data.md)部分介绍了如何从数据源检索数据，用作一个或多**记录集**对象。 本部分将讨论**记录集**中更多详细信息，包括如何浏览**记录集**和查看其数据。  

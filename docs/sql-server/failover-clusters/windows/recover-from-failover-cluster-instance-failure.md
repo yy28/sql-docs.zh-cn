@@ -1,15 +1,16 @@
 ---
-title: "从故障转移群集实例故障中恢复 | Microsoft Docs"
-ms.custom: 
+title: 从故障转移群集实例故障中恢复 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], recovery from failure
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - hardware failures [SQL Server]
 - recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9ef93dfe88584a732e22e4b3df20d9016cfd418
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ef3537461571fa3cca82529b650382e1d6c94f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>从故障转移群集实例故障中恢复
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中发生故障转移后如何使用故障转移群集管理器管理单元从群集故障中恢复。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主题说明在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中发生故障转移后如何使用故障转移群集管理器管理单元从群集故障中恢复。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
   
 -   [从无法修复的故障中恢复](#Scenario1)  
   

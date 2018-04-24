@@ -1,32 +1,33 @@
 ---
-title: "管理 SQL Server 合作伙伴 | Microsoft Docs"
-description: "提供监视 SQL Server 解决方案的第三方合作伙伴列表。"
+title: 管理 SQL Server 合作伙伴 | Microsoft Docs
+description: 提供监视 SQL Server 解决方案的第三方合作伙伴列表。
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: becde7ea17d456f697d247e6b03fe97b3ce74b8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6a6559da315ccb2b601f7d28af444d3cdabb6b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理合作伙伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]要管理 SQL Server 服务，请从各种行业领先工具中进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的管理解决方案的 Microsoft 合作伙伴公司。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+要管理 SQL Server 服务，请从各种行业领先工具中进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的管理解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-management-partners"></a>我们的管理合作伙伴
 | Partner | Description | 链接 |

@@ -1,32 +1,33 @@
 ---
-title: "监视 SQL Server 合作伙伴 | Microsoft Docs"
-description: "提供监视 SQL Server 解决方案的第三方合作伙伴列表。"
+title: 监视 SQL Server 合作伙伴 | Microsoft Docs
+description: 提供监视 SQL Server 解决方案的第三方合作伙伴列表。
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 0ddac5bf809c836c194e7b0f187a24e4ed060abe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c6873ceb09c2cb7f2f9761c9b5c0ffe74d8b4f3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 监视合作伙伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]要监视 SQL Server 服务，请从各种行业领先工具中进行选择。 本文重点介绍提供支持 Microsoft SQL Server 的监视解决方案的 Microsoft 合作伙伴公司。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+要监视 SQL Server 服务，请从各种行业领先工具中进行选择。 本文重点介绍提供支持 Microsoft SQL Server 的监视解决方案的 Microsoft 合作伙伴公司。
 
 <!--
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)

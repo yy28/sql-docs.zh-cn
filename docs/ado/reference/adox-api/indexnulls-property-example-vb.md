@@ -1,32 +1,32 @@
 ---
-title: "IndexNulls 属性示例 (VB) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: IndexNulls 属性示例 (VB) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - IndexNulls property [ADOX], Visual Basic example
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d06e784cac696737b5e913ec5bb302a6c976173
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e42b5a7e010031d6c22dfd28c7a1a5f89dbd6474
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 属性示例 (VB)
 此示例演示[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将创建一个新的索引并设置的值**IndexNulls**根据用户输入 （从名为列表 1 为列表框）。 然后，**索引**追加到**员工**[表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**应用于[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**表，与**记录集**打开。 一条新记录添加到**员工**表，与**Null**索引的字段中的值。 是否显示此新记录依赖于设置**IndexNulls**属性。  

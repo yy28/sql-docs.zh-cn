@@ -1,17 +1,17 @@
 ---
-title: "WillMove 和 MoveComplete 事件 (ADO) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: WillMove 和 MoveComplete 事件 (ADO) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset::MoveComplete
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac06472367c1ebb000d317a6373ea911241e45f8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e7063e8dd77058ea4cbe05b925a1de29cfe63f00
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
 **WillMove**事件时调用之前的挂起操作更改中的当前位置[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **MoveComplete**中当前的位置后，将调用事件**记录集**更改。  

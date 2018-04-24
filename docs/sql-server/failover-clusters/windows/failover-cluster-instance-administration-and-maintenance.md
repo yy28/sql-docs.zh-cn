@@ -1,15 +1,16 @@
 ---
-title: "故障转移群集实例管理和维护 | Microsoft Docs"
-ms.custom: 
+title: 故障转移群集实例管理和维护 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - removing nodes
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef96b749f2dcfde79202efe935412b73ade6ddee
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a05ccc3c7e1bec3419dd8555f40cd3576456f80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]诸如从现有 Always On 故障转移群集实例 (FCI) 中添加或删除节点等此类维护任务均使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来完成。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  诸如从现有 Always On 故障转移群集实例 (FCI) 中添加或删除节点等此类维护任务均使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来完成。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>维护故障转移群集实例  
  安装 FCI 后，您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序对其进行更改或修复。 例如，您可以向 FCI 添加其他节点、将 FCI 作为独立实例运行或从 FCI 配置中删除节点。  

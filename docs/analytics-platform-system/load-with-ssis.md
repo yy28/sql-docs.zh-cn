@@ -1,27 +1,21 @@
 ---
-title: 使用 Integration Services 加载数据
-author: barbkess
-ms.author: barbkess
+title: 加载带有 Integration Services 的并行数据仓库 |Microsoft 文档
+description: 提供有关使用 SQL Server Integration Services (SSIS) 包来加载数据到并行数据仓库 (PDW) 的引用和部署信息。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 提供数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署的信息。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-integration-services"></a>使用 Integration Services 加载数据
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用 Integration Services 并行数据仓库加载数据
 提供数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署的信息。  
   
 <!-- MISSING LINKS
@@ -156,7 +150,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>示例  
   
-### <a name="Walkthrough"></a>A. 从平面文件的简单负载  
+### <a name="Walkthrough"></a>一个。 从平面文件的简单负载  
 下面的演练演示如何使用 Integration Services 来加载到 SQL Server PDW 设备的平面文件数据的简单数据负载。  此示例假定已在客户端计算机上安装集成服务，并已安装 SQL Server PDW 目标，如上面所述。  
   
 在此示例中我们将加载到`Orders`具有以下 DDL 的表。 `Orders`表属于`LoadExampleDB`数据库。  

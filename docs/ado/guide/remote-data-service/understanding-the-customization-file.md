@@ -1,6 +1,6 @@
 ---
 title: 了解自定义文件 |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个部分标头包含方括号 (**[]**) 包含的类型和参数。 文字字符串由指示四个部分类型**连接**， **sql**， **userlist**，或**日志**。 该参数是文字字符串、 默认值、 用户指定的标识符，或执行任何操作。  

@@ -1,15 +1,16 @@
 ---
-title: "在 SQL Server 故障转移群集中添加或删除节点（安装程序）| Microsoft Docs"
-ms.custom: 
+title: 在 SQL Server 故障转移群集中添加或删除节点（安装程序）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad5dbfd8ad4774d1b8877f3699157908bb449592
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9da0d18f86ed1a764295663cb3bf251ec0723fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 故障转移群集中添加或删除节点（安装程序）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此过程可以管理现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此过程可以管理现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点。  
   
  若要更新或删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须是一名本地管理员，且具有作为服务登录到故障转移群集的所有节点的权限。 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
   
@@ -110,6 +112,6 @@ ms.lasthandoff: 11/20/2017
 8.  “完成”页会提供指向删除节点操作摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 删除节点操作，请单击 **“关闭”**。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -1,29 +1,21 @@
 ---
-title: 系统数据库 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 系统数据库的并行数据仓库 |Microsoft 文档
+description: 系统数据库中并行数据仓库 (PDW)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f03e26be-1b16-4526-b4b8-1f17b91d3635
-caps.latest.revision: 9
-ms.workload: not set
-ms.openlocfilehash: be24472c9c007735f4625d079d27815862457c02
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: eafd857bdc4e9b997b8bc3bca587843f6dff30f7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="system-databases"></a>系统数据库
+# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>系统数据库中并行数据仓库 (PDW)
 系统数据库是 SQL Server PDW 使用来管理用户、 数据库和临时数据的数据库。 SQL Server PDW 包括以下系统数据库： master 和 tempdb。  
   
 ## <a name="system-database-topics"></a>系统数据库主题  

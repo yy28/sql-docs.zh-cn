@@ -1,33 +1,33 @@
 ---
-title: "追加和 CreateParameter 方法示例 (JScript) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 追加和 CreateParameter 方法示例 (JScript) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f4fb56c40cca35734a4dbc247492f8db3dd86b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6b4419f1d7935ea15aff3170f922bc9f1d43fa00
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>追加和 CreateParameter 方法示例 (JScript)
 此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法执行具有输入参数的存储的过程。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AppendJS.asp**。  

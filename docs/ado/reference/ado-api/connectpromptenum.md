@@ -1,33 +1,33 @@
 ---
-title: ConnectPromptEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: ConnectPromptEnum |Microsoft 文档
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ConnectPromptEnum
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4761b8375e78c10556d3c9f414e3558cb59a4e21
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 402c687551d76b81487377a1c701c05c283b5228
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定是否应显示一个对话框，打开与数据源的连接时提示输入缺少的参数。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
 |**adPromptNever**|4|永远不会提示。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- Package: **com.ms.wfc.data**  
+ 包： **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  
