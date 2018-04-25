@@ -2,7 +2,7 @@
 title: 创建维护计划（维护计划设计图面）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 738e4846e7dcead475b8c8b5924e7b8fb359f97a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/10/2018
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   [使用维护计划设计图面创建维护计划](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  若要创建或管理维护计划，您必须是 **sysadmin** 固定服务器角色的成员。 对象资源管理器只为属于 **sysadmin** 固定服务器角色成员的用户显示 **“维护计划”** 节点。  
   
 ##  <a name="SSMSProcedure"></a> 使用维护计划设计图面  
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/10/2018
      **名称**  
      显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  
   
-     **说明**  
+     **Description**  
      查看或指定维护计划的说明。 说明的最大长度为 512 个字符。  
   
      **设计器图面**  
@@ -152,7 +152,7 @@ ms.lasthandoff: 04/10/2018
   
     2.  选择想要显示在 **“工具箱”**中的工具，然后单击 **“确定”**。  
   
-     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”**中。 有关上述各个任务的详细信息，请参阅“启动维护计划向导”下的 [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
+     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”**中。 有关上述各个任务的详细信息，请参阅 [](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) “启动维护计划向导”下的 **使用维护计划向导**。  
   
 8.  定义各任务之间的工作流：  
   
@@ -246,7 +246,7 @@ ms.lasthandoff: 04/10/2018
      **导出**  
      打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
   
-     **刷新**  
+     **“刷新”**  
      刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
      **筛选**  
@@ -261,7 +261,7 @@ ms.lasthandoff: 04/10/2018
      **日志文件摘要**  
      此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”**。 如果对日志应用了筛选器，你将看到以下文本：**“基于以下条件筛选日志条目:**  \<筛选条件>”。  
   
-     **日期**  
+     **Date**  
      显示事件的日期。  
   
      **数据源**  

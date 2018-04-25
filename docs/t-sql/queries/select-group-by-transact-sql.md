@@ -1,16 +1,16 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f83c1fa093977eb77fec9f58c0f02223ce581212
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -349,7 +350,7 @@ NULL 值：
 |功能|SQL Server Integration Services|SQL Server 兼容级别 100 或更高|SQL Server 2008 或兼容级别为 90 的更高版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 聚合|WITH CUBE 或 WITH ROLLUP 不支持。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP 支持。|与兼容级别 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回下面的错误消息：“关键字 'cube'&#124;'rollup' 附近有语法错误”。<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)********。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)********。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回下面的错误消息：“关键字 'cube'&#124;'rollup' 附近有语法错误”。<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)******<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|不支持|是否支持|是否支持|  
 |CUBE|不支持|是否支持|不支持|  
 |ROLLUP|不支持|是否支持|不支持|  
