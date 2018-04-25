@@ -1,27 +1,28 @@
 ---
-title: "SQLServerResource 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerResource 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f2e7a05719cb7254df5f1023c196c21ef15c4c0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 691a7bea9ab4c190357b868500708c3036dc1793
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,31 +31,31 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="constructors"></a>构造函数  
   
-|Name|Description|  
+|名称|说明|  
 |----------|-----------------|  
-|[SQLServerResource （)](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|初始化的新实例[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)类。 此构造函数仅供内部使用。|  
+|[SQLServerResource （)](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|初始化的新实例[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)类。 此构造函数是仅供内部使用。|  
   
 ## <a name="fields"></a>字段  
  无。  
   
-## <a name="inherited-fields"></a>继承的字段  
+## <a name="inherited-fields"></a>继承的所有字段  
   
-|Name|Description|  
+|名称|说明|  
 |----------|-----------------|  
-|java.util.ResourceBundle|父级 (parent)|  
+|java.util.ResourceBundle|父|  
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|说明|  
 |----------|-----------------|  
-|[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|检索错误字符串信息。 此方法仅计划供内部使用。|  
+|[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|检索错误字符串信息。 此方法旨在仅供内部使用。|  
   
 ## <a name="inherited-methods"></a>继承的方法  
   
-|类继承自：|方法|  
+|继承自的类：|方法|  
 |---------------------------|-------------|  
 |java.util.ListResourceBundle|getKeys handleGetObject|  
-|java.util.ResourceBundle|getBundle、getLocale、getObject、getString、getStringArray、setParent|  
+|java.util.ResourceBundle|getBundle、 getLocale、 getObject、 getString、 getStringArray、 setParent|  
 |java.lang.Object|clone、 equals、 finalize、 getClass、 hashCode、 notify、 notifyAll、 toString、 wait|  
   
 ## <a name="see-also"></a>另请参阅  

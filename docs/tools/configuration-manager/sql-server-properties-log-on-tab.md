@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 属性 （选项卡上的日志） |Microsoft 文档"
-ms.custom: 
+title: SQL Server 属性 （选项卡上的日志） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8e12e87d3135f88e04dc159e7433ade959625daf
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/03/2018
 ---
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/03/2018
 >   
 >  有关选择帐户以运行服务的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机帮助中的“设置 Windows 服务帐户”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **内置帐户**  
  **Local System**  
  -   指定本地系统帐户。 该帐户不需要密码。 但是，本地系统帐户可能会阻止该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  

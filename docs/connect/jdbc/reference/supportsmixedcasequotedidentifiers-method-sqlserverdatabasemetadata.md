@@ -1,35 +1,38 @@
 ---
-title: "supportsMixedCaseQuotedIdentifiers 方法 |Microsoft 文档"
-ms.custom: 
+title: supportsMixedCaseQuotedIdentifiers 方法 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.supportsMixedCaseQuotedIdentifiers
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.supportsMixedCaseQuotedIdentifiers
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 76c68fc2-5af6-4b8d-baee-245716fdc5cc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80a901d63364a7ebb80f93f2b4ce5655021e8e67
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 822827aaca7c7d6a994c1d10ff7560a14b0f0279
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>supportsMixedCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此数据库是否将用双引号引起来的大小写混合的 SQL 标识符视为区分大小写，并以混合大小写方式存储它们。  
+  检索是否此数据库将用作为区分大小写的引号引起来的大小写混合的 SQL 标识符，并将其存储在混合大小写。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +42,12 @@ public boolean supportsMixedCaseQuotedIdentifiers()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果标识符存储在混合大小写。 否则为 **false**。  
+ **true**如果标识符存储在混合大小写。 否则为**false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  由 java.sql.DatabaseMetaData 接口中的 supportsMixedCaseQuotedIdentifiers 方法指定此 supportsMixedCaseQuotedIdentifiers 方法。  
   
 ## <a name="see-also"></a>另请参阅  

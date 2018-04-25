@@ -2,7 +2,7 @@
 title: 'Pdostatement:: Bindcolumn |Microsoft 文档'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5f85c59eec602a483dd68da5df030f4d5cf18d6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f77fdb089f83d1d8d8f866be4a0a7ef99b9fa155
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,20 +37,20 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*列*: （混合） 数的列 （基于 1 的索引） 或在结果集中的列的名称。  
+$$：列（从 1 开始的索引）的（混合）数量或结果集中的列的名称。  
   
-&$*param*: 列将绑定到的 PHP 变量的 （混合） 名称。  
+&$param*：列将绑定到的 PHP 变量的（混合）名称。  
   
-$*类型*: PDO::PARAM_ * 常量表示的参数的可选数据类型。  
+$type*：参数的可选数据类型，由 PDO::PARAM* 常量表示。  
   
 $*maxLen*：可选整数，不由 Microsoft Drivers for PHP for SQL Server 使用。  
   
-$*driverdata*： 可选混合驱动程序的参数。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 以采用 UTF-8 编码的字符串形式将列绑定到变量。  
+$driverdata*：适用于驱动程序的可选混合参数。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 以采用 UTF-8 编码的字符串形式将列绑定到变量。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

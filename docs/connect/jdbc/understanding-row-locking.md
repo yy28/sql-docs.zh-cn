@@ -1,40 +1,41 @@
 ---
-title: "了解行锁定 |Microsoft 文档"
-ms.custom: 
+title: 了解行锁定 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c37c5ab29f67d7ce30603c4609cb66d3e625c61
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 888a877cfa0406c02667a968be0ad3e31ad8d403
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-row-locking"></a>了解行锁定
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]行锁。 这样，就可以在同时在数据库中执行修改的多个用户之间实施并发控制。 默认情况下，事务和锁是在每个连接的基础上进行管理的。 例如，如果应用程序打开两个 JDBC 连接，则一个连接获得的锁不能与另一个连接共享。 一个连接所获得的锁不能与另一个连接所持有的锁相冲突。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 行锁。 这样，就可以在同时在数据库中执行修改的多个用户之间实施并发控制。 默认情况下，事务和锁是在每个连接的基础上进行管理的。 例如，如果应用程序打开两个 JDBC 连接，则一个连接获得的锁不能与另一个连接共享。 一个连接所获得的锁不能与另一个连接所持有的锁相冲突。  
   
 > [!NOTE]  
->  如果使用行锁定，则将锁定提取缓冲区中的所有行，这样，如果提取大小的设置非常大，则可能影响并发性能。  
+>  如果使用行锁定，则将被锁定提取缓冲区中的所有行，以便提取大小的非常大设置可以影响并发程度。  
   
  锁定用于确保事务完整性和数据库一致性。 锁定可以防止用户读取其他用户正在更改的数据，并防止多个用户同时更改相同的数据。 如果不使用锁定，数据库中的数据可能在逻辑上变得不正确，而针对这些数据进行查询可能会产生想不到的结果。  
   
 > [!NOTE]  
->  有关详细信息行中的锁定有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅"中的锁定[!INCLUDE[ssDE](../../includes/ssde_md.md)]"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中的行锁定的详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 联机丛书中的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中的锁定”。  
   
 ## <a name="see-also"></a>另请参阅  
  [通过 JDBC 驱动程序管理结果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  

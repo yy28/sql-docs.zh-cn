@@ -1,8 +1,8 @@
 ---
-title: PDOStatement::bindParam | Microsoft Docs
+title: 'Pdostatement:: Bindparam |Microsoft 文档'
 ms.custom: ''
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2017
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,21 +37,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*参数*: （混合） 参数标识符。 语句使用名为占位符，对于使用参数名称 (: 名称)。 对于使用问号语法已准备的语句，它是参数的基于 1 的索引。  
+$parameter*：（混合）参数标识符。 对于使用命名占位符的语句，为参数名 :name。 对于使用问号语法的已准备的语句，将为基于 1 的参数索引。  
   
-&$*变量*： 要将绑定到 SQL 语句参数的 PHP 变量的 （混合） 名称。  
+&$variable*：要绑定到 SQL 语句参数的 PHP 变量的（混合）名称。  
   
-$*data_type*： 可选 （整数） PDO::PARAM_ * 常量。 默认值为 pdo:: PARAM_STR。  
+$data*type*：可选（整数）PDO::PARAM 常量。 默认值为 PDO::PARAM_STR。  
   
-$*长度*： 数据类型的可选 （整数） 长度。 你可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 以在 $ 使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 时指示的默认大小*data_type*。  
+$length*：数据类型的可选（整数）长度。 当在 $* 中使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 时，可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 来指示默认大小。  
   
 $*driver_options*： 可选 （混合） 特定于驱动程序的选项。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 以采用 UTF-8 编码的字符串形式将列绑定到变量。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>注释  
-Null 数据绑定到类型 varbinary、 binary 或 varbinary （max） 的服务器列时应指定二进制编码 (PDO::SQLSRV_ENCODING_BINARY) 使用 $*driver_options*。 有关编码常量的详细信息，请参阅[常量](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
+## <a name="remarks"></a>Remarks  
+在将 NULL 数据绑定到类型 varbinary、binary 或 varbinary(max) 的服务器列时，应使用 $* 指定二进制编码 (PDO::SQLSRV_ENCODING_BINARY)。 有关编码常量的详细信息，请参阅 [常量](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
 
@@ -105,6 +105,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> 如果值超出了范围可能最终为 bigint 类型，绑定一个输出参数时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，使用 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE PDO::PARAM_INT 可能会导致"超出范围的值"异常。 因此，改为使用默认 pdo:: PARAM_STR 和提供大小信息的结果字符串，最多为 21。 它是数字，其中包括负号，任何 bigint 值的最大的数。 
+
 ## <a name="example"></a>示例  
 此代码示例演示如何使用输入/输出参数。  
   
@@ -125,7 +128,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。
+> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将绑定十进制值作为输入参数。  

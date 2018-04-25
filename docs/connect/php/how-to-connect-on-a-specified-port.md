@@ -2,7 +2,7 @@
 title: 如何： 在指定端口上连接 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connecting to the server, specifying a port
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b3c8f76026c7065cf6d790b323f559e1b101126
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b17dd2bb8df3f7274cb8eea36faf3ee5f320f983
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>如何：在指定端口上连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,16 +33,16 @@ ms.lasthandoff: 03/28/2018
   
 ### <a name="to-connect-on-a-specified-port"></a>在指定端口上连接  
   
-1.  对服务器配置为接受连接的端口进行验证。 有关配置服务器以接受指定端口上的连接的信息，请参阅[如何： 配置服务器以侦听特定 TCP 端口 （SQL Server 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
+1.  对服务器配置为接受连接的端口进行验证。 有关配置服务器以在特定端口上接受连接的信息，请参阅[如何：配置服务器以侦听特定 TCP 端口 ](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)SQL Server 配置管理器。  
   
-2.  添加到所需的端口*$serverName*参数[sqlsrv_connect](../../connect/php/sqlsrv-connect.md)函数。 用逗号分隔服务器名称和端口。 例如，以下代码行使用 SQLSRV 驱动程序来演示如何在端口 1521 上连接到名为 *myServer* 的服务器：  
+2.  将所需端口添加到 [sqlsrv](../../connect/php/sqlsrv-connect.md)connect 函数的 *$serverName* 参数。 用逗号分隔服务器名称和端口。 例如，以下代码行使用 SQLSRV 驱动程序来演示如何在端口 1521 上连接到名为 *myServer* 的服务器：  
   
     ```  
     $serverName = "myServer, 1521";  
     sqlsrv_connect( $serverName );  
     ```  
   
-    下面的代码行使用 PDO_SQLSRV 驱动程序来演示如何连接到一个名为服务器*myServer*在端口 1521年上：  
+    以下代码行使用 PDO*SQLSRV 驱动程序来演示如何在端口 1521 上连接到名为* myServer 的服务器：  
   
     ```  
     $serverName = "(local), 1521";  

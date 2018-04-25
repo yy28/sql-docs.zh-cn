@@ -1,27 +1,28 @@
 ---
-title: "自定义密钥存储提供程序 |Microsoft 文档"
-ms.custom: 
+title: 自定义密钥存储提供程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: "1"
+caps.latest.revision: 1
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: Inactive
-ms.openlocfilehash: 4c6f936ee92c23f38c78dc219be25ef051e02bb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5bde3f699c1db9156e9e4fdfc96d2098d15413d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-keystore-providers"></a>自定义密钥存储提供程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -641,4 +642,4 @@ FoundProv:
 
 ## <a name="see-also"></a>另请参阅
 
-[使用始终加密的 ODBC 驱动程序](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+[对 JDBC 驱动程序使用始终加密](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

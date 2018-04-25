@@ -1,29 +1,30 @@
 ---
-title: "步骤 3： 连接到 SQL 使用 Java 的概念证明 |Microsoft 文档"
-ms.custom: 
+title: 步骤 3：使用 Java 连接到 SQL 的概念证明
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6bdda6d24e2f1437eb251315d5b91efc7ab1016d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b4e5d6288a7ac269f60c4c8a0ca37bf52a932f10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3： 连接到 SQL 使用 Java 的概念证明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3：使用 Java 连接到 SQL 的概念证明
   
 此示例中，应考虑仅概念证明。 示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/18/2017
         }  
 ```  
   
-## <a name="step-2-execute-a-query"></a>步骤 2： 执行查询  
+## <a name="step-2-execute-a-query"></a>执行查询。  
 在此示例中，连接到 Azure SQL 数据库、 执行 SELECT 语句，并返回所选的行。   
   
 ```java  

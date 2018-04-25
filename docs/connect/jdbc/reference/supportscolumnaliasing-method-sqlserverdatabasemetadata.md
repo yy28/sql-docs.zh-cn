@@ -1,35 +1,38 @@
 ---
-title: "supportsColumnAliasing 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: supportsColumnAliasing 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.supportsColumnAliasing
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.supportsColumnAliasing
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f45a27d188881da86b9ed9c55c8a659d43f5ed5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a7bea6b9199f8eefdbf4bf38319459f6b2dbd5ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>supportsColumnAliasing 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此数据库是否支持列名使用别名。  
+  检索是否此数据库支持列别名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +42,12 @@ public boolean supportsColumnAliasing()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果支持。 否则为 **false**。  
+ **true**如果支持。 否则为**false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  由 java.sql.DatabaseMetaData 接口中的 supportsColumnAliasing 方法指定此 supportsColumnAliasing 方法。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,32 +1,33 @@
 ---
-title: "保护 JDBC 驱动程序应用程序 |Microsoft 文档"
-ms.custom: 
+title: 保护 JDBC 驱动程序应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e26574a8a11256136b376546e1f52533a986711
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3dbe03cff41a94bb43d1cc81ba13986a7cd09455
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="securing-jdbc-driver-applications"></a>保护 JDBC Driver 应用程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  增强的安全性[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]应用程序涉及多个避免常见的编码缺陷。 访问数据的应用程序具有许多潜在的故障点，攻击者可以利用它们检索、操纵或破坏敏感数据。 重要的是了解安全性的各个环节，包括从应用程序设计阶段的威胁建模到应用程序最终部署的整个过程，以及应用程序的长期持续维护工作。  
+  增强 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序的安全性并不仅仅是避免一般的代码缺陷这一个方面。 访问数据的应用程序具有许多潜在的故障点，攻击者可以利用它们检索、操纵或破坏敏感数据。 重要的是了解安全性的各个环节，包括从应用程序设计阶段的威胁建模到应用程序最终部署的整个过程，以及应用程序的长期持续维护工作。  
   
  本部分的各个主题介绍一些常见的安全事项，包括连接字符串、验证用户输入以及一般的应用程序安全性。  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
 |[保护连接字符串](../../connect/jdbc/securing-connection-strings.md)|描述有助于保护可用来连接到数据源的信息的各种技术。|  
 |[验证用户输入](../../connect/jdbc/validating-user-input.md)|描述验证用户输入的技术。|  
 |[应用程序安全性](../../connect/jdbc/application-security.md)|描述如何使用 Java 策略权限来帮助保护 JDBC Driver 应用程序。|  
-|[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)|描述如何建立具有的安全通信通道[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库使用安全套接字层 (SSL)。|  
+|[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)|描述如何使用安全套接字层 (SSL) 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库之间建立安全通信通道。|  
 |[FIPS 模式](../../connect/jdbc/fips-mode.md)|描述如何在与 FIPS 兼容模式下使用 JDBC 驱动程序。| 
   
 ## <a name="see-also"></a>另请参阅  

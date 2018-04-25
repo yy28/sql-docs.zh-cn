@@ -2,7 +2,7 @@
 title: 'Pdostatement:: Closecursor |Microsoft 文档'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46f2ec56126f4c0ed03a2928671f3b32bfd4270c
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: de023c9bdd452a4611d28493b37f2a2046d485fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,8 +39,8 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>返回值  
 如果成功，则为 true；否则为 false。  
   
-## <a name="remarks"></a>注释  
-当 MultipleActiveResultSets 连接选项设置为 false 时，closeCursor 将起作用。  有关 MultipleActiveResultSets 连接选项的详细信息，请参阅[如何： 禁用多个活动结果集 (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。  
+## <a name="remarks"></a>Remarks  
+当 MultipleActiveResultSets 连接选项设置为 false 时，closeCursor 将起作用。  有关 MultipleActiveResultSets 连接选项的详细信息，请参阅[如何：禁用多个活动的结果集 ](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)MARS。  
   
 也可以只将语句句柄设置为 null，而不是调用 closeCursor。  
   
