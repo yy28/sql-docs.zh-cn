@@ -2,7 +2,7 @@
 title: 修复 bug 列表 |Microsoft 文档
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-bugs-fixed"></a>修复 bug 的列表
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/08/2018
 - 修复程序错误 22003 崩溃中 SQLGetData 时传入的缓冲区的大小较小然后正在检索的数据 (Windows)
 - 固定截断 ADAL 错误消息
 - 修复了极少数 32 位 Windows 上时将转换的浮点数转化为整数
-- 修复了问题其中将 double 插入使用始终加密的十进制字段上将不返回数据截断错误
+- 修复了问题，其中将 double 插入十进制字段使用始终加密上将返回数据截断错误
 - 在 MacOS 安装程序修复警告
 - 修复了不正确状态发送到 SQL Server 会话恢复尝试期间连接复原和连接池都启用时，会导致删除的服务器的会话
 

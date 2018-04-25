@@ -1,16 +1,16 @@
 ---
-title: "SQL Server Browser 服务 |Microsoft 文档"
-ms.custom: 
+title: SQL Server Browser 服务 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.browseservers.local.f1
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/03/2018
 ---
-# <a name="sql-server-browser-service"></a>SQL Server Browser 服务
+# <a name="sql-server-browser-service"></a>SQL Server Browser Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器程序以 Windows 服务的形式运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器可用于以下操作：  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器程序以 Windows 服务的形式运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器可用于执行下列操作：  
   
 -   浏览可用服务器列表  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/03/2018
   
 -   连接到专用管理员连接 (DAC) 端点  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 服务 (sqlbrowser) 为 [!INCLUDE[ssAS](../../includes/ssas-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例提供实例名称和版本号。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器随[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 服务 (sqlbrowser) 为 [!INCLUDE[ssAS](../../includes/ssas-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例提供实例名称和版本号。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起安装。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器可以在安装过程中进行配置，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器进行配置。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务会自动启动：  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 -   安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例时。  
   
 ## <a name="background"></a>背景  
- 在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]之前，一台计算机上只能安装一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]侦听端口 1433 上的传入请求分配给[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由官方 Internet 分配号机构 (IANA)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个实例可以使用端口，因此，在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 引入了对多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的支持时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析协议 (SSRP) 是为侦听 UDP 端口 1434 而开发的。 此侦听器服务使用已安装实例的名称以及该实例使用的端口或命名管道响应客户端请求。 为了解决 SSRP 系统的限制， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务来替换 SSRP。  
+ 在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]之前，一台计算机上只能安装一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听 1433 端口上的传入请求，该端口由官方的 Internet 号码分配机构 (IANA) 分配给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个实例可以使用端口，因此，在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 引入了对多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的支持时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析协议 (SSRP) 是为侦听 UDP 端口 1434 而开发的。 此侦听器服务使用已安装实例的名称以及该实例使用的端口或命名管道响应客户端请求。 为了解决 SSRP 系统的限制， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务来替换 SSRP。  
   
 ## <a name="how-sql-server-browser-works"></a>SQL Server Browser 工作原理  
  启动一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用了 TCP/IP 协议，服务器将被分配一个 TCP/IP 端口。 如果启用了 Named Pipes 协议， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将侦听特定的命名管道。 该特定实例将使用此端口（或“管道”）与客户端应用程序交换数据。 在安装过程中，TCP 1433 端口和管道 `\sql\query` 将分配给默认实例，但服务器管理员可以随后使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器进行更改。 由于只有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可以使用端口或管道，因此，会将不同的端口号和管道名称分配给命名实例，包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 默认情况下，命名实例和 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 在启用时便配置为使用动态端口，也就是说，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时就分配了可用端口。 如果需要，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例分配特定端口。 连接时，客户端可以指定特定端口，但是如果端口是动态分配的，端口号可能会在重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时被更改，因此正确的端口号对于客户端来说是不确定的。  
@@ -109,7 +109,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="security"></a>Security  
   
 ### <a name="account-privileges"></a>帐户权限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析协议 (SSRP) 侦听 UDP 端口，并接受未经身份验证的请求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器应尽量减小在受到恶意攻击的几率低特权用户的安全上下文中运行。 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改登录帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器的最小用户权限如下：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析协议 (SSRP) 侦听 UDP 端口，并接受未经身份验证的请求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器应该在低特权用户的安全上下文中运行，以将受到恶意攻击的几率降到最低。 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改登录帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器的最小用户权限如下：  
   
 -   拒绝通过网络访问该计算机  
   

@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 属性 （启动参数选项卡） |Microsoft 文档"
-ms.custom: 
+title: SQL Server 属性 （启动参数选项卡） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/03/2018
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/03/2018
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 使用此对话框可以添加或删除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的启动参数。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **指定启动参数**  
  若要添加某一参数，请键入该参数，然后单击 **“添加”**。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/03/2018
  若要删除某一参数，请选择该参数，然后单击 **“删除”**。  
   
 ## <a name="parameter-format"></a>参数格式  
- 不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器将强制以下参数要求。  
+ 不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器将强制以下参数要求。  
   
 -   前导空格和尾随空格将会从任何启动参数中删除。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
   
 |参数|简短说明|  
 |---------------|-----------------------|  
-|-m|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
+|-M|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |-T1204|返回参与死锁的锁的资源和类型，以及受影响的当前命令。|  
 |-T1224|基于锁数禁用锁升级。|  
 |-T3608|禁止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动启动和恢复除 master 数据库之外的任何数据库。|  

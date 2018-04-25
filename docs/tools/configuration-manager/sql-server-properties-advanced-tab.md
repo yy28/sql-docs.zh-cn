@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 属性 （高级选项卡） |Microsoft 文档"
-ms.custom: 
+title: SQL Server 属性 （高级选项卡） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0a0b573dcb4b68c8becf86c8e847b10d5df5ed1a
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/03/2018
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/03/2018
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 默认情况下， **“高级”** 选项卡中会显示下列属性。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **群集**  
  指示此服务是否作为群集服务器的资源进行安装。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/03/2018
  **单品**  
  显示产品的单品 (SKU) 编号。  
   
- **版本**  
+ **版本(Version)**  
  显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的版本号。  
   
  **虚拟服务器名称**  
