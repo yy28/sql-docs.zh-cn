@@ -1,31 +1,31 @@
 ---
-title: "什么是数据迁移助手 (SQL Server) 中的新增功能 |Microsoft 文档"
-ms.custom: 
+title: 什么是数据迁移助手 (SQL Server) 中的新增功能 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-dma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: 
+keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0004406d86da4174898141d1f75c72186921b8d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>什么是数据迁移助手中的新增功能
 
@@ -51,14 +51,14 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到在 Linux 上
 ### <a name="migrating-windows-logins"></a>迁移 Windows 登录名
 虽然在 Linux 上的 SQL Server 2017 正式支持的 Active Directory (AD) 登录迁移，但它需要额外配置才能正常工作。 请参阅主题[与在 Linux 上的 SQL Server 的 Active Directory 身份验证](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication)有关设置在 Linux 上的 SQL Server 2017 上的 Active Directory 登录名的详细信息。 此之后安装程序完成，你可以像往常一样将迁移 Active Directory 登录名。 标准 SQL 身份验证的工作与预期不进行任何附加设置。
 
-## <a name="dma-v32"></a>DMA v3.2
+## <a name="dma-v32"></a>DMA 3.2 版
 DMA v3.2 版本还包括添加以下内容：
 
 - 架构和数据迁移与新的迁移工作流启用从本地 SQL Server 数据库到 Azure SQL 数据库。
 
 - 在架构迁移到 Azure SQL 数据库，DMA 脚本源数据库对象，提供有关如何解决任何潜在的兼容性问题的指导，然后将您的架构部署到 Azure。
 
-## <a name="dma-v31"></a>DMA v3.1
+## <a name="dma-v31"></a>DMA v3.1，解决
 DMA v3.1，解决版本还包括添加以下内容：
 
 - 在数据库排序规则方面的改进的评估建议的 Azure SQL 数据库使用的不受支持的系统存储过程和 CLR 对象。
@@ -72,7 +72,7 @@ DMA v3.0 版本扩展 Azure SQL 数据库评估，以提供全面的建议，用
 
 - 部分或不受支持的特性和功能。
 
-## <a name="dma-v21"></a>DMA v2.1
+## <a name="dma-v21"></a>DMA 2.1 版
 DMA v2.1 版本还包括添加以下内容：
 - 命令行支持在无人参与模式下，这有助于大规模运行评估运行评估。 有关更多详细信息，请参阅主题[运行数据迁移助手从命令行](dma-commandline.md)。
 

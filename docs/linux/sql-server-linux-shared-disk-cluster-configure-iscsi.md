@@ -1,24 +1,24 @@
 ---
-title: "配置故障转移群集实例存储 iSCSI-在 Linux 上的 SQL Server |Microsoft 文档"
-description: 
+title: 配置故障转移群集实例存储 iSCSI-在 Linux 上的 SQL Server |Microsoft 文档
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 4033289cb388e9ba06260b482af613054e70760c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-在 Linux 上的 SQL Server
 
@@ -99,7 +99,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![30 iSCSIattachedDisks][7]
 
 7.  在 iSCSI 磁盘上创建物理卷。
 
@@ -324,7 +324,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
 
    *    若要测试，请在该文件夹中创建数据库。 下面所示的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件中的操作系统级别中，存在，然后删除的临时位置。 你可以使用 SSMS。
   
-    ![50-ExampleCreateSSMS][9]
+    ![50 ExampleCreateSSMS][9]
 
    *    卸载共享 
 

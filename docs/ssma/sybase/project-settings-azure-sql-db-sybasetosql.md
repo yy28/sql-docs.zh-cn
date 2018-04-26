@@ -2,7 +2,7 @@
 title: 项目设置 (Azure SQL DB) (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb155079bc318e9b23944fb2830a64454d3a76de
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 741c45fb95faee927129d073b7132b32c8ecc83d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>项目设置 (Azure SQL DB) (SybaseToSQL)
 Azure SQL DB 项目设置允许你配置要添加在连接对话框，并还允许在 Azure SQL 数据库连接中实现检测信号机制的 Azure SQL DB 数据库后缀。  
@@ -45,7 +45,7 @@ Azure SQL DB 窗格位于**项目设置**和**默认项目设置**对话框。
   
 应指定的值中正在： ss 的格式 (例如，"4:45 '或' 0:50 ')。  
   
-**Azure SQL DB Server Suffix**  
+**Azure SQL DB 服务器后缀**  
   
 指定 Azure SQL DB 服务器后缀  
   

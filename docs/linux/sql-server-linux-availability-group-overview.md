@@ -1,25 +1,25 @@
 ---
-title: "Always On 可用性组在 Linux 上的 SQL server |Microsoft 文档"
-description: 
+title: Always On 可用性组在 Linux 上的 SQL server |Microsoft 文档
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 54fec5a177d5edf463853d230a56c28eeb1b0f7c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 9d442c41adaec7148b3eb0259f851fee3fd2b683
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性组
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/15/2018
 
 群集类型存储在[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]动态管理视图 (DMV) `sys.availability_groups`，列中`cluster_type`和`cluster_type_desc`。
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
+## <a name="requiredsynchronizedsecondariestocommit"></a>所需\_同步\_辅助副本\_到\_提交
 
 新手[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是设置，可供承载个可用性组调用`required_synchronized_secondaries_to_commit`。 这将告知可用性组必须与主保持同步的辅助副本的数目。 这使等自动故障转移 （仅在与群集类型为外部 Pacemaker 集成），并控制等的主可用性的行为，如果适当数量的辅助副本是联机还是脱机。 若要了解有关此工作原理的详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是默认设置和维护由 Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 你可以手动重写此值。
 

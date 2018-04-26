@@ -1,25 +1,25 @@
 ---
-title: "连接库和框架 |Microsoft 文档"
-description: "列出客户端应用程序可用于从各种语言连接到 Microsoft SQL Server 在本地运行或在云中，在 Linux、 Windows 或 Docker 以及 Azure SQL 数据库和 Azure SQL 数据仓库的连接驱动程序。"
+title: 连接库和框架 |Microsoft 文档
+description: 列出客户端应用程序可用于从各种语言连接到 Microsoft SQL Server 在本地运行或在云中，在 Linux、 Windows 或 Docker 以及 Azure SQL 数据库和 Azure SQL 数据仓库的连接驱动程序。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e74d5804d5a6fef00696b62d7f4606dc8fa7599e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>适用于 Microsoft SQL Server 的连接库和框架
 

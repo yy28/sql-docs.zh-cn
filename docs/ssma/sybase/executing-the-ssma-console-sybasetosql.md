@@ -2,7 +2,7 @@
 title: 执行 SSMA 控制台 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>执行 SSMA 控制台 (SybaseToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。 接下来的部分详细介绍相同。  
@@ -45,7 +45,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
 ## <a name="project-commands"></a>项目命令  
 创建项目，打开、 保存和退出项目项目命令句柄。  
   
-### <a name="create-new-project"></a>create-new-project  
+### <a name="create-new-project"></a>创建新的项目  
 此命令创建一个新的 SSMA 项目。  
   
 -   `project-folder` 指示获取创建的项目的文件夹。  
@@ -104,7 +104,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>close-project  
+### <a name="close-project"></a>关闭项目  
 此命令关闭迁移项目。  
   
 **语法示例：**  
@@ -164,7 +164,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>connect-target-database  
+### <a name="connect-target-database"></a>连接目标数据库  
 此命令连接到目标 SQL Server 数据库，并完全加载的目标数据库的高级元数据，但不是元数据。  
   
 如果无法建立到目标连接，会生成错误和控制台应用程序将停止进一步执行。  
@@ -382,7 +382,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
 > [!NOTE]  
 > 迁移命令设置了默认控制台输出，则与不进行详细的错误报告的完整输出报告： 源对象树的根节点处仅摘要。  
   
-### <a name="map-schema"></a>map-schema  
+### <a name="map-schema"></a>映射架构  
 此命令提供源数据库到目标架构的架构映射。  
   
 -   `source-schema` 指定要迁移的源架构。  
@@ -403,7 +403,7 @@ sql-server-schema="<target-schema>"/>
 > [!NOTE]  
 > 迁移命令设置了默认控制台输出，则与不进行详细的错误报告的完整输出报告： 源对象树的根节点处仅摘要。  
   
-### <a name="synchronize-target"></a>synchronize-target  
+### <a name="synchronize-target"></a>同步目标  
 此命令将目标对象与目标数据库同步。  
  
 如果针对源数据库执行此命令，则被遇到错误。  
@@ -416,11 +416,11 @@ sql-server-schema="<target-schema>"/>
   
 -   `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 -   `report-errors-to:` 指定的同步操作 （可选属性） 的错误报告的位置。 如果只提供了文件夹路径，然后按名称文件**TargetSynchronizationReport.XML**创建。  
   
@@ -464,7 +464,7 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>refresh-from-database  
+### <a name="refresh-from-database"></a>从数据库中刷新  
 此命令刷新数据库中的源对象。  
   
 如果针对目标数据库执行此命令，则会生成错误。  
@@ -477,11 +477,11 @@ fail-script>" (optional)
   
 -   `on-error:` 指定是否为警告或错误调出刷新错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 -   `report-errors-to:` 指定的刷新操作 （可选属性） 的错误报告的位置。 如果只提供了文件夹路径，然后按名称文件**SourceDBRefreshReport.XML**创建。  
   

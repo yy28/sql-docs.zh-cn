@@ -1,25 +1,25 @@
 ---
-title: "在 Linux 上的 SQL Server 安全入门 |Microsoft 文档"
-description: "本指南介绍了典型的安全操作。"
+title: 在 Linux 上的 SQL Server 安全入门 |Microsoft 文档
+description: 本指南介绍了典型的安全操作。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: 0868aeaec180999590a06f8012a89addb64d1ce1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
 

@@ -6,7 +6,7 @@ ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -16,11 +16,11 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: f6acfbf1138507100a0b5b5a486d0e6288f8b372
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 7816293d595b5231fe19ea464c4b099495c3d2c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的教程： 使用 Active Directory 身份验证
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/03/2018
 
 使用以下步骤以加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到 Active Directory 域的主机：
 
-1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**加入你的 AD 域的主机。 如果你尚未安装的 realmd 和 Kerberos 客户端包上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用你的 Linux 分发的包管理器的主机：
+1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 加入你的 AD 域的主机。 如果你尚未安装的 realmd 和 Kerberos 客户端包上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用你的 Linux 分发的包管理器的主机：
 
    ```bash
    # RHEL
@@ -147,7 +147,7 @@ ms.lasthandoff: 04/03/2018
   
 5. 验证，可以现在从域中，收集有关用户的信息以及您可以获取作为该用户的 Kerberos 票证。
 
-   下面的示例使用**id**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**此的命令。
+   下面的示例使用**id**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 此的命令。
 
    ```bash
    id user@contoso.com
@@ -172,7 +172,7 @@ ms.lasthandoff: 04/03/2018
 ## <a id="createuser"></a> 创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和设置 SPN
 
   > [!NOTE]
-  > 下一个步骤使用你[完全限定的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果你在**Azure**，你必须**[创建一个](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在继续操作之前。
+  > 下一个步骤使用你[完全限定的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果你在**Azure**，你必须**[创建一个](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** 在继续操作之前。
 
 1. 在你的域控制器上运行[New-aduser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令以创建新的 AD 用户使用永不过期的密码。 本示例将命名的帐户"mssql，"但帐户名称可以是您喜欢的任何。 系统将提示您输入的帐户的新密码：
 
@@ -208,7 +208,7 @@ ms.lasthandoff: 04/03/2018
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 创建具有的 keytab 文件**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**为你在上一步中创建的 AD 用户。 出现提示时，输入该 AD 帐户的密码。
+2. 创建具有的 keytab 文件**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 为你在上一步中创建的 AD 用户。 出现提示时，输入该 AD 帐户的密码。
 
    ```bash
    sudo ktutil

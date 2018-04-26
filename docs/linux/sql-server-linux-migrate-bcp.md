@@ -1,25 +1,25 @@
 ---
-title: "大容量复制数据到 Linux 上的 SQL Server |Microsoft 文档"
-description: 
+title: 大容量复制数据到 Linux 上的 SQL Server |Microsoft 文档
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: On Demand
-ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b5e7b92730582e7657e1ba6be7bbcaeda01dc18f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 bcp 将数据批量复制到 Linux 上的 SQL Server
 
@@ -62,7 +62,7 @@ sqlcmd -S localhost -U sa -P <your_password> -Q "CREATE DATABASE BcpSampleDB;"
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>创建源数据文件
-复制并粘贴到你的终端窗口的以下命令。 我们使用内置`cat`命令以创建使用三个记录的示例文本数据文件将文件保存在您的主目录作为**~/test_data.txt**。 记录中的字段用逗号分隔。
+复制并粘贴到你的终端窗口的以下命令。 我们使用内置`cat`命令以创建使用三个记录的示例文本数据文件将文件保存在您的主目录作为 **~/test_data.txt**。 记录中的字段用逗号分隔。
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -122,7 +122,7 @@ Id          Name                Location
 
 在本教程中，你使用`bcp`将数据从我们之前创建到新的数据文件的示例表导出。
 
-复制并粘贴到终端窗口 followikng 命令。 这些命令使用`bcp`命令行实用工具将数据从表导出**TestEmployees**数据库中**BcpSampleDB**到调用的新数据文件**~/test_export.txt**.  请记住将用户名和`<your_password>`根据需要在运行命令前。
+复制并粘贴到终端窗口 followikng 命令。 这些命令使用`bcp`命令行实用工具将数据从表导出**TestEmployees**数据库中**BcpSampleDB**到调用的新数据文件 **~/test_export.txt**.  请记住将用户名和`<your_password>`根据需要在运行命令前。
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','
@@ -144,4 +144,4 @@ cat ~/test_export.txt
 - [bcp 实用工具](../tools/bcp-utility.md)
 - [有关兼容性时使用 bcp 数据格式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [导入使用 BULK INSERT 大容量数据](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
+- [大容量插入 (Transact SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

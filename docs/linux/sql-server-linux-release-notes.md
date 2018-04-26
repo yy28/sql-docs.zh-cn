@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 786153cf6d3f9cee30a01d3b6e3a94646a75eecc
-ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
+ms.openlocfilehash: e5c8cc35d7cd539b5b00a077cf0468aac533f897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -305,10 +305,10 @@ sudo systemctl start mssql-server
 1. 通过删除启用在内核中的 IPv6`ipv6.disable=1`从启动命令行。 若要执行此操作的方式取决于 Linux 分发和引导加载程序，如 grub。 如果你确实想要禁用的 IPv6，你仍然可以禁用它通过设置`net.ipv6.conf.all.disable_ipv6 = 1`中`sysctl`配置 (例如`/etc/sysctl.conf`)。 这仍将防止系统的网络适配器 IPv6 地址，但允许 sqlservr 功能工作。
 
 #### <a name="network-file-system-nfs"></a>网络文件系统 (NFS)
-如果你使用**网络文件系统 (NFS)**在生产中的远程共享，请注意以下支持要求：
+如果你使用**网络文件系统 (NFS)** 在生产中的远程共享，请注意以下支持要求：
 
 - 使用 NFS 版本**4.2 或更高版本**。 NFS 的较旧版本不支持所需的功能，如 fallocate 和稀疏文件创建，普遍适用于现代文件系统。
-- 仅查找**/var/opt/mssql**上 NFS 装入的目录。 其他文件，如 SQL Server 系统二进制文件，不支持。
+- 仅查找 **/var/opt/mssql**上 NFS 装入的目录。 其他文件，如 SQL Server 系统二进制文件，不支持。
 - 确保安装对远程共享时，NFS 客户端，使用 nolock 选项。
 
 #### <a name="localization"></a>本地化

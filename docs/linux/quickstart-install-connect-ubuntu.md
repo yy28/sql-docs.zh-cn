@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: fd3b175cd8440d17da0f341cd13f65bb044f45a0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b9f91efc1465249492efd303e4b0c083a0c00022
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门： 安装 SQL Server 并在 Ubuntu 上创建数据库
 
@@ -126,13 +126,13 @@ ms.lasthandoff: 04/18/2018
 
 1. **可选**： 添加`/opt/mssql-tools/bin/`到你**路径**bash shell 中的环境变量。
 
-   若要使**sqlcmd/bcp**访问登录会话 bash shell 中修改你**路径**中**~/.bash_profile**文件使用以下命令：
+   若要使**sqlcmd/bcp**访问登录会话 bash shell 中修改你**路径**中 **~/.bash_profile**文件使用以下命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   若要使**sqlcmd/bcp**访问交互式/非-登录会话 bash shell 中修改**路径**中**~/.bashrc**文件使用以下命令：
+   若要使**sqlcmd/bcp**访问交互式/非-登录会话 bash shell 中修改**路径**中 **~/.bashrc**文件使用以下命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

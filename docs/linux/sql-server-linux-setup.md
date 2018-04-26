@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 69b56cf027a1c7d8f536b4d9ad80e5ef3b627469
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
@@ -65,15 +65,15 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 | **处理器核心** | 2 核 |
 | **处理器类型** | 仅 x64 兼容 |
 
-如果你使用**网络文件系统 (NFS)**在生产中的远程共享，请注意以下支持要求：
+如果你使用**网络文件系统 (NFS)** 在生产中的远程共享，请注意以下支持要求：
 
 - 使用 NFS 版本**4.2 或更高版本**。 NFS 的较旧版本不支持所需的功能，如 fallocate 和稀疏文件创建，普遍适用于现代文件系统。
-- 仅查找**/var/opt/mssql**上 NFS 装入的目录。 其他文件，如 SQL Server 系统二进制文件，不支持。
+- 仅查找 **/var/opt/mssql**上 NFS 装入的目录。 其他文件，如 SQL Server 系统二进制文件，不支持。
 - 确保安装对远程共享时，NFS 客户端，使用 nolock 选项。
 
 ## <a id="repositories"></a> 配置源存储库
 
-当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server 自 2017 年。 快速入门使用**累积更新 (CU)**存储库。 但是可以改为配置**GDR**存储库。 存储库以及如何配置它们的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server 自 2017 年。 快速入门使用**累积更新 (CU)** 存储库。 但是可以改为配置**GDR**存储库。 存储库以及如何配置它们的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 > [!IMPORTANT]
 > 如果你以前安装的 CTP 或 RC 版本的 SQL Server 自 2017 年，你必须删除预览存储库并注册一个常规正式版 (GA)。 有关详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。

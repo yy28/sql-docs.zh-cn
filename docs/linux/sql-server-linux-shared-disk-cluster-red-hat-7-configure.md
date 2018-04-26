@@ -1,25 +1,25 @@
 ---
-title: "为 SQL Server 配置 Red Hat Enterprise Linux 共享的群集 |Microsoft 文档"
-description: "通过为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集实现高可用性。"
+title: 为 SQL Server 配置 Red Hat Enterprise Linux 共享的群集 |Microsoft 文档
+description: 通过为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 69f0953d6a03231b86ba9fb7a13bbddea2a48a22
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 

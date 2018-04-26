@@ -1,25 +1,25 @@
 ---
-title: "配置故障转移群集实例的 SQL Server 上 Linux (RHEL) |Microsoft 文档"
-description: 
+title: 配置故障转移群集实例的 SQL Server 上 Linux (RHEL) |Microsoft 文档
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 57f8f5d3881262ed96dcf84295b6c2a21dddc35d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例的 SQL Server 上 Linux (RHEL)
 
@@ -281,7 +281,7 @@ FCI 将创建资源组中。 由于资源组后，就不必约束，这是稍微
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 -->
-## <a name="summary"></a>摘要
+## <a name="summary"></a>“摘要”
 
 在本教程中，你将完成以下任务。
 

@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: dmx
 ms.date: 02/03/2018
-ms.openlocfilehash: df8c6bbb6b4dd11551a3ad4796b3d8c77504ba81
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: b757a1226efd7e606ff9e1ed36106724e23ae8c9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-data-mining-extensions-dmx-for-sql-server"></a>新的和最近的更新： 数据挖掘扩展插件 (DMX) for SQL Server
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/08/2018
 
 
 
-- 更新日期范围：2017-12-03 到 2018-02-03
+- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
 - *主题区域：* &nbsp; **数据挖掘扩展插件 (DMX) for SQL Server**。
 
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 04/08/2018
 - [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
 - [新 + 更新 (0 + 0): **SQL 的示例**文档](../samples/new-updated-samples.md)
-- [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)**文档](../ssma/new-updated-ssma.md)
+- [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)** 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
 

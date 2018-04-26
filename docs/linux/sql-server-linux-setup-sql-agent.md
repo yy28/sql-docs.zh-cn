@@ -1,25 +1,25 @@
 ---
-title: "在 Linux 上安装 SQL Server 代理 |Microsoft 文档"
-description: "本文介绍如何在 Linux 上安装 SQL Server 代理。"
+title: 在 Linux 上安装 SQL Server 代理 |Microsoft 文档
+description: 本文介绍如何在 Linux 上安装 SQL Server 代理。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: bec1837a2e4084d01858815346c5a7563199a220
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 1135e7844515ffd051e937c7804c654b3143ac36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
 
@@ -97,7 +97,7 @@ sudo systemctl restart mssql-server
 
 使用以下步骤来安装**mssql server 代理**SUSE Linux Enterprise Server 上。 
 
-Install **mssql-server-agent** 
+安装**mssql server 代理** 
 
 ```bash
 sudo zypper install mssql-server-agent

@@ -1,25 +1,25 @@
 ---
-title: "管理使用 PowerShell 的 Linux 上的 SQL Server |Microsoft 文档"
-description: "本文概述了在 Linux 上使用 SQL Server 的 Windows 上使用 PowerShell。"
+title: 管理使用 PowerShell 的 Linux 上的 SQL Server |Microsoft 文档
+description: 本文概述了在 Linux 上使用 SQL Server 的 Windows 上使用 PowerShell。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8869f87ec6e69844155a2bf0361a90e07b30de24
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 
@@ -76,7 +76,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 - 创建的实例[服务器](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx)对象
 - 连接到**服务器**和显示的几个属性
 
-请记住将 **\<your_server_instance\>** 与 IP 地址或你在 Linux 上的 SQL Server 2017 实例的主机名。
+请记住将**\<your_server_instance\>** 与 IP 地址或你在 Linux 上的 SQL Server 2017 实例的主机名。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -116,7 +116,7 @@ HostDistribution : Ubuntu
 - 使用**Get SqlErrorLog** cmdlet 来连接到 Linux 上的 SQL Server 2017 实例并检索错误日志以来**昨天**
 - 将输出发送到通过管道传递**Out-gridview** cmdlet
 
-请记住将 **\<your_server_instance\>** 与 IP 地址或你在 Linux 上的 SQL Server 2017 实例的主机名。
+请记住将**\<your_server_instance\>** 与 IP 地址或你在 Linux 上的 SQL Server 2017 实例的主机名。
 
 ```powershell
 # Prompt for credentials to login into SQL Server

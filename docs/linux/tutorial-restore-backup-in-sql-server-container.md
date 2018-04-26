@@ -1,24 +1,24 @@
 ---
-title: "在 Docker 中的 SQL Server 数据库还原 |Microsoft 文档"
-description: "本教程将说明如何还原新的 Linux Docker 容器中的 SQL Server 数据库备份。"
+title: 在 Docker 中的 SQL Server 数据库还原 |Microsoft 文档
+description: 本教程将说明如何还原新的 Linux Docker 容器中的 SQL Server 数据库备份。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ad11495a927d5ca37e15cb872a200a55beb93b35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>还原 Linux Docker 容器中的 SQL Server 数据库
 
@@ -35,10 +35,10 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="prerequisites"></a>必要條件
 
-* 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅[安装 Docker](https://docs.docker.com/engine/installation/)。
+* 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
 * 至少 2 GB 的磁盘空间
 * 至少 2 GB 的 RAM
-* [在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
+* [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 
@@ -76,9 +76,9 @@ ms.lasthandoff: 02/13/2018
     此命令与开发人员版 （默认值） 创建 SQL Server 2017 容器。 SQL Server 端口**1433年**端口的主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用来保留 SQL Server 创建的数据。
 
    > [!NOTE]
-   > 在容器中运行生产 SQL Server 版本的过程是略有不同。 有关详细信息，请参阅[运行容器映像的生产](sql-server-linux-configure-docker.md#production)。 如果你使用相同的容器名称和端口，此演练的其余部分将仍适用于生产容器。
+   > 在容器中运行生产 SQL Server 版本的过程是略有不同。 有关详细信息，请参阅[运行生产容器映像](sql-server-linux-configure-docker.md#production)。 如果你使用相同的容器名称和端口，此演练的其余部分将仍适用于生产容器。
 
-1. 若要查看你的 Docker 容器，请使用`docker ps`命令。
+1. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
     ```bash
     sudo docker ps -a
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/13/2018
     docker ps -a
     ```
  
-1. 如果**状态**列显示的状态**向上**，然后在容器中运行 SQL Server 且在侦听端口指定**端口**列。 如果**状态**你 SQL 服务器容器显示的列**Exited**，请参阅[故障排除部分中的配置指南](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)。
 
    ```
    $ sudo docker ps -a
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/13/2018
 
 本教程使用[Wide World Importers 示例数据库](../sample/world-wide-importers/wide-world-importers-documentation.md)。 使用以下步骤来下载并将 Wide World Importers 数据库备份文件复制到你的 SQL Server 容器。
 
-1. 首先，使用**docker exec**创建备份文件夹。 以下命令将创建**/var/选择/mssql/**目录在 SQL Server 容器内。
+1. 首先，使用**docker exec**创建备份文件夹。 以下命令将创建 **/var/选择/mssql/** 目录在 SQL Server 容器内。
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -126,7 +126,7 @@ ms.lasthandoff: 02/13/2018
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. 使用**docker cp**将备份文件复制到在容器**/var/opt/mssql/backup**目录。
+1. 使用**docker cp**将备份文件复制到在容器 **/var/opt/mssql/backup**目录。
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -291,7 +291,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 已到容器还原数据库后，可能还想要定期创建数据库备份正在运行的容器内。 前面的步骤，但按相反的顺序，步骤将按照类似的模式。
 
-1. 使用**备份数据库**TRANSACT-SQL 命令在容器中创建的数据库备份。 本教程创建一个新的备份文件， **wwi_2.bak**，在以前创建**/var/opt/mssql/backup**目录。
+1. 使用**备份数据库**TRANSACT-SQL 命令在容器中创建的数据库备份。 本教程创建一个新的备份文件， **wwi_2.bak**，在以前创建 **/var/opt/mssql/backup**目录。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -340,7 +340,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>使用持续的数据
 
-除了保护您的数据执行数据库备份，还可以使用数据卷容器。 本教程中创建的开头**sql1**具有容器`-v sql1data:/var/opt/mssql`参数。 **Sql1data**数据卷容器仍然存在**/var/opt/mssql**数据，即使在删除容器。 以下步骤中完全删除**sql1**容器，然后创建新的容器， **sql2**，与所保留的数据。
+除了保护您的数据执行数据库备份，还可以使用数据卷容器。 本教程中创建的开头**sql1**具有容器`-v sql1data:/var/opt/mssql`参数。 **Sql1data**数据卷容器仍然存在 **/var/opt/mssql**数据，即使在删除容器。 以下步骤中完全删除**sql1**容器，然后创建新的容器， **sql2**，与所保留的数据。
 
 1. 停止**sql1**容器。
 

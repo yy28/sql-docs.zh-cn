@@ -1,24 +1,24 @@
 ---
-title: "在 Kubernetes 中配置 SQL Server 容器，以实现高可用性 |Microsoft 文档"
-description: "本教程演示如何部署具有 Kubernetes Azure 容器服务上的 SQL Server 高可用性解决方案。"
+title: 在 Kubernetes 中配置 SQL Server 容器，以实现高可用性 |Microsoft 文档
+description: 本教程演示如何部署具有 Kubernetes Azure 容器服务上的 SQL Server 高可用性解决方案。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9e9925268f46007155c3a6851b250a57d9b02298
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>在 Kubernetes 中配置 SQL Server 容器，以实现高可用性
 
@@ -317,7 +317,7 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
 
 Kubernetes 自动重新创建 pod 恢复的 SQL Server 实例，并连接到持久性存储区。 使用`kubectl get pods`以验证部署一个新的组合。 使用`kubectl get services`以验证新的容器的 IP 地址是否相同。 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>“摘要”
 
 在本教程中，您学习了如何将 SQL Server 容器部署到 Kubernetes 群集以实现高可用性。 
 

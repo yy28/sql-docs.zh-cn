@@ -1,25 +1,25 @@
 ---
-title: "SQL Server 2017 上 Docker 配置选项 |Microsoft 文档"
-description: "了解不同使用和 SQL Server 2017 容器映像在 Docker 中与之进行交互的方式。 这包括持久保存数据，将文件，复制和故障排除。"
+title: SQL Server 2017 上 Docker 配置选项 |Microsoft 文档
+description: 了解不同使用和 SQL Server 2017 容器映像在 Docker 中与之进行交互的方式。 这包括持久保存数据，将文件，复制和故障排除。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: 7212b1a0a5e6322a33046d09edd091c257ff6b44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>在 Docker 上配置 SQL Server 2017 容器映像
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/27/2018
       docker login
       ```
 
-   1. 接下来，你需要获取免费的开发人员 Docker 存储上的容器映像。 转到[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)，单击**结帐**，并按照说明操作。
+   1. 接下来，你需要获取免费的开发人员 Docker 存储上的容器映像。 转到[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)，单击**结帐**，并按照说明操作。
 
    1. 检查要求，然后运行过程[快速入门](quickstart-install-connect-docker.md)。 但有两个的差异。 你必须拉取映像**存储/microsoft/mssql-服务器-linux:\<标记名称\>** Docker 存储区中。 并且你必须指定与生产版本**MSSQL_PID**环境变量。 下面的示例演示如何为 Enterprise Edition 运行最新的 SQL Server 2017 容器映像：
 
@@ -411,7 +411,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 ### <a id="errorlogs"></a> SQL Server 安装程序和错误日志
 
-你可以查看 SQL Server 安装程序和错误日志**/var/opt/mssql/log**。 如果容器未运行，请首先启动它。 然后使用交互式命令提示符来检查日志。
+你可以查看 SQL Server 安装程序和错误日志 **/var/opt/mssql/log**。 如果容器未运行，请首先启动它。 然后使用交互式命令提示符来检查日志。
 
 ```bash
 docker start e69e056c702d
@@ -427,7 +427,7 @@ cat errorlog
 ```
 
 > [!TIP]
-> 如果你在装载主机目录到**/var/opt/mssql**当你创建你的容器，你可以改为查看**日志**在主机上的映射路径的子目录。
+> 如果你在装载主机目录到 **/var/opt/mssql**当你创建你的容器，你可以改为查看**日志**在主机上的映射路径的子目录。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,6 +1,6 @@
 ---
 title: 使用 SSMA 项目 (OracleToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 230e3b73b1903a4a74c98fed108600ffd9d5a523
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e34ac2455e6de1f35925045504e0e3224ee56560
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 项目 (OracleToSQL)
 若要迁移到的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，首先创建新的 SSMA 项目。 项目是一个文件，其中包含以下信息：  
@@ -33,11 +33,11 @@ ms.lasthandoff: 12/21/2017
   
 -   元数据的目标实例的有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中将接收迁移的对象和数据。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]连接信息。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 连接信息。  
   
 -   项目设置。  
   
-当你打开的项目时，它断开 Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 允许您在脱机工作。 有关重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅[连接到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)。  
+当你打开的项目时，它断开 Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 允许您在脱机工作。 有关重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅[连接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)。  
   
 ## <a name="reviewing-default-project-settings"></a>查看默认项目设置  
 SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同步 SSMA 包含多个设置和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 默认设置是适用于多个用户。 但是，在创建新的 SSMA 项目之前，你应查看这些设置。 如果你愿意，你可以更改将用于所有新项目的默认设置。  
@@ -50,19 +50,19 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
   
 3.  在左窗格中，单击**转换**。  
   
-4.  在右窗格中，查看并根据需要更改设置。 有关这些设置的详细信息，请参阅[项目设置 &#40;转换 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+4.  在右窗格中，查看并根据需要更改设置。 有关这些设置的详细信息，请参阅[项目设置&#40;转换&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)。  
   
 5.  重复步骤 1-3 的迁移、 同步、 加载系统对象、 GUI，和类型映射页。  
   
-    -   有关迁移设置的信息，请参阅[项目设置 &#40;迁移 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-migration-oracletosql.md).  
+    -   有关迁移设置的信息，请参阅[项目设置&#40;迁移&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)。  
   
-    -   有关系统对象设置的信息，请参阅[项目设置 &#40;加载系统对象 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md).  
+    -   有关系统对象设置的信息，请参阅[项目设置&#40;加载系统对象&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)。  
   
-    -   有关同步到的设置信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅[项目设置 &#40;同步 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+    -   有关同步到的设置信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅[项目设置&#40;同步&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。  
   
-    -   有关 GUI 设置的信息，请参阅[项目设置 &#40;GUI &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-gui-oracletosql.md).  
+    -   有关 GUI 设置的信息，请参阅[项目设置&#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)。  
   
-    -   有关数据类型映射设置的信息，请参阅[项目设置 &#40;类型映射 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+    -   有关数据类型映射设置的信息，请参阅[项目设置&#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
   
 ## <a name="creating-new-projects"></a>创建新项目  
 若要将数据从 Oracle 数据库到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你必须首先创建一个项目。  
@@ -90,9 +90,9 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
     -   Azure SQL 数据库  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
-除了定义应用于所有新的 SSMA 项目的默认项目设置，你可以自定义的每个项目的设置。 有关详细信息，请参阅[设置项目选项 &#40; OracleToSQL &#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  
+除了定义应用于所有新的 SSMA 项目的默认项目设置，你可以自定义的每个项目的设置。 有关详细信息，请参阅[设置项目选项&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  
   
-当你自定义源和目标数据库之间的数据类型映射时，你可以定义在项目、 数据库或对象级别的映射。 有关详细信息，请参阅[映射 Oracle 和 SQL Server 数据类型 &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
+当你自定义源和目标数据库之间的数据类型映射时，你可以定义在项目、 数据库或对象级别的映射。 有关详细信息，请参阅[映射 Oracle 和 SQL Server 数据类型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
   
 ## <a name="saving-projects"></a>保存项目  
 保存项目时，SSMA 保留项目设置中，和 （可选） 选择数据库元数据中的项目文件。  
@@ -107,7 +107,7 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
   
         保存元数据可能需要几分钟。 如果你不想保存元数据，不选中所有复选框。  
   
-    2.  单击**保存**按钮。  
+    2.  单击 **保存** 按钮。  
   
         SSMA 将分析 Oracle 架构并将元数据保存到项目文件。  
   
@@ -130,7 +130,7 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
 迁移过程的下一步是[连接到 Oracle 数据库 (OracleToSQL)](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-[连接到 Oracle 数据库 &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
-[连接到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[连接到 Oracle 数据库&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
+[连接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
   

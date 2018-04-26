@@ -1,27 +1,27 @@
 ---
-title: "加密连接到 Linux 上的 SQL Server |Microsoft 文档"
-description: "本指南介绍了在 Linux 上的加密对 SQL Server 的连接。"
+title: 加密连接到 Linux 上的 SQL Server |Microsoft 文档
+description: 本指南介绍了在 Linux 上的加密对 SQL Server 的连接。
 author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b60ded8bde38413ccc2818efd2ca3852d88f235c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密连接到 Linux 上的 SQL Server
 
