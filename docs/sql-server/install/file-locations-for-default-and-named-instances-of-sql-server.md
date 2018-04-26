@@ -1,27 +1,27 @@
 ---
-title: "SQL Server 的默认实例和命名实例的文件位置 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 的默认实例和命名实例的文件位置 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: b5ce1eacf023848410bf41261072adf1cd56ee43
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: db5977924f9a1b6b83817516f6ae2b1b4a916af9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 的默认实例和命名实例的文件位置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  单台计算机上所有实例使用的公共文件安装在以下文件夹中：[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 其中 \<drive> 是安装组件的驱动器号。 默认值通常为驱动器 C。\<nnn> 标识版本。 下表标识路径的版本。 
 
-|\<*nnn*>|版本
+|\<nnn>|版本
 |-----|-----
 |140|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]
 |130|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]
@@ -84,9 +84,9 @@ ms.lasthandoff: 02/09/2018
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间可指定一个非默认实例 ID。 如果用户选择更改默认安装目录，则不使用 \<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而使用 \<自定义路径\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请注意，不支持以下划线 (_) 开头或者包含数字符号 (#) 或美元符号 ($) 的实例 ID。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和客户端组件是不识别实例的，因此不为它们指定实例 ID。 默认情况下，将不识别实例的组件安装在单个目录 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] 中。 更改一个共享组件的安装路径会同时更改其他共享组件的安装路径。 后续安装会将非实例识别组件安装到与原始安装相同的目录。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和客户端组件是不识别实例的，因此不为它们指定实例 ID。 默认情况下，将不识别实例的组件安装在单个目录 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]中。 更改一个共享组件的安装路径会同时更改其他共享组件的安装路径。 后续安装会将非实例识别组件安装到与原始安装相同的目录。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是支持在安装后重命名实例的唯一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 如果重命名 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，实例 ID 不会发生变化。 重命名实例后，目录和注册表项将继续使用在安装期间创建的实例 ID。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是唯一的在安装后支持实例重命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 如果重命名 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，实例 ID 不会发生变化。 重命名实例后，目录和注册表项将继续使用在安装期间创建的实例 ID。  
   
  将在 HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> 下为识别实例的组件创建注册表配置单元。 例如，  
   

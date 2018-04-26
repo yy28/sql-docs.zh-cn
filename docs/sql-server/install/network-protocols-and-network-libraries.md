@@ -1,16 +1,16 @@
 ---
-title: "网络协议和网络库 | Microsoft Docs"
-ms.custom: 
+title: 网络协议和网络库 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fcbdda587d73eb7797f3f9f2b8e0b3621cca33c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="default-sql-server-network-configuration"></a>默认 SQL Server 网络配置  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例针对 TCP/IP 端口 1433 进行配置，并命名为管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例配置为采用 TCP 动态端口，其端口号由操作系统分配。  
   
- 如果无法使用动态端口地址（例如，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接必须通过服务器配置为要通过特定端口地址的防火墙时）。 请选择一个未分配的端口号。 Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)上列出这些端口号。  
+ 如果无法使用动态端口地址（例如，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接必须通过服务器配置为要通过特定端口地址的防火墙时）。 请选择一个未分配的端口号。 Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) 上列出这些端口号。  
   
  为了增强安全性，当安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时不会完全启用网络连接。 在安装完成后，若要启用、禁用和配置网络协议，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置区域。  
   

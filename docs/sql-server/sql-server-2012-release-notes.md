@@ -1,10 +1,8 @@
 ---
 title: SQL Server 2012 发行说明 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: supportability
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -14,19 +12,20 @@ ms.topic: article
 helpviewer_keywords:
 - Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 6786ab20e983647a9b83ee383017fc8bd106d8a4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[单击此处下载](http://go.microsoft.com/fwlink/?LinkId=238647)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[此处下载](http://go.microsoft.com/fwlink/?LinkId=238647)(#单击此处下载)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
   
 有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 还可以在 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?LinkId=190948) (#sql-server-联机丛书) 中以及 [SQL Server 论坛](http://go.microsoft.com/fwlink/?LinkId=213599)(#sql-server-论坛) 上找到更多信息。  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  在“组件服务”窗口中，导航到“**控制台根节点**” -> “**组件服务**” -> “**计算机**” -> “**我的电脑**” -> “**Dconfig**” ->“**DReplayController**”。  
   
-4.  右键单击“DReplayController”，然后单击“属性”。  
+4.  右键单击“DReplayController” ，然后单击“属性” 。  
   
 5.  在 **“DReplayController 属性”** 窗口中的 **“安全性”** 选项卡上，单击 **“启动和激活权限”** 部分的 **“编辑”** 。  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-或  
+或多个  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -99,7 +98,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **解决方法：** 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下任务：  
   
-1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (#microsoft-下载中心) (http://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
+1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
   
 2.  将数据库移到相应的数据文件夹。 如果您要使数据库保持在其默认位置，必须首先更改权限，然后才能成功附加该数据库。  
   
@@ -156,7 +155,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  若要启用“ **Microsoft .NET Framework 3.5.1**”，请选中该功能旁边的复选框。 若要关闭 Windows 功能，请取消选中该复选框。  
   
-        3.  单击 **“确定”**。  
+        3.  单击“确定” 。  
   
         **使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1：**  
   
@@ -327,12 +326,12 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 在群集中不支持 DQS  
 **问题：** 在 SQL Server 群集安装中不支持 DQS。 如果你在安装 SQL Server 的某一群集实例，则不得在“ **功能选择** ”页上选中“ **Data Quality Services** ”和“ **数据质量客户端** ”复选框。 如果在群集实例安装过程中选中了这些复选框（并且通过运行 DQSInstaller.exe 文件完成了数据质量服务器安装），则 DQS 将安装在此节点上，但在将更多节点添加到群集时不可用于附加节点，因此在附加节点上将不起作用。  
   
-**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)(#http://support.microsoft.com/kb/2674817)。  
+**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅[http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安装数据质量服务器，请在卸载数据质量服务器后删除 DQS 对象  
 **问题：** 如果卸载数据质量服务器，则 DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
   
-**解决方法：** 要重新安装同一台计算机上和相同 SQL Server 实例中的数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](http://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
+**解决方法：**要重新安装同一台计算机上和相同 SQL Server 实例中的数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](http://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 知识发现或交互式清理活动已终止的指示被延迟  
 **问题：** 如果管理员在“活动监视”屏幕中终止某一活动，则在正在运行知识发现、域管理或交互式清理活动的交互用户执行下一操作前，将不会收到指出其活动已终止的任何指示。  
@@ -506,14 +505,14 @@ A semantic language statistics database is not registered. Full-text indexes usi
 |驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快的单子网端点故障转移|多子网故障转移：SQL 群集实例的命名实例解析|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
-|SQL Native Client 11.0 OLEDB|是|是|是|“否”|是|  
-|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|用户帐户控制|是|是|是|用户帐户控制|  
-|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|用户帐户控制|是|是|是|是|  
-|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|用户帐户控制|  
+|SQL Native Client 11.0 OLEDB|“否”|是|是|否|“否”|  
+|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|是|是|是|是|用户帐户控制|  
+|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|是|是|是|是|是|  
+|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
   
-**\&#42;** 下载 ADO.NET（结合使用 .NET Framework 4.0）的连接性修补程序： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)(#http://support.microsoft.com/kb/2600211)。  
+\&#42; 下载 ADO .NET（结合使用 .NET Framework 4.0）的连接性修补程序：[http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
   
-**\&#42;\&#42;** 下载 ADO.NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序： [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)(#http://support.microsoft.com/kb/2654347)。  
+\&#42;\&#42; 下载 ADO .NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序：[http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)。  
   
 **MultiSubnetFailover 关键字和相关功能**  
   
@@ -611,10 +610,10 @@ Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日�
   
 3.  在主群集节点上安装包含 MDS 功能的 SQL Server 2012，然后在任何附加群集节点上安装包含 MDS 功能的 SQL Server 2012。  
   
-有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)(#http://support.microsoft.com/kb/2683467)。  
+有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)。  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 需要 Microsoft Silverlight 5  
-在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)(#http://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
+在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

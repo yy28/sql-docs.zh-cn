@@ -1,31 +1,32 @@
 ---
-title: "使用 OPENJSON 分析和转换 JSON 数据 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 使用 OPENJSON 分析和转换 JSON 数据 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OPENJSON
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 31
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d6caf93638c66ff2c8c23842fafdedff1fd22fcb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 10321d8d758927e82c7ad38e1054d42b7339aae3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 分析和转换 JSON 数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,11 +156,11 @@ WITH (
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)（SQL Server 2016 和 JSON 支持）
+-   [SQL Server 2016 和 JSON 支持](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)（在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON）
+-   [在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)（JSON 充当 NoSQL 和关系环境之间的桥梁）
+-   [JSON 充当 NoSQL 和关系环境之间的桥梁](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>另请参阅  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

@@ -1,26 +1,27 @@
 ---
-title: "SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14a6ae78a0ed5969ce3ab65dbd09b81680076fdb
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持
 
@@ -64,7 +65,7 @@ Active Directory 交互式身份验证支持交互式身份验证，以便能够
 - 只有当连接到 Azure SQL 数据库时，才支持使用 Active Directory 交互式身份验证。 SQL Server（本地或 VM 上）或 Azure SQL 数据仓库不支持它。
 - 服务器资源管理器中的连接对话框不支持 Active Directory 交互式身份验证。必须结合使用 SSDT 和 SQL Server 对象资源管理器进行连接。
 - SSDT 不支持将单一登录与当前登录 Visual Studio 的帐户集成。
-- 在 Visual Studio 安装期间安装到扩展目录的 SQLPackage.exe 并不是从此位置进行使用。 若要同时使用 SQLpackage.exe 和 AAD，请转到 https://www.microsoft.com/en-us/download/details.aspx?id=55088 
+- 在 Visual Studio 安装期间安装到扩展目录的 SQLPackage.exe 并不是从此位置进行使用。 若要配合使用 SQLpackage.exe 和 AAD，请转到 https://www.microsoft.com/en-us/download/details.aspx?id=55088。 
 - AAD 身份验证（包括新身份验证方法）不支持 SSDT 数据比较。  
 
 

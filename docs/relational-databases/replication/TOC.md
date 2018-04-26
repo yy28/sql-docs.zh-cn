@@ -29,8 +29,10 @@
 #### [Web 同步的拓扑](topologies-for-web-synchronization.md)  
 ### [配置 IIS 以实现 Web 同步](configure-iis-for-web-synchronization.md)  
 ### [配置 IIS 7 以实现 Web 同步](configure-iis-7-for-web-synchronization.md)  
+
 ## [配置分发](configure-distribution.md)  
 ### [配置发布和分发](configure-publishing-and-distribution.md)  
+### [在可用性组中配置分发](configure-distribution-availability-group.md)
 ### [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)  
 ### [禁用发布和分发](disable-publishing-and-distribution.md)  
 ### [为复制启用数据库 (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [指定默认快照位置 (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [设置事务发布的分发保留期 (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [设置历史记录保留期 (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [订阅发布](subscribe-to-publications.md)  
 ### [创建请求订阅](create-a-pull-subscription.md)  
 ### [创建推送订阅](create-a-push-subscription.md)  

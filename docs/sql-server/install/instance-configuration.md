@@ -1,16 +1,16 @@
 ---
-title: "安装向导帮助 | Microsoft Docs"
-ms.custom: 
+title: 安装向导帮助 | Microsoft Docs
+ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - instance configuration, Setup
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 
+caps.latest.revision: 62
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 16c42d4f6864e94c475ba917c75c8219d96245ce
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4ef290dacb4863511444c1267ce98a28a9e80926
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="notes"></a>说明  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署到 SharePoint 场中的实例将应用程序文件、数据文件和属性存储于内容数据库和服务应用程序数据库中。  
+-   在 SharePoint 场上部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例将应用程序文件、数据文件和属性存储于内容数据库和服务应用程序数据库中。  
   
 -   向现有安装添加功能时，不能更改以前安装的功能的位置，也不能为新功能指定该位置。  
 
@@ -236,7 +236,7 @@ ms.lasthandoff: 02/15/2018
   
 #### <a name="notes"></a>说明  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署到 SharePoint 场中的实例将应用程序文件、数据文件和属性存储于内容数据库和服务应用程序数据库中。  
+-   在 SharePoint 场上部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例将应用程序文件、数据文件和属性存储于内容数据库和服务应用程序数据库中。  
   
 -   向现有安装添加功能时，不能更改以前安装的功能的位置，也不能为新功能指定该位置。  
 
@@ -309,7 +309,7 @@ ms.lasthandoff: 02/15/2018
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 切勿设置空密码或弱 sa 密码。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]切勿设置空密码或弱 sa 密码。  
   
  **混合模式（Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证）**  
  允许用户使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接。 通过 Windows 用户帐户进行连接的用户可以使用经过 Windows 验证的可信连接。  
@@ -317,7 +317,7 @@ ms.lasthandoff: 02/15/2018
  如果必须选择“混合模式身份验证”并且要求使用 SQL 登录名以适应早期应用程序，则必须为所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户设置强密码。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证只是为了向后兼容。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证只是为了向后兼容。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **输入密码**  
  输入并确认系统管理员 (sa) 登录名。 密码是抵御入侵者的第一道防线，因此设置强密码对于系统安全是绝对必要的。 切勿设置空密码或弱 sa 密码。  
@@ -451,7 +451,7 @@ ms.lasthandoff: 02/15/2018
  将用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员角色中  
  默认情况下不启用此选项。 若要将当前安装用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员角色中，请选中此复选框。  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 作为 BUILTIN\Administrators 成员的用户在连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，不会自动添加到 sysadmin 固定服务器角色中。 只有已显式添加到服务器级管理员角色中的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 用户才能管理 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 Built-In\Users 组的任一成员都可连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例，但他们仅拥有执行数据库任务的有限权限。 因此，对于从先前 Windows 版本中的 BUILTIN\Administrators 和 Built-In\Users 继承 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特权的用户，必须在运行于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]实例中为其显式授予管理特权。  
+ 作为 BUILTIN\Administrators 成员的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 用户在连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 时，不会自动添加到 sysadmin 固定服务器角色中。 只有已显式添加到服务器级管理员角色中的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 用户才能管理 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 Built-In\Users 组的任一成员都可连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例，但他们仅拥有执行数据库任务的有限权限。 因此，对于从先前 Windows 版本中的 BUILTIN\Administrators 和 Built-In\Users 继承 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特权的用户，必须在运行于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]实例中为其显式授予管理特权。  
   
  若要在此安装程序完成后对用户角色进行任何更改，请使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 外围应用配置器工具 (SQLSAC.exe)。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员角色中的用户列表，请单击 **“添加新管理员”** 链接。  
   

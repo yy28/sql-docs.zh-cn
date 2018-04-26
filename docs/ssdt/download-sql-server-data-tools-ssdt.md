@@ -1,46 +1,47 @@
 ---
-title: "下载 SQL Server Data Tools (SSDT) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/09/2018
+title: 下载 SQL Server Data Tools (SSDT) | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "安装 ssdt, 下载 ssdt, 最新 ssdt"
+- 安装 ssdt, 下载 ssdt, 最新 ssdt
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-caps.latest.revision: 
+caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cdabb190f7ffd7258765560909510fb6e82f5158
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f7021631b041fbcd52b6411e3dc3c6d5ed041f4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下载 SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** 是一款可免费下载的现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Integration Services 包、Analysis Services 数据模型和 Reporting Services 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。 
 
-SSDT 15.5.2 是 Visual Studio 2017 15.5 或更高版本中的 SQL Server 数据库、Analysis Services、Reporting Services 和 Integration Services 项目的独立 Web 安装体验。
+SSDT 15.x 是 Visual Studio 2017 15.5 或更高版本中的 SQL Server 数据库、Analysis Services、Reporting Services 和 Integration Services 项目的独立 Web 安装体验。
 
 | SSDT for Visual Studio 2017 | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.5.2)](https://go.microsoft.com/fwlink/?LinkId=866452) | [![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
+|[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.6.0)](https://go.microsoft.com/fwlink/?linkid=871368) | [![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
 |||
 
 > [!IMPORTANT]
-> 在安装 SSDT for Visual Studio 2017 (15.5.2) 之前，请卸载 VS 2017 上已安装的“Microsoft Analysis Services 项目”和“Microsoft Reporting Services 项目”扩展，并关闭所有 VS 实例。 
+> 在安装 SSDT for Visual Studio 2017 (15.6.0) 之前，请卸载 VS 2017 上已安装的“Microsoft Analysis Services 项目”和“Microsoft Reporting Services 项目”扩展，并关闭所有 VS 实例。 
 > 
-> SSDT for Visual Studio 2017 15.5.x 的非英语版本不支持从 15.4.0 英语预览版升级，因此在安装 15.5.x 的其他语言版本之前，必须先卸载 15.4.0 英语预览版。 
+> SSDT for Visual Studio 2017 15.6.x 的非英语版本不支持从 15.4.0 英语预览版升级，因此在安装 15.6.x 的其他语言版本之前，必须先卸载 15.4.0 英语预览版。 
 
 
 SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4：[下载数据层应用程序框架 (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
@@ -50,8 +51,9 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4
 ## <a name="ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017
 **版本信息**  
   
-版本号：15.5.2  
-此版本的内部版本号为：14.0.16156.0
+版本号：15.6.0  
+内部版本号：14.0.16162.0  
+发布日期：2018 年 4 月 10 日  
 
 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
 
@@ -61,17 +63,17 @@ SSDT for Visual Studio 2017 与安装 VS 的系统要求相同，支持操作系
   
 此版本的 SSDT for VS 2017 可安装以下语言：  
 
-[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x804) | 
-[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x404) | 
-[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x409) | 
-[法语]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x40c)  
-[德语]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x407) | 
-[意大利语]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x410) | 
-[日语]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x411) | 
-[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x412) | 
-[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x416) | 
-[俄语]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x419) | 
-[西班牙语]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x40a)  
+[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x804) | 
+[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x404) | 
+[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x409) | 
+[法语]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x40c)  
+[德语]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x407) | 
+[意大利语]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x410) | 
+[日语]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x411) | 
+[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x412) | 
+[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x416) | 
+[俄语]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x419) | 
+[西班牙语]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x40a)  
 
 ## <a name="ssdt-for-visual-studio-2015"></a>SSDT for Visual Studio 2015
 **版本信息**  

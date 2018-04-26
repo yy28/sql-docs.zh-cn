@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,7 @@ ms.lasthandoff: 03/22/2018
 **msdb**数据库中的 **SQLAgentUserRole**、 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole**固定数据库角色的成员，以及 **sysadmin** 固定服务器角色的成员具有访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的权限。 不属于这些角色的用户不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理。 有关用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的角色的详细信息，请参阅 [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ### <a name="subsystems"></a>子系统  
-子系统是预定义的对象，表示作业步骤可用的功能。 每个代理都可以访问一个或多个子系统。 子系统可以提供安全性，因为它们分隔了对可用于代理的功能的访问。 除了 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤，每个作业步骤都在代理的上下文中运行。 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤使用 EXECUTE AS 命令设置安全上下文。  
+子系统是预定义的对象，表示作业步骤可用的功能。 每个代理都可以访问一个或多个子系统。 子系统可以提供安全性，因为它们分隔了对可用于代理的功能的访问。 除了 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤，每个作业步骤都在代理的上下文中运行。 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤使用 EXECUTE AS 命令将安全上下文设置为作业的所有者。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定义了下表中列出的子系统：  
   

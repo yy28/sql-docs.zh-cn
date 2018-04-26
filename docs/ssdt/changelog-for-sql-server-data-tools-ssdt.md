@@ -1,34 +1,66 @@
 ---
-title: "SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/09/2018
+title: SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
+内部版本号：14.0.16162.0  
+发布日期：2018 年 4 月 10 日
+  
+### <a name="whats-new"></a>新增功能
+
+**SSIS：**
+
+1.  修复问题：以 SQLServer2016 和 SQLServer2017 为目标时，AS 处理任务不记录任何处理步骤
+2.  修复问题：在 SSDT 中打开具有很长非英文名称的 dtsx 时发生访问冲突
+3.  修复问题：ScriptTask 变量列表有时会在任务 UI 中消失
+4.  修复问题：当包位置为 SQL Server 时，添加现有包的副本失败
+5.  修复问题：访问某个编辑器对话框中的组合框时，焦点会卡住。
+6.  修复问题：切换 VS 主题时背景不更改。
+7.  修复问题：注释和加载标签在深色主题中不可见。
+8.  修复问题：SSIS 工具箱禁用项的状态属性定义不正确。
+9.  修复问题：执行 WebServiceTask 始终失败。
+10. 修复问题：如果连接字符串设置为某个变量，且其中包含依赖于项目参数的表达式，包部署会失败。
+
+**安装程序：**
+
+1.  在隐私免责声明中添加“SQL Server Data Tools 客户体验改善计划”链接。
+2.  修复问题：当选择“安装新的 SQL Server Data Tools for Visual Studio 2017 实例”时会弹出 VS 安装程序窗口
+
+### <a name="known-issues"></a>已知问题：
+1.  当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
 内部版本号：14.0.16156.0
@@ -42,11 +74,11 @@ ms.lasthandoff: 02/11/2018
 4.  修复了使用其他语言时，某些字符串在 Hadoop 连接管理器编辑器中截断的问题。
 5.  修复了某些字符串在 OData 连接管理器编辑器中截断的问题。
 6.  修复了某些字符串在 Integration Services 导入项目向导窗口中截断的问题。
-7.  修复了标题位于 SSIS 工具中框信息窗口中的问题。
+7.  修复了标题位于 SSIS 工具框信息窗口中的问题。
 8.  修复了某些字符串在 Integration Services 部署向导窗口中截断的问题。 
 
 **安装程序**
-- 修复了下载有效负载有时失败，出现错误“系统找不到指定的文件 (0x80070002)”的问题  
+- 修复了下载有效负载有时失败，出现错误“系统找不到指定的文件 (0x80070002)”的问题。  
 
 ### <a name="known-issues"></a>已知问题
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。

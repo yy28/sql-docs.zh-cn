@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,6 @@ SQL 数据库托管实例：
    - 支持 SQL 代理作业。
    - 支持链接服务器。
 - 在[此处](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)了解有关托管实例的更多信息。
-
 
 对象资源管理器：
 - 添加了设置，以便在从对象资源管理器拖放至查询窗口时，不强制使用括号括住名称。 （用户建议 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 和 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)。）
@@ -109,7 +108,8 @@ SMO：
 
 ### <a name="known-issues"></a>已知问题
 
-- 目前存在一个已知问题，即在维护计划中配置日程安排时，SSMS 17.6 会发生故障。
+> [!WARNING]
+> 存在已知问题：当使用[维护计划](../relational-databases/maintenance-plans/maintenance-plans.md)时，SSMS 17.6 变得不稳定，甚至崩溃。 如果使用维护计划，请勿安装 SSMS 17.6。 如果已经安装 SSMS 17.6，且此问题正在产生不良影响，请降级到 17.5。 
 
 ## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 

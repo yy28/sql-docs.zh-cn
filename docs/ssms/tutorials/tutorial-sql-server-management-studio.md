@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 教程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,24 +52,24 @@ SQL Server Management Studio (SSMS) 将介绍用于管理 [!INCLUDE[ssNoVersion]
   
 - [教程：使用 SSMS 连接并查询 SQL Server](connect-query-sql-server.md)
 
-    在本部分中，你将了解如何连接到 SQL Server 实例。 此外，你还将了解用于创建并查询新数据库的一些基本 Transact-SQL (T-SQL) 命令。 
+    在本教程中，你将了解如何连接到 SQL Server 实例。 此外，你还将了解用于创建并查询新数据库的一些基本 Transact-SQL (T-SQL) 命令。 
 
 - [教程：在 SSMS 中编写对象脚本](scripting-ssms.md)
 
-    在本部分中，你将了解如何在 SSMS 中编写各种对象（包括数据库和查询）的脚本。 
+    在本教程中，你将了解如何在 SSMS 中编写各种对象（包括数据库和查询）的脚本。 
 
 - [教程：在 SSMS 中使用模板](templates-ssms.md)
    
-    在本部分中，你将了解如何使用 SSMS 中的预建模板。 
+    在本教程中，你将了解如何使用 SSMS 中的预建模板。 模板是一项少有人知的功能，可针对各种数据库管理任务存储大量 Transact-SQL 代码片段。 
 
 - [教程：SSMS 配置](ssms-configuration.md)
 
-    在本部分中，你将了解配置 SSMS 环境的基本信息。 
+    本教程介绍有关如何配置 SSMS 环境（例如更改环境布局）的基础知识。 本教程还介绍各种不同的 SSMS 组件。 
   
 
 - [教程：使用 SSMS 的其他提示和技巧](ssms-tricks.md)
 
-    在本部分中，你将了解使用 SSMS 的其他提示和技巧。 本教程包括以下内容：
+    在本教程中，你将了解使用 SSMS 的其他提示和技巧。 本教程包括以下内容：
     - 注释和取消注释文本
     - 缩进文本
     - 在对象资源管理器中筛选对象

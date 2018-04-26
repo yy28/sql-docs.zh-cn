@@ -1,30 +1,31 @@
 ---
-title: "使用内置函数验证、查询和更改 JSON 数据 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 使用内置函数验证、查询和更改 JSON 数据 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - JSON, built-in functions
 - functions (JSON)
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 21
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c6803992992cf2a62afe741df536c0fa87a5fe2d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f141625abf8c12314ab1aabe3c86618f6fb18f57
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -180,11 +181,11 @@ SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)（SQL Server 2016 和 JSON 支持）
+-   [SQL Server 2016 和 JSON 支持](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)（在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON）
+-   [在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)（JSON 充当 NoSQL 和关系环境之间的桥梁）
+-   [JSON 充当 NoSQL 和关系环境之间的桥梁](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>另请参阅  
  [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)   

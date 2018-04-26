@@ -1,16 +1,16 @@
 ---
-title: "使用扩展保护连接到数据库引擎 | Microsoft Docs"
-ms.custom: 
+title: 使用扩展保护连接到数据库引擎 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - spoofing attacks
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 开始支持扩展保护。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
   
 > [!IMPORTANT]  
 >  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅 [针对验证的扩展保护](http://support.microsoft.com/kb/968389)。  
