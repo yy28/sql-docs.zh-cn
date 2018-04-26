@@ -1,16 +1,16 @@
 ---
-title: "创建用户定义的数据类型别名 | Microsoft Docs"
-ms.custom: 
+title: 创建用户定义的数据类型别名 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
@@ -18,20 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a2acca73084c6815410f9e0f151ab12c7d5e0b3
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 435137451447ffa28f95befc098e1a1eb9358571
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
   
  **本主题内容**  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 02/19/2018
      **长度/精度**  
      相应地显示数据类型的长度或精度。 **长度** 适用于基于字符的用户定义数据类型； **精度** 仅适用于基于数字的用户定义数据类型。 该标签会根据先前所选的数据类型而相应地改变。 如果所选数据类型的长度或精度是固定的，则不能编辑此框。  
   
-     不会显示 **nvarchar(max)**、 **varchar(max)**或 **varbinary(max)** 数据类型的长度。  
+     不会显示 **nvarchar(max)**、 **varchar(max)** 或 **varbinary(max)** 数据类型的长度。  
   
      **名称**  
      如果创建新的用户定义数据类型别名，请键入用于在整个数据库中表示用户定义数据类型的唯一名称。 最大字符数必须符合系统的 **sysname** 数据类型的要求。 不能编辑现有的用户定义数据类型别名的名称。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/19/2018
   
      对于 **nchar** 和 **nvarchar** 数据类型，存储值始终是 **“长度”**中值的两倍。  
   
-     不会显示 **nvarchar(max)**、**varchar(max)**或 **varbinary(max)** 数据类型的存储。  
+     不会显示 **nvarchar(max)**、**varchar(max)** 或 **varbinary(max)** 数据类型的存储。  
   
 2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构。  
   
