@@ -1,16 +1,16 @@
 ---
-title: "指定字段终止符和行终止符 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 指定字段终止符和行终止符 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +76,7 @@ ms.lasthandoff: 03/20/2018
   
     -   使用 **-t** 开关为行中的所有字段（除最后一个字段以外）指定字段终止符，并使用 **-r** 开关指定行终止符。  
   
-    -   使用字符格式开关**-c** 或 **-w**（而不是 **-t** 开关）将字段终止符设置为制表符 \t。 这与指定 **-t**\t 的作用相同。  
+    -   使用字符格式开关 **-c** 或 **-w**（而不是 **-t** 开关）将字段终止符设置为制表符 \t。 这与指定 **-t**\t 的作用相同。  
   
         > [!NOTE]  
         >  如果指定了 **-n** （本机数据）或 **-N** （Unicode 本机）开关，则不会插入终止符。  
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  **bcp** 命令包含以下开关。  
   
-|开关|说明|  
+|开关|Description|  
 |------------|-----------------|  
 |**-c**|指定将数据字段作为字符数据加载。|  
 |**-t** `,`|指定逗号 (,) 作为字段终止符。|  
@@ -135,8 +136,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR ='field_terminator'|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
-    |ROWTERMINATOR ='row_terminator'|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
+    |FIELDTERMINATOR ='field_terminator'****|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
+    |ROWTERMINATOR ='row_terminator'****|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
   
      有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
@@ -176,7 +177,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |选项|Attribute|  
 |------------|---------------|  
-|DATAFILETYPE **='**char**'**|指定将数据字段作为字符数据加载。|  
+|DATAFILETYPE **='** char **'**|指定将数据字段作为字符数据加载。|  
 |FIELDTERMINATOR **='**`,`**'**|将逗号 (`,`) 指定为字段终止符。|  
 |ROWTERMINATOR **='**`\n`**'**|指定行终止符作为换行符。|  
   

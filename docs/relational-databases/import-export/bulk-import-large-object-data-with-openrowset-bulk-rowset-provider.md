@@ -1,16 +1,16 @@
 ---
-title: "使用 OPENROWSET BULK 行集提供程序批量导入大型对象数据 | Microsoft Docs"
-ms.custom: 
+title: 使用 OPENROWSET BULK 行集提供程序批量导入大型对象数据 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SINGLE_NCLOB option
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - large data, bulk imports
 - SINGLE_BLOB option
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cb73567a88cbdc4402a178fe7ec28f79cccca95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4e309875d56367c83a638fd8cea76b579125f607
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>使用 OPENROWSET BULK 行集提供程序批量导入大型对象数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ ms.lasthandoff: 02/03/2018
  OPENROWSET BULK 子句支持通过三个选项以单行或单列行集导入数据文件的内容。 您可以指定其中一个大型对象选项，而不是使用格式化文件。 这些选项如下所示：  
   
  SINGLE_BLOB  
- 以单行读取 *data_file* 的内容，以 **varbinary(max)**类型的单列行集返回内容。  
+ 以单行读取 *data_file* 的内容，以 **varbinary(max)** 类型的单列行集返回内容。  
   
  SINGLE_CLOB  
- 以字符读取指定数据文件的内容，以 **varchar(max)**类型的单行、单列行集返回内容，使用的是当前数据库的排序规则，例如文本或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文档。  
+ 以字符读取指定数据文件的内容，以 **varchar(max)** 类型的单行、单列行集返回内容，使用的是当前数据库的排序规则，例如文本或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文档。  
   
  SINGLE_NCLOB  
- 以 Unicode 读取指定数据文件的内容，以 **nvarchar(max)**类型的单行、单列行集返回内容，并使用当前数据库的排序规则。  
+ 以 Unicode 读取指定数据文件的内容，以 **nvarchar(max)** 类型的单行、单列行集返回内容，并使用当前数据库的排序规则。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 BULK INSERT 或 OPENROWSET (BULK...) 导入批量数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   

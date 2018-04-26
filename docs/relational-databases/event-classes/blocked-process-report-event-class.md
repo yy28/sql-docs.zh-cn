@@ -1,34 +1,35 @@
 ---
-title: "Blocked Process Report 事件类 | Microsoft Docs"
-ms.custom: 
+title: Blocked Process Report 事件类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36d8b302c134bdb18e55f69eeeb7bb916d825929
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 96b2dd7107ce1b7de95dd74df895d22e5dfab82e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Blocked Process Report** 事件类指明某个任务已被阻塞，导致超过指定的时间。 此事件类不包括系统任务和正在等待未发现死锁的资源的任务。  
+  **Blocked Process Report** 事件类指明某个任务已被阻塞，导致超过指定的时间。 此事件类不包括系统任务和正在等待未发现死锁的资源的任务。  
   
  若要配置阈值和报告生成频率，请使用 **sp_configure** 命令配置“阻塞的进程阈值”选项（以秒为单位进行设置）。 默认情况下，不生成阻塞的进程报告。 有关设置“阻塞的进程阈值”选项的详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   
@@ -41,8 +42,8 @@ ms.lasthandoff: 02/12/2018
 |**DatabaseID**|**int**|获取锁所在的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**Duration**|**bigint**|进程阻塞的时间（毫秒）。|13|是|  
 |**EndTime**|**datetime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。|15|是|  
-|**EventClass**|**int**|事件类型 = 137。|27|是|  
-|**EventSequence**|**int**|特定事件在请求中的顺序。|51|是|  
+|**EventClass**|**int**|事件类型 = 137。|27|“否”|  
+|**EventSequence**|**int**|特定事件在请求中的顺序。|51|“否”|  
 |**IndexID**|**int**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|24|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |**LoginSid**|**图像**|已登录的用户的安全标识符 (SID)。 系统线程中始终报告此事件。 IsSystem = 1；SID = sa。|41|是|  
