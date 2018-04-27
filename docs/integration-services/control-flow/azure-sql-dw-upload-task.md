@@ -2,7 +2,7 @@
 title: Azure SQL DW 上传任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: control-flow
@@ -16,16 +16,16 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: bff2df8d44cf8406a507fb764cb409f766f15bab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
 “Azure SQL DW 上传任务”  使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 按照高效的 PolyBase 方法执行上传流程，如 [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)（Azure SQL 数据仓库加载模式和策略）一文中所述。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/20/2018
 -----|-----------
 LocalDirectory|指定包含待上传数据文件的本地目录。
 Recursively|指定是否以递归方式搜索子目录。
-FileName|指定用于选择具有特定名称模式的文件的名称筛选器。 例如 MySheet\*.xls\* 将包含如 MySheet001.xsl 和 MySheetABC.xslx 等文件。
+FileName|指定用于选择具有特定名称模式的文件的名称筛选器。 例如 MySheet*.xls\* 将包含如 MySheet001.xsl 和 MySheetABC.xslx 等文件。
 RowDelimiter|指定标记每一行末尾的字符。
 ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 |（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
 IsFirstRowHeader|指定每个数据文件的第一行是否包含列名称，而非实际数据。

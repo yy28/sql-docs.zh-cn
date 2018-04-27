@@ -1,28 +1,28 @@
 ---
-title: "Oracle CDC 服务 | Microsoft Docs"
-ms.custom: 
+title: Oracle CDC 服务 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7371c120f4ff874a878a77cd3db0df8755aebd75
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 25b308788b7249f052cd877ac7e4b801f50eb5e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
   Oracle CDC 服务是运行 xdbcdcsvc.exe 程序的一种 Windows 服务。 Oracle CDC 服务可配置为在同一台计算机上运行多个 Windows 服务，每个服务都使用不同的 Windows 服务名称。 在单个计算机上创建多个 Oracle CDC Windows 服务通常是为了在它们之间或在每个服务需要使用不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时实现更好的隔离。  

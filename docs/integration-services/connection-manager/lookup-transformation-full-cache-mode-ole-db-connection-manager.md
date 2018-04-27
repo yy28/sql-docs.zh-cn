@@ -1,30 +1,30 @@
 ---
-title: "查找转换完全缓存模式 - OLE DB 连接管理器 | Microsoft Docs"
-ms.custom: 
+title: 查找转换完全缓存模式 - OLE DB 连接管理器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a4c0035ede0be79e1a37e144099155be9b30fd9a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查找转换完全缓存模式 - OLE DB 连接管理器
   可以将查找转换配置为使用完全缓存模式和 OLE DB 连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  

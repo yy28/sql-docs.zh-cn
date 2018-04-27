@@ -1,16 +1,16 @@
 ---
-title: "FTP 任务 | Microsoft Docs"
-ms.custom: 
+title: FTP 任务 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: e2ea750295bdd55129ec59eacf9a0563575e513d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
@@ -76,8 +76,8 @@ ms.lasthandoff: 03/20/2018
 |**FTPConnectingToServer**|指示任务已启动与 FTP 服务器的连接。|  
 |**FTPOperation**|报告任务所执行的 FTP 操作的开始及其类型。|  
   
-## <a name="related-tasks"></a>相关任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+## <a name="related-tasks"></a>Related Tasks  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，请参阅 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 03/20/2018
 ## <a name="ftp-task-editor-general-page"></a>FTP 任务编辑器（“常规”页）
   使用 **“FTP 任务编辑器”** 对话框的 **“常规”** 页可以指定连接到与任务通信的 FTP 服务器的 FTP 连接管理器。 您还可以命名和描述 FTP 任务。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **FtpConnection**  
  选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
@@ -110,11 +110,11 @@ ms.lasthandoff: 03/20/2018
 ## <a name="ftp-task-editor-file-transfer-page"></a>FTP 任务编辑器（“文件传输”页）
   可以使用 **“FTP 任务编辑器”** 对话框的 **“文件传输”** 页配置任务执行的 FTP 操作。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **IsRemotePathVariable**  
  指示远程路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **RemoteVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **RemotePath**。|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 03/20/2018
  **IsLocalPathVariable**  
  指示本地路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **LocalVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **LocalPath**。|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 03/20/2018
  **运算**  
  选择要执行的 FTP 操作。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**发送文件**|发送文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收文件**|接收文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
@@ -159,7 +159,7 @@ ms.lasthandoff: 03/20/2018
  **RemotePath**  
  选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关主题**：[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题** [FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 动态选项  
   

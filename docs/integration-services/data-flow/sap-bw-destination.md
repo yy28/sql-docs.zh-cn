@@ -1,28 +1,28 @@
 ---
-title: "SAP BW 目标 | Microsoft Docs"
-ms.custom: 
+title: SAP BW 目标 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47b31595b327e762f4710ffbfd85f1c3ccf894c9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 49400239fd34e67ee1c2c2dd2d1c7d17c1620889
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
   SAP BW 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的目标组件。 因此，SAP BW 目标将来自 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流的数据加载到 SAP Netweaver BW 版本 7 系统。  

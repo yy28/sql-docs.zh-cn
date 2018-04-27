@@ -1,28 +1,28 @@
 ---
-title: "使用新建实例向导 | Microsoft Docs"
-ms.custom: 
+title: 使用新建实例向导 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e6e92aa871347938f49c0a5e1d345e4a8d98377
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 01bf2921f9ae8bbe43c925726a3819ac9bfd18b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新建实例向导
   “新建实例”向导用于为 CDC 服务创建新实例。 您从 CDC 设计器控制台打开“创建 Oracle CDC 实例”向导。 您可以在“新建实例”向导中执行以下操作。  

@@ -1,16 +1,16 @@
 ---
-title: "Integration Services 数据类型 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 数据类型 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying data types
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 
+caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 929ae55c02aa0e5c5172c072c192b88902a0a07f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
 -   使用数据转换将列的数据类型从一种数据类型转换为另一种数据类型。 有关详细信息，请参阅 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
--   使用派生列转换创建数据类型与原始列数据类型不同的列的副本。 有关详细信息，请参阅 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
+-   使用派生列转换创建数据类型与原始列数据类型不同的列的副本。 有关详细信息，请参阅 [派生列转换](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>字符串和日期/时间数据类型之间的转换  
  下表列出了日期/时间数据类型和字符串之间的转换结果：  

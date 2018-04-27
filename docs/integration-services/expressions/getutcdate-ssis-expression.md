@@ -1,16 +1,16 @@
 ---
-title: "GETUTCDATE（SSIS 表达式）| Microsoft Docs"
-ms.custom: 
+title: GETUTCDATE（SSIS 表达式）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dates [Integration Services], GETUTCDATE
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - UTC time
 - GETUTCDATE function
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07df1948bdd1a6d74ef3a858c1823838ab8e07a7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0067e1204c8445077d7b07e529292e462fd3488a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE（SSIS 表达式）
   使用 DT_DBTIMESTAMP 格式返回以 UTC 时间（协调世界时或格林尼治标准时间）表示的系统当前日期。 GETUTCDATE 函数不带参数。  
