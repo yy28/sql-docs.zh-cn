@@ -2,7 +2,7 @@
 title: 分析服务器属性 （选项卡上的日志） |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 915d8b9b06d30ce7690b177f71f14d3ce8f38ca8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2ac693b1ea77d909301454db6ea551c1983245a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>分析服务器属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-使用 **“分析服务器属性”** 对话框中的 **“登录”** 选项卡可以指定 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 服务使用的帐户，还可以启动和停止该服务。  
+  使用 **“分析服务器属性”** 对话框中的 **“登录”** 选项卡可以指定 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 服务使用的帐户，还可以启动和停止该服务。  
   
 > [!NOTE]  
 >  更改群集实例上的服务使用的 **“帐户名”** 时，新帐户必须是安装期间为待更改服务指定的域组的成员，或者您必须有权添加该组的成员。 如果您无权修改组成员身份，请与域管理员联系。  

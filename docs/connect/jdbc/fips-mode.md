@@ -1,28 +1,28 @@
 ---
-title: "FIPS 模式下 |Microsoft 文档"
-ms.custom: 
+title: FIPS 模式下 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
 ms.workload: Inactive
-ms.openlocfilehash: e6e60a44f4dbe890683436ea6f6801f504396239
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: bc357dc09c8357db8c9a5de24d6644029f31dd14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fips-mode"></a>FIPS 模式下
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -93,7 +93,7 @@ public boolean isFIPS() throws Exception {
 |属性|类型|默认|Description|说明|
 |---|---|---|---|---|
 |encrypt|布尔值 ["true / false"]|"false"|JVM FIPS 已启用加密属性应为**true**||
-|TrustServerCertificate|布尔值 ["true / false"]|"false"|针对 FIPS，用户需要验证证书链，以便用户应使用**"false"**此属性的值。 ||
+|TrustServerCertificate|布尔值 ["true / false"]|"false"|针对 FIPS，用户需要验证证书链，以便用户应使用 **"false"** 此属性的值。 ||
 |trustStore|字符串|null|你可以导入你的证书你 Java 密钥库文件路径。 如果你的系统，则无需传递任何内容安装证书。 驱动程序使用 cacerts 或 jssecacerts 文件。||
 |trustStorePassword|字符串|null|用于检查 trustStore 数据完整性的密码。||
 |fips|布尔值 ["true / false"]|"false"|此属性对于 fips 启用 JVM 应为**true**|添加在 6.1.4 (稳定版本 6.2.2)||

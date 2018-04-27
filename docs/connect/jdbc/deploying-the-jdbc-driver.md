@@ -1,27 +1,28 @@
 ---
-title: "部署的 JDBC 驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 部署的 JDBC 驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fdeed91effe8c6619121f6ed392237f710a785d8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: dc9f01dd72d96a50df220c84827bd7afb826168c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

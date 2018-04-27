@@ -1,30 +1,33 @@
 ---
-title: "getTimestamp 方法 （int、 java.util.Calendar） |Microsoft 文档"
-ms.custom: 
+title: getTimestamp 方法 （int、 java.util.Calendar） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getTimestamp (int, java.util.Calendar)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getTimestamp (int, java.util.Calendar)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce7ad759d6901ccdc641d693f836180a1152fe84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 557ac549e51e2d0fa1d9d5119915d8b6cbea80fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +63,7 @@ public java.sql.Timestamp getTimestamp(int index,
  此方法返回值只能从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**和**smalldatetime**列。  
   
 ## <a name="see-also"></a>另请参阅  
- [getTimestamp 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+ [getTimestamp 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

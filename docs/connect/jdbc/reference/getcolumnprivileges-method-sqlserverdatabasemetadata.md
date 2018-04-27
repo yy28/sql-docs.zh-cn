@@ -1,30 +1,33 @@
 ---
-title: "getColumnPrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getColumnPrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumnPrivileges
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumnPrivileges
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2d0e071acf8df933f42fb1adea31ad759763096
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6b88af8e4af62f556bd22a3769d587ad214a1273
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *目录*  
+ *catalog*  
   
  A**字符串**，其中包含目录名称。  
   
- *架构*  
+ *schema*  
   
  A**字符串**包含架构的名称。  
   
@@ -69,7 +72,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  GetColumnPrivileges 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**字符串**|目录名称。|  
 |TABLE_SCHEM|**字符串**|表架构名称。|  

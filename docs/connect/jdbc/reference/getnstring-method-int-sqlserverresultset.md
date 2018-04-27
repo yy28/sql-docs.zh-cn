@@ -1,27 +1,28 @@
 ---
-title: "getNString 方法 (int) (SQLServerResultSet) |Microsoft 文档"
-ms.custom: 
+title: getNString 方法 (int) (SQLServerResultSet) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd72b796ee87e21b1c480af87c5510e8de83e722
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e5811867040a00e30bd0d0983ba9faa40e99aae6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>getNString 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +53,7 @@ public java.lang.String getNString(int columnIndex)
  此方法可以用于检索的值**nvarchar**， **nchar**， **nvarchar (max)**， **ntext**，或**xml**此当前行中的列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [getNString 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   
+ [getNString 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

@@ -2,7 +2,7 @@
 title: SQL Native Client 11.0 配置 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -20,15 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b49f2efcee75e737d6caeacc752999203c2358af
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c6a770329b502311f95951931f9e960abd8a6436
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-本节包含了按 F1 后看到的有关  配置管理器中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对话框的帮助主题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是客户端计算机用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的网络库，与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起启动。  
+  本节包含了按 F1 后看到的有关  配置管理器中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对话框的帮助主题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是客户端计算机用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的网络库，与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起启动。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 配置中配置的设置将在运行客户端程序的计算机上使用。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上配置这些设置时，它们仅影响那些运行在服务器上的客户端程序。  
   

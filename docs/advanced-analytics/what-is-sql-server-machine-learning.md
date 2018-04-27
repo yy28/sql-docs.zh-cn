@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什么是 SQL Server 计算机学习 Services？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ SQL Server 计算机学习 Services 是嵌入、 预测分析和数据科学引�
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | 函数将 R 脚本放入 T-SQL 的存储过程，与数据库中注册的存储的过程和 R 开发环境中运行存储的过程。
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | none | 主要用于在非 SQL 安装中的机器学习服务器，如[（独立版） 版本](r/r-server-standalone.md)。 此包用于部署和承载 web 服务、 生成与专用 web 的横向扩展拓扑和计算节点、 本地和远程会话，运行诊断和的详细信息之间切换。 对于 （数据库中） 安装，使用此包中的客户端容量： 例如，若要访问远程服务器上的 web 服务专用于运行仅机器学习服务工作负荷。 |
 
-通过包分发和内置于多个产品的解释程序发送的自定义 R 和 Python 代码可移植性。 SQL Server 中提供了同一个包也会出现在多个其他 Microsoft 产品和服务，包括一个名为的非 SQL 版本[Microsoft 机器学习 Server](https://docs.microsoft.com/machine-learning-server/)。 可用的客户端，包括我们 R 和 Pyton 的解释程序包括[Microsoft R 客户端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)和[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
+通过包分发和内置于多个产品的解释程序发送的自定义 R 和 Python 代码可移植性。 SQL Server 中提供了同一个包也会出现在多个其他 Microsoft 产品和服务，包括一个名为的非 SQL 版本[Microsoft 机器学习 Server](https://docs.microsoft.com/machine-learning-server/)。 可用的客户端，包括我们 R 和 Python 解释程序包括[Microsoft R 客户端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)和[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
 
 包和解释程序也是可用的多[Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)，Azure 机器学习和 Azure 服务，如[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)。 
 
@@ -90,15 +90,15 @@ SQL Server 文档的最新版本的版本不可知。 对于 SQL Server 机器�
 
 ## <a name="next-steps"></a>后续步骤
 
-**步骤 1:**安装和配置软件。 
+**步骤 1:** 安装和配置软件。 
 
 + [安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](install/sql-machine-learning-services-windows-install.md)
 
-**步骤 2:**开始使用代码中使用的以下教程之一：
+**步骤 2:** 开始使用代码中使用的以下教程之一：
 
 + [教程： 在 T-SQL 中运行 Python](tutorials/run-python-using-t-sql.md)
 + [教程： 在 T-SQL 中运行 R](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 
-**步骤 3:**添加你最喜欢的 R 和 Python 程序包并将它们与由 Microsoft 提供的包配合使用
+**步骤 3:** 添加你最喜欢的 R 和 Python 程序包并将它们与由 Microsoft 提供的包配合使用
 
 + [SQL Server 的 R 包管理](r/r-package-management-for-sql-server-r-services.md)

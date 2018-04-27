@@ -1,30 +1,33 @@
 ---
-title: "getTime 方法 (int) (SQLServerResultSet) |Microsoft 文档"
-ms.custom: 
+title: getTime 方法 (int) (SQLServerResultSet) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getTime (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getTime (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f080fccd5312b3f1e22cfb2400777931f5f5649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: cb16c56f9fbed5383bf018f6d05eed70b13821ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public java.sql.Time getTime(int columnIndex)
  此方法返回的有效时间部分[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]datetime 或 smalldatetime 数据类型，与设置为 1970年/01/01 Java 基线日期的日期部分。  
   
 ## <a name="see-also"></a>另请参阅  
- [getTime 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [getTime 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

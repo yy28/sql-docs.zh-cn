@@ -2,7 +2,7 @@
 title: SQL Server 属性 （服务选项卡） |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af6abd37fa23a4bfd77695296118896f27e8f3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6ccba4a989f29ca9488f74e9639b14a1704ddef2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
+  使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
   
 ## <a name="options"></a>“常规”  
  **二进制路径**  

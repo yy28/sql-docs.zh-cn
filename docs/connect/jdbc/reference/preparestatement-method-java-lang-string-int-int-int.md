@@ -1,30 +1,33 @@
 ---
-title: "prepareStatement 方法 （java.lang.String、 int、 int、 int） |Microsoft 文档"
-ms.custom: 
+title: prepareStatement 方法 （java.lang.String、 int、 int、 int） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnection.prepareStatement (java.lang.String, int, int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnection.prepareStatement (java.lang.String, int, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3356b173391b2b9aa118f7806fbb6645412bcda2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 32e51478c65af13830b26579f23e0a47bcfc0ff7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement 方法 (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -68,7 +71,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  由 java.sql.Connection 接口中的 prepareStatement 方法指定此 prepareStatement 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [prepareStatement 方法 &#40;SQLServerConnection &#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   
+ [prepareStatement 方法&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 类](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -1,30 +1,33 @@
 ---
-title: "getInt 方法 (java.lang.String) (SQLServerResultSet) |Microsoft 文档"
-ms.custom: 
+title: getInt 方法 (java.lang.String) (SQLServerResultSet) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getInt (java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getInt (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98ddf079f6a2a20ce2e6d42d771c6e1d46d2dfe5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: db026dcd369975db9b218d4e04dcaf757ace650d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getint-method-javalangstring-sqlserverresultset"></a>getInt 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public int getInt(java.lang.String columnName)
  仅在支持此方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以安全地返回如 int、 smallint、 tinyint 和位的整数值的数据类型。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [getInt 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)   
+ [getInt 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
