@@ -1,6 +1,6 @@
 ---
 title: SSMA for Access to SQL 中的新 GUI 功能 |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ed90f86af4d9a9d529401935e18c24ccd4e64d4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5e1d78081ab845f2cb03f4b6b1aa0114515060f4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SSMA for Access to SQL 中的新 GUI 功能
 本章介绍 SSMA 用户界面的新的功能  
@@ -105,7 +105,7 @@ GUI 对象历史记录可用于以下优势导航对象时：
   
 -   右键单击弹出菜单中选择快速信息  
   
--   Press Ctrl+Shift+Space  
+-   按 Ctrl + Shift + 空格键  
   
 ### <a name="find-declaration"></a>查找声明  
 你可以转到以下方式的光标位置处的对象的声明：  

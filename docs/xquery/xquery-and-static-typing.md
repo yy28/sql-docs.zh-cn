@@ -2,8 +2,8 @@
 title: XQuery 和静态键入 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -27,11 +27,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 944077fa810f845d14bbcf670275a28f4441cf09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 与静态类型化
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/10/2018
 ## <a name="static-type-inference"></a>静态类型推导  
  静态类型推导用于确定表达式的返回类型。 它通过运用输入参数的静态类型和运算的静态语义并推断结果的静态类型，来确定返回类型。 例如，通过以下方式来确定表达式 1 + 2.3 的静态类型：  
   
--   1 的静态类型是**xs:integer**和 2.3 静态类型时**xs: decimal**。 根据动态语义的静态语义**+**操作将整数转换为十进制数，然后返回小数。 推断出的静态类型将为**xs: decimal**。  
+-   1 的静态类型是**xs:integer**和 2.3 静态类型时**xs: decimal**。 根据动态语义的静态语义**+** 操作将整数转换为十进制数，然后返回小数。 推断出的静态类型将为**xs: decimal**。  
   
  对于非类型化的 XML 实例，有一些特殊类型表示数据没有被类型化。 此信息用于静态类型检查期间和执行某些隐式转换。  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 04/10/2018
   
  子类型是根据使用派生（通过限制或扩展 XML 架构）的子类型化规则定义的。 例如，如果类型为 S 的所有值还是类型 T 的实例，则类型 S 就是类型 T 的子类型。  
   
- 此外，根据 XML 架构类型的层次结构，所有整数值还都是小数值。 但是，并非所有小数值都是整数。 因此，整数是小数的子类型，反之则不然。 例如， **+**操作只允许某些类型，如数值类型的值**xs:integer**， **xs: decimal**， **xs:float**，和**将 xs: double**。 如果其他值类型，如**xs: string**，会传递，该操作将引发类型错误。 这称为强类型化。 其他类型（例如用于表示非类型化的 XML 的原子类型）的值可以隐式转换为运算所接受的类型的值。 这称为弱类型化。  
+ 此外，根据 XML 架构类型的层次结构，所有整数值还都是小数值。 但是，并非所有小数值都是整数。 因此，整数是小数的子类型，反之则不然。 例如， **+** 操作只允许某些类型，如数值类型的值**xs:integer**， **xs: decimal**， **xs:float**，和**将 xs: double**。 如果其他值类型，如**xs: string**，会传递，该操作将引发类型错误。 这称为强类型化。 其他类型（例如用于表示非类型化的 XML 的原子类型）的值可以隐式转换为运算所接受的类型的值。 这称为弱类型化。  
   
- 如果要求在隐式转换后进行弱类型化，则静态类型检查可保证只有带有正确基数的允许使用类型的值才会被传递到运算。 "String"+ 1，它可以识别"string"的静态类型是**xs: string**。 因为这不是允许的类型为**+**引发操作，类型错误。  
+ 如果要求在隐式转换后进行弱类型化，则静态类型检查可保证只有带有正确基数的允许使用类型的值才会被传递到运算。 "String"+ 1，它可以识别"string"的静态类型是**xs: string**。 因为这不是允许的类型为**+** 引发操作，类型错误。  
   
- 在将任意表达式 E2 与任意表达式 E1 的结果相加 (E1 + E2) 的情况下，静态类型推导将首先确定 E1 和 E2 的静态类型，然后检查它们的静态类型是否为该运算允许使用的类型。 例如，如果 E1 的静态类型可以是**xs: string**或**xs:integer**、 静态类型检查引发类型错误，即使某些值在运行的时仍可能是整数。 相同会出现此情况，如果 E1 的静态类型**xs:integer\***。 因为**+**操作仅接受恰好一个整数值和 E1 无法返回零或多个静态类型检查引发错误。  
+ 在将任意表达式 E2 与任意表达式 E1 的结果相加 (E1 + E2) 的情况下，静态类型推导将首先确定 E1 和 E2 的静态类型，然后检查它们的静态类型是否为该运算允许使用的类型。 例如，如果 E1 的静态类型可以是**xs: string**或**xs:integer**、 静态类型检查引发类型错误，即使某些值在运行的时仍可能是整数。 相同会出现此情况，如果 E1 的静态类型**xs:integer\***。 因为**+** 操作仅接受恰好一个整数值和 E1 无法返回零或多个静态类型检查引发错误。  
   
  如前面所述，类型推导经常推断出不同于所传递数据的、用户不了解的数据类型。 在这些情况下，用户就必须重写查询。 以下为一些常见的情况：  
   

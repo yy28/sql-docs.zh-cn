@@ -1,31 +1,31 @@
 ---
-title: "SSMA for SAP ASE (SybaseToSQL) 中的新增 |Microsoft 文档"
-ms.custom: 
+title: SSMA for SAP ASE (SybaseToSQL) 中的新增 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd8bd705a767095e28a55dc22d6b26fcd079baf6
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: cfcb84fd1be2823cf23b47aa4a1d1675a35a989f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) 的新增功能
 本主题列出每个版本中的 SAP ASE (以前称为 Sybase 的 SSMA) 更改了 SSMA。 
@@ -46,7 +46,7 @@ SSMA for SAP ASE 的 v7.6 版本包含以下更改：
 > [!IMPORTANT]
 > SSMA v7.4 和更高版本，.Net 4.5.2 的目标是安装先决条件，并已停止使用该工具的 32 位版本。
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA v7.5 还是
 SSMA for SAP ASE 的 v7.5 还是版本包含以下更改：
 -   增强了多项改进，以确保残障人士更大的可访问性。
 -   更新以创建或替换语法提供支持。
@@ -75,7 +75,7 @@ Sybase 的 SSMA v7.3 版包含以下更改：
       - 在此博客文章中，提供了有关如何构造的自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
       - 用于转换的示例项目可以下载这个[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>SSMA 7.2 版
 Sybase 的 SSMA 7.2 版版包含以下更改：
 - 改进的质量和转换度量值根据客户反馈的目标修补程序。
 - 遥测功能增强以提供更好的数据点，以解决客户问题和改进 SSMA 的转换率。
@@ -217,4 +217,4 @@ Sybase 的 SSMA 2006 年 11 月版包含以下更改：
 2006 年 7 月发布的用于 Sybase 的 SSMA 是初次发布。  
   
 ## <a name="see-also"></a>另请参阅  
-[用于 Sybase &#40; 入门 SSMASybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+[快速入门用于 Sybase 的 SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

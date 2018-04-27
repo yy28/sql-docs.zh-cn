@@ -1,6 +1,6 @@
 ---
 title: Oracle 架构评估转换 (OracleToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 72e4156ed3ac58a4870ab5487a3ece2e3adeaadb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30cead1b886fecd524e417b5daee6f76ebc796d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Oracle 架构评估转换 (OracleToSQL)
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，迁移将十分复杂和多少时间应确定将需要迁移。 SSMA 可以创建显示百分比将成功转换的对象的评估报表。 SSMA 还允许你查看的特定问题导致转换失败。  
@@ -82,13 +82,13 @@ SSMA 时它会创建此评估报告，将转换到所选的 Oracle 数据库对�
   
     -   更新 SSMA 中的 Oracle 语法。 你可以更新过程、 函数、 触发器、 打包的函数和打包的过程的语法。 若要更新的语法，在 Oracle 元数据资源管理器窗格中选择的对象，请单击**SQL**选项卡上，然后修改的 SQL 代码。 离开项时，系统将提示你保存已更新的语法。 你可以查看对象报告的错误上**报表**选项卡。  
   
-    -   在 Oracle 中，你可以修改 Oracle 对象，可以删除或修改有问题的代码。 若要更新的代码载入 SSMA，你将需要更新的元数据。 有关详细信息，请参阅[连接到 Oracle 数据库 &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
+    -   在 Oracle 中，你可以修改 Oracle 对象，可以删除或修改有问题的代码。 若要更新的代码载入 SSMA，你将需要更新的元数据。 有关详细信息，请参阅[连接到 Oracle 数据库&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
     -   你可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器和 Oracle 元数据资源管理器中，清除项旁边的复选框，在加载到对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]从 Oracle 中迁移数据。  
   
 ## <a name="next-step"></a>下一步  
-[转换 Oracle 架构 &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
+[转换 Oracle 架构&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: 将 MySQL 和 SQL Server 字符映射设置 (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>将 MySQL 和 SQL Server 字符映射设置 (MySQLToSQL)
 可以为 MySQL 字符数据类型、 表达式和文本指定字符集 （字符集）。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/06/2018
 > 它们分别是：  
 >   
 > 1.  **应用：**应用用户，仅当字符集的映射进行编辑，尚未保存时，才启用所做的更改。  
-> 2.  **取消:**取消用户所做的更改。 字符集的映射进行了编辑，但不是会保存时，获取启用该按钮。  
+> 2.  **取消:** 取消用户所做的更改。 字符集的映射进行了编辑，但不是会保存时，获取启用该按钮。  
 > 3.  **重置为默认值：**将所有映射重都置为默认值。  
   
 1.  **在根元数据节点级别：** Charset 映射网格包含 charset 网格与每个字符集为一个单独的列。 网格中的列是：  
@@ -101,12 +101,12 @@ ms.lasthandoff: 04/06/2018
     |ascii|US ASCII|CHAR/VARCHAR （默认值）|  
     |ujis|EUC-JP 日语|NCHAR/NVARCHAR （默认值）|  
     |sjis|Shift JIS 日语|NCHAR/NVARCHAR （默认值）|  
-    |希伯来语|ISO 8859-8 Hebrew|CHAR/VARCHAR （默认值）|  
+    |希伯来语|ISO 8859-8 希伯来语|CHAR/VARCHAR （默认值）|  
     |tis620|TIS620 泰语|CHAR/VARCHAR （默认值）|  
     |euckr|EUC KR 朝鲜语|NCHAR/NVARCHAR （默认值）|  
     |koi8u|KOI8-U 乌克兰语|CHAR/VARCHAR （默认值）|  
     |gb2312|GB2312 中文 （简体的)|NCHAR/NVARCHAR （默认值）|  
-    |希腊语|ISO 8859-7 Greek|CHAR/VARCHAR （默认值）|  
+    |希腊语|ISO 8859-7 希腊语|CHAR/VARCHAR （默认值）|  
     |cp 1250|Windows 中欧|CHAR/VARCHAR （默认值）|  
     |gbk|简体中文 GBK|NCHAR/NVARCHAR （默认值）|  
     |latin5|ISO 8859-9 土耳其语|CHAR/VARCHAR （默认值）|  
@@ -118,12 +118,12 @@ ms.lasthandoff: 04/06/2018
     |macce|Mac 中欧|CHAR/VARCHAR （默认值）|  
     |macroman|Mac 西部欧洲|CHAR/VARCHAR （默认值）|  
     |cp852|DOS 中部欧洲|CHAR/VARCHAR （默认值）|  
-    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR （默认值）|  
-    |cp 1251|Windows Cyrillic|CHAR/VARCHAR （默认值）|  
+    |latin7|ISO 8859-13 波罗|CHAR/VARCHAR （默认值）|  
+    |cp 1251|Windows 西里尔文|CHAR/VARCHAR （默认值）|  
     |cp 1256|Windows 阿拉伯语|CHAR/VARCHAR （默认值）|  
     |cp 1257|Windows 波罗|CHAR/VARCHAR （默认值）|  
     |BINARY|二进制伪 charset|CHAR/VARCHAR （默认值）|  
-    |geostd8|GEOSTD8 Georgian|CHAR/VARCHAR （默认值）|  
+    |geostd8|GEOSTD8 格鲁吉亚语|CHAR/VARCHAR （默认值）|  
     |cp932|对于 Windows 日文 SJIS|NCHAR/NVARCHAR （默认值）|  
     |eucjpms|对于 Windows 日文 UJIS|NCHAR/NVARCHAR （默认值）|  
   

@@ -1,6 +1,6 @@
 ---
 title: 生成报表 (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,18 +23,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b452d85718dbdca6ade3c40417fa8b200ea74cdc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 44e368d2839725a99b3c2d38db6c24e1c9114537
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-mysqltosql"></a>生成报表 (MySQLToSQL)
 使用命令执行特定活动的报告中在对象树级别的 SSMA 控制台中生成。  
   
 使用以下过程以生成报告：  
   
-1.  指定**摘要-报表-向其写入**参数。 相关的报表，存储作为文件名称 （如果指定） 或指定的文件夹中。 文件名称是系统预定义的位置下, 表中所述**&lt;n&gt;**是唯一的文件数以每次执行同一命令与数字递增。  
+1.  指定**摘要-报表-向其写入**参数。 相关的报表，存储作为文件名称 （如果指定） 或指定的文件夹中。 文件名称是系统预定义的位置下, 表中所述**&lt;n&gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
   
     报表 vis à vis 命令是：  
   
@@ -43,10 +43,10 @@ ms.lasthandoff: 04/06/2018
     |**Sl。不。**|**Command**|**报表标题**|  
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|迁移数据|DataMigrationReport&lt;n&gt;.XML|  
+    |3|迁移数据|DataMigrationReport&lt;n&gt;。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |5|同步目标|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|从数据库中刷新|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > 输出报告是不同的评估报表。 前者是对执行命令时的性能报表，后者是以编程方式使用的 XML 报表。  
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/06/2018
 ```  
   
 ### <a name="synchronize-target"></a>同步目标：  
-该命令**同步目标**具有**报表-到错误**参数，指定该同步操作的错误报告的位置。 然后，名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;**是唯一的文件数以每次执行同一命令与数字递增。  
+该命令**同步目标**具有**报表-到错误**参数，指定该同步操作的错误报告的位置。 然后，名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
   
 **注意：**如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
   
@@ -117,14 +117,14 @@ ms.lasthandoff: 04/06/2018
   
 **-错误：**指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
--   report-total-as-warning  
+-   为警告报告总数  
   
--   report-each-as-warning  
+-   报表-每个-作为-警告  
   
--   fail-script  
+-   失败脚本  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
-该命令**从数据库中刷新**具有**报表-到错误**参数，指定刷新操作的错误报告的位置。 然后，名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;**是唯一的文件数以每次执行同一命令与数字递增。  
+该命令**从数据库中刷新**具有**报表-到错误**参数，指定刷新操作的错误报告的位置。 然后，名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
   
 **注意：**如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
   
@@ -147,11 +147,11 @@ ms.lasthandoff: 04/06/2018
   
 **-错误：**指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
--   report-total-as-warning  
+-   为警告报告总数  
   
--   report-each-as-warning  
+-   报表-每个-作为-警告  
   
--   fail-script  
+-   失败脚本  
   
 ## <a name="see-also"></a>另请参阅  
 [执行 SSMA 控制台 (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

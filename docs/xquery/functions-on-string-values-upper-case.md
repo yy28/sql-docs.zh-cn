@@ -1,16 +1,16 @@
 ---
-title: "大写函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 大写函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - upper-case
 - upper-case Function (XQuery)
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 885c66230a2a29b204e60b310bf50fd426db848c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1c444ef705e7e806e7941aa01311691f80d884a2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---upper-case"></a>对字符串值的大写形式的函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  此函数将在每个字符转换*$arg*为其等效的大写形式。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为大写。 这一标准与 Unicode 标准码位标准的映射不相同。  
+  此函数将在每个字符转换 *$arg*为其等效的大写形式。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为大写。 这一标准与 Unicode 标准码位标准的映射不相同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |*$arg*|要转换为大写的字符串值。|  
   
 ## <a name="remarks"></a>注释  
- 如果值*$arg*为空，则返回一个零长度字符串。  
+ 如果值 *$arg*为空，则返回一个零长度字符串。  
   
 ## <a name="examples"></a>示例  
   

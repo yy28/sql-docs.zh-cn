@@ -1,16 +1,16 @@
 ---
-title: "在路径表达式步骤中指定的谓词 |Microsoft 文档"
-ms.custom: 
+title: 在路径表达式步骤中指定的谓词 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - qualifiers [XQuery]
 - path expressions [XQuery]
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9eafae8a2834073ef6e6db380d074b7e0290f1ee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b44c3202e4e64f96ded4a615232405ab8d5bc4cc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-predicates"></a>路径表达式的指定谓词
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ WHERE ProductModelID=7
   
      此查询中的路径表达式仅返回指定了 LotSize 属性的 <`Location`> 元素节点。 如果谓词返回特定 <`Location`> 的空序列，将不在结果中返回该生产车间。  
   
-2.  谓词值只能是 xs:integer、 xs: boolean 或节点\*。 节点\*，谓词的计算结果为如果没有任何节点，则为 True 和 False 空序列。 对于任何其他数值类型（如双精度类型和浮点类型），将生成静态类型化错误。 当且仅当所得到的整数等于上下文位置值时，表达式的谓词真值才为 True。 此外，仅整数文本值与**last （)**函数减少到 1 的筛选的步骤表达式的基数。  
+2.  谓词值只能是 xs:integer、 xs: boolean 或节点\*。 节点\*，谓词的计算结果为如果没有任何节点，则为 True 和 False 空序列。 对于任何其他数值类型（如双精度类型和浮点类型），将生成静态类型化错误。 当且仅当所得到的整数等于上下文位置值时，表达式的谓词真值才为 True。 此外，仅整数文本值与**last （)** 函数减少到 1 的筛选的步骤表达式的基数。  
   
      例如，下列查询将检索 <`Features`> 元素的第三个子元素节点。  
   
@@ -226,9 +226,9 @@ WHERE CatalogDescription.exist('
   
 -   WHERE 子句指定[exist （） 方法 （XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)。  
   
--   中的路径表达式**exist （)**方法在第二个步骤中指定的谓词。 如果谓词表达式返回至少一个功能的序列，则该谓词表达式的真值为 True。 在这种情况下，因为**exist （)**方法，则返回 True，则返回 ProductModelID。  
+-   中的路径表达式**exist （)** 方法在第二个步骤中指定的谓词。 如果谓词表达式返回至少一个功能的序列，则该谓词表达式的真值为 True。 在这种情况下，因为**exist （)** 方法，则返回 True，则返回 ProductModelID。  
   
 ## <a name="static-typing-and-predicate-filters"></a>静态类型化和谓词筛选器  
- 谓词可能还会影响表达式的静态推断类型。 整数文本值与**last （)**函数减少到最多一个筛选的步骤表达式的基数。  
+ 谓词可能还会影响表达式的静态推断类型。 整数文本值与**last （)** 函数减少到最多一个筛选的步骤表达式的基数。  
   
   

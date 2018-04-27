@@ -1,6 +1,6 @@
 ---
 title: 为 Oracle 组件 (OracleToSQL) 删除 SSMA |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 369c3d4cba7e60bde7c7f55bb1e96fd0d7ac4381
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f55d809746dc5782a8d591cd6e85322394035cb2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>为 Oracle 组件 (OracleToSQL) 删除 SSMA
 完成后将数据库迁移到的 Oracle 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可能想要卸载 SSMA 组件。 你可以随时卸载客户端组件。 但是，你不应卸载来自的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]除非你已迁移的数据库不再使用中的函数**ssma_oracle**架构**sysdb**数据库。  
@@ -64,6 +64,6 @@ ms.lasthandoff: 12/21/2017
 在卸载后你可以确认在对象**sysdb.ssma_oracle**架构，甚至整个**sysdb**数据库，是否使用已删除[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。 但是，如果你使用其他 SSMA 产品，它们也使用**sysdb**数据库。 如果数据库存在并且可确保没有其他数据库引用此数据库中的对象，你可以分离数据库。  
   
 ## <a name="see-also"></a>另请参阅  
-[安装适用于 Oracle 客户端 &#40; OracleToSQL &#41; SSMA](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[在 SQL Server &#40; OracleToSQL &#41; 上安装 SSMA 组件](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[安装适用于 Oracle 客户端 SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[在 SQL Server 上安装 SSMA 组件&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

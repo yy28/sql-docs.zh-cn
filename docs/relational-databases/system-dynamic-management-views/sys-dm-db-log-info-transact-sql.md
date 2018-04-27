@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_log_info (Transact SQL) |Microsoft 文档
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -27,15 +27,15 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c19ffdd3cdee50b12d43b70fbbb0e8f95c150bab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e180bf8257f97bbdab086b485bea0425453462c5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 返回[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的事务日志的信息。 请注意所有事务日志文件都组合表输出中。 输出中的每一行表示事务日志中的 VLF，并提供与该 VLF 在日志中相关的信息。
 
@@ -43,7 +43,8 @@ ms.lasthandoff: 04/16/2018
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## <a name="arguments"></a>参数  
  *database_id* |NULL |默认值  
  是数据库的 ID。 database_id 的数据类型为 int。有效输入包括数据库、 NULL 或默认的 ID 号。 默认值为 NULL。 NULL 和 DEFAULT 是当前数据库的上下文中的等效值。
@@ -68,10 +69,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)的日志记录创建[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 
 ## <a name="remarks"></a>注释
- `sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。 
+`sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。    
  
 ## <a name="permissions"></a>权限  
- 需要`VIEW DATABASE STATE`数据库中的权限。  
+需要`VIEW DATABASE STATE`数据库中的权限。  
   
 ## <a name="examples"></a>示例  
   

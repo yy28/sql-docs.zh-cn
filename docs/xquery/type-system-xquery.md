@@ -1,16 +1,16 @@
 ---
-title: "类型系统 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 类型系统 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d84021e20c56be6d889ba1936d385432a5d8e481
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system-xquery"></a>类型系统 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 02/09/2018
   
 -   节点的类型化值与字符串值。  
   
--   [数据函数 &#40;XQuery &#41;](../xquery/data-accessor-functions-data-xquery.md)和[字符串函数 &#40;XQuery &#41;](../xquery/data-accessor-functions-string-xquery.md).  
+-   [数据函数&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)和[字符串函数&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)。  
   
 -   匹配由表达式返回的序列类型。  
   
 ## <a name="built-in-types-of-xml-schema"></a>XML 架构的内置类型  
  XML 架构的内置类型具有预定义的命名空间前缀 xs。 这些类型的一些包括**xs:integer**和**xs: string**。 所有这些内置类型都支持。 您可以在创建 XML 架构集合时使用这些类型。  
   
- 当查询类型化的 XML 时，节点的静态和动态类型由与正被查询的列或变量相关联的 XML 构架集合确定。 有关静态和动态类型的详细信息，请参阅[表达式上下文和查询计算 &#40;XQuery &#41;](../xquery/expression-context-and-query-evaluation-xquery.md). 例如，指定以下查询对类型化**xml**列 (`Instructions`)。 表达式使用 `instance of` 验证返回的 `LotSize` 属性的类型化值是 `xs:decimal` 类型。  
+ 当查询类型化的 XML 时，节点的静态和动态类型由与正被查询的列或变量相关联的 XML 构架集合确定。 有关静态和动态类型的详细信息，请参阅[表达式上下文和查询计算&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)。 例如，指定以下查询对类型化**xml**列 (`Instructions`)。 表达式使用 `instance of` 验证返回的 `LotSize` 属性的类型化值是 `xs:decimal` 类型。  
   
 ```  
 SELECT Instructions.query('  
@@ -77,7 +77,7 @@ WHERE ProductModelID=7
   
 -   在创建 XML 架构集合时无法使用这些类型。 这些类型的 XQuery 类型系统中使用，并用于[的 XQuery 和静态类型](../xquery/xquery-and-static-typing.md)。 可以将其转换为原子类型，例如， **xdt:untypedAtomic**中**xdt**命名空间。  
   
--   在查询非类型化的 XML 时，元素节点的静态和动态类型是**xdt： 非类型化**，和属性值的类型是**xdt:untypedAtomic**。 结果**query （)**方法生成非类型化的 XML。 这意味着作为返回，XML 节点**xdt： 非类型化**和**xdt:untypedAtomic**分别。  
+-   在查询非类型化的 XML 时，元素节点的静态和动态类型是**xdt： 非类型化**，和属性值的类型是**xdt:untypedAtomic**。 结果**query （)** 方法生成非类型化的 XML。 这意味着作为返回，XML 节点**xdt： 非类型化**和**xdt:untypedAtomic**分别。  
   
 -   **Xdt:dayTimeDuration**和**xdt:yearMonthDuration**不支持类型。  
   
@@ -108,11 +108,11 @@ SELECT @x.query( '/a[1] instance of element()')
 ## <a name="typed-value-vs-string-value"></a>类型化值与字符串值  
  每个节点都带有类型化值和字符串值。 对于类型化的 XML 数据，类型化值的类型是与正被查询的列或变量相关联的 XML 架构集合提供的。 对于非类型化的 XML 数据，类型化值的类型是**xdt:untypedAtomic**。  
   
- 你可以使用**data （)**或**string （)**函数可检索节点的值：  
+ 你可以使用**data （)** 或**string （)** 函数可检索节点的值：  
   
--   [数据函数 &#40;XQuery &#41;](../xquery/data-accessor-functions-data-xquery.md)返回节点的类型化的值。  
+-   [数据函数&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)返回节点的类型化的值。  
   
--   [字符串函数 &#40;XQuery &#41;](../xquery/data-accessor-functions-string-xquery.md)返回节点的字符串值。  
+-   [字符串函数&#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md)返回节点的字符串值。  
   
  在下列 XML 架构集合中，定义了整数类型的 <`root`> 元素：  
   
@@ -155,7 +155,7 @@ WHERE ProductModelID=7
  此查询将返回结果 12.75。  
   
 > [!NOTE]  
->  显式使用**data （)**在此示例中的函数是仅用于说明目的。 如果未指定， **sum （)**隐式应用**data （)**函数提取节点的类型化的值。  
+>  显式使用**data （)** 在此示例中的函数是仅用于说明目的。 如果未指定， **sum （)** 隐式应用**data （)** 函数提取节点的类型化的值。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

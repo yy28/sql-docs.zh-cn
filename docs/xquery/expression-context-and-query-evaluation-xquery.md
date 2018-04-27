@@ -1,16 +1,16 @@
 ---
-title: "表达式上下文和查询计算 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 表达式上下文和查询计算 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aa51ff95256dde4ed6d750a2dbfab5c2c44c2d41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>表达式上下文和查询计算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  解析在表达式中指定的函数和类型名称。  
   
-3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，以下查询返回一个静态的错误，因为 **+** 运算符要求数值基元的类型自变量：  
+3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，以下查询返回一个静态的错误，因为**+** 运算符要求数值基元的类型自变量：  
   
     ```  
     declare @x xml  
@@ -136,7 +136,7 @@ ms.lasthandoff: 02/09/2018
     SELECT @x.query('"x" + 4')  
     ```  
   
-     在下面的示例中， **value （)**运算符要求单一实例。 如指定的 XML 架构，可以有多个\<Elem > 元素。 对表达式进行的静态分析确定它是非类型安全，并返回静态错误。 若要解决该错误，必须重写表达式以显式指定单一参数 (`data(/x:Elem)[1]`)。  
+     在下面的示例中， **value （)** 运算符要求单一实例。 如指定的 XML 架构，可以有多个\<Elem > 元素。 对表达式进行的静态分析确定它是非类型安全，并返回静态错误。 若要解决该错误，必须重写表达式以显式指定单一参数 (`data(/x:Elem)[1]`)。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -169,9 +169,9 @@ ms.lasthandoff: 02/09/2018
   
 -   不支持基准 URI 功能。  
   
--   **fn:doc()**不支持。  
+-   **fn:doc()** 不支持。  
   
--   **fn:collection()**不支持。  
+-   **fn:collection()** 不支持。  
   
 -   不提供 XQuery 静态标记。  
   
@@ -195,9 +195,9 @@ ms.lasthandoff: 02/09/2018
   
 -   **隐式时区**固定为 UTC + 0，不能更改。  
   
--   **Fn:doc()**不支持函数。 所有查询都执行针对**xml**类型列或变量。  
+-   **Fn:doc()** 不支持函数。 所有查询都执行针对**xml**类型列或变量。  
   
--   **Fn:collection()**不支持函数。  
+-   **Fn:collection()** 不支持函数。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   

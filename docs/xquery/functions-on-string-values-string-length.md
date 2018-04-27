@@ -1,16 +1,16 @@
 ---
-title: "字符串长度函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 字符串长度函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - string-length function
 - fn:string-length function
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: 
+caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a01221907acd777eaaf41ca77d73bf561724c96c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a63031831d6bcb040f9b19f9d291c81b9486832f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---string-length"></a>函数对字符串值的字符串长度
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ fn:string-length($arg as xs:string?) as xs:integer
  要计算其长度的源字符串。  
   
 ## <a name="remarks"></a>注释  
- 如果值*$arg*空序列， **xs:integer**返回值为 0。  
+ 如果值 *$arg*空序列， **xs:integer**返回值为 0。  
   
- XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容级别 &#40;Transact SQL &#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
  如果该值包含由两个代理项字符表示的 4 字节 Unicode 字符，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将单独对代理项字符计数。  
   
- **String-length()**没有参数只能使用谓词内。 例如，下面的查询返回 <`ROOT`> 元素：  
+ **String-length()** 没有参数只能使用谓词内。 例如，下面的查询返回 <`ROOT`> 元素：  
   
 ```  
 DECLARE @x xml;  
@@ -64,7 +64,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数是代理项感知"部分[中 SQL Server 2016 数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容级别 &#40;Transact SQL &#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数是代理项感知"部分[中 SQL Server 2016 数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
  本主题提供对 XML 实例存储在各种 XQuery 示例**xml** AdventureWorks 数据库中的类型列。  

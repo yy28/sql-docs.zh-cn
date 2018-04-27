@@ -1,27 +1,28 @@
 ---
-title: "将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e51a3b70f585bebd353a84b9c0274180a0daf870
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL)
 在 Oracle 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将迁移到 Oracle 架构中的所有对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构名为的数据库。 但是，你可以自定义 Oracle 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
@@ -56,7 +57,7 @@ Oracle 数据库包含架构。 实例[!INCLUDE[ssNoVersion](../../includes/ssno
   
 -   将映射到 SQL Server  
   
-可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]具有与其连接使用 SSMA 数据库。 要映射的目标数据库是否不存在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，则系统将提示你使用的消息**"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据。它会在同步期间创建。是否要继续？"** 单击是。 同样，可以架构映射到在目标下不存在架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库将在同步期间创建的。  
+可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]具有与其连接使用 SSMA 数据库。 要映射的目标数据库是否不存在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，则系统将提示你使用的消息 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据。它会在同步期间创建。是否要继续？"** 单击是。 同样，可以架构映射到在目标下不存在架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库将在同步期间创建的。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>还原为默认数据库和架构  
 如果你自定义的 Oracle 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构，你可以还原回默认值的映射。  
@@ -65,10 +66,10 @@ Oracle 数据库包含架构。 实例[!INCLUDE[ssNoVersion](../../includes/ssno
   
 1.  在架构映射的选项卡上，选择任何行，然后单击**重置为默认**若要还原到的默认数据库和架构。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 如果你想要分析的 Oracle 对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你可以[创建转换报表](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)。 否则，你可以[转换 Oracle 数据库对象定义](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象定义。  
   
 ## <a name="see-also"></a>另请参阅  
-[连接到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[连接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

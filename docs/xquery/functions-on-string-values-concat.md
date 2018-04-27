@@ -1,16 +1,16 @@
 ---
-title: "concat 函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: concat 函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f4970f431b3929268414fd78d7e834d7a835919
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f7d63904e613f399e4f66b9fcd3547f57a0e5175
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---concat"></a>对字符串值-concat 函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ fn:concat ($string as xs:string?
  此函数必须至少包含两个参数。 如果一个参数为空序列，则将被作为零长度字符串处理。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数是代理项感知"部分[中 SQL Server 2016 数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容级别 &#40;Transact SQL &#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数是代理项感知"部分[中 SQL Server 2016 数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
  本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型列中的 AdventureWorks 示例数据库。  
@@ -92,7 +92,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 **Exist （)**方法**xml**中 WHERE 子句将返回 True，如果行中的 XML 文档具有数据类型 <`ProductDescription`> 元素。  
+ 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 **Exist （)** 方法**xml**中 WHERE 子句将返回 True，如果行中的 XML 文档具有数据类型 <`ProductDescription`> 元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -114,7 +114,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- 请注意，返回的布尔值**exist （)**方法**xml**与 1 比较类型。  
+ 请注意，返回的布尔值**exist （)** 方法**xml**与 1 比较类型。  
   
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  

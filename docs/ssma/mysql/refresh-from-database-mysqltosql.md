@@ -1,6 +1,6 @@
 ---
 title: 刷新从数据库 (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1881df93e8b26463b4f7a638e5b1e94674442013
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9fcc074a16f5fc794dc4339bb58bd552371206a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="refresh-from-database-mysqltosql"></a>刷新从数据库 (MySQLToSQL)
 **从数据库刷新**对话框中，可以选择要刷新从 MySQL 数据库的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  

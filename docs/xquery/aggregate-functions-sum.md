@@ -1,16 +1,16 @@
 ---
-title: "sum 函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: sum 函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sum function [XQuery]
 - fn:sum function
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 599080605291b48f30a40c85354ea5bb2f2320c6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 87f8e3859f8a487a56ff9c1874ad98772af210b8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---sum"></a>聚合函数-求和
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  要计算和的一列原子值。  
   
 ## <a name="remarks"></a>注释  
- 所有类型的原子化的值传递给**sum （)**一定要相同的基类型的子类型。 接受的基类型为三种内置数字基类型或 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果没有混合的这些类型，或者如果传递其他类型的其他值时，会引发静态错误。  
+ 所有类型的原子化的值传递给**sum （)** 一定要相同的基类型的子类型。 接受的基类型为三种内置数字基类型或 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果没有混合的这些类型，或者如果传递其他类型的其他值时，会引发静态错误。  
   
- 结果**sum （)**接收传入的类型，如 xdt:untypedAtomic，对于将 xs: double 的基类型，即使输入 （可选） 是空的序列。 如果输入在静态下为空，则对于 xs:integer 的静态和动态类型，结果都为 0。  
+ 结果**sum （)** 接收传入的类型，如 xdt:untypedAtomic，对于将 xs: double 的基类型，即使输入 （可选） 是空的序列。 如果输入在静态下为空，则对于 xs:integer 的静态和动态类型，结果都为 0。  
   
- **Sum （)**函数将返回数字值的总和。 如果 xdt:untypedAtomic 值无法转换为将 xs: double，在输入序列中，将忽略值*$arg*。 如果输入是动态计算的空序列，则返回的所用基类型的值为 0。  
+ **Sum （)** 函数将返回数字值的总和。 如果 xdt:untypedAtomic 值无法转换为将 xs: double，在输入序列中，将忽略值 *$arg*。 如果输入是动态计算的空序列，则返回的所用基类型的值为 0。  
   
  当发生溢出或超出范围异常时，函数将返回一个运行时错误。  
   
@@ -114,13 +114,13 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   只有单个自变量版本的**sum （)**支持。  
+-   只有单个自变量版本的**sum （)** 支持。  
   
 -   如果输入是动态计算的空序列，则返回的所用基类型（而不是 xs:integer 类型）的值为 0。  
   
--   **Sum （)**函数映射到 xs: decimal 的所有整数。  
+-   **Sum （)** 函数映射到 xs: decimal 的所有整数。  
   
--   **Sum （)**不支持对类型 xs: duration 值的函数。  
+-   **Sum （)** 不支持对类型 xs: duration 值的函数。  
   
 -   不支持跨基类型边界混合类型的序列。  
   

@@ -1,15 +1,16 @@
 ---
-title: "将 Access 数据库迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 将 Access 数据库迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 92ab1b9e1bd128c57347f2f68b251fce4648bfe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bbbea4be309e1508620e9e067c94328905fcc824
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>将访问数据库迁移到 SQL Server 的 Azure SQL DB (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 是一个工具，提供了一个全面的环境，可帮助你快速访问将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 通过使用 SSMA，你可以查看访问和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象、 评估迁移的 Access 数据库、 访问数据库对象转换、 加载入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，然后将数据迁移。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 是一个工具，提供了一个全面的环境，可帮助你快速访问将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 通过使用 SSMA，你可以查看访问和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象、 评估迁移的 Access 数据库、 访问数据库对象转换、 加载入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，然后将数据迁移。  
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
 若要成功地将对象和数据迁移到的访问从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，请按照以下步骤：  

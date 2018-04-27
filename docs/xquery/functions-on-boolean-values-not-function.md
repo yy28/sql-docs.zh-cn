@@ -1,16 +1,16 @@
 ---
-title: "not 函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: not 函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - not function [XQuery]
 - EBV
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0a104fb4904e5df5433de3505cdd8c4e8cf2c4b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0e30edaba23aea28806e70824684f0fe332c85c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-boolean-values---not-function"></a>对布尔值的函数上不起作用 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果返回 TRUE 的有效布尔值*$arg*为 false，否则，返回 FALSE 的有效布尔值*$arg*为 true。  
+  如果返回 TRUE 的有效布尔值 *$arg*为 false，否则，返回 FALSE 的有效布尔值 *$arg*为 true。  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,7 +74,7 @@ WHERE CatalogDescription.exist('
   
 -   该查询然后构造的 XML，包括 <`Product`> 元素并将其**ProductModelID**属性。  
   
--   WHERE 子句使用[exist （） 方法 （XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)的行进行过滤。 **Exist （)**方法返回 True，如果有\<ProductDescription > 元素不具有\<规范 > 子元素。 请注意，使用**not()**函数。  
+-   WHERE 子句使用[exist （） 方法 （XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)的行进行过滤。 **Exist （)** 方法返回 True，如果有\<ProductDescription > 元素不具有\<规范 > 子元素。 请注意，使用**not()** 函数。  
   
  该结果集为空，因为每个产品型号目录说明包括\<规范 > 元素。  
   
@@ -100,7 +100,7 @@ WHERE ProductModelID=7
   
 -   **Declarenamespace**中[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义生产说明命名空间前缀 Adventure Works。 它表示在生产说明文档中使用了相同的命名空间。  
   
--   在查询中，**不 (@MachineHours)**谓词返回 True，如果没有任何**MachineHours**属性。  
+-   在查询中，**不 (@MachineHours)** 谓词返回 True，如果没有任何**MachineHours**属性。  
   
  结果如下：  
   
@@ -115,7 +115,7 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Not()**函数仅支持类型 xs: boolean，或 node （） * 或空序列的自变量。  
+-   **Not()** 函数仅支持类型 xs: boolean，或 node （） * 或空序列的自变量。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  

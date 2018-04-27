@@ -1,30 +1,31 @@
 ---
-title: "SSMA 控制台 (AccessToSQL) 中的命令行选项 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: SSMA 控制台 (AccessToSQL) 中的命令行选项 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f1e71cefafab7e905b83b66c87eebbc88dc852c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 控制台 (AccessToSQL) 中的命令行选项
 Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA 活动。 下来的几节提供了更多详细信息。  
@@ -34,7 +35,7 @@ Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA �
   
 对于本部分，术语 option 也称为转换。  
   
-选项不区分大小写，并且可能会启动与**-**'**/**字符。  
+选项不区分大小写，并且可能会启动与**-**'**/** 字符。  
   
 如果指定了选项，它是必填项指定相应的选项参数。  
   
@@ -166,21 +167,21 @@ Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA �
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-有关的 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md).  
+有关的 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword Help 选项:-securepassword-？ / 帮助  
 显示 SSMA 控制台选项的语法的摘要：  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-有关的 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
+有关的 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
 ### <a name="next-steps"></a>后续步骤  
 下一步取决于您的项目要求：  
   
-1.  用于指定的密码或导出 / 导入密码，请参阅[管理密码 &#40;AccessToSQL &#41;](../../ssma/access/managing-passwords-accesstosql.md).  
+1.  用于指定的密码或导出 / 导入密码，请参阅[管理密码&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
   
-2.  有关生成报表，请参阅[生成报表 &#40;AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md).  
+2.  有关生成报表，请参阅[生成报表&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)。  
   
-3.  有关故障排除控制台中的问题，请参阅[故障排除 &#40;AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md).  
+3.  有关故障排除控制台中的问题，请参阅[故障排除&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)。  
   

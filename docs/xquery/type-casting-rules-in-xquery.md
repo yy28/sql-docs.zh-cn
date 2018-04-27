@@ -1,16 +1,16 @@
 ---
-title: "类型转换规则在 XQuery 中 |Microsoft 文档"
-ms.custom: 
+title: 类型转换规则在 XQuery 中 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - cast as operator
 - implicit casting
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6c4ea6e7fc0089fa711f3fd0e6db0ed5088b0d2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8770344d83484dc8d515b9a6576bdf83cb3aec98
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的类型转换规则
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,13 +143,13 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>隐式强制转换  
- 只允许对数值类型和 untypedAtomic 类型进行隐式转换。 例如，以下**min （)**函数将返回两个值的最小值：  
+ 只允许对数值类型和 untypedAtomic 类型进行隐式转换。 例如，以下**min （)** 函数将返回两个值的最小值：  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- 在此示例中，两个值中传递到 XQuery **min （)**函数都是不同的类型。 因此，执行隐式转换其中**整数**类型提升为**double**和第二个**double**值进行比较。  
+ 在此示例中，两个值中传递到 XQuery **min （)** 函数都是不同的类型。 因此，执行隐式转换其中**整数**类型提升为**double**和第二个**double**值进行比较。  
   
  此示例中介绍的类型升级遵循下列规则：  
   

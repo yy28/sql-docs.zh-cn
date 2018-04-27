@@ -2,7 +2,7 @@
 title: 用于 SAP ASE (SybaseToSQL) 入门 SSMA |Microsoft 文档
 ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34910ce2592f765d5fac0decaadfc48f5f173ed0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2b502bd5cfe2c1a7df2129294b279a2b7b3a407a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>用于 SAP ASE (SybaseToSQL) 入门 SSMA
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 的 SAP ASE 使你能够快速地转换到的 SAP 自适应 Server Enterprise (ASE) 数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库架构，上载生成架构转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库，并从中迁移数据到 SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库。  
@@ -109,7 +109,7 @@ SSMA 包含以下菜单：
 |**编辑**|包含用于查找和处理的详细信息页中，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql_md.md)]从 SQL 详细信息窗格。 此外包含**管理书签**选项，其中你可以看到的现有书签列表。 可以使用对话框右侧的按钮来管理在书签。|  
 |**“视图”**|包含**同步元数据资源管理器**命令。 这将同步 Sybase 元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 元数据资源管理器。 此外包含用于显示和隐藏的命令**输出**和**错误列表**窗格和一个选项**布局**管理两种布局。|  
 |**工具**|包含命令以创建报表、 导出数据，并将对象和数据迁移。 此外提供对访问**全局设置**和**项目设置**对话框。|  
-|**Tester**|包含命令以创建测试用例、 查看测试结果和用于数据库备份管理命令。|  
+|**测试人员**|包含命令以创建测试用例、 查看测试结果和用于数据库备份管理命令。|  
 |**帮助**|提供访问到 SSMA 帮助和**有关**对话框。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>输出窗格中和错误列表窗格  

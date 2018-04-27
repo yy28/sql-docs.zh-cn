@@ -2,7 +2,7 @@
 title: 创建变量值文件 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -24,18 +24,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52120155992671337b5a5fa1aaa81ce023fcc3f4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5390d418528d75f1a35b4ab0f0e02fb7fd7f00ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>创建变量值文件 (SybaseToSQL)
 变量的值文件是 XML 文件包含频繁更改从一台服务器迁移到另一个类似的源或目标服务器名称的命令的参数值。 多个变量的文件，用于存储每个源服务器的值时将发生大量的数据库迁移，将创建并中的主脚本文件引用**– v**切换在命令行。 这有助于在维护几个脚本文件中的多个变量的文件中的变量值的静态值。  
   
 > [!NOTE]  
 > 1.  变量名是前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，将导致停止控制台执行过程的脚本文件的分析过程中遇到错误。  
-> 2.  The escape character for **$** is **$$**. 如果一个变量或静态参数的值的值包含**$** （美元） 符号，然后**$$**必须指定将其视为字符而不是变量。  
+> 2.  The escape character for **$** is **$$**. 如果一个变量或静态参数的值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是变量。  
 > 3.  出于可维护性目的，可以在声明变量`‘variable-group’`的用户的逻辑分隔的元素定义的变量。  此元素的使用情况不是必需的。  
   
 **示例：**  

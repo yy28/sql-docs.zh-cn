@@ -1,9 +1,9 @@
 ---
-title: 集成的终端中 SQL Operations Studio (preview) |Microsoft 文档
-description: 了解有关集成的终端中 SQL Operations Studio (preview)。
+title: 集成的终端中 SQL 操作 Studio （预览版） |Microsoft 文档
+description: 了解有关集成的终端中 SQL 操作 Studio （预览版）。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b55e86314dd075b61dac5751b29fc541fdf1e2c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61d74e7d8818391ca01c45ad8f9a7b2897751712
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integrated-terminal"></a>集成的终端
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 
 若要打开终端：
 
-* 使用**Ctrl +'**带有反撇号字符的键盘快捷方式。
+* 使用**Ctrl +'** 带有反撇号字符的键盘快捷方式。
 * 使用**视图** | **集成终端**菜单命令。
 * 从**命令控制板**(**Ctrl + Shift + P**)，使用**视图： 切换集成终端**命令。
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="managing-multiple-terminals"></a>管理多个终端
 
-可以创建多个终端打开到不同位置，还可以轻松地在它们之间导航。 可以通过点击右上角的加号图标添加终端实例**终端**面板或通过触发**Ctrl + Shift +**命令。 这将创建另一个项在下拉列表中，可以使用它们之间进行切换。
+可以创建多个终端打开到不同位置，还可以轻松地在它们之间导航。 可以通过点击右上角的加号图标添加终端实例**终端**面板或通过触发**Ctrl + Shift +** 命令。 这将创建另一个项在下拉列表中，可以使用它们之间进行切换。
 
 ![多个终端](media/integrated-terminal/terminal-multiple-instances.png)
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a id="key-bindings"></a>终端键绑定
 
-**视图： 切换集成终端**命令绑定到**Ctrl +'**若要快速切换的视图内外的集成终端面板。
+**视图： 切换集成终端**命令绑定到**Ctrl +'** 若要快速切换的视图内外的集成终端面板。
 
 以下是用于在集成的终端中快速导航的键盘快捷键：
 

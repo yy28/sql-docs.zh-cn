@@ -1,6 +1,6 @@
 ---
 title: 菜单命令和其他快捷键 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd4c36f8542331615e6d711f6780d855db9158aa
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 8721facf7eedd8ed5a9d2f36173cd90e2e89b652
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>菜单命令和其他快捷键 (AccessToSQL)
 以下各节描述了用于访问菜单命令和其他的 SSMA 的各种对话框中用于访问应用程序的快捷键的键盘快捷键。  

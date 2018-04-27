@@ -1,16 +1,16 @@
 ---
-title: "错误处理 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 错误处理 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - XQuery, error handling
 - dynamic errors [XQuery]
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76839b7a31bc6468cc397c9d6255af5660bcfcd5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0eef94efe7f4414747be9dffb8ba6512aee47bda
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-handling-xquery"></a>错误处理 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  通常，在谓词内出现动态错误的情况下，不引发错误就不会更改语义，因为 () 映射到 False。 但是，在某些情况下，返回 () 而不返回动态错误可能导致意外结果。 下列示例说明了这一点。  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>示例：使用带字符串的 avg() 函数  
- 在下面的示例中， [avg 函数](../xquery/aggregate-functions-avg.md)调用来计算三个值的平均值。 这些值中的一个是字符串。 由于此情况下的 XML 实例是非类型化的，因此其中的所有数据都是非类型化的原子类型。 **Avg （)**函数首先将这些值与强制转换**将 xs: double**之前在计算平均值。 但是，值， `"Hello"`，不能强制转换为**将 xs: double**和创建一个动态错误。 在这种情况下，而不是返回一个动态的错误的强制转换`"Hello"`到**将 xs: double**导致空序列。 **Avg （)**函数将忽略此值，计算平均值的其他两个值，并返回 150。  
+ 在下面的示例中， [avg 函数](../xquery/aggregate-functions-avg.md)调用来计算三个值的平均值。 这些值中的一个是字符串。 由于此情况下的 XML 实例是非类型化的，因此其中的所有数据都是非类型化的原子类型。 **Avg （)** 函数首先将这些值与强制转换**将 xs: double**之前在计算平均值。 但是，值， `"Hello"`，不能强制转换为**将 xs: double**和创建一个动态错误。 在这种情况下，而不是返回一个动态的错误的强制转换`"Hello"`到**将 xs: double**导致空序列。 **Avg （)** 函数将忽略此值，计算平均值的其他两个值，并返回 150。  
   
 ```  
 DECLARE @x xml  
@@ -67,7 +67,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>示例：使用 not 函数  
- 当你使用[上不起作用](../xquery/functions-on-boolean-values-not-function.md)中一个谓词，例如， `/SomeNode[not(Expression)]`，和表达式将导致动态错误，空序列将返回而不是错误。 应用**not()**到空序列，则返回 True，而不是错误。  
+ 当你使用[上不起作用](../xquery/functions-on-boolean-values-not-function.md)中一个谓词，例如， `/SomeNode[not(Expression)]`，和表达式将导致动态错误，空序列将返回而不是错误。 应用**not()** 到空序列，则返回 True，而不是错误。  
   
 ### <a name="example-casting-a-string"></a>示例：转换字符串  
  在下面的示例中，文字字符串“NaN”先转换为 xs:string，再转换为 xs:double。 结果是一个空行集。 虽然字符串“NaN”无法成功转换为 xs:double，但直到运行时才能确定，因为该字符串首先转换为 xs:string。  
@@ -89,7 +89,7 @@ GO
 ```  
   
 #### <a name="implementation-limitations"></a>实现限制  
- **Fn:error()**不支持函数。  
+ **Fn:error()** 不支持函数。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   

@@ -1,16 +1,16 @@
 ---
-title: "有效的布尔值 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 有效的布尔值 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - XQuery, effective Boolean values
 - EBV
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93c3ecaf4a4ded90a4b65aed08c6112fd9b670f1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bf7f4f3e24b5c17c543e616b539b54ca900f3242
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布尔值 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- 当查询类型化**xml**列或变量，你可以为 Boolean 类型的节点。 **Data （)**在这种情况下返回一个布尔值。 如果查询表达式返回布尔值 True，则有效的布尔值为 True，如下例所示。 本例中对下列各项也进行了说明：  
+ 当查询类型化**xml**列或变量，你可以为 Boolean 类型的节点。 **Data （)** 在这种情况下返回一个布尔值。 如果查询表达式返回布尔值 True，则有效的布尔值为 True，如下例所示。 本例中对下列各项也进行了说明：  
   
 -   创建一个 XML 架构集合。 元素\<b > 集合中是为 Boolean 类型。  
   
@@ -99,6 +99,6 @@ go
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   
- [FLWOR 语句和迭代 &#40;XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR 语句和迭代&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

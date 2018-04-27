@@ -1,15 +1,16 @@
 ---
-title: "要开始使用用于访问 SQL Server Migration Assistant |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 要开始使用用于访问 SQL Server Migration Assistant |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,24 +25,24 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 92a7e496075cb7e42c09bd89a1f17e1b296b9946
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e61807234af431f63f3e10a612e0d4ff7d8b7d7d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>开始使用 SQL Server Migration Assistant for Access (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 的访问权限允许您快速将转换到的访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 对象上载到生成的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，并将数据迁移到的访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如果有必要，你也可以链接到的访问表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库表，以便你可以继续使用现有访问前端应用程序与[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 的访问权限允许您快速将转换到的访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 对象上载到生成的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，并将数据迁移到的访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如果有必要，你也可以链接到的访问表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库表，以便你可以继续使用现有访问前端应用程序与[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
   
 本主题介绍安装过程，并有助于使您熟悉 SSMA 用户界面。  
   
 ## <a name="installing-ssma"></a>安装 SSMA  
-若要使用 SSMA，首先必须安装 SSMA 客户端程序可以访问你想要迁移的这两个数据库的计算机和目标实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 有关安装说明，请参阅[安装 SQL Server Migration Assistant for Access &#40;AccessToSQL &#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
+若要使用 SSMA，首先必须安装 SSMA 客户端程序可以访问你想要迁移的这两个数据库的计算机和目标实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 有关安装说明，请参阅[安装 SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)。  
   
 若要启动 SSMA，请单击**启动**，指向**所有程序**，指向**SQL Server Migration Assistant for Access**，然后选择**SQL Server Migration Assistant for Access**。  
   
@@ -90,7 +91,7 @@ SSMA 包含两个元数据资源管理器可用于浏览和执行访问操作和
 -   链接和取消链接访问和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]表。  
   
 #### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server 或 Azure SQL DB 元数据资源管理器  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Azure SQL DB 元数据资源管理器显示的实例有关的信息或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 当您连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，SSMA 中检索该实例的相关元数据并将其存储在项目文件中。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL DB 元数据资源管理器显示的实例有关的信息或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 当您连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，SSMA 中检索该实例的相关元数据并将其存储在项目文件中。  
   
 你可以使用 SQL Server 或 Azure SQL DB 元数据资源管理器来选择转换后的访问数据库对象和加载 （同步） 的实例的那些对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
   
@@ -127,7 +128,7 @@ SSMA 包含以下菜单：
   
 |菜单|Description|  
 |--------|---------------|  
-|**File**|迁移向导，使用项目中，添加和移除 Access 数据库文件，以及连接到包含命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。|  
+|**文件**|迁移向导，使用项目中，添加和移除 Access 数据库文件，以及连接到包含命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。|  
 |**编辑**|包含用于查找和处理的详细信息页中，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql_md.md)]从 SQL 详细信息窗格。 若要打开**管理书签**对话框中的，在编辑菜单上单击管理书签。 在对话框中，你将看到现有书签的列表。 可以使用对话框右侧的按钮来管理在书签。|  
 |**“视图”**|包含**同步元数据资源管理器**命令。 这将同步访问元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 元数据资源管理器。 此外包含用于显示和隐藏的命令**输出**和**错误列表**窗格和一个选项**布局**使用两种布局进行管理。|  
 |**工具**|包含命令以创建报表、 导出数据、 将对象和数据迁移，链接表，并提供到全球的访问权限和项目设置对话框。|  

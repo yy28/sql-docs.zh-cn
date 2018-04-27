@@ -1,6 +1,6 @@
 ---
 title: 全局设置 （日志记录） (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a349ef1a4ef3d0f628b32aa72dc1cba239cb1893
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f2600699c34fe2f965b0a7f7157854ae4696746f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-accesstosql"></a>全局设置 （日志记录） (AccessToSQL)
 使用**全局设置**对话框中，指定 SSMA 的日志记录设置。 通常情况下，仅当使用产品支持时，才会更改这些设置。  
@@ -40,14 +40,14 @@ ms.lasthandoff: 04/06/2018
 |----------|---------------|  
 |**[所有类别]**|用于设置以下选项的所有日志记录级别。|  
 |**Collector**|收集有关源架构的元数据并将其保存到项目。|  
-|**Converter**|将结构的源数据库对象，如表和存储的过程转换为相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]结构。|  
+|**转换器**|将结构的源数据库对象，如表和存储的过程转换为相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]结构。|  
 |**数据迁移器**|将数据迁移从源数据库到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
-|**Formatter**|子组件的生成的脚本的转换器[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构。|  
+|**格式化程序**|子组件的生成的脚本的转换器[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构。|  
 |**图形用户界面**|当你使用 SSMA 工具时显示的消息。|  
-|**Linker**|解析的 SQL 标识符，并提供到其他组件的信息。|  
+|**链接器**|解析的 SQL 标识符，并提供到其他组件的信息。|  
 |**其他**|不在任何其他类别的所有消息。|  
-|**Parser**|分析源架构。|  
-|**Synchronizer**|加载源到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
+|**分析器**|分析源架构。|  
+|**同步器**|加载源到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**TreeConverter**|将转换到的源元数据中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据。|  
   
 每个选项下**消息级别**，为 SSMA 配置以下日志记录级别之一：  

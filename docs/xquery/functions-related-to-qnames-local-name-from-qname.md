@@ -1,16 +1,16 @@
 ---
-title: "本地-名称-从的 QName (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 本地-名称-从的 QName (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - fn:local-name-from-QName function
 - local-name-from-QName function
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1809f0529a55f39446e35ded526d921541c6d995
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d5e7b8508be909f1cfe095c8cb1eab414e80d90
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>与 QNames 的本地名称从 QName 相关函数
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回表示由指定的 QName 的本地部分 xs:NCNAME *$arg*。 如果结果为空序列*$arg*是空的序列。  
+  返回表示由指定的 QName 的本地部分 xs:NCNAME *$arg*。 如果结果为空序列 *$arg*是空的序列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,13 +47,13 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
 ## <a name="examples"></a>示例  
  本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型中的列[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
- 下面的示例使用**local-name-from-QName()**函数可检索的本地名称和命名空间 URI 部分从 QName 类型值。 该示例执行以下操作：  
+ 下面的示例使用**local-name-from-QName()** 函数可检索的本地名称和命名空间 URI 部分从 QName 类型值。 该示例执行以下操作：  
   
 -   创建 XML 架构集合。  
   
 -   创建带有 xml 类型列的表。 xml 类型是使用 XML 架构集合类型化的。  
   
--   将示例 XML 实例存储到表中。 使用**query （)**执行方法的 xml 数据类型，查询表达式，以从实例中检索 QName 类型值的本地名称部分。  
+-   将示例 XML 实例存储到表中。 使用**query （)** 执行方法的 xml 数据类型，查询表达式，以从实例中检索 QName 类型值的本地名称部分。  
   
 ```  
 DROP TABLE T  
@@ -83,6 +83,6 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [与 QNames &#40; 相关的功能XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [函数与 QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

@@ -1,30 +1,31 @@
 ---
-title: "选择并配置受影响的对象 (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 选择并配置受影响的对象 (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d212f53d9cdd366ec6105ca6d44b345112d2f4fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>选择并配置受影响的对象 (OracleToSQL)
 在此页中，你可以选择表和外键，在其中更改与其进行比较，如果 SSMA 验证上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   规则  
   
--   ，则“默认”  
+-   默认  
   
 -   标识  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="sql"></a>Sql  
 SQL 选项卡包含的"创建表"选定的表的 SQL。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Data  
 数据选项卡显示所选表中显示的数据。  
   
 ## <a name="properties"></a>属性  
@@ -113,10 +114,10 @@ SQL 选项卡包含的"创建表"选定的表的 SQL。
 你可以编辑这些 SELECT 语句，以提供自定义验证。 若要保存所做的更改，在 Oracle 和 SQL Server 语句中，使用**应用**相应按钮源和目标 SQL 下。  
   
 ## <a name="next-step"></a>下一步  
-[自定义调用顺序 &#40; OracleToSQL &#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[自定义调用顺序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[完成测试用例准备 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[运行测试用例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[测试迁移数据库对象 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[完成测试用例准备&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[运行测试用例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

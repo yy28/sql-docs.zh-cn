@@ -2,7 +2,7 @@
 title: 全局设置 （对话框） (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9688410b2b5768bcc5cb323d986d949f8a16f67
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 90807867579bc47877ec662f166cc3d77caf5234
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>全局设置 （对话框） (SybaseToSQL)
 使用的对话框页**全局设置**对话框中指定的默认用户执行任何操作和 SSMA 警告设置。  

@@ -1,6 +1,6 @@
 ---
 title: 执行 SSMA 控制台 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4400ab959c61b23c3a98c817c03506631a4d61af
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5f754441a32346c616e381f8d7f8929354589dcf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL)
 Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的部分详细介绍相同。  
@@ -228,7 +228,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+连接目标数据库  
   
 -   连接到目标 SQL Server 或 SQL Azure 数据库并完全加载的目标数据库的高级别元数据，但不是元数据。  
   
@@ -541,7 +541,7 @@ convert-schema
   
 **Command**  
   
-synchronize-target  
+同步目标  
   
 1.  将目标对象与目标数据库同步。  
   
@@ -557,11 +557,11 @@ synchronize-target
   
 3.  `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 4.  `report-errors-to:` 为同步操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定了错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -606,7 +606,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+从数据库中刷新  
   
 -   刷新数据库中的源对象。  
   
@@ -622,11 +622,11 @@ refresh-from-database
   
 3.  `on-error:` 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 4.  `report-errors-to:` 刷新操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定的错误报告的位置**SourceDBRefreshReport.XML**创建。  
   

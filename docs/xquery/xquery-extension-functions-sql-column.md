@@ -2,8 +2,8 @@
 title: sql:column() 函数 (XQuery) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -25,18 +25,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8571d05ccf90fc9e51a16c10ff279f26ad987dda
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4d68443b225f0b24a69ac4bd310a58a2d6a2991c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 扩展函数-sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  本主题中所述[绑定关系的数据在 XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)，你可以使用**sql:column(()**正常使用时[XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)来公开关系的值在 XQuery 内。  
+  本主题中所述[绑定关系的数据在 XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)，你可以使用**sql:column(()** 正常使用时[XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)来公开关系的值在 XQuery 内。  
   
- 例如， [query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于指定对 XML 实例存储在变量或列的查询**xml**类型。 有时，您可能还希望查询使用其他非 XML 列中的值同时引入关系数据和 XML 数据。 若要执行此操作，请使用**sql:column()**函数。  
+ 例如， [query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于指定对 XML 实例存储在变量或列的查询**xml**类型。 有时，您可能还希望查询使用其他非 XML 列中的值同时引入关系数据和 XML 数据。 若要执行此操作，请使用**sql:column()** 函数。  
   
  SQL 值将映射到相应的 XQuery 值，其类型将为 XQuery 基类型，等效于相应的 SQL 类型。  
   
@@ -48,11 +48,11 @@ sql:column("columnName")
 ```  
   
 ## <a name="remarks"></a>注释  
- 请注意中指定的列对该引用**sql:column()**内 XQuery 函数引用正在处理的行中的列。  
+ 请注意中指定的列对该引用**sql:column()** 内 XQuery 函数引用正在处理的行中的列。  
   
  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，你只能引用**xml**实例的上下文中的 XML DML 的源表达式 insert 语句; 否则，你不能引用的类型的列**xml**或 CLR用户定义的类型。  
   
- **Sql:column()**函数不支持在联接操作。 可改用 APPLY 操作。  
+ **Sql:column()** 函数不支持在联接操作。 可改用 APPLY 操作。  
   
 ## <a name="examples"></a>示例  
   
@@ -101,7 +101,7 @@ sql:column("columnName")
   
 -   **命名空间**中的关键字[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义 XML 命名空间前缀，"pd"，在查询正文中使用。 请注意，表别名（“P”和“PM”）是在查询本身的 FROM 子句中定义的。  
   
--   **Sql:column()**函数用于将 XML 内的非 XML 值。  
+-   **Sql:column()** 函数用于将 XML 内的非 XML 值。  
   
  下面是部分结果：  
   

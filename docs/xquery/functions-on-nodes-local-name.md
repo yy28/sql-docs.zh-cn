@@ -1,16 +1,16 @@
 ---
-title: "本地名称函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 本地名称函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:local-name function
 - local-name function
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 043593b488085c5d35fa356c955138eb66f82643
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 35c1f450c107b0f3331cdd8f272f20c821fe0386
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-nodes---local-name"></a>在节点的本地名称的函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回的名称的本地部分*$arg*为 xs: string 将是零长度字符串，或将有 xs:NCName 词法窗体。 如果未提供参数，默认值为上下文节点。  
+  返回的名称的本地部分 *$arg*为 xs: string 将是零长度字符串，或将有 xs:NCName 词法窗体。 如果未提供参数，默认值为上下文节点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ fn:local-name($arg as node()?) as xs:string
   
 ## <a name="remarks"></a>注释  
   
--   在 SQL Server， **fn:local-name()**没有仅可以依赖于上下文的谓词的上下文中使用的参数。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
+-   在 SQL Server， **fn:local-name()** 没有仅可以依赖于上下文的谓词的上下文中使用的参数。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
   
 -   如果提供了参数而参数是空序列，则该函数返回长度为零的字符串。  
   
@@ -80,7 +80,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 在谓词中使用不带参数的本地名称  
- 下面的查询指定针对 Instructions 列中，键入**xml**的 ProductModel 表的列。 表达式返回其 QName 的本地名称部分为“Location”的 <`root`> 元素的所有元素子级。 **Local-name()**函数为指定谓词中的，并且它由该功能使用的上下文节点没有自变量。  
+ 下面的查询指定针对 Instructions 列中，键入**xml**的 ProductModel 表的列。 表达式返回其 QName 的本地名称部分为“Location”的 <`root`> 元素的所有元素子级。 **Local-name()** 函数为指定谓词中的，并且它由该功能使用的上下文节点没有自变量。  
   
 ```  
 SELECT Instructions.query('  
@@ -94,6 +94,6 @@ WHERE ProductModelID=7
   
 ## <a name="see-also"></a>另请参阅  
  [在节点上的函数](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [命名空间 uri 函数 &#40;XQuery &#41;](../xquery/functions-on-nodes-namespace-uri.md)  
+ [命名空间 uri 函数&#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

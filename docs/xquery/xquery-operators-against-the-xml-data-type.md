@@ -2,8 +2,8 @@
 title: XQuery 运算符对 xml 数据类型 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4af87b91b32142d4b4266af5b10fa54e80eae7c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 运算符
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-using-general-operators"></a>A. 使用一般运算符  
  此查询说明了应用于序列和比较序列的一般运算符的使用方法。 查询检索从每个客户的电话号码序列**AdditionalContactInfo**列**联系人**表。 然后，将这个序列与两个电话号码（“111-111-1111”、“222-2222”）序列进行比较。  
   
- 该查询使用**=**比较运算符。 在右侧的序列中的每个节点**=**运算符比较与左侧序列中的每个节点。 如果匹配节点，节点比较将**TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
+ 该查询使用**=** 比较运算符。 在右侧的序列中的每个节点**=** 运算符比较与左侧序列中的每个节点。 如果匹配节点，节点比较将**TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
   
 ```  
 WITH XMLNAMESPACES (  

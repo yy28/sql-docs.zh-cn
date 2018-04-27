@@ -1,6 +1,6 @@
 ---
-title: Appendix - 1 (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+title: 附录-1 (AccessToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,13 +21,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a90c11d100546febc943ad192a24bd9501aceeae
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6db58f77ada43baf8235d1f87a4de32a5463516b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="appendix---1-accesstosql"></a>Appendix - 1 (AccessToSQL)
+# <a name="appendix---1-accesstosql"></a>附录-1 (AccessToSQL)
 SSMA 控制台命令行选项的快速视图：  
   
 |Sl。 否。|开关|必需？|开关参数|允许的值|  

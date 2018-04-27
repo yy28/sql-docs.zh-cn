@@ -1,6 +1,6 @@
 ---
 title: 连接到 SQL Server (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d35db5eb35e4e27a2ea9724cdc2d5d017a8e02e8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9edacaa537f2df61dcdf131a5930bf5bfb92c1a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server，必须连接到 SQL Server 的目标实例。 连接时，SSMA 获取有关 SQL Server 实例中的所有数据库的元数据，并在 SQL 服务器元数据资源管理器中显示数据库元数据。 SSMA 存储的连接，但不会存储密码的 SQL Server 实例的信息。  

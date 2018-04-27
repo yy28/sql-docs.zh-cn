@@ -1,27 +1,28 @@
 ---
-title: "刷新从数据库 (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 刷新从数据库 (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d37a01129f273611a0502c14ea6caa44f8f90ad3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="refresh-from-database-oracletosql"></a>刷新从数据库 (OracleToSQL)
 **从数据库刷新**对话框中，可以选择要从 Oracle 数据库刷新的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  
@@ -34,11 +35,11 @@ ms.lasthandoff: 12/21/2017
   
 -   如果对象是新的 Oracle 数据库中，行是粉红色。  
   
-你可以指定中的默认对象刷新设置**项目设置**对话框。 有关详细信息，请参阅[项目设置 &#40;同步 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+你可以指定中的默认对象刷新设置**项目设置**对话框。 有关详细信息，请参阅[项目设置&#40;同步&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。  
   
 访问**从数据库刷新**对话框中，右键单击对象 Oracle 元数据资源管理器中单击**从数据库刷新**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **折叠 （-）**  
 折叠所有对象组，以隐藏的单个对象。  
   

@@ -1,31 +1,32 @@
 ---
-title: "创建脚本文件 (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 创建脚本文件 (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Script File Creation, Configuring Oracle Console Settings
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 469802e908d287d5612697b77711aa5ef4f01455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 087bde0aca02a1101cb1914a69e0d5982d294732
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-oracletosql"></a>创建脚本文件 (OracleToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建的变量值文件和服务器连接文件。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -125,11 +126,11 @@ ms.lasthandoff: 12/21/2017
   
     模式包括：  
   
-    -   **要求-用户-**提示用户进行 continue('yes') 或出错 （否）。  
+    -   **要求-用户-** 提示用户进行 continue('yes') 或出错 （否）。  
   
-    -   **错误-**控制台会显示错误并停止执行。  
+    -   **错误-** 控制台会显示错误并停止执行。  
   
-    -   **继续-**控制台将继续执行。  
+    -   **继续-** 控制台将继续执行。  
   
     默认模式是**错误**。  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -175,7 +176,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -186,7 +187,7 @@ ms.lasthandoff: 12/21/2017
   
     </synchronize-target>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -221,7 +222,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -274,7 +275,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -316,7 +317,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -349,14 +350,14 @@ ms.lasthandoff: 12/21/2017
 -   **最大重新连接尝试次数：**时建立的连接超时或中断由于网络故障，则需要服务器来重新连接。 重新连接尝试所允许的最大**5**重试后，控制台会自动执行重新连接。 自动重新连接的工具可减少你的工作量中重新运行该脚本。  
   
 ## <a name="server-connection-parameters"></a>服务器连接参数  
-脚本文件中或将服务器连接文件中，可以定义服务器连接参数。 请参阅[创建服务器连接文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)有关详细信息部分。  
+脚本文件中或将服务器连接文件中，可以定义服务器连接参数。 请参阅[服务器连接文件创建&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)有关详细信息部分。  
   
 ## <a name="script-commands"></a>脚本命令  
 脚本文件包含 XML 格式的迁移工作流命令的序列。 SSMA 控制台应用程序处理顺序显示在脚本文件中的命令迁移。  
   
 例如，Oracle 数据库中的特定表的典型的数据迁移遵循的层次结构： 架构-&gt;表。  
   
-已成功执行脚本文件中的所有命令，SSMA 控制台应用程序退出，并将控制权返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[创建变量值文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或变量值的脚本文件中的单独部分中。  
+已成功执行脚本文件中的所有命令，SSMA 控制台应用程序退出，并将控制权返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[创建变量值文件&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或变量值的脚本文件中的单独部分中。  
   
 **示例：**  
   
@@ -397,14 +398,14 @@ ms.lasthandoff: 12/21/2017
   
 更改为相关性其中显示的参数后，你可以执行模板 （文件）。  
   
-在找不到的脚本命令的完整列表[执行 SSMA 控制台 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+在找不到的脚本命令的完整列表[执行 SSMA 控制台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="script-file-validation"></a>脚本文件验证  
 用户可以轻松地验证他/她脚本文件的架构定义文件对照**O2SSConsoleScriptSchema.xsd**架构文件夹中可用。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[创建变量的值文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
+操作控制台的下一步是[创建变量的值文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[创建变量的值文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[创建变量值文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

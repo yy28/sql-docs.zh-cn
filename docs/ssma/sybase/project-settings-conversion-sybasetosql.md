@@ -2,7 +2,7 @@
 title: 项目设置 （转换） (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ffffc3badb8d65d5809e293e0c1ffb526409e4a9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>项目设置 （转换） (SybaseToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Sybase 自适应 Server Enterprise (ASE) 语法的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/06/2018
 **@@ERROR**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 和 ASE 使用不同的错误代码。  
   
-此设置用于指定当它遇到的引用，SSMA 显示在输出或错误列表窗格中的消息 （警告或错误） 的类型**@@ERROR**  ASE 代码中。  
+此设置用于指定当它遇到的引用，SSMA 显示在输出或错误列表窗格中的消息 （警告或错误） 的类型 **@@ERROR**  ASE 代码中。  
   
 -   如果你选择**转换并将标记警告**，SSMA 将转换语句并将其标记警告注释。  
   

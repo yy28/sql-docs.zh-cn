@@ -1,41 +1,42 @@
 ---
-title: "全局设置 （日志记录） (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 全局设置 （日志记录） (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df2e8fd5376ddf37d02380ba1a4f1c516f023e7a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-oracletosql"></a>全局设置 （日志记录） (OracleToSQL)
 使用**全局设置**对话框中，指定 SSMA 的日志记录设置。 通常情况下，仅当使用产品支持时，才会更改这些设置。  
   
 若要访问此对话框中，在**工具**菜单上，选择**全局设置**，然后单击**日志记录**在左窗格的底部的按钮。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **消息级别**  
 下下面的选项将可用**消息级别**:  
   
 |选项|Description|  
 |----------|---------------|  
 |**[所有类别]**|用于设置以下选项的所有日志记录级别。|  
-|**收集器**|收集有关源架构的元数据并将其保存到项目。|  
+|**Collector**|收集有关源架构的元数据并将其保存到项目。|  
 |**转换器**|将结构的源数据库对象，如表和存储的过程转换为相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]结构。|  
 |**数据迁移器**|将数据迁移从源数据库到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**格式化程序**|子组件的生成的脚本的转换器[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构。|  

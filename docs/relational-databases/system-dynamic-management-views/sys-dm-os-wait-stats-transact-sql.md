@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea0f427b3a88179f41a928830787b043c245934
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,8 +174,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |COUNTRECOVERYMGR |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |CREATE_DATINISERVICE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|CXCONSUMER |当使用者线程等待制造者线程，以将行发送时出现并行查询计划。 这是执行的并行查询的常见现象。 <br /> **适用于**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |当同步查询处理器交换迭代器，并生成和使用行时出现并行查询计划。 如果等待太久，无法通过优化查询（如添加索引）来减少等待时间，请考虑调整并行度的开销阈值或降低并行度。<br /> **注意：**中[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 仅是指同步查询处理器交换迭代器，以及的生成使用者线程的行。 CXCONSUMER 等待类型分别进行跟踪使用者线程。| 
+|CXCONSUMER |当使用者线程等待制造者线程，以将行发送时出现并行查询计划。 这是执行的并行查询的常见现象。 <br /> **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |当同步查询处理器交换迭代器，并生成和使用行时出现并行查询计划。 如果等待太久，无法通过优化查询（如添加索引）来减少等待时间，请考虑调整并行度的开销阈值或降低并行度。<br /> **注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 仅是指同步查询处理器交换迭代器，以及的生成使用者线程的行。 CXCONSUMER 等待类型分别进行跟踪使用者线程。| 
 |CXROWSET_SYNC |在并行范围扫描期间出现。| 
 |DAC_INIT |当正在初始化专用管理员连接时出现。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 

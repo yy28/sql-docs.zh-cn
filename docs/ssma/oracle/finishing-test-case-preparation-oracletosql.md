@@ -1,27 +1,28 @@
 ---
-title: "完成测试用例准备 (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 完成测试用例准备 (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f6bf969705a049e03212500a3112e643fbe7654a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b1ca4a9af16b008a1f971541d07069b39f8f9b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>完成测试用例准备 (OracleToSQL)
 向导的最后一页显示的测试用例说明和有关测试中涉及的对象的信息。 此外，在此页上你可以设置测试执行选项。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 -   如果你选择**否**，执行将保存数据更改的所有测试。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>保存模式的辅助表  
-定义测试执行过程中创建的辅助表的保存模式。 请参阅辅助表中的说明[运行测试用例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)主题。  
+定义测试执行过程中创建的辅助表的保存模式。 请参阅辅助表中的说明[运行测试用例&#40;OracleToSQL&#41; ](../../ssma/oracle/running-test-cases-oracletosql.md)主题。  
   
 -   如果你选择**始终将保存**，辅助表数据将始终存储供以后使用。  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/21/2017
 单击**完成**按钮以保存到已准备的测试用例[使用测试存储库 (OracleToSQL)](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用测试存储库 &#40; OracleToSQL &#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[运行测试用例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[测试迁移数据库对象 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[使用测试存储库&#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[运行测试用例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

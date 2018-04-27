@@ -1,27 +1,28 @@
 ---
-title: "菜单命令和其他快捷键 (Oracle SQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 菜单命令和其他快捷键 (Oracle SQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: b6bdfbc11f7e458cb93fbf0af7a159526fe29d7f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1fb3f6530305d3cefb7b31b53c2a841ce653755b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>菜单命令和其他快捷键 (Oracle SQL)
 以下各节描述了用于访问菜单命令和其他 Oracle 应用程序的 SSMA 的各种对话框中使用键盘快捷方式的键盘快捷键。  
@@ -204,5 +205,5 @@ ms.lasthandoff: 12/21/2017
 |请转到声明。|F12|  
   
 ## <a name="see-also"></a>另请参阅  
-[键盘快捷方式 &#40; SQL &#41; 到 Oracle](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
+[键盘快捷方式&#40;Oracle To SQL&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: 创建测试用例 (OracleToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: fed434b32dd482dfb5700c3b547b7e6016ca9669
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7401e9b5de144160abb84388cb9dc1f8e144f357
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-test-cases-oracletosql"></a>创建测试用例 (OracleToSQL)
 使用测试用例向导来创建测试。 此向导允许您通过选择测试和验证对象和指定的测试参数创建测试用例。  
@@ -39,16 +39,16 @@ ms.lasthandoff: 12/21/2017
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>创建测试用例使用向导概述  
 创建测试用例的过程包括五个步骤：  
   
-1.  [初始化测试用例 &#40; OracleToSQL &#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [初始化测试用例&#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [选择并配置的对象添加到测试 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [选择并配置的对象添加到测试&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [选择并配置受影响对象 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [选择并配置受影响的对象&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-4.  [自定义调用顺序 &#40; OracleToSQL &#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+4.  [自定义调用顺序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [完成测试用例准备 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [完成测试用例准备&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[测试迁移数据库对象 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

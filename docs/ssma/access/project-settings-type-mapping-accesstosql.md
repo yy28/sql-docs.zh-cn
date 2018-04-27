@@ -1,6 +1,6 @@
 ---
 title: 项目设置 （类型映射） (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ea7789abd2395615471ecde8934104e85780ae6a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>项目设置 （类型映射） (AccessToSQL)
 类型映射的项目设置，可以设置 SSMA 项目的默认类型映射。 你还可以指定单个数据库对象的类型映射。 有关详细信息，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
@@ -56,16 +56,16 @@ ms.lasthandoff: 04/06/2018
 |--------------------|------------------------|  
 |**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**byte**|**tinyint**|  
+|**字节**|**tinyint**|  
 |**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**uniqueidentifier**|  
+|**Guid**|**uniqueidentifier**|  
 |**integer**|**int**|  
-|**long**|**int**|  
-|**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
+|**长**|**int**|  
+|**长二进制**|**varbinary(max)**|  
+|**备注**|**nvarchar(max)**|  
 |**备注**-对于 Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  

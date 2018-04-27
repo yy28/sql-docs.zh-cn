@@ -2,7 +2,7 @@
 title: 数据迁移设置 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07eb75232f809bb5d94004cab1b612467bda589f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ea726b4ab97d6e993445a385c8e6d148f0d63231
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-migration-settings-sybasetosql"></a>数据迁移设置 (SybaseToSQL)
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/06/2018
   
 -   **应用：**单击**应用**将已更改的设置。  
   
--   **取消:**单击**取消**之前进行的更改已还原存在的设置。  
+-   **取消:** 单击**取消**之前进行的更改已还原存在的设置。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 Sybase 数据迁移到 SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)  

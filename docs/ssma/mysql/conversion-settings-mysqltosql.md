@@ -1,6 +1,6 @@
 ---
 title: 转换设置 (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a37482bec4c033c9098d3ae285ee3f7598baaaf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9284ccc7adab73068bc615bf6f294a23c59c42cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **设置**选项卡允许用户级别设置节点。 选项卡将出现在以下的元数据库节点：  
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/06/2018
   
 1.  **函数转换设置：**  
   
-    1.  此选项卡包含**'强行函数转换'**选项。 该选项可以具有以下四个值之一：  
+    1.  此选项卡包含 **'强行函数转换'** 选项。 该选项可以具有以下四个值之一：  
   
         -   根据项目设置 [继承] 转换  
   

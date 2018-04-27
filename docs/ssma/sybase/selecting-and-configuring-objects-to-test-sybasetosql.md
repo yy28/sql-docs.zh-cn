@@ -2,7 +2,7 @@
 title: 选择并配置的对象添加到测试 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 26d6e9d0a07ddc32f20c80f3d0d476131721d969
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>选择并配置的对象添加到测试 (SybaseToSQL)
 在此步骤中，您将选择对象进行测试，以及如何用于比较过程的和函数的输出参数，以及函数的返回值配置设置。  

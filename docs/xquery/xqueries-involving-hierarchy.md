@@ -1,16 +1,16 @@
 ---
-title: "涉及层次结构的 XQueries |Microsoft 文档"
-ms.custom: 
+title: 涉及层次结构的 XQueries |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - hierarchies [XQuery]
 - XQuery, hierarchies
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c77b4dfc656ad55f6ca36301df04d65c506f3434
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6f485b974ceaac492f8dc611dd2fe0c139426139
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xqueries-involving-hierarchy"></a>涉及层次结构的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ WHERE ProductModelID=7
   
 -   上下文切换标记 {) 和 (} 用于将查询从 XML 构造切换到查询计算。  
   
--   **Sql:column()**用于正在构造的 XML 中包含的关系的值。  
+-   **Sql:column()** 用于正在构造的 XML 中包含的关系的值。  
   
 -   在构造 <`Location`> 元素时，$wc/@* 将检索所有生产车间属性。  
   
--   **String （)**函数返回的字符串值从 <`step`> 元素。  
+-   **String （)** 函数返回的字符串值从 <`step`> 元素。  
   
  下面是部分结果：  
   
@@ -126,7 +126,7 @@ WHERE ContactID = 1
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   
- [XML 构造 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)   
+ [XML 构造&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  
   
   

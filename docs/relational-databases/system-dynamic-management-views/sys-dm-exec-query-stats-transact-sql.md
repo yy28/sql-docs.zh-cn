@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02fec5c45a9cc4e928a5f2f9074d7e520aefd605
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0118022e8e9c24e2e26c4a559068fc02aaef79e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,18 +111,18 @@ ms.lasthandoff: 04/16/2018
 |**last_used_threads**|**bigint**|在执行此计划的最后一次时使用的并行线程数。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**min_used_threads**|**bigint**|使用此计划曾经使用一次执行中的并行线程中最小的数。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**max_used_threads**|**bigint**|使用一次执行中曾经使用此计划的并行线程的最大数目。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**total_columnstore_segment_reads**|**bigint**|读取查询的列存储段的总和。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**last_columnstore_segment_reads**|**bigint**|列存储段读取上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**min_columnstore_segment_reads**|**bigint**|读过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**max_columnstore_segment_reads**|**bigint**|读过查询一次执行中的列存储段中最大的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**total_columnstore_segment_skips**|**bigint**|查询已跳过的列存储段的总和。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**last_columnstore_segment_skips**|**bigint**|列存储段跳过上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**min_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**max_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最大的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
-|**total_spills**|**bigint**|自编译后，通过执行此查询溢出的页的总数。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|总页数溢出的上次执行查询时。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|此查询在单个执行期间曾溢出的页中最小的数。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|最大页数单次执行期间曾溢出此查询。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_columnstore_segment_reads**|**bigint**|读取查询的列存储段的总和。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_reads**|**bigint**|列存储段读取上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_reads**|**bigint**|读过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_reads**|**bigint**|读过查询一次执行中的列存储段中最大的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**total_columnstore_segment_skips**|**bigint**|查询已跳过的列存储段的总和。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_skips**|**bigint**|列存储段跳过上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最大的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
+|**total_spills**|**bigint**|自编译后，通过执行此查询溢出的页的总数。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|总页数溢出的上次执行查询时。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|此查询在单个执行期间曾溢出的页中最小的数。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|最大页数单次执行期间曾溢出此查询。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|此分布的节点标识符。<br /><br /> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]

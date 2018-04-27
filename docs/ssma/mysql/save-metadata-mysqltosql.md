@@ -1,6 +1,6 @@
 ---
 title: 保存元数据 (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b13bbe672267937af7d4097b9c07f9065c4142e1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 1a0be1286baced36ec0b35a9a7f1a9b8dc30677a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-metadata--mysqltosql"></a>保存元数据 (MySQLToSQL)
 **保存元数据**对话框会提示您以在保存它之前将元数据加载到你的 SSMA 项目。 这样，你已可以脱机使用，还可以发送给他人，请与技术支持人员如完成的项目文件。  

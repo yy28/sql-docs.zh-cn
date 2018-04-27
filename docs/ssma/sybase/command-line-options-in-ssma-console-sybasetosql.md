@@ -2,7 +2,7 @@
 title: SSMA 控制台 (SybaseToSQL) 中的命令行选项 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b76d8debc23900a72945e6cf0a37d8d54d012e64
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 控制台 (SybaseToSQL) 中的命令行选项
 Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA 活动。 接下来的部分详细介绍相同。  
@@ -37,7 +37,7 @@ Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA �
   
 对于本部分，术语 option 也称为转换。  
   
--   选项不区分大小写，并且可能会启动与**-**'**/**字符。  
+-   选项不区分大小写，并且可能会启动与**-**'**/** 字符。  
   
 -   如果指定了选项，则必须指定相应的选项参数。  
   

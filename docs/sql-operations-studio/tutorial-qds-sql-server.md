@@ -1,9 +1,9 @@
 ---
-title: 教程： 启用五个最慢的查询示例小组件的 SQL Operations Studio (preview) |Microsoft 文档
+title: 教程： 启用五个最慢的查询示例小组件的 SQL 操作 Studio （预览版） |Microsoft 文档
 description: 本教程演示如何启用五个最慢的查询示例上的小组件数据库仪表板。
 ms.custom: tools|sos
 ms.date: 03/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78c6ad929a3eea55669e9ebdcef149e605d594ef
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4c0597adca9897d69503bba3d08d9cdafd859c1c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程： 添加*五个最慢的查询*示例小组件设为数据库仪表板
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 03/17/2018
 
 4. 粘贴到编辑器中复制的计划。
 
-5. 按**Ctrl + S**保存该文件，并更改文件扩展名为*.s q l*。 *.s q l*未出现在文件扩展名下拉列表中，因此只需键入中。 为本教程中，命名该文件*slowquery.sqlplan*。
+5. 按**Ctrl + S**保存该文件，并更改文件扩展名为 *.s q l*。 *.s q l*未出现在文件扩展名下拉列表中，因此只需键入中。 为本教程中，命名该文件*slowquery.sqlplan*。
 
 6. 在中打开查询计划[!INCLUDE[name-sos](../includes/name-sos-short.md)]的查询计划查看器：
 

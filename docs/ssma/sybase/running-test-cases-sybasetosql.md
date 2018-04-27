@@ -2,7 +2,7 @@
 title: 运行测试用例 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 321a4f0dfdadc1209cf480448e72d68cfa4fe7ed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Sybase 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -57,19 +57,19 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 |名称|类型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
+|USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
 |USER_TABLE$ Aud|表|保存已删除并覆盖的行的表。|  
-|USER_TABLE$AudID|表|保存新的和已更改行的表。|  
+|USER_TABLE$ AudID|表|保存新的和已更改行的表。|  
 |USER_TABLE|视图|简化的表示形式的表修改。|  
 |新的 USER_TABLE $|视图|简化的表示形式插入的和被覆盖的行。|  
-|USER_TABLE$new_id|视图|插入的和已更改行的标识。|  
-|USER_TABLE$old|视图|简化的表示形式被删除，而且覆盖的行。|  
+|USER_TABLE$ new_id|视图|插入的和已更改行的标识。|  
+|旧的 USER_TABLE $|视图|简化的表示形式被删除，而且覆盖的行。|  
   
 以下对象创建的数据库中的已验证表 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 |名称|类型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
+|USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
   
 ### <a name="test-object-calls"></a>测试对象调用  
 在此步骤中，SSMA 测试人员时，将调用选择用于测试每个对象的结果进行比较并显示报表。  

@@ -1,6 +1,6 @@
 ---
 title: 使用 SSMA 项目 (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76642133566117c55fb750d1308e3e9331e1e6de
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5743862c6f8352f0d94172707f2ac31aeaf59c8d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 项目 (DB2ToSQL)
 迁移到 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，首先创建新的 SSMA 项目。 项目是一个文件，其中包含以下信息：  
@@ -86,7 +86,7 @@ SSMA 进行转换和加载数据库对象、 迁移数据，和与 DB2 同步 SS
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL 数据库  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
 除了定义应用于所有新的 SSMA 项目的默认项目设置，你可以自定义的每个项目的设置。 有关详细信息，请参阅[设置项目选项&#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md)和相关部分。  

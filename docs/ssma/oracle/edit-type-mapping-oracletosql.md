@@ -1,27 +1,28 @@
 ---
-title: "编辑类型映射 (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 编辑类型映射 (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: b737d23608fa538019d55cc4825a29001238ee1e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c089d4f05ff66ea01d74f43538b886b82066f4e1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-type-mapping-oracletosql"></a>编辑类型映射 (OracleToSQL)
 **编辑类型映射**对话框中，可以指定类型的源和目标的数据库对象对象之间的映射方式。  
@@ -34,13 +35,13 @@ ms.lasthandoff: 12/21/2017
   
 特定于表的类型映射重写数据库和项目类型映射。 特定于数据库的映射覆盖项目映射。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **源类型**  
 选择要映射到的源数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
   
 以下字段的可变长度数据类型时，将出现在**源类型**:  
   
-**From**  
+**从**  
 指定此映射的最短长度。 例如，对于**nchar**数据类型，你可以输入 10 来指定此映射的范围开始**nchar(10)**。  
   
 **若要**  

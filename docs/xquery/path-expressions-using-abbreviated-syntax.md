@@ -1,16 +1,16 @@
 ---
-title: "使用缩写在路径表达式中的语法 |Microsoft 文档"
-ms.custom: 
+title: 使用缩写在路径表达式中的语法 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - axis step [XQuery]
 - abbreviated syntax [XQuery]
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2882ee4082e29ce4d4ad41f3347feb7eca4a0a46
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 214adb3b2c59faafb2ac3734c79a1f3a00c30259
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路径表达式-使用缩写的语法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
  XQuery 支持在路径表达式中使用下列缩写：  
   
--   **子**轴是默认轴。 因此，**子::**轴可以省略从表达式中的步骤。 例如，`/child::ProductDescription/child::Summary` 可以写为 `/ProductDescription/Summary`。  
+-   **子**轴是默认轴。 因此，**子::** 轴可以省略从表达式中的步骤。 例如，`/child::ProductDescription/child::Summary` 可以写为 `/ProductDescription/Summary`。  
   
 -   **属性**轴可缩写为@。 例如，`/child::ProductDescription[attribute::ProductModelID=10]` 可以写为 `/ProudctDescription[@ProductModelID=10]`。  
   
--   A **/descendant-or-self::node()/**可缩写为 / /。 例如，`/descendant-or-self::node()/child::act:telephoneNumber` 可以写为 `//act:telephoneNumber`。  
+-   A **/descendant-or-self::node()/** 可缩写为 / /。 例如，`/descendant-or-self::node()/child::act:telephoneNumber` 可以写为 `//act:telephoneNumber`。  
   
      上一个查询检索了存储在 Contact 表的 AdditionalContactInfo 列中的所有电话号码。 AdditionalContactInfo 的架构定义的方式， \<telephoneNumber > 元素可以在文档中的任意位置出现。 因此，若要检索所有电话号码，必须搜索文档中的每一个节点。 从文档的根节点开始搜索，接下来搜索所有后代节点。  
   
@@ -65,7 +65,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      如果将路径表达式替换为缩写语法 `//act:telephoneNumber`，会收到相同的结果。  
   
--   **自助:: node （)**在步骤中可缩写为一个句点 （.）。 但是，该点不等效也可以与**自助:: node （)**。  
+-   **自助:: node （)** 在步骤中可缩写为一个句点 （.）。 但是，该点不等效也可以与**自助:: node （)**。  
   
      例如，在以下查询中，使用点表示的是一个值而不是节点：  
   
@@ -73,6 +73,6 @@ child::ProductDescription[attribute::ProductModelID=19]
     ("abc", "cde")[. > "b"]  
     ```  
   
--   **父:: node （)**在步骤中可缩写为双句点 （.）。  
+-   **父:: node （)** 在步骤中可缩写为双句点 （.）。  
   
   

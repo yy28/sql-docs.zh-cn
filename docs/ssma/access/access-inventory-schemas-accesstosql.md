@@ -1,6 +1,6 @@
 ---
 title: 访问清单架构 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -48,11 +48,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a279ed084f4d7dc3b2574ed71332acf9bfe61c8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL)
 下列各节描述 SSMA 在导出到的访问架构时创建的表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/06/2018
 |**文件路径**|**nvarchar(4000)**|访问数据库的完整路径和文件名称。|  
 |**FileSize**|**bigint**|以 kb 为单位的 Access 数据库的大小。|  
 |**FileOwner**|**nvarchar(4000)**|指定访问数据库的所有者为 Windows 帐户。|  
-|**DateCreated**|**datetime**|日期和 Access 数据库的创建的时间。|  
+|**时间**|**datetime**|日期和 Access 数据库的创建的时间。|  
 |**DateModified**|**datetime**|日期和 Access 数据库的上次修改的时间。|  
 |**TablesCount**|**int**|访问数据库中的表数。|  
 |**QueriesCount**|**int**|访问数据库中的查询数。|  
@@ -188,7 +188,7 @@ ms.lasthandoff: 04/06/2018
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含该模块的数据库。|  
 |**ModuleId**|**int**|一个用于标识该模块的递增整数。 此列是表的主键。|  
-|**ModuleName**|**nvarchar(4000)**|模块的名称。|  
+|**moduleName**|**nvarchar(4000)**|模块的名称。|  
   
 ## <a name="see-also"></a>另请参阅  
 [导出 Access 清单](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  

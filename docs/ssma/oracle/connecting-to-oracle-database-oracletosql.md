@@ -1,6 +1,6 @@
 ---
 title: 连接到 Oracle 数据库 (OracleToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c0c85182da6de1e2cb80cda8c628788651e89ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>连接到 Oracle 数据库 (OracleToSQL)
 若要迁移到的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你必须连接到你想要迁移的 Oracle 数据库。 连接时，SSMA 获取有关所有 Oracle 架构，元数据，然后在 Oracle 元数据资源管理器窗格中显示内容。 SSMA 存储有关数据库服务器的信息，但不会存储密码。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/21/2017
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    有关详细信息，请参阅[连接到 Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
+    有关详细信息，请参阅[连接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
   
 ## <a name="reconnecting-to-oracle"></a>重新连接到 Oracle  
 与数据库服务器的连接将保持活动状态，直到关闭该项目。 当你重新打开项目时，你必须重新连接，如果你想与数据库的活动连接。 您可以离线工作之前你想要更新元数据，数据库将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并迁移数据。  
@@ -133,5 +133,5 @@ ms.lasthandoff: 12/21/2017
 -   迁移过程的下一步是[连接到的 SQL Server 实例](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f)。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

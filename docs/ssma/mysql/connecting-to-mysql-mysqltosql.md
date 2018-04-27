@@ -1,6 +1,6 @@
 ---
 title: 连接到 MySQL (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 888989c8dbbf7715695f0203e80dcdd768a44a2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，你必须连接到你想要迁移的 MySQL 数据库。 连接时，SSMA 获取有关所有 MySQL 架构，元数据，然后在 MySQL 元数据资源管理器窗格中显示内容。 SSMA 存储有关数据库服务器的信息，但不会存储密码。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/06/2018
   
     3.  在**密码**框中，指定的用户名称中输入的密码。  
   
-5.  **SSL:**如果你想要安全地连接到 MySQL，请通过检查使用的安全套接字层 (SSL) **SSL**复选框。  
+5.  **SSL:** 如果你想要安全地连接到 MySQL，请通过检查使用的安全套接字层 (SSL) **SSL**复选框。  
   
 6.  **配置：**它提供一个选项以配置 MySQL 通过安全套接字层 (SSL) 的连接。  
   

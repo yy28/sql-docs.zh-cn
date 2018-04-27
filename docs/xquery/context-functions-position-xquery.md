@@ -1,16 +1,16 @@
 ---
-title: "定位函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 定位函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - position function
 - fn:position function
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00ac65b0e0468cb1b4985af92e29cdd0376ea250
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6c7ec3c4bcd0d330d69956d47f3a92c30ed4957
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="context-functions---position-xquery"></a>上下文函数的位置 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>注释  
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()**只能依赖于上下文的谓词的上下文中。 确切地说，仅可用在方括号 ([ ]) 内。与此函数比较不会在静态类型推导过程中减少基数。  
+ 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()** 只能依赖于上下文的谓词的上下文中。 确切地说，仅可用在方括号 ([ ]) 内。与此函数比较不会在静态类型推导过程中减少基数。  
   
 ## <a name="examples"></a>示例  
  本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型中的列[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
@@ -78,7 +78,7 @@ WHERE CatalogDescription is not null
   
 -   查询正文构造的 XML\<产品 > 具有元素**ProductModelID**和**ProductModelName**属性，并具有作为子元素返回的产品功能。  
   
--   **Position()**函数用于谓词中确定的位置\<功能 > 上下文中的子元素。 如果是第一个或第二个功能，将返回该子元素。  
+-   **Position()** 函数用于谓词中确定的位置\<功能 > 上下文中的子元素。 如果是第一个或第二个功能，将返回该子元素。  
   
 -   IF 语句将添加\<这里是更 / > 如果产品目录中有两个以上的功能的结果的元素。  
   

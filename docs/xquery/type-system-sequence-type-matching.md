@@ -1,16 +1,16 @@
 ---
-title: "序列的类型匹配 |Microsoft 文档"
-ms.custom: 
+title: 序列的类型匹配 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>类型系统的序列的类型匹配
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ ms.lasthandoff: 02/09/2018
   
 -   您可能希望知道表达式返回的是 XML 元素还是特定名称和类型的属性节点。  
   
- 您可以在序列类型匹配时使用 `instance of` 布尔运算符。 有关详细信息`instance of`表达式，请参阅[SequenceType 表达式 &#40;XQuery &#41;](../xquery/sequencetype-expressions-xquery.md).  
+ 您可以在序列类型匹配时使用 `instance of` 布尔运算符。 有关详细信息`instance of`表达式，请参阅[SequenceType 表达式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>比较表达式返回的原子值类型  
  如果表达式返回的是原子值序列，则您可能必须弄清序列中值的类型。 下列示例说明如何使用序列类型语法来估计表达式返回的原子值类型。  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>示例：确定序列是否为空  
- **Empty()**序列类型可以使用序列类型表达式，以确定指定的表达式返回的序列是否为空序列。  
+ **Empty()** 序列类型可以使用序列类型表达式，以确定指定的表达式返回的序列是否为空序列。  
   
  在下面的示例中，XML 架构允许 <`root`> 元素为空：  
   
@@ -237,9 +237,9 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>实现限制  
  具体的限制如下：  
   
--   **document-node()**内容类型不支持语法。  
+-   **document-node()** 内容类型不支持语法。  
   
--   **processing-instruction(name)**不支持语法。  
+-   **processing-instruction(name)** 不支持语法。  
   
 ## <a name="element-tests"></a>元素测试  
  元素测试用于将表达式返回的元素节点与具有特定名称和类型的元素节点相匹配。 您可以使用下列元素测试：  
@@ -315,7 +315,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>示例 B  
- 下列示例说明如何确定表达式返回的节点是否为具有特定名称的元素节点。 它使用**element()**测试。  
+ 下列示例说明如何确定表达式返回的节点是否为具有特定名称的元素节点。 它使用**element()** 测试。  
   
  在下面的示例中，正在查询的 XML 实例中的两个 <`Customer`> 元素属于两种不同的类型：`CustomerType` 和 `SpecialCustomerType`。 假定您希望知道表达式返回的 <`Customer`> 元素的类型。 以下 XML 架构集合定义 `CustomerType` 和 `SpecialCustomerType` 类型。  
   
@@ -433,15 +433,15 @@ RETURN
   
 -   **元素 （ElementName，TypeName）**不支持。  
   
--   **元素 (\*，TypeName)**不支持。  
+-   **元素 (\*，TypeName)** 不支持。  
   
--   **schema-element()**不支持。  
+-   **schema-element()** 不支持。  
   
--   **schema-attribute(AttributeName)**不支持。  
+-   **schema-attribute(AttributeName)** 不支持。  
   
 -   显式查询**xsi: type**或**xsi: nil**不支持。  
   
 ## <a name="see-also"></a>另请参阅  
- [类型系统 &#40;XQuery &#41;](../xquery/type-system-xquery.md)  
+ [类型系统&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

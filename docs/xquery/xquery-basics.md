@@ -1,16 +1,16 @@
 ---
-title: "XQuery 基础知识 |Microsoft 文档"
-ms.custom: 
+title: XQuery 基础知识 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - XQuery, about XQuery
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2cafafe39eeb1efd8dbca66215ae26c991a1823
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2b179d4a8202897232d11ff124773eacd962459d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-basics"></a>XQuery 基础知识
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,22 +36,22 @@ ms.lasthandoff: 02/09/2018
   本节介绍了 XQuery 的基础知识。  
   
 ## <a name="in-this-section"></a>本節內容  
- [序列和 QNames &#40;XQuery &#41;](../xquery/sequence-and-qnames-xquery.md)  
+ [序列和 QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  说明了序列以及 QNames 和预定义的命名空间。  
   
- [表达式上下文和查询计算 &#40;XQuery &#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [表达式上下文和查询计算&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  说明了在其中计算 XQuery 的两个上下文。 这两个上下文为静态上下文和动态上下文。  
   
- [原子化 &#40;XQuery &#41;](../xquery/atomization-xquery.md)  
+ [原子化&#40;XQuery&#41;](../xquery/atomization-xquery.md)  
  说明了原子化（原子化是提取某个项的类型化值的过程）。  
   
- [有效的布尔值 &#40;XQuery &#41;](../xquery/effective-boolean-value-xquery.md)  
+ [有效的布尔值&#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
  说明了有效的布尔值。 可以为返回单个布尔值、节点序列或空序列的表达式计算此值。  
   
- [类型系统 &#40;XQuery &#41;](../xquery/type-system-xquery.md)  
+ [类型系统&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  说明了含有各种预定义类型的 XQuery 类型系统。 对于架构类型 XQuery 是强类型化的语言，对于非类型化的数据 XQuery 是弱类型化的语言。  
   
- [错误处理 &#40;XQuery &#41;](../xquery/error-handling-xquery.md)  
+ [错误处理&#40;XQuery&#41;](../xquery/error-handling-xquery.md)  
  说明了 XQuery 中的静态、动态的处理和类型错误。  
   
  [XQuery 中的注释](../xquery/comments-in-xquery.md)  

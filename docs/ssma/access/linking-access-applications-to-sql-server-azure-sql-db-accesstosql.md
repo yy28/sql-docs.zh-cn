@@ -1,15 +1,16 @@
 ---
-title: "链接到 SQL Server 的 Azure SQL 数据库的访问应用程序 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 链接到 SQL Server 的 Azure SQL 数据库的访问应用程序 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a1b658217a8d18642daca9028ae01334b22395c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>链接到 SQL Server 的 Azure SQL DB (AccessToSQL) 访问应用程序
 如果你想要使用现有的 Access 应用程序，用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以将原始 Access 表链接到已迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 表。 链接会修改你的 Access 数据库，以便你的查询、 窗体、 报表和数据访问页使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库而不是你的 Access 数据库中的数据。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  右键单击**表**，然后选择**链接**。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 用于访问备份的原始访问表，并创建链接的表。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 用于访问备份的原始访问表，并创建链接的表。  
   
 链接表后，SSMA 中的表显示时带有小链接图标。 在 Access 中，表会显示与"链接"图标，它是带箭头指向全球。  
   
@@ -153,7 +154,7 @@ Recordset.LastModified
 **解决方法：**使用修改表架构[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]，然后更新中访问的链接。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>超链接的功能在迁移后将丢失数据  
-**原因：**在迁移后数据，列中的超链接失去其功能，并且变得非常简单**nvarchar (max)**列。  
+**原因：**在迁移后数据，列中的超链接失去其功能，并且变得非常简单**nvarchar (max)** 列。  
   
 **解决方法：** None。  
   

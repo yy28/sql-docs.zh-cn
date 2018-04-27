@@ -1,6 +1,6 @@
 ---
 title: 映射源和目标数据库 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eed81b1bf2d9f3f2e70f30a6744c4d7ad9bf33d3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 77266085cf8a55322abf184fb18c5be26af95939
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源和目标数据库 (AccessToSQL)
 当您连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你需要指定用于迁移的目标数据库。 如果你有多个访问数据库可以将它们映射到多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库 （或架构） 或连接的 SQL Azure 数据库下的多个架构。  
@@ -64,11 +64,11 @@ SSMA 方式可以将映射到每个访问数据库[!INCLUDE[ssNoVersion](../../i
   
 -   将映射到 SQL Server  
   
-可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]具有与其连接使用 SSMA 数据库。 如果要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，则系统将提示你使用的消息**"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据。它会在同步期间创建。是否要继续？"** 单击是。 同样，可以架构映射到在目标下不存在架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库将在同步期间创建的。  
+可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]具有与其连接使用 SSMA 数据库。 如果要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，则系统将提示你使用的消息 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据。它会在同步期间创建。是否要继续？"** 单击是。 同样，可以架构映射到在目标下不存在架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库将在同步期间创建的。  
   
 -   将映射到 SQL Azure  
   
-你可以将源数据库映射到已连接的目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库或到连接的目标中的任何架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 如果将源架构映射到已连接的目标数据库在任何非现有架构，则系统将提示您提供一条消息**"架构中不存在目标元数据。它会在同步期间创建。你想要继续吗？"**单击是。  
+你可以将源数据库映射到已连接的目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库或到连接的目标中的任何架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 如果将源架构映射到已连接的目标数据库在任何非现有架构，则系统将提示您提供一条消息 **"架构中不存在目标元数据。它会在同步期间创建。你想要继续吗？"** 单击是。  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>还原为初始数据库和架构  
 如果你自定义的 Access 数据库之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库和架构，你可以还原到指定连接到数据库的映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  

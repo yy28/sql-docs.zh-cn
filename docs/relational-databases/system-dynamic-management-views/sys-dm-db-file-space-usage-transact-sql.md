@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75bc2c0256697c030fa369487407483de63c0c62
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aeab15ee29bcc56e0814d4976bcb2e5239f818ff
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,12 +54,12 @@ ms.lasthandoff: 04/16/2018
 |user_object_reserved_page_count|**bigint**|从统一区为数据库中的用户对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 你可以使用中的 total_pages 列[sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)目录视图以返回用户对象中的每个分配单元的保留的页计数。 但请注意，total_pages 列包括 IAM 页。|  
 |internal_object_reserved_page_count|**bigint**|从统一区为文件中的内部对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 不存在可返回每个内部对象的页计数的目录视图或动态管理对象。|  
 |mixed_extent_page_count|**bigint**|文件的已分配混合区中的已分配和未分配总页数。 混合区包含分配给不同对象的页。 此计数包含文件中的所有 IAM 页。|
-|modified_extent_page_count|**bigint**|**开头**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />在中修改的页的总数分配自上次完整数据库备份后的文件的范围。已修改的页计数可以用于跟踪自上次完整备份，以确定是否有益差异备份以来的差异更改已在数据库中。|
+|modified_extent_page_count|**bigint**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过 SP2 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />在中修改的页的总数分配自上次完整数据库备份后的文件的范围。 已修改的页计数可以用于跟踪自上次完整备份，以决定是否需要差异的备份后的数据库中的差异更改量。|
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
 |distribution_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分发与关联的唯一数字 id。|  
   
 ## <a name="remarks"></a>注释  
- 页计数始终为区级计数。 所以，页计数的值始终为八的倍数。 包含全局分配映射表 (GAM) 和共享全局分配映射表 (SGAM) 分配页的区是已分配的统一区。 它们不包含在上文所述的页计数中。  
+ 页计数始终为区级计数。 所以，页计数的值始终为八的倍数。 包含全局分配映射表 (GAM) 和共享全局分配映射表 (SGAM) 分配页的区是已分配的统一区。 它们不包含在上文所述的页计数中。 有关页和区的详细信息，请参阅[页和区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md)。 
   
  当前版本存储区的内容是在[sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)。 在文件级而不是会话级和任务级跟踪版本存储页，因为它们是全局资源。 会话会生成版本，但在会话结束时不能删除版本。 版本存储清除必须考虑需要访问特定版本的运行时间最长的事务。 可以通过查看 elapsed_time_seconds 列中的发现最长运行的事务与版本存储区清理相关[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)。  
   

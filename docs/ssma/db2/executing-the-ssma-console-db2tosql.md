@@ -1,6 +1,6 @@
 ---
 title: 执行 SSMA 控制台 (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 816c37c3ac9c26c80d0f3a95ed27af135b9e874c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>执行 SSMA 控制台 (DB2ToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。 接下来的部分详细介绍相同。 控制台应用程序在此部分中使用作为枚举的某些标准脚本文件命令。  
@@ -35,7 +35,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 **Command**  
   
-create-new-project  
+创建新的项目  
   
 创建新的 SSMA 项目。  
   
@@ -108,7 +108,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
 ```  
 **Command**  
   
-close-project  
+关闭项目  
   
 关闭迁移项目。  
   
@@ -195,7 +195,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+连接目标数据库  
   
 -   连接到目标 SQL Server 数据库，并完全加载的目标数据库的高级别元数据，但不是元数据。  
   
@@ -441,7 +441,7 @@ convert-schema
   
 **Command**  
   
-map-schema  
+映射架构  
   
 架构映射到目标架构的源数据库。  
   
@@ -462,7 +462,7 @@ map-schema
 ```  
 **Command**  
   
-map-schema  
+映射架构  
   
 架构映射到目标架构的源数据库。  
   
@@ -489,7 +489,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步目标  
   
 -   将目标对象与目标数据库同步。  
   
@@ -505,11 +505,11 @@ synchronize-target
   
 -   `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 -   `report-errors-to:` 为同步操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定了错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -554,7 +554,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+从数据库中刷新  
   
 -   刷新数据库中的源对象。  
   
@@ -570,11 +570,11 @@ refresh-from-database
   
 -   `on-error:` 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 -   `report-errors-to:` 刷新操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定的错误报告的位置**SourceDBRefreshReport.XML**创建。  
   

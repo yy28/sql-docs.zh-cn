@@ -1,6 +1,6 @@
 ---
 title: 项目设置 （转换） (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 47bb86d67219dd5656a6864a4603adc382a36128
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>项目设置 （转换） (MySQLToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将 MySQL 语法转换为 SQL Server 或 SQL Azure 语法的设置。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/06/2018
 |||  
 |-|-|  
 |**术语**|**“定义”**|  
-|**边界框的默认 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 用于空间索引**|定义默认值为 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 的边界框用于空间索引的参数。<br /><br />**默认模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**开放式模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**完整模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**边界框的默认 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 用于空间索引**|定义默认值为 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 的边界框用于空间索引的参数。<br /><br />**默认模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**开放式模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**完整模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**空间索引的默认网格密度**|定义 LEVEL_1、 LEVEL_2、 LEVEL_3 和用于空间索引的网格密度 LEVEL_4 的默认值。<br /><br />**默认模式**<br /><br />LEVEL_1： 默认<br /><br />LEVEL_2： 默认<br /><br />LEVEL_3： 默认<br /><br />LEVEL_4： 默认<br /><br />**开放式模式**<br /><br />LEVEL_1： 默认<br /><br />LEVEL_2： 默认<br /><br />LEVEL_3： 默认<br /><br />LEVEL_4： 默认<br /><br />**完整模式**<br /><br />LEVEL_1： 默认<br /><br />LEVEL_2： 默认<br /><br />LEVEL_3： 默认<br /><br />LEVEL_4： 默认|  
   
 ### <a name="transactions"></a>中的  

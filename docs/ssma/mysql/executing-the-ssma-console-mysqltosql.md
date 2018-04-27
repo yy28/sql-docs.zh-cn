@@ -1,6 +1,6 @@
 ---
 title: 执行 SSMA 控制台 (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b8946a6abdce48e55624965d1dea8b17c40760ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。  
@@ -115,7 +115,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
 ```  
 **Command**  
   
-close-project  
+关闭项目  
                   ： 关闭迁移项目。  
   
 **脚本**  
@@ -127,7 +127,7 @@ close-project
 ```  
 **Command**  
   
-close-project  
+关闭项目  
                   ： 关闭迁移项目。  
   
 **脚本**  
@@ -209,7 +209,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+连接目标数据库  
   
 1.  连接到目标 SQL Server 或 SQL Azure 数据库并完全加载的目标数据库的高级别元数据，但不是元数据。  
   
@@ -449,7 +449,7 @@ convert-schema
   
 **Command**  
   
-map-schema  
+映射架构  
   
 架构映射到目标架构的源数据库。  
   
@@ -477,7 +477,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步目标  
   
 1.  将目标对象与目标数据库同步。  
   
@@ -493,11 +493,11 @@ synchronize-target
   
 3.  `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 4.  `report-errors-to:` 为同步操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定了错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -542,7 +542,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+从数据库中刷新  
   
 1.  刷新数据库中的源对象。  
   
@@ -556,11 +556,11 @@ refresh-from-database
   
 3.  `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   report-total-as-warning  
+    -   为警告报告总数  
   
-    -   report-each-as-warning  
+    -   报表-每个-作为-警告  
   
-    -   fail-script  
+    -   失败脚本  
   
 4.  `report-errors-to:` 为同步操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定了错误报告位置**SourceDBRefreshReport.XML**创建。  
   

@@ -1,34 +1,35 @@
 ---
-title: "全局设置 （对话框） (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 全局设置 （对话框） (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: aa5f62dbde4489b17f2863fcbe1ebbf751e1198d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b227e7becb0ea85469406263cdd13eb17137e3a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>全局设置 （对话框） (OracleToSQL)
 使用的对话框页**全局设置**对话框中指定的默认用户执行任何操作和 SSMA 警告设置。  
   
 若要访问在该对话框设置**工具**菜单上，选择**全局设置**，单击**GUI**底部的左窗格中，，然后选择**对话框**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **覆盖对象之前，则发出警告**  
 当 SSMA 将对象转换为 SQL Server 时，某些对象可能已经存在于项目的 SQL Server 元数据。 这些对象可能已转换，或对象可能只需具有在目标架构与要转换的对象相同的名称。  
   

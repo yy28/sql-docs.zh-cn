@@ -1,6 +1,6 @@
 ---
 title: Getting Started with SSMA mysql (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efe3b32103e655213cecedbc9312233d5fd2c2d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: eac1a3e0b45669194dc78c34fbe28526f17c005b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Getting Started with SSMA mysql (MySQLToSQL)
 SQL Server 迁移助手 (SSMA) mysql 允许您快速将 MySQL 数据库架构转换为 SQL Server 或 Azure SQL DB 架构，将生成的架构上载到 SQL Server 或 Azure SQL DB，以及将数据从 MySQL 迁移到 SQL Server 或 Azure SQL DB。  
@@ -107,7 +107,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
   
 |||  
 |-|-|  
-|**Button**|**函数**|  
+|**按钮**|**函数**|  
 |**创建报表**|将所选的 MySQL 对象转换为 SQL Server 或 Azure SQL DB 对象，然后创建一个报表来显示如何成功转换了。<br /><br />除非在 MySQL 元数据资源管理器中选择对象，已禁用此命令。|  
 |**转换架构**|将所选的 MySQL 对象转换为 SQL Server 或 Azure SQL DB 的对象。<br /><br />除非在 MySQL 元数据资源管理器中选择对象，已禁用此命令。|  
 |**迁移数据**|将数据从 MySQL 数据库迁移到 SQL Server 或 Azure SQL DB。 在运行此命令之前，必须将 MySQL 架构转换为 SQL Server 或 Azure SQL DB 架构，然后将对象加载到 SQL Server 或 Azure SQL DB。<br /><br />除非在 MySQL 元数据资源管理器中选择对象，已禁用此命令。|  

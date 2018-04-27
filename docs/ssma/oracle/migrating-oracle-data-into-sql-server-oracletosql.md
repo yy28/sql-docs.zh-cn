@@ -1,30 +1,31 @@
 ---
-title: "将 Oracle 数据迁移到 SQL Server (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 将 Oracle 数据迁移到 SQL Server (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Data Migration, Client-Side Migration
 - Oracle Data Migration,Server-Side Migration
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: fee4d190885979fe55c598a542feed89a460e3d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1792b9d84ccbf04876c28dce778d002a5dcf17da
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>将 Oracle 数据迁移到 SQL Server (OracleToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，可以将数据从 Oracle 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > 如果实例上未安装 Oracle 扩展包的 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，遇到以下错误: SSMA 数据迁移组件上未找到 SQL Server，将无法进行服务器端数据迁移。 请检查是否正确安装了扩展包。 单击**取消**终止数据迁移。  
   
-5.  在**连接到 Oracle**对话框中，输入连接凭据，，然后单击**连接**。 有关连接到 Oracle 的详细信息，请参阅[连接到 Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
+5.  在**连接到 Oracle**对话框中，输入连接凭据，，然后单击**连接**。 有关连接到 Oracle 的详细信息，请参阅[连接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
     用于连接到目标数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，输入中的连接凭据**连接到 SQL Server**对话框中，单击**连接**。 有关详细信息连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅[连接到 SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
@@ -108,5 +109,5 @@ ms.lasthandoff: 12/21/2017
 > 当为目标数据库使用 SQL Express edition 时，允许仅限客户端数据迁移，并且不支持服务器端数据迁移。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

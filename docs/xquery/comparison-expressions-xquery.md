@@ -1,16 +1,16 @@
 ---
-title: "比较表达式 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 比较表达式 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 361a600ec8033cbd0e10af75e7782b1b86b343cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comparison-expressions-xquery"></a>比较表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ WHERE ProductModelID=19
   
 -   \<大小 > 元素值与指定原子值"小"进行比较。  
   
--   请注意，因为值运算符仅适用于原子值， **data （)**函数隐式用于检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
+-   请注意，因为值运算符仅适用于原子值， **data （)** 函数隐式用于检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
   
  结果如下：  
   
@@ -227,9 +227,9 @@ ProductModelID       Result
   
  下面是根据文档顺序所做的比较：  
   
--   `<<`： 未**操作数 1**之前**操作数 2**按文档顺序。  
+-   `<<` ： 未**操作数 1**之前**操作数 2**按文档顺序。  
   
--   `>>`： 未**操作数 1**按照**操作数 2**按文档顺序。  
+-   `>>` ： 未**操作数 1**按照**操作数 2**按文档顺序。  
   
  下面的查询将返回 True，如果产品目录说明中有\<保证 > 元素之前显示\<维护 > 中某一特定产品的文档顺序的元素。  
   
@@ -247,14 +247,14 @@ where ProductModelID=19
   
  请注意上述查询的以下方面：  
   
--   **Value （)**方法**xml**查询中使用数据类型。  
+-   **Value （)** 方法**xml**查询中使用数据类型。  
   
--   查询的布尔值的结果转换为**nvarchar(10)**和返回。  
+-   查询的布尔值的结果转换为**nvarchar(10)** 和返回。  
   
 -   该查询返回 True。  
   
 ## <a name="see-also"></a>另请参阅  
- [类型系统 &#40;XQuery &#41;](../xquery/type-system-xquery.md)   
+ [类型系统&#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

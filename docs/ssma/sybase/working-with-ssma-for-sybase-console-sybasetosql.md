@@ -2,7 +2,7 @@
 title: SSMA 使用的 Sybase 控制台 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 067925b6401195ef2aa0686bcb88ae92a6b063e0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9bf315ea6dd4cfaaf73f02322d79caecd74b735b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>SSMA 使用的 Sybase 控制台 (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA)，版本为 Sybase 自适应 Server Enterprise (ASE)，现可通过在命令行控制台应用程序访问。 脚本文件窗体的应用程序执行命令的输入。 作为控制台应用程序，SSMA 支持脚本级别进行连接、 减少迁移周期，并缩放迁移工作量。  

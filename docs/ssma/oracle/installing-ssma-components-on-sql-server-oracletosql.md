@@ -1,30 +1,31 @@
 ---
-title: "在 SQL Server (OracleToSQL) 上安装 SSMA 组件 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 在 SQL Server (OracleToSQL) 上安装 SSMA 组件 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Installign the Extension Pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9dc0fbc22cedb1c7aa7d4ac3bd342c6acb91ba88
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server (OracleToSQL) 上安装 SSMA 组件
 除了安装 SSMA，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 Oracle 提供程序启用服务器到服务器的连接。  
@@ -34,10 +35,10 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb**，到的指定�
   
 此外，当你将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理作业时服务器端数据迁移引擎用于将数据迁移。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>必要條件  
 在上安装 Oracle 服务器组件 SSMA 之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请确保系统满足以下要求：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]安装实例。 SSMA 不支持 SQL Server 2008 Express Edition。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 安装实例。 SSMA 不支持 SQL Server 2008 Express Edition。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
@@ -60,9 +61,9 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb**，到的指定�
   
     具体取决于 WinZip 你具有的版本，你可以双击该文件，或右键单击该文件和选择**提取所有**或**在 WinZip 中打开**。 按照 WinZip 用户界面中的说明，以提取文件。  
   
-2.  将 SSMA 复制 Oracle 扩展包。*n*.Install.exe，其中 *n* 是到正在运行的计算机的生成号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+2.  将 SSMA 复制 Oracle 扩展包。*n*。Install.exe，其中*n*是到正在运行的计算机的生成号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-3.  双击 SSMA Oracle 扩展包。*n*.Install.exe。  
+3.  双击 SSMA Oracle 扩展包。*n*。Install.exe。  
   
 4.  在欢迎页上，单击**下一步**。  
   
@@ -84,7 +85,7 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb**，到的指定�
   
     Windows 身份验证将使用您的 Windows 凭据来尝试登录到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果你选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]身份验证，你必须输入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登录名和密码。  
   
-11. 在下一页上，选择**安装实用工具数据库**  *n* ，其中 *n* 是版本号，并依次**下一步**。  
+11. 在下一页上，选择**安装实用工具数据库** *n*，其中*n*是版本号，并依次**下一步**。  
   
     **Sysdb**创建数据库和该数据库中创建的用户定义函数和存储的过程。  
   
@@ -110,6 +111,6 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb**，到的指定�
 你将数据迁移到每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理作业。 这些作业将命名为**ssma_oracle 数据迁移包 {GUID}**，并且在中可见[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Jobs 文件夹中。  
   
 ## <a name="see-also"></a>另请参阅  
-[安装适用于 Oracle 客户端 &#40; OracleToSQL &#41; SSMA](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[安装适用于 Oracle 客户端 SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

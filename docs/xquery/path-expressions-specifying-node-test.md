@@ -1,16 +1,16 @@
 ---
-title: "在路径表达式步骤中指定节点测试 |Microsoft 文档"
-ms.custom: 
+title: 在路径表达式步骤中指定节点测试 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ff610c579553847dc82193cff9a28b474f0b433
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>路径表达式的指定节点测试
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [（可选） 的零个或多个步骤限定符](../xquery/path-expressions-specifying-predicates.md)  
   
- 有关详细信息，请参阅[路径表达式 &#40;XQuery &#41;](../xquery/path-expressions-xquery.md).  
+ 有关详细信息，请参阅[路径表达式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
   
  节点测试是一个条件，并且是路径表达式中的轴步骤的第二个组件。 在步骤中选定的所有节点都必须满足此条件。 对于路径表达式 `/child::ProductDescription`，节点测试为 `ProductDescription`。 此步骤将仅检索那些名为 ProductDescription 的元素节点子级。  
   

@@ -1,6 +1,6 @@
 ---
 title: 菜单命令和其他快捷键 (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b81e9aae756b94302d2a70db4b66a2c3933e10c7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 43b92985f3423defe6ef2c5a2e6a62d032474829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>菜单命令和其他快捷键 (DB2ToSQL)
 以下各节描述了用于访问菜单命令和其他的 SSMA 的各种对话框中用于 DB2 应用程序的快捷键的键盘快捷键。  

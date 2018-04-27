@@ -1,6 +1,6 @@
 ---
 title: 项目设置 （迁移） (MySQLToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6616502c370733bf0efa19eed97e6e2f022c5a0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ead554bd5c15dbd099fed6ce0bd5745e79b5308d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-migration-mysqltosql"></a>项目设置 （迁移） (MySQLToSQL)
 迁移页的**项目设置**对话框中包含自定义如何 SSMA 将数据迁移从 MySQL 到 SQL Server 的设置。  

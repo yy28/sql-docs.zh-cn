@@ -1,6 +1,6 @@
 ---
 title: 选择并配置的对象添加到测试 (OracleToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2186b7c2e52cbba438dd48b32a2f884e3ccf04fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>选择并配置的对象添加到测试 (OracleToSQL)
 在此步骤中，您将选择对象进行测试，以及如何用于比较过程的和函数的输出参数，以及函数的返回值配置设置。  
   
 ## <a name="selection-of-objects-to-test"></a>选择向测试的对象  
-在位于窗口左侧 Oracle 对象树中，检查你想要在测试过程中调用的对象。 请参阅中的可测试对象的完整列表[测试迁移的数据库对象 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)主题。  
+在位于窗口左侧 Oracle 对象树中，检查你想要在测试过程中调用的对象。 请参阅中的可测试对象的完整列表[测试迁移的数据库对象&#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)主题。  
   
 如果 SSMA Tester 不支持任何选定的测试对象，你将看到该链接标记为**某些所选的对象包含错误**下对象树。 单击此链接来查看为什么是这些对象不能测试的原因并清除所选内容的错误的对象。  
   
@@ -87,8 +87,8 @@ ms.lasthandoff: 12/21/2017
 你可以在指定输入的参数值**调用值**页。 **添加调用**按钮添加使用空的参数值的新调用。 **删除调用**按钮可移除当前的调用。  
   
 ## <a name="next-step"></a>下一步  
-[选择并配置受影响对象 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[选择并配置受影响的对象&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[测试迁移数据库对象 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

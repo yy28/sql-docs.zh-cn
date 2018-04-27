@@ -1,9 +1,9 @@
 ---
-title: 备份和还原数据库使用 SQL Operations Studio (preview) |Microsoft 文档
-description: 了解如何备份和还原数据库使用 SQL Operations Studio (preview)
+title: 备份和还原数据库使用 SQL 操作 Studio （预览版） |Microsoft 文档
+description: 了解如何使用 SQL Operations Studio (預覽) 以備份和還原資料庫
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,34 +14,34 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ef55aa54275e356eff9674aac10a27b36d758e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: baf76f3d403f74bc84ecafc4d2c84bce340a0e2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>备份和还原使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>备份和还原使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-在本教程中，你将学习如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]到：
+您可以在本教學課程中，了解如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 來完成下列工作：
 > [!div class="checklist"]
 > * 备份数据库 
 > * 查看备份状态
 > * 生成用于执行备份的脚本
 > * 还原数据库
-> * 查看还原任务的状态
+> * 檢視還原工作的狀態
 
 ## <a name="prerequisites"></a>必备条件
 
 本教程需要安装 SQL Server *TutorialDB*。 若要创建*TutorialDB*数据库，请完成以下快速入门之一：
 
-- [连接和查询 SQL Server 使用[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [连接和查询 SQL Server 使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>备份数据库
 
 1. 打开 TutorialDB 数据库仪表板 (打开**服务器**侧栏 (**CTRL + G**)，展开**数据库**，右键单击**TutorialDB**，然后选择**管理**)。 
 
-2. 打开**Backup database**对话框 (单击**备份**上**任务**小组件)。
+2. 開啟 **Backup database** 對話方塊 (按一下**工作**小工具上的**備份**)。
 
    ![任务小组件](./media/tutorial-backup-restore-sql-server/tasks.png)
 
@@ -52,32 +52,32 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>查看备份状态并查看备份脚本
 
-1. 打开**任务历史记录**侧栏上单击的时钟图标*操作栏*或按**CTRL + T**。
+1. 在**動作列**上按一下 [時鐘] 圖示或按下 *CTRL + T*，以開啟**工作歷程記錄**資訊看板。
 
    ![任务历史记录](./media/tutorial-backup-restore-sql-server/task-history.png)
 
-2. 若要查看备份脚本在编辑器中，右键单击**成功的备份数据库**和选择**脚本**。
+2. 若要在編輯器內檢視備份指令碼，請以滑鼠右鍵按一下**成功的備份資料庫**並選取**指令碼**。
 
    ![备份脚本](./media/tutorial-backup-restore-sql-server/task-script.png) 
 
-## <a name="restore-a-database-from-a-backup-file"></a>从备份文件还原数据库
+## <a name="restore-a-database-from-a-backup-file"></a>從備份檔案還原資料庫
 
 
-1. 打开**服务器**侧栏 (**CTRL + G**)，右键单击你的服务器，然后选择**管理**。 
+1. 開啟**伺服器**資訊看板 (**CTRL + G**)，以滑鼠右鍵按一下您的伺服器，然後選取**管理**。 
 
-2. 打开**还原数据库**对话框 (单击**还原**上**任务**小组件)。
+2. 開啟**還原資料庫**對話方塊 (按一下**工作**小工具上的**還原**)。
 
 2. 选择**备份文件**中**从还原**字段。 
 
-3. 单击省略号 （...） 以**备份文件路径**字段，并选择的最新备份文件*TutorialDB*。
+3. **從還原**欄位中選取*備份檔案*。 
 
-3. 类型**TutorialDB_Restored**中**目标数据库**字段**目标**部分，以将备份文件还原到新的数据库。
+3. 在**目的地**區段的**目標資料庫**欄位中輸入 **TutorialDB_Restored**，以將備份檔案還原至新的資料庫。
 
    ![还原 (restore)](./media/tutorial-backup-restore-sql-server/restore.png)
 
 4. 单击**还原**
 
-5. 若要查看的还原操作的状态，请单击**CTRL + T**以打开**任务历史记录**侧栏。
+5. 若要檢視還原作業的狀態，請按 **CTRL + T** 以開啟**工作歷程記錄**資訊看板。
 
    ![还原 (restore)](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
@@ -88,5 +88,5 @@ ms.lasthandoff: 12/21/2017
 > * 查看备份状态
 > * 生成用于执行备份的脚本
 > * 还原数据库
-> * 查看还原任务的状态
+> * 檢視還原工作的狀態
 

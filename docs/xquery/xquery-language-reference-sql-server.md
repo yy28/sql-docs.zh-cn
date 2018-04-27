@@ -2,8 +2,8 @@
 title: XQuery 语言参考 (SQL Server) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e9ac63fb610743e540979271dd9ebac32fd6c873
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 语言参考 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   
  XQuery 基于现有的 XPath 查询语言，并支持更好的迭代、更好的排序结果以及构造必需的 XML 的功能。 XQuery 在 XQuery 数据模型上运行。 此模型是 XML 文档以及可能为类型化也可能为非类型化的 XQuery 结果的抽象概念。 类型信息基于 W3C XML 架构语言所提供的类型。 如果没有可用的类型化信息，XQuery 将按照非类型化处理数据。 这与 XPath 1.0 版处理 XML 的方式相似。  
   
- 若要查询的变量或列中存储的 XML 实例**xml**类型，则使用[xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，可以声明的变量**xml**键入和使用查询**query()**方法**xml**数据类型。  
+ 若要查询的变量或列中存储的 XML 实例**xml**类型，则使用[xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，可以声明的变量**xml**键入和使用查询**query （)** 方法**xml**数据类型。  
   
 ```  
 DECLARE @x xml  
@@ -74,7 +74,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  本部分的组织结构基于 World Wide Web 联合会 (W3C) XQuery 工作草案规范。 本部分中的某些关系图是从该规范得到的。 本部分将 Microsoft XQuery 实现与 W3C 规范进行比较，介绍 Microsoft XQuery 与 W3C 的不同之处并指明不支持的 W3C 功能。 W3C 规范位于[http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)。  
+>  本部分的组织结构基于 World Wide Web 联合会 (W3C) XQuery 工作草案规范。 本部分中的某些关系图是从该规范得到的。 本部分将 Microsoft XQuery 实现与 W3C 规范进行比较，介绍 Microsoft XQuery 与 W3C 的不同之处并指明不支持的 W3C 功能。 W3C 规范位于[ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -1,6 +1,6 @@
 ---
 title: 使用示例控制台脚本文件 (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5d7a127cb350c8cb95c84ebe43795212986274b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 209333cfd06ae2049865a9ebf1494c6eacafc591
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用示例控制台脚本文件 (DB2ToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -51,11 +51,11 @@ ms.lasthandoff: 04/06/2018
   
     -   连接到源和目标服务器的详细信息，请参阅[服务器连接文件创建&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) 。  
   
-2.  **VariableValueFileSample.xml:**已用在示例控制台中的所有变量都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需将示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行自变量传递。  
+2.  **VariableValueFileSample.xml:** 已用在示例控制台中的所有变量都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需将示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行自变量传递。  
   
     变量的值文件的详细信息，请参阅[创建变量的值文件&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)。  
   
-3.  **AssessmentReportGenerationSample.xml:**此示例使用户能够生成可由用户以进行分析之前他开始转换和迁移数据的 xml 评估报表。  
+3.  **AssessmentReportGenerationSample.xml:** 此示例使用户能够生成可由用户以进行分析之前他开始转换和迁移数据的 xml 评估报表。  
   
     在`generate-assessment-report`命令，用户必须 mandatorily 更改变量值 (请参阅**VariableValueFileSample.xml**) 中`object-name`属性设为数据库名称是在用户使用。 根据指定对象的种类`object-type`值将还必须更改。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/06/2018
   
     确保服务器连接文件命令行自变量传递到控制台应用程序和 ServersConnectionFileSample.xml 更新使用正确的服务器的参数值。  
   
-4.  **SqlStatementConversionSample.xml:**此示例使用户能够生成对应`t-sql`源数据库的脚本`sql`作为输入提供的命令。  
+4.  **SqlStatementConversionSample.xml:** 此示例使用户能够生成对应`t-sql`源数据库的脚本`sql`作为输入提供的命令。  
   
     在`convert-sql-statement`命令，用户必须 mandatorily 更改变量值 (请参阅**VariableValueFileSample.xml**) 中`context`属性设为正在使用用户的数据库名称。 用户还将需要更改`sql`属性值设为源数据库`sql`他/她需要要转换的命令。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/06/2018
     > [!NOTE]  
     > 确保变量值文件命令行自变量传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
   
-5.  **ConversionAndDataMigrationSample.xml:**此示例使用户能够从转换为数据迁移执行端到端迁移。 下面列出的他们将需要更改的必需的属性值列表：  
+5.  **ConversionAndDataMigrationSample.xml:** 此示例使用户能够从转换为数据迁移执行端到端迁移。 下面列出的他们将需要更改的必需的属性值列表：  
   
     |命令名称|Description|Attribute|  
     |----------------|---------------|-------------|  

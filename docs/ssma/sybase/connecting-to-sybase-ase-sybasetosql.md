@@ -2,7 +2,7 @@
 title: 连接到 Sybase ASE (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 3c663218b700acb40892a763db93d02629388d27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>连接到 Sybase ASE (SybaseToSQL)
 若要 Sybase 自适应 Server Enterprise (ASE) 将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你必须连接到包含你想要迁移的数据库的自适应服务器。 连接时，SSMA 获取自适应的服务器上所有数据库有关的元数据，并在 Sybase 元数据资源管理器窗格中显示数据库元数据。 SSMA 存储有关数据库服务器的信息，但不会存储密码。  

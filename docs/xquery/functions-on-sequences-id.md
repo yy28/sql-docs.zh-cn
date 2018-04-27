@@ -1,16 +1,16 @@
 ---
-title: "id 函数 (XQuery) |Microsoft 文档"
-ms.custom: 
+title: id 函数 (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 341693aa368bc92e5176570711541ab6c217cb88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8f1b577cc16d7688eca03ce5c02e239bedab3957
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-sequences---id"></a>函数对序列的 id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回与匹配的一个或多个中提供的 xs: idref 值的值的 xs: id 值的元素节点的序列*$arg*。  
+  返回与匹配的一个或多个中提供的 xs: idref 值的值的 xs: id 值的元素节点的序列 *$arg*。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 基于 IDREF 属性值检索元素  
  下面的示例使用 fn:id 来基于 IDREF manager 属性检索 <`employee`> 元素。 在此示例中，manager 属性是一个 IDREF 类型的属性，eid 属性是一个 ID 类型的属性。  
   
- 为特定的管理器属性值， **id （)**函数查找 <`employee`> 其 ID 类型特性值与输入的 IDREF 值匹配的元素。 换而言之，为特定员工， **id （)**函数返回员工管理器。  
+ 为特定的管理器属性值， **id （)** 函数查找 <`employee`> 其 ID 类型特性值与输入的 IDREF 值匹配的元素。 换而言之，为特定员工， **id （)** 函数返回员工管理器。  
   
  在该示例中执行下列操作：  
   
@@ -109,7 +109,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 基于 OrderList IDREFS 属性值检索元素  
  在下面的示例中，<`Customer`> 元素的 OrderList 属性是一个 IDREFS 类型的属性。 它列出特定客户的订单 ID。 对于每个订单 ID，在 <`Customer`> 下都有一个提供订单值的 <`Order`> 元素子级。  
   
- 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 此值然后传递给**id （)**函数。 然后找到函数 <`Order`> 其 OrderID 属性值与匹配的输入元素**id （)**函数。  
+ 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 此值然后传递给**id （)** 函数。 然后找到函数 <`Order`> 其 OrderID 属性值与匹配的输入元素**id （)** 函数。  
   
 ```  
 drop xml schema collection SC  
@@ -187,7 +187,7 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持的两个参数版本**id （)**。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求的自变量类型**id （)**要 xs:IDREF* 的子类型。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求的自变量类型**id （)** 要 xs:IDREF* 的子类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [在序列上的函数](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

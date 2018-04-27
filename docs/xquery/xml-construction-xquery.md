@@ -2,8 +2,8 @@
 title: XML 构造 (XQuery) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 542ab45094806cd59c6f80038e38b73c1efa338f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-construction-xquery"></a>XML 构造 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 下面的查询与上一个查询类似。 但是，大括号中的表达式指定**data （)**函数可检索的原子值 <`root`> 元素并将其分配给构造的元素中，<`e`>。  
+ 下面的查询与上一个查询类似。 但是，大括号中的表达式指定**data （)** 函数可检索的原子值 <`root`> 元素并将其分配给构造的元素中，<`e`>。  
   
 ```  
 DECLARE @x xml;  
@@ -251,7 +251,7 @@ This is product model catalog description.
   
  构造属性时，可以使用大括号中的表达式指定属性的值。 在本例中，表达式的结果返回为属性值。  
   
- 在下面的示例中， **data （)**函数不是绝对必需的。 将表达式值分配到属性，因为**data （)**隐式应用以检索指定的表达式的类型化的值。  
+ 在下面的示例中， **data （)** 函数不是绝对必需的。 将表达式值分配到属性，因为**data （)** 隐式应用以检索指定的表达式的类型化的值。  
   
 ```  
 DECLARE @x xml;  
@@ -353,7 +353,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     如果将应用**data （)**函数，查询可检索的原子值的表达式，因为`/x`，这加上字符串。 下面是原子值的序列：  
+     如果将应用**data （)** 函数，查询可检索的原子值的表达式，因为`/x`，这加上字符串。 下面是原子值的序列：  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   

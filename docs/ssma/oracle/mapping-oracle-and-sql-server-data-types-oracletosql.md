@@ -1,6 +1,6 @@
 ---
 title: 映射 Oracle 和 SQL Server 数据类型 (OracleToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 14abe4d362eead87d83ab8ea9b9082f8c2c8f566
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
 Oracle 数据库类型与不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库类型。 当转换到的 Oracle 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你必须指定如何将从到 Oracle 数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
   
 ## <a name="default-mappings"></a>默认映射  
-SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置&#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>映射继承的类型  
 你可以自定义在项目级别、 对象类别级别 （例如所有存储过程） 或对象级别的类型映射。 除非重写，则在较低级别，将从较高的级别继承设置。 例如，如果您映射**smallmoney**到**money**项目级别，在项目中的所有对象将都使用此映射，除非你自定义级别的对象或类别的映射。  
@@ -84,7 +84,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
   
-        某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换**框中，然后[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换**框中，然后 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  若要删除的自定义数据类型映射，请执行以下操作：  
   
@@ -94,9 +94,9 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         无法删除继承的映射。 但是，通过上的特定对象或对象类别的自定义映射中重写继承的映射。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是为[创建评估报表](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)或[Oracle 数据库对象转换为 SQL Server 语法](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)。 如果创建了一个评估报告，Oracle 对象将自动转换此评估过程。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

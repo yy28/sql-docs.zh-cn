@@ -1,9 +1,9 @@
 ---
-title: 教程： 使用 SQL Operations Studio (preview) TRANSACT-SQL 编辑器创建数据库对象 |Microsoft 文档
-description: 本教程演示简化使用 T-SQL 的 SQL Operations Studio (preview) 中的关键功能。
+title: 教程： 使用 SQL 操作 Studio （预览版） TRANSACT-SQL 编辑器创建数据库对象 |Microsoft 文档
+description: 本教程演示简化使用 T-SQL 的 SQL 操作 Studio （预览版） 中的关键功能。
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程： 使用 TRANSACT-SQL 编辑器创建数据库对象的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -117,7 +117,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建
 
 ## <a name="use-peek-definition"></a>使用查看定义 
 
-SQL Operations Studio 提供的功能，若要查看使用查看定义功能的对象定义。 本部分创建的第二个存储的过程，并使用查看定义查看表以快速创建存储过程的正文中有哪些列。
+SQL 操作 Studio 提供的功能，若要查看使用查看定义功能的对象定义。 本部分创建的第二个存储的过程，并使用查看定义查看表以快速创建存储过程的正文中有哪些列。
 
 1. 通过按下打开新的编辑器**Ctrl + N**。 
 

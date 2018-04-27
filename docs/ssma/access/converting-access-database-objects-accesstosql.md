@@ -1,6 +1,6 @@
 ---
 title: 转换访问数据库对象 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -41,11 +41,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c05d0dd92d0802260f59f86fef13e617f6eea899
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: adf6b62a0cddd53eaebd3cacc33ef05730bc08a6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>转换访问数据库对象 (AccessToSQL)
 在已添加访问数据库并连接到后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 SSMA 用于访问显示元数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象。 你可以现在选择访问数据库对象，然后将转换到的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 架构。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/06/2018
 |Query|view<br /><br />最 SELECT 查询将转换为视图中。 其他查询，如更新查询，不会迁移。<br /><br />采用参数的 SELECT 查询不会转换，也不会交叉表查询。|  
 |报表|不转换|  
 |窗体|不转换|  
-|macro|不转换|  
+|宏|不转换|  
 |module|不转换|  
 |默认值|默认值|  
 |允许零长度列属性|检查约束|  

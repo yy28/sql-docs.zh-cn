@@ -1,16 +1,16 @@
 ---
-title: "展开的 QName (XQuery) |Microsoft 文档"
-ms.custom: 
+title: 展开的 QName (XQuery) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - expanded-QName function
 - fn:expanded-QName function
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9a00b0b5f6e21f8590c4dee3e1a588d0203f004
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7d5f3bfcdcca66e5d4d6892dc1ec0e256d480ba5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>与 QNames-展开 QName 相关函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回具有 URI 中指定的命名空间的 xs: qname 类型的一个值*$paramURI*中指定的本地名称和*$paramLocal*。 如果*$paramURI*是空字符串或空序列，它表示不在命名空间。  
+  返回具有 URI 中指定的命名空间的 xs: qname 类型的一个值 *$paramURI*中指定的本地名称和 *$paramLocal*。 如果 *$paramURI*是空字符串或空序列，它表示不在命名空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,13 +50,13 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  QName 的本地名称部分。  
   
 ## <a name="remarks"></a>注释  
- 以下规则适用于**expanded-QName()**函数：  
+ 以下规则适用于**expanded-QName()** 函数：  
   
--   如果*$paramLocal*指定值不处于 xs:NCName 类型正确词法窗体时，会返回空序列，并表示动态错误。  
+-   如果 *$paramLocal*指定值不处于 xs:NCName 类型正确词法窗体时，会返回空序列，并表示动态错误。  
   
--   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此， **expanded-QName()**函数不能在 XML 构造。 例如，当构造节点（如 `<e> expanded-QName(…) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
+-   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此， **expanded-QName()** 函数不能在 XML 构造。 例如，当构造节点（如 `<e> expanded-QName(…) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
   
--   您可以修改或比较现有的 QName 类型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`值进行比较的元素，<`e`>，返回的 QName 与**expanded-QName()**函数。  
+-   您可以修改或比较现有的 QName 类型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`值进行比较的元素，<`e`>，返回的 QName 与**expanded-QName()** 函数。  
   
 ## <a name="examples"></a>示例  
  本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型中的列[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
@@ -70,7 +70,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   将 XML 实例保存在表中。  
   
--   使用**modify （)**要修改的实例中的 QName 类型元素的值的 xml 数据类型的方法。 **Expanded-QName()**函数用于生成新的 QName 类型值。  
+-   使用**modify （)** 要修改的实例中的 QName 类型元素的值的 xml 数据类型的方法。 **Expanded-QName()** 函数用于生成新的 QName 类型值。  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -195,7 +195,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- 可以比较 QName 值，如以下查询所示。 查询仅返回 <`root`> 元素，其值与匹配 QName 类型返回值**expanded-QName()**函数。  
+ 可以比较 QName 值，如以下查询所示。 查询仅返回 <`root`> 元素，其值与匹配 QName 类型返回值**expanded-QName()** 函数。  
   
 ```  
 SELECT xmlCol.query('  
@@ -209,9 +209,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>实现限制  
- 一个日期和时间限制： **expanded-QName()**函数接受第二个参数为空序列，并将返回而不是引发运行时错误，第二个参数不正确时为空。  
+ 一个日期和时间限制： **expanded-QName()** 函数接受第二个参数为空序列，并将返回而不是引发运行时错误，第二个参数不正确时为空。  
   
 ## <a name="see-also"></a>另请参阅  
- [与 QNames &#40; 相关的功能XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [函数与 QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: 连接到 SQL Server (DB2eToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a985f474e67c846fcb7d4b0428f8f61ba3e010e9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 373e9e080f839a6c2ea66291118991488ac73c17
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>连接到 SQL Server (DB2eToSQL)
 迁移到 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]必须连接到任何这些目标实例的 2014年或 Azure SQL DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 连接时，获取有关的实例中的所有数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]并显示在数据库元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 SSMA 存储的哪个实例有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]已连接，但不会存储密码。  
@@ -91,11 +91,11 @@ ms.lasthandoff: 04/06/2018
   
 ||||||  
 |-|-|-|-|-|  
-|**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
+|**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL 数据库|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|是|用户帐户控制|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||是||  
-|Azure SQL DB||||是|  
+|Azure SQL 数据库||||是|  
   
 > [!IMPORTANT]  
 > 根据项目类型，但不是根据版本的数据库对象的转换执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 你连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016年或 Azure SQL DB。  

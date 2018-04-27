@@ -1,6 +1,6 @@
 ---
 title: 项目设置 （类型映射） (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a268c4a080248028d8eeb399db68f0de57412b01
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: be9c30338806ada2c4a74ef73cb5d8725a15dabf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>项目设置 （类型映射） (DB2ToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -70,8 +70,8 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_integer|int|  
 |blob|varbinary(max)|  
 |boolean|bit|  
@@ -82,14 +82,14 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|decimal|float[53]|  
-|双精度|float[53]|  
-|float|float[53]|  
+|decimal|float [53]|  
+|双精度|float [53]|  
+|float|float [53]|  
 |int|int|  
 |integer|int|  
 |long|varchar(max)|  
 |长时间原始|varbinary(max)|  
-|long raw[\*..8000]<sup>*</sup>|varbinary[*]|  
+|长时间原始 [\*...8000]<sup>*</sup>|varbinary[*]|  
 |长时间原始 [8001..\*]<sup>*</sup>|varbinary(max)|  
 |国家/地区 char|nvarchar(max)|  
 |不同的国家/地区 char|nvarchar(max)|  
@@ -98,12 +98,12 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |不同的国家/地区字符<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|number|float[53]|  
-|numeric|float[53]|  
+|number|float [53]|  
+|numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
-|real|float[53]|  
+|real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |smallint|smallint|  
@@ -126,27 +126,27 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
 |不同的 char [*...\*]|varchar[*]|  
-|char[*..\*]|char[*]|  
+|char [*...\*]|char[*]|  
 |character|char|  
 |不同的字符 [*...\*]|varchar[*]|  
-|character[*..\*]|char[*]|  
+|字符 [*...\*]|char[*]|  
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|dec[*..\*]|dec[*][0]|  
+|dec [*...\*]|dec[*][0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
 |decimal|decimal[38][0]|  
-|decimal[*..\*]|decimal[*][0]|  
+|十进制 [*...\*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
-|双精度|float[53]|  
-|float|float[53]|  
+|双精度|float [53]|  
+|float|float [53]|  
 |float[*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[54..*]|float [53]|  
 |int|int|  
 |integer|int|  
 |long|varchar(max)|  
@@ -165,15 +165,15 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |NCHAR|NCHAR|  
 |nchar[*]|nchar[*]|  
 |Nclob|nvarchar(max)|  
-|number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|number|float [53]|  
+|数字 [*...\*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |numeric|numeric|  
-|numeric[*..\*]|numeric[*]|  
+|数字 [*...\*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
-|nvarchar2[*..\*]|nvarchar[*]|  
-|raw[*..\*]|varbinary[*]|  
-|real|float[53]|  
+|nvarchar2 [*...\*]|nvarchar[*]|  
+|原始 [*...\*]|varbinary[*]|  
+|real|float [53]|  
 |Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
@@ -181,12 +181,12 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |与本地时区的时间戳 [*...\*]|datetimeoffset[*]|  
 |时区的时间戳|datetimeoffset|  
 |时区的时间戳 [*...\*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|时间戳 [*...\*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
-|urowid[*..\*]|uniqueidentifier|  
-|varchar[*..\*]|varchar[*]|  
-|varchar2[*..\*]|varchar[*]|  
-|Xmltype|xml|  
+|urowid [*...\*]|uniqueidentifier|  
+|varchar [*...\*]|varchar[*]|  
+|varchar2 [*...\*]|varchar[*]|  
+|Xml 类型|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>默认本地变量的类型映射  
 下表包含本地变量的默认类型映射。  
@@ -194,33 +194,33 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_interger|int|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|char varying[*..8000]|varchar[*]|  
-|char varying[8001..*]|varchar(max)|  
+|不同的 char [*...8000]|varchar[*]|  
+|不同的 char [8001..*]|varchar(max)|  
 |char[*..8000]|char[*]|  
 |char[8001..*]|varchar(max)|  
 |字符|char|  
-|character varying[*..8000]|varchar[*]|  
-|character varying[8001..*]|varchar(max)|  
+|不同的字符 [*...8000]|varchar[*]|  
+|不同的字符 [8001..*]|varchar(max)|  
 |character[*..8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|dec[*..\*]|dec[*][0]|  
+|dec [*...\*]|dec[*][0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
 |decimal|decimal[38][0]|  
-|decimal[*..\*]|decimal[*][0]|  
+|十进制 [*...\*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
-|双精度|float[53]|  
-|Float|float[53]|  
+|双精度|float [53]|  
+|Float|float [53]|  
 |float[*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[54..*]|float [53]|  
 |int|int|  
 |Integer|int|  
 |integer[*..\*]|numeric[*][0]|  
@@ -234,8 +234,8 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |国家/地区 char [*...4000]|nchar[*]|  
 |国家/地区 char [4001..*]|nvarchar(max)|  
 |国家/地区字符|NCHAR|  
-|national character[*..4000]|nvarchar[*]|  
-|national character[4001..*]|nvarchar(max)|  
+|国家/地区字符 [*...4000]|nvarchar[*]|  
+|国家/地区字符 [4001..*]|nvarchar(max)|  
 |不同的国家/地区字符 [*...4000]|nvarchar[*]|  
 |不同的国家/地区字符 [4001..*]|nvarchar(max)|  
 |Nchar|NCHAR|  
@@ -244,18 +244,18 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |不同的 nchar [*...4000]|nvarchar[*]|  
 |不同的 nchar [4001..*]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|Number|float [53]|  
+|数字 [*...\*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |数字|numeric[38][0]|  
-|numeric[*..\*]|numeric[*]|  
+|数字 [*...\*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..4000]|nvarchar[*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
 |pls_integer|int|  
-|raw[*..8000]|varbinary[*]|  
+|原始 [*...8000]|varbinary[*]|  
 |raw[8001..*]|varbinary(max)|  
-|Real|float[53]|  
+|Real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
@@ -266,14 +266,14 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |时区的时间戳|datetimeoffset|  
 |与本地时区的时间戳 [*...\*]|datetimeoffset[*]|  
 |时区的时间戳 [*...\*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|时间戳 [*...\*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
-|urowid[*..\*]|uniqueidentifier|  
+|urowid [*...\*]|uniqueidentifier|  
 |varchar[*..8000]|varchar[*]|  
 |varchar[8001..*]|varchar(max)|  
 |varchar2[*..8000]|varchar[*]|  
 |varchar2[8001..*]|varcha(max)|  
-|Xmltype|xml|  
+|Xml 类型|xml|  
   
 ## <a name="see-also"></a>另请参阅  
 [用户界面参考&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

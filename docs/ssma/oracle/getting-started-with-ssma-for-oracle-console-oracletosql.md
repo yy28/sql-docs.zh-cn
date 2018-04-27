@@ -1,30 +1,31 @@
 ---
-title: "用于 Oracle 控制台 (OracleToSQL) 入门 SSMA |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 用于 Oracle 控制台 (OracleToSQL) 入门 SSMA |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f73c9250dd75d3beb5ec16cdb70fb3a4f7c57b20
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8fb5dc2f2bc16f531ffebef7a4e908fe6260b7a3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>用于 Oracle 控制台 (OracleToSQL) 入门 SSMA
 本部分介绍的过程启动并开始使用 Oracle 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口。  
@@ -41,13 +42,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>使用 SSMA 控制台的过程  
 在 Windows 系统上成功启动控制台之后，你可以使用以下步骤才能使用它：  
   
-1.  通过脚本文件配置 SSMA 控制台。 本部分的详细信息，请参阅[创建脚本文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
+1.  通过脚本文件配置 SSMA 控制台。 本部分的详细信息，请参阅[创建脚本文件&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
   
-2.  [创建变量的值文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+2.  [创建变量值文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-3.  [创建服务器连接文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+3.  [创建服务器连接文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-4.  [执行 SSMA 控制台 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)基于您的项目需求  
+4.  [执行 SSMA 控制台&#40;OracleToSQL&#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)基于您的项目需求  
   
 其他功能：  
   

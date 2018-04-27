@@ -1,9 +1,9 @@
 ---
-title: 快速访问见解和 SQL Operations Studio (preview) 中的常见任务 |Microsoft 文档
-description: 了解如何在 SQL Operations Studio (preview) 中显示见解的小组件。
+title: 快速访问见解和 SQL 操作 Studio （预览版） 中的常见任务 |Microsoft 文档
+description: 了解如何在 SQL 操作 Studio （预览版） 中显示见解的小组件。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>中的仪表板[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>中的仪表板 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 若要查看仪表板、 右键单击服务器或数据库，并选择**管理**。
 
@@ -107,11 +107,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="sample-insight-action-definition"></a>示例见解操作定义
 
-```"actions"{}```定义见解操作。 操作可以定义通过特定的作用域如```"server"```， ```"database"``` ，依此类推和[!INCLUDE[name-sos](../includes/name-sos-short.md)]将当前的连接上下文信息传递到操作。 
+```"actions"{}``` 定义见解操作。 操作可以定义通过特定的作用域如```"server"```， ```"database"``` ，依此类推和[!INCLUDE[name-sos](../includes/name-sos-short.md)]将当前的连接上下文信息传递到操作。 
 
-例如，还原操作启动 WideWorldImporters 数据库```"database": "${Database}"```定义指示传递```Database```你查询结果设置为还原操作中的列值。 然后还原操作将启动数据库。 ```"types"```是一个 json 数组和数组中可以列出多个操作。 它基本上是将成为上下文菜单上了解详细信息对话框该用户可以单击并执行该操作。 
+例如，还原操作启动 WideWorldImporters 数据库```"database": "${Database}"```定义指示传递```Database```你查询结果设置为还原操作中的列值。 然后还原操作将启动数据库。 ```"types"``` 是一个 json 数组和数组中可以列出多个操作。 它基本上是将成为上下文菜单上了解详细信息对话框该用户可以单击并执行该操作。 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]"备份"、"restore"、"新建查询"和"新数据库"操作类型为已启用了预览 0.17.1。
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] "备份"、"restore"、"新建查询"和"新数据库"操作类型为已启用了预览 0.17.1。
 
 ```json
 "details": {

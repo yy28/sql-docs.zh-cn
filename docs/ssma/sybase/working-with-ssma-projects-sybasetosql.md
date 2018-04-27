@@ -2,7 +2,7 @@
 title: 使用 SSMA 项目 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c1b7b34a106a8bab8bb2a5ba09a67b29cc4e50a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 71405d2a4f8d766cd3af34ac53feb9992946610a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>使用 SSMA 项目 (SybaseToSQL)
 若要 Sybase 自适应 Server Enterprise (ASE) 将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，首先创建 SSMA 项目。 项目是包含你想要迁移到的 ASE 数据库的相关元数据文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，元数据的目标实例的有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 迁移的对象和数据，将接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 连接信息和项目设置。  
@@ -85,7 +85,7 @@ SSMA 包含几个选项进行转换和加载数据库对象，迁移数据，并
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL 数据库  
   
 然后单击**确定**。  
   

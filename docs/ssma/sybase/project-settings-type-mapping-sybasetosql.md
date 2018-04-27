@@ -2,7 +2,7 @@
 title: 项目设置 （类型映射） (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d113993ad9cbfa46e471748ae5840fab3c96d26b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置 （类型映射） (SybaseToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Sybase 自适应 Server Enterprise (ASE) 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -69,14 +69,14 @@ ms.lasthandoff: 04/06/2018
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char varying[\*..8000]**|**varchar[\*]**|  
-|**char varying[8001..\*]**|**varchar(max)**|  
+|**不同的 char [\*...8000]**|**varchar[\*]**|  
+|**不同的 char [8001..\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**不同的字符**|**varchar**|  
-|**character varying[\*..8000]**|**varchar[\*]**|  
-|**character varying[8001..\*]**|**varchar(max)**|  
+|**不同的字符 [\*...8000]**|**varchar[\*]**|  
+|**不同的字符 [8001..\*]**|**varchar(max)**|  
 |**character[\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
@@ -113,8 +113,8 @@ ms.lasthandoff: 04/06/2018
 |**国家/地区 varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**不同的 nchar**|**nvarchar**|  
-|**nchar varying[\*..4000]**|**nvarchar[\*]**|  
-|**nchar varying[4001..\*]**|**nvarchar(max)**|  
+|**不同的 nchar [\*...4000]**|**nvarchar[\*]**|  
+|**不同的 nchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/06/2018
 |**unichar**|**nchar**|  
 |**unichar 不同**|**nvarchar**|  
 |**unichar varying[\*..4000]**|**nvarchar[\*]**|  
-|**unichar varying[4001..\*]**|**nvarchar(max)**|  
+|**unichar 改变 [4001..\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  

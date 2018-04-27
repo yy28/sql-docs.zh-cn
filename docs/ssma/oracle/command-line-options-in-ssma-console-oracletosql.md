@@ -1,15 +1,16 @@
 ---
-title: "SSMA 控制台 (OracleToSQL) 中的命令行选项 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: SSMA 控制台 (OracleToSQL) 中的命令行选项 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Command Line Options, Help Option
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: a5b0502ba12f5151679b6e4468bdb046b490ecc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0c1061732d28120432da9e8f4e20e129af066027
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 控制台 (OracleToSQL) 中的命令行选项
 Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选项。 接下来的部分详细介绍相同。  
@@ -36,7 +37,7 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
   
 对于本部分，术语 option 也称为转换。  
   
--   选项不区分大小写，并且可能会启动与**-**'**/**字符。  
+-   选项不区分大小写，并且可能会启动与**-**'**/** 字符。  
   
 -   如果指定了选项，则必须指定相应的选项参数。  
   
@@ -94,7 +95,7 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 输出选项:-x / xmloutput [xmloutputfile]  
 此命令用于输出到控制台或 xml 文件以 xml 格式的命令输出消息。  
   
-有两个选项可用于 xmloutput，viz。。，：  
+有两个选项可用于 xmloutput，viz..,:  
   
 -   如果 filepath 提供 xmloutput 切换后输出重定向到文件。  
   
@@ -164,21 +165,21 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
   
 `C:\>SSMAforOracleConsole.EXE -?`  
   
-有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md)。  
+有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword Help 选项:-securepassword-？ / 帮助  
 显示 SSMA 控制台选项的语法的摘要：  
   
 `C:\>SSMAforOracleConsole.EXE -securepassword -?`  
   
-有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
+有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
   
 ### <a name="next-step"></a>下一步  
 下一步取决于您的项目要求：  
   
--   用于指定的密码或导出 / 导入密码，请参阅[管理密码 &#40; OracleToSQL &#41;](../../ssma/oracle/managing-passwords-oracletosql.md)。  
+-   用于指定的密码或导出 / 导入密码，请参阅[管理密码&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)。  
   
--   有关生成报表，请参阅[生成报表 &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)。  
+-   有关生成报表，请参阅[生成报表&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)。  
   
--   有关故障排除控制台中的问题，请参阅[故障排除 &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
+-   有关故障排除控制台中的问题，请参阅[故障排除&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
   

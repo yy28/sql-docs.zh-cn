@@ -1,36 +1,37 @@
 ---
-title: "数据迁移报告 (OracleToSQL) |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 数据迁移报告 (OracleToSQL) |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: d88f1451ec5253e097c9f96691c5b22b3eae896a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 51fc0f6d9866f1bfe70087c34048e12fd8ab304e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-migration-report--oracletosql"></a>数据迁移报告 (OracleToSQL)
 **数据迁移报告**对话框中将显示在您迁移到的数据后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="options"></a>“常规”  
-**“状态”**  
+## <a name="options"></a>选项  
+**状态**  
 显示从迁移数据源到目标数据库的状态。  
   
-**From**  
+**从**  
 源表。  
   
 **若要**  

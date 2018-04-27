@@ -1,7 +1,7 @@
 ---
 title: 安装和配置 WideWorldImporters 示例数据库的 SQL |Microsoft 文档
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 3b2a1c4f6fc6045a25a86ea8d49290fafbc29b57
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 04fe03ecffa717de838642006764c9b82f2341d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-and-configuration"></a>安装和配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Wide World Importers OLTP 数据库安装和配置说明。
 
 1. 打开 SQL Server Management Studio 并连接到目标 SQL Server 实例。
 2. 右键单击**数据库**节点，然后选择**Restore Database**。
-3. 选择**设备**并单击按钮**...**
+3. 选择**设备**并单击按钮 **...**
 4. 在对话框中**选择备份设备**，单击**添加**，导航到的服务器上，文件系统中的数据库备份，并选择的备份。 单击 **“确定”**。
 5. 如果需要更改数据的目标位置，并在日志文件，**文件**窗格。 请注意，它将数据和日志文件的不同驱动器上的最佳做法。
 6. 单击 **“确定”**。 这将启动数据库还原。 完成后，您将拥有数据库安装在 SQL Server 实例上的 WideWorldImporters。
