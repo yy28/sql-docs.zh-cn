@@ -1,16 +1,16 @@
 ---
-title: "删除服务器组 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 删除服务器组 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - removing server groups
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - deleting server groups
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75dea4d0132a8e810f34f170e0f17481e6224c3a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 789c651f485e3dc9e6cf14f0324f680ed682d9cd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>删除服务器组 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中删除已注册服务器中的服务器组。 可以随时删除服务器组。 如果服务器组不为空，则删除的服务器组所包含的任何服务器或服务器组也都将删除。 在删除服务器组之前，将所有要保留的服务器或服务器组移动到新的服务器组。  
+  本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中删除已注册服务器中的服务器组。 可以随时删除服务器组。 如果服务器组不为空，则删除的服务器组所包含的任何服务器或服务器组也都将删除。 在删除服务器组之前，将所有要保留的服务器或服务器组移动到新的服务器组。  
   
 ##  <a name="SSMSProcedure"></a>  
   

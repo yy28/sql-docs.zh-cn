@@ -2,7 +2,7 @@
 title: 向 Management Studio 添加自定义报表 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b682c71e77188ea46cea5f85590953c17d61bda
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 851380829c416fe728d2a8bb74dd2d1fc1004f07
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>向 Management Studio 添加自定义报表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主题介绍如何创建简单的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 报表并将其保存为 .rdl 文件，然后将该 rdl 文件作为自定义报表添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 可以创建各式各样的复杂报表。 若要根据本主题创建报表，计算机上必须安装有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 。 不必在 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]运行自定义报表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主题介绍如何创建简单的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 报表并将其保存为 .rdl 文件，然后将该 rdl 文件作为自定义报表添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 可以创建各式各样的复杂报表。 若要根据本主题创建报表，计算机上必须安装有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 。 不必在 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]运行自定义报表。  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>创建保存为 .rdl 文件的简单报表  

@@ -2,7 +2,7 @@
 title: 使用对象资源管理器管理对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0469b79c9e5f53fe4a11d3c54ad9f313307f303b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 22c57aa3c643c83c9ecd23316aab18e48fc5a07a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用对象资源管理器管理对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用对象资源管理器来管理对象（如数据库、表和存储过程）。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以使用对象资源管理器来管理对象（如数据库、表和存储过程）。  
   
 ## <a name="viewing-objects-in-object-explorer"></a>在对象资源管理器中查看对象  
 对象资源管理器使用树状结构将信息分组到文件夹中。 若要展开文件夹，请单击加号 (+) 或双击文件夹。 展开文件夹以显示更多详细信息。 右键单击文件夹或对象，以执行常见任务。 双击对象以执行最常见的任务。  

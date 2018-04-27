@@ -1,16 +1,16 @@
 ---
-title: "在包中使用属性表达式 | Microsoft Docs"
-ms.custom: 
+title: 在包中使用属性表达式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df3d79297b56c02f4aff107349cb8dce5c75d4da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c3515ee8c083a07afc501c4494a25d76f267e5e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
  ![属性表达式的用户界面](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "属性表达式的用户界面")  
   
- 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮 “(…)”，以打开“属性表达式编辑器”对话框。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 **(…)**以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。  
+ 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮 “(…)”，以打开“属性表达式编辑器”对话框。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 **(…)** 以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。  
   
  还可以从 **“属性表达式编辑器”** 对话框打开 **“表达式生成器”** 对话框。  
   

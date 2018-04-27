@@ -2,7 +2,7 @@
 title: CDC 源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: f0552a81beb1bce6a578b058953236453bc8e47f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-source"></a>CDC 源
   CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
@@ -109,9 +109,9 @@ use <cdc-enabled-database-name>
   
 -   [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 源编辑器 & #40;列页 & #41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC 源编辑器（“列”页）](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [CDC 源编辑器 & #40;错误输出页 & #41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC 源编辑器（“错误输出”页）](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -121,7 +121,7 @@ use <cdc-enabled-database-name>
   
  有关可在 **“高级编辑器”** 对话框中设置的属性的详细信息，请参阅 [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [CDC 源自定义属性](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
@@ -141,7 +141,7 @@ use <cdc-enabled-database-name>
   
 3.  在 **“CDC 源编辑器”**中，单击 **“连接管理器”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **ADO.NET 连接管理器**  
  从列表中选择现有连接管理器，或单击“新建”创建新的连接。 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。  
   
@@ -173,7 +173,7 @@ use <cdc-enabled-database-name>
 >  对于所有净更改选项，源表必须具有主键或唯一索引。 对于不具有主键或唯一索引的表，您必须选择 **“全部”** 选项。  
   
  **包含 CDC 状态的变量**  
- 选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅[定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
+ 选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
   
  **包括重新处理指示器列**  
  选中此复选框可以创建称作 **__$reprocessing**的特殊输出列。  
@@ -194,7 +194,7 @@ use <cdc-enabled-database-name>
   
 3.  在 **“CDC 源编辑器”**中，单击 **“列”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  数据源中的可用外部列的列表。 无法使用此表添加或删除列。 在源中选择要使用的列。 所选列将按照选择它们时的顺序添加到 **“外部列”** 列表中。  
   
@@ -216,7 +216,7 @@ use <cdc-enabled-database-name>
   
 3.  在 **“CDC 源编辑器”**中，单击 **“错误输出”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   

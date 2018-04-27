@@ -2,7 +2,7 @@
 title: 选项（“SQL Server 对象资源管理器”-“命令”）| Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ce2864c359c33efe354de4f85fd347f51047874
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 69908f55cac6eb7088763798fd7b984c3a493890
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>选项（“SQL Server 对象资源管理器”-“命令”）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在对象资源管理器中右键单击表或视图时，将显示以下两个用于显示表中的行的选项：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在对象资源管理器中右键单击表或视图时，将显示以下两个用于显示表中的行的选项：  
   
 -   **Select Top 1000 Rows**  
   

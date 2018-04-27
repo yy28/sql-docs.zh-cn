@@ -1,16 +1,16 @@
 ---
-title: "设置包属性 | Microsoft Docs"
-ms.custom: 
+title: 设置包属性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17db392a965b35d668404127d778bf7ef7ecc875
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89564adcf11f815413fefaeb2701431c37b898c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  下表列出了按类别排列的包属性。  
   
 ###  <a name="Checkpoints"></a> 检查点  
- 使用此类别中的属性可以从包控制流中的某一故障点重新启动包，而不是从包控制流的开始处重新运行包。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+ 使用此类别中的属性可以从包控制流中的某一故障点重新启动包，而不是从包控制流的开始处重新运行包。 有关详细信息，请参阅 [通过使用检查点重新启动包](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 |“属性”|Description|  
 |--------------|-----------------|  

@@ -2,7 +2,7 @@
 title: 新建解决方案 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-solutions
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73b2175e4ed0e47c78f957f19123a5b33354d1a3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d4d455065077221486c53dc5b32174502a0bf724
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-new-solution"></a>新建解决方案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 创建项目时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 将创建一个解决方案来包含该项目。 一次只能打开一个解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允许在项目中创建文件夹。 若要对您的工作进行组织，请创建多个项目。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+创建项目时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 将创建一个解决方案来包含该项目。 一次只能打开一个解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允许在项目中创建文件夹。 若要对您的工作进行组织，请创建多个项目。  
   
 若要访问解决方案资源管理器，请单击“视图”菜单中的“解决方案资源管理器”。  
   

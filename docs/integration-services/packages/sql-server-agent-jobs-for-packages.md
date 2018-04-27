@@ -1,16 +1,16 @@
 ---
-title: "包的 SQL Server 代理作业 | Microsoft Docs"
-ms.custom: 
+title: 包的 SQL Server 代理作业 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - jobs [Integration Services]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50d8803f21ddb9687bfcc861a683932a0ba53f44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以计划并且自动执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
@@ -172,7 +172,7 @@ ms.lasthandoff: 01/25/2018
     |**配置**|添加 XML 配置文件以便使用特定配置来运行包。 使用包配置可在运行时更新包属性的值。<br /><br /> 此选项对应于 **dtexec** 的 **/ConfigFile**选项。<br /><br /> 若要了解如何应用包配置，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。 有关如何创建包配置的信息，请参阅 [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)。|  
     |**命令文件**|在单独的文件中指定要使用 **dtexec**运行的附加选项。<br /><br /> 例如，可以包括一个包含 /Dump errorcode 选项的文件，以便在包运行期间发生一个或多个指定事件时生成调试转储文件。<br /><br /> 您可以使用不同的选项组运行包，只需创建多个文件，然后通过使用 **“命令文件”** 选项指定正确的文件即可。<br /><br /> “命令文件”选项对应于 **dtexec** 的 **/CommandFile** 选项。|  
     |**数据源**|查看包中包含的连接管理器。 若要修改某个连接字符串，请单击连接管理器，再单击该连接字符串。<br /><br /> 此选项对应于 **dtexec** 的 **/Connection**选项。|  
-    |**执行选项**|**出现验证警告时包失败**<br /> 指示是否将警告消息视为错误。 如果选择此选项并且在验证期间出现警告，包将无法通过验证。 此选项对应于 **dtexec** 的 **/WarnAsError**选项。<br /><br /> **验证但不执行包**<br /> 指示是否在验证阶段之后停止执行包，而不实际运行包。 此选项对应于 **dtexec** 的 **/Validate**选项。<br /><br /> **覆盖 MacConcurrentExecutables 属性**<br /> 指定包可以同时执行的可执行文件数。 如果值为 -1，则表示包可以运行的最大可执行文件数等于执行包的计算机上的处理器总数加二。 此选项对应于 **dtexec** 的 **/MaxConcurrent**选项。<br /><br /> **启用包检查点**<br /> 指示包在执行期间是否使用检查点。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此选项对应于 **dtexec** 的 **/CheckPointing**选项。<br /><br /> **覆盖重新启动选项**<br /> 指示是否为包的 **CheckpointUsage** 属性设置了新值。 从 **“重新启动选项”** 列表框中选择一个值。<br /><br /> 此选项对应于 **dtexec** 的 **/Restart**选项。<br /><br /> **使用 32 位运行时**<br /> 指示是否在已安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 64 位计算机上，使用 32 位版本的 dtexec 实用工具运行包。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
+    |**执行选项**|**出现验证警告时包失败**<br /> 指示是否将警告消息视为错误。 如果选择此选项并且在验证期间出现警告，包将无法通过验证。 此选项对应于 **dtexec** 的 **/WarnAsError**选项。<br /><br /> **验证但不执行包**<br /> 指示是否在验证阶段之后停止执行包，而不实际运行包。 此选项对应于 **dtexec** 的 **/Validate**选项。<br /><br /> **覆盖 MacConcurrentExecutables 属性**<br /> 指定包可以同时执行的可执行文件数。 如果值为 -1，则表示包可以运行的最大可执行文件数等于执行包的计算机上的处理器总数加二。 此选项对应于 **dtexec** 的 **/MaxConcurrent**选项。<br /><br /> **启用包检查点**<br /> 指示包在执行期间是否使用检查点。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此选项对应于 **dtexec** 的 **/CheckPointing**选项。<br /><br /> **覆盖重新启动选项**<br /> 指示是否为包的 **CheckpointUsage** 属性设置了新值。 从 **“重新启动选项”** 列表框中选择一个值。<br /><br /> 此选项对应于 **dtexec** 的 **/Restart**选项。<br /><br /> **使用 32 位运行时**<br /> 指示是否在已安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 64 位计算机上，使用 32 位版本的 dtexec 实用工具运行包。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
     |**日志记录**|将日志提供程序与包执行操作相关联。<br /><br /> **用于文本文件的 SSIS 日志提供程序**<br /> 将日志条目写入 ASCII 文本文件<br /><br /> **用于 SQL Server 的 SSIS 日志提供程序**<br /> 将日志条目写入 MSDB 数据库的 sysssislog 表中。<br /><br /> **用于 SQL Server Profiler 的 SSIS 日志提供程序**<br /> 写入可用 SQL Server 事件探查器查看的跟踪。<br /><br /> **用于 Windows 事件日志的 SSIS 日志提供程序**<br /> 将日志条目写入 Windows 事件日志中的应用程序日志。<br /><br /> **用于 XML 文件的 SSIS 日志提供程序**<br /> 将日志文件写入 XML 文件。<br /><br /> 对于文本文件、XML 文件以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件探查器日志提供程序，您需要选择包内所含的文件连接管理器。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志提供程序，您需要选择包内所含的 OLE DB 连接管理器。<br /><br /> 此选项对应于 **dtexec** 的 **/Logger**选项。|  
     |**设置值**|覆盖包属性设置。 在 **“属性”** 框中的 **“属性路径”** 和 **“值”** 列中输入值。 为一个属性输入值后， **“属性”** 框中会出现一个空行，支持您为另一个属性输入值。<br /><br /> 若要从“属性”框中删除某个属性，请单击该行，然后单击 **“删除”**。<br /><br /> 你可以通过执行以下操作之一查找属性路径：<br /><br /> - 从 XML 配置文件 (\*.dtsconfig) 复制属性路径。 该路径列在该文件的 Configuration 部分中，作为 Path 属性的值。 下面是 MaximumErrorCount 属性的路径的示例：\Package.Properties[MaximumErrorCount]<br /><br /> - 运行“包配置向导”，并从最后的“完成向导”页中复制属性路径。 随后可以取消该向导。|  
     |**验证**|**仅执行已签名的包**<br /> 指示是否已检查包签名。 如果包未签名或签名无效，则包将失败。 此选项对应于 **dtexec** 的 **/VerifySigned**选项。<br /><br /> **验证包内部版本**<br /> 指示是否根据在此选项旁边的 **“内部版本”** 框中输入的内部版本号，验证包的内部版本号。 如果出现不匹配，则将不执行包。 此选项对应于 **dtexec** 的 **/VerifyBuild**选项。<br /><br /> **验证包 ID**<br /> 指示是否通过将包的 GUID 与此选项旁边的 **“包 ID”** 框中输入的包 ID 进行比较，对该 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyPackageID**选项。<br /><br /> **验证版本 ID**<br /> 指示是否通过将包的版本 GUID 与此选项旁边的 **“版本 ID”** 框中输入的版本 ID 进行比较，对该版本 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyVersionID**选项。|  

@@ -1,33 +1,35 @@
 ---
-title: "“删除表”对话框 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: “删除表”对话框 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.deletetable
 - vdtsql.chm:69644
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9faedaacdacf9d2722ca1ae335d8f43af86d455f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a340bea6a87db1fc16151664be890af2c3643340
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>“删除表”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以指定要从中删除记录的表。 当您将查询的类型更改为 DELETE 查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此对话框可以指定要从中删除记录的表。 当您将查询的类型更改为 DELETE 查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  
   
 选择要从中删除记录的表，再选择“确定”。  
   

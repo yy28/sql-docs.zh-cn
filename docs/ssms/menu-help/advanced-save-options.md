@@ -2,7 +2,7 @@
 title: 高级保存选项 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb0587036168b77e50da5e1ed26cb9eac66a9b9c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 801be6da5f4d4bab9250ac0da7758675af635a1f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-save-options"></a>高级保存选项
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”对话框，在“文件”菜单上，单击“<query name>.sql 另存为”，打开“文件另存为”对话框，再单击“保存”按钮上的向下箭头，然后单击“编码保存”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”对话框，在“文件”菜单上，单击“<query name>.sql 另存为”，打开“文件另存为”对话框，再单击“保存”按钮上的向下箭头，然后单击“编码保存”。  
   
 ## <a name="options"></a>“常规”  
 **编码**  

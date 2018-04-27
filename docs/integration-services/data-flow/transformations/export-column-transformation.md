@@ -1,16 +1,16 @@
 ---
-title: "导出列转换 | Microsoft Docs"
-ms.custom: 
+title: 导出列转换 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feb8ed42fe6e9f53db23b3be1586a163bfbad43b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9ddfcbb615c2ded4af0d75cc42bb791ac5568910
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  
@@ -43,10 +43,10 @@ ms.lasthandoff: 01/25/2018
   
 |追加|截断|文件存在|结果|  
 |------------|--------------|-----------------|-------------|  
-|False|False|是|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|False|是|该转换将创建一个新文件并将数据写入到该文件中。|  
-|False|True|是|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
+|False|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
+|False|True|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|True|“否”|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
 |False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
 |False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
 |True|False|是|转换将打开文件并将数据写入到文件末尾。|  

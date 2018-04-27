@@ -1,34 +1,36 @@
 ---
-title: "对查询结果中的行进行分组 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 对查询结果中的行进行分组 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - summarizing table subsets
 - grouping rows
 - grouping query results
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5de6f1138be5413cfc7112d697ea662b04b9d44
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c66729fee4be279fe48ce657d85e4b2dbb97fef1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>对查询结果中的行进行分组 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果希望创建小计或显示表的子集的其他摘要信息，可使用聚合查询创建组。 各组可对表中具有相同值的所有行的数据进行汇总。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+如果希望创建小计或显示表的子集的其他摘要信息，可使用聚合查询创建组。 各组可对表中具有相同值的所有行的数据进行汇总。  
   
 例如，假设希望看到 `titles` 表中某书籍的平均价格，并将结果按出版商分组。 为此，需要按出版商（例如 `pub_id`）对查询进行分组。 声称的查询输出结果可能类似以下形式：  
   

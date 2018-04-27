@@ -2,7 +2,7 @@
 title: “索引列”对话框 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58eb707b051fc163202af81aa847ce68a8df64fc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8f56d8e36c6710b866d3f399a968d694afcf76f8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>“索引列”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可为索引选择列并设置它们的排序顺序。 一个索引可以使用一个或多个列，并且可以按升序或降序对每个列进行排序。 若要访问此对话框，请在“索引/键”对话框中，单击“常规”部分中的“列”行的省略号按钮。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此对话框可为索引选择列并设置它们的排序顺序。 一个索引可以使用一个或多个列，并且可以按升序或降序对每个列进行排序。 若要访问此对话框，请在“索引/键”对话框中，单击“常规”部分中的“列”行的省略号按钮。  
   
 ## <a name="options"></a>“常规”  
 **列名**  

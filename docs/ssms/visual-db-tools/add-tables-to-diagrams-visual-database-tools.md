@@ -1,33 +1,35 @@
 ---
-title: "向关系图中添加表 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 向关系图中添加表 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserting tables
 - adding tables
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07c5008fda7a404723d96d2a116f14141eeb7d0e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0fece07f5b21ecdfe7c2c9f4b15d5e9d11502d7b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>向关系图中添加表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以将表添加到数据库关系图中，以编辑其结构或使其与关系图中的其他表相关。 可以向关系图中添加现有的数据库表，或者插入尚未在数据库中定义的新表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+可以将表添加到数据库关系图中，以编辑其结构或使其与关系图中的其他表相关。 可以向关系图中添加现有的数据库表，或者插入尚未在数据库中定义的新表。  
   
 ### <a name="to-insert-a-new-table-into-a-diagram"></a>向关系图中插入新表  
   

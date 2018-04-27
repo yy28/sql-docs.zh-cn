@@ -1,34 +1,36 @@
 ---
-title: "手动创建自联接 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 手动创建自联接 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - self-joins
 - manual joins [SQL Server]
 - joins [SQL Server], self
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5b4eb1ea1ad5d561bebdbcef33172940696c6fb
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ba962073bffba27b985fa08b59c6a46ed253fbee
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手动创建自联接 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 即使表在数据库中没有反身关系，也可将它与自身联接。 例如，可使用自联接查找生活在同一市县的作者对。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+即使表在数据库中没有自反关系，您也可将它与自身联接。 例如，可使用自联接查找生活在同一市县的作者对。  
   
 与任何联接一样，自联接至少需要两个表。 不同之处在于，您不是向查询中添加第二个表，而是添加同一个表的第二个实例。 这样，可将表的第一个实例中的列与第二个实例中的同一列相比较，以便对列中的值相互进行比较。 [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 为表的第二个实例分配一个别名。  
   

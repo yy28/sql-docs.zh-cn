@@ -1,30 +1,30 @@
 ---
-title: "第 2 课：在 SSIS 中创建部署捆绑 | Microsoft Docs"
-ms.custom: 
+title: 第 2 课：在 SSIS 中创建部署捆绑 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e047268e658c5b5aa0df933fd4152864b873ef2a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 93ae1e4deb21d7612bc5aa5069aaf9eb7a042abd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>第 2 课：在 SSIS 中创建部署捆绑
 在 [第 1 课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，创建了名为 Deployment Tutorial 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，将包和支持文件添加到该项目，并在包中实现了配置。  

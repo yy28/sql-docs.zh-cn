@@ -1,33 +1,35 @@
 ---
-title: "查询属性 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 查询属性 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 310d9c728820be6bc8f31b24cc979dea6ad1f7ec
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 96f152b0cc39d70ce702b46fc428bd6fbb9c01dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 当在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+当您在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/17/2018
 展开此项可显示“Top”、“百分比”、“表达式”和“With Ties”属性的属性。  
   
 **(最前面)**  
-指定查询将包括 TOP 子句，该子句只返回结果集中的前 *n* 行或前百分之 *n* 行。 默认情况下，查询将在结果集中返回前 10 行。  
+指定查询将包括 TOP 子句，该子句只返回结果集中的前 n  行或前百分之 n 行。 默认情况下，查询将在结果集中返回前 10 行。  
   
 使用此框可更改返回的行数或指定不同的百分比值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或更高版本。）  
   
@@ -83,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 指定查询将返回的行数或行数百分比。 如果将“百分比”设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
   
 **百分比**  
-指定查询将只返回结果集中的前百分之 *n* 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
+指定查询将只返回结果集中的前百分之 n 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
   
 **With Ties**  
 指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  

@@ -1,28 +1,28 @@
 ---
-title: "群集中的 Integration Services (SSIS) | Microsoft Docs"
-ms.custom: 
+title: 群集中的 Integration Services (SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e76d8815ad02797233c8daada93fc54e5433d106
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
   建议不要对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行聚类分析，因为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不是群集服务或群集感知服务，而且不支持从一个群集节点故障转移到另一个节点。 因此，在群集环境内，应当在群集的每个节点上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 并将其作为一个独立服务来启动。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **发生故障转移时，正在运行的包不会重启。**
     
-    可以通过从检查点重新启动包来从包失败中恢复。 可以从检查点重新启动，而不必将服务配置为群集资源。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+    可以通过从检查点重新启动包来从包失败中恢复。 可以从检查点重新启动，而不必将服务配置为群集资源。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 -   在不同于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的资源组中配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务时，不能使用客户端计算机上的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理存储在 msdb 数据库中的包。 在这个双跃点方案中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不能委托凭据。  
   
