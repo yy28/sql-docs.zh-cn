@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75d81e8e19e2ee1cf4efe62da164caf0e337e5ab
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d5d6abe02569642c60023da0977af3c4e87ada8c
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>配置群集仲裁 NodeWeight 设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ ms.lasthandoff: 04/26/2018
 4.  以可读格式输出群集节点属性。  
   
 ### <a name="example-powershell"></a>示例 (PowerShell)  
- 下面的示例对 NodeWeight 设置进行更改以删除“Always OnSrv1”节点的仲裁投票，然后输出群集中所有节点的设置。  
+ 下面的示例更改 NodeWeight 设置以删除“AlwaysOnSrv1”节点的仲裁投票，然后输出群集中所有节点的设置。  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “Always OnSrv1”  
+$node = “AlwaysOnSrv1”  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -92,10 +92,10 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  使用 **cluster.exe** 以设置 `NodeWeight` 值。  
   
 ### <a name="example-clusterexe"></a>示例 (Cluster.exe)  
- 下面的示例对 NodeWeight 值进行更改以删除“Cluster001”群集中“Always OnSrv1”节点的仲裁投票。  
+ 下面的示例更改 NodeWeight 值以删除“Cluster001”群集中“AlwaysOnSrv1”节点的仲裁投票。  
   
 ```ms-dos  
-cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0  
+cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
 ##  <a name="RelatedContent"></a> 相关内容  

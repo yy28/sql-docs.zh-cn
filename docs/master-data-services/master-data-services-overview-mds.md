@@ -23,17 +23,17 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d2f03949fa0edab709dcdf14a71daad12d12022b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b8d9a0203b8e4bce7391415c99ebeba8aafa3333
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- 本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的关键数据组织和管理功能。 
+本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的关键数据组织和管理功能。 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 帮助管理组织的主数据集。 可以将数据整理到模型中，创建更新数据的规则，并控制由谁更新数据。 通过使用 Excel 可以和组织中的其他用户共享主数据集。 
   
