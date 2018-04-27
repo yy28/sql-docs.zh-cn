@@ -1,6 +1,6 @@
 ---
 title: 全局设置 （编辑器） (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 424206b5895ed7b575e21c476f091ee867642170
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 7a2b6f9780dc05c65abe1b966144b3dc83bd8706
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-editor-db2tosql"></a>（编辑器） (DB2ToSQL) 的全局设置
 使用的编辑器页**全局设置**对话框中指定的代码编辑器窗口的设置。  

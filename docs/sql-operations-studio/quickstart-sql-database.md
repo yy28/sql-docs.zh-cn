@@ -1,9 +1,9 @@
 ---
-title: 快速入门： 连接和查询 Azure SQL 数据库使用 SQL Operations Studio (preview) |Microsoft 文档
-description: 本快速入门演示如何使用 SQL Operations Studio (preview) 来连接到 SQL 数据库和运行查询
+title: 快速入门： 连接和查询 Azure SQL 数据库使用 SQL 操作 Studio （预览版） |Microsoft 文档
+description: 本快速入门演示如何使用 SQL 操作 Studio （预览版） 来连接到 SQL 数据库和运行查询
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,15 +14,15 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82fbe7376d762940815c7739311e69672b7fbff6
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 5ecee0879282a31f08fb98bceb0241a5faf0ca2f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]来连接和查询 Azure SQL 数据库
 
-本快速入门演示如何使用*[!INCLUDE[name-sos](../includes/name-sos-short.md)]*以连接到 Azure SQL 数据库，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
+本快速入门演示如何使用*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 以连接到 Azure SQL 数据库，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/09/2018
 
    ![新建连接图标](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 如果你的服务器不具有的防火墙规则允许 SQL Operations Studio 若要连接，**创建新的防火墙规则**窗体将打开。 完成表单创建新的防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果你的服务器不具有的防火墙规则允许 SQL 操作 Studio 若要连接，**创建新的防火墙规则**窗体将打开。 完成表单创建新的防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火墙规则](media/quickstart-sql-database/firewall.png)  
 

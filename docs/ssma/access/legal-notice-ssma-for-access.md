@@ -1,6 +1,6 @@
 ---
 title: 法律声明 (SSMA for Access) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77bd292e59e6ef73ea1d7ec9edf68954e8e8d158
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: cb9e1f7a3ddbbb7c880bdf5ecd80547a984e3434
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="legal-notice-ssma-for-access"></a>法律声明 (SSMA for Access)
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  

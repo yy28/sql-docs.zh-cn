@@ -1,6 +1,6 @@
 ---
 title: 安装 SQL Server Migration Assistant 用于访问 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -34,11 +34,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b60003c1d9c7c266d57f6c0fc583b977561be72
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 73de7050a3a27efd8a7b42e8df053ee6069a0f27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装访问 (AccessToSQL) 的 SQL Server 迁移的助手
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 使用基于 Windows Installer 的向导，可安装 migration Assistant (SSMA) 的访问。 本主题提供有关安装、 许可、 卸载和升级 SSMA 有关安装先决条件的信息到 SSMA，最新版本的链接和说明。  

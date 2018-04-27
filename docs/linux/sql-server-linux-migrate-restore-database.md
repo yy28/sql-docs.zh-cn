@@ -1,25 +1,25 @@
 ---
-title: "从 Windows 的 SQL Server 数据库迁移到 Linux |Microsoft 文档"
-description: "本教程演示如何在 Windows 上，执行 SQL Server 数据库备份并将其还原到运行 SQL Server 2017 Linux 计算机。"
+title: 从 Windows 的 SQL Server 数据库迁移到 Linux |Microsoft 文档
+description: 本教程演示如何在 Windows 上，执行 SQL Server 数据库备份并将其还原到运行 SQL Server 2017 Linux 计算机。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 85feed30c5167112fb61ee3ae4338a2b58a702e1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 
@@ -108,7 +108,7 @@ SQL Server 的备份和还原功能是将从在 Windows 上的 SQL Server 数据
 
 ## <a name="move-the-backup-file-before-restoring"></a>移动恢复之前的备份文件
 
-此时，备份文件是在用户的主目录中的 Linux 服务器上。 在将数据库还原到 SQL Server 之前, 中，你必须将备份的子目录中**/var/opt/mssql**。
+此时，备份文件是在用户的主目录中的 Linux 服务器上。 在将数据库还原到 SQL Server 之前, 中，你必须将备份的子目录中 **/var/opt/mssql**。
 
 1. 在相同的 Windows Bash 会话中，远程连接到你的目标 Linux 计算机进行**ssh**。 下面的示例连接到 Linux 计算机**192.0.2.9**以用户身份**user1**。
 
@@ -149,7 +149,7 @@ SQL Server 的备份和还原功能是将从在 Windows 上的 SQL Server 数据
 > [!NOTE]
 > 以下步骤使用**sqlcmd**工具。 如果你尚未安装 SQL Server Tools，请参阅[在 Linux 上的安装 SQL Server 命令行工具](sql-server-linux-setup-tools.md)。
 
-1. 在相同的终端中，启动**sqlcmd**。 下面的示例连接到具有的本地 SQL Server 实例**SA**用户。 输入的密码出现提示时，或通过添加指定的密码**-P**参数。
+1. 在相同的终端中，启动**sqlcmd**。 下面的示例连接到具有的本地 SQL Server 实例**SA**用户。 输入的密码出现提示时，或通过添加指定的密码 **-P**参数。
 
    ```bash
    sqlcmd -S localhost -U SA

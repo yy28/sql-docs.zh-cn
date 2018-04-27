@@ -1,6 +1,6 @@
 ---
 title: 高级对象选择 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76d6ad6531250fe01ef10106e753b4e4bc8323f6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6d7e6e457d1f308f19df909752d30f7a90f579a9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-object-selection--accesstosql"></a>高级的对象选择 (AccessToSQL)
 **高级对象部分**对话框可以通过使用中的对象名称，字符串和子字符串筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  

@@ -1,24 +1,24 @@
 ---
-title: "为在 Linux 上的 SQL Server 配置存储库 |Microsoft 文档"
-description: "检查并为在 Linux 上的 SQL Server 2017 配置源存储库。 源存储库会影响在安装和升级过程中应用的 SQL Server 的版本。"
+title: 为在 Linux 上的 SQL Server 配置存储库 |Microsoft 文档
+description: 检查并为在 Linux 上的 SQL Server 2017 配置源存储库。 源存储库会影响在安装和升级过程中应用的 SQL Server 的版本。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6983e361ff26f2c6a7e17b1706f414005d38a34
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库安装和升级在 Linux 上的 SQL Server
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="check-for-previously-configured-repositories-rhel"></a>检查有以前配置的存储库 (RHEL)
 首先，验证是否已注册的 SQL Server 存储库。
 
-1. 查看中的文件**/etc/yum.repos.d**目录使用以下命令：
+1. 查看中的文件 **/etc/yum.repos.d**目录使用以下命令：
 
    ```bash
    sudo ls /etc/yum.repos.d
@@ -136,7 +136,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>检查有以前配置的存储库 (Ubuntu)
 首先，验证是否已注册的 SQL Server 存储库。
 
-1. 查看的内容**/etc/apt/sources.list**文件。
+1. 查看的内容 **/etc/apt/sources.list**文件。
 
    ```bash
    sudo cat /etc/apt/sources.list

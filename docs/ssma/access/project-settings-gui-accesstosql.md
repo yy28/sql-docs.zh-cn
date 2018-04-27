@@ -1,6 +1,6 @@
 ---
 title: 项目设置 (GUI) (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d8108d257fd635162dda6a31bf6467fd7ca5e17
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 24bfc4623f33b4a4c30fd62097dfdd5815bd6d03
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-gui-accesstosql"></a>项目设置 (GUI) (AccessToSQL)
 GUI 项目设置允许你配置数据上的显示方式**数据**选项卡; 如果要包括的评估报表的数据报表。  

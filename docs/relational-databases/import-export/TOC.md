@@ -30,7 +30,6 @@
 ### [使用格式化文件跳过数据字段](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [使用格式化文件将表列映射到数据文件字段](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 # [使用“导入平面文件”向导导入平面文件](import-flat-file-wizard.md)
-## [报告“导入平面文件”失败](reporting-import-flat-file-failures.md)
 # [使用导入和导出向导执行导入和导出操作](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [从 Excel 导入](import-data-from-excel-to-sql.md) 
 # [导入 JSON 文档](../json/import-json-documents-into-sql-server.md)

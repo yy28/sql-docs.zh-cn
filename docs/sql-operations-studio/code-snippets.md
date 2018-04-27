@@ -1,10 +1,10 @@
 ---
-title: 在 SQL Operations Studio (preview) 中创建的代码段 |Microsoft 文档
-description: 了解如何创建和使用 SQL Operations Studio (preview) 中的 SQL 代码段
+title: 在 SQL 操作 Studio （预览版） 中创建的代码段 |Microsoft 文档
+description: 了解如何创建和使用 SQL 操作 Studio （预览版） 中的 SQL 代码段
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>创建和使用代码片段来快速创建中的 TRANSACT-SQL (T-SQL) 脚本[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>创建和使用代码片段来快速创建中的 TRANSACT-SQL (T-SQL) 脚本 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 代码片段中的[!INCLUDE[name-sos](../includes/name-sos-short.md)]更简便地的模板创建数据库和数据库对象。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供若干的 T-SQL 代码段，以帮助你快速生成正确的语法。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供若干的 T-SQL 代码段，以帮助你快速生成正确的语法。 
 
 也可以创建用户定义代码段。
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 1. 选择**SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]从 Visual Studio Code 继承其代码段功能，因此这篇文章专门讨论了如何使用 SQL 代码段。 有关详细信息，请参阅[创建自己的代码段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)Visual Studio Code 文档中。 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 从 Visual Studio Code 继承其代码段功能，因此这篇文章专门讨论了如何使用 SQL 代码段。 有关详细信息，请参阅[创建自己的代码段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)Visual Studio Code 文档中。 
 
    ![替换模板字段](media/code-snippets/select-sql.png)
 

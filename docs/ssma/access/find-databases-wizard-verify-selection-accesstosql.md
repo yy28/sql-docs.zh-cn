@@ -1,6 +1,6 @@
 ---
 title: 查找数据库向导 （验证所选内容） (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 915cc8c97e05489fb72a7193ce764faf55ed0b62
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 18da6d0d9961d5dc0d4a4d8ad92bcd3705ed0665
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>查找数据库向导 （验证所选内容） (AccessToSQL)
 找到数据库向导的验证所选内容页列出了要添加到 SSMA 的文件。 如果不正确的文件的列表，请单击**回**修改的列表。 否则，请单击**完成**添加文件。  

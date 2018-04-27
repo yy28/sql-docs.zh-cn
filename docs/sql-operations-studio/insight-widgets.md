@@ -1,9 +1,9 @@
 ---
-title: 使用见解小组件监视服务器和 SQL Operations Studio (preview) 中的数据库 |Microsoft 文档
-description: 了解 SQL Operations Studio (preview) 中的见解小组件。
+title: 使用见解小组件监视服务器和 SQL 操作 Studio （预览版） 中的数据库 |Microsoft 文档
+description: 了解 SQL 操作 Studio （预览版） 中的见解小组件。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d810e0b5ed89b93ac3d56a12758285fbd297092b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 076bca7864a6111a5fa4758d5ecd074b01812d65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>管理服务器和数据库与见解中的小组件[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>管理服务器和数据库与见解中的小组件 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 见解小组件需要你使用来监视服务器和数据库的 TRANSACT-SQL (T-SQL) 查询并将它们转换成真知灼见可视化效果。 
 
@@ -41,7 +41,7 @@ Insights 是可自定义图表和图形添加到服务器和数据库监视仪�
 
 ## <a name="sql-queries"></a>SQL 查询 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]可以避免引入尚未其他语言或大量用户接口，所以它尝试使用最少的 JSON 配置使用 T-SQL 尽可能多地尝试。 使用 T-SQL 的配置见解小组件利用现有源的有用可以转换为真知灼见小组件的 T-SQL 查询的无数的数目。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 可以避免引入尚未其他语言或大量用户接口，所以它尝试使用最少的 JSON 配置使用 T-SQL 尽可能多地尝试。 使用 T-SQL 的配置见解小组件利用现有源的有用可以转换为真知灼见小组件的 T-SQL 查询的无数的数目。
 
 见解小组件组成一个或两个 T-SQL 查询：
 * *见解小组件查询*是必需的且在小组件中返回显示的数据的查询。
@@ -49,7 +49,7 @@ Insights 是可自定义图表和图形添加到服务器和数据库监视仪�
 
 见解小组件查询定义呈现计数、 图表或关系图的数据集。 了解详细信息查询用于列出相关见解中了解详细信息面板中的表格格式的详细信息。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]执行见解小组件查询，将查询结果集映射到图表的数据集，然后将其呈现。 当用户打开了某个见解的详细信息时，它将执行了解详细信息查询并输出在对话框内的网格视图中的结果。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 执行见解小组件查询，将查询结果集映射到图表的数据集，然后将其呈现。 当用户打开了某个见解的详细信息时，它将执行了解详细信息查询并输出在对话框内的网格视图中的结果。
 
 基本理念都是一种方法中编写的 T-SQL 查询，以便它可作为数据集的计数、 图表和图形小组件。 
 

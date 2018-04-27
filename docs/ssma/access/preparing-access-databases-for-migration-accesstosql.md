@@ -1,15 +1,16 @@
 ---
-title: "准备迁移 (AccessToSQL) 访问数据库 |Microsoft 文档"
-ms.prod: sql-non-specified
+title: 准备迁移 (AccessToSQL) 访问数据库 |Microsoft 文档
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e427612a8d0dea7020b1d58bced56e7350110d4e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>准备迁移 (AccessToSQL) 访问数据库
 在迁移到 Access 数据库之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，必须确定哪些数据库迁移，并确保这些数据库可供迁移。  
@@ -46,7 +47,7 @@ Jet 数据库引擎，用于存储作为数据库引擎访问，是用于数据�
 你将数据库迁移到后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以继续使用访问通过使用链接的表，或您可以手动迁移您的应用程序[!INCLUDE[msCoName](../../includes/msconame_md.md)]基于.NET Framework 的代码，从而直接与交互[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 ## <a name="determining-which-databases-to-migrate"></a>确定哪些数据库迁移  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 进行访问可以找到用于你的 Access 数据库。 然后可以将导出到这些数据库有关的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 有关如何导出和查询元数据的详细信息，请参阅[导出访问清单](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 进行访问可以找到用于你的 Access 数据库。 然后可以将导出到这些数据库有关的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 有关如何导出和查询元数据的详细信息，请参阅[导出访问清单](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed)。  
 
    > [!NOTE]
    > 并非所有访问功能和设置支持，或者可以轻松地转换成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 在开始迁移数据库之前，请参阅[不兼容的访问功能](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1)。

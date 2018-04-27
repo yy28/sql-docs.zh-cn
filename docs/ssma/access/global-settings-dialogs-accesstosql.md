@@ -1,6 +1,6 @@
 ---
 title: 全局设置 （对话框） (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a486cdaa42c4938242fc8a4c6e354f69b406334
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d45dd5a75231bf0150649b40e0dbd84e2a2df546
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>全局设置 （对话框） (AccessToSQL)
 使用的对话框页**全局设置**对话框中指定的默认用户执行任何操作和 SSMA 警告设置。  

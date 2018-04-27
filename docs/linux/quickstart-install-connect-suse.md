@@ -1,25 +1,25 @@
 ---
-title: "要开始使用 SUSE Linux Enterprise Server 上的 SQL Server 2017 |Microsoft 文档"
-description: "本快速入门演示如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
+title: 要开始使用 SUSE Linux Enterprise Server 上的 SQL Server 2017 |Microsoft 文档
+description: 本快速入门演示如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: e1690120790be2de70ddd19aa3c1c4893178cb08
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 58fd31b13cb8ed99fb0b7ab62dc38e6e7cdf971c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门： 安装 SQL Server 和 SUSE Linux Enterprise Server 上创建数据库
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/24/2018
 
 你必须具有的 SLES v12 SP2 机**至少 2 GB**的内存。 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
 
-若要安装您自己的计算机上的 SUSE Linux 企业服务器，请转到[https://www.suse.com/products/server](https://www.suse.com/products/server)。 你还可以在 Azure 中创建 SLES 虚拟机。 请参阅[创建和使用 Azure CLI 管理 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并使用`--image SLES`对的调用中`az vm create`。
+若要安装您自己的计算机上的 SUSE Linux 企业服务器，请转到[ https://www.suse.com/products/server ](https://www.suse.com/products/server)。 你还可以在 Azure 中创建 SLES 虚拟机。 请参阅[创建和使用 Azure CLI 管理 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并使用`--image SLES`对的调用中`az vm create`。
 
 > [!NOTE]
 > 在此期间，[适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标不支持 Windows 10。
@@ -87,7 +87,7 @@ ms.lasthandoff: 02/24/2018
    systemctl status mssql-server
    ```
 
-1. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。 如果你正在使用 SuSE 防火墙，你需要编辑**/etc/sysconfig/SuSEfirewall2**配置文件。 修改**FW_SERVICES_EXT_TCP**条目以包括 SQL Server 端口号。
+1. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。 如果你正在使用 SuSE 防火墙，你需要编辑 **/etc/sysconfig/SuSEfirewall2**配置文件。 修改**FW_SERVICES_EXT_TCP**条目以包括 SQL Server 端口号。
 
    ```
    FW_SERVICES_EXT_TCP="1433"

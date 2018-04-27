@@ -1,9 +1,9 @@
 ---
-title: 创建和自定义 SQL Operations Studio (preview) 中的键盘快捷键 |Microsoft 文档
-description: 了解如何创建和自定义 SQL Operations Studio (preview) 中的键盘快捷方式。
+title: 创建和自定义 SQL 操作 Studio （预览版） 中的键盘快捷键 |Microsoft 文档
+description: 了解如何创建和自定义 SQL 操作 Studio （预览版） 中的键盘快捷方式。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a96204723bd56a63ec23841ede47b5844fbad313
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 167b442388aaba9bc088648c7b070cf9c2731cbf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>中的键盘快捷键[!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>中的键盘快捷键 [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 本文提供了快速查看、 编辑和创建中的键盘快捷键的步骤[!INCLUDE[name-sos](../includes/name-sos-short.md)]。
 

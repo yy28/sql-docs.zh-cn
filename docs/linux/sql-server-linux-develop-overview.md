@@ -1,25 +1,25 @@
 ---
-title: "开发应用程序的 SQL Server on Linux |Microsoft 文档"
-description: 
+title: 开发应用程序的 SQL Server on Linux |Microsoft 文档
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.custom: sql-linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.workload: On Demand
-ms.openlocfilehash: fb07628c8818b16709abab07efc1f52248426305
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 24dca42ea34e6810be4cf015af2dd84d6fa39de9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="next-steps"></a>后续步骤
 
-若要开始，请在使用以下快速入门之一的 Linux 上安装 SQL Server:
+若要开始，请使用以下快速入门教程之一在 Linux 上安装 SQL Server：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)

@@ -1,6 +1,6 @@
 ---
 title: 连接到 DB2 数据库 (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588fe34578ac6018ccefbc08f6ab70a017283353
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6cd697c4e81482db4b23aa7eee34724d44934475
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库 (DB2ToSQL)
 迁移到 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你必须连接到你想要迁移的 DB2 数据库。 连接时，SSMA 获取有关所有的 DB2 架构的元数据，然后在 DB2 元数据资源管理器窗格中显示内容。 SSMA 存储有关数据库服务器的信息，但不会存储密码。  

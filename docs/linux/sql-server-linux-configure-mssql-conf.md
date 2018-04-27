@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 7ff775907a9f34d635c7ecf23965ce2ef96179f6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -120,7 +120,7 @@ ms.lasthandoff: 04/19/2018
 
 **Filelocation.defaultdatadir**和**filelocation.defaultlogdir**设置更改其中创建新的数据库和日志文件的位置。 默认情况下，此位置为 /var/opt/mssql/data。 若要更改这些设置，请使用以下步骤：
 
-1. 创建新数据库的目标目录数据和日志文件。 下面的示例创建一个新**/tmp/数据**目录：
+1. 创建新数据库的目标目录数据和日志文件。 下面的示例创建一个新 **/tmp/数据**目录：
 
    ```bash
    sudo mkdir /tmp/data
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/19/2018
 
 若要更改这些设置，请使用以下步骤：
 
-1. 创建新的错误日志文件的目标目录。 下面的示例创建一个新**/tmp/masterdatabasedir**目录：
+1. 创建新的错误日志文件的目标目录。 下面的示例创建一个新 **/tmp/masterdatabasedir**目录：
 
    ```bash
    sudo mkdir /tmp/masterdatabasedir
@@ -241,7 +241,7 @@ ms.lasthandoff: 04/19/2018
 
 若要设置此新位置，请使用以下命令：
 
-1. 创建新的转储文件的目标目录。 下面的示例创建一个新**/tmp/转储**目录：
+1. 创建新的转储文件的目标目录。 下面的示例创建一个新 **/tmp/转储**目录：
 
    ```bash
    sudo mkdir /tmp/dump
@@ -272,7 +272,7 @@ ms.lasthandoff: 04/19/2018
 
 若要更改这些设置：
 
-1. 创建新的错误日志文件的目标目录。 下面的示例创建一个新**/tmp/logs**目录：
+1. 创建新的错误日志文件的目标目录。 下面的示例创建一个新 **/tmp/logs**目录：
 
    ```bash
    sudo mkdir /tmp/logs
@@ -304,7 +304,7 @@ ms.lasthandoff: 04/19/2018
 
 若要设置此新位置，请使用以下命令：
 
-1. 创建新的备份文件的目标目录。 下面的示例创建一个新**/tmp/备份**目录：
+1. 创建新的备份文件的目标目录。 下面的示例创建一个新 **/tmp/备份**目录：
 
    ```bash
    sudo mkdir /tmp/backup
@@ -358,9 +358,9 @@ ms.lasthandoff: 04/19/2018
     | 类型 | Description |
     |-----|-----|
     | **迷你** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
-    | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 和主机环境中，将以下的内存区域添加到转储的内部结构：</br></br> -各种全局函数</br> 的所有内存超过 64 TB</br> -All 名为区域中找到**/proc/$ pid/映射**</br> 双向从线程和堆栈的间接内存</br> 线程信息</br> -关联 Teb 的和 Peb 的</br> 模块信息</br> VMM 和 VAD 树 |
+    | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 和主机环境中，将以下的内存区域添加到转储的内部结构：</br></br> -各种全局函数</br> 的所有内存超过 64 TB</br> -All 名为区域中找到 **/proc/$ pid/映射**</br> 双向从线程和堆栈的间接内存</br> 线程信息</br> -关联 Teb 的和 Peb 的</br> 模块信息</br> VMM 和 VAD 树 |
     | **filtered** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
-    | **full** | 完整的整个过程转储中包括所有区域位于**/proc/$ pid/映射**。 这不受**coredump.captureminiandfull**设置。 |
+    | **full** | 完整的整个过程转储中包括所有区域位于 **/proc/$ pid/映射**。 这不受**coredump.captureminiandfull**设置。 |
 
 ## <a id="dbmail"></a> 设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件
 
@@ -387,7 +387,7 @@ sudo systemctl restart mssql-server
 
 **Telemetry.userrequestedlocalauditdirectory**设置启用本地审核和创建的允许你设置目录，其中本地的审核日志。
 
-1. 创建新的本地审核日志的目标目录。 下面的示例创建一个新**/tmp/审核**目录：
+1. 创建新的本地审核日志的目标目录。 下面的示例创建一个新 **/tmp/审核**目录：
 
    ```bash
    sudo mkdir /tmp/audit
@@ -539,7 +539,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 ## <a name="mssqlconf-format"></a>mssql.conf format
 
-以下**/var/opt/mssql/mssql.conf**文件提供了为每个设置的一个示例。 可以使用此格式可以手动更改到**mssql.conf**文件根据需要。 如果你手动更改此文件，必须重新启动 SQL Server，才能将应用所做的更改。 若要使用**mssql.conf**文件使用 Docker，你必须具有 Docker[保存数据](sql-server-linux-configure-docker.md)。 第一次添加整个**mssql.conf**到你的主机目录文件，然后运行容器。 没有在此示例[客户反馈](sql-server-linux-customer-feedback.md)。
+以下 **/var/opt/mssql/mssql.conf**文件提供了为每个设置的一个示例。 可以使用此格式可以手动更改到**mssql.conf**文件根据需要。 如果你手动更改此文件，必须重新启动 SQL Server，才能将应用所做的更改。 若要使用**mssql.conf**文件使用 Docker，你必须具有 Docker[保存数据](sql-server-linux-configure-docker.md)。 第一次添加整个**mssql.conf**到你的主机目录文件，然后运行容器。 没有在此示例[客户反馈](sql-server-linux-customer-feedback.md)。
 
 ```ini
 [EULA]

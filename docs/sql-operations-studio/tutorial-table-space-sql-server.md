@@ -1,9 +1,9 @@
 ---
-title: 教程： 启用表空间使用情况示例见解小组件，在 SQL Operations Studio (preview) |Microsoft 文档
-description: 本教程演示如何启用表空间使用情况示例见解小组件，在 SQL Operations Studio (preview) 数据库仪表板。
+title: 教程： 启用表空间使用情况示例见解小组件，在 SQL 操作 Studio （预览版） |Microsoft 文档
+description: 本教程演示如何启用表空间使用情况示例见解小组件，在 SQL 操作 Studio （预览版） 数据库仪表板。
 ms.custom: tools|sos
 ms.date: 03/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a1ebe6fda1baf546923887f28b51d416a80b59
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 6ec260eb6c82bfcac0e38251375fc9b58af55db1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教程： 启用表空间使用使用情况示例见解小组件 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

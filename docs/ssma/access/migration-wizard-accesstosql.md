@@ -1,6 +1,6 @@
 ---
 title: 迁移向导 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03b556d7fa5f49d69d9554d3416e3277adc4f504
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 56fc8975af4f801158ad9eeaa9b2536a3d3b8df5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migration-wizard-accesstosql"></a>迁移向导 (AccessToSQL)
 迁移向导引导您完成迁移的一个或多个数据库从 Access 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 通过使用向导，将创建一个项目，将数据库添加到项目，选择要迁移，并连接到的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 此外将转换、 加载和迁移访问架构和数据。 （可选） 你可以将链接到的访问表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 表。  

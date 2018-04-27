@@ -1,6 +1,6 @@
 ---
 title: 将 DB2 数据迁移到 SQL Server (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9b69c59a7b06f18b080a1f2ee5ae259b4abfb3fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>将 DB2 数据迁移到 SQL Server (DB2ToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，可以将数据从 DB2 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

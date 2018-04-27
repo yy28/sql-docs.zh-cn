@@ -1,24 +1,24 @@
 ---
-title: "在 Linux 上的 SQL Server 的客户反馈 |Microsoft 文档"
-description: "描述如何收集和 Linux 上配置 SQL Server 客户反馈。"
+title: 在 Linux 上的 SQL Server 的客户反馈 |Microsoft 文档
+description: 描述如何收集和 Linux 上配置 SQL Server 客户反馈。
 author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25772bd0ad7b2994e732e97fd264bef0e951eea9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0cc16f093a04876a07cbc4566138861f268453ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的客户反馈
 
@@ -88,7 +88,7 @@ Microsoft SQL Server 2017 包含 Internet 启用的功能，可以收集并向 M
 
 此选项允许本地审核，并且允许你设置在其中创建本地审核日志的目录。
 
-1. 创建新的本地审核日志的目标目录。 下面的示例创建一个新**/tmp/审核**目录：
+1. 创建新的本地审核日志的目标目录。 下面的示例创建一个新 **/tmp/审核**目录：
 
    ```bash
    sudo mkdir /tmp/audit
@@ -116,7 +116,7 @@ Microsoft SQL Server 2017 包含 Internet 启用的功能，可以收集并向 M
 ### <a name="on-docker"></a>在 Docker 上
 若要在 docker 上启用本地审核必须 Docker[保存数据](sql-server-linux-configure-docker.md)。 
 
-1. 新的本地审核日志的目标目录将容器中。 在您的计算机上的主机目录中创建新的本地审核日志的目标目录。 下面的示例创建一个新**/审核**目录：
+1. 新的本地审核日志的目标目录将容器中。 在您的计算机上的主机目录中创建新的本地审核日志的目标目录。 下面的示例创建一个新 **/审核**目录：
 
    ```bash
    sudo mkdir <host directory>/audit

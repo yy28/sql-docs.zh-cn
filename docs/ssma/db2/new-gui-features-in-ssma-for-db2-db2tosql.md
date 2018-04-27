@@ -1,6 +1,6 @@
 ---
 title: SSMA for DB2 中的新 GUI 功能 (DB2ToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed0e67bfcc5aaed3a11451d9fab562d368c8782c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 57f3aac072d59fbfd9685547e5153c8148992744
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新 GUI 功能 (DB2ToSQL)
 本章介绍 SSMA 用户界面的新的功能。  
@@ -105,7 +105,7 @@ GUI 对象历史记录可用于以下优势导航对象时：
   
 -   右键单击弹出菜单中选择快速信息  
   
--   Press Ctrl+Shift+Space  
+-   按 Ctrl + Shift + 空格键  
   
 ### <a name="find-declaration"></a>查找声明  
 你可以转到以下方式的光标位置处的对象的声明：  

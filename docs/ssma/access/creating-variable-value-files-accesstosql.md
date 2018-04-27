@@ -1,6 +1,6 @@
 ---
 title: 创建变量值文件 (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,18 +21,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c9e2d86d94c8e49c2aa54e431e5b2c2c4a1ba43
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a216202893e40bfd4a3c1e960fba9db1c08f809c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL)
 变量的值文件是 XML 文件包含频繁更改跨服务器迁移的命令 （例如源或目标服务器名称） 的参数值。 大量的数据库迁移发生时，多个变量的文件，用于存储每个源服务器的值都是创建，并且在主脚本文件与引用**– v**切换在命令行。 此行为有助于维护几个脚本文件中的多个变量的文件中的变量值的静态值。  
   
 > [!NOTE]  
 > -  变量名是前缀和后缀，以 $ （美元） 符号。 如果变量的值文件中的值，而不分配的变量，分析脚本文件的过程将会出错，导致停滞控制台执行过程。  
-> -  The escape character for **$** is **$$**. 如果一个变量或静态参数的值的值包含**$** （美元） 符号，然后**$$**必须指定将其视为字符而不是变量。  
+> -  The escape character for **$** is **$$**. 如果一个变量或静态参数的值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是变量。  
 > -  出于可维护性目的，可以在声明变量`‘variable-group’`逻辑分隔的用户定义的变量的元素。  此元素的使用情况不是必需的。  
   
 **示例：**  

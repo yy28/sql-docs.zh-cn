@@ -1,6 +1,6 @@
 ---
 title: 将访问数据迁移到 SQL Server 的 Azure SQL DB (AccessToSQL) |Microsoft 文档
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 937d75eb150a65bf65d1f55c01c5de760f0d36d4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 872471f89489c4b1f38681fdfd15a84cdb6fe280
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>将访问数据迁移到 SQL Server 的 Azure SQL DB (AccessToSQL)
 您已成功创建数据库对象插入后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以访问到从迁移数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  

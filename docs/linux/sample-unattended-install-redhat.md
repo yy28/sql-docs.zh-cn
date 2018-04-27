@@ -1,24 +1,24 @@
 ---
-title: "Red Hat Enterprise Linux 上的 SQL Server 的无人参与的安装 |Microsoft 文档"
-description: "SQL Server 脚本示例-Red Hat Enterprise Linux 上的无人参与安装"
+title: Red Hat Enterprise Linux 上的 SQL Server 的无人参与的安装 |Microsoft 文档
+description: SQL Server 脚本示例-Red Hat Enterprise Linux 上的无人参与安装
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 67f9d71c2a5bd1f57e270c07028f6e8c0ac036a1
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8273d9b876d4af3fd7c535af78fdd4e60d4db7fd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>示例： 无人参与的 SQL Server 安装脚本以 Red Hat Enterprise Linux
 

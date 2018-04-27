@@ -1,9 +1,9 @@
 ---
-title: 启用或禁用使用情况数据收集和崩溃报告 SQL Operations Studio (preview) |Microsoft 文档
+title: 启用或禁用使用情况数据收集和崩溃报告 SQL 操作 studio （预览版） |Microsoft 文档
 description: 此文章介绍了如何控制如果使用情况和崩溃报告数据收集和发送给 Microsoft。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae620951028ba8e0e82f89c4251238c92bc614ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 035195a03dea60f097a9de88ceb869fe53398c35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>启用或禁用使用情况数据收集[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>启用或禁用使用情况数据收集 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 ## <a name="how-to-disable-telemetry-reporting"></a>如何禁用遥测报告
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]收集使用情况数据，并将其发送给 Microsoft，帮助改进我们的产品和服务。 要了解详细信息，请阅读[隐私声明](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 收集使用情况数据，并将其发送给 Microsoft，帮助改进我们的产品和服务。 要了解详细信息，请阅读[隐私声明](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)。
 
 如果你不想要向 Microsoft 发送使用情况数据，则可以设置*telemetry.enableTelemetry*将设置为*false*。
 
