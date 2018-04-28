@@ -1,30 +1,33 @@
 ---
-title: "getTypeInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getTypeInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTypeInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTypeInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2424ec8f3b484272d2311ac7880cc8810561bd2e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 032ddf6a5f266fa68c6a735dd7f59cf4df02c68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,23 +52,23 @@ public java.sql.ResultSet getTypeInfo()
   
  GetTypeInfo 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**字符串**|数据类型的名称。|  
-|DATA_TYPE|**短**|来自 java.sql.Types 的 SQL 数据类型。|  
+|DATA_TYPE|**short**|来自 java.sql.Types 的 SQL 数据类型。|  
 |PRECISION|**int**|有效数字总个数。|  
 |LITERAL_PREFIX|**字符串**|字符或字符常量前使用。|  
 |LITERAL_SUFFIX|**字符串**|用于终止常量的一个或多个字符。|  
 |CREATE_PARAMS|**字符串**|此数据类型的创建参数说明。|  
-|NULLABLE|**短**|指示列能否包含 Null 值。 它可以是以下值之一：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|NULLABLE|**short**|指示列能否包含 Null 值。 它可以是以下值之一：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|指示数据类型是否区分大小写。 "**true**"如果类型是区分大小写; 否则为"**false**"。|  
-|SEARCHABLE|**短**|指示是否可在 SQL WHERE 子句中使用此列。 它可以是以下值之一：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**short**|指示是否可在 SQL WHERE 子句中使用此列。 它可以是以下值之一：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|指示数据类型的符号。 "**true**"如果类型是无符号; 否则为"**false**"。|  
 |FIXED_PREC_SCALE|**boolean**|指示数据类型可以为 money 值。 "**true**"数据类型是否为 money 类型; 否则为"**false**"。|  
 |AUTO_INCREMENT|**boolean**|指示数据类型可以自动递增。 "**true**"如果递增; 否则为可以自动类型"**false**"。|  
 |LOCAL_TYPE_NAME|**字符串**|数据类型的本地化名称。|  
-|MINIMUM_SCALE|**短**|小数点右边的最大位数。|  
-|MAXIMUM_SCALE|**短**|小数点右边的最小位数。|  
+|MINIMUM_SCALE|**short**|小数点右边的最大位数。|  
+|MAXIMUM_SCALE|**short**|小数点右边的最小位数。|  
 |SQL_DATA_TYPE|**int**|JDBC 驱动程序不支持此类型。|  
 |SQL_DATETIME_SUB|**int**|JDBC 驱动程序不支持此类型。|  
 |NUM_PREC_RADIX|**int**|计算某列最大容纳数时所采用的位数或数字个数。|  

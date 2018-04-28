@@ -1,30 +1,33 @@
 ---
-title: "getExportedKeys 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getExportedKeys 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getExportedKeys
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getExportedKeys
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78a2ace3784458d21546379f7073091832af1496
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6900e3d01e328bdf0727e9a6bc9bb4441df343d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +48,7 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
   
  A**字符串**，其中包含目录名称。  
   
- *架构*  
+ *schema*  
   
  A**字符串**包含架构的名称。  
   
@@ -64,7 +67,7 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
   
  GetExportedKeys 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**字符串**|包含主键表的目录名称。|  
 |PKTABLE_SCHEM|**字符串**|主键表的架构名称。|  
@@ -74,12 +77,12 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 |FKTABLE_SCHEM|**字符串**|外键表的架构名称。|  
 |FKTABLE_NAME|**字符串**|外键表的名称。|  
 |FKCOLUMN_NAME|**字符串**|外键的列名称。|  
-|KEY_SEQ|**短**|多列主键中列的序列号。|  
-|UPDATE_RULE|**短**|SQL 操作为更新时对外键应用的操作。 它可以是以下值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|DELETE_RULE|**短**|SQL 操作为删除时对外键应用的操作。 它可以是以下值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|KEY_SEQ|**short**|多列主键中列的序列号。|  
+|UPDATE_RULE|**short**|SQL 操作为更新时对外键应用的操作。 它可以是以下值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|DELETE_RULE|**short**|SQL 操作为删除时对外键应用的操作。 它可以是以下值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
 |FK_NAME|**字符串**|外键的名称。|  
 |PK_NAME|**字符串**|主键的名称。|  
-|DEFERRABILITY|**短**|指示对外键约束的计算是否可以延迟到提交时。 它可以是以下值之一：<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
+|DEFERRABILITY|**short**|指示对外键约束的计算是否可以延迟到提交时。 它可以是以下值之一：<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
 >  有关 getExportedKeys 方法返回的数据的详细信息，请参阅"sp_fkeys (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  

@@ -1,30 +1,33 @@
 ---
-title: "getProcedureColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getProcedureColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getProcedureColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getProcedureColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d8fa1fbb84392dba636c8aa5649f45cd54e397d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 457eb19095b87983e72b082f6b67945fa0f0cd31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -69,20 +72,20 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  GetProcedureColumns 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**字符串**|指定的存储过程所在数据库的名称。|  
 |PROCEDURE_SCHEM|**字符串**|存储过程的架构。|  
 |PROCEDURE_NAME|**字符串**|存储过程的名称。|  
 |COLUMN_NAME|**字符串**|列的名称。|  
-|COLUMN_TYPE|**短**|列的类型。 它可以是以下值之一：<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
+|COLUMN_TYPE|**short**|列的类型。 它可以是以下值之一：<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**int**|来自 java.sql.Types 的 SQL 数据类型。|  
 |TYPE_NAME|**字符串**|数据类型的名称。|  
 |PRECISION|**int**|有效数字总个数。|  
 |LENGTH|**int**|以字节为单位的数据的长度。|  
-|SCALE|**短**|小数点右侧的数字个数。|  
-|RADIX|**短**|数值类型的基础。|  
-|NULLABLE|**短**|指示列能否包含 Null 值。 它可以是以下值之一：<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
+|SCALE|**short**|小数点右侧的数字个数。|  
+|RADIX|**short**|数值类型的基础。|  
+|NULLABLE|**short**|指示列能否包含 Null 值。 它可以是以下值之一：<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
 |REMARKS|**字符串**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不返回此列的值。|  
 |COLUMN_DEF|**字符串**|列的默认值。|  
 |SQL_DATA_TYPE|**int**|此列等同于**DATA_TYPE**列中，除**datetime**和 ISO**间隔**数据类型。|  

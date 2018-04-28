@@ -1,30 +1,33 @@
 ---
-title: "setBytes 方法 （长，字节，int，int） |Microsoft 文档"
-ms.custom: 
+title: setBytes 方法 （长，字节，int，int） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerBlob.setBytes (long.byte[], int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerBlob.setBytes (long.byte[], int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 583b53edb45215c3c103e78465e1a4dd1bd14294
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 04162acd8f204306d60b5af73637a5835b818861
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes 方法 （长，字节，int，int）
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,11 +53,11 @@ public int setBytes(long pos,
   
  要写入 BLOB 的字节的数组。  
   
- *偏移量*  
+ *offset*  
   
  以字节为单位的偏移量数组从何处着手读取数据自**字节**数组。  
   
- *len*  
+ len  
   
  要尝试从字节数组读入 BLOB 的字节数。  
   
@@ -70,7 +73,7 @@ public int setBytes(long pos,
  数据将覆盖指定位置开始，并且可以过度运行 BLOB 的初始长度。 指定“位置+1”值将追加字节。 传递“位置+2”或更大值（或零或更小值）会引发位置错误。 传递长度为零**字节**数组将返回零，因为不写入任何字节。  
   
 ## <a name="see-also"></a>另请参阅  
- [setBytes 方法 &#40;SQLServerBlob &#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [setBytes 方法&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 成员](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 类](../../../connect/jdbc/reference/sqlserverblob-class.md)  

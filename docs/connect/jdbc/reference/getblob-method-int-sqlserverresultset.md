@@ -1,30 +1,33 @@
 ---
-title: "getBlob 方法 (int) (SQLServerResultSet) |Microsoft 文档"
-ms.custom: 
+title: getBlob 方法 (int) (SQLServerResultSet) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getBlob (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getBlob (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ab35f25a26b60b0d8ebf9ccd8f517e1bcb347af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c3322efef6b5c03804b3d81a0e992cc2a3d817a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getblob-method-int-sqlserverresultset"></a>getBlob 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +56,7 @@ public java.sql.Blob getBlob(int i)
  由 java.sql.ResultSet 接口中的 getBlob 方法指定此 getBlob 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [getBlob 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [getBlob 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

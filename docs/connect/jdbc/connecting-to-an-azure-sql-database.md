@@ -1,27 +1,28 @@
 ---
-title: "连接到 Azure SQL 数据库 |Microsoft 文档"
-ms.custom: 
+title: 连接到 Azure SQL 数据库 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7e7452a001f96b38b8e2a6047a144a82b5f957a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="details"></a>详细信息  
  连接到时[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，你应连接到 master 数据库才能调用**SQLServerDatabaseMetaData.getCatalogs**。  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]不支持从用户数据库中返回整个集的目录。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 视图来获取目录。 中的权限的讨论，请参阅[sys.databases （SQL Azure 数据库）](http://go.microsoft.com/fwlink/?LinkId=217396)了解**SQLServerDatabaseMetaData.getCatalogs**行为[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支持从用户数据库中返回整个集的目录。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 视图来获取目录。 中的权限的讨论，请参阅[sys.databases （SQL Azure 数据库）](http://go.microsoft.com/fwlink/?LinkId=217396)了解**SQLServerDatabaseMetaData.getCatalogs**行为[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
   
  删除的连接  
  连接到时[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，处于非活动状态一段时间后 （例如防火墙） 的网络组件都可能终止空闲连接。 在此上下文中，有两种类型的空闲连接：  

@@ -1,30 +1,33 @@
 ---
-title: "getColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0df43a82b288f475c1325c66670cf6290933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *目录*  
+ *catalog*  
   
  A**字符串**，其中包含目录名称。  
   
- *架构*  
+ *schema*  
   
  A**字符串**，其中包含的架构名称模式。  
   
@@ -69,7 +72,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  GetColumns 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**字符串**|目录名称。|  
 |TABLE_SCHEM|**字符串**|表架构名称。|  
@@ -82,7 +85,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**int**|列的小数位数。|  
 |NUM_PREC_RADIX|**int**|列的基数。|  
 |NULLABLE|**int**|指示列是否可以为 Null。 它可以是以下值之一：<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**字符串**|与列关联的注释。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null 此列。|  
+|REMARKS|**字符串**|与列关联的注释。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null 此列。  |  
 |COLUMN_DEF|**字符串**|列的默认值。|  
 |SQL_DATA_TYPE|**int**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 该列与 DATA_TYPE 列相同，datetime 和 SQL-92 interval 数据类型除外。 该列始终返回值。|  
 |SQL_DATETIME_SUB|**int**|datetime 及 SQL-92 interval 数据类型的子类型代码。 对于其他数据类型，该列返回 NULL。|  
@@ -110,7 +113,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  DATA_TYPE 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型|JDBC 驱动程序 2.0 返回类型 (或者，如果连接到[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) 和关联数值常量|JDBC Driver 3.0 时连接到在返回类型[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]或更高版本|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型|JDBC 驱动程序 2.0 返回类型 (或者，如果连接到[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) 和关联数值常量|JDBC Driver 3.0 时连接到在返回类型[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]或更高版本|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |大于 8 kB 的用户定义类型|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |地理|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -125,7 +128,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  COLUMN_SIZE 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647（数据库元数据）|  
 |xml|1073741823|2147483647（数据库元数据）|  
@@ -137,13 +140,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  BUFFER_LENGTH 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |大于 8 kB 的用户定义类型||2147483647|  
   
  TYPE_NAME 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|图像|varbinary|  
@@ -159,7 +162,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  SQL_DATA_TYPE 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008 JDBC 驱动程序 2.0 中的数据值|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008 JDBC 驱动程序 3.0 中的数据值|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 JDBC 驱动程序 2.0 中的数据值|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 JDBC 驱动程序 3.0 中的数据值|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  

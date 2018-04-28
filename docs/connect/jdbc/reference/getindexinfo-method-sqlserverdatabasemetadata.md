@@ -1,30 +1,33 @@
 ---
-title: "getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getIndexInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getIndexInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7ae3de9c4d636d27b802437b1787e6b28c31387b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  A**字符串**，其中包含目录名称。  
   
- *架构*  
+ *schema*  
   
  A**字符串**包含架构的名称。  
   
@@ -74,7 +77,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  GetIndexInfo 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**字符串**|在其中指定的表所在的数据库名称。|  
 |TABLE_SCHEM|**字符串**|表的架构。|  
@@ -82,13 +85,13 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |NON_UNIQUE|**boolean**|指示索引值是否可以不唯一。|  
 |INDEX_QUALIFIER|**字符串**|索引所有者的名称。 当 TYPE 为 tableIndexStatistic 时，该名称为 Null。|  
 |INDEX_NAME|**字符串**|索引的名称。|  
-|TYPE|**短**|索引的类型。 它可以是以下值之一：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
-|ORDINAL_POSITION|**短**|列在索引中的序号位置。 索引中的第一列为 1。|  
+|TYPE|**short**|索引的类型。 它可以是以下值之一：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|ORDINAL_POSITION|**short**|列在索引中的序号位置。 索引中的第一列为 1。|  
 |COLUMN_NAME|**字符串**|列的名称。|  
-|ASC_OR_DESC|**字符串**|索引排序规则中所用的顺序。 它可以是以下值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回"A"。|  
+|ASC_OR_DESC|**字符串**|索引排序规则中所用的顺序。 它可以是以下值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回"A"。  |  
 |CARDINALITY|**int**|表中的行数或索引中的唯一值个数。|  
 |PAGES|**int**|用于存储索引或表的页数。|  
-|FILTER_CONDITION|**字符串**|筛选条件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null。|  
+|FILTER_CONDITION|**字符串**|筛选条件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null。  |  
   
 > [!NOTE]  
 >  有关 getIndexInfo 方法返回的数据的详细信息，请参阅"sp_indexes (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  

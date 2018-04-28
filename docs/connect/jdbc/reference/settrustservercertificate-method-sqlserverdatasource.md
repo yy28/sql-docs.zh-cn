@@ -1,30 +1,33 @@
 ---
-title: "setTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft 文档"
-ms.custom: 
+title: setTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: setTrustServerCertificate Method (SQLServerDataSource)
-apilocation: setTrustServerCertificate Method (SQLServerDataSource)
+apiname:
+- setTrustServerCertificate Method (SQLServerDataSource)
+apilocation:
+- setTrustServerCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b0248cec1f5ba4fd760fe8ef3b641d0f346783a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2b4a1788fc4e4578cf8b80893d6d1f2c80fa6e3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *trustServerCertificate*  
+ *TrustServerCertificate*  
   
  **true**如果在使用 SSL 加密的通信层时，服务器安全套接字层 (SSL) 证书应为自动受信任。 否则为 **false**。  
   

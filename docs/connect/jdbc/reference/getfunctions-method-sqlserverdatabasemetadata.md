@@ -1,27 +1,28 @@
 ---
-title: "getFunctions 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getFunctions 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d09162647b6d5a4076bb60b3bf05e1e90eb27dee
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7cafae4dcdbe9102da3ef4e27ee20b41b231667e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *目录*  
+ *catalog*  
   
  数据库中的目录名称。 如果该名称为空字符串 ""，则结果将包括无目录的函数。 如果它是**null**，目录名称不用于搜索。  
   
@@ -66,7 +67,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  每个函数说明都包括以下列：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**字符串**|函数所在的数据库的名称。|  
 |FUNCTION_SCHEM|**字符串**|函数所在的架构的名称。|  
@@ -75,7 +76,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 |NUM_OUTPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_RESULT_SETS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |REMARKS|**字符串**|有关函数的注释。|  
-|FUNCTION_TYPE|**短**|函数的类型。 它可以是以下值之一：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|FUNCTION_TYPE|**short**|函数的类型。 它可以是以下值之一：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  返回的结果集中的所有说明都按 FUNCTION_CAT、FUNCTION_SCHEM、FUNCTION_NAME 和 SPECIFIC_NAME 排序。  
   

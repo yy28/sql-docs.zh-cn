@@ -1,27 +1,28 @@
 ---
-title: "getFunctionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getFunctionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88606f2a53f3f276529feb6b780279fdd3c96323
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8e9e3d78c17b4c2fe44ce80b6baf0eb8e4294339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *目录*  
+ *catalog*  
   
  A**字符串**，其中包含目录名称。 如果该名称为空字符串 ""，则结果将包括无目录的函数。 如果它是**null**，目录名称不用于搜索。  
   
@@ -68,20 +69,20 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  结果集中的各行均包括针对参数说明、列说明或返回类型的以下列：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**字符串**|函数所在的数据库的名称。|  
 |FUNCTION_SCHEM|**字符串**|函数的架构。|  
 |FUNCTION_NAME|**字符串**|函数的名称。|  
 |COLUMN_NAME|**字符串**|参数或列的名称。|  
-|COLUMN_TYPE|**短**|**列的类型。它可以是以下值之一：**<br /><br /> functionColumnUnknown (0)：未知类型。<br /><br /> functionColumnIn (1)：输入参数。<br /><br /> functionColumnInOut (2)：输入/输出参数。<br /><br /> functionColumnOut (3)：输出参数。<br /><br /> functionReturn (4)：函数返回值。<br /><br /> functionColumnResult (5)：参数或列是结果集中的列。|  
+|COLUMN_TYPE|**short**|**列的类型。它可以是以下值之一：**<br /><br /> functionColumnUnknown (0)：未知类型。<br /><br /> functionColumnIn (1)：输入参数。<br /><br /> functionColumnInOut (2)：输入/输出参数。<br /><br /> functionColumnOut (3)：输出参数。<br /><br /> functionReturn (4)：函数返回值。<br /><br /> functionColumnResult (5)：参数或列是结果集中的列。|  
 |DATA_TYPE|**int**|SQL 数据类型从 Java.sql.Types 的值。|  
 |TYPE_NAME|**字符串**|数据类型的名称。|  
 |PRECISION|**int**|有效数字总个数。|  
 |LENGTH|**int**|以字节为单位的数据的长度。|  
-|SCALE|**短**|小数点右侧的数字个数。|  
-|RADIX|**短**|数值类型的基础。|  
-|NULLABLE|**短**|指示是否参数或返回值可以包含**null**值。<br /><br /> **它可以是以下值之一：**<br /><br /> functionNoNulls (0)：不允许为 NULL 值。<br /><br /> functionNullable (1)：允许为 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
+|SCALE|**short**|小数点右侧的数字个数。|  
+|RADIX|**short**|数值类型的基础。|  
+|NULLABLE|**short**|指示是否参数或返回值可以包含**null**值。<br /><br /> **它可以是以下值之一：**<br /><br /> functionNoNulls (0)：不允许为 NULL 值。<br /><br /> functionNullable (1)：允许为 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
 |REMARKS|**字符串**|有关列或参数的注释。|  
 |COLUMN_DEF|**字符串**|列的默认值。<br /><br /> **注意：**此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  
 |SQL_DATA_TYPE|**int**|此列等同于**DATA_TYPE**列中，除**datetime**和 ISO**间隔**数据类型。<br /><br /> **注意：**此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  

@@ -1,30 +1,33 @@
 ---
-title: "getVersionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getVersionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getVersionColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getVersionColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6adf8973efd40728df1604dcef9b4a87736be72c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 916191363743bd204b6841e1713e92cfeaddd46b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,11 +44,11 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *目录*  
+ *catalog*  
   
  A**字符串**，其中包含目录名称。  
   
- *架构*  
+ *schema*  
   
  A**字符串**，其中包含的架构名称模式。  
   
@@ -64,16 +67,16 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
  GetVersionColumns 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
-|SCOPE|**短**|JDBC 驱动程序不支持此类型。|  
+|SCOPE|**short**|JDBC 驱动程序不支持此类型。|  
 |COLUMN_NAME|**字符串**|列名称。|  
-|DATA_TYPE|**短**|来自 java.sql.Types 的 SQL 数据类型。|  
+|DATA_TYPE|**short**|来自 java.sql.Types 的 SQL 数据类型。|  
 |TYPE_NAME|**字符串**|数据类型的名称。|  
 |COLUMN_SIZE|**int**|列的精度。|  
 |BUFFER_LENGTH|**int**|列的长度（字节）。|  
-|DECIMAL_DIGITS|**短**|列的小数位数。|  
-|PSEUDO_COLUMN|**短**|指示列是否为伪列。 它可以是以下值之一：<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|DECIMAL_DIGITS|**short**|列的小数位数。|  
+|PSEUDO_COLUMN|**short**|指示列是否为伪列。 它可以是以下值之一：<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
 >  有关 getVersionColumns 方法返回的数据的详细信息，请参阅"sp_datatype_info (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  

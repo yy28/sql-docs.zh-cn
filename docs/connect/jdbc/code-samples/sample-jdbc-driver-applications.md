@@ -1,26 +1,27 @@
 ---
-title: "示例 JDBC 驱动程序应用程序 |Microsoft 文档"
-ms.custom: 
+title: 示例 JDBC 驱动程序应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 29439d8929fc7eee4c74ef29fac5260986728a43
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: daca915d7553d62a543487d048cbef025283c89c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-jdbc-driver-applications"></a>示例 JDBC 驱动程序应用程序
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +34,12 @@ ms.lasthandoff: 11/18/2017
   
  此部分的主题说明了如何配置和运行示例应用程序，还包括了对示例应用程序所说明内容的讨论。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  
 |[连接和检索数据](../../../connect/jdbc/connecting-and-retrieving-data.md)|这些示例应用程序演示如何连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。 它们还演示了要在其中检索中的数据的不同方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。|  
-|[使用数据类型 &#40;JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)|这些示例应用程序演示如何使用 JDBC 驱动程序数据类型方法来处理中的数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。|  
+|[使用数据类型&#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)|这些示例应用程序演示如何使用 JDBC 驱动程序数据类型方法来处理中的数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。|  
 |[使用结果集](../../../connect/jdbc/working-with-result-sets.md)|这些示例应用程序演示如何使用结果集处理数据中包含[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。|  
 |[处理大型数据](../../../connect/jdbc/working-with-large-data.md)|这些示例应用程序演示如何使用自适应缓冲检索大型值数据从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]而无需服务器游标开销的数据库。|  
   

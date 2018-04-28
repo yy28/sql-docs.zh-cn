@@ -2,7 +2,7 @@
 title: 步骤 4： 连接到使用 ADO.NET 的 SQL 的弹性 |Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado-net
@@ -18,13 +18,13 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7ccf61c8c1e440ed8ae9533e61cbbf74d156eb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步骤 4： 使用 ADO.NET 的 sql 的弹性连接
 
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/18/2017
 此代码示例包括：  
   
 - 名为小第二个类**TestSqlException**，其中一个属性名为**数**。  
-- `//throw new TestSqlException(4060);`其中你可以取消注释。  
+- `//throw new TestSqlException(4060);` 其中你可以取消注释。  
   
 如果取消注释 throw 语句并重新编译，下次运行的**RetryAdo2.exe**输出类似于以下内容。  
   

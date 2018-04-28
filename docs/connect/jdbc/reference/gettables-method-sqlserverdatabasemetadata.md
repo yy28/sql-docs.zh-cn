@@ -1,30 +1,33 @@
 ---
-title: "getTables 方法 (SQLServerDatabaseMetaData) |Microsoft 文档"
-ms.custom: 
+title: getTables 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTables
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTables
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2b020065a3285cb93f3230e75a929b85f1c9a3ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *目录*  
+ *catalog*  
   
  A**字符串**，其中包含目录名称。 对此参数提供 Null 值指示无需使用目录名称。  
   
- *架构*  
+ *schema*  
   
  A**字符串**，其中包含的架构名称模式。 对此参数提供 Null 值指示无需使用架构名称。  
   
@@ -69,13 +72,13 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  GetTables 方法所返回的结果集将包含以下信息：  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**字符串**|在其中指定的表所在的数据库名称。|  
 |TABLE_SCHEM|**字符串**|表架构名称。|  
 |TABLE_NAME|**字符串**|表名称。|  
 |TABLE_TYPE|**字符串**|表类型。|  
-|REMARKS|**字符串**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不返回此列的值。|  
+|REMARKS|**字符串**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不返回此列的值。  |  
 |TYPE_CAT|**字符串**|JDBC 驱动程序不支持此类型。|  
 |TYPE_SCHEM|**字符串**|JDBC 驱动程序不支持此类型。|  
 |TYPE_NAME|**字符串**|JDBC 驱动程序不支持此类型。|  

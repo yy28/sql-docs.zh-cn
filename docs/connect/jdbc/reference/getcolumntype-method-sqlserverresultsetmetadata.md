@@ -1,30 +1,33 @@
 ---
-title: "getColumnType 方法 (SQLServerResultSetMetaData) |Microsoft 文档"
-ms.custom: 
+title: getColumnType 方法 (SQLServerResultSetMetaData) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.getColumnType
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.getColumnType
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bd64abab433d103eeef7f27dd137da330b9c350
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 376b91fa9467c0ac80ff60fb6e56169ff1d62062
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>getColumnType 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public int getColumnType(int column)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *列*  
+ *column*  
   
  **Int** ，该值指示的列索引。  
   
@@ -52,7 +55,7 @@ public int getColumnType(int column)
 ## <a name="remarks"></a>注释  
  由 java.sql.ResultSetMetaData 接口中的 getColumnType 方法指定此 getColumnType 方法。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 DATA_TYPE 列中具有的行为更改。 请参阅[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)有关详细信息。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 DATA_TYPE 列中具有的行为更改。 请参阅[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)有关详细信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSetMetaData 成员](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

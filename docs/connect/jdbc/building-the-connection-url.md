@@ -1,28 +1,28 @@
 ---
-title: "生成连接 URL |Microsoft 文档"
-ms.custom: 
+title: 生成连接 URL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: a19c9022d26ed7aa0af4443583553b441059e97c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -80,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>指定的多个 SQL Server 实例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到的命名实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以指定命名实例 （首选） 的端口号，也可以作为 JDBC URL 属性指定实例名称或**数据源**属性。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允许的每个服务器的多个数据库实例的安装。 每个实例都由一个专用名称所标识。 若要连接到的命名实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以指定命名实例 （首选） 的端口号，也可以作为 JDBC URL 属性指定实例名称或**数据源**属性。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
   
  若要使用端口号，请执行下列操作：  
   
@@ -103,7 +103,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  sqljdbc_auth.dll 文件的安装位置如下：  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
+ \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \auth\  
   
  有关支持的任何操作系统[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)有关的一项中的新增功能的说明[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]，允许应用程序连接到使用类型 4 Kerberos 使用集成身份验证的数据库。  
   

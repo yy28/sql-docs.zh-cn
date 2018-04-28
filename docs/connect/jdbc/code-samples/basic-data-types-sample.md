@@ -1,26 +1,27 @@
 ---
-title: "基本数据类型示例 |Microsoft 文档"
-ms.custom: 
+title: 基本数据类型示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: ccdc5f5a4c096daa6b340a207bd4c620bca765ee
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 1d9adb32f085d666813885083f5c897f6b243e9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="basic-data-types-sample"></a>基本数据类型示例
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
   
  \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \samples\datatypes  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  若要运行此示例应用程序，必须设置类路径来包括 sqljdbc.jar 或 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc.jar 项或 sqljdbc4.jar 项，示例应用程序将引发“找不到类”的常见异常。 你还将需要访问[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。 有关如何设置类路径的详细信息，请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。  
   
  你还必须创建中的以下表和示例数据[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库：  
@@ -170,6 +171,6 @@ public class basicDT {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用数据类型 &#40;JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
+ [使用数据类型&#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   
