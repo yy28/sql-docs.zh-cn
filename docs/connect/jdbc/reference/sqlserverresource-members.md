@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 691a7bea9ab4c190357b868500708c3036dc1793
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -31,31 +31,31 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="constructors"></a>构造函数  
   
-|名称|说明|  
+|名称|Description|  
 |----------|-----------------|  
-|[SQLServerResource （)](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|初始化的新实例[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)类。 此构造函数是仅供内部使用。|  
+|[SQLServerResource （)](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|初始化的新实例[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)类。 此构造函数仅供内部使用。|  
   
 ## <a name="fields"></a>字段  
  无。  
   
-## <a name="inherited-fields"></a>继承的所有字段  
+## <a name="inherited-fields"></a>继承的字段  
   
-|名称|说明|  
+|名称|Description|  
 |----------|-----------------|  
-|java.util.ResourceBundle|父|  
+|java.util.ResourceBundle|父级 (parent)|  
   
 ## <a name="methods"></a>方法  
   
-|名称|说明|  
+|名称|Description|  
 |----------|-----------------|  
-|[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|检索错误字符串信息。 此方法旨在仅供内部使用。|  
+|[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|检索错误字符串信息。 此方法仅计划供内部使用。|  
   
 ## <a name="inherited-methods"></a>继承的方法  
   
-|继承自的类：|方法|  
+|类继承自：|方法|  
 |---------------------------|-------------|  
 |java.util.ListResourceBundle|getKeys handleGetObject|  
-|java.util.ResourceBundle|getBundle、 getLocale、 getObject、 getString、 getStringArray、 setParent|  
+|java.util.ResourceBundle|getBundle、getLocale、getObject、getString、getStringArray、setParent|  
 |java.lang.Object|clone、 equals、 finalize、 getClass、 hashCode、 notify、 notifyAll、 toString、 wait|  
   
 ## <a name="see-also"></a>另请参阅  

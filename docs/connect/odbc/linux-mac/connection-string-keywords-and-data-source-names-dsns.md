@@ -1,32 +1,32 @@
 ---
-title: "连接到 SQL Server |Microsoft 文档"
-ms.custom: 
+title: 连接到 SQL Server |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source names
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: aff97d687a4519d2451895772ba33f2a2ec3c4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/11/2018
 
 -   驱动程序库，后者在用来安装驱动程序的模板.ini 文件中指定路径。  
 
-若要创建 DSN，创建 （如有必要） 并编辑文件**~/.odbc.ini** (`.odbc.ini`主目录中) 为仅供当前用户，用户 DSN 或`/etc/odbc.ini`的系统 DSN （管理所需特权。）下面是一个示例文件，DSN 显示最小所需的项：  
+若要创建 DSN，创建 （如有必要） 并编辑文件 **~/.odbc.ini** (`.odbc.ini`主目录中) 为仅供当前用户，用户 DSN 或`/etc/odbc.ini`的系统 DSN （管理所需特权。）下面是一个示例文件，DSN 显示最小所需的项：  
 
 ```  
 [MSSQLTest]  
@@ -67,7 +67,7 @@ Server = [protocol:]server[,port]
  - **odbcinst-i-s-f** *template_file*  
  
 你可以验证您的驱动程序正在使用`isql`若要测试该连接，也可以使用此命令：
- - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P<password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>使用安全套接字层 (SSL)  
 你可以使用安全套接字层 (SSL) 加密连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 SSL 保护[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]用户名和密码通过网络。 SSL 还会验证服务器的标识以抵御中间人 (MITM) 攻击。  

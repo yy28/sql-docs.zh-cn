@@ -1,27 +1,28 @@
 ---
-title: "使用高级的数据类型 |Microsoft 文档"
-ms.custom: 
+title: 使用高级的数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ca19754f3332c1832405085ad1b04fb36380bd9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df610dec98d98d497b21b5e297781fa0a3375bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-advanced-data-types"></a>使用高级数据类型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,15 +48,15 @@ ms.lasthandoff: 11/18/2017
  JDBC 驱动程序实现了 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 接口的所有方法。  
   
 > [!NOTE]  
->  CLOB 值可与[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]（或更高版本） 大型值数据类型。 具体而言，可以与使用 CLOB 类型**varchar （max)**和**nvarchar (max)**数据类型，可与使用 BLOB 类型**varbinary （max)**和**映像**可以用于数据类型和 NCLOB 类型**ntext**和**nvarchar (max)**。  
+>  CLOB 值可与[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]（或更高版本） 大型值数据类型。 具体而言，可以与使用 CLOB 类型**varchar （max)** 和**nvarchar (max)** 数据类型，可与使用 BLOB 类型**varbinary （max)** 和**映像**可以用于数据类型和 NCLOB 类型**ntext**和**nvarchar (max)**。  
   
 ## <a name="large-value-data-types"></a>大值数据类型  
- 在早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 使用大型值数据类型需要特殊处理。 大值数据类型是超过了 8KB 最大行大小的数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]引入了最大说明符**varchar**， **nvarchar**，和**varbinary**数据类型，以允许的值存储最大为 2 ^31 个字节。 表列和[!INCLUDE[tsql](../../includes/tsql_md.md)]变量可以指定**varchar （max)**， **nvarchar (max)**，或**varbinary （max)**数据类型。  
+ 在早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 使用大型值数据类型需要特殊处理。 大值数据类型是超过了 8KB 最大行大小的数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 引入了最大说明符**varchar**， **nvarchar**，和**varbinary**数据类型，以允许的值存储最大为 2 ^31 个字节。 表列和[!INCLUDE[tsql](../../includes/tsql_md.md)]变量可以指定**varchar （max)**， **nvarchar (max)**，或**varbinary （max)** 数据类型。  
   
  大值类型主要用于以下场合：从数据库中检索这些类型，或者将其添加到数据库。 以下部分介绍了完成这些任务的几种不同方法。  
   
 ### <a name="retrieving-large-value-types-from-a-database"></a>从数据库中检索大值类型  
- 检索非二进制大型值数据类型时，如**varchar （max)**数据类型-一种方法是从数据库读取该数据作为字符流。 在下面的示例中， [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)类用于从数据库中检索数据和返回作为结果集。 则[getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)类用于从结果集中读取大型值数据。  
+ 检索非二进制大型值数据类型时，如**varchar （max)** 数据类型-一种方法是从数据库读取该数据作为字符流。 在下面的示例中， [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)类用于从数据库中检索数据和返回作为结果集。 则[getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)类用于从结果集中读取大型值数据。  
   
 ```  
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -64,9 +65,9 @@ Reader reader = rs.getCharacterStream(2);
 ```  
   
 > [!NOTE]  
->  这种方法还可以用于**文本**， **ntext**，和**nvarchar (max)**数据类型。  
+>  这种方法还可以用于**文本**， **ntext**，和**nvarchar (max)** 数据类型。  
   
- 检索二进制大型值数据类型时，如**varbinary （max)**数据类型-从数据库中，有几种方法，你可以执行。 最有效的方法是将数据作为二进制流进行读取，如下所示：  
+ 检索二进制大型值数据类型时，如**varbinary （max)** 数据类型-从数据库中，有几种方法，你可以执行。 最有效的方法是将数据作为二进制流进行读取，如下所示：  
   
 ```  
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -98,9 +99,9 @@ pstmt.executeUpdate();
 ```  
   
 > [!NOTE]  
->  此方法还可以用于存储中的值**文本**， **ntext**，和**nvarchar (max)**列。  
+>  此方法还可以用于存储中的值**文本**， **ntext**，和**nvarchar (max)** 列。  
   
- 如果在服务器上的映像库，并且必须整个二进制图像文件上载到**varbinary （max)**列中，使用 JDBC 驱动程序的最有效方法是使用流直接，如以下所示：  
+ 如果在服务器上的映像库，并且必须整个二进制图像文件上载到**varbinary （max)** 列中，使用 JDBC 驱动程序的最有效方法是使用流直接，如以下所示：  
   
 ```  
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)");  
@@ -139,7 +140,7 @@ rs.updateRow();
  有关大值类型的详细信息，请参阅 SQL Server 联机丛书中的“使用大值类型”。  
   
 ## <a name="xml-data-type"></a>XML 数据类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]提供**xml** ，您可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 因为与其他内置类型，你可以使用**xml**数据类型用作列类型创建表时; 作为变量类型、 参数类型或函数返回类型; 或在[!INCLUDE[tsql](../../includes/tsql_md.md)]CAST 和 CONVERT 函数。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供**xml** ，您可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 因为与其他内置类型，你可以使用**xml**数据类型用作列类型创建表时; 作为变量类型、 参数类型或函数返回类型; 或在[!INCLUDE[tsql](../../includes/tsql_md.md)]CAST 和 CONVERT 函数。  
   
  JDBC 驱动程序中, **xml**可以作为字符串、 字节数组、 流、 CLOB、 BLOB 或 SQLXML 对象映射数据类型。 默认值为字符串。 从 JDBC Driver 2.0 开始，JDBC 驱动程序为 JDBC 4.0 API 提供支持，后者引入了 SQLXML 接口。 SQLXML 接口定义进行交互并处理 XML 数据的方法。 **SQLXML**数据类型映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**数据类型。 有关如何读取和写入 XML 数据，from 和 to 的关系数据库的详细信息**SQLXML** Java 数据类型，请参阅[支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)。  
   
@@ -151,7 +152,7 @@ rs.updateRow();
   
 -   为了可与其他 XML 处理器和磁盘文件进行互换而以 UTF-16 进行编码时，对作为带有前导 BOM 的字节数组的 XML 的访问  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]UTF 16 编码 xml 需要前导 BOM。 当以字节数组形式提供 XML 参数值时，应用程序必须提供此前导 BOM。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]始终输出 XML 值，如 utf-16 字符串与没有 BOM 或嵌入编码声明。 当将 XML 值作为 byte[]、BinaryStream 或 Blob 进行检索时，会为该值预置一个 UTF-16 BOM。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] UTF 16 编码 xml 需要前导 BOM。 当以字节数组形式提供 XML 参数值时，应用程序必须提供此前导 BOM。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 始终输出 XML 值，如 utf-16 字符串与没有 BOM 或嵌入编码声明。 当将 XML 值作为 byte[]、BinaryStream 或 Blob 进行检索时，会为该值预置一个 UTF-16 BOM。  
   
  有关详细信息**xml**数据类型，请参阅"xml 数据类型"中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]联机丛书。  
   

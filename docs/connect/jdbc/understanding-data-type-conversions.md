@@ -1,32 +1,33 @@
 ---
-title: "了解数据类型转换 |Microsoft 文档"
-ms.custom: 
+title: 了解数据类型转换 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba1a10fc33dc5e80fb300eaa31e849692c55041
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e18bd56e110cccab17488de752ba5ab4c8666fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-conversions"></a>了解数据类型转换
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  为了便于的 Java 编程语言到的数据类型转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供所需的 JDBC 规范的数据类型转换。 为更大的灵活性，所有类型都都可以与其他转换**对象**，**字符串**，和**byte []**数据类型。  
+  为了便于的 Java 编程语言到的数据类型转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供所需的 JDBC 规范的数据类型转换。 为更大的灵活性，所有类型都都可以与其他转换**对象**，**字符串**，和**byte []** 数据类型。  
   
 ## <a name="getter-method-conversions"></a>Getter 方法转换  
  基于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型，以下图表包含 get 的 JDBC 驱动程序的转换映射\<类型 > （） 方法的[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)类，并且 get支持的转换\<类型 > 方法[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)类。  
@@ -81,9 +82,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **转换后 (y)**： 从 Java 转换**数值**类型设置为基础服务器**数值**较小的类型。 此转换是正则并遵循[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发“不支持的转换”错误。 例如，值为"1.9999"中"1"中的目标列中; 基础整数列结果上使用 updateDecimal但如果传递"3000000000"，该驱动程序将引发错误。  
   
--   **数据相关的 (z)**： 从 Java 转换**字符串**类型设置为基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型取决于以下条件： 驱动程序将发送**字符串**值赋给[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]执行转换，如有必要。 如果 sendStringParametersAsUnicode 设置为 true，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允许转换**nvarchar**到**映像**并引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 false，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允许转换**varchar**到**映像**且不引发异常。  
+-   **数据相关的 (z)**： 从 Java 转换**字符串**类型设置为基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型取决于以下条件： 驱动程序将发送**字符串**的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]执行转换，如有必要。 如果 sendStringParametersAsUnicode 设置为 true，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允许转换**nvarchar**到**映像**并引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 false，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允许转换**varchar**到**映像**且不引发异常。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]将执行的转换并将错误传递回 JDBC 驱动程序中，有问题时。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将执行的转换并将错误传递回 JDBC 驱动程序中，有问题时。  
   
  当[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]列数据类型是**XML**，数据值必须为有效**XML**。 调用 updateBytes、 updateBinaryStream 或 updateBlob 方法时，数据值应为十六进制字符串表示形式的 XML 字符。 例如：  
   
@@ -110,9 +111,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **转换后 (y)**： 从 Java 转换**数值**类型设置为基础服务器**数值**较小的类型。 此转换是正则并遵循[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发不支持转换的错误。 例如，值为"1.9999"中"1"中的目标列中; 基础整数列结果上使用 updateDecimal但如果传递"3000000000"，该驱动程序将引发错误。  
   
--   **数据相关的 (z)**： 从 Java 转换**字符串**类型设置为基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型取决于以下条件： 驱动程序将发送**字符串**值赋给[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]执行转换，如有必要。 如果 sendStringParametersAsUnicode 连接属性设置为 true，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允许转换**nvarchar**到**映像**并引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 false，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允许转换**varchar**到**映像**且不引发异常。  
+-   **数据相关的 (z)**： 从 Java 转换**字符串**类型设置为基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型取决于以下条件： 驱动程序将发送**字符串**的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]执行转换，如有必要。 如果 sendStringParametersAsUnicode 连接属性设置为 true，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允许转换**nvarchar**到**映像**并引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 false，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允许转换**varchar**到**映像**且不引发异常。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]执行大容量的集转换并将错误传递回 JDBC 驱动程序有问题时。 客户端转换异常，并且仅在的情况下执行**日期**，**时间**，**时间戳**，**布尔**，和**字符串**值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 执行大容量的集转换并将错误传递回 JDBC 驱动程序有问题时。 客户端转换异常，并且仅在的情况下执行**日期**，**时间**，**时间戳**，**布尔**，和**字符串**值。  
   
  当[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]列数据类型是**XML**，数据值必须为有效**XML**。 调用 setObject(byte[], SQLXML)、setObject(inputStream, SQLXML) 或 setObject(Blob, SQLXML) 方法时，数据值应为 XML 字符的十六进制字符串表示形式。 例如：  
   

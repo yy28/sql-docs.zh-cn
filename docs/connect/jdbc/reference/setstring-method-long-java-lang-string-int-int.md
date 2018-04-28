@@ -1,30 +1,33 @@
 ---
-title: "setString 方法 (长，java.lang.String，int，int) |Microsoft 文档"
-ms.custom: 
+title: setString 方法 (长，java.lang.String，int，int) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.setString (long, java.lang.String, int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.setString (long, java.lang.String, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da7714cd9e4d397d02fc97276ec851ea0ab1f1f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2aac4300c26527265a026c061499e33a5155fcd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 方法 (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,11 +53,11 @@ public int setString(long pos,
   
  要写入 CLOB 的字符串。  
   
- *偏移量*  
+ *offset*  
   
  字符串中的偏移量，从这个位置开始读取字符。  
   
- *len*  
+ len  
   
  将要写入的字符数。  
   
@@ -70,7 +73,7 @@ public int setString(long pos,
  字符数据将覆盖指定位置开始，并且可以覆盖 CLOB 的初始长度。 指定“位置+1”值将追加到字符串末尾。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [setString 方法 &#40;SQLServerClob &#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [setString 方法&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob 方法](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 成员](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 类](../../../connect/jdbc/reference/sqlserverclob-class.md)  

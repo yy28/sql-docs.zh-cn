@@ -3,7 +3,7 @@ title: SQL Server 的 OLE DB 驱动程序的系统要求 |Microsoft 文档
 description: SQL Server 的 OLE DB 驱动程序的要求
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -20,16 +20,18 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5169c841784230d1ad4d99472dd636a490c750ce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驱动程序的系统要求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据访问功能（如 MARS），必须安装以下软件：  
 
@@ -69,9 +71,9 @@ ms.lasthandoff: 04/06/2018
 
  IDBInfo::GetKeywords 将始终返回关键字列表，对应于连接上的服务器版本不受**DataTypeCompatibility**。  
 
-|数据类型|用于 SQL Server 的 OLE DB 驱动程序<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|用于 SQL Server 的 OLE DB 驱动程序|Windows 数据访问组件、MDAC 及<br /><br /> OLE DB 驱动程序的 SQL Server OLE DB 应用程序与 DataTypeCompatibility = 80|  
+|数据类型|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|用于 SQL Server 的 OLE DB 驱动程序|Windows 数据访问组件、MDAC 及<br /><br /> OLE DB 驱动程序的 SQL Server OLE DB 应用程序与 DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|Udt|Udt|Varbinary|  
+|CLR UDT (\<= 8 Kb)|udt|Udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|图像|  
 |varchar(max)|varchar|varchar|varchar|Text|  
 |nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
@@ -83,5 +85,5 @@ ms.lasthandoff: 04/06/2018
 |time|time|varchar|varchar|Varchar|  
 
 ## <a name="see-also"></a>另请参阅  
- [用于 SQL Server 编程的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server-programming.md)   
+ [用于 SQL Server 的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server.md)   
  [安装适用于 SQL Server 的 OLE DB 驱动程序](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

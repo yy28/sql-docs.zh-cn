@@ -25,14 +25,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a7bea6b9199f8eefdbf4bf38319459f6b2dbd5ed
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>supportsColumnAliasing 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索是否此数据库支持列别名。  
+  检索此数据库是否支持列名使用别名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,12 +42,12 @@ public boolean supportsColumnAliasing()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果支持。 否则为**false**。  
+ **true**如果支持。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  由 java.sql.DatabaseMetaData 接口中的 supportsColumnAliasing 方法指定此 supportsColumnAliasing 方法。  
   
 ## <a name="see-also"></a>另请参阅  

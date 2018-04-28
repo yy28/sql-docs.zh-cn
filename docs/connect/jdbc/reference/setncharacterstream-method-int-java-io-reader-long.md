@@ -1,27 +1,28 @@
 ---
-title: "setNCharacterStream 方法到 java.io.Reader 对象-长 |Microsoft 文档"
-ms.custom: 
+title: setNCharacterStream 方法到 java.io.Reader 对象-长 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b91436d5a369ebbf7f718ba22d7c395edb78f79
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ffc0f214a4636f597962801cf033bcf500b02833
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,10 +61,10 @@ public final void setNCharacterStream(int parameterIndex,
   
  流的长度是否不同于中指定了什么*长度*参数，在更新或插入行时的 JDBC 驱动程序引发异常。  
   
- 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[setNCharacterStream 方法 &#40; int、 java.io.Reader &#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)当应用程序希望更新的列从一个流，其长度为未知。  
+ 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[setNCharacterStream 方法&#40;int、 java.io.Reader&#41; ](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)当应用程序希望更新的列从一个流，其长度为未知。  
   
 ## <a name="see-also"></a>另请参阅  
- [setNCharacterStream 方法 &#40;SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
+ [setNCharacterStream 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

@@ -1,27 +1,28 @@
 ---
-title: "updateNClob 方法 （int、 java.sql.NClob） |Microsoft 文档"
-ms.custom: 
+title: updateNClob 方法 （int、 java.sql.NClob） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6e9bca18-f64e-46a4-8541-2c9c39b393b5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bd2cca4eaad36ba7d69e6cfba2df9beac5b8754
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3897258b1f2d43b98aa38d6428c022a654a08e5a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatenclob-method-int-javasqlnclob"></a>updateNClob 方法 (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ public void updateNClob(int columnIndex,
   
  **Int** ，该值指示的列索引。  
   
- *nClob*  
+ *NClob*  
   
  NClob 对象。  
   
@@ -54,7 +55,7 @@ public void updateNClob(int columnIndex,
  仅在支持此方法**nvarchar (max)**， **ntext**，和**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateNClob 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
+ [updateNClob 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

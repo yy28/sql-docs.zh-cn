@@ -3,7 +3,7 @@ title: 更新应用程序到 OLE DB 驱动程序适用于 SQL Server 从 MDAC |M
 description: 更新应用程序到 OLE DB 驱动程序适用于从 MDAC 的 SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -21,16 +21,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61056a6951176b4257856b114a512f6f81dfc33e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>更新应用程序到 OLE DB 驱动程序适用于从 MDAC 的 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   有大量的 OLE DB 驱动程序的 SQL Server 和 Microsoft 数据访问组件 (MDAC); 之间的差异从 Windows Vista 开始，数据访问组件现在称为 Windows 数据访问组件 （或 Windows DAC）。 虽然两者都提供对本机数据访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库，OLE DB 驱动程序的 SQL Server 专门设计了可公开的新功能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而在同时保持与早期版本的向后兼容性。   
 
@@ -96,7 +98,7 @@ ms.lasthandoff: 04/06/2018
 
 -   MDAC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据类型将显示为与 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 兼容的数据类型，如下表所示。  
 
-    |SQL Server 2005 类型|SQL Server 2000 type|  
+    |SQL Server 2005 类型|SQL Server 2000 类型|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -104,7 +106,7 @@ ms.lasthandoff: 04/06/2018
     |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
 
-     此类型映射会影响为列元数据返回的值。 例如，**文本**列具有最大为 2147483647，但 OLE DB 驱动程序的 SQL Server 报告的最大大小**varchar （max)**为 2147483647 或-1，具体取决于平台的列。  
+     此类型映射会影响为列元数据返回的值。 例如，**文本**列具有最大为 2147483647，但 OLE DB 驱动程序的 SQL Server 报告的最大大小**varchar （max)** 为 2147483647 或-1，具体取决于平台的列。  
 
 -   OLE DB 驱动程序的 SQL Server 连接字符串中允许多义性 （例如，可能会超过一次，指定某些关键字和冲突关键字可能允许基于位置或的优先级的解决方法） 的向后兼容性原因。 OLE DB 驱动程序的 SQL Server 的未来版本可能不允许在连接字符串中的多义性。 修改应用程序以使用 OLE DB 驱动程序的 SQL Server 以消除任何依赖于连接字符串多义性时，它是很好的做法。  
 

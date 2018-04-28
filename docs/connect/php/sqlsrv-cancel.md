@@ -2,7 +2,7 @@
 title: sqlsrv_cancel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sqlsrv_cancel
 - API Reference, sqlsrv_cancel
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
-caps.latest.revision: ''
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71de874d6f89bdec64011eb054f2de259bd47b01
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 8d9030165be2ff9e284cf961c767b73c4f175b6f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ sqlsrv_cancel( resource $stmt)
 布尔值：如果操作成功，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-以下示例针对[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库以执行查询，然后使用并对结果进行计数变量*$salesTotal*达到指定的量。 之后将丢弃其余的查询结果。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例针对[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库以执行查询，然后使用并对结果进行计数变量 *$salesTotal*达到指定的量。 之后将丢弃其余的查询结果。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  

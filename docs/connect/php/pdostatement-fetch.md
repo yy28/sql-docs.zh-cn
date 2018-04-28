@@ -2,7 +2,7 @@
 title: 'Pdostatement:: Fetch |Microsoft 文档'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7326279bc150c25c712ca708dcd137a9e0d805d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 0ca4ca734983e1611453ed1f0c5468f5c0cb2576
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,7 +70,7 @@ $*cursor_offset*： 指定要提取时的行的可选 （整数） 符号 $*curs
 |PDO::FETCH_ORI_PRIOR|检索上一行。|  
 |PDO::FETCH_ORI_FIRST|检索第一行。|  
 |PDO::FETCH_ORI_LAST|检索最后一行。|  
-|PDO::FETCH_ORI_ABS, *num*|检索在 $ 请求的行*cursor_offset*按行号。|  
+|PDO::FETCH_ORI_ABS， *num*|检索在 $ 请求的行*cursor_offset*按行号。|  
 |PDO::FETCH_ORI_REL， *num*|检索在 $ 请求的行*cursor_offset*按从当前位置的相对位置。|  
   
 如果值为 $ 指定*cursor_offset*或 $*cursor_orientation*导致结果集边界之外的位置，提取将失败。  

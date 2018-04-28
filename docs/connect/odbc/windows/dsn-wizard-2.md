@@ -20,35 +20,35 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d8b1aedf25af40b9b910506afacb1a43e1c779a2
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>数据源向导屏幕 2
 
-指定身份验证的方式，并设置 Microsoft  高级客户端条目和配置数据源时  Native Client ODBC 驱动程序将用于连接到  的登录名和密码。
+指定的方法的身份验证，并设置 Microsoft SQL Server 高级客户端条目的登录名和密码的 ODBC driver for SQL Server 将使用配置数据源时连接到 SQL Server。
 
-## <a name="options"></a>“常规”
+## <a name="options"></a>选项
 
-### <a name="with-integrated-windows-authentication"></a>集成 Windows 身份验证(&W)。
+### <a name="with-integrated-windows-authentication"></a>使用集成的 Windows 身份验证
 
 指定驱动程序请求到的 SQL Server 的安全 （或受信任） 连接。 选中后，SQL Server 将使用集成登录安全性来建立使用此数据源的连接，而不考虑服务器上的当前登录安全模式。 提供的任何登录 ID 或密码都将忽略。 SQL Server 系统管理员必须有关联的 Windows 登录名与 SQL Server 登录 ID （例如，通过使用 SQL Server Management Studio）。
 
 您还可以指定该服务器的服务主体名称 (SPN)。
 
-### <a name="with-active-directory-integrated-authentication"></a>使用 Active Directory 集成身份验证(&I)。
+### <a name="with-active-directory-integrated-authentication"></a>与 Active Directory 集成的身份验证
 
-指定驱动程序向 SQL Server 使用 Azure Active Directory 进行身份验证。 选中后，SQL Server 将使用集成登录安全性来建立使用此数据源的连接，而不考虑服务器上的当前登录安全模式。
+指定驱动程序向 SQL Server 使用 Azure Active Directory 进行身份验证。 当选中时，SQL Server 将使用 Azure Active Directory 集成的登录安全性来建立连接使用此数据源，而不考虑服务器上当前的登录安全模式。
 
 ### <a name="with-sql-server-authentication"></a>使用 SQL Server 身份验证
 
 指定驱动程序向 SQL Server 使用的登录 ID 和密码进行身份验证。
 
-### <a name="with-active-directory-password-authentication"></a>Active Directory 密码身份验证
+### <a name="with-active-directory-password-authentication"></a>使用 Active Directory 密码身份验证
 
 指定驱动程序向 SQL Server 使用 Azure Active Directory 登录 ID 和密码进行身份验证。
 
-### <a name="with-active-directory-interactive-authentication"></a>Active Directory 交互式身份验证
+### <a name="with-active-directory-interactive-authentication"></a>使用 Active Directory 交互式身份验证
 
 指定驱动程序对通过提供登录 id。 使用 Azure Active Directory 交互模式的 SQL Server 进行身份验证 这将触发 Windows Azure 身份验证提示对话框。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 
 指定如果连接到 SQL Server 时，将使用该驱动程序的登录 ID**与 SQL Server 身份验证使用的登录 ID 和用户输入的密码**或**使用登录 ID 与 Active Directory 密码身份验证和用户输入的密码**或**由用户输入与 Active Directory 交互身份验证使用的登录 ID**选择。 这仅适用于为确定服务器默认设置建立的连接；不适用于创建数据源之后使用该数据源建立的后续连接。
 
-### <a name="password"></a>Password
+### <a name="password"></a>密码
 
 指定如果连接到 SQL Server 时，将使用该驱动程序的密码**与 SQL Server 身份验证使用的登录 ID 和用户输入的密码**或**使用登录 ID 与 Active Directory 密码身份验证和用户输入的密码**选择。 这仅适用于为确定服务器默认设置建立的连接；不适用于使用新数据源建立的后续连接。
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="next-steps"></a>后续步骤
 
-[数据源向导屏幕 4](../../../connect/odbc/windows/dsn-wizard-1.md)
+[数据源向导屏幕 1](../../../connect/odbc/windows/dsn-wizard-1.md)
 
-[数据源向导屏幕 4](../../../connect/odbc/windows/dsn-wizard-3.md)
+[数据源向导屏幕 3](../../../connect/odbc/windows/dsn-wizard-3.md)
 

@@ -3,7 +3,7 @@ title: 使用 OLE DB 驱动程序适用于 SQL 的服务器标头和库文件 |M
 description: SQL Server 标头和库文件的使用 OLE DB 驱动程序
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 932a5c8d272bf975e4931326b96bea495e927a08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用 OLE DB 驱动程序适用于 SQL 的服务器标头和库文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   当 SQL Server SDK 选项 OLE DB 驱动程序选择在安装过程期间安装 SQL Server 标头和库文件 OLE DB 驱动程序。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新发布用于 SQL Server 的 OLE DB 驱动程序的详细信息，请参阅[安装 OLE DB 驱动程序的 SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)。  
   
  用于 SQL Server 标头和库文件的 OLE DB 驱动程序安装在以下位置：  
   
- *%PROGRAM FILES%*\Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
+ *%Program 文件 %* \Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
   
  为 SQL Server 标头文件 (msoledbsql.h) OLE DB 驱动程序可以用于将 SQL Server 数据访问功能 OLE DB 驱动程序添加到你的自定义应用程序。 OLE DB 驱动程序为 SQL Server 标头文件包含所有的定义、 属性、 属性，并利用新功能所需的接口中引入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   

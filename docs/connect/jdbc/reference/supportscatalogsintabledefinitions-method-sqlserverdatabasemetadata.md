@@ -25,14 +25,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8cd36ffc949efe12323eca14626395bbae15e951
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportscatalogsintabledefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInTableDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索是否可以在表定义语句中使用目录名称。  
+  检索目录名称能否用于表定义语句。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,12 +42,12 @@ public boolean supportsCatalogsInTableDefinitions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果支持。 否则为**false**。  
+ **true**如果支持。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  由 java.sql.DatabaseMetaData 接口中的 supportsCatalogsInTableDefinitions 方法指定此 supportsCatalogsInTableDefinitions 方法。  
   
 ## <a name="see-also"></a>另请参阅  

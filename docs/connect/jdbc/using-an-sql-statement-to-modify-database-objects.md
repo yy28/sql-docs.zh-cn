@@ -1,27 +1,28 @@
 ---
-title: "使用 SQL 语句来修改数据库对象 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQL 语句来修改数据库对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5bc8d1f8ce376595a2daf1cc8fddd240a2b4ba8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6bb291d725728ef7d5e87f0331f14aac33b19ba8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>使用 SQL 语句修改数据库对象
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_get_config |Microsoft 文档
+title: sqlsrv_get_config | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ffdebecc3121e8707b3e58cd1302fe02f9897106
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -48,7 +48,7 @@ sqlsrv_get_config( string $setting )
 ## <a name="return-value"></a>返回值  
 *$setting* 参数指定的设置的值。 如果指定的设置无效，将返回 **false** ，并向错误集合中添加一个错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 如果 **false** config **sqlsrv_get_config**，必须调用 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 来确定是否发生错误，或 **false** 是否是 *$setting* 参数指定的设置的值。  
   
 ## <a name="see-also"></a>另请参阅  

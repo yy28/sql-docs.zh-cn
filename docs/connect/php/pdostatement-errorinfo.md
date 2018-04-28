@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec0f059e1be3cf476faa2ac4ff0b4f71c7643511
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -47,7 +47,7 @@ array PDOStatement::errorInfo();
   
 如果没有错误或如果未设置 SQLSTATE，特定于驱动程序的字段将为 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

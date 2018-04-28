@@ -25,14 +25,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cefdfe464824546adc27c34cfa961a843fdd0afb
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>supportsGroupByBeyondSelect 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索是否此数据库支持使用不包含在 GROUP BY 子句中，SELECT 语句中的列，前提 SELECT 语句中的所有列都包含在 GROUP BY 子句中。  
+  在 SELECT 语句中的所有列均包含在 GROUP BY 子句中的情况下，检索此数据库是否支持使用 GROUP BY 子句中的 SELECT 语句不包含的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,12 +42,12 @@ public boolean supportsGroupByBeyondSelect()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果支持。 否则为**false**。  
+ **true**如果支持。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  由 java.sql.DatabaseMetaData 接口中的 supportsGroupByBeyondSelect 方法指定此 supportsGroupByBeyondSelect 方法。  
   
 ## <a name="see-also"></a>另请参阅  

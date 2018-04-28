@@ -1,30 +1,33 @@
 ---
-title: "updateByte 方法 （int，字节） |Microsoft 文档"
-ms.custom: 
+title: updateByte 方法 （int，字节） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateByte (int, byte)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateByte (int, byte)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e635d789-9218-488e-a213-2e3e09635acc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b97b0dc53a9c4b8afb3166b0f044e38b73e37fb3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4bac6b90f340e933649438ea26d7597f2442873f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatebyte-method-int-byte"></a>updateByte 方法 (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateByte(int index,
  由 java.sql.ResultSet 接口中的 updateByte 方法指定此 updateByte 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateByte 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
+ [updateByte 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

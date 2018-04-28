@@ -1,8 +1,8 @@
 ---
-title: sqlsrv_fetch_object | Microsoft Docs
+title: sqlsrv_fetch_object |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87477c1d30607d71e49729f73105905a2f64767a
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2c90f8f636e249a4b1689d8b8c80946097cb6f74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,9 +48,9 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$className* [可选]: 指定要实例化的类名称的字符串。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
   
-*$ctorParams* [可选]: 包含值的数组传递到与指定类的构造函数*$className*参数。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
+*$ctorParams* [可选]: 包含值的数组传递到与指定类的构造函数 *$className*参数。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
   
-*行*[可选]: 指定要在使用可滚动游标的结果集中访问的行的以下值之一。 (如果*行*指定，则*$className*和*$ctorParams*必须显式指定，即使你必须指定为空*$className*和*$ctorParams*。)  
+*行*[可选]: 指定要在使用可滚动游标的结果集中访问的行的以下值之一。 (如果*行*指定，则 *$className*和 *$ctorParams*必须显式指定，即使你必须指定为空 *$className*和 *$ctorParams*。)  
   
 -   SQLSRV_SCROLL_NEXT  
   

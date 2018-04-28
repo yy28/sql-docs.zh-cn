@@ -2,7 +2,7 @@
 title: SQLSRV 驱动程序 API 参考 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,21 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: ''
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8055aee892d75a9dc7f5b4c9ac4248184578f9b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: a3344453c4675242c68d69a14070f46ad7e586ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驱动程序 API 参考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驱动程序的 API 名称为 **sqlsrv**。 所有**sqlsrv**函数开头**sqlsrv_**后, 跟谓词或名词。 后跟谓词的函数可执行特定操作，后跟名词的函数可返回特定形式的元数据。  
+在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驱动程序的 API 名称为 **sqlsrv**。 所有**sqlsrv**函数开头**sqlsrv_** 后, 跟谓词或名词。 后跟谓词的函数可执行特定操作，后跟名词的函数可返回特定形式的元数据。  
   
 ## <a name="in-this-section"></a>本節內容  
 SQLSRV 驱动程序包含以下函数：  

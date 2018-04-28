@@ -2,7 +2,7 @@
 title: 系统要求 Microsoft Drivers for PHP for SQL Server |Microsoft 文档
 ms.custom: ''
 ms.date: 03/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-caps.latest.revision: ''
+caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f616a439b737e3228321247edab187975790bdde
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 44a18257abc758ee910fb9c4953cbdef02239fbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>系统要求 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/28/2018
 |5.5|       |       |       |5.5.16+ |5.5.16+ |
 |5.4|       |       |       |5.4.32  |5.4.32  |
 
--   某个版本的驱动程序文件必须位于 PHP 扩展目录中。 请参阅[驱动程序版本](#driver-versions)有关不同驱动程序文件信息。  若要下载驱动程序，请参阅 [Microsoft Drivers for PHP for SQL Server](http://www.microsoft.com/download/details.aspx?id=20098)。 有关为 PHP 配置驱动程序的信息，请参阅[Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。
+-   某个版本的驱动程序文件必须位于 PHP 扩展目录中。 请参阅[驱动程序版本](#driver-versions)有关不同驱动程序文件信息。  若要下载驱动程序，请参阅[下载 Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md)。 有关为 PHP 配置驱动程序的信息，请参阅[Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。
 
 -   Web 服务器是必需的。 必须将 Web 服务器配置为运行 PHP。 有关托管 PHP 应用程序使用 IIS 的信息，请参阅[教程 PHP 的网站上](http://php.net/manual/fa/install.windows.iis.php)。  
 
@@ -128,16 +128,16 @@ Microsoft ODBC Driver for SQL Server 的正确版本是 PHP 运行时所在的�
 |---------------|---------------|----------------|---------------------|  
 |32-bit php_sqlsrv_7_nts.dll <br />32-bit php_pdo_sqlsrv_7_nts.dll |7.0|否 |32 位 php7.dll|
 |32-bit php_sqlsrv_7_ts.dll  <br />32-bit php_pdo_sqlsrv_7_ts.dll  |7.0|是|32 位 php7ts.dll|
-|64-bit php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|否 |64 位 php7.dll|  
-|64-bit php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|是|64 位 php7ts.dll|
+|64 位 php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|否 |64 位 php7.dll|  
+|64 位 php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|是|64 位 php7ts.dll|
 |32-bit php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|否 |32 位 php7.dll|  
 |32-bit php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|是|32 位 php7ts.dll|  
 |64-bit php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|否 |64 位 php7.dll|  
-|64-bit php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|是|64 位 php7ts.dll|   
+|64 位 php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|是|64 位 php7ts.dll|   
 |32-bit php_sqlsrv_72_nts.dll<br />32-bit php_pdo_sqlsrv_72_nts.dll|7.2|否 |32 位 php7.dll|  
 |32-bit php_sqlsrv_72_ts.dll <br />32-bit php_pdo_sqlsrv_72_ts.dll |7.2|是|32 位 php7ts.dll|  
-|64-bit php_sqlsrv_72_nts.dll<br />64-bit php_pdo_sqlsrv_72_nts.dll|7.2|否 |64 位 php7.dll|  
-|64-bit php_sqlsrv_72_ts.dll <br />64-bit php_pdo_sqlsrv_72_ts.dll |7.2|是|64 位 php7ts.dll|  
+|64 位 php_sqlsrv_72_nts.dll<br />64-bit php_pdo_sqlsrv_72_nts.dll|7.2|否 |64 位 php7.dll|  
+|64 位 php_sqlsrv_72_ts.dll <br />64-bit php_pdo_sqlsrv_72_ts.dll |7.2|是|64 位 php7ts.dll|  
 
 在 Linux 上，将包括以下版本的驱动程序：
 
@@ -158,12 +158,12 @@ Microsoft ODBC Driver for SQL Server 的正确版本是 PHP 运行时所在的�
 |---------------|---------------|----------------|---------------------|  
 |32-bit php_sqlsrv_7_nts.dll <br />32-bit php_pdo_sqlsrv_7_nts.dll |7.0|否 |32 位 php7.dll|
 |32-bit php_sqlsrv_7_ts.dll  <br />32-bit php_pdo_sqlsrv_7_ts.dll  |7.0|是|32 位 php7ts.dll|
-|64-bit php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|否 |64 位 php7.dll|  
-|64-bit php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|是|64 位 php7ts.dll|
+|64 位 php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|否 |64 位 php7.dll|  
+|64 位 php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|是|64 位 php7ts.dll|
 |32-bit php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|否 |32 位 php7.dll|  
 |32-bit php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|是|32 位 php7ts.dll|  
 |64-bit php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|否 |64 位 php7.dll|  
-|64-bit php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|是|64 位 php7ts.dll|   
+|64 位 php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|是|64 位 php7ts.dll|   
 
 在 Linux 上，将包括以下版本的驱动程序：
 

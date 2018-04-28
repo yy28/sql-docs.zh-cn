@@ -2,7 +2,7 @@
 title: 使用 sqlcmd 连接 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,8 +70,8 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k 删除或替换控制字符。  
   
-- **-K***application_intent*  
-连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果**-K**未指定，`sqlcmd`不支持连接到辅助副本的 AlwaysOn 可用性组中。 有关详细信息，请参阅[上 Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+- **-K * * * application_intent*  
+连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果 **-K**未指定，`sqlcmd`不支持连接到辅助副本的 AlwaysOn 可用性组中。 有关详细信息，请参阅[上 Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > **-K** 在适用于 SUSE Linux 的 CTP 中不受支持。 但是，可以指定**ApplicationIntent = ReadOnly** DSN 文件中的关键字传递给`sqlcmd`。 有关详细信息，请参阅"中的 DSN 支持`sqlcmd`和`bcp`"本主题的末尾。  
@@ -80,7 +80,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 - -m *error_level*控制哪些错误消息发送到 stdout。  
   
-- **-M***multisubnet_failover*  
+- **-M * * * multisubnet_failover*  
 在连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 **-M**。 **-M**提供更快地检测故障转移和到 （当前） 活动服务器的连接。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，请参阅[上 Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -q *commandline_query*执行查询时`sqlcmd`启动，但不退出时查询运行完毕。  
 
-- -Q *commandline_query*执行查询时`sqlcmd`启动。 `sqlcmd`在查询结束时，将退出。  
+- -Q *commandline_query*执行查询时`sqlcmd`启动。 `sqlcmd` 在查询结束时，将退出。  
 
 - -r 重定向到 stderr 的错误消息。
 
@@ -104,7 +104,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char*指定列分隔符字符。  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*协议*:]*服务器*[**，* * * 端口*]  
 指定的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]要连接到或-D 是否使用，DSN。 在 Linux 和 macOS 上的 ODBC 驱动程序要求-s。 请注意， **tcp**是唯一有效的协议。  
   
 - -t *query_timeout*指定的命令 （或 SQL 语句） 在超时之前等待的秒数。  
@@ -216,19 +216,19 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **数据库 =***database_name*  
+-   **数据库 = * * * database_name*  
   
 -   **驱动程序 = ODBC Driver 11 for SQL Server**或**驱动程序 = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **服务器 =***server_name_or_IP_address*  
+-   **服务器 = * * * server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   
 在 DSN 中的驱动程序项是必需的但若要连接到服务器，`sqlcmd`或`bcp`需要服务器条目中的值。  
 
-如果在这两个 DSN 中指定相同的选项和`sqlcmd`或`bcp`命令行中，命令行选项将重写在 DSN 中使用的值。 例如，如果 DSN 具有某一数据库项和`sqlcmd`命令行包括**-d**，传递给值**-d**使用。 如果**Trusted_Connection = yes** DSN，则使用身份验证的 Kerberos 和用户名称中指定 (**– U**) 和密码 (**– P**)，如果提供，将被忽略。
+如果在这两个 DSN 中指定相同的选项和`sqlcmd`或`bcp`命令行中，命令行选项将重写在 DSN 中使用的值。 例如，如果 DSN 具有某一数据库项和`sqlcmd`命令行包括 **-d**，传递给值 **-d**使用。 如果**Trusted_Connection = yes** DSN，则使用身份验证的 Kerberos 和用户名称中指定 (**– U**) 和密码 (**– P**)，如果提供，将被忽略。
 
 调用的现有脚本`isql`可以修改为使用`sqlcmd`通过定义以下别名： `alias isql="sqlcmd –D"`。  
 

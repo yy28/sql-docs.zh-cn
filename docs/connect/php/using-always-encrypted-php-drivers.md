@@ -1,7 +1,7 @@
 ---
 title: 使用始终加密的 PHP 驱动程序适用于 SQL Server |Microsoft 文档
 ms.date: 01/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.workload: Inactive
-ms.openlocfilehash: 588a0471866b1b33a3e485b321193edfd0c9187d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>使用始终加密的 PHP 驱动程序适用于 SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -96,10 +96,10 @@ CREATE TABLE [dbo].[Patients](
    -   显式设置的 SQL 类型。
   -   对于 PDO_SQLSRV 驱动程序，用户没有显式设置参数的 SQL 类型的选项。 PDO_SQLSRV 驱动程序自动帮助用户确定 SQL 类型时将参数绑定。
  -   要确定 SQL 类型的驱动程序，适用于一些限制：
-  -   SQLSRV Driver:
+  -   SQLSRV 驱动程序：
    -   如果用户想要确定加密列的 SQL 类型的驱动程序，则用户必须使用`sqlsrv_prepare`和`sqlsrv_execute`。
    -   如果`sqlsrv_query`是首选，用户将负责指定所有参数的 SQL 类型。 指定的 SQL 类型必须包括字符串类型的字符串长度和小数位数和精度的十进制类型。
-  -   PDO_SQLSRV Driver:
+  -   PDO_SQLSRV 驱动程序：
    -   语句属性`PDO::SQLSRV_ATTR_DIRECT_QUERY`参数化查询中不支持。
    -   语句属性`PDO::ATTR_EMULATE_PREPARES`参数化查询中不支持。
    

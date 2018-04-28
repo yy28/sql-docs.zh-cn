@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：创建用于 Ruby 开发的 SQL 数据库
+title: 步骤 2： 创建 SQL 数据库的 Ruby 开发 |Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9e001119b50d9fc3968b34e99867091c290a7cad
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-2-create-a-sql-database-for-ruby-development"></a>步骤 2：创建用于 Ruby 开发的 SQL 数据库
+# <a name="step-2-create-a-sql-database-for-ruby-development"></a>步骤 2： 创建 SQL 数据库的 Ruby 开发
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

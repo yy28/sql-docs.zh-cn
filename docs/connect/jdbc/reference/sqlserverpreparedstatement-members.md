@@ -1,27 +1,28 @@
 ---
-title: "SQLServerPreparedStatement 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerPreparedStatement 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05f80d22f4eb968f6db9ce24a8c5e9808bd43356
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1926d376ac2653dcc7b4d6b0481bbe968d9469d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,15 +43,15 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|将一组参数添加到此语句对象的命令的批处理。|  
-|[取消](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(继承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)取消当前正在运行此语句对象的 SQL 语句。|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(继承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)取消当前正在运行此语句对象的 SQL 语句。|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|此清空的 SQL 命令的当前列表[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|立即清除当前参数值。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(继承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)清除此语句对象报告的所有警告。|  
 |[关闭](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|释放数据库和 JDBC 资源立即而不是等待它们自动释放此语句对象。|  
-|[执行](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|在此语句对象，它可以是任何类型的 SQL 语句中运行的 SQL 语句。|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|在此语句对象，它可以是任何类型的 SQL 语句中运行的 SQL 语句。|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|向数据库提交要运行的命令批。 如果所有命令都成功运行，则返回一个更新计数数组。|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|此语句对象中运行 SQL 查询并返回[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)由查询生成的对象。|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|在此语句对象中，它必须是 SQL INSERT、 UPDATE、 MERGE 或 DELETE 语句; 运行的 SQL 语句或返回任何内容，例如 DDL 语句的 SQL 语句。|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|将指定的参数设置为指定的 Blob 对象。|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|将指定的参数设置为指定**布尔**值。|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|将指定的参数设置为指定**字节**值。|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的字节数组。|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的字节数组。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|将指定的参数设置为指定的读取器对象。|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|将指定的参数设置为给定的 Clob 对象。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(继承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)将 SQL 游标名称设置为指定字符串，此字符串将由后续的执行方法使用。|  

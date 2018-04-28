@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: fc5a2d4c3aa440a1e5b48637ad62d0cc7ab48a84
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/16/2018
 bool PDOStatement::debugDumpParams();  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

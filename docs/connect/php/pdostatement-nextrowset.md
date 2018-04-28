@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 3facaf516ae57eff6afa3891cd6c6360394011a1
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,7 +39,7 @@ bool PDOStatement::nextRowset();
 ## <a name="return-value"></a>返回值  
 如果成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

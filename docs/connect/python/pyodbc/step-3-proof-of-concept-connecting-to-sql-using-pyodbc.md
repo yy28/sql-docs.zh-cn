@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：使用 pyodbc 连接到 SQL 的概念验证
+title: 步骤 3： 连接到 SQL 使用 pyodbc 的概念证明 |Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 389ab8cc4c25b586b75abce440ee985bcdff4d01
 ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/20/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念验证
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3： 连接到 SQL 使用 pyodbc 的概念证明
 
 此示例中，应考虑仅概念证明。  示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。  
 

@@ -2,7 +2,7 @@
 title: 使用集成身份验证 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edc89fa38ae3b4554f44290cf36073d6c6a0625b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -89,7 +89,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   应用程序服务器作为不同的数据库进行身份验证和连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]作为另一个数据库数据库用户进行身份验证 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 作为另一个数据库数据库用户进行身份验证 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
 配置集成身份验证后，凭据将传递给链接服务器。  
   
@@ -101,17 +101,17 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 它是使用错误`-T`与`-U`或`-P`选项。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>支持的语法通过注册的 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>支持的语法通过注册的 SPN [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 Spn 在连接字符串或连接属性中使用的语法如下所示：  
 
-|语法|说明|  
+|语法|Description|  
 |----------|---------------|  
-|MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。 *port* 为 TCP 端口号。 *fqdn* 是一个完全限定域名。|  
+|MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。 *port* 是 TCP 端口号。 *fqdn* 是一个完全限定域名。|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Linux 或 macOS 计算机与 Active Directory 进行身份验证
 
-若要配置 Kerberos，在其中输入数据`krb5.conf`文件。 `krb5.conf`处于`/etc/`但你可以引用另一个文件，例如使用语法`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`。 以下是一个示例`krb5.conf`文件：  
+若要配置 Kerberos，在其中输入数据`krb5.conf`文件。 `krb5.conf` 处于`/etc/`但你可以引用另一个文件，例如使用语法`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`。 以下是一个示例`krb5.conf`文件：  
   
 ```  
 [libdefaults]  

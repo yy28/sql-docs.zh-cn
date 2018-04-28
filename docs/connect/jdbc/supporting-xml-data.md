@@ -1,41 +1,42 @@
 ---
-title: "支持 XML 数据 |Microsoft 文档"
-ms.custom: 
+title: 支持 XML 数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ec535a43cf79b10e25d3c0fd7108d3c9a40dd0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d23e602f9e1323f96bc350d2501dccf6e06b03ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supporting-xml-data"></a>支持 XML 数据
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]提供**xml** ，您可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 像其他内置类型，你可以使用**xml**数据类型为： 当你创建表; 或键入变量的类型、 参数类型、 函数返回类型或列[!INCLUDE[tsql](../../includes/tsql_md.md)]CAST 和 CONVERT 函数。 JDBC 驱动程序中, **xml**可以作为字符串、 字节数组、 流、 CLOB、 BLOB 或 SQLXML 对象映射数据类型。 字符串是默认映射。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供**xml** ，您可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 像其他内置类型，你可以使用**xml**数据类型为： 当你创建表; 或键入变量的类型、 参数类型、 函数返回类型或列[!INCLUDE[tsql](../../includes/tsql_md.md)]CAST 和 CONVERT 函数。 JDBC 驱动程序中, **xml**可以作为字符串、 字节数组、 流、 CLOB、 BLOB 或 SQLXML 对象映射数据类型。 字符串是默认映射。  
   
  JDBC 驱动程序提供对 JDBC 4.0 API 的支持，后者引入了 SQLXML 接口。 SQLXML 接口定义与 XML 数据交互以及操作 XML 数据的方法。 **SQLXML** JDBC 4.0 数据类型，它映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**数据类型。 因此，如果要在应用程序中使用 SQLXML 数据类型，必须将 classpath 设置为包含 sqljdbc4.jar 文件。 如果应用程序在访问 SQLXML 对象及其方法时尝试使用 sqljdbc3.jar，将引发异常。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]始终将它存储在数据库列之前验证的 XML 数据。 应用程序可以使用**SQLXML**数据类型，因为 JDBC 驱动程序将其映射到**xml**自动数据类型。 **SQLXML** sqljdbc4.jar 中提供了支持。 请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)有关支持的 JRE 版本的列表[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 始终将它存储在数据库列之前验证的 XML 数据。 应用程序可以使用**SQLXML**数据类型，因为 JDBC 驱动程序将其映射到**xml**自动数据类型。 **SQLXML** sqljdbc4.jar 中提供了支持。 请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)有关支持的 JRE 版本的列表[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
   
  此部分中的主题描述 SQLXML 接口以及如何对其进行编程**SQLXML**使用 JDBC API 方法的数据类型。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  

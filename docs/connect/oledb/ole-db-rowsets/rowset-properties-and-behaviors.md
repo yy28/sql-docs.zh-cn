@@ -3,7 +3,7 @@ title: 行集属性和行为 |Microsoft 文档
 description: 行集属性和 OLE DB 驱动程序的 SQL Server 中的行为
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6724a1f7123be2040fd87d4a14ca4b45b7eb99ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 09b5ad3e392be5ae28511a94068d030eb6c50aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>行集属性和行为
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/06/2018
 |DBPROP_MEMORYUSAGE|为 SQL Server 中，OLE DB 驱动程序不被实现此行集属性。 尝试读取或写入属性值将生成错误。|  
 |DBPROP_NOTIFICATIONGRANULARITY|为 SQL Server 中，OLE DB 驱动程序不被实现此行集属性。 尝试读取或写入属性值将生成错误。|  
 |DBPROP_NOTIFICATIONPHASES|读/写： 只读<br /><br /> 默认值： DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序支持所有通知阶段。|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|读/写： 只读<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 描述： SQL Server 通知阶段 OLE DB 驱动程序是可取消之前尝试执行所指示的行集修改。 尝试完成后，SQL Server 的 OLE DB 驱动程序不支持阶段取消。|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|读/写： 只读<br /><br /> 默认值： DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> 描述： SQL Server 通知阶段 OLE DB 驱动程序是可取消之前尝试执行所指示的行集修改。 尝试完成后，SQL Server 的 OLE DB 驱动程序不支持阶段取消。|  
 |DBPROP_ORDEREDBOOKMARKS|为 SQL Server 中，OLE DB 驱动程序不被实现此行集属性。 尝试读取或写入属性值将生成错误。|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明： 设置更改可见性属性会导致 SQL Server 以使用用于 OLE DB 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标来支持行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_QUICKRESTART|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明： 如果设置为 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序，尝试对该行集使用服务器游标。|  

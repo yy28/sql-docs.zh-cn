@@ -1,27 +1,28 @@
 ---
-title: "截断方法 (SQLServerNClob) |Microsoft 文档"
-ms.custom: 
+title: 截断方法 (SQLServerNClob) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b09192763b6982db02a53f758b6aab1837612085
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e0f138480a7296fd0bf5ee75abf901b75ac819bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="truncate-method-sqlservernclob"></a>truncate 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ public void truncate(long len)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *len*  
+ len  
   
  长度，以字符为单位，向其**NCLOB**应截断值。  
   

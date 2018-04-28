@@ -3,7 +3,7 @@ title: 用于高可用性、 灾难恢复的 SQL Server 支持的 OLE DB 驱动�
 description: OLE DB 驱动程序的 SQL Server 支持的高可用性、 灾难恢复
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: dc6bba3823e1683baa7962bd11889fbaca83dea4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>用于高可用性、 灾难恢复的 SQL Server 支持的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

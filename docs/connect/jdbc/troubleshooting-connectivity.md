@@ -1,27 +1,28 @@
 ---
-title: "故障排除连接 |Microsoft 文档"
-ms.custom: 
+title: 故障排除连接 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1566b30797b45a0eaa40491658f4fc3381c683f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b213cb9d2a3527b967afef5dc28aa11d82fd0f9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-connectivity"></a>连接疑难解答
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 -   未启用 TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，或指定的服务器或端口号不正确。 验证[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]正在侦听 TCP/IP 与指定的服务器和端口。 系统可能会报告类似“登录已经失败。 对主机的 TCP/IP 连接已失败。”的异常。 这指示下列内容之一：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]已安装但尚未安装 TCP/IP 网络协议的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]网络实用程序[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Configuration Manager for[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]及更高版本。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 已安装但尚未安装 TCP/IP 网络协议的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]网络实用程序[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Configuration Manager for[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]及更高版本。  
   
     -   作为安装 TCP/IP[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]协议，但它未在侦听 JDBC 连接 URL 中指定的端口。 默认端口为 1433，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]可以配置在产品安装在任何端口上侦听。 请确保[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]侦听端口 1433年。 或者，如果端口已更改，则应确保 JDBC 连接 URL 中指定的端口与更改的端口相匹配。 有关 JDBC 连接 Url 的详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。  
   

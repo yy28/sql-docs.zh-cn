@@ -25,14 +25,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: dca763b48c5efd27a501f0232fa5891b5399117c
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="updatetime-method-int-javasqltime"></a>updateTime 方法 （int、 java.sql.Time）
+# <a name="updatetime-method-int-javasqltime"></a>updateTime 方法 (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用给定的列索引的时间值更新指定的列。  
+  根据给定的列索引使用时间值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,19 +42,19 @@ public void updateTime(int index,
                        java.sql.Time x)  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  *索引*  
   
  **Int** ，该值指示的列索引。  
   
- *X*  
+ *x*  
   
- 该时间值。  
+ 时间值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  由 java.sql.ResultSet 接口中的 updateTime 方法指定此 updateTime 方法。  
   
 ## <a name="see-also"></a>另请参阅  

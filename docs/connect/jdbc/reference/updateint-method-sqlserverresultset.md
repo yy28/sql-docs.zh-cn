@@ -1,30 +1,33 @@
 ---
-title: "updateInt 方法 (SQLServerResultSet) |Microsoft 文档"
-ms.custom: 
+title: updateInt 方法 (SQLServerResultSet) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateInt
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateInt
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28918d33a9fd9e4c0249405df0e6a00a211a2195
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d8fee7995b2443d596dcf015e1b1e676f3bb7171
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateint-method-sqlserverresultset"></a>updateInt 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="overload-list"></a>重载列表  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[updateInt （int，int）](../../../connect/jdbc/reference/updateint-method-int-int.md)|更新的指定的列**int**给定的列索引的值。|  
 |[updateInt （java.lang.String，int）](../../../connect/jdbc/reference/updateint-method-java-lang-string-int.md)|更新的指定的列**int**给定的列名称的值。|  

@@ -1,27 +1,28 @@
 ---
-title: "使用大数据 |Microsoft 文档"
-ms.custom: 
+title: 使用大数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f21be61a9e91f3c3bbe0f5ab82c81435b57ef29e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 524806a3566bb62fe0361574b9193dabfe2da20b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-large-data"></a>处理大型数据
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
  此部分中的主题描述了可用于检索从大值数据的不同方式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  

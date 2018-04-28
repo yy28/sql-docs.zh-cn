@@ -1,7 +1,7 @@
 ---
 title: Linux 和 macOS Microsoft Drivers for PHP for SQL Server 的安装教程 |Microsoft 文档
-ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.date: 04/11/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.workload: Inactive
-ms.openlocfilehash: f7c9542294be520b6861262e814b9fda31b06d5d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 4ab3f815063a537b25b776b6b98fd26e74b7d2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux 和 macOS Microsoft Drivers for PHP for SQL Server 的安装教程
 以下说明假定一个干净的环境，并演示如何以 PHP 7.x、 Microsoft ODBC 驱动程序、 Apache 和 Microsoft 驱动程序安装 SQL Server 上 Ubuntu 16.04 和 17.10，RedHat 7、 8 和 9，Suse 12 Debian，和 macOS X 10.11 和 10.12 for PHP。 这些说明建议安装驱动程序使用 PECL，但你也可以下载的预构建的二进制文件从[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 项目页，并将其中的说明安装[加载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。 有关扩展加载和为何我们不希望向 php.ini 添加扩展的说明，请参阅部分[加载驱动程序](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)。
@@ -35,8 +35,8 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="installing-the-drivers-on-ubuntu-1604-and-1710"></a>在 Ubuntu 16.04 和 17.10 上安装驱动程序
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 with 7.0 or 7.1 in the following commands.
+> [!NOTE]
+> 若要安装 PHP 7.0 或 7.1，将替换为 7.0 或以下命令中的 7.1 7.2。
 
 ### <a name="step-1-install-php"></a>步骤 1. 安装 PHP
 ```
@@ -75,8 +75,8 @@ sudo service apache2 restart
 
 ## <a name="installing-the-drivers-on-red-hat-7"></a>在 Red Hat 7 上安装驱动程序
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace remi-php72 with remi-php70 or remi-php71 respectively in the following commands.
+> [!NOTE]
+> 若要安装 PHP 7.0 或 7.1，替换 remi php72 remi php70 或 remi-php71 分别在以下命令。
 
 ### <a name="step-1-install-php"></a>步骤 1. 安装 PHP
 
@@ -138,8 +138,8 @@ sudo apachectl restart
 
 ## <a name="installing-the-drivers-on-debian-8-and-9"></a>在 Debian 8 和 9 上安装驱动程序
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 in the following commands with 7.0 or 7.1.
+> [!NOTE]
+> 若要安装 PHP 7.0 或 7.1，将替换为 7.0 或 7.1 7.2 以下命令中。
 
 ### <a name="step-1-install-php"></a>步骤 1. 安装 PHP
 ```
@@ -187,10 +187,9 @@ sudo service apache2 restart
 
 ## <a name="installing-the-drivers-on-suse-12"></a>在 Suse 12 上安装驱动程序
 
-    > [!NOTE]
-    > To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
-    > To install PHP 7.1, replace the repository URL below with the following URL:
-      `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> [!NOTE]
+> 若要安装 PHP 7.0，跳过以下命令添加存储库-7.0 是 suse 12 上的默认值 PHP。
+> 若要安装 PHP 7.1，请将下面的存储库 URL 替换以下 URL: `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### <a name="step-1-install-php"></a>步骤 1. 安装 PHP
 ```
@@ -232,21 +231,21 @@ sudo systemctl restart apache2
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace php72 with php70 or php71 respectively in the following commands.
+> [!NOTE]
+> 若要安装 PHP 7.0 或 7.1，替换php@7.2与php@7.0或php@7.1分别在以下命令。
 
 ### <a name="step-1-install-php"></a>步骤 1. 安装 PHP
 
 ```
 brew tap
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/homebrew-php
-brew install php72 --with-pear --with-httpd24 --with-cgi
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+brew tap homebrew/core
+brew install php@7.2
 ```
+PHP 现在应在你的路径-运行`php -v`以验证你是否正在运行的 PHP 的正确版本。 如果 PHP 不在你的路径或不是正确的版本，运行以下命令：
+```
+brew link --force --overwrite php@7.2
+```
+
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装必备组件
 按照的说明安装的 ODBC driver for macOS [Linux 和 macOS 安装页](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。 
 
@@ -257,13 +256,20 @@ brew install autoconf automake libtool
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装 Microsoft SQL Server PHP 驱动程序
 ```
-chmod -R ug+w /usr/local/opt/php72/lib/php
-pear config-set php_ini /usr/local/etc/php/7.2/php.ini system
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 和配置驱动程序加载
 ```
+brew install apache2
+```
+若要查找 Apache Apache 安装的配置文件，运行 
+```
+apachectl -V | grep SERVER_CONFIG_FILE
+``` 
+和用来替换路径`httpd.conf`中的以下命令：
+```
+echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5. 重新启动 Apache 并测试的示例脚本

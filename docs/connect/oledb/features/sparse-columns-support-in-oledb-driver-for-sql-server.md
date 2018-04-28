@@ -3,7 +3,7 @@ title: OLE DB 驱动程序中的 SQL Server 的稀疏列支持 |Microsoft 文档
 description: OLE DB 驱动程序中的 SQL Server 的稀疏列支持
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>OLE DB 驱动程序中的 SQL Server 的稀疏列支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/06/2018
 |确定列是否为稀疏列。|参考 DBSCHEMA_COLUMNS 架构行集 (OLE DB) 的 SS_IS_SPARSE 列。|  
 |确定列是否为**column_set**。|参考 DBSCHEMA_COLUMNS 架构行集的 SS_IS_COLUMN_SET 列。 或者，请查阅*dwFlags*由 IColumnsinfo::GetColumnInfo 或 DBCOLUMNFLAGS 中 IColumnsRowset::GetColumnsRowset 返回的行集返回。 有关**column_set**列，将设置 DBCOLUMNFLAGS_SS_ISCOLUMNSET。|  
 |导入和导出 bcp 具有否的表的稀疏列**column_set**。|SQL server 从以前版本的 OLE DB 驱动程序的行为方面没有变化。|  
-|导入和导出 bcp 具有的表的稀疏列**column_set**。|**Column_set**是导入和导出为 XML; 相同的方式，即作为**varbinary （max)**如果绑定作为二进制类型，或**nvarchar (max)**如果绑定为**char**或**wchar**类型。<br /><br /> 成员的稀疏列**column_set**不会导出为不同的列; 它们仅导出的值中**column_set**。|  
+|导入和导出 bcp 具有的表的稀疏列**column_set**。|**Column_set**是导入和导出为 XML; 相同的方式，即作为**varbinary （max)** 如果绑定作为二进制类型，或**nvarchar (max)** 如果绑定为**char**或**wchar**类型。<br /><br /> 成员的稀疏列**column_set**不会导出为不同的列; 它们仅导出的值中**column_set**。|  
 |**queryout** BCP 的行为。|从以前版本的 OLE DB 驱动程序的显式命名列的 SQL server 的处理没有变化。<br /><br /> 如果应用场景涉及在具有不同架构的表之间进行导入和导出，则可能要求特殊处理。<br /><br /> 有关 BCP 的详细信息，请参阅本章后面的“针对稀疏列的大容量复制 (BCP) 支持”。|  
   
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
@@ -60,13 +60,13 @@ ms.lasthandoff: 04/06/2018
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>针对稀疏列的大容量复制 (BCP) 支持  
  没有为稀疏列中 OLE DB 的 BCP api 更改或**column_set**功能。  
   
- 如果表具有**column_set**，稀疏列不被当作非重复列。 中的值包括所有稀疏列的值**column_set**，这作为 XML 列; 相同的方式导出，即作为**varbinary （max)**如果绑定作为二进制类型，或**nvarchar (max)**如果绑定为**char**或**wchar**类型)。 在导入时， **column_set**值必须符合的架构**column_set**。  
+ 如果表具有**column_set**，稀疏列不被当作非重复列。 中的值包括所有稀疏列的值**column_set**，这作为 XML 列; 相同的方式导出，即作为**varbinary （max)** 如果绑定作为二进制类型，或**nvarchar (max)** 如果绑定为**char**或**wchar**类型)。 在导入时， **column_set**值必须符合的架构**column_set**。  
   
  有关**queryout**操作，没有显式被引用的列的处理的方式没有更改。 **column_set**列具有 XML 列相同的行为和稀疏性不起作用的处理方式上名为稀疏列。  
   
- 但是，如果**queryout**使用的导出和你引用稀疏列的稀疏列集按名称的成员，无法执行直接导入同样结构化表。 这是因为 BCP 使用元数据与一致**选择\***导入操作并且不能以匹配**column_set**成员与此元数据的列。 若要导入**column_set**成员列单独，必须定义上引用所需的表的视图**column_set**列，并且必须执行导入操作使用视图。  
+ 但是，如果**queryout**使用的导出和你引用稀疏列的稀疏列集按名称的成员，无法执行直接导入同样结构化表。 这是因为 BCP 使用元数据与一致**选择\*** 导入操作并且不能以匹配**column_set**成员与此元数据的列。 若要导入**column_set**成员列单独，必须定义上引用所需的表的视图**column_set**列，并且必须执行导入操作使用视图。  
   
 ## <a name="see-also"></a>另请参阅  
- [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)  
   
   

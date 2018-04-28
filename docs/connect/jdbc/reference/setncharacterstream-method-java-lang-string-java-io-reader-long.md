@@ -1,27 +1,28 @@
 ---
-title: "读取器对象的长到 setNCharacterStream 方法 |Microsoft 文档"
-ms.custom: 
+title: 读取器对象的长到 setNCharacterStream 方法 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 291c94f63ebc86869682e769ef93b93c86f60ffc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 59991276c1643635f62a6ab8e69340f1998b6937
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>setNCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,10 +61,10 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  流的长度是否不同于中指定了什么*长度*参数，在更新或插入行时的 JDBC 驱动程序引发异常。  
   
- 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[setNCharacterStream 方法 &#40;java.lang.String、 java.io.Reader &#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)当应用程序希望更新的列从一个流，其长度为未知。  
+ 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[setNCharacterStream 方法&#40;java.lang.String、 java.io.Reader&#41; ](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)当应用程序希望更新的列从一个流，其长度为未知。  
   
 ## <a name="see-also"></a>另请参阅  
- [setNCharacterStream 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
+ [setNCharacterStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9f4c785d876629c3a2f95f70f15de6145f50e1af
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,14 +39,14 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>返回值  
 如果方法调用成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>Remarks  
-当调用 [PDO::commit](../../connect/php/pdo-commit.md) 或 [PDO::rollback](../../connect/php/pdo-rollback.md) 时，将结束使用 PDO::beginTransaction 开始的事务。  
+## <a name="remarks"></a>注释  
+使用 pdo:: begintransaction 开始的事务时结束[pdo:: commit](../../connect/php/pdo-commit.md)或[pdo:: rollback](../../connect/php/pdo-rollback.md)调用。  
   
 PDO::beginTransaction 不受 PDO::ATTR_AUTOCOMMIT 的值影响（也不影响该值）。  
   
 除非先使用 PDO::rollback 或 PDO::commit 结束之前的 PDO::beginTransaction，否则不允许调用 PDO::beginTransaction。  
   
-如果此方法失败，该连接将返回到自动提交模式。  
+如果此方法失败，则连接返回到自动提交模式。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   

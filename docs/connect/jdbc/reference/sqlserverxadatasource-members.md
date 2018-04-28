@@ -1,27 +1,28 @@
 ---
-title: "SQLServerXADataSource 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerXADataSource 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 257bbe29b71c558002c6d22d7d05cc01f7e24e12
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ee5a0ea6a351a5f0bce49ff3fccd26d636048f2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="constructors"></a>构造函数  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[SQLServerXADataSource （)](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|初始化的新实例[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)类。|  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(继承自[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 返回的值**applicationIntent**连接属性。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(继承自[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 返回的应用程序名称。|  

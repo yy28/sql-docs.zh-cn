@@ -2,7 +2,7 @@
 title: 在 Linux 和 macOS 的高可用性和灾难恢复上的 ODBC 驱动程序 |Microsoft 文档
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,13 +16,13 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 60f3022334ca505f5ae2d3ddadba623de292f418
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>在 Linux 和 macOS 用于高可用性和灾难恢复的支持上的 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -48,7 +48,7 @@ Linux 和 macOS 支持的 ODBC 驱动程序[!INCLUDE[ssHADR](../../../includes/s
 
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接
 
-始终指定**MultiSubnetFailover = Yes** (或**= True**) 时连接到[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性组侦听器或[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]故障转移群集实例。 **MultiSubnetFailover**可以实现更快的故障转移的所有可用性组和故障转移群集实例中的[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]。 **MultiSubnetFailover**也大大降低了单个和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行连接。 子网故障转移期间，该驱动程序积极地重试 TCP 连接。
+始终指定**MultiSubnetFailover = Yes** (或 **= True**) 时连接到[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性组侦听器或[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]故障转移群集实例。 **MultiSubnetFailover**可以实现更快的故障转移的所有可用性组和故障转移群集实例中的[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]。 **MultiSubnetFailover**也大大降低了单个和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行连接。 子网故障转移期间，该驱动程序积极地重试 TCP 连接。
 
 **MultiSubnetFailover** 连接属性指示将在可用性组或故障转移群集实例中部署应用程序。 此驱动程序尝试连接到主计算机上数据库[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]实例尝试连接到所有 IP 地址。 在连接时**MultiSubnetFailover = Yes**，客户端的重试 TCP 连接的频率比操作系统的默认 TCP 重新传输间隔快。 **MultiSubnetFailover=Yes** 会在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例的故障转移之后进行更快速的重新连接。 **MultiSubnetFailover = Yes**适用于单-和多-subnet 可用性组和故障转移群集实例。  
 

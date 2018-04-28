@@ -3,7 +3,7 @@ title: 读取 FILESTREAM 列才能使用 IBCPSession (OLE DB) 文件 |Microsoft 
 description: 读取 FILESTREAM 列才能使用 IBCPSession (OLE DB) 文件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3828927497b98a0c9c24a17e669c492dec60bde1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 2d83f3cab28f30588825707db4aed1bb93c7fc3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 将 FILESTREAM 列读入文件 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此示例使用 IBCPSession 接口将 filestream 列读入文件并编写格式化文件。  
   
- 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md)。  
+ 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>示例  
  请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  

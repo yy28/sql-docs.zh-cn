@@ -1,27 +1,28 @@
 ---
-title: "SQLServerResultSetMetaData 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerResultSetMetaData 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df2f0fbfe57b258bf0ad314377f0d11925ac03b9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f59c3d4b46395b931cd2ad68400c9c9b707b4d14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +37,13 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls、columnNullable、columnNullableUnknown|  
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|获取包括指定列的表的目录名称。|  
 |[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|返回其实例生产如果的 Java 类的完全限定名称[getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)类调用以检索列的值。|  
@@ -56,8 +57,8 @@ ms.lasthandoff: 11/18/2017
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverresultsetmetadata.md)|获取指定列的小数点右侧的位数。|  
 |[getSchemaName](../../../connect/jdbc/reference/getschemaname-method-sqlserverresultsetmetadata.md)|获取指定列的表架构名称。|  
 |[getTableName](../../../connect/jdbc/reference/gettablename-method-sqlserverresultsetmetadata.md)|获取指定列的表名称。|  
-|[isAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|指示指定列是否为自动编号，这将使该列处于只读状态。|  
-|[isCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|指示列是否区分大小写。|  
+|[IsAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|指示指定列是否为自动编号，这将使该列处于只读状态。|  
+|[IsCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|指示列是否区分大小写。|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|指示指定列是否为现金值。|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|指示指定列上的写入操作是否将一定成功。|  
 |[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|指示指定列中的值的为 Null 性。|  

@@ -1,27 +1,28 @@
 ---
-title: "SQLServerBlob 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerBlob 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ef29d1bcd35511df7caa0ef728513ba70e7624d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: bdcb7495e5f57670ad9b75aee3d6db4aebc43b55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="constructors"></a>构造函数  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|初始化 SQLServerBlob 类的新实例。|  
   
@@ -42,16 +43,16 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
-|[释放](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|此方法可释放 BLOB 对象以及它所持有的资源。|  
+|[可用](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|此方法可释放 BLOB 对象以及它所持有的资源。|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|返回一个用于从 BLOB 中读取数据的输入流。|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|获取 BLOB 数据作为字节数组。|  
-|[长度](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|返回 BLOB 对象中的字节数。|  
-|[位置](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|返回根据给定的模式和的起始索引的 BLOB 中的指定模式的位置。|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|获取 BLOB 数据作为字节数组。|  
+|[length](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|返回 BLOB 对象中的字节数。|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|返回根据给定的模式和的起始索引的 BLOB 中的指定模式的位置。|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-method-sqlserverblob.md)|检索可用于写入 BLOB 值的流。|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|将给定的字节数组写入 BLOB（从给定的位置开始），然后返回写入的字节数。|  
-|[截断](../../../connect/jdbc/reference/truncate-method-sqlserverblob.md)|将 BLOB 截断给定的长度。|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|将给定的字节数组写入 BLOB（从给定的位置开始），然后返回写入的字节数。|  
+|[truncate](../../../connect/jdbc/reference/truncate-method-sqlserverblob.md)|将 BLOB 截断给定的长度。|  
   
 ## <a name="inherited-methods"></a>继承的方法  
   

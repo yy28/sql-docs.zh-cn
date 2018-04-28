@@ -3,7 +3,7 @@ title: 稀疏列支持 (OLE DB) |Microsoft 文档
 description: 稀疏列支持 (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327c98688395be4afd5381387be6b6675eae3981
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 9ba4afcc517b5872da5440b26b2e371b8ced18fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>稀疏列支持 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,10 +62,10 @@ ms.lasthandoff: 04/06/2018
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 返回两个新列：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 返回不是的成员的列**column_set**。<br /><br /> 已添加两个新的架构行集： DBSCHEMA_COLUMNS_EXTENDED 将返回所有列的稀疏性无论**column_set**成员身份。 DBSCHEMA_SPARSE_COLUMN_SET 返回的成员的列**column_set**。 这些新行集具有与 DBSCHEMA_COLUMNS 相同的列和限制。|  
 |IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 可用架构行集的列表中包括 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的新行集的 Guid。|  
 |ICommand::Execute|如果**选择\*从***表*是使用，它将返回不是稀疏的成员的所有列**column_set**，加上包含的所有值的 XML 列成员的稀疏的非 null 列**column_set**，如果存在。|  
-|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset 返回作为 ICommand::Execute，相同的列行集**选择\***对同一个表的查询。|  
+|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset 返回作为 ICommand::Execute，相同的列行集**选择\*** 对同一个表的查询。|  
 |ITableDefinition|没有此接口为稀疏列或没有更改**column_set**列。 必须进行架构修改的应用程序必须直接执行正确的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
 ## <a name="see-also"></a>另请参阅  
- [用于 SQL Server 的 OLE DB 驱动程序&#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

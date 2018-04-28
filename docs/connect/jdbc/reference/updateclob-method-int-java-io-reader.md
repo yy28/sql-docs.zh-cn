@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f02a1edbadfbf10810da70eb6e209dd5cc7ae2f9
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -38,9 +38,9 @@ public void updateClob(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ *列索引*  
   
- 指示列索引的 。  
+ **Int** ，该值指示的列索引。  
   
  *读取器*  
   
@@ -49,7 +49,7 @@ public void updateClob(int columnIndex,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  由 java.sql.ResultSet 接口中的 updateClob 方法指定此 updateClob 方法。  
   
 ## <a name="see-also"></a>另请参阅  

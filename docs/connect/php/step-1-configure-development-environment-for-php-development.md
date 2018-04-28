@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：配置用于 PHP 开发的开发环境
+title: 步骤 1： 配置用于 PHP 开发的开发环境 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 962d90c76bfbb6022fa7b9fff05d721c03ed8fce
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---

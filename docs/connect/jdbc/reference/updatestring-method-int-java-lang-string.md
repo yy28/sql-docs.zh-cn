@@ -25,11 +25,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9c0d4be6e44023d4747bdcfc8dff352f23f4ac42
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="updatestring-method-int-javalangstring"></a>updateString 方法 （int，java.lang.String）
+# <a name="updatestring-method-int-javalangstring"></a>updateString 方法 (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   更新的指定的列**字符串**给定的列索引的值。  
@@ -42,19 +42,19 @@ public void updateString(int index,
                          java.lang.String x)  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  *索引*  
   
  **Int** ，该值指示的列索引。  
   
- *X*  
+ *x*  
   
  A**字符串**对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  由 java.sql.ResultSet 接口中的 updateString 方法指定此 updateString 方法。  
   
 ## <a name="see-also"></a>另请参阅  

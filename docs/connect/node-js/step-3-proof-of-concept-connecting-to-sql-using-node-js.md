@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：使用 Node.js 连接到 SQL 的概念证明
+title: 步骤 3： 连接到 SQL 使用 Node.js 的概念证明 |Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3：使用 Node.js 连接到 SQL 的概念证明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3： 连接到 SQL 使用 Node.js 的概念证明
 
 ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 Node.js SQL 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/16/2018
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>执行查询。  
+## <a name="step-2--execute-a-query"></a>步骤 2： 执行查询  
   
   
 在使用执行所有 SQL 语句**new request （)** 函数。 如果语句返回行，例如 select 语句，你可以检索它们使用**request.on （)** 函数。 如果没有行，request.on （） 函数将返回空列表。  

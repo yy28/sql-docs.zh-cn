@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: be214bad19b10dbee5ff8d2950d4c9974e3d592a
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ mixed PDOStatement::getAttribute( $attribute );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$attribute*：一个整数，PDO::ATTR* 或 PDO::SQLSRV\*ATTR 常量之一。 受支持的属性是可以在设置的特性[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，PDO::SQLSRV_ATTR_DIRECT_QUERY (有关详细信息，请参阅[直接语句执行和在准备语句执行PDO_SQLSRV 驱动程序](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md))，PDO::ATTR_CURSOR 和 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE (有关详细信息，请参阅[游标类型 （PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md))。  
+$*属性*： 一个整数，其中一个 PDO::ATTR_ * 或 PDO::SQLSRV_ATTR_\*常量。 受支持的属性是可以在设置的特性[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，PDO::SQLSRV_ATTR_DIRECT_QUERY (有关详细信息，请参阅[直接语句执行和在准备语句执行PDO_SQLSRV 驱动程序](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md))，PDO::ATTR_CURSOR 和 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE (有关详细信息，请参阅[游标类型 （PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md))。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，返回预定义 PDO 属性或自定义驱动程序属性的（混合）值。 如果失败，返回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 有关示例，请参阅 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  

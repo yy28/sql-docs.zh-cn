@@ -1,27 +1,28 @@
 ---
-title: "SQLServerDatabaseMetaData 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerDatabaseMetaData 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a467dca2697056235c1ac4584f6eea299d5f0e17
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d8552b0a4e59e1eed892dae11b37daa18e85288b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +37,13 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls、attributeNullable、attributeNullableUnknown、bestRowNotPseudo、bestRowPseudo、 bestRowSession、bestRowTemporary、bestRowTransaction、bestRowUnknown、columnNoNulls、columnNullable、 columnNullableUnknown、importedKeyCascade、importedKeyInitiallyDeferred、importedKeyInitiallyImmediate、 importedKeyNoAction、importedKeyNotDeferrable、importedKeyRestrict、importedKeySetDefault、 importedKeySetNull、procedureColumnIn、procedureColumnInOut、procedureColumnOut、procedureColumnResult、 procedureColumnReturn、procedureColumnUnknown、procedureNoNulls、procedureNoResult、procedureNullable、 procedureNullableUnknown、procedureResultUnknown、procedureReturnsResult、sqlStateSQL、sqlStateSQL99、 sqlStateXOpen、tableIndexClustered、tableIndexHashed、tableIndexOther、tableIndexStatistic、typeNoNulls、 typeNullable、typeNullableUnknown、typePredBasic、typePredChar、typePredNone、typeSearchable、 versionColumnNotPseudo、versionColumnPseudo、versionColumnUnknown|  
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|检索当前用户有权调用返回的所有过程是否[getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md)方法。|  
 |[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|检索当前用户有权使用返回的所有表是否[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) SELECT 语句中的方法。|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|检索此数据库是否忽略事务内的数据定义语句。|  
 |[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|可以通过调用检测是否可见的行删除的检索[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)类。|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|检索是否返回值，则为[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)方法包括 LONGVARCHAR 和 LONGVARBINARY 的 SQL 数据类型。|  
-|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|检索给定架构和目录中可用的用户定义类型的给定类型的给定属性的说明。|  
+|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|检索给定架构和目录中可用的用户定义类型的给定类型的给定属性的说明。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|检索表中唯一标识一行的最佳列集的说明。|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|检索在连接的服务器中可用的目录名称。|  
 |[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|检索**字符串**此数据库使用作为目录和表名称之间的分隔符。|  
@@ -116,13 +117,13 @@ ms.lasthandoff: 11/18/2017
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|检索此数据库的特定架构中由用户定义的类型层次结构的说明。|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的系统函数的以逗号分隔的列表。|  
 |[getTablePrivileges](../../../connect/jdbc/reference/gettableprivileges-method-sqlserverdatabasemetadata.md)|检索可用于给定目录、架构或表名称模式的各表的访问权限的说明。|  
-|[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|检索可用于给定目录、架构或表名称模式的各表的说明。|  
+|[GetTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|检索可用于给定目录、架构或表名称模式的各表的说明。|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|检索当前数据库中可用的表类型。|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的时间和日期函数的以逗号分隔的列表。|  
-|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|检索当前数据库支持的所有标准 SQL 类型的说明。|  
+|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|检索当前数据库支持的所有标准 SQL 类型的说明。|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|检索特定架构中定义的由用户定义的类型的说明。|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|检索此数据库的 URL。|  
-|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|检索此数据库可识别的用户名。|  
+|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|检索此数据库可识别的用户名。|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|检索在某行内的任何值更新时会随之自动更新的表列的说明。|  
 |[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|检索可以指示是否在通过调用该方法检测到的可见行插入[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)类。|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|检索目录是否出现在完全限定表名的开始位置。|  

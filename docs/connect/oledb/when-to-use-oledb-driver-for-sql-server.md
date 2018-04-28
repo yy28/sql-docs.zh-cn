@@ -3,7 +3,7 @@ title: 何时使用用于 SQL Server 的 OLE DB 驱动程序 |Microsoft 文档
 description: 何时使用用于 SQL Server 的 OLE DB 驱动程序
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 361a13bd249bef726e202fc8fef69fb48d88b746
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 250fdffb328fe781279819ae2e856624388122bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>何时使用用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   OLE DB 驱动程序的 SQL Server 是一个可用于访问中的数据的技术[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  有关不同的数据访问技术的讨论，请参阅[数据访问技术路线图](http://go.microsoft.com/fwlink/?LinkID=179186)  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 04/06/2018
  有关 OLE DB 驱动程序的 SQL Server 和 MDAC 之间的差异的信息，请参阅[更新为 OLE DB 驱动程序的应用程序适用于 SQL Server 从 MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [用于 SQL Server 编程的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server-programming.md)     
+ [用于 SQL Server 的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB 操作指南主题](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

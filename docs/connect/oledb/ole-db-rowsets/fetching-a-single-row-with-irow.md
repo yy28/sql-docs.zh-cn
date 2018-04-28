@@ -3,7 +3,7 @@ title: 提取具有 IRow 的单一行 |Microsoft 文档
 description: 提取单个行使用用于 SQL Server 的 OLE DB 驱动程序的 IRow 接口
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f34071fd7033c381cfc63fb1bb1937ec718ef19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d8d9652ce229e89ac82162d5a55e465231a9f324
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-a-single-row-with-irow"></a>使用 IRow 提取单行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

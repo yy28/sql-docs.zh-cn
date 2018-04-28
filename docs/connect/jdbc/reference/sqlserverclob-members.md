@@ -1,28 +1,29 @@
 ---
-title: "SQLServerClob 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerClob 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8416bd8dea2a36d3421ab44084649e64f39345b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 591756b1dea5200ba65c41332e57c6dcae17ed46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="constructors"></a>构造函数  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|初始化 SQLServerClob 类的新实例。|  
   
@@ -43,18 +44,18 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
-|[释放](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|此方法可释放 CLOB 对象以及它所持有的资源。|  
+|[可用](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|此方法可释放 CLOB 对象以及它所持有的资源。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|将 Clob 作为 ASCII 流具体化。|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)|将 Clob 数据作为 java.io.Reader 对象或字符流返回。|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlserverclob.md)|根据指定的起始位置和要复制的字符数返回 Clob 中指定子字符串的副本。|  
-|[长度](../../../connect/jdbc/reference/length-method-sqlserverclob.md)|返回 Clob 中的字符数。|  
-|[位置](../../../connect/jdbc/reference/position-method-sqlserverclob.md)|返回指定 Clob 对象的字符位置或根据指定的起始位置返回 Clob 中的子字符串。|  
+|[length](../../../connect/jdbc/reference/length-method-sqlserverclob.md)|返回 Clob 中的字符数。|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverclob.md)|返回指定 Clob 对象的字符位置或根据指定的起始位置返回 Clob 中的子字符串。|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlserverclob.md)|返回用来将 ASCII 字符写入起始于指定位置的 Clob 的流。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverclob.md)|返回用来将 Unicode 字符流写入起始于指定位置的 Clob 的流。|  
 |[setString](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)|将给定的字符串写入起始于指定位置的 Clob。|  
-|[截断](../../../connect/jdbc/reference/truncate-method-sqlserverclob.md)|将截断为指定长度 Clob。|  
+|[truncate](../../../connect/jdbc/reference/truncate-method-sqlserverclob.md)|将截断为指定长度 Clob。|  
   
 ## <a name="inherited-methods"></a>继承的方法  
   

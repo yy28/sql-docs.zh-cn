@@ -1,30 +1,33 @@
 ---
-title: "截断方法 (SQLServerClob) |Microsoft 文档"
-ms.custom: 
+title: 截断方法 (SQLServerClob) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.truncate
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.truncate
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: ea3b2a03-387e-49d7-a4d6-ca6a6a354c90
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e81d94f2539ee911bfda2b87e87676b2cebaa17a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f34b0fd94ce91960a8b48e8f57478d7408f11fd5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="truncate-method-sqlserverclob"></a>truncate 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public void truncate(long len)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *len*  
+ len  
   
  CLOB 应截断为的长度（以字符数表示）。  
   

@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0548f10588754fcf5e9ffbc973118737e50869ec
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -45,8 +45,8 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>返回值  
 如果在计算行数时出错，则返回**false** 。 否则，返回结果集中的行数。  
   
-## <a name="remarks"></a>Remarks  
-**需要客户端、静态或键集游标，并且将返回 false**（如果你使用向前游标或动态游标）。 （向前游标是默认值。）有关游标的详细信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和[游标类型（SQLSRV 驱动程序）](../../connect/php/cursor-types-sqlsrv-driver.md)。  
+## <a name="remarks"></a>注释  
+sqlsrv_num_rows 需要客户端、 静态、 或键集游标，并且将返回**false**如果你使用向前游标或动态游标。 （向前游标是默认值。）有关游标的详细信息，请参阅[sqlsrv_query](../../connect/php/sqlsrv-query.md)和[游标类型&#40;SQLSRV 驱动程序&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
   

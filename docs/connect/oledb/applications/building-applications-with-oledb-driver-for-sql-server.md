@@ -3,7 +3,7 @@ title: 生成使用 OLE DB 驱动程序的 SQL Server 的应用程序 |Microsoft
 description: 使用 OLE DB 驱动程序的 SQL Server 的生成应用程序
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>使用 OLE DB 驱动程序的 SQL Server 的生成应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在开发时为 SQL Server 库使用 OLE DB 驱动程序的应用程序，有大量的派上用场的问题。 本部分中的主题讨论这些问题，包括从 MDAC 升级到 OLE DB 驱动程序，对于 SQL Server，用于 SQL Server 标头和库文件，并简要介绍可用于与 OLE DB 驱动程序 S 的各种连接字符串的 OLE DB 驱动程序的许多QL Server。  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  讨论如何各种数据访问组件可以用于适用于 SQL Server 的 OLE DB 驱动程序的不同版本。  
 
 ## <a name="see-also"></a>另请参阅  
- [用于 SQL Server 编程的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

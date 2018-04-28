@@ -1,27 +1,28 @@
 ---
-title: "SQLServerDataSourceObjectFactory 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerDataSourceObjectFactory 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8fe4072176d56e69cea154994cf28ad7bbb4e30
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4167f0843633a8e907c7dcbb93daef50767e3b02
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>SQLServerDataSourceObjectFactory 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="constructors"></a>构造函数  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[SQLServerDataSourceObjectFactory （)](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|初始化的新实例[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)类。|  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|检索指定数据源对象的实例。|  
   

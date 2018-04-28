@@ -3,7 +3,7 @@ title: 查找更多的 OLE DB 驱动程序的 SQL Server 信息 |Microsoft 文�
 description: 在哪里可以找到有关 SQL Server 信息的多个 OLE DB 驱动程序
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -18,16 +18,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, additional resources
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4d39e7ce5bfe9fe058c497275b4ad7023dcfda5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: f225e4b5883b2a03cd30de1b39f797687a5a69f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>查找更多的 OLE DB 驱动程序的 SQL Server 信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   有关 OLE DB 驱动程序的 SQL Server 和其他类型的数据访问编程的详细信息，请参阅以下联机资源：  
   
@@ -44,6 +46,6 @@ ms.lasthandoff: 04/06/2018
   
 
 ## <a name="see-also"></a>另请参阅  
- [适用于 SQL Server 的 OLE DB 驱动程序编程](../oledb/oledb-driver-for-sql-server-programming.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server.md)  
   
   

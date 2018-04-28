@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_server_info |Microsoft 文档
+title: sqlsrv_server_info | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d65fd337b3d3eec851bfa7d3bd43ec108be7286d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---

@@ -1,27 +1,28 @@
 ---
-title: "识别驱动程序的连接池 in the ODBC Driver for SQL Server |Microsoft 文档"
-ms.custom: 
+title: 识别驱动程序的连接池 in the ODBC Driver for SQL Server |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67cb0f520c9e75606c7e1ffcae42d20d87a3d9fb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2567b047216edd151197446aaa79822ab19a93ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中识别驱动程序的连接池
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,50 +51,50 @@ ms.lasthandoff: 11/18/2017
   
     |关键字|ODBC Driver 13|ODBC Driver 11|
     |-|-|-|
-    |`Address`|是|是|
-    |`AnsiNPW`|是|是|
-    |`App`|是|是|
-    |`ApplicationIntent`|是|是|  
-    |`Authentication`|是|“否”|
+    |`Address`|是|用户帐户控制|
+    |`AnsiNPW`|用户帐户控制|用户帐户控制|
+    |`App`|用户帐户控制|用户帐户控制|
+    |`ApplicationIntent`|用户帐户控制|用户帐户控制|  
+    |`Authentication`|用户帐户控制|“否”|
     |`ColumnEncryption`|是|“否”|
-    |`Database`|是|是|
-    |`Encrypt`|是|是|  
-    |`Failover_Partner`|是|是|
-    |`FailoverPartnerSPN`|是|是|
-    |`MARS_Connection`|是|是|
-    |`Network`|是|是|
-    |`PWD`|是|是|
-    |`Server`|是|是|
-    |`ServerSPN`|是|是|
-    |`TransparentNetworkIPResolution`|是|是|
-    |`Trusted_Connection`|是|是|
-    |`TrustServerCertificate`|是|是|
-    |`UID`|是|是|
-    |`WSID`|是|是|
+    |`Database`|用户帐户控制|用户帐户控制|
+    |`Encrypt`|用户帐户控制|用户帐户控制|  
+    |`Failover_Partner`|用户帐户控制|用户帐户控制|
+    |`FailoverPartnerSPN`|用户帐户控制|用户帐户控制|
+    |`MARS_Connection`|用户帐户控制|用户帐户控制|
+    |`Network`|用户帐户控制|用户帐户控制|
+    |`PWD`|用户帐户控制|用户帐户控制|
+    |`Server`|用户帐户控制|用户帐户控制|
+    |`ServerSPN`|用户帐户控制|用户帐户控制|
+    |`TransparentNetworkIPResolution`|用户帐户控制|用户帐户控制|
+    |`Trusted_Connection`|用户帐户控制|用户帐户控制|
+    |`TrustServerCertificate`|用户帐户控制|用户帐户控制|
+    |`UID`|用户帐户控制|用户帐户控制|
+    |`WSID`|用户帐户控制|是|
     
 - 如果以下任何连接属性在你的连接字符串和已入池的连接字符串之间有所不同，则不使用已入池的连接。  
   
     |Attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |`SQL_ATTR_CURRENT_CATALOG`|是|是|
-    |`SQL_ATTR_PACKET_SIZE`|是|是|
-    |`SQL_COPT_SS_ANSI_NPW`|是|是|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|是|“否”|
+    |`SQL_ATTR_CURRENT_CATALOG`|是|用户帐户控制|
+    |`SQL_ATTR_PACKET_SIZE`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_ANSI_NPW`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|用户帐户控制|“否”|
     |`SQL_COPT_SS_AUTHENTICATION`|是|“否”|
-    |`SQL_COPT_SS_ATTACHDBFILENAME`|是|是|
-    |`SQL_COPT_SS_BCP`|是|是|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|是|“否”|
-    |`SQL_COPT_SS_CONCAT_NULL`|是|是|
-    |`SQL_COPT_SS_ENCRYPT`|是|是|
-    |`SQL_COPT_SS_FAILOVER_PARTNER`|是|是|
-    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|是|是|
-    |`SQL_COPT_SS_INTEGRATED_SECURITY`|是|是|
-    |`SQL_COPT_SS_MARS_ENABLED`|是|是|
-    |`SQL_COPT_SS_OLDPWD`|是|是|
-    |`SQL_COPT_SS_SERVER_SPN`|是|是|
-    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|是|是|
-    |`SSPROP_AUTH_REPL_SERVER_NAME`|是|是|
-    |`SQL_COPT_SS_TNIR`|是|是|
+    |`SQL_COPT_SS_ATTACHDBFILENAME`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_BCP`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|用户帐户控制|“否”|
+    |`SQL_COPT_SS_CONCAT_NULL`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_ENCRYPT`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_FAILOVER_PARTNER`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_INTEGRATED_SECURITY`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_MARS_ENABLED`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_OLDPWD`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_SERVER_SPN`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|用户帐户控制|用户帐户控制|
+    |`SSPROP_AUTH_REPL_SERVER_NAME`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_TNIR`|用户帐户控制|否|
  
 -   无需进行额外的网络调用，该驱动程序即可重置和调整以下连接关键字和属性。 该驱动程序将重置这些参数，以确保该连接不会包含错误信息。  
   
@@ -101,36 +102,36 @@ ms.lasthandoff: 11/18/2017
   
     |关键字|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |`AutoTranslate`|是|是|
-    |`Description`|是|是|
-    |`MultisubnetFailover`|是|是|  
-    |`QueryLog_On`|是|是|
-    |`QueryLogFile`|是|是|
-    |`QueryLogTime`|是|是|
-    |`Regional`|是|是|
-    |`StatsLog_On`|是|是|
-    |`StatsLogFile`|  是|是|
+    |`AutoTranslate`|是|用户帐户控制|
+    |`Description`|用户帐户控制|用户帐户控制|
+    |`MultisubnetFailover`|用户帐户控制|用户帐户控制|  
+    |`QueryLog_On`|用户帐户控制|用户帐户控制|
+    |`QueryLogFile`|用户帐户控制|用户帐户控制|
+    |`QueryLogTime`|用户帐户控制|用户帐户控制|
+    |`Regional`|用户帐户控制|用户帐户控制|
+    |`StatsLog_On`|用户帐户控制|用户帐户控制|
+    |`StatsLogFile`|  用户帐户控制|是|
   
      如果更改以下连接属性之一，仍可重复使用现有连接。  该驱动程序将根据需要重置该值。 无需进行额外的网络调用，该驱动程序即可在客户端中重置这些属性。  
   
     |Attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |所有语句属性|是|是|
-    |`SQL_ATTR_AUTOCOMMIT`|是|是|
-    |`SQL_ATTR_CONNECTION_TIMEOUT`|  是|是|
-    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|是|是|
-    |`SQL_ATTR_LOGIN_TIMEOUT`|是|是|
-    |`SQL_ATTR_ODBC_CURSORS`|  是|是|
-    |`SQL_COPT_SS_PERF_DATA`|是|是|
-    |`SQL_COPT_SS_PERF_DATA_LOG`|是|是|
-    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| 是|是| 
-    |`SQL_COPT_SS_PERF_QUERY`|是|是|
-    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|是|是|
-    |`SQL_COPT_SS_PERF_QUERY_LOG`|  是|是|
-    |`SQL_COPT_SS_PRESERVE_CURSORS`|是|是|
-    |`SQL_COPT_SS_TRANSLATE`|是|是|
-    |`SQL_COPT_SS_USER_DATA`|  是|是|
-    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|是|是|  
+    |所有语句属性|是|用户帐户控制|
+    |`SQL_ATTR_AUTOCOMMIT`|用户帐户控制|用户帐户控制|
+    |`SQL_ATTR_CONNECTION_TIMEOUT`|  用户帐户控制|用户帐户控制|
+    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|用户帐户控制|用户帐户控制|
+    |`SQL_ATTR_LOGIN_TIMEOUT`|用户帐户控制|用户帐户控制|
+    |`SQL_ATTR_ODBC_CURSORS`|  用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_PERF_DATA`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_PERF_DATA_LOG`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| 用户帐户控制|用户帐户控制| 
+    |`SQL_COPT_SS_PERF_QUERY`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_PERF_QUERY_LOG`|  用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_PRESERVE_CURSORS`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_TRANSLATE`|用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_USER_DATA`|  用户帐户控制|用户帐户控制|
+    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|用户帐户控制|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft ODBC Driver for SQL Server（Windows 平台）](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

@@ -1,27 +1,28 @@
 ---
-title: "unwrap 方法 (SQLServerStatement) |Microsoft 文档"
-ms.custom: 
+title: unwrap 方法 (SQLServerStatement) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26a0e6fd3cec7cde459dc72416e35bc98275e3f1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d649d5eff66d170310865973efd99e128fa0c416
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,12 +54,12 @@ public <T> T unwrap(Class<T> iface)
   
  当调用此方法时，该对象解包到[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)类。  
   
- 有关示例代码，请参阅[更新大型数据示例](../../../connect/jdbc/updating-large-data-sample.md)，或[unwrap 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
+ 有关示例代码，请参阅[更新大型数据示例](../../../connect/jdbc/updating-large-data-sample.md)，或[unwrap 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)。  
   
  有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [isWrapperFor 方法 &#40;SQLServerStatement &#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   
+ [isWrapperFor 方法&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 类](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

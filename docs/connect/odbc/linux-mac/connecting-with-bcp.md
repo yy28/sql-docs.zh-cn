@@ -2,7 +2,7 @@
 title: 使用 bcp 连接 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: badff319d1ae969d14fc14fc68d40fdd57b776eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>可用选项
 在当前版本中，以下语法和选项有：  
 
-[*database***.**]*schema***.***table* **in** *data_file* | **out** *data_file*
+[*数据库 ***。**]* 架构***。***表 ***中** *data_file* | **出** *data_file*
 
 - -a *packet_size*  
 指定服务器发出或接收的每个网络数据包的字节数。  
@@ -149,7 +149,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -V (80 | 90 | 100)  
 使用从早期版本的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
-- -x  
+- -X  
 结合使用该格式和 -f format_file 选项一起使用，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。  
   
 ## <a name="see-also"></a>另请参阅

@@ -1,30 +1,33 @@
 ---
-title: "updateShort 方法 (int、 short) |Microsoft 文档"
-ms.custom: 
+title: updateShort 方法 (int、 short) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateShort (int, short)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateShort (int, short)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 155b9189-cb97-4264-b42c-bbda1c7d624f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3988d55997b1fe2cc04ec367117ef95e2fd2cf80
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 11457b5277cc5ecf3171bc6d9a8b8bdac1f5ac25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateshort-method-int-short"></a>updateShort 方法 (int, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateShort(int index,
  由 java.sql.ResultSet 接口中的 updateShort 方法指定此 updateShort 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateShort 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
+ [updateShort 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

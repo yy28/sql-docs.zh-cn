@@ -1,27 +1,28 @@
 ---
-title: "使用结果集 |Microsoft 文档"
-ms.custom: 
+title: 使用结果集 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d90a11fa3c617f529d4bc13e3b80f5755423310
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 815a8f481141fac0d2c834cdd3a663fa2609b3b4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-result-sets"></a>使用结果集
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/18/2017
   
  本部分中的主题介绍你可以使用结果集来操作中包含的数据的不同方式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  

@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ea18d388225bd8cf217126fd6ebe685ddf12fd2d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 身份验证或使用 SQL Server 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 默认情况下， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 尝试使用 Windows 身份验证连接到服务器。  
 
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
 
 |主题|Description|  
 |---------|---------------|  
@@ -43,8 +43,8 @@ ms.lasthandoff: 04/16/2018
 |[如何：禁用多个活动的结果集 (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|介绍如何在建立连接时禁用 MARS 功能。|  
 |[连接选项](../../connect/php/connection-options.md)|列出在包含连接属性的关联阵列中允许的选项。|  
 |[支持 LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|介绍对 LocalDB 功能的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持，该支持已在 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]中添加。|  
-|[支持高可用性、灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|讨论如何配置应用程序以利用 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 中添加的高可用性和灾难恢复功能。|  
-|[连接到 Microsoft Azure SQL 数据库](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|请参阅如何连接到 Azure SQL Database|  
+|[支持高可用性、灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|讨论如何配置你的应用程序以充分利用添加功能的高可用性、 灾难恢复[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。|  
+|[连接到 Microsoft Azure SQL 数据库](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|讨论如何连接到 Azure SQL 数据库。|  
 |[连接复原](../../connect/php/connection-resiliency.md)|讨论重新连接断开连接复原功能。|  
 
 ## <a name="see-also"></a>另请参阅  

@@ -1,28 +1,28 @@
 ---
-title: "用于 SQL Server 的功能的 Microsoft JDBC Driver 的依赖关系 |Microsoft 文档"
-ms.custom: 
+title: 用于 SQL Server 的功能的 Microsoft JDBC Driver 的依赖关系 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/28/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 703a27220a80744c46ca0bc7667756cec1ab6596
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 953e727ed3a4c05907895006c232e36a39bfa62d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能依赖关系
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 03/02/2018
 - JDBC 驱动程序版本 6.0.0 
     - 依赖项版本： Adal4j （版本 1.3.0），以及其依赖关系
         - 在此版本的驱动程序，你可以连接使用*ActiveDirectoryIntegrated*仅在 Windows 操作系统并使用 SQL Server （sqljdbc_auth.dll 和 Active Directory 身份验证库上的身份验证模式ADALSQL。DLL)。 
-- JDBC Driver version 6.4.0
+- JDBC 驱动程序版本 6.4.0
     - 依赖项版本： Adal4j （版本 1.4.0） 及其依赖项
         - 在此版本的驱动程序，你的应用程序不需要使用 ADALSQL。DLL。 具体取决于操作系统。 有关**非 Windows 操作系统**，驱动程序需要使用 Kerberos 票证，以进行 ActiveDirectoryIntegrated 身份验证。 请参阅[Windows、 Linux 和 Mac 上的设置的 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)有关详细信息。 有关**Windows 操作系统**，默认情况下的驱动程序检查是否 sqljdbc_auth.dll 是加载，并且不需要 Kerberos 票证安装程序或 adal4j 依赖项。 但是，如果未加载 sqljdbc_auth.dll，驱动程序的行为与非 Windows 操作系统相同的方式，并且需要安装程序，在下面的示例所述： 使用此功能的示例应用程序可以找到[此处](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md).
 

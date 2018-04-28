@@ -16,11 +16,11 @@ manager: v-hakaka
 ms.workload: Inactive
 ms.openlocfilehash: 462b141c365e0140236c78af451c73b110911765
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>如何：使用 Azure Active Directory 身份验证进行连接
+# <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) 是一种作为的替代方法进行操作的核心用户 ID 管理技术[SQL Server 身份验证](../../connect/php/how-to-connect-using-sql-server-authentication.md)。 Azure AD 允许连接到 Microsoft Azure SQL 数据库和 SQL 数据仓库与联合身份在 Azure AD 中使用用户名和密码、 Windows 集成身份验证或 Azure AD 访问令牌;SQL Server PHP 驱动程序提供部分支持这些功能。

@@ -1,28 +1,28 @@
 ---
-title: "准备语句的元数据缓存 JDBC 驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 准备语句的元数据缓存 JDBC 驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13d4c0766552d9472038ffe7f2ff7fed6d73584d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: eb093c9102cbafde8e43fc69f2860831634bfee5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>已准备的语句的元数据缓存 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/02/2018
 |-----------|-----------------|  
 |int getDiscardedServerPreparedStatementCount()|返回的数目当前未完成已准备语句撤消操作。|
 |void closeUnreferencedPreparedStatementHandles()|强制任何未完成丢弃已准备语句得以执行 unprepare 请求。|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|返回的特定连接实例的行为。 如果为 false 则调用 sp_executesql 后会发生第二次执行情况它调用 sp_prepexec 做好准备的语句，在首次执行和将其实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果仅一次执行的语句，这关闭缓解 sp_unprepare 已准备的语句上的需要。 可以通过调用 setDefaultEnablePrepareOnFirstPreparedStatementCall() 更改此选项的默认值。|
+|布尔 getEnablePrepareOnFirstPreparedStatementCall()|返回的特定连接实例的行为。 如果为 false 则调用 sp_executesql 后会发生第二次执行情况它调用 sp_prepexec 做好准备的语句，在首次执行和将其实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果仅一次执行的语句，这关闭缓解 sp_unprepare 已准备的语句上的需要。 可以通过调用 setDefaultEnablePrepareOnFirstPreparedStatementCall() 更改此选项的默认值。|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|指定的特定连接实例的行为。 如果值为 false 则调用 sp_executesql 后会发生第二次执行情况它调用 sp_prepexec 做好准备的语句，在首次执行和将其实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果仅一次执行的语句，这关闭缓解 sp_unprepare 已准备的语句上的需要。|
 |int getServerPreparedStatementDiscardThreshold()|返回的特定连接实例的行为。 此设置控制多少未完成准备语句放弃操作 (sp_unprepare) 可以是每个连接未完成之前执行的调用，以清理服务器上未完成的句柄。 如果设置为 < = 1，unprepare 在关闭已准备的语句上立即执行操作。 如果设置为 {@literal >} 1，这些调用进行批处理在一起以避免调用 sp_unprepare 开销过于频繁。 可以通过调用 getDefaultServerPreparedStatementDiscardThreshold() 更改此选项的默认值。|
 |void setServerPreparedStatementDiscardThreshold(int value)|指定的特定连接实例的行为。 此设置控制多少未完成准备语句放弃操作 (sp_unprepare) 可以是每个连接未完成之前执行的调用，以清理服务器上未完成的句柄。 如果设置为 < = 1 unprepare 操作在关闭已准备的语句上立即执行。 如果设置为 > 1 进行一起批处理这些调用以避免调用 sp_unprepare 过于频繁的开销。|
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/02/2018
 |新方法|Description|  
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|如果此配置为 false 则调用 sp_executesql 后会发生第二次执行情况它调用 sp_prepexec 做好准备的语句，在首次执行的已准备的语句和将其实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果仅一次执行的语句，这关闭缓解 sp_unprepare 已准备的语句上的需要。|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|如果此配置返回 false 已准备的语句在首次执行调用 sp_executesql，并且不准备一条语句，第二次执行发生后，它将调用 sp_prepexec 和实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果仅一次执行的语句，这关闭缓解 sp_unprepare 已准备的语句上的需要。|
+|布尔 getEnablePrepareOnFirstPreparedStatementCall()|如果此配置返回 false 已准备的语句在首次执行调用 sp_executesql，并且不准备一条语句，第二次执行发生后，它将调用 sp_prepexec 和实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果仅一次执行的语句，这关闭缓解 sp_unprepare 已准备的语句上的需要。|
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|此设置控制多少未完成准备语句放弃操作 (sp_unprepare) 可以是每个连接未完成之前执行的调用，以清理服务器上未完成的句柄。 如果设置为 < = 1 unprepare 操作在关闭已准备的语句上立即执行。 如果设置为 {@literal >} 这些调用进行一起批处理来避免开销的过于频繁调用 sp_unprepare 1|
 |int getServerPreparedStatementDiscardThreshold()|此设置控制多少未完成准备语句放弃操作 (sp_unprepare) 可以是每个连接未完成之前执行的调用，以清理服务器上未完成的句柄。 如果设置为 < = 1 unprepare 操作在关闭已准备的语句上立即执行。 如果设置为 {@literal >} 1 这些调用进行一起批处理，以避免调用 sp_unprepare 过于频繁的开销。|
 
@@ -79,18 +79,18 @@ ms.lasthandoff: 03/02/2018
 |新方法|Description|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|设置为 true 或 false 池语句。|
-|boolean getDisableStatementPooling()|如果禁用语句池，则返回 true。|
+|布尔 getDisableStatementPooling()|如果禁用语句池，则返回 true。|
 |void setStatementPoolingCacheSize(int value)|指定此连接的已准备的语句缓存的大小。 小于 1 的值意味着没有缓存。|
 |int getStatementPoolingCacheSize()|返回此连接的已准备的语句缓存的大小。 小于 1 的值意味着没有缓存。|
 |int getStatementHandleCacheEntryCount()|返回当前的共用已准备的语句句柄数。|
-|boolean isPreparedStatementCachingEnabled()|是否启用语句池或不适用于此连接。|
+|布尔 isPreparedStatementCachingEnabled()|是否启用语句池或不适用于此连接。|
 
  **SQLServerDataSource**
  
 |新方法|Description|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|设置池的语句为 true 或 false|
-|boolean getDisableStatementPooling()|如果禁用语句池，则返回 true。|
+|布尔 getDisableStatementPooling()|如果禁用语句池，则返回 true。|
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|指定此连接的已准备的语句缓存的大小。 小于 1 的值意味着没有缓存。|
 |int getStatementPoolingCacheSize()|返回此连接的已准备的语句缓存的大小。 小于 1 的值意味着没有缓存。|
 

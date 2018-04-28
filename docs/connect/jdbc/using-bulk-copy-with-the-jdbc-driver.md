@@ -1,27 +1,28 @@
 ---
-title: "使用 JDBC 驱动程序的大容量复制 |Microsoft 文档"
-ms.custom: 
+title: 使用 JDBC 驱动程序的大容量复制 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  提供的 SQLServerBulkCopy 代码示例演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，则可以更轻松且更快速地使用 TRANSACT-SQL INSERT ... 用于复制数据的 SELECT 语句。  
   
-###  <a name="BKMK_TableSetup"></a>表设置  
+###  <a name="BKMK_TableSetup"></a> 表设置  
  若要创建正确运行代码示例所需的表，必须在 SQL Server 数据库中运行以下 Transact-SQL 语句。  
   
 ```  
@@ -460,7 +461,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>事务和批量复制操作  
+##  <a name="BKMK_TransactionBulk"></a> 事务和批量复制操作  
  大容量复制操作可以作为独立操作或作为多步事务的一部分执行。 后面这个选项使你能够在同一事务中执行多个大容量复制操作，以及执行其他数据库操作（例如插入、更新和删除），同时仍能够提交或回滚整个事务。  
   
  默认情况下，大容量复制操作作为独立的操作执行。 大容量复制操作以非事务方式执行，不可以对其进行回滚。 如果在发生错误时需要回滚全部或部分大容量复制，可以使用 SQLServerBulkCopy 托管的事务，或者在现有事务内执行大容量复制操作。  

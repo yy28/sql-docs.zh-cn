@@ -25,11 +25,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8be753415e11a62849bfdfdf68f15f5d2d4613ef
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="updatebyte-method-javalangstring-byte"></a>updateByte 方法 （java.lang.String，字节）
+# <a name="updatebyte-method-javalangstring-byte"></a>updateByte 方法 (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   更新的指定的列**字节**给定的列名称的值。  
@@ -42,19 +42,19 @@ public void updateByte(java.lang.String columnName,
                        byte x)  
 ```  
   
-#### <a name="parameters"></a>参数  
- *列名称*  
+#### <a name="parameters"></a>Parameters  
+ *columnName*  
   
  A**字符串**包含列名称。  
   
- *X*  
+ *x*  
   
  A**字节**值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  由 java.sql.ResultSet 接口中的 updateByte 方法指定此 updateByte 方法。  
   
 ## <a name="see-also"></a>另请参阅  

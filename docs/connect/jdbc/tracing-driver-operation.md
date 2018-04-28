@@ -1,27 +1,28 @@
 ---
-title: "跟踪驱动程序操作 |Microsoft 文档"
-ms.custom: 
+title: 跟踪驱动程序操作 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 717c1d05c666efef553a77d11dcd8105a0834832
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ea02f1c06e942933fa7add21888447664e3608f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/18/2017
   
  下表逐一介绍了公共日志记录类别每个可用的日志记录级别。  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |SEVERE|表示严重故障，为最高日志记录级别。 在 JDBC 驱动程序中，该级别用于报告错误和异常。|  
 |WARNING|指示潜在的问题。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/18/2017
   
  下表逐一介绍了内部日志记录类别每个可用的日志记录级别。  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |SEVERE|表示严重故障，为最高日志记录级别。 在 JDBC 驱动程序中，该级别用于报告错误和异常。|  
 |WARNING|指示潜在的问题。|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="logging-categories"></a>日志记录类别  
  当创建记录器对象时，你必须告知对象的已命名的实体或你感兴趣获取从日志信息的类别。 JDBC Driver 支持下列公共日志记录类别，这些日志记录类别都是在 com.microsoft.sqlserver.jdbc 驱动程序包中定义的。  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |连接|将消息记录[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)类。 应用程序可将日志记录级别设置为 FINER。|  
 |。|将消息记录[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)类。 应用程序可将日志记录级别设置为 FINER。|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/18/2017
   
  从 Microsoft JDBC Driver 2.0 开始，JDBC Driver 还提供了 com.microsoft.sqlserver.jdbc.internals 包，后者包括对下列内部日志记录类别的日志记录支持。  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |AuthenticationJNI|有关 Windows 的日志消息集成身份验证问题 (时**authenticationScheme**连接属性隐式或显式设置为**NativeAuthentication**)。<br /><br /> 应用程序可将日志记录级别设置为 FINEST 和 FINE。|  
 |的|将消息记录[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)类。 应用程序可将日志记录级别设置为 FINE 和 FINER。|  

@@ -3,7 +3,7 @@ title: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB) |Micro
 description: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 248c218d4d6446653013912695dc67f3c6e57b84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 7fcf8b4a4b7f6f70b4f537b1e018158b1d9e4332
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此示例使用 IRowsetFastUpload 接口向 filestream 列发送大小在 4 MB 与 4 GB 之间的数据。  
   
- 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md)。  
+ 有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>示例  
  编译并运行此示例之前，启用 FILESTREAM 的支持 ([启用和配置 FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  

@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP for SQL Server 支持矩阵 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -12,16 +12,16 @@ ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: ''
+caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
 ms.workload: On Demand
-ms.openlocfilehash: 23159425e45fdc8974e0047859072654c5c77959
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 95b8e0ad1b69431e6f2266babd42f88ea2f4bfcc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 支持矩阵的 Microsoft PHP 驱动程序
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,19 +37,19 @@ ms.lasthandoff: 03/28/2018
 
 |驱动程序名称|驱动程序包版本|终止主流支持|
 |-|-|-|
-|Microsoft PHP Drivers 5.2 for SQL Server|5.2|2023 年 2 月 9 日|
+|SQL Server 的 Microsoft PHP 驱动程序 5.2|5.2|2023 年 2 月 9 日|
 |SQL Server 的 Microsoft PHP 驱动程序 4.3|4.3|2022 年 7 月 6 日|
 |SQL Server 的 Microsoft PHP 驱动程序 4.0|4.0|2021 年 7 月 11 日|
-|Microsoft PHP Drivers 3.2 for SQL Server|3.2|于 2020 2020年 3 月 9日日|
-|Microsoft PHP Drivers 3.1 for SQL Server|3.1|2019 年 12 月 12 日|
+|SQL Server 的 Microsoft PHP 驱动程序 3.2|3.2|于 2020 2020年 3 月 9日日|
+|SQL Server 的 Microsoft PHP 驱动程序 3.1|3.1|2019 年 12 月 12 日|
 
  不再支持以下 Microsoft PHP 驱动程序。
 
 |驱动程序名称|驱动程序包版本|终止主流支持|
 |-|-|-|
-|Microsoft PHP Drivers 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
-|Microsoft PHP Drivers 2.0 for SQL Server|2.0|2015 年 8 月 10日日|
-|Microsoft PHP Drivers 1.0 for SQL Server|1.0|2014 年 4 月 28 日，|
+|SQL Server 的 Microsoft PHP 驱动程序 3.0|3.0|2017 年 3 月 6 日|
+|SQL Server 的 Microsoft PHP 驱动程序 2.0|2.0|2015 年 8 月 10日日|
+|SQL Server 的 Microsoft PHP 驱动程序 1.0|1.0|2014 年 4 月 28 日，|
 
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server 版本认证兼容性
  下表列出了测试和认证为与相应的驱动程序版本兼容的 SQL Server 版本。 我们还尽量保持与以前的驱动程序版本的向后兼容，但只有最新支持驱动程序进行测试并发布 SQL Server 时用新的 SQL Server 版本认证。

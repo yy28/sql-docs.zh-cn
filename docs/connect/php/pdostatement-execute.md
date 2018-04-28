@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 223ca5d155b140f12e2397b67dbb9878d2e0582e
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ bool PDOStatement::execute ([ $input ] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-*$input*：可选包含参数标记的值的关联阵列。  
+*$input*: （可选） 包含参数标记的值的关联数组。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 使用 PDOStatement::execute 执行的语句必须先通过 [PDO::prepare](../../connect/php/pdo-prepare.md)准备就绪。 请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) 获取有关如何指定直接或已准备的语句执行的信息。  
   
 输入参数数组的所有值将会视为 PDO::PARAM_STR 值。  

@@ -1,27 +1,28 @@
 ---
-title: "使用透明网络 IP 解析 |Microsoft 文档"
-ms.custom: 
+title: 使用透明网络 IP 解析 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0db2d2b8dfc796b8c2dc696d66264745182ab39a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e7249d00dc4f3d71b7c3245e2939be7e541f5b39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-transparent-network-ip-resolution"></a>使用透明网络 IP 解析
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -36,13 +37,13 @@ TransparentNetworkIPResolution 是功能的现有 MultiSubnetFailover 提供，M
 |:-:|:-:|:-:|
 |（默认值）|（默认值）|0|
 |（默认值）|已启用|1|
-|（默认值）|禁用|0|
+|（默认值）|Disabled|0|
 |已启用|（默认值）|0|
 |已启用|已启用|1|
-|已启用|禁用|0|
-|禁用|（默认值）|2|
-|禁用|已启用|1|
-|禁用|禁用|2|
+|已启用|Disabled|0|
+|Disabled|（默认值）|2|
+|Disabled|已启用|1|
+|Disabled|Disabled|2|
 
 `TransparentNetworkIPResolution`连接字符串和 DSN 关键字控制连接字符串级别的此设置。 默认情况下启用。
 
@@ -52,7 +53,7 @@ TransparentNetworkIPResolution 是功能的现有 MultiSubnetFailover 提供，M
 
 `SQL_COPT_SS_TNIR`预连接属性允许控制以编程方式设置此应用程序：
 
-连接属性|   大小/类型|  默认| 值| Description
+连接属性|   大小/类型|  默认| “值”| Description
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER`或`SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|启用或禁用 TNIR。
 

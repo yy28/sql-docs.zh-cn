@@ -3,7 +3,7 @@ title: 使用 ADO 和 OLE DB 驱动程序一起用于 SQL Server |Microsoft 文�
 description: 使用 ADO 和 OLE DB 驱动程序一起用于 SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -20,23 +20,25 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3003fd77624f7e304f8e3f493148475c1187a86b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b4888cc0054a8cf3c22b49aa28baf2c23577a48d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>使用 ADO 和 OLE DB 驱动程序一起用于 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   若要在中引入的新功能利用[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]如多个活动结果集 (MARS)、 查询通知、 用户定义类型 (Udt)，或新**xml**数据类型，使用 ActiveX 现有应用程序数据对象 (ADO) 应使用 OLE DB 驱动程序适用于 SQL Server 作为其数据访问接口。  
   
  若要启用要使用的最新版本的新功能的 ADO [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，一些增强功能进行了 OLE DB 驱动程序的 SQL Server 扩展了 OLE DB 的核心功能。 这些增强功能允许 ADO 应用程序使用较新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能以及使用两个数据类型中引入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml**和**udt**。 这些增强功能还利用增强功能**varchar**， **nvarchar**，和**varbinary**数据类型。 OLE DB 驱动程序的 SQL Server 将 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化属性添加到 dbpropset_sqlserverdbinit 限设置的属性使用 ADO 应用程序，因此新的数据类型公开与 ADO 兼容的方式。 此外，SQL Server 的 OLE DB 驱动程序还定义一个新的名为的连接字符串关键字**DataTypeCompatibility** ，设置连接字符串中。  
 
 > [!NOTE]  
->  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新更大**varchar （max)**， **nvarchar (max)**，和**varbinary （max)**数据类型会返回 ADO 类型**adLongVarChar**，**adLongVarWChar**和**adLongVarBinary**分别。 XML 列返回为**adLongVarChar**，并且 UDT 列返回为**感**。 但是，如果使用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL) 而不是 SQLOLEDB，你需要确保设置**DataTypeCompatibility**为"80"关键字，以便新的数据类型会正确映射到 ADO 数据类型。  
+>  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新更大**varchar （max)**， **nvarchar (max)**，和**varbinary （max)** 数据类型会返回 ADO 类型**adLongVarChar**，**adLongVarWChar**和**adLongVarBinary**分别。 XML 列返回为**adLongVarChar**，并且 UDT 列返回为**感**。 但是，如果使用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL) 而不是 SQLOLEDB，你需要确保设置**DataTypeCompatibility**为"80"关键字，以便新的数据类型会正确映射到 ADO 数据类型。  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>启用从 ADO 的 SQL Server 的 OLE DB 驱动程序  
  若要启用 SQL Server 的 OLE DB 驱动程序的使用情况，ADO 应用程序将需要在其连接字符串中实现以下关键字：  

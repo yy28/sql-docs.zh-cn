@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型
+title: 检索日期和时间类型字符串的形式使用 SQLSRV 驱动程序 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e89f3df43a8a3f5327c86c792cc3425e75aede50
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 此功能已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的版本 1.1 中添加，并且仅在针对 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]使用 SQLSRV 驱动程序时才有效。 将 ReturnDatesAsStrings 连接选项与 PDO_SQLSRV 驱动程序结合使用时会出错。  
   
-可以通过在连接字符串中指定一个选项来以字符串的形式检索日期和时间类型（datetime**、date**、time**、datetime2** 和 datetimeoffset**）。  
+你可以检索日期和时间类型 (**datetime**，**日期**，**时间**， **datetime2**，和**datetimeoffset**)为通过连接字符串中指定选项的字符串。  
   
 ### <a name="to-retrieve-date-and-time-types-as-strings"></a>以字符串的形式检索日期和时间类型  
   
@@ -62,7 +62,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>示例  
-以下示例演示当检索字符串时，通过指定 UTF-8 可以字符串的形式检索日期，即使连接是使用 `"ReturnDatesAsStrings" => false` 建立的也是如此。  
+下面的示例演示你可以通过指定 utf-8，当你检索此字符串中，即使进行连接时检索日期作为字符串`"ReturnDatesAsStrings" => false`。  
   
 ```  
 <?php  
@@ -99,7 +99,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>示例  
-以下示例演示如何通过在连接字符串中指定 UTF-8 和 `"ReturnDatesAsStrings" => true` 来以字符串的形式检索日期。  
+下面的示例演示如何通过指定 utf-8 检索字符串形式的日期和`"ReturnDatesAsStrings" => true`连接字符串中。  
   
 ```  
 <?php  

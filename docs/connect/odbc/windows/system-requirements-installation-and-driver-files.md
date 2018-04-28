@@ -1,28 +1,28 @@
 ---
-title: "系统要求、 安装和驱动程序文件 |Microsoft 文档"
-ms.custom: 
+title: 系统要求、 安装和驱动程序文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e23264905c2a8b706b32a906d7dbf2dc3dd165b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
-ms.translationtype: MT
+ms.openlocfilehash: 7a6ce94207d79c58c5d615be723b3d44d69cdaf9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系统要求、安装和驱动程序文件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ ODBC Driver 13 和为 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_
 -   Windows Server 2008 R2 
 -   Windows Server 2012
 -   Windows Server 2012 R2    
--   Windows Vista SP2  *(ODBC Driver 11 Only)*  
+-   Windows Vista SP2 *(ODBC Driver 11 仅)*  
 -   Windows 7  
 -   Windows 8
 -   Windows 8.1
@@ -100,12 +100,12 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
  
 |组件|Description|  
 |---------------|-----------------|  
-|msodbcsql17.dll or <br> msodbcsql13.dll or <br> msodbcsql11.dll|包含所有驱动程序功能的动态链接库 (DLL) 文件。 此文件安装在 %systemroot%\system32。|  
+|msodbcsql17.dll 或 <br> msodbcsql13.dll 或 <br> msodbcsql11.dll|包含所有驱动程序功能的动态链接库 (DLL) 文件。 此文件安装在 %systemroot%\system32。|  
 |msodbcdiag17.dll 或 <br> msodbcdiag13.dll 或 <br> msodbcdiag11.dll|包含驱动程序的诊断 （跟踪） 接口的动态链接库 (DLL) 文件。 此文件安装在 %systemroot%\system32。|
-|msodbcsqlr17.rll or <br> msodbcsqlr13.rll or <br> msodbcsqlr11.rll|驱动程序库的附带资源文件。 此文件安装在 %systemroot%\system32\1033。| 
-|s13ch_msodbcsql.chm or <br> s11ch_msodbcsql.chm |介绍如何创建数据源驱动程序数据源向导帮助文件。 此文件安装在 %SYSTEMROOT%\System32\1033 <br /> <br /> **注意：** ODBC 驱动程序 17 没有 chm 文件。 |  
-|msodbcsql.h|包含的所有新的定义使用的驱动程序所需的标头文件。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> ODBC 驱动程序 17 或 13 msodbcsql.h 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK。 <br /> msodbcsql.h for ODBC Driver 11 is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
-|msodbcsql17.lib or <br> msodbcsql13.lib or <br> msodbcsql11.lib|调用所需的库文件**bcp**属于该驱动程序的实用工具函数。<br /><br /> **注意：**如果你确实在你的程序中引用此库文件，请确保它是系统路径中，在其中使用该应用程序的系统路径。<br /><br /> msodbcsql17.lib or msodbcsql13.lib is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。|
+|msodbcsqlr17.rll 或 <br> msodbcsqlr13.rll 或 <br> msodbcsqlr11.rll|驱动程序库的附带资源文件。 此文件安装在 %systemroot%\system32\1033。| 
+|s13ch_msodbcsql.chm 或 <br> s11ch_msodbcsql.chm |介绍如何创建数据源驱动程序数据源向导帮助文件。 此文件安装在 %SYSTEMROOT%\System32\1033 <br /> <br /> **注意：** ODBC 驱动程序 17 没有 chm 文件。 |  
+|msodbcsql.h|包含的所有新的定义使用的驱动程序所需的标头文件。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> ODBC 驱动程序 17 或 13 msodbcsql.h 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK。 <br /> 有关 ODBC Driver 11 msodbcsql.h 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK。| 
+|msodbcsql17.lib or <br> msodbcsql13.lib or <br> msodbcsql11.lib|调用所需的库文件**bcp**属于该驱动程序的实用工具函数。<br /><br /> **注意：**如果你确实在你的程序中引用此库文件，请确保它是系统路径中，在其中使用该应用程序的系统路径。<br /><br /> msodbcsql17.lib 或 msodbcsql13.lib 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK。<br /> msodbcsql11.lib 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。|
 
   
 ## <a name="see-also"></a>另请参阅  

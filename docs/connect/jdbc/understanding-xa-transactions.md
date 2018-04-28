@@ -1,27 +1,28 @@
 ---
-title: "了解 XA 事务 |Microsoft 文档"
-ms.custom: 
+title: 了解 XA 事务 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1388ca846b426e4b544f991855942abab16e3507
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  按照下一节的代码示例所示设置日志记录功能。 在输出日志文件中搜索“服务器 XA DLL 版本:...”这一短语。  
   
-###  <a name="BKMK_ServerSide"></a>配置服务器端超时设置的自动回滚撤消事务  
+###  <a name="BKMK_ServerSide"></a> 配置服务器端超时设置的自动回滚撤消事务  
   
 > [!WARNING]  
 >  此服务器端选项是新增功能与 Microsoft JDBC Driver 4.2 （和更高版本） for SQL Server。 若要获取更新的行为，请确保服务器上的 sqljdbc_xa.dll 已更新。 有关设置客户端端超时的详细信息，请参阅[XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  

@@ -1,27 +1,28 @@
 ---
-title: "了解游标类型 |Microsoft 文档"
-ms.custom: 
+title: 了解游标类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1611575b0f0401b47cf468837f39a6a8dd36aa49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-cursor-types"></a>了解游标类型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
   
 |结果集<br /><br /> （游标）类型|SQL Server 游标类型|特征|select<br /><br /> 方法|响应<br /><br /> 缓冲|Description|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
-|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|只进，只读|直接|full|应用程序必须（向前）经过结果集一次。 这是默认行为，其行为与 TYPE_SS_DIRECT_FORWARD_ONLY 游标的方式相同。 在语句执行期间，驱动程序将整个结果集从服务器读入内存中。|  
+|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|只进，只读|直接|完整|应用程序必须（向前）经过结果集一次。 这是默认行为，其行为与 TYPE_SS_DIRECT_FORWARD_ONLY 游标的方式相同。 在语句执行期间，驱动程序将整个结果集从服务器读入内存中。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|只进，只读|直接|自适应|应用程序必须（向前）经过结果集一次。 其行为与 TYPE_SS_DIRECT_FORWARD_ONLY 游标的行为相同。 当应用程序请求行时，驱动程序从服务器读取对应的行，这样可以最大限度地减少客户端内存占用。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|快进|只进，只读|cursor|N/A|应用程序必须通过使用服务器游标在结果集中进行一次（前进）传递。 其行为与 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标的行为相同。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|动态（只进）|只进，可更新|N/A|N/A|应用程序必须（向前）经过结果集一次才能更新一行或多行。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 默认情况下，当应用程序调用提取大小固定[setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)对象。<br /><br /> **注意：** JDBC 驱动程序提供一种自适应缓冲功能，允许您检索语句执行结果从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]随着应用程序需要它们，而不是一次。 例如，如果应用程序需要检索一个因为太大而无法完全容纳于应用程序内存中的大型数据块，则自适应缓冲使客户端应用程序可以检索诸如流这样的值。 该驱动程序的默认行为是"**自适应**"。 但是，若要实现的只进的可更新结果集的自适应缓冲，则应用程序必须显式调用[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)对象通过提供**字符串**值"**自适应"**。 有关代码示例，请参阅[更新大型数据示例](../../connect/jdbc/updating-large-data-sample.md)。|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/18/2017
  对于动态游标，已更新的行将保留其在提取缓冲区的位置，直到离开由提取缓冲区定义的窗口。 已更新的行随后可能重新出现在结果集内的不同位置，或者可能完全消失。 必须避免结果集中出现临时不一致的应用程序所使用的提取大小应为 1（对于 CONCUR_SS_SCROLL_LOCKS 并发机制，默认值为 8 行；对于其他并发机制，则为 128 行）。  
   
 ## <a name="cursor-conversion"></a>游标转换  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]有时可以选择实现游标类型不是请求，这被称为隐式游标转换 （或游标降级）。 有关隐式游标转换的详细信息，请参阅中的"使用隐式游标转换"主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]联机丛书。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 有时可以选择实现游标类型不是请求，这被称为隐式游标转换 （或游标降级）。 有关隐式游标转换的详细信息，请参阅中的"使用隐式游标转换"主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]联机丛书。  
   
  与[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，当你更新通过 ResultSet.TYPE_SCROLL_SENSITIVE 和 ResultSet.CONCUR_UPDATABLE 结果的数据设置，将引发异常的消息"游标只读"。 发生此异常的原因[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]完成隐式游标转换为该结果设置并在未返回已请求的可更新光标。  
   

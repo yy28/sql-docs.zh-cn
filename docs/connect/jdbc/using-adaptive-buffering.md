@@ -1,27 +1,28 @@
 ---
-title: "使用自适应缓冲 |Microsoft 文档"
-ms.custom: 
+title: 使用自适应缓冲 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>使用自适应缓冲
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **此查询生成一个非常大型结果集：**应用程序可以执行生成不是应用程序可以在内存中存储的更多行的 SELECT 语句。 在以前版本中，应用程序必须使用服务器游标来避免发生内存不足错误。 借助于自适应缓冲，可以对任意大的结果集执行只进只读传递，而不需要服务器游标。  
   
--   **此查询生成非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**出参数值：**应用程序可以检索单个值 (列或 OUT 参数) 太大，无法完全纳入应用程序内存。 自适应缓冲允许客户端应用程序通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索作为流，这样的值。 应用程序检索的值从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]如从流中读取。  
+-   **此查询生成非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**出参数值：**应用程序可以检索单个值 (列或 OUT 参数) 太大，无法完全纳入应用程序内存。         自适应缓冲允许客户端应用程序通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索作为流，这样的值。 应用程序检索的值从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]如从流中读取。  
   
 > [!NOTE]  
 >  使用自适应缓冲时，JDBC Driver 只会缓冲它必须缓冲的那些数据。 该驱动程序未提供任何公共方法来控制或限制缓冲区的大小。  

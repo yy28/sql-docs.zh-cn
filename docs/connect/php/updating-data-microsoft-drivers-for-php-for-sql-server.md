@@ -1,5 +1,5 @@
 ---
-title: 更新数据 (Microsoft Drivers for PHP for SQL Server)
+title: 更新数据 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6d4d0ff4dfc6ab78636a8fa04d6347938338aee0
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  执行具有已更新参数值的 Transact-SQL 查询（如果适用）。 有关执行查询的详细信息，请参阅 [Comparing Execution Functions](../../connect/php/comparing-execution-functions.md) 。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |---------|---------------|  

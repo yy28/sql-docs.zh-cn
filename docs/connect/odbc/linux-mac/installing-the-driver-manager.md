@@ -1,30 +1,30 @@
 ---
-title: "安装驱动程序管理器 (ODBC Driver for SQL Server) |Microsoft 文档"
-ms.custom: 
+title: 安装驱动程序管理器 (ODBC Driver for SQL Server) |Microsoft 文档
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36f432e883b56759d46304239715a00c06334d3a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: a396bd0cab8ad6298eec79c48fdf541178194c8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-driver-manager"></a>安装驱动程序管理器
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/20/2018
   
 5.  当你准备好安装，并且如果你的计算机可以访问外部站点通过 FTP，执行以下命令： **./build_dm.sh**。
 
-如果你的计算机无法访问外部站点通过 FTP，获取`unixODBC-2.3.0.tar.gz`。 你可以获取`unixODBC-2.3.0.tar.gz`从[http://www.unixodbc.org](http://www.unixodbc.org/)。单击**下载**页后，可以转到下载页面左侧的链接。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 此版本的不支持 UnixODBC 2.3.1 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh-下载 url = file://unixODBC-2.3.0.tar.gz**。  
+如果你的计算机无法访问外部站点通过 FTP，获取`unixODBC-2.3.0.tar.gz`。 你可以获取`unixODBC-2.3.0.tar.gz`从[ http://www.unixodbc.org ](http://www.unixodbc.org/)。单击**下载**页后，可以转到下载页面左侧的链接。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 此版本的不支持 UnixODBC 2.3.1 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh-下载 url = file://unixODBC-2.3.0.tar.gz**。  
 
 6.  类型**是**继续进行解压缩文件。 此过程的一部分可能需要五分钟的时间才能完成。  
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/20/2018
 
 1.  删除所有已安装的旧版 unixODBC（例如 unixODBC 2.2.11）。 在 Red Hat Enterprise Linux 5 或 6 上，执行以下命令： **yum 删除 unixODBC**。 SUSE Linux Enterprise 上**zypper 删除 unixODBC**。  
   
-2.  转到[http://www.unixodbc.org](http://www.unixodbc.org/)。单击**下载**页后，可以转到下载页面左侧的链接。 然后，单击相应链接以将文件 unixODBC-2.3.0.tar.gz 保存到计算机。 此版本的不支持 UnixODBC 2.3.1 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+2.  转到[ http://www.unixodbc.org ](http://www.unixodbc.org/)。单击**下载**页后，可以转到下载页面左侧的链接。 然后，单击相应链接以将文件 unixODBC-2.3.0.tar.gz 保存到计算机。 此版本的不支持 UnixODBC 2.3.1 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
 3.  在你的 Linux 计算机上执行该命令： **tar xvzf unixODBC 2.3.0.tar.gz**。  
   

@@ -2,7 +2,7 @@
 title: 安装 Microsoft ODBC Driver for SQL Server 在 Linux 和 macOS 上 |Microsoft 文档
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 9819122fd8a0ca50a31d3a97465aaa2f32e37b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -519,7 +519,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 
 |组件|Description|  
 |---------------|-----------------|  
-|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|动态库 (`dylib`) 文件，其中包含的所有驱动程序的功能。 此文件安装在`/usr/local/lib/`。|  
+|libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|动态库 (`dylib`) 文件，其中包含的所有驱动程序的功能。 此文件安装在`/usr/local/lib/`。|  
 |`msodbcsqlr17.rll`或`msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`驱动程序 17 并在`[driver .dylib directory]../share/msodbcsql/resources/en_US/`为 Driver 13。 | 
 |msodbcsql.h|包含的所有新的定义使用的驱动程序所需的标头文件。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/usr/local/include/msodbcsql17/`驱动程序 17 并在`/usr/local/include/msodbcsql/`为 Driver 13。 |
 |LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`驱动程序 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |

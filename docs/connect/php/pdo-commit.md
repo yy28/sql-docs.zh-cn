@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cf60044e9a1d448df64b41f95bce1ae3cdd3b0c7
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,7 +39,7 @@ bool PDO::commit();
 ## <a name="return-value"></a>返回值  
 如果方法调用成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 PDO::commit 不受 PDO::ATTR_AUTOCOMMIT 的值影响（也不影响该值）。  
   
 有关使用 PDO::commit 的示例，请参阅 [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) 。  

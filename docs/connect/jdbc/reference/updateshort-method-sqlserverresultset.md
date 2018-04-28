@@ -1,30 +1,33 @@
 ---
-title: "updateShort 方法 (SQLServerResultSet) |Microsoft 文档"
-ms.custom: 
+title: updateShort 方法 (SQLServerResultSet) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateShort
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateShort
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2d50c789-eb9d-4f8a-81ca-974563040bbb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 080fa4f9ac0e8455328bffab259bd198c80cf64c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0752dd9898e660306c1ebe1f2e16058a1a0b3d2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateshort-method-sqlserverresultset"></a>updateShort 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="overload-list"></a>重载列表  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[updateShort (int、 short)](../../../connect/jdbc/reference/updateshort-method-int-short.md)|更新的指定的列**短**给定的列索引的值。|  
 |[updateShort (java.lang.String，短)](../../../connect/jdbc/reference/updateshort-method-java-lang-string-short.md)|更新的指定的列**短**给定的列名称的值。|  

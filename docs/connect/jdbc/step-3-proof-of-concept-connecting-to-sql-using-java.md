@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：使用 Java 连接到 SQL 的概念证明
+title: 步骤 3： 连接到 SQL 使用 Java 的概念证明 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b4e5d6288a7ac269f60c4c8a0ca37bf52a932f10
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3：使用 Java 连接到 SQL 的概念证明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3： 连接到 SQL 使用 Java 的概念证明
   
 此示例中，应考虑仅概念证明。 示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/16/2018
         }  
 ```  
   
-## <a name="step-2-execute-a-query"></a>执行查询。  
+## <a name="step-2-execute-a-query"></a>步骤 2： 执行查询  
 在此示例中，连接到 Azure SQL 数据库、 执行 SELECT 语句，并返回所选的行。   
   
 ```java  

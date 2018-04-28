@@ -1,8 +1,8 @@
 ---
-title: PDO::query | Microsoft Docs
+title: 'Pdo:: query |Microsoft 文档'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 93485e84b2e65ecbf7ab28ee23d8422e889b4554
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,8 +57,8 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 pdo:: exec; 的行为有关详细信
 |style|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN， *num*|在指定列中查询数据。 表中的第一列为列 0.|  
-|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
-|PDO::FETCH_CLASS, '*classname*'|给现有类中的属性分配列名称。|  
+|Pdo:: FETCH_CLASS，*classname*，数组 ( *arglist* )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
+|Pdo:: FETCH_CLASS，*classname*|给现有类中的属性分配列名称。|  
   
 在再次调用 PDO::query 之前，请调用 PDOStatement::closeCursor 以释放与 PDOStatement 对象相关联的数据库资源。  
   

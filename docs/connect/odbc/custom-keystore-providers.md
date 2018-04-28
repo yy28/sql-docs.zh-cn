@@ -20,7 +20,7 @@ author: MightyPen
 ms.workload: Inactive
 ms.openlocfilehash: 5bde3f699c1db9156e9e4fdfc96d2098d15413d4
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -642,4 +642,4 @@ FoundProv:
 
 ## <a name="see-also"></a>另请参阅
 
-[对 JDBC 驱动程序使用始终加密](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+[使用始终加密的 ODBC 驱动程序](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

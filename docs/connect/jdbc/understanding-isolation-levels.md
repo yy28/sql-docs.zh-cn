@@ -1,27 +1,28 @@
 ---
-title: "了解隔离级别 |Microsoft 文档"
-ms.custom: 
+title: 了解隔离级别 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0115d8c16c63882990a462c0fde8d146e91dbf88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-isolation-levels"></a>了解隔离级别
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,11 +52,11 @@ ms.lasthandoff: 11/18/2017
   
 |隔离级别|脏读|不可重复读|虚拟读取|  
 |---------------------|----------------|-------------------------|-------------|  
-|未提交读|是|是|是|  
-|已提交读|是|是|是|  
-|可重复读|是|是|是|  
-|Snapshot|是|“否”|是|  
-|可序列化|是|“否”|是|  
+|未提交读|是|用户帐户控制|是|  
+|已提交读|否|用户帐户控制|是|  
+|可重复读|否|“否”|是|  
+|Snapshot|否|“否”|否|  
+|可序列化|否|“否”|否|  
   
  事务必须至少在可重复读的隔离级别运行，才能在两个事务都检索同一行，然后根据原先检索的值更新行时，防止出现丢失更新的情况。 如果两个事务使用一个 UPDATE 语句更新行，而且更新并不以先前检索的值为基础，则在默认的已提交读的隔离级别上不会发生丢失更新的情况。  
   

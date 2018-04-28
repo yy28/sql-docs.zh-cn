@@ -3,7 +3,7 @@ title: 提取列使用 IRow::GetColumns （或 IRow::Open） 和 ISequentialStre
 description: 提取列使用 IRow::GetColumns （或 IRow::Open） 和 ISequentialStream
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518d974fcb16598e664fb484d03106e2e869ca6d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 71f353f0d37e4f36b72fc63a206c4c6b726d1485
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,13 +41,13 @@ ms.lasthandoff: 04/06/2018
   
 2.  执行命令 (在此示例中， **ICommandExecute::Execute()** IID_IRow 已调用)。  
   
-3.  提取列的数据使用**IRow::Open()**或**IRow::GetColumns()**。  
+3.  提取列的数据使用**IRow::Open()** 或**IRow::GetColumns()**。  
   
-    -   **IRow::Open()**可用来打开**ISequentialStream**所在的行。 指定 DBGUID_STREAM 以指示该列包含二进制数据的流 (**IStream**或**ISequentialStream**用于从列读取的数据)。  
+    -   **IRow::Open()** 可用来打开**ISequentialStream**所在的行。 指定 DBGUID_STREAM 以指示该列包含二进制数据的流 (**IStream**或**ISequentialStream**用于从列读取的数据)。  
   
-    -   如果**IRow::GetColumns()**使用时， **pData** DBCOLUMNACCESS 结构元素设置为指向流的对象。  
+    -   如果**IRow::GetColumns()** 使用时， **pData** DBCOLUMNACCESS 结构元素设置为指向流的对象。  
   
-4.  使用**ISequentialStream::Read()**重复以读取到使用者缓冲区中的指定的字节数。  
+4.  使用**ISequentialStream::Read()** 重复以读取到使用者缓冲区中的指定的字节数。  
   
 ## <a name="example"></a>範例  
  此示例显示如何使用 IRow 提取单行。 在此示例中，将一次从该行中检索一列。 此示例演示了 IRow::Open() 和 IRow::GetColumns() 的用法。 为读取列数据，示例中使用了 ISequentialStream::Read。  

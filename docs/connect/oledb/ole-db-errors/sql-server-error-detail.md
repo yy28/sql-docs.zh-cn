@@ -3,7 +3,7 @@ title: SQL Server 错误详细信息 |Microsoft 文档
 description: SQL Server 错误详细信息
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-errors
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9d23ec9cdc323f80f7a65a6221eff0ac2bdc9ef
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 88e0fe59415372b9fba4fcf0d2079716fbcfb56d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 |成员|Description|  
 |------------|-----------------|  
-|*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息。 在返回的字符串相同**:: Getdescription**。|  
+|*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息。 在返回的字符串相同 **:: Getdescription**。|  
 |*pwszServer*|会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。|  
 |*pwszProcedure*|如果适用，则为产生错误的过程的名称。 否则为空字符串。|  
 |*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机错误号。 返回的值与相同*plNativeError*参数**ISQLErrorInfo::GetSQLInfo**。|  

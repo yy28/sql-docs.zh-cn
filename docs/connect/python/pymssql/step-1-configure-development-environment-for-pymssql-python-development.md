@@ -1,27 +1,28 @@
 ---
-title: "步骤 1： 配置 pymssql Python 开发环境 |Microsoft 文档"
-ms.custom: 
+title: 步骤 1： 配置 pymssql Python 开发环境 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 73ebcc99421ef0afcc15d13241c6fb6ffffd10c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步骤 1： 配置 pymssql Python 开发的开发环境
 你将需要配置你的开发环境满足先决条件，以便开发应用程序使用的 SQL Server Python 驱动程序。    

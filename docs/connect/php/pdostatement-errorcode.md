@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c50401a94ac5d30af4cc96a57a0ede7027b47d7b
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,7 +39,7 @@ string PDOStatement::errorCode();
 ## <a name="return-value"></a>返回值  
 如果语句句柄上没有任何操作，将以字符串或 NULL 形式返回五个字符的 SQLSTATE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

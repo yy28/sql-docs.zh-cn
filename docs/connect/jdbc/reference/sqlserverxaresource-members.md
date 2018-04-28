@@ -1,27 +1,28 @@
 ---
-title: "SQLServerXAResource 成员 |Microsoft 文档"
-ms.custom: 
+title: SQLServerXAResource 成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e61b22a719ea74b1097a50f811a4e1bde85db54
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b4d0dd8ffe48528b439447a59e2540950c34527d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="fields"></a>字段  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|用于允许使用紧密结合的 XA 事务，这些事务具有不同的 XA 分支事务 ID (XID)，但具有相同的全局事务 ID (GTRID)。|  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[提交](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|提交全局给定 Xid 对象所指定的事务。|  
 |[结束](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|结束代表某个事务分支执行的工作。|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/18/2017
 |[恢复 (recover)](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|从资源管理器获取准备好的事务分支的列表。|  
 |[回滚](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|请求资源管理器回滚代表事务分支执行的工作。|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|此设置当前的事务超时值[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)对象。|  
-|[启动](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|启动工作代表 Xid 对象中指定的事务分支。|  
+|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|启动工作代表 Xid 对象中指定的事务分支。|  
   
 ## <a name="inherited-methods"></a>继承的方法  
   

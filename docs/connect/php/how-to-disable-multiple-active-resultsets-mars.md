@@ -1,5 +1,5 @@
 ---
-title: 如何：禁用多个活动的结果集 (MARS)
+title: 如何： 禁用多个活动的结果集 (MARS) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8fd8fefc30efe97c097ebb9a6f880fe326f873c8
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -67,7 +67,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>示例  
-以下示例显示如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 PDO_SQLSRV 驱动程序禁用 MARS 支持。  
+下面的示例演示如何禁用 MARS 支持，使用 PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。  
   
 ```  
 <?php  

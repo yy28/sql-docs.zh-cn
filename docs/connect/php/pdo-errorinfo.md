@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: aa20f4bb1f833a43f2cfc8ae99423db8d6af7751
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -45,15 +45,15 @@ array PDO::errorInfo();
   
 -   特定于驱动程序的错误消息。  
   
-如果没有错误或如果未设置 SQLSTATE，特定于驱动程序的字段将为 NULL。  
+如果没有错误，或如果未设置 SQLSTATE，特定于驱动程序的字段均为 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 PDO::errorInfo 仅对直接在数据库上执行的操作检索错误信息。 在使用 PDO::prepare 或 PDO::query 创建 PDOStatement 实例时，使用 PDOStatement::errorInfo。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  
-在此示例中，列名称拼写不正确（是 `Cityx` 而不是 `City`）导致了错误，随后报告了该错误。  
+在此示例中，列的名称拼写错误 (`Cityx`而不是`City`)，从而导致错误，然后报告。  
   
 ```  
 <?php  

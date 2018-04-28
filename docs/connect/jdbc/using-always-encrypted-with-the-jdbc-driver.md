@@ -2,7 +2,7 @@
 title: JDBC 驱动程序使用始终加密 |Microsoft 文档
 ms.custom: ''
 ms.date: 3/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: ''
+caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 02a0be7375eafcd3ba54dbdf83f3e55e73b13a91
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 驱动程序使用始终加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -107,7 +107,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure activedirectory-库-为-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > 有关如何在一个 Maven 项目中包括这些依赖关系的示例，请参阅[下载 ADAL4J 和 AKV 依赖关系使用 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -143,11 +143,11 @@ JDBC 驱动程序附带了 Java 密钥存储的内置密钥存储提供程序实
 
 有三个允许客户端应用程序指定该驱动程序必须向 Java 密钥存储进行身份验证的凭据的连接字符串属性。 该驱动程序初始化提供程序基于连接字符串中这三个属性的值。
 
-**keyStoreAuthentication:**标识要使用的 Java 密钥存储区。 Microsoft JDBC Driver 6.0 和更高版本的 SQL Server，你可以进行身份验证到 Java 密钥存储只能通过此属性。 对于 Java 密钥存储，此属性的值必须是`JavaKeyStorePassword`。
+**keyStoreAuthentication:** 标识要使用的 Java 密钥存储区。 Microsoft JDBC Driver 6.0 和更高版本的 SQL Server，你可以进行身份验证到 Java 密钥存储只能通过此属性。 对于 Java 密钥存储，此属性的值必须是`JavaKeyStorePassword`。
 
-**keyStoreLocation:**存储列主密钥的 Java 密钥库文件的路径。 路径包括 keystore 文件名。
+**keyStoreLocation:** 存储列主密钥的 Java 密钥库文件的路径。 路径包括 keystore 文件名。
 
-**keyStoreSecret:**机密/密码用于 keystore 以及与该密钥。 表示使用 Java 密钥存储、 密钥库和密钥的密码必须相同。
+**keyStoreSecret:** 机密/密码用于 keystore 以及与该密钥。 表示使用 Java 密钥存储、 密钥库和密钥的密码必须相同。
 
 此处是提供这些凭据连接字符串中的一个示例：
 

@@ -2,7 +2,7 @@
 title: 使用始终加密的 ODBC 驱动程序适用于 SQL Server |Microsoft 文档
 ms.custom: ''
 ms.date: 10/01/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -15,14 +15,14 @@ ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 653e9680cdaac667f0a00fd84700f07210fffb5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>使用始终加密的 ODBC 驱动程序适用于 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -278,7 +278,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 若要缓解此问题，请使用`SQL_COLUMN_IGNORE`标志来忽略将不会更新作为的一部分的列`SQLBulkOperations`以及何时使用`SQLSetPos`对于游标基于更新。  应忽略不会被直接修改应用程序的所有列，这两种性能，并且若要避免所绑定到的缓冲区的列的截断*较小*比其实际 (DB) 大小。 有关详细信息，请参阅[SQLSetPos 函数引用](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)。
 
-#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults & SQLDescribeCol
+#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 和 SQLDescribeCol
 
 应用程序可以调用[SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)已准备的语句中返回有关列元数据。  启用始终加密后，调用`SQLMoreResults`*之前*调用`SQLDescribeCol`导致[sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)调用，这不正确返回纯文本加密列的元数据。 若要避免此问题，请调用`SQLDescribeCol`已准备的语句上*之前*调用`SQLMoreResults`。
 
@@ -378,7 +378,7 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 
 |凭据类型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|Username/password| `KeyVaultPassword`|用户主体名称|密码|
+|用户名/密码| `KeyVaultPassword`|用户主体名称|密码|
 |客户端 ID/密钥| `KeyVaultClientSecret`|客户端 ID|机密|
 
 #### <a name="example-connection-strings"></a>连接字符串示例
@@ -391,7 +391,7 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Username/Password**
+**用户名/密码**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>

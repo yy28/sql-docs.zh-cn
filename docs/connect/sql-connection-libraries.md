@@ -5,23 +5,23 @@ author: MightyPen
 ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 03/29/2018
+ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 467f49e9cab080c67f96369a0eeeda9dd588726d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 数据库的连接模块
 
-这篇文章提供连接模块的下载链接或*驱动程序*，客户端程序可以使用与交互[Microsoft SQL Server](../index.md)，并使用其在云中的双向[AzureSQL 数据库](http://docs.microsoft.com/azure/sql-database/)。 驱动程序是可用于各种编程语言，在以下操作系统上运行：
+这篇文章提供连接模块的下载链接或*驱动程序*，客户端程序可以使用与交互[Microsoft SQL Server](../relational-databases/database-features.md)，并使用其在云中的双向[AzureSQL 数据库](http://docs.microsoft.com/azure/sql-database/)。 驱动程序是可用于各种编程语言，在以下操作系统上运行：
 
 - Linux (Ubuntu)
 - MacOS
@@ -53,11 +53,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | 语言 | 下载 SQL 驱动程序 |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET 核心，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET 核心，适用于 Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET 核心，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET 核心，有关 MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET 核心，适用于 Windows](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 驱动程序，安装说明](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-| PHP | *操作系统：*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[从 Github 的 Linux 或 macOS PHP 驱动程序](http://github.com/Microsoft/msphpsql/) |
+| PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc，安装说明](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[下载 ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby 驱动程序，安装说明](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby 下载页](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

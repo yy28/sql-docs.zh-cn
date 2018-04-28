@@ -1,5 +1,5 @@
 ---
-title: SQL Server 的帮助查看器 | Microsoft Docs
+title: Ruby Driver for SQL Server |Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 065ce675e0942442dd1d3b8faf9b48242eaa8598
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---

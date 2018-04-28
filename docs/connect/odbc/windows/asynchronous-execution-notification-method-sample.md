@@ -1,5 +1,5 @@
 ---
-title: 异步执行（通知方法）示例
+title: 异步执行 （通知方法） 示例 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e971ee6725f27afcd8f8b9c8accdd37176f1cf6c
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>异步执行（通知方法）示例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  本主题中的代码示例演示如何使用[异步执行](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)通知方法。  
+  本主题中的代码示例演示如何使用[异步执行 （通知方法）](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)。  
   
  此函数使用异步通知打开五个连接，并在每个连接的语句上执行一个查询。  
   

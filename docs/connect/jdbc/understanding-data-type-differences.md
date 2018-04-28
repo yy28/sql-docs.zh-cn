@@ -1,27 +1,28 @@
 ---
-title: "了解数据类型的区别 |Microsoft 文档"
-ms.custom: 
+title: 了解数据类型的区别 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9f24abd0bf39ebe61cf3715371c6c6c3d6f5663
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: cf10944059322a159de43ccee2a7e4d8ed1d8526
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-differences"></a>了解数据类型的差异
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/18/2017
 |----------|-----------------|  
 |固定长度|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Char**和**nchar**数据类型映射到 JDBC 直接**CHAR**和**NCHAR**类型。 这些都是在列具有 SET ANSI_PADDING ON 的情况下，具有由服务器提供的填充的固定长度的类型。 填充始终开启的**nchar**，但对于**char**，其中不填充 server char 列的情况下，在 JDBC 驱动程序添加填充。|  
 |Variable-length|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Varchar**和**nvarchar**类型直接映射到 JDBC **VARCHAR**和**NVARCHAR**分别类型。|  
-|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**文本**和**ntext**类型映射到 JDBC **LONGVARCHAR**和**LONGNVARCHAR**分别键入。 这些是不推荐使用的类型从[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]，因此你应使用较大的值类型**varchar （max)**或**nvarchar (max)**，而不是。<br /><br /> 使用更新\<数值类型 > 和[updateObject （int、 java.lang.Object）](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)方法将会失败针对**文本**和**ntext** server 列。 但是，使用[setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)对于支持与指定的字符转换类型的方法**文本**和**ntext** server 列。|  
+|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**文本**和**ntext**类型映射到 JDBC **LONGVARCHAR**和**LONGNVARCHAR**分别键入。 这些是不推荐使用的类型从[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]，因此你应使用较大的值类型**varchar （max)** 或**nvarchar (max)**，而不是。<br /><br /> 使用更新\<数值类型 > 和[updateObject （int、 java.lang.Object）](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)方法将会失败针对**文本**和**ntext** server 列。 但是，使用[setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)对于支持与指定的字符转换类型的方法**文本**和**ntext** server 列。|  
   
 ## <a name="binary-string-types"></a>二进制字符串类型  
  JDBC 二进制字符串类型**二进制**， **VARBINARY**，和**LONGVARBINARY**。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/18/2017
 |----------|-----------------|  
 |固定长度|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**二进制**类型映射到 JDBC 直接**二进制**类型。 这是在列具有 SET ANSI_PADDING ON 的情况下，具有由服务器提供填充的固定长度类型。 没有填充服务器 char 列时，JDBC 驱动程序会添加填充。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**时间戳**类型是 JDBC**二进制**固定长度为 8 个字节的类型。|  
 |Variable-length|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Varbinary**类型映射到 JDBC **VARBINARY**类型。<br /><br /> **Udt**键入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]映射到为 JDBC **VARBINARY**类型。|  
-|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**映像**类型映射到 JDBC **LONGVARBINARY**类型。 在从开始已弃用此类型[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]，因此你应使用大值类型， **varbinary （max)**相反。|  
+|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**映像**类型映射到 JDBC **LONGVARBINARY**类型。 在从开始已弃用此类型[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]，因此你应使用大值类型， **varbinary （max)** 相反。|  
   
 ## <a name="exact-numeric-types"></a>精确数字类型  
  JDBC 精确数字类型直接映射到其对应的 SQL Server 类型。  

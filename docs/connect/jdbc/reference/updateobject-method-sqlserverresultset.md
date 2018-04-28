@@ -25,7 +25,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d6c879217a91941ad0a0cfe5242c7c7f7b760cce
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|说明|  
+|名称|Description|  
 |----------|-----------------|  
 |[updateObject （int、 java.lang.Object）](../../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)|更新的指定的列**对象**给定的列索引的值。|  
 |[updateObject （int、 java.lang.Object、 int）](../../../connect/jdbc/reference/updateobject-method-int-java-lang-object-int.md)|更新的指定的列**对象**给定的列索引和小数位数的值。|  

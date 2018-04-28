@@ -3,7 +3,7 @@ title: 转换执行从服务器到客户端 |Microsoft 文档
 description: 执行从服务器到客户端的转换
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 188cba2a9ea012e36632a94572cd3b738b525729
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 52b1a92e30f0b90f2ade7315b9cc3e6e67f05abc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,19 +35,19 @@ ms.lasthandoff: 04/06/2018
   
 |目标 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日期|1, 7|确定|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|确定|确定|4|4|  
-|Time|5, 6, 7|-|9|确定|6|3, 6|5, 6|-|OK (VT_BSTR)|确定|确定|4|4|  
+|日期|1, 7|确定|-|-|1|1, 3|1, 7|-|确定 (VT_BSTR)|确定|确定|4|4|  
+|Time|5、 6、 7|-|9|确定|6|3, 6|5、 6|-|确定 (VT_BSTR)|确定|确定|4|4|  
 |Smalldatetime|7|8|9, 10|10|确定|3|7|-|7 (VT_DATE)|确定|确定|4|4|  
-|日期时间|5, 7|8|9, 10|10|确定|3|7|-|7 (VT_DATE)|确定|确定|4|4|  
-|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|确定|确定|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|确定|5, 7, 11|-|OK (VT_BSTR)|确定|确定|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/A|N/A|N/A|N/A|N/A|N/A|  
+|日期时间|5、 7|8|9, 10|10|确定|3|7|-|7 (VT_DATE)|确定|确定|4|4|  
+|Datetime2|5、 7|8|9, 10|10|7|3|5、 7|-|确定 (VT_BSTR)|确定|确定|4|4|  
+|Datetimeoffset|5、 7、 11|8, 11|9、 10、 11|10、 11|7, 11|确定|5、 7、 11|-|确定 (VT_BSTR)|确定|确定|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、 9|12|12|12|7, 13|N/A|N/A|N/A|N/A|N/A|N/A|  
 |Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|确定|3|7|-|7(VT_DATE)|确定|确定|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|确定|3|7|-|7(VT_DATE)|确定|确定|4|4|  
 |Sql_variant<br /><br /> (date)|1, 7|确定|2|2|1|1, 3|1, 7|-|OK(VT_BSTR)|确定|确定|4|4|  
-|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|确定|6|3, 6|5, 6|-|OK(VT_BSTR)|确定|确定|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5, 7|8|9, 10|10|确定|3|5, 7|-|OK(VT_BSTR)|确定|确定|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|确定|5, 7, 11|-|OK(VT_BSTR)|确定|确定|4|4|  
+|Sql_variant<br /><br /> (time)|5、 6、 7|2|6|确定|6|3, 6|5、 6|-|OK(VT_BSTR)|确定|确定|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5、 7|8|9, 10|10|确定|3|5、 7|-|OK(VT_BSTR)|确定|确定|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5、 7、 11|8, 11|9、 10、 11|10、 11|7, 11|确定|5、 7、 11|-|OK(VT_BSTR)|确定|确定|4|4|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   

@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: acee29ec49e4bd0d8e303248a2a527d5697b42aa
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -49,7 +49,7 @@ sqlsrv_close( resource $conn )
 除非使用无效参数调用该函数，否则布尔值为 **true** 。 如果使用无效参数调用该函数，将返回 **False** 。  
   
 > [!NOTE]  
-> 对于此函数，**Null** 是有效参数。 这允许在脚本中调用该函数多次。 例如，当在错误条件中关闭某个连接，并且在脚本结尾再次关闭该连接时，第二次对 sqlsrv_close **的调用将返回 True**，因为第一次对 sqlsrv_close **的调用（在错误条件中）将连接资源设置为 NULL**。  
+> 对于此函数，**Null** 是有效参数。 这允许在脚本中调用该函数多次。 例如，如果你关闭错误条件中的连接，并在脚本结尾再次关闭，第二次调用到**sqlsrv_close**将返回**true**因为的首次调用到**sqlsrv_关闭**（在错误条件中） 将连接资源设置为**null**。  
   
 ## <a name="example"></a>示例  
 以下示例将关闭连接。 该示例假定已在本地计算机上安装了 SQL Server。 当从命令行运行该示例时，所有输出都将写入控制台。  

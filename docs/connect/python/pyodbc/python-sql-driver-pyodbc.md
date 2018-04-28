@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ee00cfa1322befabd0b21af718516e05290b0405
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="python-sql-driver---pyodbc"></a>Python SQL 驱动程序 - pyodbc
+# <a name="python-sql-driver---pyodbc"></a>Python SQL 驱动程序-pyodbc
 
 ![下载向下箭头带圆圈](../../../ssdt/media/download.png)[for Python 安装 SQL 驱动程序](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 

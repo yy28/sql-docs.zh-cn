@@ -3,7 +3,7 @@ title: 大型 CLR 用户定义类型 (OLE DB) |Microsoft 文档
 description: 大型 CLR 用户定义类型 (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f4ba8559525b2b0b7a174a7160e7d3daf138f30
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: e3aaddc3ac658c0a7d713933b6594c1c3a27e88f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/06/2018
   
 |SQL Server 数据类型|OLE DB 数据类型|内存布局|“值”|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE [] （字节数组\)|132 (oledb.h)|  
   
- UDT 值表示为字节数组。 支持与十六进制字符串之间的转换。 文字值表示为带有“0x”前缀的十六进制字符串。 十六进制字符串是以 16 为基数的二进制数据的文本表示形式。 一个示例是从服务器类型的转换**varbinary(10)**到 DBTYPE_STR，这将导致在 20 个字符的字符的每个对其中表示单字节的十六进制表示形式。  
+ UDT 值表示为字节数组。 支持与十六进制字符串之间的转换。 文字值表示为带有“0x”前缀的十六进制字符串。 十六进制字符串是以 16 为基数的二进制数据的文本表示形式。 一个示例是从服务器类型的转换**varbinary(10)** 到 DBTYPE_STR，这将导致在 20 个字符的字符的每个对其中表示单字节的十六进制表示形式。  
   
 ## <a name="parameter-properties"></a>参数属性  
  DBPROPSET_SQLSERVERPARAMETER 属性集通过 OLE DB 支持 UDT。 有关详细信息，请参阅[使用用户定义类型](../../oledb/features/using-user-defined-types.md)。  

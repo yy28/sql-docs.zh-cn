@@ -20,14 +20,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: fa41ae8760bc4316dfb6ea892d4a345f84403c02
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>supportsStoredFunctionsUsingCallSyntax 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指示当前的数据库是否支持通过存储的过程转义语法的调用用户或供应商定义的函数。  
+  指示当前数据库是否支持通过使用存储过程转义语法调用用户或供应商定义的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +37,12 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果支持。 否则为**false**。  
+ **true**如果支持。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注释  
  由 java.sql.DatabaseMetaData 接口中的 supportsStoredFunctionsUsingCallSyntax 方法指定此 supportsStoredFunctionsUsingCallSyntax 方法。  
   
 ## <a name="see-also"></a>另请参阅  

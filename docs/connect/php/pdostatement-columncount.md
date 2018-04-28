@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6bba828315fe5cdf50893e516165b72e3a637461
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,7 +39,7 @@ int PDOStatement::columnCount ();
 ## <a name="return-value"></a>返回值  
 返回结果集中的列数。 如果结果集为空，将返回零。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

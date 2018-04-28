@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 901cecf3bcab9260e820953516512b16cddf3edb
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,16 +37,16 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$$fetch*style*：指定行数据的格式的（整数）符号。 有关值的列表，请参阅 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 PDO::FETCH_COLUMN 也允许使用。 PDO::FETCH_BOTH 是默认值。  
+$*fetch_style*： 指定行数据的格式 （整数） 符号。 有关值的列表，请参阅 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 PDO::FETCH_COLUMN 也允许使用。 PDO::FETCH_BOTH 是默认值。  
   
-$$column*index*：表示当 $*fetch*style 为 PDO::FETCHCOLUMN 时要返回的列的整数值。 0 是默认值。  
+$*column_index*： 一个整数值，表示列以返回如果 $*fetch_style*是 PDO::FETCH_COLUMN。 0 是默认值。  
   
-$$ctor*args*：当 $*fetch*style 为 PDO::FETCHCLASS 或 PDO::FETCHOBJ 时，类构造函数的参数数组。  
+$*ctor_args*： 的类构造函数，参数数组时 $*fetch_style* pdo:: FETCH_CLASS 或 PDO::FETCH_OBJ。  
   
 ## <a name="return-value"></a>返回值  
 结果集中的其余行的数组，或 False（如果方法调用失败）。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

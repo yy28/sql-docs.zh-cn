@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: eaad375b8f537e7d220adc8e1779ebdd8c9da07f
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,16 +37,16 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$parameter*：（混合）参数标识符。 对于使用命名占位符的语句，为参数名 :name。 对于使用问号语法的已准备的语句，将为基于 1 的参数索引。
+$*参数*: （混合） 参数标识符。 语句使用名为占位符，对于使用参数名称 (: 名称)。 对于使用问号语法已准备的语句，它是参数的基于 1 的索引。
   
-$$value*：要绑定到参数的（混合）值。  
+$*值*： 要绑定到参数的 （混合） 值。  
   
-$$data*type*：由 PDO::PARAM 常量表示的可选（整数）数据类型。 默认值为 PDO::PARAM_STR。  
+$*data_type*: PDO::PARAM_ * 常量表示的可选 （整数） 数据类型。 默认值为 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   

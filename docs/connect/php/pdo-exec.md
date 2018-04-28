@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ac5a2f7b4411b38e3986e8d547a2959cdb5d6278
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -42,7 +42,7 @@ int PDO::exec ($statement)
 ## <a name="return-value"></a>返回值  
 报告受影响行数的整数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 如果 *$statement* 包含多个 SQL 语句，则仅为最后一个语句报告受影响行的计数。  
   
 PDO::exec 不为 SELECT 语句返回结果。  

@@ -1,27 +1,28 @@
 ---
-title: "游标类型 （PDO_SQLSRV 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 游标类型 （PDO_SQLSRV 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9757631940208f0f3ded1fe90eec8fbfd1b061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fef4910ae38fba0d101e95e9f7ad0c73d4541b72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-types-pdosqlsrv-driver"></a>游标类型 （PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,9 +36,9 @@ PDO_SQLSRV 驱动程序，可以使用多个游标之一创建可滚动的结果
   
 可以通过使用 pdo:: prepare 或 pdostatement:: Setattribute 来选择任一游标类型来指示服务器端游标的类型：  
   
--   PDO::ATTR_CURSOR = > PDO::CURSOR_FWDONLY  
+-   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_FWDONLY  
   
--   PDO::ATTR_CURSOR = > PDO::CURSOR_SCROLL  
+-   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_SCROLL  
   
 你可以通过指定 PDO::ATTR_CURSOR 请求键集或动态游标 = > PDO::CURSOR_SCROLL，然后传入适当的值与 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 你可以将其传递到 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE 的可能值有：  
   

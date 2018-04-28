@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2bea66627882dc61cce0b82ab69788a3c4178cf5
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$$：一个可选整数，指示从零开始的列号。 默认值为 0（该行的第一列）。  
+$*column_number*： 一个可选整数，指示的从零开始的列号。 默认值为 0（该行的第一列）。  
   
 ## <a name="return-value"></a>返回值  
 一列或 false（如果没有更多的行）。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  
