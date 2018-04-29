@@ -1,27 +1,28 @@
 ---
-title: "SQL Server Management Studio - 许可条款 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Management Studio - 许可条款 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3690381b8c1b539bf4f30c8508cd927964e40f1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 许可条款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/17/2018
   
 **3.  基于 INTERNET 的服务。** Microsoft 随软件提供基于 Internet 的服务， 但可能随时更改或取消这些服务。  
   
-&nbsp;&nbsp;**a.  同意使用基于 Internet 的服务。** 下面以及 SQL Server 隐私声明中介绍的软件功能可通过 Internet 连接到 Microsoft 或服务提供商的计算机系统。 在某些情况下，连接建立时您不会另外收到通知。 您可以关闭这项功能，或者不使用它。 有关此功能的详细信息，请访问 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)。 **使用此功能即表示同意传输这些信息**。 Microsoft 不会将这些信息用于识别您的身份或与您联系。  
+&nbsp;&nbsp;**a.  同意使用基于 Internet 的服务。** 下面以及 SQL Server 隐私声明中介绍的软件功能可通过 Internet 连接到 Microsoft 或服务提供商的计算机系统。 在某些情况下，连接建立时您不会另外收到通知。 您可以关闭这项功能，或者不使用它。 有关此功能的详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)。 **使用此功能即表示同意传输这些信息**。 Microsoft 不会将这些信息用于识别您的身份或与您联系。  
   
 &nbsp;&nbsp;**i.  计算机信息。** 以下功能使用 Internet 协议，向相应的系统发送计算机信息，例如 Internet 协议地址、操作系统类型、浏览器及所使用的软件名称和版本、安装软件的设备的语言代码等。 Microsoft 使用这些信息是为了提供基于 Internet 的服务。  
   

@@ -1,33 +1,35 @@
 ---
-title: "向项目中添加现有项 | Microsoft Docs"
-ms.custom: 
+title: 向项目中添加现有项 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - projects [SQL Server Management Studio], item additions
 - adding project items
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35155a319dfe1e1565a7e6b1c0ac435b952bd7de
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 59d81d6e1003ab82fc8d3bf9b43af8bbc353d48a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-existing-items-to-a-project"></a>向项目中添加现有项
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql_md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将附加文件扩展名关联到项目类型，请参阅 [如何将文件扩展名与代码编辑器关联](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql_md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将附加文件扩展名关联到项目类型，请参阅 [如何将文件扩展名与代码编辑器关联](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>向项目中添加现有查询或杂项文件  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
     使用此选项可以筛选所显示的文件和文件夹。 输入要用来筛选的完整或部分文件名，使用星号 (`*`) 作为通配符。  
   
     > [!NOTE]  
-    > 通过在“文件名”框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入“http://mywebsite”可显示“mywebsite”Web 位置中可用的文件，输入“\\\myserver\myshare”可显示“myserver”上的“myshare”位置中可用的文件。  
+    > 通过在“文件名”框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 http://mywebsite 可显示 mywebsite Web 位置中可用的文件，输入 \\\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件。  
   
     **文件类型**  
     使用此选项基于文件扩展名筛选文件。 每个产品列出最常用文件类型的默认筛选器。  

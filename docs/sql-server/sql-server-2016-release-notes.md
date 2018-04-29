@@ -1,8 +1,8 @@
 ---
 title: SQL Server 2016 发行说明 | Microsoft Docs
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -18,24 +18,29 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20cd775d23caae5f4f833b95e9a4bc7c1a257612
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3e8962771c634f3cf606606beaac1b0604623e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   本主题介绍 SQL Server 2016 版本的限制和问题，包括服务包。 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)（SQL Server 2016 的新增功能）。
 
-> [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)从**[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)下载 SQL Server 2016**
->
-> [![Azure 虚拟机小](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
->
-> [![下载 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 若要获取最新版本的 Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。
+- [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)从**[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)下载 SQL Server 2016**
+- [![Azure 虚拟机小](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
+- [![下载 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 若要获取最新版本的 Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。
+
+## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 包括 2016 SP1 之后、CU8 之前（含 CU8）发布的所有累积更新。 
+
+- [![Microsoft 下载中心](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [下载 SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- 有关更新的完整列表，请参阅 [SQL Server 2016 Service Pack 2 版本信息](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含至 SQL Server 2016 RTM CU3 的所有修补程序，包括安全更新 MS16-136。 它包含 SQL Server 2016 累积更新（并包含最新累积更新 - CU3 和 2016 年 11 月 8 日发布的安全更新 MS16-136）中提供的解决方案的汇总。 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含至 SQL Server 2016 RTM CU3 的所有累积更新，包括安全更新 MS16-136。 它包含 SQL Server 2016 累积更新（并包含最新累积更新 - CU3 和 2016 年 11 月 8 日发布的安全更新 MS16-136）中提供的解决方案的汇总。
 
 以下功能在 SQL Server SP1 的标准、Web、Express 和 Local DB 版中均可用（另有注明的除外）：
 - Always Encrypted
@@ -159,24 +164,22 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 -   使用选项“选择联机或本地帮助”，然后配置“我想要使用联机帮助”对应的帮助选项。     
     
 -   使用选项“联机安装内容”并下载 SQL Server 2014 Content。     
-    
+
  **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按 F1 时，将在浏览器中显示 F1 帮助文章的联机版本。 此问题在于基于浏览器的帮助，即使已配置并安装了本地帮助也不例外。 
-     
-**更新内容：**    
-在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。    
+
+**更新内容：**在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。    
     
-* 在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings |HlpViewer_VisualStudio14_en US.settings 文件，并将下面代码中的日期更改为在将来的某个日期。    
-    
-     
-```    
+* 在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings |HlpViewer_VisualStudio14_en US.settings 文件，并将下面代码中的日期更改为在将来的某个日期。
+
      Cache LastRefreshed="12/31/2017 00:00:00"    
-``` 
+```
 
-## <a name="additional-information"></a>其他信息
-+ [SQL Server 2016 安装](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
+## Additional Information
++ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]    
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")

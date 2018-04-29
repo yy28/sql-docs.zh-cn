@@ -1,23 +1,24 @@
 ---
-title: "安装非英语语言版本的 SQL Server Management Studio (SSMS) | Microsoft Docs"
-description: "安装非英语语言版本的 SQL Server Management Studio (SSMS)"
-ms.custom: 
+title: 安装非英语语言版本的 SQL Server Management Studio (SSMS) | Microsoft Docs
+description: 安装非英语语言版本的 SQL Server Management Studio (SSMS)
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae38d56a3faee88fa688a0b027482713ac07b59
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: 336b26d502d6cb40ab7c3be5de35d52f3d019b8a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安装非英语语言版本的 SQL Server Management Studio (SSMS) 
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/11/2017
 2. 现在，单击刚安装的语言，然后选择“设为默认值”，来设置系统区域设置，以使用在上一步中安装的语言包。 
 3. 操作系统在所需语言中运行后，[安装同一种语言的 SSMS 版本](download-sql-server-management-studio-ssms.md#available-languages)。 第一次安装新的 SSMS 语言时，请使用完整包。 对于后续安装，可以使用升级包。
 4. 对于每种你想要安装的语言，如果与已安装的 SSMS 第一个版本的语言不匹配，请安装相应的 Visual Studio 2015 Shell（独立）语言包：
-   - 浏览到 [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS)（可能需要登录并完成“连接注册”过程）。
+   - 浏览到 [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS)（你可能需要登录并完成 Connect 注册过程）。
    - 下载并安装所需的 Visual Studio 2015 Shell（独立）语言包。
 
    > [!IMPORTANT]

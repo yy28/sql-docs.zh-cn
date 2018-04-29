@@ -3,15 +3,16 @@
 
 # [SQL Server 指南](sql-server-guides.md)
 ## Always On 可用性组故障排除和监视指南
-## [索引设计](sql-server-index-design-guide.md)
+## [索引体系结构和设计](sql-server-index-design-guide.md)
 ## [内存管理体系结构](memory-management-architecture-guide.md)
 ### [读取页](reading-pages.md)  
 ### [写入页](writing-pages.md)
 ## [页和盘区体系结构](pages-and-extents-architecture-guide.md)
 ## [迁移后验证和优化](post-migration-validation-and-optimization-guide.md)
+## [“性能”](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [查询处理体系结构](query-processing-architecture-guide.md)
 ## [线程和任务体系结构](thread-and-task-architecture-guide.md)
-## [事务日志体系结构和管理](sql-server-transaction-log-architecture-and-management-guide.md)
+## [事务日志体系结构和管理指南](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [事务锁定和行版本控制指南](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [联接](../relational-databases/performance/joins.md)
 # [分区](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [“性能”](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [基于策略的管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [复制](../relational-databases/replication/sql-server-replication.md)

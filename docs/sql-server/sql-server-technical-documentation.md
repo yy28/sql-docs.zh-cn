@@ -1,6 +1,6 @@
 ---
 title: SQL Server 文档 | Microsoft Docs
-ms.date: 02/28/2018
+ms.date: 04/26/2018
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
@@ -24,44 +24,65 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06ccc15f14599c1d9861af90d6a56d65b71e3e0e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b09bbe3776db2e3dd4835ccc9d8951b71efe6207
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 中处于领先水平。 本文档可帮助你安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
+::: moniker range=">= sql-analysis-services-2017 || >= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 中处于领先水平。 本文档可帮助你在 Windows 和 Linux 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
+::: moniker-end
 
-::: moniker range="=sql-server-2017"
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 中处于领先水平。 本文档可帮助你在 Windows 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
+::: moniker-end
+
+::: moniker range="= sqlallproducts-allversions"
+|新增功能  | 发行说明  |
+|---------|---------|
+|[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)        |
+|[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
+::: moniker-end
+::: moniker range="= sql-analysis-services-2017 || = sql-server-linux-2017 || = sql-server-2017"
 |新增功能  | 发行说明  |
 |---------|---------|
 |[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)        |
 ::: moniker-end
-::: moniker range="=sql-server-2016"
+::: moniker range="=sql-server-2016 || =sqlallproducts-allversions"
 |新增功能  | 发行说明  |
 |---------|---------|
 |[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
-::: moniker range="=sql-server-2014"
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 内容很快会合并到 .docs 站点中。  现在，请参阅：
 - [SQL Server 2014 联机丛书](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2014 中的新增功能](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [先前版本](https://docs.microsoft.com/en-us/previous-versions/sql/)
+
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+**试用 SQL Server！**
+- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
+::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 **试用 SQL Server！**
-    + [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)[下载 SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
-    + [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-    + [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-    + [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![在 Linux 上安装 SQL Server](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [在 Linux 上安装 SQL Server](../linux/sql-server-linux-setup.md)
+- [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+::: moniker-end
 
-::: moniker range=">=sql-server-2016 || = sqlallproducts-allversions"
+::: moniker range=">= sql-analysis-services-2016 || >= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="sql-server-technologies"></a>SQL Server 技术
 
 |||
@@ -76,11 +97,22 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 是用于主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 基于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 生成的解决方案可帮助确保报表和分析均基于适当的信息。 使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您可以为主数据创建中央存储库，并随着主数据随时间变化而维护一个可审核的安全对象记录。|
 ::: moniker-end
 
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
 ## <a name="migrate-and-move-data"></a>迁移和移动数据
 
 - [使用 SQL Server 导入和导出向导导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
-- [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)
 - [将 SQL Server 数据库迁移至 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)
+::: moniker-end
+
+::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+## <a name="migrate-and-move-data"></a>迁移和移动数据
+
+- [使用 SQL Server 导入和导出向导导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+- [将数据迁移到 Linux 上的 SQL Server](../linux/sql-server-linux-migrate-overview.md)
+- [将 SQL Server 数据库迁移至 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)
+::: moniker-end
 
 ## <a name="update-your-version-of-sql-server"></a>更新 SQL Server 的版本
 

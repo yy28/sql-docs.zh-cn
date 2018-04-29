@@ -1,32 +1,32 @@
 ---
-title: "数据事件探查任务编辑器（“配置文件请求”页）| Microsoft Docs"
-ms.custom: 
+title: 数据事件探查任务编辑器（“配置文件请求”页）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e851690a9961916c5aa73ae94338a168fb809e7c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>数据事件探查任务编辑器（“配置文件请求”页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页，选择和配置需要计算的配置文件。 在单个数据事件探查任务中，可以为多列或多个表或视图中的列组合计算多个配置文件。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 |**候选键配置文件请求**|计算候选键项配置文件。<br /><br /> 此配置文件报告某个列或列集是选定表的键还是近似键。 此配置文件还可以帮助您识别数据中的问题，如可能的键列中的重复值。|  
 |**列长度分布配置文件请求**|计算列长度分布配置文件。<br /><br /> 列长度分布配置文件报告选定列中字符串值的所有不同长度以及每个长度所表示的表中的行的百分比。 此配置文件可以帮助您识别数据中的问题，例如值无效。 例如，在对以两个字符表示的美国州代码列进行事件探查，发现存在超过两个字符的值。|  
 |**列 Null 比率配置文件请求**|列 Null 比率配置文件。<br /><br /> 列 Null 比率配置文件报告选定列中 null 值的百分比。 此配置文件可以帮助您识别数据中的问题，例如，列中 null 值的比率以外偏高。 例如，您对邮政编码列进行事件探查，却发现缺失的邮政编码所占的比例超出允许的范围。|  
-|**列模式配置文件请求**|计算列模式配置文件。<br /><br /> 列模式配置文件报告涵盖字符串列中值的指定百分比的一组正则表达式。 此配置文件可以帮助您识别数据中的问题，如无效字符串。 它还可以建议可用于以后验证新值的正则表达式。 例如，邮政编码列的模式配置文件可能会产生正则表达式：\d{5}-\d{4}、\d{5}、和 \d{9}。 如果看到其他正则表达式，则数据可能包含无效或格式不正确的值。|  
+|**列模式配置文件请求**|计算列模式配置文件。<br /><br /> 列模式配置文件报告涵盖字符串列中值的指定百分比的一组正则表达式。 此配置文件可以帮助您识别数据中的问题，如无效字符串。 它还可以建议可用于以后验证新值的正则表达式。 例如，邮政编码列的模式配置文件可能会产生正则表达式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他正则表达式，则数据可能包含无效或格式不正确的值。|  
 |**列统计信息配置文件请求**|选择此选项可使用选定表或视图中所有适用列的默认设置来计算列统计信息配置文件。<br /><br /> 列统计信息配置文件报告的统计信息包括：例如，数值列的最小值、最大值、平均值和标准偏差以及 **datetime** 列的最小值和最大值。 此配置文件可以帮助您识别数据中的问题，如无效值。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。|  
 |**列值分布配置文件请求**|计算列值分布配置文件。<br /><br /> 列值分布配置文件报告选定列中所有的非重复值以及每个值所表示的表中的行的百分比。 此配置文件还可以报告其表示内容超过表中指定的行百分比的值。 此配置文件可帮助您识别数据中的问题，例如，列中非重复值的数目不正确。 例如，在对包含美国各州的列进行事件探查时发现，其中存在 50 多个非重复值。|  
 |**函数依赖关系配置文件请求**|计算函数依赖关系配置文件。<br /><br /> 函数依赖关系配置文件报告某列（依赖列）中的值依赖另一列或列集（决定列）中的值的程度。 此配置文件还可以帮助您识别数据中的问题，如无效值。 例如，您探查美国邮政编码列和美国的州列之间的依赖关系。 同一邮政编码应始终对应同一州，但配置文件却发现有违反此依赖关系的情况。|  

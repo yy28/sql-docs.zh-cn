@@ -26,11 +26,13 @@
 ## [SQL Server 2012 说明](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 说明](sql-server-2008-r2-sp2-release-notes.md)
 
+# [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [数据库引擎](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [故障转移群集](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
-# [安装](../sql-server/install/planning-a-sql-server-installation.md)
+# [安装 (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
+# [安装 (Linux)](../linux/sql-server-linux-setup.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
@@ -38,6 +40,7 @@
 # [数据迁移助手](../dma/dma-overview.md)
 # [Stretch 数据库](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 教程](tutorials-for-sql-server-2016.md)
+# [SQL Server 工具](../tools/overview-sql-tools.md)
 
 # Resources
 
