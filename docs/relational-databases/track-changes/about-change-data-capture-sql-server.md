@@ -1,36 +1,36 @@
 ---
-title: "关于变更数据捕获 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 关于变更数据捕获 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6347faf1a4de6590063f892cf44f5d58c90cdc0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-变更数据捕获可记录应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动。 这样，就可以按易于使用的关系格式提供这些更改的详细信息。 将为修改的行捕获列信息以及将更改应用于目标环境所需的元数据，并将其存储在镜像所跟踪源表的列结构的更改表中。 系统提供了一些表值函数，以便使用者可以系统地访问更改数据。  
+  变更数据捕获可记录应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动。 这样，就可以按易于使用的关系格式提供这些更改的详细信息。 将为修改的行捕获列信息以及将更改应用于目标环境所需的元数据，并将其存储在镜像所跟踪源表的列结构的更改表中。 系统提供了一些表值函数，以便使用者可以系统地访问更改数据。  
   
  此技术针对的数据使用者的一个典型示例是提取、转换和加载 (ETL) 应用程序。 ETL 应用程序以增量方式将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源表中的更改数据加载到数据仓库或数据市场。 虽然数据仓库中的源表的表示形式必须反映源表中的更改，但刷新源副本的端到端技术并不适用。 相反，您需要一种具有特定结构的可靠更改数据流，以便使用者可以将其应用于不同的目标数据表示形式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 变更数据捕获就提供了这一技术。  
   
@@ -113,7 +113,33 @@ ms.lasthandoff: 02/15/2018
  两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业从设计上都具有足够高的灵活性和可配置性，可以满足变更数据捕获环境的基本需求。 不过，在这两种情况下，系统都已公开了提供核心功能的基础存储过程，因而可以进行进一步的自定义。  
   
  数据库引擎服务或 SQL Server 代理服务在 NETWORK SERVICE 帐户下运行时，变更数据捕获无法正常工作。 这可能导致错误 22832。  
-  
+ 
+## <a name="working-with-database-and-table-collation-differences"></a>使用数据库和表排序规则的差异
+
+请务必了解在数据库与为变更数据捕获而配置的表的列之间具有不同的排序规则。 CDC 使用临时存储来填充副表。 如果表的 CHAR 或 VARCHAR 列的排序规则与数据库排序规则不同，并且这些列存储了非 ASCII 字符（例如双字节 DBCS 字符），则 CDC 可能无法将更改后的数据与基表中的数据保持一致。 这是因为临时存储变量不能包含与之关联的排序规则。
+
+请考虑以下方法之一，确保变更数据捕获与基表保持一致：
+
+- 将 NCHAR 或 NVARCHAR 数据类型用于包含非 ASCII 数据的列。
+
+- 或者，将相同的排序规则用于列和数据库。
+
+例如，如果有使用 SQL_Latin1_General_CP1_CI_AS 排序规则的数据库，请考虑下表：
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
+
+CDC 可能无法为列 C2 捕获二进制数据，因为它的排序规则不同 (Chinese_PRC_CI_AI)。 使用 NVARCHAR 可避免此问题：
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+```
+
 ## <a name="see-also"></a>另请参阅  
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [启用和禁用变更数据捕获 (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

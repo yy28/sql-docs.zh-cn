@@ -1,16 +1,16 @@
 ---
-title: "char 和 varchar (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: char 和 varchar (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - varchar
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - variable-length data types [SQL Server]
 - varchar data type
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c383e3b3ff5b79604454f80443c9042633797bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2147de81da2779ecec2369e59a4a67db49e8dc0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 这些数据类型可以是固定长度，也可以是可变长度。  
   
 ## <a name="arguments"></a>参数  
-**char** [ ( *n* ) ] 固定长度，非 Unicode 字符串数据。 n 用于定义字符串长度，并且它必须为 1 到 8,000 之间的值。 存储大小为 n 字节。 char 的 ISO 同义词是 character。
+char [ ( n ) ] 固定长度，非 Unicode 字符串数据。 n 用于定义字符串长度，并且它必须为 1 到 8,000 之间的值。 存储大小为 n 字节。 char 的 ISO 同义词是 character。
   
-**varchar** [ ( *n* | **max** ) ] 可变长度，非 Unicode 字符串数据。 n 用于定义字符串长度，并且它可以为 1 到 8,000 之间的值。 max 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小为所输入数据的实际长度 + 2 个字节。 varchar 的 ISO 同义词是 charvarying 或 charactervarying。
+varchar [ ( n | max ) ] 可变长度，非 Unicode 字符串数据。 n 用于定义字符串长度，并且它可以为 1 到 8,000 之间的值。 max 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小为所输入数据的实际长度 + 2 个字节。 varchar 的 ISO 同义词是 charvarying 或 charactervarying。
   
 ## <a name="remarks"></a>Remarks  
 如果没有在数据定义或变量声明语句中指定 n，则默认长度为 1。 如果在使用 CAST 和 CONVERT 函数时未指定 n，则默认长度为 30。

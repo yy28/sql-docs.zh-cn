@@ -1,35 +1,36 @@
 ---
-title: "“创建新策略”或“打开策略”对话框，“常规”页 | Microsoft Docs"
-ms.custom: 
+title: “创建新策略”或“打开策略”对话框，“常规”页 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.policy.f1
 - sql13.swb.dmf.policy.filter.f1
 - sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 028b2e39f916f29a4332f9a04b2d2af6fbcf2304
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 84ff9f5a11ca06ef5a8baf2b33be7b1a9c79bad4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>“创建新策略”或“打开策略”对话框，“常规”页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此对话框可创建新的基于策略的管理策略，或者修改现有策略。 可以将 **“针对目标”** 和 **“服务器限制”** 区域作为筛选器，将策略限制为所有可能的目标的子集。 对于要用作目标筛选器的条件，必须在物理方面中对其进行定义，并且不能包含函数和 LIKE 运算符。 在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此对话框可创建新的基于策略的管理策略，或者修改现有策略。 可以将 **“针对目标”** 和 **“服务器限制”** 区域作为筛选器，将策略限制为所有可能的目标的子集。 对于要用作目标筛选器的条件，必须在物理方面中对其进行定义，并且不能包含函数和 LIKE 运算符。 在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="options"></a>“常规”  
  **名称**  

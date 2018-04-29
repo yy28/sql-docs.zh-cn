@@ -1,16 +1,16 @@
 ---
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EVENT_NOTIFICATION_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2528104adb090ceb67476708cd8470d247e35a3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  在删除事件通知前，会话一直保持打开状态。 某些错误可能导致会话提前关闭。 显式结束部分或全部会话可能导致目标服务无法接收更多消息。  
   
- { 'broker_instance_specifier' | 'current database' }  
+ { 'broker_instance_specifier' | 'current database' }****  
  指定解析 broker_service 所依据的 Service Broker 实例。 特定 Service Broker 的值可通过查询 sys.databases 目录视图的 service_broker_guid 列来获取。 使用 'current database' 在当前数据库中指定 Service Broker 实例。 'current database' 是不区分大小写的文字字符串。  
   
 > [!NOTE]  
@@ -137,7 +137,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  在下面的示例 A 和 B 中，`TO SERVICE 'NotifyService'` 子句中的 GUID ('8140a771-3c4b-4479-8ac0-81008ab17984') 特定于设置相应示例的计算机。 对于该实例，它是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 GUID。  
 >   
->  若要复制和运行这些示例，需要将此 GUID 替换为您的计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 GUID。 如上面的“参数”部分所述，可以通过查询 sys.databases 目录视图的 service_broker_guid 列获取 'broker_instance_specifier'。  
+>  若要复制和运行这些示例，需要将此 GUID 替换为您的计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 GUID。 如上面的“参数”部分所述，可以通过查询 sys.databases 目录视图的 service_broker_guid 列获取 'broker_instance_specifier'****。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. 创建服务器范围的事件通知  
  以下示例创建使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 设置目标服务时所需的对象。 该目标服务引用专用于事件通知的启动服务的消息类型和约定。 然后对该目标服务创建一个事件通知，只要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例发生 `Object_Created` 跟踪事件，便会发送一个通知。  

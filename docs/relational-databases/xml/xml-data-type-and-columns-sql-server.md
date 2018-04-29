@@ -1,32 +1,32 @@
 ---
-title: "XML 数据类型和列 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: XML 数据类型和列 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4fa1ea2ba7eb9742d4596a1ce403a42038d2d842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-本主题讨论 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的优势和不足，并帮助您选择如何存储 XML 数据。  
+  本主题讨论 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的优势和不足，并帮助您选择如何存储 XML 数据。  
   
 ## <a name="relational-or-xml-data-model"></a>关系或 XML 数据模型  
  如果您的数据已通过已知架构高度结构化，则关系模型可能最适合用于数据存储。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了您所需的必要功能和工具。 另一方面，如果结构是半结构化或非结构化的或者未知的，则必须考虑对这类数据进行建模。  
@@ -67,9 +67,9 @@ ms.lasthandoff: 02/12/2018
   
 -   本机存储，数据类型为 **xml**   
   
-     数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关 InfoSet 的详细信息，请访问 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
+     数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关信息集的详细信息，请访问 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
   
-     对于类型化的 **xml** 数据类型 - 绑定到 XML 架构的 **xml** 数据类型，后架构验证信息集 (PSVI) 将类型信息添加到信息集并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871)上的 W3C XML 架构规范。  
+     对于类型化的 **xml** 数据类型 - 绑定到 XML 架构的 **xml** 数据类型，后架构验证信息集 (PSVI) 将类型信息添加到信息集并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅位于 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) 的 W3C XML 架构规范。  
   
 -   在 XML 和关系存储之间映射  
   

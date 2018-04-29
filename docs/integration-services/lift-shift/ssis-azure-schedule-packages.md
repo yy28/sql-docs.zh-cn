@@ -1,30 +1,31 @@
 ---
-title: "计划安排 Azure 上的 SSIS 包执行 | Microsoft Docs"
-ms.date: 01/16/2018
+title: 计划安排 Azure 上的 SSIS 包执行 | Microsoft Docs
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 94d0bb3462fe2dac81194e881521299f2b8c6e38
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>计划安排 Azure 上的 SSIS 包执行
 可以通过选择以下计划安排选项之一，计划安排存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的包的执行。
 -   [SQL Server 代理](#agent)
 -   [SQL 数据库弹性作业](#elastic)
--   [Azure 数据工厂 SQL Server 存储过程活动](#sproc)
+-   [Azure 数据工厂执行 SSIS 包活动](#activities)
+-   [Azure 数据工厂 SQL Server 存储过程活动](#activities)
 
 ## <a name="agent"></a> 使用 SQL Server 代理计划安排一个包
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> 使用 Azure 数据工厂 SQL Server 存储过程活动计划安排一个包
+## <a name="activities"></a> 使用 Azure 数据工厂安排包
 
-要了解如何使用 Azure 数据工厂存储过程活动来安排 SSIS 包，请参阅下列文章：
+要了解如何使用 Azure 数据工厂活动来安排 SSIS 包，请参阅下列文章：
 
--   对于数据工厂版本 2：[Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)（在 Azure 数据工厂中使用存储过程活动调用 SSIS 包）
+-   对于数据工厂版本 2：[在 Azure 数据工厂中使用 SSIS 活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   对于数据工厂版本 1：[Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)（在 Azure 数据工厂中使用存储过程活动调用 SSIS 包）
+-   对于数据工厂版本 2：[在 Azure 数据工厂中使用存储过程活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   对于数据工厂版本 1：[在 Azure 数据工厂中使用存储过程活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>后续步骤
 有关 SQL Server 代理的详细信息，请参阅 [包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。

@@ -1,16 +1,16 @@
 ---
 title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c393479727eae943a512b0e2953028a90a3dd123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>参数  
 Cert_ID  
-证书的 ID。 cert_ID 是 int。
+int 数据类型的证书 ID 值。
   
 Expiry_Date  
-证书的失效日期。
+证书过期日期。
   
 Start_Date  
 证书开始生效的日期。
@@ -67,27 +67,27 @@ Cert_Serial_Number
 证书序列号。
   
 *主题*  
-证书的主题。
+证书主题。
   
  SID  
-证书的 SID。 这也是映射到该证书的所有登录或用户的 SID。
+证书 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
 String_SID  
 字符串形式的证书的 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
 ## <a name="return-types"></a>返回类型
-属性规范必须以单引号 (') 括起。
+必须以单引号括起属性规范。
   
-返回类型取决于在函数调用中指定的属性。 所有的返回值都包装在 sql_variant 返回类型中。
+返回类型取决于在函数调用中指定的属性。 返回类型 sql_variant 包装所有返回值。
 -   Expiry_Date 和 Start_Date 返回 datetime。  
--   Cert_Serial_NumberIssuer_Name、Subject 和 String_SID 返回 nvarchar。  
+-   Cert_Serial_Number、Issuer_Name、String_SID 和 Subject 全部都返回 nvarchar。  
 -   SID 返回 varbinary。  
   
 ## <a name="remarks"></a>Remarks  
-可在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中查阅证书的有关信息。
+请参阅 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中的证书信息。
   
 ## <a name="permissions"></a>权限  
-需要对证书具有某些权限，并且未拒绝向调用方授予该证书的 VIEW DEFINITION 权限。
+需要对证书具有相应的权限，并且调用方对证书的 VIEW 权限没有被拒绝。 请参阅 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) 和 [GRANT CERTIFICATE PERMISSIONS (Transact-SQL)](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)，获取有关证书权限的详细信息。
   
 ## <a name="examples"></a>示例  
 以下示例返回证书主题。
@@ -96,7 +96,7 @@ String_SID
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

@@ -1,16 +1,16 @@
 ---
-title: "REVOKE 数据库作用域凭据 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 数据库作用域凭据 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - REVOKE DATABASE SCOPED CREDENTIAL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - REVOKE statements, database scoped credentials
 - revoking permissions [SQL Server], database scoped credentials
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-caps.latest.revision: 
+caps.latest.revision: 2
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 074fe713de6116e2ba07ee9c5fedf7e34789cf4b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 538d3ec0a0ff403bb0647b9b4a1fb6c57307ea23
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 数据库作用域凭据 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -57,13 +58,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- *permission*  
+ permission  
  指定可对数据库作用域凭据撤消的权限。 如下所列。  
   
  ON CERTIFICATE ::credential_name  
  指定要对其撤消权限的数据库作用域凭据。 需要使用作用域限定符“::”。  
   
- *database_principal*  
+ database_principal  
  指定要从中撤消权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  

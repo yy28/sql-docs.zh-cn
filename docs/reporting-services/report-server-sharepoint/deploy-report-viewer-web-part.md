@@ -1,25 +1,25 @@
 ---
-title: "在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件 | Microsoft Docs"
-ms.custom: 
+title: 在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df39b0b38363f7990609214abddeda8b5b6e54a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -33,7 +33,11 @@ ms.lasthandoff: 01/09/2018
 
 ## <a name="requirements"></a>要求
 
-**支持的 SharePoint Server 版本：**  
+> [!IMPORTANT]
+> 如果已配置 Reporting Services SharePoint 集成模式，则目前无法安装此 Web 部件。
+>
+
+**支持的 SharePoint Server 版本：**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -148,6 +152,26 @@ Web 部件支持以下语言：
 * 俄语 (ru)
 * 中文（简体 - zh-HANS 和 zh-CHS）
 * 中文（繁体 - zh-HANT 和 zh-CHT）
+
+## <a name="troubleshoot"></a>故障排除
+
+* 如果已配置 SharePoint 集成模式，则卸载 SSRS 时出错：
+
+    Install-SPRSService：[A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService 无法强制转换为 [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService。 A 类型来自“C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll”位置处上下文“Default”中的“Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91”。 B 类型来自“C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll”位置处上下文“Default”中的“Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91”。
+    
+    解决方案：
+    1. 删除报表查看器 Web 部件
+    2. 卸载 SSRS
+    3. 重新安装报表查看器 Web 部件
+
+* 如果已配置 SharePoint 集成模式，则尝试升级 SharePoint 时出错：
+
+    无法加载文件或程序集“Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91”或其依赖项之一。 系统找不到指定的文件。 00000000-0000-0000-0000-000000000000
+    
+    解决方案：
+    1. 删除报表查看器 Web 部件
+    2. 卸载 SSRS
+    3. 重新安装报表查看器 Web 部件
 
 ## <a name="next-steps"></a>后续步骤
 

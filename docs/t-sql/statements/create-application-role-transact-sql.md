@@ -1,16 +1,16 @@
 ---
 title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLICATION_ROLE_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CREATE APPLICATION ROLE statement
 - application roles [SQL Server], creating
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 167b3b66439d352cac9632a9b9a2490c1ebaa95b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 07fe98141ba623936fdc14f0063134d541fd3119
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ CREATE APPLICATION ROLE application_role_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *application_role_name*  
+ application_role_name  
  指定应用程序角色的名称。 该名称一定不能被用于引用数据库中任何主体。  
   
- PASSWORD ='password'  
+ PASSWORD ='password'****  
  指定数据库用户将用于激活应用程序角色的密码。 应始终使用强密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
   
  DEFAULT_SCHEMA =schema_name  

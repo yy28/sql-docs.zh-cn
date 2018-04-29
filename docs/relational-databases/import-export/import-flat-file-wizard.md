@@ -1,16 +1,16 @@
 ---
-title: "将平面文件导入 SQL |Microsoft 文档"
-ms.custom: 
+title: 将平面文件导入 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.importflatfile.f1
@@ -18,11 +18,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 此功能仅在 SQL Server Management Studio (SSMS) v17.3 或更高版本中可用。 请确保使用最新版本。 可以在[此处](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
  
 ## <a id="started"></a>入门
@@ -51,10 +52,10 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 ![向导菜单](media/import-flat-file-wizard/importffmenu.png)
 
-要了解有关向导不同功能的详细信息，请参考以下教程。
+要了解有关向导不同功能的详细信息，请参考以下教程：
 
 ## <a name="tutorial"></a>教程
-为了实现本教程的目的，请随意使用自己的平面文件。 另外，本教程会使用 Excel 生成的以下 CSV，你可以随意复制。 如果使用此 CSV，请将其标题命名为“example.csv”，确保在容易找到的位置（如桌面）将其另存为 csv。
+为了实现本教程的目的，请随意使用自己的平面文件。 另外，本教程会使用 Excel 生成的以下 CSV，你可以随意复制。 如果使用此 CSV，则将其标题命名为“example.csv”，确保在容易找到的位置（如桌面）将其另存为 csv。
 
 ![向导 Excel](media/import-flat-file-wizard/importffexample.png)
 
@@ -94,10 +95,15 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 ![向导结果](media/import-flat-file-wizard/importffresults.png)
 
+## <a name="reporting-import-flat-file-failures"></a>报告“导入平面文件”失败
+如果遇到任何故障，请向 sqltoolsprosesupport@microsoft.com 发送电子邮件
+
+有关详细信息，[请参阅这些说明](reporting-import-flat-file-failures.md)。
+
 ## <a name="learn-more"></a>了解详细信息
 
 了解有关向导的详细信息。
-
+ 
 - **了解有关导入其他数据源的详细信息。** 如果要导入除平面文件外的其他内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 - **了解有关连接平面文件数据源的详细信息。** 如果想要寻找有关连接平面文件数据源的详细信息，请参阅[连接到平面文件数据源](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)。
 - **了解有关 PROSE 的详细信息。** 如果想要寻找向导使用的智能框架的概述，请参阅 [PROSE SDK](https://microsoft.github.io/prose/)。

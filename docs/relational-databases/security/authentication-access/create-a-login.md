@@ -2,7 +2,7 @@
 title: 创建登录名 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03a4f993deace5c4714e17667b00eee99b4811a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **地图**  
  允许登录名访问下面列出的数据库。  
   
- **数据库**  
+ **“数据库”**  
  列出服务器上可用的数据库。  
   
  **用户**  
@@ -160,7 +161,7 @@ ms.lasthandoff: 04/10/2018
  **数据库角色成员身份：***database_name*  
  选择用户在指定数据库中的角色。 在每个数据库中，所有用户都是 **public** 角色的成员，并且不能被删除。 有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
-### <a name="securables"></a>Securables  
+### <a name="securables"></a>安全对象  
  **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。 此页还将提供以下选项：  
   
  **上部网格**  
@@ -170,9 +171,9 @@ ms.lasthandoff: 04/10/2018
   
 1.  单击 **“搜索”**。  
   
-2.  在**添加对象**对话框中，选择以下选项之一：**特定对象...**，**类型的所有对象...**，或 **服务器 * * * server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在“添加对象”对话框中，选择以下选项之一：“特定对象…”、“特定类型的所有对象…”或“服务器 server_name”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注意：**选择 **服务器 * * * server_name*自动用该服务器的安全对象的所有填充上部网格。  
+    > 注意：如果选择“服务器 server_name”，将使用该服务器的所有安全对象自动填充上部网格。  
   
 3.  如果您选择 **“特定对象…”**：  
   
@@ -239,7 +240,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Create a login for SQL Server by specifying a server name and a Windows domain account name.  
@@ -255,7 +256,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Creates the user "shcooper" for SQL Server using the security credential "RestrictedFaculty"   

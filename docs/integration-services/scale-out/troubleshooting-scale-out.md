@@ -1,28 +1,28 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out 故障排除 | Microsoft Docs"
+title: SQL Server Integration Services (SSIS) Scale Out 故障排除 | Microsoft Docs
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a86f7e738b6e80ef81beda22a0c1f74349093ae7
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: ac1235a122a37593eea61a7c7cfd918e46143eb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
 
@@ -142,6 +142,8 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     值类型：REG_DWORD 
 
     值数据：0 (False)
+
+4.  如果不能在步骤 2 中清除所有非自签名证书。 在步骤 3 中将注册表项的值设为 2。
 
 ## <a name="http-request-error"></a>HTTP 请求错误
 

@@ -1,16 +1,16 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,16 +40,17 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e9de41bb284045477426e6044f2449f62f1d58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -189,10 +190,10 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  property_name | field_name  
  用户定义类型的公共属性或公共数据成员。  
   
- method_name ( argument [ ,...n ] )  
+ method_name ( argument [ ,... n] )  
  带一个或多个参数的 udt_column_name 的非静态公共赋值函数方法。  
   
- .WRITE (expression,@Offset,@Length)  
+ .WRITE (expression,@Offset,@Length)****  
  指定要修改的 column_name 值的一部分。 expression 替换从 column_name 的 @Offset 开始的 @Length 单位。 使用该子句只能指定 varchar(max)、nvarchar(max) 或 varbinary(max) 的列。 column_name 不能为 NULL，也不能由表名或表别名限定。  
   
  expression 是复制到 column_name 的值。 expression 的计算结果必须为 column_name 类型或者 expression 必须能够隐式强制转换为此类型。 如果 expression 设置为 NULL，则忽略 @Length，并将 column_name 中的值按指定的 @Offset 截断。  
@@ -336,7 +337,7 @@ GO
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 ntext、text 和 image 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大值数据类型  
- 使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新* 。 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字符，而完整更新则删除或修改该列中的所有数据。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新* **。 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字符，而完整更新则删除或修改该列中的所有数据。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  当 UPDATE 语句导致下列任一操作时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]便会将部分更新转换为完整更新：  
 -   更改分区视图或表的键列。  

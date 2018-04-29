@@ -1,16 +1,16 @@
 ---
-title: "唯一粒子归属约束 | Microsoft Docs"
-ms.custom: 
+title: 唯一粒子归属约束 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - unique particle attribution
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - UPA constraint rule
 - unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e19f33b48fda8ef1a476ff78fac176722b7af9d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9e2540252ab1591b53c4dce9608f2ccddb7f8f02
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-在 XSD 中，复杂内容模型受唯一粒子归属 (UPA) 约束规则的约束。 此规则要求实例文档中的每个元素明确地完全对应于其父级的内容模型中的一个 `<xsd:element>` 或 `<xsd:any>` 粒子。 任何包含具有可能不明确的内容模型的类型的架构都将被拒绝。  
+  在 XSD 中，复杂内容模型受唯一粒子归属 (UPA) 约束规则的约束。 此规则要求实例文档中的每个元素明确地完全对应于其父级的内容模型中的一个 `<xsd:element>` 或 `<xsd:any>` 粒子。 任何包含具有可能不明确的内容模型的类型的架构都将被拒绝。  
   
  导致不明确的最常见原因是具有可变出现范围（例如 minOccurs < maxOccurs）的 `<xsd:any>` 通配符字符和粒子。 例如，以下内容模型是不明确的，因为 <`e1`> 元素既可以与 `<xsd:element>` 元素匹配，也可以与 `<xsd:any>` 元素匹配。  
   

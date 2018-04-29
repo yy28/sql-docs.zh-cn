@@ -1,36 +1,38 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out 对高可用性的支持 | Microsoft Docs"
+title: SQL Server Integration Services (SSIS) Scale Out 对高可用性的支持 | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
 在 SSIS Scale Out 中，通过使用多个 Scale Out Worker 来执行包，可提供 Scale Out Worker 端的高可用性。
 
-Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 和 Windows 故障转移群集实现。在此解决方案中，Scale Out Master 的多个实例托管在 Windows 故障转移群集内。 主节点上的 Scale Out Master 服务或 SSISDB 关闭时，辅助节点上的该服务或 SSISDB 将继续接受用户请求并与 Scale Out Worker 通信。 
+Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 和 Windows 故障转移群集实现。 在此解决方案中，Scale Out Master 的多个实例托管在 Windows 故障转移群集中。 主节点上的 Scale Out Master 服务或 SSISDB 关闭时，辅助节点上的该服务或 SSISDB 将继续接受用户请求并与 Scale Out Worker 通信。
 
-要设置 Scale Out Master 端的高可用性，请执行以下步骤：
+或者，可使用 SQL Server 故障转移群集实例在 Scale Out Master 端实现 高可用性。 请参阅 [Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持](scale-out-failover-cluster-instance.md)。
+
+要使用针对 SSIS 目录的 Always On 设置 Scale Out Master 端的高可用性，请执行以下步骤：
 
 ## <a name="1-prerequisites"></a>1.必备条件
 设置 Windows 故障转移群集。 有关说明，请参阅博客文章[安装适用于 Windows Server 2012 的故障转移群集功能和工具](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)。 在所有群集节点上安装功能和工具。

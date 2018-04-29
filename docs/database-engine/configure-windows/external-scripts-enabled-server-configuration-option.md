@@ -1,7 +1,7 @@
 ---
 title: 启用了外部脚本的服务器配置选项 | Microsoft Docs
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -23,19 +23,19 @@ author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: c4459e9c4308e4c8848a2ce0d5178555ad31e0fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>启用了外部脚本的服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+适用范围：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 使用 **external scripts enabled** 选项启用包含某些远程语言扩展的脚本执行。 此属性默认处于禁用状态。 安装“高级分析服务”后，安装程序可以根据需要将此属性设置为 true。
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 在使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 过程执行外部脚本之前，必须启用“已启用外部脚本”选项。 使用 sp_execute_external_script 执行以受支持的语言（如 R 或 Python）编写的脚本。 
 
@@ -68,7 +68,7 @@ RECONFIGURE WITH OVERRIDE;
 
 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 
-[RECONFIGURE & #40;Transact SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 
 [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 

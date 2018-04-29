@@ -1,8 +1,8 @@
 ---
 title: 将 SQL Server Integration Services 工作负荷直接迁移到云 | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: lift-shift
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 10870216c2abc826a72bb16715701a794e651610
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
 现在，可将 SQL Server Integration Services (SSIS) 包和工作负荷移到 Azure 云。
@@ -85,7 +85,7 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 
 如果要设置 SQL 数据库实例来承载 SSISDB，还需安装用于 SSIS 的 Azure 功能包和 Access 可再发行组件。 除提供与内置组件支持的数据源的连接外，这些组件还提供与 Excel 和 Access 文件和各种 Azure 数据源的连接。
 
-现在暂时无法安装或使用用于 SSIS 的“第三方组件”（包括 Microsoft 提供的第三方组件，例如 Attunity 提供的 Oracle 和 Teradata 组件以及 SAP BI 组件）。
+还可以安装其他组件。 有关详细信息，请参阅 [Azure-SSIS 集成运行时的自定义安装](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)。
 
 ## <a name="deploy-and-run-packages"></a>部署和运行包
 在 Azure 上将项目部署到 SSISDB 时，需要使用“项目部署模型”，而不是包部署模型。

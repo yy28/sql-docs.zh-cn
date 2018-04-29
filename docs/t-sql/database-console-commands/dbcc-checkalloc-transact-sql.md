@@ -1,16 +1,16 @@
 ---
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d4c23442a4857d2c4a6f4c4ea75042cb63e3dadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ DBCC CHECKALLOC 命令完成后，会将一条消息写入 [!INCLUDE[ssNoVersion
 |5|出现终止了 DBCC 命令的未知错误。|  
   
 ## <a name="error-reporting"></a>错误报告  
-一旦 DBCC CHECKALLOC 检测到损坏错误，就将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
+只要 DBCC CHECKALLOC 检测到损坏错误，就将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
 转储文件包含 DBCC CHECKALLOC 命令的结果以及其他诊断输出数据。 该文件拥有任意访问控制列表 (DACL)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员有权进行访问。 默认情况下，sysadmin 角色包含 Windows BUILTIN\Administrators 组和本地管理员组的所有成员。 如果数据收集进程失败，DBCC 命令不会失败。
   
 ## <a name="resolving-errors"></a>纠正错误  

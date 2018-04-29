@@ -1,8 +1,8 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: ''
+caps.latest.revision: 153
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7569b89a9ceffd99e15d11a5ef06c880411a479
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: d6ac507a908d77618aa4171bc222e60cbd051ed0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,10 @@ BULK INSERT
   
  CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' }****  
  指定该数据文件中数据的代码页。 仅当数据含有字符值大于 **127** 或小于 **32** 的 **char**、**varchar** 或 **text** 列时，CODEPAGE 才适用。  
-  
+
+> [!IMPORTANT]
+> CODEPAGE 不是 Linux 上的支持项。
+
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议在[格式化文件](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中为每个列指定一个排序规则名称。  
   
@@ -136,7 +139,7 @@ BULK INSERT
 |ACP|数据类型为 **char**、**varchar** 或 **text** 的列从 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
 |OEM（默认值）|数据类型为 **char**、**varchar** 或 **text** 的列从系统 OEM 代码页转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
 |RAW|不进行从一个代码页到另一个代码页的转换；这是最快的选项。|  
-|*code_page*|特定的代码页码，例如 850。<br /><br /> **\*\*重要提示\*\***低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|  
+|*code_page*|特定的代码页码，例如 850。<br /><br /> **\*\*重要提示\*\*** 低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|  
   
  DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
  指定 BULK INSERT 使用指定的数据文件类型值执行导入操作。  

@@ -1,16 +1,16 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 
+caps.latest.revision: 30
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 146fd91bfab0ceb5d9b289ef9be6c7446c77f073
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 352bdf39861d8874f1e7b535c2ef954e65d48339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -182,6 +183,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  LOCATION =  'folder_or_filepath'  
  为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始；根文件夹是外部数据源中指定的数据位置。  
+
+
+在 SQL Server 中，如果路径和文件夹不存在，CREATE EXTERNAL TABLE 语句会进行创建。 然后，可使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 有关详细信息，请参阅 [Polybase 查询](/sql/relational-databases/polybase/polybase-queries)。 
+
+在 SQL 数据仓库和分析平台系统中，如果路径和文件夹不存在，[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 语句会进行创建。 在这两个产品，CREATE EXTERNAL TABLE 不会创建路径和文件夹。
+
   
  如果将 LOCATION 指定为一个文件夹，则从外部表中进行选择的 PolyBase 查询会从该文件夹及其所有子文件夹中检索文件。 正如 Hadoop 一样，PolyBase 不返回隐藏文件夹。 它也不返回文件名以下划线 (_) 或句点 (.) 开头的文件。  
   

@@ -1,16 +1,16 @@
 ---
-title: "创建服务器角色 | Microsoft Docs"
-ms.custom: 
+title: 创建服务器角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -19,19 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca312c8c2d5d83b7e8fb233f9d9dfac3c37fcaab
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8e74d591eff94f3a4f4fb9b58944573d976e4342
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
-[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中创建新的服务器角色。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建新的服务器角色。  
   
  **本主题内容**  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建新的服务器角色，请使用：**  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
   
 -   要求具有 CREATE SERVER ROLE 权限，或者 sysadmin 固定服务器角色中的成员身份。  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     --Creates the server role auditors that is owned the securityadmin fixed server role.  

@@ -1,16 +1,16 @@
 ---
-title: "REVOKE 证书权限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 证书权限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - permissions [SQL Server], certificates
 - REVOKE statement, certificates
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2901626ba62de943fcf0f8d6772448e32d9924d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b1854a2c3a02fd90e179e8879bf3c3d2616d3f17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 证书权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- *permission*  
+ permission  
  指定可以对证书撤消的权限。 如下所列。  
   
  ON CERTIFICATE ::certificate_name  
  指定要撤消的权限所针对的证书。 需要使用作用域限定符“::”。  
   
- *database_principal*  
+ database_principal  
  指定要从中撤消权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  

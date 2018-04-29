@@ -15,16 +15,17 @@ ms.custom: ''
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 04/10/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: fd5186e4a069b76108ad0c8cd4e91497e618a195
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>用于 SQL 数据库和数据仓库的透明数据加密
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 透明数据加密有助于保护 Azure SQL 数据库和 Azure 数据仓库免受恶意活动的威胁。 它对数据库、关联备份和静态事务日志文件执行实时加密和解密，且无需更改应用程序。
 
@@ -44,9 +45,9 @@ Microsoft 也可无缝移动和管理异地复制和还原所需的密钥。
 > 默认情况下，使用服务托管的透明数据加密对所有新创建的 SQL 数据库进行加密。 默认情况下，不加密 2017 年 5 月之前的现有数据库和通过还原、异地复制和数据库副本创建的数据库。
 >
 
-## <a name="bring-your-own-key-preview"></a>自带密钥（预览）
+## <a name="bring-your-own-key"></a>自带密钥
 
-借助自带密钥（处于预览状态）支持，用户可以控制其透明数据加密密钥，并能控制访问人员和访问时间。 Key Vault 是基于Azure 云的外部密钥管理系统，是第一个透明数据加密将其与自带密钥支持集成的密钥管理服务。 借助自带密钥支持，数据库加密密钥可受存储在 Key Vault 中的非对称密钥的保护。 非对称密钥始终位于 Key Vault 中。 服务器拥有密钥保管库权限后，服务器会通过 Key Vault 向它发送基本的密钥操作请求。 在服务器级别设置非对称密钥，则该服务器下的所有数据库都会继承该密钥。
+借助自带密钥支持，用户可以控制其透明数据加密密钥，并能控制访问人员和访问时间。 Key Vault 是基于Azure 云的外部密钥管理系统，是第一个透明数据加密将其与自带密钥支持集成的密钥管理服务。 借助自带密钥支持，数据库加密密钥可受存储在 Key Vault 中的非对称密钥的保护。 非对称密钥始终位于 Key Vault 中。 服务器拥有密钥保管库权限后，服务器会通过 Key Vault 向它发送基本的密钥操作请求。 在服务器级别设置非对称密钥，则该服务器下的所有数据库都会继承该密钥。
 
 借助自带密钥支持，现在可以控制密钥轮替和密钥保管库权限等密钥管理任务。 还可以删除密钥并对所有加密密钥启用审核/报告。 Key Vault 提供中央密钥管理，并使用严密监控的硬件安全模块。 Key Vault 促进密钥和数据管理的分离，有助于符合法规遵从性。 若要了解有关 Key Vault 的详细信息，请参阅 [Key Vault 文档页](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
 

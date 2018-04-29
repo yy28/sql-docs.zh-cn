@@ -1,16 +1,16 @@
 ---
 title: ALTER VIEW (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f20a6326f33f0cd41116d3a3c20dcdfad163eea2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS select_statement
  加密 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 中包含 ALTER VIEW 语句文本的项。 WITH ENCRYPTION 可防止视图作为 SQL Server 复制的一部分进行发布。  
   
  SCHEMABINDING  
- 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能以可影响视图定义的方式来修改基表。 必须首先修改或删除视图定义本身，然后才能删除要修改的表的相关性。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)。 所有被引用对象都必须在同一个数据库内。  
+ 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能以可影响视图定义的方式来修改基表。 必须首先修改或删除视图定义本身，然后才能删除要修改的表的相关性。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)**。 所有被引用对象都必须在同一个数据库内。  
   
  不能删除参与使用 SCHEMABINDING 子句创建的视图的表或视图，除非该视图已被删除或更改，而不再具有架构绑定。 否则，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误。 另外，如果对参与具有架构绑定的视图的表执行 ALTER TABLE 语句，而这些语句又会影响视图定义，则这些语句将会失败。  
   

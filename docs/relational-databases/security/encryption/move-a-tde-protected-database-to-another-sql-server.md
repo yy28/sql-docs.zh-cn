@@ -1,34 +1,35 @@
 ---
-title: "将受 TDE 保护的数据库移到其他 SQL Server | Microsoft Docs"
-ms.custom: 
+title: 将受 TDE 保护的数据库移到其他 SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df6d9dfb912e4a425f44008a982b8c18fdc54f7c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c7cf3c269522f35f2ba64bb7e81c9910bdd95869
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
    
 ##  <a name="Restrictions"></a> 限制和局限  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认情况下，将此处创建的文件存储在 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 中。 您的文件名和位置可能会有所不同。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
   
 -   要求针对 **master** 数据库的 **CONTROL DATABASE** 权限以便创建数据库主密钥。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     -- Create a database master key and a certificate in the master database.  
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/21/2017
      **保留全文目录**  
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
-     **状态**  
+     **“状态”**  
      显示以下状态之一： **“就绪”** 或 **“未就绪”**。  
   
      **消息**  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/21/2017
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   当数据库有一个或多个活动连接时，则“状态”为“未就绪”，“消息”列将显示“*<number_of_active_connections>* 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”**断开所有活动连接。  
+    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“<number_of_active_connections> 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”**断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
@@ -196,7 +197,7 @@ ms.lasthandoff: 11/21/2017
   
 8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”**下，单击 **“添加”**。  
   
-9. 在“定位数据库文件 - *server_name*”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”。  
+9. 在“定位数据库文件 - server_name”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”。  
   
      在 **“附加数据库”** 对话框中提供了以下选项。  
   
@@ -218,10 +219,10 @@ ms.lasthandoff: 11/21/2017
      **“所有者”**  
      提供数据库可能所有者的下拉列表，您可以根据需要从其中选择其他所有者。  
   
-     **状态**  
+     **“状态”**  
      显示下表中相应的数据库状态。  
   
-    |图标|状态文本|说明|  
+    |图标|状态文本|Description|  
     |----------|-----------------|-----------------|  
     |（无图标）|（无文本）|此对象的附加操作尚未启动或者可能挂起。 这是打开该对话框时的默认值。|  
     |绿色的右向三角形|正在进行|已启动附加操作，但是该操作未完成。|  
@@ -263,7 +264,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     -- Detach the TDE protected database from the source server.   

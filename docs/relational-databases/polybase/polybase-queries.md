@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 查询 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 查询 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本文提供的查询示例使用 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 中介绍的 SQL Server 2016 功能。 使用这些示例前，还必须了解设置 PolyBase 所需的 T-SQL 语句（请参阅 [PolyBase T-SQL 对象](../../relational-databases/polybase/polybase-t-sql-objects.md)。）
+  本文提供的查询示例使用 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 中介绍的 SQL Server（从 2016 开始）功能。 使用这些示例前，还必须了解设置 PolyBase 所需的 T-SQL 语句（请参阅 [PolyBase T-SQL 对象](../../relational-databases/polybase/polybase-t-sql-objects.md)。）
   
 ## <a name="queries"></a>查询  
  对外部表运行 Transact-SQL 语句或使用 BI 工具来查询外部表。
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 将数据从 SQL Server 导出到 Hadoop 或 Azure 存储空间。 
 
-首先，将“允许 PolyBase 导出”的 `sp_configure` 值设置为 1，启用导出功能。 然后，创建一个指向目标目录的外部表。 然后，使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 
+首先，将“允许 PolyBase 导出”的 `sp_configure` 值设置为 1，启用导出功能。 然后，创建一个指向目标目录的外部表。 如果目标目录尚不存在，CREATE EXTERNAL TABLE 语句将创建一个。 然后，使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 
 
-INSERT INTO 语句创建目标目录（若无），而 SELECT 语句的结果则以指定的文件格式导出到指定位置。 外部文件被命名为 *QueryID_date_time_ID.format*，其中 *ID* 是增量标识符， *format* 是导出的数据格式。 例如，其中一个文件名可能是 QID776_20160130_182739_0.orc。
+SELECT 语句的结果将以指定文件格式导出到指定位置。 外部文件被命名为 *QueryID_date_time_ID.format*，其中 *ID* 是增量标识符， *format* 是导出的数据格式。 例如，其中一个文件名可能是 QID776_20160130_182739_0.orc。
+
 
 > [!NOTE]
 > 通过 PolyBase 将数据导出到 Hadoop 或 Azure Blob 存储时，只会导出数据，而不会导出 CREATE EXTERNAL TABLE 命令中定义的列名称（元数据）。

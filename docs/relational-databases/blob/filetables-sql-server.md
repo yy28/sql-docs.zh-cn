@@ -1,16 +1,16 @@
 ---
 title: FileTable (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], overview
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0702c1621fb3f37ef61e5fcd2df66fa9a7019cf7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 6c709286cfd5982ce003bda673d89e3fead9dce2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-FileTable 功能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件数据提供对 Windows 文件命名空间的支持以及与 Windows 应用程序的兼容性支持。 FileTable 使得应用程序可以集成其存储和数据管理组件，可对非结构化数据和元数据提供集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括全文搜索和语义搜索）。  
+  FileTable 功能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件数据提供对 Windows 文件命名空间的支持以及与 Windows 应用程序的兼容性支持。 FileTable 使得应用程序可以集成其存储和数据管理组件，可对非结构化数据和元数据提供集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括全文搜索和语义搜索）。  
   
  换言之，您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将文件和文档存储在称作 FileTable 的特别的表中，但是从 Windows 应用程序访问它们，就好像它们存储在文件系统中，而不必对您的客户端应用程序进行任何更改。  
   
@@ -139,5 +139,12 @@ FileTable 功能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中
   
  [FileTable DDL、函数、存储过程和视图](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
  列出用于支持 FileTable 功能的新增或更改的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
+
+## <a name="see-also"></a>另请参阅
+[Filestream 和 FileTable 动态管理视图 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream 和 FileTable 目录视图 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Filestream 和 FileTable 系统存储过程 (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+
+
   
   

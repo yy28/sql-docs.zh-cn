@@ -1,16 +1,16 @@
 ---
-title: "使用 WITH XMLNAMESPACES 将命名空间添加到查询 | Microsoft Docs"
-ms.custom: 
+title: 使用 WITH XMLNAMESPACES 将命名空间添加到查询 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ELEMENTS XSINIL directive
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 432e833f5cd9341a083973f8060ddbd477d386c6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5b2462cd05608551fab959e76e7bcbb9ab718aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 将命名空间添加到查询
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 只有 xml 命名空间无须在 WITH XMLNAMESPAC 中显式定义即可使用，如下列 PATH 模式查询所示。 此外，如果声明了前缀，则前缀必须绑定到命名空间 http://www.w3.org/XML/1998/namespac。 在 SELECT 子句中指定的名称将引用未使用 WITH XMLNAMESPACES 进行显式定义的 xml 命名空间前缀。  
+ 只有 xml 命名空间无须在 WITH XMLNAMESPAC 中显式定义即可使用，如下列 PATH 模式查询所示。 此外，如果声明了前缀，则前缀必须绑定到命名空间 http://www.w3.org/XML/1998/namespace。 在 SELECT 子句中指定的名称将引用未使用 WITH XMLNAMESPACES 进行显式定义的 xml 命名空间前缀。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

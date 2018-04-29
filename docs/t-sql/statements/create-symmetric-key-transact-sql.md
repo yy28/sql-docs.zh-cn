@@ -1,16 +1,16 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE SYMMETRIC KEY
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5604a0c32049d274610a600ebf1a2174c40d088
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 1bd64184c79c7a9f240450323dada3d4d413daf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ CREATE SYMMETRIC KEY key_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *Key_name*  
+ Key_name  
  指定在数据库中识别该对称密钥的唯一名称。 临时密钥的名称应当以数字符号 (#) 开头。 例如，#temporaryKey900007。 您不能创建名称以多个 # 开头的对称密钥。 您不能使用 EKM 提供程序创建临时对称密钥。  
   
  AUTHORIZATION owner_name  
@@ -88,13 +88,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- KEY_SOURCE ='pass_phrase'  
+ KEY_SOURCE ='pass_phrase'****  
  指定从中派生密钥的通行短语。  
   
- IDENTITY_VALUE ='identity_phrase'  
+ IDENTITY_VALUE ='identity_phrase'****  
  指定一个标识短语，将根据该短语生成 GUID 以标记使用临时密钥加密的数据。  
   
- PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME='key_name_in_provider'****  
  指定在可扩展密钥管理提供程序中引用的名称。  
   
 > [!NOTE]  
@@ -106,7 +106,7 @@ CREATE SYMMETRIC KEY key_name
  CREATION_DISPOSITION = OPEN_EXISTING  
  将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对称密钥映射到现有的可扩展密钥管理密钥。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，则此参数默认为 CREATE_NEW。  
   
- *certificate_name*  
+ certificate_name  
  指定将用于对对称密钥进行加密的证书的名称。 该证书必须已存在于数据库中。  
   
  ' password '  

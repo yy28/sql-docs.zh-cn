@@ -1,16 +1,16 @@
 ---
 title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DecryptByKey_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - decryption [SQL Server], symmetric keys
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1275be81fdf2a8405d0f744da962c3cf874eea2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3d3064da25a280e7fe0d2534e7b2b2040094fbc3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>参数  
- *ciphertext*  
+ ciphertext  
  已使用密钥进行加密的数据。 ciphertext 的数据类型为 varbinary。  
   
  **@ciphertext**  
@@ -66,7 +66,9 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  包含用于生成验证器的数据的变量。 必须与提供给 EncryptByKey 的值相匹配。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+ varbinary（最大大小为 8000 个字节）。
+ 
+如果用于数据加密的对称密钥未打开或 ciphertext 为 NULL，则返回 NULL。
   
 ## <a name="remarks"></a>Remarks  
  DecryptByKey 使用对称密钥。 该对称密钥必须已经在数据库中打开。 可以同时打开多个密钥。 不必只在解密密码之前才打开密钥。  

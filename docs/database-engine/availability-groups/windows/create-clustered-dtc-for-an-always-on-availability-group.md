@@ -1,30 +1,32 @@
 ---
-title: "为 AlwaysOn 可用性组创建群集 DTC | Microsoft Docs"
-ms.custom: 
+title: 为 AlwaysOn 可用性组创建群集 DTC | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c766dd57d08e1673c4fb3231a6a7ba86af26886f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何为 SQL Server AlwaysOn 可用性组完整配置群集 DTC 资源。 完整配置过程可能要长达一小时才能完成。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题介绍如何为 SQL Server AlwaysOn 可用性组完整配置群集 DTC 资源。 完整配置过程可能要长达一小时才能完成。 
 
 本演练将按照[为 SQL Server 可用性组群集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的要求，创建群集 DTC 资源和 SQL Server 可用性组。
 
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/18/2018
   - DTC IP 资源：`DTCIP1`
 
 ## <a name="1-check-operating-system"></a>1.检查操作系统
-对于受支持的分布式事务，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。  对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址： [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)。  此脚本将检查操作系统版本以及是否需要安装修补程序 3090973。  在 `SQLNODE1` 上运行以下 PowerShell 脚本。
+对于受支持的分布式事务，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。  对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)。  此脚本将检查操作系统版本以及是否需要安装修补程序 3090973。  在 `SQLNODE1` 上运行以下 PowerShell 脚本。
 
 ```powershell  
 # A few OS checks

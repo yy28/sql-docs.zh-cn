@@ -1,16 +1,16 @@
 ---
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 109f9bdd06bf27928450c89ad06dc6d93247b881
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 137f5200829916c69c2cf8fcae4c8490e48b2b6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>文本与图像函数 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ TEXTPTR ( column )
   
 |函数或语句|Description|  
 |---------------------------|-----------------|  
-|PATINDEX('%pattern%' , expression)|返回指定字符串在 text 或 ntext 列中所处的字符位置。|  
-|DATALENGTH(expression)|返回 text、ntext 和 image 列中数据的长度。|  
+|PATINDEX('%pattern%' , expression)*****|返回指定字符串在 text 或 ntext 列中所处的字符位置。|  
+|DATALENGTH(expression)****|返回 text、ntext 和 image 列中数据的长度。|  
 |SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）。|  
 |SUBSTRING(text_column, start, length)|返回由指定的 start 偏移量和 length 指定的 varchar 字符串。 字符串的长度应小于 8 KB。|  
   

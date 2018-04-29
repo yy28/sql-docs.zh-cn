@@ -1,16 +1,16 @@
 ---
 title: FETCH (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5102a72cd08af6627a8954fe12b4a696618cea1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ FETCH
  @cursor_variable_name  
  游标变量名，引用要从中进行提取操作的打开的游标。  
   
- INTO @variable_name[ ,...]n  
+ INTO @variable_name[ ,...n]  
  允许将提取操作的列数据放到局部变量中。 列表中的各个变量从左到右与游标结果集中的相应列相关联。 各变量的数据类型必须与相应的结果集列的数据类型匹配，或是结果集列数据类型所支持的隐式转换。 变量的数目必须与游标选择列表中的列数一致。  
   
 ## <a name="remarks"></a>Remarks  

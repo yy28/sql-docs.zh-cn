@@ -1,16 +1,16 @@
 ---
 title: CEILING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CEILING_TSQL
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - integers [SQL Server]
 - CEILING function [Transact-SQL]
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8859077710b51556a9c61c546b91f37795afd8d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cc2871d3cdb81cfd4f93000bab0b166a829b490e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回大于或等于指定数值表达式的最小整数。
+此函数返回大于或等于指定数值表达式的最小整数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +49,13 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>参数  
 *numeric_expression*  
-是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
+精确数值或近似数值数据类型类别的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 针对此函数，bit 数据类型无效。
   
 ## <a name="return-types"></a>返回类型
-返回与 numeric_expression 相同的类型。
+返回与 numeric_expression 相同类型的值。
   
 ## <a name="examples"></a>示例  
-以下示例显示使用 CEILING 函数的正数、负数和零值。
+此示例显示为 CEILING 函数输入的正数、负数和零值。
   
 ```sql
 SELECT CEILING($123.45), CEILING($-123.45), CEILING($0.0);  

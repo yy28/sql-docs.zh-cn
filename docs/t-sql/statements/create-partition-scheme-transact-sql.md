@@ -1,16 +1,16 @@
 ---
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: e3f3c52b3fca1326d9cc73203ff46285a2da2b76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,10 +71,10 @@ AS PARTITION partition_function_name
  ALL  
  指定所有分区都映射到在 file_group_name 中提供的文件组，或映射到主文件组（如果指定了 [PRIMARY]）。 如果指定了 ALL，则只能指定一个 file_group_name。  
   
- file_group_name[ PRIMARY ] [ ,...n] |   
+ file_group_name | [ PRIMARY ] [ ,...n]  
  指定用来持有由 partition_function_name 指定的分区的文件组的名称。 数据库中必须已存在 file_group_name。  
   
- 如果指定了 [PRIMARY]，则分区将存储于主文件组中。 如果指定了 ALL，则只能指定一个 file_group_name。 分区分配到文件组的顺序是从分区 1 开始，按文件组在 [,...n] 中列出的顺序进行分配。 在 [,...n] 中，可以多次指定同一个 file_group_name。 如果 n 不足以拥有在 partition_function_name 中指定的分区数，则 CREATE PARTITION SCHEME 将失败，并返回错误。  
+ 如果指定了 [PRIMARY]，则分区将存储于主文件组中。 如果指定了 ALL，则只能指定一个 file_group_name。 分区分配到文件组的顺序是从分区 1 开始，按文件组在 [,...n] 中列出的顺序进行分配**。在 [,...n] 中，可以多次指定同一个 file_group_name**。 如果 n 不足以拥有在 partition_function_name 中指定的分区数，则 CREATE PARTITION SCHEME 将失败，并返回错误。  
   
  如果 partition_function_name 生成的分区数少于文件组数，则第一个未分配的文件组将标记为 NEXT USED，并且出现显示命名 NEXT USED 文件组的信息。 如果指定了 ALL，则单独的 file_group_name 将为该 partition_function_name 保持它的 NEXT USED 属性。 如果在 ALTER PARTITION FUNCTION 语句中创建了一个分区，则 NEXT USED 文件组将再接收一个分区。 若要再创建一个未分配的文件组来拥有新的分区，请使用 ALTER PARTITION SCHEME。  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -56,16 +56,17 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 
+caps.latest.revision: 223
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 431a26ae4bc8a7a00afcff70f65128e8108b500d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -338,7 +339,7 @@ ON partition_scheme_name ( column_name )
   
  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，该对象可以是聚集列存储索引存储的表。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持由三部分组成的名称格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，或 database_name 为 tempdb，object_name 以 # 开头。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持由三部分组成的名称格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，或 database_name 为 tempdb，object_name 以 # 开头**。  
   
  **\<relational_index_option>::=**  
   
@@ -359,7 +360,7 @@ ON partition_scheme_name ( column_name )
   
  在向后兼容的语法中，WITH PAD_INDEX 等效于 WITH PAD_INDEX = ON。  
   
- FILLFACTOR =fillfactor  
+ FILLFACTOR = fillfactor  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 如果 fillfactor 为 100，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  

@@ -1,8 +1,8 @@
 ---
 title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: sql-non-specified
+ms.date: 04/18/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: ''
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4fba23a746773bf24f8d2e130bd7e445f8f796df
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,13 +73,11 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> **Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** V12 已于 2014 年 12 月发布。 该版本的一个方面在于新创建的数据库的兼容级别设置为 120。 在 2015 SQL 数据库中，开始支持级别 130，不过默认值保留为 120。  
+> 2018 年 1 月，在 SQL 数据库中，新创建的数据库的默认兼容性级别为 140。 我们不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。 不过，强烈建议客户计划转到最新的兼容性级别，以便利用最新的改进。
 > 
-> 从 **2016 年 6 月中旬**开始，在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，**新创建的**数据库的默认兼容级别是 130 而不是 120。 在 2016 年 6 月中旬之前创建的现有数据库不受影响，会保持其当前兼容级别（100、110 或 120）。 
-> 
-> 如果你通常希望数据库的级别为 130，但有理由首选级别 110 **基数估计**算法，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特别是其关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。  
+> 如果你通常希望数据库的级别为 140，但有理由首选级别 110 基数估计算法，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特别是其关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 >  
->  有关如何评估 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+>  有关如何评估 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 注意，本文是指兼容性级别 130 和 SQL Server，但同样的方法也适用于转到 140 的 SQL Server 和 Azure SQL DB。
 
 
  执行以下查询可确定连接到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。  
@@ -99,6 +97,9 @@ SELECT name, compatibility_level FROM sys.databases;
   
 ## <a name="remarks"></a>Remarks  
 对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容级别都设置为[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 除非数据库具有更低的兼容级别，否则数据库会设置为此级别。 在将数据库从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本进行升级时，如果数据库至少是该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所允许的最低级别，则它会保留现有兼容级别。 升级兼容级别低于允许级别的数据库会将数据库设置为允许的最低兼容级别。 这既适用于系统数据库也适用于用户数据库。 使用 **ALTER DATABASE** 可更改数据库的兼容级别。 若要查看数据库的当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 **compatibility_level** 列。  
+
+> [!NOTE]  
+> 在早期版本的 SQL Server 中创建并已升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或服务包 1 的[分发数据库](../../relational-databases/replication/distribution-database.md)的兼容性级别为 90，不受其他数据库的支持。 这并不影响复制功能。 升级到更高版本的服务包和 SQL Server 版本将导致分发数据库的兼容性级别增加到可与主数据库匹配。
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>利用兼容性级别获得向后兼容  
  兼容性级别只影响指定数据库的行为，而不影响整个服务器的行为。 兼容性级别只实现与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本保持部分向后兼容。 从兼容性模式 130 开始，任何影响功能的新查询计划都仅添加到新兼容性模式中。 这样做是为了在由于查询计划更改导致性能降低而引发的升级过程中尽量减少风险。 从应用程序的角度来看，目标仍是处于最新兼容级别以便继承某些新功能，以及在查询优化器空间中完成的性能改进，不过是采用可控方式实现此目标。 通过将兼容性级别用作临时性的迁移辅助工具，可解决相关兼容性级别设置控制的行为之间存在的版本差异问题。 有关更多详细信息，请参阅本文后面部分的升级最佳做法。  

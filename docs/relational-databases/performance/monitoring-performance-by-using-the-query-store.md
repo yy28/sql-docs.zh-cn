@@ -1,31 +1,32 @@
 ---
-title: "使用查询存储监视性能 | Microsoft Docs"
-ms.custom: 
+title: 使用查询存储监视性能 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5451f613900a420aa681ce076cf2c94e59057a98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
   
 -   快速查找并修复通过强制使用先前查询计划而造成的计划性能回归。 修复近期由于执行计划更改而出现性能回归的查询。  
 -   确定在给定时间窗口中查询执行的次数，从而帮助 DBA 对性能资源问题进行故障排除。  
--   标识过去 *n* 小时内的前 *n* 个查询（按执行时间、内存占用等）。  
+-   标识过去 *x* 小时内的前 *n* 个查询（按执行时间、内存占用等）。  
 -   审核给定查询的查询计划历史记录。  
 -   分析特定数据库的资源（CPU、I/O 和内存）使用模式。  
 -   确定资源上正在等待的前 n 个查询。 
@@ -315,7 +316,7 @@ DEALLOCATE adhoc_queries_cursor;
 ###  <a name="Peformance"></a> 性能审核和疑难解答  
  查询存储将保存整个查询过程中的编译历史记录和运行时度量，使你能询问有关工作负载的问题。  
   
- **在数据库上执行的最后 n 个查询？**  
+ 在数据库上执行的最后 n 个查询？  
   
 ```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   

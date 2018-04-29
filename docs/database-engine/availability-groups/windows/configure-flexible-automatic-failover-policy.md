@@ -1,32 +1,32 @@
 ---
-title: "配置灵活的自动故障转移策略 | Microsoft Docs"
-ms.custom: 
+title: 配置灵活的自动故障转移策略 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b1a512a3b4d22582c717afc3f77853d9f32281b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>配置灵活的自动故障转移策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/23/2018
   
 -   只有三个副本支持自动故障转移。  
   
--   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值  定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中 *n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
+-   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值  定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中*n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 02/23/2018
   
          这些整数值与故障条件级别的关系如下：  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] ReplTest1|Level|当出现以下情况时，自动启动故障转移…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|级别|当出现以下情况时，自动启动故障转移…|  
         |------------------------------|-----------|-------------------------------------------|  
         |@shouldalert|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
         |2|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/23/2018
   
          有关故障转移条件级别的更多信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
-    -   若要配置运行状况检查超时阈值，请使用 HEALTH_CHECK_TIMEOUT = *n* 选项，其中， *n* 是一个从 15000 毫秒（15 秒）到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）  
+    -   若要配置运行状况检查超时阈值，请使用 HEALTH_CHECK_TIMEOUT = *n* 选项，其中，*n* 是一个从 15000 毫秒（15 秒）到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）  
   
          例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句会将现有可用性组 `AG1`的运行状况检查超时阈值更改为 60,000 毫秒（1 分钟）。  
   

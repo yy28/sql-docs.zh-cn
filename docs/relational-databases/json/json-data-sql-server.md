@@ -2,10 +2,10 @@
 title: 在 SQL Server 中处理 JSON 数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: ''
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
@@ -15,16 +15,17 @@ helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 47
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3da48d5cad4e246ba57a162e7693ae4952b2c995
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ JSON 是一种流行的数据格式，用于在现代 Web 和移动应用程序�
 
 SQL Server 中的 JSON 函数使用户能在同一数据库中将 NoSQL 和相关概念合并。 现在，可以将经典关系列与同一表中包含格式化为 JSON 文本的文档的列合并，在关系结构中分析和导入 JSON 文档，或者将关系数据格式化为 JSON 文本。 在以下视频中可看到 JSON 函数如何在 SQL Server 和 Azure SQL 数据库中连接关系概念和 NoSQL 概念：
 
-JSON 充当 NoSQL 和关系环境之间的桥梁
+*JSON 充当 NoSQL 和关系环境之间的桥梁*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
  
 下面是 JSON 文本的示例： 
@@ -60,16 +61,16 @@ JSON 充当 NoSQL 和关系环境之间的桥梁
 ## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>SQL Server 和 SQL 数据库的关键 JSON 功能
 下一部分介绍 SQL Server 随其内置 JSON 支持一起提供的主要功能。 在以下视频中可看到如何使用 JSON 函数和运算符：
 
-SQL Server 2016 和 JSON 支持
+*SQL Server 2016 和 JSON 支持*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>从 JSON 文本中提取值并在查询中使用这些值
 如果使用存储在数据库表中的 JSON 文本，则可以使用以下内置函数来读取或修改 JSON 文本中的值：  
-  
--   **JSON_VALUE** 从 JSON 字符串中提取标量值。
--   **JSON_QUERY** 从 JSON 字符串中提取对象或数组。
--   **ISJSON** 测试字符串是否包含有效 JSON。
--   JSON_MODIFY 更改 JSON 字符串中的值。
+    
+-   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) 从 JSON 字符串中提取标量值。
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 从 JSON 字符串中提取对象或数组。
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) 测试字符串是否包含有效 JSON。
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 更改 JSON 字符串中的值。
 
 **示例**
   
@@ -93,13 +94,19 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 有关详细信息，请参阅[使用内置函数验证、查询和更改 JSON 数据 (SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)、[JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 和 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。  
   
 ### <a name="change-json-values"></a>更改 JSON 值
-如果必须修改部分 JSON 文本，可以使用 JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。 以下示例将更新包含 JSON 的变量中的属性的值：  
+如果必须修改部分 JSON 文本，可以使用 [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。 以下示例将更新包含 JSON 的变量中的属性的值：  
   
 ```sql  
-DECLARE @jsonInfo NVARCHAR(MAX)
-
-SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
+DECLARE @json NVARCHAR(MAX);
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
+SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SELECT modifiedJson = @json;
 ```  
+**结果**  
+
+|modifiedJson|  
+|--------|  
+|{"info":{"address":[{"town":"Belgrade"},{"town":"London"},{"town":"Madrid"}]}|  
   
 ### <a name="convert-json-collections-to-a-rowset"></a>将 JSON 集合转换为行集
 在 SQL Server 中查询 JSON 不需要自定义查询语言。 可以使用标准的 T-SQL 查询 JSON 数据。 如果必须基于 JSON 数据创建查询或报表，可以通过调用 OPENJSON 行集函数，轻松地将 JSON 数据转换为行与列。 有关详细信息，请参阅[用 OPENJSON 将 JSON 数据转换为行和列 (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)。  
@@ -137,7 +144,41 @@ FROM OPENJSON(@json)
 - 路径中可选的 **strict** 前缀指定 JSON 文本中必须存在指定属性的值。
 
 有关详细信息，请参阅[用 OPENJSON 将 JSON 数据转换为行和列 (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md) 和 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)。  
+
+JSON 文档可能包含无法直接映射到标准关系列中的子元素和层次结构数据。 在这种情况下，可通过将父实体与子数组联接，平展 JSON 层次结构。
+
+在下面的示例中，数组中的第二个对象包含表示人员技能的子数组。 每个子对象都可使用附加 `OPENJSON` 函数调用进行分析： 
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json =  
+N'[  
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },  
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }  
+ ]'  
+   
+SELECT *  
+FROM OPENJSON(@json)  
+  WITH (id int 'strict $.id',  
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json) 
+    outer apply openjson( a.skills ) 
+                     with ( skill nvarchar(8) '$' ) as b
+```  
+首个 `OPENJSON` 中返回技能数组，作为原始 JSON 文本片段，并使用 `APPLY` 运算符传递给其他 `OPENJSON` 函数。 第二个 `OPENJSON` 函数将分析 JSON 数组并将字符串值返回为单列行集，这一行集将与第一个 `OPENJSON` 的结果联接。 此查询的结果如下表所示：
+
+**结果**  
   
+|id|firstName|lastName|age|dateOfBirth|技能|  
+|--------|---------------|--------------|---------|-----------------|----------|  
+|2|John|Smith|25|||  
+|5|Jane|Smith||2005-11-04T12:00:00|SQL| 
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` 将联接一级实体和子数组，并返回平展后的结果集。 由于 JOIN，将对每个技能重复第二行。
+
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>将 SQL Server 数据转换为 JSON 或导出 JSON
 通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，可将 SQL Server 数据或 SQL 查询结果的格式设置为 JSON。 使用 FOR JSON 委托从客户端应用程序到 SQL Server 的 JSON 输出格式。 有关详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
@@ -208,12 +249,15 @@ JSON 文本存储在 varchar 或 nvarchar 列中，并编制了纯文本形式�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>在 SQL Server 中存储 JSON 数据并编制索引
 
+JSON 是一种文本格式，因此 JSON 文档可存储于 SQL 数据库中的 `NVARCHAR` 列。 由于所有 SQL Server 子系统中支持 `NVARCHAR` 类型，可将 JSON 文档放置于具有“聚集列存储”索引的表、内存优化表或者可使用 OPENROWSET 或 Polybase 读取的外部文件。
+
 要了解有关在 SQL Server 中存储、索引和优化 JSON 数据的详细信息，请参阅以下文章：
 -   [在 SQL Server 或 SQL 数据库中存储 JSON 文档](store-json-documents-in-sql-tables.md)
 -   [对 JSON 数据编制索引](index-json-data.md)
 -   [使用内存中 OLTP 优化 JSON 处理](optimize-json-processing-with-in-memory-oltp.md)
 
 ### <a name="load-json-files-into-sql-server"></a>将 JSON 文件加载到 SQL Server  
+
 可将文件中存储的信息格式化为标准 JSON 或行分隔的 JSON。 SQL Server 可以导入 JSON 文件的内容，使用 OPENJSON 或 JSON_VALUE 函数分析内容，并将其加载到表中。  
   
 -   如果 JSON 文档存储在可由 SQL Server 访问的本地文件、共享网络驱动器或 Azure 文件位置，则可以使用批量导入将 JSON 数据加载到 SQL Server。 有关此方案的详细信息，请参阅[Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)（使用 OPENROWSET (BULK) 将 JSON 文件导入 SQL Server）。  
@@ -344,7 +388,7 @@ FOR JSON AUTO
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
-在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON
+*在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
 在 SQL Server 中使用 JSON 函数构建 REST API

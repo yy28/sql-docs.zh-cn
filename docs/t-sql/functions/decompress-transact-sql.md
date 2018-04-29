@@ -1,16 +1,16 @@
 ---
 title: DECOMPRESS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/30/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECOMPRESS
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-caps.latest.revision: 
+caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2988959b7ec3f9eccad74b752e7643f1e6675590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19b40cbfc0324e0771bc27b9f9f8a06af2c50af2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- varbinary(n)、varbinary(max) 或 binary(n)。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ Is a varbinary(n)、varbinary(max) 或 binary(n)********。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  返回 varbinary(max) 类型的数据类型。 输入参数使用 ZIP 算法进行了解压缩。 如果需要，用户应显式将结果强制转换为目标类型。  

@@ -1,8 +1,8 @@
 ---
-title: SQL Server 索引设计指南 | Microsoft Docs
+title: SQL Server 索引体系结构和设计指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -29,16 +29,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 405482e0cc8fdf8e545ee8fffab9edc678d1612e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
+# <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引设计指南包含的信息和最佳做法可帮助设计满足应用程序需要的高效索引。  
+索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 在索引体系结构上的本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引设计指南包含的信息和最佳做法可帮助设计满足应用程序需要的高效索引。  
     
 本指南假定读者对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引类型有一般了解。 有关索引类型的一般说明，请参阅 [索引类型](../relational-databases/indexes/indexes.md)。  
 
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/05/2018
   
 -   对于聚集索引，请保持较短的索引键长度。 另外，对唯一列或非空列创建聚集索引可以使聚集索引获益。  
   
--   无法指定 **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)** 数据类型的列为索引键列。 不过， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**和 **xml** 数据类型的列可以作为非键索引列参与非聚集索引。 有关详细信息，请参阅本指南中的 [具有包含列的索引](#Included_Columns)。  
+-   无法指定 **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 数据类型的列为索引键列。 不过， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 和 **xml** 数据类型的列可以作为非键索引列参与非聚集索引。 有关详细信息，请参阅本指南中的 [具有包含列的索引](#Included_Columns)。  
   
 -   **xml** 数据类型的列只能在 XML 索引中用作键列。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 引入了称作选择性 XML 索引的一种新的 XML 索引。 这个新的索引可提高 SQL Server 中针对作为 XML 存储的数据的查询性能，从而通过降低索引本身的存储成本来加快大型 XML 数据工作负荷的索引编制和改进可伸缩性。 有关详细信息，请参阅[选择性 XML 索引 (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -456,7 +457,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   一页上能容纳的索引行将更少。 这样会使 I/O 增加并降低缓存效率。  
   
--   需要更多的磁盘空间来存储索引。 特别是，将 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**或 **xml** 数据类型添加为非键索引列会显著增加磁盘空间要求。 这是因为列值被复制到了索引叶级别。 因此，它们既驻留在索引中，也驻留在基表中。  
+-   需要更多的磁盘空间来存储索引。 特别是，将 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 或 **xml** 数据类型添加为非键索引列会显著增加磁盘空间要求。 这是因为列值被复制到了索引叶级别。 因此，它们既驻留在索引中，也驻留在基表中。  
   
 -   索引维护可能会增加对基础表或索引视图执行修改、插入、更新或删除操作所需的时间。  
   

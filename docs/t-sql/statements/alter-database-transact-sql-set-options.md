@@ -1,17 +1,17 @@
 ---
-title: "ALTER DATABASE SET 选项 (Transact-SQL) | Microsoft Docs"
-description: "了解如何在 SQL Server 和 Azure SQL 数据库中设置自动优化、加密和查询存储等数据库选项"
-ms.custom: 
+title: ALTER DATABASE SET 选项 (Transact-SQL) | Microsoft Docs
+description: 了解如何在 SQL Server 和 Azure SQL 数据库中设置自动优化、加密和查询存储等数据库选项
+ms.custom: ''
 ms.date: 12/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 
+caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5432a43a2e9207666cc88da722425006454cdd0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -990,7 +990,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 > [!IMPORTANT]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_PADDING 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议始终将 ANSI_PADDING 设置为 ON。 创建或操作计算列或索引视图的索引时，ANSI_PADDING 必须为 ON。  
   
- **char(*n*)** 和 **binary(*n*)** 列（允许为 Null 值）在 ANSI_PADDING 设置为 ON 时会填充到列长，而当 ANSI_PADDING 为 OFF 时，则会剪裁尾随空格和零。 始终将不允许为 Null 值的 **char(*n*)** 和 **binary(*n*)** 列填充到列长。  
+ char(n) 和 binary(n) 列（允许为 Null 值）在 ANSI_PADDING 设置为 ON 时会填充到列长，而当 ANSI_PADDING 为 OFF 时，则会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(n) 和 binary(n) 列填充到列长。  
   
  连接级设置（使用 SET 语句设置）覆盖 ANSI_PADDING 的默认数据库级别设置。 默认情况下，当连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_PADDING 设置为 ON。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
@@ -1085,7 +1085,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
   
  指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。  
   
- TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+ TARGET_RECOVERY_TIME =target_recovery_time { SECONDS | MINUTES }  
  *target_recovery_time*  
  指定在发生崩溃的情况下恢复指定数据库的最大上限时间。  
   
@@ -1125,21 +1125,21 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 |\<db_user_access_option>|是|是|  
 |\<db_update_option>|是|是|  
 |\<delayed_durability_option>|是|是|  
-|\<external_access_option>|是|是|  
-|\<cursor_option>|是|是|  
-|\<auto_option>|是|是|  
-|\<sql_option>|是|是|  
-|\<recovery_option>|是|是|  
-|\<target_recovery_time_option>|是|是|  
-|\<database_mirroring_option>|是|是|  
-|ALLOW_SNAPSHOT_ISOLATION|是|是|  
-|READ_COMMITTED_SNAPSHOT|是|是|  
+|\<external_access_option>|是|“否”|  
+|\<cursor_option>|是|“否”|  
+|\<auto_option>|是|“否”|  
+|\<sql_option>|是|“否”|  
+|\<recovery_option>|是|“否”|  
+|\<target_recovery_time_option>|“否”|是|  
+|\<database_mirroring_option>|“否”|“否”|  
+|ALLOW_SNAPSHOT_ISOLATION|“否”|“否”|  
+|READ_COMMITTED_SNAPSHOT|“否”|是|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|是|是|  
-|\<service_broker_option>|是|是|  
+|\<service_broker_option>|是|“否”|  
 |DATE_CORRELATION_OPTIMIZATION|是|是|  
 |\<parameterization_option>|是|是|  
 |\<change_tracking_option>|是|是|  
-|\<db_encryption>|是|是|  
+|\<db_encryption>|是|“否”|  
   
  通过设置以下选项之一来清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存：  
   

@@ -1,16 +1,16 @@
 ---
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - HAS_PERMS_BY_NAME
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b796f4f9ca3631f329b0261a39953e58964b58bb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4189de226a768914621be0a99d6d2a5b757c7236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>参数  
- *securable*  
+ securable  
  安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式。 没有默认值。  
   
  *securable_class*  
@@ -67,7 +67,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称。 默认值为 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全对象不能使用 **'[***sub name***]'** 形式的括号。 请改用 **'***sub name***'**。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全对象不能使用 '[sub name]' 形式的括号****。 请改用 'sub name'****。  
   
  *sub-securable_class*  
  类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类。 默认值为 NULL。  

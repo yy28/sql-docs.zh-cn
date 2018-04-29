@@ -2,7 +2,7 @@
 title: TOP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a>限制受 DELETE、INSERT 或 UPDATE 影响的行  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. 使用 TOP 限制删除的行数  
- 当 TOP (*n*) 子句与 DELETE 结合使用，未定义所选内容上执行删除操作*n*的行数。 DELETE 语句，即选择任何 (*n*) 的满足 WHERE 子句中定义的条件的行数。 下面的示例从 `20` 表中删除其到期日期早于 2002 年 7 月 1 日的 `PurchaseOrderDetail` 行。  
+ 当 TOP (n) 子句与 DELETE 一起使用时，将针对未定义的所选 n 行执行删除操作。 也即，DELETE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行。 下面的示例从 `20` 表中删除其到期日期早于 2002 年 7 月 1 日的 `PurchaseOrderDetail` 行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. 使用 TOP 限制更新的行数  
- 以下示例使用 TOP 子句更新表中的行。 当 TOP (*n*) 子句用于更新，则更新操作执行的未定义的行号上。 UPDATE 语句，即选择任何 (*n*) 的满足 WHERE 子句中定义的条件的行数。 下列示例将 10 个客户从一位销售人员分配给了另一位。  
+ 以下示例使用 TOP 子句更新表中的行。 当 TOP (n) 子句与 UPDATE 一起使用时，将针对未定义数目的行执行更新操作。 也即，UPDATE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行。 下列示例将 10 个客户从一位销售人员分配给了另一位。  
   
 ```sql  
 USE AdventureWorks2012;  

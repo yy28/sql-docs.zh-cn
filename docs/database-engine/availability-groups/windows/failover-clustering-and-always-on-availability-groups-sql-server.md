@@ -1,15 +1,16 @@
 ---
-title: "故障转移群集和 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 故障转移群集和 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9b7cccf79efb654ddb9c49a6ed43751f00654908
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +61,6 @@ ms.lasthandoff: 01/18/2018
   
  有关在 Windows Server 故障转移群集 (WSFC) 节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的信息以及有关 WSFC 仲裁的信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移  
- 从 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]开始， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持部署的可用性组跨群集迁移到新的 Windows Server 故障转移群集 (WSFC) 群集。 跨群集迁移将一个可用性组或一批可用性组移到新的目标 WSFC 群集，并且所用的停机时间最短。 通过跨群集迁移过程，您可以在升级到 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 群集时维护您的服务级别协议 (SLA)。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] （或更高版本）必须安装并且为目标 WSFC 群集上的 AlwaysOn 启用。 跨群集迁移能否成功取决于对目标 WSFC 群集的详尽计划和准备。  
-  
- 有关详细信息，请参阅 [针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](http://msdn.microsoft.com/library/jj873730.aspx)。  
-  
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 和可用性组  
  您可以通过将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集与 WSFC 群集一起实现，在服务器-实例级别设置第二层的故障转移。 可用性副本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的独立实例或 FCI 实例承载。 对于某一给定可用性组，一个 FCI 伙伴只能承载一个副本。 当某一可用性副本正在一个 FCI 上运行时，可用性组的可能所有者列表将只包含活动的 FCI 节点。  
   
@@ -90,7 +86,7 @@ ms.lasthandoff: 01/18/2018
  **可用性组的故障转移策略设置应用于所有副本，无论它位于独立实例还是 FCI 实例中。  
   
 > [!NOTE]  
->  有关不同版本的 **中故障转移群集内的** 节点数 **和** AlwaysOn 可用性组 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中故障转移群集内的节点数和 Always On 可用性组的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 上承载可用性副本的注意事项  
   

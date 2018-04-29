@@ -1,16 +1,16 @@
 ---
-title: "配置服务器以侦听特定 TCP 端口 | Microsoft Docs"
-ms.custom: 
+title: 配置服务器以侦听特定 TCP 端口 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - fixed port
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d536334958c3f027de7d2d7dd9c78213938cbfe2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 33ee433b3379f5e104f4ca2fbfbfa1442cd1a5aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>配置服务器以侦听特定 TCP 端口
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
  有关默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!TIP]  
->  选择端口号时，请查看t [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) 以了解分配给特定应用程序的端口号列表。 请选择一个未分配的端口号。 更多详细信息，请参阅 [TCP/IP 的默认动态端口范围在 Windows Vista 和 Windows Server 2008 中已更改](http://support.microsoft.com/kb/929851)。  
+>  选择端口号时，请查看 [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) 以了解分配给特定应用程序的端口号列表。 请选择一个未分配的端口号。 更多详细信息，请参阅 [TCP/IP 的默认动态端口范围在 Windows Vista 和 Windows Server 2008 中已更改](http://support.microsoft.com/kb/929851)。  
   
 > [!WARNING]  
 >  重新启动时，数据库引擎开始侦听新端口。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务监视注册表并在配置更改时报告新端口号，即使数据库引擎可能未使用该端口。 重新启动数据库引擎可确保一致性并避免连接失败。  

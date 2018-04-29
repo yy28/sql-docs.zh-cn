@@ -1,16 +1,16 @@
 ---
-title: "为可用性组配置只读路由 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 为可用性组配置只读路由 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - read-only routing
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9df48b3e6fb769543e7b5e4248b00c5a4ec2a88c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: af2cc1f3496cfc5aea545f11433cb8399d8b42f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>为可用性组配置只读路由 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-若要配置 AlwaysOn 可用性组以便在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中支持只读路由，你可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 *只读路由* 指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将符合条件的只读连接请求路由到可用的 AlwaysOn [可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) （即，配置为在辅助角色下运行时允许只读工作负荷的副本）的能力。 为支持只读路由，可用性组必须具备 [可用性组侦听器](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。 只读客户端必须将其连接请求定向到此侦听器，并且客户端的连接字符串必须将应用程序意向指定为“只读”。 也就是说，它们必须是 *读意向连接请求*。  
+  若要配置 AlwaysOn 可用性组以便在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中支持只读路由，你可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 *只读路由* 指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将符合条件的只读连接请求路由到可用的 AlwaysOn [可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) （即，配置为在辅助角色下运行时允许只读工作负荷的副本）的能力。 为支持只读路由，可用性组必须具备 [可用性组侦听器](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。 只读客户端必须将其连接请求定向到此侦听器，并且客户端的连接字符串必须将应用程序意向指定为“只读”。 也就是说，它们必须是 *读意向连接请求*。  
 
 只读路由在 [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] 及更高版本中可用。
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/23/2018
   
     -   若要配置辅助角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 SECONDARY_ROLE 选项，如下所示：  
   
-         SECONDARY_ROLE ( READ_ONLY_ROUTING_URL ='TCP://system-address:port')  
+         SECONDARY_ROLE ( READ_ONLY_ROUTING_URL ='TCP://system-address:port')****  
   
          只读路由 URL 的参数如下所示：  
   
@@ -124,7 +124,7 @@ ms.lasthandoff: 02/23/2018
   
     -   若要配置主角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 选项，如下所示：  
   
-         PRIMARY_ROLE ( READ_ONLY_ROUTING_LIST =(‘server’ [ ,...n ] ))  
+         PRIMARY_ROLE ( READ_ONLY_ROUTING_LIST =(‘server’ [ ,...n ] ))****  
   
          其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。  
   
@@ -194,13 +194,13 @@ GO
   
 2.  在将可用性副本添加到可用性组中时，使用 **New-SqlAvailabilityReplica** cmdlet。 在修改现有可用性副本时，使用 **Set-SqlAvailabilityReplica** cmdlet。 相关参数如下：  
   
-    -   若要为辅助角色配置只读路由，请指定 ReadonlyRoutingConnectionUrl"url" 参数。  
+    -   若要为辅助角色配置只读路由，请指定 ReadonlyRoutingConnectionUrl"url" 参数****。  
   
          其中， *url* 是当路由到副本时要用于建立只读连接的连接完全限定域名 (FQDN) 和端口。 例如：  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          有关详细信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)。  
   
-    -   若要为主要角色配置连接访问，请指定 ReadonlyRoutingList"server" [ ,... ]*n*，其中，server 标识托管可用性组中的只读次要副本的服务器实例。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   若要为主要角色配置连接访问，请指定 ReadonlyRoutingList"server" [ ,...n ]，其中，server 标识一个托管可用性组中的只读次要副本的服务器实例****。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  您必须先设置副本的只读路由 URL，然后才能为其配置只读路由列表。  

@@ -2,7 +2,7 @@
 title: 启用“锁定内存页”选项 (Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad766a982b180e6fad72ec0ca3314648be81315f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac244ae7479f48e08d035ab67d904a74528a00e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。  
   
 > [!NOTE]  
 >  当预计会将内存分页到磁盘时，锁定内存中的页可以大大提高性能。  
@@ -50,9 +51,9 @@ ms.lasthandoff: 01/18/2018
   
 6.  在 **“本地安全设置 – 锁定内存中的页”** 对话框中，单击 **“添加用户或组”**。  
   
-7.  在 **“选择用户、服务帐户或组”** 对话框中，添加有权运行 sqlservr.exe 的帐户。  
+7.  在“选择用户”、“服务帐户”或“组”对话框中，选择 SQL Server 服务帐户。  
   
-8.  重新启动 SQL Server 数据引擎服务，以使此设置生效。
+8.  重启 SQL Server 服务，以使此设置生效。
   
 ## <a name="see-also"></a>另请参阅  
  [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

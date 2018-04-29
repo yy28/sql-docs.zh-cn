@@ -1,16 +1,16 @@
 ---
-title: "数据类型同义词 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 数据类型同义词 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - alternate names [SQL Server]
 - synonyms [SQL Server], data types
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 07b4ada74ee54bf1c892e0938dd794e17ea4c0cb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 88cb8431560647423205ecba3ef34cd621263dd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-synonyms-transact-sql"></a>数据类型同义词 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ ms.lasthandoff: 11/21/2017
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** *n* **)**|**char(n)**|  
-|**character varying(** n **)**|**varchar(n)**|  
+|character( n )|**char(n)**|  
+|character varying( n )|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[**(**n**)**] for n = 1-7|**real**|  
-|**float**[**(**n**)**] for n = 8-15|**float**|  
+|float[(n)] for n = 1-7****|**real**|  
+|float[(n)] for n = 8-15****|**float**|  
 |**integer**|**int**|  
-|**national character(** n **)**|**nchar(n)**|  
-|**national char(** n **)**|**nchar(n)**|  
-|**national character varying(** n **)**|**nvarchar(n)**|  
-|**national char varying(** n **)**|**nvarchar(n)**|  
+|national character( n )|**nchar(n)**|  
+|national char( n )|**nchar(n)**|  
+|national character varying( n )|**nvarchar(n)**|  
+|national char varying( n )|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   

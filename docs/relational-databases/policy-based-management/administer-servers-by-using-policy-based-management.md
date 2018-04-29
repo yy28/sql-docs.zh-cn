@@ -1,16 +1,16 @@
 ---
-title: "使用基于策略的管理来管理服务器 | Microsoft Docs"
-ms.custom: 
+title: 使用基于策略的管理来管理服务器 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - facet See facets
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 
+caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 096ad11f9bd1fafb7ce09fc1a8775d90b935e40f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]基于策略的管理是一个基于策略的系统，用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 用于创建包含条件表达式的条件。 然后创建一些策略，将这些条件应用于数据库目标对象。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+   基于策略的管理是一个基于策略的系统，用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 用于创建包含条件表达式的条件。 然后创建一些策略，将这些条件应用于数据库目标对象。  
 
 例如，作为数据库管理员，你可能希望确保某些服务器没有启用数据库邮件，因此，可创建设置该服务器选项的条件和策略。 
    

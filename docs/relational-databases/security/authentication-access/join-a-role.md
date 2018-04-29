@@ -1,16 +1,16 @@
 ---
-title: "加入角色 | Microsoft Docs"
-ms.custom: 
+title: 加入角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12899d16a1055b4b6a63cb880df1829fc61b4c6e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1a422023129646f855b29ec5a6eb1587a54c0ed3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="join-a-role"></a>加入角色
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持四种类型的角色。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要向登录名和数据库用户分配角色，请使用：**  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求对数据库具有 **ALTER ANY ROLE** 权限、对角色具有 **ALTER** 权限或具有 **db_securityadmin**中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -83,9 +85,9 @@ ms.lasthandoff: 11/21/2017
   
 4.  右键单击要编辑的角色，然后选择“属性”。  
   
-5.  在“服务器角色属性 - *server_role_name*”对话框的“成员”页中单击“添加”。  
+5.  在“服务器角色属性 - server_role_name”对话框的“成员”页中单击“添加”。  
   
-6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - *server_role_name*”对话框。  
+6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - server_role_name”对话框。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -105,9 +107,9 @@ ms.lasthandoff: 11/21/2017
   
 7.  右键单击要编辑的角色，然后选择“属性”。  
   
-8.  在“数据库角色属性 - *database_role_name*”对话框的“常规”页中，单击“添加”。  
+8.  在“数据库角色属性 - database_role_name”对话框的“常规”页中，单击“添加”。  
   
-9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - *database_role_name*”对话框。  
+9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - database_role_name”对话框。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -119,7 +121,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     ALTER SERVER ROLE diskadmin ADD MEMBER [Domain\Juan] ;  
@@ -134,7 +136,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     ALTER ROLE Marketing ADD MEMBER [Domain\Juan] ;  

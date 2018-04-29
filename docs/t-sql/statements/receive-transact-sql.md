@@ -1,16 +1,16 @@
 ---
 title: RECEIVE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RECEIVE_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - receiving messages
 - retrieving messages
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed6bfbd57bda9c2c3e7649be91ded91605af153f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0ec4c3011336b8feca6df673bf06021d46b30bdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -174,11 +174,11 @@ ms.lasthandoff: 11/21/2017
 |**conversation_group_id**|**uniqueidentifier**|此消息所属会话组的标识符。|  
 |**conversation_handle**|**uniqueidentifier**|此消息所属会话的句柄。|  
 |**message_sequence_number**|**bigint**|消息在会话中的序列号。|  
-|**service_name**|**nvarchar(512)**|要进行会话的服务的名称。|  
+|service_name|**nvarchar(512)**|要进行会话的服务的名称。|  
 |**service_id**|**int**|要进行会话的服务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
 |**service_contract_name**|**nvarchar(256)**|会话遵循的约定的名称。|  
 |**service_contract_id**|**int**|会话遵循的约定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
-|**message_type_name**|**nvarchar(256)**|用于说明消息格式的消息类型的名称。 消息可以是应用程序消息类型，也可以是 Broker 系统消息。|  
+|message_type_name|**nvarchar(256)**|用于说明消息格式的消息类型的名称。 消息可以是应用程序消息类型，也可以是 Broker 系统消息。|  
 |**message_type_id**|**int**|对消息进行说明的消息类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
 |**validation**|**nchar(2)**|对消息所用的验证。<br /><br /> E=Empty N=None X=XML|  
 |**message_body**|**varbinary(MAX)**|消息的内容。|  

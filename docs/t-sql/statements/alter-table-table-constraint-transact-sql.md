@@ -1,16 +1,16 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TSQL
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - table_constraint
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 
+caps.latest.revision: 59
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 464ce13d973f975fe36a73f94ec9b12cd0eb1bf3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7b3c40933f9d2e84ebc4db3aede6c8aa2a26e912
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录。 可在 ALTER TABLE 的 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中指定其他索引选项。  
   
- ON { partition_scheme_name(partition_column_name) | filegroup| "default" }  
+ ON { partition_scheme_name(partition_column_name) | filegroup| "default" }**  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定为约束创建的索引的存储位置。 如果指定了 partition_scheme_name，则将对该索引进行分区，并将分区映射到由 partition_scheme_name 指定的文件组。 如果指定了 filegroup，则将在命名文件组内创建索引。 如果指定了 "default" 或者根本没有指定 ON，将在创建表的同一个文件组中创建索引。 当为 PRIMARY KEY 约束或 UNIQUE 约束添加聚集索引时，如果指定了 ON，则创建聚集索引时将把整个表移动到指定的文件组中。  

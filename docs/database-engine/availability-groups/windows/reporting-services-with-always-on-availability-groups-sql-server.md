@@ -1,30 +1,31 @@
 ---
-title: "Reporting Services 与 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 与 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69d5529f2e8b563072f0662c4256a163b39756c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
  将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源的一个重要好处是利用可读的辅助副本作为报表数据源，同时辅助副本为主数据库提供故障转移功能。  
   
- 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的常规信息，请参阅 [SQL Server 2012 的 AlwaysOn 常见问题 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
+ 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般信息，请参阅[适用于 SQL Server 2012 的 Always On 的常见问题解答http://msdn.microsoft.com/sqlserver/gg508768) (](http://msdn.microsoft.com/sqlserver/gg508768)。  
   
  **本主题内容：**  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ReportServerTempDB  
   
- 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，你将服务应用程序数据库名称配置为你作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的详细信息，请参阅 [为 SharePoint 服务器配置和管理 SQL Server 可用性组 (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)。  
+ 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，你将服务应用程序数据库名称配置为你作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[为 SharePoint 服务器配置和管理 SQL Server 可用性组 (](http://go.microsoft.com/fwlink/?LinkId=245165)http://go.microsoft.com/fwlink/?LinkId=245165)。  
   
 > [!NOTE]  
 >  SharePoint 模式的报表服务器使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序数据库和 SharePoint 内容数据库之间的同步过程。 将报表服务器数据库和内容数据库一起维护很重要。 您应考虑在同一可用性组中配置它们以便它们作为一个整体进行故障转移和恢复。 请考虑下列方案：  

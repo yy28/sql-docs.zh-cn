@@ -1,30 +1,30 @@
 ---
-title: "第 2 课：从其他计算机进行连接 | Microsoft Docs"
-ms.custom: 
+title: 第 2 课：从其他计算机进行连接 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 465d8d500030e49b7b3e462d6da3be256d82ca3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/09/2018
 为了增强安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 均打开了 Windows 防火墙。 在您从其他计算机连接到此实例时，必须打开防火墙中的通信端口。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的默认实例侦听端口 1433；因此，您不需要配置固定端口。 不过，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 的命令实例会侦听动态端口。 打开防火墙的端口之前，必须首先将 [!INCLUDE[ssDE](../includes/ssde-md.md)] 配置为侦听特定端口（称为固定端口或静态端口）；否则， [!INCLUDE[ssDE](../includes/ssde-md.md)] 可能会在每次启动时侦听不同的端口。 有关防火墙、默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!NOTE]  
-> Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)上列出这些端口号。应分配的端口号的范围是从 49152 到 65535。  
+> Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) 上列出这些端口号。应分配的端口号的范围是从 49152 到 65535。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>配置 SQL Server 以侦听特定端口  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  在“连接到服务器”对话框中，确认是否已在“服务器类型”框中选中“数据库引擎”。  
   
-3.  在“服务器名称”框中，键入 **tcp:**以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 tcp:<computer_name>。 在命名实例的示例中，请键入 tcp:<computer_name>,49172。  
+3.  在“服务器名称”框中，键入 **tcp:** 以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 tcp:<computer_name>。 在命名实例的示例中，请键入 tcp:<computer_name>,49172****。  
   
     > [!NOTE]  
     > 如果你在“服务器名称”框中省略 **tcp:**，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  

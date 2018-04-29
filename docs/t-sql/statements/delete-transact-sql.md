@@ -1,16 +1,16 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DELETE
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a30704357c724c3a7e5ecc78569aecdd62687e8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +101,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  公用表表达式还可与 SELECT、INSERT、UPDATE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP **(***expression***)** [ PERCENT ]  
+ TOP (expression) [ PERCENT ]****  
  指定将要删除的任意行数或任意行的百分比。 *expression* 可以是行数或行的百分比。 与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
  FROM  
@@ -109,7 +110,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *table_alias*  
  在表示要从中删除行的表或视图的 FROM *table_source* 子句中指定的别名。  
   
- *server_name*  
+ server_name  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name。  
@@ -127,12 +128,12 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- *rowset_function_limited*  
+ rowset_function_limited  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH **(** \<table_hint_limited> [... *n*] **)**  
+ WITH ( \<table_hint_limited> [... n] )  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
@@ -163,13 +164,13 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  GLOBAL  
  指定 cursor_name 是指全局游标。  
   
- *cursor_name*  
+ cursor_name  
  从其中进行提取的打开游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标。 游标必须允许更新。  
   
- *cursor_variable_name*  
+ cursor_variable_name  
  游标变量的名称。 游标变量必须引用允许更新的游标。  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION ( \<query_hint> [ ,... n] )  
  关键字，指示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式的优化器提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
@@ -320,7 +321,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制删除的行数  
- 当 TOP (*n*) 子句与 DELETE 一起使用时，将针对随机选择的 *n* 行执行删除操作。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
+ 当 TOP (n) 子句与 DELETE 一起使用时，将针对随机选择的 n 行执行删除操作。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
   
 ```  
 DELETE TOP (20)   

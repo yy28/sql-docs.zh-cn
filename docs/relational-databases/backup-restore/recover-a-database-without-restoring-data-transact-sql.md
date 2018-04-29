@@ -1,16 +1,16 @@
 ---
-title: "恢复数据库但不还原数据 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 恢复数据库但不还原数据 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring [SQL Server], recovery-only
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery-only
 - recovery [SQL Server], without restoring data
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9cf307382a1fcf763b80ddf5e4bc2aac87e7cf68
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ab055d2aa8c5f7f685d343fa6b938b852dbf190b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-通常，恢复数据库之前，将还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的所有数据。 但是，还原操作可以恢复数据库而不实际还原备份；例如，恢复那些与数据库一致的只读文件时。 这称为仅恢复还原。 当脱机数据已与数据库一致且只需变为可用时，仅恢复还原操作将完成恢复数据库并使数据联机。  
+  通常，恢复数据库之前，将还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的所有数据。 但是，还原操作可以恢复数据库而不实际还原备份；例如，恢复那些与数据库一致的只读文件时。 这称为仅恢复还原。 当脱机数据已与数据库一致且只需变为可用时，仅恢复还原操作将完成恢复数据库并使数据联机。  
   
  仅恢复还原可以针对整个数据库或一个或多个文件或文件组进行。  
   
@@ -71,7 +71,7 @@ RESTORE DATABASE AdventureWorks2012
   
  仅恢复文件还原的 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语法是：  
   
- RESTORE DATABASE database_name { FILE =logical_file_name | FILEGROUP =logical_filegroup_name }[ ,... ] WITH RECOVERY*n*  
+ RESTORE DATABASE database_name { FILE logical_file_name | FILEGROUP logical_filegroup_name }[ ,...n ] WITH RECOVERY****  
   
  **示例**  
   

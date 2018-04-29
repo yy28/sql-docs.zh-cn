@@ -1,15 +1,16 @@
 ---
-title: "事务 - AlwaysOn 可用性组和数据库镜像 | Microsoft Docs"
-ms.custom: 
+title: 事务 - AlwaysOn 可用性组和数据库镜像 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 25e9efc5d7ffb6d4d0c09cc88e19671ed7f7b043
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 22a8c1156ebe41ed64e7fd4dd41ad4d79ef172d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
   
  必须满足以下要求：  
   
--   可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址： [https://support.microsoft.com/zh-cn/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)。  
+-   可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)。  
   
 -   必须使用 CREATE AVAILABILITY GROUP 命令和 WITH DTC\_SUPPORT = PER_DB 子句创建可用性组。 当前不可更改现有可用性组。  
 

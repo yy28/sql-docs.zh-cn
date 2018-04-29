@@ -1,8 +1,8 @@
 ---
 title: 配置 Windows 服务帐户和权限 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -58,11 +58,11 @@ author: MikeRayMSFT
 ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 679dab613a948419e1407e66ef82b907465e1c2b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 20fe8b9065d6026e81e398c063eec0240eb51635
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/28/2018
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
@@ -149,7 +149,8 @@ ms.lasthandoff: 03/28/2018
 |PolyBase 引擎  |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
 |PolyBase 数据移动服务 |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
   
- *当需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机外部的资源时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用配置了必需的最小特权的托管服务帐户 (MSA)。  
+ *当需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机外部的资源时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用配置了必需的最小特权的托管服务帐户 (MSA)。   
+ ** 在域控制器上安装时，不支持虚拟帐户作为服务帐户。
   
  **SQL Server 故障转移群集实例**
   
@@ -295,7 +296,7 @@ ms.lasthandoff: 03/28/2018
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序授予的权限|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT SERVICE\MSSQLSERVER**。 命名实例： **NT SERVICE\MSSQL$**InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT SERVICE\MSSQLSERVER**。 命名实例： **NT SERVICE\MSSQL$** InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理：**\*<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT Service\SQLSERVERAGENT**。 命名实例：NT Service\SQLAGENT$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例：SQLServerMSASUser$ComputerName$MSSQLSERVER****。 命名实例：SQLServerMSASUser$ComputerName$InstanceName**。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例：SQLServerMSASUser$ComputerName$PowerPivot**。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 仅适用于表格：<br /><br /> **增加进程工作集** (SeIncreaseWorkingSetPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaSizePrivilege)<br /><br /> **锁定内存中的页** (SeLockMemoryPrivilege) - 仅当完全关闭分页时才需要。<br /><br /> 仅适用于故障转移群集安装：<br /><br /> **提高计划优先级** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：**NT SERVICE\ReportServer**。 命名实例：NT SERVICE\\ReportServer$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)|  
@@ -414,8 +415,8 @@ ms.lasthandoff: 03/28/2018
 ||管理员和系统|\tools\binn\schemas\sqlserver\2004\07\showplan|完全控制|  
 ||用户|\tools\binn\schemas\sqlserver\2004\07\showplan|读取和执行|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<报表服务器 Web 服务帐户>|\<install>\Reporting Services\LogFiles|删除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||报表管理器应用程序池标识、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户、Everyone|*\<install>*\Reporting Services\ReportManager, *\<install>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<install>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<install>*\Reporting Services\ReportManager\webctrl_client\1_0\\*。\*|读取|  
-||报表管理器应用程序池标识|*\<install>*\Reporting Services\ReportManager\Pages\\*。\*|读取|  
+||报表管理器应用程序池标识、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户、Everyone|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<install>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<install>* \Reporting Services\ReportManager\webctrl_client\1_0\\*。\*|读取|  
+||报表管理器应用程序池标识|*\<install>* \Reporting Services\ReportManager\Pages\\*。\*|读取|  
 ||\<报表服务器 Web 服务帐户>|\<install>\Reporting Services\ReportServer|读取|  
 ||\<报表服务器 Web 服务帐户>|\<install>\Reporting Services\ReportServer\global.asax|完全|  
 ||Everyone|\<install>\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
@@ -476,7 +477,7 @@ ms.lasthandoff: 03/28/2018
   
 ###  <a name="WMI"></a> WMI  
 
-Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 为了支持这一点，需在**中预配 Windows WMI 提供程序 (**NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的 per-service SID。  
+Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 为了支持这一点，需在**中预配 Windows WMI 提供程序 (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的 per-service SID。  
   
  SQL WMI 提供程序需要以下权限：  
   

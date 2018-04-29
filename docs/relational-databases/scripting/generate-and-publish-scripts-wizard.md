@@ -1,16 +1,16 @@
 ---
-title: "生成和发布脚本向导 | Microsoft Docs"
-ms.custom: 
+title: 生成和发布脚本向导 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql9.swb.generatescriptswizard.chooseviews.f1
@@ -45,23 +45,25 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e2396034590be1d904988265a29a4f223f96eaad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
-  
-1.  **开始之前：**  [发布到宿主服务](#PubHostSvc)， [权限](#Permissions)  
-  
-2.  **要生成或发布脚本，请使用：**  [生成和发布脚本向导](#GenPubScriptWiz)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
+
+有关使用“生成和发布脚本向导”更详细的教程，请参阅[教程：生成脚本向导](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)。
+
+
   
 ## <a name="before-you-begin"></a>开始之前  
  源和目标数据库可以位于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例上。  
@@ -82,25 +84,19 @@ ms.lasthandoff: 01/24/2018
 1.  在 **对象资源管理器**中，展开包含要为其编写脚本的数据库的实例的节点。  
   
 2.  指向 **“任务”**，然后单击 **“生成脚本”**。  
+
+    ![生成脚本向导](media/generate-and-publish-scripts-wizard/generatescripts.png)
   
 3.  完成向导对话框：  
   
     -   [“简介”页](#Introduction)  
-  
-    -   [“选择对象”页](#ChooseObjects)  
-  
+    -   [“选择对象”页](#ChooseObjects)   
     -   [“设置脚本编写选项”页](#SetScriptOpt)  
-  
     -   [“高级脚本编写选项”页](#AdvScriptOpt)  
-  
-    -   [“管理提供程序”页](#MgProviders)  
-  
+    -   [“管理提供程序”页](#MgProviders)   
     -   [“高级发布选项”页](#AdvPubOpts)  
-  
     -   [“提供程序配置”页](#ProvConfig)  
-  
-    -   [摘要页](#Summary)  
-  
+    -   [摘要页](#Summary)   
     -   [“保存或发布脚本”页](#SavePubScripts)  
   
 ###  <a name="Introduction"></a> “简介”页  
@@ -108,14 +104,14 @@ ms.lasthandoff: 01/24/2018
   
  **不再显示此页** - 下次启动“生成和发布脚本向导”时跳过此页。  
   
- “下一步 >” - 进入“选择方法”页。  
-  
- “取消” - 结束向导，而不从数据库中生成或发布脚本。  
+  ![“简介”页](media/generate-and-publish-scripts-wizard/intro.png)
   
 ###  <a name="ChooseObjects"></a> “选择对象”页  
  使用此页可选择要包含在该向导生成的脚本中的对象。 在以下向导页中，您可以选择将这些脚本保存到您选择的位置，或者使用它们将数据库对象和数据发布到安装了 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)的远程 Web 宿主提供程序。  
   
- **编写整个数据库的脚本选项** - 单击此项可为数据库中的所有对象生成脚本并且为数据库本身包括一个脚本。  
+ **编写整个数据库的脚本选项** - 单击此项可为数据库中的所有对象生成脚本并且为数据库本身包括一个脚本。 
+
+   ![对所有 DB 编写脚本](media/generate-and-publish-scripts-wizard/scriptall.png) 
   
  **选择特定数据库对象** - 单击此项可以将向导限制为仅对数据库中的所选特定对象生成脚本：  
   
@@ -124,6 +120,8 @@ ms.lasthandoff: 01/24/2018
 -   **全选** - 选中所有可用的复选框。  
   
 -   **取消全选** - 清除所有复选框。 然后，您必须至少选择一个数据库对象才能继续。  
+
+   ![特定位置脚本编写](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
 ###  <a name="SetScriptOpt"></a> “设置脚本编写选项”页  
  使用此页可以指定您是否希望向导将脚本保存到您选择的位置或者是否要使用它们将数据库对象发布到远程 Web 宿主提供程序。 若要发布，您必须有权访问通过使用 Database Publishing Services Web 服务安装的 Web 服务。  
@@ -131,8 +129,8 @@ ms.lasthandoff: 01/24/2018
  **选项** - 如果您希望向导将脚本保存到您选择的位置，则选择 **“将脚本保存到特定位置”**。 您以后可以对数据库引擎的实例或者对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]运行这些脚本。 如果您希望向导将数据库对象发布到远程 Web 宿主提供程序，请选择 **“发布到 Web 服务”**。  
   
  **将脚本保存到特定位置** – 将一个或多个 Transact-SQL 脚本文件保存到指定位置。  
-  
--   **高级** - 显示出 **“高级脚本编写选项”** 对话框，您可在其中选择用于生成脚本的高级选项。  
+
+  ![保存](media/generate-and-publish-scripts-wizard/save.png)   
   
 -   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击**“浏览(…)”**按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
   
@@ -152,6 +150,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvScriptOpt"></a> “高级脚本编写选项”页  
  使用此页可以指定希望此向导生成脚本的方式。 此页中提供有许多不同的选项。 如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] “数据库引擎类型” **中指定的 SQL Server 或**版本不支持这些选项，则这些选项将灰显。  
+
+![“高级选项”](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **选项** - 通过从每个选项右侧的可用设置列表中选择一个值来指定高级选项。  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/24/2018
   
 -   **包含 if NOT EXISTS** - 值为 **True**时，脚本包含一个用于检查对象在数据库中是否已经存在的语句，并在对象已经存在的情况下不尝试创建新对象。 默认值为 **False**。  
   
--   **包含系统约束名称** - 值为 **False**时，在源数据库上自动命名的约束的默认值将在目标数据库上被自动重命名。 值为 **True**时，约束将在源数据库和目标数据库上具有相同名称。  
+-   **包含系统约束名称** - 值为 False 时，在源数据库上自动命名的约束的默认值将在目标数据库上被自动重命名。 值为 **True**时，约束将在源数据库和目标数据库上具有相同名称。  
   
 -   **包含不支持的语句** - 值为 **False**时，脚本不包含选定服务器版本或引擎类型上不支持的对象的语句。 值为 **True**时，脚本包含不支持的对象。 不支持的对象的每个语句都将具有一个注释，指出必须首先编辑语句，然后才能对所选 SQL Server 版本或引擎类型运行脚本。 默认值为 **False**。  
   
@@ -240,6 +240,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvPubOpts"></a> “高级发布选项”页  
  使用此页可指定您希望该向导发布数据库的方式。 此页中提供有许多不同的选项。 如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] “数据库引擎类型” **中指定的 SQL Server 或**版本不支持这些选项，则这些选项将灰显。  
+
+  ![高级发布](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
  **选项** - 通过从每个选项右侧的可用设置列表中选择一个值来指定高级选项。  
   

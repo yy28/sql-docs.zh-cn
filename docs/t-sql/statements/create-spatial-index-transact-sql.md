@@ -1,16 +1,16 @@
 ---
 title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SPATIAL INDEX
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 05e551350da60132741be91d1a9bc22cc0dd7748
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -221,7 +221,7 @@ BOUNDING_BOX = ( {
 ```  
   
 ## <a name="arguments"></a>参数  
- *index_name*  
+ index_name  
  索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  ON \<object> ( *spatial_column_name* )  
@@ -364,8 +364,8 @@ GRIDS
 > [!WARNING] 
 > 如果指定的密度无效，则会引发错误。  
   
-CELLS_PER_OBJECT =*n*  
-指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 *n* 可以是介于 1 和 8192 之间（含 1 和 8192）的任何整数。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
+CELLS_PER_OBJECT =n  
+指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 n 可以是介于 1 和 8192 之间（含 1 和 8192）的任何整数。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
   
  CELLS_PER_OBJECT 的默认值如下：  
   

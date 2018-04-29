@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 入门 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 入门 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 入门
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   了解如何在 SQL Server Management Studio (SSMS) 中管理 PolyBase 对象  
   
--   获得使用 PolyBase 对象的查询示例  
-  
-## <a name="prerequisites"></a>必备条件  
- [SQL Server（64 位）](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)的实例需具备以下先决条件：  
-  
--   Microsoft .NET Framework 4.5。  
-  
--   Oracle Java SE RunTime Environment (JRE) 版本 7.51 或更高版本（64 位）。 （ [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 可正常工作）。 转到 [Java SE 下载](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。 如果不存在 JRE，安装程序将失败。   
-  
--   最低内存：4 GB  
-  
--   最小硬盘空间：2 GB    
-
--   必须启用 TCP/IP 连接。 （请参阅 [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。）默认禁用 SQL Server Developer 版和 Express 版。 可以安装 PolyBase，但它在启用 TCP/IP 之后才能完全启动。 必须手动启用 TCP/IP 才能使 PolyBase 正常工作。 
-  
- 
- 外部数据源，以下项之一：  
-  
--   Hadoop 群集。 有关支持版本的信息，请参阅 [配置 PolyBase](#supported)。  
-
--   Azure Blob 存储
-
-> [!NOTE]
->   如果你打算对 Hadoop 使用计算下推功能，你将需要确保目标 Hadoop 群集具有核心组件 HDFS、Yarn/MapReduce 并且启用了 JobHistory Server。 PolyBase 通过 MapReduce 提交下推查询，并且从 JobHistory Server 提取状态。 缺少任一组件，查询都将失败。 
+-   获得使用 PolyBase 对象的查询示例    
 
 ## <a name="install-polybase"></a>安装 PolyBase  
- 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](../../relational-databases/polybase/polybase-installation.md)。  
+如果尚未安装 PolyBase，请参阅 [PolyBase 安装](../../relational-databases/polybase/polybase-installation.md)。 这篇安装文章介绍了安装的先决条件。
   
 ### <a name="how-to-confirm-installation"></a>如何确认安装  
  安装完成后，运行以下命令以确认已成功安装 PolyBase。 如果已安装 PolyBase，则返回 1；否则返回 0。  

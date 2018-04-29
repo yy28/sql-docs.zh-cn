@@ -1,27 +1,27 @@
 ---
-title: "在 Server Core 上安装 SQL Server 2016 | Microsoft Docs"
-ms.custom: 
+title: 在 Server Core 上安装 SQL Server 2016 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7de58227a8da5f90921b1e973a63949f71a25b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ac142899ecabd2e3d322be70de5f0ff14fd8913c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 
@@ -52,30 +52,30 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 |全文搜索|是||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|是||  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|是||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|“否”||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|“否”||  
 |客户端工具连接|是||  
-|Integration Services 服务器|是|深入了解新的 Integration Services 服务器及其在 [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md) 中的功能。|  
-|客户端工具向后兼容性|是||  
-|客户端工具 SDK|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|是||  
+|Integration Services 服务器|是||  
+|客户端工具向后兼容性|“否”||  
+|客户端工具 SDK|“否”||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|“否”||  
 |管理工具 - 基本|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
 |管理工具 - 完整|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
-|Distributed Replay 控制器|是||  
+|Distributed Replay 控制器|“否”||  
 |Distributed Replay 客户端|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
 |SQL 客户端连接 SDK|是||  
 |Microsoft Sync Framework|是|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|是||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|是||  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|“否”||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|“否”||  
   
 ## <a name="supported-scenarios"></a>支持的方案  
  下表显示在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时支持的方案矩阵。  
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 64 位版本*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|所有语言|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作系统语言/区域设置（组合）上的语言|JPN（日语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER（德语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS（中文 - 中国）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA（阿拉伯语 (SA)）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA（泰语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK（土耳其语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT（葡萄牙语 - 葡萄牙）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG（英语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 64 位版本 |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言|所有语言|  
+|操作系统语言/区域设置（组合）上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言|JPN（日语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER（德语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS（中文 - 中国）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA（阿拉伯语 (SA)）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA（泰语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK（土耳其语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT（葡萄牙语 - 葡萄牙）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG（英语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Windows 版本|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>升级 

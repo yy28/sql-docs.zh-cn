@@ -1,16 +1,16 @@
 ---
-title: "指定第一个和最后一个触发器 | Microsoft Docs"
-ms.custom: 
+title: 指定第一个和最后一个触发器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - first triggers [SQL Server]
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - INSTEAD OF triggers
 - AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9aa886d4456a2dbfbad2c82aca4db83d119357a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 33d3488d20be5196a9dc9a7f13db334c3b94fd57
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-可将与表关联的 AFTER 触发器之一指定为执行每个 INSERT、DELETE 和 UPDATE 触发操作时激发的第一个或最后一个 AFTER 触发器。 在第一个和最后一个触发器之间激发的 AFTER 触发器将按未定义的顺序执行。  
+  可将与表关联的 AFTER 触发器之一指定为执行每个 INSERT、DELETE 和 UPDATE 触发操作时激发的第一个或最后一个 AFTER 触发器。 在第一个和最后一个触发器之间激发的 AFTER 触发器将按未定义的顺序执行。  
   
  若要指定 AFTER 触发器的顺序，请使用 **sp_settriggerorder** 存储过程。 **sp_settriggerorder** 有下列选项。  
   
@@ -59,7 +60,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  如果 ALTER TRIGGER 语句更改了第一个或最后一个触发器，则会删除 **First** 或 **Last** 属性并将顺序值设置为 **None**。 必须使用 **sp_settriggerorder**来重置顺序。  
   
- OBJECTPROPERTY 函数使用属性 **ExecIsFirstTrigger** 和 **ExecIsLastTrigger**来报告某个触发器是第一个还是最后一个触发器。  
+ OBJECTPROPERTY 函数使用以下属性，报告某一触发器是第一个还是最后一个触发器：ExecIsFirstInsertTrigger、ExecIsFirstUpdateTrigger、ExecIsFirstDeleteTrigger、ExecIsLastInsertTrigger、ExecIsLastUpdateTrigger 和 ExecIsLastDeleteTrigger。  
   
  复制将为包含在立即更新订阅或排队更新订阅中的任意表自动生成第一个触发器。 复制要求其触发器为第一个触发器。 在尝试将带有第一个触发器的表包含在立即更新订阅或排队更新订阅中时，复制将引发错误。 如果在表已经包含在订阅中之后尝试使某个触发器成为第一个触发器， **sp_settriggerorder** 将返回错误。 如果在复制触发器上使用 ALTER，或使用 **sp_settriggerorder** 将复制触发器更改为最后一个触发器或无触发器，订阅将无法正常工作。  
   

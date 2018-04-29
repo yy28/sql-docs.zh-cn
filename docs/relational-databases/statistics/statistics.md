@@ -1,16 +1,16 @@
 ---
-title: "统计信息 | Microsoft Docs"
-ms.custom: 
+title: 统计信息 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: statistics
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-statistics
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
@@ -26,19 +26,21 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 
+caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: aadb78f147f67afba5434490364ec60577518501
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statistics"></a>统计信息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询优化器使用统计信息来创建可提供查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
   
 ##  <a name="DefinitionQOStatistics"></a> 组件和概念  
 ### <a name="statistics"></a>统计信息  
@@ -117,7 +119,7 @@ ORDER BY s.name;
     * 如果在评估时间统计信息时表基数为 500 或更低，则每达到 500 次修改时更新一次。
     * 如果在评估时间统计信息时表基数大于 500，则每达到 500 + 修改次数的百分之二十时更新一次。
 
-* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 乘以当前的表基数所得结果的平方根。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。  
+* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 与当前的表基数乘积的平方根。 例如，如果表中包含 200 万行，则计算为 sqrt (1000 * 2000000) = 44721.359。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。  
 
 > [!IMPORTANT]
 > 从 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 开始到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低于 130，且使用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。

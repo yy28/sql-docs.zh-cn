@@ -1,16 +1,16 @@
 ---
 title: CERT_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERT_ID
@@ -23,21 +23,21 @@ helpviewer_keywords:
 - IDs [SQL Server], certificates
 - certificates [SQL Server], IDs
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3abed6a762708581344c189ecf4ef6c0fd5331d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 61b97f46cba26da431f96cb4aa399973f60bcb1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="certid-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回证书的 ID。
+此函数返回证书的 ID 值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,19 +49,20 @@ Cert_ID ( 'cert_name' )
   
 ## <a name="arguments"></a>参数  
 **'** *cert_name* **'**  
+
 数据库中证书的名称。
   
 ## <a name="return-types"></a>返回类型
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-证书名称可以在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中看到。
+[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中显示证书名称。
   
 ## <a name="permissions"></a>权限  
-需要对证书具有某些权限，并且未拒绝向调用方授予该证书的 VIEW DEFINITION 权限。
+需要对证书具有相应的权限，并且调用方对证书的 VIEW DEFINITION 权限没有被拒绝。 有关证书权限的详细信息，请参阅 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md#permissions)。
   
 ## <a name="examples"></a>示例  
-以下示例返回名为 `ABerglundCert3` 的证书的 ID。
+此示例返回名为 `ABerglundCert3` 的证书的 ID。
   
 ```sql
 SELECT Cert_ID('ABerglundCert3');  

@@ -1,16 +1,16 @@
 ---
-title: "将数据库还原到新位置 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 将数据库还原到新位置 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 
+caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: fbe4821e83b274ab3a8fae04b0ea50c450183d25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>将数据库还原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题介绍如何使用 SQL Server Management Studio (SSMS) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将 [!INCLUDE[tsql](../../includes/tsql-md.md)]数据库还原到一个新位置并且可以选择重命名该数据库。 您可以在同一服务器实例或不同服务器实例上将数据库移到新的目录路径或者创建数据库的副本。  
+  本主题介绍如何使用 SQL Server Management Studio (SSMS) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将 [!INCLUDE[tsql](../../includes/tsql-md.md)]数据库还原到一个新位置并且可以选择重命名该数据库。 您可以在同一服务器实例或不同服务器实例上将数据库移到新的目录路径或者创建数据库的副本。  
     
 ##  <a name="BeforeYouBegin"></a> 开始之前！  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 02/23/2018
   
      有关详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的“指定备份集”。  
   
-     MOVE 'logical_file_name_in_backup' TO 'operating_system_file_name' [ ,...n ]  
+     MOVE 'logical_file_name_in_backup' TO 'operating_system_file_name' [ ,...n ]********  
      指定由 *logical_file_name_in_backup* 指定的数据或日志文件将还原到 *operating_system_file_name*指定的位置。 请为每个要从备份集还原到新位置的逻辑文件指定 MOVE 语句。  
   
     |选项|Description|  

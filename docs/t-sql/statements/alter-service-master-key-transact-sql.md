@@ -1,16 +1,16 @@
 ---
 title: ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVICE_MASTER_KEY_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], modifying
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4469bcbd22e0b0a74c8b891dfe3020c566a644a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be5627a51c84c8df00a6cd04d253f37c6246b3a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,25 +68,25 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  指示应当重新生成服务主密钥。  
   
- OLD_ACCOUNT **='***account_name***'**  
+ OLD_ACCOUNT ='account_name'****  
  指定旧的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- OLD_PASSWORD **='***password***'**  
+ OLD_PASSWORD ='password'****  
  指定旧的 Windows 服务帐户的密码。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_ACCOUNT **='***account_name***'**  
+ NEW_ACCOUNT ='account_name'****  
  指定新的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_PASSWORD **='***password***'**  
+ NEW_PASSWORD ='password'****  
  指定新的 Windows 服务帐户的密码。  
   
 > [!WARNING]  

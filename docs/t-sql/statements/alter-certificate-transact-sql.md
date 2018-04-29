@@ -1,16 +1,16 @@
 ---
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_CERTIFICATE_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - ALTER CERTIFICATE statement
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39ab165b0587e31384c03235889bc9d7d6a240a9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e80a0db2949b78b7615ef769bc9b517a51071631
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,13 +76,13 @@ ALTER CERTIFICATE certificate_name
  certificate_name  
  在数据库中标识证书的唯一名称。  
   
- FILE ='path_to_private_key'  
+ FILE ='path_to_private_key'****  
  指定私钥的完整路径（包括文件名）。 此参数可以是本地路径或网络位置的 UNC 路径。 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问此文件。 使用此选项时，必须确保服务帐户有权访问指定的文件。  
   
- DECRYPTION BY PASSWORD ='key_password'  
+ DECRYPTION BY PASSWORD ='key_password'****  
  指定解密私钥所需的密码。  
   
- ENCRYPTION BY PASSWORD ='password'  
+ ENCRYPTION BY PASSWORD ='password'****  
  指定用于对数据库中的证书私钥进行加密的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
  REMOVE PRIVATE KEY   

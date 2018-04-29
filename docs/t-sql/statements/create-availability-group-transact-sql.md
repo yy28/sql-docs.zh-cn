@@ -1,16 +1,16 @@
 ---
 title: CREATE AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVAILABILITY GROUP
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 
+caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 37cb1d34ffa7db4aec6a8ef4457321b4d4601d31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ CREATE AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *group_name*  
+ group_name  
  指定新可用性组的名称。 group_name 必须是一个有效的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][标识符](../../relational-databases/databases/database-identifiers.md)，并且它在 WSFC 群集的所有可用性组中必须是唯一的。 可用性组名称的最大长度为 128 个字符。  
   
  AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
@@ -233,12 +233,12 @@ CREATE AVAILABILITY GROUP group_name
   
  有关 WSFC 节点和服务器实例的先决条件的信息，请参阅[针对 Always On 可用性组的先决条件、限制和建议 (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
- ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
+ ENDPOINT_URL **='** TCP **://***system-address***:***port***'**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上[数据库镜像终结点](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)的 URL 路径，该实例将托管当前 REPLICA ON 子句中定义的可用性副本。  
   
  ENDPOINT_URL 子句是必需的。 有关详细信息，请参阅 [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)配置服务器实例时遇到的典型问题。  
   
- **'**TCP**://***system-address***:***port***'**  
+ 'TCP://system-address:port'****  
  指定一个 URL，它用于指定端点 URL 或只读路由 URL。 URL 参数如下所示：  
   
  *system-address*  
@@ -293,7 +293,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  指定手动种子设定（默认）。 此方法要求在主要副本上创建数据库的备份，并在次要副本上手动还原该备份。  
   
- BACKUP_PRIORITY **=** *n*  
+ BACKUP_PRIORITY = n  
  指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 这些值将具有以下含义：  
   
 -   1..100 表示可被选择来执行备份的可用性副本。 1 表示最低优先级，100 表示最高优先级。 如果 BACKUP_PRIORITY = 1，则只有在没有更高的优先级可用性副本当前可用的情况下，才会选择可用性副本来执行备份。  
@@ -321,7 +321,7 @@ CREATE AVAILABILITY GROUP group_name
   
  有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
   
- READ_ONLY_ROUTING_URL ='TCP://system-address:port'  
+ READ_ONLY_ROUTING_URL ='TCP://system-address:port'****  
  指定要用于此可用性副本的路由读意向连接请求的 URL。 这是 SQL Server 数据库引擎侦听的 URL。 通常，SQL Server 数据库引擎的默认实例侦听 TCP 端口 1433。  
   
  对于命名实例，可以通过查询 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 动态管理视图的 port 和 type_desc 列来获取端口号。 服务器实例使用 Transact-SQL 侦听器 (type_desc='TSQL')。  
@@ -345,7 +345,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  主副本中的数据库允许所有连接。 这是默认行为。  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } 指定一个以逗号分隔的服务器实例列表，这些实例承载在以辅助角色运行时满足以下要求的此可用性组的可用性副本：  
+ READ_ONLY_ROUTING_LIST = { (‘\<server_instance>’ [ ,...n ] ) | NONE } 指定一个以逗号分隔的服务器实例列表，这些实例承载在以辅助角色运行时满足以下要求的此可用性组的可用性副本：  
   
 -   被配置为允许所有连接或只读连接（参阅上文 SECONDARY_ROLE 选项的 ALLOW_CONNECTIONS 参数）。  
   
@@ -377,12 +377,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> 指定构成一半分布式可用性组的可用性组的名称。  
   
- LISTENER ='TCP://system-address:port'  
+ LISTENER ='TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL 路径。  
   
  必须有 LISTENER 子句。  
   
- **'**TCP**://***system-address***:***port***'**  
+ 'TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL。 URL 参数如下所示：  
   
  *system-address*  
@@ -419,7 +419,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  指定手动种子设定（默认）。 此方法要求在主要副本上创建数据库的备份，并在次要可用性组的副本上手动还原该备份。  
   
- LISTENER ‘dns_name’( \<listener_option> ) 为此可用性组定义新的可用性组侦听器。 LISTENER 是一个可选参数。  
+ LISTENER ‘dns_name’( \<listener_option> ) 为此可用性组定义新的可用性组侦听器****。 LISTENER 是一个可选参数。  
   
 > [!IMPORTANT]  
 >  创建第一个侦听器之前，强烈建议阅读[创建或配置可用性组侦听程序 (SQL Server)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
@@ -429,7 +429,7 @@ CREATE AVAILABILITY GROUP group_name
 >  -   请求您的网络管理员将该侦听器的 IP 地址保留为专用。  
 > -   将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
   
- *dns_name*  
+ dns_name  
  指定可用性组侦听器的 DNS 主机名。 在域和 NetBIOS 中，侦听器的 DNS 名称必须唯一。  
   
  dns_name 为字符串值。 该名称只能包含字母数字字符、破折号 (-) 和连字符 (_)，顺序不分先后。 DNS 主机名不区分大小写。 最大长度为 63 个字符。  
@@ -441,7 +441,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER 采用以下 \<listener_option> 选项之一： 
   
- WITH DHCP [ ON { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) } ]  
+ WITH DHCP [ ON { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) } ]****  
  指定可用性组侦听器使用动态主机配置协议 (DHCP)。  或者，使用 ON 子句标识在其上创建此侦听器的网络。 DHCP 限制为单个子网，该子网用于在可用性组中托管副本的每个服务器实例。  
   
 > [!IMPORTANT]  
@@ -451,20 +451,20 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP ( { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) | (‘ipv6_address’) } [ , ...n ] ) [ , PORT =listener_port ]***  
+ WITH IP ( { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) | (‘ipv6_address’) } [ , ...n ] ) [ , PORT =listener_port ]********  
  指定可用性组侦听器使用一个或多个静态 IP 地址，而不使用 DHCP。 若要跨多个子网创建一个可用性组，每个子网均需要一个侦听器配置中的静态 IP 地址。 对于某一给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。 请联系网络管理员，以获取每个托管新可用性组副本的子网的静态 IP 地址。  
   
  例如：  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ four_part_ipv4_address  
  指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如， `10.120.19.155`。  
   
- *four_part_ipv4_mask*  
+ four_part_ipv4_mask  
  指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如， `255.255.254.0`。  
   
- *ipv6_address*  
+ ipv6_address  
  指定可用性组侦听器的 IPv6 地址。 例如， `2001::4898:23:1002:20f:1fff:feff:b3a3`。  
   
  PORT = listener_port  

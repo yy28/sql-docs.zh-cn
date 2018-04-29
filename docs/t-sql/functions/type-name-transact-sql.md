@@ -1,16 +1,16 @@
 ---
 title: TYPE_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TYPE_NAME_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efd210bc036ed301f426e81feb6c783984f9fb4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4c080a7c88d977651e9a3447f05f4e05558631f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +64,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  当 type_id 无效或当调用方没有足够权限引用类型时，TYPE_NAME 将返回 NULL。  
   
- TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这表示名称不具有 schema. 前缀。  
+ TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这表示名称不具有 schema. prefix。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   

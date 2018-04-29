@@ -2,7 +2,7 @@
 title: 分布式可用性组 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ae16c285a4ff77e0f7753f6bc9a0323aed7f37f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)进行了补充。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)进行了补充。
 
 > [!NOTE]
 > “DAG”不是 Distributed Availability Group（分布式可用性组）的正式缩写，因为此缩写已用于 Exchange Database Availability Group（数据库可用性组）功能。 此 Exchange 功能与 SQL Server 可用性组或分布式可用性组无关。
@@ -55,6 +56,9 @@ ms.lasthandoff: 01/18/2018
 
 > [!NOTE]
 > SQL Server 2016 中的分布式可用性组支持通过使用选项 FORCE_FAILOVER_ALLOW_DATA_LOSS 仅从一个可用性组故障转移到另一个可用性组。
+
+> [!NOTE]
+> 通过分布式可用性组使用事务复制时，转接副本无法配置为发布服务器。
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>分布式可用性组的 SQL Server 版本要求
 

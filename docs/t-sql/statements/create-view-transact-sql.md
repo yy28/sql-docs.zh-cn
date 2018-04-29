@@ -1,16 +1,16 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -39,16 +39,17 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 
+caps.latest.revision: 85
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 633179d7540ba4a6515c3614724a4849f40de391
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ecdb971d79ed8ced7112da1c73ff65fd66fe079
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -153,7 +154,7 @@ OR ALTER
  对 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 表中包含 CREATE VIEW 语句文本的项进行加密。 使用 WITH ENCRYPTION 可防止在 SQL Server 复制过程中发布视图。  
   
  SCHEMABINDING  
- 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能按照将影响视图定义的方式修改基表或表。 必须首先修改或删除视图定义本身，才能删除将要修改的表的依赖关系。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)。 所有被引用对象都必须在同一个数据库内。  
+ 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能按照将影响视图定义的方式修改基表或表。 必须首先修改或删除视图定义本身，才能删除将要修改的表的依赖关系。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)**。 所有被引用对象都必须在同一个数据库内。  
   
  不能删除参与了使用 SCHEMABINDING 子句创建的视图的视图或表，除非该视图已被删除或更改而不再具有架构绑定。 否则，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误。 另外，如果对参与具有架构绑定的视图的表执行 ALTER TABLE 语句，而这些语句又会影响视图定义，则这些语句将会失败。  
   

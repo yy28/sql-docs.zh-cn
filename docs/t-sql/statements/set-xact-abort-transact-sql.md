@@ -1,23 +1,26 @@
 ---
-title: "集 XACT_ABORT (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: SET XACT_ABORT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - XACT_ABORT_TSQL
 - XACT_ABORT
 - SET XACT_ABORT
 - SET_XACT_ABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - XACT_ABORT option
@@ -27,23 +30,24 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - SET XACT_ABORT statement
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c12ab84986210f559fe5d3b1a8842b70a885108e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38e51f72122f4c20c566398fca8dc5d5e58f3fa1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
     
 > [!NOTE]  
->  **引发**语句采用**设置 XACT_ABORT RAISERROR**却没有。 新的应用程序应使用**引发**而不是**RAISERROR**。  
+>  THROW 语句执行 SET XACT_ABORT。 RAISERROR 则不执行。 新应用程序应使用 THROW 而不是 RAISERROR。  
   
  指定当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句出现运行时错误时，[!INCLUDE[tsql](../../includes/tsql-md.md)] 是否自动回滚当前事务。  
   
@@ -63,7 +67,7 @@ SET XACT_ABORT { ON | OFF }
 SET XACT_ABORT ON   
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当 SET XACT_ABORT 为 ON 时，如果执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句产生运行时错误，则整个事务将终止并回滚。  
   
  当 SET XACT_ABORT 为 OFF 时，有时只回滚产生错误的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，而事务将继续进行处理。 如果错误很严重，那么即使 SET XACT_ABORT 为 OFF，也可能回滚整个事务。 OFF 是默认设置。  
@@ -135,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [THROW &#40;Transact SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
 title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPRIVATEKEY
@@ -20,26 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - CERTPRIVATEKEY
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df513e6ce63ff49e31ad05e5a4dca0372de69c83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1a08058fbc27aa8f8996ca8d3b15e98cb20d4e59
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回二进制格式的证书私钥。 此函数有三个参数。
+此函数返回二进制格式的证书私钥。 此函数有三个参数。
 -   一个证书 ID。  
--   一个加密密码，用于对该函数返回的私钥位加密，防止密钥以明文形式向用户公开。  
--   一个可选的解密密码。 如果指定了解密密码，则用它来对证书的私钥解密，否则使用数据库主密钥。  
+-   一个加密密码，用于加密函数返回的私钥位。 这种方法不会以明文文本形式向用户显示密钥。  
+-   一个可选的解密密码。 指定的解密密码用于解开此证书的私钥。 否则，使用数据库主密钥。  
   
-只有有权访问证书私钥的用户才能使用此函数。 此函数返回 PVK 格式的私钥。
+只有可以访问证书私钥的用户可以使用此函数。 此函数返回 PVK 格式的私钥。
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>参数  
 certificate_ID  
-证书的 certificate_id。 可通过 sys.certificates 或通过使用 [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数提供。 cert_id 的数据类型为 int
+证书的 certificate_id。 通过 sys.certificates 或通过 [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数获得此值。 cert_id 为 int 数据类型。
   
 encryption_password  
 用于对返回的二进制值进行加密的密码。
@@ -66,7 +66,7 @@ decryption_password
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-CERTENCODED 和 CERTPRIVATEKEY 一起用于返回二进制格式证书的不同部分。
+同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分。
   
 ## <a name="permissions"></a>权限  
 CERTPRIVATEKEY 向用户开放使用。
@@ -81,12 +81,12 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Use 5tr0ng P^55Words'
 GO  
 CREATE CERTIFICATE Shipping04   
 WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20141031';  
+EXPIRY_DATE = '20401031';  
 GO  
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的更为复杂的示例，请参阅主题 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B。
+请参阅 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B，查看有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的更为复杂的示例。
   
 ## <a name="see-also"></a>另请参阅
 [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  

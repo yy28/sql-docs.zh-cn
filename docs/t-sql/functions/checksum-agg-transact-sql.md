@@ -1,16 +1,16 @@
 ---
 title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKSUM_AGG
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3499cd8fb118d12fdbf450c23f2919fd0003cee7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dc03a1662860aafe1a44e50b40e587f10ebc66ba
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回组中各值的校验和。 Null 值会被忽略。 后面可以跟随 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。
+此函数返回组中各值的校验和。 `CHECKSUM_AGG` 将忽略 null 值。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以遵循 `CHECKSUM_AGG`。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,28 +48,28 @@ CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )
   
 ## <a name="arguments"></a>参数  
 **ALL**  
-向所有值应用此聚合函数。 ALL 为默认值。
+向所有值应用此聚合函数。 ALL 为默认参数。
   
 DISTINCT  
-指定 CHECKSUM_AGG 返回唯一校验值。
+指定 `CHECKSUM_AGG` 返回唯一值的校验和。
   
 *expression*  
-整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。
+整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 `CHECKSUM_AGG` 不允许使用聚合函数或子查询。
   
 ## <a name="return-types"></a>返回类型
 将所有表达式值的校验和作为 int 类型返回。
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM_AGG 可用于检测表中的更改。
+`CHECKSUM_AGG` 可以检测表中的更改。
   
-表中行的顺序不影响 CHECKSUM_AGG 的结果。 此外，CHECKSUM_AGG 函数还可与 DISTINCT 关键字和 GROUP BY 子句一起使用。
+`CHECKSUM_AGG` 结果不取决于表中行的顺序。 此外，`CHECKSUM_AGG` 函数允许使用 DISTINCT 关键字和 GROUP BY 子句。
   
-如果表达式列表中的某个值发生更改，则列表的校验和通常也会更改。 但只在极少数情况下，校验和会保持不变。
+如果表达式列表值更改，则列表校验和值列表很可能也会更改。 但是，也存在计算校验和不会更改这一很小的可能性。
   
-CHECKSUM_AGG 与其他聚合函数具有相似的功能。 有关详细信息，请参阅[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)。
+`CHECKSUM_AGG` 具有类似于其他聚合函数的功能。 有关详细信息，请参阅[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
-以下示例使用 `CHECKSUM_AGG` 检测 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Quantity` 表的 `ProductInventory` 列中的更改。
+这些示例使用 `CHECKSUM_AGG` 检测 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `ProductInventory` 表的 `Quantity` 列中的更改。
   
 ```sql
 --Get the checksum value before the column value is changed.  

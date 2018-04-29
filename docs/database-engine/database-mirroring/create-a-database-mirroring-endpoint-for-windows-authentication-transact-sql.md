@@ -1,15 +1,16 @@
 ---
-title: "创建使用 Windows 身份验证的数据库镜像终结点 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 创建使用 Windows 身份验证的数据库镜像终结点 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 212e131c50570b14ef574b4ea24371fd6ae0b048
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6043d585b7b402ba51bf22693b871215572c4932
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何创建一个数据库镜像端点，该端点通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 Windows 身份验证。 为了支持数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例都需要一个数据库镜像端点。 一个服务器实例只能有一个数据库镜像端点，该端点有一个端口。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 服务器实例上的所有数据库镜像会话都侦听该端口，并且数据库镜像的所有传入连接都使用该端口。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主题介绍如何创建一个数据库镜像端点，该端点通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 Windows 身份验证。 为了支持数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例都需要一个数据库镜像端点。 一个服务器实例只能有一个数据库镜像端点，该端点有一个端口。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 服务器实例上的所有数据库镜像会话都侦听该端口，并且数据库镜像的所有传入连接都使用该端口。  
   
 > [!IMPORTANT]  
 >  如果数据库镜像端点已存在并处于使用状态，则我们建议您使用此端点。 删除正在使用的端点会中断现有会话。  

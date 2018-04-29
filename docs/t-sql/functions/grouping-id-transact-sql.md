@@ -1,16 +1,16 @@
 ---
 title: GROUPING_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUPING_ID_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 048ce847992563943a7ff358dcda6ebe249a7310
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aad0f86356e05f41dfe55aa0c4347d08d7e7785d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  GROUPING_ID \<column_expression> 必须与 GROUP BY 列表中的表达式完全匹配。 例如，如果按 DATEPART (yyyy, \<column name>) 进行分组，则使用 GROUPING_ID (DATEPART (yyyy, \<column name>))；或者如果按 \<column name> 进行分组，则使用 GROUPING_ID (\<column name>)。  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>比较 GROUPING_ID () 与 GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,**...*n* ]) 将 GROUPING (\<column_expression>) 在每个输出行中为其列列表中的每个列返回的对应值作为 0、1 字符串输入。 GROUPING_ID 将该字符串解释为二进制数并返回对应的整数。 例如，请考虑以下语句：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表显示了 GROUPING_ID () 的输入值和输出值。  
+ GROUPING_ID (\<column_expression> [ ,...n ]) 将 GROUPING (\<column_expression>) 在每个输出行中为其列列表中的每个列返回的对应值作为 0、1 字符串输入。 GROUPING_ID 将该字符串解释为二进制数并返回对应的整数。 例如，请考虑以下语句：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表显示了 GROUPING_ID () 的输入值和输出值。  
   
 |聚合的列|GROUPING_ID (a, b, c) 输入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 输出|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -245,7 +245,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. 将 GROUPING_ID () 与 ROLLUP 和 CUBE 一起使用以标识分组级别  
  下面示例中的代码演示如何使用 `GROUPING()` 来计算 `Bit Vector(base-2)` 列。 `GROUPING_ID()` 用于计算对应的 `Integer Equivalent` 列。 `GROUPING_ID()` 函数中的列顺序与 `GROUPING()` 函数所连接的列的列顺序相反。  
   
- 在这些示例中，`GROUPING_ID()` 用于为 `Grouping Level` 列中的每行创建一个值以标识分组级别。 分组级别并不总是从 1 开始的连续整数列表（0、1、2、...n。  
+ 在这些示例中，`GROUPING_ID()` 用于为 `Grouping Level` 列中的每行创建一个值以标识分组级别。 分组级别并不总是从 1 开始的连续整数列表（0、1、2、...n）。  
   
 > [!NOTE]  
 >  可以在 HAVING 子句中使用 GROUPING 和 GROUPING_ID 来筛选结果集。  

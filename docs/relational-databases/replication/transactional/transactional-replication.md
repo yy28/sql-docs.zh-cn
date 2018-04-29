@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d6753d2ea8943cc00123dfd7f56328fc5fbe998
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1df3d126c25ab02e5d6be4f9f73347500b3607c4
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="transactional-replication"></a>事务复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,6 @@ ms.lasthandoff: 04/16/2018
 -   发布服务器或订阅服务器不是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（例如，Oracle）。  
   
  默认情况下，事务发布的订阅服务器应视为只读，因为更改不会传播回发布服务器。 但是，事务复制确实提供了允许在订阅服务器上进行更新的选项。  
-  
- **本主题内容**  
-  
- [事务复制的工作机制](#HowWorks)  
-  
- [初始数据集](#Dataset)  
-  
- [快照代理](#SnapshotAgent)  
-  
- [日志读取器代理](#LogReaderAgent)  
-  
- [分发代理](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> 事务复制的工作机制  
  事务复制是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照代理、日志读取器代理和分发代理实现的。 快照代理准备快照文件（其中包含了已发布表和数据库对象的架构和数据），然后将这些文件存储在快照文件夹中，并在分发服务器中的分发数据库中记录同步作业。  

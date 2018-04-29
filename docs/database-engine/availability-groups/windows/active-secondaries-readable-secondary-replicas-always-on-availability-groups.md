@@ -1,15 +1,16 @@
 ---
-title: "活动次要副本 - 可读次要副本 - AlwaysOn 可用性组 | Microsoft Docs"
-ms.custom: 
+title: 活动次要副本 - 可读次要副本 - AlwaysOn 可用性组 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection access to availability replicas
@@ -19,21 +20,21 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e18fc38d0f5baa2c49a487a362dc8612bc61f404
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 211a24d5842cb598021297be23322211d40730ab
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本）。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本）。 可读辅助副本可以处于异步提交可用性模式或同步提交可用性模式。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
   
  在主数据库中进行的安全设置会对辅助数据库永久保留。 这包括用户、数据库角色和应用程序角色及其各自的权限；如果对主数据库启用了透明数据加密 (TDE)，还将包括 TDE。  
   
@@ -237,9 +238,9 @@ GO
   
     |可读辅助副本？|启用了快照隔离或 RCSI 级别隔离？|主数据库|辅助数据库|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |是|是|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
+    |“否”|“否”|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
     |否|是|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
-    |是|是|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |是|“否”|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
     |是|是|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
   
 ##  <a name="bkmk_RelatedTasks"></a>相关任务  

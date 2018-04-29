@@ -1,16 +1,16 @@
 ---
-title: "SSIS 如何创建 ETL 包 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: SSIS 如何创建 ETL 包 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -22,27 +22,32 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ea1b643ebef4b9ff5b4336ee189a00c232ab222
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 83e51e583e0c83d8d0cbc8dbd213a78baa766ffb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何创建 ETL 包
 
  > 如需与以前版本的 SQL Server 相关的内容，请参阅[教程：创建简单的 ETL 包](https://msdn.microsoft.com/library/ms169917(SQL.120).aspx)。
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是一个可用于生成高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载 (ETL) 包。 SSIS 包括生成并调试包的图形工具和向导；执行如 FTP 操作、执行 SQL 语句和发送电子邮件等工作流功能的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；管理服务，即用于管理包执行和存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型编程的应用程序编程接口 (API)。  
-  
 在本教程中，将学习如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建一个简单的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 所创建的包将从平面文件提取数据，重新设置数据的格式，然后将已重新设置格式的数据插入到事实数据表中。 在下列课程中，将扩展包以阐释循环、包配置、日志记录和错误流。  
   
 在安装教程所用的示例数据的同时，也会安装将在教程的每一课中创建的完整的包版本。 使用完整的包，您可以按需要跳过前面几课而从后面的课程开始学习教程。 如果本教程是你第一次使用包或新的开发环境，我们建议从第 1 课开始学习。  
-  
+
+> [!IMPORTANT]
+> 近来，运行本教程所需的示例文件不再在以前的位置联机提供。 对于带来的不便，我们深表歉意。 我们已经在新的位置提供这些文件，并更新了这篇文章中的链接。
+
+## <a name="what-is-sql-server-integration-services-ssis"></a>什么是 SQL Server Integration Services (SSIS)？
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是一个可用于生成高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载 (ETL) 包。 SSIS 包括生成并调试包的图形工具和向导；执行如 FTP 操作、执行 SQL 语句和发送电子邮件等工作流功能的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；管理服务，即用于管理包执行和存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型编程的应用程序编程接口 (API)。  
+
 ## <a name="what-you-learn"></a>学习内容  
 熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新工具、控件和功能的最好方法，就是使用它们。 本教程将指导使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建一个简单的 ETL 包，其中包含循环、配置、错误流逻辑和日志记录。  
   
@@ -51,21 +56,10 @@ ms.lasthandoff: 01/25/2018
   
 若要使用本教程，系统中必须安装下列组件：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 **数据库的** 。 为了增强安全性，默认情况下不会安装示例数据库。 要下载 **AdventureWorksDW2012** 数据库，请参阅 [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026)。  
-  
-    > [!IMPORTANT]  
-    > 附加数据库 (\*.mdf file) 时，默认情况下 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将搜索 .ldf 文件。 在“附加数据库”对话框中单击“确定”前，必须手动删除 .ldf 文件。  
-    >   
-    > 有关附加数据库的详细信息，请参阅 [Attach a Database](../relational-databases/databases/attach-a-database.md)。  
-  
--   示例数据。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要下载示例数据和课程包，请执行以下操作。  
-  
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
-  
-    2.  单击 **“下载”** 选项卡。  
-  
-    3.  单击 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
-  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 **数据库的** 。 若要下载 AdventureWorksDW2012 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorksDW2012.bak`，并还原备份。  
+
+-   示例数据。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要以 Zip 文件下载示例数据和课程包，请[单击此处](http://download.microsoft.com/download/3/1/4/314A4169-D540-4E9E-9776-585BFBFC2CC5/Creating a Simple ETL Package.zip)。  
+
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
 [第 1 课：使用 SSIS 创建项目和基本包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 在本课中，将创建一个简单的 ETL 包，从单个平面文件中提取数据，再使用查找转换转换数据，最后将所得结果加载到目标事实数据表中。  

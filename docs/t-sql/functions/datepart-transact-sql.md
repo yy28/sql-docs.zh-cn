@@ -1,16 +1,16 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af3b28322a1d0080202cfc42c3381f8d82d0f535
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,8 +138,8 @@ ISO 8601 包括 ISO 周-日期系统，即周的编号系统。 每周都与该�
 |---|---|---|---|
 |星期日|1 月 1 日，<br /><br /> 第一个星期六，<br /><br /> 其中有 1–7 天属于此年|是|United States|  
 |星期一|1 月 1 日，<br /><br /> 第一个星期日，<br /><br /> 其中有 1–7 天属于此年|是|大多数欧洲国家和英国|  
-|星期一|1 月 4 日<br /><br /> 第一个星期四，<br /><br /> 其中有 4–7 天属于此年|是|ISO 8601，挪威和瑞典|  
-|星期一|1 月 7 日<br /><br /> 第一个星期一，<br /><br /> 7 天均属于此年|是||  
+|星期一|1 月 4 日<br /><br /> 第一个星期四，<br /><br /> 其中有 4–7 天属于此年|“否”|ISO 8601，挪威和瑞典|  
+|星期一|1 月 7 日<br /><br /> 第一个星期一，<br /><br /> 7 天均属于此年|“否”||  
 |星期三|1 月 1 日，<br /><br /> 第一个星期二，<br /><br /> 其中有 1–7 天属于此年|是||  
 |星期六|1 月 1 日，<br /><br /> 第一个星期五，<br /><br /> 其中有 1–7 天属于此年|是||  
   

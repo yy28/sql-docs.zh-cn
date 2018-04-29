@@ -1,16 +1,16 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 
+caps.latest.revision: 68
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1a1bbef130ca5b5fef4255121a8d602c9dc47d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +84,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Database  
+-- Syntax for Azure SQL Database and Azure SQL Data Warehouse 
   
 ALTER LOGIN login_name   
   {   
@@ -104,7 +105,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER LOGIN login_name   
     {   
@@ -135,7 +136,7 @@ ALTER LOGIN login_name
  ENABLE | DISABLE  
  启用或禁用此登录名。 禁用登录名不会影响已连接登录名的行为。 （使用 `KILL` 语句终止现有连接。）禁用的登录名将保留它们的权限，且仍然可以模拟。  
   
- PASSWORD ='password'  
+ PASSWORD ='password'****  
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定正在更改的登录名的密码。 密码是区分大小写的。  
   
  与 SQL 数据库持续保持活动连接需要至少每隔 10 小时进行重新授权（由数据库引擎执行）。 数据库引擎使用最初提交的密码尝试重新授权，且无需用户输入。 出于性能原因，在 SQL 数据库中重置密码时，连接将不会重新进行身份验证，即使该连接因连接池而重置。 这与本地 SQL Server 的行为不同。 如果自最初授权连接时已更改密码，则必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可使用 KILL 命令，显式终止与 SQL 数据库的连接。 有关详细信息，请参阅 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)。  
@@ -154,11 +155,11 @@ ALTER LOGIN login_name
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定在 PASSWORD 参数后输入的密码已经过哈希运算。 如果未选择此选项，则在将密码存储到数据库之前，对其进行哈希运算。 此选项只能用于在两台服务器之间同步登录名。 切勿使用 HASHED 选项定期更改密码。  
   
- OLD_PASSWORD ='oldpassword'  
+ OLD_PASSWORD ='oldpassword'****  
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 要指派新密码的登录的当前密码。 密码是区分大小写的。  
   
  MUST_CHANGE  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、并行数据仓库。  
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果包括此选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在首次使用已更改的登录名时提示输入更新的密码。  
   
@@ -177,12 +178,12 @@ ALTER LOGIN login_name
  正在重命名的登录的新名称。 如果是 Windows 登录，则与新名称对应的 Windows 主体的 SID 必须匹配与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登录相关联的 SID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的新名称不能包含反斜杠字符 (\\)。  
   
  CHECK_EXPIRATION = { ON | OFF }  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、并行数据仓库。  
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定是否应对此登录帐户强制实施密码过期策略。 默认值为 OFF。  
   
  CHECK_POLICY = { ON | OFF }  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、并行数据仓库。  
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定应对此登录名强制实施运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的 Windows 密码策略。 默认值为 ON。  
   
@@ -197,7 +198,7 @@ ALTER LOGIN login_name
  删除登录到服务器凭据的当前所有映射。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
  UNLOCK  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、并行数据仓库。  
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定应解锁被锁定的登录名。  
   

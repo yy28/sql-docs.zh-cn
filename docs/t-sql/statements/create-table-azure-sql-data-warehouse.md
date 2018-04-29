@@ -1,30 +1,31 @@
 ---
-title: "CREATE TABLE（Azure SQL 数据仓库）| Microsoft Docs"
-ms.custom: 
+title: CREATE TABLE（Azure SQL 数据仓库）| Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
+caps.latest.revision: 59
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -122,7 +123,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
  | 参数 | 解释 |
  | -------- | ----------- |
- | *constraint_name* | 约束的可选名称。 该约束名称在数据库中是唯一的。 此名称可在其他数据库中重复使用。 |
+ | constraint_name | 约束的可选名称。 该约束名称在数据库中是唯一的。 此名称可在其他数据库中重复使用。 |
  | *constant_expression* | 列的默认值。 表达式必须是文本值或一个常数。 例如，允许的常数表达式：`'CA'`、`4`。 不允许：`2+3`、`CURRENT_TIMESTAMP`。 |
   
 
@@ -164,7 +165,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |partition_column_name| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将用于行分区的列。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按升序对分区列值进行排序。 出于 `RANGE` 规范的目的，由 `LEFT` 到 `RIGHT` 由低到高排序。 |  
 | `RANGE LEFT` | 指定属于左侧分区的边界值（较低值）。 默认为“左”。 |
 | `RANGE RIGHT` | 指定属于右侧分区的边界值（较高值）。 | 
-| `FOR VALUES` ( boundary_value [,...n] )**** | 指定分区的边界值。 boundary_value 是一个常数表达式。 不可为 NULL。 它必须匹配或可以隐式转换为 partition_column_name 的数据类型。 它不能在隐式转换期间截断，使得值的大小和规模与 partition_column_name 的数据类型不匹配<br></br><br></br>如果指定 `PARTITION` 子句，但不指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将创建具有一个分区的已分区表。 如果适用，稍后可将表格拆分成两个分区。<br></br><br></br>如果指定一个边界值，生成的表格有两个分区；一个用于低于边界值的值，另一个用于高于边界值的值。 请注意，如果将分区移动到未分区表中，未分区表将接收数据，但其元数据中将不会有分区边界。| 
+| `FOR VALUES` ( boundary_value [,...n] ) | 指定分区的边界值。 boundary_value 是一个常数表达式。 不可为 NULL。 它必须匹配或可以隐式转换为 partition_column_name 的数据类型。 它不能在隐式转换期间截断，使得值的大小和规模与 partition_column_name 的数据类型不匹配<br></br><br></br>如果指定 `PARTITION` 子句，但不指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将创建具有一个分区的已分区表。 如果适用，稍后可将表格拆分成两个分区。<br></br><br></br>如果指定一个边界值，生成的表格有两个分区；一个用于低于边界值的值，另一个用于高于边界值的值。 请注意，如果将分区移动到未分区表中，未分区表将接收数据，但其元数据中将不会有分区边界。| 
  
  请在“示例”部分中查看[创建已分区表](#PartitionedTable)。
 
@@ -212,7 +213,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将 n 视为下列两个可能值之一。 如果 `1`<= n <= `24`，将 n 视为 `24`。 如果 `25` <= n <= `53`，将 n 视为 `53`。  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据类型从 `1` 到 `53` 之间的所有 n 值均符合 ISO 标准`float`。 double precision 的同义词是 `float(53)`。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 数据类型从 `1` 到 `53` 之间的所有 n 值均符合 ISO 标准。 double precision 的同义词是 `float(53)`。  
   
  `real` [ ( n ) ]  
  real 的定义与 float 相同。 `real` 的 ISO 同义词为 `float(24)`。  
@@ -223,7 +224,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *精度*  
  最多可以存储的十进制数字的总位数，包括小数点左边和右边的位数。 该精度的取值范围必须为 `1` 到最大精度 `38`。 默认精度为 `18`。  
   
- *小数位数*  
+ *scale*  
  小数点右边可以存储的十进制数字的最大位数。 小数位数的取值范围必须为 `0` 到精度。 只有指定了精度，才能指定小数位数。 默认小数位数为 `0`；因此，`0` <= 小数位数 <= 精度。 最大存储大小基于精度而变化。  
   
 | 精度 | 存储字节数  |  

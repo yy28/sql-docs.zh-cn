@@ -1,16 +1,16 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FUNCTION
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 
+caps.latest.revision: 162
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 072d8fabf26e99137e29f6d1eb42556a6f6ad225
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -277,13 +277,13 @@ RETURNS return_data_type
  *schema_name*  
  用户定义函数所属的架构的名称。  
   
- *function_name*  
+ function_name  
  用户定义函数的名称。 函数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，并且在数据库中以及对其架构来说是唯一的。  
   
 > [!NOTE]  
 >  即使未指定参数，函数名称后也需要加上括号。  
   
- @*parameter_name*  
+ @parameter_name  
  用户定义函数中的参数。 可声明一个或多个参数。  
   
  一个函数最多可以有 2,100 个参数。 执行函数时，如果未定义参数的默认值，则用户必须提供每个已声明参数的值。  
@@ -315,10 +315,10 @@ RETURNS return_data_type
  READONLY  
  指示不能在函数定义中更新或修改参数。 如果参数类型为用户定义的表类型，则应指定 READONLY。  
   
- *return_data_type*  
+ return_data_type  
  标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为返回数据类型。  
   
- *function_body*  
+ function_body  
  指定一系列定义函数值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句在一起使用不会产生负面影响（例如修改表）。 function_body 仅用于标量函数和多语句表值函数。  
   
  在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值。  
@@ -368,9 +368,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。  
+ \<table_type_definition> ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...n ] ) 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
+ \< clr_table_type_definition >  ( { column_namedata_type } [ ,...n ] )  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
   
  定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。 表始终放在主文件组中。  
   
@@ -441,7 +441,7 @@ RETURNS return_data_type
  column_name  
  表中列的名称。 列名称必须遵循标识符的规则，且在表中必须唯一。 column_name 可以包含 1 到 128 个字符。  
   
- *data_type*  
+ data_type  
  指定列数据类型。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。 对于 CLR 函数，可以使用除 text、ntext、image、char、varchar、varchar(max) 和 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 cursor 指定为列数据类型。  
   
  DEFAULT constant_expression  
@@ -493,7 +493,7 @@ RETURNS return_data_type
  CHECK  
  一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。 不能为 CLR 表值函数指定 CHECK 约束。  
   
- *logical_expression*  
+ logical_expression  
  返回 TRUE 或 FALSE 的逻辑表达式。  
   
  **\<computed_column_definition>::=**  
@@ -503,7 +503,7 @@ RETURNS return_data_type
  column_name  
  计算列的名称。  
   
- *computed_column_expression*  
+ computed_column_expression  
  定义计算列的值的表达式。  
   
  **\<index_option>::=**  
@@ -540,7 +540,7 @@ RETURNS return_data_type
   
  为了使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在类中重载时引用正确方法，\<method_specifier> 中指示的方法必须具有下列特征： 
   
--   接收 [ ,...*n* ] 中指定的参数数量。  
+-   接收 [ ,...n ] 中指定的参数数量。  
   
 -   通过值而不是引用来接收所有参数。  
   

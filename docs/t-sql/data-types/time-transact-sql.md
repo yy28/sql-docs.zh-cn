@@ -1,16 +1,16 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 6/7/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81a0b19c21ac231e49dd6c6dad23de7beaaa6b35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,8 +60,8 @@ ms.lasthandoff: 11/21/2017
 |精确度|100 纳秒（Informatica 中为 1 毫秒）|  
 |默认值|00:00:00<br /><br /> 此值用作从 date 隐式转换到datetime2 或 datetimeoffset 时追加的时间部分。|  
 |用户定义的秒的小数部分精度|是|  
-|时区偏移量感知和保留|是|  
-|夏时制感知|是|  
+|时区偏移量感知和保留|“否”|  
+|夏时制感知|“否”|  
   
 |指定的小数位数|结果 (精度, 小数位数)|列长度（以字节为单位）|小数<br /><br /> seconds<br /><br /> 精度|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  

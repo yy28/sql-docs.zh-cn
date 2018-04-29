@@ -1,16 +1,16 @@
 ---
-title: "float 和 real (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: float 和 real (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - float
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - floating point data [SQL Server]
 - real data type
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f955e5d367a17602959f5294f9fb5d393b186b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 87b6b785af338745f3c02cb1d6d0b77efb01240c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
-float [ (n) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值。 n 的默认值为 53。
+float [ (n) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小****。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值。 n 的默认值为 53。
   
 |n 值|精度|存储大小|  
 |---|---|---|
@@ -52,7 +53,7 @@ float [ (n) ] 其中 n 为用于存储 float 数值尾数的位数（以科学�
 |**25-53**|15 位数|8 字节|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 n 视为下列两个可能值之一。 如果 1<=n<=24，则将 n 视为 24。 如果 25<=n<=53，则将 n 视为 53。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 n 视为下列两个可能值之一。 如果 1<=n<=24，将 n 视为 24。 如果 25<=n<=53，将 n 视为 53。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] float[(n)] 数据类型从 1 到 53 之间的所有 n 值均符合 ISO 标准。 double precision 的同义词是 float(53)。
   

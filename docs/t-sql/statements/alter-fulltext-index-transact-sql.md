@@ -1,16 +1,16 @@
 ---
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 
+caps.latest.revision: 95
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 022cec421b1827c525d18d04d42bdd648936d147
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 327f527ad470d36dac37bb044fe77149794c1650
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  创建作为统计语义索引一部分的附加关键短语和文档相似性索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
- [ **,***...n*]  
+ [ ,...n]  
  指示可以为 ADD、ALTER 或 DROP 子句指定多个列。 指定多个列时，请使用逗号分隔这些列。  
   
  WITH NO POPULATION  

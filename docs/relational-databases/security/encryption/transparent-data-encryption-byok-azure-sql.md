@@ -16,15 +16,16 @@ ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 04/03/2018
+ms.date: 04/19/2018
 ms.author: aliceku
-ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的“创建自己的密钥”（预览）支持进行透明数据加密
+# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 通过支持[透明数据加密 (TDE)](transparent-data-encryption.md) 的“创建自己的密钥”(BYOK) 功能，可以使用称为“TDE 保护程序”的非对称密钥对数据库加密密钥 (DEK) 进行加密。  TDE 保护程序存储在你控制下的 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)（Azure 基于云的外部密钥管理系统）中。 Azure Key Vault 是第一个 TDE 将其与 BYOK 支持集成的密钥管理服务。 TDE DEK 存储在数据库的引导页上，由 TDE 保护程序进行加密和解密。 TDE 保护程序存储在 Azure Key Vault 中，且绝不会离开密钥保管库。 如果服务器对密钥保管库的访问权限被撤销，则无法将数据库解密和读取进内存。  在逻辑服务器级别设置 TDE 保护程序，并且由与服务器关联的所有数据库继承。 
@@ -65,9 +66,9 @@ ms.lasthandoff: 04/08/2018
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>有关配置 Azure Key Vault 的准则
 
-- 在启用[软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的情况下使用密钥保管库，以防密钥（或密钥保管库）意外删除时丢失数据：  
-  - 被软删除的资源将保留一段时间（90 天），除非它们被恢复或清除。
-  - “恢复”和“清除”操作具有与密钥保管库访问策略相关的各自权限。 
+- 在启用[软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的情况下配置 Key Vault，以防意外或恶意删除密钥（或 Key Vault）时丢失数据。  这是针对使用 BYOK 的 TDE 的硬性要求：  
+  - 被软删除的资源将保留 90 天，除非它们被恢复或清除。
+  - “恢复”和“清除”操作具有 Key Vault 访问策略定义的各自权限。 
 - 授予逻辑服务器权限，让其可以使用自己的 Azure Active Directory (Azure AD) 标识访问密钥保管库。  使用门户 UI 时会自动创建 Azure AD 标识，并向服务器授予密钥保管库的访问权限。  通过 PowerShell 使用 BYOK 配置 TDE，必须创建 Azure AD 标识，且应验证完成情况。 请参阅[使用 BYOK 配置 TDE](transparent-data-encryption-byok-azure-sql-configure.md)，获取使用 PowerShell 时的详细分步说明。
 
   >[!NOTE]
@@ -122,7 +123,8 @@ ms.lasthandoff: 04/08/2018
 ### <a name="azure-key-vault-configuration-steps"></a>Azure Key Vault 配置步骤
 
 - 安装 [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
-- 使用 Key Vault 中的 [PowerShell 启用“软删除”属性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)，在两个不同区域创建两个 Azure Key Vault（该选项在 AKV 门户中还不可用，但 SQL 需要该选项） 
+- 使用 Key Vault 中的 [PowerShell 启用“软删除”属性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)，在两个不同区域创建两个 Azure Key Vault（该选项在 AKV 门户中还不可用，但 SQL 需要该选项）。
+- 这两个 Azure Key Vault 都必须位于在相同 Azure 地域中可用的两个区域，才能备份和恢复密钥。  如果需要将两个 Key Vault 位于不同地区以满足 SQL Geo-DR 要求，请遵循 [BYOK 过程](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys)，该过程允许从本地 HSM 导入密钥。
 - 在第一个 Key Vault 中创建新的密钥：  
   - RSA/RSA HSA 2048 密钥 
   - 永久有效 
@@ -138,7 +140,7 @@ ms.lasthandoff: 04/08/2018
 - 选择逻辑服务器 TDE 窗格，并用于每个逻辑 SQL Server：  
    - 在相同区域中选择 AKV 
    - 选择密钥用作 TDE 保护程序 - 每个服务器都将使用该 TDE 保护程序的本地副本。 
-   - 在门户中执行此操作将为逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限）创建 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，请勿删除此标识符。  可通过删除 Azure Key Vault 中的权限来撤销访问权限。 对于逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限），请勿删除此标识符。  可通过删除 Azure Key Vault 中的权限来撤销访问权限。 
+   - 在门户中执行此操作将为逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限）创建 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，请勿删除此标识符。  可通过删除 Azure Key Vault 中的权限来撤销访问权限。 对于逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限）。
 - 创建主数据库。 
 - 请按照[活动异地复制指南](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)完成方案，此步骤将创建辅助数据库。
 

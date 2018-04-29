@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 故障排除 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 故障排除 | Microsoft Docs
+ms.custom: ''
 ms.date: 8/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
@@ -18,20 +18,20 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 
+caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7f75c81eb0b2cdcf8fdc68ba5ac1a21ba62481eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 故障排除
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
+  若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
   
 ## <a name="catalog-views"></a>目录视图  
  使用此处列出的目录视图来管理 PolyBase 操作。  
@@ -243,7 +243,7 @@ ms.lasthandoff: 02/12/2018
 
 ## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案
 
-有关解决外部表的错误，请参阅 Murshed Zaman 的博客 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 安装错误和可能的解决方案")。
+要解决外部表问题，请参阅 Murshed Zaman 的博客 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 安装错误和可能的解决方案")。
 
 ## <a name="see-also"></a>另请参阅
 [PolyBase Kerberos 连接疑难解答](polybase-troubleshoot-connectivity.md)

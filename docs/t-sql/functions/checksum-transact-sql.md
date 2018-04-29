@@ -1,16 +1,16 @@
 ---
 title: CHECKSUM (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKSUM_TSQL
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - CHECKSUM function
 - checksum values
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d41736f6ac216de0ecf755cbf7ca73ba34a697b8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fb7fdf7e2eeb45fea9881fd2fecf8c769679b3aa
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-返回按照表的某一行或一组表达式计算出来的校验和值。 CHECKSUM 用于生成哈希索引。
+`CHECKSUM` 函数返回按照表的某一行或一组表达式计算出来的校验和值。 使用 `CHECKSUM` 来生成哈希索引。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,7 +49,15 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>参数  
 \*  
-指定对表的所有列进行计算。 如果有任一列是非可比数据类型，则 CHECKSUM 返回错误。 非可比数据类型有 text、ntext、image、XML 和 cursor，还包括以上述任一类型作为基类型的 sql_variant。
+此参数指定涵盖了所有表列的校验和计算。 如果有任一列具有非可比数据类型，则 `CHECKSUM` 返回错误。 非可比数据类型包括：
+
+- **cursor**
+- **图像**
+- **ntext**
+- **text**
+- **XML**
+
+另一个非可比数据类型为，以上述任一数据类型作为基类型的 sql_variant。
   
 *expression*  
 除非可比数据类型之外的任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
@@ -57,16 +66,18 @@ CHECKSUM ( * | expression [ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM 对其参数列表计算一个称为校验和的哈希值。 此哈希值用于生成哈希索引。 如果 CHECKSUM 的参数为列，并且对计算的 CHECKSUM 值生成索引，则结果是一个哈希索引。 它可用于对列进行等价搜索。
+CHECKSUM 对其参数列表计算一个称为校验和的哈希值。 使用哈希值生成哈希索引。 如果 `CHECKSUM` 函数具有列参数，则结果是一个哈希索引，并且对计算的 CHECKSUM 值生成索引。 它可用于对列进行等价搜索。
   
-CHECKSUM 满足哈希函数的下列属性：在使用等于 (=) 运算符比较时，如果两个列表的相应元素具有相同类型且相等，则在任何两个表达式列表上应用的 CHECKSUM 将返回同一值。 对于该定义，指定类型的 Null 值被作为相等进行比较。 如果表达式列表中的某个值发生更改，则列表的校验和通常也会更改。 但只在极少数情况下，校验和会保持不变。 因此，我们不推荐使用 CHECKSUM 来检测值是否更改，除非应用程序可以容忍偶尔丢失更改。 请考虑改用 [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md)。 指定 MD5 哈希算法时，HashBytes 为两个不同输入返回相同结果的可能性比 CHECKSUM 小得多。
+`CHECKSUM` 函数满足哈希函数的属性：`CHECKSUM` 在使用等于 (=) 运算符比较时，如果两个列表的相应元素具有相同数据类型且对应的元素相等，则在任何两个表达式列表上应用的 BINARY_CHECKSUM 将返回同一值。 因为 `CHECKSUM` 函数，指定类型的 Null 值被定义为相等进行比较。 如果表达式列表中的至少一个值发生更改，则列的校验和很可能也会更改。 但是，这一点无法保证。 因此，若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `CHECKSUM`。 否则，请考虑改用 [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md)。 指定 MD5 哈希算法时，HashBytes 为两个不同输入返回相同结果的可能性比 CHECKSUM 小得多。
   
-表达式的顺序影响 CHECKSUM 的结果值。 用于 CHECKSUM(*) 的列顺序是表或视图定义中指定的列顺序。 其中包括计算列。
+表达式顺序会影响计算 `CHECKSUM` 值。 用于 CHECKSUM(\*) 的列顺序是表或视图定义中指定的列顺序。 其中包括计算列。
   
 CHECKSUM 值取决于排序规则。 使用不同排序规则存储的相同值将返回一个不同的 CHECKSUM 值。
   
 ## <a name="examples"></a>示例  
-以下示例演示如何使用 `CHECKSUM` 生成哈希索引。 通过将计算校验和列添加到索引的表中，然后对校验和列生成索引来生成哈希索引。
+这些示例显示了如何使用 `CHECKSUM` 来生成哈希索引。
+  
+为生成哈希索引，第一个示例将已计算的校验和列添加到我们想要索引的表。 然后在校验和列生成索引。 
   
 ```sql
 -- Create a checksum index.  
@@ -80,7 +91,7 @@ CREATE INDEX Pname_index ON Production.Product (cs_Pname);
 GO  
 ```  
   
-校验和索引可用作哈希索引，尤其是当要索引的列为较长的字符列时可以提高索引速度。 校验和索引可用于等价搜索。
+此示例显示将校验和索引用作哈希索引。 当索引的列为长字符列时，这可加快索引的速度。 校验和索引可用于等价搜索。
   
 ```sql
 /*Use the index in a SELECT query. Add a second search   
@@ -93,7 +104,7 @@ AND Name = N'Bearing Ball';
 GO  
 ```  
   
-对计算列创建索引将具体化为校验和列，对 `ProductName` 值所做的任何更改都将传播到校验和列。 也可以直接对索引的列生成索引。 然而，如果键值较长，则很可能不执行校验和索引甚至常规索引。
+对计算列的索引创建将具体化为校验和列，对 `ProductName` 值所做的任何更改都将传播到校验和列。 或者，我们可以在想要索引的列上直接生成索引。 但是，对于长密钥值，常规索引的执行很可能不如校验和索引。
   
 ## <a name="see-also"></a>另请参阅
 [CHECKSUM_AGG (Transact-SQL)](../../t-sql/functions/checksum-agg-transact-sql.md)  

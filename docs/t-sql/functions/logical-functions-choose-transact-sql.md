@@ -1,16 +1,16 @@
 ---
-title: "CHOOSE (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: CHOOSE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 47c1b132f83999e752f9f16392f521323d546663
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="logical-functions---choose-transact-sql"></a>逻辑函数-CHOOSE (Transact SQL)
+# <a name="logical-functions---choose-transact-sql"></a>逻辑函数 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中从值列表返回指定索引处的项。  
@@ -46,18 +46,18 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *索引*  
+ 索引  
  一个整数表达式，表示其后的项列表的从 1 开始的索引。  
   
- 如果提供的索引值具有数值数据类型以外**int**，则该值隐式转换为整数。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
+ 如果提供的索引值具有 int 之外的数值数据类型，则该值将隐式转换为整数。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
   
- *val_1...val_n*  
+ val_1 … val_n  
  任何数据类型的逗号分隔的值列表。  
   
 ## <a name="return-types"></a>返回类型  
  从传递到函数的类型集中返回优先级最高的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  CHOOSE 像索引一样进入数组中，其中，数组由跟在索引参数之后的各参数组成。 索引参数确定将返回以下哪些值。  
   
 ## <a name="examples"></a>示例  
@@ -130,6 +130,6 @@ Sales Representative                               2007-07-01 Summer
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [IIF &#40;Transact SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

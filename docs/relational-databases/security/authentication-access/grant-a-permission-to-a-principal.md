@@ -1,33 +1,35 @@
 ---
-title: "向主体授予权限 | Microsoft Docs"
-ms.custom: 
+title: 向主体授予权限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d22ba04e498423840ea77a40d17949980887da7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5a69323028abbd3c7684614593a1dba98dfb87c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中对主体授予权限。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中对主体授予权限。  
   
  **本主题内容**  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要向主体授予权限，请使用：**  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  授权者（或使用 AS 选项指定的主体）必须具有使用 GRANT OPTION 授予的权限本身，或具有隐含授予该权限的更高权限。 **sysadmin** 固定服务器角色成员可以授予任何权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -72,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  右键单击某一存储过程，然后选择“属性”。  
   
-5.  在“存储过程属性 – *stored_procedure_name”*对话框中，在“选择页”下，选择“权限”。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
+5.  在“存储过程属性 – stored_procedure_name”对话框中选择某页面，然后选择“权限”。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
   
 6.  完成后，单击 **“确定”**。  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   

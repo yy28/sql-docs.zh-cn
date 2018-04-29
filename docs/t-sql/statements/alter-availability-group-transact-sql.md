@@ -1,16 +1,16 @@
 ---
 title: ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 
+caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebe662a8164db991c105ebf676b6a51e1f6cdcc5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -277,7 +277,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL 在 ADD REPLICA ON 子句中是必需的，在 MODIFY REPLICA ON 子句中是可选的。  有关详细信息，请参阅 [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)配置服务器实例时遇到的典型问题。  
   
- 'TCP://system-address:port'  
+ 'TCP://system-address:port'****  
  指定一个 URL，它用于指定端点 URL 或只读路由 URL。 URL 参数如下所示：  
   
  *system-address*  
@@ -332,7 +332,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  指定手动种子设定（默认）。 此方法要求在主要副本上创建数据库的备份，并在次要副本上手动还原该备份。  
   
- BACKUP_PRIORITY *=***n  
+ BACKUP_PRIORITY =n  
  指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 这些值将具有以下含义：  
   
 -   1..100 表示可被选择来执行备份的可用性副本。 1 表示最低优先级，100 表示最高优先级。 如果 BACKUP_PRIORITY = 1，则只有在没有更高的优先级可用性副本当前可用的情况下，才会选择可用性副本来执行备份。  
@@ -360,7 +360,7 @@ ALTER AVAILABILITY GROUP group_name
   
  有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
   
- READ_ONLY_ROUTING_URL ='TCP://system-address:port'  
+ READ_ONLY_ROUTING_URL ='TCP://system-address:port'****  
  指定要用于此可用性副本的路由读意向连接请求的 URL。 这是 SQL Server 数据库引擎侦听的 URL。 通常，SQL Server 数据库引擎的默认实例侦听 TCP 端口 1433。  
   
  对于命名实例，可以通过查询 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 动态管理视图的 port 和 type_desc 列来获取端口号。 服务器实例使用 Transact-SQL 侦听器 (type_desc='TSQL')。  
@@ -454,7 +454,7 @@ ALTER AVAILABILITY GROUP group_name
   
  有关强制故障转移的限制、先决条件和建议的信息，以及强制故障转移对可用性组中以前的主数据库的影响，请参阅[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER ‘dns_name’( \<add_listener_option> )  
+ ADD LISTENER ‘dns_name’( \<add_listener_option> )****  
  为此可用性组定义新的可用性组侦听器。 仅在主要副本上受支持。  
   
 > [!IMPORTANT]  
@@ -481,12 +481,12 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  指定构成一半分布式可用性组的可用性组名称。  
   
- LISTENER ='TCP://system-address:port'  
+ LISTENER ='TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL 路径。  
   
  必须有 LISTENER 子句。  
   
- 'TCP://system-address:port'  
+ 'TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL。 URL 参数如下所示：  
   
  *system-address*  
@@ -538,7 +538,7 @@ ALTER AVAILABILITY GROUP group_name
  \<add_listener_option>  
  ADD LISTENER 采用以下选项之一：  
   
- WITH DHCP [ ON { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) } ]  
+ WITH DHCP [ ON { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) } ]****  
  指定可用性组侦听器将使用动态主机配置协议 (DHCP)。  或者，使用 ON 子句标识将在其上创建此侦听器的网络。 DHCP 限制为单个子网，该子网用于在可用性组中承载可用性副本的每个服务器实例。  
   
 > [!IMPORTANT]  
@@ -548,7 +548,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP ( { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) | (‘ipv6_address’) } [ , ...n ] ) [ , PORT =listener_port ]***  
+ WITH IP ( { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) | (‘ipv6_address’) } [ , ...n ] ) [ , PORT =listener_port ]********  
  指定可用性组侦听器将使用一个或多个静态 IP 地址，而不使用 DHCP。 若要跨多个子网创建一个可用性组，每个子网均需要一个侦听器配置中的静态 IP 地址。 对于某一给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。 请与您的网络管理员联系以获取将承载新可用性组的可用性副本的每个子网的静态 IP 地址。  
   
  例如：  
@@ -571,22 +571,22 @@ ALTER AVAILABILITY GROUP group_name
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER ‘dns_name’( \<modify_listener_option> )  
+ MODIFY LISTENER ‘dns_name’( \<modify_listener_option> )****  
  修改此可用性组的现有可用性组侦听器。 仅在主要副本上受支持。  
   
  \<modify_listener_option>  
  MODIFY LISTENER 采用以下选项之一：  
   
- ADD IP { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) | (‘dns_nameipv6_address’) }  
+ ADD IP { (‘four_part_ipv4_address’,‘four_part_ipv4_mask’) | (‘dns_nameipv6_address’) }****  
  将指定的 IP 地址添加到由 dns_name 指定的可用性组侦听器。  
   
  PORT = listener_port  
  请参阅本节前面对此参数的说明。  
   
- RESTART LISTENER ‘dns_name’  
+ RESTART LISTENER ‘dns_name’****  
  重新启动与指定的 DNS 名称关联的侦听器。 仅在主要副本上受支持。  
   
- REMOVE LISTENER ‘dns_name’  
+ REMOVE LISTENER ‘dns_name’****  
  删除与指定的 DNS 名称关联的侦听器。 仅在主要副本上受支持。  
   
  OFFLINE  
