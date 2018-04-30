@@ -6,7 +6,7 @@ ms.author: erickang
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a43b6778870a1555b63ebdad55bc64859d0dd5be
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 创建和运行 SQL Server 的 TRANSACT-SQL 脚本
 
@@ -252,7 +252,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
 
 ## <a name="next-steps"></a>后续步骤
 
-在实际情况中，你可能会创建一个稍后要保存和运行的脚本（用于管理或作为大型开发项目的一部分）。 在这种情况下，你可以将使用脚本保存**.sql**扩展。
+在实际情况中，你可能会创建一个稍后要保存和运行的脚本（用于管理或作为大型开发项目的一部分）。 在这种情况下，你可以将使用脚本保存 **.sql**扩展。
 
 如果你不熟悉 T-SQL 的请参阅[教程： 编写 TRANSACT-SQL 语句]和[TRANSACT-SQL 参考 （数据库引擎）]。
 
