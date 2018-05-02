@@ -28,11 +28,11 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1b0500c39e158f07c7371f853be7262ee9b82930
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 64ec9fcd7b4a8411d665a96614ee99f2dacddcd6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/20/2018
 |**2371**|将固定自动更新统计信息阈值更改为动态自动更新统计信息阈值。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在低于 130 的[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)下，此行为由引擎控制，跟踪标志 2371 不再有效。<br /><br />**作用域**：仅全局|
 |**2389**|为升序键启用自动生成的快速统计信息（直方图修正）。 如果设置了跟踪标志 2389，并且将前导统计信息列标记为升序，则会在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 4139。<br /><br />**作用域**：全局、会话或查询|
 |**2390**|为升序键或未知键启用自动生成的快速统计信息（直方图修正）。 如果设置了跟踪标志 2390，并且将前导统计信息列标记为升序或未知，则会在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 4139。<br /><br />**作用域**：全局、会话或查询|
-|**2422**|当超过 Resource Governor REQUEST_MAX_CPU_TIME_SEC 配置设置的最长时间时，允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止请求。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/4038419)。<br /><br />**注意：**此跟踪标志适用于 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局|
+|**2422**|当超过 Resource Governor REQUEST_MAX_CPU_TIME_SEC 配置设置的最长时间时，允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止请求。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/4038419)。<br /><br />**注意：**此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局|
 |**2430**|启用备用锁类清除。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2754301)。<br /><br />**作用域**：仅全局| 
 |**2453**|当足够数量的行发生更改时，允许表变量触发重新编译。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：**请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询|
 |**2469**|为已分区列存储索引中的 `INSERT INTO ... SELECT` 启用备用 Exchange。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3204769)。<br /><br />**作用域**：全局、会话或查询|
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/20/2018
 |**10204**|在列存储索引重组期间禁用合并/重新压缩。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，当重组列存储索引时，会有一个新功能将所有小型压缩行组自动合并为较大的压缩行组，并重新压缩具有大量已删除行的所有行组。<br /><br />**注意：**跟踪标志 10204 不适用于对内存优化表创建的列存储索引。<br /><br />**作用域**：全局或会话|   
 |**10316**|允许对[内部内存优化暂存时态表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)创建除默认索引之外的附加索引。 如果有特定的查询模式，其中包含未被默认索引覆盖的列，则可以考虑添加附加索引。<br /><br />**注意：**内存优化表的经系统版本控制的时态表旨在提供较高的事务吞吐量。 请注意，创建附加索引可能会为更新或删除当前表中的行的 DML 操作带来开销。 如果使用附加索引，应力求在时态查询的性能和额外的 DML 开销之间找到适当的平衡点。<br /><br />**作用域**：全局或会话|
 |**11023**|对于未将采样率显式指定为 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句一部分的所有后续统计信息更新，禁止使用上一个持续采样率。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/4039284)。<br /><br />**作用域**：全局或会话|    
-|**11024**|当任何分区的修改计数超过本地[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)时，允许触发统计信息的自动更新。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/4041811)。<br /><br />**作用域**：全局或会话| 
+|**11024**|当任何分区的修改计数超过本地[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)时，允许触发统计信息的自动更新。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/4041811)。<br /><br />**注意：**此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局或会话| 
   
 ## <a name="remarks"></a>Remarks  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有三种跟踪标志：查询、会话和全局。 查询跟踪标志在特定查询的上下文中处于活动状态。 会话跟踪标志对某个连接有效，且只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 某些标志只能作为全局标志启用，而某些标志在全局或会话作用域都可以启用。  

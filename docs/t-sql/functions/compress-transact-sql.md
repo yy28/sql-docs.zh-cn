@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51324f00da71597a8a2dd37d8f0077c4b3bc8b55
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0d4c7392b58f3277317e3bf9b8077239510bb0c3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-使用 GZIP 算法压缩输入表达式。 压缩的结果是 varbinary(max) 类型的字节数组。
+此函数使用 GZIP 算法压缩输入表达式。 该函数返回类型 varbinary(max) 的字节数组。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,35 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>参数  
 *expression*  
-Is a nvarchar(n)、nvarchar(max)、varchar(n)、varchar(max)、varbinary(n)、varbinary(max)、char(n)、nchar(n) 或 binary(n) 表达式************************。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。
+仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，
+
+* **binary(***n***)**
+* **char(***n***)**
+* **nchar(***n***)**
+* **nvarchar(max)**
+* **nvarchar(***n***)**
+* **varbinary(max)**
+* **varbinary(***n***)**
+* **varchar(max)**
+
+或多个
+
+* **varchar(***n***)**
+
+expression。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-返回表示输入压缩内容的 varbinary(max) 数据类型。
+varbinary(max) 代表已压缩的输入内容。
   
 ## <a name="remarks"></a>Remarks  
 压缩数据无法编入索引。
   
-COMPRESS 函数压缩将提供的数据压缩为输入表达式。对于每个要压缩的数据部分，必须调用该函数。 有关在存储过程中以行或页级别进行自动压缩的信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。
+`COMPRESS` 函数压缩输入的表达式数据。 必须调用此函数，才能压缩每个部分的数据。 请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)，详细了解行或页级别存储过程中的自动数据压缩。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-compress-data-during-the-table-insert"></a>A. 在插入表格期间压缩数据  
-以下示例演示如何压缩插入到表格中的数据：
+此示例演示如何压缩插入到表格中的数据：
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -69,7 +84,7 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 ```  
   
 ### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. 将已删除行的压缩版本进行存档  
-以下语句从 `player` 表删除旧播放器记录，并将记录以压缩格式存储在 `inactivePlayer` 表中，从而节省空间。
+此语句先从 `player` 表中删除旧的播放器记录。 为节省空间，它会以压缩格式将记录存储在 `inactivePlayer` 表中。
   
 ```sql
 DELETE player  

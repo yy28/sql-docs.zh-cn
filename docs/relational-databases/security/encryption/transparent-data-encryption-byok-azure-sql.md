@@ -19,11 +19,11 @@ ms.topic: article
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 1ca79d0f6c4bc501e7b03cd0c5b710eba2b50adf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,9 +66,10 @@ ms.lasthandoff: 04/20/2018
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>有关配置 Azure Key Vault 的准则
 
-- 在启用[软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的情况下配置 Key Vault，以防意外或恶意删除密钥（或 Key Vault）时丢失数据。  这是针对使用 BYOK 的 TDE 的硬性要求：  
-  - 被软删除的资源将保留 90 天，除非它们被恢复或清除。
-  - “恢复”和“清除”操作具有 Key Vault 访问策略定义的各自权限。 
+- 在启用[软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的情况下创建密钥保管库，以防密钥（或密钥保管库）意外删除时丢失数据。  必须使用 [PowerShell 启用密钥保管库中的“软删除”属性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)（该选项在从 AKV 门户中尚不可用，但 SQL 需要该选项）：  
+  - 被软删除的资源将保留一段时间（90 天），除非它们被恢复或清除。
+  - “恢复”和“清除”操作具有与密钥保管库访问策略相关的各自权限。 
+
 - 授予逻辑服务器权限，让其可以使用自己的 Azure Active Directory (Azure AD) 标识访问密钥保管库。  使用门户 UI 时会自动创建 Azure AD 标识，并向服务器授予密钥保管库的访问权限。  通过 PowerShell 使用 BYOK 配置 TDE，必须创建 Azure AD 标识，且应验证完成情况。 请参阅[使用 BYOK 配置 TDE](transparent-data-encryption-byok-azure-sql-configure.md)，获取使用 PowerShell 时的详细分步说明。
 
   >[!NOTE]
