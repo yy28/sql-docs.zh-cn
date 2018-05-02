@@ -1,5 +1,5 @@
 ---
-title: 查看优化报表 |Microsoft 文档
+title: 查看优化报表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-3---viewing-tuning-reports"></a>课程 1-3-查看优化报告
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课程的上一练习中，你可以查看[!INCLUDE[tsql](../../includes/tsql-md.md)]中创建或删除数据库对象作为 MySession 优化会话结果已生成的数据库引擎优化顾问建议的脚本。 MySession 优化会话是在 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的。  
+# <a name="lesson-1-3---viewing-tuning-reports"></a>第 1-3 课 - 查看优化报表
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课程的上一个练习中，你已经查看了在数据库引擎优化顾问建议中创建或删除数据库对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，这些建议是 MySession 优化会话生成的结果。 MySession 优化会话是在 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的。  
   
 尽管查看可用于实现优化结果的脚本时非常有效，但数据库引擎优化顾问仍提供了许多可供查看的有用报告。 这些报告提供了有关正在优化的数据库中现有物理设计结构的信息，以及有关建议的结构的信息。 通过单击“报告”选项卡可以查看优化报告，如以下练习中所述。 本练习将使用你在[优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)和[查看优化建议](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md)中创建的 MySession 和 EvaluateMySession 优化会话。  
   
@@ -51,11 +51,11 @@ ms.lasthandoff: 01/17/2018
   
 7.  单击“选择报告”列表中的其他报告，了解相关内容。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>“摘要”  
 现在，你已经浏览了 MySession 优化会话的数据库引擎优化顾问 GUI 的“报告”选项卡。 可以执行相同的步骤来浏览为 EvaluateMySession 优化会话生成的报告。 双击“会话监视器”窗格中的 **EvaluateMySession** 开始该会话。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 3 课： 使用 dta 命令提示实用工具](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[第 3 课：使用 dta 命令提示实用工具](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   

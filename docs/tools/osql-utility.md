@@ -1,15 +1,16 @@
 ---
-title: "osql 实用工具 |Microsoft 文档"
-ms.custom: 
+title: osql 实用工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: osql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -25,19 +26,21 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bbd6a75a0ff9e3be746c46882ee93e201d7955ef
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 730d21c957d3f4fa78d82cc2b6c6037770e716e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="osql-utility"></a>osql 实用工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**实用工具可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  使用 **osql** 实用工具可以输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
   
 > [!IMPORTANT]  
 >  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未来版本中将删除此功能。 请避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 改用 **sqlcmd** 。 有关详细信息，请参阅 [sqlcmd Utility](../tools/sqlcmd-utility.md)。  
@@ -100,7 +103,7 @@ C:\>osql
  使用可信连接而不请求密码。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定*server_name***\\***instance_name*连接到的命名实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在该服务器上。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
+ 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 命名实例的 server_name\\instance_name**。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
   
  **-H** *wksta_name*  
  工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who**显示。 如果不指定此选项，则采用当前计算机名称。  
@@ -115,7 +118,7 @@ C:\>osql
  指定命令超时之前的秒数。如果未指定 *time_out* 值，则命令将不会超时。  
   
  **-h** *headers*  
- 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用 -1，则在参数和设置之间一定不能有空格（可以是**-h-1**，不能是 **-h -1**）。  
+ 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用 -1，则在参数和设置之间一定不能有空格（可以是 **-h-1**，不能是 **-h -1**）。  
   
  **-s** *col_separator*  
  指定列分隔符字符，默认值为空格。 若要使用对操作系统有特殊含义的字符（例如 | ; & < >），请将该字符用双引号 (") 括起来。  
@@ -158,7 +161,7 @@ osql -E -q "select name, object_id from %table%"
  从输入行中删除编号和提示符号 (>)。  
   
  **-m** *error_level*  
- 自定义错误消息的显示。 显示指定的或更高严重级别的错误的消息数、状态和错误级别。 不显示低于指定级别的错误的信息。 使用 **-1** 可以指定返回所有标题及其消息，即使是信息型消息。 如果使用 **-1**，则在参数和设置之间不能有空格（可以是**-m-1**，不能是 **-m -1**）。  
+ 自定义错误消息的显示。 显示指定的或更高严重级别的错误的消息数、状态和错误级别。 不显示低于指定级别的错误的信息。 使用 **-1** 可以指定返回所有标题及其消息，即使是信息型消息。 如果使用 **-1**，则在参数和设置之间不能有空格（可以是 **-m-1**，不能是 **-m -1**）。  
   
  **-r** { **0**| **1**}  
  将消息输出重定向到屏幕 (**stderr**)。 如果不指定参数，或指定参数为 **0**，则仅重定向严重级别为 11 或更高的错误信息。 如果指定参数为 **1**，则将重定向所有的消息输出（包括“print”）。  
@@ -175,7 +178,7 @@ osql -E -q "select name, object_id from %table%"
  打印性能统计信息。  
   
  **-b**  
- 指定发生错误时， **osql** 退出并返回一个 DOS ERRORLEVEL 值。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误消息的严重级别为 11 或更大值时，返回给 DOS ERRORLEVE 变量的值为 1；否则返回的值为 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS 批处理文件可以测试 DOS ERRORLEVEL 的值并相应地处理错误。  
+ 指定发生错误时， **osql** 退出并返回一个 DOS ERRORLEVEL 值。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误消息的严重级别为 11 或更大值时，返回给 DOS ERRORLEVE 变量的值为 1；否则返回的值为 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 批处理文件可以测试 DOS ERRORLEVEL 的值并正确地处理错误。  
   
  **-u**  
  指定无论 *input_file* 为何种格式，都以 Unicode 格式存储 *output_file*。  
@@ -195,12 +198,12 @@ osql -E -q "select name, object_id from %table%"
  同时还将 DOS ERRORLEVEL 的默认值设置为 -1。  
   
 > [!NOTE]  
->   **-n** ， **-O**和**-D**选项不再受**osql**。  
+>  **-n**、 **-O** 和 **-D** 选项不再受 **osql**支持。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql**启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
   
- 如果在启动时，不指定用户名称**osql**，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]检查的环境变量，并使用，例如， **osqluser = (***用户***)**或**osqlserver = (***服务器***)**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
+ 如果启动 osql 时不指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用环境变量，如 osqluser=(user) 或 osqlserver=(server)********。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
   
  如果 **-U** 或 **-P** 选项都没有使用，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证模式进行连接。 身份验证根据运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **的用户的**Windows 帐户进行。  
   
@@ -212,7 +215,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 命令  
  除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **中的**语句外，还可以使用以下命令。  
   
-|Command|说明|  
+|Command|Description|  
 |-------------|-----------------|  
 |GO|执行上一个 GO 命令之后输入的所有语句。|  
 |RESET|清除已输入的所有语句。|  
@@ -259,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  如果可能，请使用 **-E**选项（信任连接）。  
   
- 使用时**osql**以交互方式，可以将操作系统文件读入命令缓冲区与 **: r * * * file_name*。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
+ 以交互方式使用 osql 时，可使用 **:r***file_name* 将操作系统文件读入命令缓冲区。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
   
 > [!NOTE]  
 >  使用 **osql**时，如果批处理分隔符 GO 出现在 SQL 脚本文件中，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将其视为语法错误。  
@@ -286,7 +289,7 @@ EXIT(SELECT @@ROWCOUNT)
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
 ```  
   
- **osql** 实用工具将在圆括号 **()** 中输入的所有内容原样传递给服务器。 如果存储系统过程选择了一个集合并返回一个值，则仅返回选择的内容。 圆括号中无参数的 EXIT**()** 语句将执行批处理中此语句前的所有内容，然后不返回值退出。  
+ **osql** 实用工具将在圆括号 **()** 中输入的所有内容原样传递给服务器。 如果存储系统过程选择了一个集合并返回一个值，则仅返回选择的内容。 圆括号中无参数的 EXIT **()** 语句将执行批处理中此语句前的所有内容，然后不返回值退出。  
   
  EXIT 格式有四种：  
   
@@ -295,12 +298,12 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  不执行批处理，立即退出，不返回值。  
   
--   EXIT**()**  
+-   EXIT **()**  
   
 > [!NOTE]  
 >  执行批处理后退出，不返回值。  
   
--   EXIT**(***query***)**  
+-   EXIT **(***query***)**  
   
 > [!NOTE]  
 >  执行包括查询的批处理，返回查询的结果后退出。  
@@ -341,9 +344,9 @@ GO
  此语句的结果为 `10.3496`，说明该值是原样按完整的小数位存储的。  
   
 ## <a name="see-also"></a>另请参阅  
- [注释 &#40;MDX &#41;](../mdx/comment-mdx.md)   
- [-&#40;注释 &#41;&#40;MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
- [强制转换和转换 &#40;Transact SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
- [RAISERROR &#40;Transact SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
+ [注释 (MDX)](../mdx/comment-mdx.md)   
+ [--（注释）(MDX)](../mdx/comment-mdx-operator-reference.md)   
+ [CAST 和 CONVERT (Transact-SQL)](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "启动跟踪 |Microsoft 文档"
-ms.custom: 
+title: 启动跟踪 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -25,19 +26,19 @@ helpviewer_keywords:
 - stopping traces
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ef0d4c1015fa70145f8539a4dd10f4f8f6ffc35b
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="start-a-trace"></a>启动跟踪
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]定义新跟踪或通过使用创建了模板之后[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，你可以启动、 暂停或停止捕获数据使用的新的跟踪定义或模板。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 定义新跟踪或创建模板之后，可以使用新的跟踪定义或模板来启动、暂停或停止捕获数据。  
   
 ## <a name="starting-a-trace"></a>启动跟踪  
  当启动跟踪并且已定义的源为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个队列，为捕获的服务器事件提供临时存放位置。  
@@ -50,10 +51,10 @@ ms.lasthandoff: 01/17/2018
 >  在使用现有跟踪时，可以查看属性，但是不能修改属性。 若要修改属性，请停止或暂停跟踪。  
   
 ## <a name="see-also"></a>另请参阅  
- [连接到服务器 &#40; 后自动启动跟踪SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [暂停跟踪 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/pause-a-trace-sql-server-profiler.md)   
- [停止跟踪 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/stop-a-trace-sql-server-profiler.md)   
- [清除跟踪窗口 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)   
+ [连接到服务器后自动启动跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [暂停跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/pause-a-trace-sql-server-profiler.md)   
+ [停止跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/stop-a-trace-sql-server-profiler.md)   
+ [清除跟踪窗口 (SQL Server Profiler)](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)   
  [在跟踪暂停或停止之后运行跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

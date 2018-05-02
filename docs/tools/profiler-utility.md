@@ -1,15 +1,16 @@
 ---
-title: "事件探查器实用工具 |Microsoft 文档"
-ms.custom: 
+title: 事件探查器实用工具 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**探查器**实用工具可以启动[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Profiler 实用工具可以启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
   
 > [!NOTE]  
 >  **Profiler** 实用工具不适用于脚本跟踪。 有关详细信息，请参阅 [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)。  
@@ -66,7 +67,7 @@ profiler
  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的用户登录 ID。 登录 ID 区分大小写。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]的用户。  
   
  **/P** *password*  
  指定用户指定的用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的密码。  
@@ -97,7 +98,7 @@ profiler
  指定要在事件探查器启动时加载的跟踪文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/O**一起使用。  
   
  **/O "** *filename*  **"**  
- 指定应在其中写入跟踪结果的文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/F.**一起使用。  
+ 指定应在其中写入跟踪结果的文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/F.** 一起使用。  
   
  **/L** *locale_ID*  
  不可用。  
@@ -123,7 +124,7 @@ profiler
  **/Z**  *file_size*  
  指定跟踪文件的大小（以兆字节 (MB) 为单位）。 默认大小是 5 MB。 若启用了滚动功能，则所有滚动文件的大小将被限制为此参数所指定的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要使用特定的模板启动跟踪，请同时使用 **/S** 和 **/T** 选项。 例如，若要使用 MyServer\MyInstance 上的 Standard 模板启动跟踪，请在命令提示符处输入以下内容：  
   
 ```  

@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-2---setting-tool-options-and-layout"></a>课程 1-2-设置工具选项和布局
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以设置配置数据库引擎优化顾问图形用户界面 (GUI) 显示在启动时，它使用的字体的选项和其他工具功能，以便最好地支持你如何使用它。 通过本页的练习将让您熟悉可设置的各选项及其设置方式。  
+# <a name="lesson-1-2---setting-tool-options-and-layout"></a>第 1-2 课 - 设置工具选项和布局
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以设置用于配置数据库引擎优化顾问图形用户界面 (GUI) 在启动时的显示内容、使用的字体以及其他工具功能的选项，从而为你的使用方式提供最佳支持。 通过本页的练习将让您熟悉可设置的各选项及其设置方式。  
   
 ### <a name="set-the-tool-options"></a>设置工具选项  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/17/2018
     -   默认情况下，将选中“在停止会话分析之前询问”，避免在数据库引擎优化顾问完成工作负载分析之前意外停止优化会话。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 2 课： 使用数据库引擎优化顾问](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[第 2 课：使用数据库引擎优化顾问](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

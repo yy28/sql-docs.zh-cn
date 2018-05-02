@@ -1,5 +1,5 @@
 ---
-title: 启动命令提示符实用工具 dta 和优化工作负荷 |Microsoft 文档
+title: 启动 dta 命令提示符实用工具并优化工作负荷 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lesson 3-1-启动命令提示符实用工具 dta 和优化工作负荷
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此任务将引导您完成启动**dta**实用程序，查看其帮助，然后使用它来优化的工作负荷从命令提示符。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的工作负荷 MyScript.sql。  
+# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>第 3-1 课 - 启动 dta 命令提示符实用工具并优化工作负荷
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此任务指导你如何从命令提示符下启动 dta 实用工具、查看其帮助，以及使用它优化工作负荷。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的工作负荷 MyScript.sql。  
   
 本教程使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库。 出于安全原因，默认情况下不安装该示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](http://sqlserversamples.codeplex.com)。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/17/2018
   
 3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 和 [查看优化报告](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)中执行的方式相同。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>“摘要”  
 你已使用 **dta** 实用工具在命令提示符下完成了对一个简单工作负荷的优化。 该工具还提供了其他许多优化选项。 有关详细信息，请参阅工具帮助 (**dta -?**) 和参考主题 [dta 实用工具](../../tools/dta/dta-utility.md) 。  
   
 ## <a name="after-you-finish-this-tutorial"></a>学完本教程后  

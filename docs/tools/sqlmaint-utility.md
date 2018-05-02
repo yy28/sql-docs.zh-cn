@@ -1,15 +1,16 @@
 ---
-title: "sqlmaint 实用工具 |Microsoft 文档"
-ms.custom: 
+title: sqlmaint 实用工具 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqlmaint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**实用程序执行一组指定的一个或多个数据库上的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果成功运行，则 sqlmaint 实用工具可以对一个或多个数据库执行一组指定的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] 将使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划功能代替此实用工具。 有关维护计划的详细信息，请参阅 [维护计划](../relational-databases/maintenance-plans/maintenance-plans.md)。  
@@ -86,7 +87,7 @@ number[minutes | hours | days | weeks | months]
  指定返回 **sqlmaint** 的语法关系图。 此参数必须单独使用。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定*server_name***\\***instance_name*连接到的命名实例[!INCLUDE[ssDE](../includes/ssde-md.md)]在该服务器上。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 命名实例的 server_name\\instance_name**。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
   
  **-U** *login_ID*  
  指定连接服务器时使用的登录 ID。 如果未提供， **sqlmaint** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。 如果 *login_ID* 包含特殊字符，则必须用双引号 (") 引起来；否则，双引号为可选。  
@@ -135,7 +136,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  *sqlmaint* 访问远程服务器时， **html_file** 需要完整的 UNC 文件名。  
   
  **-DelHtmlRpt** \<*time_period*>  
- 指定是否在报表文件的创建后的时间间隔超过中删除报表目录中的所有 HTML 报表\< *time_period*>。 **-DelHtmlRpt** 将查找名称符合由 *html_file* 参数生成的模式的文件。 如果*html_file*为 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，则**-DelHtmlRpt**导致**sqlmaint**删除任何文件名称匹配的模式 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 且处于早于指定\< *time_period*>。  
+ 指定报表文件创建后的时间间隔超出 \<time_period> 时，删除报表目录中的所有 HTML 报表。 **-DelHtmlRpt** 将查找名称符合由 *html_file* 参数生成的模式的文件。 如果 html_file 为 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，则 -DelHtmlRpt 将导致 sqlmaint 删除任何名称与 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式匹配的文件，以及早于指定 \<time_period> 的文件。  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  指定从 **-D**. 指定的数据库中删除未使用的空间。 该选项仅适用于定义为自动增长的数据库。 *Threshold_percent* 指定在 **sqlmaint** 可以尝试删除未使用数据空间之前数据库必须达到的大小 (MB)。 如果数据库小于 *threshold_percent*，则不采取任何操作。 *Free_percent* 指定数据库中必须保留的未使用空间的大小，以数据库最终大小的百分比表示。 例如，如果一个 200 MB 的数据库包含 100 MB 数据，则将 *free_percent* 指定为 10 将使数据库最终大小变为 110 MB。 请注意，如果数据库小于 *free_percent* 加上数据库中数据量的大小，则数据库不会扩展。 例如，如果 108 MB 的数据库有 100 MB 数据，则将 *free_percent* 指定为 10 不会将数据库扩展为 110 MB，而是仍保持为 108 MB。  
@@ -205,7 +206,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定备份介质为磁盘。  
   
  **-DelBkUps**< *time_period* >  
- 对于磁盘备份，指定是否创建备份后的时间间隔超过的情况下删除备份目录中的所有备份文件\< *time_period*>。  
+ 对于磁盘备份，指定如果创建备份后的时间间隔超出了 \<time_period>，则删除备份目录中的所有备份文件。  
   
  **-CrBkSubDir**  
  对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
@@ -233,7 +234,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  如果仅指定 *number* ，则默认日期部分为 **weeks**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sqlmaint** 实用工具可对一个或多个数据库执行维护操作。 如果指定 **-D** ，则在剩余的命令开关中指定的操作仅对指定数据库执行。 如果指定 **-PlanName** 或 **-PlanID** ，则 **sqlmaint** 只从指定的维护计划中检索数据库列表信息。 在其余的 **sqlmaint** 参数中指定的所有操作都会应用于从计划获取的列表中的每个数据库。 **sqlmaint** 实用工具不会应用在计划本身中定义的任何维护活动。  
   
  如果成功运行，则 **sqlmaint** 实用工具将返回 0，如果失败则返回 1。 在下列情况下将报告失败：  

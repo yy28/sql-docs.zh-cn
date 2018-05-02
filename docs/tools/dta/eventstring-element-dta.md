@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定[!INCLUDE[tsql](../../includes/tsql-md.md)]直接在 XML 输入文件中的脚本工作负荷。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]直接在 XML 输入文件中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本工作负荷。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，无限长。|  
 |**默认值**|无。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/17/2018
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[工作负荷元素 &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
+|**父元素**|[工作负荷元素 (DTA)](../../tools/dta/workload-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

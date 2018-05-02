@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0e7517d17dea7e452e282debd0c9a2c63a92f93b
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的文件组元素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定索引是为用户指定的配置创建的文件组。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定要针对用户指定的配置对其创建索引的文件组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，长度没有限制。|  
 |**默认值**|无。|  
-|**出现次数**|選擇性。 对于每个 **Index** 元素可以使用一次。 如果为 **PartitionScheme** 元素指定了 **PartitionColumn** 和 **Index** 元素，则不能使用此元素。|  
+|**出现次数**|可选。 对于每个 **Index** 元素可以使用一次。 如果为 **PartitionScheme** 元素指定了 **PartitionColumn** 和 **Index** 元素，则不能使用此元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[索引元素 &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
+|**父元素**|[索引元素 (DTA)](../../tools/dta/index-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

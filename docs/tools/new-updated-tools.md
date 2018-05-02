@@ -1,6 +1,6 @@
 ---
-title: 已更新-适用于 SQL Server 文档工具 |Microsoft 文档
-description: 显示更新内容的 Microsoft SQL server 工具中最近更改文档的代码的段。
+title: 已更新 - SQL Server 工具文档 | Microsoft Docs
+description: 显示 Microsoft SQL Server 工具文档中最近更新内容的片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -12,7 +12,7 @@ ms.component: tools
 ms.date: 02/03/2018
 ms.openlocfilehash: 6527348b7ad1fb6f5443d45fd3e251654c80d5f5
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/08/2018
 ---
@@ -20,15 +20,15 @@ ms.lasthandoff: 04/08/2018
 
 
 
-几乎每日 Microsoft 及其现有的文章的一些上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文档网站。 这篇文章显示摘录最近已更新的文章。 可能还会列出链接到新的文章。
+Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文档网站上的一些现有文章。 本文显示从最近更新的文章中摘录的内容。 可能还会列出新文章的链接。
 
-定期重新运行程序生成这篇文章。 有时摘录可使用不完善格式，或出现 markdown 源文章中的说明。 此处永远不会显示图像。
+本文由定期重新运行的程序生成。 摘录内容偶尔会有格式问题，还可能以源文的 markdown 格式显示。 此处不会显示任何图像。
 
-报告的以下日期范围和主题的新的更新：
+最新的更新报告涵盖以下日期范围和主题：
 
 
 
-- 更新日期范围：2017-12-03 到 2018-02-03
+- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
 - *主题区域：* &nbsp; **适用于 SQL Server 工具**。
 
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/08/2018
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>最近创建的新项目
+## <a name="new-articles-created-recently"></a>最近创建的新文章
 
 单击以下链接可跳转到最近添加的新文章。
 
@@ -47,13 +47,13 @@ ms.lasthandoff: 04/08/2018
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>与摘录更新的文章
+## <a name="updated-articles-with-excerpts"></a>包含摘录内容的已更新文章
 
 此部分摘录了最近大幅更新的文章中的更新内容。
 
-此处显示的摘自其正确的语义上下文的来自分隔。 此外，有时摘录分开环绕在实际的文章中的重要的 markdown 语法。 因此这些摘录适用于一般性指导原则。 摘录仅使你能够知道您的兴趣是否值得花些时间后，单击，访问实际的文章。
+此处显示的摘录与其对应的语义上下文脱离。 此外，有时摘录会与实际文章中此摘录周围的重要 markdown 语法元素脱离。 因此，这些摘录仅可用于一般指导。 摘录只是帮助你确定自己是否有兴趣花时间点击并访问实际文章。
 
-有关这些和其他原因，不从这些摘录中，复制代码并不会为确切真实任何文本摘录。 相反，请访问实际的文章。
+鉴于以上原因及其他原因，请不要复制这些摘录中的代码，也不要将摘录当作确切事实。 请转而访问实际文章。
 
 
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/08/2018
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Compact 的最近更新的文章的列表
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/08/2018
 
 &nbsp;
 
-***此区域中的没有项目已更新最近，这一次。***
+此区域最近未更新任何文章。
 
 
 
@@ -109,16 +109,16 @@ ms.lasthandoff: 04/08/2018
 
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
-- [新 + 更新 (0 + 0): **ActiveX 数据对象 (ADO) sql**文档](../ado/new-updated-ado.md)
+- [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
 - [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (0 + 0): **sql Data Quality Services**文档](../data-quality-services/new-updated-data-quality-services.md)
-- [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
+- [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
+- [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
-- [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
-- [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0): **SQL 的示例**文档](../samples/new-updated-samples.md)
-- [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)**文档](../ssma/new-updated-ssma.md)
+- [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
+- [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../samples/new-updated-samples.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
-- [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
+- [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 
 

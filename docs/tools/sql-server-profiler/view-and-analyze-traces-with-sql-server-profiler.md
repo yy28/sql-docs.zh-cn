@@ -1,15 +1,16 @@
 ---
-title: "查看和分析使用 SQL Server 事件探查器跟踪 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQL Server Profiler 查看和分析跟踪 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -21,24 +22,24 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 查看和分析跟踪
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]查看跟踪中捕获的事件数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示基于定义的跟踪属性的数据。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的一种方式是将数据复制到其他程序中，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问可以使用跟踪文件包含 SQL 批处理和远程过程调用 (RPC) 事件，如果**文本**跟踪中包括数据列。 为了确保捕获正确的事件和列以便与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问一起使用，请使用随 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]一起提供的预定义优化模板。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 查看跟踪中捕获的事件数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示基于定义的跟踪属性的数据。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的一种方式是将数据复制到其他程序中，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果跟踪中包括“文本”数据列，则优化顾问可以使用包含 SQL 批处理和远程过程调用 (RPC) 事件的跟踪文件。 为了确保捕获正确的事件和列以便与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问一起使用，请使用随 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]一起提供的预定义优化模板。  
   
  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]打开跟踪时，如果跟踪文件是由 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或 SQL 跟踪系统存储过程创建的，则该文件不需要带 .trc 文件扩展名。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]此外可以读取 SQL 跟踪.log 文件和通用 SQL 脚本文件。 打开不带 .log 文件扩展名的 SQL 跟踪 .log 文件（例如 trace.txt）时，应将文件格式指定为 **SQLTrace_Log** 。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 还可以读取 SQL 跟踪 .log 文件和通用 SQL 脚本文件。 打开不带 .log 文件扩展名的 SQL 跟踪 .log 文件（例如 trace.txt）时，应将文件格式指定为 **SQLTrace_Log** 。  
   
  您可以配置 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 日期和时间显示格式以便有助于跟踪分析。  
   
@@ -75,7 +76,7 @@ AND     CPU < (Duration * 1000)
   
 2.  查找目标事件。  
   
-    -   打开跟踪文件或表，并展开所需事件类的节点，例如， **Deadlock Chain**。 有关详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或[打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)。  
+    -   打开跟踪文件或表，并展开所需事件类的节点，例如， **Deadlock Chain**。 有关详细信息，请参阅 [打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)一起提供的预定义优化模板。  
   
     -   在跟踪数据中搜索直到找到所需的事件（使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“编辑”菜单上的“查找”命令帮助查找跟踪中的值）。 记录所跟踪事件的“ClientProcessID”和“开始时间”数据列中的值。  
   
@@ -90,9 +91,9 @@ AND     CPU < (Duration * 1000)
 ## <a name="see-also"></a>另请参阅  
  [查看保存的跟踪 (Transact-SQL)](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [查看筛选器信息 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [查看筛选器信息 &#40;Transact SQL &#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
- [打开跟踪文件 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [查看筛选器信息 (SQL Server Profiler)](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [查看筛选器信息 (Transact-SQL)](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
+ [打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   

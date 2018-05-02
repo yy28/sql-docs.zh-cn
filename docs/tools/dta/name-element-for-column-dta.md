@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9bb4027f057fdfcd3c6aa4802708bfe39361ecff
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-column-dta"></a>列的名称元素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]一个用户指定的配置中指定索引列的名称。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在用户指定的配置中为索引列指定名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，长度没有限制。|  
 |**默认值**|无。|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/17/2018
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[索引 &#40; DTA &#41; 的列元素](../../tools/dta/column-element-for-index-dta.md)|  
+|**父元素**|[索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec9be70ff9d3605159bd47c4a4fd77f5bb1c6111
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-element-for-index-dta"></a>索引的列元素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定在其为用户指定的配置创建索引的列。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定在其上为用户指定的配置创建索引的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -85,8 +85,8 @@ ms.lasthandoff: 01/17/2018
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[索引元素 &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
-|**子元素**|[列 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-column-dta.md)|  
+|**父元素**|[索引元素 (DTA)](../../tools/dta/index-element-dta.md)|  
+|**子元素**|[列的名称元素 (DTA)](../../tools/dta/name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[用户指定配置 (DTA) 的 XML 输入文件示例](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  

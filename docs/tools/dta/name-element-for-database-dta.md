@@ -24,7 +24,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 342364fbc99ef542120d3a36c22e4a59ce6bcca8
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，长度没有限制。|  
 |**默认值**|无。|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/17/2018
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[服务器 &#40; DTA &#41; 的数据库元素](../../tools/dta/database-element-for-server-dta.md)|  
+|**父元素**|[服务器的数据库元素 (DTA)](../../tools/dta/database-element-for-server-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

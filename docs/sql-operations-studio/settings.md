@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) 用户和工作区设置 |Microsoft 文档
-description: 如何修改 SQL Operations Studio (preview) 用户和工作区设置。
+title: SQL 操作 Studio （预览版） 用户和工作区设置 |Microsoft 文档
+description: 如何修改 SQL 操作 Studio （预览版） 用户和工作区设置。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>用户和工作区设置
 
 很容易地配置[!INCLUDE[name-sos](../includes/name-sos-short.md)]根据通过设置自己的喜好。 几乎每个属于[!INCLUDE[name-sos](../includes/name-sos-short.md)]的编辑器、 用户界面和功能的行为具有选项可以修改。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供两个不同的作用域的设置：
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供两个不同的作用域的设置：
 
 * **用户**这些设置应用到的任何实例的全局[!INCLUDE[name-sos](../includes/name-sos-short.md)]打开。
 * **工作区**工作区设置是特定于你计算机上的文件夹的设置，在资源管理器侧栏中打开文件夹时才可用。 在此作用域上定义的设置会覆盖用户作用域。
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>热退出
 
-当你退出默认情况下 SQL Operations Studio 将记住文件未保存的更改。 这是与 Visual Studio 代码中的热退出功能相同。
+当你退出默认情况下 SQL 操作 Studio 将记住文件未保存的更改。 这是与 Visual Studio 代码中的热退出功能相同。
 
 默认情况下，热退出处于关闭状态。 启用作用通过编辑退出`files.hotExit`设置。 有关详细信息，请参阅[（在 Visual Studio Code 文档中） 的热退出](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 

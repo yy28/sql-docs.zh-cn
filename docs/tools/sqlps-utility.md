@@ -1,36 +1,39 @@
 ---
-title: "sqlps 实用工具 |Microsoft 文档"
-ms.custom: 
+title: sqlps 实用工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqlps
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6fe8cb156ab8b1fbe6f72d4a91498d313f4674b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps**实用工具启动 Windows PowerShell 会话，同时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 提供程序和 cmdlet 加载和注册。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **sqlps** 实用工具可启动 Windows PowerShell 会话，同时加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]使用**sqlps** PowerShell 模块相反。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]改用 sqlps PowerShell 模块。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,12 +78,12 @@ sqlps
  指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从*script_block* 或其他 **script_block** 实用工具会话调用 **script_block** 实用工具时，才能指定 **script_block** 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
- 指定包含要运行的 PowerShell 命令的字符串。 使用格式**"& {***命令***}"**。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
+ 指定包含要运行的 PowerShell 命令的字符串。 使用 "&{command}" 格式****。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
   
  [ **-?** | **-Help** ]  
  显示 **sqlps** 实用工具选项的语法摘要。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **Sqlps** 实用工具启动 PowerShell 环境 (PowerShell.exe) 并加载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 模块。 该模块也命名为 **sqlps**，它将加载并注册以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元：  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -106,7 +109,7 @@ sqlps
  在 **和** 中，此版本的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 实用工具已作为 Windows PowerShell 1.0 微型外壳程序实现。 微型外壳程序具有某些限制，例如不允许用户加载不是由微型外壳程序所加载的管理单元。 这些限制并不适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本及更高的版本的实用工具，这些版本已更改为使用 **sqlps** 模块。  
   
 ## <a name="examples"></a>示例  
- **A.运行 sqlps 实用工具，默认情况下的，不显示版权标志的交互模式**  
+ **A.以默认的交互模式运行 sqlps 实用工具，不显示版权标志**  
   
 ```  
 sqlps -NoLogo  

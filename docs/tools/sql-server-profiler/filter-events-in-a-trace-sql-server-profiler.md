@@ -1,29 +1,30 @@
 ---
-title: "筛选跟踪 （SQL Server 事件探查器） 中的事件 |Microsoft 文档"
-ms.custom: 
+title: 筛选跟踪 （SQL Server 事件探查器） 中的事件 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e6d6716cfcdf8bd6ce495f8aefe0e0df34fddb1c
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
@@ -40,11 +41,11 @@ ms.lasthandoff: 01/17/2018
   
 2.  单击 **“列筛选器”.**  
   
-     此时将显示“编辑筛选器”对话框。 **编辑筛选器**对话框中包含可用于筛选跟踪中的事件的比较运算符的列表。  
+     此时将显示“编辑筛选器”对话框。 “编辑筛选器”对话框包含一个比较运算符列表，可以使用这些运算符在跟踪中筛选事件。  
   
 3.  若要应用筛选器，请单击比较运算符，再键入要用于该筛选器的值。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
  **注意事项：**  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/17/2018
   
     -   输入的日期符合此格式： `YYYY/MM/DD HH:mm:sec`。  
   
-         -或者-  
+         -或-  
   
-    -   在**“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 若要查看**常规选项**对话框中，在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**工具**菜单上，单击**选项**。  
+    -   在**“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 要查看“常规选项”对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“工具”菜单上单击“选项”。  
   
          -以及-  
   

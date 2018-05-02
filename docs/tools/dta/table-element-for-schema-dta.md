@@ -24,7 +24,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2fa7311680006fa5fc6ce51058dce05e6ed1f675
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/17/2018
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|**NumberOfRows**|選擇性。 允许您模拟不同大小的表的整数。|  
+|**NumberOfRows**|可选。 允许您模拟不同大小的表的整数。|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**字符串**，长度为 1 到 255 个字符。|  
 |**默认值**|无。|  
@@ -58,10 +58,10 @@ ms.lasthandoff: 01/17/2018
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[数据库 &#40; DTA &#41; 的架构元素](../../tools/dta/schema-element-for-database-dta.md)|  
-|**子元素**|[Table &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-table-dta.md)|  
+|**父元素**|[数据库的架构元素 (DTA)](../../tools/dta/schema-element-for-database-dta.md)|  
+|**子元素**|[表的名称元素 (DTA)](../../tools/dta/name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果不指定 **Table** 元素，则数据库引擎优化顾问将假定指定数据库中的所有表都可优化。  
   
 ## <a name="example"></a>示例  

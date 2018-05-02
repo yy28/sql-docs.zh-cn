@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 在数据库中的基本导航引擎优化顾问 |Microsoft 文档
+title: 第 1 课：数据库引擎优化顾问中的基本导航 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce3acbca50968e72a1890f554c239d30e3632445
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 课：数据库引擎优化顾问中的基本导航
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库引擎优化顾问提供图形用户界面 (GUI) 基于到查看优化会话和优化建议报表的方式。 本课程将介绍如何启动工具以及如何配置显示。 在本课程的结尾，您将了解启动工具的各种方式以及如何配置其显示，从而支持定期执行的优化任务。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库引擎优化顾问提供一种基于图形用户界面 (GUI) 的方式来查看优化会话和优化建议报表。 本课程将介绍如何启动工具以及如何配置显示。 在本课程的结尾，您将了解启动工具的各种方式以及如何配置其显示，从而支持定期执行的优化任务。  
   
 本课程包含以下主题：  
   

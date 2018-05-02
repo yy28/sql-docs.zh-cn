@@ -1,30 +1,31 @@
 ---
-title: "安装 Distributed 的 Replay |Microsoft 文档"
-ms.custom: 
+title: 安装 Distributed 的 Replay |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以在三种方式之一安装 Distributed Replay:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以采用以下三种方法之一安装 Distributed Replay：  
   
 -   [从安装向导安装 Distributed Replay](#bkmk_wizard)  
   
@@ -67,17 +68,17 @@ ms.lasthandoff: 01/17/2018
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]工具  
   
-     \- OR-  
+     \- 或 -  
   
-     \<共享功能目录 > \Tools\\（用户提供的替代共享的功能目录）  
+     \<Share Feature Directory>\Tools\\（用户提供的替代共享功能目录）  
   
 -   在 64 位系统上：  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- OR-  
+     \- 或 -  
   
-     \<共享功能目录 (x86) > \Tools\\（用户提供的替代共享的功能 (x86) 目录）  
+     \<Share Feature Directory (x86)>\Tools\\（用户提供的替代共享功能 (x86) 目录）  
   
 #### <a name="to-install-distributed-replay-features"></a>安装 Distributed Replay 功能  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/17/2018
   
     1.  在 32 位计算机上，默认安装路径为 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  在 64 位计算机上默认安装路径是**C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\  
   
 9. 在完成后，单击 **“下一步”**。  
   
@@ -163,11 +164,11 @@ ms.lasthandoff: 01/17/2018
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **可选**|Distributed Replay 控制器服务的服务帐户。|检查帐户和密码|  
 |/CTLRSVCPASSWORD<br /><br /> **可选**|Distributed Replay 控制器服务帐户的密码。|检查帐户和密码|  
-|/CTLRSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 控制器服务的启动类型。|Automatic<br /><br /> 禁用<br /><br /> Manual|  
+|/CTLRSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 控制器服务的启动类型。|自动<br /><br /> 禁用<br /><br /> Manual|  
 |/CTLRUSERS<br /><br /> **可选**|指定哪些用户对 Distributed Replay 控制器服务具有权限。|使用“ ”（空格）作为分隔符的一组用户帐户字符串<br /><br /> **重要**：在您配置 Distributed Replay 控制器服务时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：<br /><br /> 域用户帐户<br /><br /> 用户创建的本地用户帐户<br /><br /> 管理员<br /><br /> 管理员<br /><br /> 虚拟帐户和 MSA（托管服务帐户）<br /><br /> Network Services、Local Services 和 System<br /><br /> <br /><br /> 注意：不接受组帐户（本地或域）和其他内置帐户（如 Everyone）。|  
 |/CLTSVCACCOUNT<br /><br /> **可选**|Distributed Replay 客户端服务的服务帐户。|检查帐户和密码|  
 |/CLTSVCPASSWORD<br /><br /> **可选**|Distributed Replay 客户端服务帐户的密码。|检查帐户和密码|  
-|/CLTSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 客户端服务的启动类型。|Automatic<br /><br /> 禁用<br /><br /> Manual|  
+|/CLTSTARTUPTYPE<br /><br /> **可选**|Distributed Replay 客户端服务的启动类型。|自动<br /><br /> 禁用<br /><br /> Manual|  
 |/CLTCTLRNAME<br /><br /> **可选**|客户端就 Distributed Replay 控制器服务与之通信的计算机的名称。||  
 |/CLTWORKINGDIR<br /><br /> **可选**|Distributed Replay 客户端服务的工作目录。|有效的路径|  
 |/CLTRESULTDIR<br /><br /> **可选**|Distributed Replay 客户端服务的结果目录。|有效的路径|  
@@ -222,9 +223,9 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed 的 Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令行选项 &#40; 分布式的重播实用工具 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

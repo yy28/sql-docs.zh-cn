@@ -24,7 +24,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c2b4da3d22c91ad05ba53736eb17a2210b0c0b5d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -52,8 +52,8 @@ ms.lasthandoff: 01/17/2018
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[服务器 &#40; DTA &#41; 的数据库元素](../../tools/dta/database-element-for-server-dta.md)|  
-|**子元素**|[架构 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [架构 &#40; DTA &#41; 的表元素](../../tools/dta/table-element-for-schema-dta.md)|  
+|**父元素**|[服务器的数据库元素 (DTA)](../../tools/dta/database-element-for-server-dta.md)|  
+|**子元素**|[架构的名称元素 (DTA)](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [架构的表元素 (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
   
 ## <a name="example"></a>示例  
  有关此元素的使用示例，请参阅[服务器元素 (DTA)](../../tools/dta/server-element-dta.md)。  

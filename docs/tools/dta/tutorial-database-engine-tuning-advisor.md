@@ -1,29 +1,31 @@
 ---
-title: "教程： 数据库引擎优化顾问 |Microsoft 文档"
-ms.custom: 
+title: 教程：数据库引擎优化顾问 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 - tutorials [Database Engine Tuning Advisor]
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0c6068064e47e571f143070bfd853c6df4e913d4
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
@@ -35,13 +37,13 @@ ms.lasthandoff: 01/17/2018
 ## <a name="what-you-will-learn"></a>学习内容  
 本教程将讲述如何定位数据库引擎优化顾问 GUI，以及如何通过 GUI 和 **dta** 实用工具执行一些基本任务。 本教程包含以下几课：  
   
-[数据库引擎优化顾问中的第 1 课： 基本导航](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[第 1 课：数据库引擎优化顾问中的基本导航](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 在本课程中，您将熟悉新的数据库引擎优化顾问 GUI，并学习如何设置显示选项和布局。  
   
-[第 2 课： 使用数据库引擎优化顾问](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[第 2 课：使用数据库引擎优化顾问](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 在本课中，您将学习如何通过数据库引擎优化顾问 GUI 执行基本的优化任务。  
   
-[第 3 课： 使用 dta 命令提示实用工具](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[第 3 课：使用 dta 命令提示实用工具](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 在本课程中，将学习如何启动 **dta** 命令提示实用工具以及如何运行一些简单的优化命令。  
   
 ## <a name="requirements"></a>要求  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
 -   [dta 实用工具](../../tools/dta/dta-utility.md) 提供有关此命令提示实用工具的参考材料和可用于控制此实用工具的操作的可选 XML 文件。  
   
 ## <a name="next-lesson"></a>下一课  
-[数据库引擎优化顾问中的第 1 课： 基本导航](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[第 1 课：数据库引擎优化顾问中的基本导航](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   
