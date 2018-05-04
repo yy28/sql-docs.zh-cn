@@ -3,13 +3,10 @@ title: getByte 方法 (int) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff950e440c093d7588a7d80404fba1c6a1617ed7
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8fac39642ed7b2eb032fd2bef858e50049a38608
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,19 +40,19 @@ public byte getByte(int index)
 #### <a name="parameters"></a>Parameters  
  *索引*  
   
- **Int** ，该值指示参数索引。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- A**字节**值。  
+ 一个 byte 值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getByte 方法指定此 getByte 方法。  
+ 此 getByte 方法由 java.sql.CallableStatement 接口中的 getByte 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
- [getByte 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
+ [getByte 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,31 +1,29 @@
 ---
-title: "向表中添加列 |Microsoft 文档"
-ms.custom: 
+title: 向表中添加列 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ac4b677edc906b6e5081e1c7a16b5089865c75eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-columns-to-a-table"></a>向表中添加列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本文介绍如何将列添加到现有表。  
+  本文介绍如何将列添加到现有表。  
   
 ## <a name="add-columns-from-the-datasource"></a>从数据源添加列  
  使用表导入向导从数据源表导入数据时，将在模型中创建一个新表，该表包含源表中的所有列，如果您选择使用“预览并筛选”功能来筛选出某些列，则仅包含您选择的那些列和已筛选数据。 您还可以编写一个指定要导入的那些列的 SQL 查询。 但是，您可能以后决定源表具有要添加到模型表的其他列，或需要添加其值从 DAX 公式派生的计算列。  

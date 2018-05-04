@@ -1,7 +1,6 @@
 ---
 title: SubmitChanges 方法 (RDS) |Microsoft 文档
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a297a6f41fe3a191742ef6e92f84ecbc2e971eae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6c4f2b3a0cf70d068e1f6a7124e7152c8329ebd1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 提交挂起的更改的本地缓存而可更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)中指定的数据源到[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性或[URL](../../../ado/reference/rds-api/url-property-rds.md)属性。  

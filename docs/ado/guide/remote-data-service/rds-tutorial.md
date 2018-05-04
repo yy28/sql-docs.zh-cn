@@ -1,11 +1,9 @@
 ---
 title: RDS 教程 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 29839e451deb37b1c4b9bac4a963dda36cf5b597
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 40ab51d55e33549c2ecc5a615f00f396dd9bb6c9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-tutorial"></a>RDS 教程
 本教程演示如何使用 RDS 编程模型来查询和更新数据源。 首先，它描述完成此任务所需的步骤。 然后在 Microsoft® Visual Basic Scripting Edition （采用 ADO 的 Windows 基础类 (ADO/WFC)） 重复本教程。  

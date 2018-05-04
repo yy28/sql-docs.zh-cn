@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fac535b1d447ce51ee9d09bb596c47c5706400e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e010050729de75f8cd624b9e54f0a4c3d19aec6c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maxactiveconnections-element-assl"></a>MaxActiveConnections 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的最大允许的元素派生自的并发连接数[数据源](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)数据类型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含的最大允许的元素派生自的并发连接数[数据源](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|Integer|  
 |默认值|**10**|  
@@ -58,13 +57,13 @@ ms.lasthandoff: 01/08/2018
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[数据源](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|父元素|[DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果此元素的值设置为零，则最大并发连接数取决于用来访问数据源的数据插件。 如果此元素的值设置为负值，则对最大并发连接数没有限制。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

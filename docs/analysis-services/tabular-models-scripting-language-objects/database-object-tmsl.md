@@ -1,30 +1,29 @@
 ---
-title: "数据库对象 (TMSL) |Microsoft 文档"
-ms.custom: 
+title: 数据库对象 (TMSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ae5c046b-8242-4046-ae76-2c070503fd93
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e67dfe62b23e08a675fbb93833c9383091198629
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b4213ebbcc74244ba62221f88c6ff9732a354230
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-object-tmsl"></a>数据库对象 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定义表格数据库兼容级别 1200年或更高版本，基于相同级别的模型。 本主题介绍了数据库，提供负载的请求的创建、 alter、 删除和执行数据库管理任务的对象定义。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定义表格数据库兼容级别 1200年或更高版本，基于相同级别的模型。 本主题介绍了数据库，提供负载的请求的创建、 alter、 删除和执行数据库管理任务的对象定义。  
   
 > [!NOTE]  
 >  在任何脚本中，可以引用次只有一个数据库。 对于数据库本身之外的任何对象，数据库属性是可选如果你指定的模型。 没有模型可以用于推导的数据库名称，如果未显式提供的数据库之间的一对一映射。   
@@ -42,12 +41,12 @@ ms.lasthandoff: 01/08/2018
                 或 readOnlyExclusive。 请参阅[高可用性和 Analysis Services 中的可伸缩性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)和[切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)有关时使用此属性的详细信息。  
   
 ## <a name="usage"></a>用法  
- **数据库**中几乎每个命令使用对象。 请参阅[命令中表格模型脚本语言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)有关的列表。 A**数据库**对象是某个服务器对象的子级。  
+ **数据库**中几乎每个命令使用对象。 请参阅[中表格模型脚本语言命令&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)有关的列表。 A**数据库**对象是某个服务器对象的子级。  
   
  在创建时，替换或更改数据库的对象，将指定对象定义的所有读写的属性。 省略一个读 / 写属性被视为删除操作。  
   
 ## <a name="partial-syntax"></a>部分语法  
- 因为很大，此对象定义，则仅直接属性列。 **模型**对象提供的数据库定义大容量。 请参阅[模型对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)到的对象定义的方法。  
+ 因为很大，此对象定义，则仅直接属性列。 **模型**对象提供的数据库定义大容量。 请参阅[模型对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)到的对象定义的方法。  
   
 ```  
     "database": {  

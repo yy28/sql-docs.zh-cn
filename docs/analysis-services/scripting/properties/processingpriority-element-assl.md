@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39839288c591aa684ea6dfd88b0d8885aca5a711
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec057d9f089cc161f42c57889a0fd63a2a9f842f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processingpriority-element-assl"></a>ProcessingPriority 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在后台操作，例如迟缓聚合，索引，或群集过程中确定父对象的处理的优先级。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  确定在后台操作期间（例如迟缓聚合、索引或群集），父对象的处理优先级。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|Integer|  
 |默认值|**0**|  
@@ -59,12 +58,12 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[维度](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)， [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)，[分区](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  对应的父级的元素**ProcessingPriority**分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.MeasureGroup>，和<xref:Microsoft.AnalysisServices.Partition>。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

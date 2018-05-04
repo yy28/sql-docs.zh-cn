@@ -1,29 +1,27 @@
 ---
-title: "第 5 课： 定义维度和度量值组之间的关系 |Microsoft 文档"
-ms.custom: 
+title: 第 5 课： 定义维度和度量值组之间的关系 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b3637cc09617b51663ac2bc65dea13c764981c2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1af75a53884071a7cfef819c21d72a12e7641bcf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 课：定义维度和度量值组之间的关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 & #40;Adventure Works 教程 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

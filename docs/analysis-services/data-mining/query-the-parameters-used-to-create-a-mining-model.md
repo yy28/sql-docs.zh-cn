@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
@@ -18,15 +17,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a35dc0d2279b73086af5c16d9d827a12221f63dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bd07b141b8e9c6743009223988688eb25e4e9eef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查询用于创建挖掘模型的参数
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]挖掘模型的构成不仅受到定型事例中，但可以通过创建模型时所设置的参数受影响。 因此，检索现有模型的参数设置以便更好地理解模型的行为可能会很有用。 在归档该模型的特定版本时检索参数可能也很有用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  挖掘模型的构成不仅受到定型事例的影响，还会受到在创建模型时设置的参数的影响。 因此，检索现有模型的参数设置以便更好地理解模型的行为可能会很有用。 在归档该模型的特定版本时检索参数可能也很有用。  
   
  若要查找在创建模型时使用的参数，应针对某个挖掘模型架构行集创建查询。 作为一组可以轻松地查询通过使用 TRANSACT-SQL 语法的系统视图公开这些架构行集。 下面的过程介绍如何创建返回用于创建指定挖掘模型的参数的查询。  
   

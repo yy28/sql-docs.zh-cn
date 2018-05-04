@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: ad03c455c6ee0b623fca0544901ee4c6c6e397d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,11 +107,11 @@ ms.lasthandoff: 04/03/2018
   
  有关如何将 Reporting Services 作为数据源与 DMX 查询一起使用的详细信息，请参阅以下链接：  
   
- [从数据挖掘模型 &#40; DMX &#41; 中检索数据&#40;SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [从数据挖掘模型 & #40; DMX & #41; 中检索数据& #40;SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [针对 DMX &#40; analysis Services 连接类型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [针对 DMX & #40; analysis Services 连接类型SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  但是，不需要将 DMX 用作数据源。 用于数据挖掘的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件还支持将预测查询的结果保存到关系数据库中。 如果已建立用于使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]更新模型的工作流，则将预测和其他数据挖掘查询结果保存到 SQL Server 可使您能够使用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 进行报告，并能使用其他不与 DMX 建立接口连接的工具。  
   

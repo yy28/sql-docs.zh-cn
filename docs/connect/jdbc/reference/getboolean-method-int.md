@@ -3,15 +3,12 @@ title: getBoolean 方法 (int) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBoolean (int)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9f30f40a92b00c19a3c54739e8989dd33acb62d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 36799e9f21c38bcec1764f685d3b62539b45f78c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getboolean-method-int"></a>getBoolean 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +38,7 @@ public boolean getBoolean(int index)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 索引  
+ *索引*  
   
  指示参数索引的 int。  
   
@@ -52,7 +48,7 @@ public boolean getBoolean(int index)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  由 java.sql.CallableStatement 接口中的 getBoolean 方法指定此 getBoolean 方法。  
   
 ## <a name="see-also"></a>另请参阅  

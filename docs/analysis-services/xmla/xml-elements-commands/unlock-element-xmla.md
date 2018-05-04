@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e898471957c96ea35b1214cd389eb6ba8ebc901d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 37fb814e22796dd807207015d6927ff9e4dc7498
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unlock-element-xmla"></a>Unlock 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]将指定的锁解锁上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  将指定的锁解锁上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,10 +51,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|无|  
+|默认值|无|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,13 +64,13 @@ ms.lasthandoff: 01/08/2018
 |父元素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |子元素|[ID](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **Unlock** 命令可删除在当前活动事务的上下文中建立的锁。 只有数据库管理员或服务器管理员可以显式发出 **Unlock** 命令。  
   
  所有锁都位于当前事务的上下文中。 当提交或回滚当前事务时，事务中定义的所有锁都将自动释放。  
   
 ## <a name="see-also"></a>另请参阅  
- [锁定元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [锁定元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
+ [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

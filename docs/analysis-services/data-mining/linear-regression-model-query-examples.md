@@ -1,35 +1,33 @@
 ---
-title: "线性回归模型查询示例 |Microsoft 文档"
-ms.custom: 
+title: 线性回归模型查询示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6b66268d63551f60850f54c8d2e576464d04bfab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，内容查询可能会提供有关回归公式的更多详细信息，而预测查询则可能会告诉您新数据点是否适合模型。 您还可以使用查询来检索有关模型的元数据。  
+  在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，内容查询可能会提供有关回归公式的更多详细信息，而预测查询则可能会告诉您新数据点是否适合模型。 您还可以使用查询来检索有关模型的元数据。  
   
  本节介绍如何针对基于 Microsoft 线性回归算法的模型创建查询。  
   
@@ -197,13 +195,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回指定列的一个预测值或一组值。|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|返回指定列的一个预测值或一组值。|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关对所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都通用的函数列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 有关如何使用这些函数的详细信息，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -211,6 +209,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 线性回归算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [线性回归模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

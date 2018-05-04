@@ -1,31 +1,29 @@
 ---
-title: "Analysis Services 表格模型中的模拟 |Microsoft 文档"
-ms.custom: 
+title: Analysis Services 表格模型中的模拟 |Microsoft 文档
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1db24fc8afb1bb0ec53375fe5f76395b4e4ab0a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonation"></a>模拟 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本文提供了表格模型作者的登录凭据时如何使用的 Analysis services 连接到数据源导入和处理 （刷新） 数据的了解。  
+  本文提供了表格模型作者的登录凭据时如何使用的 Analysis services 连接到数据源导入和处理 （刷新） 数据的了解。  
 
 ##  <a name="bkmk_conf_imp_info"></a> 配置模拟  
  其中，和在什么上下文中存在的模型确定如何配置模拟信息。 创建新的模型项目时，模拟时连接到要导入数据的数据源配置 SQL Server Data Tools (SSDT) 中。 一旦部署某一模型，可以通过使用 SQL Server Management Studio (SSMS) 在模型数据库连接字符串属性中配置模拟。 对于 Azure Analysis Services 中的表格模型，你可以使用 SSMS 或**视为： 脚本**基于浏览器的设计器编辑 JSON 中的 Model.bim 文件中的模式。

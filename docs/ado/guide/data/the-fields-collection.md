@@ -1,11 +1,9 @@
 ---
 title: 字段集合 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d26e2fb793dc1b4b6b757e17064760857b748ed8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-fields-collection"></a>字段集合
 **字段**集合是一个 ADO 的内部集合。 集合是一组有序可以作为一个单元引用的项。 有关 ADO 集合的详细信息，请参阅[ADO 对象模型](../../../ado/guide/data/ado-objects-and-collections.md)。  

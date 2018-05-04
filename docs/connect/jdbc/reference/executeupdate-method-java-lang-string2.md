@@ -3,15 +3,12 @@ title: executeUpdate 方法 (java.lang.String) |Microsoft 文档
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeUpdate (java.lang.String)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa8aef31d1df6798bc209fb1dbb95ef8c58cb3ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: a48df94bb417825aba64699443de6e43fced0d12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 方法 (java.lang.String)
 
@@ -45,7 +41,7 @@ public final int executeUpdate(java.lang.String sql)
 A**字符串**包含 SQL 语句。
 
 ## <a name="return-value"></a>返回值
-**Int** ，该值指示行受影响，则为 0 的数，如果使用的 DDL 语句。
+一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0。
 
 ## <a name="exceptions"></a>异常
 [SQLServerException](./sqlserverexception-class.md)

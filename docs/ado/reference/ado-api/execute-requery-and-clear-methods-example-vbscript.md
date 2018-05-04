@@ -1,11 +1,9 @@
 ---
 title: 执行、 重新执行查询，并清除方法示例 (VBScript) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b5f7a213825b56e212d97ce9b8ab2277da54ce5e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 714c07e87c5f373279c4ae30d5b72cd4b0d55957
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>执行、 重新执行查询，并清除方法示例 (VBScript)
 此示例演示**执行**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法来检索当前数据中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 ExecuteCommand 和 PrintOutput 过程所需运行此过程。  

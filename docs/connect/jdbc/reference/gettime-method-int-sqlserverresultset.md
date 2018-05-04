@@ -3,13 +3,10 @@ title: getTime 方法 (int) (SQLServerResultSet) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0d46ccd62a86cef4c8a9423ed955b45e0d30ddb
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e5d86e6ad808d69b64e5dd9abed03cf5513cf5c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -41,9 +38,9 @@ public java.sql.Time getTime(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *列索引*  
+ columnIndex  
   
- **Int** ，该值指示的列索引。  
+ 指示列索引的 int。  
   
 ## <a name="return-value"></a>返回值  
  一个时间对象。  

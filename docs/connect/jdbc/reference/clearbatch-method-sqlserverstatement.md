@@ -3,13 +3,10 @@ title: clearBatch 方法 (SQLServerStatement) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,16 +19,16 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9619efc23321bbbfe7ad18ee4102c0554ef3bea5
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 48e3cbaa9387dbb90aad97cca75149f2d9770e4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
 # <a name="clearbatch-method-sqlserverstatement"></a>clearBatch 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此清空的 SQL 命令的当前列表[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。  
+  为此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象清空当前 SQL 命令列表。  
   
 ## <a name="syntax"></a>语法  
   

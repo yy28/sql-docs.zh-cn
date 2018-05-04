@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB 远程处理提供程序 （ADO 服务提供商） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f132bb8124afecea1b1f7fb519ecf64d1cfe88a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 远程处理提供程序概述
 Microsoft OLE DB 远程处理提供了让客户端计算机上的本地用户以调用在远程计算机上的数据提供程序。 就像你可以像远程计算机上的本地用户，请指定远程计算机的数据提供程序参数。 然后指定远程处理提供程序用于访问远程计算机的参数。 然后，就可以访问远程计算机，就像是本地用户。

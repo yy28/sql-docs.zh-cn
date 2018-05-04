@@ -1,7 +1,6 @@
 ---
 title: 记录集，SourceRecordset 属性 (RDS) |Microsoft 文档
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be22029aa9a0bdd7deaeb47f988c4ccd13bc8761
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1b032e25ee5d4c85638cacfbe160240bf4c1853f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>记录集，SourceRecordset 属性 (RDS)
 指示**记录集**从自定义业务对象返回的对象。  

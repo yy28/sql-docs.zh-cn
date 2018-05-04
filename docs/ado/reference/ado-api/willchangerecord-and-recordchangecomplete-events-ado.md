@@ -1,11 +1,9 @@
 ---
 title: WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1c20f1af76f7852cf4b91c2ea140ab6135ca6669
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 77d02d1a5b5d643c49fcbbd33057d6c709f1949a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**事件调用一个或多个记录 （行） 之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)更改。 **RecordChangeComplete**事件时调用后一个或多个记录更改。  

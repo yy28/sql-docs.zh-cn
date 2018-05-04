@@ -1,11 +1,9 @@
 ---
 title: CreateObject 方法 (RDS) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 355c56509e8c06b0d687e5d6164cf0e7c4abe93c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f5759c1b1b9faaaa9262879a614913a5fcf16c42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 创建用于目标业务对象的代理，并将指针返回到它。 与业务对象的通信，以通过 Internet 发送请求和数据服务器端存根 （stub） 将代理包和封送处理数据。 对于进程内组件的对象，不使用代理、 提供只需指向对象的指针。  

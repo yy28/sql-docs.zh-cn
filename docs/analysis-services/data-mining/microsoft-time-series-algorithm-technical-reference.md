@@ -1,16 +1,15 @@
 ---
-title: "Microsoft Time Series Algorithm Technical Reference |Microsoft 文档"
-ms.custom: 
+title: Microsoft Time Series Algorithm Technical Reference |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -29,16 +28,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: d600580312e9880f47b57d4d1da80688aea5d37e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 时序算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -148,7 +146,7 @@ ms.lasthandoff: 03/20/2018
 |*MINIMUM_SERIES_VALUE*|指定可以预测的最小值。 此参数与 MAXIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，可以指定预测的销售额决不应为负数。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
 |*MINIMUM_SUPPORT*|指定在每个时序树中生成一个拆分所需的最小时间段数。 默认值为 10。|  
 |*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 下表将列出此参数的可能值：<br /><br /> **上一个**：重复前一时间段中的值。<br /><br /> **平均值**：使用定型时所用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。<br /><br /> **无**：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> <br /><br /> 请注意，如果数据中包含多个序列，这些序列不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对时序模型执行 **PREDICTION JOIN** 时，还使用此参数的值来填补新数据中的空白。|  
-|*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 \{1\}。<br /><br /> 请注意，需要使用大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|  
+|*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 {1}。<br /><br /> 请注意，需要使用大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|  
 |*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5：默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
   
 ### <a name="modeling-flags"></a>建模标志  
@@ -176,6 +174,6 @@ ms.lasthandoff: 03/20/2018
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [时序模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

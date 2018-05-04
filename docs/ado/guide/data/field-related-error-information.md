@@ -1,11 +1,9 @@
 ---
 title: 与字段相关的错误信息 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ec0241e4d57a53776e1d124d697657d464f4e515
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b53698e1042af197db9d9fa7ddfc4af555721607
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="field-related-error-information"></a>与字段相关的错误的信息
 如果错误直接相关的字段 — 例如，如果数据丢失或它的错误类型的字段是-你可以通过检查检索有关原因的问题的详细信息**字段**对象的**状态**属性。 此属性已得到增强，提供有关的问题的特定信息。 因此，举例来说，当调用**UpdateBatch**可以检查来确定失败，问题的原因**状态**属性**字段**中每个受影响记录。 属性将包含中的值之一**FieldStatusEnum**常量。 下表包含发生错误时所特别感兴趣的那些值。  

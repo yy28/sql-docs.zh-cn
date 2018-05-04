@@ -1,29 +1,27 @@
 ---
-title: "第 1 课： 创建新的表格模型项目 |Microsoft 文档"
-ms.custom: 
+title: 第 1 课： 创建新的表格模型项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f0c3761c88fa38ceaa4258bd6576b986c6bc94fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 课：创建新的表格模型项目
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +31,7 @@ ms.lasthandoff: 02/23/2018
 学完本课的估计时间：**10 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
-本主题是表格模型创作教程中的第一课。 若要完成本课程中，你必须安装 SQL Server 实例上的 AdventureWorksDW 示例数据库。 若要了解详细信息，请参阅[表格建模 &#40;Adventure Works 教程 &#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
+本主题是表格模型创作教程中的第一课。 若要完成本课程中，你必须安装 SQL Server 实例上的 AdventureWorksDW 示例数据库。 若要了解详细信息，请参阅[表格建模&#40;Adventure Works 教程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)。  
   
 ## <a name="create-a-new-tabular-model-project"></a>创建新的表格模型项目  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 02/23/2018
   
 让我们看一下模型属性。 单击**Model.bim**。 在**属性**窗口中，你将看到[模型属性](../analysis-services/tabular-models/model-properties-ssas-tabular.md)，最重要的是**DirectQuery 模式下**属性。 此属性指定是在内存中模式（关闭）还是在 DirectQuery 模式（打开）下部署模型。 对于本教程，您将在内存中模式下创作和部署模型。
 
-![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
+![作为表格-lesson1-属性](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 在创建新的模型时，可以在指定的数据建模设置根据相应某些模型属性自动设置**工具** > **选项**对话框。 “数据备份”、“工作区保持期”和“工作区服务器”属性指定备份、在内存中保留以及构建工作区数据库（模型创作数据库）的方式和位置。 如有必要，您可以稍后更改这些设置，但目前保留这些属性不变。  
 

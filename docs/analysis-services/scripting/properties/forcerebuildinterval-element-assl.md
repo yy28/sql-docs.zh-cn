@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fec32179658d115a7dec17fa61a39a060a8ea700
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac9c93f41f3bc58d268eda3f5b8b50e9afbc5d92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="forcerebuildinterval-element-assl"></a>ForceRebuildInterval 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]确定指定的开始新的多维 OLAP (MOLAP) 映像可用时之后的 MOLAP 映像无条件地启动, 的时间量。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  确定在多维 OLAP (MOLAP) 映像可用后经过多长时间才能无条件开始 MOLAP 映像处理。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|XML 持续时间|  
 |默认值|Infinite|  
@@ -61,12 +60,12 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  对应于的父元素**ForceRebuildInterval**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ProactiveCaching>。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

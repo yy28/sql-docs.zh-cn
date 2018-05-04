@@ -1,35 +1,33 @@
 ---
-title: "SystemGetClusterAccuracyResults (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: SystemGetClusterAccuracyResults (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - SystemGetClusterAccuracyResults
 - cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 832a0160b7add0fc93e83d297cf0a3565ed940e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-返回挖掘结构和相关聚类分析模型的交叉验证准确性指标。  
+  返回挖掘结构和相关聚类分析模型的交叉验证准确性指标。  
   
  此存储过程将为作为单个分区的整个数据集返回指标。 若要将数据集分区为交叉部分，并返回每个分区的度量值，请使用 [SystemGetClusterCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)。  
   
@@ -132,8 +130,8 @@ CALL SystemGetClusterAccuracyResults (
   
 ## <a name="see-also"></a>另请参阅  
  [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
