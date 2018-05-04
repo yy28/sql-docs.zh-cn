@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f66227c67a4cd84fbd1fdaafbbdcf457df7b3b2e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e57c57acf704a2b9f6e9366733b88e15216ae89d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
-![下载向下箭头带圆圈](../../ssdt/media/download.png)[sql 下载 PHP 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Microsoft Drivers for PHP for SQL Server 启用用于 PHP 应用程序与 SQL Server 的集成。 允许读取和写入从 PHP 脚本中的 SQL Server 数据的 PHP 扩展插件的驱动程序。 驱动程序提供在 Azure SQL 数据库和所有版本的 SQL Server 2005 和更高版本 （包括速成版） 中的数据访问接口。 驱动程序做出使用 PHP 功能，包括 PHP 流读取和写入大型对象。  
   
@@ -45,7 +44,7 @@ Microsoft Drivers for PHP for SQL Server 启用用于 PHP 应用程序与 SQL Se
 * [支持资源 Microsoft Drivers for PHP for SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>下载  
-* ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 PHP 驱动程序适用于 SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+* ![下载向下箭头带圆圈](../../ssdt/media/download.png)[sql for PHP 下载驱动程序](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>示例  
 * [Microsoft Drivers for PHP for SQL Server 的代码示例](code-samples-for-php-sql-driver.md)

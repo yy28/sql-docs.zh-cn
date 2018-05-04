@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="close-method-sqlserverstatement"></a>close 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  释放此[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象的数据库和 JDBC 资源立即而不是等待它们自动释放。  
+  立即释放此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的数据库和 JDBC 资源，而非等待它们自动释放。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,8 +44,8 @@ public void close()
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Statement 接口中关闭的方法指定此关闭的方法。  
+## <a name="remarks"></a>Remarks  
+ 此 Close 方法由 java.sql.Statement 接口中的 Close 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

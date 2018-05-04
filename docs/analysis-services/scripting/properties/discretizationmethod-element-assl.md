@@ -27,15 +27,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fd84d0426afa9ee1272c26c8ca7ac302972748b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0e24717a24d7e8dde9ee90280ff05c564554a3fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义要用于离散化的方法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定义用于离散化的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*无*|  
@@ -61,24 +61,24 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)， [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
- 值**DiscretizationMethod**元素确定如何值**DimensionAttribute**或**ScalarMiningStructureColumn** discretized、 或组织到一组特定的组。 有关离散化方法的详细信息，请参阅[离散化方法 &#40; 数据挖掘 &#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)。  
+## <a name="remarks"></a>注释  
+ 值**DiscretizationMethod**元素确定如何值**DimensionAttribute**或**ScalarMiningStructureColumn** discretized、 或组织到一组特定的组。 有关离散化方法的详细信息，请参阅[离散化方法&#40;数据挖掘&#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)。  
   
  此元素的值限定为下表中的字符串之一。  
   
-|ReplTest1|Description|  
+|“值”|说明|  
 |-----------|-----------------|  
 |*自动*|等效于用于挖掘结构列的 AUTOMATIC 离散化方法。|  
 |*EqualAreas*|等效于用于挖掘结构列的 EQUAL_AREAS 离散化方法。|  
-|*群集*|等效于用于挖掘结构列的 CLUSTERS 离散化方法。|  
+|*Clusters*|等效于用于挖掘结构列的 CLUSTERS 离散化方法。|  
 |*Thresholds*|等效于用于挖掘结构列的 THRESHOLDS 离散化方法。|  
 |*EqualRanges*|等效于用于挖掘结构列的 EQUAL_RANGES 离散化方法。|  
   
  对应的允许值为枚举**DiscretizationMethod**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DiscretizationMethod>。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

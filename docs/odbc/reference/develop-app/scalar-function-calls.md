@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
@@ -19,17 +19,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba961f17cf244cd013f7c62b6cec411a0f642882
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-function-calls"></a>标量函数调用
 标量函数返回每一行的值。 例如，该绝对值标量函数将作为自变量的数值列，并返回列中的每个值的绝对值的数值。 调用标量函数的转义序列是  
   
- **{fn***标量函数* **}**   
+ **{fn***标量函数* **}**  
   
  其中*标量函数*是中列出的函数之一[附录 e： 标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。 有关标量函数转义序列的详细信息，请参阅[标量函数转义序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)附录 c: SQL 语法中。  
   
@@ -51,7 +50,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  **转换 (** *value_exp* **，** *data_type * * *)**  
   
- 其中*value_exp*列名称，另一个标量函数，或文本值，而结果和*data_type*是匹配的关键字**#define**使用的名称SQL 数据类型标识符中定义[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，以下 SQL 语句使用**转换**若要确保的函数的输出**CURDATE**函数是一个日期，而不是时间戳或字符数据：  
+ 其中*value_exp*列名称，另一个标量函数，或文本值，而结果和*data_type*是匹配的关键字 **#define**使用的名称SQL 数据类型标识符中定义[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，以下 SQL 语句使用**转换**若要确保的函数的输出**CURDATE**函数是一个日期，而不是时间戳或字符数据：  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

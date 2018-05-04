@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34316cba593d433d240dc67360d802e3deaddd2f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b5b1fd1295586e69f9db0f4084f74540163f45ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption 映射
-在应用程序调用**SQLSetStmtOption**到 ODBC 3*.x*驱动程序，将会调用  
+在应用程序调用**SQLSetStmtOption**到 ODBC 3 *.x*驱动程序，将会调用  
   
 ```  
 SQLSetStmtOption(StatementHandle, fOption, vParam)  
@@ -58,8 +57,8 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
   
  驱动程序管理器不知道驱动程序定义的语句属性需要字符串或 32 位整数值，因此可以传递中的有效值*StringLength*参数**SQLSetStmtAttr**. 如果该驱动程序已定义的驱动程序定义的语句属性了特殊语义，并且需要使用来调用**SQLSetStmtOption**，则它必须支持**SQLSetStmtOption**。  
   
- 如果应用程序调用**SQLSetStmtOption**在 ODBC 3 中设置特定于驱动程序的语句选项*.x*驱动程序和选项已在 ODBC 2 中定义。*x*应为 ODBC 3 中的选项定义版本的驱动程序，新的清单常量*.x*驱动程序。 如果在调用中使用旧的清单常量**SQLSetStmtOption**，驱动程序管理器将调用**SQLSetStmtAttr**与*StringLength*参数设置为 0。  
+ 如果应用程序调用**SQLSetStmtOption**在 ODBC 3 中设置特定于驱动程序的语句选项 *.x*驱动程序和选项已在 ODBC 2 中定义。*x*应为 ODBC 3 中的选项定义版本的驱动程序，新的清单常量 *.x*驱动程序。 如果在调用中使用旧的清单常量**SQLSetStmtOption**，驱动程序管理器将调用**SQLSetStmtAttr**与*StringLength*参数设置为 0。  
   
- 在应用程序调用**SQLSetStmtAttr**将 SQL_ATTR_USE_BOOKMARKS 设置为在 ODBC 3 SQL_UB_ON*.x*驱动程序，SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_FIXED。 SQL_UB_ON 是作为 SQL_UB_FIXED 相同的常量。 驱动程序管理器将通过 SQL_UB_FIXED 传递给该驱动程序。 ODBC 3 中已弃用 SQL_UB_FIXED*.x*，但 ODBC 3*.x*驱动程序必须实现它以使用 ODBC 2。*x*使用固定长度书签的应用程序。  
+ 在应用程序调用**SQLSetStmtAttr**将 SQL_ATTR_USE_BOOKMARKS 设置为在 ODBC 3 SQL_UB_ON *.x*驱动程序，SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_FIXED。 SQL_UB_ON 是作为 SQL_UB_FIXED 相同的常量。 驱动程序管理器将通过 SQL_UB_FIXED 传递给该驱动程序。 ODBC 3 中已弃用 SQL_UB_FIXED *.x*，但 ODBC 3 *.x*驱动程序必须实现它以使用 ODBC 2。*x*使用固定长度书签的应用程序。  
   
- ODBC 3*.x*驱动程序，驱动程序管理器不再将检查以查看*选项*SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。
+ ODBC 3 *.x*驱动程序，驱动程序管理器不再将检查以查看*选项*SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。

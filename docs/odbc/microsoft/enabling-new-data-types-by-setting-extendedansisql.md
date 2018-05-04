@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extendedANSISQL [ODBC], enabling new data types
 ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0b5c54555a8809c44a0fa3a65731ff4c6b591fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0d8cf54b10f62d5f008d148875e088ff88a7e0d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>通过设置 ExtendedAnsiSQL 启用新的数据类型
 ExtendedAnsiSQL 标志打开时，两个新的数据类型是在 Jet 4.0 数据库中可用： SQL_DECIMAL 和 SQL_NUMERIC。 默认值精度和小数位数分别为 18 和 0。 通过类型化为 SQL_DECIMAL 或 SQL_NUMERIC 的 ODBC 访问的数据将映射为 Microsoft Jet 十进制数字，而不是货币。  

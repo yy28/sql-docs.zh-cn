@@ -29,12 +29,11 @@ caps.latest.revision: 57
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3c4720b0ecb2dcf3aa17f250a30f106ddd1e941f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6d3d8471754918eaff793bb6787f383b67f33a77
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  挖掘结构的命名方式是在模型名称后追加 "_structure"，这样可以确保将结构名称与模型名称进行区分。  
   
- 若要创建现有挖掘结构的挖掘模型，使用[ALTER 挖掘结构 &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)语句。  
+ 若要创建现有挖掘结构的挖掘模型，使用[ALTER 挖掘结构&#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)语句。  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,7 +70,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  来检索当前的提供程序支持的算法的列表，只需使用[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看的当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *参数列表*  
- 可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
+ 選擇性。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *XML 字符串*  
  （仅适用于高级用户。）XML 编码的模型 (PMML)。 字符串必须以单引号 (') 引起。  
@@ -115,15 +114,15 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  有关可用于定义列的一组数据类型、内容类型、列分布和建模标志，请参阅下列主题：  
   
--   [数据类型 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [数据类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [内容类型 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [内容类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列分布 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列分布&#40;数据挖掘&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [建模标志 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [建模标志 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- 您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持以下使用\<列关系 > 子句。  
+ 您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持以下使用\<列关系 > 子句。  
   
  **与相关**  
  此窗体指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  
@@ -142,9 +141,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- 有关与每个算法关联的参数的列表，请参阅[数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ 有关与每个算法关联的参数的列表，请参阅[数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果要创建具有内置测试数据集的模型，则应当使用 CREATE MINING STRUCTURE 语句，然后再使用 ALTER MINING STRUCTURE 语句。 但是，并非所有挖掘模型类型都支持维持数据集。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
  有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时间序列预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
@@ -208,8 +207,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

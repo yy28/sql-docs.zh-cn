@@ -20,12 +20,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 982790c72cd4179c78305ac76bf7178b8af80896
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 83ac9f1e36172d6af5a7b55909e2a73bee7f81a8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>用于 SQL Server 的 OLE DB 驱动程序的组件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 |msoledbsql.dll|包含所有 SQL Server 功能的 OLE DB 驱动程序动态链接库 (DLL) 文件。|  
 |msoledbsqlr.rll|用于 SQL Server 库 OLE DB 驱动程序附带资源文件。|   
 |msoledbsql.h|为 SQL Server 标头文件包含的所有新定义 OLE DB 驱动程序所需使用用于 SQL Server 的 OLE DB 驱动程序。 此标头文件将替换 sqloledb.h 标头文件。<br /><br /> 注意： 你可以引用 msoledbsql.h 和 sqloledb.h 同一程序中的，只要 sqloledb.h 首先定义。|  
-|msoledbsql.lib|库文件需要直接调用**bcp**属于 SQL Server 的 OLE DB 驱动程序的实用工具函数。<br /><br /> 注意： 如果你确实在编程代码中引用 msoledbsql.lib 文件，你需要确保 msoledbsql.dll 文件是在你的系统路径，并使用户在系统路径中使用你的应用程序。|  
+|msoledbsql.lib|库文件需要直接调用[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)是 SQL Server 的 OLE DB 驱动程序的一部分的函数。<br /><br /> 注意： 如果你确实在编程代码中引用 msoledbsql.lib 文件，你需要确保 msoledbsql.dll 文件是在你的系统路径，并使用户在系统路径中使用你的应用程序。|  
 
 ## <a name="see-also"></a>另请参阅  
  [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

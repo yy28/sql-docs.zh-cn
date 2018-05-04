@@ -11,22 +11,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9fb1a94d88f83ebc861843c8ea998cb45cefc73a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c44d3278a61f8df573c909a48507624c563df64b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的概述
 
-![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载适用于 SQL Server PHP 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]是一个 PHP 扩展，提供对 SQL Server 2005 和更高版本包括 Azure SQL Database 数据访问。 扩展提供用于访问 SQL Server，包括 Express、 SQL Server 2005 以开头的所有版本中的数据使用 SQLSRV 驱动程序的过程接口和 PDO_SQLSRV 驱动程序的面向对象的接口。 与 SQL Server 2008 开始的版本 3.1 和更高版本的驱动程序的支持。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API 包括对 Windows 身份验证、事务、参数绑定、流式传输、元数据访问和错误处理的支持。  
   
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
 |主题|Description|  
 |---------|---------------|  
-| ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载适用于 SQL Server PHP 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access) | Microsoft SQL Server PHP 驱动程序的源代码下载链接。 |
+| ![下载向下箭头带圆圈](../../ssdt/media/download.png)[for SQL Server for PHP 下载驱动程序](download-drivers-php-sql-server.md) | 若要下载 Microsoft Drivers for PHP for SQL Server 的链接。 |
 |[Microsoft Drivers for PHP for SQL Server 的发行说明](../../connect/php/release-notes-for-the-php-sql-driver.md)|列出已添加版本 4.0、 3.2、 3.1、 3.0 和 2.0 的功能。|  
 |[支持资源 Microsoft Drivers for PHP for SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|在开发使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的应用程序时，提供可能有用的资源的链接。|  
 |[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)|在运行本文档中的代码示例时，提供可能有用的信息。|  

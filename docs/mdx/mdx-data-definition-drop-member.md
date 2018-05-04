@@ -29,12 +29,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d4881eb548f1d5ccc034522e7446856ccad08d24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a49ce890fb3a98e26f67f1b1e648decd4372c7ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-member"></a>MDX 数据定义-删除成员
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ DROP MEMBER
  有效的字符串表达式，它提供的成员名称或成员键。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建成员语句 &#40;MDX &#41;](../mdx/mdx-data-definition-create-member.md)   
- [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [创建成员语句 & #40;MDX & #41;](../mdx/mdx-data-definition-create-member.md)   
+ [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

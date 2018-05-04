@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], deferred
 - deferred buffers [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5273f48c96039e543e24c2945cd5cda14d352e6d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b494ac404632ed13fc617a9c6638e75bf6b2d1fd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deferred-buffers"></a>延迟的缓冲区
 A*延迟的缓冲区*是在某个时间使用其值*后*函数调用中指定。 例如， **SQLBindParameter**用于将相关联，或*绑定，*具有 SQL 语句中的参数的数据缓冲区。 应用程序指定的参数数目，并传递地址、 字节长度和类型的缓冲区。 驱动程序将保存此信息，但不检查缓冲区的内容。 更高版本，当应用程序执行语句，该驱动程序检索的信息并使用它检索参数数据并将其发送到数据源。 因此，延迟的输入缓冲区中的数据。 延迟的缓冲区是一个函数中指定，并且用于另一个，因为它是对应用程序编程错误驱动程序仍希望存在; 将释放延迟的缓冲区有关详细信息，请参阅[Allocating 和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)，本部分中更高版本。  

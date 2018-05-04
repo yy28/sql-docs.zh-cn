@@ -20,12 +20,11 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5551b2d2fe5b041dbee57d76eee58fb30861c308
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ed3c4eac39b7ee34bc16063ad7671aa5a0175f9d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union--mdx"></a>联合 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ Alternate syntax 2
  *集表达式 2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此函数返回的两个联合或多个指定集*。* 与标准语法和备用语法 1，默认情况下将消除重复项。 使用标准语法中，使用**所有**标志将重复项保留在已加入的组。 从该集的尾部删除重复项。 使用替代语法 2 时始终会保留重复项。  
   
 ## <a name="examples"></a>示例  
@@ -107,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [+ &#40;联合 &#41;&#40;MDX &#41;](../mdx/union-mdx-operator-reference.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [+&#40;联合&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

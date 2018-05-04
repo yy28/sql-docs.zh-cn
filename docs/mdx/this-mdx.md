@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7065d192cf9b02f827753b8e0b50191d6daf30b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c0af257ba1a413385e3c25e6226cbbfba107c442
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="this-mdx"></a>This (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 This   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **这**函数可以使用补充的任何子多维数据集表达式，以提供 MDX 计算脚本中当前范围内的当前子多维数据集。 **这**函数必须作为赋值的左侧使用。  
   
 ## <a name="examples"></a>示例  
@@ -88,7 +87,7 @@ This
  `End Scope;`  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
  [计算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

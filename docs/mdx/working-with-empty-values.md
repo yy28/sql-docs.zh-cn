@@ -21,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 92920642feb9d517067b41206e3cdb7c15f8302b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-empty-values"></a>使用空值
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +60,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   [IsEmpty](../mdx/isempty-mdx.md)函数返回**TRUE**当且仅当标识由元组函数中指定的单元格为空。 否则，该函数返回**FALSE**。  
   
     > [!NOTE]  
-    >  **IsEmpty**函数无法确定是否使用成员表达式，则返回空值。 若要确定是否从表达式返回了 null 成员，请使用[IS](../mdx/is-mdx.md)运算符。  
+    >  **IsEmpty** 函数无法确定是否使用成员表达式，则返回空值。 若要确定是否从表达式返回了 null 成员，请使用[IS](../mdx/is-mdx.md)运算符。  
   
 -   当空单元值是数字运算符（+、-、*、/）中任一运算符的一个操作数时，如果另一个操作数是非空值，空单元值将被作为零处理。 如果两个操作数都为空，数字运算符将返回空单元值。  
   
@@ -126,7 +125,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 有关详细信息，请参阅[NonEmpty &#40;MDX &#41;](../mdx/nonempty-mdx.md).  
+ 有关详细信息，请参阅[NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)。  
   
 ## <a name="empty-values-and-comparison-operators"></a>空值和比较运算符  
  如果数据中存在空值，逻辑运算符和比较运算符有可能返回 TRUE 或 FALSE 以外的第三种结果 EMPTY。 这种对三值逻辑的需要是导致许多应用程序出错的根源。 下面这些表概括了引入空值比较的影响。  
@@ -156,8 +155,8 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [表达式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

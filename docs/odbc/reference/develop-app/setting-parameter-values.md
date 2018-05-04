@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88b8ea3a21f7b2d0bd5790aad934e784b4ca3e87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0e41f775ef6640f4f82aa16cea038becc305bf5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-parameter-values"></a>设置参数值
 若要设置参数的值，应用程序只需将设置绑定到参数变量的值。 它并不重要时设置此值，只要它设置之前执行的语句。 应用程序可以设置值之前或之后绑定变量，并且它可以更改它想多次的值。 当执行语句时，该驱动程序只需检索变量的当前值。 不止一次; 执行已准备的语句时，这是特别有用应用程序为某些或所有变量每次执行该语句时将设置新值。 此示例，请参阅[已准备的执行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)，本部分前面的。  

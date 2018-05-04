@@ -28,12 +28,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e27b11836c0619c1415718cce3e38029ac8359d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 数据操作的更新多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,21 +71,21 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  有效的 MDX（多维表达式）数值表达式，将返回介于 0 到 1 之间的一个十进制值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  您可以更新多维数据集中的指定叶单元或非叶单元的值，并且可以根据需要跨依赖叶单元为指定非叶单元分配值。 元组表达式指定的单元可以是多维空间中的任意有效单元（即该单元不一定是叶单元）。 但是，必须使用聚合单元格[总和](../mdx/sum-mdx.md)聚合函数和不能包含计算的成员的元组中用于标识该单元格。  
   
  可能需要考虑**更新多维数据集**作为将自动生成一系列到叶和非叶单元格将汇总到指定的和的各个单元格写回操作子例程的语句。  
   
  下面是分配的方法的说明。  
   
- **USE_EQUAL_ALLOCATION:**分配给已更新的单元格每个叶单元格将分配基于下面的表达式的相等值。  
+ **USE_EQUAL_ALLOCATION:** 分配给已更新的单元格每个叶单元格将分配基于下面的表达式的相等值。  
   
 ```  
 <leaf cell value> =   
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:**分配给已更新的单元格每个叶单元格将根据下面的表达式会更改。  
+ **USE_EQUAL_INCREMENT:** 分配给已更新的单元格每个叶单元格将根据下面的表达式会更改。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -94,13 +93,13 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:**分配给已更新的单元格每个叶单元格将分配一个相等的值，基于下面的表达式。  
+ **USE_WEIGHTED_ALLOCATION:** 分配给已更新的单元格每个叶单元格将分配一个相等的值，基于下面的表达式。  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:**分配给已更新的单元格每个叶单元格将根据下面的表达式会更改。  
+ **USE_WEIGHTED_INCREMENT:** 分配给已更新的单元格每个叶单元格将根据下面的表达式会更改。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -128,6 +127,6 @@ Weight_Expression = <leaf cell value> / <existing value>
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [MDX 数据操作语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

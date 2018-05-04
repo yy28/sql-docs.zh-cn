@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a972760985e93f61ffa813043ad6c4e58f7d1a28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9b24f49594003f453f3258c431881bd0ddda0f70
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide-dmx"></a>（除）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,16 +49,16 @@ Dividend / Divisor
 ## <a name="return-value"></a>返回值  
  与优先级较高的参数具有相同数据类型的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此运算符返回的值即为用第一个表达式除以第二个表达式所得的商。  
   
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果除数的计算结果为 Null 值，则该运算符将产生错误。 如果除数和被除数的计算结果均为 Null 值，则该运算符将返回 Null 值。  
   
 ## <a name="see-also"></a>另请参阅  
- [算术运算符 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [除 &#40;SSIS 表达式 &#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40; 除 &#41;&#40;Transact SQL &#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [算术运算符&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [将划分&#40;SSIS 表达式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;将划分&#41; &#40;Transact SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

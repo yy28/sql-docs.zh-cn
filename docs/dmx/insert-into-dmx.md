@@ -32,17 +32,16 @@ caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9ee2a89f60504719b74eb340f9399b8622d06500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  处理指定的数据挖掘对象。 有关处理挖掘模型和挖掘结构的详细信息，请参阅[处理要求和注意事项 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
+  处理指定的数据挖掘对象。 有关处理挖掘模型和挖掘结构的详细信息，请参阅[处理要求和注意事项&#40;数据挖掘&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   
  如果指定了挖掘结构，则该语句将处理挖掘结构及其关联的所有挖掘模型。 如果指定了挖掘模型，则该语句将只处理挖掘模型。  
   
@@ -67,12 +66,12 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *源数据查询*  
  采用提供程序所定义格式的源查询。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果不指定**挖掘模型**或**挖掘结构**，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]搜索依据的名称，该对象类型并处理正确的对象。 如果服务器包含同名的挖掘结构和挖掘模型，将返回错误。  
   
  通过使用第二种语法形式，INSERT INTO*\<对象 >*。COLUMN_VALUES，你可以将数据直接插入模型列而无需训练模型。 该方法以一种简练、有序的方式向模型提供列数据，在处理包含层次结构或有序列的数据集时，该方法很有用。  
   
- 如果你使用**INSERT INTO**与挖掘模型或挖掘结构和关闭的离开\<映射模型列 > 和\<源数据查询 > 自变量，该语句的行为类似**ProcessDefault**，使用已存在的绑定。 如果绑定不存在，则语句将返回错误。 有关详细信息**ProcessDefault**，请参阅[处理选项和设置 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). 下例说明了该语法：  
+ 如果你使用**INSERT INTO**与挖掘模型或挖掘结构和关闭的离开\<映射模型列 > 和\<源数据查询 > 自变量，该语句的行为类似**ProcessDefault**，使用已存在的绑定。 如果绑定不存在，则语句将返回错误。 有关详细信息**ProcessDefault**，请参阅[处理选项和设置&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。 下例说明了该语法：  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -88,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
 ||未处理挖掘结构。|处理挖掘模型和挖掘结构。|  
 ||挖掘结构包含其他挖掘模型。|进程失败。 必须重新处理结构和关联的挖掘模型。|  
 |INSERT INTO 挖掘结构*\<结构 >*|处理或未处理挖掘结构。|处理挖掘结构和关联的挖掘模型。|  
-|插入到挖掘模型*\<模型 >* ，它包含源查询<br /><br /> 或多个<br /><br /> INSERT INTO 挖掘结构*\<结构 >* ，它包含源查询|结构或模型已包含内容。|进程失败。 通过执行此操作之前，必须清除的对象[删除 &#40; DMX &#41;](../dmx/delete-dmx.md)。|  
+|插入到挖掘模型*\<模型 >* ，它包含源查询<br /><br /> 或<br /><br /> INSERT INTO 挖掘结构*\<结构 >* ，它包含源查询|结构或模型已包含内容。|进程失败。 通过执行此操作之前，必须清除的对象[删除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>映射的模型列  
  通过使用\<映射模型列 > 元素，可以在挖掘模型映射到的列中的数据源的列。 \<映射模型列 > 元素具有以下形式：  
@@ -114,7 +113,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   返回行集的任意 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查询  
   
- 有关数据源类型的详细信息，请参阅[&#60; 源数据查询 &#62;](../dmx/source-data-query.md)。  
+ 有关数据源类型的详细信息，请参阅[&#60;源数据查询&#62;](../dmx/source-data-query.md)。  
   
 ## <a name="basic-example"></a>基本示例  
  下面的示例使用**OPENQUERY**定型 Naive Bayes 模型中的目标邮递数据基于[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据库。  
@@ -144,8 +143,8 @@ AS [Models]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

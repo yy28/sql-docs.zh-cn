@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a158bbcdd77e4a7e1e026db793b46e306d8c6fbe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-mdx"></a>表达式 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  在 MDX 中，标量函数返回计算上下文内的单个值。 此区别对于理解 MDX 如何解析标量函数很重要，因为不是对单个数据元素计算大多数 MDX 表达式、语句和脚本，而是重复地对一组数据元素（如单元或成员）进行计算。 但在计算标量函数时，函数通常查看单个数据元素。  
   
  对象标识符  
- 由于多维数据的本质，因此 MDX 是面向对象的。 在 MDX 中，对象标识符被视为简单表达式。 有关标识符的详细信息，请参阅[标识符 &#40;MDX &#41;](../mdx/identifiers-mdx.md).  
+ 由于多维数据的本质，因此 MDX 是面向对象的。 在 MDX 中，对象标识符被视为简单表达式。 有关标识符的详细信息，请参阅[标识符&#40;MDX&#41;](../mdx/identifiers-mdx.md)。  
   
  可以从用运算符联接的这些实体的组合生成复杂表达式。  
   
@@ -87,7 +86,7 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  
@@ -100,7 +99,7 @@ WHERE [Product].[Category].[Bikes]
 |[处理空值](../mdx/working-with-empty-values.md)|说明什么是空值以及如何处理此类值。|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 语言参考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

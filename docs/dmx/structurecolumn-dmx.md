@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 21bb3a47c11a5377114a1333383669598b633df6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +49,14 @@ StructureColumn('structure column name')
   
  如果引用的挖掘结构列是嵌套表，函数将返回表值。 返回的表值可用于 sub-SELECT 语句的 FROM 子句中。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此函数是多态函数，可在允许有表达式（包括 SELECT 表达式列表、WHERE 条件表达式和 ORDER BY 表达式）的语句中的任意位置使用。  
   
  挖掘结构中的列的名称是一个字符串值，因此必须括在单引号： 例如， `StructureColumn('`**列 1**`')`。 如果多个列具有相同的名称，则该名称在包含 SELECT 语句的上下文中解析。  
   
  从查询使用返回的结果**StructureColumn**函数会影响对模型的任何筛选器的状态。 也就是说，模型筛选器控制包含在挖掘模型中的事例。 因此，结构列查询可以只返回挖掘模型中使用的那些事例。 有关说明挖掘模型筛选器对事例表和嵌套表的影响的代码示例，请参阅本主题的“示例”部分。  
   
- 有关如何在一个 DMX SELECT 语句中使用此函数的详细信息，请参阅[SELECT FROM #60; 模型 &#62;。用例 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)或[SELECT FROM #60; 结构 &#62;。用例](../dmx/select-from-structure-cases.md)。  
+ 有关如何在一个 DMX SELECT 语句中使用此函数的详细信息，请参阅[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)或[SELECT FROM&#60;结构&#62;。用例](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="error-messages"></a>错误消息  
  如果用户没有父挖掘结构的钻取权限，则会引发以下安全错误：  
@@ -150,8 +149,8 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

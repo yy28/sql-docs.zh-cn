@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLGetInfo
 - backward compatibility [ODBC], SQLGetInfo
@@ -21,15 +21,14 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91f38a5c5ad19d5df6e253ee2fdbf7bf44eec930
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8cee4d4e5e6b8874d1fe4abf305844e74ebc7cc5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo 支持
-当一个 ODBC 2。*x*应用程序调用**SQLGetInfo**为 ODBC 3*.x*驱动程序，*信息类型*必须支持下表中的自变量。  
+当一个 ODBC 2。*x*应用程序调用**SQLGetInfo**为 ODBC 3 *.x*驱动程序，*信息类型*必须支持下表中的自变量。  
   
 |*信息类型*|返回|  
 |----------------|-------------|  
@@ -43,6 +42,6 @@ ms.lasthandoff: 04/16/2018
 |SQL_SCROLL_CONCURRENCY (ODBC 1.0)|枚举支持光标的并发控制选项 SQLINTEGER 位掩码。<br /><br /> 以下的位掩码用于确定支持哪些选项：<br /><br /> SQL_SCCO_READ_ONLY = 游标是只读的。 不允许任何更新。<br /><br /> SQL_SCCO_LOCK = 光标使用锁定不足以确保可以更新的行的最低级别。<br /><br /> SQL_SCCO_OPT_ROWVER = 光标使用乐观并发控制，比较行版本，如 SQLBase ROWID 或 Sybase 时间戳。<br /><br /> SQL_SCCO_OPT_VALUES = 光标使用乐观并发控制，对值进行比较。|  
 |SQL_STATIC_SENSITIVITY (ODBC 2.0)|SQLINTEGER 位掩码枚举无论应用程序对通过静态或键集驱动游标所做的更改**SQLSetPos**或定位的 update 或 delete 语句可以检测通过该应用程序。<br /><br /> SQL_SS_ADDITIONS = Added 行是否可见到光标处;光标可以滚动到这些行。 这些行添加到光标处下与驱动程序相关。<br /><br /> SQL_SS_DELETIONS = 已删除行不再可供光标，而没有留下的结果集; 的"漏洞"从已删除的行滚动光标后，它不能返回到该行。<br /><br /> SQL_SS_UPDATES = 到光标处; 可见的行更新如果将光标从滚动，并返回对已更新行，光标所返回的数据是更新的数据，而不是原始数据。 此选项适用仅为静态游标或更新上未更新的密钥的键集驱动游标。 对于动态游标或在其中一个密钥更改混合游标中的情况下，此选项不适用于。<br /><br /> 应用程序是否可以检测到的结果集由其他用户，在同一应用程序，包括其他游标所做的更改取决于游标类型。|  
   
- ODBC 3*.x*应用程序使用 ODBC 3*.x*驱动程序不应调用**SQLGetInfo**与*信息类型*中所述的自变量前面的表，但应使用 ODBC 3*.x* *信息类型*参数列在下一段落中。 没有之间的一一对应关系*信息类型*ODBC 2 中使用的参数。*x*和 ODBC 3 中所使用*.x*。 ODBC 3*.x*应用程序使用 ODBC 2。*x*驱动程序，另一方面，应使用*信息类型*自变量前面所述。  
+ ODBC 3 *.x*应用程序使用 ODBC 3 *.x*驱动程序不应调用**SQLGetInfo**与*信息类型*中所述的自变量前面的表，但应使用 ODBC 3 *.x* *信息类型*参数列在下一段落中。 没有之间的一一对应关系*信息类型*ODBC 2 中使用的参数。*x*和 ODBC 3 中所使用 *.x*。 ODBC 3 *.x*应用程序使用 ODBC 2。*x*驱动程序，另一方面，应使用*信息类型*自变量前面所述。  
   
  支持游标属性的信息类型情况下上, 表中的信息类型的某些选项已弃用。 这些不推荐使用类型为 SQL_FETCH_DIRECTION、 SQL_LOCK_TYPES、 SQL_POS_OPERATIONS、 SQL_POSITIONED_STATEMENTS、 SQL_SCROLL_CONCURRENCY 和 SQL_STATIC_SENSITIVITY 的信息。 新的游标属性类型是 SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2，其中 XXX 等于动态、 FORWARD_ONLY、 KEYSET_DRIVEN 或静态。 每个新的类型表示单个游标类型的驱动程序功能。 有关这些选项的详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。

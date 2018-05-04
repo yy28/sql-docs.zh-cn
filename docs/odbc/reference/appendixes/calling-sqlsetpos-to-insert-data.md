@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], inserting data
@@ -21,14 +21,13 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7912db8105a67fcd6240c107778b55b3dcacd0c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f6e5b42e863f7998afcd97318084a9af640bd7ad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>调用 SQLSetPos 以插入数据
-当一个 ODBC 2。*x*应用程序使用 ODBC 3*.x*驱动程序调用**SQLSetPos**与*操作*SQL_ADD，驱动程序管理器的自变量未映射到此调用**SQLBulkOperations**。 如果 ODBC 3*.x*驱动程序应使用的应用程序调用**SQLSetPos** SQL_ADD，驱动程序应支持该操作。  
+当一个 ODBC 2。*x*应用程序使用 ODBC 3 *.x*驱动程序调用**SQLSetPos**与*操作*SQL_ADD，驱动程序管理器的自变量未映射到此调用**SQLBulkOperations**。 如果 ODBC 3 *.x*驱动程序应使用的应用程序调用**SQLSetPos** SQL_ADD，驱动程序应支持该操作。  
   
- 行为的一个主要区别时**SQLSetPos**使用调用就是处于状态 S6 时发生 SQL_ADD。 在 ODBC 2。*x*，驱动程序返回 S1010 时**SQLSetPos**调用时使用中状态 S6 SQL_ADD (光标具有定位与后**SQLFetch**)。 ODBC 3 中*.x*， **SQLBulkOperations**与*操作*的 SQL_ADD 可以调用状态 S6 中。 行为的另一个主要区别在于**SQLBulkOperations**与*操作*的 SQL_ADD 可以是在状态 S5 中调用，而**SQLSetPos**与**操作**的 SQL_ADD 不能。 对于 ODBC 3 中相同的调用可以发生的语句转换，*.x*，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
+ 行为的一个主要区别时**SQLSetPos**使用调用就是处于状态 S6 时发生 SQL_ADD。 在 ODBC 2。*x*，驱动程序返回 S1010 时**SQLSetPos**调用时使用中状态 S6 SQL_ADD (光标具有定位与后**SQLFetch**)。 ODBC 3 中 *.x*， **SQLBulkOperations**与*操作*的 SQL_ADD 可以调用状态 S6 中。 行为的另一个主要区别在于**SQLBulkOperations**与*操作*的 SQL_ADD 可以是在状态 S5 中调用，而**SQLSetPos**与**操作**的 SQL_ADD 不能。 对于 ODBC 3 中相同的调用可以发生的语句转换，*.x*，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。

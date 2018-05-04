@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2501a747df22295cd42b9820e7b80b1ee9716333
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2c9c8ffbcd8c53054bfc3ce1638aa0f5f1bec8c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函数
 **一致性**  
@@ -86,7 +85,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="comments"></a>注释  
  游标名称仅在中使用定位更新和 delete 语句 (例如，**更新***表名*...**WHERE CURRENT OF** *游标名称*)。 有关详细信息，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果应用程序不会调用**SQLSetCursorName**定义游标名称，在执行的查询语句，该驱动程序生成的名称以字母 SQL_CUR 开头且不超过 18 个字符的长度。  
   
- 在连接内的所有游标名称必须都是唯一的。 游标名称的最大长度是由驱动程序定义的。 最大互操作性，建议应用程序，限制为不能超过 18 个字符的游标名称。 ODBC 3 中*.x*，如果游标名称是带引号的标识符视为区分大小写的方式，它可以包含字符的 SQL 语法将不允许或将专门，如空白或保留关键字。 如果游标名称必须以区分大小写的方式处理，则它必须传递作为带引号的标识符。  
+ 在连接内的所有游标名称必须都是唯一的。 游标名称的最大长度是由驱动程序定义的。 最大互操作性，建议应用程序，限制为不能超过 18 个字符的游标名称。 ODBC 3 中 *.x*，如果游标名称是带引号的标识符视为区分大小写的方式，它可以包含字符的 SQL 语法将不允许或将专门，如空白或保留关键字。 如果游标名称必须以区分大小写的方式处理，则它必须传递作为带引号的标识符。  
   
  游标名称设置显式或隐式保持设置之前使用删除它与之关联的语句**SQLFreeHandle**。 **SQLSetCursorName**可以调用以进行重命名语句中的游标，只要光标位于未分配或已准备状态。  
   

@@ -44,7 +44,7 @@ public final java.io.InputStream getBinaryStream(int paramIndex)
 #### <a name="parameters"></a>Parameters  
  *paramIndex*  
   
- **Int** ，该值指示参数索引。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
  一个 InputStream 对象中。  
@@ -53,7 +53,7 @@ public final java.io.InputStream getBinaryStream(int paramIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [getBinaryStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
+ [getBinaryStream 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

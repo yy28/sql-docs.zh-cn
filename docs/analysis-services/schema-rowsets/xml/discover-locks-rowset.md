@@ -20,15 +20,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d93f7d578defe5aa10aaa8e1a5f7ac94c3cc05ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在服务器上提供有关当前持续锁的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供有关服务器上的当前持续锁定的信息。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_LOCKS**行集包含以下各列。  
@@ -51,18 +51,18 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|SPID|DBTYPE_I4|可选。|  
-|LOCK_TRANSACTION_ID|DBTYPE_GUID|可选。|  
-|LOCK_OBJECT_ID|DBTYPE_WSTR|可选。|  
-|LOCK_STATUS|DBTYPE_I4|可选。|  
-|LOCK_TYPE|DBTYPE_I4|可选。|  
-|LOCK_MIN_TOTAL_MS|DBTYPE_I8|可选。|  
+|SPID|DBTYPE_I4|選擇性。|  
+|LOCK_TRANSACTION_ID|DBTYPE_GUID|選擇性。|  
+|LOCK_OBJECT_ID|DBTYPE_WSTR|選擇性。|  
+|LOCK_STATUS|DBTYPE_I4|選擇性。|  
+|LOCK_TYPE|DBTYPE_I4|選擇性。|  
+|LOCK_MIN_TOTAL_MS|DBTYPE_I8|選擇性。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 ## <a name="lock-types"></a>锁类型  
   
-|锁名称|ReplTest1|Description|  
+|锁名称|“值”|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|无锁。|  
 |LOCK_SESSION_LOCK|0x0000001|不活动的会话；不影响其他锁。|  

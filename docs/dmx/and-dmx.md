@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4acd3c33863e8e8c198480e4cc90e4661f7acf94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4968fc4f42ffe33e6e8926d8eccbc661060c30a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>返回值  
  一个布尔值。如果两个参数的处理结果均为 TRUE，则返回 TRUE；否则返回 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  在运算符执行逻辑与运算之前，两个参数都被视为布尔值（0 为 FALSE；其他为 TRUE）。 下表列出了不同参数值组合的返回值。  
   
 |如果 Expression1 为|如果 Expression2 为|则返回值为|  
@@ -62,8 +61,8 @@ Expression1 AND Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [逻辑运算符 &#40; DMX &#41;](../dmx/operators-logical.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [逻辑运算符&#40;DMX&#41;](../dmx/operators-logical.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

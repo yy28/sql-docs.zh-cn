@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - duplicated functions [ODBC]
 - compatibility [ODBC], duplicated functions
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e834e0733e3f388658cf41e3a620b17f843e0c14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 55faa01b16331870c4539e290e218838e4d9e381
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="duplicated-features"></a>重复的功能
 以下的 ODBC 2。*x*由 ODBC 3 重复的函数。*x*函数。 因此，ODBC 2。*x*函数被弃用 ODBC 3 中。*x*。 ODBC 3。*x*函数称为替换函数。  
@@ -58,4 +57,4 @@ ms.lasthandoff: 04/16/2018
  [1] 函数**SQLExtendedFetch**是重复这样的功能。**SQLFetchScroll**提供 ODBC 3 中相同的功能。*x*。 但是，驱动程序管理器未映射**SQLExtendedFetch**到**SQLFetchScroll**时针对 ODBC 3。*x*驱动程序。 有关详细信息，请参阅[驱动程序管理器的用途](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)为了向后兼容的附录 g： 驱动程序准则中。 驱动程序管理器映射**SQLFetchScroll**到**SQLExtendedFetch**时针对 ODBC 2。*x*驱动程序。  
   
 > [!NOTE]  
->  该函数**SQLBindParam**是一种特殊情况。 **SQLBindParam**是重复的功能。 这不是 ODBC 2*.x*函数，但存在 Open Group 和 ISO 标准中的函数。 此函数提供的功能完全归入通过的**SQLBindParameter**。 因此，驱动程序管理器映射调用**SQLBindParam**到**SQLBindParameter**基础驱动程序时 ODBC 3。*x*驱动程序。 但是，当基础驱动程序是 ODBC 2*.x*驱动程序，驱动程序管理器不会执行此映射。
+>  该函数**SQLBindParam**是一种特殊情况。 **SQLBindParam**是重复的功能。 这不是 ODBC 2 *.x*函数，但存在 Open Group 和 ISO 标准中的函数。 此函数提供的功能完全归入通过的**SQLBindParameter**。 因此，驱动程序管理器映射调用**SQLBindParam**到**SQLBindParameter**基础驱动程序时 ODBC 3。*x*驱动程序。 但是，当基础驱动程序是 ODBC 2 *.x*驱动程序，驱动程序管理器不会执行此映射。

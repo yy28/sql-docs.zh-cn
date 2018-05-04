@@ -1,50 +1,23 @@
 ---
-title: "维度类型 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- quantitative dimensions [Analysis Services]
-- BillOfMaterials dimension [Analysis Services]
-- geography dimensions
-- utility dimensions [Analysis Services]
-- channel dimensions
-- dimensions [Analysis Services], types
-- products dimensions [Analysis Services]
-- account dimensions [Analysis Services]
-- organization dimensions
-- currency dimensions [Analysis Services]
-- rates dimensions
-- promotion dimensions
-- scenario dimensions [Analysis Services]
-- customers dimensions [Analysis Services]
-- Type property
-ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 
-author: Minewiskan
+title: 维度类型 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c36b8c16acb2521c2472b1f4398cb68ea89952d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimension-properties---types"></a>数据库维度属性的类型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-**类型**属性设置可以提供的服务器和客户端应用程序到维度内容的相关信息。 在某些情况下，**类型**仅提供客户端应用程序的指南，是可选的设置。 在其他情况下，如**帐户**或**时间**维度，**类型**属性设置为维度及其属性确定特定的基于服务器的行为并且可能需要实现的多维数据集中的某些行为。 例如，**类型**维度的属性可以设置为**帐户**以指示客户端应用程序的标准维度包含帐户属性。 有关时间、 帐户和货币维度的详细信息，请参阅[创建日期类型维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[创建父-子类型维度的财务帐户](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[创建一种货币键入维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
+  **类型**属性设置可以提供的服务器和客户端应用程序到维度内容的相关信息。 在某些情况下，**类型**仅提供客户端应用程序的指南，是可选的设置。 在其他情况下，如**帐户**或**时间**维度，**类型**属性设置为维度及其属性确定特定的基于服务器的行为并且可能需要实现的多维数据集中的某些行为。 例如，**类型**维度的属性可以设置为**帐户**以指示客户端应用程序的标准维度包含帐户属性。 有关时间、 帐户和货币维度的详细信息，请参阅[创建日期类型维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[创建父-子类型维度的财务帐户](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[创建一种货币键入维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
   
  维度类型的默认设置**正则**，这使得内容的相关维度的任何假设。 这是所有维度的默认设置，除非另行指定，最初定义维度时**时间**时定义使用维度向导的维度。 您还应该保留**正则**作为维度类型，如果维度向导未列出适当类型的维度类型。  
   
@@ -71,6 +44,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [通过使用现有表创建维度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [维度 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [维度 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

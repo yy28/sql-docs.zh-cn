@@ -5,16 +5,18 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: sql-linux,UpdArt.exe
+ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
-ms.component: ''
-ms.date: 02/03/2018
-ms.openlocfilehash: c277f51ddb50dfb9a5ef2bd23af7f6e80d00c25c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
+ms.component: linux
+ms.date: 04/28/2018
+ms.openlocfilehash: adc9b9d4dec86f1b0e8807869aa0f20532837cea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的和最近的更新： Linux 文档上的 SQL Server
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
+- *日期范围的更新：* &nbsp; **2018年-02-03** &nbsp;到&nbsp; **2018年-04-28**
 - *主题区域：* &nbsp; **在 Linux 上的 Microsoft SQL Server**。
 
 
@@ -41,12 +43,9 @@ ms.lasthandoff: 04/26/2018
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [配置多子网 Alwayson 可用性组和故障转移群集实例](sql-server-linux-configure-multiple-subnet.md)
-2. [创建和配置 Linux 上的 SQL Server 的可用性组](sql-server-linux-create-availability-group.md)
-3. [在 Linux 上的 SQL Server 的部署 Pacemaker 群集](sql-server-linux-deploy-pacemaker-cluster.md)
-4. [在 Linux 上的 SQL Server 常见问题 (FAQ)](sql-server-linux-faq.md)
-5. [SQL Server 可用性 Linux 部署的基础知识](sql-server-linux-ha-basics.md)
-6. [在 Kubernetes 中配置 SQL Server 容器，以实现高可用性](tutorial-sql-server-containers-kubernetes.md)
+1. [有关在 Linux 上的 SQL Server 的 active Directory 身份验证](sql-server-linux-active-directory-auth-overview.md)
+2. [配置 SQL Server Always On 可用性组在 Windows 和 Linux （跨平台） 上](sql-server-linux-availability-group-cross-platform.md)
+3. [操作始终在 Linux 上的可用性组](sql-server-linux-availability-group-operate-ha.md)
 
 
 
@@ -72,8 +71,9 @@ ms.lasthandoff: 04/26/2018
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [Always On Linux 上的可用性组](#TitleNum_1)
-2. [提取、 转换和加载使用 SSIS 的 Linux 上的数据](#TitleNum_2)
+1. [配置存储库安装和升级在 Linux 上的 SQL Server](#TitleNum_1)
+2. [使用 mssql conf 工具在 Linux 上配置 SQL Server](#TitleNum_2)
+3. [在 Linux 上的 SQL Server 2017 的发行说明](#TitleNum_3)
 
 
 
@@ -84,34 +84,69 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-always-on-availability-groups-on-linuxsql-server-linux-availability-group-overviewmd"></a>1.&nbsp;[Always On Linux 上的可用性组](sql-server-linux-availability-group-overview.md)
+### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1.&nbsp; [配置存储库安装和升级在 Linux 上的 SQL Server](sql-server-linux-change-repo.md)
 
-*更新时间： 2018年-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
+*更新时间： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
 
-<!-- Source markdown line 85.  ms.author= mikeray.  -->
+<!-- Source markdown line 72.  ms.author= jroth.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 85685bc8ad3528aa26ca3f2bba7b0112808ad6f9 51aff6e55104c8f775d2b4f4461e44f689a9ee6b  (PR=4768  ,  Filename=sql-server-linux-availability-group-overview.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
+<!-- git diff --ignore-all-space --unified=0 b5ccaa0fcb8895f25c162e4e0494ad4872773de3 29a959be6ee7d58fe0c53e8f91bdd282fb2e6d29  (PR=5676  ,  Filename=sql-server-linux-change-repo.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-满足以下条件时，可能会自动故障转移的可用性组：
+- 输出文件的内容。
 
--   主和辅助副本设置为同步的数据移动。
--   辅助数据库已同步 （不同步），这意味着两个位于相同的数据点的状态。
--   群集类型设置为外部。 自动故障转移不能与群集类型为无。
--   `sequence_number`将成为辅助副本的主具有最高的序列号-换而言之，辅助副本的`sequence_number`匹配从原始主副本。
+```
+   sudo cat /etc/yum.repos.d/mssql-server.repo
+```
 
-如果满足这些条件，承载主副本的服务器失败，则可用性组将将所有权更改为同步的副本。 同步副本的行为 (的其中可以有三个总： 一个主节点和两个辅助副本) 进一步可通过控制`required_synchronized_secondaries_to_commit`。 这在 Windows 和 Linux 上配合承载个可用性组，但配置完全不同。 在 Linux 上，通过该可用性组资源本身上的群集自动配置的值。
+- **名称**属性是配置的存储库。 此文章的 [存储库] 部分中的表，可以识别它。
 
-**仅配置副本和仲裁**
+**删除旧的存储库 (RHEL)**
 
+如有必要，删除旧的存储库使用以下命令。
 
-此外新在 SQL Server 自 2017 年截至 CU1 是仅配置副本。 因为 Pacemaker 不同于 WSFC，尤其是当涉及到仲裁和需要 STONITH，只需两个节点配置将无法工作时涉及到可用性组。 Fci，提供 Pacemaker 的仲裁机制可以是不错，因为所有 FCI 故障转移仲裁都发生在群集层。 对于可用性组，在 Linux 下的仲裁都会在 SQL Server 中，所有元数据的存储位置。 这是仅配置副本就会起作用。
+```
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
 
-如果没有任何其他内容，第三个节点和至少一个同步的副本将是所需。 这不适用于 SQL Server Standard，因为它可以仅有两个参与可用性组的副本。 仅配置副本存储在 master 数据库中，相同的可用性组配置中的其他副本 AG 配置。 仅配置副本没有参与可用性组的用户数据库。 从主来同步发送配置数据。 无论它们是自动还是手动的故障转移期间，然后使用此配置数据。
+此命令假定名为上一节中标识的文件**mssql server.repo**。
+
+**配置新的存储库 (RHEL)**
+
+配置新的存储库，以用于 SQL Server 安装和升级。 请使用以下命令可配置的所选的存储库。
+
+| 存储库 | Command |
+|---|---|
+| **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+**<a id="sles"></a> 配置 SLES 存储库**
+
+使用以下步骤在 SLES 上配置存储库。
+
+**检查有以前配置的存储库 (SLES)**
+
+首先，验证是否已注册的 SQL Server 存储库。
+
+- 使用**zypper 信息**以获取有关任何以前配置的存储库的信息。
+
+```
+   sudo zypper info mssql-server
+```
+
+- **存储库**属性是配置的存储库。 此文章的 [存储库] 部分中的表，可以识别它。
+
+**删除旧的存储库 (SLES)**
+
+如有必要，删除旧的存储库。 使用以下命令基于以前配置的存储库的类型之一。
+
+| 存储库 | 若要删除的命令 |
+|---|---|
+| **预览** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 
 
 
@@ -123,46 +158,109 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2.&nbsp;[提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2.&nbsp; [使用 mssql conf 工具在 Linux 上配置 SQL Server](sql-server-linux-configure-mssql-conf.md)
 
-*更新时间： 2018年-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1))
+*更新时间： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
 
-<!-- Source markdown line 50.  ms.author= lle.  -->
+<!-- Source markdown line 151.  ms.author= jroth.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9bba002ae3955ebb8376c7c85b7ec1ac8c706073 1533a8e0bfe553e5404de79129119b3f93185ee9  (PR=4768  ,  Filename=sql-server-linux-migrate-ssis.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
+<!-- git diff --ignore-all-space --unified=0 3664c4d64ea4840dcbc718461ed04403cc486f30 89f708af45ce262057e967e9047f1328e19248ba  (PR=5676  ,  Filename=sql-server-linux-configure-mssql-conf.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-    ```
-    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
-    ```
 
-2.  指定`/de[crypt]`选项输入密码以交互方式，如下面的示例中所示：
-
-    ```
-    /opt/ssis/bin/dtexec /f package.dtsx /de
-
-    Enter decryption password:
-    ```
-
-3.  指定`/de`选项在命令行上提供的密码，如下面的示例中所示。 不推荐使用此方法，因为它将使用命令的解密密码存储中的命令历史记录。
-
-    ```
-    opt/ssis/bin/dtexec /f package.dtsx /de test
-
-    Warning: Using /De[crypt] <password> may store decryption password in command history.
-
-    You can use /De[crypt] instead to enter interactive mode,
-    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
-    ```
-
-**设计包**
+**<a id="masterdatabasedir"></a> 更改默认 master 数据库文件目录位置**
 
 
-**连接到 ODBC 数据源**。 借助上 Linux CTP 2.1 刷新及更高版本的 SSIS，SSIS 包可以在 Linux 上使用 ODBC 连接。 此功能已测试 SQL Server 和 MySQL ODBC 驱动程序，但还需要使用任何 Unicode ODBC 驱动程序观察到 ODBC 规范。 在设计时，你可以提供一个 DSN 或连接字符串以连接到 ODBC 数据中;你还可以使用 Windows 身份验证。 有关详细信息，请参阅[博客文章在 Linux 上的宣布推出的 ODBC 支持](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
+**Filelocation.masterdatafile**和**filelocation.masterlogfile**设置 SQL Server 引擎查找 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。
+
+若要更改这些设置，请使用以下步骤：
+
+- 创建新的错误日志文件的目标目录。 下面的示例创建一个新 **/tmp/masterdatabasedir**目录：
+
+```
+   sudo mkdir /tmp/masterdatabasedir
+```
+
+- 更改所有者和到的目录组**mssql**用户：
+
+```
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+```
+
+- 使用 mssql conf 更改使用的主数据和日志文件的默认 master 数据库目录**设置**命令：
+
+```
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+```
+
+- 停止 SQL Server 服务：
+
+```
+   sudo systemctl stop mssql-server
+```
+
+- 将 master.mdf 和 masterlog.ldf 移动：
+
+```
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+```
+
+- 启动 SQL Server 服务：
+
+```
+   sudo systemctl start mssql-server
+```
+
+> [!NOTE]
+> 如果 SQL Server 找不到指定目录中的 master.mdf 和 mastlog.ldf 文件，将在指定的目录中，自动创建模板化副本的系统数据库和 SQL Server 已成功启动。 但是，元数据，例如用户数据库、 服务器登录名、 服务器证书、 加密密钥、 SQL 代理作业或旧 SA 登录密码将不会在新的 master 数据库中更新。 你将需要停止 SQL Server 并重将你的旧 master.mdf 和 mastlog.ldf 移动到新的指定位置，然后启动 SQL Server 以继续使用现有元数据。
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-release-notes-for-sql-server-2017-on-linuxsql-server-linux-release-notesmd"></a>3.&nbsp; [在 Linux 上的 SQL Server 2017 的发行说明](sql-server-linux-release-notes.md)
+
+*更新时间： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2))
+
+<!-- Source markdown line 64.  ms.author= jroth.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 367d112a9427bbdd18e0e52cc82264dd169c91ae 63a67be08fa39ece778cf9ca0b9746dd28694574  (PR=5676  ,  Filename=sql-server-linux-release-notes.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
+
+
+
+- [启用 SQL Server 代理]
+
+**<a id="CU6"></a> CU6 (年 4 月 2018)**
+
+
+这是 SQL Server 自 2017 年的累积更新 6 (CU6) 版本。 对于此版本的 SQL Server 引擎版本是 14.0.3025.34。 有关修补程序和此版本中的改进的信息，请参阅[ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)。
+
+**包的详细信息**
+
+
+对于手动或脱机包安装，你可以下载的 RPM 包和 Debian 包使用下表中的信息：
+
+| “包” | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 14.0.3025.34-3 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
+| SLES RPM 包 | 14.0.3025.34-3 | [mssql server 引擎 RPM 程序包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
+| Ubuntu 16.04 Debian 包 | 14.0.3025.34-3 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 
 
@@ -175,40 +273,36 @@ ms.lasthandoff: 04/26/2018
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
-- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+- [新 + 更新 (11 + 6): &nbsp; &nbsp; **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新 + 更新 (18 + 0): &nbsp; &nbsp; **Analysis Services for SQL**文档](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (218 + 14):**连接到 SQL**文档](../connect/new-updated-connect.md)
+- [新 + 更新 (14 + 0): &nbsp; &nbsp; **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
+- [新 + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
+- [新 + 更新 (3 + 3): &nbsp; &nbsp; **sql Linux**文档](../linux/new-updated-linux.md)
+- [新 + 更新 (7 + 10): &nbsp; &nbsp; **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
+- [新 + 更新 (1 + 3): &nbsp; &nbsp; **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文档](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文档](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL 的工具**文档](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
-- [新 + 更新 (0 + 0): **ActiveX 数据对象 (ADO) sql**文档](../ado/new-updated-ado.md)
-- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (0 + 0): **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新 + 更新 (0 + 0): **sql Data Quality Services**文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
+- [新 + 更新 (0 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
 - [新 + 更新 (0 + 0): **SQL 的示例**文档](../samples/new-updated-samples.md)
 - [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)** 文档](../ssma/new-updated-ssma.md)
-- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
-
 

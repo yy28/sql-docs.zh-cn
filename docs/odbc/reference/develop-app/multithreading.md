@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], thread-safe
 - thread-safe drivers [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e2ad7121936734e30795de2153c06c14595f638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822dcc213a28211a15a07e1bb4586c8a14f7cdd0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multithreading"></a>多线程处理
 多线程在操作系统上，驱动程序必须是线程安全的。 也就是说，它必须能够为应用程序在多个线程上使用相同的句柄。 这如何实现是特定于驱动程序，以及有可能驱动程序将进行序列化任何尝试同时在两个不同的线程使用相同的句柄。  

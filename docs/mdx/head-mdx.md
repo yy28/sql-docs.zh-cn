@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7276608bf6d50410cd157fe82ec96d006639d5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5529333ef2e81b8fee7d78765e0fb528ecb02577
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="head-mdx"></a>Head (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *计数*  
+ *Count*  
  指定要返回的元组数的有效数值表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **头**函数从指定集的开头返回指定的数目的元组。 会保留元素的顺序。 Count 的默认值为 1。 如果指定的元组数是等于或大于 1，**头**函数返回一个空集。 如果指定的元组数目超过了集中的元组数目，则此函数返回原始集。  
   
 ## <a name="example"></a>示例  
@@ -69,10 +68,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [结尾 &#40;MDX &#41;](../mdx/tail-mdx.md)   
- [项 &#40;元组 &#41;&#40;MDX &#41;](../mdx/item-tuple-mdx.md)   
- [项 &#40;成员 &#41;&#40;MDX &#41;](../mdx/item-member-mdx.md)   
- [级别 &#40;MDX &#41;](../mdx/rank-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [结尾&#40;MDX&#41;](../mdx/tail-mdx.md)   
+ [项&#40;元组&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
+ [项&#40;成员&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
+ [级别&#40;MDX&#41;](../mdx/rank-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

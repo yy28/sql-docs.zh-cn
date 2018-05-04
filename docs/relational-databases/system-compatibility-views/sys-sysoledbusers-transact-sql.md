@@ -27,12 +27,11 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d413a9a07af247a62611946bf687c53e6f42d878
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74f62d7f55ac1ad62d7b5fdd1a04f3fb574a3532
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ ms.lasthandoff: 04/16/2018
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**int**|服务器的安全标识号 (SID)。|  
-|**rmtloginame**|**nvarchar(**128**)**|远程登录名， **loginsid**链接映射到**rmtservid**。|  
-|**rmtpassword**|**nvarchar(**128**)**|返回 NULL。|  
-|**loginsid**|**varbinary(**85**)**|要映射的本地登录 SID。|  
+|**rmtloginame**|**nvarchar(** 128 **)**|远程登录名， **loginsid**链接映射到**rmtservid**。|  
+|**rmtpassword**|**nvarchar(** 128 **)**|返回 NULL。|  
+|**loginsid**|**varbinary(** 85 **)**|要映射的本地登录 SID。|  
 |**status**|**int**|如果为 1，则映射应使用用户凭据。|  
 |**changedate**|**datetime**|最近更改映射信息的日期。|  
   

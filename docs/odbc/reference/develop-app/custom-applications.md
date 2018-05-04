@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], custom applications
 - custom applications [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f2a4eab813bc691fd435dc00778cbfe41c8bdcc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 634c0988707b52e5517dcc90e006a5513eb90d97
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-applications"></a>自定义应用程序
 自定义应用程序通常为几个 Dbms 执行特定任务。 例如，应用程序可能会从单个 DBMS 中检索数据并生成报告，或它可能在几个 Dbms 之间的数据传输。 这些应用程序具有共同点是这些 Dbms 写入应用程序之前已知的而是可能会更改应用程序的生命周期。  

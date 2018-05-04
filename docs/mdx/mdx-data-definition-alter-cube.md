@@ -27,12 +27,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1db5a0a41669c97728cdb12107d18b0467481a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 数据定义的 ALTER 多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -132,11 +131,11 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  提供成员名称或成员键的有效字符串表达式。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>注释  
  如果未使用 WITH DESCENDANTS 子句，则已删除成员的子级将成为已删除成员父级的子级。 如果使用 WITH DESCENDANTS 子句，则还会删除维度表内的所有后代及其对应的行。  
   
 > [!NOTE]  
->  有关删除计算的成员、 命名集、 操作和单元计算，请参阅[DROP 成员语句 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-member.md)，[删除 SET 语句 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-set.md)， [DROP 操作语句 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-action.md)，和[删除单元格计算语句 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  有关删除计算的成员、 命名集、 操作和单元计算，请参阅[DROP 成员语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)， [DROP 设置语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)，[DROP 操作语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)，和[DROP 单元格计算语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="updating-the-default-dimension-member"></a>更新默认维度成员  
  该子句更新多维数据集的默认成员，并且在定义默认成员的 MDX 计算脚本中使用。 可以为数据库维度、多维数据集维度或者用户登录名指定默认成员。 还可以在会话期间更改默认成员。  
@@ -148,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  返回单个成员的有效 MDX 表达式。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>注释  
  指定的 MDX 表达式可以为静态或动态。  
   
 ## <a name="moving-a-dimension-member"></a>移动维度成员  
@@ -180,9 +179,9 @@ CELL CALCULATION Calculation_Name
  定义计算成员属性值的有效 MDX 标量表达式。  
   
 ## <a name="creating-a-cell-calculation"></a>创建单元计算  
- 有关创建使用 ALTER CUBE 语句的单元计算的详细信息，请参阅[DROP 单元格计算语句 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ 有关创建使用 ALTER CUBE 语句的单元计算的详细信息，请参阅[DROP 单元格计算语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

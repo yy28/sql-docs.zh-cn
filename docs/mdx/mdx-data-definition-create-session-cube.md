@@ -29,12 +29,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: be395f43e1a372e54f9759edcf58d0b35f03d15c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3f779c5fdc0cdc7d21ae9406a16de9917ad35fee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 数据定义-创建会话多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +130,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<级别类型 >  
  该规范仅对于派生维度定义有效。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  与服务器和本地多维数据集不同，会话多维数据集在创建该会话多维数据集的会话之外不会持久保留。 会话多维数据集按照定义它的度量值和定义来定义。 有两种类型的维度。  
   
 -   源维度 - 这些维度是一个或多个源多维数据集的一部分。  
@@ -220,7 +219,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [创建全局多维数据集语句 &#40;MDX &#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+ [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [创建全局多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

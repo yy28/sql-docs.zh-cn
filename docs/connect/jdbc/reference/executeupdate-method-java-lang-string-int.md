@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  运行给定的 SQL 语句和信号[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]有关是否自动生成密钥，给定的标志与生成此[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象应变为可供检索。  
+  运行给定 SQL 语句并向 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 发送有关由此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象自动生成的键是否应对检索可用的给定标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,27 +47,27 @@ public final int executeUpdate(java.lang.String sql,
   
  A**字符串**包含 SQL 语句。  
   
- *flag*  
+ flag  
   
- **Int**值，该值指示是否应使自动生成的键可用。 它必须是下列常量之一：  
+ 指示是否应使自动生成的键可用的 int 值。 它必须是下列常量之一：  
   
  RETURN_GENERATED_KEYS  
   
  NO_GENERATED_KEYS  
   
 ## <a name="return-value"></a>返回值  
- **Int** ，该值指示行受影响，则为 0 的数，如果使用的 DDL 语句。  
+ 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 java.sql.Statement 接口中的 executeUpdate 方法指定此 executeUpdate 方法。  
   
- 如果执行存储的过程结果中的更新计数大于 1，或生成多个结果集，使用[执行](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)方法来执行存储的过程。  
+ 如果执行存储过程将产生大于 1 的更新计数，或生成多个结果集，则请使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法执行存储过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [executeUpdate 方法&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
+ [executeUpdate 方法 (SQLServerStatement)](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 类](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

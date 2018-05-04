@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], architecture
 - FoxPro ODBC driver [ODBC], architecture
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 660d6eb74b5c7498dc0e63b64e6ffe6c20ed831b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f2b51c07e6c0b0cbff386ae80ec7ccec519e5316
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-architecture-overview"></a>驱动程序体系结构概述
 Microsoft Visual FoxPro ODBC 驱动程序是可用于打开和查询 Microsoft Visual FoxPro 数据库或通过打开数据库连接 (ODBC) 界面 FoxPro 表的 32 位驱动程序。 你可以访问 FoxPro 数据使用以下类型的应用程序：  

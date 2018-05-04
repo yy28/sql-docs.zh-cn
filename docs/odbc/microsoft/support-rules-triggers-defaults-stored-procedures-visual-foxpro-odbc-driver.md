@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], stored procedures
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -35,12 +35,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c7e7c1794d2caa3a6b76a4b8075bd7d0a07323a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 710cd2eb0be42a455fda1dc48d9877f28b8bd9d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>支持规则、 触发器、 默认值和存储的过程 （Visual FoxPro ODBC 驱动程序）
 无法创建 Visual FoxPro 规则、 触发器、 默认值或使用 Visual FoxPro ODBC 驱动程序的存储的过程。 但是，你的应用程序可以交互与现有规则、 触发器、 默认值或存储的过程中，因为它将插入、 更新或删除数据库中存储的 Visual FoxPro 数据。  
@@ -50,7 +49,7 @@ ms.lasthandoff: 04/16/2018
  如果其规则、 触发器、 默认值，则你的应用程序与数据进行交互或存储的过程调用任何其他 Visual FoxPro 命令或函数，该驱动程序将生成错误。 请参阅[不支持 Visual FoxPro 命令和函数](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)有关命令和驱动程序不支持的函数的列表。  
   
 > [!TIP]  
->  如果你想要的条件的代码插入到规则、 触发器或存储的过程，用于确定要在调用由驱动程序时执行的命令，则可以使用**版本 （)**函数。 **版本 （)**函数将返回"Visual FoxPro ODBC 驱动程序*\<版本 >*"驱动程序调用时。  
+>  如果你想要的条件的代码插入到规则、 触发器或存储的过程，用于确定要在调用由驱动程序时执行的命令，则可以使用**版本 （)** 函数。 **版本 （)** 函数将返回"Visual FoxPro ODBC 驱动程序*\<版本 >*"驱动程序调用时。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro 命令和规则、 触发器、 默认值和存储的过程中支持的功能  
   

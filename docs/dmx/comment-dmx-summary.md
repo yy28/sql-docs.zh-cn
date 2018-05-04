@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 40b4189e6ce20c49ad7aab24b53ea41900b022f5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 33c96340b0c020124ed995ca69284f81b44a5e28
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="---comment-dmx-summary"></a>-（注释） (DMX) 摘要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,17 +44,17 @@ ms.lasthandoff: 01/08/2018
  *Comment_Text*  
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  该运算符用于单行或嵌套的注释。 通过使用 -- 插入的注释由换行符分隔。  
   
  注释没有最大长度限制。  
   
- 有关如何在 DMX 中使用不同类型的注释的详细信息，请参阅[注释 &#40; DMX &#41;](../dmx/comments-dmx.md)。  
+ 有关如何在 DMX 中使用不同类型的注释的详细信息，请参阅[注释&#40;DMX&#41;](../dmx/comments-dmx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [斜杠星型 &#40;注释 &#41;&#40; DMX &#41;](../dmx/slash-star-comment-dmx.md)   
- [双斜线 &#40;注释 &#41;&#40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [正斜杠星型&#40;注释&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [双斜线&#40;注释&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

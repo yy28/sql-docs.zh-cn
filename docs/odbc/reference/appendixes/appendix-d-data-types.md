@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], defined
 - SQL data types [ODBC], defined
@@ -22,17 +22,16 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04d25dd57849514636c53092276ef49dc44187bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 057f8a5333ee8f542f63993b014bfcba64e350df
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-d-data-types"></a>附录 d： 数据类型
 ODBC 定义了两个集的数据类型： SQL 数据类型和 C 数据类型。 SQL 数据类型表示存储在数据源的数据的数据类型。 C 数据类型表示存储在应用程序缓冲区中数据的数据类型。  
   
- SQL 数据类型由 sql-92 标准根据每个 DBMS 定义。 对于 sql-92 标准中指定的每个 SQL 数据类型，ODBC 定义类型标识符，它是**#define**值，该值是作为 ODBC 函数中的自变量传递或返回的结果集的元数据中。 唯一的 SQL 92 不支持 ODBC 的数据类型是的位 （ODBC SQL_BIT 类型具有不同的特征）、 BIT_VARYING、 TIME_WITH_TIMEZONE、 TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驱动程序负责将数据源 – 特定 SQL 数据类型映射到 ODBC SQL 数据类型标识符和特定于驱动程序的 SQL 数据类型的标识符。 在实现描述符的 SQL_DESC_CONCISE_TYPE 字段中指定的 SQL 数据类型。  
+ SQL 数据类型由 sql-92 标准根据每个 DBMS 定义。 对于 sql-92 标准中指定的每个 SQL 数据类型，ODBC 定义类型标识符，它是 **#define**值，该值是作为 ODBC 函数中的自变量传递或返回的结果集的元数据中。 唯一的 SQL 92 不支持 ODBC 的数据类型是的位 （ODBC SQL_BIT 类型具有不同的特征）、 BIT_VARYING、 TIME_WITH_TIMEZONE、 TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驱动程序负责将数据源 – 特定 SQL 数据类型映射到 ODBC SQL 数据类型标识符和特定于驱动程序的 SQL 数据类型的标识符。 在实现描述符的 SQL_DESC_CONCISE_TYPE 字段中指定的 SQL 数据类型。  
   
  ODBC 定义的 C 数据类型和其相应的 ODBC 类型标识符。 应用程序指定将通过传递中的相应 C 类型标识符接收结果集数据的缓冲区的 C 数据类型*TargetType*对的调用中的自变量**SQLBindCol**或**SQLGetData**。 它指定通过传递相应的 C 类型标识符中包含的语句参数的缓冲区的 C 类型*ValueType*对的调用中的自变量**SQLBindParameter**。 在应用程序描述符的 SQL_DESC_CONCISE_TYPE 字段中指定的 C 数据类型。  
   

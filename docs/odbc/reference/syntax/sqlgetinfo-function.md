@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetInfo
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fca7aaa6278bfc7ab6a21b89c620a28297bf9da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 函数
 **一致性**  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetInfo(
  对所有调用**SQLGetInfo**要求连接为打开，除非*信息类型*是 SQL_ODBC_VER，返回的版本的驱动程序管理器。  
   
 ## <a name="information-types"></a>信息类型  
- 本部分列出支持的信息类型**SQLGetInfo**。 信息类型可明确分组，并按字母顺序列出。 已添加或重命名为 ODBC 3 的信息类型*.x*还会列出。  
+ 本部分列出支持的信息类型**SQLGetInfo**。 信息类型可明确分组，并按字母顺序列出。 已添加或重命名为 ODBC 3 的信息类型 *.x*还会列出。  
   
 ## <a name="driver-information"></a>驱动程序信息  
  以下值的*信息类型*参数返回的 ODBC 驱动程序，如活动语句、 数据源名称和接口标准符合性级别的数量有关的信息：  
@@ -277,7 +276,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
 ## <a name="information-types-added-for-odbc-3x"></a>信息类型添加适用于 ODBC 3.x  
- 以下值的*信息类型*自变量中添加了 ODBC 3*.x*:  
+ 以下值的*信息类型*自变量中添加了 ODBC 3 *.x*:  
   
 |||  
 |-|-|  
@@ -308,7 +307,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
 ## <a name="information-types-renamed-for-odbc-3x"></a>适用于 ODBC 重命名的信息类型 3.x  
- 以下值的*信息类型*ODBC 3 已重命名自变量*.x*。  
+ 以下值的*信息类型*ODBC 3 已重命名自变量 *.x*。  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -344,7 +343,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>ODBC 中不推荐使用的信息类型 3.x  
- 以下值的*信息类型*ODBC 3 中已弃用参数*.x*。 ODBC 3*.x*驱动程序必须继续为了向后兼容 ODBC 2 支持这些信息类型*.x*应用程序。 (有关这些类型的详细信息，请参阅[SQLGetInfo 支持](../../../odbc/reference/appendixes/sqlgetinfo-support.md)为了向后兼容的附录 g： 驱动程序准则中。)  
+ 以下值的*信息类型*ODBC 3 中已弃用参数 *.x*。 ODBC 3 *.x*驱动程序必须继续为了向后兼容 ODBC 2 支持这些信息类型 *.x*应用程序。 (有关这些类型的详细信息，请参阅[SQLGetInfo 支持](../../../odbc/reference/appendixes/sqlgetinfo-support.md)为了向后兼容的附录 g： 驱动程序准则中。)  
   
 |||  
 |-|-|  
@@ -732,7 +731,7 @@ SQLRETURN SQLGetInfo(
  如果数据源定义一个命名的对象称为"数据库"，则将字符串字符替换为正在使用中，当前数据库的名称。  
   
 > [!NOTE]  
->  ODBC 3 中*.x*，此返回的值*信息类型*还可以通过调用返回**SQLGetConnectAttr**与*属性*SQL_ATTR_CURRENT_CATALOG 自变量。  
+>  ODBC 3 中 *.x*，此返回的值*信息类型*还可以通过调用返回**SQLGetConnectAttr**与*属性*SQL_ATTR_CURRENT_CATALOG 自变量。  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  枚举数据源支持的 SQL 92 datetime 文本 SQLUINTEGER 位掩码。 请注意，这些是 sql-92 规范中列出的日期时间文字独立于 datetime 文字转义子句定义的 ODBC。 有关 ODBC datetime 文字转义子句的详细信息，请参阅[日期、 时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
@@ -1337,7 +1336,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_NUM_ABS (ODBC 1.0) SQL_FN_NUM_ACOS (ODBC 1.0) SQL_FN_NUM_ASIN (ODBC 1.0) SQL_FN_NUM_ATAN (ODBC 1.0) SQL_FN_NUM_ATAN2 (ODBC 1.0) SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) SQL_FN_NUM_COT (ODBC 1.0) SQL_FN_NUM_DEGREES (ODBC 2.0) SQL_FN_NUM_EXP (ODBC 1.0) SQL_FN_NUM_FLOOR (ODBC 1.0) SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 (ODBC 2.0) SQL_FN_NUM_MOD (ODBC 1.0) SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_POWER (ODBC 2.0) SQL_FN_NUM_RADIANS (ODBC 2.0) SQL_FN_NUM_RAND (ODBC 1.0) SQL_FN_NUM_ROUND (ODBC 2.0) SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) SQL_FN_NUM_SQRT (ODBC 1.0) SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
- SQLUINTEGER 值，该值指示的级别 ODBC 3*.x*接口与相兼容的驱动程序。  
+ SQLUINTEGER 值，该值指示的级别 ODBC 3 *.x*接口与相兼容的驱动程序。  
   
  SQL_OIC_CORE： 所有 ODBC 驱动程序的最低级别应遵守。 此级别包括基本接口元素，如连接函数、 准备和执行 SQL 语句的函数、 基本的结果集元数据函数、 基本的目录函数等。  
   

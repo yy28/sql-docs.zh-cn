@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], and SQLDescribeCol
 - SQLDescribeCol function [ODBC], and SQLColAttribute
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f3e09d40f81753029de94a480519540ebe6ef07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4a46107b85766a528fece7968fe812362fddc2de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 和 SQLColAttribute
 **SQLDescribeCol**和**SQLColAttribute**用于检索结果集元数据。 这两个函数之间的差异在于**SQLDescribeCol**始终返回相同五项时的信息 （列的名称、 数据类型、 精度、 小数位数和可为 null）， **SQLColAttribute**返回一段单独的请求的应用程序的信息。 但是， **SQLColAttribute**可以返回元数据，包括列的区分大小写的一个更丰富选择、 显示大小、 updatability，以及可搜索性。  

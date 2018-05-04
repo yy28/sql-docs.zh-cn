@@ -1,30 +1,30 @@
 ---
-title: "在表格模型中创建表、 分区和列 |Microsoft 文档"
-ms.custom: 
+title: 在表格模型中创建表、 分区和列 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a067a7852a575a5449d3482721311f057beba122
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>在表格模型中创建表、 分区和列
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格模型中，表由行和列组成。 行组织成分区，以支持增量数据刷新。 表格解决方案可以支持几种类型的表，具体取决于数据来源于何处：  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格模型中，表由行和列组成。 行组织成分区，以支持增量数据刷新。 表格解决方案可以支持几种类型的表，具体取决于数据来源于何处：  
 
 * 普通表，数据从关系数据源，通过数据提供程序的来源位置。 
 

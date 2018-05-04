@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb908b1fe38e0bd193a17ac66c753d4057fed4a7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f62e74939ab7be81696f90b39af85239332a88c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords"></a>保留关键字
 保留了下列关键字以用于 ODBC 函数调用。 这些单词不会限制的最小的 SQL 语法;但是，若要确保使用支持的核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔列表。  

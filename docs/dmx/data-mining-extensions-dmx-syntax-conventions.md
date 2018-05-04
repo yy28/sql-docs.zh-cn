@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 564e0dddd4d1d5c3ea417b9b8a4f1f01404219d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 821c13f6a0d6e695249d873477a5145fc64b1b4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>数据挖掘扩展插件 (DMX) 语法约定
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 01/08/2018
 |`[ ]`（方括号）|包含可选语法项。 不要键入方括号。|  
 |{}（大括号）|包含必选的语法项。 不要键入大括号。|  
 |, ...|指示逗号前面的项可重复任意次。 各项用逗号分隔。|  
-|\<标签 >:: =|语法块的名称。 该约定用于对过长语法段或语法单元进行分组和标记，这些语法段或语法单元可在一条语句中的多个位置使用。 可在其中使用语法块的每个位置由括在尖括号内，如的标签\<标签 >。|  
+|\<label> ::=|语法块的名称。 该约定用于对过长语法段或语法单元进行分组和标记，这些语法段或语法单元可在一条语句中的多个位置使用。 可在其中使用语法块的每个位置由括在尖括号内，如的标签\<标签 >。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../dmx/data-mining-extensions-dmx-reference.md)  
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 
