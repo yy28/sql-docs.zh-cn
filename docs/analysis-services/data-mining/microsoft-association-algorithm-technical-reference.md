@@ -1,16 +1,15 @@
 ---
-title: "Microsoft 关联算法技术参考 |Microsoft 文档"
-ms.custom: 
+title: Microsoft 关联算法技术参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb0f074871ee4c6f1e24eb02664a66fb512aeba4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法是熟知的 Apriori 算法的简单实现。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法是熟知的 Apriori 算法的简单实现。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法均可用于分析关联，但每种算法找到的规则可能不同。 在决策树模型中，导致特定规则的拆分基于信息获取，而在关联模型中，规则完全基于置信度。 因此，在关联模型中，强规则或具有高置信度的规则由于不提供新信息，可能不一定会受到关注。  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 02/15/2018
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
- 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 你还可以更改参数以编程方式使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>在 AMO 中，或通过使用集合[MiningModels 元素 &#40;ASSL &#41;](../../analysis-services/scripting/collections/miningmodels-element-assl.md)在 XMLA。 下表对各参数进行了说明：  
+ 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 你还可以更改参数以编程方式使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>在 AMO 中，或通过使用集合[MiningModels 元素&#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md)在 XMLA。 下表对各参数进行了说明：  
   
 > [!NOTE]  
 >  不能使用 DMX 语句更改现有模型中的参数；在创建模型时必须指定 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中的参数。  
@@ -171,6 +169,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)   
- [关联模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [关联模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

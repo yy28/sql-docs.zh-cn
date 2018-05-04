@@ -1,11 +1,9 @@
 ---
 title: 命令流 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35efef1459e2a44d19602ce77adeacb6b01ff81b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a98dc21338ef492aa126e70cc28bc636acb2b91b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-streams"></a>命令流
 ADO 已始终支持指定的字符串格式的命令输入**CommandText**属性。 作为替代方法，用 ADO 2.7 或更高版本，你还可以使用信息的流用于命令输入通过分配到流**CommandStream**属性。 你可以分配 ADO**流**对象或任何支持 COM 的对象**IStream**接口。  

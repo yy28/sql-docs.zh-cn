@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c593cab9b3de64c0b2442c7c8be1390553b01497
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b99afab30584db1a13444f2d259ffafa0459c967
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ len
  field  
  指定连接将返回的数据。  
   
-|“值”|返回|  
+|ReplTest1|返回|  
 |-----------|-------------|  
 |SRV_APPLNAME|客户端建立连接时提供的应用程序名称。|  
 |SRV_BCPFLAG|一个标志，如果客户端正在准备执行大容量复制操作，则为 TRUE；否则为 FALSE。|  

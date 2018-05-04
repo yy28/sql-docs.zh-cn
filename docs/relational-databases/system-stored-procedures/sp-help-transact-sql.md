@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: be83dee5f8f4fa4f9e5893bc71964dd3a8df4e3c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 337e2f9f66c4fefb678248c97f5b109ec195a8d0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>参数  
  [ **@objname=**] **'***name***'**  
- 是中的任何对象的名称**sysobjects**中任何用户定义数据类型或**systypes**表。 *名称*是**nvarchar (**776**)**，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
+ 是中的任何对象的名称**sysobjects**中任何用户定义数据类型或**systypes**表。 *名称*是**nvarchar (** 776 **)**，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
    
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -62,31 +61,31 @@ sp_help [ [ @objname = ] 'name' ]
   
     |列名|数据类型|Description|  
     |-----------------|---------------|-----------------|  
-    |**名称**|**nvarchar(**128**)**|对象名称|  
-    |**所有者**|**nvarchar(**128**)**|对象所有者（拥有对象的数据库主体。 默认为包含对象的架构所有者。）|  
-    |**对象类型**|**nvarchar (**31**)**|对象类型|  
+    |**名称**|**nvarchar(** 128 **)**|对象名称|  
+    |**所有者**|**nvarchar(** 128 **)**|对象所有者（拥有对象的数据库主体。 默认为包含对象的架构所有者。）|  
+    |**对象类型**|**nvarchar (** 31 **)**|对象类型|  
   
 2.  如果*名称*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型或用户定义数据类型， **sp_help**返回该结果集。  
   
     |列名|数据类型|Description|  
     |-----------------|---------------|-----------------|  
-    |**类型 _ 名称**|**nvarchar(**128**)**|数据类型名称。|  
-    |**Storage_type**|**nvarchar(**128**)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型名称。|  
+    |**类型 _ 名称**|**nvarchar(** 128 **)**|数据类型名称。|  
+    |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型名称。|  
     |**长度**|**int**|数据类型的物理长度（以字节为单位）。|  
     |**Prec**|**int**|精度（数字总位数）。|  
     |**小数位数**|**int**|小数点右侧的数字个数。|  
-    |**可以为 Null**|**varchar (**35**)**|指示是否允许 NULL 值：“是”或“否”。|  
-    |**default_name**|**nvarchar(**128**)**|绑定到此类型的默认值的名称。<br /><br /> NULL = 未绑定默认值。|  
-    |**rule_name**|**nvarchar(**128**)**|绑定到此类型的规则的名称。<br /><br /> NULL = 未绑定默认值。|  
+    |**可以为 Null**|**varchar (** 35 **)**|指示是否允许 NULL 值：“是”或“否”。|  
+    |**default_name**|**nvarchar(** 128 **)**|绑定到此类型的默认值的名称。<br /><br /> NULL = 未绑定默认值。|  
+    |**rule_name**|**nvarchar(** 128 **)**|绑定到此类型的规则的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**排序规则**|**sysname**|数据类型的排序规则。 如果是非字符数据类型，则为 NULL。|  
   
 3.  如果*名称*是以外的数据类型，任何数据库对象**sp_help**返回此结果集和也其他结果集，基于指定的对象的类型。  
   
     |列名|数据类型|Description|  
     |-----------------|---------------|-----------------|  
-    |**名称**|**nvarchar(**128**)**|表名|  
-    |**所有者**|**nvarchar(**128**)**|表所有者|  
-    |**类型**|**nvarchar (**31**)**|表类型|  
+    |**名称**|**nvarchar(** 128 **)**|表名|  
+    |**所有者**|**nvarchar(** 128 **)**|表所有者|  
+    |**类型**|**nvarchar (** 31 **)**|表类型|  
     |**Created_datetime**|**datetime**|表的创建日期|  
   
      根据指定的数据库对象**sp_help**返回额外的结果集。  
@@ -97,22 +96,22 @@ sp_help [ [ @objname = ] 'name' ]
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**column_name**|**nvarchar(**128**)**|列名称。|  
-        |**类型**|**nvarchar(**128**)**|列数据类型。|  
-        |**计算**|**varchar (**35**)**|指示是否计算列中的值：“是”或“否”。|  
+        |**column_name**|**nvarchar(** 128 **)**|列名称。|  
+        |**类型**|**nvarchar(** 128 **)**|列数据类型。|  
+        |**计算**|**varchar (** 35 **)**|指示是否计算列中的值：“是”或“否”。|  
         |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意： 列数据类型是否为较大的值类型 (**varchar （max)**， **nvarchar (max)**， **varbinary （max)**，或**xml**)，将的值显示为-1。|  
-        |**Prec**|**char (**5**)**|列精度。|  
-        |**小数位数**|**char (**5**)**|列小数位数。|  
-        |**可以为 Null**|**varchar (**35**)**|指示是否允许列中包含 NULL 值：“是”或“否”。|  
-        |**TrimTrailingBlanks**|**varchar (**35**)**|剪裁尾随空格。 返回 Yes 或 No。|  
-        |**FixedLenNullInSource**|**varchar (**35**)**|仅为保持向后兼容。|  
+        |**Prec**|**char (** 5 **)**|列精度。|  
+        |**小数位数**|**char (** 5 **)**|列小数位数。|  
+        |**可以为 Null**|**varchar (** 35 **)**|指示是否允许列中包含 NULL 值：“是”或“否”。|  
+        |**TrimTrailingBlanks**|**varchar (** 35 **)**|剪裁尾随空格。 返回 Yes 或 No。|  
+        |**FixedLenNullInSource**|**varchar (** 35 **)**|仅为保持向后兼容。|  
         |**排序规则**|**sysname**|列的排序规则。 对于非字符数据类性为 NULL。|  
   
     -   针对标识列返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**标识**|**nvarchar(**128**)**|其数据类型被声明为标识的列名。|  
+        |**标识**|**nvarchar(** 128 **)**|其数据类型被声明为标识的列名。|  
         |**种子**|**numeric**|标识列的起始值。|  
         |**增量**|**numeric**|用于此列中的值的增量。|  
         |**不用于复制**|**int**|不强制执行标识属性，当复制登录名，如**sqlrepl**，将数据插入到表：<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -127,40 +126,40 @@ sp_help [ [ @objname = ] 'name' ]
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(**128**)**|数据所在的文件组：主要文件组、次要文件组或事务日志文件组。|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|数据所在的文件组：主要文件组、次要文件组或事务日志文件组。|  
   
     -   针对索引返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|索引名。|  
-        |**index_description**|**varchar (**210**)**|索引的说明。|  
-        |**index_keys**|**nvarchar (**2078年**)**|要生成索引的列的列名。 对于 xVelocity 内存优化的列存储索引返回 NULL。|  
+        |**index_description**|**varchar (** 210 **)**|索引的说明。|  
+        |**index_keys**|**nvarchar (** 2078年 **)**|要生成索引的列的列名。 对于 xVelocity 内存优化的列存储索引返回 NULL。|  
   
     -   针对约束返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**constraint_type**|**nvarchar (**146**)**|约束的类型。|  
-        |**constraint_name**|**nvarchar(**128**)**|约束名称。|  
-        |**delete_action**|**nvarchar (**9**)**|指示 DELETE 操作是 NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 还是 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
-        |**update_action**|**nvarchar (**9**)**|指示 UPDATE 操作是 NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 还是 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
-        |**status_enabled**|**varchar (**8**)**|指示是否启用约束：Enabled、Disabled 或 N/A。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
-        |**status_for_replication**|**varchar (**19**)**|指示约束是否用于复制。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
-        |**constraint_keys**|**nvarchar (**2078年**)**|构成约束的列的名称。对于默认值和规则而言，则为定义默认值或规则的文本。|  
+        |**constraint_type**|**nvarchar (** 146 **)**|约束的类型。|  
+        |**constraint_name**|**nvarchar(** 128 **)**|约束名称。|  
+        |**delete_action**|**nvarchar (** 9 **)**|指示 DELETE 操作是 NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 还是 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
+        |**update_action**|**nvarchar (** 9 **)**|指示 UPDATE 操作是 NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 还是 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
+        |**status_enabled**|**varchar (** 8 **)**|指示是否启用约束：Enabled、Disabled 或 N/A。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
+        |**status_for_replication**|**varchar (** 19 **)**|指示约束是否用于复制。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
+        |**constraint_keys**|**nvarchar (** 2078年 **)**|构成约束的列的名称。对于默认值和规则而言，则为定义默认值或规则的文本。|  
   
     -   针对执行引用的对象返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**通过引用表**|**nvarchar (**516**)**|标识引用表的其他数据库对象。|  
+        |**通过引用表**|**nvarchar (** 516 **)**|标识引用表的其他数据库对象。|  
   
     -   针对存储过程、函数或扩展存储过程返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**parameter_name**|**nvarchar(**128**)**|存储过程参数名。|  
-        |**类型**|**nvarchar(**128**)**|存储过程参数的数据类型。|  
+        |**parameter_name**|**nvarchar(** 128 **)**|存储过程参数名。|  
+        |**类型**|**nvarchar(** 128 **)**|存储过程参数的数据类型。|  
         |**长度**|**int**|最大物理存储长度（以字节为单位）。|  
         |**Prec**|**int**|精度，即数字总位数。|  
         |**小数位数**|**int**|小数点右边的数字位数。|  

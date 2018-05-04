@@ -24,13 +24,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af3a7f2e9d0c891cd416db9eb5449e21e3b8aa06
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3aec507212896d9ed03cdb7053b320743b2236c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,16 +57,16 @@ sp_bindrule [ @rulename = ] 'rule' ,
  [  **@objname=**] *****object_name*****  
  要绑定规则的表和列或别名数据类型。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
   
- *object_name*是**nvarchar(776)**无默认值。 如果*object_name*是一个部分名称，它被解析为别名数据类型。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，该别名数据类型的现有列继承*规则*除非规则已绑定到列的直接。  
+ *object_name*是**nvarchar(776)** 无默认值。 如果*object_name*是一个部分名称，它被解析为别名数据类型。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，该别名数据类型的现有列继承*规则*除非规则已绑定到列的直接。  
   
 > [!NOTE]  
->  *object_name*可以包含括号**[**和**]**字符的形式分隔的标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+>  *object_name*可以包含括号 **[** 和 **]** 字符的形式分隔的标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
 > [!NOTE]  
 >  可以将针对使用别名数据类型的表达式创建的规则绑定到列或别名数据类型，但在引用这些规则时无法编译它们。 避免使用对别名数据类型创建的规则。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 仅当将规则绑定到别名数据类型时才能使用。 *future_only_flag*是**varchar(15)**默认值为 NULL。 当设置为此参数**futureonly**防止继承新规则的别名数据类型的现有列。 如果*futureonly_flag*为 NULL，新规则绑定到当前具有任何规则或使用该别名数据类型的现有规则别名数据类型的列。  
+ 仅当将规则绑定到别名数据类型时才能使用。 *future_only_flag*是**varchar(15)** 默认值为 NULL。 当设置为此参数**futureonly**防止继承新规则的别名数据类型的现有列。 如果*futureonly_flag*为 NULL，新规则绑定到当前具有任何规则或使用该别名数据类型的现有规则别名数据类型的列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

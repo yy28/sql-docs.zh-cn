@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLTables
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca0e5379079c735b7dd0f5b6770818e5f930f51d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltables-function"></a>SQLTables 函数
 **一致性**  
@@ -129,7 +128,7 @@ SQLRETURN SQLTables(
   
  否则，应用程序必须能够处理的情况下，用户为其选择一个表的其中**选择**不授予特权。  
   
- *SchemaName*和*TableName*参数接受搜索模式。 *CatalogName*参数接受搜索模式，如果 SQL_ODBC_VERSION 环境属性是 SQL_OV_ODBC3; 它不接受搜索模式，如果设置 SQL_OV_ODBC2。 如果设置 SQL_OV_ODBC3，ODBC 3*.x*驱动程序将需要该通配符中*CatalogName*自变量进行转义以原义处理。 有关有效的搜索模式的详细信息，请参阅[模式值自变量](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
+ *SchemaName*和*TableName*参数接受搜索模式。 *CatalogName*参数接受搜索模式，如果 SQL_ODBC_VERSION 环境属性是 SQL_OV_ODBC3; 它不接受搜索模式，如果设置 SQL_OV_ODBC2。 如果设置 SQL_OV_ODBC3，ODBC 3 *.x*驱动程序将需要该通配符中*CatalogName*自变量进行转义以原义处理。 有关有效的搜索模式的详细信息，请参阅[模式值自变量](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
   
 > [!NOTE]  
 >  有关常规使用、 自变量和返回的数据的 ODBC 目录函数的详细信息，请参阅[目录函数](../../../odbc/reference/develop-app/catalog-functions.md)。  
@@ -148,9 +147,9 @@ SQLRETURN SQLTables(
   
  若要确定 TABLE_CAT、 TABLE_SCHEM 和 TABLE_NAME 列的实际长度，应用程序可以调用**SQLGetInfo**的 SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN 和 SQL_MAX_TABLE_NAME_LEN 信息类型。  
   
- 下面的列已重命名为 ODBC 3*.x*。 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
+ 下面的列已重命名为 ODBC 3 *.x*。 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
   
-|ODBC 2.0 列|ODBC 3*.x*列|  
+|ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

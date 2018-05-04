@@ -28,12 +28,11 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9a60ff831a77a5b557d22d00b79d4b936167a628
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1cc9100153d04de7820c210142ae425801cccf95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,13 +93,13 @@ sys.sp_cdc_enable_table
  用于唯一标识源表中的行的唯一索引的名称。 *index_name*是**sysname**而且可以为 NULL。 如果指定， *index_name*必须在源表上的有效唯一索引。 如果*index_name*标识的索引列作为表的唯一行标识符将优先于任何定义的主键列的指定。  
   
  [  **@captured_column_list =** ] *****captured_column_list*****  
- 标识将包括在更改表中的源表列。 *captured_column_list*是**nvarchar (max)**而且可以为 NULL。 如果为 NULL，则所有列都将包括在更改表中。  
+ 标识将包括在更改表中的源表列。 *captured_column_list*是**nvarchar (max)** 而且可以为 NULL。 如果为 NULL，则所有列都将包括在更改表中。  
   
  列名称必须是源表中的有效列。 在主键索引中, 定义的列或列中引用的索引定义*index_name*必须包含。  
   
  *captured_column_list*是以逗号分隔列表的列名称。 可以选择将列表中的单个列名称放在双引号 ("") 或方括号 ([]) 中。 如果列名称包含嵌入的逗号，则必须将该列名称引起来。  
   
- *captured_column_list*不能包含以下保留的列名称： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__ $操作**，和**__ $update_mask**。  
+ *captured_column_list*不能包含以下保留的列名称： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__ $操作**，和 **__ $update_mask**。  
   
  [  **@filegroup_name =** ] *****filegroup_name*****  
  要用于为捕获实例创建的更改表的文件组。 *filegroup_name*是**sysname**而且可以为 NULL。 如果指定， *filegroup_name*必须为当前数据库中定义。 如果为 NULL，则使用默认文件组。  

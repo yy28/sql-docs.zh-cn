@@ -1,11 +1,9 @@
 ---
 title: 数据部分 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea45564e35d9e6bbd3d8cd484f190a4fdd3b88aa
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cc7a8e66765d35d4c8a8a7f74f63720dec4d9429
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-section"></a>数据部分
 数据部分定义以及任何挂起的更新、 插入或删除的行集的数据。 数据节可以包含零个或多个行。 它只能包含一个行集，其中行定义的架构中的数据。 此外，如前面提到的那样，可以忽略不包含任何数据的列。 如果某个属性或子元素使用的数据部分中，并且未在架构部分中定义该构造，则以无提示方式忽略它。  

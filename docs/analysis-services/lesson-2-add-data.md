@@ -1,28 +1,27 @@
 ---
-title: "第 2 课： 添加数据 |Microsoft 文档"
-ms.custom: 
+title: 第 2 课： 添加数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 103e6317751156edb53eb0abe43b5e8193989bee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 学完本课的估计时间： **20 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课： [第 1 课：创建新的表格模型项目](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>创建连接  
@@ -93,7 +92,7 @@ ms.lasthandoff: 01/08/2018
     
     **DimDate**
     
-      |“列”|  
+      |列|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
     **DimGeography**
   
-      |“列”|  
+      |列|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +110,7 @@ ms.lasthandoff: 01/08/2018
   
     **DimProduct**
   
-      |“列”|  
+      |列|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,27 +125,27 @@ ms.lasthandoff: 01/08/2018
   
     **DimProductCategory**
   
-      |“列”|  
+      |列|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |“列”|  
+      |列|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |“列”|  
+      |列|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  
       |**ShipDateKey**|   
   
-## <a name="Import"></a>Import the selected tables and column data  
+## <a name="Import"></a>导入所选的表和列数据  
 现在，预览并筛选出不必要的数据后，你可以导入所需数据执行操作的其余的部分。 向导将导入表数据以及表之间的任何关系。 在模型中创建新表和列和筛选出的数据将不导入。  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>导入选择的表和列数据  

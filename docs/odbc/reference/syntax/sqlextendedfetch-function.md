@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee25cf1b7b4df806c3ea999205d14117aac3c038
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函数
 **一致性**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch**从结果集中提取数据的指定行集，并返回所有绑定的列的数据。 绝对或相对位置或书签，可以指定行集。  
   
 > [!NOTE]  
->  ODBC 3 中*.x*， **SQLExtendedFetch**已被取代**SQLFetchScroll**。 ODBC 3*.x*应用程序不应调用**SQLExtendedFetch**; 它们应改为调用**SQLFetchScroll**。 驱动程序管理器映射**SQLFetchScroll**到**SQLExtendedFetch**使用 ODBC 2 时*.x*驱动程序。 ODBC 3*.x*驱动程序应支持**SQLExtendedFetch**如果他们想要使用 ODBC 2*.x*调用它的应用程序。 有关详细信息，请参阅"注释"和[块状游标可滚动游标，向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)为了向后兼容的附录 g： 驱动程序准则中。  
+>  ODBC 3 中 *.x*， **SQLExtendedFetch**已被取代**SQLFetchScroll**。 ODBC 3 *.x*应用程序不应调用**SQLExtendedFetch**; 它们应改为调用**SQLFetchScroll**。 驱动程序管理器映射**SQLFetchScroll**到**SQLExtendedFetch**使用 ODBC 2 时 *.x*驱动程序。 ODBC 3 *.x*驱动程序应支持**SQLExtendedFetch**如果他们想要使用 ODBC 2 *.x*调用它的应用程序。 有关详细信息，请参阅"注释"和[块状游标可滚动游标，向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)为了向后兼容的附录 g： 驱动程序准则中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -129,9 +128,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   调用**SQLExtendedFetch**不能与调用混合**SQLFetch**或**SQLFetchScroll**，并且如果**SQLBulkOperations**称为在调用任何提取函数之前， **SQLExtendedFetch**之前关闭并重新打开游标不能调用。 也就是说， **SQLExtendedFetch**可以仅在语句状态 S7 中调用。 有关详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)附录 b: ODBC 状态转换表中。  
   
- 在应用程序调用**SQLFetchScroll**时使用 ODBC 2*.x*驱动程序，驱动程序管理器映射到此调用**SQLExtendedFetch**。 有关详细信息，请参阅"SQLFetchScroll 和 ODBC 2*.x*驱动程序"中[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)。  
+ 在应用程序调用**SQLFetchScroll**时使用 ODBC 2 *.x*驱动程序，驱动程序管理器映射到此调用**SQLExtendedFetch**。 有关详细信息，请参阅"SQLFetchScroll 和 ODBC 2 *.x*驱动程序"中[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)。  
   
- 在 ODBC 2*.x*， **SQLExtendedFetch**调用提取多个行和**SQLFetch**调用提取单个行。 ODBC 3 中*.x*，另一方面， **SQLFetch**可以调用提取多个行。  
+ 在 ODBC 2 *.x*， **SQLExtendedFetch**调用提取多个行和**SQLFetch**调用提取单个行。 ODBC 3 中 *.x*，另一方面， **SQLFetch**可以调用提取多个行。  
   
 ## <a name="related-functions"></a>相关函数  
   

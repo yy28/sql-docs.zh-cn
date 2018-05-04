@@ -1,11 +1,9 @@
 ---
 title: ADO 的 visual c + + 扩展 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,15 +20,14 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 55f76e23f032f98a4f0ede00660dff62ccd6dec4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d27cc7776c59364ebc0b69c4872dc8b78ee51116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
-编程 Visual c + + 的 ADO 的首选的方法使用**#import**指令中, 所述[Microsoft Visual c + + ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 但是，早期版本的 ADO 附带使用 Visual c + + 编程的另一种方法： Visual c + + 扩展。 本部分介绍此功能的用户的用户必须维护 Visual c + + 扩展代码，但应使用 # 编写新的 ADO 代码**导入**。
+编程 Visual c + + 的 ADO 的首选的方法使用 **#import**指令中, 所述[Microsoft Visual c + + ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 但是，早期版本的 ADO 附带使用 Visual c + + 编程的另一种方法： Visual c + + 扩展。 本部分介绍此功能的用户的用户必须维护 Visual c + + 扩展代码，但应使用 # 编写新的 ADO 代码**导入**。
 
  一个最繁琐作业 Visual c + + 程序员表面时检索数据用 ADO 将转换成 c + + 数据类型，作为 VARIANT 数据类型返回，并且然后将转换的数据存储在类或结构中的数据。 除了繁琐外，c + + 通过检索数据 VARIANT 数据类型会降低性能。
 

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4dc772c1f572c294bccd664cdd8aa013b85d985b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b58815042b77ed72698cf6a1de8b3eb12a76f83e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-block-cursors"></a>使用块状游标
 内置 ODBC 3，还可以为块游标的支持。*x*。 **SQLFetch**可以仅用于多行提取 ODBC 3 中调用时。*x*; 如果要将一个 ODBC 2。*x*应用程序调用**SQLFetch**，它将打开仅的单行更行、 只进游标。 当一个 ODBC 3。*x*应用程序调用**SQLFetch** ODBC 2 中。*x*驱动程序，它可以返回单个行，除非的驱动程序支持**SQLExtendedFetch**。 有关详细信息，请参阅[块状游标可滚动游标，向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)为了向后兼容的附录 g： 驱动程序准则中。  

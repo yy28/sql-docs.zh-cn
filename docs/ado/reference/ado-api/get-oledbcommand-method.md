@@ -1,11 +1,9 @@
 ---
 title: get_OLEDBCommand 方法 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 01e6082d17932dfc85e7ce7ca1ecd3f09d69bc5a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 79990576ad2fbd9d6707aaa9a704c75e65e66a58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getoledbcommand-method"></a>get_OLEDBCommand 方法
 返回基础 OLE DB 命令，首先将传播到 OLE DB 命令 ADO 命令上设置任何参数信息。  

@@ -1,11 +1,9 @@
 ---
 title: 保留的筛选和分层记录集 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d945999ef7feb34ebe7de3b945868bc35c154589
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d995e0d35f355f1d1b41fd0c6bcacd93da5b1b22
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>持久化筛选和分层记录集
 如果[筛选器](../../../ado/reference/ado-api/filter-property.md)属性实际上是为**记录集**，保存筛选器访问的行。 如果**记录集**是分层的当前子**记录集**和其子都得到保存，包括父**记录集**。 如果**保存**方法的子**记录集**是调用子及其所有子级都保存，但不是父。 有关层次结构的详细信息**记录集**，请参阅[数据成型](../../../ado/guide/data/data-shaping.md)。  

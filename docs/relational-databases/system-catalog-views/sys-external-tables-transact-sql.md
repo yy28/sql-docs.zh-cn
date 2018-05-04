@@ -19,13 +19,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf4bceb7932cb5f8a5f4f891015efb4e540d6cf9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 53e30403430eed3786d815d604ed5ba3b7c2768c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 |file_format_id|**int**|对于通过 HADOOP 外部数据源的外部表，这是外部文件格式的对象 ID。||  
 |位置|**nvarchar(4000)**|对于通过 HADOOP 外部数据源的外部表，这是在 HDFS 中的外部数据的路径。||  
 |reject_type|**tinyint**|对于通过 HADOOP 外部数据源的外部表，这是在查询外部数据时，将计算被拒绝的行的方式。|值 – 被拒绝的行数。<br /><br /> 百分比 – 的被拒绝的行的百分比。|  
-|reject_value|**float**|通过 HADOOP 外部数据源的外部表：<br /><br /> 有关*reject_type =*值，这是行拒绝查询失败前允许的数目。<br /><br /> 有关*reject_type* = 百分比，这是行拒绝查询失败前允许的百分比。||  
+|reject_value|**float**|通过 HADOOP 外部数据源的外部表：<br /><br /> 有关*reject_type =* 值，这是行拒绝查询失败前允许的数目。<br /><br /> 有关*reject_type* = 百分比，这是行拒绝查询失败前允许的百分比。||  
 |reject_sample_value|**int**|有关*reject_type* = 百分比，这是要加载，成功或失败之前计算的被拒绝的行的百分比, 的行数。|如果 reject_type = VALUE。|  
 |distribution_type|**int**|对于通过于包含 SHARD_MAP_MANAGER 外部数据源的外部表，这是对基础表的行的数据分布。|0 – Sharded<br /><br /> 1 – 复制<br /><br /> 2 – 轮循机制|  
 |distribution_desc|**nvarchar(120)**|对于通过于包含 SHARD_MAP_MANAGER 外部数据源的外部表，这是显示为字符串的分布类型。||  

@@ -24,12 +24,11 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b8937b491afa9489779513a20ace182a49ef56e6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 20064832fa9c35aeb27bb8f0519c996f11a52cef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +71,13 @@ sp_dropextendedproperty
  所指定的级别 0 对象类型的名称。 *level0_object_name*是**sysname**默认值为 NULL。  
   
  [ @level1type=] {*level1_object_type*}  
- 级别 1 对象的类型。 *level1_object_type*是**varchar （128)**默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 级别 1 对象的类型。 *level1_object_type*是**varchar （128)** 默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
  [ @level1name=] {*level1_object_name*}  
  所指定的级别 1 对象类型的名称。 *level1_object_name*是**sysname**默认值为 NULL。  
   
  [ @level2type=] {*level2_object_type*}  
- 级别 2 对象的类型。 *level2_object_type*是**varchar （128)**默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 级别 2 对象的类型。 *level2_object_type*是**varchar （128)** 默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  [ @level2name=] {*level2_object_name*}  
  所指定的级别 2 对象类型的名称。 *level2_object_name*是**sysname**默认值为 NULL。  

@@ -3,13 +3,10 @@ title: getBoolean 方法 (SQLServerResultSet) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b614c95ddab787ac546f92539f5830e36f5f9b76
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d1c4e6e9198f63c43bd5ec6a7dc749b751947de5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 |名称|Description|  
 |----------|-----------------|  
-|[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int-sqlserverresultset.md)|检索此当前行中指定的列索引的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象作为**布尔**Java 编程语言中。|  
+|[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 boolean。|  
 |[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string-sqlserverresultset.md)|检索此当前行中的指定的列名称的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象作为**布尔**Java 编程语言中。|  
   
 ## <a name="see-also"></a>另请参阅  

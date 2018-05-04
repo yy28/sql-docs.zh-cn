@@ -1,11 +1,9 @@
 ---
 title: 项的属性示例 (VB) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cf4f6c78b5dd6c93dfcb0ae43a5fa1b271c64c2d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3beaf6111b432427d2a40f9f0362c6a9084a5246
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="item-property-example-vb"></a>项的属性示例 (VB)
 此示例演示如何[项](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合的成员。 该示例打开***作者***表***Pubs***使用参数化命令的数据库。  

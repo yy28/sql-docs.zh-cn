@@ -1,35 +1,34 @@
 ---
-title: "创建命令 (TMSL) |Microsoft 文档"
-ms.custom: 
+title: 创建命令 (TMSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 98af912235d950e787a925ce751fc1df5d1fa6bf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 466863efaf71bc8eb9049b771fe477745cdb6080
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-command-tmsl"></a>创建命令 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]创建指定的对象和的所有子代指定的对象。 如果该对象已存在，该命令将引发错误。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  创建指定的对象和的所有子代指定的对象。 如果该对象已存在，该命令将引发错误。  
   
 ## <a name="request"></a>请求  
  根据对象的请求的结构而有所不同。 一个对象，它父级必须包括的所有子级，尽管同级及其父对象的完整对象定义不是必需的。  
   
- [数据库对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)将数据库添加到服务器。  
+ [数据库对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)将数据库添加到服务器。  
   
 ```  
 {   
@@ -51,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [数据源对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [数据源对象&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -75,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables 对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)向表中添加列。  
+ [Tables 对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)向表中添加列。  
   
 ```  
 {   
@@ -93,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [分区对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)分区添加到父表对象。  
+ [分区对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)分区添加到父表对象。  
   
 ```  
 {  
@@ -113,7 +112,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [角色对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)按最小方式将角色添加到数据库，但没有成员身份或筛选器。  
+ [角色对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)按最小方式将角色添加到数据库，但没有成员身份或筛选器。  
   
 ```  
 {  
@@ -170,7 +169,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>使用情况 （终结点）  
- 语句中使用此命令元素[执行方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)通过以下方式公开的 XMLA 终结点调用：  
+ 语句中使用此命令元素[执行方法&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)通过以下方式公开的 XMLA 终结点调用：  
   
 -   作为 XMLA 窗口中 SQL Server Management Studio (SSMS)  
   
@@ -180,7 +179,7 @@ ms.lasthandoff: 01/08/2018
   
  你可以从 SSMS 生成用于此命令的现成脚本。  例如，你可以右键单击现有数据库 >**脚本** > **编写数据库脚本为** > **创建到**。  
   
- [ \[MS SSAS T\]: QL Server Analysis Services 表格 （SQL Server 技术协议）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文档包括部分 3.1.5.2.2，用于描述 JSON 表格元数据命令和对象的结构。 目前，该文档介绍命令和在 TMSL 脚本中尚未实现的功能。 请参阅主题 ([表格模型脚本语言 &#40;TMSL &#41;引用](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 阐述上支持的功能。  
+ [ \[MS SSAS T\]: QL Server Analysis Services 表格 （SQL Server 技术协议）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文档包括部分 3.1.5.2.2，用于描述 JSON 表格元数据命令和对象的结构。 目前，该文档介绍命令和在 TMSL 脚本中尚未实现的功能。 请参阅主题 ([表格模型脚本语言&#40;TMSL&#41;引用](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 阐述上支持的功能。  
 
 ## <a name="see-also"></a>另请参阅  
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

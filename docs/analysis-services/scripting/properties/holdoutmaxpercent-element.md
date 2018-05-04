@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,15 +22,15 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5282451ccad6f4cd8f3deb80542f5b2d72e3e05d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 639f5866885026345d6c1f630100648822b580ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 元素
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定数据源中将用于维持部分包含的测试组的事例的最大百分比[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。 其余事例用于定型。 值为 0 指示对可作为测试集来维持的事例数没有限制。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指定数据源中将用于维持部分包含的测试组的事例的最大百分比[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。 其余事例用于定型。 值为 0 指示对可作为测试集来维持的事例数没有限制。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|0 到 99 之间的整数。|  
 |默认值|30|  
@@ -57,9 +56,9 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果为两个指定值**HoldoutMaxPercent**和**HoldoutMaxCases**，算法将限制测试设置为较小的两个值。  
   
  如果**HoldoutMaxCases**设置为默认值 0，并且尚未为设置一个值**HoldoutMaxPercent**，该算法使用完整的数据集以进行训练。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/08/2018
  对应于的父元素**HoldoutMaxPercent**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MiningStructure>。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
+ [属性&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutMaxCases 元素](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)   
  [HoldoutSeed 元素](../../../analysis-services/scripting/properties/holdoutseed-element.md)   
  [HoldoutActualSize 元素](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  

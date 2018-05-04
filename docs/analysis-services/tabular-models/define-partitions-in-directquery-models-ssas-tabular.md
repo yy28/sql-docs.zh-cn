@@ -1,31 +1,29 @@
 ---
-title: "在 DirectQuery 模型中定义分区 |Microsoft 文档"
-ms.custom: 
+title: 在 DirectQuery 模型中定义分区 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 21e629bbac90f30562c6b8434e2a73a71fdea4ed
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b184e2c6f28a86a31f7c10913eccaafa3c2561a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>在 DirectQuery 模型中定义分区
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本节介绍了如何在 DirectQuery 模型中使用分区。 有关在表格模型中的分区的更多常规信息，请参阅[分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+  本节介绍了如何在 DirectQuery 模型中使用分区。 有关在表格模型中的分区的更多常规信息，请参阅[分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  虽然表在 DirectQuery 模式下可以有多个分区，但只能指定其中一个分区在查询执行中使用。 一个分区要求可适用于所有兼容性级别的 DirectQuery 模型。  
