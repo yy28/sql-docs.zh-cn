@@ -25,13 +25,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70bd9f0161b84636d4cea081576ca5b54f0bc158
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6980d71bf921065c0d460fcc9107a8d525dcd60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.lasthandoff: 04/16/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|包含该别名数据类型的数据库。|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|包含该别名数据类型的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|包含该别名数据类型的数据库。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|包含该别名数据类型的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
 |**A I N _**|**sysname**|别名数据类型。|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|表所有者。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|表所有者。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**sysname**|使用别名数据类型的表。|  
 |**COLUMN_NAME**|**sysname**|使用别名数据类型的列。|  
   

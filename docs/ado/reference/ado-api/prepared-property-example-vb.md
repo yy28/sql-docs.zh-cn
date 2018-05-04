@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4eeaad753c494b5b1a4be3de61704244309cc659
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e0d15e570cb3ab50de91d73b9b4548ada6a57bef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepared-property-example-vb"></a>已准备好的属性示例 (VB)
 此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象-准备的一个，另一个未准备好。  

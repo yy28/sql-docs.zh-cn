@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e14d37c916240c0c7cc454df50d44d4de4ba319a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 493a17424410155be360828e7c998335c2f11aad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  指定层次结构名称的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果指定层次结构号，**维度**函数返回在多维数据集的从零开始的位置是层次结构指定层次结构数目。  
   
  如果指定层次结构名称，则**维度**函数将返回指定层次结构。 通常情况下，使用此字符串版本**维度**与用户定义函数的函数。  
@@ -93,6 +92,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

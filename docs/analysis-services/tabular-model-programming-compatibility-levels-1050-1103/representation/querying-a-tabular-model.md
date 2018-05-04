@@ -1,33 +1,32 @@
 ---
-title: "在查询表格模型 |Microsoft 文档"
-ms.custom: 
+title: 在查询表格模型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0f9fd950d33859b0bfaf0b68e7c9e263286ce87f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="querying-a-tabular-model"></a>查询表格模型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-作为开发人员，查询表格模型意味着从表格数据库检索数据；为完成此目标，您具有两个选项：在 DAX 中使用表查询，或者使用 MDX 并且在数据从多维数据集传入时检索数据。 不过，根据您的表格模型的基础模式，您可能会被限制为仅使用 DAX 表查询；DirectQuery 模式要求使用 DAX 表查询。  
+  作为开发人员，查询表格模型意味着从表格数据库检索数据；为完成此目标，您具有两个选项：在 DAX 中使用表查询，或者使用 MDX 并且在数据从多维数据集传入时检索数据。 不过，根据您的表格模型的基础模式，您可能会被限制为仅使用 DAX 表查询；DirectQuery 模式要求使用 DAX 表查询。  
   
 ## <a name="querying-with-adomdnet"></a>使用 ADOMD.Net 进行查询  
  使用 ADOMD.Net 查询表格模型既简单又灵活；您可以将 MDX 语句或表格查询表达式从 DAX 发送到服务器以便获取结果。  

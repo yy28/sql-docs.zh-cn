@@ -24,13 +24,12 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 911828ded03593503026c573c0f921398cf5da43
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 270a40f5a8abc9b35b1a12debcbd2148509ac010
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,16 +64,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*qualifier.owner.name*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
  [ @col_type=] '*col_type*  
- 是列类型。 *col_type*是**char (**1**)**，默认值为。 类型 R 最佳列集，通过返回的列或列中检索值，允许中指定的任意行无法唯一标识表。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
+ 是列类型。 *col_type*是**char (** 1 **)**，默认值为。 类型 R 最佳列集，通过返回的列或列中检索值，允许中指定的任意行无法唯一标识表。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
   
  [ @scope=] '*作用域*  
- ROWID 要求的最小作用域。 *作用域*是**char (**1**)**，默认值为 t。 作用域 C 指定 ROWID 是仅在该行上定位时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
+ ROWID 要求的最小作用域。 *作用域*是**char (** 1 **)**，默认值为 t。 作用域 C 指定 ROWID 是仅在该行上定位时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
   
  [ @nullable=] '*可以为 null*  
- 指示特殊列能否接受 Null 值。 *可以为 null*是**char (**1**)**，默认值为 u。 O 指定不允许空值的特殊列。 如果值为 U，则指定列可以部分为 Null 值。  
+ 指示特殊列能否接受 Null 值。 *可以为 null*是**char (** 1 **)**，默认值为 u。 O 指定不允许空值的特殊列。 如果值为 U，则指定列可以部分为 Null 值。  
   
  [ @ODBCVer=] '*ODBCVer*  
- 所使用的 ODBC 版本。 *ODBCVer*是**int (**4**)**，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 版本 2.0 和 ODBC 版本 3.0 之间的差异的详细信息，请参阅 ODBC 版本 3.0 的 ODBC SQLSpecialColumns 规范。  
+ 所使用的 ODBC 版本。 *ODBCVer*是**int (** 4 **)**，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 版本 2.0 和 ODBC 版本 3.0 之间的差异的详细信息，请参阅 ODBC 版本 3.0 的 ODBC SQLSpecialColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
  InclusionThresholdSetting  
@@ -88,7 +87,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |DATA_TYPE|**int**|ODBC SQL 数据类型。|  
 |TYPE_NAME|**sysname**|数据依赖于源的数据类型名称;例如， **char**， **varchar**， **money**，或**文本**。|  
 |PRECISION|**Int**|数据源中的列的精度。 此字段始终返回值。|  
-|LENGTH|**Int**|长度，以字节为单位，所需的数据源中其二进制形式的数据类型，如 10 **char (**10**)**、 4 的**整数**，和为 2 **smallint**.|  
+|LENGTH|**Int**|长度，以字节为单位，所需的数据源中其二进制形式的数据类型，如 10 **char (** 10 **)**、 4 的**整数**，和为 2 **smallint**.|  
 |SCALE|**int**|数据源中列的小数位数。 对于不适用小数位数的数据类型，返回 NULL。|  
 |PSEUDO_COLUMN|**int**|指示列是否为伪列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

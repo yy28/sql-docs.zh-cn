@@ -29,12 +29,11 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b27e47e8aa8563b004f0ad7b07163ecd3891ffb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c1f0067bfd589c15bacd1e76d8b4b39569b19b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>访问用户定义的类型-使用 Dataadapter 更新 UDT 的列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 下面的 ADO.NET 代码段检索有效的连接字符串，创建一个新**SqlDataAdapter**，并填充**: System.Data.DataTable**中的数据的行与**点**表。  
+ 下面的 ADO.NET 代码段检索有效的连接字符串，创建一个新**SqlDataAdapter**，并填充 **: System.Data.DataTable**中的数据的行与**点**表。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  

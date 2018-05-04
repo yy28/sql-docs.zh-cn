@@ -22,12 +22,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dfde684aa3b9de8403c16335247826f7d2ae4f29
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8770b910bf515f742db4e59e92e202bec0c3a16f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ Expression1 XOR Expression2
 ## <a name="return-value"></a>返回值  
  返回一个布尔值**true**如果一个且仅有一个自变量的计算结果为**true**; 否则为**false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **XOR**运算符将两个参数视为布尔值 (0，0，作为**false**; 否则为**true**) 执行逻辑异或运算符之前。 下表说明了如何**XOR**执行逻辑异或运算符。  
   
 |*Expression1*|*Expression2*|返回值|  
@@ -63,6 +62,6 @@ Expression1 XOR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

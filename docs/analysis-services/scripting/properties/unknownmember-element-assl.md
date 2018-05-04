@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8048d3018e8772b3363d9992b35e208b2fc2ca86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 80cd5da1a5668b7c944ed70a8111d0e3358a38c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unknownmember-element-assl"></a>UnknownMember 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指示未知的成员是否可见。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指示未知成员是否可见。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*无*|  
@@ -60,23 +60,23 @@ ms.lasthandoff: 01/08/2018
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|父元素|[维度](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*可见*|未知成员存在并显示。|  
-|*隐藏*|未知成员存在，但不显示。|  
-|*无*|未知成员未使用。|  
+|*Hidden*|未知成员存在，但不显示。|  
+|*InclusionThresholdSetting*|未知成员未使用。|  
   
  对应于的允许值为枚举**UnknownMember**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.UnknownMemberBehavior>。  
   
 ## <a name="see-also"></a>另请参阅  
- [UnknownMemberName 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/unknownmembername-element-assl.md)   
- [UnknownMemberTranslation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)   
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [UnknownMemberName 元素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/unknownmembername-element-assl.md)   
+ [UnknownMemberTranslation 元素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)   
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

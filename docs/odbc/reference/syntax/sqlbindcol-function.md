@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBindCol
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 23df3fff2ff88ecf62b332f0fca752f608894ef6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函数
 **一致性**  
@@ -247,7 +246,7 @@ SQLRETURN SQLBindCol(
 |*绑定地址*|数据缓冲区，使用指定的地址*TargetValuePtr*中的参数**SQLBindCol**。<br /><br /> 为长度/指示器缓冲区，使用指定的地址*StrLen_or_IndPtr*中的参数**SQLBindCol**。 有关详细信息，请参阅"描述符和 SQLBindCol"部分中的"附加注释"。<br /><br /> 如果绑定的地址为 0，不返回任何数据值，即使前面的公式来计算出的地址为非零值。|  
 |*绑定偏移量*|如果使用按行绑定，则存储在地址的值指定具有 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性。<br /><br /> 如果使用列绑定或 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性的值是 null 指针，*绑定偏移量*为 0。|  
 |*行号*|基于 1 的行集中的行数。 对于单行更行提取，这是默认安全设置，这是 1。|  
-|*元素大小*|绑定的数组中元素的大小。<br /><br /> 如果使用列的绑定，这是**sizeof(SQLINTEGER)**长度/指示器缓冲区。 对于数据缓冲区，它是值*BufferLength*中的参数**SQLBindCol**如果数据类型是长度可变，并且数据类型的大小，如果数据类型为固定长度。<br /><br /> 如果使用按行绑定，这是数据和长度/指示器缓冲区 SQL_ATTR_ROW_BIND_TYPE 语句属性的值。|  
+|*元素大小*|绑定的数组中元素的大小。<br /><br /> 如果使用列的绑定，这是**sizeof(SQLINTEGER)** 长度/指示器缓冲区。 对于数据缓冲区，它是值*BufferLength*中的参数**SQLBindCol**如果数据类型是长度可变，并且数据类型的大小，如果数据类型为固定长度。<br /><br /> 如果使用按行绑定，这是数据和长度/指示器缓冲区 SQL_ATTR_ROW_BIND_TYPE 语句属性的值。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>说明符和 SQLBindCol  
  以下各节描述了如何**SQLBindCol**与描述符交互。  

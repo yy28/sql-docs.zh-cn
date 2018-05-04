@@ -22,17 +22,16 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 697f1da527f797a203a8536c80894ba8bffe5dec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 617cd92b6728aa19fbb6599f71fab5374a331857
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  返回数值表达式对集求得使用有偏差的总体公式计算总体标准偏差 (除以 *n* )。  
+  返回数值表达式对集求得使用有偏差的总体公式计算总体标准偏差 (除以*n*)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +47,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **StdevP**函数使用有偏差的总体公式、 时[Stdev](../mdx/stdev-mdx.md)函数使用无偏差的总体公式。  
   
 ## <a name="example"></a>示例  
@@ -66,6 +65,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

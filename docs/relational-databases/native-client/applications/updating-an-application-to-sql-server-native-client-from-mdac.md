@@ -22,13 +22,12 @@ caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5163ef5cea7268824b8b9f5e0fe35911ab4a2f8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e186f21502f29572b5de457a021485a212dc767e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>将应用程序从 MDAC 更新到 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,7 +109,7 @@ ms.lasthandoff: 04/16/2018
     |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
-     此类型映射会影响为列元数据返回的值。 例如，**文本**列具有最大为 2147483647，但[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 报告的最大大小**varchar （max)** SQL_SS_LENGTH_UNLIMITED，以及列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 报告的最大大小**varchar （max)**为 2147483647 或-1，具体取决于平台的列。  
+     此类型映射会影响为列元数据返回的值。 例如，**文本**列具有最大为 2147483647，但[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 报告的最大大小**varchar （max)** SQL_SS_LENGTH_UNLIMITED，以及列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 报告的最大大小**varchar （max)** 为 2147483647 或-1，具体取决于平台的列。  
   
 -   出于向后兼容的原因，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 允许连接字符串中存在多义性（例如，可能多次指定某些关键字，以及可能允许基于位置或优先级对发生冲突的关键字进行冲突解决）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的未来版本可能不允许连接字符串中存在多义性。 在修改要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的应用程序时，最好消除对连接字符串多义性的任何依赖。  
   

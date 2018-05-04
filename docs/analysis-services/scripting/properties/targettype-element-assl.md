@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7aa94520c72183f4aaf619d252ce7c99f35f2c96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 67c53bb07cfb9144869ce759af25b42b12478107
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="targettype-element-assl"></a>TargetType 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]标识中标识的项的项类型[目标](../../../analysis-services/scripting/properties/target-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  标识中标识的项的项类型[目标](../../../analysis-services/scripting/properties/target-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|无|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,18 +61,18 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[操作](../../../analysis-services/scripting/objects/action-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*Cube*|操作目标是多维数据集。|  
 |*单元格*|操作目标是子多维数据集。|  
 |*设置*|操作目标是集。|  
-|*Hierarchy*|操作目标是层次结构。|  
-|*Level*|操作目标是级别。|  
+|*层次结构*|操作目标是层次结构。|  
+|*级别*|操作目标是级别。|  
 |*DimensionMembers*|操作目标是维度的成员。|  
 |*HierarchyMembers*|操作目标是层次结构的成员。|  
 |*LevelMembers*|操作目标是级别的成员。|  
@@ -83,6 +83,6 @@ ms.lasthandoff: 01/08/2018
  对应于的父元素**TargetType**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

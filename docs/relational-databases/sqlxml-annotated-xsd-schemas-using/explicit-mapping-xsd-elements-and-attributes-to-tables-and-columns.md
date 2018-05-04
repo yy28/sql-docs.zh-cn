@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -35,13 +34,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b411f418f684ad54a7a04bce0a8c90484f475dc9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1aa43166872412d9008a6be3bec869917c533b02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>显式映射 XSD 元素和属性表和列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,9 +65,9 @@ ms.lasthandoff: 04/16/2018
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 批注  
- 此示例中，在 XSD 架构组成**\<联系人 >**包含复杂类型的元素 **\<FName >**和 **\<LName >**子元素和**ContactID**属性。  
+ 此示例中，在 XSD 架构组成**\<联系人 >** 包含复杂类型的元素 **\<FName >** 和 **\<LName >** 子元素和**ContactID**属性。  
   
- **Sql:relation**批注地图**\<联系人 >**到 Person.Contact 表 AdventureWorks 数据库中的元素。 **Sql:field**批注地图 **\<FName >**到 FirstName 列的元素和 **\<LName >** LastName 的元素列。  
+ **Sql:relation**批注地图**\<联系人 >** 到 Person.Contact 表 AdventureWorks 数据库中的元素。 **Sql:field**批注地图 **\<FName >** 到 FirstName 列的元素和 **\<LName >** LastName 的元素列。  
   
  为指定任何批注**ContactID**属性。 这导致将属性默认映射为具有相同名称的列。  
   

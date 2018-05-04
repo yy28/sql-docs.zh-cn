@@ -18,13 +18,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 25a6a8fe27093f70ac84da9a6b32f4cb72b31761
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 403768eaccf6e1f31976a6d70601353f253a3412
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 04/16/2018
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] （字节数组\)|132 (oledb.h)|  
   
- UDT 值表示为字节数组。 支持与十六进制字符串之间的转换。 文字值表示为带有“0x”前缀的十六进制字符串。 十六进制字符串是以 16 为基数的二进制数据的文本表示形式。 一个示例是从服务器类型的转换**varbinary(10)**到 DBTYPE_STR，这将导致在 20 个字符的字符的每个对其中表示单字节的十六进制表示形式。  
+ UDT 值表示为字节数组。 支持与十六进制字符串之间的转换。 文字值表示为带有“0x”前缀的十六进制字符串。 十六进制字符串是以 16 为基数的二进制数据的文本表示形式。 一个示例是从服务器类型的转换**varbinary(10)** 到 DBTYPE_STR，这将导致在 20 个字符的字符的每个对其中表示单字节的十六进制表示形式。  
   
 ## <a name="parameter-properties"></a>参数属性  
  DBPROPSET_SQLSERVERPARAMETER 属性集通过 OLE DB 支持 UDT。 有关详细信息，请参阅[使用用户定义类型](~/relational-databases/native-client/features/using-user-defined-types.md)。  

@@ -25,13 +25,12 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 507593c3b3d9240bf42482a9fc1a1c342e3df958
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3e41d96d6376dceb8594851e2ba31244ca1a8b60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 04/16/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。 INFORMATION_SCHEMA 视图可能不完整，因为它们并未针对所有新功能进行更新。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。 INFORMATION_SCHEMA 视图可能不完整，因为它们并未针对所有新功能进行更新。|  
 |**TABLE_NAME**|**sysname**|表名。|  
-|**TABLE_TYPE**|**varchar (**10**)**|表的类型。 可以是 VIEW 或 BASE TABLE。|  
+|**TABLE_TYPE**|**varchar (** 10 **)**|表的类型。 可以是 VIEW 或 BASE TABLE。|  
   
 ## <a name="see-also"></a>另请参阅  
  [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

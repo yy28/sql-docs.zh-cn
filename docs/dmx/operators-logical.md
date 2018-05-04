@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09d51ab41f3c228952a606183a3207db467e8af9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f3da957d4b2ed72a26cbc0adf77d5727e9386dd4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators---logical"></a>操作员-逻辑
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,20 +35,20 @@ ms.lasthandoff: 01/08/2018
   
 |运算符|Description|  
 |--------------|-----------------|  
-|[和 &#40; DMX &#41;](../dmx/and-dmx.md)|对两个数值表达式执行逻辑与运算。|  
-|[不 &#40; DMX &#41;](../dmx/not-dmx.md)|对数值表达式执行逻辑非运算。|  
-|[或者 &#40; DMX &#41;](../dmx/or-dmx.md)|对数值表达式执行逻辑或运算。|  
+|[和&AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|对两个数值表达式执行逻辑与运算。|  
+|[不&AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|对数值表达式执行逻辑非运算。|  
+|[或者&AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|对数值表达式执行逻辑或运算。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [表达式 &#40; DMX &#41;](../dmx/expressions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [表达式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

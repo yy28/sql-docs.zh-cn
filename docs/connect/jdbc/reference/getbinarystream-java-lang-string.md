@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBinaryStream(String paramName)
 apilocation:
@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1c5c013103d44927c8cc2296eee2de78d3f3e8ba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e5cdcea28aafe2061867b5486e9565509eb3b36b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getbinarystream-javalangstring"></a>getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +41,9 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *参数名称*  
+ paramName  
   
- A**字符串**，该值指示参数名称。  
+ 指示参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  一个 InputStream 对象中。  
@@ -53,7 +52,7 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [getBinaryStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
+ [getBinaryStream 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

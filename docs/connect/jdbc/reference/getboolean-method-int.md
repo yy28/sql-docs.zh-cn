@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getboolean-method-int"></a>getBoolean 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索与指定参数的值**布尔**给定参数索引值。  
+  根据给定的参数索引检索指定参数的值作为 boolean 值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,21 +42,21 @@ public boolean getBoolean(int index)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *索引*  
+ 索引  
   
- **Int** ，该值指示参数索引。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- A**布尔**值。  
+ 一个布尔值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 java.sql.CallableStatement 接口中的 getBoolean 方法指定此 getBoolean 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [getBoolean 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)   
+ [getBoolean 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

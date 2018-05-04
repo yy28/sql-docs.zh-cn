@@ -24,12 +24,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 26eb846b1744fcf8616228ca1bf95b80c4e4d33c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,10 +131,10 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定快照的备用文件夹的位置。 *alternate_snapshot_folder*是**nvarchar （255)**，默认值为 NULL。  
   
  [  **@pre_snapshot_script =** ] *****pre_snapshot_script*****  
- 指定指向的指针**.sql**文件位置。 *pre_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 在订阅服务器上应用快照时，合并代理将在运行任何复制的对象脚本之前运行快照前脚本。 该脚本将在合并代理连接到订阅数据库时使用的安全上下文中执行。 快照前脚本不运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
+ 指定指向的指针 **.sql**文件位置。 *pre_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 在订阅服务器上应用快照时，合并代理将在运行任何复制的对象脚本之前运行快照前脚本。 该脚本将在合并代理连接到订阅数据库时使用的安全上下文中执行。 快照前脚本不运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
   
  [  **@post_snapshot_script =** ] *****post_snapshot_script*****  
- 指定指向的指针**.sql**文件位置。 *post_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 当所有其他复制的对象脚本和数据均已在初始同步过程中应用之后，合并代理将运行快照后脚本。 该脚本将在合并代理连接到订阅数据库时使用的安全上下文中执行。 快照后脚本不运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
+ 指定指向的指针 **.sql**文件位置。 *post_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 当所有其他复制的对象脚本和数据均已在初始同步过程中应用之后，合并代理将运行快照后脚本。 该脚本将在合并代理连接到订阅数据库时使用的安全上下文中执行。 快照后脚本不运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
   
  [  **@compress_snapshot =** ] *****compress_snapshot*****  
  指定的写入到的快照**@alt_snapshot_folder**位置是压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar(5)**，默认值为 FALSE。 **false**指定，将不会压缩快照;**true**指定要压缩快照。 无法压缩大于 2GB 的快照文件。 压缩的快照文件被解压缩到合并代理所在的位置；一般对压缩的快照使用请求订阅，以便在订阅服务器上解压缩文件。 不能压缩默认文件夹中的快照。 若要支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，你必须指定**false**。  
@@ -172,7 +171,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定在无法使用预计算分区时是否启用分区更改优化。 *keep_partition_changes*是**nvarchar(5)**，默认值为 TRUE。 **false**意味着对更改进行分区都不优化，并且分区中的数据更改时，当不使用预计算的分区，将验证发送到所有订阅服务器的分区。 **true**对更改进行分区的方式进行了优化，和订阅服务器，具有已更改的分区中的行受到影响。 当使用预计算的分区，设置*use_partition_groups*到**true**并设置*keep_partition_changes*到**false**。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
 > [!NOTE]  
->  如果指定的值**true**为*keep_partition_changes*，将值指定为**1**为快照代理参数**-MaxNetworkOptimization**. 有关此参数的详细信息，请参阅[复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)。 有关如何指定代理参数的信息，请参阅[复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
+>  如果指定的值**true**为*keep_partition_changes*，将值指定为**1**为快照代理参数 **-MaxNetworkOptimization**. 有关此参数的详细信息，请参阅[复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)。 有关如何指定代理参数的信息，请参阅[复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
  与[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器， *keep_partition_changes*必须设置为 true，以确保将正确地传播删除。 设置为 false 时，订阅服务器可能有比预期更多的行。  
   

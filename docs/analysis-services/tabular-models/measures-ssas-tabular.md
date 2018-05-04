@@ -1,30 +1,30 @@
 ---
-title: "度量值 |Microsoft 文档"
-ms.custom: 
+title: 度量值 |Microsoft 文档
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 231b9296f5cd6b2a46037f540716c9bdb7a68fc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures"></a>度量值组
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格模型中，度量值是使用中报告的客户端使用的 DAX 公式创建计算。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  在表格模型中，度量值是使用 DAX 公式创建的计算，以便用于报表客户端中。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
   
 ##  <a name="bkmk_understanding"></a> 优点  
  度量值可以基于标准聚合函数，如 AVERAGE、COUNT 或 SUM；或者，您可以使用 DAX 定义自己的公式。 除了公式之外，每个度量值都具有属性（由度量值数据类型定义），如“名称”、“表详细信息”、“格式”和“小数位数”。  
@@ -76,7 +76,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> 度量值属性  
  每个度量值具有定义它的属性。 可以在“属性”窗口中编辑度量值属性以及关联的列属性。 度量值具有以下属性：  
   
-|“属性”|默认设置|Description|  
+|属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**Description**|空白|度量值的说明。 该说明将不与度量值一起显示在报告客户端中。|  
 |**格式**|从公式表达式中引用的列的数据类型自动确定。|度量值的格式。 例如，货币或百分比。|  

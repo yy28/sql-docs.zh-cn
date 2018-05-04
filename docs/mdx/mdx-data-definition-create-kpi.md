@@ -1,15 +1,15 @@
 ---
-title: "创建 KPI 语句 (MDX) |Microsoft 文档"
-ms.custom: 
+title: 创建 KPI 语句 (MDX) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE KPI
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - CREATE KPI statement
 - key performance indicators [MDX]
 ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6a97fbc894a0b88511ab551aa231fcfb3746d52c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3174d2be856d3d2956ced0d8ee34aaeb0a872d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义-创建 KPI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *Property_Value*  
  定义 KPI 属性值的有效标量表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  指定当前连接的多维数据集以外的多维数据集将导致错误。 因此，应使用 CURRENTCUBE 来代替多维数据集名称，以表示当前的多维数据集。  
   
 ## <a name="kpi-properties"></a>KPI 属性  
@@ -96,22 +95,22 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |图形用途|KPI 图形的名称|状态数|  
 |--------------------|-------------------------|----------------------|  
-|“登录属性”|形状|3|  
-|“登录属性”|交通灯|3|  
-|“登录属性”|路标|3|  
-|“登录属性”|测量|3|  
-|“登录属性”|反向测量|5|  
-|“登录属性”|温度计|3|  
-|“登录属性”|柱状|3|  
-|“登录属性”|面|3|  
-|“登录属性”|方差箭头|3|  
+|状态|形状|3|  
+|状态|交通灯|3|  
+|状态|路标|3|  
+|状态|仪表|3|  
+|状态|反向测量|5|  
+|状态|温度计|3|  
+|状态|柱状|3|  
+|状态|面|3|  
+|状态|方差箭头|3|  
 |走向|标准箭头|3|  
 |走向|状态箭头|3|  
 |走向|反向状态箭头|5|  
 |走向|面|3|  
   
 ## <a name="see-also"></a>另请参阅  
- [删除 KPI 语句 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP KPI 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17e11f8dd61de45f7ce046241695f3dcc901e254
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4eaed0a59daf6a2e9abeb08e5be60ef953733c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conformance-levels"></a>一致性级别
 ODBC 驱动程序为各种数据源的应用程序访问。 每个驱动程序可让应用程序在运行时确定哪些 ODBC 功能和哪些 SQL 语法驱动程序和每个数据源支持。 这不是应用程序设计为可以使用单独的驱动程序或一小，已知组，驱动程序，因为这些应用程序只需写入该驱动程序或驱动程序的功能的要求。 若要帮助发现驱动程序和数据源功能的应用程序，两个方面的一致性是否可用： ODBC 接口和 SQL 语法。  

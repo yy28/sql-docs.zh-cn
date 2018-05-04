@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6a04d94d0a650eb0349e599814fc2f1f614d4732
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 45d063b3926e48e51cbc54266aa96ccb11f9e1eb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  停止安排快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 235959，这意味着 11:59:59 PM 根据在 24 小时制测量值。  
   
  [  **@snapshot_job_name =** ] *****snapshot_agent_name*****  
- 使用现有作业时现有快照代理作业的名称。 *snapshot_agent_name*是**nvarchar(100)**默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果*snapshot_agent_name*未指定，则*job_login*和*job_password*必须为 NULL。  
+ 使用现有作业时现有快照代理作业的名称。 *snapshot_agent_name*是**nvarchar(100)** 默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果*snapshot_agent_name*未指定，则*job_login*和*job_password*必须为 NULL。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
  连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*是**smallint**，默认值为 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，和**1**指定 Windows 身份验证。 值为**0**必须为指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

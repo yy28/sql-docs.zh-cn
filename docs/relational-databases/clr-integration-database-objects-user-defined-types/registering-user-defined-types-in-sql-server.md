@@ -39,12 +39,11 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58838ffa846a8b7e6ebaf18e155817c64cf0cb9c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1b44d371f11795b5184b6aa76e197994ee751019
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中注册用户定义类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.lasthandoff: 04/16/2018
   
  遵照以下步骤使用 Visual Studio 创建和部署 UDT：  
   
-1.  创建一个新**数据库**项目中**Visual Basic**或**Visual C#**语言节点。  
+1.  创建一个新**数据库**项目中**Visual Basic**或**Visual C#** 语言节点。  
   
 2.  向将要包含该 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库添加引用。  
   
@@ -85,7 +84,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句注册程序集使用*< assembly_bits >*的 FROM 子句中的自变量。 这**varbinary**值的字节流的形式表示的文件。  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句注册程序集使用 *< assembly_bits >* 的 FROM 子句中的自变量。 这**varbinary**值的字节流的形式表示的文件。  
   
 ```  
 USE AdventureWorks;  

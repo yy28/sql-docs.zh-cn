@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2482386f131b7e49134b5fdcbfaae7d0ec339b74
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f3875fe6d93aa1351d788ddbf74d1b130c657865
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 Url
 URL 指定存储在本地或网络的计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等*。*  

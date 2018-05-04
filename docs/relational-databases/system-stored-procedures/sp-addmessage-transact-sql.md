@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 05769a0a060de4a78bdcf425e20d004ef9ae9099
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  是错误的严重性级别。 *严重性*是**smallint**默认值为 NULL。 有效级别的范围为 1 到 25。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
  [ **@msgtext =** ] **'***msg***'**  
- 错误消息的文本。 *消息*是**nvarchar （255)**默认值为 NULL。  
+ 错误消息的文本。 *消息*是**nvarchar （255)** 默认值为 NULL。  
   
  [  **@lang =** ] *****语言*****  
  消息所用的语言。 *语言*是**sysname**默认值为 NULL。 因为可以在同一服务器上，安装多个语言*语言*指定编写每条消息所采用的语言。 当*语言*是省略的语言为会话是默认语言。  
   
  [  **@with_log =** ] { TRUE | **'FALSE'** }  
- 是否在消息发生时将其写入 Windows 应用程序日志。 **@with_log** 是**varchar(5)**默认值为 FALSE。 如果为 TRUE，则错误始终写入 Windows 应用程序日志。 如果为 FALSE，则错误不会始终写入 Windows 应用程序日志，但仍然可以写入，具体取决于错误是如何引发的。 只有的成员**sysadmin**服务器角色可以使用此选项。  
+ 是否在消息发生时将其写入 Windows 应用程序日志。 **@with_log** 是**varchar(5)** 默认值为 FALSE。 如果为 TRUE，则错误始终写入 Windows 应用程序日志。 如果为 FALSE，则错误不会始终写入 Windows 应用程序日志，但仍然可以写入，具体取决于错误是如何引发的。 只有的成员**sysadmin**服务器角色可以使用此选项。  
   
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
  [ **@replace** *=* ] *****替换*****  
- 如果指定为字符串*替换*，以新的消息文本和严重性级别覆盖现有错误消息。 *替换*是**varchar(7)**默认值为 NULL。 必须指定此选项，如果*msg_id*已存在。 如果替换美国英语消息，英语消息，严重性级别将替换具有相同的所有其他语言中的所有消息*msg_id*。  
+ 如果指定为字符串*替换*，以新的消息文本和严重性级别覆盖现有错误消息。 *替换*是**varchar(7)** 默认值为 NULL。 必须指定此选项，如果*msg_id*已存在。 如果替换美国英语消息，英语消息，严重性级别将替换具有相同的所有其他语言中的所有消息*msg_id*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

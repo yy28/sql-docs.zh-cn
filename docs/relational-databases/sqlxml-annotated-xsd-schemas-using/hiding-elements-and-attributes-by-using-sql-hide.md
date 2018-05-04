@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,13 +30,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbef6a043fb1132da098541724a47d01d77d6a08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 807d4a2289cef978c888414a712a37af4f95e177
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 隐藏元素和属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +47,9 @@ ms.lasthandoff: 04/16/2018
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 对属性指定 sql:hide  
- 在此示例中的 XSD 架构组成 **\<Person.Contact >**具有元素**ContactID**， **FirstName**，和**LastName**属性。  
+ 在此示例中的 XSD 架构组成 **\<Person.Contact >** 具有元素**ContactID**， **FirstName**，和**LastName**属性。  
   
-  **\<Person.Contact >**元素的复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性 **\<Person.Contact >**元素属于简单类型，并将映射到与中 Person.Contacttable AdventureWorks 数据库中的相同名称的列。 在架构中， **sql:hide**上指定批注**ContactID**属性。 当针对此架构中，指定 XPath 查询**ContactID**不返回 XML 文档中。  
+ **\<Person.Contact >** 元素的复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性 **\<Person.Contact >** 元素属于简单类型，并将映射到与中 Person.Contacttable AdventureWorks 数据库中的相同名称的列。 在架构中， **sql:hide**上指定批注**ContactID**属性。 当针对此架构中，指定 XPath 查询**ContactID**不返回 XML 文档中。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -98,7 +96,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 当**sql:hide**元素上指定了，该元素及其属性或子元素不显示在生成的 XML 文档。 下面是在其中的另一个 XSD 架构**sql:hide**上指定 **\<OD >**元素：  
+ 当**sql:hide**元素上指定了，该元素及其属性或子元素不显示在生成的 XML 文档。 下面是在其中的另一个 XSD 架构**sql:hide**上指定 **\<OD >** 元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -153,7 +151,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 当 XPath 查询 (例如`/Customers[@CID="1"]`) 指定针对此架构，则生成的 XML 文档不包括 **\<OD >**元素及其子级，此部分结果所示：  
+ 当 XPath 查询 (例如`/Customers[@CID="1"]`) 指定针对此架构，则生成的 XML 文档不包括 **\<OD >** 元素及其子级，此部分结果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

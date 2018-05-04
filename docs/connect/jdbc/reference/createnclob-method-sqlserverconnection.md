@@ -42,7 +42,7 @@ public java.sql.NClob createNClob()
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 java.sql.Connection 接口中的 createNClob 方法指定此 createNClob 方法。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
 - connecting to driver [ODBC], prompting user for information
@@ -27,12 +27,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796713fb12fe2eb70a0e7630ec558a63d7cfec4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 54d419e83a4a44273b42559e4b1ba300f021f771
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>提示用户输入连接信息
 如果应用程序使用**SQLConnect**并需要提示用户输入的任何连接信息，如用户名和密码，必须这样做本身。 虽然这使应用程序控制其"外观和感觉"，它可能会强制应用程序以包含特定于驱动程序的代码。 当应用程序需要提示用户提供特定于驱动程序的连接信息时，将发生这种情况。 这会带来一个不可能的情况，对于泛型应用程序，用于处理任意和所有驱动程序，包括驱动程序时写入的应用程序不存在。  

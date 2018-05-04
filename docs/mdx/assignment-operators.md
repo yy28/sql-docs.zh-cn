@@ -20,12 +20,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5fef245a6921d62942b58ceb462602a25e6f06c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 814be052207349211aeb244d33393e6dccccf9bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assignment-operators"></a>赋值运算符
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,6 +34,6 @@ ms.lasthandoff: 01/08/2018
  赋值运算符用于将值赋给 MDX 脚本中的子多维数据集。 有关详细信息，请参阅 [MDX 脚本编写基础知识 (Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [运算符 &#40;MDX 语法 &#41;](../mdx/operators-mdx-syntax.md)  
+ [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

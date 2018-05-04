@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a936895822b842d2d08672c4c05bd8c1a416064c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bd4cad291b909a0ed2b86d56f2df489b6de8e6f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union---mdx-operator-reference"></a>联合的 MDX 运算符参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +48,8 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>返回值  
  一个包含两个指定集的成员的集。  
   
-## <a name="remarks"></a>Remarks  
- **+ （联合）**运算符在功能上等效于[联合 &#40;MDX &#41;](../mdx/union-mdx.md)函数。  
+## <a name="remarks"></a>注释  
+ **+ （联合）**运算符在功能上等效于[联合&#40;MDX&#41; ](../mdx/union-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  
@@ -68,6 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

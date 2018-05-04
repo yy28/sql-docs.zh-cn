@@ -19,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cc7b4230144836d2d01f95b60bd730e3a942e1ad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-recordsets"></a>使用记录集
 **记录集**对象具有的内置功能，可让您重新排列结果集中的数据的顺序，来搜索特定记录根据你提供的条件并甚至优化使用索引这些搜索操作。 这些功能是否可供使用取决于提供程序以及在某些情况下 — 例如[索引](../../../ado/reference/ado-api/index-property.md)属性-数据源本身的结构。  
@@ -69,7 +68,7 @@ ms.lasthandoff: 04/18/2018
  星号可以仅在条件字符串的末尾或在一起的开头和末尾的条件字符串中，使用前面所示。 不能将星号用作前导通配符 (* str) 或嵌入通配符 ('s\*r)。 这会导致错误。  
   
 ### <a name="seek-and-index"></a>查找和索引  
- 使用**Seek**连同方法**索引**如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**(adSeek)**方法，以确定基础提供程序是否支持**Seek**，和**Supports(adIndex)**若要确定此提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**和**索引**。)  
+ 使用**Seek**连同方法**索引**如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 方法，以确定基础提供程序是否支持**Seek**，和**Supports(adIndex)** 若要确定此提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**和**索引**。)  
   
  如果**Seek**功能不查找所需的行，没有错误发生，以及行是否定位在的结尾**记录集**。 设置**索引**为之前执行此方法所需索引的属性。  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 04/18/2018
 -   *值*是将与之比较的字段值的值 (例如， `'Smith'`， `#8/24/95#`， `12.345`，或`$50.00`)。 与字符串一起使用单引号 （'） 和井号 (`#`) 的日期。 对于数字，可以使用小数点、 美元符号和科学记数法。 如果*运算符*是**如**，*值*可以使用通配符。 只能星号 (\*) 和百分号 （%） 通配符允许使用字符，并且它们必须是字符串中的最后一个字符。 *值*不能为 null。  
   
     > [!NOTE]
-    >  要包含在筛选器中的单引号 （'）*值*，使用两个单引号来表示一个。 例如，若要筛选*O'Malley*，条件字符串应该是`"col1 = 'O''Malley'"`。 若要包含在起点和筛选器值的末尾的单引号，请将字符串括在井号 （#）。 例如，若要筛选*'1'*，条件字符串应该是`"col1 = #'1'#"`。  
+    >  要包含在筛选器中的单引号 （'）*值*，使用两个单引号来表示一个。 例如，若要筛选*O'Malley*，条件字符串应该是`"col1 = 'O''Malley'"`。 若要包含在起点和筛选器值的末尾的单引号，请将字符串括在井号 （#）。 例如，若要筛选 *'1'*，条件字符串应该是`"col1 = #'1'#"`。  
   
  没有之间没有优先**AND**和**或**。 可以对子句进行分组，这在括号内。 但是，你不能分组子句通过联接**或**然后加入组通过 AND，另一个子句，如下所示。  
   

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -38,13 +37,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b3b3798be063dd586d74cf4f44d72a48c5f39ccf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 781c56c6f8454ad7f388fc41acc0ef830bdd9c04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -141,7 +139,7 @@ ms.lasthandoff: 04/16/2018
  默认值是 FALSE。  
   
  SGUseID  
- 指定的映射架构中的属性是否标识为**id**类型可在创建 PRIMARY KEY 约束创建表时。 SchemaGen 属性设置为 TRUE 时，请使用此属性。 如果 SGUseID 为 TRUE，SchemaGen 实用程序为其使用属性**dt: type ="id"**指定为主密钥列并添加适当的 PRIMARY KEY 约束创建表时。  
+ 指定的映射架构中的属性是否标识为**id**类型可在创建 PRIMARY KEY 约束创建表时。 SchemaGen 属性设置为 TRUE 时，请使用此属性。 如果 SGUseID 为 TRUE，SchemaGen 实用程序为其使用属性**dt: type ="id"** 指定为主密钥列并添加适当的 PRIMARY KEY 约束创建表时。  
   
  默认值是 FALSE。  
   

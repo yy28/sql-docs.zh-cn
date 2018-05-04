@@ -26,13 +26,12 @@ caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7452644412b76854a82d7c6a41c2b15de22db48
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ec52b02a29f258497b6e7e19cfd23e43fedc7a60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,8 +98,8 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="permissions"></a>权限  
 每个人都可以看到自己的会话信息。  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:**需要`VIEW SERVER STATE`权限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]查看服务器上的所有会话。  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**需要`VIEW DATABASE STATE`若要查看当前数据库的所有连接。 `VIEW DATABASE STATE` 无法在中授予`master`数据库。 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 需要`VIEW SERVER STATE`权限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]查看服务器上的所有会话。  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 需要`VIEW DATABASE STATE`若要查看当前数据库的所有连接。 `VIEW DATABASE STATE` 无法在中授予`master`数据库。 
   
   
 ## <a name="remarks"></a>注释  

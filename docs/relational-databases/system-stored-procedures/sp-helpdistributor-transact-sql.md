@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfd25167cda521390395940b77a2f6a8b79a0000
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 641dd06193b6897a703067f24ce7aa5392abe929
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,26 +57,26 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@distributor=**] *****分发服务器*****输出  
+ [  **@distributor=**] *****分发服务器***** 输出  
  是分发服务器的名称。 分发服务器是**sysname**，默认值为**%**，即返回结果集的唯一值。  
   
- [  **@distribdb=**] *****distribdb*****输出  
+ [  **@distribdb=**] *****distribdb***** 输出  
  是分发数据库的名称。 *distribdb*是**sysname**，默认值为**%**，即返回结果集的唯一值。  
   
- [  **@directory=**] *****目录*****输出  
+ [  **@directory=**] *****目录***** 输出  
  是工作目录。 *目录*是**nvarchar （255)**，默认值为**%**，即返回结果集的唯一值。  
   
  [  **@account=**] *****帐户***输出**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户。 *帐户*是**nvarchar （255)**，默认值为**%**，即返回结果集的唯一值。  
   
  [  **@min_distretention=**] *min_distretention * * * 输出**  
- 最小分发保持期（以小时为单位）。 *min_distretention*是**int**，默认值为**-1**。  
+ 最小分发保持期（以小时为单位）。 *min_distretention*是**int**，默认值为 **-1**。  
   
  [  **@max_distretention=**] *max_distretention * * * 输出**  
- 最大分发保持期（以小时为单位）。 *max_distretention*是**int**，默认值为**-1**。  
+ 最大分发保持期（以小时为单位）。 *max_distretention*是**int**，默认值为 **-1**。  
   
  [  **@history_retention=**] *history_retention * * * 输出**  
- 历史记录保持期（以小时为单位）。 *history_retention*是**int**，默认值为**-1**。  
+ 历史记录保持期（以小时为单位）。 *history_retention*是**int**，默认值为 **-1**。  
   
  [  **@history_cleanupagent=**] *****history_cleanupagent***输出**  
  是历史记录清除代理程序的名称。 *history_cleanupagent*是**nvarchar(100)**，默认值为**%**，即返回结果集的唯一值。  

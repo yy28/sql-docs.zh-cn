@@ -23,13 +23,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32634f7ab35224d33140c6e3a263e13542d659d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1cacebfc5505005c74b71f57fdc1af4fc4d86cd6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-data-files-and-format-files"></a>使用数据文件和格式化文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  调用[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行批量复制操作。  
   
- 数据文件以本机模式创建；因此，来自表或视图中所有列的数据都采用与数据库中相同的格式存储于数据文件中。 然后，通过使用与上述相同的步骤并设置 DB_IN（而非 DB_OUT），将该文件大容量复制到某一服务器中。 只有在源表和目标表都具有完全相同的结构时，这一功能才适用。 生成的数据文件也可作为输入的**bcp**实用工具通过使用**/n** （本机模式） 交换机。  
+ 数据文件以本机模式创建；因此，来自表或视图中所有列的数据都采用与数据库中相同的格式存储于数据文件中。 然后，通过使用与上述相同的步骤并设置 DB_IN（而非 DB_OUT），将该文件大容量复制到某一服务器中。 只有在源表和目标表都具有完全相同的结构时，这一功能才适用。 生成的数据文件也可作为输入的**bcp**实用工具通过使用 **/n** （本机模式） 交换机。  
   
  若要大容量复制出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的结果集，而非直接从表或视图复制：  
   

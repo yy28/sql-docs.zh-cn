@@ -1,32 +1,32 @@
 ---
-title: "将数据源添加到表格模型 (Analysis Services AMO-TOM) |Microsoft 文档"
-ms.custom: 
+title: 将数据源添加到表格模型 (Analysis Services AMO-TOM) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3892601961f95b0d4dd4f0de0d3767eff01186d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>将数据源添加到表格模型 (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**数据源**Microsoft.AnalysisServices.Tabular 命名空间中的类在数据刷新操作期间是指定的类型的表格模型的数据源的抽象，导入的数据的位置。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+**数据源**Microsoft.AnalysisServices.Tabular 命名空间中的类在数据刷新操作期间是指定的类型的表格模型的数据源的抽象，导入的数据的位置。 
 
-你可以通过实例化的派生类的对象添加到表格模型数据源**数据源**，然后将其添加到**数据源**模型对象的集合。 若要提交到服务器的更改，请调用**Model.SaveChanges()**或**Database.Update(UpdateOptions.ExpandFull)**。 
+你可以通过实例化的派生类的对象添加到表格模型数据源**数据源**，然后将其添加到**数据源**模型对象的集合。 若要提交到服务器的更改，请调用**Model.SaveChanges()** 或**Database.Update(UpdateOptions.ExpandFull)**。 
 
 在 SQL Server 2016 Analysis Services 支持仅从关系数据库，其中的数据提供程序公开形式的表和列数据的数据导入。 在这种情况下，表格对象模型使用 ProviderDataSource 类 （派生自数据源） 公开此功能。 
 

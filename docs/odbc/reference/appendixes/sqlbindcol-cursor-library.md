@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eeca90b8de3ce65e8da68d6aabac89b2181ed047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a877b6cade18e59f12abfe807d8efa04363b3dcb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol （光标库）
 > [!IMPORTANT]  
@@ -36,8 +35,8 @@ ms.lasthandoff: 04/16/2018
   
  应用程序可以调用**SQLBindCol**重新绑定结果集列后该维度被称为**SQLExtendedFetch**， **SQLFetch**，或**SQLFetchScroll**，只要 C 数据类型、 列大小和十进制数字的绑定的列保持不变。 应用程序不需要关闭游标重新绑定到不同的地址的列。  
   
- 游标库支持设置要使用绑定偏移量的 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性。 (**SQLBindCol**不必为进行此重新绑定调用。)游标库用于 ODBC 3*.x*驱动程序，该绑定偏移量是不使用时**SQLFetch**调用。 如果使用绑定偏移量**SQLFetch**与 ODBC 2 一起使用的是光标库时调用。*x*驱动程序因为**SQLFetch**然后映射到**SQLExtendedFetch**。  
+ 游标库支持设置要使用绑定偏移量的 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性。 (**SQLBindCol**不必为进行此重新绑定调用。)游标库用于 ODBC 3 *.x*驱动程序，该绑定偏移量是不使用时**SQLFetch**调用。 如果使用绑定偏移量**SQLFetch**与 ODBC 2 一起使用的是光标库时调用。*x*驱动程序因为**SQLFetch**然后映射到**SQLExtendedFetch**。  
   
  游标库支持调用**SQLBindCol**可将书签列绑定。  
   
- 当使用 ODBC 2。*x*驱动程序，光标库返回 SQLSTATE HY090 （无效字符串或缓冲区长度） 时**SQLBindCol**调用将书签列的缓冲区长度设置为值不等于 4。 使用 ODBC 3 时*.x*驱动程序，光标库允许要是任意大小的缓冲区。
+ 当使用 ODBC 2。*x*驱动程序，光标库返回 SQLSTATE HY090 （无效字符串或缓冲区长度） 时**SQLBindCol**调用将书签列的缓冲区长度设置为值不等于 4。 使用 ODBC 3 时 *.x*驱动程序，光标库允许要是任意大小的缓冲区。

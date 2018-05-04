@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
 - data sources [ODBC], declaring ODBC version
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 89e3363eeefaf85aa81c29266bdf565066c626a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>声明应用程序&#39;s ODBC 版本
 应用程序分配连接之前，必须设置 SQL_ATTR_ODBC_VERSION 环境属性。 此属性，指出应用程序，如下所示 ODBC 2。*x*或 ODBC 3。*x*规范时使用以下各项：  
@@ -49,9 +48,9 @@ ms.lasthandoff: 04/16/2018
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***中 SQLTables 参数**。   在 ODBC 2。*x*中的通配符字符 （"%"和"_"） *CatalogName*参数按原义处理。 在 ODBC 3。*x*，它们被视为通配符。 因此，应用程序遵循 ODBC 2。*x*规范不能用作这些通配符字符，且未转义它们时将它们用作文本。 遵循 ODBC 3 应用程序。*x*规范可以将这些操作用作通配符字符或转义它们并将它们用作文本。 有关详细信息，请参阅[目录函数中的参数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
+-   *CatalogName***中 SQLTables 参数**。 在 ODBC 2。*x*中的通配符字符 （"%"和"_"） *CatalogName*参数按原义处理。 在 ODBC 3。*x*，它们被视为通配符。 因此，应用程序遵循 ODBC 2。*x*规范不能用作这些通配符字符，且未转义它们时将它们用作文本。 遵循 ODBC 3 应用程序。*x*规范可以将这些操作用作通配符字符或转义它们并将它们用作文本。 有关详细信息，请参阅[目录函数中的参数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
   
- ODBC 3*.x*驱动程序管理器和 ODBC 3*.x*驱动程序检查应用程序写入到 ODBC 规范的版本，并相应地做出响应。 例如，如果应用程序遵循 ODBC 2。*x*规范和调用**SQLExecute**之前调用**SQLPrepare**，ODBC 3*.x*驱动程序管理器返回 SQLSTATE S1010 （函数序列错误）。 如果应用程序遵循 ODBC 3*.x*规范，驱动程序管理器返回的 SQLSTATE HY010 （函数序列错误）。 有关详细信息，请参阅[向后兼容性和标准合规性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
+ ODBC 3 *.x*驱动程序管理器和 ODBC 3 *.x*驱动程序检查应用程序写入到 ODBC 规范的版本，并相应地做出响应。 例如，如果应用程序遵循 ODBC 2。*x*规范和调用**SQLExecute**之前调用**SQLPrepare**，ODBC 3 *.x*驱动程序管理器返回 SQLSTATE S1010 （函数序列错误）。 如果应用程序遵循 ODBC 3 *.x*规范，驱动程序管理器返回的 SQLSTATE HY010 （函数序列错误）。 有关详细信息，请参阅[向后兼容性和标准合规性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
   
 > [!IMPORTANT]  
 >  按照 ODBC 3 的应用程序。*x*规范必须使用条件代码以避免使用 ODBC 3 到新的功能。*x*使用 ODBC 2 时。*x*驱动程序。 ODBC 2。*x*驱动程序不支持 ODBC 3 到新的功能。*x*只是因为应用程序声明，它遵循 ODBC 3。*x*规范。 此外，ODBC 3。*x*驱动程序未执行停止支持 ODBC 3 到新的功能。*x*只是因为应用程序声明，它遵循 ODBC 2。*x*规范。

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef59162739835fa2e6bdd0cba6bb4f4c648901cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e1e75f97ded8f999d5fa945e0aafb04322d51540
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-gateway"></a>标准网关
 A*网关*是一种软件导致如下所示另一个 DBMS。 即网关接受的编程接口，SQL 语法和数据流式传输协议的单个 DBMS 和将其转换到的编程接口，SQL 语法和数据流的隐藏 DBMS 的协议。 例如，编写用于 Microsoft® SQL Server™ 的应用程序可以还访问 DB2 数据通过 Micro Decisionware DB2 网关;此产品将导致 DB2 为类似于 SQL Server。 当使用网关时，必须为每个目标数据库编写不同的网关。  

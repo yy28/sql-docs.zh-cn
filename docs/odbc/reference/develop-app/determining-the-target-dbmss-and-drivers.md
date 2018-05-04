@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 904383158c521cad2e29889020d35bf2374ad517
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f275e344b49f62f1ecc55430c603c0f31f333aa6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>确定目标 Dbms 和驱动程序
 要考虑的下一步问题是，哪些应用程序的目标 Dbms 和支持这些 Dbms 使用哪些驱动程序都可用？ 通用应用程序往往是高度可互操作，因为目标 Dbms 的问题是最适用于自定义和垂直应用程序。 但是，这一问题目标驱动程序适用于所有应用程序，因为驱动程序差别很大速度、 质量、 支持的功能和可用性。 此外，如果驱动程序与应用程序一起重新分发，成本和可用性的许可计划需要考虑。  

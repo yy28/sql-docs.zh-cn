@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: defb200c5e15c65fe1045e8cf1678700395819b8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c1a85b322b48a19bd8b8d7bbf8777fe03c780371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上配置 RDS
 如果你遇到困难获取 RDS 才能正常工作，为 Windows 2000 升级后，请按照下列步骤以解决此问题：  

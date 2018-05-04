@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b352fe818402cbad25af99a4ca336704b331a4f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +57,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *分隔符*  
  以字符串表达式表示的有效分隔符。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果指定第二个集，则**生成**函数返回通过将第二组中的元组应用到每个元组中的第一组生成一组*，* ，然后联接生成由联合设置。 如果**所有**指定，则函数将保留在结果集中的重复项。  
   
  如果指定的字符串表达式，则**生成**函数返回由针对每个元组中的第一组指定的字符串表达式求值生成一个字符串*，* ，然后串联结果。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
@@ -118,7 +117,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>字符串  
  下面的示例演示如何使用**生成**以返回字符串：  
   
 ```  
@@ -138,9 +137,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  这种形式的**生成**函数可在调试计算，因为它使您能够返回在一组中显示的所有成员的名称的字符串。 这可能是一组的严格 MDX 表示更便于阅读， [SetToStr &#40;MDX &#41;](../mdx/settostr-mdx.md)函数返回。  
+>  这种形式的**生成**函数可在调试计算，因为它使您能够返回在一组中显示的所有成员的名称的字符串。 这可能是一组的严格 MDX 表示更便于阅读， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函数返回。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

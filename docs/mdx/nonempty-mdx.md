@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a17e8cf51ac2c2a8bac98315b85f53421d7c3c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d533d6e5e0d62219f144b325b97142039e4eb5bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,11 +45,11 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此函数返回位于第一个指定集中并且在对第二个集中的元组求值时不为空的元组。 **NonEmpty**函数将考虑帐户计算和保留了重复元组。 如果未提供第二个集，将在多维数据集中属性层次结构和度量值的成员的当前坐标上下文中对表达式求值。  
   
 > [!NOTE]  
->  使用此函数而不是不推荐使用[NonEmptyCrossjoin &#40;MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)函数。  
+>  使用此函数而不是不推荐使用[NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md)函数。  
   
 > [!IMPORTANT]  
 >  非空是元组所引用的单元的特征，而不是元组本身的特征。  
@@ -99,10 +98,10 @@ NONEMPTY(set_expression1 [,set_expression2])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另请参阅  
- [DefaultMember &#40;MDX &#41;](../mdx/defaultmember-mdx.md)   
- [筛选器 &#40;MDX &#41;](../mdx/filter-mdx.md)   
- [IsEmpty &#40;MDX &#41;](../mdx/isempty-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)  
+ [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
+ [筛选器 & #40;MDX & #41;](../mdx/filter-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

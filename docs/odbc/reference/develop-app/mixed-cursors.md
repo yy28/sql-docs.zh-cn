@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mixed cursors [ODBC]
 - cursors [ODBC], dynamic
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16fd4840718c286adfe711b6b7322154f7f5f9cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27038553bb380c67f66d8137354d7cbec4ff1a33
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mixed-cursors"></a>混合的游标
 混合的光标位于键集驱动游标和动态游标的组合。 如果结果集太大而无法规范的合理保存整个结果集的密钥，则会使用它。 混合的游标实现通过创建小于整个结果集，但大于行集中键集。  

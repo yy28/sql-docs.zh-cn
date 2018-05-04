@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0a46aa0480b83727aeb0a9882745ff9221b992c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---if"></a>MDX 脚本编写-如果
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,8 +45,8 @@ IF expression THEN assignment END IF
  *分配*  
  为子多维数据集或计算属性赋值的 MDX 表达式。  
   
-## <a name="remarks"></a>Remarks  
- IF 语句用于控制流，这是与不同[IIf &#40;MDX &#41;](../mdx/iif-mdx.md)函数和[CASE 语句 &#40;MDX &#41;](../mdx/case-statement-mdx.md) ，仅可用于返回值或对象。  
+## <a name="remarks"></a>注释  
+ IF 语句用于控制流，这是与不同[IIf &#40;MDX&#41; ](../mdx/iif-mdx.md)函数和[CASE 语句&#40;MDX&#41; ](../mdx/case-statement-mdx.md) ，仅可用于返回值或对象。  
   
 ## <a name="examples"></a>示例  
  在以下示例中，作用域限制在 Customers 维度中 Customers Geography 层次结构的 Country 级别。 如果当前度量值为 Internet Sales Amount，则 Internet Sales Amount 设置为 10：  
@@ -59,6 +58,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

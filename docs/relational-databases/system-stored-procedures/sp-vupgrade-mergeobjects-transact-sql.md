@@ -24,12 +24,11 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10a03aebfdd4b22bf0e2e63f4ad4a9c1337a1201
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 991c8f5d6e94724fec85370f354cd19bf6584ffe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
  是分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果不需要此参数*security_mode*设置为**1**，即 Windows 身份验证。  
   
  [  **@password=**] *****密码*****  
- 在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码*是**sysname**，默认值为**'** （空字符串）。 如果不需要此参数*security_mode*设置为**1**，即 Windows 身份验证。  
+ 在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码*是**sysname**，默认值为 **'** （空字符串）。 如果不需要此参数*security_mode*设置为**1**，即 Windows 身份验证。  
   
  [  **@security_mode=**] *****security_mode*****  
  是分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*是**位**默认值为**1**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用身份验证。 如果**1**，将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

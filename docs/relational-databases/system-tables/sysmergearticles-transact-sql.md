@@ -26,12 +26,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28bf9e7ecfe802087fc2eebd775a9dc537ccb763
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fb4d6d761c0c15f686e0967dfcc3e8bea78a240c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图; 使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
 |**artid**|**uniqueidentifier**|给定项目的唯一标识号。|  
 |**说明**|**nvarchar(255)**|项目的简要说明。|  
-|**pre_creation_command**|**tinyint**|在订阅数据库中创建项目时将执行的默认操作：<br /><br /> **0 =**无-如果该表已存在于订阅服务器，不执行任何操作。<br /><br /> **1** = drop-删除表，然后再重新创建它。<br /><br /> **2** = delete-发出删除基于子集筛选器中的 WHERE 子句。<br /><br /> **3** = Truncate-相同**2**，但删除了而不是行的页。 不过，不要使用 WHERE 子句。|  
+|**pre_creation_command**|**tinyint**|在订阅数据库中创建项目时将执行的默认操作：<br /><br /> **0 =** 无-如果该表已存在于订阅服务器，不执行任何操作。<br /><br /> **1** = drop-删除表，然后再重新创建它。<br /><br /> **2** = delete-发出删除基于子集筛选器中的 WHERE 子句。<br /><br /> **3** = Truncate-相同**2**，但删除了而不是行的页。 不过，不要使用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|当前项目所属发布的 ID。|  
 |**别名**|**int**|项目标识的别名映射。|  
 |**column_tracking**|**int**|表明的项目是否实现跟踪的列。|  
@@ -83,7 +82,7 @@ ms.lasthandoff: 04/16/2018
 |**verify_resolver_signature**|**int**|指定在合并复制中使用冲突解决程序之前是否验证数字签名：<br /><br /> **0** = 不验证签名。<br /><br /> **1** = 验证签名以确定它是否来自可靠来源。|  
 |**allow_interactive_resolver**|**bit**|指定是否对项目启用交互式冲突解决程序。 **1**指定项目使用交互式冲突解决程序。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已启用合并代理来使用一条 UPDATE 语句在同一行的多个列中应用更改。<br /><br /> **0** = 每个列的独立更新更改的问题。<br /><br /> **1** = 发出 UPDATE 语句，这会导致更新发生在一个语句中的多个列。|  
-|**check_permissions**|**int**|当合并代理将更改应用于发布服务器时要验证的表级权限的位图。 *check_permissions*可以具有这些值之一：<br /><br /> **0x00 =**则不检查权限。<br /><br /> **0x10 =**可以上载订阅服务器上所做插入之前检查发布服务器上的权限。<br /><br /> **0x20 =**可以上载订阅服务器上所做的更新之前检查发布服务器上的权限。<br /><br /> **0x40 =**可以上载订阅服务器上的 delete 操作之前检查发布服务器上的权限。|  
+|**check_permissions**|**int**|当合并代理将更改应用于发布服务器时要验证的表级权限的位图。 *check_permissions*可以具有这些值之一：<br /><br /> **0x00 =** 则不检查权限。<br /><br /> **0x10 =** 可以上载订阅服务器上所做插入之前检查发布服务器上的权限。<br /><br /> **0x20 =** 可以上载订阅服务器上所做的更新之前检查发布服务器上的权限。<br /><br /> **0x40 =** 可以上载订阅服务器上的 delete 操作之前检查发布服务器上的权限。|  
 |**maxversion_at_cleanup**|**int**|清除了元数据的最高版本。|  
 |**processing_order**|**int**|指示合并发布; 中的项目的处理顺序其中的一个值**0**指示，本文是无序，并从最低到最高值的顺序处理项目。 如果两个项目具有相同值，将对其进行并发处理。 有关详细信息，请参阅[指定合并项目的处理顺序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。|  
 |**upload_options**|**tinyint**|定义对具有客户端订阅的订阅服务器上所进行更新的限制，可以为下列值之一：<br /><br /> **0** = 没有在客户端订阅与订阅服务器上所做的更新限制; 所有的更改上载到发布服务器。<br /><br /> **1** = 对于客户端订阅，订阅服务器上允许更改但不是会上载到发布服务器。<br /><br /> **2** = 在订阅服务器与客户端订阅不允许更改。<br /><br /> 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。|  
@@ -105,6 +104,6 @@ ms.lasthandoff: 04/16/2018
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
   
   

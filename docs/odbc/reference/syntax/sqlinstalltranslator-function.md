@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallTranslator
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cbd15cc8f2fc51d8d3c85269aad2854692ee966d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 36e1c76e85aec665e8b9554a305ccef0444d27f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator 函数
 **一致性**  
@@ -40,4 +39,4 @@ ms.lasthandoff: 04/16/2018
  **摘要**  
  在 ODBC 3.0 中， **SQLInstallTranslator**已被取代[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)。 调用**SQLInstallTranslator**将映射到**SQLInstallTranslatorEx**。 有关详细信息，请参阅**SQLInstallTranslatorEx**。  
   
- **SQLInstallTranslator**将返回 FALSE，如果在 ODBC 3 中的应用程序调用它*.x*驱动程序管理器与*lpszInfFile*参数设置为非 NULL 值。 ODBC 2 中使用的 Odbc.inf 文件。*x* ODBC 3 中不再支持*.x*、 甚至为了向后兼容。
+ **SQLInstallTranslator**将返回 FALSE，如果在 ODBC 3 中的应用程序调用它 *.x*驱动程序管理器与*lpszInfFile*参数设置为非 NULL 值。 ODBC 2 中使用的 Odbc.inf 文件。*x* ODBC 3 中不再支持 *.x*、 甚至为了向后兼容。

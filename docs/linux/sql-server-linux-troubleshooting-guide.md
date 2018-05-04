@@ -4,7 +4,7 @@ description: 提供有关在 Linux 上使用 SQL Server 2017 故障排除提示�
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: On Demand
-ms.openlocfilehash: 2be739569e240bfecd7e18fecae52a6f15d24e0f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e699d921a6100c3f8381b4a5ad1ba3054c258961
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -160,6 +159,41 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
+## <a name="rebuild-system-databases"></a>重新生成系统数据库
+作为最后一招，您可以选择重新生成 master 和模型数据库回默认版本。
+
+> [!WARNING]
+> 这些步骤将**删除所有 SQL Server 系统数据**已配置 ！ 这包括用户数据库 （但不是将用户数据库本身） 有关的信息。 这样做会删除存储在系统数据库，包括以下其他信息： 主要密钥信息，在 master、 SA 登录名的密码、 来自 msdb 作业相关信息、 msdb 和 sp_configure 选项从数据库邮件信息中加载任何证书。 如果你了解的含义，仅使用 ！
+
+1. 停止 SQL Server。
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. 运行**sqlservr**与**强制安装**参数。 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > 请参阅上面的警告 ！ 此外，还必须运行为**mssql**用户如下所示。
+
+1. 你将看到消息"恢复已完成"后，按 CTRL + C。 这将关闭 SQL Server
+
+1. 重新配置 SA 密码。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. 启动 SQL Server 和重新配置服务器。 这包括还原或重新附加任何用户数据库。
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
 ## <a name="common-issues"></a>常见问题
 
 1. 你无法连接到远程 SQL Server 实例。
@@ -186,7 +220,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 
 4. 在密码中使用特殊字符。
 
-   如果在 SQL Server 登录密码中使用某些字符，则在 Linux 终端中使用这些字符时可能需要对它们进行转义。 你必须转义 $ 使用反斜杠字符的任何时候使用它中终端命令/外壳脚本：
+   如果在 SQL Server 登录密码中使用某些字符，你可能需要使用终端中的 Linux 命令时，以反斜杠转义。 例如，你必须转义美元符号 （$） 每当你使用它在终端命令/外壳脚本：
 
    无效：
 

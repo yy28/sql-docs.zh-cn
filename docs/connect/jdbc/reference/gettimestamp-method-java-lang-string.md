@@ -44,7 +44,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 #### <a name="parameters"></a>Parameters  
  *sCol*  
   
- A**字符串**，其中包含参数名称。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  一个时间戳的对象。  
@@ -52,13 +52,13 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定此 getTimestamp 方法。  
   
- 此方法返回值只能从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**和**smalldatetime**列。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime 和 smalldatetime 列返回值。  
   
 ## <a name="see-also"></a>另请参阅  
- [getTimestamp 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+ [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

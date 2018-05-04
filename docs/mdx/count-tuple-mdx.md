@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 76bea834dccee153edf96c78175f290a4e5551c5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2bb8a346570d52cbea9c027bf4b9b12222195171
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-tuple-mdx"></a>Count（元组）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Tuple_Expression.Count
  *Tuple_Expression*  
  返回元组的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  返回元组中的维度数。  
   
 ## <a name="example"></a>示例  
@@ -59,9 +58,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [计数 &#40; 维度 &#41;&#40;MDX &#41;](../mdx/count-dimension-mdx.md)   
- [计数 &#40;层次结构级别 &#41;&#40;MDX &#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [计数 &#40;集 &#41;&#40;MDX &#41;](../mdx/count-set-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [计数&#40;维度&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [计数&#40;层次结构级别&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [计数 & #40;集 & #41;& #40;MDX & #41;](../mdx/count-set-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

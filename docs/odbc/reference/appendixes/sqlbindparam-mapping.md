@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindparam function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLBindParam
@@ -20,15 +20,14 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1a2c78cd97b6577be8d11d07325165d6d82cd895
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 45bd2ccaf64f13e419e7a8da1e772a7d6ad93758
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam 映射
-**SQLBindParam**无法真正调用不推荐使用因为它已存在永远不会 ODBC 中; 但是，它仍表示重复的功能-驱动程序管理器需要将其导出，因为 ISO 和打开组 – 符合应用程序将使用它。 因为**SQLBindParameter**包含的所有功能**SQLBindParam**， **SQLBindParam**将映射的顶部**SQLBindParameter**(基础驱动程序时 ODBC 3*.x*驱动程序)。 ODBC 3*.x*驱动程序不需要实现**SQLBindParam**。  
+**SQLBindParam**无法真正调用不推荐使用因为它已存在永远不会 ODBC 中; 但是，它仍表示重复的功能-驱动程序管理器需要将其导出，因为 ISO 和打开组 – 符合应用程序将使用它。 因为**SQLBindParameter**包含的所有功能**SQLBindParam**， **SQLBindParam**将映射的顶部**SQLBindParameter**(基础驱动程序时 ODBC 3 *.x*驱动程序)。 ODBC 3 *.x*驱动程序不需要实现**SQLBindParam**。  
   
 ## <a name="remarks"></a>注释  
  当以下调用到**SQLBindParam**进行：  

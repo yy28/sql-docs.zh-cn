@@ -25,12 +25,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c5726b7550b0c7a9b1dab63344631502b2fa06b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 73201cc7d431cec2626b5cfb127da92445eede99
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-dmx"></a>标识符 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
  定义对象时会创建一个对象标识符。 然后，可使用该标识符来引用对象。 标识符包含的字符数必须小于或等于 100。  
   
-##  <a name="RegularIdentifiers"></a>常规标识符  
+##  <a name="RegularIdentifiers"></a> 常规标识符  
  DMX 中的常规标识符符合 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在标识符格式方面的规则。 DMX 中的常规标识符不需要分隔符。 以下是使用常规、 非分隔标识符的 DMX 语句的示例：  
   
 ```  
@@ -69,13 +68,13 @@ SELECT * FROM Clustering.CONTENT;
   
     -   下划线 (_)。  
   
-3.  标识符必须不能是 DMX 保留字。 DMX 中的保留字不区分大小写。 有关详细信息，请参阅[保留关键字 &#40; DMX &#41;](../dmx/reserved-keywords-dmx.md)。  
+3.  标识符必须不能是 DMX 保留字。 DMX 中的保留字不区分大小写。 有关详细信息，请参阅[保留关键字&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)。  
   
 4.  标识符不能包含嵌入的空格或特殊字符。  
   
  在 DMX 语句中使用不符合上述规则的标识符时，必须使用方括号分隔这些标识符。  
   
-##  <a name="DelimitedIdentifiers"></a>分隔的标识符  
+##  <a name="DelimitedIdentifiers"></a> 分隔的标识符  
  分隔标识符括在方括号 ([ ]) 中。  下面是一个 DMX 语句示例，其中的分隔标识符符合上述规则。  
   
 ```  
@@ -113,13 +112,13 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  使用限定对象名称时，可能要分隔组成对象名的多个标识符。 必须单独分隔每个标识符。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

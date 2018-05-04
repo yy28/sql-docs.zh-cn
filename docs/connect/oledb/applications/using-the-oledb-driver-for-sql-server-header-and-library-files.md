@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用 OLE DB 驱动程序适用于 SQL 的服务器标头和库文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  为 SQL Server 标头文件 (msoledbsql.h) OLE DB 驱动程序可以用于将 SQL Server 数据访问功能 OLE DB 驱动程序添加到你的自定义应用程序。 OLE DB 驱动程序为 SQL Server 标头文件包含所有的定义、 属性、 属性，并利用新功能所需的接口中引入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
- 除了 OLE DB 驱动程序为 SQL Server 标头文件，此外还有一个 msoledbsql.lib 库文件的导出库为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大容量复制程序 (BCP) 功能。  
+ 除了 OLE DB 驱动程序为 SQL Server 标头文件，此外还有一个 msoledbsql.lib 库文件的导出库为[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)功能。  
   
  为 SQL Server 标头文件 OLE DB 驱动程序是与 sqloledb.h 标头文件使用与 Microsoft 数据访问组件 (MDAC)，向后兼容，但未包含 SQLOLEDB 的 Clsid (OLE DB 访问接口[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]附带 MDAC) 或符号XML 功能 （这不受 SQL Server OLE DB 驱动程序）。    
   

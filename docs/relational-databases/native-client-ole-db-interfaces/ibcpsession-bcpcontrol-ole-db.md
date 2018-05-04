@@ -22,13 +22,12 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2a8a2f968861c8f79a32a088d4f66746a3b4174
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1d259cfdd44c6f39ed40997903d22cf98be45b78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +57,7 @@ HRESULT BCPControl(
 |BCP_OPTION_BATCH|每批的行数。 默认值为 0，提取数据时，该值指示表中的所有行，或用户数据中的所有行都文件时正在将数据复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 值小于 1 则将 BCP_OPTION_BATCH 重置为默认值。|  
 |BCP_OPTION_DELAYREADFMT|布尔值，如果设置为 true，将导致[IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)读取在执行。 如果为 false （默认值），IBCPSession::BCPReadFmt 立即将读取格式化文件。 如果将发生序列错误**BCP_OPTION_DELAYREADFMT**是 true，并且您调用 IBCPSession::BCPColumns 或 IBCPSession::BCPColFmt。<br /><br /> 如果调用，也会出现序列错误`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`之后调用`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`和 IBCPSession::BCPWriteFmt。<br /><br /> 有关详细信息，请参阅[元数据发现](../../relational-databases/native-client/features/metadata-discovery.md)。|  
 |BCP_OPTION_FILECP|*IValue*自变量包含数据文件的代码页的数目。 可以指定代码页的编号，例如 1252 或 850，或者采用以下值之一：<br /><br /> BCP_FILECP_ACP：文件中的数据位于客户端的 Microsoft Windows® 代码页中。<br /><br /> BCP_FILECP_OEMCP：文件中的数据位于客户端的 OEM 代码页中（默认值）。<br /><br /> BCP_FILECP_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的代码页中。|  
-|BCP_OPTION_FILEFMT|数据文件格式的版本号。 该版本号可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]）、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。  例如，若要将数据导入从获取文本列中[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器成为**varchar （max)**中的列[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的服务器，你应指定 80。 同样，如果在将数据从导出时指定 80 **varchar （max)**列，则会保存图像一样文本列保存在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式化，并可以导入到的文本列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器。|  
+|BCP_OPTION_FILEFMT|数据文件格式的版本号。 该版本号可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]）、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。  例如，若要将数据导入从获取文本列中[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器成为**varchar （max)** 中的列[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的服务器，你应指定 80。 同样，如果在将数据从导出时指定 80 **varchar （max)** 列，则会保存图像一样文本列保存在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式化，并可以导入到的文本列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器。|  
 |BCP_OPTION_FIRST|文件或表要复制的数据的第一行。 默认值为 1；值小于 1 则将此选项重置为其默认值。|  
 |BCP_OPTION_FIRSTEX|对于 BCP out 操作，指定要复制到数据文件的数据库表的第一行。<br /><br /> 对于 BCP in 操作，指定要复制到数据库表的数据文件的第一行。<br /><br /> *IValue*参数应为一个有符号的 64 位整数，它包含的值的地址。 可以传递到 BCPFIRSTEX 的最大值为 2^63-1。|  
 |BCP_OPTION_FMTXML|用于指定生成的格式化文件应采用 XML 格式。 默认情况下关闭此选项，此时将格式化文件作为文本文件保存。 XML 格式化文件提供更大的灵活性，但具有某些额外约束。 例如，不能同时为字段指定前缀和终止符，而在较早的格式化文件中则可以执行此操作。<br /><br /> 注意： XML 格式化文件是仅当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起安装工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。|  

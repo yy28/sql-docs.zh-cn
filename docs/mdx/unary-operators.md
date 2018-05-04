@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9c729af732238916a2cb88795fb94d0729ce9f85
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1486ab5907a9c3b738bc9ab23e8154e696766f16
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unary-operators"></a>一元运算符
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,6 +54,6 @@ WHERE [Product].[Category].[Bikes]
  MDX 此外，使用特殊的一元运算符以确定执行的聚合操作[RollupChildren](../mdx/rollupchildren-mdx.md)函数。 有关这些特殊的一元运算符的详细信息，请参阅[向维度中添加自定义聚合](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [运算符 &#40;MDX 语法 &#41;](../mdx/operators-mdx-syntax.md)  
+ [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

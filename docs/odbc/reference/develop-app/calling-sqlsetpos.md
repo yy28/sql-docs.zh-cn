@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], calling
@@ -23,15 +23,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eac0128a7919f58acc58bce793f9f765fb0d1e07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c34e1e5f9c4dae5f2a39cadd6b9afbdc03403b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-sqlsetpos"></a>调用 SQLSetPos
-在 ODBC 2。*x*，指向行状态数组的指针时的自变量**SQLExtendedFetch**。 行状态数组更高版本已更新通过调用**SQLSetPos**。 某些驱动程序具有依赖于此数组不会更改之间的事实**SQLExtendedFetch**和**SQLSetPos**。 在 ODBC 3。*x*、 指向状态数组的指针是一个描述符字段，因此应用程序可以轻松地将其更改为指向另一个数组。 这可能会造成问题时 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用，但**SQLSetStmtAttr**设置数组状态指针和正在调用**SQLFetchScroll**提取数据。 驱动程序管理器将其映射为对的调用序列**SQLExtendedFetch**。 在下面的代码中，将通常会引发错误时驱动程序管理器映射第二个**SQLSetStmtAttr**在使用 ODBC 2 时调用*.x*驱动程序：  
+在 ODBC 2。*x*，指向行状态数组的指针时的自变量**SQLExtendedFetch**。 行状态数组更高版本已更新通过调用**SQLSetPos**。 某些驱动程序具有依赖于此数组不会更改之间的事实**SQLExtendedFetch**和**SQLSetPos**。 在 ODBC 3。*x*、 指向状态数组的指针是一个描述符字段，因此应用程序可以轻松地将其更改为指向另一个数组。 这可能会造成问题时 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用，但**SQLSetStmtAttr**设置数组状态指针和正在调用**SQLFetchScroll**提取数据。 驱动程序管理器将其映射为对的调用序列**SQLExtendedFetch**。 在下面的代码中，将通常会引发错误时驱动程序管理器映射第二个**SQLSetStmtAttr**在使用 ODBC 2 时调用 *.x*驱动程序：  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -40,7 +39,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- 无法更改 ODBC 2 中的行状态指针时，将引发错误。*x*之间调用**SQLExtendedFetch**。 相反，驱动程序管理器执行以下步骤使用 ODBC 2 时*.x*驱动程序：  
+ 无法更改 ODBC 2 中的行状态指针时，将引发错误。*x*之间调用**SQLExtendedFetch**。 相反，驱动程序管理器执行以下步骤使用 ODBC 2 时 *.x*驱动程序：  
   
 1.  初始化内部的驱动程序管理器标志*fSetPosError*为 TRUE。  
   

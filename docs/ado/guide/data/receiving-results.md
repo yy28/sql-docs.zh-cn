@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 429a9706d6a751da691812f14142ced5f30aed8f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8192e5042873243feb5a2d14b23935d83ffd5a49
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="receiving-results"></a>接收结果
 在 ADO 大多数命令会返回到调用方的一些信息。 返回行集的命令，请在收到的结果**记录集**对象，它是可能最常用的 ADO 对象。  

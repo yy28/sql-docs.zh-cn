@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - handles [ODBC]
 - driver handles [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef9fe627d79c0a2040500cd2894dcd90a83bee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac96dc4ab020d94449d9106038890d5e61fbbe0a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handles"></a>控点
 句柄都是不透明的 32 位值，标识特定的项;ODBC，在此项可以环境、 连接、 语句或描述符。 在应用程序调用**SQLAllocHandle**、 驱动程序管理器或驱动程序创建指定类型的新项并对应用程序返回的句柄。 应用程序更高版本使用句柄来在调用 ODBC 函数时标识该项。 驱动程序管理器和驱动程序使用该句柄找到项目的信息。  

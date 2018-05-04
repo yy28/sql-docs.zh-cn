@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetConnectAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 52fe25460bc4eafa3c415cbf926aa8e016d1fad0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函数
 **一致性**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLSetConnectAttr**设置控制方面的连接的属性。  
   
 > [!NOTE]  
->  有关什么驱动程序管理器时，将映射此函数可对 ODBC 3*.x*应用程序使用 ODBC 2*.x*驱动程序，请参阅[映射用于向后的替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  有关什么驱动程序管理器时，将映射此函数可对 ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序，请参阅[映射用于向后的替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -126,9 +125,9 @@ SQLRETURN SQLSetConnectAttr(
  本节后面; 表中显示当前定义的特性和引入这些 ODBC 的版本应将定义更多属性以利用不同数据源。 ODBC; 保留一组属性驱动程序开发人员必须保留用于 Open Group 自己特定于驱动程序使用的值。  
   
 > [!NOTE]  
->  能够在连接级别设置语句特性，通过调用**SQLSetConnectAttr** ODBC 3 中已弃用*.x*。 ODBC 3*.x*应用应永远不会将语句属性设置在连接级别。 ODBC 3*.x*语句属性不能在连接级别，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句属性，可以设置在连接级别或语句级上设置。  
+>  能够在连接级别设置语句特性，通过调用**SQLSetConnectAttr** ODBC 3 中已弃用 *.x*。 ODBC 3 *.x*应用应永远不会将语句属性设置在连接级别。 ODBC 3 *.x*语句属性不能在连接级别，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句属性，可以设置在连接级别或语句级上设置。  
 >   
->  ODBC 3*.x*驱动程序仅需要支持此功能，如果它们应使用 ODBC 2*.x*应用程序将 ODBC 2 设置*.x*在连接级别的语句选项。 有关详细信息，请参阅[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)为了向后兼容的附录 g： 驱动程序准则中。  
+>  ODBC 3 *.x*驱动程序仅需要支持此功能，如果它们应使用 ODBC 2 *.x*应用程序将 ODBC 2 设置 *.x*在连接级别的语句选项。 有关详细信息，请参阅[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)为了向后兼容的附录 g： 驱动程序准则中。  
   
  应用程序可以调用**SQLSetConnectAttr**分配和释放连接在任何时间之间的时间。 成功地设置连接应用程序的所有连接和语句属性都保留直到**SQLFreeHandle**连接上调用。 例如，如果应用程序调用**SQLSetConnectAttr**之前连接到数据源，该属性仍然存在即使**SQLSetConnectAttr**失败驱动程序中，当应用程序连接到数据源;如果应用程序设置特定于驱动程序的属性，该属性仍然存在，即使应用程序连接到不同的驱动程序连接上。  
   
@@ -172,7 +171,7 @@ SQLRETURN SQLSetConnectAttr(
   
  在中设置的信息的格式\* *ValuePtr*缓冲区取决于指定*属性*。 **SQLSetConnectAttr**将接受两个不同的格式之一的特性信息： 以 null 结尾的字符串或整数值。 每个格式将其记录在该特性的说明。 字符字符串的指向*ValuePtr*参数**SQLSetConnectAttr**具有长度为*StringLength*字节。  
   
- *StringLength*将忽略自变量长度定义的属性，如果是 ODBC 2 中引入的所有特性如此*.x*或更早版本。  
+ *StringLength*将忽略自变量长度定义的属性，如果是 ODBC 2 中引入的所有特性如此 *.x*或更早版本。  
   
 |*属性*|*ValuePtr*内容|  
 |-----------------|-------------------------|  

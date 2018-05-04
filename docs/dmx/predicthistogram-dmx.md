@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b967498b2ea2cf742eca67c8557230ed80c78055
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2c06d117d2abd0fc988f5d5b497e588910bd744a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>返回类型  
  表。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  直方图可以生成统计信息列。 返回的直方图的列结构取决于与一起使用的列引用的类型**PredictHistogram**函数。  
   
 ## <a name="scalar-columns"></a>标量列  
@@ -61,11 +60,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]不支持数据挖掘算法**$ProbabilityVariance**。 对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 算法，此列始终为 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] 不支持数据挖掘算法 **$ProbabilityVariance**。 对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 算法，此列始终为 0。  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]不支持数据挖掘算法**$ProbabilityStdev**。 对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 算法，此列始终为 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] 不支持数据挖掘算法 **$ProbabilityStdev**。 对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 算法，此列始终为 0。  
   
 -   **$AdjustedProbability**  
   
@@ -98,16 +97,16 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [群集 &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40; DMX &#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40; DMX &#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40; DMX &#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40; DMX &#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40; DMX &#41;](../dmx/predictvariance-dmx.md)   
- [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [群集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
+ [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
+ [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
+ [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

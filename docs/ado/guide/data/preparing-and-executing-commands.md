@@ -19,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfe5be8b68fe701d5b44431ab6e10cf8445deda3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 53d81f2e944954715246f98959567cb9e02fe0be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparing-and-executing-commands"></a>准备和执行命令
 命令是颁发给提供程序执行某些操作对基础数据源的说明。 SQL 语句，例如，是到 Microsoft SQL 数据提供程序的命令。 在 ADO 中，命令通常表示由**命令**对象，尽管还可以通过发出简单命令**连接**或**记录集**对象。  

@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6fd6820db6912a15f7991ec76131a8fabe9fd822
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 064c5514e014b8ba976c21001665626bcb71722e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,18 +49,18 @@ SELECT <expression list> [TOP <n>] FROM <model>
  一组以逗号分隔的表达式、预测列或仅预测列。  
   
  *n*  
- 可选。 一个指定返回行数的整数。  
+ 選擇性。 一个指定返回行数的整数。  
   
  *model*  
  一个模型标识符。  
   
  *条件列表*  
- 可选。 限制条件，用于限制从列列表返回的值。  
+ 選擇性。 限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 可选。 一个返回标量值的表达式。  
+ 選擇性。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  中的列*表达式列表*必须定义为预测或预测仅，或与可预测列相关的。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  
@@ -72,7 +71,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>时间序列示例  
- 以下示例对预测模型中的 Amount 列执行预测，并返回接下来的四个时间步长。 Model Region 列将 bike models 和 regions 组合为一个标识符。 该查询使用[PredictTimeSeries &#40; DMX &#41;](../dmx/predicttimeseries-dmx.md)函数进行预测。  
+ 以下示例对预测模型中的 Amount 列执行预测，并返回接下来的四个时间步长。 Model Region 列将 bike models 和 regions 组合为一个标识符。 该查询使用[PredictTimeSeries &#40;DMX&#41; ](../dmx/predicttimeseries-dmx.md)函数进行预测。  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   
@@ -80,9 +79,9 @@ FROM Forecasting
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [选择 &#40; DMX &#41;](../dmx/select-dmx.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

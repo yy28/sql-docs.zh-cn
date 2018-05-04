@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>驱动程序管理器连接池
 连接池可让应用程序使用的不需要为每种使用重新建立的连接池中的连接。 创建并放在池中的连接后，应用程序可以重复使用该连接，而不执行完整的连接过程。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
   
  驱动程序管理器确定是否应根据传入的参数使用池中的特定连接**SQLConnect**或**SQLDriverConnect**，并根据连接属性连接已分配后设置。  
   
- 驱动程序管理器是建立连接池连接，它必须是能够确定连接是否仍然工作传递出连接之前。 否则，驱动程序管理器将保留在将分发到应用程序的死连接发生暂时性网络故障时。 已在 ODBC 3 定义新的连接属性*.x*: SQL_ATTR_CONNECTION_DEAD。 这是返回 SQL_CD_TRUE 或 SQL_CD_FALSE 的只读连接属性。 值 SQL_CD_TRUE 表示，该连接已丢失，而值 SQL_CD_FALSE 意味着连接仍处于活动状态。 （与早期版本的 ODBC 驱动程序还可以支持此属性。）  
+ 驱动程序管理器是建立连接池连接，它必须是能够确定连接是否仍然工作传递出连接之前。 否则，驱动程序管理器将保留在将分发到应用程序的死连接发生暂时性网络故障时。 已在 ODBC 3 定义新的连接属性 *.x*: SQL_ATTR_CONNECTION_DEAD。 这是返回 SQL_CD_TRUE 或 SQL_CD_FALSE 的只读连接属性。 值 SQL_CD_TRUE 表示，该连接已丢失，而值 SQL_CD_FALSE 意味着连接仍处于活动状态。 （与早期版本的 ODBC 驱动程序还可以支持此属性。）  
   
  驱动程序必须高效地实施此选项，或它将会影响连接池性能。 具体而言，若要获取此连接属性的调用应不会导致到服务器的往返行程。 相反，驱动程序应只返回连接的最后一个已知的状态。 连接状态死如果最后一个行程到服务器失败，且不死如果最后一个行程成功。  
   

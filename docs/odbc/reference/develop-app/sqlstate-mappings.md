@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 402d5b6c01142334ed38a73b96da9f0eb635f1c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2e3f1dc1e8f0e8cf67ac97c33a7ab6b7137cdd7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 映射
 本主题讨论为 ODBC 2 的 SQLSTATE 值。*x*和 ODBC 3。*x*。 有关 ODBC 3 的详细信息。*x* SQLSTATE 值，请参阅[附录 a: ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
  当一个 ODBC 2。*x*应用程序升级到 ODBC 3。*x*应用程序，则应用程序必须将更改为预期 ODBC 3。*x*而不是 ODBC 2 SQLSTATEs。*x* SQLSTATEs。 下表列出了 ODBC 3。*x* SQLSTATEs，每个 ODBC 2。*x* SQLSTATE 映射到。  
   
- 当 SQL_ATTR_ODBC_VERSION 环境属性设置为 SQL_OV_ODBC2 时，驱动程序将发送 ODBC 2。*x*而不是 ODBC 3 SQLSTATEs。*x* SQLSTATEs 时**SQLGetDiagField**或**SQLGetDiagRec**调用。 可以注意 ODBC 2 来确定特定映射*.x*下表，它对应于 ODBC 3 1 列中的 SQLSTATE。*x*第二列中的 SQLSTATE。  
+ 当 SQL_ATTR_ODBC_VERSION 环境属性设置为 SQL_OV_ODBC2 时，驱动程序将发送 ODBC 2。*x*而不是 ODBC 3 SQLSTATEs。*x* SQLSTATEs 时**SQLGetDiagField**或**SQLGetDiagRec**调用。 可以注意 ODBC 2 来确定特定映射 *.x*下表，它对应于 ODBC 3 1 列中的 SQLSTATE。*x*第二列中的 SQLSTATE。  
   
 |ODBC 2。*x* SQLSTATE|ODBC 3。*x* SQLSTATE|注释|  
 |-------------------------|-------------------------|--------------|  

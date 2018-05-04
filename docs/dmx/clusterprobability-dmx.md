@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d4b85f18478d1cc34050804845f62e2283b57462
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd1e979a3613dc95566875a57fc422c59dbc5074
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,14 +46,14 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  以下语法使用挖掘模型内容架构行集来返回挖掘模型中存在的节点标题。  
   
 ```  
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 有关使用此语法的详细信息，请参阅[SELECT FROM #60; 模型 &#62;。内容 &#40; DMX &#41;](../dmx/select-from-model-content-dmx.md). 有关挖掘模型内容架构行集的详细信息，请参阅[DMSCHEMA_MINING_MODEL_CONTENT 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
+ 有关使用此语法的详细信息，请参阅[SELECT FROM&#60;模型&#62;。内容&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)。 有关挖掘模型内容架构行集的详细信息，请参阅[DMSCHEMA_MINING_MODEL_CONTENT 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
   
  如果\<节点标题 > 未指定，则该函数返回输入的事例属于最可能分类的概率。 使用**群集**函数以返回最可能的分类。  
   
@@ -75,9 +74,9 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [群集 &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [群集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

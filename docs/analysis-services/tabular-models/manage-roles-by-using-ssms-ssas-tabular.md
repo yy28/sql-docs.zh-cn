@@ -1,31 +1,30 @@
 ---
-title: "使用 SSMS 管理角色 |Microsoft 文档"
-ms.custom: 
+title: 使用 SSMS 管理角色 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9472bef0e1971c3f8868902b5cd91189256e860d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: e4dba7abd73af31bc6b845c89caf066eaf56cbc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-roles-by-using-ssms"></a>使用 SSMS 管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-对于部署的表格模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建、编辑和管理角色。  
+  对于部署的表格模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建、编辑和管理角色。  
   
  本主题中的任务：  
   
@@ -65,9 +64,9 @@ ms.lasthandoff: 02/23/2018
   
 6.  在“成员身份设置”窗口中单击 **“添加”**，然后在 **“选择用户或组”** 对话框中，添加要作为成员添加的 Windows 用户或组。  
   
-7.  如果您创建的角色已具有“读取”权限，则可以使用 DAX 公式为任意表添加行筛选器。 若要添加行筛选器，在**角色属性- \<rolename >**对话框中，在**选择页**，单击**行筛选器**。  
+7.  如果您创建的角色已具有“读取”权限，则可以使用 DAX 公式为任意表添加行筛选器。 若要添加行筛选器，在**角色属性- \<rolename >** 对话框中，在**选择页**，单击**行筛选器**。  
   
-8.  在行筛选器窗口中，选择一个表，然后单击**DAX 筛选器**字段，然后在**DAX 筛选器- \<tablename >**字段中，键入 DAX 公式。  
+8.  在行筛选器窗口中，选择一个表，然后单击**DAX 筛选器**字段，然后在**DAX 筛选器- \<tablename >** 字段中，键入 DAX 公式。  
   
     > [!NOTE]  
     >  DAX 筛选器- \<tablename > 字段不包含自动完成查询编辑器或插入函数功能。 若要在写入 DAX 公式时使用自动完成功能，必须在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式编辑器。  

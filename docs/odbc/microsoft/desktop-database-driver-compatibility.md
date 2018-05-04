@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], Unicode
 - Unicode [ODBC], desktop database drivers
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 557a7254e9cea7476ee3de706da86519f9ef1fec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1a8390be6d2aa4fa7999f19018a4a2750c7d44fd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-driver-compatibility"></a>桌面数据库驱动程序兼容性
 Unicode 是一种软件字符编码的方法将所有字符视为有固定的宽度的两个字节。 此方法用于替代为 Windows ANSI 字符编码，即，因为它表示为一个字节中的字符限制为 256 个字符。 因为 Unicode 可以代表 65000 字符，它还包含许多语言的字符不表示以 ANSI 编码。  

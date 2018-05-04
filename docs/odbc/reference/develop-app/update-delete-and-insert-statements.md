@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
 - DELETE [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b590f45a6cb7bb3e80b5b52835bd7fd65ba27af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 59e98d80962a059f885bd82ed8be465415a55774
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、 DELETE 和 INSERT 语句
 基于 SQL 的应用程序通过执行对表进行更改**更新**，**删除**，和**插入**语句。 这些语句是最小 SQL 语法一致性级别的一部分，并且必须支持的所有驱动程序和数据源。  

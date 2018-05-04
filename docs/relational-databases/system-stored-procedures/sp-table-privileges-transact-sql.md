@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4ca9192b53e2fa1e6b8eaeb66b4cddd923dd7631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>参数  
  [ @table_name=] '*table_name*  
- 用来返回目录信息的表。 *table_name*是**nvarchar (**384**)**，无默认值。 支持通配符模式匹配。  
+ 用来返回目录信息的表。 *table_name*是**nvarchar (** 384 **)**，无默认值。 支持通配符模式匹配。  
   
  [ @table_owner=] '*table_owner*  
- 是用于返回目录信息的表所有者。 *table_owner*是**nvarchar (**384**)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
+ 是用于返回目录信息的表所有者。 *table_owner*是**nvarchar (** 384 **)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
   
  如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程查找具有指定的表*table_name*归数据库所有者。 如果存在，则返回该表的列。  
   

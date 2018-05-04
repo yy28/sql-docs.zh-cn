@@ -1,5 +1,5 @@
 ---
-title: 步骤 3： 连接到使用 ADO.NET 的 SQL 的概念证明 |Microsoft 文档
+title: 步骤 3：使用 ADO.NET 连接到 SQL 的概念证明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -24,10 +24,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步骤 3： 连接到使用 ADO.NET 的 SQL 的概念证明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步骤 3：使用 ADO.NET 连接到 SQL 的概念证明
 
 - 以前的文章：&nbsp;&nbsp;&nbsp;[步骤 2： 创建 ADO.NET 开发 SQL 数据库](step-2-create-a-sql-database-for-ado-net-development.md)  
-- 接下来文章：&nbsp;&nbsp;&nbsp;[步骤 4： 使用 ADO.NET 的 sql 的弹性连接](step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- 下一篇文章：&nbsp;&nbsp;&nbsp;[步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
 此 C# 代码示例，应考虑仅概念证明。 示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/16/2018
 ```  
 
 
-## <a name="step-2--execute-a-query"></a>步骤 2： 执行查询  
+## <a name="step-2--execute-a-query"></a>步骤 2：执行查询  
   
 SqlCommand.ExecuteReader 方法：  
   

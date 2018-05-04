@@ -22,12 +22,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 00259604fe891a21f6f52835b1844762a751f09a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4321a81e2b823ca6ce38f11a0a04cfef2e745f8c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-mdx-syntax"></a>函数（MDX 语法）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   多维表达式 (MDX) 中有几类用于执行特定操作的内部函数。 下表列出了 MDX 中可用的函数类别。  
   
 > [!NOTE]  
->  有关各个函数的详细信息，请参阅[MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md).  
+>  有关各个函数的详细信息，请参阅[MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)。  
   
 |函数类别|Description|  
 |-----------------------|-----------------|  
-|数组函数|提供存储过程中使用的数组。<br /><br /> 有关详细信息，请参阅[使用存储过程 &#40;MDX &#41;](../mdx/using-stored-procedures-mdx.md).|  
+|数组函数|提供存储过程中使用的数组。<br /><br /> 有关详细信息，请参阅[使用存储过程&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)。|  
 |维度函数|从层次结构、级别或成员返回对维度的引用。<br /><br /> 有关详细信息，请参阅[使用维度、 层次结构和级别函数](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  
 |层次结构函数|从级别或成员返回对层次结构的引用。<br /><br /> 有关详细信息，请参阅[使用维度、 层次结构和级别函数](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  
 |级别函数|从成员、维度、层次结构或字符串表达式返回对级别的引用。<br /><br /> 有关详细信息，请参阅[使用维度、 层次结构和级别函数](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  
@@ -54,6 +53,6 @@ ms.lasthandoff: 01/08/2018
  函数可用于或包含在任何 MDX 表达式中。 函数还可以嵌套（在一个函数内使用另一个函数）。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 语法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

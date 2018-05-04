@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e63c8026b31140f5ad1f94c99f143670d31c5c78
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c827972d0d4478431f085a6aa4d69f70f020be89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-based-drivers"></a>基于文件的驱动程序
 基于文件的驱动程序用于 dBASE 等的数据源，不提供要使用的驱动程序的独立数据库引擎。 这些驱动程序直接访问物理数据，而且必须实现过程 SQL 语句的数据库引擎。 标准做法是，基于文件的驱动程序中的数据库引擎实现定义的最小的 SQL 一致性级别; ODBC SQL 的子集有关此一致性级别中的 SQL 语句的列表，请参阅[附录 c: SQL 语法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  

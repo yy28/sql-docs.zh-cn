@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - absolute scrolling [ODBC]
 - relative scrolling [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 96487021b9f791a3c6cd08b222c829178f67a4a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>相对和绝对滚动
 中的滚动选项大多数**SQLFetchScroll**将光标位置相对于当前的位置或位置的绝对位置。 **SQLFetchScroll**支持提取下一行，之前，第一个和最后一个行集，作为很好地为相对提取 (提取行集*n*从开始的当前行集的行) 和绝对提取 （提取行集开始在行*n*)。 如果*n*是中的绝对读取负，行进行计数从结果集的末尾。 因此，行为-1 的绝对读取意味着提取开头结果集中的最后一行的行集。  

@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cd3ed46a927a40804b09e674fe6d814d2b085ab1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +46,12 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  由提供的值\<排名表达式 > 自变量确定中提供的行级别的递减顺序\<表表达式 > 自变量，并在指定的最顶层的行数\<计数 > 返回自变量。  
   
- TopCount 函数引入最初了启用关联的预测，并通常情况下，生成与包含语句相同的结果**选择前**和**ORDER BY**子句。 如果你使用，您将获得更好的性能，关联的预测**预测 (DMX)**函数，该支持多个预测，以返回的规范函数。  
+ TopCount 函数引入最初了启用关联的预测，并通常情况下，生成与包含语句相同的结果**选择前**和**ORDER BY**子句。 如果你使用，您将获得更好的性能，关联的预测**预测 (DMX)** 函数，该支持多个预测，以返回的规范函数。  
   
- 但是，有一些你可能仍需要使用 TopCount 的情形。 例如，不支持 DMX**顶部**在嵌套 select 语句中的限定符。 [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md)函数也不支持添加**顶部**。  
+ 但是，有一些你可能仍需要使用 TopCount 的情形。 例如，不支持 DMX**顶部**在嵌套 select 语句中的限定符。 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函数也不支持添加**顶部**。  
   
 ## <a name="examples"></a>示例  
  以下示例是针对关联模型，你通过使用生成的预测查询[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询返回相同的结果，但第一个示例使用 TopCount，和第二个示例使用预测函数。  
@@ -72,7 +71,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  示例结果：  
   
-|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -108,7 +107,7 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
-|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29…|0.25…|  
 |Water Bottle|2866|0.19…|0.17…|  
@@ -116,7 +115,7 @@ NATURAL PREDICTION JOIN
   
  但是，此查询类型可能会影响生产设置的性能。 这是因为此查询返回算法的所有预测集，对这些预测进行排序并返回前 3 个产品。  
   
- 以下示例提供返回相同结果但执行速度明显加快的替代语句。 此示例将 TopCount 替换接受作为自变量数目的预测的预测函数。 此示例还使用**$SUPPORT**关键字来直接检索嵌套的表列。  
+ 以下示例提供返回相同结果但执行速度明显加快的替代语句。 此示例将 TopCount 替换接受作为自变量数目的预测的预测函数。 此示例还使用 **$SUPPORT**关键字来直接检索嵌套的表列。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
@@ -125,10 +124,10 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  结果包含按支持值排序的前 3 个预测。 您可以将 $SUPPORT 替换为 $PROBABILITY 或 $ADJUSTED_PROBABILITY，以便返回按概率或调整后的概率排名的预测。 有关详细信息，请参阅**预测 (DMX)**。  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40; DMX &#41;](../dmx/topsum-dmx.md)  
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
   
   

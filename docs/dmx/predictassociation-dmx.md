@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09933a65f19ca025c8a681b068bf31c6fe0e9d7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3a3fd8d22cd601fc26b53af35a4d101ffcaea3e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,21 +48,21 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  选项**PredictAssociation**函数包括 EXCLUDE_NULL、 INCLUDE_NULL、 非独占时间、 独占 （默认值）、 INPUT_ONLY、 INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  
   
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY 和 INCLUDE_STATISTICS 只适用于表列引用；EXCLUDE_NULL 和 INCLUDE_NULL 只适用于标量列引用。  
   
- 仅返回 INCLUDE_STATISTICS **$Probability**和**$AdjustedProbability**。  
+ 仅返回 INCLUDE_STATISTICS **$Probability**和 **$AdjustedProbability**。  
   
- 如果数值参数 *n* 指定，则**PredictAssociation**函数返回的概率在基于的前 n 最有可能值：  
+ 如果数值参数*n*指定，则**PredictAssociation**函数返回的概率在基于的前 n 最有可能值：  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- 如果包含**$AdjustedProbability**，该语句返回顶部 *n* 值基于**$AdjustedProbability**。  
+ 如果包含 **$AdjustedProbability**，该语句返回顶部*n*值基于 **$AdjustedProbability**。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用**PredictAssociation**函数以返回四个产品的 Adventure Works 数据库是最有可能一起销售。  
@@ -91,8 +90,8 @@ SHAPE {
 
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

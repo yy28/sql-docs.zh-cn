@@ -24,12 +24,11 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 223065b249eee4d6468e965f7626c7febe656011
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 290c794ac4800800c3abef1263cd0e8717163ead
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +66,10 @@ sp_add_log_shipping_secondary_primary
  主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
   
  [ **@backup_source_directory** = ] '*backup_source_directory*'  
- 存储主服务器的事务日志备份文件的目录。 *backup_source_directory*是**nvarchar(500)**和不能为 NULL。  
+ 存储主服务器的事务日志备份文件的目录。 *backup_source_directory*是**nvarchar(500)** 和不能为 NULL。  
   
  [ **@backup_destination_directory** =] '*backup_destination_directory*  
- 备份文件复制到的辅助服务器上的目录。 *backup_destination_directory*是**nvarchar(500)**和不能为 NULL。  
+ 备份文件复制到的辅助服务器上的目录。 *backup_destination_directory*是**nvarchar(500)** 和不能为 NULL。  
   
  [ **@copy_job_name** = ] '*copy_job_name*'  
  要创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业使用的名称，此代理作业用于将事务日志备份复制到辅助服务器。 *copy_job_name*是**sysname**和不能为 NULL。  

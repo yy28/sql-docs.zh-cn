@@ -1,35 +1,34 @@
 ---
-title: "为 Power View 报表配置表行为属性 |Microsoft 文档"
-ms.custom: 
+title: 为 Power View 报表配置表行为属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 5a524b19b9cb10e3eac2110b4d9e279ceccebfc9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-为报表配置表行为属性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
+  如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同于其他报表应用程序，因为它在报表设计期间自动对项进行分组，其方法是对照您所使用的显示格式计算您放入报表字段列表中的列。 在大多数情况下，默认分组会产生最佳结果。 但对于某些表（主要是包含详细数据的表），默认分组行为有时将对不应分组的行进行分组。 对于此类表，您可以设置用于更改对组进行计算的方式的属性。  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]其他报表应用程序与不同，它将通过项目进行分组自动在报表设计期间评估放置在报表字段列表的显示格式中的列正使用的。 在大多数情况下，默认分组会产生最佳结果。 但对于某些表（主要是包含详细数据的表），默认分组行为有时将对不应分组的行进行分组。 对于此类表，您可以设置用于更改对组进行计算的方式的属性。  
   
  对于您主要关心其中各单独行的表（如员工记录或客户记录），建议设置表行为属性。 相比较而言，未从这些属性受益的表包括那些充当查找表的表（例如，日期表、产品目录表或部门表，其中，表由相对较少的行数和列数组成），或者摘要表（其中包含的行只在汇总时才有用，如按照性别、年龄或地理位置累计的人口普查数据）。 对于查找表和摘要表，默认的分组行为会产生最佳结果。  
   

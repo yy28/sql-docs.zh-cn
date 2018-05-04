@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2129b4dffc162eb342bf18de345943146a34c633
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822e6c0e2d71c24261372224d3832e3c001e616f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField 和 SQLSetDescRec （光标库）
 > [!IMPORTANT]  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
  游标库执行调用**SQLSetDescRec**书签列。  
   
- 当使用 ODBC 2。*x*驱动程序，光标库返回 SQLSTATE HY090 （无效字符串或缓冲区长度） 时**SQLSetDescField**或**SQLSetDescRec**调用来设置 SQL_DESC_OCTET_值不等于 4 到 ARD 的书签记录的长度字段。 使用 ODBC 3 时*.x*驱动程序，光标库允许要是任意大小的缓冲区。  
+ 当使用 ODBC 2。*x*驱动程序，光标库返回 SQLSTATE HY090 （无效字符串或缓冲区长度） 时**SQLSetDescField**或**SQLSetDescRec**调用来设置 SQL_DESC_OCTET_值不等于 4 到 ARD 的书签记录的长度字段。 使用 ODBC 3 时 *.x*驱动程序，光标库允许要是任意大小的缓冲区。  
   
  游标库执行**SQLSetDescField**时调用它可返回 SQL_DESC_BIND_OFFSET_PTR、 SQL_DESC_BIND_TYPE、 SQL_DESC_ROW_ARRAY_SIZE 或 SQL_DESC_ROW_STATUS_PTR 字段的值。 对于任何行，而不仅仅是书签行，可以返回这些字段。  
   

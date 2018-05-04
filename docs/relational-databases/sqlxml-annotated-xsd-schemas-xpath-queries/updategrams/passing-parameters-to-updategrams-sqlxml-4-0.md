@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1852a8ee9c0c96a58c5ad71e25eafa1730d0ec49
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 287c6f9805a645f552af0e5c4e7097aab39208c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>将参数传递给 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 04/16/2018
  Updategram 允许您将 NULL 作为参数值传递。 若要将传递 NULL 参数值，则指定**nullvalue**属性。 分配给值**nullvalue**然后提供属性作为参数值。 Updategram 将该值视为 NULL。  
   
 > [!NOTE]  
->  在 **\<sql:header >**和 **\<updg:header >**，应指定**nullvalue**为非限定; 而中**\<updg:sync >**，你指定**nullvalue**为限定 (例如， **updg:nullvalue**)。  
+>  在 **\<sql:header >** 和 **\<updg:header >**，应指定**nullvalue**为非限定; 而中**\<updg:sync >**，你指定**nullvalue**为限定 (例如， **updg:nullvalue**)。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足中指定的要求[要求运行 SQLXML 示例](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  

@@ -19,13 +19,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6b114e0c6c4c962642ffa7ae5a3328a3590131d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b21a37e658b03b0fd3c6b518373dd9d682d291f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
  开发人员可以将列绑定到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-使用特定 C 数据类型*TargetType*值**SQL_C_BINARY**。 不可移植绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定类型的列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的已定义 ODBC C 数据类型与 DB-Library 的类型定义匹配，移植应用程序的 DB-Library 开发人员可能需要利用此功能。  
   
- 报告数据截断是代价高昂的过程为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。 通过确保所有绑定数据缓冲区的宽度足以返回数据，可以避免截断。 对于字符数据，在使用字符串终止的默认驱动程序行为时，该宽度应该包括字符串终止符所占的空间。 例如，绑定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)**到数组中提取每个值的截断的五个字符结果的列。 将同一列绑定到六个字符的数组可以提供一个用于存储空终止符的字符元素，这样即避免了截断。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)可用来高效地检索长字符和二进制数据而不发生截断。  
+ 报告数据截断是代价高昂的过程为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。 通过确保所有绑定数据缓冲区的宽度足以返回数据，可以避免截断。 对于字符数据，在使用字符串终止的默认驱动程序行为时，该宽度应该包括字符串终止符所占的空间。 例如，绑定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** 到数组中提取每个值的截断的五个字符结果的列。 将同一列绑定到六个字符的数组可以提供一个用于存储空终止符的字符元素，这样即避免了截断。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)可用来高效地检索长字符和二进制数据而不发生截断。  
   
  对于大型值数据类型，如果用户提供缓冲区不够大到能够容纳的列，整个值**SQL_SUCCESS_WITH_INFO**返回和"字符串数据;发出右截断"警告。 **StrLen_or_IndPtr**自变量将包含的字符/存储在缓冲区中的字节数。  
   

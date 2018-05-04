@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], quoted identifiers
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d91e7eb44bbdec36a3b1411e90f33e118fda2035
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3af402bd63bf1892b1906da34114d5515e6dfa30
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quoted-identifiers"></a>带引号的标识符
 在 SQL 语句中包含特殊字符或匹配关键字的标识符必须括在*标识符引号字符*; 括在此类字符中的标识符称为*带引号的标识符*(也称为*分隔标识符*SQL 92 中)。 例如，在下面的示例引用 Accounts Payable 标识符**选择**语句：  

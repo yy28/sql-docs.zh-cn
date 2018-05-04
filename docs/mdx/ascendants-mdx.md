@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8f2d48317bb6cb0fb5a066348ae1beed8a0f35f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7eb0bff443065cff7a279320d85d848ae303f5dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Ascendants(Member_Expression)
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **祖先**函数将返回所有祖先构成的从成员本身至成员的层次结构的顶部; 更具体地说，它执行后序遍历层次结构对于所指定的成员，且然后返回所有祖先成员与成员相关，包括它自身，在一组。 这是与此相反[上级](../mdx/ancestor-mdx.md)函数，返回特定的祖先成员或祖先，在特定级别。  
   
 ## <a name="examples"></a>示例  
@@ -65,6 +64,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

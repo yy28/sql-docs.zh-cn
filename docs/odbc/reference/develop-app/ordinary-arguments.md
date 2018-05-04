@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments in catalog functions [ODBC], ordinary
 - catalog functions [ODBC], arguments
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5575a477ddd9ce4e29204a0146a96fb56cd919f6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a97c5c7125b24239d0eaae1a75efdd65c37d7b04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ordinary-arguments"></a>普通自变量
 时的目录函数字符串自变量是的普通自变量，它将被视为文字字符串。 普通参数接受字符串的搜索模式和的值列表都不。 普通自变量的情况是有意义的并按原义转字符串中的引号字符。 这些自变量被视为普通自变量，如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;将它们视为标识符自变量而是如果此属性设置为 SQL_TRUE。  

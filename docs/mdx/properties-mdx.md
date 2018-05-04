@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1931694b7054dec03c45617867ccf4a68575fd09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ebfef6e411c6360212251460a9d8fc51e20d9173
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,8 +47,8 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_Name*  
  成员属性名称的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
- **属性**函数返回指定的成员属性的指定成员的值。 成员属性可以是任何内部成员属性，如**名称**， **ID**，**密钥**，或**标题**，也可以是用户定义的成员属性。 有关详细信息，请参阅[内部成员属性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[用户定义的成员属性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+## <a name="remarks"></a>注释  
+ **属性**函数返回指定的成员属性的指定成员的值。 成员属性可以是任何内部成员属性，如**名称**， **ID**，**密钥**，或**标题**，也可以是用户定义的成员属性。 有关详细信息，请参阅[内部成员属性&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[用户定义成员属性&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
   
  默认情况下，将该值强迫为一个字符串。 如果**类型化**强类型的返回值的指定。  
   
@@ -119,7 +118,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用成员属性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [使用成员属性 & #40;MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

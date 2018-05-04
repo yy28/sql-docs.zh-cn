@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
 - connecting to driver [ODBC], SQLConnect
@@ -25,12 +25,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21b67f1fdbf609aa8564a6b95a0e60382a0b97a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specific-connection-information"></a>特定于驱动程序的连接信息
 **SQLConnect**假定数据源名称、 用户 ID 和密码是不足以连接到数据源，并且，可以在系统上存储的所有其他连接信息。 这不经常这种情况。 例如，驱动程序可能需要一个用户 ID 和密码登录到服务器以及其他用户 ID 和密码登录到 DBMS。 因为**SQLConnect**接受单个用户 ID 和密码，这意味着，其他用户 ID 和密码必须存储在系统上的数据源信息如果**SQLConnect**要使用。 这是潜在的安全违规行为，除非密码经过加密应当避免。  
@@ -46,6 +45,6 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
   
  **DSN** （数据源名称） 关键字名称数据源， **UID**和**PWD**关键字指定的用户 ID 和密码的服务器和**UIDDBMS**和**PWDDBMS**关键字为 DBMS 中指定的用户 ID 和密码。 请注意，最后的分号是可选的。 **SQLDriverConnect**分析此字符串; 使用 XYZ Corp 数据源名称从系统，例如服务器地址; 中检索的其他连接信息并登录到服务器和使用指定的用户 Id 和密码的 DBMS。  
   
- 关键字 / 值对中**SQLDriverConnect**必须遵循某些语法规则。 关键字和它们的值不应包含**[] {} （)，;？\*= ！ @**字符。 值**DSN**关键字不能只包含空格，并且不包含前导空格。 由于注册表语法中，关键字和数据源名称不能包含反斜杠 (\\) 字符。 中的关键字 / 值对的等号两侧不允许有空格。  
+ 关键字 / 值对中**SQLDriverConnect**必须遵循某些语法规则。 关键字和它们的值不应包含 **[]{}（)，;？\*= ！ @** 字符。 值**DSN**关键字不能只包含空格，并且不包含前导空格。 由于注册表语法中，关键字和数据源名称不能包含反斜杠 (\\) 字符。 中的关键字 / 值对的等号两侧不允许有空格。  
   
  **FILEDSN**关键字可以在调用中使用**SQLDriverConnect**以指定包含数据源信息的文件的名称 (请参阅[连接使用的文件数据源](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，本部分中更高版本)。 **SAVEFILE**关键字可用来指定在其中进行成功的连接的关键字 / 值对的.dsn 文件的名称通过调用**SQLDriverConnect**将保存。 有关文件数据源的详细信息，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。

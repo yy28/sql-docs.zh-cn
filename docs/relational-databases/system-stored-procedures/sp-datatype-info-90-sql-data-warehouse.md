@@ -19,13 +19,12 @@ caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cca052fb77b2f6bc2db691f884043079197d439
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a633d790503357edef72b8c26b85515dd043c556
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -60,9 +59,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|与 DBMS 相关的数据类型。|  
 |DATA_TYPE|**int**|此类型的所有列所映射到的 ODBC 类型代码。|  
 |PRECISION|**int**|数据源中数据类型的最大精度。 数据类型的精度不适用时返回 NULL。 PRECISION 列的返回值以 10 为基数。|  
-|LITERAL_PREFIX|**varchar(**32**)**|常量前使用的一个或多个字符。 例如，一个单引号 () 字符类型和 0x 为二进制文件。|  
-|LITERAL_SUFFIX|**varchar(**32**)**|字符或字符用于终止常量。 例如，一个单引号 () 字符类型和二进制没有引号。|  
-|CREATE_PARAMS|**varchar(**32**)**|此数据类型的创建参数的说明。 例如，**十进制**是"精度和小数位数"， **float**为 NULL，和**varchar**是"max_length"。|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|常量前使用的一个或多个字符。 例如，一个单引号 () 字符类型和 0x 为二进制文件。|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|字符或字符用于终止常量。 例如，一个单引号 () 字符类型和二进制没有引号。|  
+|CREATE_PARAMS|**varchar(** 32 **)**|此数据类型的创建参数的说明。 例如，**十进制**是"精度和小数位数"， **float**为 NULL，和**varchar**是"max_length"。|  
 |NULLABLE|**int**|指定为 Null 性。<br /><br /> 1 = 允许 Null 值。<br /><br /> 0 = 不允许 Null 值。|  
 |CASE_SENSITIVE|**int**|指定是否区分大小写。<br /><br /> 1 = 此类型的所有列都区分大小写（用于排序规则）。<br /><br /> 0 = 此类型的所有列都不区分大小写。|  
 |SEARCHABLE|**int**|指定列类型的搜索能力：<br /><br /> 1 = 不能搜索。<br /><br /> 2 = 可以使用 LIKE 进行搜索。<br /><br /> 3 = 可以使用 WHERE 进行搜索。<br /><br /> 4 = 可以使用 WHERE 或 LIKE 进行搜索。|  

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6af10b10a3b2669dceb1035f38f3099c5b3177b8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d87d0b6c86a753d49ccf3aa287bc8e95b02270f7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>使用 ODBC 驱动程序的 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -46,7 +45,7 @@ Microsoft ODBC Driver for SQL Server 或更高版本 13.1 允许 ODBC 应用程�
 
 |Attribute|类型|值|默认|Description|
 |-|-|-|-|-|
-|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_RESET`|(未设置)|请参阅说明`Authentication`上面的关键字。 `SQL_AU_NONE` 若要显式重写一组提供`Authentication`DSN 和/或连接字符串中的值时`SQL_AU_RESET`取消设置该属性，如果它已设置，从而允许要优先的 DSN 或连接字符串值。|
+|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`、`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_RESET`|(未设置)|请参阅说明`Authentication`上面的关键字。 `SQL_AU_NONE` 若要显式重写一组提供`Authentication`DSN 和/或连接字符串中的值时`SQL_AU_RESET`取消设置该属性，如果它已设置，从而允许要优先的 DSN 或连接字符串值。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|指向`ACCESSTOKEN`或 NULL|NULL|如果非 null，指定 azure Ad 访问令牌来使用。 它是指定访问令牌中的错误以及`UID`， `PWD`， `Trusted_Connection`，或`Authentication`连接字符串关键字或其等效的属性。 <br> **注意：** ODBC 驱动程序版本 13.1 仅支持此上_Windows_。|
 |`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|（请参阅说明）|控制连接的加密。 `SQL_EN_OFF` 和`SQL_EN_ON`禁用并启用加密，分别。 如果预属性值的`Authentication`未设置，则_无_或`SQL_COPT_SS_ACCESS_TOKEN`设置，和`Encrypt`默认值中的 DSN 或连接字符串未指定`SQL_EN_ON`。 否则，默认值是`SQL_EN_OFF`。 此属性控制的生效值[是否加密将用于连接。](https://docs.microsoft.com/en-us/sql/relational-databases/native-client/features/using-encryption-without-validation)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|不支持与 Azure Active Directory，因为无法通过 ODBC 连接来实现对 AAD 主体的密码更改。 <br><br>SQL Server 2005 中引入了 SQL Server 身份验证的密码过期。 `SQL_COPT_SS_OLDPWD`属性已添加以允许客户端连接提供旧和新密码。 设置此属性时，访问接口对于第一次连接或后续连接将不使用连接池，因为连接字符串将包含现在已更改的“旧密码”。|

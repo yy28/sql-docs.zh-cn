@@ -22,12 +22,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 95264cc1e894fdd2acd43b4f49807968ea9ce587
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3dd67eb8c1883eddfab04542456da0b09fdb6f50
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>使用维度函数、层次结构函数和级别函数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,9 +56,9 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另请参阅  
- [维度 &#40;MDX &#41;](../mdx/dimension-mdx.md)   
- [函数 &#40;MDX 语法 &#41;](../mdx/functions-mdx-syntax.md)   
- [层次结构 &#40;MDX &#41;](../mdx/hierarchy-mdx.md)   
- [级别 &#40;MDX &#41;](../mdx/level-mdx.md)  
+ [维度&#40;MDX&#41;](../mdx/dimension-mdx.md)   
+ [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)   
+ [层次结构&#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
+ [级别&#40;MDX&#41;](../mdx/level-mdx.md)  
   
   

@@ -27,15 +27,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8d536d67738872ba070217d934a1b47be7857398
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定使用的参数[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器执行交叉验证挖掘模型时。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器在执行挖掘模型的交叉验证时使用的参数。  
   
 > [!NOTE]  
 >  这些参数仅供内部使用。 此处提供的信息仅供参考。  
@@ -71,14 +71,14 @@ ms.lasthandoff: 01/08/2018
 |父元素|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
 |子元素|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  这些属性仅用于内部使用，不支持在 DDL 语句中使用。  
   
  有关如何使用交叉验证中[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]，请参阅[交叉验证报表中的度量值](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
   
- 有关如何执行交叉验证的使用信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]存储的过程，请参阅[数据挖掘存储过程 &#40;Analysis Services-数据挖掘 &#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
+ 有关如何执行交叉验证的使用信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]存储的过程，请参阅[数据挖掘存储过程&#40;Analysis Services-数据挖掘&#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

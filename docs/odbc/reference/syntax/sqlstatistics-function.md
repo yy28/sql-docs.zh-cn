@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLStatistics
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d18b910da6bf23aa507c3fecc7994a59cf74e705
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6f91845e85a9af9f99e137368f6bdb7f8570a2cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函数
 **一致性**  
@@ -92,7 +91,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE 请求该驱动程序无条件地检索统计信息。 （仅符合 Open Group 标准和不支持 ODBC 扩展驱动程序将不能支持 SQL_ENSURE。）  
   
- SQL_QUICK 请求，该驱动程序将检索的基数和页面，仅当从服务器可迅速获得。 在这种情况下，驱动程序不能保证是最新值。 (写入到 Open Group 标准的应用程序将始终从 ODBC 3 获得 SQL_QUICK 行为*.x*的兼容驱动程序。)  
+ SQL_QUICK 请求，该驱动程序将检索的基数和页面，仅当从服务器可迅速获得。 在这种情况下，驱动程序不能保证是最新值。 (写入到 Open Group 标准的应用程序将始终从 ODBC 3 获得 SQL_QUICK 行为 *.x*的兼容驱动程序。)  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -132,9 +131,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  有关常规使用、 自变量和返回的数据的 ODBC 目录函数的详细信息，请参阅[目录函数](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 下面的列已重命名为 ODBC 3*.x*。 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
+ 下面的列已重命名为 ODBC 3 *.x*。 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
   
-|ODBC 2.0 列|ODBC 3*.x*列|  
+|ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

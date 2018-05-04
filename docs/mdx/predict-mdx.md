@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d7266e462167dcae27a30b033c368f910b6dfc0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8bc7f32bb4890f8bddd7f12c1fe96b6cd18604b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ Predict(Mining_Model_Name,String_Expression)
  *String_Expression*  
  计算结果为指定挖掘模型的有效 DMX 表达式的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **预测**函数的计算结果指定的挖掘模型的上下文中的指定的字符串表达式。  
   
  在数据挖掘表达式 (DMX) 参考中提供了数据挖掘语法和函数。  
@@ -73,6 +72,6 @@ WHERE([Customer].[Customer Geography].[Customer].&[12012])
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

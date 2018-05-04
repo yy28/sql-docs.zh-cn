@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e8038145cf8587c6c0d5a86461302fd7075bcee9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9ac580c71d1c82876a41953d6f8b5411dc7dd55
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  返回维度的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  叶成员是由所有属性层次结构中的最低级别交叉联接构成的元组。 已排除了计算成员。  
   
 -   如果指定维度名称，则**离开**函数将返回包含指定维度的键属性的叶成员的集。  
@@ -61,6 +60,6 @@ Leaves( [ Dimension_expression ] )
     >  如果并非所有属性在当前范围内的度量值组中均具备相同的粒度，则会产生错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

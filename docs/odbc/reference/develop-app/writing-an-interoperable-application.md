@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
 - interoperability [ODBC], writing interoperable applications
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a0b70251acdfebbe05bb0900af8be7ea25b6fa6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7623f9e2674564a13061d144f599f974a3020a95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-interoperable-application"></a>编写可互操作的应用程序
 每当应用程序使用针对多个驱动程序相同的代码，该代码必须在这些驱动程序之间的可互操作。 在大多数情况下，这是一个简单的任务。 例如，代码以提取与只进游标的行是相同的所有驱动程序。 在某些情况下，这可能更困难。 例如，用于构造 SQL 语句中使用的标识符的代码需要考虑标识符的大小写，用引号括起来，和一个部分、 两个部分构成和由三部分的命名约定。  

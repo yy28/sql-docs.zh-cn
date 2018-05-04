@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>运算符（MDX 语法）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,12 +91,12 @@ ms.lasthandoff: 01/08/2018
   
 -   或  
   
- 有关在 MDX 中的运算符的详细信息，请参阅[MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md).  
+ 有关在 MDX 中的运算符的详细信息，请参阅[MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
 ### <a name="determining-results"></a>确定结果  
  将简单的表达式合并成复杂的表达式时，运算符的规则与数据类型优先级的规则一起决定结果值的数据类型。  
   
- 如果结果是一个字符或 Unicode 值，则结果的排序规则由运算符的规则和排序优先级的规则一起决定。 有关排序规则的详细信息，请参阅[语言和排序规则 &#40;Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ 如果结果是一个字符或 Unicode 值，则结果的排序规则由运算符的规则和排序优先级的规则一起决定。 有关排序规则的详细信息，请参阅[语言和排序规则&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)。  
   
  另外还有一些规则，根据简单表达式的精度、小数位数和长度来确定结果的精度、小数位数和长度。  
   
@@ -106,14 +105,14 @@ ms.lasthandoff: 01/08/2018
   
 |原始类型|所需类型|转换|  
 |-------------------|-----------------|----------------|  
-|级别|将|\<级别 >.members 集|  
+|Level|将|\<级别 >.members 集|  
 |层次结构|成员|\<层次结构 >.defaultmember|  
 |成员|Tuple|(\<成员 >)|  
 |Tuple|成员|\<元组 >.item(0)|  
 |Tuple|Scalar|\<元组 >.value|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX 语法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

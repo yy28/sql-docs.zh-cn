@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
 - ODBC cursor library [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7152428dc38f2310cbda7cc70a8a2e4435c5182
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab6ea0ba91b8d62c094a965faaa522b033e05336
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>附录 f: ODBC 游标库
 > [!IMPORTANT]  
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
  游标库是动态链接库 (DLL) 位于之间驱动程序管理器和驱动程序。 当应用程序调用一个函数时，驱动程序管理器将调用中光标库，它执行的函数或在指定的驱动程序中调用它的函数。 对于给定的连接，应用程序指定的是光标库是始终使用，使用该驱动程序不支持可滚动游标，如果还是从未使用过。  
   
- 游标库显示为驱动程序到驱动程序管理器。 如果游标库驻留驱动程序管理器和 ODBC 2 之间。*x*驱动程序，光标库显示为 ODBC 2。*x*驱动程序。 如果游标库所在驱动程序管理器和 ODBC 3 之间*.x*驱动程序，光标库显示为 ODBC 3*.x*驱动程序。 游标库的行为取决于它正在使用，除了绑定偏移量，这两个 ODBC 2 支持的驱动程序的版本。*x*和 ODBC 3。*x*驱动程序。  
+ 游标库显示为驱动程序到驱动程序管理器。 如果游标库驻留驱动程序管理器和 ODBC 2 之间。*x*驱动程序，光标库显示为 ODBC 2。*x*驱动程序。 如果游标库所在驱动程序管理器和 ODBC 3 之间 *.x*驱动程序，光标库显示为 ODBC 3 *.x*驱动程序。 游标库的行为取决于它正在使用，除了绑定偏移量，这两个 ODBC 2 支持的驱动程序的版本。*x*和 ODBC 3。*x*驱动程序。  
   
  若要实现的块游标**SQLFetch**和**SQLFetchScroll**，反复调用的是光标库**SQLFetch**驱动程序中。 若要实现滚动，它将缓存检索到它在内存和磁盘文件中的数据。 当应用程序请求一个新行集时，游标库将检索它根据需要从该驱动程序或缓存。  
   

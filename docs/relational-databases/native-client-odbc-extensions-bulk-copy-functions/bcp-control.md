@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 53ed8a1b6af16e36fe431a56dc32dee78c1ccf2c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b7a191076a8e6061bcf8345edaf2f50a712f1c9f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ RETCODE bcp_control (
  BCPFILE_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的代码页中。  
   
  BCPFILEFMT  
- 数据文件格式的版本号。 这可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若已从文本列中获取的导入数据要[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器成为**varchar （max)**中的列[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的服务器，你应指定 80。 同样，如果导出中的数据时指定 80 **varchar （max)**列，则会保存图像一样文本列保存在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式化，并可以导入到的文本列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器。  
+ 数据文件格式的版本号。 这可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若已从文本列中获取的导入数据要[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器成为**varchar （max)** 中的列[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的服务器，你应指定 80。 同样，如果导出中的数据时指定 80 **varchar （max)** 列，则会保存图像一样文本列保存在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式化，并可以导入到的文本列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器。  
   
  BCPFIRST  
  要复制的文件或表的第一行数据。 默认值为 1；值小于 1 则将此选项重置为其默认值。  

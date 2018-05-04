@@ -42,9 +42,9 @@ public final java.io.Reader getCharacterStream(java.lang.String paramName)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *参数名称*  
+ paramName  
   
- A**字符串**，该值指示参数名称。  
+ 指示参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  一个读取器对象。  
@@ -53,7 +53,7 @@ public final java.io.Reader getCharacterStream(java.lang.String paramName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [getCharacterStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)   
+ [getCharacterStream 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

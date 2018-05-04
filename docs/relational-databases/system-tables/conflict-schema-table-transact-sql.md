@@ -24,12 +24,11 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d9c5faa805785b856aca59ff2cd026b6ee9cf5c0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aad5963d2e3135c60e294f5eeb1aaebbc6982e30
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;架构&gt;_&lt;表&gt;(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 |__$conflict_type|**int**|冲突类型，可以是下列值之一：<br /><br /> 1：更新失败，因为另一个更新已更改了本地行，或者删除了本地行并随后重新插入。<br /><br /> 2：更改失败，因为已删除了本地行。<br /><br /> 3：删除失败，因为另一个更新已更改了本地行，或者删除了本地行并随后重新插入。<br /><br /> 4：删除失败，因为已删除了本地行。<br /><br /> 5：插入失败，因为已插入了本地行，或者已插入并随后更新了本地行。|  
 |__$is_winner|**bit**|指示该表中的行是否为冲突入选方，这意味着将其应用于本地节点。|  
 |__$pre_version|**varbinary (32)**|发起冲突更改的数据库的版本。|  
-|__$reason_code|**int**|冲突的解决代码。 可以是以下值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅**__ reason_text**。|  
+|__$reason_code|**int**|冲突的解决代码。 可以是以下值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅 **__ reason_text**。|  
 |__$reason_text|**nvarchar (720)**|冲突的解决情况。 可以是以下值之一：<br /><br /> 已解决 (1)<br /><br /> 未解决 (2)<br /><br /> 未知 (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**。 大小不同而有所不同，具体取决于内容。|一个位图，指示在发生更新-更新冲突的情况下更新的列。|  
 |__$inserted_date|**datetime**|将冲突行插入此表中的日期和时间。|  

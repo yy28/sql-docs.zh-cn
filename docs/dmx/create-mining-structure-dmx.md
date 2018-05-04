@@ -25,17 +25,16 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bdba77b79b49011bbd6b48547ffe9cc34aa270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在数据库中创建新的挖掘结构，并根据需要定义定型和测试分区。 创建挖掘结构后，你可以使用[ALTER 挖掘结构 &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)语句将模型添加到挖掘结构。  
+  在数据库中创建新的挖掘结构，并根据需要定义定型和测试分区。 创建挖掘结构后，你可以使用[ALTER 挖掘结构&#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)语句将模型添加到挖掘结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  默认值：REPEATABLE(0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  通过指定列的列表可以定义挖掘结构；如果需要，还可以指定列之间的层次结构关系，然后再根据需要将挖掘结构分为定型数据集和测试数据集。  
   
  可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先将数据库属性，AllowSessionMiningModels 的设置。 有关详细信息，请参阅 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
@@ -112,18 +111,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  有关可用于定义结构列的数据类型、内容类型、列分布和建模标志的列表，请参阅下列主题：  
   
--   [数据类型 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [数据类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [内容类型 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [内容类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列分布 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列分布&#40;数据挖掘&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [建模标志 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [建模标志 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  可以为一个列定义多个建模标志值。 但是，一个列只能有一个内容类型和数据类型。  
   
 ### <a name="column-relationships"></a>列关系  
- 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持以下使用\<列关系 > 子句。  
+ 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持以下使用\<列关系 > 子句。  
   
  **与相关**  
  指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  
@@ -136,7 +135,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  **ALTER MINING STRUCTURE**语句不支持维持。  
   
- 您最多可以指定三个维持参数。 如果同时指定维持事例和维持百分比的最大数，则将保留事例百分比，直到达到最大事例限制。 跟整数形式指定的维持百分比**%**关键字，并指定为后跟一个整数的最大事例数**情况下**关键字。 您可以按照任何顺序组合这些条件，如下面的示例所示：  
+ 您最多可以指定三个维持参数。 如果同时指定维持事例和维持百分比的最大数，则将保留事例百分比，直到达到最大事例限制。 跟整数形式指定的维持百分比 **%** 关键字，并指定为后跟一个整数的最大事例数**情况下**关键字。 您可以按照任何顺序组合这些条件，如下面的示例所示：  
   
 ```  
 WITH HOLDOUT (20 PERCENT)   
@@ -154,7 +153,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  下面的示例演示如何使用 DMX 创建包含维持的挖掘结构。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>示例 1：添加不含定型集的结构  
- 下面的示例创建新的名为 `New Mailing` 的挖掘结构，并且不创建任何关联的挖掘模型，也不使用维持。 若要了解如何向结构中添加挖掘模型，请参阅[ALTER 挖掘结构 &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 下面的示例创建新的名为 `New Mailing` 的挖掘结构，并且不创建任何关联的挖掘模型，也不使用维持。 若要了解如何向结构中添加挖掘模型，请参阅[ALTER 挖掘结构&#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -195,8 +194,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

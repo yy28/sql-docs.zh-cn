@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 880b8a12da960269ff559653880ebf62d01947ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Qtd( [ Member_Expression ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果未指定成员 expressionis，默认值是第一个层次结构使用的类型级别的当前成员*季度*中类型的第一个维度*时间*度量值组中。  
   
- **Qtd**函数是快捷函数[PeriodsToDate &#40;MDX &#41;](../mdx/periodstodate-mdx.md)函数其级别表达式参数设置为*季度*。 也就是说，`Qtd(Member_Expression)` 的功能与 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` 相同。  
+ **Qtd**函数是快捷函数[PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md)函数其级别表达式参数设置为*季度*。 也就是说，`Qtd(Member_Expression)` 的功能与 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` 相同。  
   
 ## <a name="example"></a>示例  
  下面的示例返回的总和`Measures.[Order Quantity]`成员，在某段前两个月的公历 2003 年的第三个季度中包含聚合`Date`维度，从**Adventure Works**多维数据集。  
@@ -68,6 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

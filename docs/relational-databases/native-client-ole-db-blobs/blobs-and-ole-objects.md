@@ -22,13 +22,12 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 686f9f7c4ec9562e6e5141553a3a36d779e7ad68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 078ead62470af8cb7df599d98ca8423b3cac0d43
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
  对于大型值数据类型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查类型中的大小假设**IRowset**和 DDL 接口。 具有列**varchar**， **nvarchar**，和**varbinary**具有设置为无限制的最大大小的数据类型将表示为 ISLONG 以通过架构行集和返回列数据类型的接口。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开**varchar （max)**， **varbinary （max)**和**nvarchar (max)**分别为 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_WSTR 类型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开**varchar （max)**， **varbinary （max)** 和**nvarchar (max)** 分别为 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_WSTR 类型。  
   
  可以使用这些类型应用程序，请提供以下选项：  
   

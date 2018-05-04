@@ -1,30 +1,30 @@
 ---
-title: "Tables 对象 (TMSL) |Microsoft 文档"
-ms.custom: 
+title: Tables 对象 (TMSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7c266fba0a8218ff7fb18c08f0b5432bef2bf15f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables 对象 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定义包含在模型中的表。 在模型中的表也绑定到外部数据库从中导入或查询，数据中的表或从 DAX 表达式构造的计算的表中。 一个或多个表中**分区**对象描述的数据源。  表之间**关系**对象指定的基数、 筛选器方向和关系的其他属性。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定义包含在模型中的表。 在模型中的表也绑定到外部数据库从中导入或查询，数据中的表或从 DAX 表达式构造的计算的表中。 一个或多个表中**分区**对象描述的数据源。  表之间**关系**对象指定的基数、 筛选器方向和关系的其他属性。  
   
 ## <a name="object-definition"></a>对象定义  
  所有对象都有一组通用的属性，包括名称、 类型、 说明、 一个属性集合和批注。 **表**对象还具有以下属性。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
  表示为客户端应用程序提供逻辑层次结构深化路径的集合的级别。 它是表对象的子级。  
   
 ## <a name="usage"></a>用法  
- 在中使用表对象[Alter 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[创建命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，[删除命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[刷新命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[撰写 MergePartitions 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ 在中使用表对象[Alter 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[创建命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，[删除命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[刷新命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[撰写 MergePartitions 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  在创建时，替换或更改表的对象，将指定对象定义的所有读写的属性。 省略一个读 / 写属性被视为删除操作。  
   
@@ -70,8 +70,8 @@ ms.lasthandoff: 01/08/2018
               "hierarchies": {  },  
 ```  
   
-## <a name="full-syntax"></a>完整的语法  
- 下面是一个模型的表对象的架构表示形式。 若要减少此定义的大小，分区对象描述了其他位置。 请参阅[分区对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
+## <a name="full-syntax"></a>完整语法  
+ 下面是一个模型的表对象的架构表示形式。 若要减少此定义的大小，分区对象描述了其他位置。 请参阅[分区对象&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)。  
   
 ```  
 "tables": {  

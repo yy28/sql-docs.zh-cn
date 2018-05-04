@@ -16,13 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 36aea58e1a26507a5178b5b5a58bf08df9c08489
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c866e2885d6fd5c6f3980ffe2cfd21f1af1092db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-improvements"></a>日期和时间的改进
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +48,9 @@ ms.lasthandoff: 04/16/2018
  某些应用程序（如过程控制和生产应用程序）要求能够处理精度高达 100 纳秒的时间数据。 可满足这一用途的新类型为 DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>使用具有扩展的秒的小数部分精度的日期时间  
- OLE DB 已定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 1/300 秒精度。 新**datetime2(3)**类型不是直接与现有的 datetime 类型兼容。 如果这一点将影响应用程序行为而导致风险，则应用程序必须使用新的 DBCOLUMN 标志以确定实际的服务器类型。  
+ OLE DB 已定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 1/300 秒精度。 新**datetime2(3)** 类型不是直接与现有的 datetime 类型兼容。 如果这一点将影响应用程序行为而导致风险，则应用程序必须使用新的 DBCOLUMN 标志以确定实际的服务器类型。  
   
- ODBC 还定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 3 毫秒的精度。 新**datetime2(3)**类型不是直接与现有兼容**datetime**类型。 **datetime2(3)**精度为 1 毫秒，和**datetime**精度为 1/300 秒。 在 ODBC 中，应用程序可以确定哪一个服务器类型用于描述符字段 SQL_DESC_TYPE_NAME。 因此，现有类型 SQL_TYPE_TIMESTAMP（对于 ODBC 2.0 应用程序为 SQL_TIMESTAMP）可用于这两个类型。  
+ ODBC 还定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 3 毫秒的精度。 新**datetime2(3)** 类型不是直接与现有兼容**datetime**类型。 **datetime2(3)** 精度为 1 毫秒，和**datetime**精度为 1/300 秒。 在 ODBC 中，应用程序可以确定哪一个服务器类型用于描述符字段 SQL_DESC_TYPE_NAME。 因此，现有类型 SQL_TYPE_TIMESTAMP（对于 ODBC 2.0 应用程序为 SQL_TIMESTAMP）可用于这两个类型。  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision-and-timezone"></a>使用具有扩展的秒的小数部分精度和时区的日期时间  
  一些应用程序要求带有时区信息的日期时间值。 新的 DBTYPE_DBTIMESTAMPOFFSET (OLE DB) 和 SQL_SS_TIMESTAMPOFFSET (ODBC) 类型支持这一要求。  

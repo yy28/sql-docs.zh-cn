@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -25,15 +25,14 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0283ca10e19e1a75e5a3d497c33ab57866b3b27e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>替换函数映射的向后兼容性应用程序
-ODBC 3*.x*应用程序工作到 ODBC 3*.x*对 ODBC 2 起驱动程序管理器。*x*驱动程序，只要使用任何新功能。 同时复制功能和行为的更改，但是，影响的方式，ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序。 当使用 ODBC 2。*x*驱动程序，驱动程序管理器映射以下 ODBC 3。*x*函数，已替换一个或多个 ODBC 2。*x*函数，到相应的 ODBC 2。*x*函数。  
+ODBC 3 *.x*应用程序工作到 ODBC 3 *.x*对 ODBC 2 起驱动程序管理器。*x*驱动程序，只要使用任何新功能。 同时复制功能和行为的更改，但是，影响的方式，ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序。 当使用 ODBC 2。*x*驱动程序，驱动程序管理器映射以下 ODBC 3。*x*函数，已替换一个或多个 ODBC 2。*x*函数，到相应的 ODBC 2。*x*函数。  
   
 |ODBC 3。*x*函数|ODBC 2。*x*函数|  
 |-------------------------|-------------------------|  
@@ -108,7 +107,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      驱动程序管理器返回与 SQLSTATE HY091 SQL_ERROR （描述符字段标识符无效）。 本部分没有进一步规则适用。  
   
-2.  驱动程序管理器映射 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE 到 SQL_DESC_COUNT、 SQL_DESC_NAME 或 SQL_DESC_NULLABLE，分别。 (ODBC 2*.x*驱动程序需要仅支持 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，和 SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 SQL_DESC_NAME 和 SQL_DESC_NULLABLE。)SQLColAttribute 调用映射到：  
+2.  驱动程序管理器映射 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE 到 SQL_DESC_COUNT、 SQL_DESC_NAME 或 SQL_DESC_NULLABLE，分别。 (ODBC 2 *.x*驱动程序需要仅支持 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，和 SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 SQL_DESC_NAME 和 SQL_DESC_NULLABLE。)SQLColAttribute 调用映射到：  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -240,7 +239,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      请注意， *BufferLength*和*StringLengthPtr*将被忽略。  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- 当一个 ODBC 3。*x*应用程序使用 ODBC 2*.x*驱动程序调用**SQLGetData**与*ColumnNumber*参数等于 0，ODBC 3*.x*驱动程序管理器将其映射到调用**SQLGetStmtOption**与*选项*属性设置为 SQL_GET_BOOKMARK。  
+ 当一个 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序调用**SQLGetData**与*ColumnNumber*参数等于 0，ODBC 3 *.x*驱动程序管理器将其映射到调用**SQLGetStmtOption**与*选项*属性设置为 SQL_GET_BOOKMARK。  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  驱动程序管理器映射到**SQLGetStmtOption**。 以下调用到**SQLGetStmtAttr**:  
@@ -410,15 +409,15 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>错误处理  
  在 ODBC 3。*x*，则调用**SQLFetch**或**SQLFetchScroll**填充 IRD 和给定的诊断记录的 SQL_DIAG_ROW_NUMBER 字段中 SQL_DESC_ARRAY_STATUS_PTR包含与此记录的行集中的行数。 使用此，应用程序可以使用给定的行位置关联一条错误消息。  
   
- 一个 ODBC 2。*x*驱动程序将无法提供此功能。 不过，它将提供与 SQLSTATE 01S01 错误分界 （行中的错误）。 一个 ODBC 3。*x*正在使用应用程序**SQLFetch**或**SQLFetchScroll**同时针对 ODBC 2 逐渐。*x*驱动程序必须考虑这一点。 此类应用程序将不能调用另请注意**SQLGetDiagField**实际是否仍要获取 SQL_DIAG_ROW_NUMBER 字段。 一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序将能够调用**SQLGetDiagField**只用*DiagIdentifier* SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE 或 SQL_DIAG_ 自变量SQLSTATE。 ODBC 3*.x*驱动程序管理器使用 ODBC 2 时维护的诊断数据结构。*x*驱动程序，但 ODBC 2。*x*驱动程序返回仅这四个字段。  
+ 一个 ODBC 2。*x*驱动程序将无法提供此功能。 不过，它将提供与 SQLSTATE 01S01 错误分界 （行中的错误）。 一个 ODBC 3。*x*正在使用应用程序**SQLFetch**或**SQLFetchScroll**同时针对 ODBC 2 逐渐。*x*驱动程序必须考虑这一点。 此类应用程序将不能调用另请注意**SQLGetDiagField**实际是否仍要获取 SQL_DIAG_ROW_NUMBER 字段。 一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序将能够调用**SQLGetDiagField**只用*DiagIdentifier* SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE 或 SQL_DIAG_ 自变量SQLSTATE。 ODBC 3 *.x*驱动程序管理器使用 ODBC 2 时维护的诊断数据结构。*x*驱动程序，但 ODBC 2。*x*驱动程序返回仅这四个字段。  
   
- 当一个 ODBC 2。*x*应用程序使用 ODBC 2。*x*驱动程序，如果操作可能会导致多个错误，要返回的驱动程序管理器中，不同的错误可能会返回由 ODBC 3*.x*比通过 ODBC 2 的驱动程序管理器。*x*驱动程序管理器。  
+ 当一个 ODBC 2。*x*应用程序使用 ODBC 2。*x*驱动程序，如果操作可能会导致多个错误，要返回的驱动程序管理器中，不同的错误可能会返回由 ODBC 3 *.x*比通过 ODBC 2 的驱动程序管理器。*x*驱动程序管理器。  
   
 ## <a name="mappings-for-bookmark-operations"></a>映射的书签操作  
- ODBC 3*.x*驱动程序管理器执行以下映射时 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序执行书签操作。  
+ ODBC 3 *.x*驱动程序管理器执行以下映射时 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序执行书签操作。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 当一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLBindCol**将绑定到列 0 与*fCType*等于 SQL_C_VARBOOKMARK，ODBC 3*.x*驱动程序管理器检查是否*BufferLength*参数小于 4 或大于 4，并如果是这样，返回 SQLSTATE HY090 （无效字符串或缓冲区长度）。 如果*BufferLength*参数等于 4，驱动程序管理器调用**SQLBindCol**驱动程序，替换后中*fCType*与 SQL_C_BOOKMARK。  
+ 当一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLBindCol**将绑定到列 0 与*fCType*等于 SQL_C_VARBOOKMARK，ODBC 3 *.x*驱动程序管理器检查是否*BufferLength*参数小于 4 或大于 4，并如果是这样，返回 SQLSTATE HY090 （无效字符串或缓冲区长度）。 如果*BufferLength*参数等于 4，驱动程序管理器调用**SQLBindCol**驱动程序，替换后中*fCType*与 SQL_C_BOOKMARK。  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  当一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLColAttribute**与*ColumnNumber*自变量设置为 0，驱动程序管理器返回*FieldIdentifier*值下表中列出。  

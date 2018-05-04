@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -37,13 +36,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b34c2f95c2e698e9e84a55850005a6aa409c4ad7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4e04ff0672c9611c375db7703117ed79c517452f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 托管类-SqlXmlCommand 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +108,7 @@ public SqlXmlCommand(string cnString)
  命令的文本。 此属性用于指定您要执行的命令的文本。 有关工作示例，请参阅[执行 SQL 查询 & #40;SQLXML 托管类 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  CommandStream  
- 命令流。 如果您要根据某一文件（例如 XML 模板）执行命令，则此属性很有用。 当你仅在使用 CommandStream， **"模板"**， **"属的 UpdateGram"**和**"DiffGram"CommandType**支持值。 有关工作示例，请参阅[使用 CommandStream 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)。  
+ 命令流。 如果您要根据某一文件（例如 XML 模板）执行命令，则此属性很有用。 当你仅在使用 CommandStream， **"模板"**， **"属的 UpdateGram"** 和 **"DiffGram"CommandType**支持值。 有关工作示例，请参阅[使用 CommandStream 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)。  
   
  CommandType  
  标识命令的类型。 此属性用于指定您要执行的命令的类型。 下表中的值确定命令的类型。 有关工作示例，请参阅[.NET 环境中访问 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  

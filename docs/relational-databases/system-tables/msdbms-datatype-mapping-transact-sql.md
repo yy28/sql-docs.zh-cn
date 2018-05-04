@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0e8cf90524c833f1bca5563ea43ede9cf84a1a27
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3fa02d526bcd4042efa92032551d950b5f553932
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.lasthandoff: 04/16/2018
 |**datatype_mapping_id**|**int**|标识每个唯一的数据类型映射。|  
 |**map_id**|**int**|标识源数据类型。|  
 |**dest_datatype_id**|**int**|标识目标数据类型。|  
-|**dest_precision**|**bigint**|定义目标数据类型，其中的值为 NULL 表示不使用精度，精度和的值**-1**表示将使用的源数据类型的精度。|  
-|**dest_scale**|**int**|定义目标数据类型，其中的值为 NULL 表示不使用小数位数的小数位数和的值**-1**意味着，使用源数据类型的小数位数。|  
-|**dest_length**|**bigint**|定义目标数据类型，其中的值为 NULL 表示不使用长度的长度和的值**-1**意味着，使用源数据类型的长度。|  
+|**dest_precision**|**bigint**|定义目标数据类型，其中的值为 NULL 表示不使用精度，精度和的值 **-1**表示将使用的源数据类型的精度。|  
+|**dest_scale**|**int**|定义目标数据类型，其中的值为 NULL 表示不使用小数位数的小数位数和的值 **-1**意味着，使用源数据类型的小数位数。|  
+|**dest_length**|**bigint**|定义目标数据类型，其中的值为 NULL 表示不使用长度的长度和的值 **-1**意味着，使用源数据类型的长度。|  
 |**dest_nullable**|**bit**|指示映射中的目标列是否允许 NULL 值，其中 NULL 值意味着此定义不是必需的。|  
 |**dest_createparams**|**int**|位图，用于说明适用于每种数据类型的长度、精度和小数位数组合，其中包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = SCALE。<br /><br /> **0x4** = LENGTH。|  
   

@@ -1,30 +1,30 @@
 ---
-title: "Alter 命令 (TMSL) |Microsoft 文档"
-ms.custom: 
+title: Alter 命令 (TMSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e3e12741988f5d1369e96381a54c15f64ec557
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: aee73b9b0754fae9b801c6b66a4f635e7119e0ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-command-tmsl"></a>Alter 命令 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]更改现有对象，但不是其子项，在表格模式下的 Analysis Services 实例上。  如果不存在该对象，该命令将引发错误。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  更改现有对象，但不是其子项，在表格模式下的 Analysis Services 实例上。  如果不存在该对象，该命令将引发错误。  
   
  使用**Alter**命令目标的更新，如同在表上设置一个属性，而无需指定的所有列以及。 此命令是类似于**CreateOrReplace**，但没有无需再次提供完整的对象定义的要求。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  根据对象的请求的结构而有所不同。 **Alter**可与任何以下对象：  
   
- [数据库对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)重命名数据库。  
+ [数据库对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)重命名数据库。  
   
 ```  
 "alter": {   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   }   
 ```  
   
- [数据源对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)重命名的连接，这是数据库的子对象。  
+ [数据源对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)重命名的连接，这是数据库的子对象。  
   
 ```  
 {   
@@ -82,11 +82,11 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables 对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)请参阅**示例 1**下面。  
+ [Tables 对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)请参阅**示例 1**下面。  
   
- [分区对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)请参阅**示例 2**下面。  
+ [分区对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)请参阅**示例 2**下面。  
   
- [角色对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)更改角色对象的属性。  
+ [角色对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)更改角色对象的属性。  
   
 ```  
 {   
@@ -152,7 +152,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>使用情况 （终结点）  
- 语句中使用此命令元素[执行方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)通过以下方式公开的 XMLA 终结点调用：  
+ 语句中使用此命令元素[执行方法&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)通过以下方式公开的 XMLA 终结点调用：  
   
 -   作为 XMLA 窗口中 SQL Server Management Studio (SSMS)  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 01/08/2018
   
  无法从 SSMS 生成用于此命令的现成脚本。 相反，你可以从一个示例开始或编写自己。  
   
- [ \[MS SSAS T\]: QL Server Analysis Services 表格 （SQL Server 技术协议）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文档包括部分 3.1.5.2.2，用于描述 JSON 表格元数据命令和对象的结构。 目前，该文档介绍命令和在 TMSL 脚本中尚未实现的功能。 请参阅主题 ([表格模型脚本语言 &#40;TMSL &#41;引用](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 阐述上支持的功能。  
+ [ \[MS SSAS T\]: QL Server Analysis Services 表格 （SQL Server 技术协议）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文档包括部分 3.1.5.2.2，用于描述 JSON 表格元数据命令和对象的结构。 目前，该文档介绍命令和在 TMSL 脚本中尚未实现的功能。 请参阅主题 ([表格模型脚本语言&#40;TMSL&#41;引用](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 阐述上支持的功能。  
 
 ## <a name="see-also"></a>另请参阅  
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

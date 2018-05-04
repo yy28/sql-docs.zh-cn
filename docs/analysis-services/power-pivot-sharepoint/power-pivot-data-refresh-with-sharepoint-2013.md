@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot 数据刷新与 SharePoint 2013 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot 数据刷新与 SharePoint 2013 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f56a426c24607fd8adb64d87b6ff22172c6e0a3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 Power Pivot 数据刷新
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型刷新设计通过利用 Excel Services 作为主组件，加载和刷新在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新”  和“计划数据刷新” 。  
+  SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型刷新设计通过利用 Excel Services 作为主组件，加载和刷新在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新”  和“计划数据刷新” 。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -67,7 +59,7 @@ SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据�
  **(\*)** 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_interactive_refresh"></a> 交互式数据刷新  
- SharePoint Server 2013 Excel Services 中的交互式或手动数据刷新可以使用原始数据源中的数据来刷新数据模型。 在您通过注册 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器来配置 Excel Services 应用程序并在 SharePoint 模式下运行后，交互式数据刷新将可用。 有关详细信息，请参阅 [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)。  
+ SharePoint Server 2013 Excel Services 中的交互式或手动数据刷新可以使用原始数据源中的数据来刷新数据模型。 在您通过注册 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器来配置 Excel Services 应用程序并在 SharePoint 模式下运行后，交互式数据刷新将可用。 有关详细信息，请参阅[管理 Excel Services 数据模型设置 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)。  
   
 > [!NOTE]  
 >  交互式数据刷新仅可用于在 Excel 2013 中创建的工作簿。 如果你尝试刷新某一 Excel 2010 工作簿，Excel Services 将显示如下错误消息：“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 操作失败: 该工作簿是在较早版本的 Excel 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中创建的，在升级该文件之前无法进行刷新”。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
@@ -131,7 +123,7 @@ SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据�
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../../analysis-services/power-pivot-sharepoint/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 有关详细信息，请参阅 [以操作系统方式执行](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
+ 有关详细信息，请参阅[充当操作系统的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> 计划的数据刷新  
  **计划的数据刷新的关键相关点：**  
@@ -171,7 +163,7 @@ SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据�
  ![管理数据刷新上下文菜单](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "管理数据刷新上下文菜单")  
   
 > [!TIP]  
->  有关从 SharePoint Online 刷新工作簿的信息，请参阅 [使用内置的 Power Pivot 模型从 SharePoint Online 刷新 Excel 工作簿（白皮书）](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx)。  
+>  有关刷新联机工作簿从 SharePoint 的信息，请参阅[具有从 SharePoint Online （白皮书） 的嵌入式 Power Pivot 模型刷新 Excel 工作簿](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中计划的数据刷新体系结构  
  下图总结了 SharePoint 2013 和 SQL Server 2012 SP1 中的数据刷新体系结构。  
@@ -242,7 +234,7 @@ SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据�
 ##  <a name="bkmk_moreinformation"></a> 详细信息  
  [Power Pivot 数据刷新故障排除](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
- [SharePoint 2013 中的 excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076 (v = office.15)。  
+ [SharePoint 2013 中的 excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 Power Pivot 模式下安装 Analysis Services。](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

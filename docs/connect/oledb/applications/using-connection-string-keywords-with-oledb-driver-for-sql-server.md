@@ -23,12 +23,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f4ac4a2231ea983e93c9c418bdd309cf45ed6cc2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 128b31d8ed9b541d47882ace6f9898056c0c4c2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>将连接字符串关键字用于 OLE DB 驱动程序适用于 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +125,7 @@ ms.lasthandoff: 04/16/2018
   
  `quote ::= " | '`  
   
- 属性使用必须符合其作用域中允许的语法。  例如， **WSID**使用大括号 (**{}**) 引号字符和**应用程序名称**使用单 () 或双引号 (**"**) 引号字符。 只有字符串属性可以加引号。 尝试将整数或枚举属性用引号引起来将导致“连接字符串不符合 OLE DB 规范”错误。  
+ 属性使用必须符合其作用域中允许的语法。  例如， **WSID**使用大括号 (**{}**) 引号字符和**应用程序名称**使用单 () 或双精度 (**"**) 引号字符。 只有字符串属性可以加引号。 尝试将整数或枚举属性用引号引起来将导致“连接字符串不符合 OLE DB 规范”错误。  
   
  属性值可以选择放在单引号或双引号内，并且最好这样做。 这样可以避免当值包含非字母数字字符时出现问题。 也可以在值内使用引号字符，只要使用的是双引号。  
   

@@ -23,15 +23,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7eb78b431b77dadfe216db5e30e77e9d5722b2a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 72db28d3ed7197a47f976cf39b9b7f2d2797a7b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述特定层次结构中的每个级别。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  介绍特定层次结构中的每个级别。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_LEVELS**行集包含以下各列。  
@@ -71,13 +71,13 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**LEVEL_NAME**|**DBTYPE_WSTR**|可选。|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**LEVEL_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**LEVEL_ORIGIN**|**DBTYPE_UI2**|（可选）默认限制是实际上在**MD_USER_DEFINED**和**MD_SYSTEM_ENABLED**|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（可选）默认限制是值为 1。 位图，并使用以下有效的值之一：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**LEVEL_VISIBILITY**|**DBTYPE_UI2**|（可选）默认限制是值为 1。 位图，并使用以下值之一：<br /><br /> 1 可见<br /><br /> 2 不可见|  

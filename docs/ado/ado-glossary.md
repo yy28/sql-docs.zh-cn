@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d327b5e991127a533d4b599daf8c52cfb2dba1ba
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 853f20765770afa691717adebe8ef501a15d1ec3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 术语词汇表
 本主题定义与 ADO 相关的术语。
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/18/2018
 ## <a name="b"></a>B
  表中的字段和变量之间的绑定项的映射。 在 ADO 的 Visual c + + 扩展中，**记录集**字段映射到 C/c + + 变量。
 
- 位掩码的数字值供与其他数字值，通常标志中的选项参数或返回值的按位值比较。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中， **&**和**&#124;** c + + 中。
+ 位掩码的数字值供与其他数字值，通常标志中的选项参数或返回值的按位值比较。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中， **&** 和 **&#124;** c + + 中。
 
  例如，ADO **FieldAttributeEnum**值可以用作位掩码确定字段的特性。 假设你想要确定字段是否可更新。 无法使用以下表达式在 Visual Basic 中对此进行测试：`Field.Attributes AND adFldUpdatable`
 

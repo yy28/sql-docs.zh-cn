@@ -18,13 +18,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f994a5602a0aaa6c82b928748c549ae0812eedf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB 仅填充到定义的小数位数。|转换其中转换的数据发送到服务器，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 (从[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 填充尾随仅之前的最大长度的数据中的零**datetime**值。 SQL Server Native Client 9.0 则填充到 9 位数。|  
 |验证 ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端 (从[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 实现的 OLE DB 要求*bScale*中 ICommandWithParameter::SetParameterInfo 以设 DBTYPE_DBTIMESTAMP 秒的小数部分的精度。|  
-|**Sp_columns**存储过程现在返回**"否"**而不是**"否"** IS_NULLABLE 列。|从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])， **sp_columns**存储过程现在返回**"否"**而不是**"否"** IS_NULLABLE 列.|  
+|**Sp_columns**存储过程现在返回 **"否"** 而不是 **"否"** IS_NULLABLE 列。|从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])， **sp_columns**存储过程现在返回 **"否"** 而不是 **"否"** IS_NULLABLE 列.|  
 |SQLSetDescRec、 SQLBindParameter 和 SQLBindCol 现在执行一致性检查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，设置 SQL_DESC_DATA_PTR 不会在 SQLSetDescRec、 SQLBindParameter 或 SQLBindCol 导致任何描述符类型的一致性检查。|  
 |SQLCopyDesc 现在执行描述符一致性检查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，SQLCopyDesc 未执行操作一致性检查特定的记录上设置 SQL_DESC_DATA_PTR 字段时。|  
 |SQLGetDescRec 不再不描述符一致性检查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，当设置了 SQL_DESC_DATA_PTR 字段 SQLGetDescRec 执行描述符一致性检查。 这不是 ODBC 规范和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 以及更高版本所要求的，该一致性检查不再执行。|  

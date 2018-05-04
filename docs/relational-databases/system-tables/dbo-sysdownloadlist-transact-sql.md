@@ -26,12 +26,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77e6f3c548e7ab610b84c68cc1545836cfc02c77
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5825da75cb9d0d89f141e96cb044cf1fe1890271
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +51,6 @@ ms.lasthandoff: 04/16/2018
 |**status**|**tinyint**|作业的状态：<br /><br /> **0** = 不尚未下载<br /><br /> **1** = 成功下载|  
 |**deleted_object_name**|**sysname**|删除的对象的名称。|  
   
- <sup>1</sup> **object_id**列可以是值为**-1**，对应于值为所有的 if **operation_code**列是删除的值。  
+ <sup>1</sup> **object_id**列可以是值为 **-1**，对应于值为所有的 if **operation_code**列是删除的值。  
   
   

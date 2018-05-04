@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 49c258efc97554210dc454dbd01314b5bc4a508e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll Function（SQLFetchScroll 函数）
 **一致性**  
@@ -94,11 +93,11 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|字符串或二进制数据的列返回导致非空白字符或非 NULL 二进制数据截断。 如果它是一个字符串值，它是右侧被截断。|  
-|01S01|行中的错误|提取一个或多个行时出错。<br /><br /> (如果此 SQLSTATE 返回时 ODBC 3*.x*应用程序使用 ODBC 2*.x*驱动程序，则可以忽略它。)|  
+|01S01|行中的错误|提取一个或多个行时出错。<br /><br /> (如果此 SQLSTATE 返回时 ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序，则可以忽略它。)|  
 |01S06|尝试的结果集返回第一个行集之前提取|请求的行集重叠的结果集时 FetchOrientation 为 SQL_FETCH_PRIOR，当前位置已经超出了第一行中，并且当前行数小于或等于行集大小的开始。<br /><br /> 请求的行集重叠的结果集时 FetchOrientation SQL_FETCH_PRIOR、 当前的位置已超出该结果集的末尾，且行集大小为晚于结果集大小的开始。<br /><br /> 请求的行集重叠的结果集时 FetchOrientation 为 SQL_FETCH_RELATIVE，FetchOffset 是一个负数，并且 FetchOffset 绝对值是小于或等于行集大小的开始。<br /><br /> 请求的行集重叠的结果集时 FetchOrientation SQL_FETCH_ABSOLUTE、 FetchOffset 是一个负数，且 FetchOffset 绝对值为晚于结果集大小开始但小于或等于行集大小。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S07|小数部分组成的截断|返回的列的数据被截断。 对于数值数据类型，数字的小数部分被截断。 对于时间、 时间戳，和包含时间组件的 interval 数据类型，时间的小数部分被截断。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|无法转换的结果集中的列的数据值，由指定的数据类型为*TargetType*中**SQLBindCol**。<br /><br /> 第 0 列被绑定了一个数据类型为 SQL_C_BOOKMARK，且 SQL_ATTR_USE_BOOKMARKS 语句属性被设置为 SQL_UB_VARIABLE。<br /><br /> 第 0 列被绑定了一个数据类型为 SQL_C_VARBOOKMARK，和 SQL_ATTR_USE_BOOKMARKS 语句属性未设置为 SQL_UB_VARIABLE。|  
-|07009|无效的描述符索引|该驱动程序是 ODBC 2*.x*驱动程序不支持**SQLExtendedFetch**，和一个列的绑定中指定某个列号了 0。<br /><br /> 第 0 列被绑定，且 SQL_ATTR_USE_BOOKMARKS 语句属性被设置为 SQL_UB_OFF。|  
+|07009|无效的描述符索引|该驱动程序是 ODBC 2 *.x*驱动程序不支持**SQLExtendedFetch**，和一个列的绑定中指定某个列号了 0。<br /><br /> 第 0 列被绑定，且 SQL_ATTR_USE_BOOKMARKS 语句属性被设置为 SQL_UB_OFF。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |22001|字符串数据，右截断|长度可变的书签的列返回被截断。|  
 |22002|需要指示器变量，但未提供|NULL 数据提取了的列中其*StrLen_or_IndPtr*设置**SQLBindCol** (或通过设置 SQL_DESC_INDICATOR_PTR **SQLSetDescField**或**SQLSetDescRec**) 是空指针。|  

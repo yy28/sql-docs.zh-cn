@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89b23ac70a1d698dccac9b12d4f578664c149e19
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6246bfebac2cba917d04a5d585083b1a78544816
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|审核的实体的类类型。 映射到 class_type 写入审核日志，并返回**get_audit_file()**函数。 不可为 null。|  
+|**class_type**|**char(2)**|审核的实体的类类型。 映射到 class_type 写入审核日志，并返回**get_audit_file()** 函数。 不可为 null。|  
 |**class_type_desc**|**nvarchar(120)**|可审核实体的名称。 不可为 null。|  
 |**securable_class_desc**|**nvarchar(120)**|映射到要审核的 class_type 的安全对象。 如果 class_type 不映射到安全对象，则为 NULL。 可以与 sys.dm_audit_actions 中的 class_desc 相关。|  
   

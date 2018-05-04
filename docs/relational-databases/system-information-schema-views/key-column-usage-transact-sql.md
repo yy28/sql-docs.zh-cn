@@ -25,12 +25,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 310840a228c61b2e7fd8234c38e4a5198a9c3706
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a5833eae71a8d26f9f03d78a02581be9d11c3f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ ms.lasthandoff: 04/16/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|约束限定符。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|包含该约束的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
-|**CONSTRAINT_NAME**|**nvarchar(**128**)**|约束名称。|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
-|**TABLE_NAME**|**nvarchar(**128**)**|表名。|  
-|**COLUMN_NAME**|**nvarchar(**128**)**|列名称。|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|约束限定符。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含该约束的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**CONSTRAINT_NAME**|**nvarchar(** 128 **)**|约束名称。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \*** 并使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象的架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|表名。|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|列名称。|  
 |**ORDINAL_POSITION**|**int**|列序号位置。|  
   
 ## <a name="see-also"></a>另请参阅  

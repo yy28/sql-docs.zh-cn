@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9e741b37b167fcb4568fd38fe069224e669cda0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +41,13 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>参数  
- *子查询*  
+ *subquery*  
  SELECT 语句的窗体 SELECT * FROM\<列名称 > [其中\<谓词的列表 >]。  
   
 ## <a name="result-type"></a>结果类型  
  返回**true**如果子查询返回的结果集包含至少一个行; 否则，返回**false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  可以在 EXISTS 前面使用 NOT 关键字：例如 `WHERE NOT EXISTS (<subquery>)`。  
   
  添加到 EXISTS 的子查询参数中的列的列表是无关紧要的；函数仅检查满足条件的行是否存在。  
@@ -70,7 +69,7 @@ WHERE [[Model] = 'Patch kit'
  若要查看此查询返回的相同数据的另一种方法是在关联查看器中打开该模型中，右键单击此项集**修补程序工具包 = 现有**，选择**钻取**选项，然后再选中**仅模型用例**。  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [模型筛选器语法和示例 &#40;Analysis Services-数据挖掘 &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [模型筛选器语法和示例&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

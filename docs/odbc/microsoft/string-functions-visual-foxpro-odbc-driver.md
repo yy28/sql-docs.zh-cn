@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC string functions [ODBC]
 - string functions [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 482c21b4c9f872490ac9a2d36165fdc3fc9d8246
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a5f201eee732fa316873919deaabc4d07610a015
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>字符串函数 （Visual FoxPro ODBC 驱动程序）
 下表列出了 Visual FoxPro ODBC 驱动程序; 支持 ODBC 字符串操作函数当相同的功能的 Visual FoxPro 语法不同于 ODBC 语法，将列等效 Visual FoxPro。  
@@ -37,17 +36,17 @@ ms.lasthandoff: 04/16/2018
 |ASCII *(string_exp)*|ASC *(string_exp)*|  
 |CHAR *（代码）*|CHR *(string_exp)*|  
 |CONCAT *(string_exp1，string_exp2)*|*string_exp1 + string_exp2*|  
-|差异*(string_exp1，string_exp2)*||  
-|插入*(string_exp1，开始、 长度、 string_exp2)*|内容*(string_exp1，开始、 长度、 string_exp2)*|  
-|LCASE *(string_exp)*|较低*(string_exp)*|  
-|左*(string_exp，计数)*||  
-|长度*(string_exp)*|LEN *(string_exp)*|  
+|差异 *(string_exp1，string_exp2)*||  
+|插入 *(string_exp1，开始、 长度、 string_exp2)*|内容 *(string_exp1，开始、 长度、 string_exp2)*|  
+|LCASE *(string_exp)*|较低 *(string_exp)*|  
+|左 *(string_exp，计数)*||  
+|长度 *(string_exp)*|LEN *(string_exp)*|  
 |LTRIM *(string_exp)*||  
-|重复*(string_exp，计数)*|复制*(string_exp，计数)*|  
-|替换*(string_exp1，string_exp2，string_exp3)*|STRTRAN *(string_exp1，string_exp2，string_exp3)*|  
-|右*(string_exp，计数)*||  
+|重复 *(string_exp，计数)*|复制 *(string_exp，计数)*|  
+|替换 *(string_exp1，string_exp2，string_exp3)*|STRTRAN *(string_exp1，string_exp2，string_exp3)*|  
+|右 *(string_exp，计数)*||  
 |RTRIM *(string_exp)*||  
 |SOUNDEX *(string_exp)*||  
 |空间*（计数）*||  
-|子字符串*(string_exp，开始，长度)*|SUBSTR *(string_exp，开始，长度)*|  
-|UCASE *(string_exp)*|上部*(string_exp)*|
+|子字符串 *(string_exp，开始，长度)*|SUBSTR *(string_exp，开始，长度)*|  
+|UCASE *(string_exp)*|上部 *(string_exp)*|

@@ -24,12 +24,11 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fb7bcbed7f49c4b48adb5317f2e418f37d5264e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f72bc7f10c9f049ec23e8713defa6811a4b864a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
  标识挂起的架构更改。 *schemaversion*是**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)以列出了对该发布的挂起的架构更改。  
   
  [  **@status=** ] *****状态*****  
- 是否将跳过挂起的架构更改。 *状态*是**nvarchar(10)**默认值为**active**。 如果值*状态*是**跳过**，则将不会复制所选的架构更改。  
+ 是否将跳过挂起的架构更改。 *状态*是**nvarchar(10)** 默认值为**active**。 如果值*状态*是**跳过**，则将不会复制所选的架构更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

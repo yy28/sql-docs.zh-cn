@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6bba653e598269ae66fa3b81db240efff3608ce6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f215500f095fc9f566861cb0ebffedac1416c462
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 方法示例 (JScript)
 此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法具有指定名称创建一条新记录。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AddNewJS.asp**。  

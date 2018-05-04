@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad7d7746c1bd436a6473d7d25921c7a3437e75a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +76,8 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**授权者**|**sysname**|已授予此权限的数据库用户名**TABLE_NAME**到列出**被授权者**。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列始终是相同**TABLE_OWNER**。 此字段始终返回值。 此外，授权者该列可能是数据库所有者 (**TABLE_OWNER**) 或用户向其数据库所有者授予权限的 GRANT 语句中使用 WITH GRANT OPTION 子句。|  
 |**被授权者**|**sysname**|已被授予此权限的数据库用户名**TABLE_NAME**通过列出**授权者**。 此字段始终返回值。|  
-|**特权**|**varchar(**32**)**|可用的表权限之一。 表权限可以是以下值之一或定义实现时数据源支持的其他值：<br /><br /> 选择 =**被授权者**可以检索的一个或多个列的数据。<br /><br /> 插入 =**被授权者**可以为一个或多个列的新行提供数据。<br /><br /> 更新 =**被授权者**可以修改为一个或多个列的现有数据。<br /><br /> 删除 =**被授权者**可以从表中删除行。<br /><br /> 引用 =**被授权者**可以引用外部表中主键的键/外键关系中的列。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，主键/外键关系是使用表约束定义的。<br /><br /> 提供给操作的作用域**被授权者**通过特定的表权限是数据源相关。 例如，更新权限可能会使**被授权者**若要为其更新在一个数据源的表中的所有列和仅这些列**授权者**另一个数据源具有更新权限。|  
-|**IS_GRANTABLE**|**varchar (**3**)**|指示是否**被授权者**允许向其他用户授予权限。 这常常称为“授予再授予”权限。 可以是 YES、NO 或 NULL。 未知的（或 NULL）值指不适用“授予再授予”的数据源。|  
+|**特权**|**varchar(** 32 **)**|可用的表权限之一。 表权限可以是以下值之一或定义实现时数据源支持的其他值：<br /><br /> 选择 =**被授权者**可以检索的一个或多个列的数据。<br /><br /> 插入 =**被授权者**可以为一个或多个列的新行提供数据。<br /><br /> 更新 =**被授权者**可以修改为一个或多个列的现有数据。<br /><br /> 删除 =**被授权者**可以从表中删除行。<br /><br /> 引用 =**被授权者**可以引用外部表中主键的键/外键关系中的列。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，主键/外键关系是使用表约束定义的。<br /><br /> 提供给操作的作用域**被授权者**通过特定的表权限是数据源相关。 例如，更新权限可能会使**被授权者**若要为其更新在一个数据源的表中的所有列和仅这些列**授权者**另一个数据源具有更新权限。|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|指示是否**被授权者**允许向其他用户授予权限。 这常常称为“授予再授予”权限。 可以是 YES、NO 或 NULL。 未知的（或 NULL）值指不适用“授予再授予”的数据源。|  
   
 ## <a name="remarks"></a>注释  
  返回对结果进行排序的**TABLE_QUALIFIER**， **TABLE_OWNER**， **TABLE_NAME**，和**特权**。  

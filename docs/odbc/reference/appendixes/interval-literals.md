@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval literals [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f119398650dc537ce553268c99ed34b0788b6601
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 976a56ea43eb5cb0f6161cc4c3cd4b7e735061ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-literals"></a>间隔文本
 ODBC 要求所有驱动程序支持 SQL_CHAR 或 SQL_VARCHAR 数据类型转换为所有 C interval 数据类型。 如果基础数据源不支持 interval 数据类型，但是，需要知道 SQL_CHAR 字段中的值的正确格式，才能支持这些转换该驱动程序。 同样，ODBC 要求应具有任何 ODBC C 类型可转换为 SQL_CHAR 或 SQL_VARCHAR，使驱动程序需要知道在字符字段中存储的时间间隔的何种格式。 本部分介绍驱动程序编写器需要使用转换到或从 C interval 数据类型的过程中验证 SQL_CHAR 字段的间隔文本的语法。  

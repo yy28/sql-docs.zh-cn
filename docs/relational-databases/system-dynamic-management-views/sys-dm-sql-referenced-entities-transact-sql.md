@@ -26,13 +26,12 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d6d384e280defcef14dd93b64ae47b604ecc6466
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sys.dm_sql_referenced_entities (
  *< Referencing_class >* :: = {对象 |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  指定的引用实体的类。 每个语句只能指定一个类。  
   
- *< referencing_class >*是**nvarchar(60)**。  
+ *< referencing_class >* 是**nvarchar(60)**。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -103,7 +102,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象用于 SELECT * 子句中（仅限对象级）。|  
 |is_all_columns_found|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 可以找到对象的所有列依赖关系。<br /><br /> 0 = 找不到对象的列依赖关系。|
 |is_insert_all|**bit**|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 没有列列表 （仅对象级） 在 INSERT 语句中使用对象。|  
-|is_incomplete|**bit**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过 SP2 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象或列已绑定错误，但未完成。|
+|is_incomplete|**bit**|**适用范围**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象或列已绑定错误，但未完成。|
   
 ## <a name="exceptions"></a>异常  
  在满足以下任一条件时将返回空的结果集：  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - backward compatibility [ODBC], application and driver compatibility
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42e7afdb31f9eb9a4cb59a0bfcfdc37b165f179d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 29f31b920f23a035f78ea6fe62cdccd3f53183fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-and-driver-compatibility"></a>应用程序和驱动程序兼容性
 ODBC 应用程序和驱动程序都属于的除了其版本的类别数。 一些这些应用程序是与某些驱动程序; 不兼容在其他情况下，此应用程序或驱动程序的类型可能会对它们之间的向后兼容性问题影响。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
@@ -20,15 +20,14 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f33f43451d88d69e47f5f647fa2b5e10eb89a9db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5a34db1972437578b2f38e9c42ecec8afcbb9d69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 映射
-在应用程序调用**SQLSetScrollOptions**到 ODBC 3*.x*驱动程序和驱动程序不支持**SQLSetScrollOptions**，对的调用  
+在应用程序调用**SQLSetScrollOptions**到 ODBC 3 *.x*驱动程序和驱动程序不支持**SQLSetScrollOptions**，对的调用  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -106,4 +105,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      与 *\*ValuePtr*设置为*RowsetSize*中的参数**SQLSetScrollOptions**。  
   
     > [!NOTE]  
-    >  当驱动程序管理器映射**SQLSetScrollOptions**为应用程序使用 ODBC 3*.x*驱动程序不支持**SQLSetScrollOptions**，驱动程序管理器将设置 SQL_ROWSET_SIZE 语句选项，不 SQL_ATTR_ROW_ARRAY_SIZE 语句特性，为*RowsetSize*中的参数**SQLSetScrollOption**。 因此， **SQLSetScrollOptions**按调用提取多行时，应用程序不使用**SQLFetch**或**SQLFetchScroll**。 仅当通过调用提取多个行时，才可以使用它**SQLExtendedFetch**。
+    >  当驱动程序管理器映射**SQLSetScrollOptions**为应用程序使用 ODBC 3 *.x*驱动程序不支持**SQLSetScrollOptions**，驱动程序管理器将设置 SQL_ROWSET_SIZE 语句选项，不 SQL_ATTR_ROW_ARRAY_SIZE 语句特性，为*RowsetSize*中的参数**SQLSetScrollOption**。 因此， **SQLSetScrollOptions**按调用提取多行时，应用程序不使用**SQLFetch**或**SQLFetchScroll**。 仅当通过调用提取多个行时，才可以使用它**SQLExtendedFetch**。

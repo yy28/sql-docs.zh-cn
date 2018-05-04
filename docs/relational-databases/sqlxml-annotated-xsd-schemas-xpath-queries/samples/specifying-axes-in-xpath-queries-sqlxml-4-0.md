@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,13 +24,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5eb440c409e7819d35b90b335004e9be7bb69c51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69549a2df3ae93e5f87777eaa70bf68bf76b447e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定轴 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,13 +40,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>示例  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. 检索上下文节点的子元素  
- 下面的 XPath 查询选择所有**\<联系人 >**的上下文节点的子元素：  
+ 下面的 XPath 查询选择所有**\<联系人 >** 的上下文节点的子元素：  
   
 ```  
 /child::Contact  
 ```  
   
- 在查询中，`child`是轴和`Contact`是节点的测试 (true`Contact`是**\<元素 >**节点，因为\<元素 > 与关联的主节点类型`child`轴)。  
+ 在查询中，`child`是轴和`Contact`是节点的测试 (true`Contact`是**\<元素 >** 节点，因为\<元素 > 与关联的主节点类型`child`轴)。  
   
  `child` 轴为默认轴。 因此，可以将该查询编写为：  
   
@@ -93,13 +91,13 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. 检索上下文节点的孙级  
- 下面的 XPath 查询选择所有**\<顺序 >**元素的子级**\<客户 >**元素的上下文节点的子级：  
+ 下面的 XPath 查询选择所有**\<顺序 >** 元素的子级**\<客户 >** 元素的上下文节点的子级：  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- 在查询中，`child`是轴和`Customer`和`Order`节点测试是 (这些节点测试为 TRUE，如果 Customer 和 Order **\<元素 >**节点，因为 **\<元素 >**节点是主节点进行**子**轴)。 为每个节点匹配**\<客户 >**、 匹配节点**\<订单 >**添加到的结果。 仅**\<顺序 >**结果集中返回。  
+ 在查询中，`child`是轴和`Customer`和`Order`节点测试是 (这些节点测试为 TRUE，如果 Customer 和 Order **\<元素 >** 节点，因为 **\<元素 >** 节点是主节点进行**子**轴)。 为每个节点匹配**\<客户 >**、 匹配节点**\<订单 >** 添加到的结果。 仅**\<顺序 >** 结果集中返回。  
   
  **子**轴是默认设置。 因此，可以将该查询指定为：  
   
@@ -168,10 +166,10 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 如果 XPath 查询将指定为`Customer/Order/OrderDetail`，从每个节点匹配**\<客户 >**查询导航到其**\<顺序 >**元素。 和用于每个节点匹配**\<顺序 >**，查询将节点添加 **\<OrderDetail >**到的结果。 仅 **\<OrderDetail >**结果集中返回。  
+ 如果 XPath 查询将指定为`Customer/Order/OrderDetail`，从每个节点匹配**\<客户 >** 查询导航到其**\<顺序 >** 元素。 和用于每个节点匹配**\<顺序 >**，查询将节点添加 **\<OrderDetail >** 到的结果。 仅 **\<OrderDetail >** 结果集中返回。  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. 使用 . 若要指定父轴  
- 以下查询检索所有**\<顺序 >**与父元素**\<客户 >**具有元素**CustomerID**属性值为 1。 该查询使用**子**中要查找的父级的谓词的轴**\<顺序 >**元素。  
+ 以下查询检索所有**\<顺序 >** 与父元素**\<客户 >** 具有元素**CustomerID**属性值为 1。 该查询使用**子**中要查找的父级的谓词的轴**\<顺序 >** 元素。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -190,7 +188,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 > [!NOTE]  
->  XPath 查询`/Order[../@CustomerID="1"]`将返回错误，因为不存在的父**\<顺序 >**。 尽管可能有映射架构中包含的元素**\<顺序 >**，XPath 未开始在以上任意语言; 因此， **\<顺序 >**被视为可在文档中的顶级元素类型。  
+>  XPath 查询`/Order[../@CustomerID="1"]`将返回错误，因为不存在的父**\<顺序 >**。 尽管可能有映射架构中包含的元素**\<顺序 >**，XPath 未开始在以上任意语言; 因此， **\<顺序 >** 被视为可在文档中的顶级元素类型。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
@@ -255,13 +253,13 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. 指定 attribute 轴  
- 下面的 XPath 查询选择所有**\<客户 >**的上下文节点的子元素**CustomerID**属性值为 1:  
+ 下面的 XPath 查询选择所有**\<客户 >** 的上下文节点的子元素**CustomerID**属性值为 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 谓词中`attribute::CustomerID`，`attribute`是轴和`CustomerID`是节点的测试 (如果`CustomerID`是节点测试为 TRUE，属性，因为**\<属性 >**节点是的主节点`attribute`轴)。  
+ 谓词中`attribute::CustomerID`，`attribute`是轴和`CustomerID`是节点的测试 (如果`CustomerID`是节点测试为 TRUE，属性，因为**\<属性 >** 节点是的主节点`attribute`轴)。  
   
  可以指定 `attribute` 轴的快捷方式 (@)，因为 `child` 是默认轴，因此可以在查询中省略它：  
   

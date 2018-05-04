@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 231e911d1438a16d4b1a2db234e895f8652ea375
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81ecc4cba94db62ff6f7fb6960d989a205ca8eae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |size|**nvarchar(18)**|文件大小 (MB)。|  
 |**最大大小**|**nvarchar(18)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(18)**|文件的增量。 这表示添加到每个时间新空间所需的文件的空间量。|  
-|**使用情况**|**varchar(9)**|文件用法。 对于数据文件，则这是**仅限数据**和日志文件的值是**'仅 log'**。|  
+|**使用情况**|**varchar(9)**|文件用法。 对于数据文件，则这是**仅限数据**和日志文件的值是 **'仅 log'**。|  
   
 ## <a name="remarks"></a>注释  
  **状态**结果中的列集哪些选项已设置为 ON 的数据库中的报表。 所有数据库选项不会都报告通过**状态**列。 若要查看当前的数据库选项设置的完整列表，请使用**sys.databases**目录视图。  

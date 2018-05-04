@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLMoreResults function [ODBC], multiple results
 - row counts [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e408c76354f6a4c958ebd209bc3778d0175dcef0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 373f81c453799a8c99d906671fc72a4f7faea3f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-results"></a>多个结果
 A*结果*是内容的源返回的数据后执行的语句。 ODBC 具有两种类型的结果： 结果集和行计数。 *行计数*被删除，或 insert 语句的更新，受影响的行数。 批中所述[SQL 语句的批处理](../../../odbc/reference/develop-app/batches-of-sql-statements.md)，可以生成多个结果。  

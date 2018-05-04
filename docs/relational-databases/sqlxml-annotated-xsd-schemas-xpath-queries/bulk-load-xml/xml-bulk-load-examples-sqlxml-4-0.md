@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -38,13 +37,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c02932c224c95c0977347e0d770b7e11453608cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大容量加载示例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +206,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 将 XML 数据大容量加载到多个表中  
- 在此示例中，XML 文档组成**\<客户 >**和**\<顺序 >**元素。  
+ 在此示例中，XML 文档组成**\<客户 >** 和**\<顺序 >** 元素。  
   
 ```xml  
 <ROOT>  
@@ -239,7 +237,7 @@ End Function
   
 -   CustOrder （OrderID，CustomerID）  
   
- 以下 XSD 架构定义这些表的 XML 视图。 该架构指定之间的父-子关系**\<客户 >**和**\<顺序 >**元素。  
+ 以下 XSD 架构定义这些表的 XML 视图。 该架构指定之间的父-子关系**\<客户 >** 和**\<顺序 >** 元素。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -278,7 +276,7 @@ End Function
 </xsd:schema>  
 ```  
   
- XML 大容量加载使用主键/外键关系上面指定之间 **\<Cust >**和 **\<CustOrder >**元素与大容量加载到这两个表的数据.  
+ XML 大容量加载使用主键/外键关系上面指定之间 **\<Cust >** 和 **\<CustOrder >** 元素与大容量加载到这两个表的数据.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>测试示例大容量加载  
   
@@ -391,7 +389,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 该架构指定**\<顺序 >**具有元素**\<产品 >**子元素。 **\<顺序 >**元素将映射到 Ord 表和**\<产品 >**元素映射到数据库中的产品表。 在指定的链关系**\<产品 >**元素标识由 OrderDetail 表来表示 M:N 关系。 （一个订单可能包含许多产品，而一个产品可能包含在许多订单中。）  
+ 该架构指定**\<顺序 >** 具有元素**\<产品 >** 子元素。 **\<顺序 >** 元素将映射到 Ord 表和**\<产品 >** 元素映射到数据库中的产品表。 在指定的链关系**\<产品 >** 元素标识由 OrderDetail 表来表示 M:N 关系。 （一个订单可能包含许多产品，而一个产品可能包含在许多订单中。）  
   
  当您使用此架构大容量加载 XML 文档时，记录将添加到 Ord、Product 和 OrderDetail 表中。  
   
@@ -853,10 +851,10 @@ End Sub
 </xsd:schema>  
 ```  
   
- 此架构标识 Cust 表的溢出列 (OverflowColumn)。 因此，所有未用完的 XML 数据为每个**\<客户 >**元素添加到此列。  
+ 此架构标识 Cust 表的溢出列 (OverflowColumn)。 因此，所有未用完的 XML 数据为每个**\<客户 >** 元素添加到此列。  
   
 > [!NOTE]  
->  所有抽象元素 (元素组成的**抽象 ="true"**指定)，并且所有禁止属性 (属性为其**禁止 ="true"**指定) 被视为溢出通过 XML 大容量负载测试和添加到的 overflow 列中，如果指定。 （否则，将忽略它们。）  
+>  所有抽象元素 (元素组成的**抽象 ="true"** 指定)，并且所有禁止属性 (属性为其**禁止 ="true"** 指定) 被视为溢出通过 XML 大容量负载测试和添加到的 overflow 列中，如果指定。 （否则，将忽略它们。）  
   
 #### <a name="to-test-a-working-sample"></a>测试工作示例  
   
@@ -1251,9 +1249,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. 在 xml 数据类型列中执行大容量加载  
- 如果映射架构指定[xml 数据类型](../../../t-sql/xml/xml-transact-sql.md)列使用**sql: datatype ="xml"**批注，XML 大容量加载可以将映射的字段的 XML 子元素从源文档复制到此列。  
+ 如果映射架构指定[xml 数据类型](../../../t-sql/xml/xml-transact-sql.md)列使用**sql: datatype ="xml"** 批注，XML 大容量加载可以将映射的字段的 XML 子元素从源文档复制到此列。  
   
- 请看以下 XSD 架构，它映射 AdventureWorks 示例数据库中 Production.ProductModel 表的视图。 在此表中的 CatalogDescription 字段**xml**数据类型映射到 **\<Desc >**元素使用**sql:field**和**sql:数据类型 ="xml"**批注。  
+ 请看以下 XSD 架构，它映射 AdventureWorks 示例数据库中 Production.ProductModel 表的视图。 在此表中的 CatalogDescription 字段**xml**数据类型映射到 **\<Desc >** 元素使用**sql:field**和**sql:数据类型 ="xml"** 批注。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

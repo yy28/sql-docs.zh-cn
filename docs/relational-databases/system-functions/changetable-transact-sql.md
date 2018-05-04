@@ -25,13 +25,12 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5023989a36f6118532dad0b110d03aaabf381242
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ CHANGETABLE (
  *last_sync_version*  
  获取更改时，调用应用程序必须指定所需更改的起始点。 last_sync_version 指定该起始点。 该函数返回在该版本之后更改的所有行的信息。 应用程序将查询以接收版本大于 last_sync_version 的更改。  
   
- 通常情况下，它获取更改之前，应用程序将调用**change_tracking_current_version （)**以获取版本将用于下一步时无需进行更改。 因此，该应用程序不必解释或了解实际值。  
+ 通常情况下，它获取更改之前，应用程序将调用**change_tracking_current_version （)** 以获取版本将用于下一步时无需进行更改。 因此，该应用程序不必解释或了解实际值。  
   
  由于 last_sync_version 是由调用应用程序获取的，因此该应用程序必须保持该值。 如果应用程序丢失该值，则需要重新初始化数据。  
   

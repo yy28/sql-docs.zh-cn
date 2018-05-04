@@ -28,12 +28,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4c86f019ed7b34ceab785c8f78205c5aed2d709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>数据库镜像的 sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**database_id**|**int**|此行对应的数据库的 ID。|  
 |**file_id**|**int**|页所在文件的 ID。|  
 |**page_id**|**bigint**|文件中页的 ID。|  
-|**error_type**|**int**|错误类型。 值可以是：<br /><br /> **-**1 = 所有硬件 823 错误<br /><br /> 1 = 824 错误的校验和或残缺的页 （如错误的页 ID) 以外的错误<br /><br /> 2 = 错误的校验和<br /><br /> 3 = 页撕裂|  
+|**error_type**|**int**|错误类型。 值可以是：<br /><br /> **-** 1 = 所有硬件 823 错误<br /><br /> 1 = 824 错误的校验和或残缺的页 （如错误的页 ID) 以外的错误<br /><br /> 2 = 错误的校验和<br /><br /> 3 = 页撕裂|  
 |**page_status**|**int**|页修复尝试的状态：<br /><br /> 2 = 排队等候来自伙伴的请求。<br /><br /> 3 = 请求已发送到伙伴。<br /><br /> 4 = 排队等候自动页修复（已收到来自伙伴的响应）。<br /><br /> 5 = 自动页修复已成功，页应当可用。<br /><br /> 6 = 无法修复页。 这表示在页修复尝试期间发生了错误，例如，可能是由于伙伴上的页也已损坏、已经断开与伙伴的连接或网络发生故障。 此状态不是最终状态；如果在此页上再次发现损坏，则将再次请求伙伴上的该页。|  
 |**modification_time**|**datetime**|页状态最后发生更改的时间。|  
   

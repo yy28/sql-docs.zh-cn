@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ded2bda56c0fee5012e451dbee55a89cfa32e16a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b4aaf614ac165d7ca867b3bf394ea942a992e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decimal-digits"></a>十进制数字
 *十进制数字*的 decimal 和 numeric 数据类型定义为最多的到数据的小数位数或小数点右边的位数。 对于近似的浮点数字列或参数，刻度是小数点的未定义的这是小数点的因为不固定右侧的位数。 为日期时间或间隔包含秒数部分的数据，十进制数字被指数据的秒部分在小数点右侧的数字个数。  

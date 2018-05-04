@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f9296b1ff21ee5412aa83f7a5edc2736793777f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>参数  
   *command_string*   
- 包含要传递到操作系统的命令的字符串。 *command_string*是**varchar （8000)**或**nvarchar （4000)**，无默认值。 *command_string*不能包含多个集的两个双引号。 如果任何空格都存在于文件路径或程序中引用的名称，则需要一对引号*command_string*。 如果不方便使用内含的空格，则可考虑使用 FAT 8.3 文件名作为解决方法。  
+ 包含要传递到操作系统的命令的字符串。 *command_string*是**varchar （8000)** 或**nvarchar （4000)**，无默认值。 *command_string*不能包含多个集的两个双引号。 如果任何空格都存在于文件路径或程序中引用的名称，则需要一对引号*command_string*。 如果不方便使用内含的空格，则可考虑使用 FAT 8.3 文件名作为解决方法。  
   
  **no_output**  
  可选参数，指定不应向客户端返回任何输出。  
@@ -63,7 +62,7 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- 在返回的行**nvarchar （255)**列。 如果**no_output**使用选项，就将返回仅以下：  
+ 在返回的行**nvarchar （255)** 列。 如果**no_output**使用选项，就将返回仅以下：  
   
 ```  
 The command(s) completed successfully.  

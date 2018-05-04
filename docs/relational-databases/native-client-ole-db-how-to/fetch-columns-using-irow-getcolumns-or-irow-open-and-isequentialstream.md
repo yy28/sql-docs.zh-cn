@@ -20,13 +20,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1dd7be5820756c39123425168f6ecb39bfbad2ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: faebedb647ddf1d227b4cb7230afedbb8778d598
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,13 +42,13 @@ ms.lasthandoff: 04/16/2018
   
 2.  执行命令 (在此示例中， **ICommandExecute::Execute()** IID_IRow 已调用)。  
   
-3.  提取列的数据使用**IRow::Open()**或**IRow::GetColumns()**。  
+3.  提取列的数据使用**IRow::Open()** 或**IRow::GetColumns()**。  
   
-    -   **IRow::Open()**可用来打开**ISequentialStream**所在的行。 指定 DBGUID_STREAM 以指示该列包含二进制数据的流 (**IStream**或**ISequentialStream**用于从列读取的数据)。  
+    -   **IRow::Open()** 可用来打开**ISequentialStream**所在的行。 指定 DBGUID_STREAM 以指示该列包含二进制数据的流 (**IStream**或**ISequentialStream**用于从列读取的数据)。  
   
-    -   如果**IRow::GetColumns()**使用时， **pData** DBCOLUMNACCESS 结构元素设置为指向流的对象。  
+    -   如果**IRow::GetColumns()** 使用时， **pData** DBCOLUMNACCESS 结构元素设置为指向流的对象。  
   
-4.  使用**ISequentialStream::Read()**重复以读取到使用者缓冲区中的指定的字节数。  
+4.  使用**ISequentialStream::Read()** 重复以读取到使用者缓冲区中的指定的字节数。  
   
 ## <a name="example"></a>範例  
  此示例显示如何使用 IRow 提取单行。 在此示例中，将一次从该行中检索一列。 此示例演示了 IRow::Open() 和 IRow::GetColumns() 的用法。 为读取列数据，示例中使用了 ISequentialStream::Read。  

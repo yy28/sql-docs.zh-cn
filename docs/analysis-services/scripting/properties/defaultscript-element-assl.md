@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7560b3ce0fe03700f73be4d0ef34817c03619950
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f55d756683b882ca552a6e71c726166b3606fda3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defaultscript-element-assl"></a>DefaultScript 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]标识默认[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)中的元素[mdxscript 被](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  标识默认[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)中的元素[mdxscript 被](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|Boolean|  
 |默认值|**True**|  
@@ -61,14 +61,14 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  值设置**DefaultScript**到**True**为一个脚本设置的值**DefaultScript**到**False**对于所有其他**MdxScript**中的元素**mdxscript 被**集合。  
   
  对应于的父元素**DefaultScript**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MdxScript>。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

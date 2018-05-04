@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8041914733509d89ed6d17084ae30df5817e3505
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c1f28e6a594a97882bb122f310d77f857414fc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ ms.lasthandoff: 04/16/2018
 |**autogen_sync_procs**|**bit**|指定是否在发布服务器中为立即更新订阅生成同步存储过程。 **1**意味着生成在发布服务器。 *不支持用于非 SQL 发布服务器。*|  
 |**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。 如果**0**，快照文件存储在指定的备用位置*alternate_snapshot_folder*。 如果**1**，可以在默认文件夹中找到快照文件。|  
 |**alt_snapshot_folder**|**nvarchar(510)**|指定快照的备用文件夹的位置。|  
-|**pre_snapshot_script**|**nvarchar(510)**|指定指向的指针**.sql**文件位置。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
-|**post_snapshot_script**|**nvarchar(510)**|指定指向的指针**.sql**文件位置。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
+|**pre_snapshot_script**|**nvarchar(510)**|指定指向的指针 **.sql**文件位置。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
+|**post_snapshot_script**|**nvarchar(510)**|指定指向的指针 **.sql**文件位置。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
 |**compress_snapshot**|**bit**|指定写入到快照*alt_snapshot_folder*位置是压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 **0**指定不要压缩快照。|  
 |**ftp_address**|**sysname**|分发服务器的 FTP 服务的网络地址。 指定发布快照文件所在的位置以供分发代理拾取。|  
 |**ftp_port**|**int**|分发服务器的 FTP 服务的端口号。 指定的发布快照文件所在的位置来选取的分发代理|  

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fa04e87ef14c0a863cbace5e2dfa41a31ec2c7a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6b1ebbf5aaed5145b1b360423528e3fa01186cb5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML 托管类执行 DiffGram
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- **\<之前 >**块包括**\<客户 >**元素 (**diffgr: id ="Customer1"**)。  **\<DataInstance >**块包含相应**\<客户 >**具有相同的元素**id**。**\<客户 >**中的元素 **\<NewDataSet >**还指定**diffgr:hasChanges ="修改"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr:hasChanges**属性未指定，DiffGram 处理逻辑会忽略此元素，则不执行任何更新。  
+ **\<之前 >** 块包括**\<客户 >** 元素 (**diffgr: id ="Customer1"**)。 **\<DataInstance >** 块包含相应**\<客户 >** 具有相同的元素**id**。**\<客户 >** 中的元素 **\<NewDataSet >** 还指定**diffgr:hasChanges ="修改"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr:hasChanges**属性未指定，DiffGram 处理逻辑会忽略此元素，则不执行任何更新。  
   
  以下是 C# 教程应用程序的代码演示如何使用 SQLXML 托管类来执行上述 DiffGram 并更新两个表 (Cust，Ord) 还将创建在**tempdb**数据库。  
   

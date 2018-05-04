@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2a3a7f8e9cbfcb6791cee28bb412be0ff51fc5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 362d3ec30f8ec8eb2d5b9f21994454421f8ce816
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;源数据查询&gt;-OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
 ```  
   
 ## <a name="arguments"></a>参数  
- *provider_name*  
+ provider_name  
  OLE DB 访问接口名称。  
   
  *provider_string*  
@@ -51,7 +50,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  一个返回行集的查询语法。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  数据挖掘提供程序将通过使用建立到数据源对象的连接*provider_name*和*provider_string* ，会执行中指定的查询*query_syntax*源数据中检索行集。  
   
 ## <a name="examples"></a>示例  
@@ -67,8 +66,8 @@ OPENROWSET
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#60; 源数据查询 &#62;](../dmx/source-data-query.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [&#60;源数据查询&#62;](../dmx/source-data-query.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

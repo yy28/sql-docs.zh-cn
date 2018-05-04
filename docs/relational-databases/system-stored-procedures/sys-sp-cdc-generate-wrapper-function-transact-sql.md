@@ -27,12 +27,11 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a8049558f764d0d135984ec7d00cab06dbb5abd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b2d86105f6ebe44865a0a31d3eedfefe4838bfe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sys.sp_cdc_generate_wrapper_function
  一个标志位，指示生成的过程是否将提交时间等于高端点的更改包括在提取间隔内。 *high_end_pt_flag*是**位**和具有默认值为 1，这指示应包含终结点。 值为 0 表示所有提交时间将严格小于高端点。  
   
  [ @column_list=] '*column_list*  
- 将包括在由包装函数返回的结果集中的捕获列的列表。 *column_list*是**nvarchar (max)**和默认值为 NULL。 指定 NULL 时，将包括所有捕获列。  
+ 将包括在由包装函数返回的结果集中的捕获列的列表。 *column_list*是**nvarchar (max)** 和默认值为 NULL。 指定 NULL 时，将包括所有捕获列。  
   
  [ @update_flag_list=] '*update_flag_list*  
- 包含的列的列表，在由包装函数返回的结果集中将为这些列包括一个更新标志。 *update_flag_list*是**nvarchar (max)**和默认值为 NULL。 指定 NULL 时，不包括更新标志。  
+ 包含的列的列表，在由包装函数返回的结果集中将为这些列包括一个更新标志。 *update_flag_list*是**nvarchar (max)** 和默认值为 NULL。 指定 NULL 时，不包括更新标志。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

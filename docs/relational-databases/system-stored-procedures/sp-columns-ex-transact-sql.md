@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 034955aad1d0ad90f78b36704c6d202a23176ad2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 765426f766bbccc92fa1e0558163ed724af4dd0c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,19 +80,19 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**TABLE_NAME**|**sysname**|表或视图名称。 此字段始终返回值。|  
 |**COLUMN_NAME**|**sysname**|列名称，为每个列的**TABLE_NAME**返回。 此字段始终返回值。|  
 |**DATA_TYPE**|**int**|与 ODBC 类型指示符对应的整数值。 如果是无法映射到 ODBC 类型的数据类型，则该值为 NULL。 在中返回的本机数据类型名称**TYPE_NAME**列。|  
-|**TYPE_NAME**|**varchar (**13**)**|表示数据类型的字符串。 基础 DBMS 提供此数据类型的名称。|  
+|**TYPE_NAME**|**varchar (** 13 **)**|表示数据类型的字符串。 基础 DBMS 提供此数据类型的名称。|  
 |**COLUMN_SIZE**|**int**|有效数字位数。 返回值**精度**列是以 10 为基数。|  
 |**BUFFER_LENGTH**|**int**|数据的传输大小。1|  
 |**DECIMAL_DIGITS**|**int**|小数点右边的数字位数。|  
 |**NUM_PREC_RADIX**|**int**|数字数据类型的基数。|  
 |**可以为 NULL**|**int**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
-|**备注**|**varchar (**254**)**|该字段总是返回 NULL。|  
-|**COLUMN_DEF**|**varchar (**254**)**|列的默认值。|  
+|**备注**|**varchar (** 254 **)**|该字段总是返回 NULL。|  
+|**COLUMN_DEF**|**varchar (** 254 **)**|列的默认值。|  
 |**SQL_DATA_TYPE**|**int**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 此列等同于**DATA_TYPE**列中，除**datetime**和 SQL 92**间隔**数据类型。 该列始终返回值。|  
 |**SQL_DATETIME_SUB**|**int**|子类型代码**datetime**和 SQL 92**间隔**数据类型。 对于其他数据类型，该列返回 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|字符或整数数据类型的列的最大长度（字节）。 对于所有其他数据类型，该列返回 NULL。|  
 |**ORDINAL_POSITION**|**int**|列在表中的序号位置。 表中的第一列为 1。 该列始终返回值。|  
-|**IS_NULLABLE**|**varchar (**254**)**|表中的列的为 Null 性。 根据 ISO 规则确定为 Null 性。 遵从 ISO SQL 标准的 DBMS 不能返回空字符串。<br /><br /> YES = 列可以包含 NULL。<br /><br /> NO = 列不能包含 NULL。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 为此列返回的值不同，则返回该值**可以为 NULL**列。|  
+|**IS_NULLABLE**|**varchar (** 254 **)**|表中的列的为 Null 性。 根据 ISO 规则确定为 Null 性。 遵从 ISO SQL 标准的 DBMS 不能返回空字符串。<br /><br /> YES = 列可以包含 NULL。<br /><br /> NO = 列不能包含 NULL。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 为此列返回的值不同，则返回该值**可以为 NULL**列。|  
 |**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用扩展存储过程的数据类型。|  
   
  有关更多信息，请参见 Microsoft ODBC 文档。  

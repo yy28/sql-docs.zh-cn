@@ -22,12 +22,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 086ac8bb714bca7c182a59040d64badf89f261d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c7db63f58a76c2ad24e52693a58c4ed9e9b23479
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>结果类型  
  表。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **BottomPercent**函数返回的最底部行按升序排列的级别。 级别基于的计算值\<排名表达式 > 自变量对于每一行，以便的总和\<排名表达式 > 值是至少提供由指定的百分比\<%> 自变量。 **BottomPercent**返回可能最少数量的元素，同时仍满足指定的百分比值。  
   
 ## <a name="examples"></a>示例  
@@ -75,7 +74,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  示例结果：  
   
-|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -111,7 +110,7 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
-|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
@@ -124,10 +123,10 @@ NATURAL PREDICTION JOIN
  **请注意**提供了此示例仅为说明 BottomPercent 的使用情况。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
   
 > [!WARNING]  
->  在用于计算百分比的值包含负数时，用于 TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函数可能会生成意外结果。 此行为并不影响 DMX 函数。 有关详细信息，请参阅[BottomPercent &#40;MDX &#41;](../mdx/bottompercent-mdx.md).  
+>  在用于计算百分比的值包含负数时，用于 TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函数可能会生成意外结果。 此行为并不影响 DMX 函数。 有关详细信息，请参阅[BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   

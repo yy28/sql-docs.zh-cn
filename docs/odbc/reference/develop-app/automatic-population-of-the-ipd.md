@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
 - descriptors [ODBC], automatically populating ipd
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9ff41c33a308b6e1645f81a0f62e311939d971b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 473594a879fe3bc6ab66937d2cd4e35f1975ecf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatic-population-of-the-ipd"></a>自动填充的 IPD
 某些驱动程序都能准备好参数化的查询之后设置 IPD 的字段。 描述符字段自动填充有关参数，包括数据类型、 精度、 小数位数和其他特征的信息。 这相当于支持**SQLDescribeParam**。 它还没有发现它，例如当应用程序不知道的参数以进行即席查询时的其他方法时，此信息可能特别有价值的应用程序。  

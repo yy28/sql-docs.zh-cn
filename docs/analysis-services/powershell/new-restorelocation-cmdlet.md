@@ -1,31 +1,23 @@
 ---
-title: "新 RestoreLocation cmdlet |Microsoft 文档"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 新 RestoreLocation cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 43d0ad50544be56628b9aaa48494bb84351eb0ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-指定用来还原数据库的信息。  
+  指定用来还原数据库的信息。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -42,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-file-string"></a>-File \<string>  
+### <a name="-file-string"></a>-文件\<字符串 >  
  指定要还原的备份文件的名称。  
   
 |||  
@@ -63,7 +55,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
+### <a name="-connectionstring-string"></a>-ConnectionString\<字符串 >  
  指定远程 Analysis Services 实例的连接字符串。  
   
 |||  
@@ -85,7 +77,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-folders-asrestorefolder"></a>-Folders \<AS.RestoreFolder>  
+### <a name="-folders-asrestorefolder"></a>-文件夹\<。RestoreFolder >  
  指定本地或远程实例上的分区文件夹。  
   
 |||  
@@ -96,7 +88,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter >  
  指定是否应在内存中创建并返回该对象。  
   
 |||  
@@ -119,7 +111,7 @@ ms.lasthandoff: 02/15/2018
 |接受通配符？|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅[配置 HTTP 访问 Analysis Services 上 Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)为 HTTP 连接。  
+ 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅[到在 Internet Information Services 上的 Analysis Services 配置 HTTP 访问&#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)为 HTTP 连接。  
   
  如果指定此参数，将使用用户名和密码连接到指定的 Analysis Server 实例。 如果未指定凭据，将使用正在运行该工具的用户的默认 Windows 帐户。  
   

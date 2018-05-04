@@ -25,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc2457099b01c10da59eeff031b6532d2b8a4ace
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ff52edbfae39e7937ba43a32831eb5d03d80da31
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,12 +56,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *from_lsn*  
  LSN 值，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn*是**binary （10)**。  
   
- 仅行[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与**__ $start_lsn**大于或等于*from_lsn*包含在结果集。  
+ 仅行[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与 **__ $start_lsn**大于或等于*from_lsn*包含在结果集。  
   
  *to_lsn*  
  LSN 值，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn*是**binary （10)**。  
   
- 仅行[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与**__ $start_lsn**小于或等于*from_lsn*于或等于*to_lsn*包括在结果集中。  
+ 仅行[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中的值与 **__ $start_lsn**小于或等于*from_lsn*于或等于*to_lsn*包括在结果集中。  
   
  <row_filter_option> ::= { all | all update old }  
  控制元数据列的内容和结果集中所返回的行的选项。  
@@ -82,7 +81,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |**__$start_lsn**|**binary(10)**|与更改关联的提交 LSN，用于保留更改的提交顺序。 在同一事务中提交的更改将共享同一个提交 LSN 值。|  
 |**__$seqval**|**binary(10)**|用于对某事务内的行更改进行排序的序列值。|  
 |**__$operation**|**int**|标识将更改数据行应用到目标数据源所需的数据操作语言 (DML) 操作。 可以为以下各项之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（捕获的列值是执行更新操作前的值）。 仅当指定了行筛选选项“all update old”时才应用此值。<br /><br /> 4 = 更新（捕获的列值是执行更新操作后的值）。|  
-|**__$update_mask**|**varbinary(128)**|位掩码，为捕获实例标识的每个已捕获列均对应于一个位。 此值已定义个位设置为 1 时**__ $operation** = 1 或 2。 当**__ $operation** = 3 或 4，只有那些位对应于更改的列将设置为 1。|  
+|**__$update_mask**|**varbinary(128)**|位掩码，为捕获实例标识的每个已捕获列均对应于一个位。 此值已定义个位设置为 1 时 **__ $operation** = 1 或 2。 当 **__ $operation** = 3 或 4，只有那些位对应于更改的列将设置为 1。|  
 |\<捕获的源表列>|不定|函数返回的其余列是在创建捕获实例时标识的已捕获列。 如果已捕获列的列表中未指定任何列，则将返回源表中的所有列。|  
   
 ## <a name="permissions"></a>权限  
@@ -91,7 +90,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>注释  
  如果指定的 LSN 范围不在捕获实例的更改跟踪时间线范围之内，则函数将返回错误 208（“为过程或函数 cdc.fn_cdc_get_all_changes 提供的参数数目不足。”）。  
   
- 数据类型的列**映像**，**文本**，和**ntext**始终被分配 NULL 值时**__ $operation** = 1 或**__ $操作**= 3。 数据类型的列**varbinary （max)**， **varchar （max)**，或**nvarchar (max)**分配 NULL 值时**__ $operation** = 3除非在更新期间更改了该列。 当**__ $operation** = 1，这些列在删除时分配其值。 捕获实例中包含的计算列的值始终为 NULL。  
+ 数据类型的列**映像**，**文本**，和**ntext**始终被分配 NULL 值时 **__ $operation** = 1 或 **__ $操作**= 3。 数据类型的列**varbinary （max)**， **varchar （max)**，或**nvarchar (max)** 分配 NULL 值时 **__ $operation** = 3除非在更新期间更改了该列。 当 **__ $operation** = 1，这些列在删除时分配其值。 捕获实例中包含的计算列的值始终为 NULL。  
   
 ## <a name="examples"></a>示例  
  多个[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]都能使用模板，可显示如何使用变更数据捕获查询函数。 这些模板都位于**视图**菜单中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅[模板资源管理器](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)。  

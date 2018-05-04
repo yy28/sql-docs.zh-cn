@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b68bb6f266fefff1274241e6f5b2860fb522fb02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1c4d61bcb5ca05b36fa64629ea5bb74f9e3ecad7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count（层次结构级别）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Hierarchy_Expression.Levels.Count
  *Hierarchy_Expression*  
  返回层次结构的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  返回层次结构中的级别数，包括 `[All]` 级别（如果存在）。  
   
 > [!IMPORTANT]  
@@ -62,9 +61,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [计数 &#40; 维度 &#41;&#40;MDX &#41;](../mdx/count-dimension-mdx.md)   
- [计数 &#40;元组 &#41;&#40;MDX &#41;](../mdx/count-tuple-mdx.md)   
- [计数 &#40;集 &#41;&#40;MDX &#41;](../mdx/count-set-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [计数&#40;维度&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [计数&#40;元组&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [计数 & #40;集 & #41;& #40;MDX & #41;](../mdx/count-set-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

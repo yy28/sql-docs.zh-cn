@@ -27,13 +27,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 404b686128406f912908e1b27d8e4e05f22be42f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5dcd127018624aaa6f6797d8075b3e4a143b7d78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.lasthandoff: 04/18/2018
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |class|**int**不为 NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
-|class_desc|**nvarchar(60)**不为 NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|class_desc|**nvarchar(60)** 不为 NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int**不为 NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
 |minor_id|**int** NULL|**NULL**约束<br /><br /> 索引和堆的 Index_id|  
-|dependency|**nvarchar(60)**不为 NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **空间**(有关内部函数)<br /><br /> **geometry** （用于系统 UDT）<br /><br /> **geography:: parse** （用于系统 UDT 方法）|  
+|dependency|**nvarchar(60)** 不为 NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **空间**(有关内部函数)<br /><br /> **geometry** （用于系统 UDT）<br /><br /> **geography:: parse** （用于系统 UDT 方法）|  
   
 ## <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  

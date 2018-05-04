@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7516198dba64e9567b39abecfe31948d38e846e1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6d5ade478a37ed8810934d7c3c9fd08200c7d54b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData： 一个简单的 ADO 应用程序
 此简单的应用程序步骤通过每个四个主要的 ADO 操作： 获取、 检查、 编辑和更新数据。 对随附 Microsoft® SQL Server 的 Northwind 示例数据库执行这些操作。 若要专注于 ADO 的基础知识并避免出现代码混乱，该示例中的错误处理很小。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/18/2018
   
 2.  在窗体中，设置的顶部创建四个命令按钮**名称**和**标题**到本主题末尾的表中显示的值的属性。  
   
-3.  在按钮的下面添加**Microsoft DataGrid 控件**(Msdatgrd.ocx)。 Msdatgrd.ocx 文件包含在 Visual Basic，并且位于 \windows\system32 或 \winnt\system32 目录中。 若要将 DataGrid 控件添加到 Visual Basic 工具箱窗格中，选择**组件...**从**项目**菜单。 然后旁边的复选框"Microsoft DataGrid 控件 6.0 (SP3) (OLEDB)"，然后单击**确定**。 若要将控件添加到项目中，将 DataGrid 控件从工具箱拖到 Visual Basic 窗体中。  
+3.  在按钮的下面添加**Microsoft DataGrid 控件**(Msdatgrd.ocx)。 Msdatgrd.ocx 文件包含在 Visual Basic，并且位于 \windows\system32 或 \winnt\system32 目录中。 若要将 DataGrid 控件添加到 Visual Basic 工具箱窗格中，选择**组件...** 从**项目**菜单。 然后旁边的复选框"Microsoft DataGrid 控件 6.0 (SP3) (OLEDB)"，然后单击**确定**。 若要将控件添加到项目中，将 DataGrid 控件从工具箱拖到 Visual Basic 窗体中。  
   
 4.  创建**文本框中**网格下方的窗体上并设置其属性表中所示。 在完成时，格式应类似于下图。  
   

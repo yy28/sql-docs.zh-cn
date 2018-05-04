@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLProcedures
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5420d0adf427a95dec7cbfe224d4b77621c9a5d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: daec499cca74ef63978b3eede0216e192435bdaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函数
 **一致性**  
@@ -121,9 +120,9 @@ SQLRETURN SQLProcedures(
 > [!NOTE]  
 >  **SQLProcedures**可能不会返回所有过程。 应用程序可以使用任何有效的过程，而不考虑是否将它返回由**SQLProcedures**。  
   
- 下面的列已重命名为 ODBC 3*.x*。 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
+ 下面的列已重命名为 ODBC 3 *.x*。 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
   
-|ODBC 2.0 列|ODBC 3*.x*列|  
+|ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
 |过程 _OWNER|过程 _SCHEM|  

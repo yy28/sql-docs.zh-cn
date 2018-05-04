@@ -1,31 +1,31 @@
 ---
-title: "表格模型对象级别的安全性 |Microsoft 文档"
-ms.custom: 
+title: 表格模型对象级别的安全性 |Microsoft 文档
+ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: 
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords: ''
+ms.assetid: ''
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: acc766ba2188b9d5166ef6217b30a30c0b2fa9a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-level-security"></a>对象级安全
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]数据模型安全性开头有效地实施[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和行级筛选器，可以定义数据模型对象和数据的用户权限。 从表格 1400年模型开始，你还可以定义对象级安全，其中包括表级安全性和中的列级安全性[角色对象](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+数据模型安全性开头有效地实施[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和行级筛选器，可以定义数据模型对象和数据的用户权限。 从表格 1400年模型开始，你还可以定义对象级安全，其中包括表级安全性和中的列级安全性[角色对象](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)。
 
 ## <a name="table-level-security"></a>表级别安全性
 

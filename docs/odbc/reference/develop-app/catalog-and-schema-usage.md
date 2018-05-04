@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], catalog names
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d28c36082c8bcc60b6332928532636f4952d036
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3f0295ee92c6fed4690f33691037e58fe0ae951a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-and-schema-usage"></a>目录和架构使用情况
 数据源不一定支持目录和架构名称作为所有 SQL 语句中的对象名称标识符。 数据源可能支持目录和架构名称在一个或多个 SQL 语句的以下类： 数据操作语言 (DML) 语句，过程调用，表定义语句、 索引定义语句和权限定义语句。 若要确定哪些目录和架构名称可用于 SQL 语句的类，应用程序调用**SQLGetInfo**使用 SQL_CATALOG_USAGE 和 SQL_SCHEMA_USAGE 选项。

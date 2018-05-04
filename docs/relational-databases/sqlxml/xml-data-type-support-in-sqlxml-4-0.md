@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +19,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 530cd1e4fef24d925af9a6079b6afeeb07ec463d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8adc1397d917bf3d6853a74cd525611fff48ea81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 中的 xml 数据类型支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="guidelines-and-limitations"></a>准则和限制  
   
--   **\<xsd： 任何 >**无法映射到列包括**xml**数据类型。 通过提供这种情况下在 SQLXML 支持**sql:overflow-字段**批注。 另一个解决方法是将映射**xml**与某一元素的数据类型字段**xsd:anyType**。 上表中引用的“将 XML 元素映射到 XML 数据类型列”示例介绍了这种解决办法。  
+-   **\<xsd： 任何 >** 无法映射到列包括**xml**数据类型。 通过提供这种情况下在 SQLXML 支持**sql:overflow-字段**批注。 另一个解决方法是将映射**xml**与某一元素的数据类型字段**xsd:anyType**。 上表中引用的“将 XML 元素映射到 XML 数据类型列”示例介绍了这种解决办法。  
   
 -   XPath 查询到的内容**xml**不支持数据类型列。  
   

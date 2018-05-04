@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3227019749138eebef54da7da2a7bb8b85b51ccf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 03cb4f1a05e9be35a92c63c5904816ed8d0ad227
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="children-mdx"></a>Children (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Member_Expression.Children
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **子级**函数将返回包含指定成员的子级的自然排序的集。 如果指定的成员没有子成员，则此函数返回一个空集。  
   
 ## <a name="example"></a>示例  
@@ -72,6 +71,6 @@ FROM
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**内容已更改：**<br /> -更新语法和参数以提高清晰度。<br /><br /> -添加更新的示例。|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

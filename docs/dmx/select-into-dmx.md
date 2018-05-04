@@ -27,12 +27,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5d373c62b61469835ed8a6c41e9231c5eff67fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 895b90d5bad14747355182a42cdcfd1b937009fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,15 +55,15 @@ FROM <existing model>
  提供程序定义的数据挖掘算法的名称。  
   
  *参数列表*  
- 可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
+ 選擇性。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *expression*  
- 计算结果为定型数据的有效筛选条件的表达式。 有关可用作筛选器的表达式的详细信息，请参阅[挖掘模型 &#40; 筛选器Analysis Services-数据挖掘 &#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ 计算结果为定型数据的有效筛选条件的表达式。 有关可用作筛选器的表达式的详细信息，请参阅[挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
  *现有模型*  
  要复制的现有模型的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果现有模型已定型，则此语句执行时将自动处理新模型。 否则，新模型将保持未处理状态。  
   
  **SELECT INTO**语句配合工作，仅当现有模型的结构为新模型的算法与兼容。 因此，此语句在快速创建并测试基于同一算法的模型时最为有用。 如果更改算法类型，则新算法必须支持现有模型中所有列的数据类型，否则处理模型时可能会出错。  
@@ -93,8 +92,8 @@ FROM [TM Clustering]
 >  如此示例中所示，可通过使用 SELECT INTO 语句来更改应用于事例表的筛选器；但是，如果原始模型包含嵌套表的筛选器，则就不能使用此语法来更改或删除嵌套表筛选器，但可以从原始模型中原样复制该筛选器。 若要创建具有不同嵌套表筛选器的模型，请使用 ALTER STRTUCTURE...ADD MODEL 语法。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

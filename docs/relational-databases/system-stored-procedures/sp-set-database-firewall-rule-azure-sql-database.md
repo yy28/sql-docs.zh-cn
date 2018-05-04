@@ -27,13 +27,12 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d476b15aad4376aa5aea3f51d177b00a5bba8924
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 359854184824a12dc1a05203df820e1fa9cd8c9b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
 ## <a name="arguments"></a>参数  
  **[@name**  =] [N]*名称*  
- 用来描述和区分数据库级防火墙设置的名称。 *名称*是**nvarchar （128)**无默认值。 Unicode 标识符`N`对于是可选的[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 
+ 用来描述和区分数据库级防火墙设置的名称。 *名称*是**nvarchar （128)** 无默认值。 Unicode 标识符`N`对于是可选的[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 
   
  **[@start_ip_address**  =] '*start_ip_address*  
- 数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。 *start_ip_address*是**varchar(50)**无默认值。  
+ 数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。 *start_ip_address*是**varchar(50)** 无默认值。  
   
  [**@end_ip_address** =] '*end_ip_address*  
- 数据库级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。 *end_ip_address*是**varchar(50)**无默认值。  
+ 数据库级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。 *end_ip_address*是**varchar(50)** 无默认值。  
   
  下表演示了支持的参数和选项中[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   

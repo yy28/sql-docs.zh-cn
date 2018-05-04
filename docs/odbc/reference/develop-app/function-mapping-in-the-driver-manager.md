@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - driver manager [ODBC], function mapping
@@ -21,19 +21,18 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfa3423d6fdcc930e9b0f6bb7eea3ef217c72788
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 710a3edd3afcc3d82e18875de330d15b048a5b3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>函数映射中驱动程序管理器
 驱动程序管理器支持用于采用字符串自变量的函数的两个入口点。 未修饰的函数 (**SQLDriverConnect**) 是函数的 ANSI 格式。 Unicode 窗体用修饰*W* (**SQLDriverConnectW**。)  
   
  ODBC 标头文件还支持使用修饰函数*A，* (**SQLDriverConnectA**) 的混合 ANSI/Unicode 应用程序的便利性。 对所做的调用**A**函数是实际的未修饰的入口点的调用 (**SQLDriverConnect**。)  
   
- 如果使用了 _UNICODE 编译应用程序**#define**，ODBC 标头文件将映射未修饰的函数调用 (**SQLDriverConnect**) 到的 Unicode 版本 (**SQLDriverConnectW**.)  
+ 如果使用了 _UNICODE 编译应用程序 **#define**，ODBC 标头文件将映射未修饰的函数调用 (**SQLDriverConnect**) 到的 Unicode 版本 (**SQLDriverConnectW**.)  
   
  驱动程序管理器： 将驱动程序识别为 Unicode 驱动程序，如果**SQLConnectW**由驱动程序支持。  
   

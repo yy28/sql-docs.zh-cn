@@ -29,15 +29,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6fd063f8a32fbd65ef806d624a7f82d9b154f3e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 428d96d2f664a08ce6dc6160cd2fa86cf5e6e202
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resultset-data-type-xmla"></a>Resultset 数据类型 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定义表示从返回的数据的抽象基元数据类型[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  定义表示从返回的数据的抽象基元数据类型[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
   
  **Namespace** urn： 架构-microsoft-com:xml 的结果集分析：  
   
@@ -53,23 +53,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|基本数据类型|InclusionThresholdSetting|  
+|基本数据类型|无|  
 |派生数据类型|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)， [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)，[行集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|无|  
 |子元素|[异常](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)，[消息](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)|  
-|派生元素|InclusionThresholdSetting|  
+|派生元素|無|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **Resultset**数据类型是一个可以包含架构和数据，具体取决于要返回的信息类型的自描述 XML 结果集。  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 数据类型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+ [XML 数据类型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c0d246c2ed8ea670f2d8c2fc05bca828ce152ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dc7dde2cbd3ec6b3361785b7d9f02931f812b730
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |size|**nvarchar(15)**|文件大小 (KB)。|  
 |**最大大小**|**nvarchar(15)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
-|**使用情况**|**varchar(9)**|对于数据文件的值是**仅限数据**和日志文件的值是**'仅 log'**。|  
+|**使用情况**|**varchar(9)**|对于数据文件的值是**仅限数据**和日志文件的值是 **'仅 log'**。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

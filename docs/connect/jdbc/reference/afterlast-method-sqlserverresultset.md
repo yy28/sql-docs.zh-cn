@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="afterlast-method-sqlserverresultset"></a>afterLast 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  最后一行后移动光标所在位置到[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+  将光标移到此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的最后一行之后。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ public void afterLast()
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 java.sql.ResultSet 接口中的 afterLast 方法指定此 afterLast 方法。  
   
 ## <a name="see-also"></a>另请参阅  

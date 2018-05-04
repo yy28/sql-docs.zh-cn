@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518e72a5ad45147bc9cdf3316c7bd2eba07e7fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81911e04266abf51f28a8906910290bf3d0179f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  删除最多的日期和时间作为提供的电子邮件*sent_before*自变量。 *sent_before*是**datetime**替换为默认值为 NULL。 NULL 指示所有日期。  
   
  [ **@sent_status=** ] **'***sent_status***'**  
- 删除由指定类型的电子邮件*sent_status*。 *sent_status*是**varchar(8)**无默认值。 有效值包括**发送**，**未发送**，**重试**，和**失败**。 NULL 指示所有状态。  
+ 删除由指定类型的电子邮件*sent_status*。 *sent_status*是**varchar(8)** 无默认值。 有效值包括**发送**，**未发送**，**重试**，和**失败**。 NULL 指示所有状态。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
 - SQLGetDiagField function [ODBC], and SQLGetDiagRec
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 895eb4b04b974c66f64e4ded31b84890cf19e076
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d01e70929d8cc4d9465828d208c0e774ba8b5428
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索诊断信息。 这些函数接受一个环境、 连接、 语句或描述符句柄，并从上次使用该句柄的函数返回诊断。 使用该句柄调用新函数时，将被丢弃登录特定句柄的诊断。 如果该函数返回多个诊断记录，在应用程序调用这些函数多次;通过调用检索的状态记录总数**SQLGetDiagField** SQL_DIAG_NUMBER 选项的标头记录 （记录 0）。  

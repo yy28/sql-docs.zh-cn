@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3156c9110567763d1566de58b6d08304b464e094
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b79237879b2e23682bfdd89dcf1d2ba59824aa1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询&gt;的形状
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,11 +68,11 @@ APPEND ({ <child table query> }
  *列的表名称*  
  在父表中为嵌套表新追加的列名。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  必须按与父表和子表都相关的列对查询排序。  
   
 ## <a name="examples"></a>示例  
- 你可以使用下面的示例中[INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md)语句来训练某个模型包含嵌套的表。 中的两个表**形状**通过相关联的语句**OrderNumber**列。  
+ 你可以使用下面的示例中[INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)语句来训练某个模型包含嵌套的表。 中的两个表**形状**通过相关联的语句**OrderNumber**列。  
   
 ```  
 SHAPE {  
@@ -86,9 +85,9 @@ SHAPE {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#60; 源数据查询 &#62;](../dmx/source-data-query.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [&#60;源数据查询&#62;](../dmx/source-data-query.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

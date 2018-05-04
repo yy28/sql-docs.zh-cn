@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 55a900ec55e4dc93b53168a2949de06fa9f2e879
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6f5954e7ffe41a7b2d1f6ea66ea651e1db8024a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-text-format-text-file-driver"></a>定义文本格式 （文本文件驱动程序）
 当使用文本驱动程序时，你可以使用**定义文本格式**对话框可以定义在所选文件中的列的格式。 此对话框中，你可以指定每个数据表的架构。 此信息写入到中的数据源目录的 Schema.ini 文件。 为每个文本数据源目录创建单独的 Schema.ini 文件。  

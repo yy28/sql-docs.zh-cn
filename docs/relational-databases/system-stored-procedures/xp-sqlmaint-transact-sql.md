@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea6da80de3845f87d3e8bef7757e13bb71c8b737
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c127d8cf7e27872d946a350c3e5d53e900145805
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ xp_sqlmaint 'switch_string'
  无。 如果返回错误**sqlmaint**实用程序将失败。  
   
 ## <a name="remarks"></a>注释  
- 如果在使用 SQL Server 身份验证，登录用户调用此过程时**-U"***login_id***"**和**-P"***密码***"**开关为前缀*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*且不会更改传递**sqlmaint**。  
+ 如果在使用 SQL Server 身份验证，登录用户调用此过程时 **-U"***login_id***"** 和 **-P"***密码***"** 开关为前缀*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*且不会更改传递**sqlmaint**。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

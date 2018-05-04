@@ -1,5 +1,5 @@
 ---
-title: getByte 方法 (java.lang.String) (SQLServerResultSet) |Microsoft 文档
+title: getByte 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>getByte 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此当前行中的指定的列名称的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象作为**字节**Java 编程语言中。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名的值作为 Java 编程语言中的 byte。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,18 +44,18 @@ public byte getByte(java.lang.String columnName)
 #### <a name="parameters"></a>Parameters  
  *columnName*  
   
- A**字符串**包含列名称。  
+ 一个包含列名的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A**字节**值。  
+ 一个 byte 值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 java.sql.ResultSet 接口中的 getByte 方法指定此 getByte 方法。  
   
- 仅在支持此方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以安全地返回字节值，如 tinyint 和位的数据类型。 任何其他数据类型将会引发异常。  
+ 只有可以安全返回 byte 值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型（例如 tinyint 和 bit）才支持此方法。 任何其他数据类型将会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getByte 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   

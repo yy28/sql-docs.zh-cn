@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6f7bda4d6d9e0387dcbd98a09040be4d0a0d0a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c2d31df834b2809612604d1392f860b222da73c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +148,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
  [  **@optional_command_line=**] *****optional_command_line*****  
- 提供给分发代理的可选命令提示符。 例如， **-DefinitionFile** C:\Distdef.txt 或**-CommitBatchSize** 10。 *optional_command_line*是**nvarchar （4000)**，默认值为空字符串。  
+ 提供给分发代理的可选命令提示符。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line*是**nvarchar （4000)**，默认值为空字符串。  
   
  [  **@frequency_type=**] *frequency_type*  
  安排分发代理计划的频率。 *frequency_type*是**int**，和可以是以下值之一。  
@@ -166,7 +165,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**128**|重复执行|  
   
 > [!NOTE]  
->  指定的值**64**导致分发代理以连续模式运行。 这对应于设置**-连续**代理程序的参数。 有关详细信息，请参阅 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
+>  指定的值**64**导致分发代理以连续模式运行。 这对应于设置 **-连续**代理程序的参数。 有关详细信息，请参阅 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
  [  **@frequency_interval=**] *frequency_interval*  
  是要应用于通过设置的频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为 1。  

@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f0f667c71bd1e67b311aad2d8da93b48e605ca79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -172,19 +171,19 @@ sp_addpublication [ @publication = ] 'publication'
  订阅活动的保持期（小时）。 *保留*是**int**，默认值为 336 个小时。 如果订阅在保持期内不活动，则过期后将其删除。 该值可以大于发布服务器使用的分发数据库的最大保持期。 如果**0**，对发布的已知的订阅将永不过期，并且通过过期订阅清除代理。  
   
  [  **@allow_queued_tran=** ] *****allow_queued_updating*****  
- 在订阅服务器中启用或禁用更改的队列，直到可在发布服务器上应用这些更改为止。 *allow_queued_updating*是**nvarchar(5)**默认值为 FALSE。 如果**false**，订阅服务器上的更改不会排队。 **true**是*Oracle 发布服务器不支持*。  
+ 在订阅服务器中启用或禁用更改的队列，直到可在发布服务器上应用这些更改为止。 *allow_queued_updating*是**nvarchar(5)** 默认值为 FALSE。 如果**false**，订阅服务器上的更改不会排队。 **true**是*Oracle 发布服务器不支持*。  
   
  [  **@snapshot_in_defaultfolder=** ] *****snapshot_in_default_folder*****  
- 指定是否将快照文件存储在默认文件夹中。 *snapshot_in_default_folder*是**nvarchar(5)**默认值为 TRUE。 如果**true**，可以在默认文件夹中找到快照文件。 如果**false**，快照文件存储在指定的备用位置*alternate_snapshot_folder*。 备用位置可以在另一台服务器、一个网络驱动器或可移动介质（如光盘或可移动磁盘）上。 也可以将快照文件保存到 FTP 站点以供订阅服务器以后检索。 请注意此参数可以是 true，在仍有一个位置**@alt_snapshot_folder**参数。 该组合指定将快照文件同时存储在默认位置和备用位置。  
+ 指定是否将快照文件存储在默认文件夹中。 *snapshot_in_default_folder*是**nvarchar(5)** 默认值为 TRUE。 如果**true**，可以在默认文件夹中找到快照文件。 如果**false**，快照文件存储在指定的备用位置*alternate_snapshot_folder*。 备用位置可以在另一台服务器、一个网络驱动器或可移动介质（如光盘或可移动磁盘）上。 也可以将快照文件保存到 FTP 站点以供订阅服务器以后检索。 请注意此参数可以是 true，在仍有一个位置**@alt_snapshot_folder**参数。 该组合指定将快照文件同时存储在默认位置和备用位置。  
   
  [  **@alt_snapshot_folder=** ] *****alternate_snapshot_folder*****  
- 指定快照的备用文件夹的位置。 *alternate_snapshot_folder*是**nvarchar （255)**默认值为 NULL。  
+ 指定快照的备用文件夹的位置。 *alternate_snapshot_folder*是**nvarchar （255)** 默认值为 NULL。  
   
  [  **@pre_snapshot_script=** ] *****pre_snapshot_script*****  
- 指定指向的指针**.sql**文件位置。 *pre_snapshot_script*是**nvarchar （255)，**默认值为 NULL。 分发代理将运行之前运行的任何复制的对象脚本时应用在订阅服务器上快照的快照前脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  
+ 指定指向的指针 **.sql**文件位置。 *pre_snapshot_script*是**nvarchar （255)，**默认值为 NULL。 分发代理将运行之前运行的任何复制的对象脚本时应用在订阅服务器上快照的快照前脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  
   
  [  **@post_snapshot_script=** ] *****post_snapshot_script*****  
- 指定指向的指针**.sql**文件位置。 *post_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 分发代理将在初始同步过程中已应用所有其他复制的对象脚本和数据之后才运行快照后脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  
+ 指定指向的指针 **.sql**文件位置。 *post_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 分发代理将在初始同步过程中已应用所有其他复制的对象脚本和数据之后才运行快照后脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  
   
  [  **@compress_snapshot=** ] *****compress_snapshot*****  
  指定写入到快照**@alt_snapshot_folder**位置是压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar(5)**，默认值为 FALSE。 **false**指定，将不会压缩快照;**true**指定将压缩的快照。 不能压缩大于 2 GB 的快照文件。 压缩快照文件在分发代理运行的位置解压缩；请求订阅通常与压缩快照一起使用，以便在订阅服务器上解压缩文件。 不能压缩默认文件夹中的快照。  
@@ -205,7 +204,7 @@ sp_addpublication [ @publication = ] 'publication'
  用于连接到 FTP 服务的用户密码。 *ftp_password*是**sysname**，默认值为 NULL。  
   
  [  **@allow_dts =** ] *****allow_dts*****  
- 指定发布允许数据转换。 创建订阅时可以指定 DTS 包。 *allow_transformable_subscriptions*是**nvarchar(5)**默认值为 FALSE，它不允许 DTS 转换。 当*allow_dts*为 true， *sync_method*必须设置为**字符**或**concurrent_c**。  
+ 指定发布允许数据转换。 创建订阅时可以指定 DTS 包。 *allow_transformable_subscriptions*是**nvarchar(5)** 默认值为 FALSE，它不允许 DTS 转换。 当*allow_dts*为 true， *sync_method*必须设置为**字符**或**concurrent_c**。  
   
  **true**是*Oracle 发布服务器不支持*。  
   
@@ -213,7 +212,7 @@ sp_addpublication [ @publication = ] 'publication'
  启用或禁用对订阅此发布的订阅数据库的复制功能。 *allow_subscription_copy*是**nvarchar(5)**，默认值为 FALSE。  
   
  [  **@conflict_policy =** ] *****conflict_policy*****  
- 指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 *conflict_policy*是**nvarchar(100)**默认值为 NULL，并且可以为以下值之一。  
+ 指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 *conflict_policy*是**nvarchar(100)** 默认值为 NULL，并且可以为以下值之一。  
   
 |“值”|Description|  
 |-----------|-----------------|  
@@ -310,7 +309,7 @@ sp_addpublication [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@enabled_for_het_sub=** ] *****enabled_for_het_sub*****  
- 启用发布以支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 *enabled_for_het_sub*是**nvarchar(5)**默认值为 FALSE。 值为**true**意味着发布支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 当*enabled_for_het_sub*是**true**，以下限制适用：  
+ 启用发布以支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 *enabled_for_het_sub*是**nvarchar(5)** 默认值为 FALSE。 值为**true**意味着发布支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 当*enabled_for_het_sub*是**true**，以下限制适用：  
   
 -   *allow_initialize_from_backup*必须**false**。  
   
@@ -351,22 +350,22 @@ sp_addpublication [ @publication = ] 'publication'
  有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
  [  **@p2p_conflictdetection=** ] *****p2p_conflictdetection*****  
- 如果为对等复制启用发布，则启用分发代理以检测冲突。 *p2p_conflictdetection*是**nvarchar(5)**默认值为 TRUE。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
+ 如果为对等复制启用发布，则启用分发代理以检测冲突。 *p2p_conflictdetection*是**nvarchar(5)** 默认值为 TRUE。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
  [  **@p2p_originator_id=** ] *p2p_originator_id*  
  指定对等拓扑中某个节点的 ID。 *p2p_originator_id*是**int**，默认值为 NULL。 此 ID 用于冲突检测，如果*p2p_conflictdetection*设置为 TRUE。 指定一个从未在拓扑中用过的正的非零 ID。 有关已使用的 Id 的列表，执行[sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)。  
   
  [  **@p2p_continue_onconflict=** ] *****p2p_continue_onconflict*****  
- 确定检测到冲突后分发代理是否继续处理更改。 *p2p_continue_onconflict*是**nvarchar(5)**默认值为 FALSE。  
+ 确定检测到冲突后分发代理是否继续处理更改。 *p2p_continue_onconflict*是**nvarchar(5)** 默认值为 FALSE。  
   
 > [!CAUTION]  
 >  建议您使用默认值 FALSE。 如果此选项设置为 TRUE，则分发代理会尝试应用来自具有最高发起方 ID 的节点的冲突行来收敛拓扑中的数据。 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。  
   
  [  **@allow_partition_switch=** ] *****allow_partition_switch*****  
- 指定是否对已发布的数据库执行 ALTER TABLE…SWITCH 语句。 *allow_partition_switch*是**nvarchar(5)**默认值为 FALSE。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
+ 指定是否对已发布的数据库执行 ALTER TABLE…SWITCH 语句。 *allow_partition_switch*是**nvarchar(5)** 默认值为 FALSE。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
   
  [  **@replicate_partition_switch=** ] *****replicate_partition_switch*****  
- 指定是否应将对已发布的数据库执行的 ALTER TABLE…SWITCH 语句复制到订阅服务器。 *replicate_partition_switch*是**nvarchar(5)**默认值为 FALSE。 此选项才有效才*allow_partition_switch*设置为 TRUE。  
+ 指定是否应将对已发布的数据库执行的 ALTER TABLE…SWITCH 语句复制到订阅服务器。 *replicate_partition_switch*是**nvarchar(5)** 默认值为 FALSE。 此选项才有效才*allow_partition_switch*设置为 TRUE。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

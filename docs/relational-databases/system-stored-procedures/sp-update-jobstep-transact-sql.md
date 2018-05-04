@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f6de1a82fc185c5c6824ff318d93f06b9f677646
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ sp_update_jobstep
  [ **@output_file_name =**] **'***file_name***'**  
  用于保存该步骤输出的文件的名称。 *file_name*是**nvarchar （200)**，默认值为 NULL。 此参数只对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系统中运行的命令有效。  
   
- 若要 output_file_name 将重新设置为 NULL，必须设置*output_file_name*为空字符串 () 或转换为字符串的空白字符，但您不能使用**CHAR(32)**函数。 例如，按如下所示将此参数设置为空字符串：  
+ 若要 output_file_name 将重新设置为 NULL，必须设置*output_file_name*为空字符串 () 或转换为字符串的空白字符，但您不能使用**CHAR(32)** 函数。 例如，按如下所示将此参数设置为空字符串：  
   
  **@output_file_name = ' '**  
   

@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 18572b2eb08963b2020808040f8a5a7cc43099f2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ba4746a818dfa85699ac3150ad5b7bccbad746ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO-WFC 语法)
 **CreateObject**方法**DataSpace**类指定这两个业务对象用于处理客户端应用程序请求 (*progid*) 和通信协议和服务器 (*连接*)。 **createObject**返回[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)表示服务器的对象。  

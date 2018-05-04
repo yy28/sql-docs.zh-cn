@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf114f9b706497512f10e3629e871ba64ecaaee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-string-functions"></a>使用字符串函数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,12 +112,12 @@ ms.lasthandoff: 01/08/2018
 >  **StrToMember**和**StrToSet**应多加小心使用函数。 如果在计算定义中使用这些函数，则可能会导致查询性能较差。  
   
 ## <a name="see-also"></a>另请参阅  
- [生成 &#40;MDX &#41;](../mdx/generate-mdx.md)   
- [名称 &#40;MDX &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX &#41;](../mdx/uniquename-mdx.md)   
- [函数 &#40;MDX 语法 &#41;](../mdx/functions-mdx-syntax.md)   
- [使用存储的过程 &#40;MDX &#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;MDX &#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;MDX &#41;](../mdx/strtoset-mdx.md)  
+ [生成&#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [名称&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)   
+ [使用存储的过程&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
   
   

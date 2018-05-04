@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee9cd8b485584d863e7eac942a7c81792bb22bd7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函数
 **一致性**  
@@ -99,7 +98,7 @@ SQLRETURN SQLSetDescField(
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY016|无法修改实现行描述符|*DescriptorHandle*自变量为与 IRD 关联和*FieldIdentifier*参数不为 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。|  
 |HY021|描述符信息不一致|SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段不构成有效的 ODBC SQL 类型或特定于驱动程序的 SQL 类型 （对于无效 IPDs) 或有效的 ODBC C 类型 （对于 APDs 或 ARDs）。<br /><br /> 在一致性检查过程中检查的描述符信息未一致。 (请参阅中的"一致性检查" **SQLSetDescRec**。)|  
-|HY090|字符串或缓冲区长度无效|(DM)  *\*ValuePtr*是一个字符串，和*BufferLength*而小于零，但不是等于 sql_nts 以。<br /><br /> (DM) 驱动程序是 ODBC 2*.x*驱动程序，该描述符已 ARD *ColumnNumber*参数已设置为 0，并为参数指定的值*BufferLength*已不等于 4。|  
+|HY090|字符串或缓冲区长度无效|(DM)  *\*ValuePtr*是一个字符串，和*BufferLength*而小于零，但不是等于 sql_nts 以。<br /><br /> (DM) 驱动程序是 ODBC 2 *.x*驱动程序，该描述符已 ARD *ColumnNumber*参数已设置为 0，并为参数指定的值*BufferLength*已不等于 4。|  
 |HY091|描述符字段标识符无效|为指定的值*FieldIdentifier*自变量不是一个 ODBC 定义的字段，且未实现定义的值。<br /><br /> *FieldIdentifier*自变量无效的*DescriptorHandle*自变量。<br /><br /> *FieldIdentifier*自变量为只读的、 ODBC 定义字段。|  
 |HY092|属性/选项标识符无效|中的值 *\*ValuePtr*对无效*FieldIdentifier*自变量。<br /><br /> *FieldIdentifier*自变量为 SQL_DESC_UNNAMED，和*ValuePtr*已 SQL_NAMED。|  
 |HY105|无效的参数类型|(DM) 指定为 SQL_DESC_PARAMETER_TYPE 字段的值无效。 (有关详细信息，请参阅"*InputOutputType*自变量"部分中**SQLBindParameter**。)|  
@@ -422,7 +421,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_LENGTH [全部]**  
  此 SQLULEN 记录字段为以字符为单位的字符字符串的最大值或实际长度，或者以字节为单位的 binary 数据类型。 它是固定长度的数据类型的最大长度或可变长度数据类型的实际长度。 其值始终不包括结尾的字符串的 null 终止字符。 对于其类型是 SQL_TYPE_DATE、 SQL_TYPE_TIME、 SQL_TYPE_TIMESTAMP，或 SQL interval 数据类型之一的值，此字段以字符为字符字符串表示形式的日期时间或间隔值单位的长度。  
   
- 此字段中的值可能不同于"length"作为 ODBC 2 中定义的值*.x*。 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此字段中的值可能不同于"length"作为 ODBC 2 中定义的值 *.x*。 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  此只读 SQLCHAR * 记录字段中包含的字符或驱动程序识别为此数据类型的文本的前缀的字符。 此变量包含的文本的前缀不适用的数据类型的空字符串。  
@@ -468,7 +467,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_PRECISION [全部]**  
  此 SQLSMALLINT 记录字段中包含的精确数值类型，尾数近似的数字类型，（二进制精度） 中的比特数或 SQL_TYPE_TIME，SQL_TYPE 秒的小数部分组件中的数字的数字的位数_TIMESTAMP 或 SQL_INTERVAL_SECOND 数据类型。 此字段为对于所有其他数据类型未定义。  
   
- 此字段中的值可能不同于"精度"作为 ODBC 2 中定义的值*.x*。 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此字段中的值可能不同于"精度"作为 ODBC 2 中定义的值 *.x*。 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_ROWVER [实现描述符]**  
  此 SQLSMALLINTrecord 字段指示是否一列自动修改由 DBMS 行进行更新 （例如，类型为"timestamp"SQL Server 中的列） 时。 此记录字段的值是否则设置到 SQL_TRUE 如果列是行版本控制列，和 SQL_FALSE。 此列属性是类似于调用**SQLSpecialColumns**与 IdentifierType 的 SQL_ROWVER，以确定是否自动更新的列。  
@@ -476,7 +475,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SCALE [全部]**  
  此 SQLSMALLINT 记录字段包含 decimal 和 numeric 数据类型的定义小数位数。 该字段为对于所有其他数据类型未定义。  
   
- 此字段中的值可能不同于"规模"ODBC 2 中定义的值*.x*。 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此字段中的值可能不同于"规模"ODBC 2 中定义的值 *.x*。 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  此只读 SQLCHAR * 记录字段包含基本包含的列的表的架构名称。 如果列是一个表达式，或者如果列是视图的一部分，则返回值与驱动程序相关。 如果数据源不支持架构或架构名称不能确定，此变量包含一个空字符串。  
@@ -484,11 +483,11 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SEARCHABLE [IRDs]**  
  此只读 SQLSMALLINT 记录字段设置为以下值之一：  
   
--   如果列不能在 SQL_PRED_NONE**其中**子句。 (这是与 ODBC 2 中的 SQL_UNSEARCHABLE 值相同*.x*。)  
+-   如果列不能在 SQL_PRED_NONE**其中**子句。 (这是与 ODBC 2 中的 SQL_UNSEARCHABLE 值相同 *.x*。)  
   
--   SQL_PRED_CHAR 如果列可在**其中**但仅具有子句**如**谓词。 (这是与 ODBC 2 中的 SQL_LIKE_ONLY 值相同*.x*。)  
+-   SQL_PRED_CHAR 如果列可在**其中**但仅具有子句**如**谓词。 (这是与 ODBC 2 中的 SQL_LIKE_ONLY 值相同 *.x*。)  
   
--   如果列可在 SQL_PRED_BASIC**其中**子句与除之外的所有比较运算符**如**。 (这是与 ODBC 2 中的 SQL_EXCEPT_LIKE 值相同*.x*。)  
+-   如果列可在 SQL_PRED_BASIC**其中**子句与除之外的所有比较运算符**如**。 (这是与 ODBC 2 中的 SQL_EXCEPT_LIKE 值相同 *.x*。)  
   
 -   如果列可在 SQL_PRED_SEARCHABLE**其中**子句的任何比较运算符。  
   

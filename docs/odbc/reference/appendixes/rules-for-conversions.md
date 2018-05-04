@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0e1feb5f75561d95d65cde069f135b9d24c53186
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 38d4fa50d82cf81b47dc50c44410d9e47ca3dfe5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-for-conversions"></a>转换规则
 本部分中的规则适用于涉及数值的转换。 对于这些规则，定义了以下术语：  
@@ -36,13 +35,13 @@ ms.lasthandoff: 04/16/2018
   
 -   *检索分配：*到应用程序缓冲区从数据库检索数据时。 发生这种情况在调用过程**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在检索分配过程中，"目标"是指应用程序缓冲区和"源"引用的数据库列。  
   
--   *CS:*字符源中的值。  
+-   *CS:* 字符源中的值。  
   
--   *NT:*数值的目标中的值。  
+-   *NT:* 数值的目标中的值。  
   
--   *NS:*数值源中的值。  
+-   *NS:* 数值源中的值。  
   
--   *CT:*字符目标中的值。  
+-   *CT:* 字符目标中的值。  
   
 -   精确数值精度： 它包含的数字个数。  
   

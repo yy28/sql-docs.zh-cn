@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e80dc4615803b840f285033bd75186561dc21ddf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个部分标头包含方括号 (**[]**) 包含的类型和参数。 文字字符串由指示四个部分类型**连接**， **sql**， **userlist**，或**日志**。 该参数是文字字符串、 默认值、 用户指定的标识符，或执行任何操作。  
@@ -61,7 +60,7 @@ identifier
   
  在下列情况下使用特定的部分：  
   
--   A**连接**如果客户端的值部分连接字符串关键字，使用部分"**数据源 = * * * 值*"，与匹配**连接**部分标识符*.*  
+-   A**连接**如果客户端的值部分连接字符串关键字，使用部分"**数据源 = * * * 值*"，与匹配**连接**部分标识符 *.*  
   
 -   **Sql**如果客户端命令字符串包含与匹配的字符串，则使用部分**sql**部分标识符。  
   

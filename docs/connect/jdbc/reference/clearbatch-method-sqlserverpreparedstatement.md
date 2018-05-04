@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="clearbatch-method-sqlserverpreparedstatement"></a>clearBatch 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此清空的 SQL 命令的当前列表[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。  
+  为此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象清空当前 SQL 命令列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ public final void clearBatch()
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 java.sql.Statement 接口中的 clearBatch 方法指定此 clearBatch 方法。  
   
 ## <a name="see-also"></a>另请参阅  

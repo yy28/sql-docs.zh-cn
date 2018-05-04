@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b58b0d983008fadb96ce5b527ec2283a5dd34367
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 980d214f31a955e73cd2362f41b8d3b84f1f4726
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +43,7 @@ IsTrainingCase()
 ## <a name="result-type"></a>结果类型  
  返回**true**如果这种情况是定型数据集; 的一部分否则为**false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果使用数据挖掘向导创建挖掘结构和相关的挖掘模型，则默认情况下将留出 30% 的事例用作测试数据集。 您指定的数据源中的其余事例用于定型模型。 但是，如果使用数据挖掘扩展插件 (DMX) 创建挖掘模型，则默认情况下所有数据都将用于定型模型，而不创建任何测试集。 若要允许创建测试数据集，必须设置 WITH HOLDOUT 子句的参数。  
   
  通过查看 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 和 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 属性的值，可以确定是否已将特定数据挖掘结构中的数据分区为测试集和定型集。  
@@ -52,7 +51,7 @@ IsTrainingCase()
 > [!NOTE]  
 >  如果你想要使用则 IsTrainingCase 或则 IsTestCase 函数来返回模型中的事例的详细信息，必须对模型启用钻取功能。 有关详细信息，请参阅 [对挖掘模型启用钻取](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)。  
   
- 若要返回属于的测试数据集的情况下，使用该函数[则 IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md)。  
+ 若要返回属于的测试数据集的情况下，使用该函数[则 IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用聚类分析的数据挖掘模型中的目标邮递方案从[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询仅返回用于定型挖掘模型的那些事例。 而且，定型事例仅限于 40 岁以下的客户。  
@@ -64,11 +63,11 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- 如何查询数据挖掘中使用的事例的其他示例，请参阅[SELECT FROM #60; 模型 &#62;。用例 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM #60; 结构 &#62;。用例](../dmx/select-from-structure-cases.md)。  
+ 如何查询数据挖掘中使用的事例的其他示例，请参阅[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM&#60;结构&#62;。用例](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [定型集和测试数据集](../analysis-services/data-mining/training-and-testing-data-sets.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [数据挖掘查询](../analysis-services/data-mining/data-mining-queries.md)  
   
   

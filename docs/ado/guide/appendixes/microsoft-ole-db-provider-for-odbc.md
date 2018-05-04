@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 965316983f7ef425d068253c6770beecfa2afe41
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调入数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源不尚未公开这种方式。 但是，可以通过 ODBC 访问当今使用的大多数 DBMS 系统。
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/18/2018
  这是默认提供程序 ADO，并支持所有依赖于提供程序的 ADO 属性和方法。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到此提供程序，设置**提供程序 =**参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性：
+ 若要连接到此提供程序，设置**提供程序 =** 参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性：
 
 ```
 MSDASQL
@@ -64,7 +63,7 @@ MSDASQL
 |**PWD**|指定的用户密码。|
 |**URL**|指定的文件或目录中的 Web 文件夹发布的 URL。|
 
- 因为这是默认提供程序 ADO，如果省略**提供程序 =**参数从连接字符串，ADO 将尝试建立与此提供程序的连接。
+ 因为这是默认提供程序 ADO，如果省略**提供程序 =** 参数从连接字符串，ADO 将尝试建立与此提供程序的连接。
 
 > [!NOTE]
 >  如果你要连接到的数据源提供程序支持 Windows 身份验证，你应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码连接字符串中的信息。

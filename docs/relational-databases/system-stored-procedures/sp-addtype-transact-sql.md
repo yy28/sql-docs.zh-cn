@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 754fbef75a1cfd1f3948ccc6c89210b15f780293
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  非负整数，指示小数点后面的小数数字可保留的最大十进制位数，它必须小于或等于精度值。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  [  **@nulltype =** ] *****null_type*****  
- 指示别名数据类型处理空值的方式。 *null_type*是**varchar (**8**)**，默认值为 NULL，并且必须括在单引号 （'NULL'、 'NOT NULL'，或 NONULL）。 如果*null_type*未显式定义**sp_addtype**，设置为当前默认为空。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果**@phystype**是**位**，和**@nulltype**未指定，则默认值不是 NULL。  
+ 指示别名数据类型处理空值的方式。 *null_type*是**varchar (** 8 **)**，默认值为 NULL，并且必须括在单引号 （'NULL'、 'NOT NULL'，或 NONULL）。 如果*null_type*未显式定义**sp_addtype**，设置为当前默认为空。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果**@phystype**是**位**，和**@nulltype**未指定，则默认值不是 NULL。  
   
 > [!NOTE]  
 >  *Null_type*参数仅定义此数据类型的默认值为 null。 如果在创建表的过程中使用别名数据类型时显式地定义了为空性，那么该为空性优先于已定义的为空性。 有关详细信息，请参阅[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
@@ -101,7 +100,7 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  为了向后兼容，**公共**数据库角色中自动授予 REFERENCES 权限通过使用创建的别名数据类型**sp_addtype**。 请注意中使用 CREATE TYPE 语句而不是创建别名数据类型时**sp_addtype**，没有此类自动授予发生。  
   
- 别名数据类型不能定义使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**，**表**， **xml**， **varchar （max)**， **nvarchar (max)**或**varbinary （max)**数据类型。  
+ 别名数据类型不能定义使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**，**表**， **xml**， **varchar （max)**， **nvarchar (max)** 或**varbinary （max)** 数据类型。  
   
 ## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**或**db_ddladmin**固定的数据库角色。  

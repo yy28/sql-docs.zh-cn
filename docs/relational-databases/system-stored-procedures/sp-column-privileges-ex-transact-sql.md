@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 574f0e4e829bfbe92761992e51fd3c3ffd5ef852
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,8 +75,8 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**COLUMN_NAME**|**sysname**|列名称，为每个列的**TABLE_NAME**返回。 此字段始终返回值。|  
 |**授权者**|**sysname**|已授予此权限的数据库用户名称**COLUMN_NAME**到列出**被授权者**。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列始终是相同**TABLE_OWNER**。 此字段始终返回值。<br /><br /> **授权者**列可以是数据库所有者 (**TABLE_OWNER**) 或人向其数据库所有者授予权限的 GRANT 语句中使用 WITH GRANT OPTION 子句。|  
 |**被授权者**|**sysname**|已被授予此权限的数据库用户名称**COLUMN_NAME**通过列出**授权者**。 此字段始终返回值。|  
-|**特权**|**varchar(**32**)**|可用列权限中的一个。 列权限可以是下列值中的一个（或定义实现时数据源支持的其他值）：<br /><br /> 选择 =**被授权者**可以检索的列的数据。<br /><br /> 插入 =**被授权者**插入新行时可以提供此列的数据 (通过**被授权者**) 到表。<br /><br /> 更新 =**被授权者**可以修改列中的现有数据。<br /><br /> 引用 =**被授权者**可以引用外部表中主键的键/外键关系中的列。 主键/外键关系是使用表约束定义的。|  
-|**IS_GRANTABLE**|**varchar (**3**)**|指示是否**被授权者**允许权限授予其他用户 （通常称为"授予再授予"权限）。 可以是 YES、NO 或 NULL。 未知值或 NULL 值表示不能使用“授予再授予”(grant with grant) 的数据源。|  
+|**特权**|**varchar(** 32 **)**|可用列权限中的一个。 列权限可以是下列值中的一个（或定义实现时数据源支持的其他值）：<br /><br /> 选择 =**被授权者**可以检索的列的数据。<br /><br /> 插入 =**被授权者**插入新行时可以提供此列的数据 (通过**被授权者**) 到表。<br /><br /> 更新 =**被授权者**可以修改列中的现有数据。<br /><br /> 引用 =**被授权者**可以引用外部表中主键的键/外键关系中的列。 主键/外键关系是使用表约束定义的。|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|指示是否**被授权者**允许权限授予其他用户 （通常称为"授予再授予"权限）。 可以是 YES、NO 或 NULL。 未知值或 NULL 值表示不能使用“授予再授予”(grant with grant) 的数据源。|  
   
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  

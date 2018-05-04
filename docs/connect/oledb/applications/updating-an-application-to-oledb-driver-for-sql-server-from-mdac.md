@@ -22,12 +22,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4b3f50c791d7cc53d3fa3161aaf8293abbd8b62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>更新应用程序到 OLE DB 驱动程序适用于从 MDAC 的 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +58,6 @@ ms.lasthandoff: 04/16/2018
 -   OLE DB 驱动程序的 SQL Server 不包含的 XML 集成。 OLE DB 驱动程序的 SQL Server 支持选择... XML 查询，但不支持任何其他 XML 功能。 但是，支持 OLE DB 驱动程序的 SQL Server **xml**中引入的数据类型[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
 
 -   OLE DB 驱动程序的 SQL Server 支持配置客户端网络库使用仅连接字符串属性。 如果需要更完整的网络库配置，您必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器。  
-
--   OLE DB 驱动程序的 SQL Server 不是 odbcbcp.dll 与兼容的。 必须重新生成应用程序将与 msoledbsql.lib 链接以便用于 SQL Server 的 OLE DB 驱动程序。    
 
 -   MDAC 连接字符串允许一个布尔值 (**true**) 为**Trusted_Connection**关键字。 用于 SQL Server 连接字符串的 OLE DB 驱动程序必须使用**是**或**没有**。  
 

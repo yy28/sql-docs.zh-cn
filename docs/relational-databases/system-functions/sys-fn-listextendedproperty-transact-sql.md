@@ -32,13 +32,12 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cdd9b448d0d8e6a6c57a6bae2c9c52a94952f380
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d55eb614a9041322db2e4ddfeb03f64e6cff9e29
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ fn_listextendedproperty (
  所指定的级别 0 对象类型的名称。 *level0_object_name*是**sysname**默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
  {默认 |*level1_object_type*|NULL}  
- 级别 1 对象的类型。 *level1_object_type*是**varchar （128)**默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 级别 1 对象的类型。 *level1_object_type*是**varchar （128)** 默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
 > [!NOTE]  
 >  默认值映射到 NULL，而“default”映射到对象类型 DEFAULT。  
@@ -86,7 +85,7 @@ fn_listextendedproperty (
  所指定的级别 1 对象类型的名称。 *level1_object_name*是**sysname**默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
  {默认 |*level2_object_type*|NULL}  
- 级别 2 对象的类型。 *level2_object_type*是**varchar （128)**默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 有效输入*level2_object_type*是列、 约束、 事件通知、 索引、 参数、 触发器和 NULL。  
+ 级别 2 对象的类型。 *level2_object_type*是**varchar （128)** 默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 有效输入*level2_object_type*是列、 约束、 事件通知、 索引、 参数、 触发器和 NULL。  
   
  {默认 |*level2_object_name*|NULL}  
  所指定的级别 2 对象类型的名称。 *level2_object_name*是**sysname**默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -21,19 +21,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05a8ce31caf23a29a51cd9329c2c85950e15580e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 815dcb47a34d2e0729111b2a34693f1e6f4de557
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 数据类型
 ODBC 定义由应用程序变量和其相应的类型标识符的 C 数据类型。 绑定到结果集中的列和语句参数的缓冲区使用这些名称。 例如，假设应用程序想要从字符格式的结果集列中检索数据。 它声明的变量 SQLCHAR * 数据类型，并将此变量绑定到结果集列与 SQL_C_CHAR 类型标识符。 C 数据类型和类型标识符的完整列表，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  ODBC 还定义了从每个 SQL 数据类型为 C 数据类型的默认映射。 例如，数据源中的 2 字节整数被映射到应用程序中的 2 字节整数。 若要使用的默认映射，应用程序，请指定 SQL_C_DEFAULT 类型标识符。 但是，建议不要使用此标识符互操作性的原因。  
   
- 在 ODBC 1 中定义的所有整数 C 数据类型*.x*是否已进行签名。 无符号的 C 数据类型和其相应的类型标识符被添加在 ODBC 2.0。 因此，应用程序和驱动程序需要特别注意 1 在处理时*.x*版本。  
+ 在 ODBC 1 中定义的所有整数 C 数据类型 *.x*是否已进行签名。 无符号的 C 数据类型和其相应的类型标识符被添加在 ODBC 2.0。 因此，应用程序和驱动程序需要特别注意 1 在处理时 *.x*版本。  
   
 ## <a name="c-data-type-extensibility"></a>C 数据类型扩展性  
  在 ODBC 3.8，你可以指定特定驱动程序的 C 数据类型。 这使你可以将 SQL 类型 ODBC 应用程序中的特定于驱动程序的 C 类型作为绑定，当您调用[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)， [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)，或[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。 这可能有助于支持新的服务器类型，因为现有的 C 数据类型可能无法正确反映新的服务器数据类型。 使用特定于驱动程序的 C 类型会增加驱动程序可以执行的转换的数。  

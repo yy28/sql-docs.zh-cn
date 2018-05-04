@@ -18,13 +18,12 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d24c9e652e5971757f93976b951b26989c7e5562
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 882c49269c10041e7a621fb2d77a87239cd6ed87
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 从 C 到 SQL 数据类型转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
   本主题列出了需要考虑在 C 类型间转换的问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间类型。  
   
- 下表中介绍的转换适用于在客户端上所进行的转换。 在其中客户端指定的参数不同的服务器上定义的小数秒精度的情况下，客户端转换可能会成功，但服务器将返回错误时**SQLExecute**或**SQLExecuteDirect**调用。 具体而言，ODBC 视为秒的小数部分的任何截断错误，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行为是要舍入的; 例如，舍入发生时从转**datetime2(6)**到**datetime2(2)**. Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
+ 下表中介绍的转换适用于在客户端上所进行的转换。 在其中客户端指定的参数不同的服务器上定义的小数秒精度的情况下，客户端转换可能会成功，但服务器将返回错误时**SQLExecute**或**SQLExecuteDirect**调用。 具体而言，ODBC 视为秒的小数部分的任何截断错误，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行为是要舍入的; 例如，舍入发生时从转**datetime2(6)** 到**datetime2(2)**. Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetStmtAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a1a861de024a59313bcf883b58d98b867261276
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函数
 **一致性**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLSetStmtAttr**设置与语句相关的属性。  
   
 > [!NOTE]  
->  有关什么驱动程序管理器时，将映射此函数可对 ODBC 3*.x*应用程序使用 ODBC 2*.x*驱动程序，请参阅[映射用于向后的替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  有关什么驱动程序管理器时，将映射此函数可对 ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序，请参阅[映射用于向后的替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -131,10 +130,10 @@ SQLRETURN SQLSetStmtAttr(
  信息的格式设置*ValuePtr*取决于指定*属性*。 **SQLSetStmtAttr**接受特性信息的两个不同的格式之一： 字符串或整数值。 每个格式将其记录在该特性的说明。 此格式适用于为每个属性中返回的信息**SQLGetStmtAttr**。 字符字符串的指向*ValuePtr*参数**SQLSetStmtAttr**具有长度为*StringLength*。  
   
 > [!NOTE]  
->  能够在连接级别设置语句特性，通过调用**SQLSetConnectAttr** ODBC 3 中已弃用*.x*。 ODBC 3*.x*应用应永远不会将语句属性设置在连接级别。 ODBC 3*.x*语句属性不能在连接级别，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句特性，可以设置在连接级别或语句级上设置。  
+>  能够在连接级别设置语句特性，通过调用**SQLSetConnectAttr** ODBC 3 中已弃用 *.x*。 ODBC 3 *.x*应用应永远不会将语句属性设置在连接级别。 ODBC 3 *.x*语句属性不能在连接级别，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句特性，可以设置在连接级别或语句级上设置。  
   
 > [!NOTE]  
->  ODBC 3*.x*驱动程序仅需要支持此功能，如果它们应使用 ODBC 2*.x*应用程序将 ODBC 2 设置*.x*在连接级别的语句选项。 详细信息，请参阅"设置语句选项在连接级别"下[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)为了向后兼容的附录 g： 驱动程序准则中。  
+>  ODBC 3 *.x*驱动程序仅需要支持此功能，如果它们应使用 ODBC 2 *.x*应用程序将 ODBC 2 设置 *.x*在连接级别的语句选项。 详细信息，请参阅"设置语句选项在连接级别"下[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)为了向后兼容的附录 g： 驱动程序准则中。  
   
 ## <a name="statement-attributes-that-set-descriptor-fields"></a>设置描述符字段的语句属性  
  许多语句特性对应于描述符标头字段。 将这些特性实际结果设置描述符字段的设置。 通过调用设置字段**SQLSetStmtAttr**而不是为**SQLSetDescField**不需要获得的函数调用的描述符句柄的优势。  
@@ -194,16 +193,16 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|SQLULEN\*记录指向在其中以返回的已处理，包括错误集的参数集数量的缓冲区的字段。 如果这是 null 指针，则将返回没有数。<br /><br /> 将此语句属性设置 IPD 标头中设置 SQL_DESC_ROWS_PROCESSED_PTR 字段。<br /><br /> 如果调用**SQLExecDirect**或**SQLExecute** : SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 未返回此属性指向的缓冲区中的填充，缓冲区的内容是不确定。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。|  
 |SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|SQLULEN 值，该值指定每个参数的值的数目。 如果 SQL_ATTR_PARAMSET_SIZE 大于 1，SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR APD 指向数组。 基数的每个数组等于此字段的值。<br /><br /> 没有任何绑定的参数时，将忽略此属性。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 将此语句属性设置 APD 标头中设置 SQL_DESC_ARRAY_SIZE 字段。|  
 |SQL_ATTR_QUERY_TIMEOUT (ODBC 1.0)|一个 SQLULEN 值对应于为要返回到应用程序之前执行的 SQL 语句中等待的秒数。 如果*ValuePtr*是等于 0 （默认值），没有任何超时。<br /><br /> 在指定的超时时间超过数据源中的最大超时或小于最小超时， **SQLSetStmtAttr**替代此值，并返回 SQLSTATE 01s02 的警告 （选项值已更改）。<br /><br /> 请注意，应用程序无需调用**SQLCloseCursor**重用该语句，如果**选择**语句的操作已超时。<br /><br /> 在此语句属性中设置的查询超时值是在同步和异步模式中有效。|  
-|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 值：<br /><br /> SQL_RD_ON = **SQLFetchScroll**以及在 ODBC 3*.x*， **SQLFetch**之后将光标置于到指定位置检索数据。 这是默认设置。<br /><br /> SQL_RD_OFF = **SQLFetchScroll**以及在 ODBC 3*.x*， **SQLFetch**后它将光标置于不检索数据。<br /><br /> 通过设置为 SQL_RD_OFF SQL_RETRIEVE_DATA，应用程序可以验证某行是否存在，或者检索行的书签，而不引发检索行的系统开销。 有关详细信息，请参阅[滚动和提取行](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)。<br /><br /> 可以在打开的游标; 上设置此属性的值但是，该设置可能不会立即生效，在这种情况下该驱动程序将返回 SQLSTATE 01s02 的警告 （选项值已更改） 和将该属性重置为其原始值。|  
+|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 值：<br /><br /> SQL_RD_ON = **SQLFetchScroll**以及在 ODBC 3 *.x*， **SQLFetch**之后将光标置于到指定位置检索数据。 这是默认设置。<br /><br /> SQL_RD_OFF = **SQLFetchScroll**以及在 ODBC 3 *.x*， **SQLFetch**后它将光标置于不检索数据。<br /><br /> 通过设置为 SQL_RD_OFF SQL_RETRIEVE_DATA，应用程序可以验证某行是否存在，或者检索行的书签，而不引发检索行的系统开销。 有关详细信息，请参阅[滚动和提取行](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)。<br /><br /> 可以在打开的游标; 上设置此属性的值但是，该设置可能不会立即生效，在这种情况下该驱动程序将返回 SQLSTATE 01s02 的警告 （选项值已更改） 和将该属性重置为其原始值。|  
 |SQL_ATTR_ROW_ARRAY_SIZE (ODBC 3.0)|指定的每个调用返回的行数的 SQLULEN 值**SQLFetch**或**SQLFetchScroll**。 它也是用于大容量书签操作中的书签数组中的行数**SQLBulkOperations**。 默认值为 1。<br /><br /> 如果指定的行集大小超过了支持数据源的最大行集大小，该驱动程序替代此值，并返回 SQLSTATE 01s02 的警告 （选项值已更改）。<br /><br /> 有关详细信息，请参阅[行集大小](../../../odbc/reference/develop-app/rowset-size.md)。<br /><br /> 将此语句属性设置 ARD 标头中设置 SQL_DESC_ARRAY_SIZE 字段。|  
 |SQL_ATTR_ROW_BIND_OFFSET_PTR (ODBC 3.0)|SQLULEN * 指向添加到指针来更改绑定的列数据的偏移量的值。 如果此字段为非 null，该驱动程序将取消引用指针、 将取消引用的值添加到每个描述符记录 （SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 中的延迟字段并使用新指针值在绑定时。 它被设置为默认情况下 null。<br /><br /> 将此语句属性设置 ARD 标头中设置 SQL_DESC_BIND_OFFSET_PTR 字段。|  
 |SQL_ATTR_ROW_BIND_TYPE (ODBC 1.0)|设置绑定方向 SQLULEN 值时要使用**SQLFetch**或**SQLFetchScroll**相关联的语句上调用。 通过将该值设置为 SQL_BIND_BY_COLUMN 情况下，选择列绑定。 通过将该值设置为结构或结果列将绑定到其中的缓冲区的实例的长度，选择按行绑定。<br /><br /> 如果指定长度，则它必须包含的所有绑定的列和结构或缓冲区，以确保当绑定列的地址将递增，具有指定长度，结果将指向第中的同一列的开头的任何填充空间e 下一行。 使用时**sizeof**运算符具有结构或联合在 ANSI C 中，为保证此行为。<br /><br /> 按列绑定是默认绑定方向为**SQLFetch**和**SQLFetchScroll**。<br /><br /> 有关详细信息，请参阅[绑定与块状游标一起使用的列](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)。<br /><br /> 将此语句属性设置 ARD 标头中设置 SQL_DESC_BIND_TYPE 字段。|  
 |SQL_ATTR_ROW_NUMBER (ODBC 2.0)|是整个结果中的当前行数 SQLULEN 值设置。 如果无法确定当前行数或没有当前行，该驱动程序将返回 0。<br /><br /> 此属性可以通过调用来检索**SQLGetStmtAttr**但未通过调用设置**SQLSetStmtAttr**。|  
 |SQL_ATTR_ROW_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT\*指向 SQLUSMALLINT 值的数组的值用于在大容量操作使用过程中忽略某一行**SQLSetPos**。 每个值设置为 SQL_ROW_PROCEED （适用于要包含在大容量操作中的行） 或 SQL_ROW_IGNORE （适用于从大容量操作中排除的行）。 (通过调用到的过程中使用此数组不能忽略行**SQLBulkOperations**。)<br /><br /> 此语句属性可以设置为 null 指针，用例驱动程序不返回行状态值。 此属性可以设置任何时候，但只有在下次时未使用的新值**SQLSetPos**调用。<br /><br /> 有关详细信息，请参阅[更新中行 SQLSetPos 行集](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)和[删除中 SQLSetPos 行集的行](../../../odbc/reference/develop-app/deleting-rows-in-the-rowset-with-sqlsetpos.md)。<br /><br /> 将此语句属性设置中 ARD 设置 SQL_DESC_ARRAY_STATUS_PTR 字段。|  
-|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*指向 SQLUSMALLINT 数组的值后调用值包含行状态值**SQLFetch**或**SQLFetchScroll**。 数组有有行的行集中的所有元素。<br /><br /> 此语句属性可以设置为 null 指针，用例驱动程序不返回行状态值。 此属性可以设置任何时候，但只有在下次时未使用的新值**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**调用。<br /><br /> 有关详细信息，请参阅[提取的行数和状态](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)。<br /><br /> 将此语句属性设置 IRD 标头中设置 SQL_DESC_ARRAY_STATUS_PTR 字段。<br /><br /> 此属性映射通过 ODBC 2*.x*驱动程序添加到*rgbRowStatus*对的调用中的数组**SQLExtendedFetch**。|  
+|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*指向 SQLUSMALLINT 数组的值后调用值包含行状态值**SQLFetch**或**SQLFetchScroll**。 数组有有行的行集中的所有元素。<br /><br /> 此语句属性可以设置为 null 指针，用例驱动程序不返回行状态值。 此属性可以设置任何时候，但只有在下次时未使用的新值**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**调用。<br /><br /> 有关详细信息，请参阅[提取的行数和状态](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)。<br /><br /> 将此语句属性设置 IRD 标头中设置 SQL_DESC_ARRAY_STATUS_PTR 字段。<br /><br /> 此属性映射通过 ODBC 2 *.x*驱动程序添加到*rgbRowStatus*对的调用中的数组**SQLExtendedFetch**。|  
 |SQL_ATTR_ROWS_FETCHED_PTR (ODBC 3.0)|SQLULEN\*值，该值指向在其中以返回到调用后读取的行数的缓冲区**SQLFetch**或**SQLFetchScroll**; 执行大容量操作所影响的行数通过调用**SQLSetPos**与*操作*SQL_REFRESH; 或通过执行的大容量操作影响的行数参数**SQLBulkOperations**. 此数字包括错误行。<br /><br /> 有关详细信息，请参阅[提取的行数和状态](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)。<br /><br /> 将此语句属性设置 IRD 标头中设置 SQL_DESC_ROWS_PROCESSED_PTR 字段。<br /><br /> 如果调用**SQLFetch**或**SQLFetchScroll** : SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 未返回此属性指向的缓冲区中的填充，缓冲区的内容是不确定。|  
 |SQL_ATTR_SIMULATE_CURSOR (ODBC 2.0)|一个 SQLULEN 值，指定驱动程序模拟定位的 update 和 delete 语句是否保证此类语句影响只有一个单个行。<br /><br /> 若要模拟定位的 update 和 delete 语句，大多数驱动程序构造搜索**更新**或**删除**语句包含**其中**指定子句当前行中的每个列的值。 这些列组成的唯一密钥，除非此类语句可能会影响多个行。<br /><br /> 若要确保此类语句影响只有一个行，该驱动程序确定中唯一键的列，并将这些列添加到结果集。 如果应用程序可保证在结果集中的列组成的唯一密钥，该驱动程序不需要这样做。 这可能会降低执行时间。<br /><br /> SQL_SC_NON_UNIQUE = 驱动程序不模拟的保证是否定位 update 或 delete 语句将影响只有一行;它是应用程序的责任，若要这样做。 如果语句会影响多个行， **SQLExecute**， **SQLExecDirect**，或**SQLSetPos**返回 SQLSTATE 01001 （游标操作冲突）。<br /><br /> SQL_SC_TRY_UNIQUE = 的驱动程序尝试以保证模拟定位更新或删除语句影响只包含一行。 该驱动程序执行速度始终都此类语句中，即使它们可能会影响多个行，例如，当没有唯一键。 如果语句会影响多个行， **SQLExecute**， **SQLExecDirect**，或**SQLSetPos**返回 SQLSTATE 01001 （游标操作冲突）。<br /><br /> SQL_SC_UNIQUE = 模拟定位的更新的驱动程序保证或删除语句影响只包含一行。 如果该驱动程序无法保证这一点对于给定的语句， **SQLExecDirect**或**SQLPrepare**返回错误。<br /><br /> 如果数据源提供了本机 SQL 支持定位更新和删除语句和驱动程序不模拟游标，则返回 SQL_SUCCESS，为 SQL_SIMULATE_CURSOR 请求 SQL_SC_UNIQUE 时。 如果请求 SQL_SC_TRY_UNIQUE 或 SQL_SC_NON_UNIQUE，则返回 SQL_SUCCESS_WITH_INFO。 如果数据源提供 SQL_SC_TRY_UNIQUE 级别的支持，该驱动程序不为针对 SQL_SC_NON_UNIQUE 返回 SQL_SC_TRY_UNIQUE 和 SQL_SUCCESS_WITH_INFO 被返回 SQL_SUCCESS。<br /><br /> 如果数据源不支持指定的游标模拟类型，该驱动程序替换不同的模拟类型和返回 SQLSTATE 01s02 的警告 （选项值已更改）。 对于 SQL_SC_UNIQUE，驱动程序将替换为，按顺序，SQL_SC_TRY_UNIQUE 或 SQL_SC_NON_UNIQUE。 对于 SQL_SC_TRY_UNIQUE，驱动程序将替换为 SQL_SC_NON_UNIQUE。<br /><br /> 默认值为 SQL_SC_UNIQUE。<br /><br /> 有关详细信息，请参阅[模拟定位更新和删除语句](../../../odbc/reference/develop-app/simulating-positioned-update-and-delete-statements.md)。|  
-|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|指定应用程序是否将使用与某个游标的书签 SQLULEN 值：<br /><br /> SQL_UB_OFF = Off （默认）<br /><br /> SQL_UB_VARIABLE = 应用程序将与游标，使用书签和驱动程序将提供长度可变的书签，如果它们受支持。 在 ODBC 3 中已弃用 SQL_UB_FIXED*.x*。 ODBC 3*.x*应用程序应始终使用长度可变的书签，即使使用 ODBC 2*.x* （它支持仅 4 字节、 固定长度的书签） 的驱动程序。 这是因为固定长度书签是只是一种特殊的情况的长度可变的书签。 使用 ODBC 2 时*.x*驱动程序，则驱动程序管理器会将 SQL_UB_VARIABLE 映射到 SQL_UB_FIXED。<br /><br /> 若要使用与某个游标的书签，应用程序必须指定此属性与 SQL_UB_VARIABLE 值之前打开游标。<br /><br /> 有关详细信息，请参阅[检索书签](../../../odbc/reference/develop-app/retrieving-bookmarks.md)。|  
+|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|指定应用程序是否将使用与某个游标的书签 SQLULEN 值：<br /><br /> SQL_UB_OFF = Off （默认）<br /><br /> SQL_UB_VARIABLE = 应用程序将与游标，使用书签和驱动程序将提供长度可变的书签，如果它们受支持。 在 ODBC 3 中已弃用 SQL_UB_FIXED *.x*。 ODBC 3 *.x*应用程序应始终使用长度可变的书签，即使使用 ODBC 2 *.x* （它支持仅 4 字节、 固定长度的书签） 的驱动程序。 这是因为固定长度书签是只是一种特殊的情况的长度可变的书签。 使用 ODBC 2 时 *.x*驱动程序，则驱动程序管理器会将 SQL_UB_VARIABLE 映射到 SQL_UB_FIXED。<br /><br /> 若要使用与某个游标的书签，应用程序必须指定此属性与 SQL_UB_VARIABLE 值之前打开游标。<br /><br /> 有关详细信息，请参阅[检索书签](../../../odbc/reference/develop-app/retrieving-bookmarks.md)。|  
   
  [仅当描述符不是实现描述符，而不是应用程序描述符，可以以异步方式调用 1] 这些函数。  
   

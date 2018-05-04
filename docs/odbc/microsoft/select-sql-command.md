@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
@@ -19,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69b3d6bd8330ff5a1ba85ba1da1a7b6f3a3cc26a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---sql-command"></a>选择的 SQL 命令
 从一个或多个表中检索数据。  
@@ -120,7 +119,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   如果你在查询中包括两个表，并且未指定联接条件，只要满足筛选器条件第二个表中的每个记录中加入第一个表中的每个记录。 此类查询可以生成很长的结果。  
   
--   联接表具有空字段，因为 Visual FoxPro 与空字段相匹配时要格外小心。 例如，如果在客户加入。ZIP 和发票。压缩并将查询输出如果客户包含 100 空邮政编码和发票包含 400 空邮政编码，包含生成的从空的字段的 40000 额外记录。 使用**空 （)**函数来消除在查询输出中的空记录。  
+-   联接表具有空字段，因为 Visual FoxPro 与空字段相匹配时要格外小心。 例如，如果在客户加入。ZIP 和发票。压缩并将查询输出如果客户包含 100 空邮政编码和发票包含 400 空邮政编码，包含生成的从空的字段的 40000 额外记录。 使用**空 （)** 函数来消除在查询输出中的空记录。  
   
 -   你必须使用 AND 运算符连接多个联接条件。 每个联接条件具有以下形式：  
   
@@ -141,7 +140,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  当你使用 = 运算符对于字符串，它可以充当有所不同，具体取决于设置 ANSI 的设置。 当设置 ANSI 设置为 OFF 时，Visual FoxPro 以为 Xbase 用户所熟悉的方式处理字符串比较。 当设置 ANSI 设置为 ON 时，则 Visual FoxPro 遵循 ANSI 标准的字符串比较。 请参阅[设置 ANSI](../../odbc/microsoft/set-ansi-command.md)和[确切设置](../../odbc/microsoft/set-exact-command.md)有关 Visual FoxPro 如何执行字符串比较的详细信息。  
   
- *FilterCondition*指定记录包含在查询结果中必须满足的条件。 可以包含任意数量的筛选条件在查询中的根据需要，将它们连接使用 AND 或 OR 运算符。 你还可以使用 NOT 运算符颠倒的逻辑表达式时，值或可以使用**空 （)**检查空字段。 *FilterCondition*可以接受任何窗体在下面的示例：  
+ *FilterCondition*指定记录包含在查询结果中必须满足的条件。 可以包含任意数量的筛选条件在查询中的根据需要，将它们连接使用 AND 或 OR 运算符。 你还可以使用 NOT 运算符颠倒的逻辑表达式时，值或可以使用**空 （)** 检查空字段。 *FilterCondition*可以接受任何窗体在下面的示例：  
   
  **示例 1** *FieldName1 比较 FieldName2*  
   

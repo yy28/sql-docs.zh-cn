@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: aaeb95f70c9afc6872bd56df494a8eba88f98f91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b8ef0b3f0ba361e368695b31d15b26cd013ed6e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,10 +45,10 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>返回类型  
  A\<表表达式 >。  
   
-## <a name="remarks"></a>Remarks  
- 如果 *n* 指定参数，它将返回以下值：  
+## <a name="remarks"></a>注释  
+ 如果*n*指定参数，它将返回以下值：  
   
--   如果 *n* 大于零，下一步中最可能的序列值 *n* 步骤。  
+-   如果*n*大于零，下一步中最可能的序列值*n*步骤。  
   
 -   如果这两个*n 开始*和*n 端*指定，序列值从*n 开始*到*n 端*。  
   
@@ -64,8 +63,8 @@ From
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindParameter function [ODBC], describing parameters
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f746b7df2ac3ef4de73e54c6d78df02e0c64ec34
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 629241f2385eeb3059800d35288b9c71d1d0ac97
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="describing-parameters"></a>描述参数
 **SQLBindParameter**包含描述参数的自变量： 其 SQL 类型、 精度和小数位数。 驱动程序使用此信息，或*元数据，*将参数值转换为所需的数据源的类型。 从表面看，这看起来可能驱动程序处于更有利知道比应用程序; 的参数元数据的位置毕竟，该驱动程序可以轻松地发现元数据的一个结果集列。 事实证明，这不是这种情况。 首先，大多数数据源不提供驱动程序来发现参数元数据的方法。 第二个，大多数应用程序已经知道元数据。  

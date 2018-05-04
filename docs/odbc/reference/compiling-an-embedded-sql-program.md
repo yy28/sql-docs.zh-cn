@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1c71b9e9dd0aba9631cfb276baa1f88072a8960
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 92c464cb751bccc4393c219f0312ec8a89691df1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiling-an-embedded-sql-program"></a>编译嵌入式的 SQL 程序
 嵌入式的 SQL 程序包含的 SQL 和主机语言语句混合，因为它不能直接提交到主机语言使用的编译器。 相反，它是通过一个多步骤过程编译。 尽管此过程的不同产品产品，的步骤都大致相同的所有产品。  

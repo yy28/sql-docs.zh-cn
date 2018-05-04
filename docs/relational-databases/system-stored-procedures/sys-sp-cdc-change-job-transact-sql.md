@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 48ea42d122c0b7431279ec53b384d400ea5f9de8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4878eeca70732ed5a7ab19e220eac60260e71ee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>参数  
  [  **@job_type=** ] *****job_type*****  
- 要修改的作业类型。 *job_type*是**nvarchar(20)**默认值为捕获。 有效的输入为 'capture' 和 'cleanup'。  
+ 要修改的作业类型。 *job_type*是**nvarchar(20)** 默认值为捕获。 有效的输入为 'capture' 和 'cleanup'。  
   
  [ **@maxtrans** ] **= * * * max_trans*  
  每个扫描循环中要处理的最大事务数。 *max_trans*是**int**默认值为 NULL，该值指示此参数没有更改。 如果指定值，则该值必须是一个正整数。  

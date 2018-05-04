@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab3ba71bedbd76f2d7837a660c3a6f9d7a5ba588
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**__$start_lsn**|**binary(10)**|与相应更改的提交事务关联的日志序列号 (LSN)。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果两个行时，在源表上的删除操作中删除更改表将包含两行，每个具有相同**__ $start_lsn**值。|  
+|**__$start_lsn**|**binary(10)**|与相应更改的提交事务关联的日志序列号 (LSN)。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果两个行时，在源表上的删除操作中删除更改表将包含两行，每个具有相同 **__ $start_lsn**值。|  
 |**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此列始终为 NULL。|  
 |**__$seqval**|**binary(10)**|用于对事务内的行更改进行排序的序列值。|  
 |**__$operation**|**int**|标识与相应更改关联的数据操作语言 (DML) 操作。 可以为以下各项之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（旧值）<br /><br /> 列数据中具有执行更新语句之前的行值。<br /><br /> 4 = 更新（新值）<br /><br /> 列数据中具有执行更新语句之后的行值。|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 04/16/2018
  不过，这些列中的值与源列的值相同。  
   
 ### <a name="large-object-data-types"></a>大型对象数据类型  
- 数据类型的列**映像**，**文本**，和**ntext**始终分配**NULL**值时 __ $operation = 1 或\_\_$operation = 3。 数据类型的列**varbinary （max)**， **varchar （max)**，或**nvarchar (max)**分配**NULL**值时\_\_$operation = 3，除非在更新期间更改了该列。 当\_ \_$operation = 1，这些列在删除时分配其值。 始终在捕获实例中包含的计算的列都具有值**NULL**。  
+ 数据类型的列**映像**，**文本**，和**ntext**始终分配**NULL**值时 __ $operation = 1 或\_\_$operation = 3。 数据类型的列**varbinary （max)**， **varchar （max)**，或**nvarchar (max)** 分配**NULL**值时\_\_$operation = 3，除非在更新期间更改了该列。 当\_ \_$operation = 1，这些列在删除时分配其值。 始终在捕获实例中包含的计算的列都具有值**NULL**。  
   
  默认情况下，在一个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句中可添加到已捕获列的最大大小为 65,536 字节或 64 KB。 若要增加此大小，以支持更大的 LOB 数据，使用[配置 max text repl size 服务器配置选项](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)指定更大的最大大小。 有关详细信息，请参阅 [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="data-manipulation-language-modifications"></a>数据操作语言修改  
  对启用了变更数据捕获的源表执行插入、更新和删除操作时，这些 DML 操作的记录将显示在数据库事务日志中。 变更数据捕获进程从事务日志中检索关于那些更改的信息，然后向更改表中添加一行或两行来记录更改。 条目添加到更改表中的顺序与它们提交到源表的顺序是相同的，不过更改表条目的提交通常必须对一组更改执行，而不是对单个条目执行。  
   
- 在更改表条目， **__ $start_lsn**列用来记录与到源表，变更相关联的 LSN 的提交和**__ $seqval 列**用于排序内的更改其事务。 这些元数据列可共同用于确保保留源更改的提交顺序。 因为捕获进程从事务日志获取其更改信息，所以必须注意更改表条目不会与其对应的源表更改同步显示。 在捕获进程处理了事务日志中的相关更改条目后，对应的更改将异步显示。  
+ 在更改表条目， **__ $start_lsn**列用来记录与到源表，变更相关联的 LSN 的提交和 **__ $seqval 列**用于排序内的更改其事务。 这些元数据列可共同用于确保保留源更改的提交顺序。 因为捕获进程从事务日志获取其更改信息，所以必须注意更改表条目不会与其对应的源表更改同步显示。 在捕获进程处理了事务日志中的相关更改条目后，对应的更改将异步显示。  
   
  对于插入和删除操作，会设置更新掩码中的所有位。 对于更新操作，会修改更新（旧值）行和更新（新值）行中的更新掩码以指出在更新过程中有所更改的列。  
   

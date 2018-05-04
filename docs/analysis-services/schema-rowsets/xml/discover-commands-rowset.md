@@ -20,15 +20,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f5fac5cdcfc9dd7f7be511a20018f9c6732ce028
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd2f0de8cec9c9155595a0da7219ce966ef54fdb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在服务器上提供有关中打开的连接的当前正在执行或最后一个的执行命令的资源使用情况和活动信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  在服务器上提供有关中打开的连接的当前正在执行或最后一个的执行命令的资源使用情况和活动信息。  
   
  **适用于：**表格模型、 多维模型  
   
@@ -40,12 +40,12 @@ ms.lasthandoff: 01/08/2018
 |**SESSION_SPID**|**DBTYPE_I4**|是|会话 ID。|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||自会话开始后已执行的命令数。|  
 |**COMMAND_START_TIME**|**DBTYPE_DBTIMESTAMP**||上次命令开始的日期和时间，以服务器上的 UTC 时间表示。|  
-|**COMMAND_ELAPSED_TIME_MS**|**是 DBTYPE_I8**||自命令开始起经过的时间（毫秒）。|  
-|**COMMAND_CPU_TIME_MS**|**是 DBTYPE_I8**||自命令执行开始后该命令占用的 CPU 时间（毫秒）。|  
-|**COMMAND_READS**|**是 DBTYPE_I8**||自命令开始后的累计磁盘读取次数。|  
-|**COMMAND_READ_KB**|**是 DBTYPE_I8**||自命令开始后从磁盘读取的数据的累计值 (KB)。|  
-|**COMMAND_WRITES**|**是 DBTYPE_I8**||自命令开始后的累计磁盘写入次数。|  
-|**COMMAND_WRITE_KB**|**是 DBTYPE_I8**||自命令开始后写入磁盘的数据的累计值 (KB)。|  
+|**COMMAND_ELAPSED_TIME_MS**|**DBTYPE_I8**||自命令开始起经过的时间（毫秒）。|  
+|**COMMAND_CPU_TIME_MS**|**DBTYPE_I8**||自命令执行开始后该命令占用的 CPU 时间（毫秒）。|  
+|**COMMAND_READS**|**DBTYPE_I8**||自命令开始后的累计磁盘读取次数。|  
+|**COMMAND_READ_KB**|**DBTYPE_I8**||自命令开始后从磁盘读取的数据的累计值 (KB)。|  
+|**COMMAND_WRITES**|**DBTYPE_I8**||自命令开始后的累计磁盘写入次数。|  
+|**COMMAND_WRITE_KB**|**DBTYPE_I8**||自命令开始后写入磁盘的数据的累计值 (KB)。|  
 |**COMMAND_TEXT**|**DBTYPE_WSTR**||命令文本。|  
 |**COMMAND_END_TIME**|**DBTYPE_DBTIMESTAMP**||命令执行结束时的服务器 UTC 日期和时间。|  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|a07ccd34-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|命令|  

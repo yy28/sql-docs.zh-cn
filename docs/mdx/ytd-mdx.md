@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b647c31febd5ef06b8cb2e6f808e296518f98af6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果未指定一个成员表达式，默认值是第一个层次结构使用的类型级别的当前成员*年*中类型的第一个维度*时间*度量值组中。  
   
  **Ytd**函数是快捷函数[PeriodsToDate](../mdx/periodstodate-mdx.md)函数其中级别所基于的属性层次结构的类型属性设置为*年*。 也就是说，`Ytd(Member_Expression)` 等效于 `PeriodsToDate(Year_Level_Expression,Member_Expression)`。 请注意，此功能将不运行时类型属性设置为*FiscalYears*。  
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Ytd**不带参数指定，也就是说，通常用在组合[CurrentMember &#40;MDX &#41;](../mdx/currentmember-mdx.md)函数将显示运行累积年度截止到现在总在报表中，如下面的查询中所示：  
+ **Ytd**不带参数指定，也就是说，通常用在组合[CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md)函数将显示运行累积年度截止到现在总在报表中中, 所示以下查询：  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -80,6 +79,6 @@ WHERE
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

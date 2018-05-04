@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1ba90a54159f126e49148de8a8425e74d02e148d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb9f4ec6fbc2e6aecff8d78ff562f35f9a546405
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL 语句的互操作性
 应用程序的其余部分，如 SQL 语句可以是可互操作或特定于 DBMS 的。 和需要应用程序的其余部分，如是如何可互操作的 SQL 语句的选择取决于应用程序的类型。 自定义应用程序不太可能使用可互操作的 SQL 语句，因为它们通常设计为利用一个或两个可能的 Dbms 的功能。 通用应用程序使用可互操作的 SQL 语句，因为它们被设计用于与各种 Dbms。 并垂直应用程序通常归的某处之间，要求严苛的特定级别的功能，但以其他方式使用可互操作的 SQL 语句。  

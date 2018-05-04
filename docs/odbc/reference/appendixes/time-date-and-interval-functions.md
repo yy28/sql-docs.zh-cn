@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], time functions
 - functions [ODBC], date functions
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3d32dc500c2f57919757224d64b3f5c21c6f6423
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 052531afa5ccb08f4041680751a87f7b2201846f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数
 下表列出了 ODBC 标量函数集中包含的日期和时间函数。 应用程序可以确定由驱动程序支持的日期和时间函数，应调用**SQLGetInfo**与*信息类型*SQL_TIMEDATE_FUNCTIONS。  

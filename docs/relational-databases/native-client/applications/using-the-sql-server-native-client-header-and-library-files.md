@@ -28,13 +28,12 @@ caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c511b130397334faf22b22da37789c6ae10b869b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4b234d3c76b4db8c3de1c9f2cc1e0c1db100d6bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 头文件和库文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件安装在以下位置：  
   
- *%PROGRAM FILES%*\Microsoft SQL Server\110\SDK  
+ *%PROGRAM FILES%* \Microsoft SQL Server\110\SDK  
   
  可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件 (sqlncli.h) 向自定义应用程序添加 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 数据访问功能。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件包含利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能所需的所有定义、特性、属性和接口。  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeEnv
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 802dfd5b5f95a615cca743299b264dd93afe4798
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2b7a037fee8f70704eb33c8eb4be5c1c5293270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 函数
 **一致性**  
  版本引入了： ODBC 1.0 标准合规性： 不推荐使用  
   
  **摘要**  
- ODBC 3 中*.x*，ODBC 2.0 函数**SQLFreeEnv**已被取代**SQLFreeHandle**。 有关详细信息，请参阅[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ ODBC 3 中 *.x*，ODBC 2.0 函数**SQLFreeEnv**已被取代**SQLFreeHandle**。 有关详细信息，请参阅[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 > [!NOTE]  
->  有关什么驱动程序管理器时，将映射此函数可对 ODBC 2*.x*应用程序使用 ODBC 3*.x*驱动程序，请参阅[映射弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)为了向后兼容的附录 g： 驱动程序准则中。  
+>  有关什么驱动程序管理器时，将映射此函数可对 ODBC 2 *.x*应用程序使用 ODBC 3 *.x*驱动程序，请参阅[映射弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)为了向后兼容的附录 g： 驱动程序准则中。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

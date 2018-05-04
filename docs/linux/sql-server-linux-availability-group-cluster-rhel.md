@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: Inactive
-ms.openlocfilehash: e073b59b4fd29db9abf8ad602298c0f10301f178
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2a25f2cfa7ce0afdd1455cecd1ad8c8befce53e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>对 SQL Server 可用性组配置 RHEL 群集
 
@@ -127,18 +126,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >禁用 STONITH 仅出于测试目的。 如果计划在生产环境中使用 Pacemaker，则应根据环境计划 STONITH 实现，并使其处于启用状态。 RHEL 不提供针对任何云环境 （包括 Azure） 或 HYPER-V 隔离代理。 因此，群集供应商未提供在这些环境中运行生产群集相关的支持。 我们正在研究解决方案弥补该漏洞，并在将来版本中推出。
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Set cluster property start-failure-is-fatal to false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>设置群集属性群集重新检查间隔
 
-`start-failure-is-fatal` 指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集来决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 发生故障转移后，Pacemaker 重试启动可用性组主前者上资源的 SQL 实例可用后。 Pacemaker 将降级到辅助数据库副本，并自动重新加入可用性组。 
+`cluster-recheck-interval` 指示检查群集中的资源参数、 约束或其他群集选项的更改的轮询间隔。 如果副本出现故障，群集将尝试通过绑定的时间间隔重新启动副本`failure-timeout`值和`cluster-recheck-interval`值。 例如，如果`failure-timeout`设置为 60 秒和`cluster-recheck-interval`设置为 120 秒、 重新启动尝试大于 60 秒，但不超过 120 秒的时间间隔。 我们建议将故障超时设置为 60 和群集重新检查的间隔超过 60 秒的值。 不建议将群集重新检查间隔设置为较小的值。
 
-若要更新属性值设置为`false`运行：
+若要更新属性值设置为`2 minutes`运行：
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->自动故障转移后，当`start-failure-is-fatal = true`资源管理器将尝试启动资源。 如果它在第一次尝试上失败，手动运行`pcs resource cleanup <resourceName>`来清理资源失败计数，重置配置。
+> [!IMPORTANT] 
+> 其值为 false 时，所有的分发，这些方案 （包括 RHEL 7.3 和 7.4），以使用最新可用 Pacemaker 包 1.1.18-11.el7 引入开始失败-是-严重群集设置的行为更改。 此更改会影响故障转移工作流。 如果主副本发生了服务中断，群集会出现故障转移到其中一个可用的辅助副本。 相反，用户会发现群集保留尝试启动失败的主副本。 如果该主永远不会处于联机状态 （由于的永久中断），群集永远不会故障转移到另一个可用的辅助副本。 由于此更改，以前推荐的配置设置开始失败-是-严重将不再有效，该设置需要还原为其默认值为`true`。 此外，需要更新，以包含可用性组资源`failover-timeout`属性。 
+
+若要更新属性值设置为`true`运行：
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+若要更新`ag1`资源属性`failure-timeout`到`60s`运行：
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
 
 Pacemaker 群集属性的信息，请参阅[Pacemaker 群集属性](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
 
@@ -151,8 +163,8 @@ Pacemaker 群集属性的信息，请参阅[Pacemaker 群集属性](http://acces
 若要创建可用性组资源，使用`pcs resource create`命令和设置资源属性。 以下命令将创建`ocf:mssql:ag`主/从具有名称的可用性组的类型资源`ag1`。
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

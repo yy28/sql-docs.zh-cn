@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3d6810d2cc6ac0ba3eb4125372944c6c96e3ddb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4c2e6835d818d1e1d5aba7b54497f4a95f0bc150
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-static-cursors"></a>功能，ODBC 静态游标
 静态游标是一个结果集似乎是静态的。 它通常不检测在对成员资格、 顺序或值的结果集打开光标后所做的更改。 例如，假定静态游标提取行和另一个应用程序，然后更新该行。 静态游标提取此行，如果它发现的值是不变，尽管已被其他应用程序所做的更改。  

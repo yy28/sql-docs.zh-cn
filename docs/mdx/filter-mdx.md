@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 729adc2230242798e67914907b6928ec7346b871
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8bd5ca0e0c3d470a25b9d8e44a8b55712e469924
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  计算结果为 True 或 False 的有效多维表达式 (MDX) 逻辑表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **筛选器**函数计算对指定集中的每个元组指定的逻辑表达式。 该函数返回由指定集中的其中逻辑表达式的计算结果为每个元组集中**true**。 如果没有元组评估结果为**true**，则返回空集。  
   
  **筛选器**函数工作方式类似于[IIf](../mdx/iif-mdx.md)函数。 **IIf**函数将返回两个选项之一基于 MDX 逻辑表达式的计算，而**筛选器**函数将返回满足指定的搜索条件的元组的一组。 实际上，**筛选器**函数执行`IIf(Logical_Expression, Set_Expression.Current, NULL)`上每个元组中组，并返回生成设置。  
@@ -98,6 +97,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

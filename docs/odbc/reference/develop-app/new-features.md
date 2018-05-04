@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], new features in release
 - ODBC drivers [ODBC], backward compatibility
@@ -23,15 +23,14 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb8ca5b716e4414d39597da9671b7c823461b2ee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77620585dffabc97a9e85455236bf51b575d0d3a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-features"></a>新功能
-ODBC 3 中引入了以下新功能。*x*。 一个 ODBC 3。*x*应用程序使用 ODBC 2*.x*驱动程序将不能使用此功能。 ODBC 3。*x*驱动程序管理器使用 ODBC 2 时不将这些功能*.x*驱动程序。  
+ODBC 3 中引入了以下新功能。*x*。 一个 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序将不能使用此功能。 ODBC 3。*x*驱动程序管理器使用 ODBC 2 时不将这些功能 *.x*驱动程序。  
   
 -   采用一个说明符的函数处理作为自变量： **SQLSetDescField**， **SQLGetDescField**， **SQLSetDescRec**， **SQLGetDescRec**，和**SQLCopyDesc**。  
   

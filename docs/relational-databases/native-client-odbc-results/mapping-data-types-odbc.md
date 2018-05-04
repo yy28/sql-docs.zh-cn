@@ -25,13 +25,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf59cc129d6442d08154df95ff9b02f5d417c405
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 25a8c783d4acc74ec2c0449fd89e9eebddbebfa7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-data-types-odbc"></a>映射数据类型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL 数据类型与 ODBC SQL 数据类型。 以下部分讨论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 数据类型以及它们映射到的 ODBC SQL 数据类型。 此外，还讨论 ODBC SQL 数据类型和它们对应的 ODBC C 数据类型，以及支持的和默认的转换。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**数据类型映射到 SQL_BINARY 或 SQL_VARBINARY ODBC 数据类型，因为中的值**时间戳**列不**datetime**值，但**binary （8)**或**varbinary （8)**值，用于指示的序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在该行上的活动。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序遇到字节数为奇数的 SQL_C_WCHAR (Unicode) 值，则将截断尾随奇数字节。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**数据类型映射到 SQL_BINARY 或 SQL_VARBINARY ODBC 数据类型，因为中的值**时间戳**列不**datetime**值，但**binary （8)** 或**varbinary （8)** 值，用于指示的序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在该行上的活动。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序遇到字节数为奇数的 SQL_C_WCHAR (Unicode) 值，则将截断尾随奇数字节。  
   
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>在 ODBC 中处理 sql_variant 数据类型  
  **Sql_variant**数据类型列可以包含任何中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除大型对象 (Lob)，这样**文本**， **ntext**，和**映像**。 例如，此列无法包含**smallint**某些行的值**float**其他行的值和**char/nchar**的其余部分中的值。  

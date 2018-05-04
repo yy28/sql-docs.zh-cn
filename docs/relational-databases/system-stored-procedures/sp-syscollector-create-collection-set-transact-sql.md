@@ -25,12 +25,11 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e2aa88ff030e3fb938fdd00808d10c3c8b6cac9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b958d236f24d36bddca9ed9e51d4cac92aef29e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_syscollector_create_collection_set
  *名称*必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  
   
  [  **@target =** ]*目标*  
- 保留供将来使用。 *名称*是**nvarchar （128)**默认值为 NULL。  
+ 保留供将来使用。 *名称*是**nvarchar （128)** 默认值为 NULL。  
   
  [ **@collection_mode =** ] *collection_mode*  
  指定收集和存储数据的方式。 *collection_mode*是**smallint**和可以具有以下值之一：  
@@ -120,7 +119,7 @@ sp_syscollector_create_collection_set
  默认值为*logging_level*为 1。  
   
  [  **@description =** ]*说明*  
- 收集组的说明。 *说明*是**nvarchar （4000)**默认值为 NULL。  
+ 收集组的说明。 *说明*是**nvarchar （4000)** 默认值为 NULL。  
   
  [ **@collection_set_id =** ] *collection_set_id*  
  收集组的唯一本地标识符。 *collection_set_id*是**int**与输出和是必需的。  

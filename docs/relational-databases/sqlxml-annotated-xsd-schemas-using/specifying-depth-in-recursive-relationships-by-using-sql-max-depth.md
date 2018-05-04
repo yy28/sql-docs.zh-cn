@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51728d15698d79b93d802c6f0be75fba8cf1ab0c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ae0ff4424a2c8bc0eeb7fba2b3ff515cba36a248
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 指定递归关系中的深度
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +66,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  在该片段中，雇员 5 向雇员 4 报告，雇员 4 向雇员 3 报告，雇员 3 和 2 向雇员 1 报告。  
   
- 若要产生该结果，可以使用以下 XSD 架构，并指定针对它的 XPath 查询。 架构描述 **\<Emp >**类型 EmployeeType，组成的元素 **\<Emp >**相同类型，EmployeeType 的子元素。 此即属于递归关系（元素和其祖先属于相同类型）。 此外，使用架构 **\<sql:relationship >**说明主管和 supervisee 之间的父-子关系。 请注意，在这 **\<sql:relationship >**，Emp 是父和子表。  
+ 若要产生该结果，可以使用以下 XSD 架构，并指定针对它的 XPath 查询。 架构描述 **\<Emp >** 类型 EmployeeType，组成的元素 **\<Emp >** 相同类型，EmployeeType 的子元素。 此即属于递归关系（元素和其祖先属于相同类型）。 此外，使用架构 **\<sql:relationship >** 说明主管和 supervisee 之间的父-子关系。 请注意，在这 **\<sql:relationship >**，Emp 是父和子表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -178,7 +176,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  若要生成不同的结果中的层次结构的深度，更改的值**sql:max-深度**架构中的批注和每项更改后重新执行模板。  
   
- 在上面的架构，所有 **\<Emp >**元素具有完全相同的特性集 (**EmployeeID**， **FirstName**，和**LastName**)。 过稍许修改以下架构返回额外**上级**所有属性 **\<Emp >**为管理器报告的元素。  
+ 在上面的架构，所有 **\<Emp >** 元素具有完全相同的特性集 (**EmployeeID**， **FirstName**，和**LastName**)。 过稍许修改以下架构返回额外**上级**所有属性 **\<Emp >** 为管理器报告的元素。  
   
  例如，该 XML 片段显示雇员 1 的下级：  
   
@@ -290,9 +288,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  若要测试此架构，按照提供的示例 A，本主题中前面的步骤。  
   
 ### <a name="nonrecursive-elements"></a>非递归元素  
- 如果**sql:max-深度**批注指定不会导致任何递归的架构中的元素，它将被忽略。 在以下架构中，  **\<Emp >**元素组成**\<常量 >**子元素，该元素，反过来，  **\<Emp >**子元素。  
+ 如果**sql:max-深度**批注指定不会导致任何递归的架构中的元素，它将被忽略。 在以下架构中，  **\<Emp >** 元素组成**\<常量 >** 子元素，该元素，反过来，  **\<Emp >** 子元素。  
   
- 在此架构中， **sql:max-深度**上指定的批注**\<常量 >**元素被忽略，因为没有之间不允许使用递归 **\<Emp>**父和**\<常量 >**子元素。 但没有之间的递归 **\<Emp >**祖先和 **\<Emp >**子。 该架构指定**sql:max-深度**上的批注。 因此， **sql:max-深度**指定在的上级的批注 (**\<Emp >**主管角色中) 将优先。  
+ 在此架构中， **sql:max-深度**上指定的批注**\<常量 >** 元素被忽略，因为没有之间不允许使用递归 **\<Emp>** 父和**\<常量 >** 子元素。 但没有之间的递归 **\<Emp >** 祖先和 **\<Emp >** 子。 该架构指定**sql:max-深度**上的批注。 因此， **sql:max-深度**指定在的上级的批注 (**\<Emp >** 主管角色中) 将优先。  
   
 #### <a name="example-c"></a>示例 C  
   
@@ -340,7 +338,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
   
  另一方面，如果必须通过的复杂类型派生**\<扩展 >**，对应的基本复杂类型的元素可以指定**sql:max-深度**批注。  
   
- 例如，下面的 XSD 架构生成错误，因为**sql:max-深度**批注指定基类型。 通过派生的类型上不支持此批注**\<限制 >**从另一种类型。 若要解决此问题，则必须更改架构，并指定**sql:max-深度**派生类型中的元素上的批注。  
+ 例如，下面的 XSD 架构生成错误，因为**sql:max-深度**批注指定基类型。 通过派生的类型上不支持此批注**\<限制 >** 从另一种类型。 若要解决此问题，则必须更改架构，并指定**sql:max-深度**派生类型中的元素上的批注。  
   
 #### <a name="example-d"></a>示例 D  
   
@@ -384,7 +382,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- 在架构中， **sql:max-深度**上指定**CustomerBaseType**复杂类型。 该架构还指定**\<客户 >**类型的元素**CustomerType**，该类派生自**CustomerBaseType**。 对此类架构指定的 XPath 查询将生成错误，因为**sql:max-深度**不支持在限制基类型中定义的元素上。  
+ 在架构中， **sql:max-深度**上指定**CustomerBaseType**复杂类型。 该架构还指定**\<客户 >** 类型的元素**CustomerType**，该类派生自**CustomerBaseType**。 对此类架构指定的 XPath 查询将生成错误，因为**sql:max-深度**不支持在限制基类型中定义的元素上。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>具有深层次结构的架构  
  您可能有一个包含深层次结构的架构，在该层次结构中，元素包含子元素，而该子元素又包含另一个子元素，以此类推。 如果**sql:max-深度**批注指定此类架构中生成 XML 文档，其中包含超过 500 个级别 （与在级别 1、 其子级别 2 和等等的顶级元素） 的层次结构时，返回错误。  

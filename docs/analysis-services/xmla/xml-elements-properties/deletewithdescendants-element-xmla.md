@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9d740654a701ebc4a81e1bf9e2b5084f706dfbbb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3abfe75505b2eba397a75b0d996a868df01caefe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]指示是否属性成员的后代也将被删除由容器的父[删除](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  指示是否属性成员的后代也将被删除由容器的父[删除](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|Boolean|  
 |默认值|False|  
@@ -63,9 +63,9 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[拖放](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **DeleteWithDescendants**元素确定是否**删除**命令应删除由标识的属性成员[其中](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)元素，但还这些属性成员的后代是以及删除。  
   
 > [!NOTE]  
@@ -74,6 +74,6 @@ ms.lasthandoff: 01/08/2018
  有关删除和更新属性成员的详细信息，请参阅[插入、更新和删除成员 (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

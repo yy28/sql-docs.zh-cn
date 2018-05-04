@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函数
 **一致性**  
@@ -55,16 +54,16 @@ SQLRETURN SQLGetFunctions(
  [输入]连接句柄。  
   
  *FunctionId*  
- [输入]A **#define**值，该值标识相关; ODBC 函数**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 **SQL_API_ODBC3_ALL_FUNCTIONS**由 ODBC 3*.x*应用程序以确定支持 ODBC 3*.x*和更早版本的函数。 **SQL_API_ALL_FUNCTIONS**由 ODBC 2*.x*应用程序以确定支持 ODBC 2*.x*和更早版本的函数。  
+ [输入]A **#define**值，该值标识相关; ODBC 函数**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 **SQL_API_ODBC3_ALL_FUNCTIONS**由 ODBC 3 *.x*应用程序以确定支持 ODBC 3 *.x*和更早版本的函数。 **SQL_API_ALL_FUNCTIONS**由 ODBC 2 *.x*应用程序以确定支持 ODBC 2 *.x*和更早版本的函数。  
   
- 有关的列表**#define**值，标识 ODBC 函数，请参阅"注释。"中的表  
+ 有关的列表 **#define**值，标识 ODBC 函数，请参阅"注释。"中的表  
   
  *SupportedPtr*  
  [输出] 如果*FunctionId*标识单个 ODBC 函数*SupportedPtr*指向单个 SQLUSMALLINT 值，该值是 SQL_TRUE 指定的函数是否支持的驱动程序，以及 SQL_FALSE，如果不是支持。  
   
- 如果*FunctionId*是 SQL_API_ODBC3_ALL_FUNCTIONS， *SupportedPtr*指向与大量的元素等于 SQL_API_ODBC3_ALL_FUNCTIONS_SIZE SQLSMALLINT 数组。 此数组被视为由驱动程序管理器可以用于确定是否 ODBC 3 4000 位位图*.x*或支持更早版本的函数。 SQL_FUNC_EXISTS 宏调用以确定函数的支持。 （请参阅"注释"。）ODBC 3*.x*应用程序可以调用**SQLGetFunctions**与针对任一 ODBC 3 SQL_API_ODBC3_ALL_FUNCTIONS*.x*或 ODBC 2*.x*驱动程序。  
+ 如果*FunctionId*是 SQL_API_ODBC3_ALL_FUNCTIONS， *SupportedPtr*指向与大量的元素等于 SQL_API_ODBC3_ALL_FUNCTIONS_SIZE SQLSMALLINT 数组。 此数组被视为由驱动程序管理器可以用于确定是否 ODBC 3 4000 位位图 *.x*或支持更早版本的函数。 SQL_FUNC_EXISTS 宏调用以确定函数的支持。 （请参阅"注释"。）ODBC 3 *.x*应用程序可以调用**SQLGetFunctions**与针对任一 ODBC 3 SQL_API_ODBC3_ALL_FUNCTIONS *.x*或 ODBC 2 *.x*驱动程序。  
   
- 如果*FunctionId*是 SQL_API_ALL_FUNCTIONS， *SupportedPtr*指向 SQLUSMALLINT 100 个元素数组。 按索引数组**#define**使用的值*FunctionId*来标识每个 ODBC 函数; 数组的某些元素是指未使用和保留供将来使用。 元素是 SQL_TRUE，如果它标识 ODBC 2*.x*或更早版本的驱动程序支持的函数。 如果确定驱动程序不支持 ODBC 函数或没有标识 ODBC 函数，它则 SQL_FALSE。  
+ 如果*FunctionId*是 SQL_API_ALL_FUNCTIONS， *SupportedPtr*指向 SQLUSMALLINT 100 个元素数组。 按索引数组 **#define**使用的值*FunctionId*来标识每个 ODBC 函数; 数组的某些元素是指未使用和保留供将来使用。 元素是 SQL_TRUE，如果它标识 ODBC 2 *.x*或更早版本的驱动程序支持的函数。 如果确定驱动程序不支持 ODBC 函数或没有标识 ODBC 函数，它则 SQL_FALSE。  
   
  在返回的数组 **SupportedPtr*使用从零开始的索引。  
   
@@ -135,7 +134,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] 使用 ODBC 2 时*.x*驱动程序， **SQLBulkOperations**将返回仅支持下列两个条件，则： ODBC 2*.x*驱动程序支持**SQLSetPos**，和的信息类型 SQL_POS_OPERATIONS 返回作为组的 SQL_POS_ADD 位。  
+ [1] 使用 ODBC 2 时 *.x*驱动程序， **SQLBulkOperations**将返回仅支持下列两个条件，则： ODBC 2 *.x*驱动程序支持**SQLSetPos**，和的信息类型 SQL_POS_OPERATIONS 返回作为组的 SQL_POS_ADD 位。  
   
  以下是有效值的列表*FunctionId*引入 ODBC 3.8 或更高版本的函数：  
   
@@ -146,10 +145,10 @@ SQLRETURN SQLGetFunctions(
  [2] **SQLCancelHandle**将返回这些结果仅受支持的驱动程序支持同时**SQLCancel**和**SQLCancelHandle**。 如果**SQLCancel**支持但**SQLCancelHandle**不是，应用程序仍然可以调用**SQLCancelHandle**在语句句柄，因为它将映射到**SQLCancel**。  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 宏  
- SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 宏用于确定支持 ODBC 3*.x*或之后的早期函数**SQLGetFunctions**已调用与*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 自变量。 在应用程序调用与 SQL_FUNC_EXISTS *SupportedPtr*参数设置为*SupportedPtr*传入*SQLGetFunctions*，且*FunctionID*参数设置为**#define**函数。 SQL_FUNC_EXISTS 否则，返回 SQL_TRUE 如果支持该函数，则和 SQL_FALSE。  
+ SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 宏用于确定支持 ODBC 3 *.x*或之后的早期函数**SQLGetFunctions**已调用与*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 自变量。 在应用程序调用与 SQL_FUNC_EXISTS *SupportedPtr*参数设置为*SupportedPtr*传入*SQLGetFunctions*，且*FunctionID*参数设置为 **#define**函数。 SQL_FUNC_EXISTS 否则，返回 SQL_TRUE 如果支持该函数，则和 SQL_FALSE。  
   
 > [!NOTE]  
->  使用 ODBC 2 时*.x*驱动程序，ODBC 3*.x*驱动程序管理器将返回有关 SQL_TRUE **SQLAllocHandle**和**SQLFreeHandle**因为**SQLAllocHandle**映射到**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**，和因为**SQLFreeHandle**映射到**SQLFreeEnv**， **SQLFreeConnect**，或**SQLFreeStmt**。 **SQLAllocHandle**或**SQLFreeHandle**与*HandleType* SQL_HANDLE_DESC 参数不支持，但是，即使 SQL_TRUE 返回对于函数，因为没有任何ODBC 2*.x*用于在此情况下将映射到函数。  
+>  使用 ODBC 2 时 *.x*驱动程序，ODBC 3 *.x*驱动程序管理器将返回有关 SQL_TRUE **SQLAllocHandle**和**SQLFreeHandle**因为**SQLAllocHandle**映射到**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**，和因为**SQLFreeHandle**映射到**SQLFreeEnv**， **SQLFreeConnect**，或**SQLFreeStmt**。 **SQLAllocHandle**或**SQLFreeHandle**与*HandleType* SQL_HANDLE_DESC 参数不支持，但是，即使 SQL_TRUE 返回对于函数，因为没有任何ODBC 2 *.x*用于在此情况下将映射到函数。  
   
 ## <a name="code-example"></a>代码示例  
  下面的三个示例演示应用程序如何使用**SQLGetFunctions**确定如果驱动程序支持**SQLTables**， **SQLColumns**，和**SQLStatistics**。 如果该驱动程序不支持这些功能，应用程序断开与该驱动程序连接。 第一个示例调用**SQLGetFunctions**一次针对每个函数。  

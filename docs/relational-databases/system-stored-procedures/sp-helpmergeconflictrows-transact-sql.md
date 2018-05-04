@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表具有冲突行**WA**和**CA**发布，发布名称传入**CA**检索冲突属于**CA**发布。  
   
  [  **@conflict_table=**] *****conflict_table*****  
- 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表使用的格式名与 **MSmerge_conflict_*发布*_*文章 * * *，与为每个发布的一个表文章。  
+ 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表使用的格式名与 **MSmerge_conflict_* 发布 *_* 文章 * * *，与为每个发布的一个表文章。  
   
  [ **@publisher=**] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  

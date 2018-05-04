@@ -25,12 +25,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b40b75f21b77e6dd17cf426be3ea70fe05ac0757
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3210dbcbd8453769d4edb675a04c775e72784dd1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。用例 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  在数据挖掘扩展插件 (DMX) 中，只能在创建模型时启用钻取功能。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 向现有的模型中添加钻取功能，但是必须先重新处理模型，然后才能查看或查询事例。  
   
- 有关如何启用钻取的详细信息，请参阅[创建挖掘模型 &#40; DMX &#41;](../dmx/create-mining-model-dmx.md)， [SELECT INTO &#40; DMX &#41;](../dmx/select-into-dmx.md)，和[ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 有关如何启用钻取的详细信息，请参阅[创建挖掘模型&#40;DMX&#41;](../dmx/create-mining-model-dmx.md)， [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)，和[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>参数  
  *n*  
- 可选。 一个指定返回行数的整数。  
+ 選擇性。 一个指定返回行数的整数。  
   
  *表达式列表*  
  一个逗号分隔的表达式列表。 该表达式可以包括列标识符、用户定义函数、UDF 以及 VBA 函数等。  
@@ -68,14 +67,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 可选。 一个返回标量值的表达式。  
+ 選擇性。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果对挖掘模型和挖掘结构都启用了钻取功能，那么作为具有模型和结构钻取权限的角色成员的用户，可以访问没有包括在挖掘模型中的挖掘结构列。 因此，为了保护敏感数据或个人信息，你应该构建你的数据源视图来屏蔽个人信息，并授予**AllowDrillthrough**必要时的挖掘结构权限。  
   
- [延隔时间 &#40; DMX &#41;](../dmx/lag-dmx.md)函数可与时序模型返回或筛选每个用例和初始时间之间的时间间隔。  
+ [延隔时间&#40;DMX&#41; ](../dmx/lag-dmx.md)函数可与时序模型返回或筛选每个用例和初始时间之间的时间间隔。  
   
- 使用[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)函数中**其中**子句将返回架构行集的 NODE_UNIQUE_NAME 列指定的节点与相关联的情况。  
+ 使用[IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)函数中**其中**子句将返回架构行集的 NODE_UNIQUE_NAME 列指定的节点与相关联的情况。  
   
 ## <a name="examples"></a>示例  
  下面的示例基于挖掘结构目标邮递，基于[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据库和其关联的挖掘模型。 有关详细信息，请参阅[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
@@ -101,12 +100,12 @@ AND IsInNode('002')
  若要返回结构列，必须对挖掘模型和挖掘结构都启用钻取权限。  
   
 > [!NOTE]  
->  并非所有挖掘模型类型都支持钻取功能。 有关支持钻取的模型的信息，请参阅[钻取查询 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+>  并非所有挖掘模型类型都支持钻取功能。 有关支持钻取的模型的信息，请参阅[钻取查询&#40;数据挖掘&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [选择 &#40; DMX &#41;](../dmx/select-dmx.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

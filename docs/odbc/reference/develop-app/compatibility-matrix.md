@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -25,12 +25,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce98e3471f3bf14ada77fcbb67291ba8a4dff166
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>兼容性矩阵
 下表描述的兼容性应用程序和驱动程序以前在本部分中定义的类型。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
   
  [3] 此配置可能会失败以起作用，因为 ODBC 2 中有功能。*x*不标准，如书签中。  
   
- [4] 此配置可能会失败，以起作用，因为 ODBC 3 中有功能*.x*不标准，如书签中。  
+ [4] 此配置可能会失败，以起作用，因为 ODBC 3 中有功能 *.x*不标准，如书签中。  
   
  [5] 此配置可能会失败，因为没有 ODBC 3.8 不在 ODBC 2.x 或 3.x.驱动程序，例如特定于驱动程序的功能[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   

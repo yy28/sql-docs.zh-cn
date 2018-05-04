@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>字符串函数
 下表列出的字符串操作函数。 应用程序可以确定由驱动程序支持哪些字符串函数，应调用**SQLGetInfo**与*信息类型*SQL_STRING_FUNCTIONS。  
@@ -64,5 +63,5 @@ ms.lasthandoff: 04/16/2018
 |**RTRIM (** *string_exp* **)** (ODBC 1.0)|返回的字符*string_exp*尾随空白已删除。|  
 |**SOUNDEX (** *string_exp* **)** (ODBC 2.0)|返回一个表示中单词的声音的数据源 – 相关的字符字符串*string_exp*。 例如，SQL Server 返回 4 位数字的 SOUNDEX 代码;Oracle 返回每个单词的拼音表示。|  
 |**空间 (** *计数* **)** (ODBC 2.0)|返回一个包含的字符字符串*计数*空格。|  
-|**子字符串 (** *string_exp*，*启动*，长度**)** (ODBC 1.0)|返回派生自的字符字符串*string_exp*中由指定的字符位置开始，*启动*为*长度*字符。|  
+|**子字符串 (** *string_exp*，*启动*，长度 **)** (ODBC 1.0)|返回派生自的字符字符串*string_exp*中由指定的字符位置开始，*启动*为*长度*字符。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|返回一个字符串等于，在*string_exp*，所有小写字符转换为大写形式。|

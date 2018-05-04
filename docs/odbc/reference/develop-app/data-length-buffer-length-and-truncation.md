@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data length [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f6934769c4f78063e24a393877112c2219121740
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ad2d00df90f8edbbfbcc403987ee04de660a11cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>数据长度、 缓冲区长度和截断
 *数据长度*的字节长度的数据为它的行将存储在应用程序的数据缓冲区，不是存储在数据源。 这一区别很重要，因为数据通常存储在数据源中比数据缓冲区中的不同类型。 对于正在发送到数据源的数据，这就是数据，再到数据源的类型转换的字节长度。 正在从数据源检索数据，这是数据的字节长度后转换到的数据缓冲区的类型和完成任何截断之前。  

@@ -29,17 +29,17 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 511cca07c0505db7bd1aaa21bed923498137e04f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9ac69f255b3ca09802876adb96bcfac4c9804e2a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]使用在 SOAP 请求消息的 SOAP 标头来标识的实例之间的协议功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和客户端应用程序。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  使用在 SOAP 请求消息的 SOAP 标头来标识的实例之间的协议功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和客户端应用程序。  
   
- **Namespace**`http://schemas.microsoft.com/analysisservices/2003/engine`  
+ **命名空间** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,20 +61,20 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|无|  
+|默认值|无|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|无|  
 |子元素|[功能](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **ProtocolCapabilities**元素使客户端应用程序可以与协商协议功能，如二进制 XML 或压缩支持[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在任何时候的实例。 协议协商包括以下步骤：  
   
 1.  客户端应用程序通过发送在 SOAP 标头中包含 **ProtocolCapabilities** 元素的 SOAP 请求来标识其协议功能。  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/08/2018
  协议功能可以不显式协商。 即客户端应用程序不必在 SOAP 请求中包含 **ProtocolCapabilities** 元素。 如果 SOAP 请求不包括**ProtocolCapabilities**元素，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例响应 SOAP 请求为使用相同的格式。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理连接和会话 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [标头 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+ [管理连接和会话 & #40;XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [标头 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

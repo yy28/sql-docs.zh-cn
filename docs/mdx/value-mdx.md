@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2605c0984a772ca3af031a4fc3d6b13d64c02452
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 14cdd865f2c209db59f77dd2d188c3402358da62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-mdx"></a>Value (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,8 +44,8 @@ Member_Expression[.Value]
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **值**函数返回字符串形式的指定成员的值。 **值**参数是可选的因为成员的值的默认属性的成员，并且如果未不指定任何其他值的成员返回的值。 有关成员的属性的详细信息，请参阅[内部成员属性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[用户定义的成员属性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+## <a name="remarks"></a>注释  
+ **值**函数返回字符串形式的指定成员的值。 **值**参数是可选的因为成员的值的默认属性的成员，并且如果未不指定任何其他值的成员返回的值。 有关成员的属性的详细信息，请参阅[内部成员属性&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[用户定义成员属性&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
   
 ## <a name="examples"></a>示例  
  下例将返回成员值并显式返回该成员的名称。  
@@ -67,10 +66,10 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MemberValue &#40;MDX &#41;](../mdx/membervalue-mdx.md)   
- [属性 &#40;MDX &#41;](../mdx/properties-mdx.md)   
- [名称 &#40;MDX &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX &#41;](../mdx/uniquename-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
+ [属性 & #40;MDX & #41;](../mdx/properties-mdx.md)   
+ [名称&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -24,13 +24,12 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b1dfc08ad0ff42c5a7e5409d729b6f62a4f4d36
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 451a7538ac011c1dce455122909c7ae88ac8242c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure"></a>调用存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  调用过程的 ODBC CALL 转义序列是：  
   
- {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
+ {[**?=**]**call***procedure_name*[([*parameter*][**,**[* parameter*]]...)]}  
   
  其中*procedure_name*指定过程的名称和*参数*指定过程参数。 只有使用 ODBC CALL 转义序列的语句中才支持命名参数。  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 04/16/2018
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- 不过，使用默认设置运行时，如果标识符包含不遵循 ISO 标准的字符，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持上述任何一种带引号的标识符形式。 例如，该驱动程序无法访问名为的存储的过程**"My.Proc"**使用 CALL 语句使用带引号的标识符：  
+ 不过，使用默认设置运行时，如果标识符包含不遵循 ISO 标准的字符，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持上述任何一种带引号的标识符形式。 例如，该驱动程序无法访问名为的存储的过程 **"My.Proc"** 使用 CALL 语句使用带引号的标识符：  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  

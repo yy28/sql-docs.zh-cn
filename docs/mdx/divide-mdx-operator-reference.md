@@ -23,12 +23,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5cc93d1be3e91fc42fdd5e0d579321106c9375b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1af119ab8f082b8d18672a047276c8f6731df3cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide---mdx-operator-reference"></a>除-MDX 运算符参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,8 +51,8 @@ Dividend / Divisor
 ## <a name="return-value"></a>返回值  
  具有与优先级较高的参数相同的数据类型的值。  
   
-## <a name="remarks"></a>Remarks  
- 返回的实际值**/ （除）**运算符表示除以第二个表达式的第一个表达式的商。  
+## <a name="remarks"></a>注释  
+ 返回的实际值 **/ （除）**运算符表示除以第二个表达式的第一个表达式的商。  
   
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果*除数*计算结果为 null 值，运算符引发错误。 如果这两个*除数*和*被除数*计算结果为 null 值，该运算符将返回 null 值。  
   
@@ -114,7 +113,7 @@ WHERE
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
 ## <a name="see-also"></a>另请参阅  
- [IIf &#40;MDX &#41;](../mdx/iif-mdx.md)   
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

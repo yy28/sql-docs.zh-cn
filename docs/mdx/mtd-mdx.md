@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f6969649d0ac405aca0766219b0df52b1c1ee244
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3c35a64883a8e7c7c3f09863f0ee36318654967
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Mtd( [ Member_Expression ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果未指定一个成员表达式，默认值是第一个层次结构使用的类型级别的当前成员*月*中类型的第一个维度*时间*度量值组中。  
   
  **Mtd**函数是快捷函数[PeriodsToDate](../mdx/periodstodate-mdx.md)函数时级别所基于的属性层次结构的类型属性设置为*月*。 也就是说，`Mtd(Member_Expression)` 等效于 `PeriodsToDate(Month_Level_Expression,Member_Expression)`。  
@@ -64,7 +63,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Sum &#40;MDX &#41;](../mdx/sum-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Sum &#40;MDX&#41;](../mdx/sum-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

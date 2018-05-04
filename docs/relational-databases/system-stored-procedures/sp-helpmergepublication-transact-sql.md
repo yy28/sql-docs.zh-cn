@@ -24,12 +24,11 @@ caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d5005db95a4153259dd000cda87823368255a722
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 078bdbd13ee0a7bf9f846779b41aa71cabbf590d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @publication **=** ] *****发布*****  
  发布的名称。 *发布*是**sysname**，默认值为**%**，它返回当前数据库中的所有合并发布的相关信息。  
   
- [ @found **=** ] *****找到*****输出  
+ [ @found **=** ] *****找到***** 输出  
  一个标志，用于表示返回的行。 *找到*是**int**和输出参数，默认值为 NULL。 **1**表示找到发布。 **0**指示找不到发布。  
   
- [ @publication_id **=**] *****publication_id*****输出  
+ [ @publication_id **=**] *****publication_id***** 输出  
  发布的标识号。 *publication_id*是**uniqueidentifier**和输出参数，默认值为 NULL。  
   
  [ @reserved **=**] *****保留*****  
@@ -93,8 +92,8 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |has_subscription|**bit**|指示发布是否具有任何订阅。 **0**意味着当前没有对此发布订阅。|  
 |snapshot_in_default_folder|**bit**|指定快照文件是否存储在默认文件夹中。<br /><br /> 如果**1**，可以在默认文件夹中找到快照文件。<br /><br /> 如果**0**，快照文件存储在指定的备用位置**alt_snapshot_folder**。 备用位置可以是另一台服务器、 网络驱动器，或可移动媒体 （如 CD-ROM 或可移动磁盘）。 也可以将快照文件保存到 FTP 站点以供订阅方以后检索。<br /><br /> 注意： 此参数可以是 true，在仍有一个位置**alt_snapshot_folder**参数。 这个组合指定将快照文件存储在默认位置和替代位置。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照的备用文件夹的位置。|  
-|pre_snapshot_script|**nvarchar(255)**|指定指向的指针**.sql**合并代理运行之前复制的任何的对象文件的脚本应用在订阅服务器的快照时。|  
-|post_snapshot_script|**nvarchar(255)**|指定指向的指针**.sql**合并代理在所有运行的其他文件复制对象脚本并且已在初始同步期间应用数据。|  
+|pre_snapshot_script|**nvarchar(255)**|指定指向的指针 **.sql**合并代理运行之前复制的任何的对象文件的脚本应用在订阅服务器的快照时。|  
+|post_snapshot_script|**nvarchar(255)**|指定指向的指针 **.sql**合并代理在所有运行的其他文件复制对象脚本并且已在初始同步期间应用数据。|  
 |compress_snapshot|**bit**|指定写入到快照**alt_snapshot_folder**位置将被压缩到[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。|  
 |ftp_address|**sysname**|分发服务器的 FTP 服务网络地址。 指定的合并代理，以拾取发布快照文件的位置。|  
 |ftp_port|**int**|分发服务器 FTP 服务的端口号。 **ftp_port**的默认值为**21**。 指定供合并代理拾取的发布快照文件所在的位置。|  

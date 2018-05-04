@@ -1,27 +1,26 @@
 ---
-title: "在 DirectQuery 模式下的 DAX 公式兼容性 |Microsoft 文档"
-ms.custom: 
+title: 在 DirectQuery 模式下的 DAX 公式兼容性 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 106e22e43ec0bb6003869cc264388c741d7528d0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式下的 DAX 公式兼容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -52,7 +51,7 @@ ms.lasthandoff: 02/23/2018
 
 某个特定函数可能未针对 DirectQuery 进行优化的原因包括：基础关系引擎无法执行与 xVelocity 引擎执行的计算等效的计算，或者公式无法转换为等效的 SQL 表达式。 在其他情况中，则是转换后的表达式和生成的计算的性能不可接受。
 
-若要了解所有 DAX 函数，请参阅 [DAX 函数参考].(https://msdn.microsoft.com/zh-cn/library/ee634396.aspx)
+若要了解有关所有的 DAX 函数，请参阅 [DAX 函数参考]。(https://msdn.microsoft.com/en-us/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 模式下的 DAX 运算符
 在 DirectQuery 模式下完全支持所有的 DAX 比较和算术运算符。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。

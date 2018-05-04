@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
 - CLI [ODBC], using CLI
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b019e7757f907656b2d1180af9488f9a4e8595f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5df7ff90e8b290f6fb55f1c62b59eee10d83cd8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="call-level-interfaces"></a>调用级接口
 将 SQL 语句发送到 DBMS 的最后一个方法是通过调用级界面 (CLI)。 调用级接口提供的应用程序可以调用它的 DBMS 函数的库。 因此，而不是尝试与另一种编程语言的混合 SQL，则调用级接口是类似于大多数程序员来说已经习惯于使用，如字符串、 I/O 或在 c。 请注意该 Dbms 支持嵌入式的 SQL 的数学库例程库已调用级接口，对其调用都由预编译器。 但是，这些调用是未记录和使用者，恕不另行通知。  

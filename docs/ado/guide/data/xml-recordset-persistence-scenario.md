@@ -19,12 +19,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4aa455c004305f1350fef0006ba1986932ea692c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 96104cf81d2a3107ce0d4590c162840cb41d48e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集持久化方案
 在此方案中，你将创建的 Active Server Pages (ASP) 应用程序直接与 ASP 响应对象保存记录集对象的内容。  

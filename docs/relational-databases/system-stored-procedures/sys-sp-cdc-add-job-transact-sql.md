@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58f17196962c2ca05ebf1c2e56ce78621dbb9ac7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ec45242bef3e7ad510a97d422bf05499b764c9c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 ## <a name="arguments"></a>参数  
  [  **@job_type=** ] *****job_type*****  
- 要添加的作业类型。 *job_type*是**nvarchar(20)**和不能为 NULL。 有效输入包括**捕获**和**清理**。  
+ 要添加的作业类型。 *job_type*是**nvarchar(20)** 和不能为 NULL。 有效输入包括**捕获**和**清理**。  
   
  [  **@start_job=** ] *start_job*  
  用于指示添加作业后是否立即启动该作业的标志。 *start_job*是**位**默认值为 1。  
@@ -104,7 +103,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  因为清理和捕获作业是默认创建的，所以仅当显式删除某个作业并且必须重新创建它时才需要使用此存储过程。  
   
- 作业的名称是**cdc。***< a s e _ >***_cleanup**或**cdc。***< a s e _ >***_capture**，其中*< a s e _ >*是当前数据库的名称。 如果已存在具有相同名称的作业，该名称后附加以句点 (**。**) 跟的唯一标识符，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ 作业的名称是**cdc。***< a s e _ >***_cleanup**或**cdc。***< a s e _ >***_capture**，其中 *< a s e _ >* 是当前数据库的名称。 如果已存在具有相同名称的作业，该名称后附加以句点 (**。**) 跟的唯一标识符，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  若要查看清除或捕获作业的当前配置，请使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要更改作业的配置，请使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   

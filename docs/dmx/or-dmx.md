@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1ff5d2351d7641c16c739efeea42b126a0c4e1b2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f58bb4e4324d8932f14f5c1e87c021f373abc006
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>返回值  
  如果任意一个参数或两个参数的计算结果为 TRUE，则返回 TRUE 布尔值；否则将返回 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  在运算符执行逻辑或运算之前，两个参数均被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果任何一个参数或两个参数的计算结果均为 TRUE，则该运算符将返回 TRUE。 如果*Expression1*计算结果为 TRUE 和*Expression2*计算结果为 FALSE，该运算符将返回 TRUE。  
   
  下表阐释了执行逻辑或运算的方式。  
@@ -64,8 +63,8 @@ Expression1 OR Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [逻辑运算符 &#40; DMX &#41;](../dmx/operators-logical.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [逻辑运算符&#40;DMX&#41;](../dmx/operators-logical.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

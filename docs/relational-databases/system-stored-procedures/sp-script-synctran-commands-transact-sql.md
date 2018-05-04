@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8e724f9a787d54f1143472f5823cd5b34962eb4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 66156ab677aa06c4f84c626fc8e462b2c4596d02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="results-set"></a>结果集  
- **sp_script_synctran_commands**返回一个结果集包含单个**nvarchar （4000)**列。 结果设置窗体的完整脚本所必需的创建这两项**sp_addsynctrigger**和**sp_addqueued_artinfo**调用在订阅服务器上应用。  
+ **sp_script_synctran_commands**返回一个结果集包含单个**nvarchar （4000)** 列。 结果设置窗体的完整脚本所必需的创建这两项**sp_addsynctrigger**和**sp_addqueued_artinfo**调用在订阅服务器上应用。  
   
 ## <a name="remarks"></a>注释  
  **sp_script_synctran_commands**快照和事务复制中使用。  

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +22,16 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9d71554373fab48fe3636500a70c800d66ec9863
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5fd5f69a261296f93c0fe904decb66b610269f25
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 删除数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Updategram 指示删除操作中的记录实例出现**\<之前 >**块中没有相应的记录与**\<后 >**块。 在这种情况下，属的 updategram 删除中的记录**\<之前 >**从数据库的块。  
+  Updategram 指示删除操作中的记录实例出现**\<之前 >** 块中没有相应的记录与**\<后 >** 块。 在这种情况下，属的 updategram 删除中的记录**\<之前 >** 从数据库的块。  
   
  下面是 updategram 的删除操作格式：  
   
@@ -50,9 +48,9 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 可以省略**\<后 >**标记如果属的 updategram 正在执行仅删除操作。 如果未指定可选**映射架构**属性，  **\<ElementName >**属的 updategram 映射到数据库表和子元素或属性映射到中指定表中的列。  
+ 可以省略**\<后 >** 标记如果属的 updategram 正在执行仅删除操作。 如果未指定可选**映射架构**属性，  **\<ElementName >** 属的 updategram 映射到数据库表和子元素或属性映射到中指定表中的列。  
   
- 如果在属的 updategram 中指定的元素匹配表中的多个行，或不匹配任何行，属的 updategram 返回一个错误，并取消整个**\<同步 >**块。 updategram 中的元素每次只能删除一个记录。  
+ 如果在属的 updategram 中指定的元素匹配表中的多个行，或不匹配任何行，属的 updategram 返回一个错误，并取消整个**\<同步 >** 块。 updategram 中的元素每次只能删除一个记录。  
   
 ## <a name="examples"></a>示例  
  本节中的示例使用默认映射（即未在 updategram 中指定映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[指定批注映射架构中属的 Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
  在这些示例中，updategram 不指定映射架构。 因此，updategram 使用默认映射，其中元素名称映射到表名称，而属性或子元素映射到列。  
   
- 此第一个属的 updategram 是以属性为中心，在标识 （一天晚上和晚上夜间） 的两个班次**\<之前 >**块。 因为在没有对应记录**\<后 >**块，这是一个 delete 操作。  
+ 此第一个属的 updategram 是以属性为中心，在标识 （一天晚上和晚上夜间） 的两个班次**\<之前 >** 块。 因为在没有对应记录**\<后 >** 块，这是一个 delete 操作。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

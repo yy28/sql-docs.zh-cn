@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  要创建的链接服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
  [  **@srvproduct=** ] *****库*****  
- 要添加为链接服务器的 OLE DB 数据源的产品名称。 *库*是**nvarchar (**128**)**，默认值为 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，和*目录*无需指定。  
+ 要添加为链接服务器的 OLE DB 数据源的产品名称。 *库*是**nvarchar (** 128 **)**，默认值为 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，和*目录*无需指定。  
   
  [  **@provider=** ] *****provider_name*****  
- 与此数据源对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 *provider_name*必须是唯一的当前计算机上安装指定的 OLE DB 提供程序。 *provider_name*是**nvarchar (**128**)**，默认值为 NULL; 但是，如果*provider_name*是省略，则使用 SQLNCLI。 （使用 SQLNCLI 并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将重定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的最新版本。）OLE DB 访问接口应以指定的 PROGID 在注册表中注册。  
+ 与此数据源对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 *provider_name*必须是唯一的当前计算机上安装指定的 OLE DB 提供程序。 *provider_name*是**nvarchar (** 128 **)**，默认值为 NULL; 但是，如果*provider_name*是省略，则使用 SQLNCLI。 （使用 SQLNCLI 并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将重定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的最新版本。）OLE DB 访问接口应以指定的 PROGID 在注册表中注册。  
   
  [  **@datasrc=** ] *****data_source*****  
- 由 OLE DB 访问接口解释的数据源的名称。 *data_source*是**nvarchar (**4000**)**。 *data_source*作为要初始化的 OLE DB 访问接口的 DBPROP_INIT_DATASOURCE 属性传递。  
+ 由 OLE DB 访问接口解释的数据源的名称。 *data_source*是**nvarchar (** 4000 **)**。 *data_source*作为要初始化的 OLE DB 访问接口的 DBPROP_INIT_DATASOURCE 属性传递。  
   
  [  **@location=** ] *****位置*****  
- 由 OLE DB 访问接口解释的数据库的位置。 *位置*是**nvarchar (**4000**)**，默认值为 NULL。 *位置*作为要初始化的 OLE DB 访问接口的 DBPROP_INIT_LOCATION 属性传递。  
+ 由 OLE DB 访问接口解释的数据库的位置。 *位置*是**nvarchar (** 4000 **)**，默认值为 NULL。 *位置*作为要初始化的 OLE DB 访问接口的 DBPROP_INIT_LOCATION 属性传递。  
   
  [  **@provstr=** ] *****provider_string*****  
- OLE DB 访问接口特定的连接字符串，它可标识唯一的数据源。 *provider_string*是**nvarchar (**4000**)**，默认值为 NULL。 *provstr*传递给 IDataInitialize，或者设置为 DBPROP_INIT_PROVIDERSTRING 属性来初始化 OLE DB 访问接口。  
+ OLE DB 访问接口特定的连接字符串，它可标识唯一的数据源。 *provider_string*是**nvarchar (** 4000 **)**，默认值为 NULL。 *provstr*传递给 IDataInitialize，或者设置为 DBPROP_INIT_PROVIDERSTRING 属性来初始化 OLE DB 访问接口。  
   
  针对创建链接的服务器时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，可以使用服务器 SERVER 关键字指定实例 =*servername*\\*instancename*指定的特定实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*是在其上的计算机的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行，和*instancename*是的特定实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户将连接到。  
   

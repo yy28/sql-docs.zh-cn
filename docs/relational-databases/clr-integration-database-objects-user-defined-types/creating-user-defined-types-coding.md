@@ -37,12 +37,11 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f40420d2b1e1533b9f23e4784f6cfe4c740922b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>创建用户定义的类型的编码
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ using Microsoft.SqlServer.Server;
  **Microsoft.SqlServer.Server**命名空间包含所需的 UDT，各个属性的对象和**System.Data.SqlTypes**命名空间包含表示类[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可供该程序集的本机数据类型。 当然，还可能存在程序集正常运行所需的其他命名空间。 **点**UDT 还使用**System.Text**用于处理字符串的命名空间。  
   
 > [!NOTE]  
->  Visual c + + 数据库对象，如 Udt，用编译**/clr: pure**不支持执行。  
+>  Visual c + + 数据库对象，如 Udt，用编译 **/clr: pure**不支持执行。  
   
 ## <a name="specifying-attributes"></a>指定属性  
  属性确定如何使用序列化来构造 UDT 的存储表示形式以及如何按值将 UDT 传输到客户端。  
@@ -99,7 +98,7 @@ public struct Point : INullable
   
  你必须创建一个名为属性**IsNull**，需要确定一个值是否从 CLR 代码中为 null。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发现 UDT 的 Null 实例时，会使用正常的 Null 处理方法来保留 UDT。 如果服务器不必序列化或反序列化 UDT，它不会在这些方面浪费时间；此外，它也不会浪费空间来存储 Null UDT。 每次从 CLR 中引入 UDT 时都会执行这种 Null 检查，也就是说，始终都应可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 构造来检查有无 Null UDT。 **IsNull**属性还由服务器用来测试是否实例为 null。 一旦服务器确定 UDT 为 Null，它便可以使用其本机 Null 处理方法。  
   
- **Get （)**方法**IsNull**不以任何方式特殊情况。 如果**点**变量**@p**是**Null**，然后**@p.IsNull** ，默认情况下，计算结果将为"NULL"不"1"。 这是因为**SqlMethod(OnNullCall)**属性**IsNull get （)**方法默认值为 false。 由于此对象是**Null**，当对象不反序列化，不调用该方法，并返回的默认值为"NULL"请求属性。  
+ **Get （)** 方法**IsNull**不以任何方式特殊情况。 如果**点**变量**@p**是**Null**，然后**@p.IsNull** ，默认情况下，计算结果将为"NULL"不"1"。 这是因为**SqlMethod(OnNullCall)** 属性**IsNull get （)** 方法默认值为 false。 由于此对象是**Null**，当对象不反序列化，不调用该方法，并返回的默认值为"NULL"请求属性。  
   
 ### <a name="example"></a>示例  
  在下面的示例中，`is_Null` 变量是私有的并且保存了 UDT 实例的 Null 状态。 您的代码必须保留 `is_Null` 的相应值。 用户定义的类型还必须具有名为的静态属性**Null**返回用户定义的类型的 null 值实例。 这样，如果该实例在数据库中确实为 Null，UDT 便可返回 Null 值。  

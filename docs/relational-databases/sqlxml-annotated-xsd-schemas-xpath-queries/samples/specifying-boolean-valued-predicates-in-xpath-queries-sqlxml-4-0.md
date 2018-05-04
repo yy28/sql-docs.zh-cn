@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,13 +24,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3ad82b1419ba924578854adb4f24d37f3f196d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7f15bb5aab9af5758471d2518da2641e8ff58a7f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔值谓词 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,13 +96,13 @@ ms.lasthandoff: 04/16/2018
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定连续和嵌套的谓词  
- 以下查询使用连续谓词显示。 查询返回所有**\<客户 >**同时具有的子元素的上下文节点**SalesPersonID**带 277 的值的属性和**TerritoryID**值为 3 的属性：  
+ 以下查询使用连续谓词显示。 查询返回所有**\<客户 >** 同时具有的子元素的上下文节点**SalesPersonID**带 277 的值的属性和**TerritoryID**值为 3 的属性：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 该查询将返回**\<客户 >**满足指定谓词中的两个条件的元素。  
+ 该查询将返回**\<客户 >** 满足指定谓词中的两个条件的元素。  
   
  快捷方式**属性**轴 (@) 可指定，而是因为**子**轴默认值时，它可以在查询中省略：  
   
@@ -112,7 +110,7 @@ ms.lasthandoff: 04/16/2018
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 以下 XPath 查询说明嵌套谓词的用法。 查询返回所有**\<客户 >**的上下文节点的子元素，包括**\<顺序 >**至少有一个子元素 **\<顺序 >**元素具有**SalesPersonID**属性的 2 的值。  
+ 以下 XPath 查询说明嵌套谓词的用法。 查询返回所有**\<客户 >** 的上下文节点的子元素，包括**\<顺序 >** 至少有一个子元素 **\<顺序 >** 元素具有**SalesPersonID**属性的 2 的值。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -175,7 +173,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定顶级谓词  
- 以下查询将返回**\<客户 >**具有的子元素节点的上下文节点**\<顺序 >**元素子级。 该查询将位置路径作为顶级谓词进行测试：  
+ 以下查询将返回**\<客户 >** 具有的子元素节点的上下文节点**\<顺序 >** 元素子级。 该查询将位置路径作为顶级谓词进行测试：  
   
 ```  
 /child::Customer[child::Order]  

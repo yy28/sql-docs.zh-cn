@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data buffers [ODBC], character data
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d8bdba6134e53a7e3913c0255fe709a8a891eeae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-data-and-c-strings"></a>字符数据和 C 字符串
 引用 （如列名称、 动态参数和字符串特性值） 的长度可变的字符数据的输入的参数具有一个关联的长度参数。 如果在应用程序终止 null 字符，在 C 中的典型的字符串，它提供了作为自变量中，以字节为单位的 （不包括 null 终止符） 的字符串的长度，或者 sql_nts 以 （Null-Terminated 字符串）。 非负长度参数指定的关联字符串的实际长度。 长度参数可能为 0 以指定一个零长度字符串，它是不同于 NULL 值。 负值 sql_nts 以指示要通过定位 null 终止字符确定字符串的长度的驱动程序。  

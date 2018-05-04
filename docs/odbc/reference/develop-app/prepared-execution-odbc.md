@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prepared execution [ODBC]
 - SQL statements [ODBC], prepared execution
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50a07209bdd4e5a49c70e5ab3b2e9a9b4d8bc7eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 80de464d4ccebb6511d5c6ad58541f4c9f9e5c13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepared-execution-odbc"></a>准备好的执行 ODBC
 准备好的执行是一种高效的方式来多次执行语句。 首次编译该语句，或*已准备好，*到访问计划。 然后执行一个或更多次在更高版本时，访问计划。 有关访问计划的详细信息，请参阅[处理 SQL 语句](../../../odbc/reference/processing-a-sql-statement.md)。  

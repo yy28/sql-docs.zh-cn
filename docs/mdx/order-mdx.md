@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: c67e4106b760f9218172e7ada5628e34dd308f8a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f951c681b205ff9cfbc2b99c3935931811585186
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="order-mdx"></a>Order (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +57,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  通常是单元坐标（返回以字符串表示的数字）的有效多维表达式 (MDX) 的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **顺序**函数可以是分层 (所指定的使用**ASC**或**DESC**标志) 或非层次结构 (通过使用指定**BASC**或**BDESC**标志; **B**代表"中断层次结构")。 如果**ASC**或**DESC**指定，则**顺序**函数首先将根据其位置在位于层次结构的成员，然后订单每个级别。 如果**BASC**或**BDESC**指定，则**顺序**函数排列而不考虑层次结构集中的成员。 在任何标志指定如何， **ASC**是默认设置。  
   
  如果**顺序**函数用于处理一组其中两个或多个层次结构是交叉联接，和**DESC**使用标志，则只有组中的最后一个层次结构的成员进行排序。 这与 Analysis Services 2000 不同，后者对集合中的所有层次结构进行排序。  
@@ -225,6 +224,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,36 +1,23 @@
 ---
-title: "使用 RollupChildren 函数 (MDX) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用 RollupChildren 函数 (MDX) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- queries [MDX], RollupChildren function
-- RollupChildren function
-- custom member properties [MDX]
-- IIf function
-ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7316f209c3653dd81eb6d2052428d0e6306b4c0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX 数据操作-RollupChildren 函数
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-多维表达式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 函数可以汇总某个成员的子级（对每个子级应用不同的一元运算符），并以数字的形式返回此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
+  多维表达式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 函数可以汇总某个成员的子级（对每个子级应用不同的一元运算符），并以数字的形式返回此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 函数示例  
  **RollupChildren** 函数在多维表达式 (MDX) 语句中的用法很容易理解，但它对 MDX 查询的影响十分广泛。  
@@ -80,6 +67,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  MDX 语句检查子成员的一元运算符。 如果一元运算符用于减法（正如在考虑国内盈利和国外盈利成员的情况下）， **IIf** 函数将替代一元运算符 (~)。 否则， **IIf** 函数将使用子成员的一元运算符。 最后，将所返回的汇总总数乘以 1.1，得出国内和国外总销售额的预测值。  
   
 ## <a name="see-also"></a>另请参阅  
- [操作数据 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [操作数据 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

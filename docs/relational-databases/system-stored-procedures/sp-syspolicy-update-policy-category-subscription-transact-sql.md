@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  您要更新的策略类别订阅的标识符。 *policy_category_subscription_id*是**int**，和是必需的。  
   
- [ **@target_type=** ] **'**target_type**'**  
+ [ **@target_type=** ] **'** target_type **'**  
  类别订阅的目标类型。 *target_type*是**sysname**，默认值为 NULL。  
   
  如果指定*target_type*，值必须设置为 'DATABASE'。  
   
- [ **@target_object=** ] **'**target_object**'**  
+ [ **@target_object=** ] **'** target_object **'**  
  是将订阅策略类别的名称。 *target_object*是**sysname**，默认值为 NULL。  
   
- [ **@policy_category=** ] **'**policy_category**'**  
+ [ **@policy_category=** ] **'** policy_category **'**  
  您希望数据库订阅的策略类别的名称。 *policy_category*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

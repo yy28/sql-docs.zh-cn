@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2730a5ceb1f976605f4a784b71194f4b9caceea5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3bc468a1f26c8919951420a2155c031ba2fb5a25
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +128,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**128**|重复执行|  
   
 > [!NOTE]  
->  指定的值**64**导致分发代理以连续模式运行。 这对应于设置**-连续**代理程序的参数。 有关详细信息，请参阅 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
+>  指定的值**64**导致分发代理以连续模式运行。 这对应于设置 **-连续**代理程序的参数。 有关详细信息，请参阅 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  是要应用于通过设置的频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为 1。  
@@ -229,6 +228,6 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

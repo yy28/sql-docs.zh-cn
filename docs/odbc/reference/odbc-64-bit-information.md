@@ -11,25 +11,24 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77449f6077adbad3eabf9ca928b2ce19b47c79b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位信息
-从 Windows Server 2003 开始，Microsoft 操作系统具有支持的 64 位 ODBC 库。 ODBC 标头和库首次发布与 MDAC 2.7 SDK 包含以允许程序员可以轻松地写入新的 64 位平台的代码的更改。 通过确保你的代码使用下面列出的 ODBC 定义类型，可以编译为 64 位和 32 位平台的两个基于相同的源代码**_WIN64**或**WIN32**宏。  
+从 Windows Server 2003 开始，Microsoft 操作系统具有支持的 64 位 ODBC 库。 ODBC 标头和库首次发布与 MDAC 2.7 SDK 包含以允许程序员可以轻松地写入新的 64 位平台的代码的更改。 通过确保你的代码使用下面列出的 ODBC 定义类型，可以编译为 64 位和 32 位平台的两个基于相同的源代码 **_WIN64**或**WIN32**宏。  
   
  有多个适用于 64 位处理器进行编程时，需要注意的事项：  
   
--   尽管指针的大小已从 4 个字节更改为 8 个字节，4 字节值仍是整数和长型值。 类型**INT64**和**UINT64**已定义为 8 字节整数。 新的 ODBC 类型**SQLLEN**和**SQLULEN**在 ODBC 标头文件中以定义**INT64**和**UINT64**时**_WIN64**已定义。  
+-   尽管指针的大小已从 4 个字节更改为 8 个字节，4 字节值仍是整数和长型值。 类型**INT64**和**UINT64**已定义为 8 字节整数。 新的 ODBC 类型**SQLLEN**和**SQLULEN**在 ODBC 标头文件中以定义**INT64**和**UINT64**时 **_WIN64**已定义。  
   
 -   ODBC 中的多个函数声明为采用指针参数中。 在 32 位 ODBC 参数定义为指针通常用于将一个整数值或指针传递到具体取决于调用的上下文缓冲区。 这是，当然，可能因为，指针和整数具有相同的大小。 在 64 位 Windows 中，这不是这样。  
   

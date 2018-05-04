@@ -26,12 +26,11 @@ caps.latest.revision: 56
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6adc5668f43a6db002c3622cc65b7ea1f09dee78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  指定要预测的列的名称。 列可以包含标量数据或表格格式数据。  
   
  *n*  
- 指定要预测的后续步长数。 如果没有为指定值 *n* ，默认值为 1。  
+ 指定要预测的后续步长数。 如果没有为指定值*n*，默认值为 1。  
   
  *n*不能为 0。 如果没有执行过至少一次预测，则函数将返回一个错误。  
   
@@ -85,10 +84,10 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>返回类型  
  A \<*表表达式*>。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  当使用 PREDICTION JOIN 语句添加新数据时，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法不支持历史预测。  
   
- 在 PREDICTION JOIN 中，预测过程总是从原始定型系列的末尾之后的时间步长立即开始。 即使您添加新的数据也是如此。 因此，  *n* 参数和*n 开始*参数值必须大于 0 的整数。  
+ 在 PREDICTION JOIN 中，预测过程总是从原始定型系列的末尾之后的时间步长立即开始。 即使您添加新的数据也是如此。 因此， *n*参数和*n 开始*参数值必须大于 0 的整数。  
   
 > [!NOTE]  
 >  新数据的长度不影响预测起点。 因此，如果您想要添加新数据并且还要执行新预测，请确保将预测起点设置为大于新数据的长度的值，或者按照新数据的长度来扩展预测终点。  
@@ -102,7 +101,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   第三个示例显示如何使用 EXTEND_MODEL_CASES 参数用最新数据更新挖掘模型。  
   
- 若要了解有关使用时序模型的详细信息，请参阅数据挖掘教程中，[第 2 课： 生成预测方案 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)和[时间序列预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 若要了解有关使用时序模型的详细信息，请参阅数据挖掘教程中，[第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)和[时间序列预测 DMX教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 > [!NOTE]  
 >  您可能会从模型中获取不同的结果；下面提供的示例结果仅用于说明结果格式。  
@@ -136,7 +135,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>示例 2：添加新数据和使用 REPLACE_MODEL_CASES  
  假定您发现某一特定地区的数据不正确，并且您希望使用模型中的模式，但是又想调整预测，以便与新数据匹配。 或者您可能发现另一地区的趋势更可靠，并且希望向不同地区中的数据应用最可靠的模型。  
   
- 在这些方案中，您可以使用 REPLACE_MODEL_CASES 参数，并指定一组新的数据以用作历史数据。 这样，预测将基于指定模型中的模式，但将从新数据点末尾继续平滑地进行。 有关此方案的完整演练，请参阅[高级时序预测 &#40; 中间 Data Mining Tutorial &#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。  
+ 在这些方案中，您可以使用 REPLACE_MODEL_CASES 参数，并指定一组新的数据以用作历史数据。 这样，预测将基于指定模型中的模式，但将从新数据点末尾继续平滑地进行。 有关此方案的完整演练，请参阅[高级时序预测&#40;中间 Data Mining Tutorial&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。  
   
  以下 PREDICTION JOIN 查询说明替换数据和进行新预测的语法。 对于替换数据，本示例检索 Amount 和 Quantity 列的值，并将每个值乘以 2：  
   
@@ -217,7 +216,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  数量： M200 Europe。 EXTEND_MODEL_CASES:  
   
-|$TIME|Quantity|  
+|$TIME|数量|  
 |-----------|--------------|  
 |7/25/2008 0:00|10|  
 |8/25/2008 0:00|15|  
@@ -227,7 +226,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  数量： M200 太平洋。 EXTEND_MODEL_CASES:  
   
-|$TIME|Quantity|  
+|$TIME|数量|  
 |-----------|--------------|  
 |7/25/2008 0:00|46|  
 |8/25/2008 0:00|44|  
@@ -270,8 +269,8 @@ OR [Model Region] = 'M200 North America'
 >  在此示例中使用了 FLATTENED 关键字，目的是为了更好地在表中呈现结果；但是，如果提供程序支持分层行集，则可以省略 FLATTENED 关键字。 如果省略了 FLATTENED 关键字，则查询将返回两个列，第一列包含标识 `[Model Region]` 数据序列的值，第二列包含统计信息的嵌套表。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [时间时序模型查询示例](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [预测 &#40; DMX &#41;](../dmx/predict-dmx.md)  
+ [预测 & #40; DMX & #41;](../dmx/predict-dmx.md)  
   
   

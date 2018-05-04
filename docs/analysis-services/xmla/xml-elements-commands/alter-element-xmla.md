@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6d234801cb298f15982bfc4ac1d75a493dd6aa8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 314d1cf2ee33d4c5a17e0a7bee79820593a5fe2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-element-xmla"></a>Alter 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含所使用的 Analysis Services 脚本语言 (ASSL) 元素[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法，以便更改对象的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含所使用的 Analysis Services 脚本语言 (ASSL) 元素[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法，以便更改对象的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,10 +53,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|无|  
+|默认值|无|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -74,10 +74,10 @@ ms.lasthandoff: 01/08/2018
 |ObjectExpansion|(可选**枚举**属性) 定义的内容有变更由执行程度**执行**方法。<br /><br /> 如果设置为*ObjectProperties*、 **ObjectDefinition**元素应包含仅要更改的主要对象的完整定义包括从属次要对象。 要更改的对象的从属主要对象保持不变。<br /><br /> 注意： 当使用*ObjectProperties*设置，并[ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)数据类型，[数据](../../../analysis-services/scripting/objects/data-element-assl.md)元素关联的[ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)数据类型不需要指定。 如果未指定， **ClrAssembly**使用现有文件。<br /><br /> 如果设置为*ExpandFull*、 **ObjectDefinition**元素应包含不只是要更改的对象的定义，但还的对象派生的所有主要对象的定义要更改。<br /><br /> 注意： *ExpandFull*设置不能与使用[服务器](../../../analysis-services/scripting/objects/server-element-assl.md)元素。|  
 |范围|(可选**枚举**属性) 定义中定义的对象的持续时间**ObjectDefinition**元素。<br /><br /> 如果设置为*会话*中, 定义的对象**ObjectDefinition**元素只存在于 XMLA 会话的持续时间。<br /><br /> 注意： 当使用*会话*设置， **ObjectDefinition**元素只能包含[维度](../../../analysis-services/scripting/objects/dimension-element-assl.md)，[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)，或[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL 元素。<br /><br /> 如果省略此属性，在定义对象**ObjectDefinition**元素会保留在[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  每个**Alter**命令更改指定的父对象下的一个主要对象的定义[ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)元素。  
   
 ## <a name="see-also"></a>另请参阅  
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 6f6d53545c505b32f9c9d045f07260cb23514641
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4372928aa81a91b5a2a6d1cc539cd5dcd55eae76
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  有效 MDX（多维表达式）表达式，通常返回成员或元组的单元坐标。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **IsEmpty**函数返回**true**如果计算的表达式是空单元值。 否则，此函数返回**false**。  
   
 > [!NOTE]  
@@ -73,6 +72,6 @@ IsEmpty(Value_Expression)
   
 ## <a name="see-also"></a>另请参阅  
  [使用空值](../mdx/working-with-empty-values.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing drivers [ODBC]
 - ODBC data source administrator [ODBC], viewing drivers
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e98b93dd1698aef5230cb4b7df98586ab8375df5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ed43eeb37e3e1573f261146fe62f0fc04700c7da
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewing-drivers"></a>查看驱动程序
 若要配置数据源，你必须具有至少一个驱动程序在系统上安装。 **驱动程序**选项卡中**ODBC 数据源管理器**对话框框中列出的所有驱动程序安装在计算机上，包括名称、 版本、 公司、 文件名和文件的每个驱动程序的创建日期。 必须使用驱动程序的安装程序以添加或删除驱动程序从你的系统。 有关修改驱动程序的详细信息，请参阅[管理数据源](../../odbc/admin/managing-data-sources.md)。

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetPos
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a7c9e052b30a764579bd775ce5e1ac36287175
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a32c882450a07f4588f46849753835dfe501fc44
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函数
 **一致性**  
@@ -66,7 +65,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]  
->  SQL_ADD 值*操作*自变量已被弃用 ODBC 3*.x*。 ODBC 3。*x*驱动程序将需要支持 SQL_ADD 为了向后兼容。 对的调用替换为此功能**SQLBulkOperations**与*操作*SQL_ADD。 当一个 ODBC 3。*x*应用程序处理 ODBC 2。*x*驱动程序，驱动程序管理器映射调用**SQLBulkOperations**与*操作*的到 SQL_ADD **SQLSetPos**与*操作*SQL_ADD。  
+>  SQL_ADD 值*操作*自变量已被弃用 ODBC 3 *.x*。 ODBC 3。*x*驱动程序将需要支持 SQL_ADD 为了向后兼容。 对的调用替换为此功能**SQLBulkOperations**与*操作*SQL_ADD。 当一个 ODBC 3。*x*应用程序处理 ODBC 2。*x*驱动程序，驱动程序管理器映射调用**SQLBulkOperations**与*操作*的到 SQL_ADD **SQLSetPos**与*操作*SQL_ADD。  
   
  有关详细信息，请参阅"注释"。  
   
@@ -129,7 +128,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>注释  
   
 > [!CAUTION]  
->  为语句的信息指出**SQLSetPos**可以在中调用和它需要执行的与 ODBC 2 的兼容性*.x*应用程序，请参阅[块状游标、 可滚动游标，和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
+>  为语句的信息指出**SQLSetPos**可以在中调用和它需要执行的与 ODBC 2 的兼容性 *.x*应用程序，请参阅[块状游标、 可滚动游标，和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
   
 ## <a name="rownumber-argument"></a>RowNumber 自变量  
  *RowNumber*参数指定要对其执行由指定的操作的行集中的行数*操作*自变量。 如果*RowNumber*为 0，则该操作适用于每个行集中的行。 *RowNumber*必须是一个介于 0 到行集中的行数。  

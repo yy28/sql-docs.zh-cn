@@ -23,12 +23,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e192e0eacd926cde2c6548392b1523cfc3d0af12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a510ca656d7a17bc80878c49bab20fb3254c81e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>叉积的 MDX 运算符参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +48,8 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>返回值  
  一个包含两个指定参数的叉积的集。  
   
-## <a name="remarks"></a>Remarks  
-  **\* （叉积）**运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
+## <a name="remarks"></a>注释  
+ **\* （叉积）**运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  
@@ -69,6 +68,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

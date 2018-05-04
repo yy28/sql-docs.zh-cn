@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,20 +24,19 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95088fe868d8e9e392613a147f61438e1818e643
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 167323a28eb6a5a4d85008ac09185c889667c400
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端 与服务器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题说明在 SQLXML 中客户端与服务器端 XML 格式的一般差异。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>客户端格式中不支持多行集查询  
- 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，它具有两个 SELECT 语句中 **\<sql:query >**块：  
+ 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，它具有两个 SELECT 语句中 **\<sql:query >** 块：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -49,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个指定查询分隔 **\<sql:query >**块，将获取所需的结果。  
+ 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个指定查询分隔 **\<sql:query >** 块，将获取所需的结果。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp 在客户端与服务器端格式中的映射方式不同  
  在服务器端 XML 格式的数据库列中**时间戳**（时在查询中指定 XMLDATA 选项） 键入映射到 i8 XDR 类型。  
@@ -219,7 +217,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   当指定**客户端端 xml ="0"** (false) 模板中，您请求服务器端 XML 格式。 因此，不能指定 FOR XML NESTED，因为服务器不识别 NESTED 选项。 这将生成一个错误。 必须使用服务器确实可以识别的 AUTO、RAW 或 EXPLICIT 模式。  
   
--   当指定**客户端端 xml ="1"** (true) 模板中，您请求客户端的 XML 格式。 在这种情况下，可以指定 FOR XML NESTED。 即使在服务器端发生如果指定 FOR XML AUTO，XML 格式**客户端端 xml ="1"**模板中指定。  
+-   当指定**客户端端 xml ="1"** (true) 模板中，您请求客户端的 XML 格式。 在这种情况下，可以指定 FOR XML NESTED。 即使在服务器端发生如果指定 FOR XML AUTO，XML 格式**客户端端 xml ="1"** 模板中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [有关 XML 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

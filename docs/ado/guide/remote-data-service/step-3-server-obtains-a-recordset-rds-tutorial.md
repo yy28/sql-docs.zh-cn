@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c24a84e24498003d5c08af60f81707c43d11091
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7dec4bdcb8cef10a371c7456954208cd34861c52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步骤 3： 服务器获取记录集 （RDS 教程）
 服务器程序使用的连接字符串和命令文本来查询所需的行的数据源。 ADO 通常用于检索此**记录集**，尽管其他 Microsoft 数据访问接口，如无法使用 OLE DB。  

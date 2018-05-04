@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 070e37092c8683b1709ae878686a337df74f3232
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0457cac86f031b9428eb0c49ea1d043046dba777
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|如果将这个警报通知给一个或多个操作员，则为非零。 该值是下列值中的一个或多个（用 OR 连起来）：<br /><br /> **1**= 具有电子邮件通知<br /><br /> **2**= 具有寻呼通知<br /><br /> **4**= 具有**网络发送**通知。|  
 |**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]中创建已分区表或索引。|  
 |**performance_condition**|**nvarchar(512)**|如果**类型**是**2**，此列显示性能条件的定义。 如果**类型**是**3**，此列显示的查询的 WMI 事件。 否则，该列为 NULL。|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 将始终为**[未分类]**为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 将始终为 **[未分类]** 为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
 |**类型**|**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
   
 ## <a name="remarks"></a>注释  

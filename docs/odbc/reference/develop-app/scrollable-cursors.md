@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d337edea514a796a2d7525f7a01e3607e8ba7423
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6e779d551385c62ae8cddc5a2e7612b88095497
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursors"></a>可滚动游标
 在现代基于屏幕的应用程序，在用户滚动向后和向前数据。 对于此类应用程序，将返回到以前读取的行是一个问题。 一种可能性是关闭并重新打开游标，然后提取行，直到光标达到所需的行。 另一种可能性是读取结果集，它以本地方式，缓存并实现应用程序中滚动。 这两种可能性也只能与小结果集和第二种可能性很难实现。 更好的解决方案是使用*可滚动游标，*可以向后移动并将其转发结果集中。  

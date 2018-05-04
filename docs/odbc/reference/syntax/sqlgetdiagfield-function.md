@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函数
 **一致性**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  驱动程序可以定义特定于驱动程序的标头和记录字段中的诊断数据结构。  
   
- ODBC 3*.x*应用程序使用 ODBC 2*.x*驱动程序将能够调用**SQLGetDiagField**只用*DiagIdentifier*SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 自变量。 诊断的所有其他字段将返回 SQL_ERROR。  
+ ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序将能够调用**SQLGetDiagField**只用*DiagIdentifier*SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 自变量。 诊断的所有其他字段将返回 SQL_ERROR。  
   
 ## <a name="header-fields"></a>标头字段  
  下表中列出的标头字段可以包含在*DiagIdentifier*自变量。  
@@ -240,7 +239,7 @@ n-定义 *|"创建域"|SQL_DIAG_CREATE_DOMAIN|
 -   对于适用于特定行的所有记录，记录按 SQL_DIAG_ROW_NUMBER 字段中的值进行排序。 列出所有错误和警告的影响的第一个行，，然后所有错误和警告的下一个都行受影响，依次类推。  
   
 > [!NOTE]  
->  ODBC 3*.x*如果驱动程序管理器不诊断队列中订购状态记录 SQLSTATE 01S01 （行中的错误） 返回的 ODBC 2*.x*驱动程序或者如果 SQLSTATE 01S01 （行中的错误） 返回的 ODBC3*.x*驱动程序时**SQLExtendedFetch**称为或**SQLSetPos**上的游标已定位与可用于调用**SQLExtendedFetch**.  
+>  ODBC 3 *.x*如果驱动程序管理器不诊断队列中订购状态记录 SQLSTATE 01S01 （行中的错误） 返回的 ODBC 2 *.x*驱动程序或者如果 SQLSTATE 01S01 （行中的错误） 返回的 ODBC3 *.x*驱动程序时**SQLExtendedFetch**称为或**SQLSetPos**上的游标已定位与可用于调用**SQLExtendedFetch**.  
   
  在每个行，或为所有不对应的行或行数为未知，这些记录或所有这些记录的行数等于 SQL_NO_ROW_NUMBER，列出的第一个记录取决于使用一组的排序规则。 后第一条记录，影响行的其他记录的顺序是未定义。 应用程序无法假定错误后第一条记录之前警告。 应用程序应扫描完成诊断数据结构，以获取有关对函数的成功调用的完整信息。  
   

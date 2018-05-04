@@ -27,12 +27,11 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 375c289c67f951b68255d67d4092a02f343587b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9cb69062f30a60a95d2aa844ed05a9a5af4082c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
 |**语言**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**加密**|**bit**|指示过程定义是否已经过模糊处理。<br /><br /> 0 = 未经模糊处理<br /><br /> 1 = 已经模糊处理<br /><br /> **\*\* 重要\* \*** 进行模糊处理存储的过程定义，请使用创建过程使用加密关键字。|  
 |**compressed**|**bit**|始终返回 0。 这表明过程已压缩。|  
-|**text**|**nvarchar(4000)**|SQL 定义语句的实际文本。<br /><br /> 解码后的表达式的语义等同于原始文本，但是没有语法保证。 例如，解码后的表达式中删除了空格。<br /><br /> 这[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-兼容视图获取信息与当前的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]结构和可以返回的字符数大于**nvarchar （4000)**定义。 **sp_help**返回**nvarchar （4000)**作为文本列的数据类型。 使用时**syscomments**请考虑使用**nvarchar (max)**。 对于新的开发工作，不要使用**syscomments**。|  
+|**text**|**nvarchar(4000)**|SQL 定义语句的实际文本。<br /><br /> 解码后的表达式的语义等同于原始文本，但是没有语法保证。 例如，解码后的表达式中删除了空格。<br /><br /> 这[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-兼容视图获取信息与当前的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]结构和可以返回的字符数大于**nvarchar （4000)** 定义。 **sp_help**返回**nvarchar （4000)** 作为文本列的数据类型。 使用时**syscomments**请考虑使用**nvarchar (max)**。 对于新的开发工作，不要使用**syscomments**。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

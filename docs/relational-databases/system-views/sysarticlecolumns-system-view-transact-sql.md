@@ -26,12 +26,11 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9817b7bcdf407ce359ed903e56de636613ff7478
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 93590ffdd531827104b70d9b1d0f3c4ee2eee3f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysarticlecolumns-system-view-transact-sql"></a>sysarticlecolumns（系统视图）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 |**colid**|**int**|标识项目中的列。|  
 |**is_udt**|**int**|表示列是否为用户定义数据类型 (UDT) 列。 值为**1**表示 UDT 列。|  
 |**is_xml**|**int**|如果列是**xml**列。 值为**1**指示**xml**列。|  
-|**is_max**|**int**|如果列是较大的值数据类型列 (**varchar （max)**， **nvarchar (max)**或**varbinary （max)**)。 值为**1**表示较大的值列。|  
+|**is_max**|**int**|如果列是较大的值数据类型列 (**varchar （max)**， **nvarchar (max)** 或**varbinary （max)**)。 值为**1**表示较大的值列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

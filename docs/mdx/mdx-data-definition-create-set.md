@@ -26,12 +26,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0b7c9464085c99ff9d04be0c7c6a27d6f216c22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 数据定义-创建设置
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,12 +63,12 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  定义集属性值的有效标量表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  命名集是为重用而创建的维度成员集（或者是用于定义集的表达式）。 例如，使用命名集可以定义由销售额排在前十名的商店组成的维度成员集。 此组可以静态方式，或通过所示的函数定义[TopCount](../mdx/topcount-mdx.md)。 此命名集然后使用任何所需的一套前 10 个存储位置。  
   
- CREATE SET 语句创建命名的集，仍可在整个会话，并因此，可在多个查询在会话中。 有关详细信息，请参阅[Creating Session-Scoped 计算成员 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ CREATE SET 语句创建命名的集，仍可在整个会话，并因此，可在多个查询在会话中。 有关详细信息，请参阅[Creating Session-Scoped 计算成员&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
   
- 也可以定义用于单个查询的命名集。 若要定义这种集，请在 SELECT 语句中使用 WITH 子句。 有关 WITH 子句的详细信息，请参阅[Creating Query-Scoped 命名集 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ 也可以定义用于单个查询的命名集。 若要定义这种集，请在 SELECT 语句中使用 WITH 子句。 有关 WITH 子句的详细信息，请参阅[Creating Query-Scoped 命名集&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)。  
   
  *值赋*子句不能包含任何支持 MDX 语法的函数。 如果使用 CREATE SET 语句创建集时没有指定 SESSION 子句，则该集的作用域为会话。 使用 WITH 子句创建具有查询作用域的集。  
   
@@ -79,7 +78,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  用户定义的集的作用域可以是下表所列的任意一个作用域。  
   
  查询作用域  
- 集的可见性和生存期被限制在查询中。 集是在单个查询中定义的。 查询作用域将覆盖会话作用域。 有关详细信息，请参阅[Creating Query-Scoped 命名集 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ 集的可见性和生存期被限制在查询中。 集是在单个查询中定义的。 查询作用域将覆盖会话作用域。 有关详细信息，请参阅[Creating Query-Scoped 命名集&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)。  
   
  会话作用域  
  集的可见性和生存期被限制在创建该集的会话中。 （如果对该集执行了 DROP SET 语句，集的生存期将短于会话的持续时间。）CREATE SET 语句创建的集的作用域为会话。 使用 WITH 子句创建具有查询作用域的集。  
@@ -118,7 +117,7 @@ SELECT [Core Products] ON 0
 |DISPLAY_FOLDER|标识客户端应用程序用来显示集的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠 (\\) 是级别的分隔符。 若要为已定义的集提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
   
 ## <a name="see-also"></a>另请参阅  
- [删除 SET 语句 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-set.md)   
- [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [拖放 SET 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

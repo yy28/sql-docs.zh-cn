@@ -21,12 +21,11 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a63ef5e4f3d2db6db5b90c91af4714fa035f45bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 836bc9161c2bd070f5f704fc883ef02a195f7e9b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.lasthandoff: 04/16/2018
  在运行时，将针对下列条件检查代码程序集。 如果发现任何一个条件，则将不允许托管代码运行，且将会引发异常。  
   
 ### <a name="unsafe"></a>UNSAFE  
- 加载的程序集-显式通过调用**System.Reflection.Assembly.Load()**方法从字节数组，或通过使用的隐式**Reflection.Emit**命名空间-不允许。  
+ 加载的程序集-显式通过调用**System.Reflection.Assembly.Load()** 方法从字节数组，或通过使用的隐式**Reflection.Emit**命名空间-不允许。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**UNSAFE**检查条件。  

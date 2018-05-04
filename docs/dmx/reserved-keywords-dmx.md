@@ -22,17 +22,16 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 53598a178d8b11e03feb81634d76a46974aedfe2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2efbc1d57b79ae1794db19564553d4aa91cf65bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-dmx"></a>保留关键字 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]保留为专用某些关键字。 除了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在数据挖掘扩展插件 (DMX) 语言参考中定义的位置以外，这些关键字不能用于 DMX 语句的任何其他位置。 这些受限制的 DMX 关键字包括下列成员：  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] 保留供其独占使用某些关键字。 除了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在数据挖掘扩展插件 (DMX) 语言参考中定义的位置以外，这些关键字不能用于 DMX 语句的任何其他位置。 这些受限制的 DMX 关键字包括下列成员：  
   
 -   本主题中列出的所有数据定义语句[DMX 数据定义语句](../dmx/dmx-statements-data-definition.md)。  
   
@@ -46,13 +45,13 @@ ms.lasthandoff: 01/08/2018
   
  在数据库中命名对象时，建议您使用命名约定以避免使用保留关键字。  
   
- 如果数据库中确实包含与保留关键字匹配的名称，则在引用这些对象时必须使用分隔符。 有关详细信息，请参阅[标识符 &#40; DMX &#41;](../dmx/identifiers-dmx.md)。  
+ 如果数据库中确实包含与保留关键字匹配的名称，则在引用这些对象时必须使用分隔符。 有关详细信息，请参阅[标识符&#40;DMX&#41;](../dmx/identifiers-dmx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   

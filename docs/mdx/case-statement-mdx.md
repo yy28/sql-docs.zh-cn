@@ -20,12 +20,11 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a4dbcc7ab42a0e044be0c7561adff4049fd8d1b9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7bf874dfda3e4e76c9e519c375349fced839fa58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="case-statement-mdx"></a>CASE 语句 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +70,7 @@ END
  *Boolean_expression*  
  计算结果为标量值的 MDX 表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果没有 ELSE 子句，而且所有 WHEN 子句的计算结果都为 False，则结果是空单元。  
   
 ## <a name="simple-case-expression"></a>简单 Case 表达式  
@@ -118,6 +117,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 脚本语句 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX 脚本语句 & #40;MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

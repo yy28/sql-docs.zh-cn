@@ -19,12 +19,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02292cffead70858e8a965afe6adb719ac7fb742
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5324e139c4a92abd0004184c6a215305bd31340c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支持 (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../../../relational-databases/native-client/features/filestream-support.md)。 有关演示 ODB 支持 FILESTREAM 的示例，请参阅[发送和接收数据以增量方式与 FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
- 发送和接收**varbinary （max)**大于 2 GB 的值，应用程序必须绑定参数，通过使用与 SQLBindParameter *columnsize 类型*设置为**SQL_SS_LENGTH_UNLIMITED**，设置内容和*StrLen_or_IndPtr*到**SQL_DATA_AT_EXEC** SQLExecDirect 或 SQLExecute 之前。  
+ 发送和接收**varbinary （max)** 大于 2 GB 的值，应用程序必须绑定参数，通过使用与 SQLBindParameter *columnsize 类型*设置为**SQL_SS_LENGTH_UNLIMITED**，设置内容和*StrLen_or_IndPtr*到**SQL_DATA_AT_EXEC** SQLExecDirect 或 SQLExecute 之前。  
   
  为使用任何数据在执行参数，数据将提供使用 SQLParamData 和 SQLPutData。  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 04/16/2018
  如果在绑定的列上调用 SQLFetch，将收到"数据截断"的警告，如果缓冲区已不大到能够容纳整个值。 忽略此警告，并使用 SQLParamData 和 SQLPutData 调用更新此绑定的列中的数据。 可以通过使用 SQLSetPos，如果与 SQLBindCol 绑定更新 FILESTREAM 数据。  
   
 ## <a name="example"></a>示例  
- FILESTREAM 列的行为完全相同**varbinary （max)**列，但不大小限制。 它们被绑定为 SQL_VARBINARY。 （SQL_LONGVARBINARY 用于图像列，并且对该类型有限制。 例如，SQL_LONGVARBINARY 不能用作输出参数。）以下示例显示对 FILESTREAM 列的直接 NTFS 访问。 这些示例假定已在数据库中执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 代码：  
+ FILESTREAM 列的行为完全相同**varbinary （max)** 列，但不大小限制。 它们被绑定为 SQL_VARBINARY。 （SQL_LONGVARBINARY 用于图像列，并且对该类型有限制。 例如，SQL_LONGVARBINARY 不能用作输出参数。）以下示例显示对 FILESTREAM 列的直接 NTFS 访问。 这些示例假定已在数据库中执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 代码：  
   
 ```  
 CREATE TABLE fileStreamDocs(  

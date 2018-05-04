@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4fa2207edb9ea3e732807a3d4ac0783334c361c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d53c0686742f096f49519da93e64ea2b6706d056
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此函数主要用于具有 Time 类型的维度，但也可用于任何维度。  
   
 -   如果指定一个级别表达式，则**ClosingPeriod**函数使用包含指定的级别，并返回最后一个同级的后代中的指定级别的默认成员的维度。  
@@ -59,7 +58,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  **ClosingPeriod**函数等同于以下的 MDX 语句：  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`的用户。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`中创建已分区表或索引。  
   
 > [!NOTE]  
 >  [OpeningPeriod](../mdx/openingperiod-mdx.md)函数是类似于**ClosingPeriod**函数，只不过**OpeningPeriod**函数将返回而不是最后一个同级的第一个同级。  
@@ -94,8 +93,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [OpeningPeriod &#40;MDX &#41;](../mdx/openingperiod-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40;MDX &#41;](../mdx/lastsibling-mdx.md)  
+ [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
   
   

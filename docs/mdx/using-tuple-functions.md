@@ -20,12 +20,11 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 23af14ed67fb78fc24873528dddf4b67197f4be0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 796494ac0d73b6dfaf955da58ed79b8b51b54638
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-functions"></a>使用元组函数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/08/2018
   
  与成员函数和集函数一样，元组函数对协商 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的多维结构至关重要。  
   
- 在 MDX 中，有三个元组函数[当前 &#40;MDX &#41;](../mdx/current-mdx.md)，[项 &#40;元组 &#41;&#40;MDX &#41;](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;MDX &#41;](../mdx/strtotuple-mdx.md). 以下示例查询说明如何使用这三个函数：  
+ 在 MDX 中，有三个元组函数[当前&#40;MDX&#41;](../mdx/current-mdx.md)，[项&#40;元组&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). 以下示例查询说明如何使用这三个函数：  
   
  `WITH`  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40;MDX 语法 &#41;](../mdx/functions-mdx-syntax.md)   
+ [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)   
  [使用成员函数](../mdx/using-member-functions.md)   
  [使用集函数](../mdx/using-set-functions.md)  
   

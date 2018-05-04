@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f73239547d4b0ff90c7d0e82a3fdf50ed4d00f0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 标识键列 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,9 +51,9 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 生成适当嵌套时\<sql:relationship > 不会提供足够的信息  
  此示例演示在**sql:key-字段**必须指定。  
   
- 请考虑以下架构。 该架构指定层次结构之间**\<顺序 >**和**\<客户 >**元素在其中**\<顺序 >**元素是父级和**\<客户 >**元素是子元素。  
+ 请考虑以下架构。 该架构指定层次结构之间**\<顺序 >** 和**\<客户 >** 元素在其中**\<顺序 >** 元素是父级和**\<客户 >** 元素是子元素。  
   
-  **\<Sql:relationship >**标记，用于指定的父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql:relationship >**不足以唯一方式标识父表 (Sales.SalesOrderHeader) 中的行。 因此，而无需**sql:key-字段**批注，生成的层次结构是不准确。  
+ **\<Sql:relationship >** 标记，用于指定的父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql:relationship >** 不足以唯一方式标识父表 (Sales.SalesOrderHeader) 中的行。 因此，而无需**sql:key-字段**批注，生成的层次结构是不准确。  
   
  与**sql:key-字段**上指定**\<顺序 >**、 批注唯一标识的父代 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现在下面其父级。  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 KeyFields2.xml。  
   
-2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields2.xml 的相同目录中将该文件另存为 KeyFields2T.xml。 模板中的 XPath 查询返回所有 **\<HumanResources.Employee >**元素：  
+2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields2.xml 的相同目录中将该文件另存为 KeyFields2T.xml。 模板中的 XPath 查询返回所有 **\<HumanResources.Employee >** 元素：  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

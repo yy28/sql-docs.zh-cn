@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 46f611667ca69f0e8daa2567dd8bd6c61162e18c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c1e4546db7127ea883bd2939378317941ca7366
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +67,8 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**TABLE_NAME**|**sysname**|表的名称。|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|为索引指定的全文索引表中的列。|  
 |**FULLTEXT_COLID**|**int**|全文索引列的列 ID。|  
-|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|全文索引表中指定全文索引列文档类型的列。 全文索引的列时，此值才适用**varbinary （max)**或**映像**列。|  
-|**FULLTEXT_BLOBTP_COLID**|**int**|文档类型列的列 ID。 全文索引的列时，此值才适用**varbinary （max)**或**映像**列。|  
+|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|全文索引表中指定全文索引列文档类型的列。 全文索引的列时，此值才适用**varbinary （max)** 或**映像**列。|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|文档类型列的列 ID。 全文索引的列时，此值才适用**varbinary （max)** 或**映像**列。|  
 |**FULLTEXT_LANGUAGE**|**sysname**|用于对列进行全文索引的语言。|  
   
 ## <a name="permissions"></a>权限  

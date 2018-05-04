@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
 - auto-commit mode [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 046b9a0ec140404418b7b868f2061cbabf7b0d3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4236a5545c435c1652eb07b32ddad9ddf14e2181
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-commit-mode"></a>自动提交模式
 *在自动提交模式下，*每个数据库操作是执行时提交的事务。 此模式适合于很多包含单个 SQL 语句的实际事务。 它是不必要分隔或指定这些事务完成。 在数据库中没有事务支持，自动提交模式是唯一支持的模式。 在此类数据库中，语句时，将提交，它们将执行，并且没有无法回滚它们;它们是因此始终在自动提交模式下。  

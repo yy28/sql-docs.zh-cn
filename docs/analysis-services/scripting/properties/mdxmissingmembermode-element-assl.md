@@ -25,15 +25,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02ede17b0011ed3eceecf35feaa93fc42c55da3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2452957134b0c1118695e5a34565ca6053010eb8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>MdxMissingMemberMode 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]确定如何缺少的成员的多维表达式 (MDX) 语句处理。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  确定如何处理多维表达式 (MDX) 语句中缺少的成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*默认*|  
@@ -58,13 +58,13 @@ ms.lasthandoff: 01/08/2018
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[Dimension](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|父元素|[维度](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*忽略*|忽略缺少的成员。|  
 |*错误*|如果遇到缺少的成员，则会引发错误。|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/08/2018
  对应于的父元素**MdxMissingMemberMode**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>另请参阅  
- [多维表达式 &#40;MDX &#41;引用](../../../mdx/multidimensional-expressions-mdx-reference.md)   
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [多维表达式 & #40;MDX & #41;引用](../../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

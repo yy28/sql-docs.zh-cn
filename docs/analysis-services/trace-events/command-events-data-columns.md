@@ -18,15 +18,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f3c3be311e1f0ce7b53bd35b90fb94dfc03f07b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a546ed5569d8d80c36d65f21eb3021b478831cfb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-events-data-columns"></a>命令事件数据列
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]下表列出了在每个事件类的数据列**命令事件**事件类别。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  下表列出 **Command Events** 事件类别中的每个事件类的数据列。  
   
  **Command Events** 事件类别包含下列事件类：  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 01/08/2018
 |ClientProcessID|包含与命令事件相关联的唯一客户端进程 ID。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
+ [命令事件事件类别](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS 字段 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  用于指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]读/写与行锁的开放式并发类型。  
+  用于指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 有行锁的读/写乐观并发类型。  
   
 ## <a name="syntax"></a>语法  
   

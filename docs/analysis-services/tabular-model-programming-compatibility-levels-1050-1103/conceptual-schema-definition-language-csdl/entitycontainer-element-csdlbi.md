@@ -1,33 +1,32 @@
 ---
-title: "EntityContainer 元素 (CSDLBI) |Microsoft 文档"
-ms.custom: 
+title: EntityContainer 元素 (CSDLBI) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 89d12841c0ef56f7818b9b53b292fb672ba6d51b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContainer，用于定义单个数据模型中的实体集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
+  EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContainer，用于定义单个数据模型中的实体集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
   
  EntityContainer 必须指定数据模型中包含的每种实体类型，包括表和关系。 有关这些模型实体的信息是通过列出此类型的 Entity 元素的子实体指定的。 有关详细信息，请参阅 [EntityType 元素 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md)。  
   
@@ -43,8 +42,8 @@ EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContai
 |Culture|是|一个字符串，该字符串包含请求的 LCID。|  
 |CompareOptions|是|模型的特定于语言的排序和字符串比较选项。|  
 |DirectQueryMode|“否”|指示当模型正在使用 DirectQuery 模式时的查询模式的枚举。|  
-|EntitySet 元素|是|[EntitySet 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|AssociationSet 元素|否|[AssociationSet 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|EntitySet 元素|是|[EntitySet 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
+|AssociationSet 元素|否|[AssociationSet 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions 元素  
  CompareOptions 属性定义应用于数据模型的排序规则属性。 CompareOptions 定义的属性派生自在模型设计时在 Analysis Services 数据库中设置的排序顺序、区分假名和区分大小写的设置。 下表描述了作为 CompareOptions 属性的一部分包含的值。  
@@ -119,6 +118,6 @@ EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContai
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [EntitySet 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
+ [EntitySet 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   

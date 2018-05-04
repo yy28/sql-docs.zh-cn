@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e433aea6a3ecc401ba85080d1c1b25d053ce3089
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路径 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **相对位置路径**  
   
-     相对位置路径以文档中的上下文节点为起点。 位置路径由包含一个或多个位置步骤的序列组成，位置步骤间以斜杠标记 (/) 分隔。 每个步骤选择相对于上下文节点的一组节点。 初始步骤序列选择相对于某个上下文节点的一组节点。 该组节点中的每个节点都用作下一个步骤的上下文节点。 由该步骤表示的节点集将联接起来。 例如， **child::Order/child::OrderDetail**选择 **\<OrderDetail >**元素的子级**\<顺序 >**元素上下文节点的子级。  
+     相对位置路径以文档中的上下文节点为起点。 位置路径由包含一个或多个位置步骤的序列组成，位置步骤间以斜杠标记 (/) 分隔。 每个步骤选择相对于上下文节点的一组节点。 初始步骤序列选择相对于某个上下文节点的一组节点。 该组节点中的每个节点都用作下一个步骤的上下文节点。 由该步骤表示的节点集将联接起来。 例如， **child::Order/child::OrderDetail**选择 **\<OrderDetail >** 元素的子级**\<顺序 >** 元素上下文节点的子级。  
   
     > [!NOTE]  
     >  在 XPath 的 SQLXML 4.0 实现中，每个 XPath 查询都从根上下文开始，即使 XPath 并非显式绝对路径也不例外。 例如，以“Customer”开始的 XPath 查询被视为“/Customer”。 在 XPath 查询中**客户 [顺序]**，客户开始根上下文中，但顺序开始客户上下文。 有关详细信息，请参阅[使用 XPath 查询简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
@@ -60,13 +58,13 @@ ms.lasthandoff: 04/16/2018
   
      节点测试指定根据位置步骤选择的节点类型。 每个轴 (**子**，**父**，**属性**，和**自助**) 具有主体数据库节点类型。 有关**属性**轴，主体数据库节点类型是**\<属性 >**。 有关**父**，**子**，和**自助**轴，主体数据库节点类型是**\<元素 >**。  
   
-     例如，如果指定的位置路径**child::Customer**、 **\<客户 >**选定元素的上下文节点的子级。 因为**子**轴具有**\<元素 >**作为其主体数据库节点类型，节点测试，客户，则为 TRUE，如果客户为**\<元素 >**节点。  
+     例如，如果指定的位置路径**child::Customer**、 **\<客户 >** 选定元素的上下文节点的子级。 因为**子**轴具有**\<元素 >** 作为其主体数据库节点类型，节点测试，客户，则为 TRUE，如果客户为**\<元素 >** 节点。  
   
 -   **选择谓词 （零个或多个）**  
   
      谓词针对轴筛选节点集。 在 XPath 表达式中指定选择谓词类似于在 SELECT 语句中指定 WHERE 子句。 在方括号之间指定谓词。 应用在选择谓词中指定的测试可以筛选由节点测试返回的节点。 对于要筛选的节点集中的每个节点，将使用该节点作为上下文节点并使用节点集中的节点数作为上下文大小来对谓词表达式求值。 如果对于该节点谓词表达式求值为 TRUE，则该节点将包含在结果节点集中。  
   
-     位置步骤的语法为轴名称和节点测试（用双冒号 (::) 分隔），后跟零或多个表达式，每个表达式都位于方括号中。 例如，XPath 表达式 （位置路径） **child::Customer [@CustomerID= ALFKI]**选择所有**\<客户 >**元素的上下文节点的子级。 然后，在谓词中的测试应用于的节点集，仅返回**\<客户 >**元素节点具有属性值 ALFKI 其**CustomerID**属性。  
+     位置步骤的语法为轴名称和节点测试（用双冒号 (::) 分隔），后跟零或多个表达式，每个表达式都位于方括号中。 例如，XPath 表达式 （位置路径） **child::Customer [@CustomerID= ALFKI]** 选择所有**\<客户 >** 元素的上下文节点的子级。 然后，在谓词中的测试应用于的节点集，仅返回**\<客户 >** 元素节点具有属性值 ALFKI 其**CustomerID**属性。  
   
 ## <a name="in-this-section"></a>本節內容  
  [指定轴&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  

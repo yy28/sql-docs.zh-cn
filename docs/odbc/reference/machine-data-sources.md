@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - machine data sources [ODBC]
 - data sources [ODBC], machine
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 44c163254f23aae90caf24b5be05341cbcc4016b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 51b95411978ced9466d23283b9c99bb2ab2dd614
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="machine-data-sources"></a>机数据源
 *计算机数据源*存储在用户定义的名称与系统上。 都与之关联的数据源名称的所有信息的驱动程序管理器和驱动程序有需要连接到数据源。 对于 Xbase 数据源，这可能是目录的 Xbase 驱动程序，包含 Xbase 文件中，并告诉该驱动程序如何使用这些文件，如单用户模式或只读的某些选项的完整路径的名称。 对于 Oracle 数据源，这可能是 Oracle 驱动程序的名称，Oracle DBMS 驻留的服务器的 SQL * Net 连接字符串，标识 SQL\*使用，Net 驱动程序和服务器上的数据库的系统 ID。

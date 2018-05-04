@@ -27,10 +27,10 @@ ms.lasthandoff: 04/16/2018
 # <a name="application-security"></a>应用程序安全性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  当你使用[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，务必要采取预防措施以确保你的应用程序的安全。 可以采取一些步骤来帮助保护应用程序，下列部分提供了有关这一方面的信息。  
+  使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，必须采取预防措施确保应用程序的安全性。 可以采取一些步骤来帮助保护应用程序，下列部分提供了有关这一方面的信息。  
   
 ## <a name="using-java-policy-permissions"></a>使用 Java 策略权限  
- 当你使用[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，务必指定 JDBC 驱动程序需要所需的 Java 策略权限。 Java 运行时环境 (JRE) 提供了一个可在运行时使用的大型安全模型，用于确定线程是否具有对资源的访问权限。 安全策略文件可控制该访问权限。 策略文件本身由部署者和容器的系统管理员管理，但该主题所列出的权限会影响 JDBC 驱动程序的正常运行。  
+ 使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，必须指定 JDBC 驱动程序所要求的 Java 策略权限。 Java 运行时环境 (JRE) 提供了一个可在运行时使用的大型安全模型，用于确定线程是否具有对资源的访问权限。 安全策略文件可控制该访问权限。 策略文件本身由部署者和容器的系统管理员管理，但该主题所列出的权限会影响 JDBC 驱动程序的正常运行。  
   
  策略文件中典型的权限如下所示：  
   
@@ -66,7 +66,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  代码“file:/install_dir/lib/-”是指 JDBC 驱动程序的安装目录。  
   
 ## <a name="protecting-server-communication"></a>保护服务器通信  
- 当你使用 JDBC 驱动程序与通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库，你可以通过使用 Internet 协议安全 (IPSEC) 或安全套接字层 (SSL); 保护通信通道，或可以同时使用。  
+ 使用 JDBC 驱动程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库进行通信时，可以使用 Internet 协议安全 (IPSEC) 和/或安全套接字层 (SSL) 来保护信道。  
   
  SSL 支持可用于在 IPSEC 保护措施之外提供另一层保护。 有关使用 SSL 的详细信息，请参阅[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。  
   

@@ -22,13 +22,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5ef54d6c9d0eee2481941f8dc6c77fab737d3fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8732727cda17efddabfbb68eb1ebc7f3e415e911
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>从 DB-Library 转换到 ODBC 大容量复制
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 04/16/2018
   
      在 Db-library， *varlen*值-1 指示，正在提供可变长度数据，这会在 ODBC *cbData*被解释为表示只有 NULL 值正在提供。 更改任何 Db-library *varlen* -1 到 SQL_VARLEN_DATA 及任何规范*varlen* 0 到 SQL_NULL_DATA 的规范。  
   
--   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * 具有同样的问题作为 **bcp_bind * * * varlen*和*cbData*参数如上所示。 更改任何 Db-library *file_collen* -1 到 SQL_VARLEN_DATA 及任何规范*file_collen* 0 到 SQL_NULL_DATA 的规范。  
+-   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * 具有同样的问题作为 **bcp_bind * * * varlen*和*cbData*参数如上所示。 更改任何 Db-library *file_collen* -1 到 SQL_VARLEN_DATA 及任何规范*file_collen* 0 到 SQL_NULL_DATA 的规范。  
   
 -   *IValue* ODBC 参数[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函数是 void 指针。 在 DB 库， *iValue*为整数。 将值转换为 ODBC *iValue*为 void *。  
   

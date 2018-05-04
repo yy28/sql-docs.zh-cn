@@ -1,31 +1,30 @@
 ---
-title: "Analysis Services 对象跟踪中使用的类型代码 |Microsoft 文档"
-ms.custom: 
+title: Analysis Services 对象跟踪中使用的类型代码 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 78a0ca43a89f728a9db0f7adfcf1e3c7de139d10
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>跟踪中使用的 Analysis Services 对象类型代码
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本页列举了 Analysis Services 数据模型中每个对象的对象类型（6 位数字）。 这些代码显示在跟踪日志中并用于标识与具体锁定关联的对象的类型。 例如，数据库中的锁定超时将指示对象类型 100002，这是数据库对象类型。  
+  本页列举了 Analysis Services 数据模型中每个对象的对象类型（6 位数字）。 这些代码显示在跟踪日志中并用于标识与具体锁定关联的对象的类型。 例如，数据库中的锁定超时将指示对象类型 100002，这是数据库对象类型。  
   
 > [!NOTE]  
 >  下方所列代码的数量超过了实际将出现在跟踪日志中的数量。 下表是每个对象的类型代码的完整列表，但只有使用锁定的对象才会在跟踪日志中显示一个对象类型代码。  

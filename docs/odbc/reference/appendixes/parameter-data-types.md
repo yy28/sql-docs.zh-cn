@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], parameters
 - parameter data type [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7a198f2bf8b13b5bd4d8424c8fdf41f6352b92a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a43fdab2fd7ffeaf409bde41c06386fad23d3c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-data-types"></a>参数数据类型
 即使每个参数指定与**SQLBindParameter**是定义使用 SQL 数据类型，SQL 语句中的参数具有任何内部函数的数据类型。 因此，参数标记可以包含在 SQL 语句才可以从语句中的另一个操作数推断其数据类型。 例如，在如算术表达式？ + 可以从 COLUMN1 所表示的指定列的数据类型推断出 COLUMN1，参数的数据类型。 如果无法确定的数据类型，应用程序无法使用参数标记。  

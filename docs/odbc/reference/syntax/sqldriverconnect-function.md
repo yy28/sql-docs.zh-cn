@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函数
 **一致性**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  其中*字符串*具有零个或多个字符;*标识符*具有一个或多个字符;*属性关键字*不区分大小写;*属性值*可能区分大小写; 和的值**DSN**关键字不由单独的空格组成。  
   
- 由于连接字符串和初始化文件语法、 关键字和属性值，包含字符**[] {} （)，;？\*= ！ @**不包含大括号，则应避免。 值**DSN**关键字不能只包含空格，并且不包含前导空格。 由于系统信息的语法，关键字和数据源名称不能包含反斜杠 (\\) 字符。  
+ 由于连接字符串和初始化文件语法、 关键字和属性值，包含字符 **[]{}（)，;？\*= ！ @** 不包含大括号，则应避免。 值**DSN**关键字不能只包含空格，并且不包含前导空格。 由于系统信息的语法，关键字和数据源名称不能包含反斜杠 (\\) 字符。  
   
  应用程序不需要后的属性值两边添加大括号**驱动程序**关键字除非该属性包含分号 （;），在这种情况下大括号都需要。 如果驱动程序收到的属性值包含大括号，驱动程序不应删除它们，但它们应该返回的连接字符串的一部分。  
   
- DSN 或连接字符串值括在大括号 （{}） 包含的任何字符**[] {} （)，;？\*= ！ @**到驱动程序传递不变。 但是，在使用这些字符 in 关键字时，驱动程序管理器使用文件 Dsn 时返回错误，但将连接字符串传递给正则连接字符串的驱动程序。 避免使用嵌入的大括号中的关键字值。  
+ 用大括号括起来的 DSN 或连接字符串值 ({}) 包含的任何字符 **[]{}（)，;？\*= ！ @** 到驱动程序传递不变。 但是，在使用这些字符 in 关键字时，驱动程序管理器使用文件 Dsn 时返回错误，但将连接字符串传递给正则连接字符串的驱动程序。 避免使用嵌入的大括号中的关键字值。  
   
  连接字符串可能包含任意数量的驱动程序定义的关键字。 因为**驱动程序**关键字不使用中的系统信息的信息，该驱动程序必须定义足够的关键字，以使驱动程序可以连接到数据源使用的连接字符串中仅的信息。 （有关详细信息，请参阅"驱动程序指南"本部分中更高版本）。该驱动程序定义的关键字所需连接到数据源。  
   

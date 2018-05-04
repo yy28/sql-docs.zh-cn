@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
 - connecting to driver [ODBC], SQLConnect
@@ -27,12 +27,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcb591c8fb9e3921ad3788669f47290384c302e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1dbb9c58b69fbec426fb203e47c355348f089b0b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 连接
 **SQLConnect**是最简单的连接函数。 它需要数据源名称，并接受可选的用户 ID 和密码。 它适用于应用程序，硬编码的数据源名称和不需要用户 ID 或密码。 也适用于很好地为想要的应用程序控制其自己"外观和感觉"或具有没有用户界面。 此类应用程序可以生成使用的数据源的列表**SQLDataSources**，提示用户输入数据源、 用户 ID 和密码，然后调用**SQLConnect**。  

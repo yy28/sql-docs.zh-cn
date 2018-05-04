@@ -20,12 +20,11 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: edf38e8ecd84fd4f4db18bdb9423edeb8e56e76b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e1119b4fc27ba91aacebe37f8be0911f319a87d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-mathematical-functions"></a>使用数学函数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,6 +34,6 @@ ms.lasthandoff: 01/08/2018
  默认情况下，传递给数学函数的数字将被解释为双精度浮点数。  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40;MDX 语法 &#41;](../mdx/functions-mdx-syntax.md)  
+ [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)  
   
   

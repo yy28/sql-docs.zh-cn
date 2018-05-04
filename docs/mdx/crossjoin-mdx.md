@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 24eb58744008984fca4dab647b12226769f4ab81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0529245668d3456af58e6907635c42570a70a882
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,15 +51,15 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **叉积**函数返回跨产品的两个或多个指定集。 所得集中元组的顺序取决于要联接的集的顺序以及其成员的顺序。 例如，当第一组包含 {x1，x2，...，x*n*}，并在第二个集包含 {y1、 y2，...，y*n*}，个这些集的叉积是：  
   
- {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1，y1)，(x1，y2)，...，(x1，y*n*)，(x2，y1)，(x2，y2)，...，  
   
- (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
+ (x2，y*n*)，...，(x*n*，y1)，(x*n*，y2)，...，(xn，y*n*)}  
   
 > [!IMPORTANT]  
->  如果交叉联接中的集由同一维度中不同属性层次结构中的元组组成，此函数将只返回实际存在的那些元组。 有关详细信息，请参阅[MDX &#40; 中的关键概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+>  如果交叉联接中的集由同一维度中不同属性层次结构中的元组组成，此函数将只返回实际存在的那些元组。 有关详细信息，请参阅[在 MDX 中的关键概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
   
 ## <a name="examples"></a>示例  
  以下查询说明在查询的列轴和行轴上使用 Crossjoin 函数的简单示例：  
@@ -142,6 +141,6 @@ WHERE (Measures.[Internet Sales Amount],
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

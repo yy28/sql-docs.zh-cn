@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 260c62d849f1b771b6d9fc40245fd1b0bfd2c5ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sending-long-data"></a>发送的长整型数据
 Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 254 个字符的二进制数据。 它可能不能将整个项的长整型数据存储在内存中，如当该项表示长文本文档或位图。 由于此类数据不能存储在单个缓冲区中，数据源将其发送到使用部件中的驱动程序**SQLPutData**时执行的语句。 在执行时为其发送数据的参数名为*执行中的数据参数*。  

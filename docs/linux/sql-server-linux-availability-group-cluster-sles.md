@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a32854d6619cc053d9dc9cfc28a9f17cba479f34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
@@ -189,16 +188,31 @@ ms.lasthandoff: 04/26/2018
 
 添加所有节点后，检查是否需要调整全局群集选项中的 no-quorum-policy。 这对双节点群集尤为重要。 有关详细信息，请参阅部分 4.1.2，选项否仲裁策略。 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Set cluster property start-failure-is-fatal to false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>设置群集属性群集重新检查间隔
 
-`Start-failure-is-fatal` 指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集来决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 因此，发生故障转移后，Pacemaker 重试启动可用性组主前者上资源的 SQL 实例可用后。 Pacemaker 负责降级为辅助副本，并自动重新加入可用性组。 此外，如果`start-failure-is-fatal`设置为`false`，群集将回退到使用迁移阈值配置的配置的 failcount 限制。 请确保相应地更新默认值为迁移阈值。
+`cluster-recheck-interval` 指示检查群集中的资源参数、 约束或其他群集选项的更改的轮询间隔。 如果副本出现故障，群集将尝试通过绑定的时间间隔重新启动副本`failure-timeout`值和`cluster-recheck-interval`值。 例如，如果`failure-timeout`设置为 60 秒和`cluster-recheck-interval`设置为 120 秒、 重新启动尝试大于 60 秒，但不超过 120 秒的时间间隔。 我们建议将故障超时设置为 60 和群集重新检查的间隔超过 60 秒的值。 不建议将群集重新检查间隔设置为较小的值。
 
-若要将属性值更新为 false，请运行：
+若要更新属性值设置为`2 minutes`运行：
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-如果属性具有的默认值`true`，如果开始资源失败，用户干预的第一次尝试后需要自动故障转移以清理资源失败计数和重置配置使用：`sudo crm resource cleanup <resourceName>`命令。
+
+> [!IMPORTANT] 
+> 如果你已有由 Pacemaker 群集的可用性组资源，请注意使用最新可用 Pacemaker 包 1.1.18-11.el7 的所有分发都引入开始失败-是-严重群集设置时的行为更改其值为 false。 此更改会影响故障转移工作流。 如果主副本发生了服务中断，群集会出现故障转移到其中一个可用的辅助副本。 相反，用户会发现群集保留尝试启动失败的主副本。 如果该主永远不会处于联机状态 （由于的永久中断），群集永远不会故障转移到另一个可用的辅助副本。 由于此更改，以前推荐的配置设置开始失败-是-严重将不再有效，该设置需要还原为其默认值为`true`。 此外，需要更新，以包含可用性组资源`failover-timeout`属性。 
+>
+>若要更新属性值设置为`true`运行：
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>更新现有的可用性组资源属性`failure-timeout`到`60s`运行 (替换`ag1`替换为你的可用性组资源的名称): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 Pacemaker 群集属性的详细信息，请参阅[配置群集资源](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)。
 
@@ -239,22 +253,23 @@ sudo crm configure property stonith-enabled=true
 1. 在 crm 提示符下，运行以下命令以配置资源属性。
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

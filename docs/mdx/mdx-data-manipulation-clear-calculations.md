@@ -29,12 +29,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ad7569a1db3d080c85dc0c45347c2dc011ee312d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 84cfc46ea64b0d4fb1dd79532bc6bdba9af71ded
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX 数据操作-清除计算
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,13 +51,13 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  有效的多维表达式 (MDX) 多维数据集表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **FROM**已知，如所 MDX 脚本的多维数据集的上下文时，可以省略子句。  
   
 > [!NOTE]  
 >  只有服务器管理员、数据库管理员或具有多维数据集中源数据访问权（即 ReadSourceData=true）的角色的成员才能执行此语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 数据操作语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

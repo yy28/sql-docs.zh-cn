@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e5b40c23fb1e5ca20b97431c3f99e45603fe32ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,10 +57,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  由一部分或两部分组成的表的名称。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name*是**nvarchar(517)**，无默认值。  
   
  [ **@colname=** ] **'***column_name***'**  
- 是中的列的名称*qualified_table_name*。 列必须是一个字符**varbinary （max)**或**映像**列和不能为计算的列。 *column_name*是**sysname**，无默认值。  
+ 是中的列的名称*qualified_table_name*。 列必须是一个字符**varbinary （max)** 或**映像**列和不能为计算的列。 *column_name*是**sysname**，无默认值。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建文本中存储的数据列的全文索引**varbinary （max)**或**映像**数据类型。 不对图像和图片进行索引。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建文本中存储的数据列的全文索引**varbinary （max)** 或**映像**数据类型。 不对图像和图片进行索引。  
   
  [  **@action=** ] *****操作*****  
  要执行的操作。 *操作*是**varchar （20)**、 与没有默认值，可以是以下值之一。  
@@ -78,7 +77,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 >  如果列包含的数据使用了多种语言或不支持的语言，则使用“非特定语言”。 默认值通过配置选项“默认全文语言”指定。  
   
  [ **@type_colname =** ] **'***type_column_name***'**  
- 是中的列的名称*qualified_table_name* ，保存的文档类型*column_name*。 此列必须是**char**， **nchar**， **varchar**，或**nvarchar**。 数据类型时才使用*column_name*属于类型**varbinary （max)**或**映像**。 *type_column_name*是**sysname**，无默认值。  
+ 是中的列的名称*qualified_table_name* ，保存的文档类型*column_name*。 此列必须是**char**， **nchar**， **varchar**，或**nvarchar**。 数据类型时才使用*column_name*属于类型**varbinary （max)** 或**映像**。 *type_column_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

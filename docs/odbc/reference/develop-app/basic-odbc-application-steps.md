@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8879cf9a2d6d56cfb4ac8503b7c8a67d6d2773f8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6fdd7ae86ac04d5c9d11a32999e221811e92939a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="basic-odbc-application-steps"></a>基本 ODBC 应用程序步骤
 本部分介绍了的 ODBC 应用程序的常规流程。 不太可能任何应用程序按此顺序完全调用所有这些函数。 但是，大多数应用程序使用这些步骤的某些变体。 基本应用程序步骤下图所示。  

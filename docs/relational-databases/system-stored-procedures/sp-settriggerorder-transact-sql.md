@@ -24,13 +24,12 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73a6c088b2d33c77877cadf6a80f030f8faeeaef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5059547366dbc167c4c73e3c8cabac53d0007382
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## <a name="arguments"></a>参数  
  [  **@triggername=** ] [ *triggerschema ***。**]*triggername * * ***  
- 要设置或更改其顺序的触发器的名称及其所属的架构（如果适用）。 [*triggerschema ***。**]*triggername * 是**sysname**。 如果名称与触发器不对应，或者名称与 INSTEAD OF 触发器对应，则该过程将返回错误。 *triggerschema*不能指定 DDL 或登录触发器。  
+ 要设置或更改其顺序的触发器的名称及其所属的架构（如果适用）。 [*triggerschema ***。**]* triggername * 是**sysname**。 如果名称与触发器不对应，或者名称与 INSTEAD OF 触发器对应，则该过程将返回错误。 *triggerschema*不能指定 DDL 或登录触发器。  
   
  [ @order= ] 'value'****  
- 触发器的新顺序的设置。 *值*是**varchar(10)**而且它可以是以下值之一。  
+ 触发器的新顺序的设置。 *值*是**varchar(10)** 而且它可以是以下值之一。  
   
 > [!IMPORTANT]  
 >  **第一个**和**最后一个**触发器必须是两个不同的触发器。  
@@ -66,7 +65,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**InclusionThresholdSetting**|触发器以未定义的顺序触发。|  
   
  [  **@stmttype=** ] *****statement_type*****  
- 指定触发触发器的 SQL 语句。 *statement_type*是**varchar(50)**和可以插入、 更新、 删除、 登录，或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中列出的语句事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 不能指定事件组。  
+ 指定触发触发器的 SQL 语句。 *statement_type*是**varchar(50)** 和可以插入、 更新、 删除、 登录，或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中列出的语句事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 不能指定事件组。  
   
  触发器可以指定为**第一个**或**最后一个**语句类型仅后该触发器已被定义为该语句类型的触发器的触发器。 例如，触发**TR1**可以指定**第一个**表插入**T1**如果**TR1**定义为 INSERT 触发器。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果返回错误**TR1**，其中已被定义为 INSERT 触发器，仅被设置为**第一个**，或**最后一个**，UPDATE 语句的触发器。 有关详细信息，请参见“备注”部分。  
   

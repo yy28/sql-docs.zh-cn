@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9e3f0c96d3b0921a7843e83d2b174ace160caf66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|计划的标识符。|  
 |**job_count**|**int**|返回的作业数。|  
   
-> **注意：****sp_help_jobschedule**返回值从**dbo.sysjobschedules**和**dbo.sysschedules**系统中的表**msdb**.   **sysjobschedules**更新每隔 20 分钟。 这可能会影响此存储过程返回的值。  
+> **注意：****sp_help_jobschedule**返回值从**dbo.sysjobschedules**和**dbo.sysschedules**系统中的表**msdb**. **sysjobschedules**更新每隔 20 分钟。 这可能会影响此存储过程返回的值。  
   
 ## <a name="remarks"></a>注释  
  参数**sp_help_jobschedule**可仅在某些组合。 如果*schedule_id*指定，则两者*job_id*也不*job_name*可以指定。 否则为*job_id*或*job_name*参数可与*schedule_name*。  

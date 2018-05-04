@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eee22f6b4845abb0cc9a3afb68b7dc89c87a2c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-glossary"></a>ODBC 术语表
 ## <a name="a"></a>指向  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="b"></a>B  
  **行为更改**  
- 从 ODBC 3 某些功能方面的变化*.x*到 ODBC 2 的行为。*x*行为，反之亦然。 由 SQL_ATTR_ODBC_VERSION 环境属性更改引起。  
+ 从 ODBC 3 某些功能方面的变化 *.x*到 ODBC 2 的行为。*x*行为，反之亦然。 由 SQL_ATTR_ODBC_VERSION 环境属性更改引起。  
   
  **二进制大型对象 (BLOB)**  
  通过一定数量的字节，如 255 任何二进制数据。 通常要长得多。 此类数据通常会发送到并从部分中的数据源中检索。 也称为*长整型数据*。  

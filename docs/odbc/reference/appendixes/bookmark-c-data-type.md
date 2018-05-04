@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], bookmark C data type
 - pseudo-type identifiers [ODBC], bookmark C data type
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43a9c02694e121eb653d70693587d5728931f747
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 599085e0182aa548bc6e597258cc203eb0f8b85d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-c-data-type"></a>书签 C 数据类型
 书签 C 数据类型允许应用程序检索书签。 书签 C 类型仅用于检索书签可以是长度; 中的变量的值它们不应转换为其他数据类型。 应用程序中检索结果的第 0 列从设置的书签**SQLBulkOperations** （与 SQL_ADD 的操作）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 有关详细信息，请参阅[书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/16/2018
  下表列出的值*CType*实现书签 C 数据类型，以及此数据定义，则 ODBC C 数据类型从 SQL 对于书签 C 数据类型的类型。H。  
   
 > [!NOTE]  
->  已弃用 SQL_C_BOOKMARK 数据类型。 ODBC 3*.x*应用程序不应使用 SQL_C_BOOKMARK。 ODBC 3*.x*驱动程序需要支持 SQL_C_BOOKMARK，仅当他们想要使用 ODBC 2。*x*使用它的应用程序。 当应用程序适用于 ODBC 2 时，驱动程序管理器映射到 SQL_C_BOOKMARK SQL_C_VARBOOKMARK。*x*驱动程序。  
+>  已弃用 SQL_C_BOOKMARK 数据类型。 ODBC 3 *.x*应用程序不应使用 SQL_C_BOOKMARK。 ODBC 3 *.x*驱动程序需要支持 SQL_C_BOOKMARK，仅当他们想要使用 ODBC 2。*x*使用它的应用程序。 当应用程序适用于 ODBC 2 时，驱动程序管理器映射到 SQL_C_BOOKMARK SQL_C_VARBOOKMARK。*x*驱动程序。  
   
 |C 类型标识符|ODBC C typedef|C 类型|  
 |-----------------------|--------------------|------------|  

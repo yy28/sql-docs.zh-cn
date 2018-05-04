@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27d719a9ab41bfa7594231462ea5c6318d95247d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附录 b: ODBC 状态转换表
 本附录中的表显示如何 ODBC 函数导致的环境、 连接、 语句和描述符状态的转换。 通常，环境、 连接、 语句或描述符的状态决定使用句柄 （环境、 连接、 语句或描述符） 的相应类型的函数可以调用时。 环境、 连接、 语句中，和描述符状态重叠大致如下图中所示。 例如，连接的确切重叠状态 C5，C6 并且语句说明了通过 S12 S1 是数据源而定，因为在不同的数据源，在不同时间开始事务，描述符状态 D1i （隐式已分配的描述符） 依赖描述符与之关联的语句的状态，在状态 D1e （显式已分配的描述符） 时不依赖于状态的任何语句。 有关每个状态的说明，请参阅[环境转换](../../../odbc/reference/appendixes/environment-transitions.md)，[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)，[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述符转换](../../../odbc/reference/appendixes/descriptor-transitions.md)、 本附录内容更高版本。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **NS** -下一个状态。 就像该语句必须不经历的异步状态，语句转换都是相同的。 例如，假设创建结果集的语句在因为从状态 S1 进入状态 S11 **SQLExecDirect**返回 SQL_STILL_EXECUTING。 处于状态 S11 NS 表示法意味着语句转换为相同状态 S1 中的语句来创建结果集。 如果**SQLExecDirect**会返回一个错误，该语句保留在 S1 状态; 如果成功，该语句将移动以状态 S5; 如果它需要数据时，该语句将移动以状态 S8; 并且如果仍在执行，它仍然处于状态 S11。  
   
--   ***XXXXX***或**(*XXXXX*)** -向转换表; 相关的 SQLSTATE检测到的驱动程序管理器的 SQLSTATEs 将括在括号中。 该函数返回 SQL_ERROR 和指定的 SQLSTATE，但状态不会更改。 例如，如果**SQLExecute**之前调用**SQLPrepare**，它将返回 SQLSTATE HY010 （函数序列错误）。  
+-   ***XXXXX***或 **(*XXXXX*)** -向转换表; 相关的 SQLSTATE检测到的驱动程序管理器的 SQLSTATEs 将括在括号中。 该函数返回 SQL_ERROR 和指定的 SQLSTATE，但状态不会更改。 例如，如果**SQLExecute**之前调用**SQLPrepare**，它将返回 SQLSTATE HY010 （函数序列错误）。  
   
 > [!NOTE]  
 >  表不显示且不与不更改的状态转换表相关的错误。 例如，当**SQLAllocHandle**在环境状态 E1 中调用，并返回 SQLSTATE HY001 （内存分配错误），环境将保持状态 E1; 的环境转换表中未显示这一点**SQLAllocHandle**。  

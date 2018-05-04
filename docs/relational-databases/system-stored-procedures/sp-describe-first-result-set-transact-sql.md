@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: acb21fb540012216aec4477193cf836bb7c19153
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,10 +49,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ## <a name="arguments"></a>参数  
  [ **@tsql =** ] **'***Transact-SQL_batch***'**  
- 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar (max)**。  
+ 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar (max)**。  
   
  [  **@params =** ] **N***参数*****  
- @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
+ @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)** 或**nvarchar (max)**。  
   
  一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是一个占位符，表示附加参数定义。 必须在定义语句中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
   
@@ -147,17 +146,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   如果数据类型不同，则将引发错误而不返回任何结果，但以下情况除外：  
   
-    -   **varchar(a)**到**varchar(a')**其中 >。  
+    -   **varchar(a)** 到**varchar(a')** 其中 >。  
   
-    -   **varchar(a)**到**varchar （max)**  
+    -   **varchar(a)** 到**varchar （max)**  
   
-    -   **nvarchar(a)**到**nvarchar(a')**其中 >。  
+    -   **nvarchar(a)** 到**nvarchar(a')** 其中 >。  
   
-    -   **nvarchar(a)**到**nvarchar (max)**  
+    -   **nvarchar(a)** 到**nvarchar (max)**  
   
-    -   **varbinary(a)**到**varbinary(a')**其中 >。  
+    -   **varbinary(a)** 到**varbinary(a')** 其中 >。  
   
-    -   **varbinary(a)**到**varbinary （max)**  
+    -   **varbinary(a)** 到**varbinary （max)**  
   
  **sp_describe_first_result_set**不支持间接递归。  
   
@@ -307,7 +306,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 结果： 错误，类型不匹配 (**varchar(10)**与**nvarchar(10)**)。  
+ 结果： 错误，类型不匹配 (**varchar(10)** 与**nvarchar(10)**)。  
   
 #### <a name="result-set-can-return-an-error"></a>结果集可以返回一个错误  
  第一次结果集是错误或结果集。  

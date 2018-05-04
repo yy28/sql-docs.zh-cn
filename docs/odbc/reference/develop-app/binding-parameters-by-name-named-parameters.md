@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 602591882866418ac4850f62d99b2bd20ee613fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f4a7ec9525c8602888cf97d839b811ad3090b12d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>绑定参数按名称 （命名参数）
 某些 Dbms 允许应用程序按名称而不是按位置在过程调用中指定的存储过程的参数。 此类参数称为*命名参数*。 ODBC 支持命名参数的使用。 ODBC 中, 命名的参数仅在对存储过程调用中使用，并且不在其他 SQL 语句中使用。  

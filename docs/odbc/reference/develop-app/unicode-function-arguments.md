@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d0b2e30db5cacd2266ee14ec847210d7ff8407b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1267e54f1f0ce50493558be36531138c00a067b9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函数自变量
 ODBC 3.5 （或更高版本） 驱动程序管理器支持 ANSI 和 Unicode 版本的所有接受指向字符字符串或 SQLPOINTER 在自变量的指针的函数。 Unicode 函数作为函数来实现 (为后缀*W*)，而不是宏。 ANSI 函数 (其可以调用使用或不是由后缀为*A*) 是等于当前的 ODBC API 函数。  
@@ -72,7 +71,7 @@ ODBC 3.5 （或更高版本） 驱动程序管理器支持 ANSI 和 Unicode 版�
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  已弃用的函数具有 Unicode ANSI 映射支持，因为 ODBC 3*.x*驱动程序管理器支持重新编译 ODBC 2。*x*具有 UNICODE 应用程序**#define**。  
+>  已弃用的函数具有 Unicode ANSI 映射支持，因为 ODBC 3 *.x*驱动程序管理器支持重新编译 ODBC 2。*x*具有 UNICODE 应用程序 **#define**。  
   
  本部分包含以下主题。  
   

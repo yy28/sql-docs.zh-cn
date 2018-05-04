@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b360fb33ecbee395519f39a14b5be5bf0a023857
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8d7c5c0a97498a1ebae3656b73e3f6d0d6e45eeb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +35,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定关系运算符  
- 此 XPath 查询返回的子元素的**\<客户 >**元素其中**CustomerID**属性值是"1"和其中任何子**\<顺序>**元素包含 **\<OrderDetail >**具有子项**OrderQty**具有大于 3 的值属性：  
+ 此 XPath 查询返回的子元素的**\<客户 >** 元素其中**CustomerID**属性值是"1"和其中任何子**\<顺序>** 元素包含 **\<OrderDetail >** 具有子项**OrderQty**具有大于 3 的值属性：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 方括号筛选器中指定的谓词**\<客户 >**元素。 仅**\<客户 >**至少有一个元素 **\<OrderDetail >**孙具有大于 3 返回 OrderQty 属性值。  
+ 方括号筛选器中指定的谓词**\<客户 >** 元素。 仅**\<客户 >** 至少有一个元素 **\<OrderDetail >** 孙具有大于 3 返回 OrderQty 属性值。  
   
  **子**轴是默认设置。 因此，可以将该查询指定为：  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查询中指定关系运算符并使用布尔函数比较该结果  
- 此查询返回所有**\<顺序 >**的上下文节点的具有元素子级， **SalesPersonID**属性为小于 270 的值：  
+ 此查询返回所有**\<顺序 >** 的上下文节点的具有元素子级， **SalesPersonID**属性为小于 270 的值：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

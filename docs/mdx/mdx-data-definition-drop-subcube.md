@@ -29,12 +29,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: de5bf7aa07600c15372f70b0a868637e12c704d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 38fdbfc320929708625ba6e5bd0f9a0062778202
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>MDX 数据定义的拖放子多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ DROP SUBCUBE Subcube_Name
  提供子多维数据集名称的有效字符串表达式。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 脚本语句 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [创建子多维数据集语句 &#40;MDX &#41;](../mdx/mdx-data-definition-create-subcube.md)  
+ [MDX 脚本编写语句&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [创建子多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)  
   
   

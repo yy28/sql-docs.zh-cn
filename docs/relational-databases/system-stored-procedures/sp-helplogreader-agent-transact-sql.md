@@ -22,12 +22,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdcee5a30dd32dc7ce269bc8ab5e2ba3adb6da40
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e45bef5198bc90cc7838dcdc56147c8d1c3d3551
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**名称**|**nvarchar(100)**|代理的名称。|  
 |**publisher_security_mode**|**int**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
-|**publisher_password**|**nvarchar(524)**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \***始终返回。|  
+|**publisher_password**|**nvarchar(524)**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \*** 始终返回。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|是以格式返回的 Windows 帐户运行日志读取器代理*域*\\*用户名*。|  
-|**job_password**|**sysname**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \***始终返回。|  
+|**job_password**|**sysname**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \*** 始终返回。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

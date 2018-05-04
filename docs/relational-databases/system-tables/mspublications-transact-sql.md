@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e104407394925f5deb8d7d11a55fe8e979934df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e5e6b1f9ab0d4cbd42e88ae4480d55625ba434e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 |**sync_method**|**int**|同步方法包括：<br /><br /> **0** = 的 native （生成的所有表的纯模式大容量复制输出）。<br /><br /> **1** = 的字符 （生成的所有表的字符模式大容量复制输出）。<br /><br /> **3** = 并发 （生成的所有纯模式大容量复制输出表，但不会在快照期间锁定表）。<br /><br /> **4** = Concurrent_c （生成的所有字符模式大容量复制输出表，但不会在快照期间锁定表）<br /><br /> 值**3**和**4**提供有关事务复制和合并复制，而不是快照复制。|  
 |**allow_subscription_copy**|**bit**|启用或禁用对订阅此发布的订阅数据库的复制功能。 **0**意味着禁用了复制，和**1**意味着启用它。|  
 |**thirdparty_options**|**int**|指定是否在复制文件夹中的发布显示[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]取消：<br /><br /> **0** = 显示在复制文件夹中的异类发布[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。<br /><br /> **1** = 禁止显示中的复制文件夹中的异类发布[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。|  
-|**allow_queued_tran**|**bit**|指定发布是否允许排队更新：<br /><br /> **0 =**发布是非排队。<br /><br /> **1** = 排队发布。|  
+|**allow_queued_tran**|**bit**|指定发布是否允许排队更新：<br /><br /> **0 =** 发布是非排队。<br /><br /> **1** = 排队发布。|  
 |**options**|**int**|没有此版本的信息。|  
   
 ## <a name="see-also"></a>另请参阅  

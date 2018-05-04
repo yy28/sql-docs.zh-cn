@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
 - data sources [ODBC], ODBC data source administrator
@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 222bbc143fee7aa89d8414a05510fa01a35873cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-data-sources"></a>管理数据源
 从驱动程序的安装程序安装 ODBC 驱动程序后，你可以为它定义一个或多个数据源。 数据源名称 (DSN) 应提供数据; 的唯一的说明例如，*工资单*或*Accounts Payable*。 为所有当前安装的驱动程序定义的用户和系统数据源中列出**用户 DSN**或**系统 DSN**选项卡**ODBC 数据源管理器**对话框。 中列出给定目录中的文件数据源**文件 DSN**选项卡中输入要显示的目录**查找**框中**文件 DSN**选项卡。  

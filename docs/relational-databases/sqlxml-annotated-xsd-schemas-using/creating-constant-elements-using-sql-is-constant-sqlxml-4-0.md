@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,13 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff5fac71ef48053e57ae3410adfadb3a2b46cbe7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6850406682e87638a772221123c5fd9b1787fed5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,17 +39,17 @@ ms.lasthandoff: 04/16/2018
   
 -   将顶级元素添加到 XML 文档。 XML 要求为文档提供一个顶级元素（根元素）。  
   
--   创建容器元素，如**\<订单 >**包装所有订单的元素。  
+-   创建容器元素，如**\<订单 >** 包装所有订单的元素。  
   
- **Sql： 是常量**批注添加到 **\<complexType >**元素。  
+ **Sql： 是常量**批注添加到 **\<complexType >** 元素。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 以添加容器元素  
- 在此批注 XSD 架构 **\<CustomerOrders >**指通过指定的常量元素**sql： 是常量**值为 1 的属性。 因此，  **\<CustomerOrders >**未映射到任何数据库表或列。 此常量的元素组成**\<顺序 >**子元素。  
+ 在此批注 XSD 架构 **\<CustomerOrders >** 指通过指定的常量元素**sql： 是常量**值为 1 的属性。 因此，  **\<CustomerOrders >** 未映射到任何数据库表或列。 此常量的元素组成**\<顺序 >** 子元素。  
   
- 尽管 **\<CustomerOrders >**未映射到任何数据库表或列中，事件仍显示为一个容器元素，其中包含生成的 XML 中**\<顺序 >**子元素。  
+ 尽管 **\<CustomerOrders >** 未映射到任何数据库表或列中，事件仍显示为一个容器元素，其中包含生成的 XML 中**\<顺序 >** 子元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

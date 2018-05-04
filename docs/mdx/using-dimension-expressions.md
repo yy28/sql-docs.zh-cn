@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>使用维度表达式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   将参数传递给多维表达式 (MDX) 中的函数时，通常使用维度表达式和层次结构表达式从层次结构中返回成员、集或元组。  
   
- 因为维度表达式是对象标识符，所以它们只能是简单表达式。 请参阅[表达式 &#40;MDX &#41;](../mdx/expressions-mdx.md)有关简单和复杂表达式的说明。  
+ 因为维度表达式是对象标识符，所以它们只能是简单表达式。 请参阅[表达式&#40;MDX&#41; ](../mdx/expressions-mdx.md)有关简单和复杂表达式的说明。  
   
 ## <a name="dimension-expressions"></a>维度表达式  
  维度表达式包含维度标识符或维度函数。  
@@ -74,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  层次结构标识符显示为*Dimension_Name**。**Hierarchy_Name*中用来描述 MDX 语句的 BNF 表示法。  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
+ [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

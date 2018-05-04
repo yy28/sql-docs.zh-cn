@@ -28,12 +28,11 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50fb936da78338a86b47b08423585afccad1a5bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3ad751708ee591d01a7063c6ff1409c46562fdc4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>访问用户定义的类型-检索 UDT 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -381,13 +380,13 @@ class GetRawBytes
  可以在 ADO.NET 代码中将 UDT 作为输入参数和输出参数使用。  
   
 ## <a name="using-udts-in-query-parameters"></a>在查询参数中使用 UDT  
- Udt 可以用作参数值，设置时**SqlParameter**为**System.Data.SqlClient.SqlCommand**对象。 **Sqldbtype.udt;**的枚举**SqlParameter**对象用于指示在调用时，该参数是 UDT**添加**方法**参数**集合。 **UdtTypeName**属性**SqlCommand**对象用于在数据库中使用指定的用户定义的类型的完全限定的名称*database.schema_name.object_name*语法。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
+ Udt 可以用作参数值，设置时**SqlParameter**为**System.Data.SqlClient.SqlCommand**对象。 **Sqldbtype.udt;** 的枚举**SqlParameter**对象用于指示在调用时，该参数是 UDT**添加**方法**参数**集合。 **UdtTypeName**属性**SqlCommand**对象用于在数据库中使用指定的用户定义的类型的完全限定的名称*database.schema_name.object_name*语法。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
   
 > [!NOTE]  
 >  UDT 程序集的本地副本必须对客户端项目可用。  
   
 ### <a name="example"></a>示例  
- 此示例中的代码创建**SqlCommand**和**SqlParameter**对象以将数据插入表中的 UDT 列。 该代码使用**sqldbtype.udt;**枚举来指定的数据类型，与**UdtTypeName**属性**SqlParameter**对象来指定完全限定的名称数据库中 UDT。  
+ 此示例中的代码创建**SqlCommand**和**SqlParameter**对象以将数据插入表中的 UDT 列。 该代码使用**sqldbtype.udt;** 枚举来指定的数据类型，与**UdtTypeName**属性**SqlParameter**对象来指定完全限定的名称数据库中 UDT。  
   
 ```vb  
 Option Explicit On  

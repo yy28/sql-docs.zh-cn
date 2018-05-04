@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 152ccc8fa7194676d65bdf03239969b7a8201c86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ade62bf6417d50ca47a9fc00ded49634ff34936f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customrollup-element-xmla"></a>CustomRollup 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含由父属性成员的自定义汇总公式[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含由父属性成员的自定义汇总公式[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,27 +52,27 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|字符串|  
+|默认值|无|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|父元素|[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **CustomRollup**元素包含定义由容器的父定义的属性成员的汇总行为的多维表达式 (MDX) 表达式**属性**元素。  
   
- 有关 MDX 表达式的详细信息，请参阅[表达式 &#40;MDX &#41;](../../../mdx/expressions-mdx.md).  
+ 有关 MDX 表达式的详细信息，请参阅[表达式 & #40;MDX & #41;](../../../mdx/expressions-mdx.md).  
   
 ## <a name="see-also"></a>另请参阅  
- [插入元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [更新元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [插入元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [更新元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

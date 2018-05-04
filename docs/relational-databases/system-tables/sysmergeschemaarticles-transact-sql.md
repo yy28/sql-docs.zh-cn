@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be0e14898e488592e8c0dcdbf40b53b6e678a6a2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6901f0676f6c7dbbd3770389d212026b166e7de3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**objid**|**int**|项目基对象的对象标识符。 可以是过程、视图、索引视图或用户定义函数的对象标识符。|  
 |**artid**|**uniqueidentifier**|文章 id。|  
 |**说明**|**nvarchar(255)**|项目的说明。|  
-|**pre_creation_command**|**tinyint**|在订阅数据库中创建项目时采取的默认操作：<br /><br /> **0 =**无-如果该表已存在于订阅服务器，不执行任何操作。<br /><br /> **1** = drop-删除表，然后再重新创建它。<br /><br /> **2** = delete-发出删除基于子集筛选器中的 WHERE 子句。<br /><br /> **3** = Truncate-相同**2**，但删除了而不是行的页。 不过，不要使用 WHERE 子句。|  
+|**pre_creation_command**|**tinyint**|在订阅数据库中创建项目时采取的默认操作：<br /><br /> **0 =** 无-如果该表已存在于订阅服务器，不执行任何操作。<br /><br /> **1** = drop-删除表，然后再重新创建它。<br /><br /> **2** = delete-发出删除基于子集筛选器中的 WHERE 子句。<br /><br /> **3** = Truncate-相同**2**，但删除了而不是行的页。 不过，不要使用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|发布唯一标识符。|  
 |**status**|**tinyint**|指示仅限架构的项目的状态，可以是以下状态之一：<br /><br /> **1** = Unsynced-用于发布运行快照代理的下一步时间的表运行的初始处理脚本。<br /><br /> **2** = 活动-用于发布的表的初始处理脚本已运行。<br /><br /> **5** = New_inactive-要添加。<br /><br /> **6** = New_active-要添加。|  
 |**creation_script**|**nvarchar(255)**|用于创建目标表的可选项目架构预创建脚本的路径和名称。|  

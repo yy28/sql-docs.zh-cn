@@ -29,12 +29,11 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 603ff2cfed32a6a8ecfb4f55467b697307009822
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb235afa38de1719b67c6bbbf6ffa14b32e40deb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ OBJECT_ID('table_name')
   
  如果全文键列是建议的整数数据类型，则 document_id 直接映射到基表中的全文键值。  
   
- 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_property 的参数返回的基表中的行，你需要将此视图联接返回的结果与[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，你可以将与此存储过程返回的 DocId 列 dm_fts_index_keywords_by_property 的参数的 document_id 列。 请注意，**时间戳**列不能在插入时，接收值，因为它们是由自动生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**时间戳**列必须被转换为**varbinary （8)**列。 下面的示例说明了这些步骤。 在此示例中，*针对 table_id 所*是您的表的 ID *database_name*是你的数据库的名称和*table_name*是你的表的名称。  
+ 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_property 的参数返回的基表中的行，你需要将此视图联接返回的结果与[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，你可以将与此存储过程返回的 DocId 列 dm_fts_index_keywords_by_property 的参数的 document_id 列。 请注意，**时间戳**列不能在插入时，接收值，因为它们是由自动生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**时间戳**列必须被转换为**varbinary （8)** 列。 下面的示例说明了这些步骤。 在此示例中，*针对 table_id 所*是您的表的 ID *database_name*是你的数据库的名称和*table_name*是你的表的名称。  
   
 ```  
 USE database_name;  

@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f7eb644b085cbc5686a91988fc98ada9ee2257ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 06300993d36eb81c6db93e656a7d9ea4cf6e9ff9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>返回类型  
  介于 0 和 1 之间的双精度浮点数。 该数值越接近 1，则指示事例出现在此模型中的概率越高。 该数值越接近 0，则指示事例越不可能出现在此模型中。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  默认情况下，结果**PredictCaseLikelihood**函数进行了规范化。 通常，当事例中的属性个数增加，并且任何两个事例的原始概率之间的差异大大缩小时，规范化的值更为有用。  
   
  下面的公式用于计算规范化的值（给定 x 和 y）：  
@@ -94,9 +93,9 @@ NATURAL PREDICTION JOIN
  上述结果的差异演示了规范化的效果。 原始值**CaseLikelihood**提供的建议用例的概率是大约 20%，; 但是，当你规范化结果，就会了然-事例可能性是非常低。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

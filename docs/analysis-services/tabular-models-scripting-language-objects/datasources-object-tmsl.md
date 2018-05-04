@@ -1,31 +1,30 @@
 ---
-title: "数据源对象 (TMSL) |Microsoft 文档"
-ms.custom: 
+title: 数据源对象 (TMSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 2c68188cef82e36c931b299cbd9c68cf18b659de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasources-object-tmsl"></a>数据源对象 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-到数据源模型期间导入将数据添加到模型，或在传递通过 DirectQuery 模式下的查询，或者使用定义的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
+  到数据源模型期间导入将数据添加到模型，或在传递通过 DirectQuery 模式下的查询，或者使用定义的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
   
  除非您要创建的更换，或更改数据的源对象本身，任何在脚本 （如分区脚本） 中引用的数据源必须是现有**数据源**模型中的对象。  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 02/23/2018
  如果未否则指定连接字符串上，则一个可选的字符串，用于标识托管的数据提供程序的名称对关系数据库中，连接上使用。  
   
 ## <a name="usage"></a>用法  
- **数据源**中使用对象[Alter 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[创建命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，[删除命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[刷新命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[撰写 MergePartitions 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **数据源**中使用对象[Alter 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[创建命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，[删除命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[刷新命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[撰写 MergePartitions 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md)。  
   
  A**数据源**对象是一个模型的一个属性，但也可以指定为给定模型和数据库之间的一对一映射的数据库对象的属性。  分区基于 SQL 的查询还指定**数据源**，只能使用一套减少的属性。  
   
@@ -94,7 +93,7 @@ ms.lasthandoff: 02/23/2018
 ]  
 ```  
   
-## <a name="full-syntax"></a>完整的语法  
+## <a name="full-syntax"></a>完整语法  
  下面是一个模型的数据源对象的架构表示形式。  
   
 ```  
@@ -189,6 +188,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="see-also"></a>另请参阅  
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [在 Internet 信息服务 &#40; IIS &#41; 上配置对 Analysis Services 的 HTTP 访问8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [在 Internet 信息服务 & #40; IIS & #41; 上配置对 Analysis Services 的 HTTP 访问8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

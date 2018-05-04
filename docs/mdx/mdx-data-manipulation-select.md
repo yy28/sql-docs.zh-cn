@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fc495e44fd9c2bc49ba54afbb17cc48a5a855ac6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 数据操作的选择
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -124,14 +123,14 @@ FROM
  *MemberProperty_Name*  
  表示成员属性的有效字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  `<SELECT slicer axis clause>` 表达式必须包含维度和层次结构中的成员，而不是包含指定的 `<SELECT query axis clause>` 表达式中所引用的成员。  
   
  如果指定的 `<SELECT query axis clause>` 表达式和 `<SELECT slicer axis clause>` 值中省略了多维数据集中的某个属性，则该属性的默认成员将隐式添加到切片器轴中。  
   
  使用 subselect 语句中的 NON VISUAL 选项，可以筛选出成员，同时保留实际总数，而不是筛选出的总数。 这样，您可以查询前十位的销售（人员/产品/地区），并获取所有查询成员的实际销售总数，而不是返回的前十位的销售总数。 有关详细信息，请参阅下面的示例。  
   
- 计算的成员可以包括在\<SELECT 查询轴子句 > 每当打开连接时，使用连接字符串参数*子查询 = 1*; 请参阅[支持 XMLA 属性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>对于参数用法。 下面是有关嵌套 select 语句中的计算成员的示例。  
+ 计算的成员可以包括在\<SELECT 查询轴子句 > 每当打开连接时，使用连接字符串参数*子查询 = 1*; 请参阅[支持 XMLA 属性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>对于参数用法。 下面是有关嵌套 select 语句中的计算成员的示例。  
   
 ## <a name="autoexists"></a>Autoexists  
  在 SELECT 语句中使用维度的两个或更多属性时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。 例如，假定您在处理来自 Geography 维度的属性。 如果你有一个表达式，返回所有成员从 City 属性中，以及另一个表达式的成员 Country 属性到所有国家/地区在欧洲，那么这将导致 City 成员限制为仅属于欧洲国家的那些城市。 Analysis Services 的这一特性称为 Autoexists，并且仅适用于同一维度内的属性。 Autoexists 仅适用于同一维度中的属性，因为它试图阻止在一个属性表达式中排除的维度记录被包括在其他属性表达式中。 也可以将 Autoexists 理解为不同的属性表达式产生的维度记录的交集。 请参阅下面的以下示例：  
@@ -354,7 +353,7 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 可以使用 AUTOEXISTS 修改 Autoexists 的行为 = [1 | 2 | 3] 中的连接字符串; 参数请参阅[支持 XMLA 属性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>对于参数用法。  
+ 可以使用 AUTOEXISTS 修改 Autoexists 的行为 = [1 | 2 | 3] 中的连接字符串; 参数请参阅[支持 XMLA 属性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>对于参数用法。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回的总和`Measures.[Order Quantity]`成员，在第一个八个月内的日历年 2003年中包含聚合`Date`维度，从**Adventure Works**多维数据集。  
@@ -392,7 +391,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|服装|**Components**|  
+||**All Products**|**Accessories**|自行车|服装|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -444,7 +443,7 @@ WHERE
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|所有分销商|$73,694,430.80|$506,172.45|$1,524,906.93|  
+|All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
   
@@ -478,9 +477,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX &#40; 中的重要概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 数据操作语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [限制查询中的使用查询和切片器轴 &#40;MDX &#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [MDX & #40; 中的重要概念Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [限制查询中的使用查询和切片器轴 & #40;MDX & #41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

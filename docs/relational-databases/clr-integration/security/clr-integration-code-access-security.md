@@ -23,12 +23,11 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ebe23e9aa58308e404f8cf748abe3e903471cb11
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 042ee89b41145f1886026327be9b592b262af8cb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.lasthandoff: 04/16/2018
 |权限|值/说明|  
 |----------------|-----------------------------|  
 |**SecurityPermission**|**执行：**执行托管的代码的权限。|  
-|**SqlClientPermission**|**上下文连接 = true**，**上下文连接 = yes**： 只可以使用上下文连接并且连接字符串可以仅指定的值"上下文连接 = true"或"上下文连接 = yes"。<br /><br /> **AllowBlankPassword = false:**不允许密码为空。|  
+|**SqlClientPermission**|**上下文连接 = true**，**上下文连接 = yes**： 只可以使用上下文连接并且连接字符串可以仅指定的值"上下文连接 = true"或"上下文连接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允许密码为空。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 程序集具有相同的权限**安全**程序集中，其访问外部系统资源，如文件、 网络、 环境变量和注册表的附加功能。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 04/16/2018
 |**KeyContainerPermission**|**不受限制地：**完整允许对密钥容器的访问。|  
 |**NetworkInformationPermission**|**访问：**允许 Pinging。|  
 |**RegistryPermission**|允许读取的权限**HKEY_CLASSES_ROOT**， **HKEY_LOCAL_MACHINE**， **HKEY_CURRENT_USER**， **HKEY_CURRENT_CONFIG**，和**HKEY_USERS。**|  
-|**SecurityPermission**|**断言：**断言的此代码的所有调用方拥有该操作的所需权限的能力。<br /><br /> **ControlPrincipal:**操作的主体对象的能力。<br /><br /> **执行：**执行托管的代码的权限。<br /><br /> **SerializationFormatter:**能够提供序列化服务。|  
+|**SecurityPermission**|**断言：**断言的此代码的所有调用方拥有该操作的所需权限的能力。<br /><br /> **ControlPrincipal:** 操作的主体对象的能力。<br /><br /> **执行：**执行托管的代码的权限。<br /><br /> **SerializationFormatter:** 能够提供序列化服务。|  
 |**SmtpPermission**|**访问：**允许出站连接到 SMTP 主机端口 25。|  
 |**SocketPermission**|**连接：**允许出站连接 （所有协议中的所有端口） 上的传输地址。|  
 |**SqlClientPermission**|**不受限制地：**完整允许访问数据源。|  

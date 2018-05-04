@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - number of rows fetched [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d4925e42b7039564096be578b02df8f8fcd036c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e699cc8c0272a1221b0148a8d7b2c65da9e3e6c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="number-of-rows-fetched-and-status"></a>提取的行数和状态
 如果已经设置了 SQL_ATTR_ROWS_FETCHED_PTR 语句特性，它指定返回通过调用提取的行数的缓冲区**SQLFetch**或**SQLFetchScroll**，和错误行。 （此数字是没有状态 SQL_ROW_NO_ROWS 的所有行的计数。）调用了**SQLBulkOperations**或**SQLSetPos**，该缓冲区包含受函数中执行的大容量操作的行数。 如果已经设置了 SQL_ATTR_ROW_STATUS_PTR 语句特性， **SQLFetch**或**SQLFetchScroll**返回*行状态数组*该属性提供的每个状态返回的行。 这两个指向这些字段的缓冲区分配由应用程序和驱动程序填充。 应用程序必须确保这些指针保持有效，直到关闭光标。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], buffers
 - data buffers [ODBC], types
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 815fcb78b64930cf911cfbb8c775cd5b13fc0966
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b7f2f6e48c4fd01106b1ccf4a371d4e522587db1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-buffer-type"></a>数据缓冲区类型
 应用程序指定的缓冲区的 C 数据类型。 使用单一变量，这发生在应用程序将该变量分配。 泛型内存-即，内存的指针指向 void 类型的-发生这种情况是当应用程序将强制转换为特定类型的内存。 该驱动程序发现此类型的两种方法：  

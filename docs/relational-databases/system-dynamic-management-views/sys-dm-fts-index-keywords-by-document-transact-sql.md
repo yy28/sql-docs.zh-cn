@@ -28,13 +28,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 51026e420e509cfe4af315dfaee767c45f04bcbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f27298a3d92df9092d6b18cf5a9c11112bccd37e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -97,7 +96,7 @@ sys.dm_fts_index_keywords_by_document
   
  如果全文键列是建议的整数数据类型，则 document_id 直接映射到基表中的全文键值。  
   
- 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识由 dm_fts_index_keywords_by_document 基表中的行，你需要将此视图联接返回的结果与[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以将 dm_fts_index_keywords_by_document 的 document_id 列与此存储过程返回的 DocId 列联接在一起。 请注意，**时间戳**列不能在插入时，接收值，因为它们是由自动生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**时间戳**列必须被转换为**varbinary （8)**列。 下面的示例说明了这些步骤。 在此示例中，*针对 table_id 所*是您的表的 ID *database_name*是你的数据库的名称和*table_name*是你的表的名称。  
+ 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识由 dm_fts_index_keywords_by_document 基表中的行，你需要将此视图联接返回的结果与[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以将 dm_fts_index_keywords_by_document 的 document_id 列与此存储过程返回的 DocId 列联接在一起。 请注意，**时间戳**列不能在插入时，接收值，因为它们是由自动生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**时间戳**列必须被转换为**varbinary （8)** 列。 下面的示例说明了这些步骤。 在此示例中，*针对 table_id 所*是您的表的 ID *database_name*是你的数据库的名称和*table_name*是你的表的名称。  
   
 ```  
 USE database_name;  

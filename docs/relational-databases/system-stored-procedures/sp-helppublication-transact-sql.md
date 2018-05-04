@@ -24,12 +24,11 @@ caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9c9a1709d788ac12e927de909af3ea3a00574e90
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  [ **@publication =** ] **'***publication***'**  
  要查看的发布的名称。 *发布*为 sysname，默认值为**%**，这将返回所有发布的相关信息。  
   
- [  **@found =** ] *****找到*****输出  
+ [  **@found =** ] *****找到***** 输出  
  指示返回行的标志。 *找到*是**int**和输出参数，默认值为**23456**。 **1**表示找到发布。 **0**指示找不到发布。  
   
  [ **@publisher** = ] **'***publisher***'**  
@@ -87,8 +86,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |allow_queued_tran|**bit**|指定是否已启用在订阅服务器上禁用更改排队直到这些更改可以应用到发布服务器。 如果**0**，订阅服务器上的更改不会排队。|  
 |snapshot_in_defaultfolder|**bit**|指定是否在默认文件夹中存储快照文件。 如果**0**，快照文件存储在指定的备用位置*alternate_snapshot_folder*。 如果**1**，可以在默认文件夹中找到快照文件。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照的备用文件夹的位置。|  
-|pre_snapshot_script|**nvarchar(255)**|指定指向的指针**.sql**文件位置。 分发代理将运行之前运行的任何复制的对象脚本时应用在订阅服务器上快照的快照前脚本。|  
-|post_snapshot_script|**nvarchar(255)**|指定指向的指针**.sql**文件位置。 分发代理将在初始同步过程中已应用所有其他复制的对象脚本和数据之后才运行快照后脚本。|  
+|pre_snapshot_script|**nvarchar(255)**|指定指向的指针 **.sql**文件位置。 分发代理将运行之前运行的任何复制的对象脚本时应用在订阅服务器上快照的快照前脚本。|  
+|post_snapshot_script|**nvarchar(255)**|指定指向的指针 **.sql**文件位置。 分发代理将在初始同步过程中已应用所有其他复制的对象脚本和数据之后才运行快照后脚本。|  
 |compress_snapshot|**bit**|指定写入到快照*alt_snapshot_folder*位置是压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 **0**指定不要压缩快照。|  
 |ftp_address|**sysname**|分发服务器的 FTP 服务的网络地址。 指定供订阅服务器的分发代理或合并代理拾取的发布快照文件的位置。|  
 |ftp_port|**int**|分发服务器的 FTP 服务的端口号。|  

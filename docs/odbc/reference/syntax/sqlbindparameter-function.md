@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBindParameter
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6dabf41f117227830cdf536f4d17f32b71a2d09
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函数
 **一致性**  
@@ -135,20 +134,20 @@ SQLRETURN SQLBindParameter(
   
  *InputOutputType*自变量是下列值之一：  
   
--   SQL_PARAM_INPUT。 参数将不调用过程中，如 SQL 语句中的参数标记**插入**语句，或它将在过程中的输入的参数的标记。 例如中的参数**插入到员工值 (？，？，？)**是输入的参数，而中的参数**{调用 AddEmp (？，？，？)}**可以但并不一定，输入的参数。  
+-   SQL_PARAM_INPUT。 参数将不调用过程中，如 SQL 语句中的参数标记**插入**语句，或它将在过程中的输入的参数的标记。 例如中的参数**插入到员工值 (？，？，？)** 是输入的参数，而中的参数 **{调用 AddEmp (？，？，？)}** 可以但并不一定，输入的参数。  
   
      当执行语句时，该驱动程序将为参数的数据发送到数据源;\* *ParameterValuePtr*缓冲区必须包含有效的输入的值，或 **StrLen_or_IndPtr*缓冲区必须包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT 的结果_EXEC 宏。  
   
      如果应用程序无法确定在过程调用中参数的类型，它将设置*InputOutputType*到 SQL_PARAM_INPUT; 如果数据源返回一个值对于参数，驱动程序将丢弃它。  
   
--   SQL_PARAM_INPUT_OUTPUT。 参数将标记中的过程的输入/输出参数。 例如中的参数**{调用 GetEmpDept(?)}**是接受员工的名称，并返回该雇员的部门的名称的输入/输出参数。  
+-   SQL_PARAM_INPUT_OUTPUT。 参数将标记中的过程的输入/输出参数。 例如中的参数 **{调用 GetEmpDept(?)}** 是接受员工的名称，并返回该雇员的部门的名称的输入/输出参数。  
   
      当执行语句时，该驱动程序将为参数的数据发送到数据源;\* *ParameterValuePtr*缓冲区必须包含有效的输入的值，或\* *StrLen_or_IndPtr*缓冲区必须包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或的结果SQL_LEN_DATA_AT_EXEC 宏。 驱动程序执行的语句后，将参数的数据返回给该应用程序;如果数据源不返回输入/输出参数的值，该驱动程序设置 **StrLen_or_IndPtr* SQL_NULL_DATA 缓冲区。  
   
     > [!NOTE]  
     >  在 ODBC 1.0 应用程序调用**SQLSetParam** ODBC 2.0 的驱动程序，驱动程序管理器将此转换为调用**SQLBindParameter**顺序*InputOutputType*参数设置为 SQL_PARAM_INPUT_OUTPUT。  
   
--   SQL_PARAM_OUTPUT。 参数将标记一个过程或输出参数在过程; 中的返回值在任一情况下，这些被称为*输出参数*。 例如中的参数**{？ = 调用 GetNextEmpID}**是输出参数返回下一步的员工 id。  
+-   SQL_PARAM_OUTPUT。 参数将标记一个过程或输出参数在过程; 中的返回值在任一情况下，这些被称为*输出参数*。 例如中的参数 **{？ = 调用 GetNextEmpID}** 是输出参数返回下一步的员工 id。  
   
      驱动程序执行的语句后，除非在应用程序，返回了参数的数据*ParameterValuePtr*和*StrLen_or_IndPtr*自变量都是 null 指针，在这种情况下驱动程序将丢弃的输出值。 如果数据源不返回输出参数的值，该驱动程序设置 **StrLen_or_IndPtr* SQL_NULL_DATA 缓冲区。  
   

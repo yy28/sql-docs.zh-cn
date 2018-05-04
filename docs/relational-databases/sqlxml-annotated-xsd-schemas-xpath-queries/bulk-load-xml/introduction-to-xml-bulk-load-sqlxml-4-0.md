@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebdbed96867a664fe64f6b8508c6a38e97d27166
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4da04a08e771635c4e8e166442c1448f5432e5e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大容量加载简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +52,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="streaming-of-xml-data"></a>对 XML 数据进行流式处理  
  由于源 XML 文档可能很大，因此无法将整个文档读入内存以进行大容量加载处理。 XML 大容量加载而是将 XML 数据解释为流并读取它。 当该实用工具读取数据时，该工具标识数据库表，并根据 XML 数据源生成相应记录，然后再将这些记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  
   
- 例如，下面的源 XML 文档组成**\<客户 >**元素和**\<顺序 >**子元素：  
+ 例如，下面的源 XML 文档组成**\<客户 >** 元素和**\<顺序 >** 子元素：  
   
 ```  
 <Customer ...>  
@@ -65,7 +63,7 @@ ms.lasthandoff: 04/16/2018
 ...  
 ```  
   
- 当 XML 大容量加载读取**\<客户 >**元素，它为 Customertable 生成一条记录。 当它读取 **\</Customer >**结束标记，记录到表中的 XML 大容量加载插入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在相同方式，当它会读取**\<顺序 >**元素，XML 大容量加载为 Ordertable，生成一条记录，然后插入到该记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时读取表 **\</ 排序 >**结束标记。  
+ 当 XML 大容量加载读取**\<客户 >** 元素，它为 Customertable 生成一条记录。 当它读取 **\</Customer >** 结束标记，记录到表中的 XML 大容量加载插入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在相同方式，当它会读取**\<顺序 >** 元素，XML 大容量加载为 Ordertable，生成一条记录，然后插入到该记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时读取表 **\</ 排序 >** 结束标记。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>事务和非事务 XML 大容量加载操作  
  XML 大容量加载可以以事务或非事务模式运行。 已在 nontransacted 模式下的大容量加载是否通常获得最佳性能： 即，事务属性设置为 FALSE)，并且以下条件之一为 true:  

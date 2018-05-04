@@ -26,12 +26,11 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 157b0b02373b18e545d081a8584bdccd66cef539
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 485cde86bb722e7b4bf8ea53e5e4b8e6ba066315
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcdropjob-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>参数  
  [ @job_type **=** ]*job_type*  
- 要删除的作业类型。 *job_type*是**nvarchar(20)**和不能为 NULL。 有效的输入为 'capture' 和 'cleanup'。  
+ 要删除的作业类型。 *job_type*是**nvarchar(20)** 和不能为 NULL。 有效的输入为 'capture' 和 'cleanup'。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

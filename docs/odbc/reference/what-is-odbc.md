@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
@@ -19,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ed2f843b8b3c5da54f339d0d3e7f4602246a8d69
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f503c1c55bd2ec10c8d74452c5c65d1751ab3c08
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-odbc"></a>什么是 ODBC？
 有关 ODBC 的许多错误理解中计算都存在。 向最终用户，它是 Microsoft® Windows® 控制面板中的图标。 对应用程序程序员，它是包含数据访问例程的库。 多个其他很出人意料的所有数据库访问权限问题的答案。  

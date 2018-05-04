@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e17a010a96c669e7f8363634a135bdaa9e7be892
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,8 +104,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|不优化同步，分区中的数据发生更改时，对发送到订阅服务器的分区进行验证。 若要更改此属性，则需要新的快照。|  
 |**max_concurrent_merge**||这是**int**表示的最大可以发布针对运行的并发合并进程数。 如果为 0，则没有限制。如果计划同时运行的合并进程数超出这一数值，则将多出的作业放在队列中等待，直到当前的合并进程完成。|  
 |**max_concurrent_dynamic_snapshots**||这是**int** ，表示要生成筛选的数据的快照会话的最大数快照可同时运行针对合并发布使用参数化行筛选器。 如果**0**，没有任何限制。 如果计划同时执行的快照进程数超出这一数值，则多出的作业将被放到队列中等待，直到当前运行的合并进程完成。|  
-|**post_snapshot_script**||指定指向的指针**.sql**文件位置。 在初始同步过程中应用了所有其他复制的对象脚本和数据之后，分发代理或合并代理才运行快照后脚本。 若要更改此属性，则需要新的快照。|  
-|**pre_snapshot_script**||指定指向的指针**.sql**文件位置。 应用在订阅服务器的快照时，合并代理运行之前的任何复制的对象脚本，该快照前脚本。 若要更改此属性，则需要新的快照。|  
+|**post_snapshot_script**||指定指向的指针 **.sql**文件位置。 在初始同步过程中应用了所有其他复制的对象脚本和数据之后，分发代理或合并代理才运行快照后脚本。 若要更改此属性，则需要新的快照。|  
+|**pre_snapshot_script**||指定指向的指针 **.sql**文件位置。 应用在订阅服务器的快照时，合并代理运行之前的任何复制的对象脚本，该快照前脚本。 若要更改此属性，则需要新的快照。|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**publish_to_activedirectory**|**true**|已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 您不再能够向 Active Directory 中添加发布信息。|  

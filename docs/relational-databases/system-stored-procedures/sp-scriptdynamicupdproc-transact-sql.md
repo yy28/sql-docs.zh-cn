@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b548223d520696f7c7a2b48f4010247666d41597
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c40ea324f16fa299364659d0cb3090502bae243
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
  为文章 id。 *artid*是**int**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
- 返回一个结果集包含单个**nvarchar （4000)**列。 该结果集构成了用于创建自定义存储过程的完整 CREATE PROCEDURE 语句。  
+ 返回一个结果集包含单个**nvarchar （4000)** 列。 该结果集构成了用于创建自定义存储过程的完整 CREATE PROCEDURE 语句。  
   
 ## <a name="remarks"></a>注释  
  **sp_scriptdynamicupdproc**事务复制中使用。 默认的 MCALL 脚本编写逻辑包括 UPDATE 语句中的所有列，并使用一个位图来确定已更改的列。 如果某列未更改，则将其恢复回自身，这种做法通常不会导致任何问题。 如果该列被索引，则需要进行额外的处理。 动态方法仅包括已更改的列，这样可提供一个最优的 UPDATE 字符串。 然而，生成动态 UPDATE 语句时会在运行时发生额外处理。 建议您先测试动态方法和静态方法，然后选择最佳解决方案。  

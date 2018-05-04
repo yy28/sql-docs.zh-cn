@@ -1,7 +1,7 @@
 ---
 title: 保留 Word 限制 |Microsoft 文档
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,21 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14229cd0487b8beb663be255ce54f76f4fb6b5b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac61a7aa818ef3593fddc630d5027fbf7e4aa211
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="reserved-word-limitations"></a>保留的字限制
-请不要的使用保留的字中的附录 C 中的 SQL 语法列出*ODBC 程序员参考*（或速记形式这些保留字） 作为标识符 （即，表或列名称），除非括住在返回的单词引号 （'）。
+# <a name="reserved-keyword-limitations"></a>保留的关键字限制
+
+避免使用与你的 SQL 表或相关的对象中的标识符的任何 ODBC 保留关键字。 如果独特的情况下出现其中必须将保留的关键字用作标识符，必须使用一对环绕标识符*backticks* （'）。 另一个名称*反撇号*是*反引号*。
+
+保留的关键字限制也适用于任何速记形式的保留关键字。
+
+ODBC 保留关键字的列表位于：
+
+- [ODBC 保留关键字](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)。
+
+- 在*ODBC 程序员参考指南*，请参阅[附录 c: SQL 语法](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)。
+

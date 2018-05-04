@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bd1841fa5f4f64e05a6ba4e82464c83d89596f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>返回类型  
  \<标量列引用 >  
   
- 或多个  
+ 或  
   
  \<表的列引用 >  
   
@@ -57,7 +56,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY 和 INCLUDE_STATISTICS 只适用于表列引用；EXCLUDE_NULL 和 INCLUDE_NULL 只适用于标量列引用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  选项包括 EXCLUDE_NULL（默认值）、INCLUDE_NULL、INCLUSIVE、EXCLUSIVE（默认值）、INPUT_ONLY 和 INCLUDE_STATISTICS。  
   
 > [!NOTE]  
@@ -65,7 +64,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID 参数在结果中返回 $NODEID 列。 NODE_ID 是为特定事例而对其执行预测的内容节点。 使用上表中的列的预测时，此参数是可选的。  
   
-  *n* 参数适用于表中的列。 该参数根据预测类型设置返回的行数。 如果基础列是序列，则会调用**PredictSequence**函数。 如果基础列是时序，则会调用**PredictTimeSeries**函数。 对于关联类型的预测，它调用**PredictAssociation**函数。  
+ *N*参数适用于表中的列。 该参数根据预测类型设置返回的行数。 如果基础列是序列，则会调用**PredictSequence**函数。 如果基础列是时序，则会调用**PredictTimeSeries**函数。 对于关联类型的预测，它调用**PredictAssociation**函数。  
   
  **预测**函数支持多态性。  
   
@@ -78,7 +77,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
     > [!NOTE]  
     >  此函数的返回类型本身被视为列引用。 这意味着，**预测**函数可以用作其他采用列引用作为参数的函数中的自变量 (除**预测**函数本身)。  
   
- 将 INCLUDE_STATISTICS 传递给预测表值的列上添加列**$Probability**和**$Support**向得到的表。 这些列说明了关联的嵌套表记录的存在概率。  
+ 将 INCLUDE_STATISTICS 传递给预测表值的列上添加列 **$Probability**和 **$Support**向得到的表。 这些列说明了关联的嵌套表记录的存在概率。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用预测函数可返回最有可能一起销售 Adventure Works 数据库中的四个产品。 针对关联规则挖掘模型预测函数，因为它会自动使用**PredictAssociation**函数如前面所述。  
@@ -93,7 +92,7 @@ FROM     [Association]
   
  虽然此查询返回的单个数据行 `Expression` 仅有一列，但该列包含下面的嵌套表。  
   
-|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016331743|0.252695851192499|  
 |Water Bottle|2866|0.192620471805901|0.175205052318795|  
@@ -101,8 +100,8 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函数 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

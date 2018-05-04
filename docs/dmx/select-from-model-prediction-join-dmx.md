@@ -32,12 +32,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 315ab1f6f066cad8a0a6652bac5fb24617ac29c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;预测联接 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>参数  
  *n*  
- 可选。 一个指定返回行数的整数。  
+ 選擇性。 一个指定返回行数的整数。  
   
  *选择的表达式列表*  
  从挖掘模型中派生的一组以逗号分隔的列标识符和表达式。  
@@ -72,15 +71,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  源查询。  
   
  *联接映射列表*  
- 可选。 一种逻辑表达式，可以将模型中的列与源查询中的列进行比较。  
+ 選擇性。 一种逻辑表达式，可以将模型中的列与源查询中的列进行比较。  
   
  *条件表达式*  
- 可选。 一个限制条件，用于限制从列列表返回的值。  
+ 選擇性。 一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 可选。 一个返回标量值的表达式。  
+ 選擇性。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  ON 子句定义了源查询中的列与挖掘模型中的列之间的映射。 该映射用于将源查询中的列定向到挖掘模型中的列，这样便可将这些列用作输入以便创建预测。 中的列\<*联接映射列表*> 相关使用等号 （=），如下面的示例中所示：  
   
 ```  
@@ -112,7 +111,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   有两个子居住在家里项  
   
- 使用 TM 决策树挖掘模型和使用者有关的已知的特征，查询将返回一个布尔值，描述用户购买了自行车和表格返回的值，通过一组[PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md)函数，用于描述进行预测的方式。  
+ 使用 TM 决策树挖掘模型和使用者有关的已知的特征，查询将返回一个布尔值，描述用户购买了自行车和表格返回的值，通过一组[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函数，用于描述进行预测的方式。  
   
 ```  
 SELECT  
@@ -186,7 +185,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [预测 &#40; DMX &#41;](../dmx/predict-dmx.md)函数是多态类型，可以用于所有模型类型。 可以使用 value3 作为函数的参数来限制查询返回的项的数目。 **选择**遵循 NATURAL PREDICTION JOIN 子句的列表提供要使用作为输入来预测的值。  
+ [预测&#40;DMX&#41; ](../dmx/predict-dmx.md)函数是多态类型，可以用于所有模型类型。 可以使用 value3 作为函数的参数来限制查询返回的项的数目。 **选择**遵循 NATURAL PREDICTION JOIN 子句的列表提供要使用作为输入来预测的值。  
   
 ```  
 SELECT FLATTENED  
@@ -210,9 +209,9 @@ NATURAL PREDICTION JOIN
  由于包含可预测属性 `[v Assoc Seq Line Items]` 的列是一个表列，因此查询将返回一个包含嵌套表的列。 默认情况下，嵌套表列名为 `Expression`。 如果你的提供程序不支持分层行集，则可以使用**FLATTENED**关键字，如要使结果更轻松地查看在此示例中所示。  
   
 ## <a name="see-also"></a>另请参阅  
- [选择 &#40; DMX &#41;](../dmx/select-dmx.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

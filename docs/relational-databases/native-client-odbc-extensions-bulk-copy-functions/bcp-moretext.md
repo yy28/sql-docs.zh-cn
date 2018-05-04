@@ -24,13 +24,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db0bf2f1fdfc57a1f92aa7fce8bd27c29e99003a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9715a6addb6d5983bcc8bf07fbb6829940c699e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +71,7 @@ RETCODE bcp_moretext (
   
  如果复制的行包含多个 long、 可变长度列， **bcp_moretext**第一个发送到低的顺序其数据按序号对它们编号列中，下一步后跟最低序号编号的列中，依次类推。 正确设置所需的数据的总长度很重要。 无法在长度设置之外发出已通过大容量复制接收某列的所有数据的信号。  
   
- 当**var(max)**值发送到使用 bcp_sendrow 和 bcp_moretext 服务器，它不需要调用 bcp_collen 设置列的长度。 相反，对于这些类型仅，值是通过调用 bcp_sendrow 长度为零终止。  
+ 当**var(max)** 值发送到使用 bcp_sendrow 和 bcp_moretext 服务器，它不需要调用 bcp_collen 设置列的长度。 相反，对于这些类型仅，值是通过调用 bcp_sendrow 长度为零终止。  
   
  应用程序通常调用**bcp_sendrow**和**bcp_moretext**在循环中发送的数据行数。 下面是概述如何为一个包含两个表执行此操作的**文本**列：  
   

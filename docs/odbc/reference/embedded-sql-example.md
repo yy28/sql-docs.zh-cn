@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f6aca6e448a7707394b563f02fe3ca5a31a5424
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4f0125cda224073eb5357026461b1fc5a0bb955
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-sql-example"></a>嵌入式的 SQL 的示例
 下面的代码是一个简单嵌入的 SQL 程序，用 C 语言编写程序演示很多，但不是全部的嵌入 SQL 技术。 程序提示用户输入订单号、 检索客户编号、 销售人员和订单的状态，并在屏幕上显示检索到的信息。  

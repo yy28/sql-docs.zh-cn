@@ -1,30 +1,29 @@
 ---
-title: "Analysis Services 开发人员文档 |Microsoft 文档"
-ms.custom: 
+title: Analysis Services 开发人员文档 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 2333702ea265e0bb5eee6333ae08885be61c986f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 开发人员文档
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,14 +72,14 @@ Analysis Services 提供了许多方法，以自定义解决方案，通过代�
 
 [Analysis Services 架构行集](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)描述提供有关服务器状态、 服务器操作和数据库对象的信息的架构行集。
 
-[XML for Analysis &#40;XMLA &#41;引用](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)描述 XMLA 概念可帮助你了解如何 XMLA 有助于构建你自定义解决方案。 它还说明遵从 XMLA 1.1 规范的级别。
+[以进行分析的 XML &#40;XMLA&#41;引用](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)描述 XMLA 概念可帮助你了解如何 XMLA 有助于构建你自定义解决方案。 它还说明遵从 XMLA 1.1 规范的级别。
 
-[Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)介绍的 XMLA ASSL 扩展。 ASSL 提供补充 XMLA 规范的 Analysis Services 多维模型的数据定义和操作语言。
+[Analysis Services 脚本语言&#40;的 XMLA ASSL&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)介绍的 XMLA ASSL 扩展。 ASSL 提供补充 XMLA 规范的 Analysis Services 多维模型的数据定义和操作语言。
 
-[表格模型脚本语言 &#40;TMSL &#41;引用](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL 是的 JSON 表示形式在兼容级别 1200年或更高的表格模型。 对象定义基于表格元数据结构，比如表、 列和关系而不是多维可能不熟悉，如果你不熟悉 Analysis Services 数据建模在表格模式下的元数据。
+[表格模型脚本语言&#40;TMSL&#41;引用](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL 是的 JSON 表示形式在兼容级别 1200年或更高的表格模型。 对象定义基于表格元数据结构，比如表、 列和关系而不是多维可能不熟悉，如果你不熟悉 Analysis Services 数据建模在表格模式下的元数据。
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)时记录该对象用于管理功能，加上通用的 cmdlet **Invoke ASCmd**接受任何脚本或查询作为输入的 cmdlet。
 
 ## <a name="see-also"></a>另请参阅
 [技术参考](../analysis-services/powershell/technical-reference-ssas.md) 
-[查询和表达式语言参考 &#40;Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[查询和表达式语言参考&#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

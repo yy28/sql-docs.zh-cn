@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 871720eafb0d0b166789491e576d56dbcc5f33ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 359fb827d4ce4c7e0915fbaf2021f0c754b6ea1d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="var-mdx"></a>Var (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  返回数值表达式对集求得使用无偏差的总体公式的样本方差 (除以 *n* )。  
+  返回数值表达式对集求得使用无偏差的总体公式的样本方差 (除以*n*)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,12 +47,12 @@ Var(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **Var**函数返回指定数值表达式对指定集求得的公平的方差。  
   
  **Var**函数使用无偏差的总体公式中，与[VarP](../mdx/varp-mdx.md)函数使用有偏差的总体公式。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

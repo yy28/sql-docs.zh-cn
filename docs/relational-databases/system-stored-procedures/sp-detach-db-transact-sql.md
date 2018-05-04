@@ -25,12 +25,11 @@ caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d7e36df67db10b423557384576f39a751531656e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +55,12 @@ sp_detach_db [ @dbname= ] 'database_name'
  要分离的数据库的名称。 *database_name*是**sysname**具有默认值为 NULL 值。  
   
  [ **@skipchecks =** ] **'***skipchecks***'**  
- 指定跳过还是运行 UPDATE STATISTIC。 *同时将 skipchecks*是**nvarchar(10)**具有默认值为 NULL 值。 若要跳过更新统计信息，请指定**true**。 若要显式运行更新统计信息，请指定**false**。  
+ 指定跳过还是运行 UPDATE STATISTIC。 *同时将 skipchecks*是**nvarchar(10)** 具有默认值为 NULL 值。 若要跳过更新统计信息，请指定**true**。 若要显式运行更新统计信息，请指定**false**。  
   
  默认情况下，执行 UPDATE STATISTICS 可更新有关表和索引中的数据的信息。 对于要移动到只读介质的数据库，执行 UPDATE STATISTICS 非常有用。  
   
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- 指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*是**nvarchar(10)**默认值为值**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据会被丢弃，除非该数据库是只读的。 如果为 NULL 或**true**，全文索引相关元数据将保留。  
+ 指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*是**nvarchar(10)** 默认值为值**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据会被丢弃，除非该数据库是只读的。 如果为 NULL 或**true**，全文索引相关元数据将保留。  
   
 > [!IMPORTANT]  
 >  **@keepfulltextindexfile**的未来版本中将删除参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  

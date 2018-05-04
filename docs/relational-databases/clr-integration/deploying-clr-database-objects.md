@@ -21,12 +21,11 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cf30e76dfebac337ed92e1cc88a1da7cbca35353
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ab48e283030309afae80253738ffeec2925e2f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，然后连接到注册要部署的托管程序集或数据库对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-2.  在**对象资源管理器**，展开**\<服务器名称 >**和**数据库**树。 右键单击已注册，选择托管的数据库对象所在的数据库**任务**，然后选择**生成脚本**。 将打开脚本向导。  
+2.  在**对象资源管理器**，展开**\<服务器名称 >** 和**数据库**树。 右键单击已注册，选择托管的数据库对象所在的数据库**任务**，然后选择**生成脚本**。 将打开脚本向导。  
   
 3.  从列表框中选择数据库，然后单击**下一步**。  
   
@@ -101,7 +100,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  在**选择对象类型**窗格中，选择要部署的数据库对象的类型。 单击“下一步” 。  
   
-6.  有关在中选择每个对象类型**选择对象类型**窗格中，**选择\<类型 >**显示窗格。 在此窗格中，可以从在指定数据库中注册的该数据库对象类型的所有实例中进行选择。 选择一个或多个对象并单击**下一步**。  
+6.  有关在中选择每个对象类型**选择对象类型**窗格中，**选择\<类型 >** 显示窗格。 在此窗格中，可以从在指定数据库中注册的该数据库对象类型的所有实例中进行选择。 选择一个或多个对象并单击**下一步**。  
   
 7.  **输出选项**窗格在所有所需的数据库对象尚未选择类型时出现。 选择**脚本保存到文件**并指定脚本的文件路径。 选择“下一步” 。 查看你的选择，然后单击**完成**。 部署脚本将保存到指定的文件路径。  
   
