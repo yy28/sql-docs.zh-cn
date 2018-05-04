@@ -6,20 +6,17 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ee49e767d8d0b92b1c8a6548b8870822460fa6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -221,9 +218,9 @@ You have successfully logged on as: <your user name>
     7. 在底部单击"创建"。
     9. 仍然在 Azure 门户中，单击你的应用程序的"设置"选项卡并打开"属性"选项卡。
     10. 找到"应用程序 ID"(也称为客户端 ID) 值并将其复制到某个位置，你需要此更高版本配置你的应用程序 (例如，1846943b-ad04-4808-aa13-4702d908b5c1) 时。 请参阅以下的快照。
-    11. 找到"应用程序 ID URL"值并将其复制到某个位置，这是 STS 的 URL。
-    12. 在"密钥"部分下，通过填写名称字段，选择持续时间的密钥，并保存配置 （将空值字段） 中创建密钥。 保存后，值字段应为自动填充，复制生成的值。 这是客户端机密。
-
+    11. 在"密钥"部分下，通过填写名称字段，选择持续时间的密钥，并保存配置 （将空值字段） 中创建密钥。 保存后，值字段应为自动填充，复制生成的值。 这是客户端机密。
+    12. 单击左侧面板上的 Azure Active Directory。 在"应用程序注册"下找到的"终结点"选项卡。复制"OATH 2.0 令牌终结点"下的 URL，这是你 STS 的 URL。
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. 登录到你的 Azure SQL 服务器的用户数据库作为 Azure Active Directory 管理员和应用程序主体中使用 T-SQL 命令设置包含的数据库用户。 请参阅[连接到 SQL 数据库或 SQL 数据仓库使用 Azure Active Directory 身份验证](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)有关如何创建 Azure Active Directory 管理员和包含的数据库用户的详细信息。
 
@@ -254,7 +251,7 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 

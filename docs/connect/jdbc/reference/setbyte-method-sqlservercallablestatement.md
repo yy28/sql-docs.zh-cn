@@ -3,13 +3,10 @@ title: setByte 方法 (SQLServerCallableStatement) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29eed95e2b70655760f56772c220a12c3eb8334
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 58713170d335b3fa18385bc66f0cb627ad885947
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -44,11 +41,11 @@ public void setByte(java.lang.String sCol,
 #### <a name="parameters"></a>Parameters  
  *sCol*  
   
- A**字符串**，其中包含参数名称。  
+ 包含参数名称的字符串。  
   
  *B*  
   
- A**字节**值。  
+ 一个 byte 值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

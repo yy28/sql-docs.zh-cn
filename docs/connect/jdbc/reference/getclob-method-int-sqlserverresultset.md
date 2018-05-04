@@ -3,13 +3,10 @@ title: getClob 方法 (int) (SQLServerResultSet) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6842cedbdacbd5b9dcdde83cf55fd1e40ec258f2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 9f140c77fc5dc3d92a208b37cade2fddbacbbda7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -41,9 +38,9 @@ public java.sql.Clob getClob(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *列索引*  
+ columnIndex  
   
- **Int** ，该值指示的列索引。  
+ 指示列索引的 int。  
   
 ## <a name="return-value"></a>返回值  
  Clob 对象。  

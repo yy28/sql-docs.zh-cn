@@ -3,13 +3,10 @@ title: registerOutParameter 方法类型和缩放 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0114197dc191b80637ed6a01c277d4a154764c92
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 06ed5a066ee8b3a8e9ae98d95f5aab4fe482fb94
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -45,7 +42,7 @@ public void registerOutParameter(java.lang.String s,
 #### <a name="parameters"></a>Parameters  
  *s*  
   
- A**字符串**，其中包含参数名称。  
+ 包含参数名称的字符串。  
   
  *SQLtype*  
   

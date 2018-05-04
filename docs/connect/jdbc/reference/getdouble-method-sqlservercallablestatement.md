@@ -3,13 +3,10 @@ title: getDouble 方法 (SQLServerCallableStatement) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8e2abbbacfdd0214e914299422308fd7053cd52
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 2b54c25d23c3e663be9824fcb0f15a64838b58e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -38,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 |名称|Description|  
 |----------|-----------------|  
 |[getDouble (int)](../../../connect/jdbc/reference/getdouble-method-int.md)|检索与指定参数的值**double** java 编程语言提供的参数索引。|  
-|[getDouble (java.lang.String)](../../../connect/jdbc/reference/getdouble-method-java-lang-string.md)|检索与指定参数的值**double** java 编程语言提供的参数名称。|  
+|[getDouble (java.lang.String)](../../../connect/jdbc/reference/getdouble-method-java-lang-string.md)|根据给定的参数名称，检索指定参数的值作为 Java 编程语言中的 double。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

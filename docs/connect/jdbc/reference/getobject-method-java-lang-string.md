@@ -3,13 +3,10 @@ title: getObject 方法 (java.lang.String) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afba9842918aa07b2a4d3fc52777523f43647075
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 82618a47bc45d9d204e7c37305289796e77e5a60
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public java.lang.Object getObject(java.lang.String sCol)
 #### <a name="parameters"></a>Parameters  
  *sCol*  
   
- A**字符串**，其中包含参数名称。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  **对象**值。  

@@ -3,13 +3,10 @@ title: getBigDecimal 方法 （java.lang.String，int） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23bb73d11c031e9873362974f2bfcb9fe09ff849
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 273321cb3ee41efc498a527ea1693b272108f6eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -47,11 +44,11 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
 #### <a name="parameters"></a>Parameters  
  *sCol*  
   
- A**字符串**，其中包含参数名称。  
+ 包含参数名称的字符串。  
   
  *小数位数*  
   
- **Int** ，该值指示的小数点右侧的位数。  
+ 指示小数点右边的位数的 int。  
   
 ## <a name="return-value"></a>返回值  
  一个 BigDecimal 对象。  
