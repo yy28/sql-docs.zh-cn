@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39bdde1095f5780fac2f27a9da1e834e6c3af968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4f01f1bb50323ec68860df15594a4d3688e5aebd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +68,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |TRACE_PRODUCE_BLACKBOX|**8**|指定服务器产生的最后 5 MB 跟踪信息记录将由服务器保存。 TRACE_PRODUCE_BLACKBOX 与所有其他选项不兼容。|  
   
  [ **@tracefile=** ] *'**trace_file**'*  
- 指定跟踪将写入的位置和文件名。 *trace_file*是**nvarchar(245)**无默认值。 *trace_file*可以是本地目录 （如 N C:\MSSQL\Trace\trace.trc) 或 UNC 共享或路径 (N\\\\*Servername*\\*Sharename*\\*目录*\trace.trc)。  
+ 指定跟踪将写入的位置和文件名。 *trace_file*是**nvarchar(245)** 无默认值。 *trace_file*可以是本地目录 （如 N C:\MSSQL\Trace\trace.trc) 或 UNC 共享或路径 (N\\\\*Servername*\\*Sharename*\\*目录*\trace.trc)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将追加**.trc**扩展到所有跟踪文件的名称。 如果 TRACE_FILE_ROLLOVER 选项和*max_file_size*指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始跟踪文件会增长到其最大大小创建一个新的跟踪文件。 新的文件具有与原始文件，但 _ 同名*n*追加以表示其序列，从开始**1**。 例如，如果第一个跟踪文件命名为**filename.trc**，第二个跟踪文件命名为**filename_1.trc**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将追加 **.trc**扩展到所有跟踪文件的名称。 如果 TRACE_FILE_ROLLOVER 选项和*max_file_size*指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始跟踪文件会增长到其最大大小创建一个新的跟踪文件。 新的文件具有与原始文件，但 _ 同名*n*追加以表示其序列，从开始**1**。 例如，如果第一个跟踪文件命名为**filename.trc**，第二个跟踪文件命名为**filename_1.trc**。  
   
  如果您使用 TRACE_FILE_ROLLOVER 选项，我们建议您在原始跟踪文件名中不要使用下划线字符。 如果您使用了下划线，则会发生以下行为：  
   

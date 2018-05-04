@@ -1,11 +1,9 @@
 ---
 title: 记录集边界 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da0eb328f331847d30a5e408369c77646d5a967e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 20373bc374d1f5f5b75522ede5255a376ab6f657
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
 **记录集**支持**BOF**和**EOF**属性来描述的开头和结尾，分别，数据集。 你可以将**BOF**和**EOF**为位于开头和末尾的"影子"记录**记录集**。 计数**BOF**和**EOF**，我们的示例**记录集**现在如下所示：  

@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9b45b45da18ea7c9047609ffb47bc5a698e43a21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79d7b9ce37017f9744dc3e2684457fbba5a4b13a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-mdx"></a>标识符 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
     -   下划线 (_)。  
   
-3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息，请参阅[保留关键字 &#40;MDX 语法 &#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息，请参阅[保留关键字&#40;MDX 语法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。  
   
 4.  不允许嵌入空格或特殊字符。  
   
@@ -141,8 +140,8 @@ ms.lasthandoff: 01/08/2018
  此外，还分隔了上一示例中的 Measures 标识符，以说明分隔多个标识符的情况。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 语法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 语言参考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

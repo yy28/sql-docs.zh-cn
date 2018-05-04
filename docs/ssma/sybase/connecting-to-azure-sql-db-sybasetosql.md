@@ -8,10 +8,9 @@ ms.service: ''
 ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 93cb125bf4571697cb9c7a687b2dd2702301f86d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: d58bec0fb17e1661ba382dc3da04de04fb98f6f6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>连接到 Azure SQL DB (SybaseToSQL)
 若要将 Sybase 数据库迁移到 Azure SQL DB 中，你必须连接到 Azure SQL DB 的目标实例。 连接时，SSMA 获取有关 Azure SQL 数据库实例中的所有数据库的元数据，并在 Azure SQL DB 元数据资源管理器中显示数据库元数据。 SSMA 存储的 Azure SQL 数据库连接，但不会存储密码的实例的信息。  

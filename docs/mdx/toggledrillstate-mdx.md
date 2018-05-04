@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e8564128db3f9eaa06e7eb5bfe93880c74c5b3b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 63b5fb01cac2fe886bce15ded807b8e655d98056
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,12 +53,12 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  （可选）。 指示是否在深化级别包括计算成员（如果存在）的标志。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **ToggleDrillState**函数切换位于第一个集中的第二个集的每个成员的钻取状态。 第一个集可以包含任意维数的元组，但是第二个集必须包含单个维度的成员。 **ToggleDrillState**技术支持部门的组合**DrillupMember**和**DrilldownMember**函数。 如果该成员， *m*，第二个集是否位于第一个集，以及该成员向下钻取 （即，具有紧靠它的后代），然后`DrillupMember(Set_Expression1, {m})`应用于成员或元组中的第一个集。 如果该*m*向上钻成员 (即，没有任何子代*m*紧跟*m*)，`DrilldownMember(Set_Expression1, {m}[, RECURSIVE])`应用于第一个组。  
   
  如果可选**递归**标记用于、 向上钻取和向下的钻取以递归方式应用。 有关递归标志的详细信息，请参阅[DrillupMember](../mdx/drillupmember-mdx.md)和[DrilldownMember](../mdx/drilldownmember-mdx.md)函数。  
   
- 查询的 XMLA 属性 MdpropMdxDrillFunctions，您可以验证服务器提供钻函数; 支持的级别请参阅[支持 XMLA 属性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)有关详细信息。  
+ 查询的 XMLA 属性 MdpropMdxDrillFunctions，您可以验证服务器提供钻函数; 支持的级别请参阅[支持 XMLA 属性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)有关详细信息。  
   
  请参阅[数据库日志： MDX Set 函数： ToggleDrillState() 函数](http://go.microsoft.com/fwlink/?LinkId=517759)有关方案和示例涉及此函数。  
   
@@ -78,6 +77,6 @@ SELECT ToggleDrillState
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

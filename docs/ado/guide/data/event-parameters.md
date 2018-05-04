@@ -1,11 +1,9 @@
 ---
 title: 事件参数 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43bea31384f503ea0e98d8e485002135f1cbbf57
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9946b424f5ed885ad432610c7c053dddc6332954
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-parameters"></a>事件参数
 每个事件处理程序有一个控制事件处理程序的状态参数。 对于完整事件，此参数还用于指示成功或失败的生成事件的操作。 最完整事件还具有一个错误参数，以便提供有关可能发生，任何错误以及一个或多个引用用来执行该操作的 ADO 对象的对象参数的信息。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包括对象参数**命令**，**记录集**，和**连接**对象与事件关联。 在以下的 Microsoft® Visual Basic® 示例中，你可以看到 pCommand、 pRecordset 和 pConnection 对象表示**命令**，**记录集**，和**连接**程序使用的对象**执行**方法。  

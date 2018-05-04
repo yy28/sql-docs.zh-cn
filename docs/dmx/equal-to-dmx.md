@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6144552c3fabed866a5f85e2293f177a2e8b41f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 827c353e7ee45643b483ed92ddc82bb5678ddab0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-equal-to-dmx"></a>=（等于）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,8 +47,8 @@ DMX_Expression = DMX_Expression
  如果两个参数都非空，并且第一个参数值与第二个参数值相等，则将返回包含 TRUE 的布尔值。 如果两个参数都非空，并且第一个参数值与第二个参数值不相等，则将返回包含 FALSE 的布尔值。 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该布尔值包含空值。  
   
 ## <a name="see-also"></a>另请参阅  
- [比较运算符 &#40; DMX &#41;](../dmx/operators-comparison.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [比较运算符&#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

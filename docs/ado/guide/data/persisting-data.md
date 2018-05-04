@@ -1,11 +1,9 @@
 ---
 title: 保存数据 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 915f1d4e8ac954302c35eb430bb36bb72b33ef14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-data"></a>保存数据
 （例如，使用便携式计算机） 的可移植计算已生成可以在连接和断开连接状态中运行的应用程序的需求。 ADO 通过让能够保存客户端游标的开发人员添加了对此支持**记录集**到磁盘，然后重新加载它更高版本。  
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/18/2018
   
 -   **不经常更新查找：**通常在应用程序，表用作查找 — 例如，状态税务表。 它们不经常更新，并且是只读的。 而不是需要重新读取此数据从服务器每次启动应用程序时，应用程序可以只需将数据加载从本地持久化**记录集**。  
   
- 在 ADO 中，保存和加载**记录集**，使用**Recordset.Save**和**Recordset.Open(,,,adCmdFile)**方法 ADO**记录集**对象。  
+ 在 ADO 中，保存和加载**记录集**，使用**Recordset.Save**和**Recordset.Open(,,,adCmdFile)** 方法 ADO**记录集**对象。  
   
  你可以使用**记录集保存**方法以保留你 ADO**记录集**到磁盘上的文件。 (你还可以保存**记录集**到 ADO**流**对象。 **流式传输**对象将更高版本在指南中讨论。)稍后，你可以使用**打开**方法重新打开**记录集**当你准备好要使用它。 默认情况下，ADO 将保存**记录集**为专有的 Microsoft 高级数据表图 (ADTG) 格式。 使用指定此二进制格式**adPersistADTG PersistFormatEnum**值。 或者，你可以选择保存你**记录集**为 XML，而不使用扩展**xml 格式持久化记录**。 有关记录集保存为 XML 的详细信息，请参阅[保留的记录，采用 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
   

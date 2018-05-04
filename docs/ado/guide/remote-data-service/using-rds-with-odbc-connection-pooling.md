@@ -1,11 +1,9 @@
 ---
 title: RDS 使用 ODBC 连接池 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25baa1ee860ac1f36cdf2f6e1e7541d970976594
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d38a0d41ae5cdf0c1f40db21420fd39edca72237
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS 使用 ODBC 连接池
 如果你使用 ODBC 数据源，你可以使用连接池选项在 Internet 信息服务 (IIS) 来完成的客户端负载的高性能处理。 连接池是资源管理器对于连接，维护经常使用的连接的打开状态。  

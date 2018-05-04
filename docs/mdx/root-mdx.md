@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ef6d95e700e8eda518a33eb5d9482ef8a77d82b4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-mdx"></a>Root (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  返回组成的元组**所有**多维数据集、 维度或元组中当前范围内每个属性层次结构中的成员。 有关作用域的详细信息，请参阅[SCOPE 语句 &#40;MDX &#41;](../mdx/mdx-scripting-scope.md).  
+  返回组成的元组**所有**多维数据集、 维度或元组中当前范围内每个属性层次结构中的成员。 有关作用域的详细信息，请参阅[SCOPE 语句&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)。  
   
 > [!NOTE]  
 >  如果属性层次结构没有**所有**成员、 元组包含该层次结构的默认成员。  
@@ -56,7 +55,7 @@ Root( Tuple_Expression )
  *Tuple_Expression*  
  返回元组的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果指定既不是维度名称，也不是元组表达式，则**根**函数返回包含的元组**所有**成员 (或默认成员如果**所有**成员不存在) 从多维数据集中每个属性层次结构。 成员在元组中的顺序基于多维数据集中定义属性层次结构的顺序。  
   
  如果指定维度名称，则**根**函数返回包含的元组**所有**成员 (或默认成员如果**所有**成员不存在) 基于当前的成员的上下文的指定维中的每个属性层次结构中。 成员在元组中的顺序基于维度中定义属性层次结构的顺序。  
@@ -91,6 +90,6 @@ WHERE [Measures].[Order Count]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

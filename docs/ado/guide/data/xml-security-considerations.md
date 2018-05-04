@@ -1,11 +1,9 @@
 ---
 title: XML 安全注意事项 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cbfee8717021fbc1eb621591987ee63ab54362e6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 36394ea9806dc7345c391e3e5a6fd6733d08181d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-security-considerations"></a>XML 安全注意事项
 ADO 保存和打开记录集对象上的方法不考虑安全操作，以在 Internet Explorer 中运行。 因此，如果这些方法将用在应用程序或浏览器中托管的控件中运行的脚本代码中，浏览器的安全配置会影响其行为。  

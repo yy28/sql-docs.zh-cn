@@ -1,11 +1,9 @@
 ---
 title: 处理失败的更新 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3ca859e2e8d7a4948a1fb38567500c44daff4ba
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1cd4088f20c949cd3a732b43cd5d9312c04387ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dealing-with-failed-updates"></a>处理失败的更新
 当更新到结束但出现错误时，则如何解决这些错误取决的性质和错误的严重性和你的应用程序的逻辑。 但是，如果数据库已与其他用户共享的则典型的错误是其他人在你开始前修改字段。 此类型的错误称为冲突。 ADO 检测到这种情况下，会报告错误。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28220550d868976aded368a88bdc8268cfad490c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f8e2490321aae6b155da3486cb78b1f5740738c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函数
 **一致性**  
@@ -80,7 +79,7 @@ SQLRETURN SQLGetCursorName(
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLGetCursorName**调用函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 以异步方式执行的函数曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY015|没有可用的游标名称|(DM) 驱动程序是 ODBC 2*.x*驱动程序，语句上没有任何打开的游标，并且没有游标名称必须已用设置**SQLSetCursorName**。|  
+|HY015|没有可用的游标名称|(DM) 驱动程序是 ODBC 2 *.x*驱动程序，语句上没有任何打开的游标，并且没有游标名称必须已用设置**SQLSetCursorName**。|  
 |HY090|字符串或缓冲区长度无效|(DM) 参数中指定的值*BufferLength*小于 0。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|连接超时过期|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
@@ -90,7 +89,7 @@ SQLRETURN SQLGetCursorName(
  游标名称仅在中使用定位更新和 delete 语句 (例如，**更新***表名*...**WHERE CURRENT OF** *游标名称*)。 有关详细信息，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果应用程序不会调用**SQLSetCursorName**若要定义游标名称，该驱动程序生成的名称。 此名称以字母 SQL_CUR 开头。  
   
 > [!NOTE]  
->  在 ODBC 2*.x*，当存在任何打开的游标，并且已通过调用设置没有名称**SQLSetCursorName**，调用**SQLGetCursorName**返回 SQLSTATE HY015 （没有游标名称可用）。 ODBC 3 中*.x*，这已经不成问题，则返回 true; 无论何时**SQLGetCursorName**是调用，该驱动程序返回的游标名称。  
+>  在 ODBC 2 *.x*，当存在任何打开的游标，并且已通过调用设置没有名称**SQLSetCursorName**，调用**SQLGetCursorName**返回 SQLSTATE HY015 （没有游标名称可用）。 ODBC 3 中 *.x*，这已经不成问题，则返回 true; 无论何时**SQLGetCursorName**是调用，该驱动程序返回的游标名称。  
   
  **SQLGetCursorName**返回的游标是否显式或隐式创建的名称的名称。 如果游标名称隐式生成**SQLSetCursorName**不调用。 **SQLSetCursorName**可以调用以进行重命名语句中的游标，只要光标位于未分配或已准备状态。  
   

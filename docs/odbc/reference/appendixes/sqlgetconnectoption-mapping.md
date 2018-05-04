@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d4682ae8fcf0c745816ed9b2155ebf5072a538d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2f2dd621859c6bfa600394b798983a116bb4b86c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 映射
-在应用程序调用**SQLGetConnectOption**到 ODBC 3*.x*驱动程序，将会调用  
+在应用程序调用**SQLGetConnectOption**到 ODBC 3 *.x*驱动程序，将会调用  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -58,4 +57,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  有关 ODBC 定义的字符串连接选项，驱动程序管理器设置*BufferLength*对的调用中的自变量**SQLGetConnectAttr**的预定义的最大长度 (SQL_MAX_OPTION_STRING_LENGTH);对于非字符串连接选项， *BufferLength*设置为 0。  
   
- ODBC 3*.x*驱动程序，驱动程序管理器不再将检查以查看*选项*SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。 该驱动程序必须检查选项值的有效性。
+ ODBC 3 *.x*驱动程序，驱动程序管理器不再将检查以查看*选项*SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。 该驱动程序必须检查选项值的有效性。

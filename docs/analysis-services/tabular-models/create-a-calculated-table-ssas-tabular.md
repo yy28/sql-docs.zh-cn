@@ -1,31 +1,30 @@
 ---
-title: "创建计算的表 |Microsoft 文档"
-ms.custom: 
+title: 创建计算的表 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c34293f6fca5ebfb49ab4f19980e414f8bf056c0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 2706ac8bfef9abc3ec71fd58d4b386158c7cfe68
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-calculated-table"></a>创建计算的表 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-*计算表* 是一个基于 DAX 查询或表达式的计算对象，派生自相同模型中的所有或部分其他表。  
+  *计算表* 是一个基于 DAX 查询或表达式的计算对象，派生自相同模型中的所有或部分其他表。  
   
  计算表可以解决的常见设计问题是在特定的上下文中显示角色扮演维度，以便将其作为查询结构在客户端应用程序中公开。  你可能还记得，角色扮演维度只是出现在多个上下文中的一个表 -- 一个典型示例是 Date 表，可表示为 OrderDate、ShipDate 或 DueDate，具体取决于外键关系。 通过为 ShipDate 显式创建计算表，你可以获取一个可用于查询的独立表，该表和任何其他表一样完全可操作。  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>另请参阅  
  [兼容性级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [数据分析表达式 &#40; DAX &#41;Analysis Services 中](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
+ [数据分析表达式&#40;DAX&#41; Analysis Services 中](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [了解表格模型中的 DAX](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

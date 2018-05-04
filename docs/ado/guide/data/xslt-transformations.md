@@ -1,11 +1,9 @@
 ---
 title: XSLT 转换 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d235ea5208f5c4cbf98f7f5664b1a3b3666b9207
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 18826a213cde63779cbe7b2a625a2de24453dac1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 可将 XSLT 应用到生成的 XML 将其转换为另一种格式。 了解在 ADO 中的 XML 格式可帮助在开发可以将它转换为更加友好的用户的窗体的 XSLT 模板。  

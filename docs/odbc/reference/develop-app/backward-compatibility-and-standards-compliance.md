@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
@@ -21,15 +21,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796491fa284113d350cd7f0233ce95a4f3ceb37a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9eb141c5754bf6cd7d5dd52324d784ee2a87b6ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>向后兼容性和标准合规性
-向后兼容性是较新的 ODBC 组件的功能，以便使用旧的 ODBC 组件。 以下各节讨论 ODBC 3 中的更改如何影响这些组件*.x*。 主要包含在其中的信息解决写入 ODBC 3*.x*应用程序和如何向后兼容性问题由 ODBC 驱动程序。 有关如何向后兼容性的特定指南问题影响的 ODBC 3 编写*.x*驱动程序，请参阅[为了向后兼容的附录 g： 驱动程序准则](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
+向后兼容性是较新的 ODBC 组件的功能，以便使用旧的 ODBC 组件。 以下各节讨论 ODBC 3 中的更改如何影响这些组件 *.x*。 主要包含在其中的信息解决写入 ODBC 3 *.x*应用程序和如何向后兼容性问题由 ODBC 驱动程序。 有关如何向后兼容性的特定指南问题影响的 ODBC 3 编写 *.x*驱动程序，请参阅[为了向后兼容的附录 g： 驱动程序准则](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
   
  本部分包含以下主题。  
   

@@ -28,17 +28,16 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a6ed1613fdb2d0b6f77cbbf0724bfdf74d5249cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 数据定义-创建全局多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息，请参阅[本地多维数据集 &#40;Analysis Services-多维数据 &#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息，请参阅[本地多维数据集&#40;Analysis Services-多维数据&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -133,7 +132,7 @@ FROM source_cube_name (<param list>)
  \<级别类型 >  
  该规范仅对于派生维度定义有效。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  本地多维数据集是 definedin 使用条款的度量值和定义它的定义。 有两种类型的维度。  
   
 -   源维度 - 这些维度是一个或多个源多维数据集的一部分  
@@ -217,7 +216,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [创建会话多维数据集语句 &#40;MDX &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [创建会话多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

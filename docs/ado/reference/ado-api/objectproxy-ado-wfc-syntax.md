@@ -1,11 +1,9 @@
 ---
 title: ObjectProxy (ADO-WFC 语法) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9f30144edb28fb58e6cb2606f24df22fedce613
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: dd42478c8da0cc0eba4471ac46a66ec4a08d5bd5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO-WFC 语法)
 **ObjectProxy**对象表示的服务器，并且由返回**createObject**方法[DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)对象。 ObjectProxy 类具有一个方法，**调用**，其可以调用服务器上的方法并返回从该调用而产生的对象。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2d7ae36927ef95bcfb96846b5f266da56e5f3bec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函数
 **一致性**  
@@ -88,7 +87,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>注释  
  **ConfigDSN**的关键字 / 值对形式的属性列表作为安装程序 DLL 的接收连接信息。 每个对终止与 null 字节，并且整个列表因 null 字节。 （也就是说，两个 null 字节标记列表的末尾。）中的关键字 / 值对的等号两侧不允许有空格。 **ConfigDSN**可以接受不是有效的关键字的关键字**SQLBrowseConnect**和**SQLDriverConnect**。 **ConfigDSN**不一定支持所有关键字都是有效的关键字**SQLBrowseConnect**和**SQLDriverConnect**。 (**ConfigDSN**不接受**驱动程序**关键字。)使用的关键字**ConfigDSN**函数必须支持重新创建数据源使用的安装程序自动安装程序功能所需的所有选项。 时的用法的**ConfigDSN**值和连接字符串值相同，应使用相同的关键字。  
   
- 作为 in **SQLBrowseConnect**和**SQLDriverConnect**，关键字和它们的值不应包含**[] {} （)，;？\*= ！ @**字符和的值**DSN**关键字不能只包含空白。 由于注册表语法中，关键字和数据源名称不能包含反斜杠 (\\) 字符。  
+ 作为 in **SQLBrowseConnect**和**SQLDriverConnect**，关键字和它们的值不应包含 **[]{}（)，;？\*= ！ @** 字符和的值**DSN**关键字不能只包含空白。 由于注册表语法中，关键字和数据源名称不能包含反斜杠 (\\) 字符。  
   
  **ConfigDSN**应调用**SQLValidDSN**检查数据源名称的长度并确认在名称中包含任何无效字符。 如果数据源名称的长度超过 SQL_MAX_DSN_LENGTH 或包含无效字符， **SQLValidDSN**返回错误和**ConfigDSN**返回错误。 通过检查程序数据源名称的长度**SQLWriteDSNToIni**。  
   

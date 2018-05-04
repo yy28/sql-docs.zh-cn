@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a777db13717dcd2bda9e308e7d7df27c8edb237e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67ff8ec894db15c313de3f458836cade02001bc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursor-types"></a>可滚动游标类型
 可滚动游标的四种类型是静态、 动态、 键集驱动和混合。 静态游标检测弱或根本没有更改，但相对比较便宜实现。 动态游标检测到的所有更改，但难以实现。 游标键集驱动的和混合游标位于之间，检测的大多数更改，但在更少的开销比动态游标。  

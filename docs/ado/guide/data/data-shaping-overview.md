@@ -1,11 +1,9 @@
 ---
 title: 数据定形概述 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34d9ee09d74ca1907f293dab73189b172db73de0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ba1b8acd52c86c0bffa19ec22658008a3b8f5601
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-shaping-overview"></a>数据调整概述
 *数据成型*意味着构建在查询中的两个或多个逻辑实体之间的层次结构关系。 可以在父-子关系之间的一个记录中看到层次结构[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和一个或多个记录 （也称为章） 的另一个**记录集**。 在父-子关系中，父**记录集**包含子**记录集**。 此类层次结构关系的一个示例是客户和订单。 对于数据库中每个客户，可以有零个或多个订单。 层次结构关系可以是递归的这意味着，孙级记录可以嵌套子记录中。 原则上，可以为任何深度嵌套分层记录。 在实践中，ADO 限制为最多 512 个递归**记录集**s。  

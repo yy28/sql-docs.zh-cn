@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLTransact
 apilocation:
@@ -26,19 +26,18 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 30aec4f94ca469f46ea4da6636c847d4a663dc3c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 28fa4f0829e7a7fbb3c44bd9b001524a7314680f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltransact-function"></a>SQLTransact 函数
 **一致性**  
  版本引入了： ODBC 1.0 标准合规性： 不推荐使用  
   
  **摘要**  
- 在 ODBC 3。*x*，ODBC 2*.x*函数**SQLTransact**已被取代**SQLEndTran**。 有关详细信息，请参阅[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  
+ 在 ODBC 3。*x*，ODBC 2 *.x*函数**SQLTransact**已被取代**SQLEndTran**。 有关详细信息，请参阅[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  
   
 > [!NOTE]  
 >  不支持的特性 SQL_ASYNC_DBC_FUNCTION_ENABLE，ODBC 3.8 中引入， **SQLTransact**。 使用对连接句柄的异步操作的应用程序必须使用**SQLEndTran**。  

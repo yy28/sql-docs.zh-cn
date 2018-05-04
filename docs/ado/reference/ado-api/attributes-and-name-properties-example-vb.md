@@ -1,11 +1,9 @@
 ---
 title: 特性和名称属性示例 (VB) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3149bf0d9514c64aa8c80febbc0cadf2514678aa
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b4ea31a718fad93c01f32dab8dcbe5b7ea7e7f9c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>特性和名称属性示例 (VB)
 此示例中显示的值[属性](../../../ado/reference/ado-api/attributes-property-ado.md)属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[字段](../../../ado/reference/ado-api/field-object.md)，和[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。 它使用[名称](../../../ado/reference/ado-api/name-property-ado.md)属性来显示每个名称**字段**和**属性**对象。  

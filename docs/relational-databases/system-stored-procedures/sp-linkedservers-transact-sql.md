@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c017d5b0e510147b668eeab458841ebcbf15de00
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 217350ed772c731d8a23e1a859e8dc95f02220a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +52,11 @@ sp_linkedservers
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|链接服务器的名称。|  
-|**SRV_PROVIDERNAME**|**nvarchar(**128**)**|OLE DB 访问接口的友好名称，该提供程序管理对指定链接服务器进行的访问。|  
-|**SRV_PRODUCT**|**nvarchar(**128**)**|链接服务器的产品名。|  
-|**SRV_DATASOURCE**|**nvarchar (**4000**)**|与指定链接服务器对应的 OLE DB 数据源属性。|  
-|**SRV_PROVIDERSTRING**|**nvarchar (**4000**)**|与链接服务器对应的 OLE DB 访问接口字符串属性。|  
-|**SRV_LOCATION**|**nvarchar (**4000**)**|与指定链接服务器对应的 OLE DB 位置属性。|  
+|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|OLE DB 访问接口的友好名称，该提供程序管理对指定链接服务器进行的访问。|  
+|**SRV_PRODUCT**|**nvarchar(** 128 **)**|链接服务器的产品名。|  
+|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|与指定链接服务器对应的 OLE DB 数据源属性。|  
+|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|与链接服务器对应的 OLE DB 访问接口字符串属性。|  
+|**SRV_LOCATION**|**nvarchar (** 4000 **)**|与指定链接服务器对应的 OLE DB 位置属性。|  
 |**SRV_CAT**|**sysname**|与指定链接服务器对应的 OLE DB 目录属性。|  
   
 ## <a name="permissions"></a>权限  

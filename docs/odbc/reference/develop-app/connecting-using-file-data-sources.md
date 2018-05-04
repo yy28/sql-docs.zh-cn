@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
 - SQLDriverConnect function [ODBC], connecting using file data sources
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 70b0f5dd8c8ff133d1eb1b1a35c5ce24a7cc7ad5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c598ed0eff0bbc760406332779df7a2839f97849
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>使用文件数据源连接
 .Dsn 文件中存储文件数据源的连接信息。 因此，可以重复使用单个用户或如果他们具有适当的驱动程序安装在多个用户之间共享的连接字符串。 该文件包含驱动程序名称 （或对于非共享的文件数据源的另一个数据源名称） 和 （可选） 可以使用的连接字符串**SQLDriverConnect**。 驱动程序管理器生成连接字符串，调用**SQLDriverConnect**从.dsn 文件中的关键字。  

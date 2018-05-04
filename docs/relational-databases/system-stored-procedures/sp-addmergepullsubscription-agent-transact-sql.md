@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4034453646cc75c41ac2dd0f2bd7661778e65c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8d57f9f136ad2e11648d039c1b29e46b4a2e1455
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -189,7 +188,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |NULL（默认值）||  
   
 > [!NOTE]  
->  指定的值**64**导致合并代理以连续模式运行。 这对应于设置**-连续**代理程序的参数。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+>  指定的值**64**导致合并代理以连续模式运行。 这对应于设置 **-连续**代理程序的参数。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  合并代理在星期几运行。 *frequency_interval*是**int**，并且可以为这些值之一。  

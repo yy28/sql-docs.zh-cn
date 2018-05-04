@@ -1,29 +1,28 @@
 ---
-title: "什么 &#39; s Analysis Services 中的新增功能 |Microsoft 文档"
-ms.custom: 
+title: 什么&#39;Analysis Services 中的新增功能的 s |Microsoft 文档
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 
+caps.latest.revision: 97
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 75d2f8519d66ca80b90477711fd5b41dbc1f5100
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="what39s-new-in-analysis-services"></a>什么 &#39; s Analysis Services 中的新增功能
+# <a name="what39s-new-in-analysis-services"></a>什么&#39;s Analysis Services 中的新增功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
 SQL Server 2016 Analysis Services 包含许多提供改进的性能、 更轻松解决方案创作、 自动的数据库管理新的增强功能，与双向交叉筛选，增强的关系的并行分区处理和其他更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
@@ -89,7 +88,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>并行处理表格模型中的多个表分区    
  此版本为包含两个或更多个分区的表提供新的并行处理功能，从而提高处理性能。 使用此功能不需要进行任何配置设置。 有关配置分区和处理表的详细信息，请参阅[表格模型分区](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>在 SSMS 中将计算机帐户添加为管理员    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员现在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将计算机帐户配置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员组的成员。 在“选择用户或组”对话框中，设置计算机域的“位置”，然后添加“计算机”对象类型。 有关详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]管理员现在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将计算机帐户配置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员组的成员。 在“选择用户或组”对话框中，设置计算机域的“位置”，然后添加“计算机”对象类型。 有关详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
  ### <a name="dbcc-for-analysis-services"></a>DBCC for Analysis Services    
  数据库一致性检查 (DBCC) 在内部运行，以检测数据库负载上的潜在数据损坏问题，但如果你怀疑数据或模型有问题，也可以按需运行该工具。 DBCC 将根据模型是表格式还是多维式来运行不同的检查。 有关详细信息，请参阅[适用于 Analysis Services 表格数据库和多维数据库的数据库一致性检查器 (DBCC)](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md)。    
  ### <a name="extended-events-updates"></a>扩展事件更新    

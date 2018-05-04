@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 884b83ae8d893aa9004c978e4023a3329aebddc9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 218be13894e8d7dec687ad9b3c7aab28a1cd7bfb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-operators"></a>按位运算符
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +36,13 @@ ms.lasthandoff: 01/08/2018
 |运算符|Description|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|对两个数值表达式执行逻辑与运算。|  
-|[IS](../mdx/is-mdx.md)|对两个对象表达式执行逻辑比较。|  
+|[是](../mdx/is-mdx.md)|对两个对象表达式执行逻辑比较。|  
 |[NOT](../mdx/not-mdx.md)|对数值表达式执行逻辑非运算。|  
 |[或](../mdx/or-mdx.md)|对数值表达式执行逻辑或运算。|  
 |[XOR](../mdx/xor-mdx.md)|对两个数值表达式执行逻辑异运算。|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [运算符 &#40;MDX 语法 &#41;](../mdx/operators-mdx-syntax.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

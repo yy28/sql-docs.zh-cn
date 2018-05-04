@@ -1,5 +1,5 @@
 ---
-title: '&gt;（大于）(MDX) |Microsoft 文档'
+title: '&gt; （大于）(MDX) |Microsoft 文档'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f60f464114d9ff0c2bf51257d03ec9e0952a7a7f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0706b604d1a1aa7be55ab856e6f3cfec53ea9e8a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;（大于）(MDX)
+# <a name="gt-greater-than-mdx"></a>&gt; （大于）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   执行比较运算，以确定一个多维表达式 (MDX) 的值是否大于另一个 MDX 表达式的值。  
@@ -77,6 +76,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

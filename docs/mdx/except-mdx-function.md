@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 36e19418f982542318da340664182526c2b00070
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 061b4226e0fe884f04d203e2fca575fe7b4574b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="except-mdx-function"></a>除非 (MDX) 函数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果**所有**是指定的函数将保留在第一组中找到重复项; 第二组中的重复项仍将被删除。 成员的返回顺序与它们在第一个集中出现的顺序相同。  
   
 ## <a name="examples"></a>示例  
@@ -71,7 +70,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [-&#40;除 &#41;&#40;MDX &#41;](../mdx/except-mdx-operator.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [-&#40;除&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

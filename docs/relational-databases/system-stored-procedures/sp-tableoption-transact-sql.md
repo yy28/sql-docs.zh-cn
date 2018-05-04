@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f74c1bac2175c89abffb717e2ae382d165fab81f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   设置用户定义表的选项值。 sp_tableoption 可以用于控制包含的表的行内行为**varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**，**文本**， **ntext**，**映像**，或大型用户定义类型列。  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 text in row 功能。 若要存储较大的值数据，我们建议你使用的**varchar （max)**， **nvarchar (max)**和**varbinary （max)**数据类型。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 text in row 功能。 若要存储较大的值数据，我们建议你使用的**varchar （max)**， **nvarchar (max)** 和**varbinary （max)** 数据类型。  
   
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

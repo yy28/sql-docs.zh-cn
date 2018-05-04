@@ -5,10 +5,9 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3fa9da99204196279491c89973846804836188b3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0521bd085bd0b370ffb688c021d0cf1422493051
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 程序员&#39;s 指南针对使用 ADO 对象
 本文档概述了如何使用 ADO 对象以便使用来自各种数据源的数据。 首先，简介总结了新功能，以及安装、 使用和重新分发 ADO 组件的要求。 下一步的各节讨论 ADO 对象的各种类型使用。 最后，附录中讨论各种 Microsoft 提供的数据和服务提供商、 错误消息和提示有关如何以多种编程语言，除了示例和术语表使用 ADO。

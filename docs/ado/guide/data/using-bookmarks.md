@@ -1,11 +1,9 @@
 ---
 title: 使用书签 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c2d4036cbe8205a4dd25c5a1f97ec490b20afa20
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 46ea739c431005f8409b2c2680f15e55b077c086
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bookmarks"></a>使用书签
 通常很有用，在需要移动中后返回到特定记录直接**记录集**而无需滚动的每个记录，并比较值。 例如，如果你尝试搜索记录使用**查找**方法，但搜索未返回任何记录，系统会自动在的任何一端**记录集**。 如果你的提供商支持它们，可以使用书签来将你的位置标记在使用之前**查找**方法，以便你可以返回到你的位置。 书签是**Variant**键入值，该值唯一地标识中的记录**记录集**对象。  

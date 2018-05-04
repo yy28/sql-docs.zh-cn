@@ -24,12 +24,11 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1598b35bf6fc7148c288d61fba959ac6360903d3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7640049d84ae20da08c8f3218e93c476a6de2edc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**名称**|**nvarchar(100)**|快照代理的名称。|  
 |**publisher_security_mode**|**int**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
-|**publisher_password**|**nvarchar(524)**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \***始终返回。|  
+|**publisher_password**|**nvarchar(524)**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \*** 始终返回。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|是以格式返回的 Windows 帐户运行快照代理*域*\\*用户名*。|  
-|**job_password**|**sysname**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \***始终返回。|  
+|**job_password**|**sysname**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \*** 始终返回。|  
 |**schedule_name**|**sysname**|用于该代理作业的计划的名称。|  
 |**frequency_type**|**int**|代理计划运行的频率，可以为下列值之一：<br /><br /> **1** = 一次<br /><br /> **2** = 按需<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月相对<br /><br /> **64** = 自动启动<br /><br /> **128** = 重复执行|  
 |**frequency_interval**|**int**|代理运行的日期，可以为下列值之一：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 某一天<br /><br /> **9** = 工作日<br /><br /> **10** = 周末|  
@@ -94,6 +93,6 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  [sp_addpublication_snapshot &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [sp_droppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)  
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)  
   
   

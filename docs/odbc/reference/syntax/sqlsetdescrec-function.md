@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescRec
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67110cfb1f6130153ced12525a2bd7f475b8e63a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函数
 **一致性**  
@@ -107,7 +106,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY016|无法修改实现行描述符|*DescriptorHandle*自变量为 IRD 与相关联。|  
 |HY021|描述符信息不一致|*类型*字段或描述符中的 SQL_DESC_TYPE 字段关联的任何其他字段未无效或不一致。<br /><br /> 在一致性检查过程中检查的描述符信息未一致。 （请参阅"一致性检查，"本部分中更高版本）。|  
-|HY090|字符串或缓冲区长度无效|(DM) 驱动程序是 ODBC 2*.x*驱动程序，该描述符已 ARD *ColumnNumber*参数已设置为 0，并为参数指定的值*BufferLength*已不等于 4。|  
+|HY090|字符串或缓冲区长度无效|(DM) 驱动程序是 ODBC 2 *.x*驱动程序，该描述符已 ARD *ColumnNumber*参数已设置为 0，并为参数指定的值*BufferLength*已不等于 4。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|连接超时过期|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与*DescriptorHandle*不支持该函数。|  

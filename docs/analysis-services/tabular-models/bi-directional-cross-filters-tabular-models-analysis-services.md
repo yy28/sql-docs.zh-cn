@@ -1,31 +1,30 @@
 ---
-title: "双向交叉筛选器在表格模型中 |Microsoft 文档"
-ms.custom: 
+title: 双向交叉筛选器在表格模型中 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 07f44c1d5e92e65931f7d362b959e45d0943d65f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>在表格模型中的双向交叉筛选器
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用“双向交叉筛选器”，从而无需手动制定 DAX 解决方法来传播跨表上下文的筛选器上下文。  
+  SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用“双向交叉筛选器”，从而无需手动制定 DAX 解决方法来传播跨表上下文的筛选器上下文。  
   
  让我们分解这一概念的各个组成部分：“交叉筛选”是指能够基于相关表中的值对表设置筛选器上下文，“双向”是指将筛选器上下文传输到位于表关系另一端的另一个相关表。 顾名思义，你可以朝关系的两个方向而不只是一个方向切片。  在内部，双向筛选可以扩展筛选器上下文以查询数据的超集。  
   
@@ -66,14 +65,14 @@ SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用�
 ## <a name="walkthrough-an-example"></a>演练示例  
  最好是通过一个示例来理解双向交叉筛选的值。 假设 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)中有以下数据集，该数据集反映按默认创建的基数和交叉筛选器。  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![SSAS 双向 2 模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS 双向 2 模型")  
   
 > [!NOTE]  
 >  默认情况下，在数据导入期间，将在派生自事实数据表与相关维度表之间的外键和主键关系的多对一配置中为你创建表关系。  
   
  请注意，筛选方向是从维度表到事实数据表 - 促销、产品、日期、客户和客户地理位置都是有效的筛选器，可成功产生度量值的某种聚合，实际值根据使用的维度而有所不同。  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![ssas 双向 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas 双向 3 defaultrelationships")  
   
  对于这种简单的星型架构，在筛选从维度表中行与列到位于中心 **FactOnlineSales** 表的“销售额总计”度量值提供的聚合数据的数据流时，Excel 中的测试可以完美地确认数据切片。   
   
@@ -110,7 +109,7 @@ SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用�
   
 3.  在表格模型设计器中，将工作区数据库设置为表格服务器模式的 SQL Server 2016 Preview Analysis Services 实例。  
   
-4.  验证模型兼容性级别设置为**SQL Server 2016 RTM (1200)**或更高版本。  
+4.  验证模型兼容性级别设置为**SQL Server 2016 RTM (1200)** 或更高版本。  
   
      单击 **“确定”** 以创建项目。  
   
@@ -147,11 +146,11 @@ SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用�
 ### <a name="review-default-table-relationships"></a>查看默认表关系  
  切换到关系图视图：“模型” > “模型视图” > “关系图视图”。 将直观指示基数和活动关系。 任意两个相关表之间的所有关系都是一对多的关系。  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![SSAS 双向 2 模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS 双向 2 模型")  
   
  或者，单击“表” > “管理关系”查看表布局中的相同信息。  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![ssas 双向 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas 双向 3 defaultrelationships")  
   
 ### <a name="create-measures"></a>创建度量值  
  需要使用一个聚合来根据维度数据的不同 facet 来合计销售额。 在 **DimProduct** 中，可以创建一个统计产品的度量值，然后使用该度量值来分析产品销售情况，以显示在给定年份、在给定区域或针对哪种客户类型销售了多少产品。  

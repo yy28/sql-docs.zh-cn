@@ -25,12 +25,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cc1b2baa40c0e8b6b40a5dddf2c336a4141b4810
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a37e8eb706ca4528b94575a43c0e6daf96aa281d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,12 +48,12 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  要导出 （挖掘模型或挖掘结构） 的对象的可选类型。  
   
  *对象名称*  
- 可选。 要导出的对象的名称。  
+ 選擇性。 要导出的对象的名称。  
   
- *文件名*  
+ *filename*  
  要作为字符串导出的文件的名称和位置。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果语句指定了挖掘模型，则结果文件也将包含关联的挖掘结构。 如果该语句指定**带有 WITH DEPENDENCIES**，处理 （例如，数据源和数据源视图） 的对象所需的所有对象都包含在.abf 文件。  
   
  你必须是数据库或服务器管理员联系以导出或导入对象从[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。  
@@ -74,10 +73,10 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
- [导入 &#40; DMX &#41;](../dmx/import-dmx.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [导入&AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
  [导出和导入数据挖掘对象](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

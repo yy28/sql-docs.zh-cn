@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b1f7374d18c2d9e8695d243f50b7eeca9c654e24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6efe0227868d8e19087a704f78c6f8772f898ea1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cousin-mdx"></a>Cousin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Cousin( Member_Expression , Ancestor_Member_Expression )
  *Ancestor_Member_Expression*  
  返回祖先成员的有效多维表达式 (MDX) 成员表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此函数按各级别内的成员的顺序和位置进行操作。 如果有两个层次结构，第一个层次结构有四个级别，第二个层次结构有五个级别，则第一个层次结构的第三个级别与第二个层次结构的第三个级别是同级。  
   
 ## <a name="examples"></a>示例  
@@ -73,6 +72,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,32 +1,31 @@
 ---
-title: "表格模型脚本语言 (TMSL) 参考 |Microsoft 文档"
-ms.custom: 
+title: 表格模型脚本语言 (TMSL) 参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
-ms.translationtype: MT
+ms.openlocfilehash: aaa04f94b0a011c2d87bc990dfdf860579ef783a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>表格模型脚本语言 (TMSL) 参考
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
-  表格模型脚本语言 (TMSL) 是在兼容级别 1200年或更高版本的 Analysis Services 表格模型数据库的命令和对象模型定义语法。 TMSL 与 Analysis Services 通信通过 XMLA 协议，其中[XMLA。执行](../analysis-services/xmla/xml-elements-methods-execute.md)方法同时接受基于 JSON 的**语句**TMSL 以及中的传统的基于 XML 的脚本中的脚本[Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+  表格模型脚本语言 (TMSL) 是在兼容级别 1200年或更高版本的 Analysis Services 表格模型数据库的命令和对象模型定义语法。 TMSL 与 Analysis Services 通信通过 XMLA 协议，其中[XMLA。执行](../analysis-services/xmla/xml-elements-methods-execute.md)方法同时接受基于 JSON 的**语句**中为中的传统的基于 XML 的脚本或 TMSL 脚本[Analysis Services 脚本语言&#40;的 XMLA ASSL&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  TMSL 的要素包括：  
   
@@ -41,9 +40,9 @@ ms.lasthandoff: 01/22/2018
 ## <a name="how-to-use-tmsl"></a>如何使用 TMSL  
  浏览 TMSL 脚本的最简单方法使用 CREATE、 ALTER、 DELETE 或进程命令在 SQL Server Management Studio (SSMS) 在你已经知道的模型上。 假定你使用的现有模型，请记住先升级到兼容性级别为 1200年或更高版本。  
   
-1.  找到你想要使用的命令：[表格模型脚本语言 &#40; 中的命令TMSL &#41;](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)  
+1.  找到你想要使用的命令：[中表格模型脚本语言命令&#40;TMSL&#41;](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)  
   
-2.  检查命令中使用的对象的对象定义引用：[表格模型脚本语言 &#40; 中的对象定义TMSL &#41;](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)  
+2.  检查命令中使用的对象的对象定义引用：[表格模型脚本语言中的对象定义&#40;TMSL&#41;](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)  
   
 3.  选择用于提交 TMSL 脚本方法：  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 01/22/2018
 ## <a name="scripting-languages-in-analysis-services"></a>Analysis Services 中的脚本语言  
  Analysis Services 支持 ASSL 和 TMSL 脚本语言。 仅在 1200年兼容级别或更高版本创建表格模型中将介绍 TMS JSON 格式。  
   
- [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)第一种脚本语言，并且仍是多维模型和表格模型的较低的兼容性级别 （1100年或 1103年） 唯一的脚本语言。 在 ASSL，110 x 处的表格模型所述多维条款，如**多维数据集**（适用于模型） 和**measuregroup** （适用于一个表）。  
+ [Analysis Services 脚本语言&#40;的 XMLA ASSL&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)第一种脚本语言，并且仍是多维模型和表格模型的较低的兼容性级别 （1100年或 1103年） 唯一的脚本语言。 在 ASSL，110 x 处的表格模型所述多维条款，如**多维数据集**（适用于模型） 和**measuregroup** （适用于一个表）。  
   
 > [!NOTE]  
 >  在 [SQL Server Data Tools (SSDT)，你可以升级的较早的版本表格模型使用通过向上切换 TMSL 其**CompatibilityLevel**为 1200年或更高版本。 请记住该升级是不可逆。 在升级之前，备份您的模型，以防需要原始版本更高版本。  
@@ -80,7 +79,7 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 中的表格模型的兼容性级别](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Analysis Services 脚本语言&#40;的 XMLA ASSL&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [确定 Analysis Services 实例的服务器模式](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -1,10 +1,10 @@
 ---
-title: 扩展的功能的 SQL Operations Studio (preview) |Microsoft 文档
-description: 将扩展添加到 SQL Operations Studio (preview)
+title: 扩展的功能的 SQL 操作 Studio （预览版） |Microsoft 文档
+description: 将扩展添加到 SQL 操作 Studio （预览版）
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d632e48b9dd47d1a0bd9a1d98c3c7d2ea5b5a603
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
-ms.translationtype: MT
+ms.openlocfilehash: 9e7fe86ede11699a20417b2d9ae35d120d2286b8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充功能
 
@@ -27,9 +27,10 @@ ms.lasthandoff: 03/28/2018
 擴充功能由 SQL Operations Studio 團隊 (Microsoft) 以及第 3 方社群（您 ！）提供。 如需有關建立擴充功能的詳細資訊，請參閱[開始使用擴充性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
 
 
-## <a name="add-sql-operations-studio-extensions"></a>添加 SQL Operations Studio 扩展
+## <a name="add-sql-operations-studio-extensions"></a>添加 SQL 操作 Studio 扩展
 
 1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
+
 2. 选择可用扩展以查看它的详细信息。
 
    ![扩展管理器](media/extensions/extension-manager.png)

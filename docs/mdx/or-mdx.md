@@ -22,12 +22,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3816be8be6945e21d3e6863292d4ed718a2352a2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6a9dddd834662871afa7fa08bb27ed9d4249628e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="or-mdx"></a>OR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>返回值  
  返回一个布尔值**true**如果其中一种或两个自变量的计算结果为**true**; 否则为**false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **或者**运算符将两个参数视为布尔值 (0，0，作为**false**; 否则为**true**) 运算符执行逻辑或运算之前。 下表说明了如何**或**运算符执行逻辑或运算。  
   
 |*Expression1*|*Expression2*|返回值|  
@@ -80,6 +79,6 @@ WHERE(MEASURES.ORDEMO)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -1,11 +1,9 @@
 ---
 title: 操作的非参数化命令 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b468d55f9085c5201c1720887087b3ace94a6069
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>操作非参数化命令
 非参数化命令，请执行所有提供程序命令和**记录集**命令执行过程中创建。 如果该命令以同步方式，执行所有**记录集**将完全填充。 如果选择了异步填充模式的填充的状态**记录集**将取决于的填充模式和的大小**记录集**。  

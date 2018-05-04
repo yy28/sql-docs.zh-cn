@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetEnvAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 010a47003b044a400abaaaef5cd7ffd3c80d94d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 函数
 **一致性**  
@@ -92,10 +91,10 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="comments"></a>注释  
  属性的列表，请参阅[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。 没有特定于驱动程序的环境属性。 如果*属性*指定属性返回一个字符串， *ValuePtr*必须是指向在其中返回的字符串的缓冲区的指针。 将包括 null 终止的字节的字符串的最大长度*BufferLength*字节。  
   
- **SQLGetEnvAttr**可以随时之间分配和释放的环境句柄调用。 已成功设置环境的应用程序的所有环境属性都保留直到**SQLFreeHandle**上调用*EnvironmentHandle*与*HandleType*SQL_HANDLE_ENV。 ODBC 3 中可以同时分配多个环境句柄*.x*。 已分配另一个环境时，不会影响在一个环境的环境属性。  
+ **SQLGetEnvAttr**可以随时之间分配和释放的环境句柄调用。 已成功设置环境的应用程序的所有环境属性都保留直到**SQLFreeHandle**上调用*EnvironmentHandle*与*HandleType*SQL_HANDLE_ENV。 ODBC 3 中可以同时分配多个环境句柄 *.x*。 已分配另一个环境时，不会影响在一个环境的环境属性。  
   
 > [!NOTE]  
->  符合标准的应用程序都支持 SQL_ATTR_OUTPUT_NTS 环境属性。 当**SQLGetEnvAttr**调用时，ODBC 3*.x*驱动程序管理器始终返回 SQL_TRUE 此特性。 SQL_ATTR_OUTPUT_NTS 可以将设置为 SQL_TRUE 仅通过调用**SQLSetEnvAttr**。  
+>  符合标准的应用程序都支持 SQL_ATTR_OUTPUT_NTS 环境属性。 当**SQLGetEnvAttr**调用时，ODBC 3 *.x*驱动程序管理器始终返回 SQL_TRUE 此特性。 SQL_ATTR_OUTPUT_NTS 可以将设置为 SQL_TRUE 仅通过调用**SQLSetEnvAttr**。  
   
 ## <a name="related-functions"></a>相关函数  
   

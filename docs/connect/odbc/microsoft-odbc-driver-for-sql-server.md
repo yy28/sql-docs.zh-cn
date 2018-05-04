@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f7d037b0080b754e8a0ba65efc22a92ce43873b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 ODBC 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC 是适用于 SQL Server 编写的 C 和 c + + 应用程序的主本机数据访问 API。 没有大多数数据源的 ODBC 驱动程序。 其他语言，可以使用 ODBC 包括 COBOL、 Perl、 PHP 和 Python。 在数据集成方案中广泛使用 ODBC。
 
@@ -33,15 +32,15 @@ ODBC 驱动程序附带了工具如[ **sqlcmd** ](../../tools/sqlcmd-utility.md)
 
 ## <a name="code-example-in-c"></a>C + + 中的代码示例
 
-我们具有包含使用 ODBC 的 c + + 程序的源代码的小.zip 文件：
+下面的 c + + 示例演示如何使用 ODBC Api 连接到并访问的数据库：
 
 - [C + + 代码示例中，使用 ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>下载
 
-- ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 ODBC 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 ODBC 驱动程序](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>文档  
+## <a name="documentation"></a>文档
 
 ### <a name="features"></a>功能
 

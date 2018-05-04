@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cb1766ed1c16901bec84f735ecc2357939a65a11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 24ed878f0d0370076516e861cd38c30676b39257
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用多维数据集表达式和子多维数据集表达式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,10 +84,10 @@ ms.lasthandoff: 01/08/2018
  子多维数据集标识符显示为*Subcube_Name*。 在 MDX 语句的 BNF 表示法说明。  
   
 ## <a name="see-also"></a>另请参阅  
- [基本 MDX 查询 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [在 MDX &#40; 生成子多维数据集MDX &#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [创建子多维数据集语句 &#40;MDX &#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [表达式 &#40;MDX &#41;](../mdx/expressions-mdx.md)   
- [SCOPE 语句 &#40;MDX &#41;](../mdx/mdx-scripting-scope.md)  
+ [基本 MDX 查询 & #40;MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [生成子多维数据集在 MDX 中的&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
+ [创建子多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [SCOPE 语句 & #40;MDX & #41;](../mdx/mdx-scripting-scope.md)  
   
   

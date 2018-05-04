@@ -24,13 +24,12 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67d46825f0da450707710c600cacb549d370082c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,15 +55,15 @@ sp_bindefault [ @defname = ] 'default' ,
  由 CREATE DEFAULT 创建的默认值的名称。 *默认*是**nvarchar(776)**，无默认值。  
   
  [ **@objname=** ] **'***object_name***'**  
- 将默认值绑定到的表名、列名或别名数据类型。 *object_name*是**nvarchar(776)**无默认值。 *object_name*不能使用定义**varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**，或 CLR用户定义的类型。  
+ 将默认值绑定到的表名、列名或别名数据类型。 *object_name*是**nvarchar(776)** 无默认值。 *object_name*不能使用定义**varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**，或 CLR用户定义的类型。  
   
  如果*object_name*是一个部分名称，它被解析为别名数据类型。 如果它是两个或三个部分名称，它是第一次解析为的表和列;并且，如果此解决方法失败，则将它解析为别名数据类型。 默认情况下，该别名数据类型的现有列继承*默认*，除非已直接到列绑定默认值。 默认值不能绑定到**文本**， **ntext**，**映像**， **varchar （max)**， **nvarchar (max)**，**varbinary （max)**， **xml**，**时间戳**，或 CLR 用户定义类型的列、 一个包含标识属性列、 计算的列或列，已有默认约束。  
   
 > [!NOTE]  
->  *object_name*可以包含括号**[]**作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+>  *object_name*可以包含括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 仅当将默认值绑定到别名数据类型时才能使用。 *futureonly_flag*是**varchar(15)**默认值为 NULL。 当此参数设置为**futureonly**，该数据类型的现有列不能继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，新的默认值绑定到当前具有无默认值或使用现有的默认值的别名数据类型别名数据类型的列。  
+ 仅当将默认值绑定到别名数据类型时才能使用。 *futureonly_flag*是**varchar(15)** 默认值为 NULL。 当此参数设置为**futureonly**，该数据类型的现有列不能继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，新的默认值绑定到当前具有无默认值或使用现有的默认值的别名数据类型别名数据类型的列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

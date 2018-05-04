@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
 - SQLBulkOperations function [ODBC], updating rows
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5a561fe33a54f31bcbe554dbf34525812c234e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6b843392d9bf45eedad3a4062d7a1f9590801f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新书签的行
 书签，在更新某一行时**SQLBulkOperations**使更新的表的一个或多个行的数据源。 由绑定的书签列中的书签标识行。 使用数据的应用程序缓冲区 （除非列的长度/指示器缓冲区中的值是 SQL_COLUMN_IGNORE） 每个绑定列中的更新行。 未绑定的列将不会更新。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - cursors [ODBC], block
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca7e0ea939c925d935a969469f1e14810ccdd387
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3efabeedbc0c8dcd44581e4d83e518bf44ceecfa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-status-array"></a>行状态数组
 除了数据之外， **SQLFetch**和**SQLFetchScroll**可以返回一个数组，在行集中的每个行的状态。 此数组是通过的 SQL_ATTR_ROW_STATUS_PTR 语句属性指定。 此数组由应用程序分配的和必须都由 SQL_ATTR_ROW_ARRAY_SIZE 语句特性指定的所有元素。 数组中的值设置**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 值描述的行和自上次提取后是否该状态已更改的状态。  

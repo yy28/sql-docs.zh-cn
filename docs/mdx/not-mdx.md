@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 08bfb5c70fe36e36b62482f51864adf20cc851e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6e8b509d70bbc3a16935d69217a703faed18b871
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ NOT Expression1
 ## <a name="return-value"></a>返回值  
  返回一个布尔值**false**如果自变量的计算结果为**true**; 否则为**true**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **不**运算符将表达式视为一个布尔值 (0，0，作为**false**; 否则为**true**) 运算符执行逻辑求反运算之前。 下表说明了如何**不**运算符执行逻辑求反运算。  
   
 |*Expression1*|返回值|  
@@ -57,6 +56,6 @@ NOT Expression1
 |**false**|**true**|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

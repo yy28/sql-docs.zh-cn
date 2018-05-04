@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drivers [ODBC], heterogeneous join engines
 - drivers [ODBC], ODBC on the server
@@ -23,12 +23,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e19371142140c7f084b6179b509a1c524c36266
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b7c7493ee36b7a812dc18a5b698dbb9c064a14f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="other-driver-architectures"></a>其他驱动程序体系结构
 某些 ODBC 驱动程序严格不符合前面所述的体系结构。 这可能是因为驱动程序履行之外的传统的 ODBC 驱动程序，或不是在正常的意义上的驱动程序。  

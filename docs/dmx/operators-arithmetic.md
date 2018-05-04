@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c256882453ca3536a21babb2d87b774e9aab3d6d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4b90a4c3d80dda985865e66e8bb92d8da4137ec4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators---arithmetic"></a>操作员-算术
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,10 +35,10 @@ ms.lasthandoff: 01/08/2018
   
 |运算符|Description|  
 |--------------|-----------------|  
-|[+ &#40;添加 &#41;&#40; DMX &#41;](../dmx/add-dmx.md)|将两个数相加。|  
-|[-&#40;减去 &#41;&#40; DMX &#41;](../dmx/subtract-dmx.md)|从一个数中减去另一个数。|  
-|[&#42;&#40;乘 &#41;&#40; DMX &#41;](../dmx/multiply-dmx.md)|将一个数与另一个数相乘。|  
-|[&#40; 除 &#41;&#40; DMX &#41;](../dmx/divide-dmx.md)|将一个数除以另一个数。|  
+|[+&#40;添加&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|将两个数相加。|  
+|[-&#40;减去&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|从一个数中减去另一个数。|  
+|[&#42;&#40;乘&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|将一个数与另一个数相乘。|  
+|[&#40;将划分&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|将一个数除以另一个数。|  
   
  下列规则确定了各种运算符在 DMX 表达式中的优先顺序：  
   
@@ -50,15 +49,15 @@ ms.lasthandoff: 01/08/2018
 -   括号中的表达式运算优先于其他所有运算。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [表达式 &#40; DMX &#41;](../dmx/expressions-dmx.md)   
- [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [表达式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
+ [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

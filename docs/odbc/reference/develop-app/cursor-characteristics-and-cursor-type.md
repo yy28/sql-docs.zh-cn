@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f54cc2f954a67d7a9cb3a4dfa6f6a006b652611d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: da45bd596b51a12146e5889d7c69b0e0d0a2f3e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>光标特征和游标类型
 应用程序可以指定而不是指定游标类型 （只进、 静态、 键集驱动的或动态） 游标的特性。 为此，应用程序选择光标的可滚动性 （通过设置 SQL_ATTR_CURSOR_SCROLLABLE 语句属性） 和大小写 （通过设置 SQL_ATTR_CURSOR_SENSITIVITY 语句属性） 在打开将光标放在该语句之前句柄。 然后将驱动程序选择的最有效地提供特征的光标类型请求的应用程序。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce6b64f9151808e8b02f3036638d7322d3012938
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ceb6213d6e10195cff663d4206d21a62f3e2fc75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 映射
-在应用程序调用**SQLGetStmtOption**为 ODBC 3*.x*驱动程序不支持它，对的调用  
+在应用程序调用**SQLGetStmtOption**为 ODBC 3 *.x*驱动程序不支持它，对的调用  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -58,6 +57,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  有关 ODBC 定义的字符串连接选项，驱动程序管理器设置*BufferLength*对的调用中的自变量**SQLGetConnectAttr**的预定义的最大长度 (SQL_MAX_OPTION_STRING_LENGTH);对于非字符串连接选项， *BufferLength*设置为 0。  
   
- SQL_GET_BOOKMARK 语句选项已弃用 ODBC 3 中*.x*。 ODBC 3*.x*驱动程序以使用 ODBC 2。*x*应用程序使用 SQL_GET_BOOKMARK，则它必须支持 SQL_GET_BOOKMARK。 ODBC 3*.x*驱动程序以使用 ODBC 2。*x*应用程序，它必须支持将 SQL_USE_BOOKMARKS 设置为 SQL_UB_ON 和应公开固定长度书签。 如果 ODBC 3*.x*驱动程序还支持仅长度可变的书签，不固定长度书签，则它必须返回 SQLSTATE HYC00 （未实现的可选功能） 如果 ODBC 2。*x*应用程序尝试设置 SQL_USE_BOOKMARKS 为 SQL_UB_ON。  
+ SQL_GET_BOOKMARK 语句选项已弃用 ODBC 3 中 *.x*。 ODBC 3 *.x*驱动程序以使用 ODBC 2。*x*应用程序使用 SQL_GET_BOOKMARK，则它必须支持 SQL_GET_BOOKMARK。 ODBC 3 *.x*驱动程序以使用 ODBC 2。*x*应用程序，它必须支持将 SQL_USE_BOOKMARKS 设置为 SQL_UB_ON 和应公开固定长度书签。 如果 ODBC 3 *.x*驱动程序还支持仅长度可变的书签，不固定长度书签，则它必须返回 SQLSTATE HYC00 （未实现的可选功能） 如果 ODBC 2。*x*应用程序尝试设置 SQL_USE_BOOKMARKS 为 SQL_UB_ON。  
   
- ODBC 3*.x*驱动程序，驱动程序管理器将不再检查以查看是否*选项*SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。 该驱动程序必须选中此项。
+ ODBC 3 *.x*驱动程序，驱动程序管理器将不再检查以查看是否*选项*SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。 该驱动程序必须选中此项。

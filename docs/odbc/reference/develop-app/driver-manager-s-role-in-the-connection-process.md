@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
 - connecting to data source [ODBC], driver manager
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 85839606036b56f058f6347b57d45ca296e23b96
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驱动程序管理器&#39;连接过程中的 s 角色
 请记住，应用程序请勿直接调用驱动程序函数。 相反，这些驱动程序管理器具有相同名称的函数调用，驱动程序管理器调用驱动程序函数。 通常情况下，发生这种情况几乎立即。 例如，在应用程序调用**SQLExecute**驱动程序管理器中之后，一些错误检查，驱动程序管理器调用**SQLExecute**驱动程序中。  

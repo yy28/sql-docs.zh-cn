@@ -26,12 +26,11 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3e74b297203762f9ce20b054748f77c8f6524dbf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dc57c21474843f6df49dd3bba0a0841a092d7977
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>参数  
  [[  **@job_type=** ] *** * * job_type*']  
- 要添加的作业类型。 *job_type*是**nvarchar(20)**默认值为**捕获**。 有效输入包括**捕获**和**清理**。  
+ 要添加的作业类型。 *job_type*是**nvarchar(20)** 默认值为**捕获**。 有效输入包括**捕获**和**清理**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

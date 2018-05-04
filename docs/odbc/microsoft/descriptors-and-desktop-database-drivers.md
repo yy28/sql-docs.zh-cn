@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], descriptors
 - Jet-based ODBC drivers [ODBC], descriptors
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c1cf39e841e57e4ef836f042cea41240f7f7bfe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e59dfd08fe364492c72e26e0f8dadebaca8add64
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>描述符和桌面数据库驱动程序
 描述符是一种数据结构，其中包含有关列数据或动态参数的信息。 **SQLGetDescField**可以用于检索下面列出的受支持的描述符。 实现参数描述符 (IPD) 不会自动填充因为**SQLDescribeParam**不支持。 不可通过 Jet （如 SQL_DESC_BASE_TABLE_NAME) 的描述符字段也不支持。  

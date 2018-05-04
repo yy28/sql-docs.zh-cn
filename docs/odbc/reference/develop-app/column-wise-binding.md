@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8d0d69f644ae354c795bb8d7352c00be4fe995cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-wise-binding"></a>按列绑定
 使用专用于列的绑定时，应用程序会将一个或两个，或在某些情况下的三个，数组绑定到数据要为其返回每个列。 第一个数组中包含的数据值，并第二个数组拥有长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，将绑定的第三个数组。 每个数组包含有行的行集中的所有元素。  

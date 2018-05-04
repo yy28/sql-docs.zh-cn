@@ -22,12 +22,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f4ee6b32df0c0aef1de919448baefac7e93b88a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f1cd2b67e3ec633992ccae294b823128bfb5a2ba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nextmember-mdx"></a>NextMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Member_Expression.NextMember
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **NextMember**函数返回的下一个成员，在同一级别中，包含指定的成员。  
   
 ## <a name="example"></a>示例  
@@ -57,6 +56,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

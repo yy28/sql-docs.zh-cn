@@ -1,24 +1,24 @@
 ---
-title: "SQL 客户端编程的主页 |Microsoft 文档"
-description: "使用带批注的链接下载和文档的语言和操作系统，用于连接到 SQL Server 或 Azure SQL 数据库的多个组合的中心页面。"
+title: SQL 客户端编程的主页 |Microsoft 文档
+description: 使用带批注的链接下载和文档的语言和操作系统，用于连接到 SQL Server 或 Azure SQL 数据库的多个组合的中心页面。
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
-ms.topic: article
+ms.custom: ''
+ms.technology:
+- drivers
+ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
-ms.translationtype: MT
+ms.openlocfilehash: 234ce07b25a0d120e72d8972b8e7b05f32c88201
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>客户端编程到 Microsoft SQL Server 主页
 
@@ -56,9 +56,9 @@ ms.lasthandoff: 11/29/2017
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![C# 徽标][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM 实体框架中的，.NET framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 徽标][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大加号][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Python 徽标][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby 徽标][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![C# 徽标][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM 实体框架中，.NET framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 徽标][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大加号][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python 徽标][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 徽标][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +107,7 @@ EF 有直接或间接关系具有以下技术：
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 语言语法增强功能，如 **=>**  C# 中的运算符。
+- 语言语法增强功能，如**=>** C# 中的运算符。
 - 便捷的程序，以便将映射到 SQL 数据库中的表的类生成源代码。 例如， [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 

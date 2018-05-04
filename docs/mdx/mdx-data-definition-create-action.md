@@ -30,12 +30,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 22c4cb48c762f2686f4cad86499b64cad0cc7e8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b9c418a60a57abcf7fa0b705949d5090c9661aa1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 数据定义的创建操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +92,7 @@ FOR
  *String_Expression*  
  一个有效的字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  客户端应用程序可能会创建和执行不安全的操作，也可能会使用不安全的函数。 若要避免这些情况下，使用**安全选项**属性。 有关详细信息，请参阅“Safety Options 属性”。  
   
 > [!NOTE]  
@@ -143,6 +142,6 @@ FOR
  此操作仅适用于某个集。 该名称， **ActionParameterSet**，已保留供在操作的表达式内部应用程序。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

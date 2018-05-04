@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getbyte-method-javalangstring"></a>getByte 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索与指定参数的值**字节**给定参数名称的值。  
+  根据给定的参数名称检索指定参数的值作为 byte 值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ public byte getByte(java.lang.String sCol)
 #### <a name="parameters"></a>Parameters  
  *sCol*  
   
- A**字符串**，其中包含参数名称。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A**字节**值。  
+ 一个 byte 值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getByte 方法指定此 getByte 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getByte 方法由 java.sql.CallableStatement 接口中的 getByte 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
- [getByte 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
+ [getByte 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,11 +1,9 @@
 ---
 title: ADO 代码示例 VBScript |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90f76880a2a5cb0b7487addcf781d7cc2d0b4918
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6c1e46800b874d1c801676cc26f2e8e9ddeae094
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 代码示例 VBScript
 使用下面的代码示例，若要了解有关如何在 Microsoft® Visual Basic® Scripting Edition (VBScript) 在写入时使用的 ADO 方法。  

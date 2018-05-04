@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
 - data updates [ODBC], positioned update or delete
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1685fb077fbc7d5b99f0d33f58f7624d6bd23c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e05524edbfb8efdaafafcf1910acf861004639a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>定位的 Update 和 Delete 语句
 应用程序可以更新或删除中定位的更新的结果集的当前行或删除语句。 定位 update 和 delete 语句支持的某些数据源，但不是所有异常。 若要确定是否定位数据源支持更新和 delete 语句，应用程序调用**SQLGetInfo**使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*信息类型*（具体取决于游标的类型）。 请注意 ODBC 游标库模拟定位的 update 和 delete 语句。  

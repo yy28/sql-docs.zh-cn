@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetData
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba5edc5dc4bfe9ea0deeb40cd5c96e14480ee27b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函数
 **一致性**  
@@ -124,10 +123,10 @@ SQLRETURN SQLGetData(
 |HY009|不允许使用 null 指针|(DM) 自变量*TargetValuePtr*是空指针。|  
 |HY010|函数序列错误|(DM) 指定*StatementHandle*当时不处于执行状态。 第一个调用已调用函数**SQLExecDirect**， **SQLExecute**或目录函数。<br /><br /> (DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLGetData**调用函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) *StatementHandle*处于执行状态，但没有结果集与关联*StatementHandle*。<br /><br /> 调用**SQLExeceute**， **SQLExecDirect**，或**SQLMoreResults**返回 SQL_PARAM_DATA_AVAILABLE，但**SQLGetData**调用而不是**SQLParamData**。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) 参数指定的值*BufferLength*小于 0。<br /><br /> 为参数指定的值*BufferLength*为小于 4， *Col_or_Param_Num*自变量设置为 0，并且驱动程序是 ODBC 2*.x*驱动程序。|  
+|HY090|字符串或缓冲区长度无效|(DM) 参数指定的值*BufferLength*小于 0。<br /><br /> 为参数指定的值*BufferLength*为小于 4， *Col_or_Param_Num*自变量设置为 0，并且驱动程序是 ODBC 2 *.x*驱动程序。|  
 |HY109|无效的光标位置|光标 (通过**SQLSetPos**， **SQLFetch**， **SQLFetchScroll**，或**SQLBulkOperations**) 删除了某行或无法获取。<br /><br /> 光标只进游标，且行集大小为大于 1。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持使用**SQLGetData**与中的多个行**SQLFetchScroll**。 此说明不适用于返回中的 SQL_GETDATA_EXTENSIONS 选项的 SQL_GD_BLOCK 位掩码的驱动程序**SQLGetInfo**。<br /><br /> 驱动程序或数据源不支持指定的组合来转换*TargetType*自变量和相应的列的 SQL 数据类型。 此错误仅适用于 SQL 数据类型的列已映射到特定于驱动程序的 SQL 数据类型。<br /><br /> 驱动程序还支持仅 ODBC 2*.x*，并将参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中的任何间隔 C 数据类型列出[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型中。<br /><br /> 该驱动程序仅支持之前售价 3.50 和的自变量的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持使用**SQLGetData**与中的多个行**SQLFetchScroll**。 此说明不适用于返回中的 SQL_GETDATA_EXTENSIONS 选项的 SQL_GD_BLOCK 位掩码的驱动程序**SQLGetInfo**。<br /><br /> 驱动程序或数据源不支持指定的组合来转换*TargetType*自变量和相应的列的 SQL 数据类型。 此错误仅适用于 SQL 数据类型的列已映射到特定于驱动程序的 SQL 数据类型。<br /><br /> 驱动程序还支持仅 ODBC 2 *.x*，并将参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中的任何间隔 C 数据类型列出[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型中。<br /><br /> 该驱动程序仅支持之前售价 3.50 和的自变量的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
 |HYT01|连接超时过期|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此函数|(DM) 对应的驱动程序*StatementHandle*不支持该函数。|  
 |IM017|在异步通知模式中禁用轮询|使用通知模型，则每当轮询处于禁用状态。|  
@@ -153,14 +152,14 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_BOUND。 如果返回了此选项， **SQLGetData**可以调用绑定列，以及未绑定列。  
   
- 有两个例外这些限制和驱动程序的能力放宽了它们。 首先， **SQLGetData**应永远不会在对于只进游标时调用的行集大小大于 1。 其次，如果驱动程序支持书签，它必须始终支持调用的能力**SQLGetData**列 0，即使它不允许应用程序调用**SQLGetData**早于最后其他列绑定的列。 (应用程序使用 ODBC 2*.x*驱动程序， **SQLGetData**将成功返回时使用调用的书签*Col_or_Param_Num*等于 0 后调用**SQLFetch**，这是因为**SQLFetch**映射由 ODBC 3*.x*到驱动程序管理器**SQLExtendedFetch**与*FetchOrientation*的 SQL_FETCH_NEXT，和**SQLGetData**与*Col_or_Param_Num* 0 的映射由 ODBC 3*.x*到驱动程序管理器**SQLGetStmtOption**与*fOption*的 SQL_GET_BOOKMARK。)  
+ 有两个例外这些限制和驱动程序的能力放宽了它们。 首先， **SQLGetData**应永远不会在对于只进游标时调用的行集大小大于 1。 其次，如果驱动程序支持书签，它必须始终支持调用的能力**SQLGetData**列 0，即使它不允许应用程序调用**SQLGetData**早于最后其他列绑定的列。 (应用程序使用 ODBC 2 *.x*驱动程序， **SQLGetData**将成功返回时使用调用的书签*Col_or_Param_Num*等于 0 后调用**SQLFetch**，这是因为**SQLFetch**映射由 ODBC 3 *.x*到驱动程序管理器**SQLExtendedFetch**与*FetchOrientation*的 SQL_FETCH_NEXT，和**SQLGetData**与*Col_or_Param_Num* 0 的映射由 ODBC 3 *.x*到驱动程序管理器**SQLGetStmtOption**与*fOption*的 SQL_GET_BOOKMARK。)  
   
  **SQLGetData**不能用于检索通过调用刚插入的行的书签**SQLBulkOperations**使用 SQL_ADD 选项，因为未将光标放置在该行上。 应用程序可以通过绑定第 0 列之前调用检索这样的行的书签**SQLBulkOperations** SQL_ADD，这种情况下与**SQLBulkOperations**返回绑定的缓冲区中的书签。 **SQLFetchScroll**然后可以使用 SQL_FETCH_BOOKMARK 重新光标定位在该行上调用。  
   
  如果*TargetType*自变量不是间隔数据类型，默认时间间隔前导精度 (2) 和默认间隔秒精度 (6) 中的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段设置ARD，分别用于数据。 如果*TargetType*参数不是 SQL_C_NUMERIC 数据类型 （驱动程序定义） 的默认精度和 ARD SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置默认小数位数 (0) 时，用于的数据。 如果任何默认精度或小数位数不合适，应用程序显式应通过调用设置适当的描述符字段**SQLSetDescField**或**SQLSetDescRec**。 它可以将 SQL_DESC_CONCISE_TYPE 字段设置为 SQL_C_NUMERIC 并调用**SQLGetData**与*TargetType* SQL_ARD_TYPE，这将导致描述符字段中的精度和小数位数的值的自变量要使用。  
   
 > [!NOTE]  
->  在 ODBC 2*.x*，应用程序集*TargetType*到 SQL_C_DATE、 SQL_C_TIME 或 SQL_C_TIMESTAMP，则指示\* *TargetValuePtr*为日期、 time、 或时间戳结构。 ODBC 3 中*.x*，应用程序集*TargetType*到 SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME 或 SQL_C_TYPE_TIMESTAMP。 驱动程序管理器对相应映射如果有必要，基于应用程序和驱动程序版本。  
+>  在 ODBC 2 *.x*，应用程序集*TargetType*到 SQL_C_DATE、 SQL_C_TIME 或 SQL_C_TIMESTAMP，则指示\* *TargetValuePtr*为日期、 time、 或时间戳结构。 ODBC 3 中 *.x*，应用程序集*TargetType*到 SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME 或 SQL_C_TYPE_TIMESTAMP。 驱动程序管理器对相应映射如果有必要，基于应用程序和驱动程序版本。  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>检索部分的长度可变的数据  
  **SQLGetData**可以用于从包含部件中的可变长度数据的列中检索数据-即，SQL 数据类型的列的标识符时 SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_WCHAR、 SQL_WVARCHAR、 SQL_WLONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY、 或可变长度类型的特定于驱动程序的标识符。  

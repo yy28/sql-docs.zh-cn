@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -22,12 +22,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 08f5738d39c862184d989ed8581e488adb5da1c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types"></a>C 数据类型
 ODBC C 数据类型表示在应用程序中存储数据所使用的 C 缓冲的数据类型。  
@@ -140,9 +139,9 @@ struct tagSQLGUID {
   
  [c] 中 ODBC 2。*x*，C 日期、 时间和时间戳数据类型是 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP。  
   
- [d] ODBC 3*.x*应用程序应使用 SQL_C_VARBOOKMARK，不 SQL_C_BOOKMARK。 当 ODBC 3*.x*应用程序处理 ODBC 2。*x*驱动程序，ODBC 3*.x*驱动程序管理器将映射到 SQL_C_BOOKMARK 的 SQL_C_VARBOOKMARK。  
+ [d] ODBC 3 *.x*应用程序应使用 SQL_C_VARBOOKMARK，不 SQL_C_BOOKMARK。 当 ODBC 3 *.x*应用程序处理 ODBC 2。*x*驱动程序，ODBC 3 *.x*驱动程序管理器将映射到 SQL_C_BOOKMARK 的 SQL_C_VARBOOKMARK。  
   
- [e] 的数量存储在*val* SQL_NUMERIC_STRUCT 结构为缩放后的整数，小 endian 模式 （正在最低有效字节的最左侧字节） 中的字段。 例如，小数位数为 4，数字 10.001 基 10，缩放为 100010 的整数。 由于这是 186AA 以十六进制格式，在 SQL_NUMERIC_STRUCT 值将为"AA 86 01 00 00...00"，由 SQL_MAX_NUMERIC_LEN 定义的字节数与**#define**。  
+ [e] 的数量存储在*val* SQL_NUMERIC_STRUCT 结构为缩放后的整数，小 endian 模式 （正在最低有效字节的最左侧字节） 中的字段。 例如，小数位数为 4，数字 10.001 基 10，缩放为 100010 的整数。 由于这是 186AA 以十六进制格式，在 SQL_NUMERIC_STRUCT 值将为"AA 86 01 00 00...00"，由 SQL_MAX_NUMERIC_LEN 定义的字节数与 **#define**。  
   
  有关详细信息**SQL_NUMERIC_STRUCT**，请参阅[如何： 检索与 SQL_NUMERIC_STRUCT 的数值数据](retrieve-numeric-data-sql-numeric-struct-kb222831.md)。  
   
@@ -152,9 +151,9 @@ struct tagSQLGUID {
   
  [h] _int64 可能未提供的某些编译器中。  
   
- [ODBC 3 中已弃用 i] _SQL_C_BOOKMARK*.x*。  
+ [ODBC 3 中已弃用 i] _SQL_C_BOOKMARK *.x*。  
   
- [j] _SQL_C_SHORT、 SQL_C_LONG 和 SQL_C_TINYINT 已替换为在 ODBC 中有符号和无符号类型： SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 和 SQL_C_ULONG，和 SQL_C_STINYINT 和 SQL_C_UTINYINT。 ODBC 3*.x*驱动程序都应适用于 ODBC 2。*x*应用程序应支持 SQL_C_SHORT、 SQL_C_LONG 和 SQL_C_TINYINT，因为它们调用时，驱动程序管理器将其传递通过给驱动程序。  
+ [j] _SQL_C_SHORT、 SQL_C_LONG 和 SQL_C_TINYINT 已替换为在 ODBC 中有符号和无符号类型： SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 和 SQL_C_ULONG，和 SQL_C_STINYINT 和 SQL_C_UTINYINT。 ODBC 3 *.x*驱动程序都应适用于 ODBC 2。*x*应用程序应支持 SQL_C_SHORT、 SQL_C_LONG 和 SQL_C_TINYINT，因为它们调用时，驱动程序管理器将其传递通过给驱动程序。  
   
  [可以仅对 SQL_CHAR 或 SQL_WCHAR 转换 k] SQL_C_GUID。  
   

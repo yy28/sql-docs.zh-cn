@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a0ac22fd71b80aa973d3e114a76e1f1bd192fc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ccfc4bfd03b7a7fba693bfd9e6eb86494057a665
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
   
 ## <a name="arguments"></a>参数  
  [ **@principal_id** = ] *principal_id*  
- 是数据库用户或角色中的 ID **msdb**关联后，若要删除的数据库。 *principal_id*是**int**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，提供的主体 ID **0**或主体名称**'public'**。 任一*principal_id*或*principal_name*必须指定。  
+ 是数据库用户或角色中的 ID **msdb**关联后，若要删除的数据库。 *principal_id*是**int**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，提供的主体 ID **0**或主体名称 **'public'**。 任一*principal_id*或*principal_name*必须指定。  
   
  [ **@principal_name** = ] **'***principal_name***'**  
- 是数据库用户或角色中的名称**msdb**关联后，若要删除的数据库。 *principal_name*是**sysname**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，提供的主体 ID **0**或主体名称**'public'**。 任一*principal_id*或*principal_name*必须指定。  
+ 是数据库用户或角色中的名称**msdb**关联后，若要删除的数据库。 *principal_name*是**sysname**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，提供的主体 ID **0**或主体名称 **'public'**。 任一*principal_id*或*principal_name*必须指定。  
   
  [ **@profile_id** =] *profile_id*  
  要删除的关联的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
@@ -63,7 +62,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>注释  
- 若要使公共配置文件成为专用配置文件，提供**'public'**主体的名称或**0**主体 id。  
+ 若要使公共配置文件成为专用配置文件，提供 **'public'** 主体的名称或**0**主体 id。  
   
  删除用户的默认专用配置文件的权限或默认公共配置文件的权限时，请谨慎操作。 没有默认配置文件时可用， **sp_send_dbmail**需要作为自变量的配置文件的名称。 因此，删除默认的配置文件可能会导致调用**sp_send_dbmail**失败。 有关详细信息，请参阅[sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。  
   

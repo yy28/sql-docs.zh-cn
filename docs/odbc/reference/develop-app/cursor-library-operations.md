@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], backward compatibility
 - compatibility [ODBC], cursor library
@@ -24,15 +24,14 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bac09cb2b45274a5589c152a5b0e714b71f8dc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca642308b52f52eda4f18f467ae70413ba7f3c04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-library-operations"></a>游标库操作
 > [!IMPORTANT]  
 >  将 Windows 的未来版本中删除该功能。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 如果应用程序使用 ODBC 2*.x*驱动程序，可以对 ODBC 3 的调用。*x*游标库应用程序可能能够使用 ODBC 3。*x* ODBC 2 不支持的功能*.x*驱动程序。 应注意如何使用这些功能，但是应用程序编写器。 ODBC 3 的使用。*x*游标库不会使 ODBC 2*.x*到 ODBC 3 的驱动程序。*x*驱动程序。
+ 如果应用程序使用 ODBC 2 *.x*驱动程序，可以对 ODBC 3 的调用。*x*游标库应用程序可能能够使用 ODBC 3。*x* ODBC 2 不支持的功能 *.x*驱动程序。 应注意如何使用这些功能，但是应用程序编写器。 ODBC 3 的使用。*x*游标库不会使 ODBC 2 *.x*到 ODBC 3 的驱动程序。*x*驱动程序。

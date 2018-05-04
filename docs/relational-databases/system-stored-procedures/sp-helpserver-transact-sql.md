@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0b385ddfdb140f38614e4082b45ada8a8140e4f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  对其信息进行报告的服务器。 当*服务器*未指定，有关中的所有服务器的报表**master.sys.servers**。 *服务器*是**sysname**，默认值为 NULL。  
   
  [  **@optname =** ] *****选项*****  
- 对服务器进行说明的选项。 *选项*是**varchar (**35**)**，默认值为 NULL，并且必须是以下值之一。  
+ 对服务器进行说明的选项。 *选项*是**varchar (** 35 **)**，默认值为 NULL，并且必须是以下值之一。  
   
 |“值”|Description|  
 |-----------|-----------------|  
@@ -69,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**使用远程排序规则**|使用远程列的排序规则而不使用本地服务器的排序规则。|  
   
  [  **@show_topology =** ] *****show_topology*****  
- 指定服务器与其他服务器的关系。 *show_topology*是**varchar (**1**)**，默认值为 NULL。 如果*show_topology*是否不等于**t**或为 NULL， **sp_helpserver**返回结果集部分中列出的列。 如果*show_topology*等同于**t**，除了列出结果集中的列**sp_helpserver**也会返回**topx**和**topy**信息。  
+ 指定服务器与其他服务器的关系。 *show_topology*是**varchar (** 1 **)**，默认值为 NULL。 如果*show_topology*是否不等于**t**或为 NULL， **sp_helpserver**返回结果集部分中列出的列。 如果*show_topology*等同于**t**，除了列出结果集中的列**sp_helpserver**也会返回**topx**和**topy**信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）。  
@@ -80,8 +79,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**名称**|**sysname**|服务器名称。|  
 |**network_name**|**sysname**|服务器的网络名称。|  
-|**status**|**varchar (**70**)**|服务器状态。|  
-|**id**|**char (**4**)**|服务器的标识号。|  
+|**status**|**varchar (** 70 **)**|服务器状态。|  
+|**id**|**char (** 4 **)**|服务器的标识号。|  
 |**collation_name**|**sysname**|服务器的排序规则。|  
 |**connect_timeout**|**int**|连接到链接服务器的超时值。|  
 |**query_timeout**|**int**|查询链接服务器的超时值。|  

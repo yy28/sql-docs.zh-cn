@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7bc3948044bbfd37d5ddb5a4dad32f3dc9e09725
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_serveroption [@server = ] 'server'
  要为其设置选项的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
  [  **@optname =** ] *****option_name*****  
- 为指定的服务器设置的选项。 *option_name*是**varchar (**35**)**，无默认值。 *option_name*可以是任何以下值。  
+ 为指定的服务器设置的选项。 *option_name*是**varchar (** 35 **)**，无默认值。 *option_name*可以是任何以下值。  
   
 |“值”|Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_serveroption [@server = ] 'server'
 |**远程过程事务提升**|使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果此选项是 TRUE （或） 调用远程存储的过程启动分布式的事务和并用 MS DTC 登记该事务。 调用远程存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是事务创建者，负责控制事务的完成。 当为连接发出后续 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句时，主控实例请求 MS DTC 在所涉及的计算机间管理分布式事务的完成。<br /><br /> 在启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务后，可以对已定义为链接服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例调用远程存储过程。 链接服务器全部登记在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务中，而 MS DTC 确保对每台链接服务器完成该事务。<br /><br /> 如果此选项设置为 FALSE（或 OFF），则对链接服务器调用远程存储过程时将不会把本地事务提升为分布式事务。<br /><br /> 如果进行服务器对服务器过程调用前，事务已是分布式事务，则该选项不起作用。 对链接服务器进行的过程调用将在同一分布式事务下运行。<br /><br /> 如果进行服务器对服务器过程调用前，连接中不存在活动事务，则该选项不起作用。 然后，将对没有活动事务的链接服务器运行此过程。<br /><br /> 该选项的默认值为 TRUE（或 ON）。|  
   
  [  **@optvalue =**] *****option_value*****  
- 指定是否*option_name*应启用 (**TRUE**或**上**) 还是禁用 (**FALSE**或**关闭**). *option_value*是**varchar (**10**)**，无默认值。  
+ 指定是否*option_name*应启用 (**TRUE**或**上**) 还是禁用 (**FALSE**或**关闭**). *option_value*是**varchar (** 10 **)**，无默认值。  
   
  *option_value*可能是一个非负整数来**连接超时**和**查询超时**选项。 有关**排序规则名称**选项， *option_value*可能排序规则名称或 NULL。  
   

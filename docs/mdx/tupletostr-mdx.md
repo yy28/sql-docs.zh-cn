@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0c777583e5ae027ab3f2ada53b4b168431e3390a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9a3a17d50ac15f7f59b41881d95a6e0c5fc2a3a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,8 +44,8 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  返回元组的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 此函数用于将元组的字符串表示形式传输给外部函数进行分析。 返回的字符串将用大括号 {} 括起来；如果元组中明确定义了多个成员，则每个成员之间用逗号分隔。  
+## <a name="remarks"></a>注释  
+ 此函数用于将元组的字符串表示形式传输给外部函数进行分析。 返回的字符串括在大括号{}和用逗号分隔每个成员，如果多个明确定义的元组。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回字符串 ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States])：  
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

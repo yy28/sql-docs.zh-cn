@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
 - backward compatibility [ODBC], mapping deprecated functions
@@ -24,21 +24,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddde5411238efb7104931e05f34752ab6f52e014
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-deprecated-functions"></a>映射函数弃用
-本部分介绍如何已弃用的函数映射由 ODBC 3*.x*驱动程序管理器，以保证向后兼容性的 ODBC 3*.x*与 ODBC 2 一起使用的驱动程序。*x*应用程序。 驱动程序管理器执行此映射而不考虑应用程序的版本。 因为每个 ODBC 2。*x*以下列表中的函数映射到相应的 ODBC 3*.x*函数 ODBC 3 中调用时*.x*驱动程序，ODBC 3*.x*驱动程序不需要实现 ODBC 2。*x*函数。  
+本部分介绍如何已弃用的函数映射由 ODBC 3 *.x*驱动程序管理器，以保证向后兼容性的 ODBC 3 *.x*与 ODBC 2 一起使用的驱动程序。*x*应用程序。 驱动程序管理器执行此映射而不考虑应用程序的版本。 因为每个 ODBC 2。*x*以下列表中的函数映射到相应的 ODBC 3 *.x*函数 ODBC 3 中调用时 *.x*驱动程序，ODBC 3 *.x*驱动程序不需要实现 ODBC 2。*x*函数。  
   
- 在列表中的映射触发该驱动程序时 ODBC 3*.x*驱动程序和驱动程序不支持正在映射的函数。  
+ 在列表中的映射触发该驱动程序时 ODBC 3 *.x*驱动程序和驱动程序不支持正在映射的函数。  
   
- 下表列出了所有重复的 ODBC 3 中引入的功能*.x*。  
+ 下表列出了所有重复的 ODBC 3 中引入的功能 *.x*。  
   
-|ODBC 2。*x*函数|ODBC 3*.x*函数|  
+|ODBC 2。*x*函数|ODBC 3 *.x*函数|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/16/2018
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 即使此函数不存在于 ODBC 2*.x*，它是 Open Group 和 ISO 标准中。  
+ [1] 即使此函数不存在于 ODBC 2 *.x*，它是 Open Group 和 ISO 标准中。  
   
  [2] 这是一个 ODBC 1.0 函数。  
   

@@ -1,30 +1,30 @@
 ---
-title: "模型对象 (TMSL) |Microsoft 文档"
-ms.custom: 
+title: 模型对象 (TMSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6690d9407edb3002a1924440f85b379da6c18260
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-object-tmsl"></a>模型对象 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定义表格模型。 没有每个数据库，并只有一个数据库可以在任何给定的命令中指定的一个模型。 数据库对象是父对象。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定义表格模型。 没有每个数据库，并只有一个数据库可以在任何给定的命令中指定的一个模型。 数据库对象是父对象。  
   
  模型定义来说太大，以重现一个主题中的整个语法。 为此，突出显示的主要部分的部分语法可下面，找到与链接到子对象。  
   
@@ -53,13 +53,13 @@ ms.lasthandoff: 01/08/2018
  排序规则序列。 请参阅[Analysis Services 的全球化方案](../../analysis-services/globalization-scenarios-for-analysis-services.md)有关详细信息。  
   
  表  
- 在模型中，包括分区、 列、 度量值、 Kpi 和批注的表的完整集合。 请参阅[表对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)有关详细信息。  
+ 在模型中，包括分区、 列、 度量值、 Kpi 和批注的表的完整集合。 请参阅[Tables 对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)有关详细信息。  
   
  关系  
- 指定每对表，包括设置筛选器方向和安全性的属性之间的关系。 请参阅[关系对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md)有关详细信息。  
+ 指定每对表，包括设置筛选器方向和安全性的属性之间的关系。 请参阅[关系对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md)有关详细信息。  
   
  数据源  
- 通过查询传递到外部数据库向模型提供数据或用于的一个或多个连接。 请参阅[数据源对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)有关详细信息。  
+ 通过查询传递到外部数据库向模型提供数据或用于的一个或多个连接。 请参阅[数据源对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)有关详细信息。  
   
  角色  
  将数据库权限、 成员帐户和 （可选） 在 DAX 中的自定义访问控制的安全筛选器关联的对象。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
  在创建时，替换或更改模型的对象，将指定对象定义的所有读写的属性。 省略一个读 / 写属性被视为删除操作。  
   
 ## <a name="partial-syntax"></a>部分语法  
- 由于此对象定义是很大，列出的第一个级别属性。 请参阅[对象定义中表格模型脚本语言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)有关子对象的列表。  
+ 由于此对象定义是很大，列出的第一个级别属性。 请参阅[表格模型脚本语言中的对象定义&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)有关子对象的列表。  
   
 ```  
     "model": {  

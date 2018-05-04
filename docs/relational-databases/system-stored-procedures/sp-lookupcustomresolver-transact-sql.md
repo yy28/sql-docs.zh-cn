@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad45f26fbd1c6b7f9488497333f5ba44a2b5fa8c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02de3e99a2cb322d59e7303abe3701e3acf4e33b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,16 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [  **@article_resolver =** ] *****article_resolver*****  
  指定要注销的自定义业务逻辑的名称。 *article_resolver*是**nvarchar （255)**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
   
- [ **@resolver_clsid**=] *****resolver_clsid*****输出  
+ [ **@resolver_clsid**=] *****resolver_clsid***** 输出  
  是中指定的自定义业务逻辑的名称与关联的 COM 对象的 CLSID 值*article_resolver*参数。 *resolver_clsid*是**nvarchar(50)**，默认值为 NULL。  
   
- [  **@is_dotnet_assembly=** ] *****is_dotnet_assembly*****输出  
+ [  **@is_dotnet_assembly=** ] *****is_dotnet_assembly***** 输出  
  指定要注册的自定义业务逻辑的类型。 *is_dotnet_assembly*是**位**，默认值为 0。 **1**指示要注册的自定义业务逻辑是业务逻辑处理程序程序集;**0**指示它是一个 COM 组件。  
   
- [  **@dotnet_assembly_name=** ] *****dotnet_assembly_name*****输出  
+ [  **@dotnet_assembly_name=** ] *****dotnet_assembly_name***** 输出  
  实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*是**nvarchar （255)**，默认值为 NULL。  
   
- [  **@dotnet_class_name=** ] *****dotnet_class_name*****输出  
+ [  **@dotnet_class_name=** ] *****dotnet_class_name***** 输出  
  实现业务逻辑处理程序时优先级高于 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的名称。 *dotnet_class_name*是**nvarchar （255)**，默认值为 NULL。  
   
  [  **@publisher=** ] *****发布服务器*****  

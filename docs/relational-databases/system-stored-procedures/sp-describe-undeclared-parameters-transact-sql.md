@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a455bfe51ac57408c075a20128054574b86962f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_describe_undeclared_parameters
   
 ## <a name="arguments"></a>参数  
  [ **@tsql =** ] **'***Transact-SQL_batch***'**  
- 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar (max)**。  
+ 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar (max)**。  
   
  [  **@params =** ] **N***参数*****  
- @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (***n***)**或**nvarchar (max)**。  
+ @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (***n***)** 或**nvarchar (max)**。  
   
  一个字符串，它包含的定义中嵌入的所有参数*Transact SQL_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 n 是表示附加参数定义的占位符。 如果 TRANSACT-SQL 语句中的批处理不包含参数，@params不是必需的。 该参数的默认值为 NULL。  
   
@@ -188,7 +187,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     在第一种情况下，类型推导算法会推导**char （30)**如的数据类型@p按照本主题前面的规则。 在第二个情况下，类型推导算法会推导**varchar （8000)**根据下一节中的常规推导规则。  
+     在第一种情况下，类型推导算法会推导**char （30)** 如的数据类型@p按照本主题前面的规则。 在第二个情况下，类型推导算法会推导**varchar （8000)** 根据下一节中的常规推导规则。  
   
 -   一般推断  
   
@@ -202,9 +201,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **数值 （38，19）** -其他 numeric 或 decimal 数据类型不被考虑。  
   
-    -   **varchar （8000)**， **varchar （max)**， **nvarchar （4000)**，和**nvarchar (max)** -其他字符串数据类型 (如**文本**， **char （8000)**， **nvarchar (30)**等) 不被考虑。  
+    -   **varchar （8000)**， **varchar （max)**， **nvarchar （4000)**，和**nvarchar (max)** -其他字符串数据类型 (如**文本**， **char （8000)**， **nvarchar (30)** 等) 不被考虑。  
   
-    -   **varbinary （8000)**和**varbinary （max)** -其他二进制数据类型不被视为 (如**映像**， **binary(8000)**， **varbinary(30)**等。)。  
+    -   **varbinary （8000)** 和**varbinary （max)** -其他二进制数据类型不被视为 (如**映像**， **binary(8000)**， **varbinary(30)** 等。)。  
   
     -   **日期**， **time(7)**， **smalldatetime**， **datetime**， **datetime2 （7)**， **datetimeoffset(7)** -其他日期和时间类型，如**time(4)**，不被考虑。  
   
@@ -239,7 +238,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      只有在每种数据类型之间的隐式转换次数相同（按照规则 1）并且某种数据类型具有最高优先级时，此规则才适用。 如果没有隐式转换，数据类型推断将失败并发生错误。 例如在查询`SELECT @p FROM t`，数据类型推理失败，因为任何数据类型设置为@p是很好。 例如，没有隐式转换从**int**到**xml**。  
   
-3.  如果两个类似的数据类型将在规则 1，例如**varchar （8000)**和**varchar （max)**、 越小数据类型 (**varchar （8000)**) 选择。 同一原则适用于**nvarchar**和**varbinary**数据类型。  
+3.  如果两个类似的数据类型将在规则 1，例如**varchar （8000)** 和**varchar （max)**、 越小数据类型 (**varchar （8000)**) 选择。 同一原则适用于**nvarchar**和**varbinary**数据类型。  
   
 4.  就规则 1 而言，类型推断算法倾向于将某些转换视为比其他转换好。 转换从最好到最坏依次为：  
   
@@ -251,7 +250,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  任何其他转换。  
   
- 例如，对于查询`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar （8000)**因为转换 (a) 是最佳选择。 查询`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar （8000)**仍会选择它，因为它会导致类型 (b) 转换中,，因为另一个选项 (如**varchar(4000)**) 将导致类型 (d) 转换。  
+ 例如，对于查询`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar （8000)** 因为转换 (a) 是最佳选择。 查询`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar （8000)** 仍会选择它，因为它会导致类型 (b) 转换中,，因为另一个选项 (如**varchar(4000)**) 将导致类型 (d) 转换。  
   
  作为最后一个示例中，对于查询`SELECT NULL + @p`， **int**为选择@p因为这会导致类型 (c) 转换。  
   

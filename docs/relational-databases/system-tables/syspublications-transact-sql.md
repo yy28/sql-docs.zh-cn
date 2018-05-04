@@ -26,12 +26,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 22a669d1295b7ad2ed057034d847b7e9789131f2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 50eb928934e27057957e0605f3d77e9956238ce4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ ms.lasthandoff: 04/16/2018
 |**allowed_queued_tran**|**bit**|指定是否启用在订阅服务器上对更改进行排队，直到更改可以在发布服务器上应用为止。 如果**1**，订阅服务器上的更改进行排队。|  
 |**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。<br /><br /> **0** = 快照文件已存储在指定的备用位置*alternate_snapshot_folder*。<br /><br /> **1** = 快照文件可以位于默认文件夹。|  
 |**alt_snapshot_folder**|**nvarchar(255)**|指定快照的备用文件夹的位置。|  
-|**pre_snapshot_script**|**nvarchar(255)**|指定指向的指针**.sql**文件位置。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
-|**post_snapshot_script**|**nvarchar(255)**|指定指向的指针**.sql**文件位置。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
+|**pre_snapshot_script**|**nvarchar(255)**|指定指向的指针 **.sql**文件位置。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
+|**post_snapshot_script**|**nvarchar(255)**|指定指向的指针 **.sql**文件位置。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
 |**compress_snapshot**|**bit**|指定写入到快照*alt_snapshot_folder*位置是压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。**1**意味着将压缩的快照。|  
 |**ftp_address**|**sysname**|分发服务器的 FTP 服务的网络地址。 指定发布快照文件所在的位置以供分发代理拾取。|  
 |**ftp_port**|**int**|分发服务器的 FTP 服务的端口号。 指定的发布快照文件所在的位置来选取的分发代理|  
@@ -87,6 +86,6 @@ ms.lasthandoff: 04/16/2018
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

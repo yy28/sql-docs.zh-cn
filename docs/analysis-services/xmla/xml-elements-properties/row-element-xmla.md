@@ -29,17 +29,17 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e28026dda3ddb43e1ed43ac427851b8fa4ff773c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8e295bb3faddcc9e012e8d928e6a1095f1982907
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含的数据的单个行[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)包含返回的表格数据元素[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含的数据的单个行[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)包含返回的表格数据元素[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```xml  
   
@@ -52,10 +52,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|无|  
+|默认值|无|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |父元素|[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)(使用[行集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)数据类型)|  
 |子元素|一个或多个列元素。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  返回每个行**根**包含表格数据元素都有一个相应**行**元素。 每个列中的**根**元素表示由单独的 XML 元素。 为列的值**行**元素是由 XML 元素，包含的数据和列的名称对应于 XML 元素的名称。  
   
  有两种方法可表示行中的列的空值：  
@@ -101,9 +101,9 @@ ms.lasthandoff: 01/08/2018
 </row>  
 ```  
   
- 有关详细信息列命名和表格数据的架构信息，请参阅[行集数据类型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ 有关详细信息列命名和表格数据的架构信息，请参阅[行集数据类型 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

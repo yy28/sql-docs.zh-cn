@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>语句转换
 ODBC 语句具有以下状态。  
@@ -330,7 +329,7 @@ ODBC 语句具有以下状态。
   
  [1] 该行显示转换时*选项*已 SQL_CLOSE。  
   
- [2] 该行显示转换时*选项*SQL_UNBIND 或 SQL_RESET_PARAMS。 如果*选项*自变量为 SQL_DROP 和基础驱动程序是 ODBC 3*.x*驱动程序，驱动程序管理器映射此对的调用**SQLFreeHandle**与*HandleType*设置为 SQL_HANDLE_STMT。 有关详细信息，请参阅有关的转换表[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ [2] 该行显示转换时*选项*SQL_UNBIND 或 SQL_RESET_PARAMS。 如果*选项*自变量为 SQL_DROP 和基础驱动程序是 ODBC 3 *.x*驱动程序，驱动程序管理器映射此对的调用**SQLFreeHandle**与*HandleType*设置为 SQL_HANDLE_STMT。 有关详细信息，请参阅有关的转换表[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

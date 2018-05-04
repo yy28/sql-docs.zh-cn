@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa56e9d1827b5a4335afb94fc8e69085e662009d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: da784f2af905aeeab914e4a2365978b1cdbec37c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactions-odbc"></a>ODBC 事务
 A*事务*是工作的单元，都将作为一个原子操作; 也就是说，此操作成功，要么作为一个整体失败。 例如，考虑将资金从一个银行帐户转移到另一个。 这涉及到两个步骤： 从第一个帐户中取出 money 和存储在第二个。 很重要，这两个步骤都成功;不是可接受的一个步骤，若要成功执行，另一个失败。 支持事务的数据库就能够保证这一点。  

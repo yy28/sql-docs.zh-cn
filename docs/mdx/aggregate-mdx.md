@@ -22,12 +22,11 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c3f885ecf4b30e573ba7f0140ad48c69c744d9db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果指定了一组空元组或一个空集，则此函数返回一个空值。  
   
  下表描述了如何**聚合**函数的行为与不同的聚合函数。  
@@ -136,15 +135,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [PeriodsToDate &#40;MDX &#41;](../mdx/periodstodate-mdx.md)   
- [子级 &#40;MDX &#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX &#41;](../mdx/hierarchize-mdx.md)   
- [计数 &#40;集 &#41;&#40;MDX &#41;](../mdx/count-set-mdx.md)   
- [筛选器 &#40;MDX &#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [属性 &#40;MDX &#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX &#41;](../mdx/prevmember-mdx.md)   
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [子级&#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Hierarchize & #40;MDX & #41;](../mdx/hierarchize-mdx.md)   
+ [计数 & #40;集 & #41;& #40;MDX & #41;](../mdx/count-set-mdx.md)   
+ [筛选器 & #40;MDX & #41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40;MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40;MDX & #41;](../mdx/drilldownlevel-mdx.md)   
+ [属性 & #40;MDX & #41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

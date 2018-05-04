@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41ed0af53844edfe55203e8310ce326fb2c4e2b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函数
 **一致性**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLFreeHandle**释放与特定的环境、 连接、 语句或描述符句柄关联的资源。  
   
 > [!NOTE]  
->  此函数是释放句柄的泛型函数。 它将替换 ODBC 2.0 函数**SQLFreeConnect** （适用于释放连接句柄） 和**SQLFreeEnv** （适用于释放环境句柄）。 **SQLFreeConnect**和**SQLFreeEnv**已弃用 ODBC 3 中*.x*。 **SQLFreeHandle**还将替换 ODBC 2.0 函数**SQLFreeStmt** (与 SQL_DROP*选项*) 用于释放语句句柄。 有关详细信息，请参阅"注释"。 有关什么驱动程序管理器时，将映射此函数可对 ODBC 3*.x*应用程序使用 ODBC 2*.x*驱动程序，请参阅[映射用于向后的替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  此函数是释放句柄的泛型函数。 它将替换 ODBC 2.0 函数**SQLFreeConnect** （适用于释放连接句柄） 和**SQLFreeEnv** （适用于释放环境句柄）。 **SQLFreeConnect**和**SQLFreeEnv**已弃用 ODBC 3 中 *.x*。 **SQLFreeHandle**还将替换 ODBC 2.0 函数**SQLFreeStmt** (与 SQL_DROP*选项*) 用于释放语句句柄。 有关详细信息，请参阅"注释"。 有关什么驱动程序管理器时，将映射此函数可对 ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序，请参阅[映射用于向后的替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -90,7 +89,7 @@ SQLRETURN SQLFreeHandle(
 |HY017|自动分配的描述符句柄的使用无效。|(DM)*处理*参数已设置为自动分配的描述符句柄。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|连接超时过期|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) *HandleType*参数 SQL_HANDLE_DESC，且该驱动程序为 ODBC 2*.x*驱动程序。<br /><br /> (DM) *HandleType*参数 SQL_HANDLE_STMT，并且该驱动程序不是有效的 ODBC 驱动程序。|  
+|IM001|驱动程序不支持此函数|(DM) *HandleType*参数 SQL_HANDLE_DESC，且该驱动程序为 ODBC 2 *.x*驱动程序。<br /><br /> (DM) *HandleType*参数 SQL_HANDLE_STMT，并且该驱动程序不是有效的 ODBC 驱动程序。|  
   
 ## <a name="comments"></a>注释  
  **SQLFreeHandle**用于释放句柄的环境、 连接、 语句和描述符，如以下各节中所述。 有关句柄的常规信息，请参阅[句柄](../../../odbc/reference/develop-app/handles.md)。  
@@ -116,7 +115,7 @@ SQLRETURN SQLFreeHandle(
  调用**SQLFreeHandle**与*HandleType*的 SQL_HANDLE_DESC 释放中的描述符句柄*处理*。 调用**SQLFreeHandle**不会释放分配的应用程序可能由一个指针字段 （包括 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 引用的所有任何的内存描述符记录*处理*。 释放句柄时，会释放的驱动程序不是指针字段的字段分配的内存。 在用户分配的描述符句柄将被释放，释放句柄必须与相关联的所有语句将都恢复为其各自自动分配的描述符句柄。  
   
 > [!NOTE]  
->  ODBC 2*.x*驱动程序不支持释放的描述符句柄，就像它们不支持分配的描述符句柄。  
+>  ODBC 2 *.x*驱动程序不支持释放的描述符句柄，就像它们不支持分配的描述符句柄。  
   
  请注意， **SQLDisconnect**自动会删除任何语句和描述符打开连接上。 当应用程序释放语句句柄时，该驱动程序将释放与该句柄关联的所有自动生成的描述符。  
   

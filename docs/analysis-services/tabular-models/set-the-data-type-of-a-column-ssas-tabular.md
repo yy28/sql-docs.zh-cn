@@ -1,31 +1,30 @@
 ---
-title: "设置列的数据类型 |Microsoft 文档"
-ms.custom: 
+title: 设置列的数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: c720f212a51ad9191e4f0bcd727dcee21f71e85e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-data-type-of-a-column"></a>设置列的数据类型 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-导入数据或将数据粘贴到模型时，模型设计器将自动检测并应用数据类型。 在将数据添加到模型后，您可以手动修改列的数据类型以便更改数据的存储方式。 如果只想更改显示数据的格式而不更改其存储方式，可以采用其他方法。  
+  导入数据或将数据粘贴到模型时，模型设计器将自动检测并应用数据类型。 在将数据添加到模型后，您可以手动修改列的数据类型以便更改数据的存储方式。 如果只想更改显示数据的格式而不更改其存储方式，可以采用其他方法。  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>更改列的数据类型或显示格式  
   

@@ -1,40 +1,41 @@
 ---
-title: "命令 (XMLA) |Microsoft 文档"
-ms.custom: 
+title: 命令 (XMLA) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - commands [XML for Analysis]
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3ffde9e4cc1500ee0637225dc76153f3d81b463f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ea5be05775550aa74316f81caff3641caa383683
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---commands"></a>XML 元素的命令
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]此参考部分包含 XML 用于 Analysis (XMLA) 元素，可以在用**命令**期间元素**执行**方法调用。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  此参考部分包含 XML 用于 Analysis (XMLA) 元素，可以在用**命令**期间元素**执行**方法调用。  
   
 |元素|Description|  
 |-------------|-----------------|  
 |[Alter 元素 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|包含所使用的 Analysis Services 脚本语言 (ASSL) 元素[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法，以便更改对象的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
-|[Backup 元素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|备份[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]到备份文件的数据库。|  
+|[Backup 元素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库备份到备份文件。|  
 |[Batch 元素](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|针对 Analysis (XMLA) 命令作为批处理操作，执行一个或多个 XML，按顺序或并行，实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
 |[BeginTransaction 元素](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|利用 Analysis Services 实例，在当前会话上开始一个事务。|  
 |[取消元素](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|取消 Analysis Services 实例上当前正在运行的命令。|  

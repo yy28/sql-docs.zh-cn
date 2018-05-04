@@ -24,12 +24,11 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92ad4bead82c82f1a8d23de15bb2c525b66db74a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 307239ae59df7666f94870088b0cb5a3a64fbe45
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
   
 ## <a name="arguments"></a>参数  
  [@out_token=]'*return_value*  
- 用于绑定会话的令牌。 *return_value*是**varchar(255)**无默认值。  
+ 用于绑定会话的令牌。 *return_value*是**varchar(255)** 无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  InclusionThresholdSetting  

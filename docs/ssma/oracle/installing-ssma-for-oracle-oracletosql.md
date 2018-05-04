@@ -8,21 +8,19 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: On Demand
-ms.openlocfilehash: 2fa3db2f91e81492a948656af8133825e7f18920
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: de3516a1a24564bc5fb2df26ddf344bb33a6a4f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>安装适用于 Oracle (OracleToSQL) SSMA
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 适用于 Oracle 包含的客户端应用程序用于执行迁移到的 Oracle 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和 Azure SQL 数据库。 它还包含已迁移数据库中支持数据迁移和 Oracle 系统函数的使用的扩展包。  

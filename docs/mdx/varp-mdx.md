@@ -22,17 +22,16 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b149d346c3caba0c573f5e3f85ad6647b2e178b0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5a2d398d7ab26256b7e81e7489676fa4f4beb8e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  返回数值表达式对集求得使用有偏差的总体公式的总体方差 (除以 *n* -1)。  
+  返回数值表达式对集求得使用有偏差的总体公式的总体方差 (除以*n*-1)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,12 +47,12 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **VarP**函数返回指定数值表达式，指定集求得的有偏差方差。  
   
  **VarP**函数使用有偏差的总体公式、 时[Var](../mdx/var-mdx.md)函数使用无偏差的总体公式。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

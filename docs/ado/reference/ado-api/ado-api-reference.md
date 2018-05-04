@@ -1,11 +1,9 @@
 ---
 title: ADO API 参考 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 43cda7d0301c24d45fc92e5273956a10b02e821e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 12e206c96b9a4e8fedc61fac55fcc99089b952f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
 ADO 文档的此部分包含有关每个 ADO 对象、 集合、 属性、 动态属性、 方法、 事件和枚举的主题。 此外，它包含要与 Microsoft Visual c + + 和 Windows Foundation 类 (WFC) 一起使用的 ADO 语法索引的列表。  

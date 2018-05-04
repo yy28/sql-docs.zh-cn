@@ -24,12 +24,11 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 015121ef484dca6791947417e54987733bbbcfcb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 91ee8de84d828daf7ae1540c36e9a74120531e3c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**错误的变量类型 (错误 0x80020008)**|数据类型的[!INCLUDE[tsql](../../includes/tsql-md.md)]作为方法参数不匹配的值传递[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]作为方法参数传递的方法参数或 NULL 值的数据类型。|  
 |**未知的名称 (0x8002006)**|找不到指定对象的指定属性名或方法名。|  
-|**无效的类字符串 (0x800401f3)**|没有将指定的 ProgID 或 CLSID 没有注册为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 OLE 对象。 必须先注册自定义 OLE 自动化服务器，然后它们可以使用实例化**sp_OACreate**。 这可以通过对于进程内 (.dll) 服务器，使用 Regsvr32.exe 实用工具完成或**/REGSERVER**本地 (.exe) 服务器的命令行开关。|  
+|**无效的类字符串 (0x800401f3)**|没有将指定的 ProgID 或 CLSID 没有注册为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 OLE 对象。 必须先注册自定义 OLE 自动化服务器，然后它们可以使用实例化**sp_OACreate**。 这可以通过对于进程内 (.dll) 服务器，使用 Regsvr32.exe 实用工具完成或 **/REGSERVER**本地 (.exe) 服务器的命令行开关。|  
 |**服务器执行失败 (0x80080005)**|指定的 OLE 对象已注册为本地 OLE 服务器（.exe 文件），但无法找到或启动该 .exe 文件。|  
 |**无法找到指定的模块 (0x8007007e)**|指定的 OLE 对象已注册为进程内 OLE 服务器（.dll 文件），但无法找到或半截该 .dll 文件。|  
 |**类型不匹配 (0x80020005)**|用于存储返回的属性值或者方法返回值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量的数据类型与属性或方法返回值的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型不匹配。 或者，要求属性或方法返回值，但该属性或方法未返回值。|  

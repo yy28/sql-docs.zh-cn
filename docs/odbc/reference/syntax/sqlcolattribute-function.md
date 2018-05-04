@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLColAttribute
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 89c813fd57b4f6d41f53b30d2c4b9a74e727ca16
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函数
 **一致性**  
@@ -142,11 +141,11 @@ SQLRETURN SQLColAttribute (
 > [!NOTE]  
 >  中使用的前缀*FieldIdentifier* ODBC 3 中的值。*x*已从该中使用 ODBC 2。*x*。 新的前缀为"SQL_DESC";旧的前缀为"SQL_COLUMN"。  
   
--   如果**#define** ODBC 2 的值。*x* *FieldIdentifier*相同**#define** ODBC 3 的值。*x* *FieldIdentifier*，只需传递函数调用中的值。  
+-   如果 **#define** ODBC 2 的值。*x* *FieldIdentifier*相同 **#define** ODBC 3 的值。*x* *FieldIdentifier*，只需传递函数调用中的值。  
   
--   **#Define** ODBC 2 的值。*x* *FieldIdentifiers* SQL_COLUMN_LENGTH、 SQL_COLUMN_PRECISION 和 SQL_COLUMN_SCALE 是不同于**#define** ODBC 3 的值。*x* *FieldIdentifiers* SQL_DESC_PRECISION、 SQL_DESC_SCALE 和 SQL_DESC_LENGTH。 一个 ODBC 2。*x*驱动程序需要仅支持 ODBC 2。*x*值。 一个 ODBC 3。*x*驱动程序必须支持这三个"SQL_COLUMN"和"SQL_DESC"值*FieldIdentifiers*。 因为精度、 小数位数和长度的定义有所不同 ODBC 3 中，这些值会不同。*x* ODBC 2 中相比。*x*。 有关详细信息，请参阅[列大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
+-   **#Define** ODBC 2 的值。*x* *FieldIdentifiers* SQL_COLUMN_LENGTH、 SQL_COLUMN_PRECISION 和 SQL_COLUMN_SCALE 是不同于 **#define** ODBC 3 的值。*x* *FieldIdentifiers* SQL_DESC_PRECISION、 SQL_DESC_SCALE 和 SQL_DESC_LENGTH。 一个 ODBC 2。*x*驱动程序需要仅支持 ODBC 2。*x*值。 一个 ODBC 3。*x*驱动程序必须支持这三个"SQL_COLUMN"和"SQL_DESC"值*FieldIdentifiers*。 因为精度、 小数位数和长度的定义有所不同 ODBC 3 中，这些值会不同。*x* ODBC 2 中相比。*x*。 有关详细信息，请参阅[列大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
   
--   如果**#define** ODBC 2 的值。*x* *FieldIdentifier*不同于**#define** ODBC 3 的值。*x* *FieldIdentifier*、 一样会出现的计数，名称，并且可以为 NULL 值，函数调用中的值映射到相应的值。 例如，SQL_COLUMN_COUNT 映射到 SQL_DESC_COUNT，和 SQL_DESC_COUNT 映射到 SQL_COLUMN_COUNT，具体取决于映射的方向。  
+-   如果 **#define** ODBC 2 的值。*x* *FieldIdentifier*不同于 **#define** ODBC 3 的值。*x* *FieldIdentifier*、 一样会出现的计数，名称，并且可以为 NULL 值，函数调用中的值映射到相应的值。 例如，SQL_COLUMN_COUNT 映射到 SQL_DESC_COUNT，和 SQL_DESC_COUNT 映射到 SQL_COLUMN_COUNT，具体取决于映射的方向。  
   
 -   如果*FieldIdentifier*是 ODBC 3 中的新值。*x*，为其时 ODBC 2 没有相应的值。*x*，它将不映射时 ODBC 3。*x*对的调用中的应用程序使用它**SQLColAttribute** ODBC 2 中。*x*驱动程序，并调用将返回 SQLSTATE HY091 （描述符字段标识符无效）。  
   

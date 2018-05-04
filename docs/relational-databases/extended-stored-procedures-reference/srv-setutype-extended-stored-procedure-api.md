@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10b68e2d00fe73500c4303076e3cb7b748a91b07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7e715772e9af3f259d2fc97bc636fbbf8ea9e981
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ user_type
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。 如果相应列不存在，则返回 FAIL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  列具有两种数据类型：其实际数据类型及其用户定义数据类型。 用户定义数据类型由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于存储实际的用户定义数据类型的列和（如果有的话）列说明信息，例如，列的为 Null 性和可更新性。  
   
  在使用 srv_describe 定义列后，并且在发送最后一行前，随时都可以调用 srv_setutype 函数。  

@@ -32,14 +32,14 @@ ms.lasthandoff: 04/16/2018
 # <a name="getint-method-sqlserverresultset"></a>getInt 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此当前行中指定的列的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象作为**int** Java 编程语言中。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 int。  
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
-|[getInt (int)](../../../connect/jdbc/reference/getint-method-int-sqlserverresultset.md)|检索此当前行中指定的列索引的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象作为**int** Java 编程语言中。|  
-|[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string-sqlserverresultset.md)|检索此当前行中的指定的列名称的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象作为**int** Java 编程语言中。|  
+|[getInt (int)](../../../connect/jdbc/reference/getint-method-int-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 int。|  
+|[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名的值作为 Java 编程语言中的 int。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

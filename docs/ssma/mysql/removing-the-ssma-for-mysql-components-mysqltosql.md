@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -23,12 +22,11 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a62a3f9a3fdb5e6876cb6ac27d4f9f1fb2500cc5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: ca102048105f75e9788115eafbb5bcd8dc907052
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>为 MySQL 组件 (MySQLToSql) 删除 SSMA
 完成后将数据库迁移到 MySQL 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可能想要卸载 SSMA 组件。 你可以随时卸载客户端组件。 但是，如果你卸载来自的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然后，SSMA 将不再支持迁移到目标数据库 (SQL Server/SQL Azure) 使用服务器端数据迁移引擎从 MySQL 的数据。  

@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -29,12 +28,11 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d3968104ed7e9dec525afa3bd3e0cd7b8dcbb96
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 32029fcc4e3af80cf0c3600468b6209e1241dc94
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>导出访问清单 (AccessToSQL)
 如果有多个访问数据库，并且你不确定要将迁移到哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以将导出的项目中的所有访问数据库的清单。 然后，你可以查看和查询的清单元数据，以确定哪些数据库和要迁移这些数据库中的对象。 此清单，它使你能够快速地查找诸如以下问题的答案：  

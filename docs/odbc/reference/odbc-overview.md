@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d0dff898c7f4aa9819dc80e6bba243010fb1aa2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e1d296b9780d520beb6e5ddd52f60cf27b05fe1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-overview"></a>ODBC 概述
 开放式数据库连接 (ODBC) 是数据库访问被广泛接受的应用程序编程接口 (API)。 它基于从 Open Group 和 ISO/IEC 的数据库 Api 的调用级界面 (CLI) 规范，并使用结构化查询语言 (SQL) 作为其数据库访问语言。  

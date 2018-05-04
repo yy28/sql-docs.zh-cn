@@ -22,27 +22,26 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb0c2586ba5ba25c7a5791e8f1ec9418f9079ec9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX 语句参考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   多维表达式 (MDX) 语句分为三组，如下表中所述。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  
-|[MDX 脚本语句 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)|包含有关 MDX 脚本编写语句的信息，这种语句用于管理 MDX 脚本中的查询上下文、作用域和流控制。|  
-|[MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)|包含有关 MDX 数据定义语句的信息，这种语句用于创建、删除和操作多维对象。|  
-|[MDX 数据操作语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|包含有关 MDX 数据操作语句的信息，这种语句用于检索和操作多维对象中的数据。|  
+|[MDX 脚本语句 & #40;MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)|包含有关 MDX 脚本编写语句的信息，这种语句用于管理 MDX 脚本中的查询上下文、作用域和流控制。|  
+|[MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|包含有关 MDX 数据定义语句的信息，这种语句用于创建、删除和操作多维对象。|  
+|[MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|包含有关 MDX 数据操作语句的信息，这种语句用于检索和操作多维对象中的数据。|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 语言参考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
   
   

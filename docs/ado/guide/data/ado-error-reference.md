@@ -1,11 +1,9 @@
 ---
 title: ADO 错误参考 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e1b20ffe6165688a438f97c2c23a7ac573ad320
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cf0631384cf390752d60e6465372558748880278
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-errors"></a>ADO 错误
 **ErrorValueEnum**常量介绍 ADO 错误值。 有关包括值，这些枚举常量的完整列表请参阅[附录 b: ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将检查的一些更有趣的错误，并解释某些特定情况下可引发，或若要解决此问题的解决方案。 这两个**ErrorValueEnum**列出常量和短正的十进制数。

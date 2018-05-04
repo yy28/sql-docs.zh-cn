@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -22,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 20044ab8bc57f8c943a26457cd165d95afcd077f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d2c2aa317f9d4ff810cba13fbb315ce090997583
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>引用在 Visual Basic 6 应用程序的 ADO 库
 若要将 ADO 库导入一个 Microsoft Visual Basic 6 应用程序，必须在 Visual Basic 项目中设置的引用。  
@@ -36,13 +34,13 @@ ms.lasthandoff: 04/18/2018
   
 1.  创建一个新或打开现有的 Visual Basic 项目。  
   
-2.  单击**项目**菜单项，然后选择**引用...**从下拉列表菜单面板。  
+2.  单击**项目**菜单项，然后选择**引用...** 从下拉列表菜单面板。  
   
-3.  从**可用引用**，选中对应的框**Microsoft ActiveX 数据对象*n.n*库**，其中***n.n***表示最新版本号。 **位置**下面字段应标识为所选*$installDir\msado15.dll*，其中*$installDir*表示在其中的目录的路径的 ADO 库已安装。  
+3.  从**可用引用**，选中对应的框**Microsoft ActiveX 数据对象*n.n*库**，其中***n.n***表示最新版本号。 **位置**下面字段应标识为所选 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目录的路径的 ADO 库已安装。  
   
-4.  如果你想要使用 ADO MD，重复步骤 3 以选择**Microsoft ActiveX 数据对象 （多维） *n.n*库**。 **位置**字段应标识作为此选择*$installDir\msadomd.dll*。  
+4.  如果你想要使用 ADO MD，重复步骤 3 以选择**Microsoft ActiveX 数据对象 （多维） *n.n*库**。 **位置**字段应标识作为此选择 *$installDir\msadomd.dll*。  
   
-5.  如果你想要使用 ADOX，重复步骤 3 以选择**Microsoft ADO 分机*n.n* DDL 和安全**。 **位置**字段应标识作为此选择*$installDir\msadox.dll*。  
+5.  如果你想要使用 ADOX，重复步骤 3 以选择**Microsoft ADO 分机*n.n* DDL 和安全**。 **位置**字段应标识作为此选择 *$installDir\msadox.dll*。  
   
 6.  单击**确定**完成设置引用。  
   

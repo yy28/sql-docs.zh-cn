@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 184061f0637aa5f4f17921623c02886fde1c58e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 432a53228022c2f332758252520f980c3faa5436
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +106,7 @@ srcdata
 ## <a name="returns"></a>返回  
  所描述的列的编号。 第一列为列 1。 如果出现错误，则返回 0。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在首次调用 srv_sendrow 之前，必须为行中的每一列调用一次 srv_describe 函数。 可以按任意顺序描述行的各列。  
   
  若要在发送整个结果集之前更改列行中源数据的位置和长度，请分别使用 srv_setcoldata 和 srv_setcollen。  

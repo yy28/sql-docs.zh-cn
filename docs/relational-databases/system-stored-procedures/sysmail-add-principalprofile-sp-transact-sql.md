@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8811ab095afe55a43b9b018e083d97f51525c2df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 177f6ea8ab1fa62c61b56b8e020fbb8288aad7c5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  数据库用户或角色中的 ID **msdb**关联的数据库。 *principal_id*是**int**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 A *principal_id*的**0**使此配置文件的公共配置文件，向数据库中的所有主体授予访问权限。  
   
  [ **@principal_name** = ] **'***principal_name***'**  
- 数据库用户或角色中的名称**msdb**关联的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 A *principal_name*的**'public'**使此配置文件的公共配置文件，向数据库中的所有主体授予访问权限。  
+ 数据库用户或角色中的名称**msdb**关联的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 A *principal_name*的 **'public'** 使此配置文件的公共配置文件，向数据库中的所有主体授予访问权限。  
   
  [ **@profile_id** =] *profile_id*  
  关联的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  

@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7db184099a58cf2dd6c8395a23a316739d4437a9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 06f3b79b7176d194ba2e17e3fb9dcc1256b43474
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
  解除别名数据类型的默认值绑定时，也同时解除数据类型相同且具有相同默认值的任何列的默认值绑定。 属于该数据类型并且直接绑定默认值的类将不受影响。  
   
 > [!NOTE]  
->  *object_name*可以包含括号**[]**作为分隔标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+>  *object_name*可以包含括号 **[]** 作为分隔标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
  仅在解除别名数据类型的默认值绑定时使用。 *futureonly_flag*是**varchar(15)**，默认值为 NULL。 当*futureonly_flag*是**futureonly**，现有列的数据类型不会丢失指定默认值。  

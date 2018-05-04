@@ -1,11 +1,9 @@
 ---
 title: 调整 APPEND 子句 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-append-clause"></a>形状 APPEND 子句
 形状命令 APPEND 子句将某一列或列追加**记录集**。 通常情况下，这些列即变为章节列，后者是指子**记录集**。  
@@ -43,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  零个或以下一项 (可以忽略*父命令*完全):  
   
--   返回的提供程序命令括在大括号 （"{"）**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
+-   提供程序命令括在大括号 ("{}")，该属性返回**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
   
 -   另一个形状命令嵌入在括号中。  
   
@@ -73,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>注释  
  *child-recordset*  
- -   返回的提供程序命令括在大括号 （"{"）**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
+ -   提供程序命令括在大括号 ("{}")，该属性返回**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
   
 -   另一个形状命令嵌入在括号中。  
   
@@ -97,7 +94,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  指追加到父级的章节列别名。  
   
 > [!NOTE]
->  *"父列*收件人*子列"*子句实际上是一个列表，其中用逗号分隔每个定义的关系  
+>  *"父列*收件人*子列"* 子句实际上是一个列表，其中用逗号分隔每个定义的关系  
   
 > [!NOTE]
 >  子句后追加关键字实际上是一个列表，其中每个子句用逗号分隔，并定义要追加到父级的另一列。  

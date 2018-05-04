@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1fffcda76eba3c0e58c3cc632a14d8701eac0db2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4ee954a44fd6a656f295c3b4fac216a212e6be82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-add-dmx"></a>+ (加) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +46,12 @@ Numeric_Expression + Numeric_Expression
 ## <a name="return-value"></a>返回值  
  与优先级较高的参数具有相同数据类型的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果一个表达式求出的值为空值，该运算符将返回另一个表达式的结果。  
   
 ## <a name="see-also"></a>另请参阅  
- [算术运算符 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [运算符 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [算术运算符&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

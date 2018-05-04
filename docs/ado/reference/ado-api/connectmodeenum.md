@@ -1,11 +1,9 @@
 ---
 title: ConnectModeEnum |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 09209e0d60bb58e9cf27d74828df30c81d852383
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8f35019573f17e49fea3bdec7bfe6afc17b844f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定在中修改数据的可用权限[连接](../../../ado/reference/ado-api/connection-object-ado.md)，打开[记录](../../../ado/reference/ado-api/record-object-ado.md)，或为指定值[模式](../../../ado/reference/ado-api/mode-property-ado.md)属性**记录**和[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 04/18/2018
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|指示只读权限。|  
 |**adModeReadWrite**|3|指示读/写权限。|  
-|**adModeRecursive**|0x400000|与其他结合使用*\*ShareDeny\**值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 传播到所有子记录的当前的共享限制**记录**。 它没有任何影响，如果**记录**没有任何子级。 如果与一起使用，则会生成运行时错误**adModeShareDenyNone**仅。 但是，它可以用于**adModeShareDenyNone**时与其他值组合。 例如，你可以使用"**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
+|**adModeRecursive**|0x400000|与其他结合使用*\*ShareDeny\** 值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 传播到所有子记录的当前的共享限制**记录**。 它没有任何影响，如果**记录**没有任何子级。 如果与一起使用，则会生成运行时错误**adModeShareDenyNone**仅。 但是，它可以用于**adModeShareDenyNone**时与其他值组合。 例如，你可以使用"**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|允许其他人具有任何权限打开的连接。 读取和写入访问权限都不可能向其他用户被拒绝。|  
 |**adModeShareDenyRead**|4|防止其他人打开具有读取权限的连接。|  
 |**adModeShareDenyWrite**|8|防止其他人打开具有写权限的连接。|  
