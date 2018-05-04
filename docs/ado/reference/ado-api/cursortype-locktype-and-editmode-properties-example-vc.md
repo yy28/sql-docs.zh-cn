@@ -1,11 +1,9 @@
 ---
 title: 游标类型、 LockType 和 EditMode 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b5308a04e71a29e6544419ddbe28d1eb8f117e2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0dbb8beebbbe01559954d674c69e93f356f7d632
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>游标类型、 LockType 和 EditMode 属性示例 （VC + +）
 此示例演示如何设置[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性在打开之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各种条件下的属性。 有关运行此过程需要 EditModeOutput 函数。  

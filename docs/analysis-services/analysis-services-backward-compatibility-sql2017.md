@@ -1,9 +1,8 @@
 ---
 title: SQL Server 自 2017 年 Analysis Services 向后兼容性 |Microsoft 文档
-ms.date: 07/11/2017
+ms.date: 04/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,13 +22,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c353b84213516227980763b2a3c7e68d83e78a68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3ce7f9d39c8e07a4e3d002a00343f821b0cbbeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 向后兼容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -48,6 +46,9 @@ A*弃用功能*从在将来版本中，产品会停止但仍支持，并且包�
 |多维|远程链接的度量值组|
 |表格|在 1100年和 1103年兼容性级别的模型|
 |表格|表格对象模型属性： Column.TableDetailPosition，Column.IsDefaultLabel，Column.IsDefaultImage|
+|工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [使用 SQL Server 扩展事件监视 Analysis Services](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
+|工具|跟踪重播 <br />替代功能的 Server Profiler。 没有替代功能。|  
+|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置： Microsoft.SqlServer.Management.XEvent<br />-跟踪读取： Microsoft.SqlServer.XEvent.Linq<br />-   跟踪重播：无|  
 
 
 ## <a name="discontinued-features"></a>停用的功能
@@ -63,9 +64,7 @@ A*停止使用功能*在早期版本中已弃用。 它可能继续将包含在�
 |多维|远程链接的度量值组|  
 |多维|维度写回|  
 |多维|链接的维度|
-|工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [使用 SQL Server 扩展事件监视 Analysis Services](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
-|工具|跟踪重播 <br />替代功能的 Server Profiler。 没有替代功能。|  
-|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置： Microsoft.SqlServer.Management.XEvent<br />-跟踪读取： Microsoft.SqlServer.XEvent.Linq<br />-   跟踪重播：无|  
+
 
 ## <a name="breaking-changes"></a>重大更改
 A*是否重大更改*功能、 数据模型，应用程序代码或将脚本保存到不再函数将导致触发 after 升级到当前的发行版。

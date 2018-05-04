@@ -1,11 +1,9 @@
 ---
 title: NumericScale 和精度属性示例 (VB) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7cd75e2f8ba9497b2faaba34a9a10322fa2e7bce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f1ad5c520771d13760d3592060150c38b48bae38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 代码示例： NumericScale 和精度属性示例 (VB)
 此示例演示[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[精度](../../../ado/reference/adox-api/precision-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。 此代码将显示其值**订单详细信息**表*Northwind*数据库。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: e16641bf77362128b0c00f8a5ae2127503b875b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-programming"></a>数据挖掘编程
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/22/2018
   
 -   **XMLA**  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持 XML Analysis (XMLA) 用作一种协议与客户端应用程序进行通信。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 XML Analysis (XMLA) 用作一种协议与客户端应用程序进行通信。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
   
      由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将 XMLA 用于数据定义、数据操作和数据控制支持，因此您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的可视化工具创建挖掘结构和挖掘模型，然后扩展已使用数据挖掘扩展插件 (DMX) 和 Analysis Services 脚本语言 (ASSL) 脚本创建的数据挖掘对象。  
   
@@ -68,14 +66,14 @@ ms.lasthandoff: 01/22/2018
  [使用 ADOMD.NET 进行开发](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  引入了 ADOMD.NET 客户端和服务器编程对象。  
   
- [使用分析管理对象 &#40; 进行开发AMO &#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [使用分析管理对象 & #40; 进行开发AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  介绍 AMO 编程库。  
   
- [使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [使用 Analysis Services 脚本语言 & #40; 进行开发ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  介绍 XML for Analysis (XMLA) 及其扩展插件。  
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 开发人员文档](../analysis-services/analysis-services-developer-documentation.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../dmx/data-mining-extensions-dmx-reference.md)  
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

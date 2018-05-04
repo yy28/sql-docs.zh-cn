@@ -1,34 +1,32 @@
 ---
-title: "逻辑回归模型查询示例 |Microsoft 文档"
-ms.custom: 
+title: 逻辑回归模型查询示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 086104130f865063739773c1813de3c44ef28bc7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
+  在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
   
  本节介绍如何为基于 Microsoft 逻辑回归算法的模型创建查询。  
   
@@ -197,13 +195,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回指定列的一个预测值或一组值。|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|返回指定列的一个预测值或一组值。|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -214,7 +212,7 @@ NATURAL PREDICTION JOIN
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 逻辑回归算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft 逻辑回归算法技术参考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [逻辑回归模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [第 5 课： 生成神经网络和逻辑回归模型 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [逻辑回归模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [第 5 课： 生成神经网络和逻辑回归模型 & #40; 数据挖掘中级教程 & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

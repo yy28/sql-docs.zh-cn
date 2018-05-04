@@ -1,11 +1,9 @@
 ---
 title: 确保足够的 TempDB 空间 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f71e88ce0d15ac28973850a3af8fd742eea54a18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c86196fdf0320b5f3cb5028cb7d5db484c4da846
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>确保足够的 TempDB 空间
 如果在处理时出现错误[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)需要处理对 Microsoft SQL Server 6.5 的空间的对象，你可能需要增加 TempDB 的大小。 (某些查询需要临时处理空间; 例如，具有 ORDER BY 子句的查询需要排序的**记录集**，这需要一些临时空间。)  
@@ -54,7 +51,7 @@ ms.lasthandoff: 04/18/2018
   
 6.  下**大小**组中，单击**展开**。 图中显示每个物理设备上的可用和已分配空间。 栗色条表示可用空间。  
   
-7.  选择**日志中的设备**，例如主，以显示中的可用大小**大小 (MB)**框。  
+7.  选择**日志中的设备**，例如主，以显示中的可用大小**大小 (MB)** 框。  
   
 8.  单击**现在展开**分配到 TempDB 数据库该空间。  
   

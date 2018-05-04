@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - libraries [ADO]
@@ -20,15 +19,14 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 986367a4ad578c893cb7f9b13fc1272c038f6ae9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9f5bd59675d24810ddef02a790cb3464ede168ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referencing-the-ado-libraries"></a>引用 ADO 库
-ADO 的最新版本被打包为*msado15.dll*。 ADO MD 和 ADOX 的最新版本会打包为*msadom.dll*和*msadox.dll*分别。 默认情况下，在安装这些库*$installDir*，其中*$installDir*代表您的计算机已在其中安装 ADO 库的目录的路径。 若要使用应用程序中的 ADO 库，你必须显式在中引用它们的应用程序项目。  
+ADO 的最新版本被打包为*msado15.dll*。 ADO MD 和 ADOX 的最新版本会打包为*msadom.dll*和*msadox.dll*分别。 默认情况下，在安装这些库 *$installDir*，其中 *$installDir*代表您的计算机已在其中安装 ADO 库的目录的路径。 若要使用应用程序中的 ADO 库，你必须显式在中引用它们的应用程序项目。  
   
  可以采取用来引用 ADO 库的步骤如下：  
   

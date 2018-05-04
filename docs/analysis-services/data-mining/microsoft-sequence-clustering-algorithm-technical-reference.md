@@ -1,16 +1,15 @@
 ---
-title: "Microsoft 顺序分析算法技术参考 |Microsoft 文档"
-ms.custom: 
+title: Microsoft 顺序分析算法技术参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6bf7a1a4cd06dcd3a7f538f80dd0fecec14c23fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Markov 链分析来识别有序序列，并会综合利用此分析结果和聚类分析技术基于模型中的序列和其他属性生成分类。 本主题介绍该算法的实现以及如何自定义算法，最后还对顺序分析和聚类分析模型的特殊要求进行了说明。  
+  Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Markov 链分析来识别有序序列，并会综合利用此分析结果和聚类分析技术基于模型中的序列和其他属性生成分类。 本主题介绍该算法的实现以及如何自定义算法，最后还对顺序分析和聚类分析模型的特殊要求进行了说明。  
   
  有关该算法的详细常规信息，包括如何浏览和查询顺序分析和聚类分析模型，请参阅 [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
   
@@ -143,7 +141,7 @@ Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Mar
   
 ## <a name="remarks"></a>注释  
   
--   将 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数用于序列预测。 有关支持序列预测的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   将 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支持序列预测，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
   
@@ -152,6 +150,6 @@ Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Mar
 ## <a name="see-also"></a>另请参阅  
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [序列聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [序列聚类分析模型 &#40; 挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [序列聚类分析模型 & #40; 挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

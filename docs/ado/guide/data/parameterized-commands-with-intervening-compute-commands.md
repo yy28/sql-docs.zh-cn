@@ -1,11 +1,9 @@
 ---
 title: 参数化命令使用干预计算命令 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8e03709adbc901a8f9f365c291e1809ec48e1ed9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2affa34fd504397b045e100ec8f07232d6dfec7e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>与中间的参数化的命令计算命令
 典型的参数化的形状追加命令具有创建父级的子句**记录集**使用一个查询命令和创建子级的另一个子句**记录集**使用参数化的查询命令-即包含参数占位符的命令 (一个问号"？")。 调整所生成**记录集**具有两个级别，在其中父占用较高级别，且子占用较低的级别。  

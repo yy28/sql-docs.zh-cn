@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dbe8b82f9f82327009875530e7750753705f48e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: df2fb7e55ffbe2694df5c0432bca79c58f524959
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]确定如何唯一名称的层次结构中包含的成员生成[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  确定如何唯一名称的层次结构中包含的成员生成[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*本机*|  
@@ -59,22 +58,22 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*本机*|该实例自动确定成员的唯一名称。|  
 |*NamePath*|该实例将生成由每个级别和成员标题组成的复合名称。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  对应于的父元素**MemberUniqueNameStyle**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.CubeDimension>。  
   
 ## <a name="see-also"></a>另请参阅  
- [多维数据集元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [维度元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [CubeDimension 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)  
+ [多维数据集元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [维度元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [CubeDimension 数据类型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)  
   
   

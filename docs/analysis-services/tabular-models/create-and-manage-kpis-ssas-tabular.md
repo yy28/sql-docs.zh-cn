@@ -1,33 +1,31 @@
 ---
-title: "创建和管理 Kpi |Microsoft 文档"
-ms.custom: 
+title: 创建和管理 Kpi |Microsoft 文档
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b16307f79552529c2afc0c1d298c68a85ff1f2a1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d40b0ee9275beeaaa14759b4128fef0b4608553b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-kpis"></a>创建和管理 Kpi 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本文介绍如何创建、 编辑或删除 KPI （关键绩效指标） 表格模型中。 若要创建一个 KPI，请选择计算结果为该 KPI 的基础值的度量值。 然后使用“关键绩效指标”对话框选择计算结果为某一目标值的第二个度量值或绝对值。 之后可以定义状态阈值，这些状态阈值度量基础度量值和目标度量值之间的性能。  
+  本文介绍如何创建、 编辑或删除 KPI （关键绩效指标） 表格模型中。 若要创建一个 KPI，请选择计算结果为该 KPI 的基础值的度量值。 然后使用“关键绩效指标”对话框选择计算结果为某一目标值的第二个度量值或绝对值。 之后可以定义状态阈值，这些状态阈值度量基础度量值和目标度量值之间的性能。  
   
 ## <a name="tasks"></a>“任务”  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 02/23/2018
 |走向|ALT+T|  
   
 ## <a name="see-also"></a>另请参阅  
- [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [创建和 managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   

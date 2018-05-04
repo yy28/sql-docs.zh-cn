@@ -1,35 +1,33 @@
 ---
-title: "处理要求和注意事项 （数据挖掘） |Microsoft 文档"
-ms.custom: 
+title: 处理要求和注意事项 （数据挖掘） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: 
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 26c7d21cbf5886fab1ce49a571f7ed2814dbe1ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>处理要求和注意事项（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主题介绍了一些处理数据挖掘对象时要记住的技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
+  本主题介绍了一些处理数据挖掘对象时要记住的技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
   
  [针对关系存储区的查询](#bkmk_QueryReqs)  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/15/2018
   
  处理模型时，模型不会从数据源中重新读取数据，而从挖掘结构获取数据摘要。 服务器将使用创建的多维数据集以及缓存的索引和事例数据来创建独立的线程，以便为模型定型。  
   
- 有关支持并行模型处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+ 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支持并行模型处理，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ##  <a name="bkmk_ProcessStructures"></a> 处理挖掘结构  
  可以一起处理所有相关模型的挖掘结构，也可以单独进行处理。 在预期某些模型要用较长时间进行处理并且您想要延迟该操作时，从各模型单独处理挖掘结构可能会很有用。  
@@ -94,8 +92,8 @@ ms.lasthandoff: 02/15/2018
  有关详细信息，请参阅 [导出和导入数据挖掘对象](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [挖掘结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

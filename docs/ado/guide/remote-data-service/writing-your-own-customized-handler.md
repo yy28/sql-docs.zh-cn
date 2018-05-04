@@ -1,11 +1,9 @@
 ---
 title: 编写你自己的自定义处理程序 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2aebf16b3fea3933b1ef9b565b7f76b17d8c2b71
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b780e2027e64f7832fd622e66e1d908696d24b0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>编写你自己的自定义处理程序
 你可能想要编写你自己的处理程序是否的 IIS 服务器，则管理员希望获得的默认的 RDS 支持，但更好地控制用户请求和访问权限。  

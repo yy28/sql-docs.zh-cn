@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: db8918b9f172dc972eb59474c3bc1614d5251c02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2f8fe5f8041f7a807fe0640dee55e9d2534e425
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instanceselection-element-assl"></a>InstanceSelection 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供对客户端应用程序建议如何的项列表的提示应显示，基于预期数量的列表中的项。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供对客户端应用程序建议如何的项列表的提示应显示，基于预期数量的列表中的项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*无*|  
@@ -59,14 +58,14 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此元素的值限定为下列字符串之一：  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|*无*|不显示选择列表。 允许用户直接输入值。|  
+|*InclusionThresholdSetting*|不显示选择列表。 允许用户直接输入值。|  
 |*下拉列表中*|项数很少，足以在下拉列表中显示。|  
 |*列表*|项数太多，不能在下拉列表中显示，但不需要进行筛选。|  
 |*FilteredList*|项数太多，需要用户进行筛选才能显示。|  
@@ -75,6 +74,6 @@ ms.lasthandoff: 01/08/2018
  对应于的允许值为枚举**InstanceSelection**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.InstanceSelection>。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

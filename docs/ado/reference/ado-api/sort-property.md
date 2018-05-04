@@ -1,11 +1,9 @@
 ---
 title: 排序属性 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -28,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a6f1652861f7b057105a198b36ab7bb0e4d98eb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-property"></a>排序属性
 指示在其上的一个或多个字段名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)进行排序，并且每个字段是否以升序或降序进行排序。  

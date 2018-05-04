@@ -1,31 +1,29 @@
 ---
-title: "预测查询 （数据挖掘） |Microsoft 文档"
-ms.custom: 
+title: 预测查询 （数据挖掘） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 28a123a9c3cfd3770ae7c156bc4d2c836d393723
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prediction-queries-data-mining"></a>预测查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-典型数据挖掘项目的目标是使用挖掘模型来进行预测。 例如，您可能希望预测某个服务器群集的预期停机时间量，或者生成一个分数，指示客户群体是否可能会响应广告活动。 若要执行所有这些操作，您需要创建一个预测查询。  
+  典型数据挖掘项目的目标是使用挖掘模型来进行预测。 例如，您可能希望预测某个服务器群集的预期停机时间量，或者生成一个分数，指示客户群体是否可能会响应广告活动。 若要执行所有这些操作，您需要创建一个预测查询。  
   
  就功能而言，SQL Server 中支持不同类型的预测查询，具体取决于查询的输入类型：  
   
@@ -155,7 +153,7 @@ FROM
  如果提供程序无法处理分层的行集，则可以通过在预测查询中使用 FLATTEN 关键字来对结果进行平展处理。 有关详细信息，包括平展行集的示例，请参阅 [SELECT (DMX)](../../dmx/select-dmx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [内容查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [数据定义查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [内容查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [数据定义查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

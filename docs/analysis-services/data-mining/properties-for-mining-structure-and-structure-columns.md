@@ -1,36 +1,34 @@
 ---
-title: "挖掘结构和结构列的属性 |Microsoft 文档"
-ms.custom: 
+title: 挖掘结构和结构列的属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1ec47ef02b2ff18e28d49e8902ec2cf9a499c153
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>挖掘结构和结构列的属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可以使用数据挖掘设计器的 **“挖掘结构”** 选项卡，为挖掘结构及其关联的列和嵌套表设置或更改属性。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
+  可以使用数据挖掘设计器的 **“挖掘结构”** 选项卡，为挖掘结构及其关联的列和嵌套表设置或更改属性。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
   
 > [!NOTE]  
 >  如果更改挖掘结构中的任何属性的值，即使是名称或说明等元数据，也必须首先重新处理该挖掘结构及其模型，然后才能查看或查询模型。  

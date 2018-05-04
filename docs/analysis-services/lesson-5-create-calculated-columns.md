@@ -1,28 +1,27 @@
 ---
-title: "第 6 课： 创建计算的列 |Microsoft 文档"
-ms.custom: 
+title: 第 6 课： 创建计算的列 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 58d361452f134976b7f90ce983b3bc5b7ba28d46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cfa64b41e1de655056dd2d5c8f5d5397e57d54d4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-create-calculated-columns"></a>第 5 课： 创建计算的列
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 学完本课的估计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 之前在本课程中执行任务，你应完成上一课：[第 4 课： 创建关系](../analysis-services/lesson-4-create-relationships.md)。 
   
 ## <a name="create-calculated-columns"></a>创建计算列  

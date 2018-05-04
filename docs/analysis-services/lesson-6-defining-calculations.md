@@ -1,29 +1,27 @@
 ---
-title: "第 6 课： 定义计算 |Microsoft 文档"
-ms.custom: 
+title: 第 6 课： 定义计算 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: baad90c825fe642849b4e799ad2a0c30c2935216
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,11 +60,11 @@ ms.lasthandoff: 02/15/2018
 在此任务中，将了解定义命名集。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 7 课： 定义关键绩效指标 &#40;Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 课： 定义关键绩效指标 & #40;Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 & #40;Adventure Works 教程 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [创建命名的集](../analysis-services/multidimensional-models/create-named-sets.md)  
 [创建计算的成员](../analysis-services/multidimensional-models/create-calculated-members.md)  
   

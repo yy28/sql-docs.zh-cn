@@ -1,16 +1,15 @@
 ---
-title: "提升图 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: 提升图 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 
+caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 46bf1bb6fa5ee2e21a58095c1b705d692fa31a45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-A  *chart* 以图形形式表示与随机推测相比挖掘模型带来的改进，并且根据“提升”  分数度量变化。 通过比较不同模型的提升分数，可以确定最佳的模型。 还可确定模型的预测作用开始变小的点。 例如，通过查看提升图，你可能认识到某种促销活动可能只对 30% 的客户有效，因而使用该数字以限制促销活动的作用域。  
+  A  *chart* 以图形形式表示与随机推测相比挖掘模型带来的改进，并且根据“提升”  分数度量变化。 通过比较不同模型的提升分数，可以确定最佳的模型。 还可确定模型的预测作用开始变小的点。 例如，通过查看提升图，你可能认识到某种促销活动可能只对 30% 的客户有效，因而使用该数字以限制促销活动的作用域。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，提升图可比较多个具有相同预测属性的模型的准确性。 您还可为单个结果（可预测属性的单个值）或所有结果（指定属性的所有值）评估预测的准确性。  
   
@@ -129,6 +127,6 @@ A  *chart* 以图形形式表示与随机推测相比挖掘模型带来的改进
  [返回页首](#bkmk_Top)  
   
 ## <a name="see-also"></a>另请参阅  
- [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

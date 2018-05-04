@@ -1,27 +1,25 @@
 ---
-title: "比较表格和多维解决方案 (SSAS) |Microsoft 文档"
-ms.custom: 
+title: 比较表格和多维解决方案 (SSAS) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 630cd3fe8ee4bf06e8e1f13c3bfab129d1c98cc5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比较表格和多维解决方案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +149,9 @@ ms.lasthandoff: 02/23/2018
   
 -   多维模型数据库可以使用维度和单元格级安全性，使用基于角色的权限。  
 
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿。  
+-   使用 SharePoint 权限在文件级别保护[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿。  
   
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿还原到表格模式服务器。 一旦还原该文件，它被脱离 SharePoint，让你能够使用所有表格建模功能，包括行级别安全性。  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿可还原到表格模式服务器。 一旦还原该文件，它被脱离 SharePoint，让你能够使用所有表格建模功能，包括行级别安全性。  
   
 ##  <a name="bkmk_designer"></a> 设计工具  
  对于需要生成分析模型的用户，数据建模技能和专业技术可能会大不相同。 如果您的解决方案需要考虑工具熟悉程度或用户专业技术，请比较以下模型创建体验。  

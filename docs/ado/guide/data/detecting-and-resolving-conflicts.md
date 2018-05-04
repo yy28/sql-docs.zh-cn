@@ -1,11 +1,9 @@
 ---
 title: 检测和解决冲突 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bb8451f5d4355b521f794501b4a431b02fc2f06
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果你处理的记录集，在即时模式中，则要少得多的并发问题发生的机会。 另一方面，如果你的应用程序使用批处理模式更新，可能有一个不错的概率一个用户将更改的记录，然后再将保存所做的另一个用户编辑同一个记录的更改。 在这种情况下，你需要应用程序，用于正常处理冲突。 它可能是您所希望的最后一个人将更新发送到服务器"wins"。 或者，你可能想要让最新的用户来决定哪种更新应优先通过向他提供两个冲突值之间进行选择。  

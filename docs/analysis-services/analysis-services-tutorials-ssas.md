@@ -1,29 +1,27 @@
 ---
-title: "Analysis Services 教程 |Microsoft 文档"
+title: Analysis Services 教程 |Microsoft 文档
 ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 78b46dfa832faf6496d0b986dce78390fb8af33a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 7a32867f84771fb2ee1c70098affeb4ae4e88d00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-tutorials"></a>Analysis Services 教程
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/20/2018
 [表格建模 （1400年兼容性级别）](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 适用于 Azure Analysis Services 和 SQL Server 自 2017 年 Analysis Services 及更高版本。 本教程提供有关如何通过使用 SQL Server Data Tools (SSDT) 来针对虚构公司 Adventure Works 编写基本的 Analysis Services 表格模型的课程。 
 
-[表格建模 （1200年兼容级别）](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+[表格建模（1200 兼容级别）](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 适用于 Azure Analysis Services 和 SQL Server 2016 Analysis Services 及更高版本。 本教程提供有关如何通过使用 SQL Server Data Tools (SSDT) 来针对虚构公司 Adventure Works 编写基本的 Analysis Services 表格模型的课程。  
   
 [多维建模](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  

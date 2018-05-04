@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87733e70dbfc3621e34c637c8f6b481d999d12a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2e613fc49853e913fa0ed3f6f5696aacb2c583a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvrpcdb-extended-stored-procedure-api"></a>srv_rpcdb（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +57,7 @@ SRV_PROC * srvproc,int *len );
 ## <a name="returns"></a>返回  
  一个 DBCHAR 指针，指向当前远程存储过程的数据库名称部分的以 NULL 值结束的字符串。 如果当前无远程存储过程，则返回 NULL，且 len 参数设置为 -1。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数只返回远程存储过程对象名称的数据库部分。 它不包括所有者、远程存储过程名称和远程存储过程编号的可选说明符。  
   
 > [!IMPORTANT]  

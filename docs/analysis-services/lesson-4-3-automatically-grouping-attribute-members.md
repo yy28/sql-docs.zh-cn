@@ -1,29 +1,27 @@
 ---
-title: "自动对属性成员进行分组 |Microsoft 文档"
-ms.custom: 
+title: 自动对属性成员进行分组 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b97f1c25cc46c0518c8dbf2e924d9ab99da32cd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-自动分组属性成员
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +31,7 @@ ms.lasthandoff: 02/15/2018
 **DiscretizationMethod** 属性可以确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否创建分组，并可确定要执行的分组类型。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行任何分组。 如果启用了自动分组，则可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性的结构自动确定最佳分组方法，也可以选择下面列表中的一个分组算法来指定分组方法：  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建分组范围，以便在各个组之间平均分布所有维度成员。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建分组范围，在各个组之间平均分布所有维度成员。  
   
 **Clusters**  
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 K-Means 聚类分析方法和高斯分布，对输入值执行单一维度聚类分析，以此创建分组。 此选项只对数值列有效。  
@@ -136,7 +134,7 @@ ms.lasthandoff: 02/15/2018
 [隐藏和禁用属性层次结构](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[对属性成员分组 &#40; 离散化 &#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[对属性成员分组 & #40; 离散化 & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

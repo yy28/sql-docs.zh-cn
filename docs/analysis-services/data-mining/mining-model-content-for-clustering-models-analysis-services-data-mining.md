@@ -1,36 +1,34 @@
 ---
-title: "聚类分析模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: 聚类分析模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
 - clustering [Data Mining]
 - mining model content, clustering models
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 998cf40c855f1ac4e0784f140da4a9fc59326772
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>了解聚类分析模型的结构  
  聚类分析模型的结构很简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有分类的平面列表 (NODE_TYPE = 5)。 下图显示了此组织。  
@@ -166,7 +164,7 @@ ms.lasthandoff: 02/15/2018
 >  无论使用哪一个聚类分析方法或参数，模型的结构和内容都保持不变。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  

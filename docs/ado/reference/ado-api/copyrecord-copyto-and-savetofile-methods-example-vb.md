@@ -1,11 +1,9 @@
 ---
 title: CopyRecord、 CopyTo，以及 SaveToFile 方法示例 (VB) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ccdaf87b01a6dd09ced9e94301e73ab9cfeb38db
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1bc60c7059534f7e6e4bfda3c6433c845ef9f296
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、 CopyTo，以及 SaveToFile 方法示例 (VB)
 此示例演示如何创建的文件使用副本[流](../../../ado/reference/ado-api/stream-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。 Internet 发布的 Web 文件夹创建一个副本。 其他属性和方法显示包括[流类型](../../../ado/reference/ado-api/type-property-ado-stream.md)，**打开**， [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)，和[记录打开](../../../ado/reference/ado-api/open-method-ado-record.md)。  

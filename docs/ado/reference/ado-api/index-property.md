@@ -1,11 +1,9 @@
 ---
 title: Index 属性 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b808a65032871bac2b20eb3513dd5bfcd292e55e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-property"></a>索引属性
 指示当前对有效的索引名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 04/18/2018
   
  如果可以设置索引和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性是**adLockPessimistic**或**adLockOptimistic**，然后隐式[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)执行操作。 这将释放的当前和受影响的组。 释放任何现有的筛选器，并且当前行位置更改为重新排序后的第一行**记录集**。  
   
- **索引**结合使用属性[Seek](../../../ado/reference/ado-api/seek-method.md)方法。 如果基础提供程序不支持**索引**属性，因此**Seek**方法，请考虑使用[查找](../../../ado/reference/ado-api/find-method-ado.md)方法相反。 确定是否**记录集**对象支持与索引[支持](../../../ado/reference/ado-api/supports-method.md)**(adIndex)**方法。  
+ **索引**结合使用属性[Seek](../../../ado/reference/ado-api/seek-method.md)方法。 如果基础提供程序不支持**索引**属性，因此**Seek**方法，请考虑使用[查找](../../../ado/reference/ado-api/find-method-ado.md)方法相反。 确定是否**记录集**对象支持与索引[支持](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** 方法。  
   
  内置**索引**属性不相关为动态[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性，尽管它们都应对索引。  
   

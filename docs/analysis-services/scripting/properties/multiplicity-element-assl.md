@@ -1,33 +1,31 @@
 ---
-title: "多重性元素 (ASSL) |Microsoft 文档"
-ms.custom: 
+title: 多重性元素 (ASSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9aa018ac9f692eac5de76743fb2d74c0d9832e56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1bb693999eb5fadbb3456751c06cd75e8cba20da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-指示 RelationshipEnd 中的属性是位于关系的“一”方还是关系的“多”方。  
+  指示 RelationshipEnd 中的属性是位于关系的“一”方还是关系的“多”方。  
   
 ## <a name="syntax"></a>语法  
   

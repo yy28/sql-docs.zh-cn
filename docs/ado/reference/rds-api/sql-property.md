@@ -1,7 +1,6 @@
 ---
 title: SQL 属性 |Microsoft 文档
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 967d1176417a0f8acbdbdfbcea7aad24b804fade
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a5ddbfa6b69f4859f61130e8ec1c9b758c40cf64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-property"></a>SQL 属性
 指示用于检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

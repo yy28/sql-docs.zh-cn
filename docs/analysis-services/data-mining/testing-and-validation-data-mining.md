@@ -1,16 +1,15 @@
 ---
-title: "测试和验证 （数据挖掘） |Microsoft 文档"
-ms.custom: 
+title: 测试和验证 （数据挖掘） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -30,20 +29,19 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: 
+caps.latest.revision: 61
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 454ab96791dad2bfae21ee8e69d397fc9e62a121
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-验证是评估挖掘模型对实际数据执行情况的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
+  验证是评估挖掘模型对实际数据执行情况的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
   
  本节将介绍与模型质量有关的一些基本概念，还将介绍 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中提供的模型验证的策略。 有关模型验证如何适合更大数据挖掘过程的概述，请参阅 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 02/15/2018
   “有用性”包括说明模型是否提供了有用信息的各种指标。 例如，将商店位置与销售额相关联的数据挖掘模型可能既是准确的，也是可靠的，但可能是无用的，因为不能通过在同一位置增加更多商店来推广该结果。 而且，它没有回答为什么某些位置销售额较高这一基本商业问题。 您可能还会发现，如果模型基于数据中的交叉关联，它看起来是成功，但实际上没有意义。  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>用于测试和验证挖掘模型的的工具  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持多种验证方法。  
+ 对于支持数据挖掘测试方法的所有阶段的数据挖掘解决方案，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持多种验证方法。  
   
 -   将数据分区为测试集和定型集  
   
@@ -93,13 +91,13 @@ ms.lasthandoff: 02/15/2018
 |主题|链接|  
 |------------|-----------|  
 |了解如何使用向导或 DMX 命令设置测试数据集|[定型集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|了解提供的准确性图表类型。|[提升图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|了解提供的准确性图表类型。|[提升图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   
- [测试和验证任务和操作指南 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

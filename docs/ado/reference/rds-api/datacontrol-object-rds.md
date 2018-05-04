@@ -1,11 +1,9 @@
 ---
 title: DataControl 对象 (RDS) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f8784dcbaa65a755a6469edaceb58288ab1e9c25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 对象 (RDS)
 将绑定数据查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到一个或多个控件 （例如，文本框中，网格控件或组合框） 以显示**记录集**在网页上的数据。  

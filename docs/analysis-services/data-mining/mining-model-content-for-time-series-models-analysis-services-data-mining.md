@@ -1,35 +1,33 @@
 ---
-title: "时序模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: 时序模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ba4dba10f9c576acd04f314437289f88ff08e795
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
+  所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
   
  有关适用于所有模型类型的一般挖掘模型内容的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
@@ -314,7 +312,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> 了解 ARIMA 树  
  ARIMA 模型中的每个结构都对应一个“  周期”或“ 周期性结构”。 周期性结构指数据在整个数据序列中重复的模式。 该模式在统计限度内允许发生微小变动。 周期根据定型数据中使用的默认时间单位进行测量。 例如，如果定型数据提供日销售数据，则默认时间单位为一天，且所有周期性结构均定义为指定的天数。  
   
- 该算法检测到的每个周期均获取其各自的结构节点。 例如，如果正在分析日销售数据，则模型可能会检测到表示周的周期性结构。 在本例中，该算法将在完成的模型中创建两个周期性结构：一个用于默认的日周期，用 \{1\} 表示，另一个用于周，用 \{7\} 表示。  
+ 该算法检测到的每个周期均获取其各自的结构节点。 例如，如果正在分析日销售数据，则模型可能会检测到表示周的周期性结构。 在本例中，该算法将在完成的模型中创建两个周期性结构：一个用于默认的日周期，用 {1} 表示，另一个用于周，用 {7} 表示。  
   
  例如，以下查询将从挖掘模型返回所有 ARIMA 结构。  
   
@@ -378,7 +376,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>ARIMA 的时序公式  
  若要查看各个 ARIMA 节点的完整公式，建议使用 **Microsoft 时序查看器** 的 [“挖掘图例”](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)，由此可以查看已采用一致格式构成的公式的自动回归阶数、移动平均值和其他元素。  
   
--   [查看时序公式模型 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [查看时序公式模型 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  本节将给出示例公式并解释基本术语。  
   
@@ -389,7 +387,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 `ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889`  
   
- 该公式采用长 ARIMA 格式，其中包括系数和截距的值。 该公式的缩写为 {1,0,7}，其中 1 表示将时间划分的段数，0 表示项差分阶数，7 表示系数个数。  
+ 该公式采用长 ARIMA 格式，其中包括系数和截距的值。 此公式的短格式将{1,0,7}，其中 1 表示句点作为时间段的计数，0 表示术语差分阶，，7 指示个数的系数。  
   
 > [!NOTE]  
 >  由 Analysis Services 计算得出的常量用于计算方差，但在用户界面中的任何位置均不显示该常量本身。 不过，如果选择 **“图表”** 视图中的 **“显示偏差”** ，则可以查看序列中任意一点的方差，该方差是此常量的函数。 各数据序列的工具提示显示特定预测点的方差。  
@@ -444,7 +442,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  由于 ARTXP 树的每个拆分的信息均位于该树中的不同位置，因此可能很难从 ARTXP 树中检索信息。 因而对于 ARTXP 模型，必须获取公式的各个部分，然后进行些许处理来重组完整的公式。 相比之下，从 ARIMA 模型检索公式要容易一些，原因是从 ARIMA 树的任何位置均可获取该公式。 有关如何创建检索该信息的查询的信息，请参阅 [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

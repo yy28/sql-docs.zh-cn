@@ -1,11 +1,9 @@
 ---
 title: 方法签名的示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4903c7c0da90f13546df67481ef5733b742905c7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 73d8d3fb5c759299306051579153185a0c016ad3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nextrecordset-method-example-vc"></a>方法签名的示例 （VC + +）
 此示例使用[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法来查看数据，在记录集中使用的三个单独组成的复合命令语句**选择**语句。  

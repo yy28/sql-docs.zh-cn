@@ -1,35 +1,33 @@
 ---
-title: "筛选器中关联的规则规则模型 |Microsoft 文档"
-ms.custom: 
+title: 筛选器中关联的规则规则模型 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8627d46cc0d919ecf41c7ad5c202d13921cd77df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0607c02563babab34f62f784245492fde2e63385
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以将筛选与关联模型一起使用来限制结果，使其仅包含您感兴趣的关联。 例如，您可以筛选规则，以便仅显示包含特定产品的规则。  
+  您可以将筛选与关联模型一起使用来限制结果，使其仅包含您感兴趣的关联。 例如，您可以筛选规则，以便仅显示包含特定产品的规则。  
   
  在数据挖掘设计器中，可使用  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则查看器的“规则”选项卡上的控件来筛选所显示的规则。  你还可以创建一个基于模型的查询，只查看包含特定值的项集。  
   
@@ -68,6 +66,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 关联规则查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第 3 课： 生成市场篮方案 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
+ [第 3 课： 生成市场篮方案 & #40; 数据挖掘中级教程 & #41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

@@ -1,11 +1,9 @@
 ---
 title: CacheSize 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f8728b3c1813a2a2eca85f9f20bcc19f83b69b3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 38d128a5b0eb9ace256ae87e8ab30505ff161c97
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 属性示例 （VC + +）
 此示例使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性，以显示的操作的性能差异执行显式超时和没有 30 记录缓存。  

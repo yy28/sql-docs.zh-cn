@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a334ba98f72d6ef645ba38794a0df810417439b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 079b28cc0bb65024ecaafc7178587c1092d182d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +80,7 @@ count
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  客户端请求会导致服务器执行许多命令和返回许多结果集。 对于每个结果集，srv_senddone 必须将结果完成消息返回到客户端。  
   
  count 字段指示受命令影响的行数。 如果 count 字段包含计数，则应在 status 字段中设置 SRV_DONE_COUNT 标志。 客户端通过该设置可区分等于 0 的 count 值和未使用的 count 字段。  

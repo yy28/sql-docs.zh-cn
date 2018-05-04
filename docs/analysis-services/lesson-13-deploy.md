@@ -1,29 +1,27 @@
 ---
-title: "第 14 课： 部署 |Microsoft 文档"
-ms.custom: 
+title: 第 14 课： 部署 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 403d121d7563fbccb36dd08018544d670ec2f549
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-13-deploy"></a>课 13： 部署
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  在**AW Internet 销售属性页**对话框中，在**部署服务器**中**服务器**属性，键入 Azure Analysis Services 服务器的名称或在表格模式下运行的本地服务器实例。 这将是你的模型将部署到的服务器实例。  
 
-    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-部署-部署-服务器的属性](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > 你必须在远程 Analysis Services 实例中的顺序，以便部署到该网站上具有管理员权限。  
@@ -64,14 +62,14 @@ ms.lasthandoff: 02/23/2018
   
     “部署”对话框将出现，并且显示模型中包括的元数据和每个表的部署状态。  
     
-    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
+    ![aas 部署状态](../analysis-services/media/aas-deploy-status.png)
   
 3. 成功完成部署后，继续操作并单击“关闭”。  
   
 ## <a name="conclusion"></a>结语  
 恭喜！ 完创作和部署你的第一个 Analysis Services 表格模型。 本教程已帮助指导您完成了创建表格模型的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户现在还可以连接到模型时使用的报表的客户端应用程序，例如 Microsoft Excel 或 Power BI。  
 
-![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![作为-表格-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>另请参阅  

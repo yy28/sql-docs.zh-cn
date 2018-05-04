@@ -1,28 +1,27 @@
 ---
-title: "第 7 课： 创建度量值 |Microsoft 文档"
-ms.custom: 
+title: 第 7 课： 创建度量值 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e3729aa2c15bf633ce76af5395175dfd07b3e9ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-create-measures"></a>第 6 课： 创建度量值
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 学完本课的估计时间：**30 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 之前在本课程中执行任务，你应完成上一课：[第 5 课： 创建计算列](../analysis-services/lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>创建度量值  
@@ -92,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  通过使用“自动求和”功能，创建和命名下列度量值：  
   
-    |“度量值名称”|“列”|自动求和 (∑)|公式|  
+    |“度量值名称”|列|自动求和 (∑)|公式|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
     |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  

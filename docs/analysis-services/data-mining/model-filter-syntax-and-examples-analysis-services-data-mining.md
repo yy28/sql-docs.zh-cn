@@ -1,36 +1,34 @@
 ---
-title: "模型筛选器语法和示例 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: 模型筛选器语法和示例 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 604ebf923421203002abc9ab64cebc9600897f6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本节提供有关模型筛选器语法的详细信息以及示例表达式。  
+  本节提供有关模型筛选器语法的详细信息以及示例表达式。  
   
  [筛选器语法](#bkmk_Syntax)  
   
@@ -319,7 +317,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>另请参阅  
- [为挖掘模型 &#40; 筛选器Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [为挖掘模型 & #40; 筛选器Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [测试和验证 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

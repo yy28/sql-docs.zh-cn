@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
@@ -18,26 +17,26 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5907b147aa4e06adfadaa2b56820088846d3fdd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4f558e19ded6fa97f195f19b72c3db4810cf7ac7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-overview-data-mining"></a>安全性概述（数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]保护的过程[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]发生在多个级别。 您必须保护每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其数据源，以确保只有经过授权的用户具有所选维度、挖掘模型以及数据源的读或读/写权限。 您还必须保护基础数据源以防止未经授权的用户恶意破坏敏感商业信息。 以下主题说明了保护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的过程。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  可以在多个级别对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行保护。 您必须保护每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其数据源，以确保只有经过授权的用户具有所选维度、挖掘模型以及数据源的读或读/写权限。 您还必须保护基础数据源以防止未经授权的用户恶意破坏敏感商业信息。 以下主题说明了保护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的过程。  
   
 ##  <a name="bkmk_Architecture"></a> 安全体系结构  
  查看以下资源以了解 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的基本安全体系结构，包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证来对用户访问进行身份验证的。  
   
--   [安全角色（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [安全角色 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [安全属性](../../analysis-services/server-properties/security-properties.md)  
   
--   [配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [配置服务帐户 & #40;Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授权访问对象和操作 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> 为 Analysis Services 配置登录帐户  
  您必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 选择相应的登录帐户，并为该帐户指定权限。 同时，还必须确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登录帐户只拥有执行必要任务所需的必要权限，其中包括基础数据源的相应权限。  
@@ -62,6 +61,6 @@ ms.lasthandoff: 01/08/2018
  如果使用 Integration Services 包清理数据、更新挖掘模型或进行预测，则必须确保 Integration Services 服务拥有存储有模型的数据库的相应权限，以及源数据的相应权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [角色和权限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [角色和权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

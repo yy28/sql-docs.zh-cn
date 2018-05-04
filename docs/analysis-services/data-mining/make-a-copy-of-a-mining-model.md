@@ -1,36 +1,34 @@
 ---
-title: "创建挖掘模型的副本 |Microsoft 文档"
-ms.custom: 
+title: 创建挖掘模型的副本 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], how-to topics
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8646d2de65b9dd2bd9fa0272a33b2cd4a5f0737
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c4ca5bbf6a6209f1f3f926b05401217737a7c0c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在要快速创建基于相同数据的多个挖掘模型时，创建挖掘模型的副本将很有用。 在您复制模型后，可以通过更改参数或添加筛选器，编辑新副本。  
+  在要快速创建基于相同数据的多个挖掘模型时，创建挖掘模型的副本将很有用。 在您复制模型后，可以通过更改参数或添加筛选器，编辑新副本。  
   
  例如，如果你有一个链接到购买表的 Customers 表，则可以创建副本以便针对各个客户人口统计学指标生成单独的挖掘模型，并且对年龄或区域之类的属性进行筛选。  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 02/15/2018
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [为挖掘模型 &#40; 筛选器Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [为挖掘模型 & #40; 筛选器Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

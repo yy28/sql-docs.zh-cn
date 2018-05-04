@@ -1,11 +1,9 @@
 ---
 title: 视图追加方法示例 (VB) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3513431ecfcd9539e2e5e4eb1e1dad7edecd114
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7ebc01d7267771811a191e056eb576c1b843fe7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-append-method-example-vb"></a>视图追加方法示例 (VB)
 下面的代码演示如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[视图](../../../ado/reference/adox-api/views-collection-adox.md)集合[追加](../../../ado/reference/adox-api/append-method-adox-views.md)方法在基础数据源中创建新视图。  

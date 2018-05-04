@@ -1,29 +1,27 @@
 ---
-title: "定义未知的成员和 Null 处理属性 |Microsoft 文档"
-ms.custom: 
+title: 定义未知的成员和 Null 处理属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5d59f09c5f227f684103434ae4371d4b41379482
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lesson 4-7-定义未知的成员和 Null 处理属性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +81,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  在 **DimProductSubcategory (dbo)** 表被默认选定为最新添加的表的情况下，再次单击“添加相关表”。  
   
-    **DimProductCategory (dbo)**表即被添加到“包含的对象”列表中。  
+    **DimProductCategory (dbo)** 表即被添加到“包含的对象”列表中。  
   
 4.  单击 **“确定”**。  
   

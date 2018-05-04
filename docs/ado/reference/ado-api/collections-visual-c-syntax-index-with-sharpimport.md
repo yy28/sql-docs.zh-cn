@@ -1,11 +1,9 @@
 ---
 title: '集合 （Visual c + + 语法索引与 #import） |Microsoft 文档'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,12 +23,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9495051ca7a4035eb32d1376eb0fe4dae6ad98a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 92ffc11b2011ff5f37aee25266d0f229b1dfd617
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合 （Visual c + + 语法索引与 #import）
 它是有助于你了解集合继承某些常见的方法和属性。  

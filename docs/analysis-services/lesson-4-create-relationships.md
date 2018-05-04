@@ -1,37 +1,36 @@
 ---
-title: "第 5 课： 创建关系 |Microsoft 文档"
-ms.custom: 
+title: 第 5 课： 创建关系 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 318b583cc92dcd70c75f0eb04be262a82ecf7d1d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2d80999c474fceeb199d812cd2f2112e9c4f360
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-create-relationships"></a>第 4 课： 创建关系
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课程将验证导入数据时自动创建的关系，并添加新不同的表之间的关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，DimProduct 表和 DimProductSubcategory 表基于每个产品属于某个子类别的事实具有某种关系。 若要了解详细信息，请参阅[关系](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
   
-学完本课的估计时间： **10 分钟**  
+学完本课的估计时间：**10 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 之前在本课程中执行任务，你应完成上一课：[第 3 课： 标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>查看现有关系并添加新关系  

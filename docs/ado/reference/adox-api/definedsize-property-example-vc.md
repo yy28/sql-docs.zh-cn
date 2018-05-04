@@ -1,11 +1,9 @@
 ---
 title: DefinedSize 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 57609bce13555f6a8927c48c7d3d2a39f3169628
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 84e2978c63fb0021399d6f15818fcd5cde966309
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 属性示例 （VC + +）
 此示例演示[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 代码将重新定义的名字列的大小**员工**表*Northwind*数据库。 然后，在名字的值更改[字段](../../../ado/reference/ado-api/field-object.md)的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**显示表。 请注意，默认情况下，名字字段将成为使用空格填充后您重新定义**DefinedSize**属性。  

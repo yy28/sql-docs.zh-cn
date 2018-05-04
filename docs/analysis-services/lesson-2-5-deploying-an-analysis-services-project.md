@@ -1,29 +1,27 @@
 ---
-title: "部署 Analysis Services 项目 |Microsoft 文档"
-ms.custom: 
+title: 部署 Analysis Services 项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c797c7f1acffb41de751a022d9c2e36b7fbaab4b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>课程 2-5-部署 Analysis Services 项目
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 02/15/2018
     查看项目的部署属性。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目配置为将所有项目增量部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，以创建一个与此项目同名的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，并在部署后使用默认处理选项处理这些对象。 有关详细信息，请参阅[配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
     > [!NOTE]  
-    > 如果你想要将项目部署到的命名实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]在本地计算机上，或到远程服务器上的实例时，更改**服务器**到相应的实例的属性名称，如\< *ServerName**>\\<**InstanceName * * >*。  
+    > 如果你想要将项目部署到的命名实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]在本地计算机上，或到远程服务器上的实例时，更改**服务器**到相应的实例的属性名称，如\< *ServerName**>\\<** InstanceName * * >*。  
   
 3.  单击 **“确定”**。  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/15/2018
     > [!NOTE]  
     > 如果您在部署过程中出现错误，则使用 SQL Server Management Studio 检查数据库权限。 您为数据源连接指定的帐户必须在 SQL Server 实例上具有登录名。 双击该登录名可以查看“用户映射”属性。 该帐户必须对 **AdventureWorksDW2012** 数据库具有 db_datareader 权限。  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程项目，然后使用部署脚本将其部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 部署进度将在下列两个窗口中显示：“输出”窗口和“部署进度 – Analysis Services 教程”窗口。  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目，然后使用部署脚本将其部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 部署进度将在下列两个窗口中显示：“输出”窗口和“部署进度 – Analysis Services 教程”窗口。  
   
     打开“输出”窗口，如果需要，可通过单击“视图”菜单上的“输出”实现。 “输出”窗口显示部署的整体进度。 “部署进度 - Analysis Services 教程”窗口显示部署过程中执行的每个步骤的详细信息。 有关详细信息，请参阅[生成 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)和[部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 02/15/2018
 [浏览多维数据集](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[部署 Analysis Services 项目 &#40;SSDT &#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+[部署 Analysis Services 项目 & #40;SSDT & #41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

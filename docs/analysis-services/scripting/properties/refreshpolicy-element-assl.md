@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,17 +26,17 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2f2d8598e588f65799df46a3b5e60c2f027f8861
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1a1a79ff676959c6b6684b937620b011036c793f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refreshpolicy-element-assl"></a>RefreshPolicy 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]频率确定维度或度量值组的动态部分 (所指定的[持久性](../../../analysis-services/scripting/properties/persistence-element-assl.md)元素) 检查的更改。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  频率确定维度或度量值组的动态部分 (所指定的[持久性](../../../analysis-services/scripting/properties/persistence-element-assl.md)元素) 检查的更改。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```xml  
   
@@ -50,28 +49,28 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|请参阅下表。|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
-|祖先或父级|默认值|  
+|祖先或父级|“默认值”|  
 |------------------------|-------------------|  
 |[DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md)|*依据查询*|  
-|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|InclusionThresholdSetting|  
+|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|无|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md)， [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |*依据查询*|每个查询都进行检查，以查看数据源是否已更改。|  
 |*ByInterval*|源数据计算机在指定的间隔内的更改仅检查[RefreshInterval](../../../analysis-services/scripting/properties/refreshinterval-element-assl.md)。|  
@@ -79,7 +78,7 @@ ms.lasthandoff: 01/08/2018
  对应于的允许值为枚举**RefreshPolicy**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.RefreshPolicy>。  
   
 ## <a name="see-also"></a>另请参阅  
- [持久性元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)   
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [持久性元素 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)   
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

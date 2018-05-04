@@ -1,16 +1,15 @@
 ---
-title: "挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: 挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1b7932b90770b7217944beaf1d4cb0d826ee853b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
+  使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
   
  挖掘模型内容包含关于模型的元数据、关于数据的统计信息以及挖掘算法发现的模式。 模型内容可能包括回归公式、规则和项集的定义或权重和其他统计信息，具体取决于所使用的算法。  
   
@@ -117,7 +115,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="node-id-name-caption-and-description"></a>节点 ID、名称、标题和说明  
  任何模型的根节点始终具有值为 0 的唯一 ID (**NODE_UNIQUE_NAME**)。 所有节点 ID 自动由 Analysis Services 分配，无法修改。  
   
- 每个模型的根节点还包含有关模型的一些基本的元数据。 这些元数据包括存储模型的 Analysis Services 数据库 (**MODEL_CATALOG**)、架构 (**MODEL_SCHEMA)**和模型的名称 (**MODEL_NAME)**。 不过，这些信息在模型的所有节点中都是重复的，因此您无需查询根节点来获取这些元数据。  
+ 每个模型的根节点还包含有关模型的一些基本的元数据。 这些元数据包括存储模型的 Analysis Services 数据库 (**MODEL_CATALOG**)、架构 (**MODEL_SCHEMA)** 和模型的名称 (**MODEL_NAME)**。 不过，这些信息在模型的所有节点中都是重复的，因此您无需查询根节点来获取这些元数据。  
   
  除了用作唯一标识符的名称，每个节点还具有一个名称(**NODE_NAME**)。 此名称是算法自动创建的，用于显示目的，不能进行编辑。  
   
@@ -280,14 +278,14 @@ ms.lasthandoff: 02/15/2018
 |算法或模型类型|模型内容|查询挖掘模型|  
 |-----------------------------|-------------------|----------------------------|  
 |关联规则模型|[关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|聚类分析模型|[决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|决策树模型|[决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|聚类分析模型|[决策树模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|决策树模型|[决策树模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |线性回归模型|[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |逻辑回归模型|[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Naïve Bayes 模型|[Naive Bayes 模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 模型查询示例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Naïve Bayes 模型|[Naive Bayes 模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 模型查询示例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |神经网络模型|[神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |顺序分析和聚类分析|[顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|时序模型|[时序模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|时序模型|[时序模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 查看挖掘模型内容的工具  
  当在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览模型时，可以使用 **Microsoft 一般内容树查看器**查看信息， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中均提供了此查看器。  
@@ -310,7 +308,7 @@ SELECT * FROM [<mining model name>].CONTENT
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您还可以通过启动与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并查询系统表来访问数据挖掘架构行集中的信息。 有关详细信息，请参阅[数据挖掘架构行集 (SSA)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft 一般内容树查看器 &#40; 数据挖掘 &#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft 一般内容树查看器 & #40; 数据挖掘 & #41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

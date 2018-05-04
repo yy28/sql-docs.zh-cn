@@ -1,11 +1,9 @@
 ---
 title: ParentCatalog 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9eeb1a844d93d2f20b0f1c8a9e9cbd1767482f5b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 18cb4765f78e7b6b6f303b91cb2b03e105ac2f08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog 属性示例 （VC + +）
 下面的代码演示如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性来访问提供程序特定属性，然后追加到目录的表。 该属性是**AutoIncrement**，这将在 Microsoft Jet 数据库中创建 AutoIncrement 字段。  

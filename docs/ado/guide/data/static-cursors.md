@@ -1,11 +1,9 @@
 ---
 title: 静态游标 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02867f7cfa2595f9d7427023092d1cdd9cae2754
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a837ce0d285f24772be5a88e29c0929e398e6582
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="static-cursors"></a>静态游标
 静态游标总是显示结果集和第一次打开游标时。 具体取决于实现，静态游标是只读或读/写和提供向前和向后滚动。 静态游标通常不会检测到成员资格、 顺序或值的结果集打开光标后所做的更改。 静态游标可能检测其自己的更新、 删除和插入，虽然不需要它们来这样做。  

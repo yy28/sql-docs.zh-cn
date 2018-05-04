@@ -1,11 +1,9 @@
 ---
 title: SortOrder 属性示例 (VB) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4dfd5e5dc612813bd97722a3ce9f7ca49c5044bd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 22c3955934e7e3030251bbb80165edaa6fee159f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
 此示例演示[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到[列](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码中的国家/地区列追加升序索引**员工**表，然后显示记录。 然后代码中的国家/地区列追加降序索引**员工**表并再次显示记录。 显示升序和降序索引之间的差异。  

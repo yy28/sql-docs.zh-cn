@@ -1,16 +1,15 @@
 ---
-title: "Microsoft 关联算法 |Microsoft 文档"
-ms.custom: 
+title: Microsoft 关联算法 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -32,20 +31,19 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 
+caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c4ae2e61ceddb479b0b4378885996a1332b8449f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是常用于建议引擎的算法。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是常用于建议引擎的算法。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。   
   
  关联模型基于包含各事例的标识符及各事例所包含项的标识符的数据集生成。 事例中的一组项称为“项集 ”。 关联模型由一系列项集和说明这些项在事例中如何分组的规则组成。 算法标识的规则可用于根据客户购物车中已有的项来预测客户将来可能购买的产品。 以下关系图显示了项集中的一系列规则。  
   
@@ -104,9 +102,9 @@ ms.lasthandoff: 02/15/2018
 -   支持创建数据挖掘维度。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 关联规则查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [关联模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [关联模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 关联算法技术参考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)  
   

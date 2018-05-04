@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
@@ -18,15 +17,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 66c80a12bb03635d48078f5be284e6718dc33e9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eceb95bd030b67f7bf09403d0c09af49bbcd3249
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>选择挖掘模型和数据挖掘查看器
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以通过使用上一个查看器浏览挖掘模型**挖掘模型查看器**数据挖掘设计器选项卡。 可以轻松切换模型或更改使用的浏览器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  可以使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡中的一种查看器来浏览挖掘模型。 可以轻松切换模型或更改使用的浏览器。  
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型查看器”选项卡上，“挖掘模型”下拉列表框包含当前挖掘结构中的所有挖掘模型的列表。  
   

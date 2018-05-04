@@ -1,28 +1,27 @@
 ---
-title: "Lesson 9 创建透视 |Microsoft 文档"
-ms.custom: 
+title: Lesson 9 创建透视 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 76fc2643bf8d160b38dbcc1009ad37926051407c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 26e175687bcd09c526c6aef54011ad371bb2b535
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-create-perspectives"></a>第 8 课： 创建透视
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 学完本课的估计时间： **5 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 之前在本课程中执行任务，你应完成上一课：[第七课： 创建关键绩效指标](../analysis-services/lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>创建透视  

@@ -1,11 +1,9 @@
 ---
 title: FetchProgress 事件 (ADO) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f84ed48008d5b4589c62ebed2353fbf80f9f3140
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7fea26975fc162f92527f63123eddb95fade8a8e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 事件 (ADO)
 **FetchProgress**定期在较长的异步操作以报告更多的行数当前已经检索到过程中调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

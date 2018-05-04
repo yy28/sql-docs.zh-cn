@@ -1,11 +1,9 @@
 ---
 title: 连接属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc4f312a8c8f9db4322539a61a532ac0803c4c66
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6a062757c4721a0d2f275381e5aafdae6d5d5238
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、 ConnectionTimeout 和状态属性示例 （VC + +）
 此示例演示使用的不同方式[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)以打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)属性设置的连接超时周期，和[状态](../../../ado/reference/ado-api/state-property-ado.md)属性检查连接的状态。 有关运行此过程需要 GetState 函数。  

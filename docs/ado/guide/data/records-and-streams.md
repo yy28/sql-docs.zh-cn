@@ -1,11 +1,9 @@
 ---
 title: 记录和流 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a107f9322758453222982b7f8ad9c1c4a5a15c7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3d083594f9dd54cee0f1c9c70f6fdfe14d32e49a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="records-and-streams"></a>记录和流
 当前提供的 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象作为访问数据源，例如关系数据库中的信息的主要方式。 但是，某些提供程序支持[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)作为可与其操作提供程序的数据的替代或补充对象的对象。 有关详细信息上**记录**行为，请参阅提供程序的文档。  

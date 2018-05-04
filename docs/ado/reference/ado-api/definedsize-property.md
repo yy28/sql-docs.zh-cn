@@ -1,11 +1,9 @@
 ---
 title: DefinedSize 属性 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b72bb15c70e419ae94f9d1d96ab12a374375933c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b84eb083ba442fc214d63b518c8bab0c001aa229
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property"></a>DefinedSize 属性
 指示数据容量[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -35,7 +32,7 @@ ms.lasthandoff: 04/18/2018
 ## <a name="return-value"></a>返回值  
  返回**长**值，该值反映定义的大小的一个域，它取决于字段对象的数据类型; 请参阅[类型](../../../ado/reference/ado-api/type-property-ado.md)有关详细信息。 对于使用固定长度的数据类型的字段，返回值是以字节为单位的数据类型的大小。 对于使用可变长度数据类型的字段，这是以下项之一：  
   
-1.  以字符为单位的字段的最大长度 (有关**以便您可以排除**和**adVarWChar**) 或以字节为单位 (有关**感**，和**adVarNumeric**) 如果该字段的定义的长度。 例如， **adVarChar(5)**字段具有的最大长度为 5。  
+1.  以字符为单位的字段的最大长度 (有关**以便您可以排除**和**adVarWChar**) 或以字节为单位 (有关**感**，和**adVarNumeric**) 如果该字段的定义的长度。 例如， **adVarChar(5)** 字段具有的最大长度为 5。  
   
 2.  以字符为单位的数据类型的最大长度 (有关**每**和**adWChar**) 或以字节为单位 (有关**adBinary**和**adNumeric**) 如果字段没有定义的长度。  
   

@@ -1,29 +1,27 @@
 ---
-title: "定义命名集 |Microsoft 文档"
-ms.custom: 
+title: 定义命名集 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7eda2cde35da166c5c7bd55a0fc8ff27ceaac686
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>课程 6-2-定义命名集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -142,7 +140,7 @@ ms.lasthandoff: 02/15/2018
     ![包含两个名为的筛选器窗格中设置](../analysis-services/media/l6-named-set-05.gif "包含两个名为的筛选器窗格中设置")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 7 课： 定义关键绩效指标 &#40;Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 课： 定义关键绩效指标 & #40;Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [“新建命名集”](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

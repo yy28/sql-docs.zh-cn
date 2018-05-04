@@ -1,30 +1,29 @@
 ---
-title: "将使用某个列指定模型中的回归量 |Microsoft 文档"
-ms.custom: 
+title: 将使用某个列指定模型中的回归量 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3f97137b00c611c1be5671f52d8e23cefb8c7c55
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fdd6f1b70f2ad4e83c94075f07d92fd56602ce7b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定用作回归量的列
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]线性回归模型表示为结合了各种输入数据进行拟合作为紧密尽可能的方式公式的结果的可预测属性的值为估计的回归线。 该算法只接受数值作为输入，并且自动检测提供最佳调整的输入。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  线性回归模型将可预测属性的值表示为结合了各种输入的公式的结果，这样，数据将尽可能接近地适合于估计的回归线。 该算法只接受数值作为输入，并且自动检测提供最佳调整的输入。  
   
  不过，您可以通过将 FORCE_REGRESSOR 参数添加到该模型并指定要使用的回归量，指定要作为回归量包括的列。 您最好在属性有意义的情况下（甚至在结果太小以致模型无法检测到时）或者您要确保属性包括在公式中时执行此操作。  
   
@@ -69,6 +68,6 @@ ms.lasthandoff: 01/08/2018
  [Microsoft 线性回归算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

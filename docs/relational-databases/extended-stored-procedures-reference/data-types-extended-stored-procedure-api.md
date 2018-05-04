@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c7fd67d6b49aef0c3977b544a114d42c22751af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>数据类型（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +50,15 @@ ms.lasthandoff: 04/16/2018
 |SRVDECIMALN|**decimal null**|decimal 数据类型，允许为 null 值。|  
 |SRVFLT4|**real**|4 字节的 real 数据类型。|  
 |SRVFLT8|**float**|8 字节的 float 数据类型。|  
-|SRVFLTN|**real** &#124;**float null**|real 或 float 数据类型，允许为 null 值。|  
-|SRVIMAGE|**image**|image 数据类型。|  
+|SRVFLTN|**real** &#124; **float null**|real 或 float 数据类型，允许为 null 值。|  
+|SRVIMAGE|**图像**|image 数据类型。|  
 |SRVINT1|**tinyint**|1 字节的 tinyint 数据类型。|  
 |SRVINT2|**int**|2 字节的 smallint 数据类型。|  
 |SRVINT4|**int**|4 字节的 int 数据类型。|  
-|SRVINTN|**tinyint** &#124;**smallint** &#124;**int null**|tinyint、smallint 或 int 数据类型，允许为 null 值。|  
+|SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|tinyint、smallint 或 int 数据类型，允许为 null 值。|  
 |SRVMONEY4|**smallmoney**|4 字节的 smallmoney 数据类型。|  
 |SRVMONEY|**money**|8 字节的 money 数据类型。|  
-|SRVMONEYN|**money** &#124;**smallmoney null**|smallmoney 或 money 数据类型，允许为 null 值。|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|smallmoney 或 money 数据类型，允许为 null 值。|  
 |SRVNCHAR|**nchar**|Unicode character 数据类型。|  
 |SRVNTEXT|**ntext**|Unicode text 数据类型。|  
 |SRVNUMERIC|**numeric**|numeric 数据类型。|  

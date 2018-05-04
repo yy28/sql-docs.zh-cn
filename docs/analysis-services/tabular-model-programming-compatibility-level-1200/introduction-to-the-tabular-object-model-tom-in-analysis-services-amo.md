@@ -1,36 +1,34 @@
 ---
-title: "在分析中的表格对象模型 (TOM) 简介服务 AMO |Microsoft 文档"
-ms.custom: 
+title: 在分析中的表格对象模型 (TOM) 简介服务 AMO |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e8b2c640bf61a323aeb3e8a04dadd5fe47626a98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格对象模型 (TOM) 简介
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-表格对象模型 (TOM) 是为支持的兼容性级别 1200年或更高版本生成的表格模型的编程方案创建的 Analysis Services 管理对象 (AMO) 客户端库的扩展。 使用 AMO，如 TOM 提供以编程方式处理管理功能，例如，创建模型、 导入和刷新数据，以及分配角色和权限。  
+  表格对象模型 (TOM) 是为支持的兼容性级别 1200年或更高版本生成的表格模型的编程方案创建的 Analysis Services 管理对象 (AMO) 客户端库的扩展。 使用 AMO，如 TOM 提供以编程方式处理管理功能，例如，创建模型、 导入和刷新数据，以及分配角色和权限。  
   
 TOM 公开本机表格元数据，如**模型**，**表**，**列**，和**关系**对象。  对象模型树中，下面提供的高级视图说明了如何关联组件的各部分。  
   
  TOM 是 AMO 的扩展，因为中新的 Microsoft.AnalysisServices.Tabular.dll 程序集实现表示 SQL Server 2016 中引入的新表格对象的所有类。 AMO 的通用类移到 Microsoft.AnalysisServices.Core 程序集。 你的代码需要引用两个程序集。
-请参阅[安装，请将分发，并引用表格对象模型 &#40;Microsoft.AnalysisServices.Tabular &#41;](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md)有关详细信息。  
+请参阅[安装，请将分发，并引用表格对象模型&#40;Microsoft.AnalysisServices.Tabular&#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md)有关详细信息。  
   
  目前，API 通过.NET framework 是仅适用于托管代码。 若要查看的编程选项，包括脚本和查询语言支持的完整列表请参阅[的兼容性级别 1200年的表格模型编程](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)。  
   
@@ -50,7 +48,7 @@ TOM 是基础 AMO 基础结构，其中还可容纳多维和表格数据库兼�
 这具有一些实际含义。
 所有，当你管理未在表格元数据中指定的对象的第一个 (如**服务器**或**数据库**)，你将需要利用现有的 AMO 堆栈的描述这些对象的部分。 旧的 API 以及为提供的对象状态服务器，或保存到服务器时在发现的精确说明的主版本号和次对象的概念。 Microsoft.AnalysisServices 命名空间下的 MajorObject 类公开的方法**刷新**和**更新**。 次要对象仅刷新或保存通过主要对象包含它们。
 
-与此相反，当你管理属于表格元数据的对象 (如**模型**或**表**)，利用全新的表格堆栈。 在此堆栈中，更新都细化，这意味着每个元数据对象 (派生自**MetadataObject** Microsoft.AnalysisServices.Tabular 命名空间下的类) 可以单独保存到服务器。 通常情况下，你将发现整个**模型**，然后对其下的各个元数据对象进行更改 (如**表**或**列**)，然后调用**Model.SaveChanges()**方法 （这理解细粒度级别所做的更改），将命令发送到服务器以更新这些更改的对象。
+与此相反，当你管理属于表格元数据的对象 (如**模型**或**表**)，利用全新的表格堆栈。 在此堆栈中，更新都细化，这意味着每个元数据对象 (派生自**MetadataObject** Microsoft.AnalysisServices.Tabular 命名空间下的类) 可以单独保存到服务器。 通常情况下，你将发现整个**模型**，然后对其下的各个元数据对象进行更改 (如**表**或**列**)，然后调用**Model.SaveChanges()** 方法 （这理解细粒度级别所做的更改），将命令发送到服务器以更新这些更改的对象。
 
 ### <a name="tom-and-xmla"></a>TOM 和 XMLA
 

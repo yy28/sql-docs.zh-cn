@@ -1,11 +1,9 @@
 ---
 title: CubeDefs 集合 (ADO MD) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac6d7446b4c79d09dab8b7819dd84228c165d08b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8d5cafccd076687e832cceed21c34f561a72c7e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs 集合 (ADO MD)
 包含[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)表示多维目录中的多维数据集对象。  

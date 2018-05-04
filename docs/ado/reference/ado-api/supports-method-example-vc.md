@@ -1,11 +1,9 @@
 ---
 title: 支持方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 177a85a4bec52bb359d05bc29a2c0cad7b360994
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8e89dde5395bcf58a5958effceb26ae4d07bde0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supports-method-example-vc"></a>支持方法示例 （VC + +）
 此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法以显示数据集所支持的选项将打开具有不同的游标类型。 若要运行此示例需要 DisplaySupport 函数。  

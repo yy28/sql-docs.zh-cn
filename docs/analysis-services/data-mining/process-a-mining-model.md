@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
@@ -18,15 +17,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b62c751e7d223adc36dc122086951e2fd371a1ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-a-mining-model"></a>处理挖掘模型
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘设计器中的挖掘模型选项卡中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以处理与挖掘结构关联的特定挖掘模型，也可以处理与结构关联的所有模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器的“挖掘模型”选项卡中，您可以处理与挖掘结构关联的特定挖掘模型，也可以处理与结构关联的所有模型。  
   
  可以使用以下工具处理挖掘模型：  
   
@@ -44,13 +43,13 @@ ms.lasthandoff: 01/08/2018
   
      如果更改了挖掘结构，系统将提示您在处理模型之前重新部署结构。 单击 **“是”**。  
   
-3.  在**处理挖掘模型的\<模型 >**对话框中，单击**运行**。  
+3.  在**处理挖掘模型的\<模型 >** 对话框中，单击**运行**。  
   
      此时，将打开 **“处理进度”** 对话框，以显示模型处理的详细信息。  
   
 4.  成功处理完模型之后，在 **“处理进度”** 对话框中，单击 **“关闭”** 。  
   
-5.  单击**关闭**中**处理挖掘模型的\<模型 >**对话框。  
+5.  单击**关闭**中**处理挖掘模型的\<模型 >** 对话框。  
   
  只有挖掘结构和所选挖掘模型被处理。  
   
@@ -60,13 +59,13 @@ ms.lasthandoff: 01/08/2018
   
 2.  如果更改了挖掘结构，系统将提示您在处理模型之前重新部署结构。 单击 **“是”**。  
   
-3.  在**处理挖掘结构\<结构 >**对话框中，单击**运行**。  
+3.  在**处理挖掘结构\<结构 >** 对话框中，单击**运行**。  
   
 4.  此时，将打开 **“处理进度”** 对话框，以显示模型处理的详细信息。  
   
 5.  成功处理完模型之后，在 **“处理进度”** 对话框中，单击 **“关闭”** 。  
   
-6.  单击**关闭**中**处理\<模型 >**对话框。  
+6.  单击**关闭**中**处理\<模型 >** 对话框。  
   
  挖掘结构和所有关联的挖掘模型被处理。  
   

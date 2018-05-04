@@ -1,11 +1,9 @@
 ---
 title: 将参数传递给命名命令 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db51630bf9629920ce91af22fc731f3a5c919fd0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 94f5d5fb25406b581ccd1bdadbaef5934360c7de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="passing-parameters-to-a-named-command"></a>将参数传递给命名命令
 就像该命令的结果作为传递*出*变量命名的命令中，参数来参数化的命令可以被传入的作为*中*命名命令的变量。  

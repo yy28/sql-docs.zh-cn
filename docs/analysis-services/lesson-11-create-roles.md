@@ -1,33 +1,32 @@
 ---
-title: "第 12 课： 创建角色 |Microsoft 文档"
-ms.custom: 
+title: 第 12 课： 创建角色 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 12a11fce82fbb0ec3e75ee9908f07372e5cbb086
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d813970203af8bb6e37ec145c53f13fdfbe75d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-11-create-roles"></a>第 11 课： 创建角色
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色都使用单个权限进行定义：“无”、“读取”、“读取和处理”、“处理”或“管理员”。 可以通过使用角色管理器中创作模型期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 若要了解详细信息，请参阅[角色](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
+在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色都使用单个权限进行定义：“无”、“读取”、“读取和处理”、“处理”或“管理员”。 可以通过使用角色管理器中创作模型期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 若要了解详细信息，请参阅[角色](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
 > [!NOTE]  
 > 创建角色对于完成本教程不是必需的。 默认情况下，您当前登录的帐户对于模型将具有管理员权限。 但是，若要允许在你的组织使用的报表客户端浏览该模型中的其他用户，必须创建至少一个角色具有读取权限并将这些用户添加为成员。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 学完本课的估计时间： **15 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 之前在本课程中执行任务，你应完成上一课：[课 10： 创建分区](../analysis-services/lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>创建角色  

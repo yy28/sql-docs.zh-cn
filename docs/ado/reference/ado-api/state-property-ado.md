@@ -1,11 +1,9 @@
 ---
 title: State 属性 (ADO) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c3f45b4aeb9cd16a2aa166008ac46bf01f5ba9df
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b4e254a4d13f4a210c174e3ef5b8181dd24cefd7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-property-ado"></a>State 属性 (ADO)
 对象的状态是打开还是已关闭，则指示为所有适用的对象。 如果该对象正在执行的异步方法，指示是连接、 执行，还是检索对象的当前状态。  

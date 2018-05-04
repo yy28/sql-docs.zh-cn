@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,19 +28,19 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7225db353c595ad718a29104baaf52c55eae98d0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9faf7b332c48c670a01793a6de2bbf593332edf4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---objects---executeresponse"></a>XML 元素的对象-ExecuteResponse
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]包含返回的实例的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以响应[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含返回的实例的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以响应[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```xml  
   
@@ -52,24 +51,24 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|无|  
+|默认值|无|  
 |基数|1-1：可出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|无|  
 |子元素|[返回](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **ExecuteResponse**元素是在主体中的 SOAP 响应的最顶端元素**执行**方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [DiscoverResponse 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)   
- [对象 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
+ [DiscoverResponse 元素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)   
+ [对象&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   

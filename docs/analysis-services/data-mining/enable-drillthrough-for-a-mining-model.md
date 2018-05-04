@@ -1,34 +1,32 @@
 ---
-title: "为挖掘模型启用钻取 |Microsoft 文档"
-ms.custom: 
+title: 为挖掘模型启用钻取 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - drillthrough [Analysis Services]
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 81778c4f9b2602c8fa49d5b33f8e1725c05122b7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 34666ecda18c3821c3685f2417f8a777c065dcc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>对挖掘模型启用钻取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果为挖掘模型启用了钻取，则可以在浏览模型时检索用于创建模型的事例的详细信息。 若要查看这些信息，则您必须拥有必要的权限，且挖掘结构已经过处理。  
+  如果为挖掘模型启用了钻取，则可以在浏览模型时检索用于创建模型的事例的详细信息。 若要查看这些信息，则您必须拥有必要的权限，且挖掘结构已经过处理。  
   
  **权限** 如果用户要钻取模型数据或结构数据，则该用户必须是具有挖掘模型或挖掘结构的 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 权限的角色成员。 挖掘结构和挖掘模型的钻取权限是分开设置的。  
   
@@ -62,6 +60,6 @@ ms.lasthandoff: 02/15/2018
 4.  在 **“数据集”** 菜单上，选择 **“处理”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [钻取查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [钻取查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

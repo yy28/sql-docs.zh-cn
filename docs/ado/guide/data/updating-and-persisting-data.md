@@ -1,11 +1,9 @@
 ---
 title: 更新和持久化数据 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5331ee16d67159c67c40fcca328b011dfd9a0462
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 40e92067564f56eb7bc30739c0abd0d758a3b9c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-and-persisting-data"></a>更新并将数据保存
 前面几章讨论了如何使用 ADO 来访问数据源中的数据、 如何在数据移动和甚至如何编辑数据。 当然，如果你的应用程序的目的是允许用户对数据进行更改，你将需要了解如何保存这些更改。 您也可以保留**记录集**更改为文件使用**保存**方法，或者可以将发送所做的更改回存储使用的数据源**更新**或**UpdateBatch**方法。  

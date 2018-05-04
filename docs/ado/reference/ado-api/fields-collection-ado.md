@@ -1,11 +1,9 @@
 ---
 title: 字段集合 (ADO) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7a70341a6506ca585afca3adbff9f9e7ad7b2ff3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4eebfb3b3e401585829446872545063448ec87d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fields-collection-ado"></a>字段集合 (ADO)
 包含所有[字段](../../../ado/reference/ado-api/field-object.md)的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  

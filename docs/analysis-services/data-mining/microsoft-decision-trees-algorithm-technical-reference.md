@@ -1,16 +1,15 @@
 ---
-title: "Microsoft 决策树算法技术参考 |Microsoft 文档"
-ms.custom: 
+title: Microsoft 决策树算法技术参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6a7cc31df33ae8af7a57db1a8842bb182b69117c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
   
  本主题说明此算法的实现，介绍如何针对不同的任务自定义算法行为，并提供指向有关决策树模型查询的其他信息的链接。  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 02/15/2018
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持多个参数，这些参数可影响所生成的挖掘模型的性能和准确性。 您还可以对挖掘模型列或挖掘结构列设置建模标志来控制数据的处理方式。  
   
 > [!NOTE]  
->  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍了可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的参数。  
@@ -211,6 +209,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [决策树模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

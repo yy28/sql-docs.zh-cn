@@ -1,29 +1,27 @@
 ---
-title: "第 7 课： 定义关键绩效指标 (Kpi) |Microsoft 文档"
-ms.custom: 
+title: 第 7 课： 定义关键绩效指标 (Kpi) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39ed6ea0106d983c7b70bf2e89e75b57166e7531
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a573414648573702871f50893268f04ce2e89112
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>第 7 课：定义关键绩效指标 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 & #40;Adventure Works 教程 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [多维模型中的关键绩效指标 (KPI)](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
   
   

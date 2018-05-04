@@ -1,35 +1,33 @@
 ---
-title: "SystemGetAccuracyResults (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: SystemGetAccuracyResults (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f01b38270921d26297a587f369b4e5ea13fddc22
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-返回挖掘结构和所有相关模型（不包括聚类分析模型）的交叉验证准确性指标。  
+  返回挖掘结构和所有相关模型（不包括聚类分析模型）的交叉验证准确性指标。  
   
  此存储过程将为作为单个分区的整个数据集返回指标。 若要将数据集分区为交叉部分，并返回每个分区的度量值，请使用 [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
   
@@ -114,7 +112,7 @@ SystemGetAccuracyResults(<mining structure>,
 |AttributeName|可预测列的名称。|  
 |AttributeState|可预测列中的目标值。<br /><br /> 如果此列包含一个值，则只针对指定的状态收集指标。<br /><br /> 如果未指定此值，或为 Null，则针对每个预测最有可能的状态计算指标。|  
 |PartitionIndex|表示结果适用的分区。<br /><br /> 对于此过程，始终为 0。|  
-|PartitionCases|一个整数，指示事例集，基于中的行数*\<数据集 >*参数。|  
+|PartitionCases|一个整数，指示事例集，基于中的行数*\<数据集 >* 参数。|  
 |测试|所执行测试的类型。|  
 |度量值|测试返回的度量值的名称。 每个模型的度量值取决于模型类型以及可预测值的类型。<br /><br /> 有关为每个可预测类型返回的度量值的列表，请参阅[交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。<br /><br /> 有关每个度量值的定义，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。|  
 |“值”|指定的度量值的值。|  
@@ -168,7 +166,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>另请参阅  
  [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

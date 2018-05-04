@@ -1,31 +1,29 @@
 ---
-title: "角色 |Microsoft 文档"
-ms.custom: 
+title: 角色 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d1bb19f3220da7300a7a7329ae55e859bf86334a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-在表格模型中，角色定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
+  在表格模型中，角色定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
   
  对于 SQL Server Analysis Services，角色包含用户成员按 Windows 用户名或由 Windows 组和权限 （读取、 进程、 管理员）。 对于 Azure Analysis Services，用户必须在你的 Azure Active Directory 和用户名和指定组必须通过组织的电子邮件地址或 UPN。 
   

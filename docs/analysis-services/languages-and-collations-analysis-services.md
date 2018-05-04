@@ -1,17 +1,17 @@
 ---
-title: "语言和排序规则 (Analysis Services) |Microsoft 文档"
-ms.custom: 
+title: 语言和排序规则 (Analysis Services) |Microsoft 文档
+ms.custom: ''
 ms.date: 04/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: "测试 Analysis Services"
+keywords:
+- 测试 Analysis Services
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - default languages
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: dbe4ad71a5cf5819e62c39d8b70e0b230b58c19d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -140,7 +139,7 @@ ms.lasthandoff: 01/22/2018
   
 -   更新排序规则后，重新处理分隔和维度。  
   
- 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，你可以修改**\<语言 >**和 **\<CollationName >**设置在 msmdsrv.ini 文件中，指定的语言的 LCID。  
+ 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，你可以修改**\<语言 >** 和 **\<CollationName >** 设置在 msmdsrv.ini 文件中，指定的语言的 LCID。  
   
 1.  在 Management Studio 中，右键单击服务器名 |“属性” | “语言/排序规则”。  
   
@@ -185,7 +184,7 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 的全球化方案](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [全球化提示和最佳实践和 #40;Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [全球化提示和最佳实践和 #40;Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

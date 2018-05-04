@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72dda45efc217f571969bb3354d5feb5bfa02604
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2fa05c2e97c536bde3660811ba29c6c81c1e048d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logfilerollover-element-assl"></a>LogFileRollover 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定的日志记录是否[跟踪](../../../analysis-services/scripting/objects/trace-element-assl.md)输出应将鼠标移到新文件或者应停止时，它是大小最大的日志文件中指定的[LogFileSize](../../../analysis-services/scripting/properties/logfilesize-element-assl.md)为止。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指定的日志记录是否[跟踪](../../../analysis-services/scripting/objects/trace-element-assl.md)输出应将鼠标移到新文件或者应停止时，它是大小最大的日志文件中指定的[LogFileSize](../../../analysis-services/scripting/properties/logfilesize-element-assl.md)为止。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|Boolean|  
 |默认值|False|  
@@ -61,15 +60,15 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[跟踪](../../../analysis-services/scripting/objects/trace-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果值**LogFileRollover**元素设置为 True，则日志文件的大小超过中指定的值时启动新的文件**LogFileSize**元素**跟踪**父元素; 否则为日志记录停止。  
   
  对应于的父元素**LogFileRollover**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>另请参阅  
- [跟踪元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [跟踪元素 & #40;ASSL & #41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

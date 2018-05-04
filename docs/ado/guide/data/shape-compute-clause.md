@@ -1,11 +1,9 @@
 ---
 title: 调整 COMPUTE 子句 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-compute-clause"></a>形状 COMPUTE 子句
 形状 COMPUTE 子句生成父**记录集**，其列包含的参考子**记录集**; 可选其内容是章，新的或计算的列的列或子级上执行聚合函数的结果**记录集**或以前整形**记录集**; 以及从子级的任何列**记录集**中列出可选的 BY 子句。  
@@ -45,7 +42,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  包括以下项之一：  
   
--   在大括号 （"{"） 中返回的查询命令**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
+-   在大括号内的查询命令 ("{}") 返回子**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
   
 -   现有的形状名称**记录集**。  
   

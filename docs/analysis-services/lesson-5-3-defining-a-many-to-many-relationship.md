@@ -1,29 +1,27 @@
 ---
-title: "定义多对多关系 |Microsoft 文档"
-ms.custom: 
+title: 定义多对多关系 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 40bbfb602aadc6e30b58f9f44417b892b4f5b003
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lesson 5-3-定义多对多关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -183,7 +181,7 @@ ms.lasthandoff: 02/15/2018
 [定义度量值组中的维度粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[使用数据源视图设计器 &#40; 中的关系图Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[使用数据源视图设计器 & #40; 中的关系图Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定义多对多关系和多对多关系属性](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

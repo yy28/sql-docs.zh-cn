@@ -1,11 +1,9 @@
 ---
 title: CopyTo 方法 (ADO) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3164fbdffe9bad363a09f6ff7accf8cf6d55d751
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 32e889ea84c02a544ccad53cd9c274c360994bfe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 将复制指定的字符或字节数 (具体取决于[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[流](../../../ado/reference/ado-api/stream-object-ado.md)到另一个**流**对象。  

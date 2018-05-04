@@ -1,33 +1,31 @@
 ---
-title: "处理数据库、 表或分区 (Analysis Services) |Microsoft 文档"
-ms.custom: 
+title: 处理数据库、 表或分区 (Analysis Services) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c789fc9601bd4889585d52dcb6ecfe6365038323
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2fea06b542bc6cece1d67e96e782eb5c56cc3f03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>处理数据库、表或分区 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本主题中的任务说明如何通过使用手动处理表格模型数据库、 表或分区**过程\<对象 >**中的对话框[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+  本主题中的任务说明如何通过使用手动处理表格模型数据库、 表或分区**过程\<对象 >** 中的对话框[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  有关表格模型处理的详细信息，请参阅[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   

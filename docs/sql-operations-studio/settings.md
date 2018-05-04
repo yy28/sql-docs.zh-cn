@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="user-and-workspace-settings"></a>用户和工作区设置
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/26/2018
 
 你也可以打开中的用户和工作区设置**命令控制板**(**Ctrl + Shift + P**) 与**首选项： 打开用户设置**和**首选项： 打开工作区设置**或使用键盘快捷方式 (**Ctrl +**)。
 
-下面的示例禁用在编辑器中的行号，并配置的文本编辑器的大小环绕自动基于行。
+下面的示例禁用在编辑器中的行号，并配置代码行以自动缩进。
 
 ![设置示例](media/settings/sample-settings.png)
 

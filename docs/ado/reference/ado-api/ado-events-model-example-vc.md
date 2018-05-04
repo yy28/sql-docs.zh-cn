@@ -1,11 +1,9 @@
 ---
 title: ADO 事件模型示例 （VC + +） |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,17 +19,16 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 51cd8fc601b8ecb14f680ee7af8d4f3879647985
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ec57df4ce7217579d4b409d3a571a077c376d98e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 （VC + +）
-Visual c + + 部分[ADO 事件实例化语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)常规说明如何实例化 ADO 事件模型。 以下是实例化创建的环境中的事件模型的特定示例**#import**指令。  
+Visual c + + 部分[ADO 事件实例化语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)常规说明如何实例化 ADO 事件模型。 以下是实例化创建的环境中的事件模型的特定示例 **#import**指令。  
   
- 概括介绍使用**adoint.h**作为方法签名的参考。 但是，一般的说明中的一些详细信息作为使用略微**#import**指令：  
+ 概括介绍使用**adoint.h**作为方法签名的参考。 但是，一般的说明中的一些详细信息作为使用略微 **#import**指令：  
   
 -   **#Import**指令解析**typedef**的方法签名数据类型以及到其基本窗体的修饰符。  
   
@@ -45,7 +42,7 @@ Visual c + + 部分[ADO 事件实例化语言](../../../ado/guide/data/ado-event
   
 -   你可能想要代码的 QueryInterface、 AddRef 和发布版更可靠的实现。  
   
--   **__Uuidof()**指令广泛使用，以获取接口 Id。  
+-   **__Uuidof()** 指令广泛使用，以获取接口 Id。  
   
  最后，该示例包含一些工作代码。  
   

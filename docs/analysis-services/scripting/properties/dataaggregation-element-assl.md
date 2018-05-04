@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ca81cc3f60fcdf9c281fc8be8342d0bf945204e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b03efa62817b762f3446b02491cdf01c8b9071fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataaggregation-element-assl"></a>DataAggregation 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]确定实例是否可以聚合持久化的数据或缓存的数据的[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  确定实例是否可以聚合持久化的数据或缓存的数据的[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*DataAndCacheAggregatable*|  
@@ -59,14 +58,14 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[度量值组](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此元素的值限定为下表中的字符串之一。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|*无*|不为此度量值组执行聚合。|  
+|*InclusionThresholdSetting*|不为此度量值组执行聚合。|  
 |*DataAggregatable*|为此度量值组聚合持久化数据。|  
 |*CacheAggregatable*|为此度量值组聚合缓存数据。|  
 |*DataAndCacheAggregatable*|为此度量值组聚合持久化数据和缓存数据。|  
@@ -74,8 +73,8 @@ ms.lasthandoff: 01/08/2018
  对应于的父元素**DataAggregation**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
 ## <a name="see-also"></a>另请参阅  
- [多维数据集元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [维度元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [多维数据集元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [维度元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

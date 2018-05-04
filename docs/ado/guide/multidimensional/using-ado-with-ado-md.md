@@ -1,11 +1,9 @@
 ---
 title: 使用 ADO 的 ADO MD |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b99d78262909123157cdcd60cc14dc95e9115c0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 00a999350e2aed86e74bb0bfaea77c05207a21a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 的 ADO MD
 ADO 和 ADO MD 是相关但独立的对象模型。 ADO 提供的对象用于连接到数据源、 执行命令、 检索表格数据和架构以表格格式的元数据和查看提供程序错误的信息。 ADO MD 提供用于检索多维数据和查看多维架构元数据的对象。  

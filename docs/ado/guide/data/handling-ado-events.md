@@ -1,11 +1,9 @@
 ---
 title: 处理 ADO 事件 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e03bf8916836cf271aa77546d71c60049b39235e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8c8c1bf091c6c41b8700679cce7b696da89e9eff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-ado-events"></a>处理 ADO 事件
 ADO 事件模型支持某些可发出的同步和异步 ADO 操作*事件*，或通知，在操作开始之前或之后完成。 事件是实际应用程序中定义的事件处理程序例程的调用。  

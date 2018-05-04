@@ -1,37 +1,36 @@
 ---
-title: "CreateOrReplace 命令 (TMSL) |Microsoft 文档"
-ms.custom: 
+title: CreateOrReplace 命令 (TMSL) |Microsoft 文档
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f77a0e04-461a-4fa8-b997-78057e410d56
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d658378bde1e3a58f36b1137328f723ad3d380d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fac0e43a8c1a8ec8dbdfdc3a255bdee1a74bddae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createorreplace-command-tmsl"></a>CreateOrReplace 命令 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]创建或替换指定的对象和指定的所有后代对象。 不存在对象创建。 使用新的定义，将替换现有对象。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  创建或替换指定的对象和指定的所有后代对象。 不存在对象创建。 使用新的定义，将替换现有对象。  
   
  只要指定的读写属性，请确保将其所有包含。 省略一个读写对象被视为删除操作。  
   
 ## <a name="request"></a>请求  
  根据对象的请求的结构而有所不同。 一个对象，它父级必须包括的所有子级，尽管同级及其父对象的完整对象定义不是必需的。  
   
- [数据库对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
+ [数据库对象&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
   
  替换指定其名称、 修改后的模型属性和连接的重命名、 程度最低的数据库定义的现有数据库。 对象定义不包含表、 分区或关系，因为已删除所有这些对象。  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [数据源对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)替换连接名称。  
+ [数据源对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)替换连接名称。  
   
 ```  
 {  
@@ -93,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables 对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)将覆盖任何现有表，离开不仅仅是指定一个。  
+ [Tables 对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)将覆盖任何现有表，离开不仅仅是指定一个。  
   
 ```  
 {  
@@ -178,7 +177,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [分区对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
+ [分区对象&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
   
  将分区名称。 分区对象具有三个读写属性： 名称、 源，说明。 只要指定的读写属性，请确保将其所有包含。 省略一个读写对象被视为删除操作。  
   
@@ -212,7 +211,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [角色对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)角色定义替换为一个包括的成员。  
+ [角色对象&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)角色定义替换为一个包括的成员。  
   
 ```  
 {  
@@ -511,7 +510,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>使用情况 （终结点）  
- 语句中使用此命令元素[执行方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)通过以下方式公开的 XMLA 终结点调用：  
+ 语句中使用此命令元素[执行方法&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)通过以下方式公开的 XMLA 终结点调用：  
   
 -   作为 XMLA 窗口中 SQL Server Management Studio (SSMS)  
   
@@ -521,7 +520,7 @@ ms.lasthandoff: 01/08/2018
   
  你可以从 SSMS 生成用于此命令的现成脚本。  例如，你可以右键单击现有数据库 >**脚本** > **编写数据库脚本为** > **创建或替换**。  
   
- [ \[MS SSAS T\]: QL Server Analysis Services 表格 （SQL Server 技术协议）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文档包括部分 3.1.5.2.2，用于描述 JSON 表格元数据命令和对象的结构。 目前，该文档介绍命令和在 TMSL 脚本中尚未实现的功能。 请参阅主题[表格模型脚本语言 &#40;TMSL &#41;引用](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)阐述上支持的功能  
+ [ \[MS SSAS T\]: QL Server Analysis Services 表格 （SQL Server 技术协议）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文档包括部分 3.1.5.2.2，用于描述 JSON 表格元数据命令和对象的结构。 目前，该文档介绍命令和在 TMSL 脚本中尚未实现的功能。 请参阅主题[表格模型脚本语言&#40;TMSL&#41;引用](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)阐述上支持的功能  
 
 ## <a name="see-also"></a>另请参阅  
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

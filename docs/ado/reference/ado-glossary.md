@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
@@ -18,11 +17,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/18/2018
  表中的字段和变量之间的映射。 在 ADO 的 Visual c + + 扩展中，**记录集**字段映射到 C/c + + 变量。  
   
  位掩码  
- 数字值适用于与其他数字值的按位值比较通常可标志参数或返回值中的选项。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中， **&**和**&#124;** c + + 中。  
+ 数字值适用于与其他数字值的按位值比较通常可标志参数或返回值中的选项。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中， **&** 和 **&#124;** c + + 中。  
   
  例如，ADO **FieldAttributeEnum**值可以用作位掩码确定字段的特性。 假设你想要确定字段是否可更新。 无法使用以下表达式在 Visual Basic 中对此进行测试：`Field.Attributes AND adFldUpdatable`  
   
