@@ -3,15 +3,12 @@ title: executeUpdate 方法 (java.lang.String、 int[]) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeUpdate (java.lang.String, int[])
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2fb2372d8ae0da672430c2817a29a6c440b0817a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 6e116268305f78d9a70435728a84d2989dc1c82b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +48,7 @@ public final int executeUpdate(java.lang.String sql,
  一个整数数组，指示应可用的自动生成的键的列索引。  
   
 ## <a name="return-value"></a>返回值  
- **Int** ，该值指示行受影响，则为 0 的数，如果使用的 DDL 语句。  
+ 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -60,10 +56,10 @@ public final int executeUpdate(java.lang.String sql,
 ## <a name="remarks"></a>注释  
  由 java.sql.Statement 接口中的 executeUpdate 方法指定此 executeUpdate 方法。  
   
- 如果执行存储的过程结果中的更新计数大于 1，或生成多个结果集，使用[执行](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)方法来执行存储的过程。  
+ 如果执行存储过程将产生大于 1 的更新计数，或生成多个结果集，则请使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法执行存储过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [executeUpdate 方法&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
+ [executeUpdate 方法 (SQLServerStatement)](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 类](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

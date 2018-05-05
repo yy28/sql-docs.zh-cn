@@ -3,13 +3,10 @@ title: getColumnName 方法 (SQLServerResultSetMetaData) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2c5df710f4aaaae91e6d612753ddf4d96d3db82
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 089170607395e99a39749fe58cf69dd88afe39c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,10 +40,10 @@ public java.lang.String getColumnName(int column)
 #### <a name="parameters"></a>Parameters  
  *column*  
   
- **Int** ，该值指示的列索引。  
+ 指示列索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- A**字符串**包含列名称。  
+ 一个包含列名的字符串。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
