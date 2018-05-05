@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3d3bd65ad512d3e6802754cb6ad1e80ec4cae7fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 623f2814322a6a57e6845a8d3d8d734b1b7c68f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定显式转换函数 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 显式转换函数  
  **Number （） 来**函数将参数转换为数字。  
   
- 假设的值**ContactID**是数字，以下查询将转换**ContactID**为数字将它与值 4 进行比较。 然后，查询返回所有**\<员工 >**的上下文节点的子元素**ContactID**数字值为 4 的属性：  
+ 假设的值**ContactID**是数字，以下查询将转换**ContactID**为数字将它与值 4 进行比较。 然后，查询返回所有**\<员工 >** 的上下文节点的子元素**ContactID**数字值为 4 的属性：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -86,9 +83,9 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 显式转换函数  
- **String （)**函数将参数转换为字符串。  
+ **String （)** 函数将参数转换为字符串。  
   
- 下面的查询将转换**ContactID**为字符串，并将其与字符串值"4"。 查询返回所有**\<员工 >**的上下文节点的子元素**ContactID**具有"4"的字符串值：  
+ 下面的查询将转换**ContactID**为字符串，并将其与字符串值"4"。 查询返回所有**\<员工 >** 的上下文节点的子元素**ContactID**具有"4"的字符串值：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

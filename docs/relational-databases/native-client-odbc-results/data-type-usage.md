@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fed82c2cfb21efa75278847716e90f546e64eb3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e8a08f91688a4a6c26fd138de51ee50b7b2a3974
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-usage"></a>数据类型用法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 |**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tinyint**数据类型是无符号。 A **tinyint**列绑定到数据类型 SQL_C_UTINYINT 的变量上，默认情况下。|  
 |别名数据类型|连接到的实例时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*，ODBC 驱动程序将 NULL 添加到未显式声明列可为 null 的列定义。 因此，将忽略在别名数据类型的定义中存储的为 Null 性。<br /><br /> 连接到的实例时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*，列别名数据类型具有基本数据类型的**char**或**二进制**为没有可为 null声明为数据类型创建**varchar**或**varbinary**。 [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)， [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)，和[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)返回 SQL_VARCHAR 或 SQL_VARBINARY 作为数据的这些列类型。 不对从这些列检索的数据进行填充。<br /><br /> 注意： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]6.5 和更早版本。|  
 |LONG 数据类型|*数据在执行*参数都被限制为 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 数据类型。|  
-|大值类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将公开**varchar （max)**， **varbinary （max)**，和**nvarchar (max)**作为 SQL_VARCHAR、 SQL_VARBINARY 和 SQL_ 类型WVARCHAR （分别） 在 Api 接受或返回 ODBC SQL 数据类型。|  
+|大值类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将公开**varchar （max)**， **varbinary （max)**，和**nvarchar (max)** 作为 SQL_VARCHAR、 SQL_VARBINARY 和 SQL_ 类型WVARCHAR （分别） 在 Api 接受或返回 ODBC SQL 数据类型。|  
 |用户定义类型 (UDT)|UDT 列被映射为 SQL_SS_UDT。 如果使用 UDT 的 ToString() 或 ToXMLString() 方法或者通过 CAST/CONVERT 函数，在 SQL 语句中将 UDT 列显式映射到另一种类型，则在结果集中该列的类型将反映该列被转换成的实际类型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序只能绑定到一个 UDT 列作为二进制文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅支持在 SQL_SS_UDT 和 SQL_C_BINARY 数据类型之间的转换。|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动将 XML 转换为 Unicode 文本。 XML 类型将映射为 SQL_SS_XML。|  
   

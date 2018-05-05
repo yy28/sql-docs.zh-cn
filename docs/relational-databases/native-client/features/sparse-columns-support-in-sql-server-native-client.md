@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -20,13 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f4d77722108f82733978b5b2c778ddfbfb958c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5f9cf56b4ee1a7e3108607912ecba9a05d0815e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的稀疏列支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 |确定列是否为稀疏列。|请查阅 SQLColumns 结果集 (ODBC) 的 SS_IS_SPARSE 列。<br /><br /> 参考 DBSCHEMA_COLUMNS 架构行集 (OLE DB) 的 SS_IS_SPARSE 列。<br /><br /> 如果应用程序使用来自早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本中的 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client，则此应用场景不可行。 但是，此类应用程序可以查询系统视图。|  
 |确定列是否为**column_set**。|请查阅 SQLColumns 结果集的 SS_IS_COLUMN_SET 列。 或者，参考特定于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的列属性 SQL_CA_SS_IS_COLUMN_SET (ODBC)。<br /><br /> 参考 DBSCHEMA_COLUMNS 架构行集的 SS_IS_COLUMN_SET 列。 或者，请查阅*dwFlags*由 IColumnsinfo::GetColumnInfo 或 DBCOLUMNFLAGS 中 IColumnsRowset::GetColumnsRowset 返回的行集返回。 有关**column_set**列，DBCOLUMNFLAGS_SS_ISCOLUMNSET 将设置 (OLE DB)。<br /><br /> 如果应用程序使用来自早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本中的 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client，则此应用场景不可行。 但是，此类应用程序可以查询系统视图。|  
 |导入和导出 bcp 具有否的表的稀疏列**column_set**。|在行为上与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的以前版本相比没有变化。|  
-|导入和导出 bcp 具有的表的稀疏列**column_set**。|**Column_set**是导入和导出为 XML; 相同的方式，即作为**varbinary （max)**如果绑定作为二进制类型，或**nvarchar (max)**如果绑定为**char**或**wchar**类型。<br /><br /> 成员的稀疏列**column_set**不会导出为不同的列; 它们仅导出的值中**column_set**。|  
+|导入和导出 bcp 具有的表的稀疏列**column_set**。|**Column_set**是导入和导出为 XML; 相同的方式，即作为**varbinary （max)** 如果绑定作为二进制类型，或**nvarchar (max)** 如果绑定为**char**或**wchar**类型。<br /><br /> 成员的稀疏列**column_set**不会导出为不同的列; 它们仅导出的值中**column_set**。|  
 |**queryout** BCP 的行为。|在处理显式命名的列上与以前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 相比没有变化。<br /><br /> 如果应用场景涉及在具有不同架构的表之间进行导入和导出，则可能要求特殊处理。<br /><br /> 有关 BCP 的详细信息，请参阅本章后面的“针对稀疏列的大容量复制 (BCP) 支持”。|  
   
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
@@ -63,11 +61,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>针对稀疏列的大容量复制 (BCP) 支持  
  没有为稀疏列中 ODBC 或 OLE DB 的 BCP api 更改或**column_set**功能。  
   
- 如果表具有**column_set**，稀疏列不被当作非重复列。 中的值包括所有稀疏列的值**column_set**，这作为 XML 列; 相同的方式导出，即作为**varbinary （max)**如果绑定作为二进制类型，或**nvarchar (max)**如果绑定为**char**或**wchar**类型)。 在导入时， **column_set**值必须符合的架构**column_set**。  
+ 如果表具有**column_set**，稀疏列不被当作非重复列。 中的值包括所有稀疏列的值**column_set**，这作为 XML 列; 相同的方式导出，即作为**varbinary （max)** 如果绑定作为二进制类型，或**nvarchar (max)** 如果绑定为**char**或**wchar**类型)。 在导入时， **column_set**值必须符合的架构**column_set**。  
   
  有关**queryout**操作，没有显式被引用的列的处理的方式没有更改。 **column_set**列具有 XML 列相同的行为和稀疏性不起作用的处理方式上名为稀疏列。  
   
- 但是，如果**queryout**使用的导出和你引用稀疏列的稀疏列集按名称的成员，无法执行直接导入同样结构化表。 这是因为 BCP 使用元数据与一致**选择\***导入操作并且不能以匹配**column_set**成员与此元数据的列。 若要导入**column_set**成员列单独，必须定义上引用所需的表的视图**column_set**列，并且必须执行导入操作使用视图。  
+ 但是，如果**queryout**使用的导出和你引用稀疏列的稀疏列集按名称的成员，无法执行直接导入同样结构化表。 这是因为 BCP 使用元数据与一致**选择\*** 导入操作并且不能以匹配**column_set**成员与此元数据的列。 若要导入**column_set**成员列单独，必须定义上引用所需的表的视图**column_set**列，并且必须执行导入操作使用视图。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

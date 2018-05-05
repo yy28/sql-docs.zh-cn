@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5b395a49f69ed83acedde1dc8e70cc00db78b63
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9366a70d31e286ec69610f3551642ec24b1e2cad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔函数 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>示例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布尔函数  
- 此查询返回所有**\<客户 >**的上下文节点的子元素，而没有**\<顺序 >**子元素：  
+ 此查询返回所有**\<客户 >** 的上下文节点的子元素，而没有**\<顺序 >** 子元素：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布尔函数  
- 此查询返回所有**\<客户 >**的上下文节点的元素子级，而没有**\<顺序 >**子元素。 就关系而言，此查询返回未下订单的所有客户。  
+ 此查询返回所有**\<客户 >** 的上下文节点的元素子级，而没有**\<顺序 >** 子元素。 就关系而言，此查询返回未下订单的所有客户。  
   
 ```  
 /child::Customer[child::Order=false()]  

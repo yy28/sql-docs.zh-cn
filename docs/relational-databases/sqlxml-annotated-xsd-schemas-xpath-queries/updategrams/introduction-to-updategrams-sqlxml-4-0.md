@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,13 +27,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6c3d51e64669f2410ca6e99926734b767dba1f45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 04/16/2018
  属的 updategram 中的关键字如**\<同步 >**， **\<之前 >**，和**\<后 >**，存在于**urn： 架构-microsoft-com:xml-属的 updategram**命名空间。 您可以为该命名空间使用任意前缀。 在本文档中， **updg**前缀表示**属的 updategram**命名空间。  
   
 ## <a name="reviewing-syntax"></a>查看语法  
- Updategram 是与模板**\<同步 >**， **\<之前 >**，和**\<后 >**窗体的语法的块属的 updategram。 以下代码显示了此语法的最简单形式：  
+ Updategram 是与模板**\<同步 >**， **\<之前 >**，和**\<后 >** 窗体的语法的块属的 updategram。 以下代码显示了此语法的最简单形式：  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -76,18 +73,18 @@ ms.lasthandoff: 04/16/2018
  标识要将数据更改到的新状态。  
   
  **\<sync>**  
- 包含**\<之前 >**和**\<后 >**块。 A **\<同步 >**块可以包含多个组的**\<之前 >**和**\<后 >**块。 如果存在多个集的**\<之前 >**和**\<后 >**块，这些块 （即使它们是空的） 必须指定为对。 此外，属的 updategram 可以有多个**\<同步 >**块。 每个**\<同步 >**块是一个单位的事务 (这意味着，任一中的所有内容**\<同步 >**完成块或不做任何操作)。 如果指定多个**\<同步 >**属的 updategram，发生的故障中的块**\<同步 >**块不会影响其他**\<同步>**块。  
+ 包含**\<之前 >** 和**\<后 >** 块。 A **\<同步 >** 块可以包含多个组的**\<之前 >** 和**\<后 >** 块。 如果存在多个集的**\<之前 >** 和**\<后 >** 块，这些块 （即使它们是空的） 必须指定为对。 此外，属的 updategram 可以有多个**\<同步 >** 块。 每个**\<同步 >** 块是一个单位的事务 (这意味着，任一中的所有内容**\<同步 >** 完成块或不做任何操作)。 如果指定多个**\<同步 >** 属的 updategram，发生的故障中的块**\<同步 >** 块不会影响其他**\<同步>** 块。  
   
- Updategram 是否删除、 插入或更新的记录实例依赖于的内容**\<之前 >**和**\<后 >**块：  
+ Updategram 是否删除、 插入或更新的记录实例依赖于的内容**\<之前 >** 和**\<后 >** 块：  
   
--   如果仅在显示的记录实例**\<之前 >**块中没有相应实例**\<后 >**块，属的 updategram 执行删除操作。  
+-   如果仅在显示的记录实例**\<之前 >** 块中没有相应实例**\<后 >** 块，属的 updategram 执行删除操作。  
   
--   如果仅在显示的记录实例**\<后 >**块中没有相应实例**\<之前 >**块，此操作是插入操作。  
+-   如果仅在显示的记录实例**\<后 >** 块中没有相应实例**\<之前 >** 块，此操作是插入操作。  
   
--   如果中显示的记录实例**\<之前 >**阻止和都有相应的实例**\<后 >**块，此操作是更新操作。 在这种情况下，属的 updategram 中指定的值更新的记录实例**\<后 >**块。  
+-   如果中显示的记录实例**\<之前 >** 阻止和都有相应的实例**\<后 >** 块，此操作是更新操作。 在这种情况下，属的 updategram 中指定的值更新的记录实例**\<后 >** 块。  
   
 ## <a name="specifying-a-mapping-schema-in-the-updategram"></a>在 Updategram 中指定映射架构  
- 在 updategram 中，映射架构（支持 XSD 和 XDR 架构）所提供的 XML 抽象可以是隐式的，也可以是显式的（即无论是否指定映射架构，updategram 都可以工作）。 如果未指定的映射架构，属的 updategram 假定的隐式映射 （默认映射），其中在每个元素**\<之前 >**块或**\<后 >**块映射到表和每个元素的子元素或属性将映射到数据库中的列。 如果显式指定映射架构，updategram 中的元素和属性必须与映射架构中的元素和属性匹配。  
+ 在 updategram 中，映射架构（支持 XSD 和 XDR 架构）所提供的 XML 抽象可以是隐式的，也可以是显式的（即无论是否指定映射架构，updategram 都可以工作）。 如果未指定的映射架构，属的 updategram 假定的隐式映射 （默认映射），其中在每个元素**\<之前 >** 块或**\<后 >** 块映射到表和每个元素的子元素或属性将映射到数据库中的列。 如果显式指定映射架构，updategram 中的元素和属性必须与映射架构中的元素和属性匹配。  
   
 ### <a name="implicit-default-mapping"></a>隐式（默认）映射  
  在大多数情况下，执行简单更新的 updategram 可能不需要映射架构。 此时 updategram 依赖于默认映射架构。  
@@ -117,9 +114,9 @@ ms.lasthandoff: 04/16/2018
  使用默认映射（在 updategram 中未指定映射架构）时，如果是以元素为中心的映射，则 updategram 元素映射到表并且子元素映射到列。如果是以属性为中心的映射，则属性映射到列。  
   
 ### <a name="element-centric-mapping"></a>以元素为中心的映射  
- 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。  **\<Person.Contact >**元素包含 **\<FirstName >**和 **\<LastName >**子元素。 属性，这些子元素是 **\<Person.Contact >**元素。  
+ 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。 **\<Person.Contact >** 元素包含 **\<FirstName >** 和 **\<LastName >** 子元素。 属性，这些子元素是 **\<Person.Contact >** 元素。  
   
- 由于此属的 updategram 未指定的映射架构，属的 updategram 使用隐式映射，其中 **\<Person.Contact >**元素映射到 Person.Contact 表并及其子元素将映射到 FirstName 和LastName 列。  
+ 由于此属的 updategram 未指定的映射架构，属的 updategram 使用隐式映射，其中 **\<Person.Contact >** 元素映射到 Person.Contact 表并及其子元素将映射到 FirstName 和LastName 列。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -135,7 +132,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="attribute-centric-mapping"></a>以属性为中心的映射  
- 在以属性为中心的映射中，元素具有属性。 以下 updategram 使用以属性为中心的映射。 在此示例中，  **\<Person.Contact >**元素组成**FirstName**和**LastName**属性。 这些属性是的属性 **\<Person.Contact >**元素。 与前面的示例中，此属的 updategram 指定没有映射架构中，，因此它依赖于要映射的隐式映射 **\<Person.Contact >**到 Person.Contact 表和元素的特性移动到的元素表中的相应列。  
+ 在以属性为中心的映射中，元素具有属性。 以下 updategram 使用以属性为中心的映射。 在此示例中，  **\<Person.Contact >** 元素组成**FirstName**和**LastName**属性。 这些属性是的属性 **\<Person.Contact >** 元素。 与前面的示例中，此属的 updategram 指定没有映射架构中，，因此它依赖于要映射的隐式映射 **\<Person.Contact >** 到 Person.Contact 表和元素的特性移动到的元素表中的相应列。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -150,7 +147,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="using-both-element-centric-and-attribute-centric-mapping"></a>同时使用以元素为中心的映射和以属性为中心的映射  
- 可以组合使用以元素为中心的映射和以属性为中心的映射，如以下 updategram 中所示。 请注意，  **\<Person.Contact >**元素包含属性和子元素。 此 updategram 也依赖于隐式映射。 因此， **FirstName**属性和 **\<LastName >**子元素映射到 Person.Contact 表中相应列。  
+ 可以组合使用以元素为中心的映射和以属性为中心的映射，如以下 updategram 中所示。 请注意，  **\<Person.Contact >** 元素包含属性和子元素。 此 updategram 也依赖于隐式映射。 因此， **FirstName**属性和 **\<LastName >** 子元素映射到 Person.Contact 表中相应列。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3d789ff36cb20074a1dbb70a2175aa0c28e5966
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c6dbbac19be8ff9bd138995cb021012ee3b16373
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定算数运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +34,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算数运算符  
- 此 XPath 查询返回 **\<OrderDetail >**满足指定谓词的元素：  
+ 此 XPath 查询返回 **\<OrderDetail >** 满足指定谓词的元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查询中，`child`是轴和`OrderDetail`是节点的测试 (true **OrderDetail**是**\<元素节点 >**，这是因为 **\<元素 >**节点是主节点进行**子**轴)。 所有 **\<OrderDetail >**元素节点，则应用谓词中的测试，并且返回那些满足条件的节点。  
+ 在查询中，`child`是轴和`OrderDetail`是节点的测试 (true **OrderDetail**是**\<元素节点 >**，这是因为 **\<元素 >** 节点是主节点进行**子**轴)。 所有 **\<OrderDetail >** 元素节点，则应用谓词中的测试，并且返回那些满足条件的节点。  
   
 > [!NOTE]  
 >  XPath 中的数字是双精度浮点数，对本示例中的浮点数进行比较将导致舍入。  

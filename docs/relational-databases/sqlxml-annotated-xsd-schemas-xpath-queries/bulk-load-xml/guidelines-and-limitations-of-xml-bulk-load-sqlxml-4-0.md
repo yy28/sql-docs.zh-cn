@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +18,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 24abfe07598e3bac0502189204fadf7ca0e9b349
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4b0796f498bd70f5b16ceb50b82843cc891652bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大容量加载的指导原则和限制 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.lasthandoff: 04/16/2018
   
 -   不支持内联架构。  
   
-     如果在源 XML 文档中具有某一内联架构，则 XML 大容量加载将忽略该架构。 您为 XML 数据外部的 XML 大容量加载指定该映射架构。 你无法通过使用指定节点的映射架构**xmlns ="x： 架构"**属性。  
+     如果在源 XML 文档中具有某一内联架构，则 XML 大容量加载将忽略该架构。 您为 XML 数据外部的 XML 大容量加载指定该映射架构。 你无法通过使用指定节点的映射架构**xmlns ="x： 架构"** 属性。  
   
 -   将检查 XML 文档是否格式正确，但不对其进行验证。  
   
@@ -46,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
      XML 大容量加载将忽略之前和之后的所有信息\<根 > XML 文档中的元素。 例如，XML 大容量加载将忽视所有 XML 声明、内部 DTD 定义、外部 DTD 引用和注释等。  
   
--   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，在其中架构中所标识的表的顺序是用于将它们加载到数据库的顺序。例如，下面的 XDR 架构将产生错误，使用在 XML 大容量加载因为时**\<顺序 >**元素进行了描述之前**\<客户 >**元素。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
+-   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，在其中架构中所标识的表的顺序是用于将它们加载到数据库的顺序。例如，下面的 XDR 架构将产生错误，使用在 XML 大容量加载因为时**\<顺序 >** 元素进行了描述之前**\<客户 >** 元素。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
   
 -   如果架构未指定溢出列使用**sql:overflow-字段**批注，XML 大容量加载将忽略 XML 文档中存在，但在映射架构中不会对其进行描述的任何数据。  
   
-     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假定你将描述的映射架构**\<客户 >**元素。 XML 数据文件具有 **\<AllCustomers >**根标记 （它不在架构中描述） 包含所有**\<客户 >**元素：  
+     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假定你将描述的映射架构**\<客户 >** 元素。 XML 数据文件具有 **\<AllCustomers >** 根标记 （它不在架构中描述） 包含所有**\<客户 >** 元素：  
   
     ```  
     <AllCustomers>  
@@ -96,9 +93,9 @@ ms.lasthandoff: 04/16/2018
     </AllCustomers>  
     ```  
   
-     在这种情况下，将忽略 XML 大容量加载 **\<AllCustomers >**元素，并开始在映射**\<客户 >**元素。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
+     在这种情况下，将忽略 XML 大容量加载 **\<AllCustomers >** 元素，并开始在映射**\<客户 >** 元素。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
   
-     请考虑包含的另一个 XML 源数据文件**\<顺序 >**元素。 以下元素在映射架构中未描述：  
+     请考虑包含的另一个 XML 源数据文件**\<顺序 >** 元素。 以下元素在映射架构中未描述：  
   
     ```  
     <AllCustomers>  
@@ -114,11 +111,11 @@ ms.lasthandoff: 04/16/2018
     </AllCustomers>  
     ```  
   
-     XML 大容量加载将忽略这些**\<顺序 >**元素。 但是，如果你使用**sql:overflow-字段**中要一个列标识为溢出列中，XML 大容量加载的架构的批注将所有未用完的数据存储在此列。  
+     XML 大容量加载将忽略这些**\<顺序 >** 元素。 但是，如果你使用**sql:overflow-字段**中要一个列标识为溢出列中，XML 大容量加载的架构的批注将所有未用完的数据存储在此列。  
   
 -   CDATA 部分和实体引用在存储到数据库中之前将转换为等效的字符串。  
   
-     在此示例中，CDATA 部分包装的值**\<城市 >**元素。 XML 大容量加载提取的字符串值 ("NY")，则会插入之前**\<城市 >**元素插入数据库。  
+     在此示例中，CDATA 部分包装的值**\<城市 >** 元素。 XML 大容量加载提取的字符串值 ("NY")，则会插入之前**\<城市 >** 元素插入数据库。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -151,7 +148,7 @@ ms.lasthandoff: 04/16/2018
     </Schema>  
     ```  
   
-     在此 XML 数据， **HireDate**属性是从第二个丢失**\<客户 >**元素。 XML 大容量加载时插入第二个**\<客户 >**到数据库的元素，它使用架构中指定的默认值。  
+     在此 XML 数据， **HireDate**属性是从第二个丢失**\<客户 >** 元素。 XML 大容量加载时插入第二个**\<客户 >** 到数据库的元素，它使用架构中指定的默认值。  
   
     ```  
     <ROOT>  

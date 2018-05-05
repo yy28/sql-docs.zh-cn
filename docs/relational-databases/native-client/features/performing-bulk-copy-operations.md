@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -21,13 +20,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7876fcc39108f5b94bd3c63cdcf6547b568fdbab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b62b7d320986394a0968f18e829cc9bfee3d978b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>执行大容量复制操作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +109,7 @@ ms.lasthandoff: 04/16/2018
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|列：No<br /><br /> 读/写︰ 读/写<br /><br /> 类型：VT_BOOL<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：维护使用者提供的标识值。<br /><br /> VARIANT_FALSE：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中的标识列的值由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 生成。 任何值绑定的列将被忽略[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。<br /><br /> VARIANT_TRUE：使用者绑定的取值函数可提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 标识列的值。 标识属性不接受空值，以便使用者提供了每个唯一值的列中可用**IRowsetFastLoad::Insert**调用。|  
 |SSPROP_FASTLOADKEEPNULLS|列：No<br /><br /> 读/写︰ 读/写<br /><br /> 类型：VT_BOOL<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：对于有 DEFAULT 约束的列，将保持 NULL。 仅影响接受 NULL 并应用了 DEFAULT 约束的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列。<br /><br /> VARIANT_FALSE：当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者插入一个该列包含 NULL 的行时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将插入该列的默认值。<br /><br /> VARIANT_TRUE：当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者插入一个该列包含 NULL 的行时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将插入 NULL 作为列值。|  
-|SSPROP_FASTLOADOPTIONS|列：No<br /><br /> 读/写︰ 读/写<br /><br /> 类型：VT_BSTR<br /><br /> 默认值：无<br /><br /> 说明： 此属性是相同**-h** "*提示*[，...*n*]"的选项**bcp**实用程序。 以下字符串可以在将数据大容量复制到表中时作为选项使用。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]): 数据文件中的数据的排序顺序。 如果按照表的聚集索引对加载的数据文件进行排序，将会提高大容量复制性能。<br /><br /> **ROWS_PER_BATCH** = *bb*： 每批的数据的行数 (作为*bb*)。 服务器根据 *bb*值优化大容量加载。 默认情况下， **ROWS_PER_BATCH**未知。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*： 数每批次 （cc) 的数据的千字节 (KB)。 默认情况下， **KILOBYTES_PER_BATCH**未知。<br /><br /> **TABLOCK**： 大容量复制操作期间获取表级锁。 由于仅在大容量复制操作期间持有锁定会减少对表的锁定争用，因此该选项极大地提高了性能。 表可以通过多个客户端同时加载如果表没有索引和**TABLOCK**指定。 默认情况下，锁定行为由表选项**表大容量加载上的锁**。<br /><br /> **CHECK_CONSTRAINTS**： 上的任何约束*table_name*批量复制操作期间检查。 默认情况下，忽略约束。<br /><br /> **FIRE_TRIGGER**:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]触发器使用行版本控制，而且将行版本存储在版本存储区中**tempdb**。 因此，即使是在启用触发器时，也可以进行大容量记录优化。 在大容量导入具有大量的行的批处理启用的触发器之前, 可能需要展开的大小**tempdb**。|  
+|SSPROP_FASTLOADOPTIONS|列：No<br /><br /> 读/写︰ 读/写<br /><br /> 类型：VT_BSTR<br /><br /> 默认值：无<br /><br /> 说明： 此属性是相同 **-h** "*提示*[，...*n*]"的选项**bcp**实用程序。 以下字符串可以在将数据大容量复制到表中时作为选项使用。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]): 数据文件中的数据的排序顺序。 如果按照表的聚集索引对加载的数据文件进行排序，将会提高大容量复制性能。<br /><br /> **ROWS_PER_BATCH** = *bb*： 每批的数据的行数 (作为*bb*)。 服务器根据 *bb*值优化大容量加载。 默认情况下， **ROWS_PER_BATCH**未知。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*： 数每批次 （cc) 的数据的千字节 (KB)。 默认情况下， **KILOBYTES_PER_BATCH**未知。<br /><br /> **TABLOCK**： 大容量复制操作期间获取表级锁。 由于仅在大容量复制操作期间持有锁定会减少对表的锁定争用，因此该选项极大地提高了性能。 表可以通过多个客户端同时加载如果表没有索引和**TABLOCK**指定。 默认情况下，锁定行为由表选项**表大容量加载上的锁**。<br /><br /> **CHECK_CONSTRAINTS**： 上的任何约束*table_name*批量复制操作期间检查。 默认情况下，忽略约束。<br /><br /> **FIRE_TRIGGER**:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]触发器使用行版本控制，而且将行版本存储在版本存储区中**tempdb**。 因此，即使是在启用触发器时，也可以进行大容量记录优化。 在大容量导入具有大量的行的批处理启用的触发器之前, 可能需要展开的大小**tempdb**。|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>使用基于文件的大容量复制操作  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**IBCPSession**接口以公开支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]基于文件的大容量复制操作。 **IBCPSession**接口实现[IBCPSession::BCPColFmt](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)， [IBCPSession::BCPColumns](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)， [IBCPSession::BCPControl](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)， [IBCPSession::BCPDone](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)， [IBCPSession::BCPExec](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)， [IBCPSession::BCPInit](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)， [IBCPSession::BCPReadFmt](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)，和[IBCPSession::BCPWriteFmt](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)方法。  

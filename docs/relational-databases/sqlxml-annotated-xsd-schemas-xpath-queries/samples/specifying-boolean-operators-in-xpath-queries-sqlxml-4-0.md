@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7a3de3370c5ab6ced854d1f79f6d64f2dbdfed9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9c3f061db3f431f87c5f2a214776558c3f6d69a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布尔运算符  
- 此 XPath 查询返回**\<客户 >**的上下文节点的子元素**CustomerID**属性 13 或 31 的值：  
+ 此 XPath 查询返回**\<客户 >** 的上下文节点的子元素**CustomerID**属性 13 或 31 的值：  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -50,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在谓词中，`attribute`是轴和`CustomerID`是节点的测试 (true **CustomerID**是**\<属性 >**节点，因为 **\<属性 >**节点是主节点进行**属性**轴)。 谓词筛选器**\<客户 >**元素并返回仅显示那些满足条件的谓词中指定。  
+ 在谓词中，`attribute`是轴和`CustomerID`是节点的测试 (true **CustomerID**是**\<属性 >** 节点，因为 **\<属性 >** 节点是主节点进行**属性**轴)。 谓词筛选器**\<客户 >** 元素并返回仅显示那些满足条件的谓词中指定。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>若要测试针对映射架构的 XPath 查询  
   
