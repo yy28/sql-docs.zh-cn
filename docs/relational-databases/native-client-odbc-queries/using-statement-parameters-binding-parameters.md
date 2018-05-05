@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
@@ -26,13 +25,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de762fc4de7824ebf871d0ef2f2a1476d9153ae0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6d51c8cb13a4a8bd2e9cc14e8208c6d9e0e0084f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>使用语句参数的绑定参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +64,7 @@ ms.lasthandoff: 04/16/2018
   
  使用时仅支持命名的参数[!INCLUDE[tsql](../../includes/tsql-md.md)]**执行**语句或 ODBC 调用转义序列，来执行存储的过程。  
   
- 如果**SQL_DESC_NAME**设置对于存储的过程参数，则在查询中的所有存储的过程参数还应设置**SQL_DESC_NAME**。  如果文本调用中使用存储的过程，其中参数具有**SQL_DESC_NAME**设置，文本应使用格式*' 名称*=*值*，其中*名称*是存储的过程参数名称 (例如， @p1)。 有关详细信息，请参阅[按名称 （名为参数） 的绑定参数](http://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果**SQL_DESC_NAME**设置对于存储的过程参数，则在查询中的所有存储的过程参数还应设置**SQL_DESC_NAME**。  如果文本调用中使用存储的过程，其中参数具有**SQL_DESC_NAME**设置，文本应使用格式 *' 名称*=*值*，其中*名称*是存储的过程参数名称 (例如， @p1)。 有关详细信息，请参阅[按名称 （名为参数） 的绑定参数](http://go.microsoft.com/fwlink/?LinkId=167215)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用语句参数](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

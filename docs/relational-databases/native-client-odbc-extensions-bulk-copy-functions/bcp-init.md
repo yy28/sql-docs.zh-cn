@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 180de02b710c11b2998d2f09b74e1d5542418219
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 174c487c16f9e76fec6493dac0c77db15394df8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +80,7 @@ RETCODE bcp_init (
   
 -   指定的数据类型是数据库表、视图或 SELECT 结果集中的列的数据类型。 数据类型由 sqlncli.h 中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据类型枚举。 数据自身采用它所在的计算机格式表示。 即，从列中的数据**整数**数据类型由很大的 4 字节序列的或小 endian 基于创建数据文件的计算机上。  
   
--   如果数据库数据类型的长度是固定的，则该数据文件中的数据长度也是固定的。 处理数据的大容量复制函数 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 分析数据行应为要与数据库表、 视图或所选列列表中指定的数据的长度相同的数据文件中的数据的长度。 例如，为数据库列定义为数据**char （13)**必须由文件中的数据的每一行的 13 个字符来表示。 如果数据库列允许 Null 值，则可以使用 Null 指示符作为固定长度的数据的前缀。  
+-   如果数据库数据类型的长度是固定的，则该数据文件中的数据长度也是固定的。 处理数据的大容量复制函数 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 分析数据行应为要与数据库表、 视图或所选列列表中指定的数据的长度相同的数据文件中的数据的长度。 例如，为数据库列定义为数据**char （13)** 必须由文件中的数据的每一行的 13 个字符来表示。 如果数据库列允许 Null 值，则可以使用 Null 指示符作为固定长度的数据的前缀。  
   
 -   定义终止符字节序列时，该终止符字节序列的长度设置为 0。  
   

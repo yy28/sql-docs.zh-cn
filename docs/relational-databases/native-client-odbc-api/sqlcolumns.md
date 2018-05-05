@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
@@ -19,13 +18,12 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e48fa527d745b920e2a664f8e8982b18cc53038
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e735efbd7aa155d8f4618afffc203cf4558fe9ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +44,11 @@ ms.lasthandoff: 04/16/2018
   
 |列名|Description|  
 |-----------------|-----------------|  
-|DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或为 SQL_WVARCHAR **varchar （max)**数据类型。|  
-|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，和**nvarchar (max)**数据类型。|  
-|COLUMN_SIZE|返回有关 SQL_SS_LENGTH_UNLIMITED **varchar （max)**数据类型，该值指示列的大小不受限制。|  
-|BUFFER_LENGTH|返回有关 SQL_SS_LENGTH_UNLIMITED **varchar （max)**数据类型，该值指示缓冲区的大小不受限制。|  
-|SQL_DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或为 SQL_WVARCHAR **varchar （max)**数据类型。|  
+|DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或为 SQL_WVARCHAR **varchar （max)** 数据类型。|  
+|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，和**nvarchar (max)** 数据类型。|  
+|COLUMN_SIZE|返回有关 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示列的大小不受限制。|  
+|BUFFER_LENGTH|返回有关 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示缓冲区的大小不受限制。|  
+|SQL_DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或为 SQL_WVARCHAR **varchar （max)** 数据类型。|  
 |CHAR_OCTET_LENGTH|返回字符或二进制列的最大长度。 返回 0 表示大小不受限制。|  
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|返回在其中定义 XML 架构集合名称的目录的名称。 如果找不到目录名称，则此变量包含空字符串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|返回在其中定义 XML 架构集合名称的架构的名称。 如果找不到架构名称，则此变量包含空字符串。|  
