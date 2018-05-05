@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
@@ -23,13 +22,12 @@ caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bcd2bddd6befeefb15d931ad9def7b0baff408d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3c30c279eb6c32d4c602ed8d6f27d91035001e6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>将连接字符串关键字用于 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 |关键字|Description|  
 |-------------|-----------------|  
 |**Addr**|“Address”的同义词。|  
-|**Address**|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 **地址**通常是网络服务器的名称，但可以是管道、 IP 地址或 TCP/IP 端口和套接字地址等其他名称。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 值**地址**优先于传递给值**服务器**在 ODBC 连接字符串时使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端。 另请注意，`Address=;`将连接到中指定的服务器**服务器**关键字，而`Address= ;, Address=.;`， `Address=localhost;`，和`Address=(local);`所有会导致与本地服务器的连接。<br /><br /> 完整语法**地址**关键字是，如下所示：<br /><br /> [*协议 ***:**]*地址*[* *，* * * 端口&#124;\pipe\pipename*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。 有关协议的详细信息，请参阅[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果既没有*协议*也不**网络**指定关键字，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *端口*是要连接到指定的服务器上的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|  
+|**Address**|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 **地址**通常是网络服务器的名称，但可以是管道、 IP 地址或 TCP/IP 端口和套接字地址等其他名称。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 值**地址**优先于传递给值**服务器**在 ODBC 连接字符串时使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端。 另请注意，`Address=;`将连接到中指定的服务器**服务器**关键字，而`Address= ;, Address=.;`， `Address=localhost;`，和`Address=(local);`所有会导致与本地服务器的连接。<br /><br /> 完整语法**地址**关键字是，如下所示：<br /><br /> [*协议 ***:**]* 地址 *[* *，* * * 端口&#124;\pipe\pipename*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。 有关协议的详细信息，请参阅[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果既没有*协议*也不**网络**指定关键字，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *端口*是要连接到指定的服务器上的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|  
 |**AnsiNPW**|如果是“yes”，则驱动程序使用 ANSI 定义的行为来处理 NULL 比较、字符数据填充、警告和 NULL 串联。 如果是“no”，则不公开 ANSI 定义的行为。 有关 ANSI NPW 行为的详细信息，请参阅[ISO 选项的效果](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |**应用程序**|名称的应用程序调用[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) （可选）。 如果指定，此值将存储在**master.dbo.sysprocesses**列**program_name**并且由返回[sp_who](../../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)和[APP_NAME](../../../t-sql/functions/app-name-transact-sql.md)函数。|  
 |**ApplicationIntent**|连接到服务器时声明应用程序工作负荷类型。 可能的值为**ReadOnly**和**ReadWrite**。 默认值是**ReadWrite**。  例如：<br /><br /> `ApplicationIntent=ReadOnly`<br /><br /> 有关详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对 Native Client 支持[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[SQL Server 本机客户端支持对高可用性、 灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
@@ -89,7 +87,7 @@ ms.lasthandoff: 04/16/2018
 |**QuotedId**|如果是“yes”，则 QUOTED_IDENTIFIERS 对连接设置为 ON，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用关于 SQL 语句中引号方法的 ISO 规则。 如果是“no”，则 QUOTED_IDENTIFIERS 对连接设置为 OFF。 然后，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 遵循关于 SQL 语句中引号用法的早期 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 规则。 有关详细信息，请参阅[ISO 选项的效果](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |**区域**|如果是“yes”，则在将货币、日期和时间数据转换为字符数据时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将使用客户端设置。 该转换是单向的；驱动程序不会识别其中非 ODBC 标准格式的日期字符串或货币值；例如，在 INSERT 或 UPDATE 语句中使用的参数。 如果是“no”，则驱动程序使用 ODBC 标准字符串来表示转换为字符数据的货币、日期和时间数据。|  
 |**SaveFile**|如果连接成功则在其中保存当前连接的属性的 ODBC 数据源文件的名称。|  
-|**Server**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 该值必须是服务器的网络名称、IP 地址或者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器别名。<br /><br /> **地址**关键字覆盖**服务器**关键字。<br /><br /> 通过指定以下项之一，你可以连接到本地服务器上的默认实例：<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> 有关 LocalDB 的支持的详细信息，请参阅[SQL Server 本机客户端支持对 LocalDB](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)。<br /><br /> 若要指定的命名的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，追加 **\\ ***InstanceName*。<br /><br />指定没有服务器时，将本地计算机上的默认实例建立连接。<br /><br />如果指定的 IP 地址，请确保在中启用了 TCP/IP 或命名的管道协议[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br />完整语法**服务器**关键字，如下所示是：<br /> <br /> **Server =**[*协议***:**]*服务器*[**，* * * 端口*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。<br /><br /> 以下示例将指定一个命名管道：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此行指定 named pipes 协议、本地计算机上的一个命名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称 (`MSSQL$MYINST01`)，以及命名管道的默认名称 (`sql/query`)。<br /><br /> 如果既没有*协议*也不**网络**指定关键字，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *端口*是要连接到指定的服务器上的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。<br /><br /> 传递给的值的开头将忽略空格**服务器**在 ODBC 连接字符串时使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端。|  
+|**Server**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 该值必须是服务器的网络名称、IP 地址或者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器别名。<br /><br /> **地址**关键字覆盖**服务器**关键字。<br /><br /> 通过指定以下项之一，你可以连接到本地服务器上的默认实例：<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> 有关 LocalDB 的支持的详细信息，请参阅[SQL Server 本机客户端支持对 LocalDB](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)。<br /><br /> 若要指定的命名的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，追加 **\\ ***InstanceName*。<br /><br />指定没有服务器时，将本地计算机上的默认实例建立连接。<br /><br />如果指定的 IP 地址，请确保在中启用了 TCP/IP 或命名的管道协议[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br />完整语法**服务器**关键字，如下所示是：<br /> <br /> **Server =**[* 协议***:**]*服务器*[**，* * * 端口*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。<br /><br /> 以下示例将指定一个命名管道：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此行指定 named pipes 协议、本地计算机上的一个命名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称 (`MSSQL$MYINST01`)，以及命名管道的默认名称 (`sql/query`)。<br /><br /> 如果既没有*协议*也不**网络**指定关键字，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *端口*是要连接到指定的服务器上的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。<br /><br /> 传递给的值的开头将忽略空格**服务器**在 ODBC 连接字符串时使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端。|  
 |**ServerSPN**|服务器的 SPN。 默认值为空字符串。 空字符串导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驱动程序生成的默认 SPN。|  
 |**StatsLog_On**|如果是“yes”，则启用对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能数据的捕获。 如果是“no”，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能数据在连接上不可用。|  
 |**StatsLogFile**|用于记录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能统计信息的文件的完整路径和文件名。|  
@@ -188,7 +186,7 @@ ms.lasthandoff: 04/16/2018
   
  `quote ::= " | '`  
   
- 属性使用必须符合其作用域中允许的语法。  例如， **WSID**使用大括号 (**{}**) 引号字符和**应用程序名称**使用单 () 或双引号 (**"**) 引号字符。 只有字符串属性可以加引号。 尝试将整数或枚举属性用引号引起来将导致“连接字符串不符合 OLE DB 规范”错误。  
+ 属性使用必须符合其作用域中允许的语法。  例如， **WSID**使用大括号 (**{}**) 引号字符和**应用程序名称**使用单 () 或双精度 (**"**) 引号字符。 只有字符串属性可以加引号。 尝试将整数或枚举属性用引号引起来将导致“连接字符串不符合 OLE DB 规范”错误。  
   
  属性值可以选择放在单引号或双引号内，并且最好这样做。 这样可以避免当值包含非字母数字字符时出现问题。 也可以在值内使用引号字符，只要使用的是双引号。  
   

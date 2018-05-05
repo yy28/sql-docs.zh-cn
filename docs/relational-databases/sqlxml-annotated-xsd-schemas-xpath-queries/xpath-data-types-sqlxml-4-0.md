@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -34,19 +32,18 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2d52d84c175b7f7f3975645c385934a3c89be0d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7762ba02f4368b64fc4073936cb04c293029e9d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架构 (XSD) 具有相差很大的数据类型。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关映射的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型与 XSD 数据类型，请参阅[数据类型强制和 sql: datatype 批注&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
- XPath 有三种数据类型：**字符串**，**数**，和**布尔**。 **数**数据类型始终是 IEEE 754 双精度浮点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)**数据类型是最接近 XPath**数**。 但是， **float(53)** IEEE 754 预览并不完全。 例如，NaN（非数字）和 infinity 均未使用。 尝试将转换到非数字字符串**数**和尝试除以零会产生错误。  
+ XPath 有三种数据类型：**字符串**，**数**，和**布尔**。 **数**数据类型始终是 IEEE 754 双精度浮点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)** 数据类型是最接近 XPath**数**。 但是， **float(53)** IEEE 754 预览并不完全。 例如，NaN（非数字）和 infinity 均未使用。 尝试将转换到非数字字符串**数**和尝试除以零会产生错误。  
   
 ## <a name="xpath-conversions"></a>XPath 转换  
  在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 XPath 语言规范中，XML 路径语言 (XPath) 版本 1.0 W3C 建议建议 1999 年 10 月 8，可以在 W3C Web 站点找到http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
@@ -159,7 +156,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. 在 XPath 查询中执行若干数据类型转换  
  考虑以下根据带批注的 XSD 架构指定的 XPath 查询：`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- 此 XPath 查询返回所有 **\<OrderDetail >**满足谓词的元素`@UnitPrice * @OrderQty > 98`。 如果**UnitPrice**使用批注**fixed14.4**数据类型中批注的架构，此谓词相当于 SQL 表达式：  
+ 此 XPath 查询返回所有 **\<OrderDetail >** 满足谓词的元素`@UnitPrice * @OrderQty > 98`。 如果**UnitPrice**使用批注**fixed14.4**数据类型中批注的架构，此谓词相当于 SQL 表达式：  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
@@ -169,7 +166,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 CONVERT(money, OrderDetail.UnitPrice))   
 ```  
   
- 因为算术运算符转换为其操作数**数**XPath 数据类型，第二个 （从一个 XPath 数据类型设置为另一个 XPath 数据类型） 换算为在其中的值转换为**float(53)** (**float(53)**接近 XPath**数**数据类型):  
+ 因为算术运算符转换为其操作数**数**XPath 数据类型，第二个 （从一个 XPath 数据类型设置为另一个 XPath 数据类型） 换算为在其中的值转换为**float(53)** (**float(53)** 接近 XPath**数**数据类型):  
   
 ```  
 CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice))   
