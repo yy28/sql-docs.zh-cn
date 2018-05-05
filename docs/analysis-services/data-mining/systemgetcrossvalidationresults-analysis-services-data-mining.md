@@ -1,35 +1,33 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
+title: SystemGetCrossValidationResults (Analysis Services-数据挖掘) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SystemGetCrossValidationResults
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ddb4255fb09131bb2612e47b44a0bedfc22e4be4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-将挖掘结构分区为指定数目的交叉部分，并对每个分区为模型定型，然后返回每个分区的准确性指标。  
+  将挖掘结构分区为指定数目的交叉部分，并对每个分区为模型定型，然后返回每个分区的准确性指标。  
   
 > [!NOTE]  
 >  此存储过程不能用于交叉验证聚类分析模型，也不能交叉验证使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型。 若要交叉验证聚类分析模型，可使用单独的存储过程 [SystemGetClusterCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)。  
@@ -119,7 +117,7 @@ SystemGetCrossValidationResults(
  默认值为 **null**。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果你将“状态阈值”设置为 0.0，将不会引发错误，但是请一定不要使用此值。 实际上，阈值为 0.0 意味着概率为 0% 的预测也将视为正确。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果你设置不会引发错误*状态阈值*为 0.0，但你应永远不会使用此值。 实际上，阈值为 0.0 意味着概率为 0% 的预测也将视为正确。  
   
  （可选）  
   
@@ -195,8 +193,8 @@ NULL
   
 ## <a name="see-also"></a>另请参阅  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

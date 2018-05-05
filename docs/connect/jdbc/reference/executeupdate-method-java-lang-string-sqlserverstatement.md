@@ -3,13 +3,10 @@ title: executeUpdate 方法 (java.lang.String) (SQLServerStatement) |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e5a05bc78ec035352c7784ecdb5a24da89d354b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 148f2887e01d5238ac7461f4922eea77af599bdd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -46,7 +43,7 @@ public int executeUpdate(java.lang.String sql)
  A**字符串**包含 SQL 语句。  
   
 ## <a name="return-value"></a>返回值  
- **Int** ，该值指示行受影响，则为 0 的数，如果使用的 DDL 语句。  
+ 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -54,10 +51,10 @@ public int executeUpdate(java.lang.String sql)
 ## <a name="remarks"></a>注释  
  由 java.sql.Statement 接口中的 executeUpdate 方法指定此 executeUpdate 方法。  
   
- 如果执行存储的过程结果中的更新计数大于 1，或生成多个结果集，使用[执行](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)方法来执行存储的过程。  
+ 如果执行存储过程将产生大于 1 的更新计数，或生成多个结果集，则请使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法执行存储过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [executeUpdate 方法&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
+ [executeUpdate 方法 (SQLServerStatement)](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 类](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

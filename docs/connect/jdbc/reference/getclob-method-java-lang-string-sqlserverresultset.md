@@ -3,13 +3,10 @@ title: getClob 方法 (java.lang.String) (SQLServerResultSet) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 326bb4f8a8cbd619dc11263e90c992a3b6e98a0c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 31924d49d59ca97bf140501e219a226ca8525e43
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public java.sql.Clob getClob(java.lang.String colName)
 #### <a name="parameters"></a>Parameters  
  *ColName*  
   
- A**字符串**包含列名称。  
+ 一个包含列名的字符串。  
   
 ## <a name="return-value"></a>返回值  
  Clob 对象。  

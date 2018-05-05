@@ -3,13 +3,10 @@ title: getBoolean 方法 (java.lang.String) (SQLServerResultSet) |Microsoft 文�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a61f3ff9bf58e44a5f79b919af09feada8c6ab9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d4b2af268b3d38566c2f1d4110c93171767f8e1b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,10 +40,10 @@ public boolean getBoolean(java.lang.String columnName)
 #### <a name="parameters"></a>Parameters  
  *columnName*  
   
- A**字符串**包含列名称。  
+ 一个包含列名的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A**布尔**值。  
+ 一个布尔值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -3,13 +3,10 @@ title: getBinaryStream 方法 (int) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe75fd75dd6695da0651b4f6eb9e9a2292a0807e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5147934e43cd1e0ae50262aa3de35dee8bc7763c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -41,9 +38,9 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *列索引*  
+ columnIndex  
   
- **Int** ，该值指示的列索引。  
+ 指示列索引的 int。  
   
 ## <a name="return-value"></a>返回值  
  一个 InputStream 对象中。  

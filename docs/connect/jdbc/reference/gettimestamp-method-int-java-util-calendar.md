@@ -3,13 +3,10 @@ title: getTimestamp 方法 （int、 java.util.Calendar） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e31d461b373b578c7120f74fa31d185b0885396c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 42c3ccd58cc8e3c7775d701ea0a48e1619e9a588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -44,7 +41,7 @@ public java.sql.Timestamp getTimestamp(int index,
 #### <a name="parameters"></a>Parameters  
  *索引*  
   
- **Int** ，该值指示参数索引。  
+ 指示参数索引的 int。  
   
  *cal*  
   
@@ -59,10 +56,10 @@ public java.sql.Timestamp getTimestamp(int index,
 ## <a name="remarks"></a>注释  
  由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定此 getTimestamp 方法。  
   
- 此方法返回值只能从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**和**smalldatetime**列。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime 和 smalldatetime 列返回值。  
   
 ## <a name="see-also"></a>另请参阅  
- [getTimestamp 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+ [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

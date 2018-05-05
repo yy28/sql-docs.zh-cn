@@ -3,13 +3,10 @@ title: getDouble 方法 (int) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90d101350ef6b9722285eddf3d2f584d671ac9c8
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: b3b9c1d39e99e40236874a61e3a667985a3a645e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public double getDouble(int index)
 #### <a name="parameters"></a>Parameters  
  *索引*  
   
- **Int** ，该值指示参数索引。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
  A **double**值。  
@@ -54,10 +51,10 @@ public double getDouble(int index)
 ## <a name="remarks"></a>注释  
  由 java.sql.CallableStatement 接口中的 getDouble 方法指定此 getDouble 方法。  
   
- 此方法返回所有基于数的数据类型与 Java **double**保真度。  
+ 此方法使用 Java double 精度返回所有基于数字的数据类型。  
   
 ## <a name="see-also"></a>另请参阅  
- [getDouble 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
+ [getDouble 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

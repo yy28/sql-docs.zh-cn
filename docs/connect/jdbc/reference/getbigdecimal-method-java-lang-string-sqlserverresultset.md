@@ -3,13 +3,10 @@ title: getBigDecimal 方法 (java.lang.String) (SQLServerResultSet) |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d406b0bc6bf3e5da1dcd2d978b80049a6b79f615
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: c45eaa28eef97b78402268009dd11e05f5ea5aa0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName)
 #### <a name="parameters"></a>Parameters  
  *columnName*  
   
- A**字符串**包含列名称。  
+ 一个包含列名的字符串。  
   
 ## <a name="return-value"></a>返回值  
  一个 BigDecimal 对象。  
@@ -55,7 +52,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName)
  由 java.sql.ResultSet 接口中的 getBigDecimal 方法指定此 getBigDecimal 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [getBigDecimal 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   
+ [getBigDecimal 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
