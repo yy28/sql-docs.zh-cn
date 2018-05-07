@@ -3,13 +3,10 @@ title: SQLServerPreparedStatement 成员 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
@@ -17,9 +14,9 @@ caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae0d92258f45f976d18c679059ba831a1c892638
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 275115e8d23c48a564528de57fee14ae19513e00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -46,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|将一组参数添加到此语句对象的命令的批处理。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(继承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)取消当前正在运行此语句对象的 SQL 语句。|  
-|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|此清空的 SQL 命令的当前列表[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。|  
+|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|为此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象清空当前 SQL 命令列表。|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|立即清除当前参数值。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(继承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)清除此语句对象报告的所有警告。|  
 |[关闭](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|释放数据库和 JDBC 资源立即而不是等待它们自动释放此语句对象。|  

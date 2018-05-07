@@ -1,41 +1,23 @@
 ---
 title: MiningStructurePermission 元素 (ASSL) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- MiningStructurePermission Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructurePermission
-helpviewer_keywords:
-- MiningStructurePermission element
-ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
-caps.latest.revision: 43
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aef87c52834015311cc5302c46fd539be89e172d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8a88facf7cb11546ecef703b61c2ae212f7f4af9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义的权限的成员[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素具有对单个[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定义的权限的成员[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素具有对单个[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,10 +34,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|[权限](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
-|默认值|InclusionThresholdSetting|  
+|默认值|无|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,9 +45,9 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[添加](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructurePermission>。  
   
  在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，权限**AllowDrillthrough**已扩展为适用于挖掘结构。 当向角色分配此权限时，任何作为该角色成员的用户均可使用以下语法直接查询挖掘结构：  
@@ -89,6 +71,6 @@ SELECT StructureColumn('<structure column name>' FROM <model>.CASES
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.MiningModel.AllowDrillThrough%2A>   
  <xref:Microsoft.AnalysisServices.AdomdClient.MiningModel.AllowDrillThrough%2A>   
- [对象 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [对象 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

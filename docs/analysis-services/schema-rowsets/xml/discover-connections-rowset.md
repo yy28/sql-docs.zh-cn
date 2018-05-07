@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_CONNECTIONS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CONNECTIONS rowset
-ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9d56f64f0b4cb1912e9eaaa7e644c6cbc29ad44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de0346d7412f55e597db4b7b44cd533114a297a5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在服务器上提供有关当前打开的连接的资源使用情况和活动信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供服务器上当前打开的连接的资源使用情况和活动信息。  
   
  **适用于：**表格模型、 多维模型  
   
@@ -43,15 +32,15 @@ ms.lasthandoff: 01/08/2018
 |**CONNECTION_HOST_NAME**|**DBTYPE_WSTR**|是|启动连接的计算机名称。|  
 |**CONNECTION_HOST_APPLICATION**|**DBTYPE_WSTR**||启动连接的应用程序名称。|  
 |**CONNECTION_START_TIME**|**DBTYPE_DBTIMESTAMP**||启动连接时的服务器 UTC 日期和时间。|  
-|**CONNECTION_ELAPSED_TIME_MS**|**是 DBTYPE_I8**|是|自连接开始起经过的时间（毫秒）。|  
+|**CONNECTION_ELAPSED_TIME_MS**|**DBTYPE_I8**|是|自连接开始起经过的时间（毫秒）。|  
 |**CONNECTION_LAST_COMMAND_START_TIME**|**DBTYPE_DBTIMESTAMP**||服务器 UTC 日期和最后一个命令开始其执行时间。|  
 |**CONNECTION_LAST_COMMAND_END_TIME**|**DBTYPE_DBTIMESTAMP**||上次命令执行结束时的服务器 UTC 日期和时间。|  
-|**CONNECTION_LAST_COMMAND_ELAPSED_TIME_MS**|**是 DBTYPE_I8**|是|自上次命令执行结束后经过的时间（毫秒）。|  
-|**CONNECTION_IDLE_TIME_MS**|**是 DBTYPE_I8**|是|自连接开始后的空闲时间（毫秒）。|  
-|**CONNECTION_BYTES_SENT**|**是 DBTYPE_I8**||自连接开始后该连接发送的累计字节数。|  
-|**CONNECTION_DATA_BYTES_SENT**|**是 DBTYPE_I8**||自连接开始后该连接发送的累计数据字节数。<br /><br /> 数据在连接中以压缩方式传送；此值表示解压缩后的发送数据。|  
-|**CONNECTION_BYTES_RECEIVED**|**是 DBTYPE_I8**||自连接开始后该连接收到的累计字节数。|  
-|**CONNECTION_DATA_BYTES_RECEIVED**|**是 DBTYPE_I8**||自连接开始后该连接收到的累计数据字节数。<br /><br /> 数据在连接中以压缩方式传送；此值表示解压缩后的接收数据。|  
+|**CONNECTION_LAST_COMMAND_ELAPSED_TIME_MS**|**DBTYPE_I8**|是|自上次命令执行结束后经过的时间（毫秒）。|  
+|**CONNECTION_IDLE_TIME_MS**|**DBTYPE_I8**|是|自连接开始后的空闲时间（毫秒）。|  
+|**CONNECTION_BYTES_SENT**|**DBTYPE_I8**||自连接开始后该连接发送的累计字节数。|  
+|**CONNECTION_DATA_BYTES_SENT**|**DBTYPE_I8**||自连接开始后该连接发送的累计数据字节数。<br /><br /> 数据在连接中以压缩方式传送；此值表示解压缩后的发送数据。|  
+|**CONNECTION_BYTES_RECEIVED**|**DBTYPE_I8**||自连接开始后该连接收到的累计字节数。|  
+|**CONNECTION_DATA_BYTES_RECEIVED**|**DBTYPE_I8**||自连接开始后该连接收到的累计数据字节数。<br /><br /> 数据在连接中以压缩方式传送；此值表示解压缩后的接收数据。|  
   
  未对此架构行集进行排序。  
   
@@ -60,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|a07ccd25-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|连接|  

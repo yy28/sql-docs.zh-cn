@@ -1,38 +1,23 @@
 ---
-title: "XML for Analysis 架构行集 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: XML for Analysis 架构行集 |Microsoft 文档
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- rowsets [Analysis Services], XML for Analysis
-- XML for Analysis, schema rowsets
-- schema rowsets [Analysis Services], XML for Analysis
-- schema rowsets [XML for Analysis]
-ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 44222381092f973f00ca79583c78e27bd0780f6e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 架构行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口包括返回有关服务器状态、活动和对象的元数据的多个架构行集。 如果要开发的客户端应用程序连接到结构和特征可变的 Analysis Services 模型，则需要检索元数据。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口包括返回有关服务器状态、活动和对象的元数据的多个架构行集。 如果要开发的客户端应用程序连接到结构和特征可变的 Analysis Services 模型，则需要检索元数据。  
   
  通过架构行集还可以深入了解内部进程和操作，帮助您监视服务器并解决问题。 为了更好地支持即席管理任务，您可以对大多数架构行集运行动态管理视图 (DMV) 查询。 DMV 查询以易读的表格格式返回结果，方便您在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中查看。  
   
@@ -52,7 +37,7 @@ ms.lasthandoff: 02/15/2018
 |[DISCOVER_DIMENSION_STAT 行集](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|返回指定维度的统计信息。|  
 |[DISCOVER_ENUMERATORS 行集](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|返回枚举器的名称、数据类型和枚举值的列表，这些枚举器受特定数据源的 XMLA 访问接口支持。|  
 |[DISCOVER_JOBS 行集](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|提供有关在服务器上执行的活动作业的信息。|  
-|[DISCOVER_KEYWORDS 行集 &#40;XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|返回有关 XMLA 访问接口保留的关键字的信息。|  
+|[DISCOVER_KEYWORDS 行集 & #40;XMLA & #41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|返回有关 XMLA 访问接口保留的关键字的信息。|  
 |[DISCOVER_LITERALS 行集](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|返回有关 XMLA 访问接口支持的文字的信息，包括数据类型和值。|  
 |[DISCOVER_LOCATIONS 行集](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|返回有关备份文件的内容的信息。|  
 |[DISCOVER_LOCKS 行集](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|提供有关服务器上的当前持续锁定的信息。|  
@@ -80,7 +65,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Analysis Services 中的 XMLA 进行开发](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [使用动态管理视图 &#40; Dmv &#41;监视 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [使用动态管理视图&#40;Dmv&#41;监视 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [从分析数据源检索元数据](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

@@ -1,27 +1,25 @@
 ---
-title: "Analysis Services 的 SQL Server 2016 各个版本支持的功能 |Microsoft 文档"
-ms.custom: 
+title: Analysis Services 的 SQL Server 2016 各个版本支持的功能 |Microsoft 文档
+ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: 
+caps.latest.revision: 4
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: e79ca3b24ec8ef92f677044795ede8303a3b4062
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analysis-services-features-supported-by-sql-server-editions"></a>支持的 SQL Server 版本的 analysis Services 功能
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
