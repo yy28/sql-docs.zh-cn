@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_SERVICES 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_SERVICES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_SERVICES rowset
-ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5e01e9a31c182ffc68800b1c159f88d26c9611ac
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供的每个数据挖掘算法提供程序支持的说明。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供对访问接口支持的每个数据挖掘算法的说明。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DMSCHEMA_MINING_SERVICES**行集包含以下各列。  
@@ -39,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 |列名|类型指示符|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|算法的名称。 此列是特定于访问接口的。|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|此列包含了用于介绍挖掘服务的位图。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]填充此列使用以下值之一：<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|此列包含了用于介绍挖掘服务的位图。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 填充此列使用以下值之一：<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|算法的可本地化显示名称。|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|算法的 GUID。|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|算法的用户友好说明。|  
@@ -70,8 +56,8 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|可选。|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘架构行集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

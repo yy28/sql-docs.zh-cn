@@ -3,13 +3,10 @@ title: SQLServerStatement 成员 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
@@ -17,9 +14,9 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8a22ca95f835f2eec139359f24a486e15cbee2e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 77161ec9693615eb50d4e62fb9cd1f6f185d23fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -46,9 +43,9 @@ ms.lasthandoff: 05/03/2018
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|将给定的 SQL 命令添加到的命令的当前列表，此[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|取消当前正在此运行的 SQL 语句[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。|  
-|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|此清空的 SQL 命令的当前列表[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。|  
+|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|为此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象清空当前 SQL 命令列表。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|清除此报告的所有警告[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象。|  
-|[关闭](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|释放此[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)对象的数据库和 JDBC 资源立即而不是等待它们自动释放。|  
+|[关闭](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|立即释放此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的数据库和 JDBC 资源，而非等待它们自动释放。|  
 |[execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|运行可返回多个结果的给定的 SQL 语句。|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)|向数据库提交要运行的命令批。 如果所有命令都成功运行，则返回一个更新计数数组。|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|运行给定的 SQL 语句并返回单个[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。|  

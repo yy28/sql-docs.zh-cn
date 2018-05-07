@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_STRUCTURES 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_STRUCTURES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_STRUCTURES rowset
-ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e75e8c17baba84bd690ec51605ffac9f577de35c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5a40c44722108d8377eb98d050f3af528c23c0e5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingstructures-rowset"></a>DMSCHEMA_MINING_STRUCTURES 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]枚举有关当前目录中的挖掘结构的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  枚举有关当前目录中的挖掘结构的信息。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DMSCHEMA_MINING_STRUCTURES**行集包含以下各列。  
@@ -61,9 +47,9 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|可选。|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|可选。|  
-|**STRUCTURE_NAME**|**DBTYPE_WSTR**|可选。|  
+|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|選擇性。|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|選擇性。|  
+|**STRUCTURE_NAME**|**DBTYPE_WSTR**|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘架构行集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

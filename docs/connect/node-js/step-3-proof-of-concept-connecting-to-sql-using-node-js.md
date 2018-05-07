@@ -3,13 +3,11 @@ title: 步骤 3： 连接到 SQL 使用 Node.js 的概念证明 |Microsoft 文�
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: node-js
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
@@ -17,9 +15,9 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4949a776d24af22d260895dd9f2b994c02fc3b4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: dd468fd82321dfd476b2a740fdb6eef1dc660652
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -51,7 +49,7 @@ ms.lasthandoff: 05/03/2018
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>步骤 2： 执行查询  
+## <a name="step-2--execute-a-query"></a>步骤 2：执行查询  
   
   
 在使用执行所有 SQL 语句**new request （)** 函数。 如果语句返回行，例如 select 语句，你可以检索它们使用**request.on （)** 函数。 如果没有行，request.on （） 函数将返回空列表。  

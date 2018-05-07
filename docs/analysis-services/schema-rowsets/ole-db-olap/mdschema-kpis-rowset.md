@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_KPIS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_KPIS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_KPIS rowset
-ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3a787f90243bed3fa62cb16281df182a97bfd3ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbf191fafa07bbc436c9971a5c16f4fb455f78bd
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemakpis-rowset"></a>MDSCHEMA_KPIS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述在数据库中的关键绩效指标 (Kpi)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  介绍数据库中的关键绩效指标 (KPI)。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_KPIS**行集包含以下各列。  
@@ -65,10 +51,10 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**KPI_NAME**|**DBTYPE_WSTR**|可选。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**KPI_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（可选）默认限制是值为**1**。 位图，并使用以下有效的值之一：<br /><br /> **1**多维数据集<br /><br /> **2**维度|  
   
 ## <a name="see-also"></a>另请参阅  

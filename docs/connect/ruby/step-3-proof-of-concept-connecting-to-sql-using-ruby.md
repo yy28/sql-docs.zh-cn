@@ -3,13 +3,11 @@ title: 步骤 3： 连接到 SQL 使用 Ruby 的概念证明 |Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ruby
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
@@ -17,9 +15,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32d822293a6b46e23b36238dc084ef858ca6e22d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: a5bf98585281b4b84869c385c848d9add459d57b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -38,7 +36,7 @@ ms.lasthandoff: 05/03/2018
     database: 'AdventureWorks', azure:true  
 ```  
   
-## <a name="step-2--execute-a-query"></a>步骤 2： 执行查询  
+## <a name="step-2--execute-a-query"></a>步骤 2：执行查询  
   
 复制并将以下代码粘贴到空文件中。 Test.rb。 然后，执行它通过从命令提示符下输入以下命令：  
   

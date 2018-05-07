@@ -3,13 +3,10 @@ title: setNClob 方法 （java.lang.String，java.sql.NClob） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4e30d242-0c1b-45db-b75f-41b041692f31
@@ -17,9 +14,9 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a3643b4ef24a477e0c6ddc9e90bd29f17a290cd
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: c5c466c4c27f49328644e89b2161f47db965c895
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -39,7 +36,7 @@ public final void setNClob(java.lang.String parameterName,
 #### <a name="parameters"></a>Parameters  
  *参数名称*  
   
- A**字符串**，其中包含参数名称。  
+ 包含参数名称的字符串。  
   
  *值*  
   

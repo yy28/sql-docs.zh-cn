@@ -1,39 +1,25 @@
 ---
 title: DMSCHEMA_MINING_MODELS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODELS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODELS rowset
-ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd9f66d6fc8155c8390f45130f1354f9d223bc81
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]枚举当前目录中的数据挖掘模型。 **DMSCHEMA_MINING_MODELS**行集包括以下信息： 模型名称、 处理日期和与每个挖掘模型的挖掘算法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  枚举当前目录中的数据挖掘模型。 **DMSCHEMA_MINING_MODELS**行集包括以下信息： 模型名称、 处理日期和与每个挖掘模型的挖掘算法。  
   
- 实例时都提供 SQL Server 登录名。 **DMSCHEMA_MINING_MODELS**架构行集是非常类似于[DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)架构行集，并且可以用于相同的方式。  
+ 。 **DMSCHEMA_MINING_MODELS**架构行集是非常类似于[DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)架构行集，并且可以用于相同的方式。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DMSCHEMA_MINING_MODELS**行集包含以下各列。  
@@ -66,13 +52,13 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|可选。|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|可选。|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|可选。|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|可选。|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|可选。|  
-|**MINING_STRUCTURE**|**DBTYPE_WSTR**|可选。|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|選擇性。|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|選擇性。|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|選擇性。|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|選擇性。|  
+|**MINING_STRUCTURE**|**DBTYPE_WSTR**|選擇性。|  
   
  有关如何查询此行集的示例，请参阅[查询参数用来创建挖掘模型](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)。  
   

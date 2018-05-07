@@ -3,13 +3,10 @@ title: updateBinaryStream 方法 （int、 java.io.InputStream，长） |Microso
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f84cfbe6-ebab-4357-8770-f1db34ecb04f
@@ -17,9 +14,9 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01273784f0f4c59b49b8ece9d437eed7d8b511a9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 382294d0b91ff0b563eb2aac45c18fa3464e5b7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -38,9 +35,9 @@ public void updateBinaryStream(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *列索引*  
+ columnIndex  
   
- **Int** ，该值指示的列索引。  
+ 指示列索引的 int。  
   
  *x*  
   

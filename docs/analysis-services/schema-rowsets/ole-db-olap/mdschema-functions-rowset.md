@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_FUNCTIONS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_FUNCTIONS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_FUNCTIONS rowset
-ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
-caps.latest.revision: 29
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 81c5ff06837dd9004be1ffc72be017a4991e902f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>MDSCHEMA_FUNCTIONS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]介绍可用于连接到数据库的客户端应用程序的函数。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  介绍可用于已连接到数据库的客户端应用程序的函数。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_FUNCTIONS**行集包含以下各列。  
@@ -48,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 |**DLL_NAME**|**DBTYPE_WSTR**|（可选）实现用户定义函数的程序集的名称。<br /><br /> 返回**VT_NULL** MDX 函数。|  
 |**HELP_FILE**|**DBTYPE_WSTR**|（可选）包含用户定义函数帮助文档的文件名。<br /><br /> 返回**VT_NULL** MDX 函数。|  
 |**HELP_CONTEXT**|**DBTYPE_I4**|（可选）返回此函数的帮助上下文 ID。|  
-|**对象**|**DBTYPE_WSTR**|（可选）应用了属性的对象类的通用名称。 例如，行集对应 < level_name >。成员函数将返回"**级别**"。<br /><br /> 返回**VT_NULL**对于用户定义函数或非属性 MDX 函数。|  
+|**OBJECT**|**DBTYPE_WSTR**|（可选）应用了属性的对象类的通用名称。 例如，行集对应 < level_name >。成员函数将返回"**级别**"。<br /><br /> 返回**VT_NULL**对于用户定义函数或非属性 MDX 函数。|  
 |**标题**|**DBTYPE_WSTR**|函数的显示标题。|  
   
  行集按排序**原点**， **INTERFACE_NAME**， **FUNCTION_NAME**。  
@@ -58,10 +44,10 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**LIBRARY_NAME**|**DBTYPE_WSTR**|可选。|  
-|**INTERFACE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**FUNCTION_NAME**|**DBTYPE_WSTR**|可选。|  
-|**源**|**DBTYPE_I4**|可选。|  
+|**LIBRARY_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**INTERFACE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**FUNCTION_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**源**|**DBTYPE_I4**|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB for OLAP 架构行集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

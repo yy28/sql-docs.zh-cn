@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_STORAGE_TABLES 行集 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_STORAGE_TABLES 行集 |Microsoft 文档
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0685808f47364f7e88f82b48540034ef0d0e688a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-允许客户端确定在表格或 SharePoint 模式下运行的 Analysis Services 数据库中包括的表。  
+  允许客户端确定在表格或 SharePoint 模式下运行的 Analysis Services 数据库中包括的表。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_STORAGE_TABLES**行集包含以下各列。  
@@ -39,7 +29,7 @@ ms.lasthandoff: 02/15/2018
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||度量值组的名称。|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**||分区的名称。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||维度的名称。|  
-|**TABLE_ID**|**DBTYPE_WSTR**||用于存储表属性的表的 ID。|  
+|**针对 TABLE_ID 所**|**DBTYPE_WSTR**||用于存储表属性的表的 ID。|  
 |**TABLE_PARTITIONS_COUNT**|**DBTYPE_ WSTR**||表分区计数。|  
 |**HINT_TABLE_TYPE**|**DBTYPE_ WSTR**||表类型的提示。|  
 |**ROWS_COUNT**|**DBTYPE_UI4**||在分区中的行数。|  

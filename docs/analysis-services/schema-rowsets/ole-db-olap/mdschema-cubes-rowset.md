@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_CUBES 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_CUBES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_CUBES rowset
-ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: 32
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 82a07fda14984582ae9461d861df0fa47920b527
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述在数据库中的多维数据集的结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  介绍数据库中的多维数据集的结构。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_CUBES**行集包含以下各列。  
@@ -41,7 +27,7 @@ ms.lasthandoff: 01/08/2018
 |**CATALOG_NAME**|**DBTYPE_WSTR**|数据库的名称。|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|不提供支持。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|多维数据集或维度的名称。 维度名称以美元符号 ($) 开头。<br /><br /> 注意： 仅服务器和数据库管理员有权限看到从维度创建多维数据集。|  
-|**CUBE_TYPE**|**DBTYPE_WSTR**|多维数据集的类型。 有效值为<br /><br /> **多维数据集**<br /><br /> **维度**|  
+|**CUBE_TYPE**|**DBTYPE_WSTR**|多维数据集的类型。 有效值包括：<br /><br /> **多维数据集**<br /><br /> **维度**|  
 |**CUBE_GUID**|**DBTYPE_GUID**|不提供支持。|  
 |**CREATED_ON**|**DBTYPE_DBTIMESTAMP**|不提供支持。|  
 |**LAST_SCHEMA_UPDATE**|**DBTYPE_DBTIMESTAMP**|上次处理相应多维数据集的时间。|  
@@ -64,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可选。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（可选）默认限制是值为 1。 位图，并使用两个有效的值之一：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
-|**基 Cube_Name**|**DBTYPE_WSTR**|可选。|  
+|**基 Cube_Name**|**DBTYPE_WSTR**|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB for OLAP 架构行集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

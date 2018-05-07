@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d47e3c7ef97358c908d511ee0d6eb1c18ffc601b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f8d63fc65ade4d59069195fdce852bc1dea30bd7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamtype-extended-stored-procedure-api"></a>srv_paramtype（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ n
  指示参数的编号。 第一个参数是 1。  
   
 ## <a name="returns"></a>返回  
- 参数的数据类型的标记值。 有关数据类型的信息，请参阅[数据类型（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。 如果没有任何*n*th 参数，或者如果没有没有远程存储的过程，它将返回-1。  
+ 参数的数据类型的标记值。 有关数据类型的信息，请参阅[数据类型（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1。  
   
  如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据类型之一，则此函数返回以下值。  
   
@@ -77,7 +76,7 @@ n
 |**NVARCHAR**|VARCHAR|  
 |**NTEXT**|-1|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  
   
 > [!IMPORTANT]  

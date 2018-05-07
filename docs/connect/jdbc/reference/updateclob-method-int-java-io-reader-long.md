@@ -3,13 +3,10 @@ title: updateClob 方法 （int、 java.io.Reader，长） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c958ccb-386a-4dd5-901d-5a106dac2683
@@ -17,9 +14,9 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b255d63c860b78497228849da69cc312d8502b56
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 978c5f09f2c7524462dc950a5edc9b435324bdb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
@@ -38,9 +35,9 @@ public void updateClob(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *列索引*  
+ columnIndex  
   
- **Int** ，该值指示的列索引。  
+ 指示列索引的 int。  
   
  *读取器*  
   

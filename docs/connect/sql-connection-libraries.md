@@ -2,19 +2,18 @@
 title: 用于 Microsoft SQL 数据库的连接库 |Microsoft 文档
 description: 提供用于启用与 Microsoft SQL Server 和 Azure SQL 数据库，从多种编程语言的客户端的连接的模块下载链接。
 author: MightyPen
-ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 50aed9edb4c5ab07985e467fc63a3854cef9bb88
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---

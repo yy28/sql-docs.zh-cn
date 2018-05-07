@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f41db279ec8c4087dbc086b8aca7ad79f5fe68d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,14 +65,14 @@ len
  *n*  
  指示要设置的参数的编号。 第一个参数是 1。  
   
- *data*  
+ data  
  是指向要发送回客户端的数据值的指针，该数据值将作为远程存储过程返回参数。  
   
  len  
  指定要返回的数据的实际长度。 如果参数的数据类型的长度为常量且该数据类型不允许 null 值（例如 srvbit 或 srvint1），则将会忽略 len。  
   
 ## <a name="returns"></a>返回  
- 如果参数值设置成功，则返回 SUCCEED，否则返回 FAIL。 在没有任何当前的远程存储的过程，在没有时才时才返回 FAIL 没有*n*th 远程存储过程参数，该参数不是返回的参数，以及*len*参数不是合法。  
+ 如果参数值设置成功，则返回 SUCCEED，否则返回 FAIL。 如果属于以下情况则返回 FAIL：无当前远程存储过程、没有第 n 个远程存储过程参数、参数不是返回参数以及 len 参数是非法的。  
   
  如果 len 为 0，则返回 NULL。 将 len 设置为 0 是将 NULL 返回给客户端的唯一方法。  
   
@@ -94,7 +92,7 @@ len
 |IG = 将忽略值||  
 |valid = 任何有效的数据指针||  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  参数包含通过远程存储过程在客户端和应用程序之间传递的数据。 客户端可以指定某些参数作为返回参数。 这些返回参数可包含开放式数据服务服务器应用程序传递回客户端的值。 使用返回参数类似于通过引用传递参数。  
   
  不能设置未作为返回参数调用的参数的返回值。 可以使用 srv_paramstatus 来确定参数的调用方式。  

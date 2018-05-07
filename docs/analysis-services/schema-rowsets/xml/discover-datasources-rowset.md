@@ -1,37 +1,23 @@
 ---
 title: DISCOVER_DATASOURCES 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DISCOVER_DATASOURCES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DATASOURCES rowset
-ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: 39
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6ebbc52708591c54f9236aabcd2404c01a65e81f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回 XML for Analysis (XMLA) 提供程序数据源上的服务器或 Web 服务可用的列表。 发布的数据源从应用程序 Web 服务器的 URL 返回。 客户端可以连接到该列表中的一个数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  返回服务器或 Web 服务上可用的 XML for Analysis (XMLA) 访问接口数据源的列表。 发布的数据源从应用程序 Web 服务器的 URL 返回。 客户端可以连接到该列表中的一个数据源。  
   
  如果调用[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法替换**DISCOVER_DATASOURCES**中的枚举值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素，**发现**方法返回**DISCOVER_DATASOURCES**行集。  
   
@@ -62,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  

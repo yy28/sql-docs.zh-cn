@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50af5fe7e6c40a1133ee585b416189e61ed461e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6b73c58233d37fa34b4d305bb58a4823731ef559
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ SRV_PROC * srvproc,intn, int *len );
  提供指向一个 int 变量的指针，该变量包含参数名称的长度（以字节为单位）。 如果 len 为 NULL，则不返回远程存储过程参数名称的长度。  
   
 ## <a name="returns"></a>返回  
- 指向包含参数名称的 Null 值结束字符串的指针。 参数名称的长度存储在 len 中。 如果没有任何*n*th 参数或没有远程存储的过程，它将返回 NULL， *len*设置为-1，并发送一条信息性错误消息。 如果参数名称为 NULL，len 则将设置为 0，并且返回以 null 值终止的空字符串。  
+ 指向包含参数名称的 Null 值结束字符串的指针。 参数名称的长度存储在 len 中。 如果没有第 n 个参数或没有远程存储过程，则返回 NULL，len 会设置为 -1，并且会发送信息性错误消息。 如果参数名称为 NULL，len 则将设置为 0，并且返回以 null 值终止的空字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  该函数获取远程存储过程调用参数的名称。 使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  
   
 > [!IMPORTANT]  

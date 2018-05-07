@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 008277d80aa0915f4578b24e6e85cdbe8a5fea4e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abdc661f43a3dfbc63e4b0a6e141e121e74241e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +90,9 @@ pfNull
  指向 Null 标志的指针。如果参数的值为 NULL， *pfNull 设置为 TRUE。  
   
 ## <a name="returns"></a>返回  
- 如果成功获取参数信息，则返回 SUCCEED，否则返回 FAIL。 没有当前的远程存储的过程时，并在没有时才返回 FAIL 没有*n*th 远程存储的过程参数。  
+ 如果成功获取参数信息，则返回 SUCCEED，否则返回 FAIL。 如果没有当前远程存储过程并且没有第 n 个远程存储过程参数，将返回 FAIL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  

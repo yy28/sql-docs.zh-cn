@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_DIMENSIONS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_DIMENSIONS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_DIMENSIONS rowset
-ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cf0198759485452fc3fd6d82cdd2642df92b440
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aab53e53edeee81f57914ac67cb88078d663c3ac
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述在数据库中的共享和私有维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  介绍数据库中的共享维度和专用维度。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_DIMENSIONS**行集包含以下列：  
@@ -63,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|可选。|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（可选）默认限制是值为 1。 位图，并使用以下有效的值之一：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|（可选）默认限制是值为 1。 位图，并使用以下有效的值之一：<br /><br /> 1 可见<br /><br /> 2 不可见|  
   

@@ -1,41 +1,23 @@
 ---
 title: DataItem 数据类型 (ASSL) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- DataItem Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DataItem
-helpviewer_keywords:
-- DataItem data type
-ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
-caps.latest.revision: 44
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ec40eca06225eef5d9c7e505e4fe2c9dee6972b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 838ed128df12e0cd1b46cadd208938804683db86
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dataitem-data-type-assl"></a>DataItem 数据类型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义表示数据项，如列或属性的内容相关的数据的特征的基元数据类型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定义一个基元数据类型，该类型表示数据项的数据相关特征，如列或属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,20 +39,20 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|基本数据类型|InclusionThresholdSetting|  
-|派生数据类型|InclusionThresholdSetting|  
+|基本数据类型|无|  
+|派生数据类型|无|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|无|  
 |子元素|[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)，[排序规则](../../../analysis-services/scripting/properties/collation-element-assl.md)， [DataSize](../../../analysis-services/scripting/properties/datasize-element-assl.md)， [DataType](../../../analysis-services/scripting/properties/datatype-element-assl.md)，[格式](../../../analysis-services/scripting/properties/format-element-assl.md)， [InvalidXmlCharacters](../../../analysis-services/scripting/properties/invalidxmlcharacters-element-assl.md)， [MimeType](../../../analysis-services/scripting/properties/mimetype-element-assl.md)， [NullProcessing](../../../analysis-services/scripting/properties/nullprocessing-element-assl.md)，[源](../../../analysis-services/scripting/properties/source-element-binding-assl.md)，[修剪](../../../analysis-services/scripting/properties/trimming-element-assl.md)|  
 |派生元素|请参阅“备注”中的表。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **DataItem**数据类型用于任何可绑定的数据项，; 例如，度量值、 属性键和属性名称。 相关的详细信息和适用的默认值取决于用法；例如，属性名称必须为字符串。  
   
  实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]接受某些组的数据类型。 使用其他数据类型将导致错误，而不是隐式转换为一种有效类型。  
@@ -95,6 +77,6 @@ ms.lasthandoff: 01/08/2018
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DataItem>。  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services 脚本语言 XML 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services 脚本语言 XML 数据类型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

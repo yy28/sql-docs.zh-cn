@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f501b72dad1f0e21bc59ffa6b83dc8e04bf55182
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ n
  表示参数的编号。 第一个参数的编号为 1。  
   
 ## <a name="returns"></a>返回  
- 一个指向参数值的指针。 如果*n*th 参数为 NULL，则没有*n*th 参数，或者没有任何远程存储的过程，返回 NULL。 如果参数值为字符串，则不能以 Null 值结束。 使用 srv_paramlen 确定字符串的长度。  
+ 一个指向参数值的指针。 如果第 n 个参数为 NULL，则没有第 n 个参数，或者没有任何远程存储过程，并返回 NULL。 如果参数值为字符串，则不能以 Null 值结束。 使用 srv_paramlen 确定字符串的长度。  
   
  如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一，则此函数返回以下值。 指针数据包括数据类型的指针是否为有效 (VP)、NULL 或不适用 (N/A)，以及指向的数据内容。  
   
@@ -79,7 +78,7 @@ n
   
  \*   数据不能以 Null 值结束；截断 255 个字符以外的字符时不会发出警告。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果知道参数名称，则可以使用 srv_paramnumber 获取参数编号。 要确定参数是否为 NULL，请使用 srv_paramlen。  
   
  使用参数执行远程存储过程调用时，可以通过名称或位置（未命名）来传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 如果出现错误，仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  

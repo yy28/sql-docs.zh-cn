@@ -1,33 +1,23 @@
 ---
-title: "关系数据类型 (ASSL) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 关系数据类型 (ASSL) |Microsoft 文档
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4611e01a37b0bbc9856eb7dd268db614bf718357
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c31842cff45615ad455d6d1c33a7e6fece9b251c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationship-data-type-assl"></a>Relationship 数据类型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-定义一个基元数据类型，该类型表示维度中的关系。  
+  定义一个基元数据类型，该类型表示维度中的关系。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,6 +50,6 @@ ms.lasthandoff: 02/15/2018
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Relationship>。  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services 脚本语言 XML 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services 脚本语言 XML 数据类型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

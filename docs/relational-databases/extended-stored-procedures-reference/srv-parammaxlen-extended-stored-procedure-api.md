@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: abc8ff71b104cb42bc4d4b1a09e31abdddcbc23a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6a59c20ed8447e5c930e88b7a259bc63c95a3c8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ n
  指示参数的编号。 第一个参数是 1。  
   
 ## <a name="returns"></a>返回  
- 参数数据的最大长度（以字节为单位）。 如果没有任何*n*th 参数，或者如果没有远程存储的过程，返回-1。  
+ 参数数据的最大长度（以字节为单位）。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1。  
   
  如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一，则此函数返回以下值。  
   
@@ -77,7 +75,7 @@ n
 |**NVARCHAR**|**NULL：**255<br /><br /> **ZERO：**255<br /><br /> **>=255：**255<br /><br /> **<255：**255|  
 |**NTEXT**|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255：**-1<br /><br /> **\<255：**-1|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  每个远程存储过程参数都具有实际数据长度和最大数据长度。 对于不允许使用 Null 值的标准固定长度数据类型，实际长度和最大长度相同。 对于可变长度数据类型，长度可以变化。 例如，声明为 varchar(30) 的参数可以具有长度仅为 10 个字节的数据。 该参数的实际长度为 10，最大长度为 30。 srv_parammaxlen 函数获取远程存储过程的最大数据长度。 若要获取参数的实际长度，请使用 srv_paramlen。  
   
  使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  

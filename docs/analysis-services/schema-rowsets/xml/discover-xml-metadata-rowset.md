@@ -1,37 +1,23 @@
 ---
 title: DISCOVER_XML_METADATA 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DISCOVER_XML_METADATA
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_XML_METADATA rowset
-ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 64fe5c240808b727c0985f432bb634d83cb68e91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a01f73cb3ef8647f179143e4be8b71f9dceee755
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回描述请求的对象的 XML 文档。 返回的行集始终包含一行和一列。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  返回描述请求的对象的 XML 文档。 返回的行集始终包含一行和一列。  
   
  如果调用[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法替换**DISCOVER_XML_METATDATA**中的枚举值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素，**发现**方法返回**DISCOVER_XML_METATDATA**行集。  
   
@@ -52,30 +38,30 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**DatabaseID**|**DBTYPE_WSTR**|可选。|  
-|**DimensionID**|**DBTYPE_WSTR**|可选。|  
-|**CubeID**|**DBTYPE_WSTR**|可选。|  
-|**MeasureGroupID**|**DBTYPE_WSTR**|可选。|  
-|**PartitionID**|**DBTYPE_WSTR**|可选。|  
-|**PerspectiveID**|**DBTYPE_WSTR**|可选。|  
-|**DimensionPermissionID**|**DBTYPE_WSTR**|可选。|  
-|**RoleID**|**DBTYPE_WSTR**|可选。|  
-|**DatabasePermissionID**|**DBTYPE_WSTR**|可选。|  
-|**MiningModelID**|**DBTYPE_WSTR**|可选。|  
-|**MiningModelPermissionID**|**DBTYPE_WSTR**|可选。|  
-|**DataSourceID**|**DBTYPE_WSTR**|可选。|  
-|**MiningStructureID**|**DBTYPE_WSTR**|可选。|  
-|**AggregationDesignID**|**DBTYPE_WSTR**|可选。|  
-|**TraceID**|**DBTYPE_WSTR**|可选。|  
-|**MiningStructurePermissionID**|**DBTYPE_WSTR**|可选。|  
-|**CubePermissionID**|**DBTYPE_WSTR**|可选。|  
-|**AssemblyID**|**DBTYPE_WSTR**|可选。|  
-|**MdxScriptID**|**DBTYPE_WSTR**|可选。|  
-|**DataSourceViewID**|**DBTYPE_WSTR**|可选。|  
-|**DataSourcePermissionID**|**DBTYPE_WSTR**|可选。|  
-|**ObjectExpansion**|**DBTYPE_WSTR**|可选。|  
+|**DatabaseID**|**DBTYPE_WSTR**|選擇性。|  
+|**DimensionID**|**DBTYPE_WSTR**|選擇性。|  
+|**CubeID**|**DBTYPE_WSTR**|選擇性。|  
+|**MeasureGroupID**|**DBTYPE_WSTR**|選擇性。|  
+|**PartitionID**|**DBTYPE_WSTR**|選擇性。|  
+|**PerspectiveID**|**DBTYPE_WSTR**|選擇性。|  
+|**DimensionPermissionID**|**DBTYPE_WSTR**|選擇性。|  
+|**RoleID**|**DBTYPE_WSTR**|選擇性。|  
+|**DatabasePermissionID**|**DBTYPE_WSTR**|選擇性。|  
+|**MiningModelID**|**DBTYPE_WSTR**|選擇性。|  
+|**MiningModelPermissionID**|**DBTYPE_WSTR**|選擇性。|  
+|**DataSourceID**|**DBTYPE_WSTR**|選擇性。|  
+|**MiningStructureID**|**DBTYPE_WSTR**|選擇性。|  
+|**AggregationDesignID**|**DBTYPE_WSTR**|選擇性。|  
+|**TraceID**|**DBTYPE_WSTR**|選擇性。|  
+|**MiningStructurePermissionID**|**DBTYPE_WSTR**|選擇性。|  
+|**CubePermissionID**|**DBTYPE_WSTR**|選擇性。|  
+|**AssemblyID**|**DBTYPE_WSTR**|選擇性。|  
+|**MdxScriptID**|**DBTYPE_WSTR**|選擇性。|  
+|**DataSourceViewID**|**DBTYPE_WSTR**|選擇性。|  
+|**DataSourcePermissionID**|**DBTYPE_WSTR**|選擇性。|  
+|**ObjectExpansion**|**DBTYPE_WSTR**|選擇性。|  
   
- 此限制， **ObjectExpansion**，可用于的每个主要对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 客户端通常使用限制来描述 OLAP 对象的 DDL 才能返回，并使用**ObjectExpansion**限制返回的 DDL 中定义的扩展的程度。 下表指示是否允许枚举值[Alter 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)命令。  
+ 此限制， **ObjectExpansion**，可用于的每个主要对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 客户端通常使用限制来描述 OLAP 对象的 DDL 才能返回，并使用**ObjectExpansion**限制返回的 DDL 中定义的扩展的程度。 下表指示是否允许枚举值[Alter 元素&#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)命令。  
   
 |枚举值|Description|  
 |-----------------------|-----------------|  

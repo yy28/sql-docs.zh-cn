@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_MEASUREGROUP_DIMENSIONS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEASUREGROUP_DIMENSIONS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
-ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
-caps.latest.revision: 14
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62ee9e17d9f53d981e5e44918ec690c9abceddbb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4be854b72c773300115e49551ceaf0ddc4d7db81
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>MDSCHEMA_MEASUREGROUP_DIMENSIONS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]枚举度量值组的维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  枚举度量值组的维度。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_MEASUREGROUP_DIMENSIONS**行集包含以下各列。  
@@ -57,11 +43,11 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|可选。|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|（可选）位图，并使用以下有效的值之一：<br /><br /> 1 可见<br /><br /> 2 不可见<br /><br /> 默认限制的值为 1。|  
   
 ## <a name="see-also"></a>另请参阅  

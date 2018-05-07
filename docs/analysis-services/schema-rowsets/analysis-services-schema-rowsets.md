@@ -1,43 +1,23 @@
 ---
-title: "Analysis Services 架构行集 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- SSAS, data access interfaces
-- Analysis Services data access interfaces, schema rowsets
-- data access interfaces [Analysis Services]
-- XML for Analysis, schema rowsets
-- rowsets [Analysis Services], retrieving schema rowsets
-- retrieving schema rowsets
-- XMLA, schema rowsets
-- rowsets [Analysis Services]
-- schema rowsets [Analysis Services], retrieving
-ms.assetid: 820d4b59-d428-4616-b792-c848e5da407e
-caps.latest.revision: 
-author: Minewiskan
+title: Analysis Services 架构行集 |Microsoft 文档
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
+ms.topic: reference
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: adb3427f2a482bd32635ccd24eda70a091b2653e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f2444880b28584a2a9ea70a3f229a94f0d8edf34
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analysis-services-schema-rowsets"></a>Analysis Services 架构行集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-架构行集是预定义的表，其中包含有关 Analysis Services 对象和服务器状态（包括在服务器上执行的数据库架构、活动的会话、连接、命令和作业）的信息。 您可以在 SQL Server Management Studio 的 XML/A 脚本窗口中查询架构行集表、对架构行集运行 DMV 查询，或创建包含架构行集信息的自定义应用程序（例如，检索可用于创建报表的可用维度列表的报表应用程序）。  
+  架构行集是预定义的表，其中包含有关 Analysis Services 对象和服务器状态（包括在服务器上执行的数据库架构、活动的会话、连接、命令和作业）的信息。 您可以在 SQL Server Management Studio 的 XML/A 脚本窗口中查询架构行集表、对架构行集运行 DMV 查询，或创建包含架构行集信息的自定义应用程序（例如，检索可用于创建报表的可用维度列表的报表应用程序）。  
   
 > [!NOTE]  
 >  如果你使用的架构行集在 XML/A 脚本，在中返回的信息*结果*参数[发现](../../analysis-services/xmla/xml-elements-methods-discover.md)方法结构根据本节中所述的行集列布局。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口支持 XML for Analysis 规范所需的行集。 XMLA 访问接口还支持 OLE DB、OLE DB for OLAP 和 OLE DB for Data Mining 数据源提供程序的某些标准架构行集。 下列主题介绍了支持的行集。  
@@ -52,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 |[数据挖掘架构行集](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)|介绍 XMLA 访问接口支持的数据挖掘架构行集。|  
   
 ## <a name="see-also"></a>另请参阅  
- [多维模型数据访问 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)   
- [使用动态管理视图 &#40; Dmv &#41;监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [多维模型数据访问 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)   
+ [使用动态管理视图 & #40; Dmv & #41;监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

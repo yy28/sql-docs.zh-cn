@@ -1,45 +1,23 @@
 ---
-title: "Analysis Services 脚本语言 (的 XMLA ASSL) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 脚本语言 (的 XMLA ASSL) |Microsoft 文档
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Analysis Services Scripting Language Reference
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ASSL, reference
-- scripting languages [Analysis Services]
-- Analysis Services Scripting Language, reference
-- ODL [Analysis Services Scripting Language]
-- XML [Analysis Services Scripting Language]
-- scripts [Analysis Services Scripting Language]
-- object definition language [Analysis Services Scripting Language]
-ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 00661a3edba892563837af0c20f5015aa9d259dc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 74c282274d8b4868f16db8ca83721dd22c00508d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analysis-services-scripting-language-assl-for-xmla"></a>Analysis Services 脚本语言 (的 XMLA ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-应用程序与通信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML 命令和对象说明。 Analysis Services 脚本语言 (ASSL) 表示此 XML 方言的对象定义语言部分。  
+  应用程序与通信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML 命令和对象说明。 Analysis Services 脚本语言 (ASSL) 表示此 XML 方言的对象定义语言部分。  
   
  本参考部分包含 ASSL 架构中每个元素的语法和用法信息。  
   
@@ -49,13 +27,13 @@ ms.lasthandoff: 02/15/2018
   
 |主题|Description|  
 |-----------|-----------------|  
-|[Analysis Services 脚本语言 XML 元素层次结构 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)|ASSL 中元素层次结构的详细图表。|  
-|[Analysis Services 脚本语言 XML 数据类型层次结构 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)|ASSL 中数据类型的继承层次结构的详细图表。|  
-|[Analysis Services 脚本语言 XML 元素 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)|ASSL 架构中每个元素的语法引用。|  
-|[Analysis Services 脚本语言 XML 数据类型 &#40;ASSL &#41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)|ASSL 架构中每个数据类型的语法引用。|  
+|[Analysis Services 脚本语言 XML 元素层次结构 & #40;ASSL & #41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)|ASSL 中元素层次结构的详细图表。|  
+|[Analysis Services 脚本语言 XML 数据类型层次结构&#40;ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)|ASSL 中数据类型的继承层次结构的详细图表。|  
+|[Analysis Services 脚本语言 XML 元素&#40;ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)|ASSL 架构中每个元素的语法引用。|  
+|[Analysis Services 脚本语言 XML 数据类型 & #40;ASSL & #41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)|ASSL 架构中每个数据类型的语法引用。|  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [使用分析管理对象 &#40; 进行开发AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [使用分析管理对象 & #40; 进行开发AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   

@@ -44,6 +44,7 @@
 #### [“发布服务器属性”](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
 ### [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
 ### [Service Broker](service-broker-with-always-on-availability-groups-sql-server.md)  
+## [租约、群集和运行状况检查超时](availability-group-lease-healthcheck-timeout.md)
 ## [侦听器、客户端和故障转移](listeners-client-connectivity-application-failover.md)  
 ## [登录名和作业](logins-and-jobs-for-availability-group-databases.md)  
 ## [副本间会话期间可能发生的故障](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  

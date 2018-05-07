@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_SESSIONS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_SESSIONS rowset
-ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
-caps.latest.revision: 18
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbbc74e9241d7501371008ef5bae73f092022e11
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在服务器上提供有关当前打开的会话的资源使用情况和活动信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供在服务器上当前打开的会话的资源使用情况和活动信息。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_SESSIONS**行集包含以下各列。  
@@ -65,15 +54,15 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|SESSION_ID|DBTYPE_WSTR|可选。|  
-|SESSION_SPID|DBTYPE_I4|可选。|  
-|SESSION_CONNECTION_ID|DBTYPE_I4|可选。|  
-|SESSION_USER_NAME|DBTYPE_WSTR|可选。|  
-|SESSION_CURRENT_DATABASE|DBTYPE_WSTR|可选。|  
-|SESSION_ELAPSED_TIME_MS|DBTYPE_UI8|可选。|  
-|SESSION_CPU_TIME_MS|DBTYPE_UI8|可选。|  
-|SESSION_IDLE_TIME_MS|DBTYPE_UI8|可选。|  
-|SESSION_STATUS|DBTYPE_I4|可选。|  
+|SESSION_ID|DBTYPE_WSTR|選擇性。|  
+|SESSION_SPID|DBTYPE_I4|選擇性。|  
+|SESSION_CONNECTION_ID|DBTYPE_I4|選擇性。|  
+|SESSION_USER_NAME|DBTYPE_WSTR|選擇性。|  
+|SESSION_CURRENT_DATABASE|DBTYPE_WSTR|選擇性。|  
+|SESSION_ELAPSED_TIME_MS|DBTYPE_UI8|選擇性。|  
+|SESSION_CPU_TIME_MS|DBTYPE_UI8|選擇性。|  
+|SESSION_IDLE_TIME_MS|DBTYPE_UI8|選擇性。|  
+|SESSION_STATUS|DBTYPE_I4|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [XML for Analysis 架构行集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

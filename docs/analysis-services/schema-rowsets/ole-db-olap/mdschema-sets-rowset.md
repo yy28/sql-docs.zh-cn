@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_SETS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_SETS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_SETS rowset
-ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: 37
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e3750594327d247cbb9f8abbc577c29027d1c92f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述当前在数据库中，包括会话作用域集定义的任何集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述当前在数据库中定义的任何集，包括会话作用域的集。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_SETS**行集包含以下各列。  
@@ -57,13 +43,13 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SET_NAME**|**DBTYPE_WSTR**|可选。|  
-|**作用域**|**DBTYPE_I4**|可选。|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_SOURCE**|**DBTYPE_UI2**|可选。<br /><br /> 注意： 只有一个层次结构可以包括在内，并仅那些命名集返回其层次结构与限制完全匹配。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SET_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**作用域**|**DBTYPE_I4**|選擇性。|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_SOURCE**|**DBTYPE_UI2**|選擇性。<br /><br /> 注意： 只有一个层次结构可以包括在内，并仅那些命名集返回其层次结构与限制完全匹配。|  
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB for OLAP 架构行集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_INPUT_DATASOURCES 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_INPUT_DATASOURCES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_INPUT_DATASOURCES rowset
-ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a810fef41d402cb35d9e6e3c62120f09b0c6bae4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6efa6baf40c41db7de09ebcb4e5c44990ff7e6ed
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemainputdatasources-rowset"></a>MDSCHEMA_INPUT_DATASOURCES 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述在数据库中定义的数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  介绍数据库中定义的数据源。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_INPUT_DATASOURCES**行集包含以下各列。  
@@ -54,10 +40,10 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**DATASOURCE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**DATASOURCE_TYPE**|**DBTYPE_WSTR**|可选。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**DATASOURCE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**DATASOURCE_TYPE**|**DBTYPE_WSTR**|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB for OLAP 架构行集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

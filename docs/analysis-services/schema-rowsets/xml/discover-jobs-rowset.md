@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_JOBS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_JOBS rowset
-ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0fd27205ff919130eed2e7708031b0268f35408f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f262e4d0b486676eb9f541fbd7d5c0e2866a07ae
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverjobs-rowset"></a>DISCOVER_JOBS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有关服务器上执行的活动作业信息。 作业是命令的一部分，代表命令执行特定任务。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供有关在服务器上执行的活动作业的信息。 作业是命令的一部分，代表命令执行特定任务。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_JOBS**行集包含以下各列。  
@@ -37,11 +26,11 @@ ms.lasthandoff: 01/08/2018
 |-----------------|--------------------|------------|-----------------|  
 |**JOB_CREATION_TIME**|**DBTYPE_DBTIMESTAMP**||创建作业时的服务器 UTC 日期和时间。|  
 |**JOB_DESCRIPTION**|**DBTYPE_WSTR**||服务器服务指定的作业说明。|  
-|**JOB_EXECUTION_TIME_MS**|**是 DBTYPE_I8**||作业处于活动状态的时间（毫秒）。|  
+|**JOB_EXECUTION_TIME_MS**|**DBTYPE_I8**||作业处于活动状态的时间（毫秒）。|  
 |**JOB_ID**|**DBTYPE_I4**||作业的唯一标识符。|  
 |**JOB_START_TIME**|**DBTYPE_DBTIMESTAMP**||作业开始时的服务器 UTC 日期和时间。|  
 |**JOB_THREADPOOL_ID**|**DBTYPE_I4**||从中启动当前作业的线程池。|  
-|**JOB_TOTAL_TIME_MS**|**是 DBTYPE_I8**||自作业开始起的时间（毫秒）。|  
+|**JOB_TOTAL_TIME_MS**|**DBTYPE_I8**||自作业开始起的时间（毫秒）。|  
 |**SPID**|**DBTYPE_I4**||会话 ID。|  
   
  未对此架构行集进行排序。  
@@ -51,11 +40,11 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|SPID|DBTYPE_I4|可选。|  
-|JOB_ID|DBTYPE_I4|可选。|  
-|JOB_DESCRIPTION|DBTYPE_WSTR|可选。|  
-|JOB_THREADPOOL_ID|DBTYPE_I4|可选。|  
-|JOB_MIN TOTAL_TIME_MS|DBTYPE_I8|可选。|  
+|SPID|DBTYPE_I4|選擇性。|  
+|JOB_ID|DBTYPE_I4|選擇性。|  
+|JOB_DESCRIPTION|DBTYPE_WSTR|選擇性。|  
+|JOB_THREADPOOL_ID|DBTYPE_I4|選擇性。|  
+|JOB_MIN TOTAL_TIME_MS|DBTYPE_I8|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [XML for Analysis 架构行集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

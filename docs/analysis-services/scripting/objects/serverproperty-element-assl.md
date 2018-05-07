@@ -1,41 +1,23 @@
 ---
 title: ServerProperty 元素 (ASSL) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- ServerProperty Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SERVERPROPERTY
-helpviewer_keywords:
-- ServerProperty element
-ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9008e839c9182c972d2aeefbde0cc827dd1d9dd3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fd8d5ff3afbb85b2f087e4476dc81777b524deca
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serverproperty-element-assl"></a>ServerProperty 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义与关联的服务器属性[服务器](../../../analysis-services/scripting/objects/server-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定义与关联的服务器属性[服务器](../../../analysis-services/scripting/objects/server-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,10 +37,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|无|  
+|默认值|无|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -68,13 +50,13 @@ ms.lasthandoff: 01/08/2018
 |父元素|[ServerProperties](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)|  
 |子元素|[DefaultValue](../../../analysis-services/scripting/properties/defaultvalue-element-assl.md)， [DisplayFlag](../../../analysis-services/scripting/properties/displayflag-element-assl.md)，[名称](../../../analysis-services/scripting/properties/name-element-assl.md)， [PendingValue](../../../analysis-services/scripting/properties/pendingvalue-element-assl.md)， [RequiresRestart](../../../analysis-services/scripting/properties/requiresrestart-element-assl.md)，[值](../../../analysis-services/scripting/properties/value-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **ServerProperty**元素描述的数据和元数据与实例关联的服务器属性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 与在 Analysis Services 脚本语言 (ASSL)，其他集合中包含元素不同**ServerProperty**元素而不是显式命名的元素使用名称/值对描述服务器属性。 名称/值对可提供灵活性和可扩展性。  
   
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>另请参阅  
- [服务器元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/server-element-assl.md)   
- [对象 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [服务器元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/server-element-assl.md)   
+ [对象 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

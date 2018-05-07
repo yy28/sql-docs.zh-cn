@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_STRUCTURE_COLUMNS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_STRUCTURE_COLUMNS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
-ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d7c520e22580a12afc1a1d12ce41e08388d6b107
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述部署在正在运行的服务器上的所有挖掘结构的各个列[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述部署在正在运行的服务器上的所有挖掘结构的各个列[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DMSCHEMA_MINING_STRUCTURE_COLUMNS**行集包含以下各列。  
@@ -39,11 +25,11 @@ ms.lasthandoff: 01/08/2018
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||目录名称。|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||非限定的架构名称。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]不支持架构，因此此列始终是**NULL**。|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||非限定的架构名称。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 不支持架构，因此此列始终是**NULL**。|  
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**||结构名称。 此列不能包含**NULL**。|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**||列的名称。 只保证在共享同一种模式的列之间具有唯一性。 例如，如果两个嵌套列属于同一结构中的两个不同嵌套表，则它们可能同名。|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||列 GUID。 不要使用 Guid 来标识列的提供程序应返回**NULL**此列中。|  
-|**COLUMN_PROPID**|**DBTYPE_UI4**||列属性 ID。 未将属性 Id 与列的提供程序应返回**NULL**此列中。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]返回**NULL**此列。|  
+|**COLUMN_PROPID**|**DBTYPE_UI4**||列属性 ID。 未将属性 Id 与列的提供程序应返回**NULL**此列中。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 返回**NULL**此列。|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||列序号。 列从 1 开始编号。 **NULL**如果没有稳定序号值的列。|  
 |**COLUMN_HASDEFAULT**|**DBTYPE_BOOL**||指示此列是否有默认值的布尔值。<br /><br /> **TRUE**如果列具有默认值。<br /><br /> **FALSE**如果列不具有默认值，或如果它是未知列是否具有默认值。|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||列的默认值。 一个提供程序可能会公开**DBCOLUMN_DEFAULTVALUE**但不是**DBCOLUMN_HASDEFAULT** （对于 ISO 表） 中返回的行集**IColumnsRowset::GetColumnsRowset**。<br /><br /> 如果默认值是**NULL**， **COLUMN_HASDEFAULT**是**TRUE**和**COLUMN_DEFAULT**列为**NULL**值。|  
@@ -79,10 +65,10 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|可选。|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|可选。|  
-|**STRUCTURE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**COLUMN_NAME**|**DBTYPE_WSTR**|可选。|  
+|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|選擇性。|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|選擇性。|  
+|**STRUCTURE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|選擇性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘架构行集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

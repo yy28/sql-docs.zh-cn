@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行集 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行集 |Microsoft 文档
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 110e5af35638c0eddb5cf0610955a737965373e3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-提供在列和段级别表格中运行的 Analysis Services 数据库使用的存储表有关的信息或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式。 此行集主要用于故障排除和分析。  
+  提供在列和段级别表格中运行的 Analysis Services 数据库使用的存储表有关的信息或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式。 此行集主要用于故障排除和分析。  
   
  **适用于：** 表格模型  
   
@@ -41,7 +31,7 @@ ms.lasthandoff: 02/15/2018
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|是|度量值组的名称。|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**|是|分区的名称。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||维度的名称。|  
-|**TABLE_ID**|**DBTYPE_WSTR**||表段的内部 ID。|  
+|**针对 TABLE_ID 所**|**DBTYPE_WSTR**||表段的内部 ID。|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||列的内部 ID。|  
 |**段数目 （_N)**|**DBTYPE_I8**||表段的序号。|  
 |**TABLE_PARTTION_NUMBER**|**DBTYPE_I8**||分区的序号。|  

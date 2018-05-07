@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_MEMBERS 行集 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEMBERS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEMBERS rowset
-ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 53a6314cd2c74640305d0c4f382d032887a0754d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在数据库内的成员进行了说明。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  介绍数据库中的成员。  
   
 ## <a name="rowset-columns"></a>行集列  
  **MDSCHEMA_MEMBERS**行集包含以下各列。  
@@ -70,17 +56,17 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可选。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|可选。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|可选。|  
-|**MEMBER_NAME**|**DBTYPE_WSTR**|可选。|  
-|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|可选。|  
-|**MEMBER_CAPTION**|**DBTYPE_WSTR**|可选。|  
-|**MEMBER_TYPE**|**DBTYPE_I4**|可选。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|選擇性。|  
+|**MEMBER_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
+|**MEMBER_CAPTION**|**DBTYPE_WSTR**|選擇性。|  
+|**MEMBER_TYPE**|**DBTYPE_I4**|選擇性。|  
 |**TREE_OP**|**DBTYPE_I4**|（可选）仅适用于单个成员：<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) 返回所有上级。<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) 返回仅的直属子级。<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) 返回相同的级别上的成员。<br /><br /> **MDTREEOP_PARENT** (**0x04，则**) 返回仅的直接父。<br /><br /> **MDTREEOP_SELF** (**0x08**) 在列表中返回的行返回它自身。<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) 返回所有子代。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（可选）默认限制是值为 1。 位图，并使用以下有效的值之一：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
   

@@ -293,3 +293,6 @@
 ## [配置事务复制](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [配置合并复制](tutorial-replicating-data-with-mobile-clients.md)  
 
+# 疑难解答
+## [事务复制错误](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+
