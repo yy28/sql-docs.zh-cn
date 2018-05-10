@@ -1,31 +1,23 @@
 ---
-title: "将 MSOLAP.5 添加为 Excel Services 中的受信任的数据提供程序 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 将 MSOLAP.5 添加为 Excel Services 中的受信任的数据提供程序 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbf52055cb77be6a740fc5186c69d55c352d5cc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 55727f3452d2bf406ab78fa7982a0c65e48f6052
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-MSOLAP.5 指代用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。 Excel Services 必须信任此访问接口，然后才能发出连接请求，请求在服务器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
+  MSOLAP.5 指代用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。 Excel Services 必须信任此访问接口，然后才能发出连接请求，请求在服务器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
  如果使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具配置了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，MSOLAP.5 可能已是受信任的访问接口，因为该工具包含一项可满足此要求的操作。 但是，如果使用的是 PowerShell、管理中心，或在配置工具中排除了受信任的访问接口操作，该访问接口可能缺失，在这种情况下，你应该在配置用于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的场的过程中立即添加该访问接口。  
   
