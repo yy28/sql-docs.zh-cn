@@ -1,31 +1,23 @@
 ---
-title: "调用 ProcessDimension cmdlet |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 调用 ProcessDimension cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a24a4b19f20e28346456e3c0c53f39eaeb200b9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f5cd3ad9f902aea9234046991ae9651702c5ee31
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processdimension-cmdlet"></a>Invoke-ProcessDimension cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用特定的处理类型变量处理维度。  
+  使用特定的处理类型变量处理维度。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -51,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-database-string"></a>-Database \<string>  
+### <a name="-database-string"></a>-数据库\<字符串 >  
  指定维度属于的数据库。  
   
 |||  
@@ -73,7 +65,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-databasedimension-microsoftanalysissevicesdimension"></a>-DatabaseDimension \<Microsoft.AnalysisSevices.Dimension>  
+### <a name="-databasedimension-microsoftanalysissevicesdimension"></a>-DatabaseDimension \<Microsoft.AnalysisSevices.Dimension >  
  指定要处理的 Microsoft.AnalysisServices.Dimension 对象。 如果您想要通过管道传入维度名称，则使用此参数。  
   
 |||  
@@ -84,7 +76,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|True (ByPropertyName)|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  此 cmdlet 支持以下常用参数：-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer 和 -OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

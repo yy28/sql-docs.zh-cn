@@ -7,16 +7,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7562a807fd53b2148b1b7787db5efb4c3cda7134
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e7e5b61cb8e41d818fc13d1cc97cd4d998256efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2016-r-server-standalone"></a>安装 SQL Server 2016 R Server （独立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何使用 SQL Server 2016 安装程序安装的独立版本**SQL Server 2016 R 服务器**。 如果你有企业版或软件保障，在生产服务器上安装独立 R Server 是免费的。
+本文介绍如何使用 SQL Server 2016 安装程序安装的独立版本**SQL Server 2016 R 服务器**。
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 

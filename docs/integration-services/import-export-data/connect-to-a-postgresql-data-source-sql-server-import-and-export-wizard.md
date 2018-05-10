@@ -1,28 +1,26 @@
 ---
-title: "连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）| Microsoft Docs"
-ms.custom: 
+title: 连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bc6221ec311e5836f94ef5fd2d865f1fc91e0588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）
 本主题向你介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 PostgreSQL 数据源。 
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 ![使用堆栈生成器安装 PostgreSQL ODBC](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
 ### <a name="or-download-the-latest-odbc-driver"></a>或者下载最新版 ODBC 驱动程序
-或者从这个 FTP 站点直接下载用于最新版 PostgreSQL ODBC 驱动程序 (psqlODBC) 的 Windows 安装程序：[https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)。 从 .zip 文件中提取文件并运行 .msi 文件。
+或者从此 FTP 站点直接下载用于最新版 PostgreSQL ODBC 驱动程序 (psqlODBC) 的 Windows 安装程序：[https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)。 从 .zip 文件中提取文件并运行 .msi 文件。
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>使用 PostgreSQL ODBC 驱动程序 (psqlODBC) 连接到 PostgreSQL
 ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源。 此提供程序充当 ODBC 驱动程序的包装器。

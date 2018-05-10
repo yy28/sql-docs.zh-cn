@@ -1,16 +1,15 @@
 ---
-title: "在 SharePoint Web 应用程序中设置报表服务器操作的权限 | Microsoft Docs"
-ms.custom: 
+title: 在 SharePoint Web 应用程序中设置报表服务器操作的权限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a03feca8dfe4da40235745087577e307af69ba7f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2fc28110b4d927e95eb3791f9d3408f046c683d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 应用程序中设置报表服务器操作的权限
   对于在 SharePoint 集成模式下运行的报表服务器而言，在 SharePoint 站点定义的安全设置将决定您查看和管理报表、报表模型以及共享数据源的方式。 如果使用的是默认 SharePoint 组、权限级别和权限分配，则可以使用当前安全设置来处理报表和其他文档。  

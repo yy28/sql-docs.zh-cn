@@ -1,108 +1,147 @@
 ---
-title: 将 SQL Server 上的机器学习组件绑定到 Microsoft 机器学习 Server |Microsoft 文档
+title: 升级 SQL Server R 实例 （机器学习服务） 中的 R 和 Python 组件 |Microsoft 文档
+description: 升级 R 和 SQL Server 2016 R Services 或 SQL Server 自 2017 年 1 机器学习 Services sqlbindr.exe 用于绑定到机器学习服务器中的 Python。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/05/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 140d84717f7343f52b1c553964cce8f0c40e2c7c
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>将 SQL Server 上的机器学习组件绑定到 Microsoft 机器学习 Server
+# <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍的过程*绑定*为了上升级 R 和 Python 包的 SQL Server 计算机学习 Services 或 Microsoft 机器学习 Server 到 SQL Server R Services （数据库） 实例更快的发布频率。 
+SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有包。 在标准 SQL Server 维护，R 和 Python 包更新根据 SQL Server 发布周期，具有到在当前版本的现有包的 bug 修补程序。 
 
-更改服务更新机制的绑定的过程。 不绑定，仅当你安装 service pack 或累积更新 (CU) 时刷新 R 和 Python 包的版本。 使用绑定，较新的包版本可以应用于您的实例，独立于 CU 发布计划。
+大多数数据科研人员都习惯于使用较新的包变得可用。 对于 SQL Server 自 2017 年 1 机器学习 Services （数据库） 和 SQL Server 2016 R Services （数据库），你可以通过更改获取较新版本的 R 和 Python*绑定*从 SQL Server 维护到[Microsoft机器学习服务器](https://docs.microsoft.com/en-us/machine-learning-server/index)和[现代生命周期支持策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 
-绑定会影响只是数据库引擎实例，而不是本身数据库引擎实例的机器学习或 R 组件。 它仅适用于 （数据库） 实例。 （独立） 安装不在作用域中。
-
-如果在任何时候，你想要还原到 SQL Server 维护为你的机器学习组件，你可以_取消绑定_实例中所述[本节](#bkmk_Unbind)，卸载机器学习的服务器。
-
-**适用于：** SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
-
-## <a name="binding-vs-upgrading"></a>与升级的绑定
-
-升级机器学习组件的过程中被称为**绑定**，因为它将更改要使用新的现代软件生命周期策略的 SQL Server 计算机学习组件支持模型。 
-
-一般情况下，切换到新的维护模式可确保数据科学家可以始终使用最新版本的 R 或 Python。 有关现代的生命周期策略的条款的详细信息，请参阅[Microsoft R Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
+绑定不会更改你的安装的基础知识： R 和 Python 集成仍是数据库引擎实例的一部分授权不变的 （无额外成本与绑定关联），并且 SQL Server 支持策略仍保留的数据库引擎。 但重新绑定如何维护 R 和 Python 包会更改。 本文的其余部分介绍的绑定机制及其工作原理的每个版本的 SQL Server。
 
 > [!NOTE]
-> 升级不会更改 SQL Server 数据库的支持模型，并不会更改 SQL Server 的版本。
+> 绑定适用于仅 （数据库） 实例。 绑定是不相关 （独立） 安装。
 
-绑定实例时，会发生几件事情：
+**SQL Server 2017**
 
-+ 支持模型已更改。 而不是依赖于 SQL Server 服务版本，支持基于新的现代生命周期策略。
-+ 自动升级与实例相关联的机器学习组件，每个版本中，锁定的步骤是最新的现代生命周期策略下的版本中。 
-+ 可能会添加新的 R 或 Python 包。 例如，以前的更新基于 Microsoft R Server 9.1 添加新的 R 包，如[MicrosoftML](../using-the-microsoftml-package.md)， [olapR](../r/how-to-create-mdx-queries-using-olapr.md)，和[sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
-+ 不能再手动更新实例，除非要添加新的包。
-+ 获取安装预先训练的模型由 Microsoft 提供的选项。
+对于 SQL Server 自 2017 年 1 机器学习服务，你应仅在 Microsoft 机器学习 Server 开始提供其他包或已有通过你的较新版本时，才考虑绑定。
 
-## <a name="bkmk_prereqs"></a>Prerequisites
+**SQL Server 2016**
 
-首先确定要升级的候选的实例。 如果你运行安装程序，并选择绑定选项，则返回与升级兼容的实例的列表。
+对于 SQL Server 2016 R Services 客户，有两个路径可用来获取新的和更新的 R 程序包。 一种需要升级到 SQL Server 2017;其次，绑定到 Microsoft 机器学习服务器。
 
-请参阅下表获取受支持的升级和要求的列表。
+升级到 SQL Server 2017 获取你的 R 程序包处包含在该版本中，以及 Python 功能的版本。 或者，绑定获取你更新的 R 包，可以进一步在 Microsoft 机器学习 Server 的每个新的主版本号和次版本刷新。 绑定未提供 Python 支持，这是 SQL Server 2017 功能。 
 
-| SQL Server 版本| 支持的升级| 说明|
-|-----|-----|------|
-| SQL Server 2016| 机器学习服务器 9.2.1| 至少需要 Service Pack 1 加上 CU3。 必须安装并启用 R Services。|
-| SQL Server 2017| 机器学习服务器 9.2.1| 必须安装并启用机器学习服务 （数据库）。 |
+**可通过 Microsoft 机器学习服务器组件升级**
 
-## <a name="bind-or-upgrade-an-instance"></a>将绑定或升级实例
+下表是一个版本代码图，显示与 SQL Server，可能的升级绑定到 Microsoft 机器学习 Server （以前称为 R Server Python 支持从 MLS 9.2.1 加法之前） 时一同安装的版本。 
 
-机器学习用于 Windows 的服务器包含一个可用于升级机器学习语言和工具与 SQL Server 的实例关联的工具。 有两个版本的工具： 向导和命令行实用工具。
+请注意绑定并不保证 R 或 Anaconda 的最新版本。 当绑定到 Microsoft 机器学习服务器时，可以通过安装程序，可能也可能不是在 web 上找到可用的最新版本安装的 R 或 Python 版本。
 
-在可以运行向导或命令行工具之前，必须下载机器学习组件的独立安装的最新版本。
+[**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-+ [安装机器学习适用于 Windows Server 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+组件 |初始版本 | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+----------|----------------|----------------|--------------|---------|-------|
+通过 R 的 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
+[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 9.0 | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[预先训练的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
 
-+ [下载所需的脱机安装组件](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
-### <a name="bkmk_BindWizard"></a>升级使用新的安装向导
+[**SQL Server 自 2017 年 1 机器学习服务**](../install/sql-machine-learning-services-windows-install.md)
 
-1. 启动新计算机学习服务器安装程序。 请确保具有你想要升级的实例的计算机上运行安装程序。
+组件 |初始版本 | MLS 9.3 | | | |
+----------|----------------|---------|-|-|-|-|
+通过 R 的 Microsoft R Open (MRO) | R 3.4.1 | R 3.4.3 | | | |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.3 |  9.3 | | | |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
+Anaconda 4.2 通过 Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.3  | 9.3| | | |
+ [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
+[预先训练的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.3 | 9.3| | | |
+
+## <a name="how-component-upgrade-works"></a>组件升级的工作原理
+
+组件升级是通过*绑定*到 Microsoft 机器学习服务器的 SQL Server 2016 R Services 实例 （或 SQL Server 自 2017 年 1 机器学习 Services 实例）。 [Microsoft 机器学习 Server](https://docs.microsoft.com/machine-learning-server/index)是在本地服务器产品分隔来自 SQL Server，但具有相同的解释程序和包。 绑定交换出 SQL Server 服务更新机制，以便你可以使用的 R 包和 Python 包传送与 Microsoft 机器学习服务器，这通常是较新的 SQL Server 服务。 切换支持策略是需要更高版本生成 R 数据科学团队吸引力和其解决方案的 Python 模块。 
+
+通过执行绑定[MLS installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。 安装更新特定的 R 和 Python 包，但不是将替换的独立且断开连接的服务器安装的 SQL Server 数据库中实例。
+
++ 不绑定，R 和 Python 包时你安装 SQL Server service pack 或累积更新 (CU) 对于 bug 修复修补。 
++ 使用绑定，则较新的包版本可以应用于您的实例，不考虑 CU 版本计划下[现代生命周期策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft 机器学习 Server。 现代的生命周期支持策略更短、 一年使用期限相比具有更频繁的更新。 
+
+绑定适用于 R 和 Python 功能。 也就是说，R 和 Python 功能 （Microsoft R Open、 Anaconda） 和专有的开放源代码包包 RevoScaleR、 revoscalepy，等。 绑定不会更改的数据库引擎实例的支持模型并不会更改 SQL Server 的版本。
+
+绑定是可逆的。 你可以还原到 SQL Server 维护由[取消绑定实例](#bkmk_Unbind)和修复 SQL Server 数据库引擎实例。
+
+计算总和，绑定的步骤如下所示：
+
++ 使用现有的配置安装的 SQL Server 2016 R Services （或 SQL Server 自 2017 年 1 机器学习服务） 启动。
++ 确定哪个版本的 Microsoft 机器学习服务器具有你想要使用的升级的组件。
++ 下载并运行该版本的安装程序。 安装程序检测到的现有实例，添加一个绑定的选项，并返回兼容的实例的列表。
++ 选择你想要将绑定并完成安装程序以执行绑定的实例。
+
+在用户体验方面技术，并且您与它的工作方式保持不变。 唯一的区别是存在较新版本的包和可能的其他包最初可通过 SQL Server （如 SQL Server 2016 R Services 客户 MicrosoftML)。
+
+## <a name="bkmk_BindWizard"></a>使用安装程序升级
+
+Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本，并调用名为 SqlBindR.exe 若要更改绑定的实用工具。 在内部，SqlBindR 是链接到安装程序，间接使用。 更高版本，你可以直接从命令行以执行特定的选项运行 SqlBindR。
+
+1. 检查以确认现有的版本比你打算将其替换为更小的 R 和 RevoScaleR 的版本。 有关详细信息，请参阅[获取 R 和 Python 包信息](determine-which-packages-are-installed-on-sql-server.md)。
+
+1. [下载 Microsoft 机器学习 Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)到具有你想要升级的实例的计算机上。 
+
+1. 解压缩文件夹并启动安装程序。
 
     ![Microsoft 机器学习 Server 安装向导](media/mls-921-installer-start.PNG)
 
-2. 在页上，**配置安装**，确认要升级的组件，并查看兼容的实例的列表。 如果未不显示任何实例，请检查[先决条件](#bkmk_prereqs)。
+1. 上**配置安装**，确认要升级的组件，并查看兼容的实例的列表。 
 
-    若要升级的实例，请选择实例名称旁边的复选框。 如果不选择实例，将创建机器学习 Server 的单独安装，并且 SQL Server 库保持不变。
+   在左侧，选择你想要保留还是升级每个功能。 不能升级某些功能并不是其他。 空的复选框指示您希望删除假设它当前已安装该功能。 在屏幕截图中，选择 SQL Server 自 2017 年 1 机器学习服务 (MSSQL14) 使用 R 和 Python 的实例。 支持此配置，因为 SQL Server 2017 具有 R 和 Python。
+
+   在右侧，选择实例名称旁边的复选框。 如果未不列出任何实例，则必须组合不兼容。 如果不选择实例，创建新的独立安装机器学习 Server 后，和 SQL Server 库保持不变。
 
     ![Microsoft 机器学习 Server 安装向导](media/configure-the-installation.PNG)
 
-3. 上**许可协议**页上，选择**我接受这些条款**机器学习服务器接受许可条款。 
+1. 上**许可协议**页上，选择**我接受这些条款**机器学习服务器接受许可条款。 
 
-4. 在后续页上，提供以选择，如 Microsoft R Open 或 Python Anaconda 分发任何开放源组件的其他许可条件的同意。
+1. 在后续页上，提供以选择，如 Microsoft R Open 或 Python Anaconda 分发任何开放源代码组件的其他许可条件的同意。
 
-5. 上**几乎存在**页上，记下的安装文件夹。 默认文件夹是`~\Program Files\Microsoft\ML Server`。
+1. 上**几乎存在**页上，记下的安装文件夹。 默认文件夹是 \Program Files\Microsoft\ML 服务器。
 
     如果你想要更改安装文件夹，请单击**高级**以返回到向导的第一页。 但是，你必须重复所有以前的选择。
 
-6. 如果你要安装的组件脱机，你可能会提示您为所需的计算机学习组件，如 Microsoft R Open、 Python 服务器和 Python 打开的位置。
+1. 如果你是[安装组件脱机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)，系统可能提示您为所需的计算机学习组件，如 Microsoft R Open、 Python 服务器和 Python 打开的位置。
 
 在安装过程中，替换为 SQL Server 使用的任何 R 或 Python 库和快速启动板更新为使用较新的组件。 因此，如果实例以前使用的默认 R_SERVICES 文件夹中的库，升级后这些库已删除并快速启动板服务的属性发生更改，以在新位置中使用的库。
 
-### <a name="bkmk_BindCmd"></a>升级使用命令行
+绑定会影响这些文件夹的内容： C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library 替换 C:\Program Files\Microsoft\ML Server\R_SERVER 的内容。 由 Microsoft 机器学习 Server 安装程序创建第二个文件夹及其内容。 
 
-如果你不希望使用向导，你可以安装机器学习服务器，然后 SqlBindR.exe 工具从命令行运行以升级实例。
+## <a name="confirm-binding"></a>确认绑定
+
+重新检查以确认你拥有较新版本的 R 和 RevoScaleR 的版本。 有关详细信息，请参阅[获取 R 和 Python 包信息](determine-which-packages-are-installed-on-sql-server.md)。 SQL Server 2016 R Services 客户还应具有 MicrosoftML。
+
+## <a name="bkmk_BindCmd"></a>命令行操作
+
+在运行 Microsoft 机器学习服务器后，名为 SqlBindR.exe 的命令行实用工具将变为可用，你可将用于进一步绑定操作。 例如，如果您决定要反转一个绑定，您无法重新运行安装程序或使用命令行实用工具。 此外，此工具可用于为实例检查兼容性和可用性。
 
 > [!TIP]
-> 
-> 找不到 SqlBindR.exe？ 你可能尚未下载上面列出的组件。 此实用程序时仅使用 Windows installer 机器学习服务器。
+> 找不到 SqlBindR？ 你可能不具有运行安装程序。 仅在运行机器学习 Server 安装程序之后，SqlBindR 才可用。
 
-1. 以管理员身份打开命令提示符并导航到包含 sqlbindr.exe 的文件夹。 默认位置是 `C:\Program Files\Microsoft\MLServer\Setup`
+1. 以管理员身份打开命令提示符并导航到包含 sqlbindr.exe 的文件夹。 默认位置是 C:\Program Files\Microsoft\MLServer\Setup
 
 2. 键入以下命令，查看可用实例列表： `SqlBindR.exe /list`
   
-   记下所列出的完整实例名称。 例如，实例名称可能是`MSSQL14.MSSQLSERVER`默认实例，或类似`SERVERNAME.MYNAMEDINSTANCE`。
+   记下所列出的完整实例名称。 例如，实例名称可能是 MSSQL14。默认实例，或 SERVERNAME 类似 MSSQLSERVER。MYNAMEDINSTANCE。
 
-3. 运行**SqlBindR.exe**命令*/绑定*自变量，并指定要升级，实例的名称使用上一步中返回的实例名称。
+3. 运行**SqlBindR.exe**命令 */绑定*自变量，并指定要升级，实例的名称使用上一步中返回的实例名称。
 
    例如，若要升级的默认实例，请键入：  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
@@ -110,22 +149,19 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="bkmk_Unbind"></a>还原或取消绑定实例
 
-如果你决定不再想要升级机器学习使用机器学习服务器组件，你必须首先_取消绑定_实例，然后卸载机器学习的服务器。
+你可以还原到初始安装的 R 和 Python 的组件，建立 SQL Server 安装程序的绑定的实例。 有三个部分恢复为 SQL Server 服务。
 
-+ 取消绑定实例
++ [步骤 1： 取消绑定从 Microsoft 机器学习服务器](#step-1-unbind)
++ [步骤 2： 将实例还原为原始状态](#step-2-restore)
++ [步骤 3： 重新安装任何添加到安装的程序包](#step-3-reinstall-packages)
 
-    你可以取消绑定实例化并还原为使用这两种方法之一来安装 SQL server 的原始库：
+<a name="step-1-unbind"></a> 
 
-    + [使用安装向导](#bkmk_wizunbind)对于机器学习服务器，然后取消选择该实例上的所有功能
-    + [使用 SqlBindR 实用工具](#bkmk_cmdunbind)与`/unbind`自变量，后面加上实例名称。
+### <a name="step-1-unbind"></a>步骤 1： 取消绑定
 
-    正在取消绑定过程完成后，将来的机器学习基于学习 Server 计算机上的升级将不再应用到的实例。
+有两个对回滚绑定选项： 重新重新运行安装程序或使用 SqlBindR 命令行实用程序。
 
-+ 卸载机器学习服务器
-
-    有关说明，请参阅[卸载机器学习用于 Windows 的服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall)。 
-
-### <a name="bkmk_wizunbind"></a> 取消绑定使用向导
+#### <a name="bkmk_wizunbind"></a> 取消绑定使用安装程序
 
 1. 找到的安装程序机器学习服务器。 如果你已删除安装程序，你可能需要再次下载或将其复制从另一台计算机。
 2. 请确保具有你想要取消绑定的实例的计算机上运行安装程序。
@@ -134,7 +170,7 @@ ms.lasthandoff: 04/16/2018
 4. 接受许可协议。 在安装时，必须指示你接受许可条款偶数。
 5. 单击 **“完成”**。 该进程花费一段时间。
 
-### <a name="bkmk_cmdunbind"></a> 取消绑定使用命令行
+#### <a name="bkmk_cmdunbind"></a> 取消绑定使用命令行
 
 1. 如上节所述，打开命令提示符并导航到包含 **sqlbindr.exe** 的文件夹。
 
@@ -144,15 +180,29 @@ ms.lasthandoff: 04/16/2018
    
     `SqlBindR.exe /unbind MSSQL14.MSSQLSERVER`
 
+<a name="step-2-restore"></a> 
+
+###  <a name="step-2-repair-the-sql-server-instance"></a>步骤 2： 修复的 SQL Server 实例
+
+运行 SQL Server 安装程序修复具有 R 和 Python 功能的数据库引擎实例。 将保留现有的更新，但如果你错过了任何 SQL Server 服务对 R 和 Python 包的更新，此步骤将应用这些修补程序。
+
+或者，这是更多工作，但无法完全卸载和重新安装数据库引擎实例，并将所有的服务更新。
+
+<a name="step-3-reinstall-packages"></a> 
+
+### <a name="step-3-add-any-third-party-packages"></a>步骤 3： 添加任何第三方包
+
+可能具有到包库添加了其他开放源代码或第三方包。 由于反转绑定切换默认包库的位置，你必须重新安装程序包添加到 R，但现在使用 Python 库。 有关详细信息，请参阅[默认包](installing-and-managing-r-packages.md)，[安装新的 R 包](install-additional-r-packages-on-sql-server.md)，和[安装新的 Python 软件包](../python/install-additional-python-packages-on-sql-server.md)。
+
 ## <a name="known-issues"></a>已知问题
 
 本部分列出了已知的问题特定于使用 SqlBindR.exe 实用工具中，或可能会影响 SQL Server 实例的计算机学习服务器的升级。
 
 ### <a name="restoring-packages-that-were-previously-installed"></a>还原以前安装的程序包
 
-中不包括 Microsoft R Server 9.0.1 升级实用程序，该实用工具不能还原原始包或 R 组件完全，要求用户运行修复的实例上，将应用所有服务版本中，然后重新启动实例。
+如果你升级到 Microsoft R Server 9.0.1，该版本的版本的 SqlBindR.exe 无法还原原始包或 R 组件完全，要求用户在实例中，运行 SQL Server 修复应用所有的服务版本，然后重新启动实例。
 
-但是，升级实用程序的最新版本会自动还原原始的 R 功能。 因此，你应该不需要重新安装的 R 组件或重新修补程序服务器。 但是，你必须安装可能在初始安装后添加任何 R 包。
+更高版本的 SqlBindR 自动还原原始的 R 功能，无需重新安装的 R 组件，或重新修补程序服务器。 但是，你必须安装可能在初始安装后添加任何 R 程序包更新。
 
 如果已使用包管理角色来安装并共享包，此任务是要容易得多： 你可以使用 R 命令同步到文件系统在数据库中，使用记录的已安装的程序包，反之亦然。 有关详细信息，请参阅[for SQL Server 的 R 包管理](r-package-management-for-sql-server-r-services.md)。
 
@@ -165,15 +215,17 @@ ms.lasthandoff: 04/16/2018
 2. 找到 Microsoft R Server，并单击**更改/修改**。
 3. 安装程序启动时，选择你想要将绑定到 9.1.0 的实例。
 
+Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
+
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>绑定或取消绑定离开多个临时文件夹
 
 有时也无法清理临时文件夹的绑定和正在取消绑定操作。
-如果您发现具有类似名称的文件夹，则可以在安装完成后对其进行删除： `R_SERVICES_<guid>`
+如果您发现具有类似名称的文件夹，则可以删除它在安装完成后： R_SERVICES_<guid>
 
 > [!NOTE]
 > 请务必等待，直到安装已完成。 它可能需要很长时间才能删除关联使用某一版本的 R 库，然后添加新的 R 库。 操作完成后，会删除临时文件夹。
 
-## <a name="sqlbindrexe-command-syntax"></a>sqlbindr.exe 命令语法
+## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe 命令语法
 
 ### <a name="usage"></a>用法
 
@@ -203,10 +255,10 @@ ms.lasthandoff: 04/16/2018
 |发生意外错误| 其他错误。 请与支持部门联系获取帮助。  |
 |未找到任何 SQL 实例| 此计算机不具有 SQL Server 的实例。 |
 
-有关详细信息，请参阅 Microsoft R server 的发行说明：
+## <a name="see-also"></a>另请参阅
 
++ [安装机器学习用于 Windows 的服务器 (Internet 连接)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
++ [安装机器学习用于 Windows 的服务器 （脱机）](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 + [机器学习 Server 中的已知的问题](https://docs.microsoft.com/machine-learning-server/resources-known-issues)
-
 + [从以前的版本中的 R Server 的功能公告](https://docs.microsoft.com/r-server/whats-new-in-r-server)
-
 + [已弃用，不再使用或更改的特性](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)

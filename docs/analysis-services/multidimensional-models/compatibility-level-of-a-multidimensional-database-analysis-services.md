@@ -1,31 +1,23 @@
 ---
-title: "多维数据库 (Analysis Services) 的兼容性级别 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多维数据库 (Analysis Services) 的兼容性级别 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3b25211d1eeacdbc09f4508aede2181c96a428e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多维数据库的兼容级别 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别 **1100** 具有不同的含义，具体取决于该数据库是多维数据库还是表格数据库。  
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别 **1100** 具有不同的含义，具体取决于该数据库是多维数据库还是表格数据库。  
   
  本主题仅描述多维数据库的兼容级别。 有关表格解决方案的详细信息，请参阅 [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
   

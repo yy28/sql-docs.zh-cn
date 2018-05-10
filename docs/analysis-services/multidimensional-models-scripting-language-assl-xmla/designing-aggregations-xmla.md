@@ -1,37 +1,19 @@
 ---
-title: "设计聚合 (XMLA) |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statistical information [XML for Analysis]
-- batches [XML for Analysis]
-- aggregations [Analysis Services], XML for Analysis
-- XMLA, aggregations
-- queries [XMLA]
-- XML for Analysis, aggregations
-- iterative aggregation process [XMLA]
-ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 
-author: Minewiskan
+title: 设计聚合 (XMLA) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f020d4b154ecfef556b13be45fced0fa6095f17e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
   聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 为分区使用相同的存储结构可让你轻松地定义可以使用更高版本合并的分区[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -74,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  例如，字符串“011”所指的查询涉及具有三个属性的维度，其中第二个和第三个属性包括在该查询中。  
   
 > [!NOTE]  
->  某些属性与数据集无关。 有关排除特性的详细信息，请参阅[查询元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  某些属性与数据集无关。 有关排除特性的详细信息，请参阅[查询元素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)。  
   
  包含聚合设计的度量值组中的每个维度都由 *Query* 元素中的 **Dataset** 值表示。 *Dataset* 值的顺序必须与包括在度量值组中的维度的顺序一致。  
   
@@ -85,7 +67,7 @@ ms.lasthandoff: 02/15/2018
  若要以迭代方式设计聚合，你将发送多个**DesignAggregations**命令提供很好的控制设计过程。 聚合设计向导使用同样的方法精确控制设计过程。 有关详细信息，请参阅[聚合设计向导 F1 帮助](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d)。  
   
 > [!NOTE]  
->  以迭代方式设计聚合需要显式会话。 有关显式会话的详细信息，请参阅[管理连接和会话 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+>  以迭代方式设计聚合需要显式会话。 有关显式会话的详细信息，请参阅[管理连接和会话&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)。  
   
  若要启动的迭代过程，第一次发送**DesignAggregations**命令包含以下信息：  
   
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="designing-aggregations-using-a-batch-process"></a>使用批处理过程设计聚合  
  你还可以在批处理中的聚合设计通过发送单个**DesignAggregations**命令包含**步骤**，**时间**，**存储**，和**优化**属性值为目标并局限整个设计过程。 如果你想基于使用情况的优化，在设计过程的目标在其的目标查询，还应在包括**查询**属性。 此外请确保**Materialize**属性被设置为 true，因此设计过程将定义的聚合保存到的聚合设计时在该命令完成。  
   
- 您可以在隐式或显式会话中使用批处理过程来设计聚合。 有关隐式和显式会话的详细信息，请参阅[管理连接和会话 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+ 您可以在隐式或显式会话中使用批处理过程来设计聚合。 有关隐式和显式会话的详细信息，请参阅[管理连接和会话&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)。  
   
 ## <a name="returning-design-statistics"></a>返回设计统计信息  
  当**DesignAggregations**命令将控件返回到客户端应用程序，该命令将返回包含表示命令的设计统计信息的单个行的行集。 下表列出了该行集包含的列。  

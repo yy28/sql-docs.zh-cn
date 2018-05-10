@@ -3,26 +3,24 @@ title: SQL Server Integration Services (SSIS) Scale Out 对高可用性的支持
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
 - sql13.dts.designer.transfererrormessagestask.general.f1
@@ -23,12 +22,11 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1e505b971f709124635cb9aa2ecd5bcbaf4f4af
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 948f3fe8ae7603af9c64f21b974e97eea75da2b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
   传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  

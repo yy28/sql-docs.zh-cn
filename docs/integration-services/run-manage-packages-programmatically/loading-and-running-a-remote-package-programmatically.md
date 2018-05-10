@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: run-manage-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +21,11 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7d70f21e954655cd25e4606deb96bc7240a90c0e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 60d811ccb738d3b9cabbb85118c99fc50fe01cb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
   若要从未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包，请启动这些包，以便它们可在安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的远程计算机上运行。 为此，可在本地计算机上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、Web 服务或远程组件来启动远程计算机上的包。 如果尝试直接从本地计算机启动远程包，则这些包将加载到本地计算机上，并尝试在本地计算机上运行。 如果本地计算机未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，这些包将不会运行。  

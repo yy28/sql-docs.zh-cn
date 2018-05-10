@@ -1,34 +1,23 @@
 ---
 title: Analysis Services 个性化扩展 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
-ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d06db85a9d9e75238c2aa2c4e25e0feb28a9daf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 个性化设置扩展
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化扩展是了解实现插件体系结构的基础。 在插件体系结构中，您可以动态地开发新的多维数据集对象和功能，并可以与其他开发人员方便地共享。 在这种情况下，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展提供了使它能够实现以下功能：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化扩展是了解实现插件体系结构的基础。 在插件体系结构中，您可以动态地开发新的多维数据集对象和功能，并可以与其他开发人员方便地共享。 在这种情况下，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展提供了使它能够实现以下功能：  
   
 -   **动态设计和部署**立即后，你可以设计和部署[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化扩展，用户在下一步的用户会话的开始处有权访问的对象和功能。  
   
@@ -40,7 +29,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展具有多种用途。 例如，您的公司的销售涉及到多种货币。 您可创建一个计算成员，以本地货币返回访问此多维数据集的人员的总销售额。 首先要此成员创建为个性化设置扩展。 然后，将此计算成员与一组用户共享。 共享后，这些用户将拥有立即访问计算成员，只要用户连接到服务器。 即使用户使用的接口不是用于创建该计算成员的接口，也可以访问该计算成员。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化扩展现有的托管程序集体系结构的简单又优雅修改并在整个公开[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]<xref:Microsoft.AnalysisServices.AdomdServer>对象模型、 多维表达式 (MDX) 语法和架构行集。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化扩展现有的托管程序集体系结构的简单又优雅修改并在整个公开[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]<xref:Microsoft.AnalysisServices.AdomdServer>对象模型、 多维表达式 (MDX) 语法和架构行集。  
   
 ## <a name="logical-architecture"></a>逻辑体系结构  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展的体系结构以托管程序集体系结构以及以下四个基本元素为基础：  
@@ -123,19 +112,19 @@ ms.lasthandoff: 01/08/2018
 #### <a name="adomdcommand-class"></a>AdomdCommand 类  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 类现在支持以下 MDX 命令：  
   
--   [CREATE MEMBER 语句 (MDX)](../../../mdx/mdx-data-definition-create-member.md)  
+-   [创建成员语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [更新成员语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-update-member.md)  
+-   [更新成员语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP 成员语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [DROP 成员语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [CREATE SET 语句 (MDX)](../../../mdx/mdx-data-definition-create-set.md)  
+-   [创建 SET 语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [删除 SET 语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [拖放 SET 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [创建 KPI 语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [创建 KPI 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [删除 KPI 语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [DROP KPI 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>MDX 扩展和增强功能  
  使用 CREATE MEMBER 命令进行增强**标题**属性， **display_folder**属性，与**associated_measure_group**属性。  

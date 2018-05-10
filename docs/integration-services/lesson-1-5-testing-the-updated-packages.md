@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
@@ -19,12 +18,11 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7208df70732d42a24f41728e19847f61d6a57645
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 07da75fc6f7f703d5767b393ea662904dd6a1c36
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>第 1-5 课 - 测试更新的包
 继续学习下一课（在该课中，您将创建用来在目标计算机上安装教程包的部署捆绑）之前，您应该测试包。 在此任务中，您将运行已添加到 Deployment Tutorial 项目中再用配置进行扩展的包 DataTransfer.dtsx 和 LoadXMLData。  

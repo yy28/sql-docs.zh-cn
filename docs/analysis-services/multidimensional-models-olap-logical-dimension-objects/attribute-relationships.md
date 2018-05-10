@@ -1,47 +1,23 @@
 ---
-title: "属性关系 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- member properties [Analysis Services], attribute relationships
-- security [Analysis Services], properties
-- PROPERTIES keyword
-- storage [Analysis Services], attribute relationships
-- natural hierarchies [Analysis Services]
-- dimensions [Analysis Services], member properties
-- queries [MDX], attribute relationships
-- user-defined hierarchies [Analysis Services]
-- attributes [Analysis Services], relationships
-- member properties [Analysis Services]
-- members [Analysis Services], attribute relationships
-- storing data [Analysis Services], attribute relationships
-- relationships [Analysis Services], attributes
-ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 
-author: Minewiskan
+title: 属性关系 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e687d64d3ba36bee4cffab7e81d401081b57eaa2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 903f66edbe7c296c4f4c02526e87944d5738e0ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships"></a>的维度设计器中，可以在“维度结构”视图的
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度中的属性将始终与直接或间接的键属性。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度中的属性将始终与直接或间接的键属性。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：  
   
 -   在键属性与绑定到主维度表中各列的每个非键属性之间定义。  
   
@@ -99,7 +75,7 @@ ms.lasthandoff: 02/15/2018
  创建属性关系时的主要约束是确保，对于属性关系引用的属性，属性关系所属的属性中的任何成员的值不超过一个。 例如，如果您在“市县”属性与“省市自治区”属性之间定义了关系，则每个市县只能与单个省市自治区相关。  
   
 ## <a name="attribute-relationship-queries"></a>属性关系查询  
- 你可以使用 MDX 查询要从中检索数据属性关系，成员属性的形式与**属性**MDX 关键字**选择**语句。 有关如何使用 MDX 来检索成员属性的详细信息，请参阅[使用成员属性 &#40;MDX &#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
+ 你可以使用 MDX 查询要从中检索数据属性关系，成员属性的形式与**属性**MDX 关键字**选择**语句。 有关如何使用 MDX 来检索成员属性的详细信息，请参阅[使用成员属性&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

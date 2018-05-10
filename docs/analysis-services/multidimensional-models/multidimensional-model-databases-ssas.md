@@ -1,39 +1,23 @@
 ---
-title: "多维模型数据库 (SSAS) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多维模型数据库 (SSAS) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Management Studio [Analysis Services], databases
-- SQL Server Analysis Services, databases
-- SSAS, databases
-- Analysis Services, databases
-- databases [Analysis Services], designing
-- Business Intelligence Development Studio, databases [Analysis Services]
-- databases [Analysis Services]
-ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 469665f46fea9651fdb054ab310500ef70710e8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多维模型数据库 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库是数据源、数据源视图、多维数据集、维度以及角色的集合。 此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库可以选择包含数据挖掘的结构以及一些自定义程序集，通过这些程序集，您可以将用户定义函数添加到数据库。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库是数据源、数据源视图、多维数据集、维度以及角色的集合。 此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库可以选择包含数据挖掘的结构以及一些自定义程序集，通过这些程序集，您可以将用户定义函数添加到数据库。  
   
  多维数据集是 Analysis Services 中的基本查询对象。 当通过客户端应用程序连接到 Analysis Services 数据库时，可以连接到该数据库中的多维数据集。 如果正在跨多个上下文重用维度、程序集、角色或挖掘结构，数据库可能包含多个多维数据集。  
   

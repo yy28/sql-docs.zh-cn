@@ -1,30 +1,19 @@
 ---
-title: "角色和权限 (Analysis Services) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 角色和权限 (Analysis Services) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], about security
-- security [Analysis Services - multidimensional data], about security
-ms.assetid: bb885447-868b-4686-853c-8241f63d4370
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6d84e48d30af647f8a07e514492ce9d883f33249
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 1791061952a2e003ed88b4d17c7f57539d3ea763
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles-and-permissions-analysis-services"></a>角色和权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,25 +32,25 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="in-this-section"></a>在本节中  
   
--   [授权访问对象和操作 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授权访问对象和操作 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Grant 数据库权限 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)  
+-   [Grant 数据库权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)  
   
--   [授予多维数据集或模型权限 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+-   [授予多维数据集或模型权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
--   [授予处理权限 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+-   [授予处理权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
--   [授予读取定义权限对象元数据 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [授予读取定义权限对象元数据 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [授予对数据源对象 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [授予对数据源对象 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [授予对数据挖掘结构和模型 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [授予对维度 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)  
+-   [授予对维度 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [授予维度数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [授予维度数据 & #40; 的自定义访问权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [授予单元数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+-   [授予单元数据 & #40; 的自定义访问权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  

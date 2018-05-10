@@ -1,28 +1,27 @@
 ---
-title: "教程：向报表添加饼图（报表生成器）| Microsoft Docs"
-ms.custom: 
+title: 教程：向报表添加饼图（报表生成器）| Microsoft Docs
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 68b4e3536833e23be59db3195f5903bfccbc5539
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 682aaa2705f3f2fb5281bccecd177117592cf51d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
 在本教程中，将在 Reporting Services 分页报表中创建饼图。 添加百分比，并将小切片合并为一个切片。
@@ -124,7 +123,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  在“标签数据”框中，选择“#PERCENT”。  
     
-5.  （可选）若要指定标签显示的小数位数，在“标签数据”框的“#PERCENT”后面键入“{Pn}”，其中 n 为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}**。  
+5.  （可选）若要指定标签显示的小数位数，在“标签数据”框的“#PERCENT”后面键入 **{Pn}**，其中 n 为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}**。  
 
 6.  若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”对话框中单击“是”。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +17,11 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3aef886a474004a2fb41e2dd5afb0f0171e0349e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 11dcf65abc11ea1a3683f0242dfe046a9e852294
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extending-packages-with-custom-objects"></a>用自定义对象扩展包
   如果觉得 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 内提供的组件不能满足您的需求，可以通过编写自己的扩展插件代码来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 对于扩展包，您有两种不同的选择：可以在脚本任务和脚本组件提供的功能强大的包装中编写代码，或者通过从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型提供的基类进行派生，完全重新创建自定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 扩展插件。  

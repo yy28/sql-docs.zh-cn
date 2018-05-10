@@ -1,16 +1,15 @@
 ---
-title: "保护报表和资源 | Microsoft Docs"
-ms.custom: 
+title: 保护报表和资源 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8d759eccca2ea7d1c7b0803f3a44cb258ffb981
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-reports-and-resources"></a>保护报表和资源
   您可以设置各个报表和资源的安全性，以控制用户对这些项的访问权限。 默认情况下，只有是“管理员”内置组的成员的用户，才能运行报表、查看资源、修改属性以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问报表或资源。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 01/09/2018
 >  在早期版本的文档中，包括以表达式形式创建动态查询的示例。 此类型的查询会产生 SQL 注入攻击漏洞，因而建议不要使用这类查询。  
   
 ## <a name="securing-confidential-reports"></a>保护机密报表  
- 对于包含机密信息的报表，应通过要求用户在访问敏感数据时提供凭据，在数据访问级别上保护这些报表。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 您也可以对文件夹进行保护，以便只有授权用户才能访问文件夹。 有关详细信息，请参阅 [保护文件](../../reporting-services/security/secure-folders.md)。  
+ 对于包含机密信息的报表，应通过要求用户在访问敏感数据时提供凭据，在数据访问级别上保护这些报表。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 您也可以对文件夹进行保护，以便只有授权用户才能访问文件夹。 有关详细信息，请参阅 [保护文件](../../reporting-services/security/secure-folders.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)   

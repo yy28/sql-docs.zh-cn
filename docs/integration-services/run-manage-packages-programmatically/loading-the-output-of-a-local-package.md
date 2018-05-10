@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: run-manage-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de3e7ebeffd510896752701a0406b530bf82a14b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ebf3f8cb5102df9db80e45bc148ae0a799d5319a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-the-output-of-a-local-package"></a>加载本地包的输出
   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 将输出保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或使用 System.IO 命名空间中的类将输出保存到平面文件目标时，客户端应用程序即可读取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的输出。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案的关键是 Microsoft.SqlServer.Dts.DtsClient 命名空间，该命名空间包含来自 System.Data 命名空间的 IDbConnection、IDbCommand 和 IDbDataParameter 接口的专用实现。 默认情况下，程序集 Microsoft.SqlServer.Dts.DtsClient.dll 安装在 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn 中。  

@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.execution.f1
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
@@ -18,12 +17,11 @@ caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8fae6a61597c42a73a354ed84fb8b0287f448194
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c37ea4f28191e0b78977e4e7f2fb3bad102547cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-properties-execution-page"></a>服务器属性（“执行”页）
   使用此页可设置报表执行的超时值。 此值将应用于当前报表服务器实例处理的所有报表。 您可以针对单个报表覆盖此值。 您指定的值必须适合报表服务器上发生的所有报表处理，并适合在报表服务器检索报表中所使用的数据时针对数据库服务器执行的查询处理。  

@@ -1,34 +1,23 @@
 ---
-title: "数据挖掘解决方案 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 数据挖掘解决方案 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
-- data mining [Analysis Services], development
-ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a6bee0ab1d519974c8564569fc334e7271f6bd04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-solutions"></a>数据挖掘解决方案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据挖掘解决方案是一个包含一个或多个数据挖掘项目的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案。  
+  数据挖掘解决方案是一个包含一个或多个数据挖掘项目的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案。  
   
  本节中的主题提供了有关如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]设计和实现集成数据挖掘解决方案的信息。 有关数据挖掘设计过程和相关工具的概述，请参阅 [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md)。  
   
@@ -85,13 +74,13 @@ ms.lasthandoff: 02/15/2018
   
 |“任务”|主题|  
 |-----------|------------|  
-|测试您创建的模型，验证定型数据的质量并创建代表数据挖掘模型的准确性的图表。|[测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|测试您创建的模型，验证定型数据的质量并创建代表数据挖掘模型的准确性的图表。|[测试和验证 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |通过用数据填充结构及相关模型来定型模型。 使用新数据更新和扩展模型。|[处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |通过对定型数据应用筛选器、选择其他算法或设置高级算法参数来自定义挖掘模型。|[自定义挖掘模型和结构](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|通过对在定型模式下使用的数据应用筛选器来自定义挖掘模型。|[将挖掘模型添加到结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|通过对在定型模式下使用的数据应用筛选器来自定义挖掘模型。|[将挖掘模型添加到结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |更新和管理数据挖掘解决方案。|链接 TBD|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘教程 &#40;Analysis Services &#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [数据挖掘教程 & #40;Analysis Services & #41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

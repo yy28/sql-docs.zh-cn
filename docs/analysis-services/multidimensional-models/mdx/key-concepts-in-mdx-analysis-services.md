@@ -1,37 +1,23 @@
 ---
-title: "MDX (Analysis Services) 中的重要概念 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDX (Analysis Services) 中的重要概念 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], about MDX
-- dimensional modeling [MDX]
-- MDX [Analysis Services], about MDX
-- Multidimensional Expressions [Analysis Services], dimensional modeling
-- MDX [Analysis Services], dimensional modeling
-ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5a669e1357308778c6f1321618a77c99ec967a80
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 中的重要概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-在使用多维表达式 (MDX) 查询多维数据或创建多维数据集中的 MDX 表达式之前，有必要了解多维的概念和术语。  
+  在使用多维表达式 (MDX) 查询多维数据或创建多维数据集中的 MDX 表达式之前，有必要了解多维的概念和术语。  
   
  最好从已了解的数据汇总示例开始，然后查看 MDX 如何与之相关。 这是一个在 Excel 中创建的数据透视表，由 Analysis Services 示例多维数据集中的数据填充。  
   
@@ -145,21 +131,21 @@ ms.lasthandoff: 02/15/2018
 ## <a name="next-steps"></a>后续步骤  
  现在，您已掌握重要的概念和术语，可以继续了解这些进一步阐述 Analysis Services 中的基本概念的附加主题：  
   
--   [基本 MDX 查询 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
+-   [基本 MDX 查询 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
--   [基本 MDX 脚本 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+-   [基本 MDX 脚本 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [多维建模 &#40;Adventure Works 教程 &#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [多维建模 & #40;Adventure Works 教程 & #41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [多维数据集空间](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [元组](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [使用成员、 元组，和集 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [使用成员、 元组，和集 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [直观合计和非直观合计](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 脚本编写基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX 语言参考 &#40;MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [多维表达式 &#40;MDX &#41;引用](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 脚本编写基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 语言参考 & #40;MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [多维表达式 & #40;MDX & #41;引用](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

@@ -1,27 +1,19 @@
 ---
-title: "备份 ASDatabase cmdlet |Microsoft 文档"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 备份 ASDatabase cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 03d58a82-021c-4e13-b265-c084f42a8bb2
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c4b8975c64d8fecd6227368ee0147e94496cb1df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3fabe81584debdafa73f04c1915a00f947dacad6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-asdatabase-cmdlet"></a>Backup-ASDatabase cmdlet
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -56,13 +48,13 @@ ms.lasthandoff: 01/08/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-name-string"></a>-名称\<字符串 >  
+### <a name="-name-string"></a>-Name \<string>  
  指定要备份的 Analysis Services 数据库。 如果您想要以字符串的显示传入名称，则可以使用 –Database 参数或 –Name 参数指定数据库。  
   
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  
@@ -122,7 +114,7 @@ ms.lasthandoff: 01/08/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-server-string"></a>服务器\<字符串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定 cmdlet 要连接和执行的 Analysis Services 实例。 如果未提供服务器名称，将连接到本地主机。 对于默认实例，仅指定服务器名称。 对于命名实例，请使用格式 servername\instancename。 对于 HTTP 连接，请使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  

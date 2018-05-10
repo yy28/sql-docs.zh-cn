@@ -1,31 +1,30 @@
 ---
-title: "使用 ReportViewer 控件集成 Reporting Services | Microsoft Docs"
-ms.custom: 
+title: 使用 ReportViewer 控件集成 Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f92e88661e521db0d38265a750c1b2af7a37bb89
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: bf99e8bbb0286c66ca0b16cea0ccb8ff8a1817cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls"></a>使用 ReportViewer 控件集成 Reporting Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 提供两个 ReportViewer 控件，用于将报表查看功能集成到应用程序中。 一个控件版本针对基于 Windows 窗体的应用程序，另一个版本针对 Web 窗体应用程序。 每个控件都提供类似的功能，但分别设计为针对其各自的环境。 这两个控件都可以处理已部署到报表服务器（远程处理模式）的报表或已复制到尚未安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的计算机（本地处理模式）的报表。  

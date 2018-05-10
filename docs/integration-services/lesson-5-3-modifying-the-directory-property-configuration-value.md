@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2bf875f2ffa4d9d62ed47c2e7aa44dc17f725ea6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0489101f98bcb4815e0c42e61763c894e61aeb00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>第 5-3 课 - 修改目录属性配置值
 在此任务中，将针对包级变量 `User::varFolderName`的 Value 属性，修改存储在 SSISTutorial.dtsConfig 文件中的配置设置。 该变量可以更新 Foreach 循环容器的 Directory 属性。 修改后的值将指向前一个任务中创建的 **New Sample Data** 文件夹。 修改了配置设置并运行包以后，该变量将使用从配置文件填充的值（而不是包中最初配置的目录值），来更新 Directory 属性。  

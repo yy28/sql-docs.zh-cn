@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
 - run-time [Integration Services]
@@ -28,12 +27,11 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: aff17b9baba4bf6838fb90f82ac94de06c925482
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: e17c3a8cd3a79332c96a589a7b867509e95bdede
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
   在运行时，可执行文件（包以及 Foreach 循环容器、For 循环容器、序列容器和任务宿主容器）会引发事件。 例如，错误发生时会引发 OnError 事件。 可以为这些事件创建自定义事件处理程序，以扩展包的功能并使包在运行时更容易管理。 事件处理程序可以执行诸如下列任务：  

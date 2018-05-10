@@ -1,32 +1,23 @@
 ---
 title: 更改挖掘结构的属性 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], properties
-ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2f97c94a1c594a341c1e03326c975a080d9033cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6aabe9c70442843797d3d27dd8415c2b2b040691
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>更改挖掘结构的属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有两种类型的挖掘结构，可以修改这两种属性：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  有两种针对挖掘结构的属性，这两种属性均可以修改：  
   
 -   影响整个结构的挖掘结构属性  
   

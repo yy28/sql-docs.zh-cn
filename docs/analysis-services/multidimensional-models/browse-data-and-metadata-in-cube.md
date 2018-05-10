@@ -1,31 +1,23 @@
 ---
-title: "浏览数据和多维数据集中的元数据 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 浏览数据和多维数据集中的元数据 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 433cd1af6480cc01df2da2e0a0e80f514c714adf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>浏览多维数据集中的数据和元数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集数据。 您可以使用此视图查看多维数据集的结构和数据库对象的数据、计算、格式设置和安全性。 可以像最终用户在报告工具或其他客户端应用程序中查看多维数据集一样来快速查看它。 浏览多维数据集数据时，可以查看不同的维度、深化到成员以及通过维度进行切片。  
+  可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集数据。 您可以使用此视图查看多维数据集的结构和数据库对象的数据、计算、格式设置和安全性。 可以像最终用户在报告工具或其他客户端应用程序中查看多维数据集一样来快速查看它。 浏览多维数据集数据时，可以查看不同的维度、深化到成员以及通过维度进行切片。  
   
  在浏览多维数据集之前，必须对其进行处理并且重新连接到该多维数据集。 处理后，打开多维数据集设计器的 **“浏览器”** 选项卡。 单击工具栏上的“重新连接”按钮以便刷新连接。  
   
@@ -64,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
      \- 或 -  
   
--   在**维度**列**筛选器**窗格中，单击**\<选择维度 >**并从列表中，选择维度，然后单击**\<选择层次结构 >**中**层次结构**列并选择从列表中的层次结构。  
+-   在**维度**列**筛选器**窗格中，单击**\<选择维度 >** 并从列表中，选择维度，然后单击**\<选择层次结构 >** 中**层次结构**列并选择从列表中的层次结构。  
   
  指定层次结构后，指定运算符和筛选表达式。 下表介绍了各个运算符和筛选表达式。  
   

@@ -1,31 +1,23 @@
 ---
-title: "删除 PowerPivotSystemServiceInstance cmdlet |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 删除 PowerPivotSystemServiceInstance cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: bc46094a-5584-47ba-8883-77dc79373a5d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc93af457830a9efe0c57707a37ec946597887fe
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c3f6f960d0f2b39fa877203ede26f5e66b5c3c37
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-powerpivotsystemserviceinstance-cmdlet"></a>Remove-PowerPivotSystemServiceInstance cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-从场中删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务实例。  
+  从场中删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务实例。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -47,7 +39,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind>  
+### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>标识\<PowerPivotMidTierServiceInstancePipeBind >  
  指定要删除的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务实例的 GUID。 在安装有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的每个应用程序服务器上只有一个服务实例。  
   
 |||  
@@ -58,7 +50,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |接受管道输入？|true|  
 |接受通配符？|false|  
   
-### <a name="-deletelocal-switch"></a>-DeleteLocal \<switch>  
+### <a name="-deletelocal-switch"></a>-DeleteLocal\<切换 >  
  删除在本地计算机上安装的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务实例，并且允许你不必指定对象标识即删除实例。  
   
 |||  
@@ -69,7 +61,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<switch>  
+### <a name="-confirm-switch"></a>确认\<切换 >  
  在执行命令前提示您进行确认。 默认情况下将启用该值。 若要在命令中跳过确认响应，请在命令中指定 Confirm:$false。  
   
 |||  
@@ -80,7 +72,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  此 cmdlet 支持以下常用参数：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

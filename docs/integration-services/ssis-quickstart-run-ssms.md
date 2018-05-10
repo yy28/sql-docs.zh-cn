@@ -1,10 +1,9 @@
 ---
 title: 使用 SSMS 运行 SSIS 包 | Microsoft Docs
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
@@ -13,12 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 540eb0d40c571b4dde94d91814d89ceb18986337
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ec5b6f4e368b52f849a22d014da21dd14e5e1090
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 运行 SSIS 包
 本快速入门演示如何使用 SQL Server Management Studio (SSMS) 连接到 SSIS 目录数据库，然后从 SSMS 中的对象资源管理器运行存储在 SSIS 目录中的 SSIS 包。

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
 - sql13.dts.designer.dmquerytransformation.miningmodel.f1
@@ -24,12 +23,11 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3f2af2899c629f0f9b215f8523dccfb2acb7cb6c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0a49d5b2f6217040dd513895a2eb3c0e633fcc33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-query-transformation"></a>数据挖掘查询转换
   数据挖掘查询转换针对数据挖掘模型执行预测查询。 此转换包含用于创建数据挖掘扩展 (DMX) 查询的查询生成器。 使用查询生成器可创建自定义语句来使用 DMX 语言针对现有挖掘模型计算转换输入数据。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](../../../dmx/data-mining-extensions-dmx-reference.md)。  

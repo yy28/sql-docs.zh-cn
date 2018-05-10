@@ -1,39 +1,23 @@
 ---
 title: 添加或删除表或视图中数据源视图 (Analysis Services) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dsvdesigner.tablespane.f1
-helpviewer_keywords:
-- deleting tables
-- tables [Analysis Services]
-- removing tables
-- adding tables
-- data source views [Analysis Services], tables
-- tables [Analysis Services], data source views
-ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
-caps.latest.revision: 34
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fe054e5e7378c7b779164961aaa46f1c4e6377d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2ae4ec99ca380c0405056ac6e1ca0a296f4563dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在数据源视图中添加或删除表或视图 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在创建数据源视图 (DSV) 后[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，可以通过添加或删除表和列，包括表和列从另一个数据源而在数据源视图设计器中修改。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  在您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建了数据源视图 (DSV) 后，可以通过添加或删除表和列，包括来自其他数据源的表和列，在数据源视图设计器中修改数据源视图。  
   
  若要在数据源视图设计器中打开该 DSV，请在解决方案资源管理器中双击该 DSV。 一旦打开该 DSV 后，可使用按钮栏或菜单上的“添加/删除表”命令来修改或扩展该 DSV。 您还可以在关系图中使用这些对象。 例如，您可以选择某一对象，然后使用键盘上的 Delete 键删除对象。  
   
@@ -52,6 +36,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [使用数据源视图设计器中的关系图 (Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [使用数据源视图设计器 & #40; 中的关系图Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

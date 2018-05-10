@@ -1,28 +1,27 @@
 ---
-title: "教程：创建钻取报表和主报表（报表生成器）| Microsoft Docs"
-ms.custom: 
+title: 教程：创建钻取报表和主报表（报表生成器）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a2a0eb1662a79095be0d0e3fd727d993b217a0bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
 本教程教授如何创建两种 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 

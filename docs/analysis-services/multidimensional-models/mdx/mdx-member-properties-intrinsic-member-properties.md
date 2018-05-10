@@ -1,32 +1,23 @@
 ---
 title: 内部成员属性 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- intrinsic member properties [MDX]
-ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2fc65884048df6a4f5083edd4451e60dad039910
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成员属性的内部成员属性
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]公开内部属性，可以在查询返回其他数据或元数据用于在自定义应用程序，或以帮助进行模型调查或构造包含的维度成员。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
   
  内部属性包括 **ID**、 **KEY**、 **KEYx**和 **NAME**，这些是每个成员在任意级别公开的属性。 还可以返回位置信息，如 **LEVEL_NUMBER** 或 **PARENT_UNIQUE_NAME**等等。  
   
@@ -65,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="context-sensitive-member-properties"></a>上下文相关的成员属性  
  所有维度成员和级别成员都支持一列上下文相关的内部成员属性。 下表列出了这些上下文相关的属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**ID**|在内部维护的成员 ID。|  
 |**Key**|以原始数据类型表示的成员键的值。 MEMBER_KEY 用于向后兼容。  对于非组合键，MEMBER_KEY 具有与 KEY0 相同的值；对于组合键，MEMBER_KEY 属性为 null。|  
@@ -95,7 +86,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关 **MEMBERS** 架构行集的详细信息，请参阅 [MDSCHEMA_MEMBERS 行集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|此成员所属的多维数据集的名称。|  
 |**CHILDREN_CARDINALITY**|成员具有的子级的个数。 它可以是一个估计值，所以不应依赖它进行确切计数。 访问接口应尽可能返回最精确的估计值。|  
@@ -213,15 +204,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另请参阅  
  [PeriodsToDate (MDX)](../../../mdx/periodstodate-mdx.md)   
- [子级 &#40;MDX &#41;](../../../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX &#41;](../../../mdx/hierarchize-mdx.md)   
- [Count（集）(MDX)](../../../mdx/count-set-mdx.md)   
- [筛选器 &#40;MDX &#41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX &#41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX &#41;](../../../mdx/drilldownlevel-mdx.md)   
- [属性 &#40;MDX &#41;](../../../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX &#41;](../../../mdx/prevmember-mdx.md)   
- [使用成员属性 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 函数引用 &#40;MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [子级&#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize & #40;MDX & #41;](../../../mdx/hierarchize-mdx.md)   
+ [计数 & #40;集 & #41;& #40;MDX & #41;](../../../mdx/count-set-mdx.md)   
+ [筛选器 & #40;MDX & #41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40;MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40;MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
+ [属性 & #40;MDX & #41;](../../../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
+ [使用成员属性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

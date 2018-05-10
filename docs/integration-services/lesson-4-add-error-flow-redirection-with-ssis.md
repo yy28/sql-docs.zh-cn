@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e0154191456a551a40c5d4a1968db667b16a5d46
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6402f1d995dcbff64bdc74db128e422be9350cc3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>第 4 课：使用 SSIS 添加错误流重定向
 为了处理在转换过程中可能发生的错误， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 允许根据每个组件和每个列来决定如何处理无法转换的数据。 可以选择忽略某些列中的失败、重定向整个失败的行或者只是使组件失败。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的所有组件被配置为在发生错误时失败。 而使组件失败又会导致包失败，并使所有后续处理停止。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +22,11 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1029bbedb2bf5ee595f3a427ade42dc91765dee9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 645adce2297c495445b70e727e1a32613d690ad9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和异步转换
   若要了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中同步转换与异步转换之间的区别，最好先了解同步转换。 如果同步转换无法满足您的需要，您的设计可能需要异步转换。  

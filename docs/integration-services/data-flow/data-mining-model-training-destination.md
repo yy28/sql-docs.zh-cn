@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
 - sql13.dts.designer.dmmtrainingtransformation.connection.f1
@@ -26,12 +25,11 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b30be7d03d20a9bb426d7e37df634d6ba92620a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 482e2bd27acedaed01acf4ef3d324af5b7e09b65
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
   数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 和 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)。  

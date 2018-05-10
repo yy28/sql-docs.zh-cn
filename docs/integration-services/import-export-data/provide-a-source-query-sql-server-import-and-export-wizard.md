@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
@@ -19,12 +18,11 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e6ac0fde9af282e3aa6c0a37ba817e5b9265bec5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 77a6cbbc88e7ba0077b7cb68e013e4b7e8251c08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
 如果指定要提供查询以选择要复制的数据，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“提供源查询” 。 在此页上，可编写并测试选择要从数据源复制到目标的数据的 SQL 查询。 还可以粘贴已保存的查询的文本或从文件加载它。

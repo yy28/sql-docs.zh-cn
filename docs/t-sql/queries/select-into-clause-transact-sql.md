@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -35,41 +33,41 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da1f46475be001737512dc3a0da074d2f97c403c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23b48b3246509d62459daee8ecf50dd9f54ab8c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结果行插入该表中。 要查看完整的 SELECT 语法，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
+SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结果行插入该表中。 要查看完整的 SELECT 语法，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
 [ INTO new_table ]
-[ ON filegroup]
+[ ON filegroup ]
 ```  
   
 ## <a name="arguments"></a>参数  
- new_table  
+ new_table   
  根据选择列表中的列和从数据源选择的行，指定要创建的新表名。  
- 
-  filegroup
- 
- 指定要在其中创建新表的文件组的名称。 指定的文件组应存在于数据库中，否则 SQL Server 引擎会引发错误。 此选项仅在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 及更高版本中受支持。
  
  new_table 的格式通过对选择列表中的表达式进行取值来确定。 new_table 中的列按选择列表指定的顺序创建。 new_table 中的每列与选择列表中的相应表达式具有相同的名称、数据类型、为 Null 性和值。 列的 IDENTITY 属性将被转移，但在“备注”部分的“使用标识列”中定义的情况除外。  
   
  要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的同一实例上的另一个数据库中创建表，请将 new_table 指定为 database.schema.table_name 形式的完全限定名称。  
   
  不能在远程计算机上创建 new_table，但可以从远程数据源填充 new_table。 要从远程源表创建 new_table，请在 SELECT 语句的 FROM 子句中，按照 linked_server、catalog、schema 和 object 的形式使用由四个部分组成的名称，指定源表。 或者，也可以在 FROM 子句中使用 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数来指定远程数据源。  
+ 
+ filegroup    
+ 指定要在其中创建新表的文件组的名称。 指定的文件组应存在于数据库中，否则 SQL Server 引擎会引发错误。   
+ 
+ **适用范围：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
 ## <a name="data-types"></a>数据类型  
  FILESTREAM 属性不转移到新表。 FILESTREAM BLOB 作为 varbinary(max) BLOB 复制并存储在新表中。 如果没有 FILESTREAM 属性，则 varbinary(max) 数据类型具有 2 GB 的限制。 如果某个 FILESTREAM BLOB 超过该值，则会引发 7119 错误并停止该语句。  
@@ -91,18 +89,18 @@ ms.lasthandoff: 04/16/2018
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能将表变量或表值参数指定为新表。  
   
- 即使源表已进行分区，您也不能使用 SELECT…INTO 创建分区表。 SELECT...INTO 不使用源表的分区方案；而是在默认文件组中创建新表。 若要在分区表中插入行，必须先创建分区表，然后使用 INSERT INTO...SELECT FROM 语句。  
+ 即使已对源表进行分区，也不能使用 `SELECT…INTO` 创建已分区表。 `SELECT...INTO` 不使用源表的分区方案；而是在默认文件组中创建新表。 若要在已分区表中插入行，必须先创建已分区表，然后使用 `INSERT INTO...SELECT...FROM` 语句。  
   
- 源表中定义的索引、约束和触发器不会转移到新表中，也不能在 SELECT...INTO 语句中指定它们。 如果需要使用这些对象，您可以在执行 SELECT...INTO 语句后创建它们。  
+ 源表中定义的索引、约束和触发器不会转移到新表中，也不能在 `SELECT...INTO` 语句中指定它们。 如果需要使用这些对象，可以在执行 `SELECT...INTO` 语句后创建它们。  
   
- 指定 ORDER BY 子句无法确保按指定顺序插入行。  
+ 指定 `ORDER BY` 子句无法确保行将按指定的顺序插入。  
   
  当选择列表中包含稀疏列时，稀疏列属性不会转移到新表中的列。 如果需要在新表中使用该属性，请在执行 SELECT...INTO 语句后更改列定义以包含该属性。  
   
- 当选择列表中包含计算列时，新表中的相应列并不是计算列。 新列中的值是在执行 SELECT...INTO 时计算的。  
+ 当选择列表中包含计算列时，新表中的相应列并不是计算列。 新列中的值是在执行 `SELECT...INTO` 时计算所得的值。  
   
 ## <a name="logging-behavior"></a>日志记录行为  
- SELECT...INTO 的日志记录量取决于数据库的有效恢复模式。 在简单恢复模式或大容量日志恢复模式下，大容量操作是最小日志记录操作。 对于按最小方式记录日志，使用 SELECT… INTO 语句可能比创建一个表后使用 INSERT 语句填充该表效率更高。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ `SELECT...INTO` 的日志记录量取决于数据库的有效恢复模式。 在简单恢复模式或大容量日志恢复模式下，大容量操作是最小日志记录操作。 对于最小的日志记录，使用 `SELECT...INTO` 语句可能比创建一个表后再使用 INSERT 语句填充该表的效率更高。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 ## <a name="permissions"></a>权限  
  在目标数据库中要求 CREATE TABLE 权限。  
@@ -214,7 +212,7 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. 从使用 PolyBase 创建的外部表导入  
+### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. 从使用 PolyBase 创建的外部表导入  
  从 Hadoop 或 Azure 存储空间将数据导入到 SQL Server 进行永久存储。 使用 `SELECT INTO` 导入外部表引用的数据，以便永久存储在 SQL Server 中。 动态创建关系表，然后在第二步中创建基于该表的列存储索引。  
   
  **适用于：** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -229,13 +227,12 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
         SELECT * FROM CarSensor_Data where Speed > 35   
 ) AS SensorD  
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
-ORDER BY YearlyIncome  
-  
+ORDER BY YearlyIncome;  
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 创建一个新表作为另一个表的副本并将其加载到指定的文件组
 以下示例演示如何创建一个新表作为另一个表的副本，并将其加载到用户默认文件组之外的指定文件组。
 
- 适用范围：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **适用范围：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -247,7 +244,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>另请参阅  

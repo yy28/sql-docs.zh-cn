@@ -1,43 +1,23 @@
 ---
-title: "安全角色 (Analysis Services-多维数据) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], roles
-- Analysis Services objects, roles
-- security [Analysis Services], roles
-- roles [Analysis Services], about roles
-- server roles [Analysis Services]
-- database roles [Analysis Services]
-- roles [Analysis Services]
-- storing data [Analysis Services], roles
-- access rights [Analysis Services], roles
-ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 
-author: Minewiskan
+title: 安全角色 (Analysis Services-多维数据) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9dfdaaf55bb4bf5eb71f15177985f0240ff95065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全角色（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-中使用角色[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]可管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象和数据。 在基本术语中，角色相关联的 Microsoft Windows 用户和具有特定访问权限和权限定义对象的实例由管理组的安全标识符 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供了两种类型的角色[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+  中使用角色[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]可管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象和数据。 在基本术语中，角色相关联的 Microsoft Windows 用户和具有特定访问权限和权限定义对象的实例由管理组的安全标识符 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供了两种类型的角色[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   服务器角色，它是一个固定角色，用于提供对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例的管理员访问权限。  
   
@@ -93,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 |Administer<br /><br /> 注意： 仅在数据库权限|{**true**, **false**}<br /><br /> Default=**false**|指定成员是否可管理数据库。<br /><br /> 如果值为**true** ，则将授予成员对数据库中所有对象的访问权限。<br /><br /> 成员可以拥有特定数据库的管理权限，但却不能拥有其他数据库的管理权限。|  
   
 ## <a name="see-also"></a>另请参阅  
- [权限和访问权限 &#40;Analysis Services-多维数据 &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
- [授权访问对象和操作 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [权限和访问权限 & #40;Analysis Services-多维数据 & #41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
+ [授权访问对象和操作 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   
