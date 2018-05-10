@@ -1,17 +1,16 @@
 ---
 title: SSIS 目录 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   **SSISDB**目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -619,9 +617,7 @@ ms.lasthandoff: 04/26/2018
   
 提供在“新建可用性组”向导的“选择数据库”页中创建 SSIS 目录时指定的密码。
 
-如果看到“选择数据同步首选项”提示，请选择“跳过初始数据同步”。
-  
- ![新建可用性组](../../integration-services/service/media/ssis-newavailabilitygroup.png "新建可用性组")  
+![新建可用性组](../../integration-services/service/media/ssis-newavailabilitygroup.png "新建可用性组")  
   
 ####  <a name="Step3"></a> 步骤 3：为 AlwaysOn 启用 SSIS 支持  
  创建 Integration Service 目录后，右键单击“Integration Service 目录”节点，再单击“启用 Always On 支持”。 应该能看到以下“为 AlwaysOn 启用支持”  的对话框。 如果此菜单被禁用，请确认已安装所有必备组件，然后单击“刷新” 。  

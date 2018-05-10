@@ -10,11 +10,13 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.prod: sql
+ms.technology: ssms
+ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
 本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文演示如何执行以下操作：
@@ -49,8 +51,6 @@ ms.lasthandoff: 04/03/2018
 
     - 对于“服务器类型”，选择“数据库引擎”（通常的默认选项）。
     - 对于“服务器名称”，输入 SQL Server 实例的名称。 （本文使用主机名 NODE5 [NODE5\SQL2016ST] 上的实例名称 SQL2016ST。）如果不知道如何确定 SQL Server 实例的名称，请参阅[使用 SSMS 的其他提示和技巧](ssms-tricks.md#determine-sql-server-name)。  
-
-    ![“服务器名称”字段与示例实例名称](media/connect-query-sql-server/connection.png)
 
     ![“服务器名称”字段与使用 SQL Server 实例的选项](media/connect-query-sql-server/connection2.png)
 

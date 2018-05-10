@@ -1,28 +1,27 @@
 ---
-title: "第 5 课：设置报表格式 (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 第 5 课：设置报表格式 (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0319d1e52281bf389b13564d89b5e6543b7d41aa
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 22524a7fb35104934661f0dead998319cf9a99f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。  
@@ -63,7 +62,7 @@ LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币
   
 4.  选择“使用千位分隔符(,)”。  
   
-    如果示例文本为**$12,345.00**，则说明您的设置是正确的。  
+    如果示例文本为 **$12,345.00**，则说明您的设置是正确的。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

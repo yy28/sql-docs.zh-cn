@@ -1,25 +1,24 @@
 ---
-title: 查看 R 或在 SQL Server 上安装 Python 包 |Microsoft 文档
+title: 获取有关 SQL Server 机器学习的 R 和 Python 包信息 |Microsoft 文档
+description: 确定 R 和 Python 包版本，验证安装，并获取 SQL Server R Services 或机器学习服务上的安装程序包的列表。
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>查看 R 或在 SQL Server 上安装 Python 包
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>获取有关 SQL Server 机器学习的 R 和 Python 包信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-如果你已安装多个 Python 环境，或使用多个 R 工具，很容易包安装到的错误的库或环境，然后不能以更高版本查找。 
-
-本文提供了一些查询可以用于确定当前版本，并列出在当前的 SQL Server 环境中安装的包。
+如果你已安装多个 Python 环境，或使用多个 R 工具，很容易包安装到的错误的库或环境，然后不能以更高版本查找。 本文提供了查询和指南适用于 determininga 包版本，以及若要列出在当前的 SQL Server 环境中安装的包。
 
 ## <a name="verify-the-current-default-library"></a>验证当前的默认库
 

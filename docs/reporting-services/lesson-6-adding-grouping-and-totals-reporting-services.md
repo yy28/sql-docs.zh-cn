@@ -1,29 +1,27 @@
 ---
-title: "第 6 课：添加分组和总计 (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 第 6 课：添加分组和总计 (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 
+caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教程课程中，你将向 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中添加分组和总计以便组织和汇总数据。  
@@ -35,13 +33,13 @@ ms.lasthandoff: 02/15/2018
   
 2.  如果看不到“行组”窗格，请右键单击设计图面，然后单击“查看”，再单击“分组”。  
   
-3.  从 **“报表数据”** 窗格将 **Date** 字段拖到 **“行组”** 窗格， 并将其放置到名为 **(Details)**的行上面。
+3.  从 **“报表数据”** 窗格将 **Date** 字段拖到 **“行组”** 窗格， 并将其放置到名为 **(Details)** 的行上面。
   
     请注意，行控点中现在有一个方括号，用于显示组。 表现在在垂直点线的两侧各有一个 Date 列。  
   
     ![添加的日期组](../reporting-services/media/rs-basictablegroups1design.png "添加的日期组")  
   
-4.  从 **“报表数据”** 窗格将 **Order** 字段拖到 **“行组”** 窗格， 并将其放置到 Date 下面和 **(Details)**上面。
+4.  从 **“报表数据”** 窗格将 **Order** 字段拖到 **“行组”** 窗格， 并将其放置到 Date 下面和 **(Details)** 上面。
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
