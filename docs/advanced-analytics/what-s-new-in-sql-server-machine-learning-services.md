@@ -2,16 +2,16 @@
 title: 什么&#39;SQL Server 计算机学习 Services 中的新增功能 |Microsoft 文档
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 计算机学习 Services 中的新增功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,9 @@ ms.lasthandoff: 04/16/2018
 此发行版还引入了**SQL Server 计算机学习服务器 （独立）**完全独立于 SQL Server，对于你想要的专用系统上运行的 R 和 Python 的工作负荷。 与独立服务器，您可以分发，而无需使用 SQL Server 扩展 R 或 Python 的解决方案。
 
 | 发行版本 | 功能更新 |
-|---------|---------------|
+|---------|----------------|
+| CU 6 | Bug 修复程序和包刷新，但不是新的功能公告。 在预先训练的模型中消失时，修复会 DateTime 数据类型支持 SPEES 查询中包括 Python 和 microsoftml 中改进的错误消息。 |
+| CU 5 | Bug 修复程序和包刷新，但不是新的功能公告。 修复包括改进转换函数和 revoscalepy，更正中 rxInstallPackages，对于 RxExec rx_exec 函数和修订的警告消息，在环回修复连接长路径相关的错误中的变量。 |
 | CU 4 | Bug 修复程序和包刷新，但不是新的功能公告。 |
 | CU 3 | Python 模型 revoscalepy 中的序列化使用[rx_serialize_model 函数](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)。<br/><br/>[本机评分](sql-native-scoring.md)plus 的增强功能[实时评分](real-time-scoring.md)。 与数据库中评分，吞吐量是基于每 100 万行倒数第二次使用 R 模型。 在此更新中，实时评分和本机评分提供更好的性能单行更行和批处理评分。 本机评分使用快速评分的 T-SQL 的函数可以运行在任何版本的 SQL Server，即使在 Linux 上。 该函数不需要安装的 R 或额外的配置。 这意味着你可以训练模型在其他位置，将其保存在 SQL Server，然后执行评分而不会调用。计分方法的详细信息，请参阅[如何执行实时评分或本机评分](r/how-to-do-realtime-scoring.md)。 |
 | CU 2 | Bug 修复程序和包刷新，但不是新的功能公告。 |
@@ -45,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 
 | 发行版本 |功能更新 |
 |---------|----------------|
-| CU | [**实时评分**](real-time-scoring.md)依赖于本机 c + + 库读取优化的二进制格式，存储在模型，然后无需调用 R 运行时生成预测。 这使得评分操作快得多。 与实时评分，可以运行存储的过程或执行实时评分 R 代码中。 也可用于 SQL Server 2016 中，如果实例升级到最新版本的实时评分是[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
+| CU 添加件 | [**实时评分**](real-time-scoring.md)依赖于本机 c + + 库读取优化的二进制格式，存储在模型，然后无需调用 R 运行时生成预测。 这使得评分操作快得多。 与实时评分，可以运行存储的过程或执行实时评分 R 代码中。 也可用于 SQL Server 2016 中，如果实例升级到最新版本的实时评分是[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
 | 初始版本 | [**数据库中分析的 R 集成**](r/sql-server-r-services.md)。 <br/><br/> 调用 R 的 R 包函数 T-SQL，反之亦然。 RevoScaleR 函数通过分为组件的字符串，协调分块数据提供大规模的 R 分析和管理分布式处理和聚合结果。 在 SQL Server 2016 R Services （数据库），RevoScaleR 引擎与数据库引擎实例，或数据和分析一起相同处理上下文中相集成。 <br/><br/>通过的 T-SQL 和 R 集成[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 你可以调用任何使用此存储的过程的 R 代码。 此安全基础结构使 Rn 模型和脚本，可以从使用简单的存储的过程的应用程序调用的企业级部署。 可通过从 SQL 与 R 进程 MPI 环并行化的流式处理数据来实现更多的性能提升。 <br/><br/>你可以使用 T-SQL 的[预测](../t-sql/queries/predict-transact-sql.md)函数来执行[本机评分](sql-native-scoring.md)上预先训练的模型已以前保存在所需的二进制格式。|
 
 ## <a name="linux-support-roadmap"></a>Linux 支持路线图
@@ -53,6 +55,12 @@ ms.lasthandoff: 04/16/2018
 在 Linux 上的 SQL Server 中，当前不支持使用 R 或 Python 数据库中的机器学习。 查看我们的更高版本中的通知。
 
 但是，在 Linux 上可以执行[本机评分](sql-native-scoring.md)使用 T-SQL 的预测函数。 本机评分，可以从预先训练的模型非常快，评分而无需调用或甚至需要的 R 运行时。 这意味着可以在 Linux 上使用 SQL Server 来生成预测非常快，以便为客户端应用程序提供服务。
+
+<a name="azure-sql-database-roadmap"></a>
+
+## <a name="azure-sql-database-roadmap"></a>Azure SQL 数据库路线图
+
+没有针对 Azure SQL 数据库中的 R 的有限的支持： 仅在西部美中在高级层创建的服务中可用。 扩展服务范围，其中包括 Python 支持是有可能遵循的未来版本中。 但是，没有任何预计的发行日期在此时间。  
 
 ## <a name="next-steps"></a>后续步骤
 

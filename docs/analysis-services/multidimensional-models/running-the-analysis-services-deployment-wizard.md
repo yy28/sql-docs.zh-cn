@@ -1,29 +1,19 @@
 ---
 title: 运行 Analysis Services 部署向导 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/27/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services Deployment Wizard, running
-ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
-caps.latest.revision: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 61a2c558fca710d9fa6df37b998cddca6125c3c6
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
-ms.translationtype: MT
+ms.openlocfilehash: 1513ad2da9e60bb6ab6841a32251952f82cea674
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>运行 Analysis Services 部署向导
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,17 +48,17 @@ ms.lasthandoff: 03/28/2018
  **应答文件模式**  
  使用应答文件模式，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中生成 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目时，向导允许你交互式更改最初生成的输入文件。 向导在生成部署脚本之前保存这些更改过的输入的文件。 这些更改过的输入文件便成为向导下次运行时的新起点。  
   
- 若要在应答文件模式运行向导，使用**/a**切换。  
+ 若要在应答文件模式运行向导，使用 **/a**切换。  
   
  **静默模式**  
  使用静默模式，向导基于输入文件中的信息以静默、无人参与的模式运行部署。  
   
- 若要在静默模式下运行该向导，使用**/s**切换。 如果以静默模式运行向导，则消息将输出至控制台或日志文件（如果有）。  
+ 若要在静默模式下运行该向导，使用 **/s**切换。 如果以静默模式运行向导，则消息将输出至控制台或日志文件（如果有）。  
   
  **输出模式**  
  在输出模式下，向导将生成基于输入文件的更高版本执行的部署脚本。  
   
- 若要在输出模式中运行该向导，使用**/o**切换，并提供输出文件的名称。  
+ 若要在输出模式中运行该向导，使用 **/o**切换，并提供输出文件的名称。  
   
  有关此类命令行开关的详细信息，请参阅 [使用部署实用工具部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)。  
   

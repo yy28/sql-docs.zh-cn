@@ -1,17 +1,16 @@
 ---
-title: "多平面文件连接管理器 | Microsoft Docs"
-ms.custom: 
+title: 多平面文件连接管理器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.multifile.advanced.f1
 - sql13.dts.designer.multifile.columns.f1
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: ba43dd74558a2e4506adb516183bc004aee718d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
@@ -70,7 +68,7 @@ ms.lasthandoff: 03/20/2018
  在已添加并配置了使用连接管理器的平面文件源之后，如果在多平面文件连接管理器中更新了列长度，则不必在平面文件源中手动调整输出列的大小。 打开 **“平面文件源”** 对话框时，平面文件源将提供同步列元数据的选项。  
   
 ## <a name="configuration-of-the-multiple-flat-files-connection-manager"></a>多平面文件连接管理器的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 03/20/2018
   
  若要了解有关多平面文件连接管理器的详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **连接管理器名称**  
  为工作流中的“多平面文件连接”提供一个唯一名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 03/20/2018
  **文件名**  
  键入要在“多平面文件连接”中使用的路径和文件名。 可以通过使用通配符指定多个文件，如示例“C:\\*.txt”中一样，也可以通过使用竖线 (|) 来分隔多个文件名。 所有文件的数据格式必须相同。  
   
- **浏览**  
+ **“浏览”**  
  通过定位文件来指定要在“多平面文件连接”中使用的文件名。 您可以选择多个文件。 所有文件的数据格式必须相同。  
   
  **区域设置**  
@@ -104,7 +102,7 @@ ms.lasthandoff: 03/20/2018
  **格式**  
  指示是否使用带分隔符、固定宽度或右边未对齐的格式。 所有文件的数据格式必须相同。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定，通过在 **“列”** 页上拖动标记线即可指定列的宽度。|  
@@ -116,7 +114,7 @@ ms.lasthandoff: 03/20/2018
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|标题行由回车符和换行符的组合分隔。|  
 |**{CR}**|标题行由回车符分隔。|  
@@ -151,7 +149,7 @@ ms.lasthandoff: 03/20/2018
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行由回车符和换行符的组合分隔。|  
 |**{CR}**|行由回车符分隔。|  
@@ -165,7 +163,7 @@ ms.lasthandoff: 03/20/2018
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|列由回车符和换行符的组合分隔。|  
 |**{CR}**|列由回车符分隔。|  
@@ -174,7 +172,7 @@ ms.lasthandoff: 03/20/2018
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {&#124;}。**|列由竖线分隔。|  
+|**竖线 {|}。**|列由竖线分隔。|  
   
  **重置列**  
  通过单击“重置列”可以删除除原始列之外的所有列。  
@@ -206,7 +204,7 @@ ms.lasthandoff: 03/20/2018
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行由回车符和换行符的组合分隔。|  
 |**{CR}**|行由回车符分隔。|  
@@ -227,32 +225,32 @@ ms.lasthandoff: 03/20/2018
   
  若要了解有关多平面文件连接管理器的详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **连接管理器名称**  
  为工作流中的多平面文件连接管理器提供一个唯一名称。 所提供的名称将显示在 **设计器的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域中。  
   
- **描述**  
+ **Description**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
- **配置每个列的属性**  
+ **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表以了解数据类型属性的说明。 列出的部分属性仅对某些平面文件格式是可配置的。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 该属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定，而最后一列由行分隔符终止。|  
 |**OutputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 在数据流任务中，此值用于设置平面文件源的输出列宽。<br /><br /> 注意：在对象模型中，此属性的名称为 MaximumWidth。|  
-|**数据类型**|从可用数据类型的列表中进行选择。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
+|**DataType**|从可用数据类型的列表中进行选择。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**TextQualified**|指示是否使用文本限定符限定文本数据：<br /><br /> **True**：平面文件中的文本数据是受限定的。<br /><br /> **False**：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供列名。 默认为带编号的列列表，不过，您也可以任选一个唯一的描述性名称。|  
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}** – 列由回车符和换行符的组合分隔<br /><br /> **{CR}** – 列由回车符分隔<br /><br /> **{LF}** – 列由换行符分隔<br /><br /> **分号 {;}** – 列由分号分隔<br /><br /> **冒号 {:}** – 列由冒号分隔<br /><br /> **逗号 {,}** – 列由逗号分隔<br /><br /> **制表符 {t}** – 列由制表符分隔<br /><br /> **竖线 {&#124;}** – 列由竖线分隔|  
+|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}** – 列由回车符和换行符的组合分隔<br /><br /> **{CR}** – 列由回车符分隔<br /><br /> **{LF}** – 列由换行符分隔<br /><br /> **分号 {;}** – 列由分号分隔<br /><br /> **冒号 {:}** – 列由冒号分隔<br /><br /> **逗号 {,}** - 列由逗号分隔<br /><br /> **制表符 {t}** – 列由制表符分隔<br /><br /> **竖线 {&#124;}** – 列由竖线分隔|  
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   
- **新增功能**  
+ **新建**  
  单击“新建”添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**添加列**|在列表末尾添加新列。|  
 |**在其前插入**|在所选列前面插入新列。|  
@@ -262,14 +260,14 @@ ms.lasthandoff: 03/20/2018
  选择一列，然后单击“删除”来删除该列。  
   
  **建议类型**  
- 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。 有关详细信息，请参阅[“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多平面文件连接管理器编辑器（“预览”页）
   可以使用“多平面文件连接管理器编辑器”对话框的“预览”页，查看选择的第一个源文件在按定义的样式划分为多列后的显示情况。  
   
  若要了解有关多平面文件连接管理器的详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **连接管理器名称**  
  为工作流中的“多平面文件连接”提供一个唯一名称。 所提供的名称将显示在 **设计器的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域中。  
   
@@ -285,6 +283,6 @@ ms.lasthandoff: 03/20/2018
 ## <a name="see-also"></a>另请参阅  
  [“平面文件源”](../../integration-services/data-flow/flat-file-source.md)   
  [平面文件目标](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

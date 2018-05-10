@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 00ed2233653ea5a98fdc389bbfc470f65c817f3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,8 @@ computed_column_expression
     >  由于表中计算列所用列中的各行可能有不同的值，因此计算列的每一行可能有不同的值。  
   
 PERSISTED  
- 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在表中物理存储计算值，并在计算列依赖的任何其他列发生更新时对这些计算值进行更新。 将计算列标记为 PERSISTED，便可对具有确定性、但不精确的计算列创建索引。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 用作已分区表的分区依据列的所有计算列都必须显式标记为 PERSISTED。 指定 PERSISTED 时，computed_column_expression 必须具有确定性。  
+ 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在表中物理存储计算值，并在计算列依赖的任何其他列发生更新时对这些计算值进行更新。 将计算列标记为 PERSISTED，便可对具有确定性、但不精确的计算列创建索引。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 用作已分区表的分区依据列的所有计算列都必须显式标记为 PERSISTED。 指定 PERSISTED 时，computed_column_expression 必须具有确定性。 
+
 NULL | NOT NULL  
  指定列中是否允许使用空值。 NULL 并不是严格意义上的约束，但可以使用与指定 NOT NULL 类似的方法指定。 只有同时指定了 PERSISTED 时，才能为计算列指定 NOT NULL。  
   
@@ -116,7 +114,8 @@ ON DELETE { NO ACTION | CASCADE }
  指定当表中的行具有引用关系，而被引用行已从父表中删除时，要对这些行执行的操作。 默认值为 NO ACTION。  
   
 NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对父表中行的删除操作。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对父表中行的删除操作。
+
 CASCADE  
  如果从父表中删除一行，则将从引用表中删除相应行。  
   
@@ -155,5 +154,3 @@ ON { partition_scheme_name(partition_column_name) | filegroup| "default"}
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  

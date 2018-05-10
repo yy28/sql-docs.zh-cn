@@ -1,16 +1,15 @@
 ---
-title: "rsconfig 实用工具 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: rsconfig 实用工具 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - rsconfig utility
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a7af70640cf19ddeb205a5cc345ce2c45d8a73fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  
@@ -54,7 +52,7 @@ rsconfig {-?}
 |术语|可选/必需|定义|  
 |----------|------------------------|----------------|  
 |**-?**|可选。|显示 Rsconfig.exe 参数的语法。|  
-|**-c**|如果未使用 **-e** 参数，则为必需项。|指定用于将报表服务器连接到报表服务器数据库的连接字符串、凭据和数据源值。<br /><br /> 此参数不带值。 但是，必须对其指定其他参数以提供所有必需的连接值。<br /><br /> 可以使用 **-c** 指定的参数包括 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**和**-t**。|  
+|**-c**|如果未使用 **-e** 参数，则为必需项。|指定用于将报表服务器连接到报表服务器数据库的连接字符串、凭据和数据源值。<br /><br /> 此参数不带值。 但是，必须对其指定其他参数以提供所有必需的连接值。<br /><br /> 可以使用 **-c** 指定的参数包括 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**和 **-t**。|  
 |**-e**|如果未使用 **-c** 参数，则为必需项。|指定无人参与报表执行帐户。<br /><br /> 此参数不带值。 但是，您必须在命令行中指定其他参数，以指定配置文件中加密的值。<br /><br /> 可以使用 **-e** 指定的参数包括 **-u** 和 **-p**。 你还可以设置 **-t**。|  
 |**-m**  computername|如果要配置远程报表服务器实例，则此参数是必需的。|指定承载报表服务器的计算机的名称。 如果省略该参数，则默认值为 **localhost**。|  
 |**-s**  servername|必需的。|指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  

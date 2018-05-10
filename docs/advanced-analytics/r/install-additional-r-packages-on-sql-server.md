@@ -1,19 +1,20 @@
 ---
-title: 在 SQL Server 上安装其他 R 包 |Microsoft 文档
+title: 在 SQL Server 计算机学习 Services 上安装新的 R 包 |Microsoft 文档
+description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 自 2017 年 1 机器学习 Services （数据库）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0ac316f4870482b15700395eb44b3adef934f2ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="install-additional-r-packages-on-sql-server"></a>在 SQL Server 上安装其他 R 包
+# <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何将新的 R 包安装到何处启用机器学习的 SQL Server 的实例。

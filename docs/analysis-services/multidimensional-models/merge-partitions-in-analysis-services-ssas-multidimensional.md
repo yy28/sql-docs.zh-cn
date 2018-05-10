@@ -1,34 +1,23 @@
 ---
-title: "在 Analysis Services (SSAS-多维) 中合并分区 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 在 Analysis Services (SSAS-多维) 中合并分区 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], merging
-- merging partitions [Analysis Services]
-ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5048828c306adbd803a822601150f8cca4e82f4f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以将现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的分区进行合并，以整合来自相同度量值组的多个分区的事实数据。  
+  您可以将现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的分区进行合并，以整合来自相同度量值组的多个分区的事实数据。  
   
  [常见情况](#bkmk_Scenario)  
   
@@ -124,7 +113,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  在对象资源管理器中，展开包含要合并分区的多维数据集的“度量值组”节点，展开“分区”，右键单击要被合并或要合并到的分区。 例如，如果您要将每个季度的事实数据移到存储年度事实数据的分区，请选择包含年度事实数据的分区。  
   
-2.  单击**合并分区**以打开**合并分区\<分区名称 >**对话框。  
+2.  单击**合并分区**以打开**合并分区\<分区名称 >** 对话框。  
   
 3.  在 **“源分区”**下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”**。  
   
@@ -140,9 +129,9 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [处理 Analysis Services 对象](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [分区 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [创建和管理本地分区 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [创建和管理远程分区 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [分区 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [创建和管理本地分区 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [创建和管理远程分区 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [设置分区写回](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [写入的分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [维度和分区的配置字符串存储](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  

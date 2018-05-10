@@ -1,27 +1,25 @@
 ---
-title: "向 URL 添加超链接（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 向 URL 添加超链接（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: bfecbec1812a15ec582c8e5d91afb8e471f8de3d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 80fb8d9b4f416933e19931aeb29fdb33f533e9f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
 了解如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分页报表向文本框、图像、图表和仪表添加超链接操作。 链接可以转到其他报表、报表中的书签或是静态或动态 URL。 

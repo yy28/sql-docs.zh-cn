@@ -1,31 +1,23 @@
 ---
-title: Set-PowerPivotSystemService cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 集 PowerPivotSystemService cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 00f080d09fd433d22ecf0e5eebeb84e7fc6394d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-设置场级别 PowerPivotSystemService 对象的全局属性。  
+  设置场级别 PowerPivotSystemService 对象的全局属性。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -65,7 +57,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<boolean>  
+### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh\<布尔 >  
  用于在服务器上计划的数据刷新开始时自动升级 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 工作簿。 只有与服务器的当前版本匹配的工作簿才支持数据刷新。 如果启用了此属性，工作簿将自动升级以便数据刷新可以继续进行。 该属性在服务实例级别设置。 您不能为特定的工作簿、库、站点或用户而改变该工作簿。  
   
 |||  
@@ -76,7 +68,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-directtcpconnections-boolean"></a>-DirectTCPConnections \<boolean>  
+### <a name="-directtcpconnections-boolean"></a>-DirectTCPConnections\<布尔 >  
  指定 Excel Services 将所有查询直接发送到加载了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库的 SQL Server Analysis Services (POWERPIVOT) 的实例，并且跳过用于发送到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库的每个查询请求的 MSOLAP 数据提供程序和管道传输。  
   
  设置此参数可通过更高效地建立与已加载数据库的连接，改进 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查询的性能和可伸缩性。 请注意，此参数不会更改分配初始加载请求的行为方式。 用于在场中的多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 实例之间分配数据库加载请求的其他参数（例如 –RoundRobinAllocation 和 –HealthBasedAllocation）不会受到影响，因为 –DirectTCPConnections 仅应用于在加载数据库后发出的查询。  
@@ -91,7 +83,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<switch>  
+### <a name="-confirm-switch"></a>确认\<切换 >  
  在执行命令前提示您进行确认。 默认情况下将启用该值。 若要在命令中跳过确认响应，请在命令中指定 Confirm:$false。  
   
 |||  
@@ -102,7 +94,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  此 cmdlet 支持以下常用参数：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

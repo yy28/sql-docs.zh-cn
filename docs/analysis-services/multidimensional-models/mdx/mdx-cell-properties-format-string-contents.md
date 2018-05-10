@@ -1,37 +1,23 @@
 ---
-title: "FORMAT_STRING 内容 (MDX) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: FORMAT_STRING 内容 (MDX) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- formats [Analysis Services], string values
-- VALUE property
-- formats [Analysis Services], numeric values
-- FORMATTED_VALUE property
-- FORMAT_STRING contents
-ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0abbc6911435f77466a647eac13304fda12b22b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 单元格属性-FORMAT_STRING 内容
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-**FORMAT_STRING** 单元属性格式化 **VALUE** 单元属性以生成 **FORMATTED_VALUE** 单元属性的值。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
+  **FORMAT_STRING** 单元属性格式化 **VALUE** 单元属性以生成 **FORMATTED_VALUE** 单元属性的值。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
   
 ## <a name="string-values"></a>字符串值  
  字符串的格式表达式可以是一部分，也可以是由分号 (;) 分隔开的两部分。  
@@ -79,15 +65,15 @@ ms.lasthandoff: 02/15/2018
 |---------------|-----------------|  
 |InclusionThresholdSetting|显示不带任何格式的数字。|  
 |**0**|表示显示一个数字或零 (0) 的数字占位符。<br /><br /> 如果数字在格式字符串中出现零的位置有一个数字，格式化值将显示该数字。 否则，格式化值在该位置显示零。<br /><br /> 如果数字的位数少于格式表达式中零的个数（不管在小数点的哪一侧），格式化值将显示前导零或尾随零。<br /><br /> 如果小数点分隔符右侧的数字位数多于格式表达式中小数点分隔符右侧的零的个数，格式化值将对数字四舍五入，使其小数位数与零的个数一样多。<br /><br /> 如果小数点分隔符左侧的数字位数多于格式表达式中小数点分隔符左侧的零的个数，格式化值将显示多出的位数而不作任何修改。|  
-|**#**|表示显示一个数字或不显示任何内容的数字占位符。<br /><br /> 如果表达式在格式字符串中出现数字符号 (**#**) 的位置有一个数字，格式化值将显示该数字。 否则，格式化值在该位置什么也不显示。<br /><br /> 除了当数字的位数等于或少于格式表达式中小数点分隔符任意一侧的**#**字符数时不显示前导零或尾随零外，数字符号 (**) 占位符的作用类似于零 (**0 **#** ) 数字占位符。|  
+|**#**|表示显示一个数字或不显示任何内容的数字占位符。<br /><br /> 如果表达式在格式字符串中出现数字符号 (**#**) 的位置有一个数字，格式化值将显示该数字。 否则，格式化值在该位置什么也不显示。<br /><br /> 除了当数字的位数等于或少于格式表达式中小数点分隔符任意一侧的**#** 字符数时不显示前导零或尾随零外，数字符号 (**) 占位符的作用类似于零 (** 0 **#** ) 数字占位符。|  
 |**。**|表示决定小数点分隔符左侧和右侧显示几位数的小数点占位符。<br /><br /> 如果格式表达式中句点 (**#**.**) 左侧只包含数字符号 (**) 字符，则小于 1 的数字以小数点分隔符开头。 若要显示用小数显示的前导零，请使用零 (0) 作为小数点分隔符左侧的第一个数字占位符。<br /><br /> 在格式化输出中用作小数点占位符的实际字符取决于计算机系统所识别的数字格式。<br /><br /> 注意：在某些区域设置中，用逗号作为小数点分隔符。|  
 |**%**|表示百分比占位符。 将表达式乘以 100， 并在格式字符串中出现百分比符号的位置插入百分比字符 (**%**)。|  
 |**、**|表示将小数点分隔符左侧具有四位或更多位数的数字中的千位和百位分隔开的千位分隔符。<br /><br /> 如果格式包含一个由数字占位符（**0** 或 **#**）包围的千位分隔符，则指定千位分隔符的标准用法。<br /><br /> 两个相邻的千位分隔符或一个千位分隔符紧挨小数点分隔符的左侧（无论是否指定小数）表示“通过除以 1000 来将数字按比例减小，并按所需的方式四舍五入”。 例如，可以使用格式字符串“**##0**,,”将 100,000,000 表示为 100。 小于 1,000,000 的数字显示为 0。 对于两个相邻的千位分隔符，只要不是出现在紧挨小数点分隔符的左侧，就被视为指定使用千位分隔符。<br /><br /> 在格式化输出中用作千位分隔符的实际字符取决于计算机系统所识别的数字格式。<br /><br /> 注意：在某些区域设置中，用句点作为千位分隔符。|  
 |**设置用户帐户 ：**|表示时间分隔符，在设置时间值的格式时，时间分隔符用于分隔小时、分钟和秒。<br /><br /> 注意：在某些区域设置中，可能用其他字符作为时间分隔符。<br /><br /> 在格式化输出中用作时间分隔符的实际字符取决于计算机的系统设置。|  
 |**/**|表示日期分隔符，在设置日期值的格式时，日期分隔符用于分隔年、月和日。<br /><br /> 在格式化输出中用作日期分隔符的实际字符取决于计算机的系统设置。<br /><br /> 注意：在某些区域设置中，可能用其他字符作为日期分隔符。|  
-|**E- E+ e- e+**|表示科学记数法格式。<br /><br /> 如果格式表达式在**E-** 、 **#**E+ **、**e- **或**e+ **的右侧至少包含一个数字占位符（**0 **或**），则以科学记数法格式显示格式化值，并在数字和其指数之间插入 E 或 e。 右侧的数字占位符的个数决定了指数中的数字个数。 使用 **E-** 或 **e-** 在负指数的后面包括一个减号。 使用 **E+** 或 **e+** 在负指数的后面包括一个减号，在正指数的后面包括一个加号。|  
+|**E- E+ e- e+**|表示科学记数法格式。<br /><br /> 如果格式表达式在**E-** 、 **#** E+ **、**e- **或**e+ **的右侧至少包含一个数字占位符（**0 **或**），则以科学记数法格式显示格式化值，并在数字和其指数之间插入 E 或 e。 右侧的数字占位符的个数决定了指数中的数字个数。 使用 **E-** 或 **e-** 在负指数的后面包括一个减号。 使用 **E+** 或 **e+** 在负指数的后面包括一个减号，在正指数的后面包括一个加号。|  
 |**- + $ ( )**|显示文字字符。<br /><br /> 若要显示所列字符以外的其他字符，请在该字符前加上一个反斜杠 (**\\**) 或将该字符放在双引号 (**" "**) 中。|  
-|**\\**|显示格式字符串中的下一个字符。<br /><br /> 若要将具有特殊含义的字符显示为文字字符，请在该字符前加上一个反斜杠 (**\\**)。 反斜杠本身不显示。 使用反斜杠与将下一个字符放在双引号中的作用是相同的。 若要显示反斜杠，请使用两个反斜杠 (**\\\\**)。 不能显示为文字字符的字符示例包括下列字符：<br /><br /> <br /><br /> 日期格式和时间格式的字符—**a**、 **c**、 **d**、 **h**、 **m**、 **n**、 **p**、 **q**、 **s**、 **t**、 **w**、 **y**、 **/**和 **设置用户帐户 ：**<br /><br /> 数值格式的字符—**#**、 **0**、 **%**、 **E**、 **e**、 **逗号**和 **句点**<br /><br /> 字符串格式的字符—**@**、 **&**、 **\<**、 **>**和 **!**|  
+|**\\**|显示格式字符串中的下一个字符。<br /><br /> 若要将具有特殊含义的字符显示为文字字符，请在该字符前加上一个反斜杠 (**\\**)。 反斜杠本身不显示。 使用反斜杠与将下一个字符放在双引号中的作用是相同的。 若要显示反斜杠，请使用两个反斜杠 (**\\\\**)。 不能显示为文字字符的字符示例包括下列字符：<br /><br /> <br /><br /> 日期格式和时间格式的字符—**a**、 **c**、 **d**、 **h**、 **m**、 **n**、 **p**、 **q**、 **s**、 **t**、 **w**、 **y**、 **/** 和 **:**<br /><br /> 数值格式的字符—**#**、 **0**、 **%**、 **E**、 **e**、 **逗号**和 **句点**<br /><br /> 字符串格式的字符—**@**、 **&**、 **\<**、 **>** 和 **!**|  
 |**"ABC"**|显示双引号 (**" "**) 里面的字符串。<br /><br /> 若要将字符串包含在代码内的格式中，请将文本放在 Chr(**34**) 之间。 （双引号的字符代码为 **34**。）|  
   
 ### <a name="named-numeric-formats"></a>命名数字格式  
@@ -157,8 +143,8 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [LANGUAGE 和 FORMAT_STRING 的 FORMATTED_VALUE 上](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
- [使用单元属性 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [创建和使用属性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [使用单元属性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [创建和使用属性值 & #40;MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

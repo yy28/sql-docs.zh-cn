@@ -1,34 +1,23 @@
 ---
-title: "用于处理 (Analysis Services) 工具和方法 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 用于处理 (Analysis Services) 工具和方法 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- process [Analysis Services]
-- processing [Analysis Services]
-ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 57600dd49938217fa3bf65cff86f64e03bb16b52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
+  处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
   
  作为 Analysis Services 系统管理员，您可以使用以下方法执行并监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的处理：  
   
@@ -53,7 +42,7 @@ ms.lasthandoff: 02/23/2018
  处理是由一组处理选项控制的高度可配置操作，这些选项决定在对象级别执行完全处理还是增量处理。 有关处理选项和对象的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) 和[处理 Analysis Services 对象](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、 表或分区 &#40;Analysis Services &#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)和[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+>  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、 表或分区&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)和[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中处理对象  
   
