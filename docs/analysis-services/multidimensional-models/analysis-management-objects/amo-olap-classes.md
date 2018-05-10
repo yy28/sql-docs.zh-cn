@@ -1,33 +1,19 @@
 ---
-title: "AMO OLAP 类 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: 
-author: Minewiskan
+title: AMO OLAP 类 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f4544efdf6a569bcb89f7c8236b69bf0d7916912
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 类
   分析管理对象 (AMO) OLAP 类可帮助您创建、修改、删除和处理多维数据集、维度以及相关对象，如关键绩效指标 (KPI)、操作和主动缓存。  
@@ -82,24 +68,24 @@ ms.lasthandoff: 02/15/2018
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Cube> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="MeasureGroups">度量值组对象</a>  
+###  <a name="MeasureGroups"></a> 度量值组对象  
  度量值组的创建方法是：将其添加到多维数据集的度量值组集合中，然后使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象自己的 Update 方法，将该对象更新到服务器中。 使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象自己的 Drop 方法可将该对象删除。  
   
  创建 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象之后可对其进行处理。 <xref:Microsoft.AnalysisServices.MeasureGroup>可以处理通过使用其自己的进程方法，或可以当父对象处理其自身与其自己过程方法进行处理。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.MeasureGroup> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Partition">分区对象</a>  
+###  <a name="Partition"></a> 分区对象  
  <xref:Microsoft.AnalysisServices.Partition> 对象的创建方法是：将其添加到父度量值组的分区集合中，然后使用 Update 方法，在服务器中更新 <xref:Microsoft.AnalysisServices.Partition> 对象。 删除 <xref:Microsoft.AnalysisServices.Partition> 对象可使用 Drop 方法。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Partition> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="AggregationDesign">AggregationDesign 对象</a>  
+###  <a name="AggregationDesign"></a> AggregationDesign 对象  
  聚合设计是使用 <xref:Microsoft.AnalysisServices.AggregationDesign> 对象的 AggregationDesign 方法构造的。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.AggregationDesign> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Aggregation">聚合对象</a>  
+###  <a name="Aggregation"></a> 聚合对象  
  <xref:Microsoft.AnalysisServices.Aggregation> 对象的创建方法是：将其添加到父度量值组的聚合设计集合中，然后使用 Update 方法，在服务器中更新父度量值组对象。 从 <xref:Microsoft.AnalysisServices.AggregationCollection> 中删除聚合可使用 Remove 方法或 RemoveAt 方法。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Aggregation> 中的 <xref:Microsoft.AnalysisServices>。  
@@ -119,7 +105,7 @@ ms.lasthandoff: 02/15/2018
   
  AMO 用于设置此改进行为的定义，但实际体验将由浏览实现所有这些改进的客户端决定。  
   
-###  <a name="Action">操作对象</a>  
+###  <a name="Action"></a> 操作对象  
  <xref:Microsoft.AnalysisServices.Action> 对象的创建方法是：将其添加到多维数据集的操作集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可包含参数 UpdateOptions.ExpandFull，该参数可确保此更新操作会将多维数据集中所有修改过的对象都更新到服务器中。  
   
  若要删除<xref:Microsoft.AnalysisServices.Action>对象，必须从集合中移除，并且必须更新父多维数据集。  
@@ -137,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Kpi> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Perspective">透视对象</a>  
+###  <a name="Perspective"></a> 透视对象  
  <xref:Microsoft.AnalysisServices.Perspective> 对象的创建方法是：将其添加到多维数据集的透视集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可以包括参数 UpdateOptions.ExpandFull，这样可以确保修改多维数据集中的所有对象，将都更新到具有此更新操作的服务器。  
   
  若要删除 <xref:Microsoft.AnalysisServices.Perspective> 对象，必须从集合中将其删除，并且必须更新父多维数据集。  
@@ -146,14 +132,14 @@ ms.lasthandoff: 02/15/2018
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Perspective> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Translation">转换对象</a>  
+###  <a name="Translation"></a> 转换对象  
  <xref:Microsoft.AnalysisServices.Translation> 对象的创建方法是：将其添加到所需对象的翻译集合中，然后使用 Update 方法，将最近的主要父对象更新到服务器中。 最近的父对象的 Update 方法可包含参数 UpdateOptions.ExpandFull，该参数可确保此更新操作会将所有修改过的子对象都更新到服务器中。  
   
  若要删除 <xref:Microsoft.AnalysisServices.Translation> 对象，必须从集合中将其删除，并且必须更新最近的父对象。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Translation> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="ProactiveCaching">ProactiveCaching 对象</a>  
+###  <a name="ProactiveCaching"></a> ProactiveCaching 对象  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 对象的创建方法是：将其添加到维度或分区的主动缓存对象集合中，然后使用 Update 方法，将维度或分区对象更新到服务器中。  
   
  若要删除 <xref:Microsoft.AnalysisServices.ProactiveCaching> 对象，必须从集合中将其删除，并且必须更新父对象。  
@@ -167,7 +153,7 @@ ms.lasthandoff: 02/15/2018
  [引入 AMO 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [编程 AMO OLAP Basic Objects](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)   
  [编程 AMO OLAP 高级对象](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)   
- [逻辑体系结构 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [逻辑体系结构 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

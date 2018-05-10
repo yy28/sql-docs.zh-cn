@@ -1,31 +1,23 @@
 ---
-title: "安装后配置 (Analysis Services) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining - "setup-install"
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 
-author: Minewiskan
+title: 安装后配置 (Analysis Services) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6993aa4cea9c21b41e71048497cf524335b72366
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>安装后配置 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)）。  
+  安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)）。  
   
  您具有可供部署的数据库后，需要完成一些额外工作。 换句话说，您需要在数据库上配置角色成员身份以授予用户对数据的访问权限、设计数据库备份和恢复策略，以及确定是否需要预定处理工作负荷以定期刷新数据。 可以在这些链接中找到有关数据库部署和管理的详细信息：[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)和[表格模型数据库](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
   

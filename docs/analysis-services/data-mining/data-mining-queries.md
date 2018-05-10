@@ -1,37 +1,23 @@
 ---
-title: "数据挖掘查询 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 数据挖掘查询 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>数据挖掘查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据挖掘查询可用于多种目的。 您可以：  
+  数据挖掘查询可用于多种目的。 您可以：  
   
 -   将模型应用于新数据以进行单个或多个预测。 可以将输入值作为参数提供，也可以使用批处理文件提供输入值。  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_Understand"></a> 了解数据挖掘查询  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘支持以下查询类型：  
   
--   [预测查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [预测查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      基于模型中的模式和输入数据进行推断的查询。  
   
@@ -68,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
      返回元数据、统计信息和有关模型本身的其他信息的查询。  
   
--   [钻取查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [钻取查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      可以检索模型的基础事例数据、甚至结构中未用于模型的数据的查询。  
   
@@ -149,13 +135,13 @@ ms.lasthandoff: 02/15/2018
 ## <a name="in-this-section"></a>本節內容  
  本节中的各个主题详细地介绍了每种类型的数据挖掘查询，并提供了一些链接，这些链接指向有关如何创建针对数据挖掘模型的查询的详细示例。  
   
- [预测查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [预测查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [内容查询（数据挖掘）](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [数据定义查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [数据定义查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -174,7 +160,7 @@ ms.lasthandoff: 02/15/2018
 |在 Integration Services 中使用数据挖掘组件|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

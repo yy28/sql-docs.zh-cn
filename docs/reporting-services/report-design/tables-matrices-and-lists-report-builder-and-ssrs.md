@@ -1,16 +1,15 @@
 ---
-title: "表、矩阵和列表（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 表、矩阵和列表（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.tablixgroup.f1
 - "10045"
@@ -37,16 +36,15 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 1caed0f401f74ad420475aae125ba47558d0163a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ee7b2cd3b9a1ea25bf04656af7339e93913af04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，表、矩阵和列表是在以行和列形式组织的单元中显示分页报表数据的数据区域。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域。  

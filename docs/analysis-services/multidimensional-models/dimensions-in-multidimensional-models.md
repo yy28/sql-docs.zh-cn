@@ -1,35 +1,23 @@
 ---
-title: "多维模型中的维度 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多维模型中的维度 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- OLAP [Analysis Services], dimensions
-- dimensions [Analysis Services], about dimensions
-- OLAP objects [Analysis Services], dimensions
-ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ae68ab8b879656940827bf8ebffb5c1f40cfa0b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f2a58f5db400792b09cabafc12ae2a521e0f1776
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多维模型中的维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据库维度是相关对象（称为属性）的集合，用于提供有关一个或多个多维数据集中的事实数据的信息。 例如，产品维度中的典型属性可能是产品名称、产品类别、产品系列、产品规格和产品价格。 这些对象绑定到数据源视图的一个或多个表中的一个或多个列。 默认情况下，这些属性和属性层次结构一样是可见的，可用于了解多维数据集中的事实数据。 可以将属性组织为用户定义层次结构，从而提供导航路径以帮助用户浏览多维数据集中的数据。  
+  数据库维度是相关对象（称为属性）的集合，用于提供有关一个或多个多维数据集中的事实数据的信息。 例如，产品维度中的典型属性可能是产品名称、产品类别、产品系列、产品规格和产品价格。 这些对象绑定到数据源视图的一个或多个表中的一个或多个列。 默认情况下，这些属性和属性层次结构一样是可见的，可用于了解多维数据集中的事实数据。 可以将属性组织为用户定义层次结构，从而提供导航路径以帮助用户浏览多维数据集中的数据。  
   
  多维数据集包含用户分析事实数据所基于的所有维度。 多维数据集中的数据库维度实例称为多维数据集维度，它与多维数据集中的一个或多个度量值组有关。 数据库维度可以在多维数据集中多次使用。 例如，事实数据表可以具有多个与时间相关的事实数据，并且可以定义单独的多维数据集维度以帮助分析每个与时间相关的事实数据。 但是，只需存在一个与时间相关的数据库维度，这也意味着只需存在一个与时间相关的关系数据库表便可支持多个基于时间的多维数据集维度。  
   

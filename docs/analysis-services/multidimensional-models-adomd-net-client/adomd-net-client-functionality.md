@@ -1,32 +1,19 @@
 ---
-title: "ADOMD.NET 客户端功能 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- functionality [ADOMD.NET]
-- ADOMD.NET, functionality
-ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: 
-author: Minewiskan
+title: ADOMD.NET 客户端功能 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c754b19a1cce0e3fb68a852c2cfdb3fb98617a65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 客户端功能
   与其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 数据访问接口一样，ADOMD.NET 也用作应用程序与数据源之间的桥梁。 但 ADOMD.NET 与其他 .NET Framework 数据访问接口的不同之处在于 ADOMD.NET 处理的是分析数据。 为了处理分析数据，ADOMD.NET 支持的功能与其他 .NET Framework 数据访问接口所支持的功能差异很大。 ADOMD.NET 不仅可检索数据，还可检索元数据并更改分析数据存储区的结构：  
@@ -44,7 +31,7 @@ ms.lasthandoff: 02/15/2018
  **更改分析数据的结构**  
  ADOMD.NET 还可用于实际更改分析数据存储区的结构。 虽然这通常是通过分析管理对象 (AMO) 对象模型进行的，但您也可以使用 ADOMD.NET 来发送 Analysis Services 脚本语言 (ASSL) 命令，从而创建、更改或删除服务器中的对象。  
   
- 有关详细信息：[执行命令对分析数据源](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)，[使用分析管理对象 &#40; 进行开发AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ 有关详细信息：[执行命令对分析数据源](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)，[使用分析管理对象开发&#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [Analysis Services 脚本语言&#40;的 XMLA ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  检索元数据、检索数据和更改数据结构均发生在典型 ADOMD.NET 应用程序的工作流中的特定点。  
   

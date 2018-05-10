@@ -1,54 +1,23 @@
 ---
-title: "数据源和绑定 (SSAS 多维) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 数据源和绑定 (SSAS 多维) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services], bindings
-- DSO, bindings
-- Analysis Services Scripting Language, data sources
-- cubes [Analysis Services], bindings
-- OLAP mining models [Analysis Services Scripting Language]
-- bindings [Analysis Services Scripting Language]
-- rebindings [Analysis Services Scripting Language]
-- ASSL, bindings
-- relational mining models [ASSL]
-- data sources [Analysis Services Scripting Language]
-- ASSL, data sources
-- dimensions [Analysis Services], bindings
-- measures [Analysis Services], bindings
-- relational data sources [Analysis Services Scripting Language]
-- Analysis Services Scripting Language, bindings
-- chaptered rowsets
-- granularity
-- mining models [Analysis Services], data sources
-- inline bindings [ASSL]
-- out-of-line bindings
-- measure groups [Analysis Services], bindings
-- partitions [Analysis Services], bindings
-ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b87697128cabfbd6a2e0b62fdbcf180045dca79d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可将多维数据集、维度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象绑定到数据源。 数据源可为以下对象之一：  
+  可将多维数据集、维度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象绑定到数据源。 数据源可为以下对象之一：  
   
 -   关系数据源。  
   

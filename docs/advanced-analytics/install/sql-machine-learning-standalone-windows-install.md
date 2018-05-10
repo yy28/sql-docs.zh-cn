@@ -7,18 +7,18 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ec764a5cb5a6ce011d47f7f185cc05c906fe41d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>安装 SQL Server 自 2017 年 1 机器学习 Windows 上的服务器 （独立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运行的服务器的选项。 此选项可能会很有用，如果你需要开发高性能计算机学习解决方案，可以使用远程计算上下文、 本地服务器与远程计算机学习服务器之间的 Spark 群集上或在另一个 SQL Server 上互换切换实例。
   
-本文介绍如何使用 SQL Server 安装程序安装的独立版本**SQL Server 自 2017 年 1 机器学习服务器**。 如果你有企业版或软件保障，安装独立机器学习服务器是免费的。
+本文介绍如何使用 SQL Server 安装程序安装的独立版本**SQL Server 自 2017 年 1 机器学习服务器**。 
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 

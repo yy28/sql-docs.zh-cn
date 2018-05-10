@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.general.f1
 - sql13.ssis.ssms.isprojectprop.permissions.f1
@@ -20,12 +19,11 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2392b67968953d70c119c412fa6629afc0a318a4
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 34d4bcf0ab2e6db44ddf3c710a9d88a291c6a9f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-properties-dialog-box"></a>“项目属性”对话框
   一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目就是一个部署单元。 每个项目都可以包含包、参数和环境引用。 项目是安全对象并且可为数据库主体定义权限。 在重新部署某一项目时，该项目的之前版本可以存储在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中。  

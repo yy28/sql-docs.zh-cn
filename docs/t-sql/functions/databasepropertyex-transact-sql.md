@@ -1,15 +1,13 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,13 +24,12 @@ caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4331e2c3e4b68a3c439ed72a16f0941068b76802
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7525291002bb22109c05600e25fdcd551c86b9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +67,10 @@ property
 |IsArithmeticAbortEnabled|如果执行查询时发生溢出或被零除错误，则将结束查询。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsAutoClose|在最后一个用户退出后，数据库完全关闭并释放资源。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsAutoCreateStatistics|查询优化器根据需要创建单列统计信息以提高查询性能。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
-|IsAutoCreateStatisticsIncremental|如果可能，自动创建的单列统会信息会递增。|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
+|IsAutoCreateStatisticsIncremental|如果可能，自动创建的单列统会信息会递增。|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsAutoShrink|可以定期自动收缩数据库文件。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsAutoUpdateStatistics|当查询使用现有统计信息并且该统计信息可能过期时，查询优化器将更新该统计信息。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|
-|IsClone|数据库是用户数据库的架构和统计数据副本。|适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int| 
+|IsClone|数据库是使用 DBCC CLONEDATABASE 创建的用户数据库的架构和仅统计数据副本。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/3177838)。|**适用范围**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int| 
 |IsCloseCursorsOnCommitEnabled|提交事务时关闭打开的游标。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsFulltextEnabled|支持对数据库进行全文和语义索引。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int<br /><br /> 注意：此属性的值无效。 用户数据库始终启用全文搜索。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除此列。 请不要在新的开发工作中使用此列，并尽快修改当前还在使用任何这些列的应用程序。|  
 |IsInStandBy|数据库以只读方式联机，并允许还原日志。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
@@ -88,8 +85,10 @@ property
 |IsRecursiveTriggersEnabled|已启用触发器递归触发。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsSubscribed|数据库已订阅发布。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
 |IsSyncWithBackup|数据库为发布数据库或分发数据库，并且在还原时不用中断事务复制。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
-|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检测到因电力故障或其他系统故障造成的不完全 I/O 操作。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int|  
-|IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> 适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效，出现错误或不适用<br /><br /> 基本数据类型：int|  
+|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检测到因电力故障或其他系统故障造成的不完全 I/O 操作。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int| 
+|IsVerifiedClone|数据库是使用 WITH VERIFY_CLONEDB option of DBCC CLONEDATABASE 创建的用户数据库的架构和仅统计数据副本。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/3177838)。|**适用范围**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：int| 
+|IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效，出现错误或不适用<br /><br /> 基本数据类型：int|  
+|LastGoodCheckDbTime|上次在指定数据库上成功运行 DBCC CHECKDB 的日期和时间。|**适用范围**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> NULL = 输入无效<br /><br /> 基本数据类型：datetime| 
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。|LCID 值（十进制格式）。<br /><br /> 基本数据类型：int|  
 |MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = 数据库没有启动<br /><br /> 基本数据类型：bigint|  
 |恢复|数据库的恢复模式。|FULL = 完整恢复模式<br /><br /> BULK_LOGGED = 大容量日志记录模型<br /><br /> SIMPLE = 简单恢复模式<br /><br /> 基本数据类型：nvarchar(128)|  

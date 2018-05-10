@@ -1,32 +1,23 @@
 ---
 title: 数据库存储位置 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- databases [Analysis Services], storage location
-ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
-caps.latest.revision: 18
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f3fa3c8520d4927297ec56898a181502b0664de0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f3b40e3d3a674b3e6005db13957c98c0029209bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-storage-location"></a>数据库存储位置
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在通常情况下时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库管理员 (dba) 想要驻留在服务器数据文件夹之外的某些数据库。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于上述情况，通过 **DbStorageLocation** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以在本地磁盘或网络设备中指定数据库的位置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  通常会出现这样的情况，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于上述情况，通过 **DbStorageLocation** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以在本地磁盘或网络设备中指定数据库的位置。  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 数据库属性  
  **DbStorageLocation** 数据库属性指定了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在其中创建和管理所有数据库数据和元数据文件的文件夹。 除数据库元数据文件之外（它存储在服务器数据文件夹中），所有元数据文件都存储在 **DbStorageLocation** 文件夹中。 在设置 **DbStorageLocation** 数据库属性的值时，需考虑两个重要的注意事项：  
@@ -52,8 +43,8 @@ ms.lasthandoff: 01/08/2018
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [DbStorageLocation 元素](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [创建元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)   
+ [创建元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)   
  [附加元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [同步元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [同步元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
   
   

@@ -1,32 +1,30 @@
 ---
-title: "预览报表 | Microsoft Docs"
-ms.custom: 
+title: 预览报表 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/05/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], previewing reports
 - previewing reports [Reporting Services]
 - printing previews
 - test servers [Reporting Services]
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1ee5dbf3a8823554acbb811e874bfcd09196c0a1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2cdd46a01c2151a828d58f851e3a4bdcb02e7483
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="previewing-reports"></a>预览报表
   在设计     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表时，在将报表发布到生产环境中之前可能需要查看该报表。 可使用多种方法查看该报表：在报表设计器中切换到预览模式、使用报表设计器中的预览窗口以及在测试环境中将报表发布到报表服务器。  

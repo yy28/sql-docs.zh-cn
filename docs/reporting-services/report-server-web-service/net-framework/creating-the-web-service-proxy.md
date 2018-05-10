@@ -1,17 +1,17 @@
 ---
-title: "创建 Web 服务代理 | Microsoft Docs"
-ms.custom: 
+title: 创建 Web 服务代理 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, proxies
 - proxies [Reporting Services]
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 71da140c96f21a28676c2d95ac8d93acf72af16a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 29c1cc08fa6e17eb59656cb658c6c1b78fe9c850
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-the-web-service-proxy"></a>创建 Web 服务代理
   客户端和 Web 服务可以通过 SOAP 消息进行通信，这些消息将输入参数和输出参数封装为 XML。 代理类将参数映射到 XML 元素，然后通过网络发送 SOAP 消息。 通过这种方法，代理类使您不必在 SOAP 级别与 Web 服务通信，并允许您在支持 SOAP 和 Web 服务代理的任何开发环境中调用 Web 服务方法。  

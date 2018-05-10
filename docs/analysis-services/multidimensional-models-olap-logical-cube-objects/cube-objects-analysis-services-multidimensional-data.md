@@ -1,31 +1,19 @@
 ---
 title: 多维数据集对象 (Analysis Services-多维数据) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], objects
-ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
-caps.latest.revision: 12
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 27fab4d1fb52df03991db9559f54f6d829e3256d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f5e670318a298cd49c8c03538093f8739c5f601c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>多维数据集对象（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,17 +30,17 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |主题||  
-|[操作（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[操作 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)||  
 |[计算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)||  
-|[多维数据集单元 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md)||  
+|[多维数据集单元 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md)||  
 |[多维数据集属性 - 多维模型编程](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md)||  
-|[多维数据集存储 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)||  
+|[多维数据集存储 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)||  
 |[多维数据集翻译](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)||  
 |[维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)||  
-|[多维模型中的关键绩效指标 (KPI)](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[关键绩效指标 & #40;Kpi & #41;多维模型中](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)||  
-|[分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)||  
+|[分区 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)||  
 |[透视](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)||  
   
   

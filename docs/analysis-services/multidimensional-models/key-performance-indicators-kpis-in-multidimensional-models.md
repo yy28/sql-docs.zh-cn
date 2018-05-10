@@ -1,40 +1,23 @@
 ---
-title: "密钥多维模型中的性能指标 (Kpi) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 密钥多维模型中的性能指标 (Kpi) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f7c49068db1ee60a6b417b7ef2bc4348693fc500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。  
+  在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是指与用于评估业务绩效的多维数据集中某个度量值组关联的计算的集合。 这些计算通常是多维表达式 (MDX) 或计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  
   
@@ -67,7 +50,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="parent-kpis"></a>父级 KPI  
  一个单位可以跟踪不同级别的不同商务跃点。 例如，仅使用两个或三个 KPI 即可测定整个公司的业务绩效，但是这些公司范围内的 KPI 可能基于三个或四个由整个公司内的业务单元跟踪的其他 KPI。 同样，公司内的业务单元可以使用不同的统计信息来计算相同的 KPI，其结果汇总到公司范围内的 KPI 中。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可让你定义 KPI 之间的父子关系。 这种父子关系允许使用子级 KPI 的结果来计算父级 KPI 的结果。 客户端应用程序也可以使用此关系来正确显示父级和子级 KPI。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]让你定义 Kpi 之间的父-子关系。 这种父子关系允许使用子级 KPI 的结果来计算父级 KPI 的结果。 客户端应用程序也可以使用此关系来正确显示父级和子级 KPI。  
   
 ## <a name="weights"></a>权重  
  还可以将权重分配给子级 KPI。 当计算父级 KPI 的值时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可使用权重按比例调整子级 KPI 的结果。  

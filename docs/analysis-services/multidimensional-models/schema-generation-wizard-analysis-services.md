@@ -1,32 +1,23 @@
 ---
 title: 架构生成向导 (Analysis Services) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- relational schema [Analysis Services]
-ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92996e941d5ac3a96bf684ef499f9de663df0a24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 653e28218cf7a89a7a8b4fae7735b16d3b875f61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>架构生成向导 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]支持两种方法可以使用关系架构中定义 OLAP 对象时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或数据库。 通常，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，将基于在数据源视图中构造的逻辑数据模型来定义 OLAP 对象。 此数据源视图将基于一个或多个关系数据源中的架构元素定义，如在数据源视图中自定义那样。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目或数据库中定义 OLAP 对象时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持两种使用关系架构的方法。 通常，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，将基于在数据源视图中构造的逻辑数据模型来定义 OLAP 对象。 此数据源视图将基于一个或多个关系数据源中的架构元素定义，如在数据源视图中自定义那样。  
   
  或者，您可以首先定义 OLAP 对象，然后生成数据源视图、数据源和支持这些 OLAP 对象的基础关系数据库架构。 该关系数据库称为主题区域数据库。  
   

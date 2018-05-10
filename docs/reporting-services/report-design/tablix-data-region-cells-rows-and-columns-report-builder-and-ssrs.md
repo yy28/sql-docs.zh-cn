@@ -1,32 +1,30 @@
 ---
-title: "Tablix 数据区域单元、行和列（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: Tablix 数据区域单元、行和列（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2ab98b38e62004a5537515b1963f61d01b820697
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8eb51a0c7240f1eff35ecc754d3a6b1d6fdc1000
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
   若要控制 tablix 数据区域的行和列如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)、[矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)或[列表](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  

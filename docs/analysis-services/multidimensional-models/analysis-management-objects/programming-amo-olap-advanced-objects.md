@@ -1,34 +1,19 @@
 ---
-title: "编程 AMO OLAP 高级对象 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 
-author: Minewiskan
+title: 编程 AMO OLAP 高级对象 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c07ee6b4289c015b0c42a1bc9981bec29cd49483
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 高级对象的编程
   本主题介绍 OLAP 高级对象的分析管理对象 (AMO) 编程详细信息。 本主题包含以下各节：  
@@ -43,7 +28,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [转换对象](#Transl)  
   
-##  <a name="Action">操作对象</a>  
+##  <a name="Action"></a> 操作对象  
  操作类用于在浏览多维数据集的某些区域时创建活动响应。 Action 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。 操作可为不同类型，因而也就必须根据其类型进行创建。 操作可为：  
   
 -   钻取操作，对于在其上执行了该操作的多维数据，该操作将返回表示其所选单元的基础数据的行集。  
@@ -64,7 +49,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  将操作添加到多维数据集集合，并更新多维数据集。 操作是一个不可更新对象。  
   
- 测试操作需要另一个编程应用程序。 可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中测试操作。 首先，必须安装[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]示例，请参阅[处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 测试操作需要另一个编程应用程序。 可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中测试操作。 首先，必须安装[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]示例，请参阅[处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下面的示例代码从 Adventure Works Analysis Services 项目示例复制三种不同的操作。 您可以区分这些操作，因为使用以下示例引入的操作以“My”开头。  
   
@@ -191,7 +176,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI">Kpi 对象</a>  
+##  <a name="KPI"></a> Kpi 对象  
  关键绩效指标 (KPI) 是与多维数据集中的某个度量值组关联并用于评估业务成败的计算集合。 <xref:Microsoft.AnalysisServices.Kpi> 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。  
   
  创建 <xref:Microsoft.AnalysisServices.Kpi> 对象需要执行下列步骤：  
@@ -350,7 +335,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp">透视对象</a>  
+##  <a name="Persp"></a> 透视对象  
  <xref:Microsoft.AnalysisServices.Perspective> 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。  
   
  创建 <xref:Microsoft.AnalysisServices.Perspective> 对象需要执行下列步骤：  
@@ -413,7 +398,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC">ProactiveCaching 对象</a>  
+##  <a name="PC"></a> ProactiveCaching 对象  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 对象可通过 AMO 进行定义。  
   
  创建 <xref:Microsoft.AnalysisServices.ProactiveCaching> 对象需要执行下列步骤：  
@@ -470,7 +455,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl">转换对象</a>  
+##  <a name="Transl"></a> 转换对象  
  Translation 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。 Translation 对象是易于编码的简单对象。 对象标题的翻译由区域设置标识符和翻译后的标题对提供。 对于任何标题，都可以启用多个翻译。 可以为多数 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象（例如维度、属性、层次结构、多维数据集、度量值组、度量值以及其他对象）提供翻译。  
   
  下面的代码示例为属性“产品名称”的名称提供了西班牙语翻译。  
@@ -493,9 +478,9 @@ static public void CreateTranslations(Database db)
  <xref:Microsoft.AnalysisServices>   
  [引入 AMO 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [逻辑体系结构 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [逻辑体系结构 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [安装适用于 Analysis Services 多维建模教程的示例数据和项目](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

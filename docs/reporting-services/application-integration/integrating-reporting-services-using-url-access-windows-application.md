@@ -1,17 +1,17 @@
 ---
-title: "在 Windows 应用程序中使用 URL 访问 | Microsoft Docs"
-ms.custom: 
+title: 在 Windows 应用程序中使用 URL 访问 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Windows applications [Reporting Services]
 - Web Browser controls [Reporting Services]
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b80336b75c47be99a6d5208e6c6a4281394dc49
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dd8e76d7bb66bee51001ab3884a0cd8d9c412685
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 访问集成 Reporting Services - Windows 应用程序
   尽管可以针对 Web 环境优化对报表服务器的 URL 访问，但也可以使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表嵌入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序中。 不过，涉及 Windows 窗体的 URL 访问仍然要求您使用 Web 浏览器技术。 您可以将以下集成方案用于 URL 访问和 Windows 窗体：  

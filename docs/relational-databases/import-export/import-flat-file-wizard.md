@@ -1,29 +1,27 @@
 ---
 title: 将平面文件导入 SQL |Microsoft 文档
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 09/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 00ff0d0eb75ea6ad78135ac85d93494d77b8c581
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,11 +92,6 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 此页面指示导入是否成功。 如果出现绿色的选中标记，表示成功；反之，可能需要检查配置或者输入文件是否出错。
 
 ![向导结果](media/import-flat-file-wizard/importffresults.png)
-
-## <a name="reporting-import-flat-file-failures"></a>报告“导入平面文件”失败
-如果遇到任何故障，请向 sqltoolsprosesupport@microsoft.com 发送电子邮件
-
-有关详细信息，[请参阅这些说明](reporting-import-flat-file-failures.md)。
 
 ## <a name="learn-more"></a>了解详细信息
 

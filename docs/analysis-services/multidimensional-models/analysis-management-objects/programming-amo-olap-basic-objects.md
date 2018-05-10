@@ -1,34 +1,19 @@
 ---
-title: "编程 AMO OLAP Basic Objects |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 
-author: Minewiskan
+title: 编程 AMO OLAP Basic Objects |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本对象的编程
   创建复杂 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象是一个简单直接的过程，但需要注意细节。 本主题介绍 OLAP 基本对象的编程详细信息。 本主题包含以下各节：  
@@ -168,7 +153,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>处理维度  
  处理维度非常简单，使用 <xref:Microsoft.AnalysisServices.Dimension> 对象的 Process 方法即可。  
   
- 处理某个维度会影响使用该维度的所有多维数据集。 有关处理选项的详细信息，请参阅[处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 处理某个维度会影响使用该维度的所有多维数据集。 有关处理选项的详细信息，请参阅[处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  以下代码对所提供数据库中的所有维度执行增量更新：  
   
@@ -255,7 +240,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>处理多维数据集  
  处理多维数据集非常简单，使用 <xref:Microsoft.AnalysisServices.Cube> 对象的 Process 方法即可。 处理多维数据集时还会处理该多维数据集中的所有度量值组以及这些度量值组中的所有分区。 在多维数据集中，只有分区是可以处理的对象；度量值组仅是为了处理而设的分区容器。 为多维数据集指定的处理类型会传播到分区。 对多维数据集和度量值组的处理在内部解析为对维度和分区的处理。  
   
- 有关处理选项的详细信息，请参阅[处理对象 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 有关处理选项的详细信息，请参阅[处理对象&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下面的代码对指定数据库中的所有多维数据集进行完整处理：  
   
@@ -265,7 +250,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG">度量值组对象</a>  
+##  <a name="MG"></a> 度量值组对象  
  若要管理或处理度量值组，需要对 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>创建、删除和查找 MeasureGroup  
@@ -422,7 +407,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>处理度量值组  
  处理度量值组非常简单，使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象的 Process 方法即可。 处理度量值组时将处理属于该度量值组的所有分区。 对度量值组的处理在内部解析为对维度和分区的处理。 请参阅[处理分区](#ProcPart)本文档中。  
   
- 有关处理选项的详细信息，请参阅[处理对象 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 有关处理选项的详细信息，请参阅[处理对象&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下面的代码将对提供的多维数据集中的所有度量值组进行完整处理。  
   
@@ -434,7 +419,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part">分区对象</a>  
+##  <a name="Part"></a> 分区对象  
  若要管理或处理分区，需要对 <xref:Microsoft.AnalysisServices.Partition> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>创建、删除和查找分区  
@@ -488,7 +473,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> 处理分区  
  处理分区非常简单，使用 <xref:Microsoft.AnalysisServices.Partition> 对象的 Process 方法即可。  
   
- 有关处理选项的详细信息，请参阅[处理对象 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)和[处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 有关处理选项的详细信息，请参阅[处理对象&#40;XMLA&#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)和[处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下面的代码示例对指定度量值组中的所有分区进行完整处理。  
   
@@ -533,7 +518,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD">聚合对象</a>  
+##  <a name="AD"></a> 聚合对象  
  若要设计一个聚合并将其应用于一个或多个分区，需要对 <xref:Microsoft.AnalysisServices.Aggregation> 对象进行编程。  
   
 ### <a name="creating-and-dropping-aggregations"></a>创建和删除聚合  
@@ -573,9 +558,9 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  <xref:Microsoft.AnalysisServices>   
  [引入 AMO 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [逻辑体系结构 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [逻辑体系结构 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [安装适用于 Analysis Services 多维建模教程的示例数据和项目](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

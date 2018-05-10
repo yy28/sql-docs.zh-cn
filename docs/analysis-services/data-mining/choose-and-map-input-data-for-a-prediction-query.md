@@ -1,34 +1,23 @@
 ---
-title: "选择和映射为预测查询的输入的数据 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 选择和映射为预测查询的输入的数据 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tables [Analysis Services], prediction queries
-- Mining Model Prediction [Analysis Services], input tables
-ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8c5cc795af2833b297def7728018bba65a7f4927
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+  在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
  有时候，您所需的数据可能包含在一对多联接中的多个表内。 用于关联模型或顺序分析和聚类分析模型的数据便是这种情况，它们将使用链接到包含产品或事务详细信息的嵌套表的事例表。 如果您的模型使用事例嵌套表结构，则您用于预测的数据也必须具有事例嵌套表结构。  
   
@@ -125,6 +114,6 @@ ms.lasthandoff: 02/15/2018
      如果已经存在关系，则挖掘模型中的列将自动映射到输入表中具有相同名称的列。 通过单击 **“修改联接”**以打开 **“创建关系”** 对话框，可以修改嵌套表与事例表之间的关系。  
   
 ## <a name="see-also"></a>另请参阅  
- [预测查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [预测查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

@@ -1,34 +1,23 @@
 ---
-title: "创建预测查询使用预测查询生成器 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 创建预测查询使用预测查询生成器 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- Mining Model Prediction [Analysis Services], prediction queries
-ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d3c937761e86ca39d831f902d6a73f671be7e1d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可在 BI Development Studio 中生成数据挖掘解决方案时创建预测查询，或在 SQL Server Management Studio 中右键单击现有挖掘模型，然后选择“生成预测查询”选项以创建预测查询。  
+  可在 BI Development Studio 中生成数据挖掘解决方案时创建预测查询，或在 SQL Server Management Studio 中右键单击现有挖掘模型，然后选择“生成预测查询”选项以创建预测查询。  
   
  “预测查询生成器”包含以下三种设计模式，可单击左上角的图标在这三种模式之间切换。  
   

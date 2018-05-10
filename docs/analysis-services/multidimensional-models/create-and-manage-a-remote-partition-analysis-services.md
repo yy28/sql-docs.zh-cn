@@ -1,34 +1,23 @@
 ---
-title: "创建和管理远程分区 (Analysis Services) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 创建和管理远程分区 (Analysis Services) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], remote
-- remote partitions [Analysis Services]
-ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb19c147010f0492122e88b21bd12efb43c05376
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-对度量值组进行分区时，可将远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的辅助数据库配置为分区存储。  
+  对度量值组进行分区时，可将远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的辅助数据库配置为分区存储。  
   
  多维数据集（称作主数据库）的远程分区存储于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的远程实例上的专用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（称作辅助数据库）中。  
   
@@ -131,7 +120,7 @@ ms.lasthandoff: 02/15/2018
 5.  在主服务器上：在解决方案资源管理器中右键单击多维数据集名称，选择“处理”，全面处理该多维数据集。  
   
 ## <a name="administering-remote-partitions"></a>管理远程分区  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持远程分区的并行处理和顺序处理。 定义了分区的主数据库将在参与多维数据集分区处理的所有实例之间协调事务。 然后，将处理报表发送给处理了某一分区的所有实例。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持远程分区的并行和顺序的处理。 定义了分区的主数据库将在参与多维数据集分区处理的所有实例之间协调事务。 然后，将处理报表发送给处理了某一分区的所有实例。  
   
  包含远程分区的多维数据集可与其在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的单个实例上的分区一起管理。 但是，只能在定义了分区及其父多维数据集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上查看和更新远程分区的元数据。 无法在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的远程实例上查看或更新远程分区。  
   
@@ -139,6 +128,6 @@ ms.lasthandoff: 02/15/2018
 >  尽管不向架构行集公开专用于存储远程分区的数据库，但使用分析管理对象 (AMO) 的应用程序仍可以通过使用 XML for Analysis Discover 命令来发现专用数据库。 通过使用 TCP 或 HTTP 客户端直接发送到专用数据库的所有 CREATE 或 DELETE 命令都将成功，但服务器将返回一个警告，指示该操作可能会损害这一紧密管理的数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [分区 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

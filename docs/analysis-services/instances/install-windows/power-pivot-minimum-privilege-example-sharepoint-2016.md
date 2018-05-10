@@ -1,34 +1,26 @@
 ---
-title: "Power Pivot 最低权限示例-SharePoint 2016 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot 最低权限示例-SharePoint 2016 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 683a00ae0c3c300ee5734b9e9d45b05c9c4b1442
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1eea5ef5a8e0a3296618320640ee8e54910c600d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 最低权限示例-SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-本主题介绍具有最低权限的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置示例。 该配置将不同的帐户用于三个组件中的每个组件，并且每个帐户都具有最低的权限级别。  
+  本主题介绍具有最低权限的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置示例。 该配置将不同的帐户用于三个组件中的每个组件，并且每个帐户都具有最低的权限级别。  
   
 ## <a name="summary-of-accounts"></a>帐户摘要  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 支持将 Network Service 帐户用于 Analysis Services 服务帐户。 Network Service 帐户不是针对 SharePoint 2010 的支持的方案。 有关服务帐户的详细信息，请参阅 [配置 Windows 服务帐户和权限](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx)。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 支持将 Network Service 帐户用于 Analysis Services 服务帐户。 Network Service 帐户不是针对 SharePoint 2010 的支持的方案。 有关服务帐户的详细信息，请参阅[配置 Windows 服务帐户和权限](http://msdn.microsoft.com/library/ms143504.aspx)(http://msdn.microsoft.com/library/ms143504.aspx)。  
   
  下表总结了在此最低权限配置示例中使用的三个帐户。  
   

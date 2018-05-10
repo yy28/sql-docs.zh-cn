@@ -1,38 +1,23 @@
 ---
 title: 授予对数据源对象 (Analysis Services) 的权限 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.datasources.f1
-helpviewer_keywords:
-- read/write permissions
-- user access rights [Analysis Services], data sources
-- security [Analysis Services], data sources
-- connection strings [Analysis Services]
-- data sources [Analysis Services], security
-ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: 38
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7cd02446a61b7ff1c8d9fdaa2803c30ee81a6e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2babe1792bed9932921cc9035e5ab1db8fb215e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授予数据源对象的权限 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]通常情况下，大多数用户的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不需要对基础数据源访问[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 用户通常只查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据。 但是，在数据挖掘上下文中（如根据挖掘模型执行预测），用户必须将挖掘模型的已学习数据与用户提供的数据联接起来。 为了连接到包含用户提供数据的数据源，用户将使用包含 [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md) 或 [OPENROWSET (DMX)](../../dmx/source-data-query-openrowset.md) 子句的数据挖掘扩展插件 (DMX) 查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  通常，大多数 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用户无需访问作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目基础的数据源。 用户通常只查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据。 但是，在数据挖掘上下文中（如根据挖掘模型执行预测），用户必须将挖掘模型的已学习数据与用户提供的数据联接起来。 为了连接到包含用户提供数据的数据源，用户将使用包含 [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md) 或 [OPENROWSET (DMX)](../../dmx/source-data-query-openrowset.md) 子句的数据挖掘扩展插件 (DMX) 查询。  
   
  若要执行连接到数据源的 DMX 查询，用户必须能访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的数据源对象。 默认情况下，只有数据库管理员或服务器管理员具有访问数据源对象的权限。 这意味着，除非管理员授予权限，否则用户将不能访问数据源对象。  
   
@@ -61,10 +46,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [连接字符串属性 &#40;Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
+ [连接字符串属性 & #40;Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授予维度数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [授予维度数据 & #40; 的自定义访问权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授予多维数据集或模型权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [授予单元数据 & #40; 的自定义访问权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

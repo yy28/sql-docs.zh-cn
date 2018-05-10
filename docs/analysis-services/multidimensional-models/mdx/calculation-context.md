@@ -1,31 +1,23 @@
 ---
-title: "计算上下文 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 计算上下文 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fde665f7dea3efe26d61d6d183f8ca35834f732e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 193855717a055fbe0ae4d1b49ae98e30e44b86a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculation-context"></a>计算上下文
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-计算上下文是多维数据集的已知子空间，在其中，将对表达式进行计算，并且所有坐标或者是显式已知的，或者可以从表达式派生。  
+  计算上下文是多维数据集的已知子空间，在其中，将对表达式进行计算，并且所有坐标或者是显式已知的，或者可以从表达式派生。  
   
 ## <a name="determining-the-calculation-context"></a>确定计算上下文  
  每个集、成员、元组或数值函数均在整个 MDX 表达式或语句的上下文中执行。 当参数（例如元组）传递到函数时，仅显式提供多维数据集空间中的若干个坐标。 其他坐标根据当前计算上下文来获取。  
@@ -77,8 +69,8 @@ WHERE (Customer.Country.France,
 >  若要提高查询性能，应在解析过程中尽早地消除成员和元组。 通过这种方式，针对最终成员集的复杂查询时间计算涉及的单元最少。  
   
 ## <a name="see-also"></a>另请参阅  
- [在查询 &#40; 中建立多维数据集上下文MDX &#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX &#40; 中的重要概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [在查询 & #40; 中建立多维数据集上下文MDX & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

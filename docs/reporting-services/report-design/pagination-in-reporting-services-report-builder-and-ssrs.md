@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services 中的分页（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: Reporting Services 中的分页（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: dfaf5fec90d334ef19dcf3b5de715322164253e9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 537755f62b654301392f209a3dad8a866b18c0bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分页（报表生成器和 SSRS）
   分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件而异。 在报表服务器上运行报表时，相应报表使用的是 HTML 呈现器。 HTML 遵循一组特定的分页规则。 如果将同一报表导出为其他格式，例如 PDF，系统会使用 PDF 呈现器并应用另一组规则；因此，该报表的分页方式就会不同。 若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。  

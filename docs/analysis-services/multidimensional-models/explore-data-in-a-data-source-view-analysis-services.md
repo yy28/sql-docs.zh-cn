@@ -1,35 +1,23 @@
 ---
-title: "浏览数据源视图 (Analysis Services) 中的数据 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 浏览数据源视图 (Analysis Services) 中的数据 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- exploring data [Analysis Services]
-- data source views [Analysis Services], exploring data
-- viewing source data
-ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0245eee4ac1b2b874145fa29f9b659b057977f16
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4d509e2f4f23218eb5ea7a104e33160deab69cef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>在数据源视图中浏览数据 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据源视图设计器中的“浏览数据”对话框，在数据源视图 (DSV) 中浏览表、视图或命名查询的数据。 在数据源视图设计器中浏览数据时，可以查看所选表、视图或命名查询中每个数据列的内容。 查看实际内容将帮助您确定是否需要所有列，是否需要命名计算来提高用户友好性和可用性，以及现有命名计算或命名查询是否返回预期值。  
+  可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据源视图设计器中的“浏览数据”对话框，在数据源视图 (DSV) 中浏览表、视图或命名查询的数据。 在数据源视图设计器中浏览数据时，可以查看所选表、视图或命名查询中每个数据列的内容。 查看实际内容将帮助您确定是否需要所有列，是否需要命名计算来提高用户友好性和可用性，以及现有命名计算或命名查询是否返回预期值。  
   
  若要查看数据，必须与 DSV 中所选对象的一个或多个数据源建立活动连接。 此外，还在该查询中发送表中的任何命名计算。  
   

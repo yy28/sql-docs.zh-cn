@@ -1,32 +1,23 @@
 ---
 title: 将预测函数应用于模型 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Prediction [Analysis Services], selecting mining models
-ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea29a1f9406014bf684d4c573ed2640bb7d0cf96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4f1bbde465ec10e9a218ab096ba9b920bd68bdda
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>将预测函数应用于模型
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要创建预测查询中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据挖掘，必须首先选择该查询将基于的挖掘模型。 可以选择当前项目中存在的任何挖掘模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中创建预测查询，必须首先选择查询要基于的挖掘模型。 可以选择当前项目中存在的任何挖掘模型。  
   
  选择模型后，可向查询添加 *预测函数* 。 预测函数可用于获取预测，但也可以添加会返回相关统计信息的预测函数，如预测值的概率或用于生成预测的信息。  
   

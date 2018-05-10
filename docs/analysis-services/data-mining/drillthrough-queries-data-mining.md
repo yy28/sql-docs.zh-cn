@@ -1,35 +1,23 @@
 ---
-title: "钻取查询 （数据挖掘） |Microsoft 文档"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 钻取查询 （数据挖掘） |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- AllowDrillThrough property
-- drillthrough [Analysis Services]
-- drillthrough [DMX]
-ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 804497bfe94c6d6d93f63d9b8a2242246122c034
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>钻取查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-“钻取查询”  让您通过将查询发送到挖掘模型，检索基础事例或结构数据中的详细信息。 如果您希望查看用来为模型定型的事例以及用来测试模型的事例，或者如果您希望查看事例数据的详细信息，则钻取会非常有用。  
+  “钻取查询”  让您通过将查询发送到挖掘模型，检索基础事例或结构数据中的详细信息。 如果您希望查看用来为模型定型的事例以及用来测试模型的事例，或者如果您希望查看事例数据的详细信息，则钻取会非常有用。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘提供了两种不同的钻取选项：  
   
@@ -102,8 +90,8 @@ ms.lasthandoff: 02/15/2018
 |----------|----------|  
 |描述在数据挖掘设计器中使用钻取的过程|[从挖掘模型钻取到事例数据](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |改变现有的挖掘模型以允许钻取|[为挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|使用 DMX WITH DRILLTHROUGH 子句对挖掘模型启用钻取。|[创建挖掘结构 &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
-|有关分配适用于对挖掘结构和挖掘模型进行钻取的权限的信息|[授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|使用 DMX WITH DRILLTHROUGH 子句对挖掘模型启用钻取。|[创建挖掘结构 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
+|有关分配适用于对挖掘结构和挖掘模型进行钻取的权限的信息|[授予对数据挖掘结构和模型 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   

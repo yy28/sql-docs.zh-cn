@@ -1,38 +1,23 @@
 ---
-title: "自定义挖掘模型和结构 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 自定义挖掘模型和结构 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- attributes [data mining]
-- mining models [Analysis Services], properties
-- algorithms [data mining]
-- mining models [Analysis Services], creating
-- mining models [Analysis Services], modifying
-- mining models [Analysis Services], about data mining models
-ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73e16c614ae792fe38fdc7b083323aa7c1e595ee
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8bcb37ac27e0cff9526ee5a0af7cd38b5d5a0e22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-mining-models-and-structure"></a>自定义挖掘模型和结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在选择满足业务需要的算法后，可以按照以下方式自定义挖掘模型，从而有可能使结果得到改善。  
+  在选择满足业务需要的算法后，可以按照以下方式自定义挖掘模型，从而有可能使结果得到改善。  
   
 -   使用模型中的不同数据列，或者更改这些列的用法、内容类型或离散化方法。  
   
@@ -108,7 +93,7 @@ ms.lasthandoff: 02/15/2018
 |CLUSTER_SEED|[Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 神经网络算法技术参考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
@@ -140,7 +125,7 @@ ms.lasthandoff: 02/15/2018
 |STOPPING_TOLERANCE|[Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [物理体系结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [物理体系结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
   

@@ -1,36 +1,23 @@
 ---
-title: "选择和映射模型测试数据 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 选择和映射模型测试数据 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], mining accuracy charts
-- Mining Accuracy Chart [Analysis Services], column mappings
-- input column mapping [Analysis Services]
-- mapping input columns [Analysis Services]
-ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d74352fcb3564eda40257430ff442f622fcec89e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>选择和映射模型测试数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建准确性图表，您必须选择将用于测试模型的数据，并且将数据映射到模型。  
+  若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建准确性图表，您必须选择将用于测试模型的数据，并且将数据映射到模型。  
   
  默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用挖掘模型测试数据，只要在生成挖掘结构时创建了维持数据集。 创建维持测试集是测试基于相同挖掘结构的模型的最简单方式，因为列名和数据类型将始终与该模型匹配，并且您可以合理地确定数据分布是相似的。 此外，设计器将自动创建输入和模型列之间的关系。  
   
@@ -127,6 +114,6 @@ ms.lasthandoff: 02/15/2018
      **“指定列映射”** 对话框中将显示新的列映射。 通过选择列之间的连线，然后按 Delete 键，可以删除映射。 通过在“挖掘结构”表中选择列，然后将其拖到“选择输入表”表中的对应列，可以创建一个新连接。  
   
 ## <a name="see-also"></a>另请参阅  
- [测试和验证任务和操作指南 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

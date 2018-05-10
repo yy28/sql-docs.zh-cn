@@ -1,34 +1,23 @@
 ---
-title: "生成 Analysis Services 项目 (SSDT) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 生成 Analysis Services 项目 (SSDT) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- projects [Analysis Services], building
-- Business Intelligence Development Studio, project building [Analysis Services]
-ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a6895d06c363cd63833cb27450faef33af13d1bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>生成 Analysis Services 项目 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中生成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，就像在 Visual Studio 中生成任何编程项目一样。 生成项目时，会在输出目录中创建一组 XML 文件。 这些 XML 文件使用 Analysis Services 脚本语言 (ASSL)，此脚本语言是 XML 方言，可供包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在内的客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例进行通信以创建或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。 这些 XML 文件用于将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
+  可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中生成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，就像在 Visual Studio 中生成任何编程项目一样。 生成项目时，会在输出目录中创建一组 XML 文件。 这些 XML 文件使用 Analysis Services 脚本语言 (ASSL)，此脚本语言是 XML 方言，可供包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在内的客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例进行通信以创建或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。 这些 XML 文件用于将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
 ## <a name="building-a-project"></a>生成项目  
  生成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将在输出文件夹中生成一组完整的 XML 文件，其中包含生成此项目中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库对象所需的所有必要的 ASSL 命令。 如果项目先前已生成并针对活动配置指定了增量部署，则 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 还将生成一个 XML 文件，其中包含对已部署对象执行增量更新所用的 ASSL 命令。 此 XML 文件将写入项目的 ..\obj\\<active configuration\> 文件夹。 当部署和处理非常庞大的项目或数据库时，使用增量生成可以节省时间。  
@@ -54,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 |*Projectname*.configsettings|包含部署过程中使用的配置设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些设置（例如用于数据源的连接字符串）。|  
 |*Projectname*.deploymenttargets|包含部署过程中使用的目标设置，您可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些目标设置（例如服务器名称和数据库名称）。|  
 |*Projectname*.deploymentoptions|包含在部署过程中使用的各种选项设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些选项设置（例如存储位置）|  
-|*Assemblyname*/*dllname.*dll|用于每个被引用程序集的各个文件夹；每个文件夹包含程序集、被引用程序集以及输出调试信息的所有关联 .pdb 文件的 DLL。|  
+|*Assemblyname*/*dllname.* dll|用于每个被引用程序集的各个文件夹；每个文件夹包含程序集、被引用程序集以及输出调试信息的所有关联 .pdb 文件的 DLL。|  
   
 |文件（在 obj 文件夹中）|Description|  
 |-----------------------------|-----------------|  
@@ -66,6 +55,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [部署 Analysis Services 项目 &#40;SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

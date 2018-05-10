@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2bf3df5733c9b427f7c34459b95404768d4520d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bbf4b982faa988290573368818f4d75961fd38c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +62,13 @@ WAITFOR
  可以继续执行批处理、存储过程或事务之前必须经过的指定时段，最长可为 24 小时。  
   
  '*time_to_pass*'  
- 等待的时段。 可以使用 datetime 数据可接受的格式之一指定 time_to_pass，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。  
+ 等待的时段。 可以使用 datetime 数据可接受的格式之一指定 time_to_pass，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。 这将被格式化为 hh:mm[[:ss].mss]。
   
  TIME  
  指定的运行批处理、存储过程或事务的时间。  
   
  '*time_to_execute*'  
- WAITFOR 语句完成的时间。 可以使用 datetime 数据可接受的格式之一指定 time_to_execute，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。  
+ WAITFOR 语句完成的时间。 可以使用 datetime 数据可接受的格式之一指定 time_to_execute，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。 这将被格式化为 hh:mm[[:ss].mss]，并且可以选择包括 1900-01-01 的日期。
   
  *receive_statement*  
  有效的 RECEIVE 语句。  

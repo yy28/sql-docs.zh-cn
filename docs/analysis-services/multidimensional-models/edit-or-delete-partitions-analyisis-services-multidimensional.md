@@ -1,34 +1,23 @@
 ---
-title: "编辑或删除分区 (Analyisis Services-多维) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 编辑或删除分区 (Analyisis Services-多维) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- modifying partitions
-- partitions [Analysis Services], modifying
-ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1a384aef1376a41695117f960655eebf43a26838
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: bce863b8acae9d6791a7b8b5e952af80fc154053
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>编辑或删除分区（Analysis Services - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-多维数据集分区可在 **中使用多维数据集设计器中的** “分区” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]选项卡来修改。 **“分区”** 选项卡列出了多维数据集中的所有度量值组的分区。 它还列出了已启用写回的写回分区。  
+  多维数据集分区可在 **中使用多维数据集设计器中的** “分区” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]选项卡来修改。 **“分区”** 选项卡列出了多维数据集中的所有度量值组的分区。 它还列出了已启用写回的写回分区。  
   
  若要编辑任何度量值组的分区，请在 **“分区”** 选项卡上展开该度量值组。度量值组的分区按照序号以表的形式列出，表中使用了下表中列出的列。  
   
@@ -54,8 +43,8 @@ ms.lasthandoff: 02/15/2018
  可以为多维数据集中每个度量值组的每一个分区分别配置存储。 也可以为多维数据集或度量值组配置默认存储设置。 存储是在多维数据集向导中的 **“分区”** 选项卡中进行配置的。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建和管理本地分区 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [设计聚合 &#40;Analysis Services-多维 &#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
- [在 Analysis Services &#40; 中合并分区SSAS-多维 &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [创建和管理本地分区 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [设计聚合 & #40;Analysis Services-多维 & #41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
+ [在 Analysis Services & #40; 中合并分区SSAS-多维 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

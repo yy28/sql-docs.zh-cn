@@ -1,32 +1,23 @@
 ---
 title: 定义多对多关系和多对多关系属性 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- many-to-many relationships [Analysis Services]
-ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5377557da99938446a0746e0183e2adcf321dab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f0a8ee2b6ee9bb7d53234b6b21974978543bc4c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍在 Analysis Services 中，包括何时使用它们以及如何创建它们的多对多维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  本主题介绍 Analysis Services 中的多对多维度，包括何时使用它们以及如何创建它们。  
   
 ## <a name="introduction"></a>简介  
  Analysis Services 支持多对多维度，并且允许更复杂的分析，从而超越了传统的星型架构所能提供的功能。 在传统的星型架构中，所有维度都具有针对事实表的一对多关系。 每个事实都联接到一个维度成员；单个维度成员与多个事实相关联。  
@@ -192,7 +183,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>另请参阅  
  [维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [安装适用于 Analysis Services 多维建模教程的示例数据和项目](../../analysis-services/install-sample-data-and-projects.md)   
- [部署 Analysis Services 项目 &#40;SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [部署 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多维模型中的透视](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

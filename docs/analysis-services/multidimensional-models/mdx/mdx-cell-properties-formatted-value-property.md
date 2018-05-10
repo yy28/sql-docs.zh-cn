@@ -1,31 +1,23 @@
 ---
-title: "基于 LANGUAGE 和 FORMAT_STRING 上 FORMATTED_VALUE |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 基于 LANGUAGE 和 FORMAT_STRING 上 FORMATTED_VALUE |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4066cc4626de5cca04eac5b91b55e46fa9a2e5cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX 单元格属性-FORMATTED_VALUE 属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
+  FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
   
 ## <a name="value-formatstring-language-properties"></a>VALUE、FORMAT_STRING、LANGUAGE 属性  
  下表说明了这些属性的定义，可为我们将来合并使用这些属性提供帮助。  
@@ -149,9 +141,9 @@ FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属�
 |L|06:30|FORMAT_STRING 显式设置为 `Short Time` ，并且 LANGUAGE 显式设置为 `1041` （日语）。|  
   
 ## <a name="see-also"></a>另请参阅  
- [FORMAT_STRING 内容 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [使用单元属性 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [创建和使用属性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [FORMAT_STRING 内容 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [使用单元属性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [创建和使用属性值 & #40;MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

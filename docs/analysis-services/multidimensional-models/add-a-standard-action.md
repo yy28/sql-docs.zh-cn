@@ -1,31 +1,23 @@
 ---
-title: "添加标准操作 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 添加标准操作 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e19398c0e1507273abf218b4a49255bd8ce910dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-standard-action"></a>添加标准操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以通过在多维数据集设计器中使用“操作”视图，向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
+  您可以通过在多维数据集设计器中使用“操作”视图，向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 ### <a name="to-create-an-action"></a>创建操作  
   
@@ -79,7 +71,7 @@ ms.lasthandoff: 02/15/2018
         > [!NOTE]  
         >  专有操作将不返回到服务器，除非客户端应用程序显式将架构行级限制为仅返回与“应用程序”中指定的名称匹配的操作。  
   
-    -   在“操作内容”中，如果你在使用 URL 类型，则用引号括上 Internet 地址，例如 "http://www.adventure-works.com" 。  
+    -   在**操作内容**，如果你使用的 URL 类型，例如，将 Internet 地址括在引号中，"http://www.adventure-works.com"。  
   
     -   在 **“说明”**中，键入操作的说明。  
   

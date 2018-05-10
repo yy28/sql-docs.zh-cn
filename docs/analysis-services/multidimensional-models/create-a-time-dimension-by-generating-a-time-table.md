@@ -1,39 +1,23 @@
 ---
-title: "通过生成时间表来创建时间维度 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 通过生成时间表来创建时间维度 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- dimensions [Analysis Services], time
-- time periods [Analysis Services]
-- range-based time dimensions [Analysis Services]
-- server time dimensions [Analysis Services]
-- calendars [Analysis Services]
-- table-based time dimensions [Analysis Services]
-ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7c437b381faae56438376a93355adec76b28d7e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2c5526075c563bfea107592c6e0d583feff3fde2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用的时间表时，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用的时间表时，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
   
 -   **在数据源中生成时间表** 如果您具有在基础数据源中创建对象的权限，可选择此选项。 该向导将生成一个时间表并将此表存储在数据源中。 然后，该向导根据此时间表创建时间维度。  
   

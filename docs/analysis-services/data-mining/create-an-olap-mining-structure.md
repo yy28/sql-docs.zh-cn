@@ -1,31 +1,23 @@
 ---
-title: "创建 OLAP 挖掘结构 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 创建 OLAP 挖掘结构 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b5ad8add984db3c83cfc6b3af99f430035f56d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>创建 OLAP 挖掘结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
+  基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
   
  本主题介绍如何基于现有多维解决方案中的维度和相关度量值创建 OLAP 挖掘结构。  
   
@@ -117,7 +109,7 @@ ms.lasthandoff: 02/15/2018
 |----------|---------------------|---------------|  
 |将成员分组为分类|根据客户成员属性、客户购买的产品和客户支出的金额，将客户维度分段。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法|  
 |查找受关注的或异常的成员|根据销售额、利润、存储地点和存储量标识 Store 维度中受关注的或异常的商店。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法|  
-|查找受关注的或异常的单元|标识随时间变化而呈典型趋势的商店销售额。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法|  
+|查找受关注的或异常的单元|标识随时间变化而呈典型趋势的商店销售额。|[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法|  
 |查找相关性|确定导致服务器停机的因素，包括区域、计算机类型、操作系或购买日期。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes 算法|  
   
 ##  <a name="bkmk_Filters"></a>进行切片多维数据集 vs。对模型进行筛选  
@@ -166,7 +158,7 @@ ms.lasthandoff: 02/15/2018
 >  只有以下模型类型支持数据挖掘维度的创建：基于 Microsoft 聚类分析算法、Microsoft 决策树算法或 Microsoft 关联算法的模型。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)   
  [挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)   

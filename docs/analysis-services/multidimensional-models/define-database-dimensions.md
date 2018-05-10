@@ -1,32 +1,23 @@
 ---
 title: 定义数据库维度 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], defining
-ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cc42f36439973607f4f0d45ea7a18c0160de5ced
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 31d56175095ce7b58ff2fddc5ee19bff34a7cb8c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用维度设计器中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]配置中的现有数据库维度[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或数据库。 可以使用维度设计器执行下列任务：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度设计器，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中配置现有数据库维度。 可以使用维度设计器执行下列任务：  
   
 -   配置维度级别属性。  
   
@@ -58,7 +49,7 @@ ms.lasthandoff: 01/08/2018
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  说明如何定义和配置维度属性。  
   
- [创建用户定义层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [创建用户定义的层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  说明如何定义和配置用户定义层次结构。  
   
  [定义属性关系](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  

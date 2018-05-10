@@ -1,45 +1,23 @@
 ---
-title: "数据挖掘概念 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 数据挖掘概念 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Analysis Services, data mining
-- cleaning data
-- predictive analytics
-- learning algorithms
-- data mining [Analysis Services], concepts
-- inductive learning
-- data mining [Analysis Services], about data mining
-- mining models [Analysis Services]
-- data access [Analysis Services]
-- machine learning algorithms [Analysis Services]
-- mining models [Analysis Services], about data mining
-- SSAS, data mining
-- Analysis Services, data mining
-ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7a625cb7ec0aa187a825dbc02b742d82afa83065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
+  数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
   
  这些模式和趋势可以被收集在一起并定义为“数据挖掘模型” 。 挖掘模型可以应用于特定的方案，例如：  
   
@@ -156,7 +134,7 @@ ms.lasthandoff: 02/15/2018
   
  在将模型部署到生产环境之前，您需要测试模型的性能。 此外，在生成模型时，您通常需要使用不同配置创建多个模型，并对所有这些模型进行测试，以便查看哪个模型为您的问题和数据生成最佳结果。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 此分区可以完成操作时自动生成挖掘模型。 有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供工具，可帮助你将你的数据划分为定型集和测试数据集，以便您可以准确地评估对同一数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 此分区可以完成操作时自动生成挖掘模型。 有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
  可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于你的数据，或者是否可用于推断总体，可以使用称为交叉验证的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   

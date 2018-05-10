@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什么是 SQL Server 计算机学习 Services？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server 计算机学习 Services 是嵌入、 预测分析和数据科学引�
 有为使用 SQL Server 中的机器学习功能的两个选项： 
 
 + [**SQL Server 计算机学习 Services （数据库）** ](r/sql-server-r-services.md)的范围内计算引擎，完全集成与数据库引擎的数据库引擎实例操作。 大多数安装是此选项。
-+ [**SQL Server 计算机学习服务器 （独立）** ](r/r-server-standalone.md)是非 SQL 安装。 尽管你使用 SQL Server 安装程序以安装服务器，会将它从 SQL Server 完全分离。 就功能而言，它等效于非 SQL [Microsoft 机器学习用于 Windows 的服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
++ [**SQL Server 计算机学习服务器 （独立）** ](r/r-server-standalone.md)是机器学习用于 Windows 的服务器运行独立于数据库引擎。 尽管你使用 SQL Server 安装程序以安装服务器，不是识别实例的功能。 就功能而言，它等效于非 SQL Server [Microsoft 机器学习用于 Windows 的服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
 
 ## <a name="r-and-python-packages"></a>R 和 Python 包
 

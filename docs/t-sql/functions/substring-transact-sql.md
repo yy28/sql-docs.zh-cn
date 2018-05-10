@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -30,13 +28,12 @@ caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75aab8f9b1035e94b65d96319f8589b11e032ecb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5733adbcf8823b816a1e287cca45e6ea1ab2a145
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,9 +50,9 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是 character、binary、text、ntext 或者 image[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 为 character、binary、text、ntext 或者 image [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *start*  
+ start  
  指定返回字符的起始位置的整数或 bigint 表达式。 （编号从 1 开始，意味着表达式中的第一个字符为 1）。 如果 start 小于 1，则返回的表达式的起始位置为表达式中指定的第一个字符。 在这种情况下，返回的字符数是后两者中的较大值：*start* + *length* 之和减去 1，0。 如果 start 大于值表达式中的字符数，将返回一个零长度的表达式。  
   
  *length*  

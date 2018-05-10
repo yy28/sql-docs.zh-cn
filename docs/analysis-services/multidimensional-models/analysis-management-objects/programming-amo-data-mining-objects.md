@@ -1,34 +1,19 @@
 ---
-title: "编程 AMO 数据挖掘对象 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 
-author: Minewiskan
+title: 编程 AMO 数据挖掘对象 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 数据挖掘对象的编程
   使用 AMO 对数据挖掘对象进行编程非常简单直接。 第一步是创建数据结构模型以支持挖掘项目。 然后创建数据挖掘模型，该模型支持您要用于预测或查找数据下未看到的关系的挖掘算法。 创建挖掘项目（包括结构和算法）后，可以处理挖掘模型以获取定型的模型，稍后从客户端应用程序进行查询和预测时将使用该模型。  
@@ -41,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [MiningModel 对象](#MiningModel)  
   
-##  <a name="MiningStructure">MiningStructure 对象</a>  
+##  <a name="MiningStructure"></a> MiningStructure 对象  
  挖掘结构是用于创建所有挖掘模型的数据结构的定义。 挖掘结构包含与数据库中定义的数据源视图的绑定，以及组成挖掘模型的所有列的定义。 一个挖掘结构可包含多个挖掘模型。  
   
  创建 <xref:Microsoft.AnalysisServices.MiningStructure> 对象需要执行下列步骤：  
@@ -94,7 +79,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel">MiningModel 对象</a>  
+##  <a name="MiningModel"></a> MiningModel 对象  
  挖掘模型是将在挖掘算法中使用的所有列和列定义的存储库。  
   
  创建 <xref:Microsoft.AnalysisServices.MiningModel> 对象需要执行下列步骤：  
@@ -149,7 +134,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [AMO 基础类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [引入 AMO 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 数据挖掘类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
- [逻辑体系结构 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [逻辑体系结构 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -1,35 +1,23 @@
 ---
-title: "在数据源视图 (Analysis Services) 中定义命名的计算 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 在数据源视图 (Analysis Services) 中定义命名的计算 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- modifying named calculations
-- data source views [Analysis Services], named calculations
-- named calculations [Analysis Services]
-ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 62d9d96f3d0fc373ba83149789487706fe8354c7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 958cbd16ed777f77b9829eb0b99071a64b65bd06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-命名计算是一个表示为计算列的 SQL 表达式。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑下列示例：  
+  命名计算是一个表示为计算列的 SQL 表达式。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑下列示例：  
   
 -   创建从事实表的多个列派生的单个命名计算（例如，通过将税率与销售价格相乘创建“税额”）。  
   
@@ -91,6 +79,6 @@ FROM
  尝试删除命名计算时，系统将提示您删除会使在项目或数据库中定义的对象列表失效。 在删除计算之前仔细查看该列表。  
   
 ## <a name="see-also"></a>另请参阅  
- [在数据源视图 &#40; 中定义命名的查询Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图 & #40; 中定义命名的查询Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

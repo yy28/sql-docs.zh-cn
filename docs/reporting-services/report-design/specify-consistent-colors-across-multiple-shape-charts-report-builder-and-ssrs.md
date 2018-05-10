@@ -1,27 +1,25 @@
 ---
-title: "对多个形状图指定一致的颜色（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 对多个形状图指定一致的颜色（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fecb8cd6e36040876e21baa9e1789d95fb5dba49
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fddd1c4466b3b30976bd1008ec7f6d616b71ba89
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>对多个形状图指定一致的颜色（报表生成器和 SSRS）
   在分页报表的非形状图中， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 将根据图表中各序列的索引从调色板选择新颜色。 例如，图表中的第一个序列将映射到调色板中的第一个颜色。 但是，对于形状图，该行为则不相同。 在形状图中，调色板中的每个颜色都映射到数据集中的数据点。 例如，数据点 1 映射到调色板中的第一个颜色，数据点 2 映射调色板中的第二个颜色，依此类推。  

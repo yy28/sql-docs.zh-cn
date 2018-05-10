@@ -1,16 +1,15 @@
 ---
-title: "报表参数（报表生成器和报表设计器）| Microsoft Docs"
-ms.custom: 
+title: 报表参数（报表生成器和报表设计器）| Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
 - sql13.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -19,16 +18,15 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
   本主题介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表参数的常规用法、可设置的属性等内容。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。 可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和报表设计器中所创建的分页报表中使用报表参数，也可在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中所创建的移动报表中使用。 阅读有关 [报表参数概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)的详细信息。  

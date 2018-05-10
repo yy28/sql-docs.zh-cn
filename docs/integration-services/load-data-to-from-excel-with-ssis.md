@@ -2,25 +2,23 @@
 title: 使用 SSIS 从 Excel 加载数据或将数据加载到 Excel | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
 ms.date: 04/10/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 00e3c7b22555404654a381911a7812af666a03cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fd5a4863f2f94a693ae7216f39fbe0472a94a68b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel
 

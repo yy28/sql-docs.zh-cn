@@ -1,30 +1,28 @@
 ---
-title: "报表服务器应用程序的应用程序域 | Microsoft Docs"
-ms.custom: 
+title: 报表服务器应用程序的应用程序域 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f892ef4a4849385e0a48272dd7eef826e4b49635
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fad2f5fd529550e7d5ed1f6101f271d15753364a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains-for-report-server-applications"></a>报表服务器应用程序的应用程序域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表服务器作为一个包含报表服务器 Web 服务、报表管理器和后台处理应用程序的服务来实现。 每个应用程序都在单个报表服务器进程中其各自的应用程序域中运行。 在大多数情况下，应用程序域是在内部创建、配置和管理的。 但是，如果要研究性能或内存问题并排除服务中断故障，则了解如何针对报表服务器应用程序域执行回收操作会非常有帮助。  

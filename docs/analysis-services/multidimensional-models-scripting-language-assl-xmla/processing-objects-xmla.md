@@ -1,40 +1,19 @@
 ---
-title: "处理对象 (XMLA) |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- objects [XML for Analysis]
-- XML for Analysis, objects
-- XMLA, partitions
-- partitions [Analysis Services], XML for Analysis
-- XML for Analysis, partitions
-- writeback [Analysis Services], XML for Analysis
-- out-of-line bindings
-- processing objects [XML for Analysis]
-- XMLA, objects
-ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 
-author: Minewiskan
+title: 处理对象 (XMLA) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 58150b6b74fd3a58fb09f44818b724214a64b8b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-objects-xmla"></a>处理对象 (XMLA)
   在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理是步骤或系列的指导将数据转换进行业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
@@ -75,14 +54,14 @@ ms.lasthandoff: 02/15/2018
 |*ProcessClearStructureOnly*|挖掘结构|  
 |*ProcessScriptCache*|多维数据集|  
   
- 有关处理的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象，请参阅[处理多维模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 有关处理的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象，请参阅[处理多维模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ## <a name="specifying-objects-to-be-processed"></a>指定要处理的对象  
  [对象](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)属性**过程**命令包含要处理的对象的对象标识符。 可以在指定只有一个对象**过程**命令，但处理的对象还将处理任何子对象。 例如，在处理多维数据集中的一个度量值组时会处理该度量值组的所有分区；在处理一个数据库时会处理该数据库所包含的所有对象，包括多维数据集、维度和挖掘结构。  
   
  如果你设置**ProcessAffectedObjects**属性**过程**命令为 true，任何相关还处理受处理指定的对象的对象。 例如，如果通过使用增量更新维度*ProcessUpdate*处理中的选项**过程**命令时，其聚合失效因为成员任何分区正在添加或删除由还处理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果**ProcessAffectedObjects**设置为 true。 在这种情况下，单个**过程**命令可以处理多个对象上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，但[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]确定哪些对象中指定的单个对象除了**过程**此外必须处理命令。  
   
- 但是，你可以通过使用多个同时处理多个对象，例如维度，**过程**内的命令**批处理**命令。 批处理操作上的对象的串行或并行处理提供更精细的控制级别[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]比使用实例**ProcessAffectedObjects**属性，并让你调整为你处理方法更大[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 有关执行批处理操作的详细信息，请参阅[执行批处理操作 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ 但是，你可以通过使用多个同时处理多个对象，例如维度，**过程**内的命令**批处理**命令。 批处理操作上的对象的串行或并行处理提供更精细的控制级别[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]比使用实例**ProcessAffectedObjects**属性，并让你调整为你处理方法更大[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 有关执行批处理操作的详细信息，请参阅[执行批处理操作&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)。  
   
 ## <a name="specifying-out-of-line-bindings"></a>指定外部绑定  
  如果**过程**命令不包含的**批处理**命令，可以选择指定的外部绑定中[绑定](../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md)，[数据源](../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md)，和[DataSourceView](../../analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla.md)属性**过程**命令为要处理的对象。 外部绑定是对数据源、 数据源视图和其他绑定仅在执行过程中存在的对象的引用**过程**的命令，并且其重写与关联的任何现有绑定正在处理的对象。 如果未指定外部绑定，则使用当前与要处理的对象关联的绑定。  
@@ -93,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
 -   使用在数据流任务[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在处理维度、 挖掘模型或分区时提供数据。  
   
- 外部绑定属于 Analysis Services 脚本语言 (ASSL) 的一部分。 有关在 ASSL 中的外部绑定的详细信息，请参阅[数据源和绑定 &#40;SSAS 多维 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ 外部绑定属于 Analysis Services 脚本语言 (ASSL) 的一部分。 有关在 ASSL 中的外部绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ### <a name="incrementally-updating-partitions"></a>增量更新分区  
  增量更新已处理的分区时通常需要外部绑定，原因在于为该分区指定的绑定会引用已在该分区中聚合的事实数据表数据。 通过使用以增量方式更新已处理的分区时**过程**命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]执行下列操作：  
@@ -104,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 -   将该临时分区与所选现有分区合并。  
   
- 有关合并分区使用的 Analysis (XMLA) 的 XML 的详细信息，请参阅[合并分区 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
+ 有关合并分区使用的 Analysis (XMLA) 的 XML 的详细信息，请参阅[合并分区&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  
   
 ## <a name="handling-processing-errors"></a>对处理错误进行处理  
  [ErrorConfiguration](../../analysis-services/xmla/xml-elements-properties/errorconfiguration-element-xmla.md)属性**过程**命令允许你指定如何处理处理的对象时遇到错误。 例如，在处理维度时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在键属性的键列中遇到重复的值。 因为属性键必须是唯一的，因此 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 丢弃重复的记录。 基于[KeyDuplicate](../../analysis-services/scripting/properties/keyduplicate-element-assl.md)属性**ErrorConfiguration**，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]无法：  

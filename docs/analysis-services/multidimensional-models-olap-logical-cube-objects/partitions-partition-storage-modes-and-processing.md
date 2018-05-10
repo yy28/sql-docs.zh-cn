@@ -1,44 +1,23 @@
 ---
-title: "分区存储模式和处理 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+title: 分区存储模式和处理 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>分区的分区存储模式和处理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-分区的存储模式影响分区及其父度量值组和多维数据集的查询和处理性能、存储要求以及存储位置。 存储模式的选择也会影响处理选择。  
+  分区的存储模式影响分区及其父度量值组和多维数据集的查询和处理性能、存储要求以及存储位置。 存储模式的选择也会影响处理选择。  
   
  分区可以使用下列三种基本存储模式之一：  
   
@@ -53,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="molap"></a>MOLAP  
  在 MOLAP 存储模式下，处理分区时，分区的聚合及其源数据副本将存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 内的多维结构中。 此 MOLAP 结构在得到高度优化后，可以最大程度地提高查询性能。 该存储位置可以位于用来定义分区的计算机上，也可以位于其他运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的计算机上。 由于源数据副本位于多维结构中，因此，可以在不访问分区源数据的情况下直接解析查询。 使用聚合可以显著缩短查询响应时间。 分区 MOLAP 结构中的数据与分区的最新处理完全保持同步。  
   
- 随着源数据的更改，MOLAP 存储中的对象必须定期处理以合并这些更改并使其可供用户使用。 处理会完全更新或增量更新 MOLAP 结构中的数据。 两次处理之间的时间将构成滞后时间，在此期间，OLAP 对象中的数据可能无法与源数据相匹配。 您可以增量更新或完全更新 MOLAP 存储中的对象，而无需使分区或多维数据集脱机。 但是，在某些情况下可能需要使多维数据集脱机以处理对 OLAP 对象所做的特定结构更改。 您可以通过更新和处理临时服务器上的多维数据集以及使用数据库同步将已处理的对象复制到生成服务器，最小化更新 MOLAP 存储所需的中断时间。 还可以使用主动缓存，在保留 MOLAP 存储的大多数性能优点的同时最小化滞后时间，并最大化可用性。 有关详细信息，请参阅[主动缓存 &#40;分区 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)， [synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)，和[处理多维模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 随着源数据的更改，MOLAP 存储中的对象必须定期处理以合并这些更改并使其可供用户使用。 处理会完全更新或增量更新 MOLAP 结构中的数据。 两次处理之间的时间将构成滞后时间，在此期间，OLAP 对象中的数据可能无法与源数据相匹配。 您可以增量更新或完全更新 MOLAP 存储中的对象，而无需使分区或多维数据集脱机。 但是，在某些情况下可能需要使多维数据集脱机以处理对 OLAP 对象所做的特定结构更改。 您可以通过更新和处理临时服务器上的多维数据集以及使用数据库同步将已处理的对象复制到生成服务器，最小化更新 MOLAP 存储所需的中断时间。 还可以使用主动缓存，在保留 MOLAP 存储的大多数性能优点的同时最小化滞后时间，并最大化可用性。 有关详细信息，请参阅[主动缓存&#40;分区&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)， [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)，和[处理多维模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ## <a name="rolap"></a>ROLAP  
  在 ROLAP 存储模式下，分区的聚合将存储在关系数据库（在分区数据源中指定）的索引视图中。 与 MOLAP 存储模式不同，ROLAP 不会将源数据的副本存储到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件夹中。 当不能从查询缓存中获得结果时，则会访问数据源中的索引视图以回答查询。 使用 ROLAP 存储的查询响应速度通常比使用 MOLAP 或 HOLAP 存储模式更慢。 使用 ROLAP 时的处理时间通常也较长。 但是，使用不经常执行查询的大型数据集（例如纯粹的历史记录数据）时，用户可以使用 ROLAP 实时查看数据并可节省存储空间。  
@@ -93,8 +72,8 @@ ms.lasthandoff: 02/15/2018
  按 HOLAP 存储的分区小于相应按 MOLAP 存储的分区（因为前者不包含源数据），而比 ROLAP 分区响应涉及汇总数据的查询要快。 一般情况下，HOLAP 存储模式适用于多维数据集中要求快速响应基于大量源数据的汇总的查询的分区。 但是，当用户生成必须涉及叶级数据的查询时（例如，计算中值），通常最好选择 MOLAP。  
   
 ## <a name="see-also"></a>另请参阅  
- [主动缓存 &#40;分区 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [主动缓存 & #40;分区 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [分区 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -1,32 +1,23 @@
 ---
 title: 批处理 (Analysis Services) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- batches [Analysis Services]
-ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
-caps.latest.revision: 39
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ec94963644de42f6fd07da60c16f2f314f168e41
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1f958d685517e538dd87014729c0e28ad897e287
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="batch-processing-analysis-services"></a>批处理 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，你可以使用批处理命令将多个处理命令发送到单个请求中的服务器。 通过批处理，您可以控制以什么顺序来处理哪些对象。 此外，批可以作为一系列独立作业运行，也可以作为一个事务运行，如果事务中的某个进程失败，则会导致整批回滚。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用批处理命令在单个请求中向服务器发送多个处理命令。 通过批处理，您可以控制以什么顺序来处理哪些对象。 此外，批可以作为一系列独立作业运行，也可以作为一个事务运行，如果事务中的某个进程失败，则会导致整批回滚。  
   
  批处理通过合并和减少提交更改所用的时间，最大限度地提高数据可用性。 在完全处理一个维度时，任何使用该维度的分区都会标记为未处理。 因此，包含未处理分区的多维数据集不可用于浏览。 可以通过批处理作业将维度和受影响的分区一起处理来解决该问题。 将批处理作业作为事务来运行，可确保该事务中包括的所有对象在处理完成前仍可用于查询。 由于事务提交更改时，会对受影响的对象放置锁，因此会使这些对象暂时不可用；但是，用于提交更改的总时间比单独处理对象的时间要短。  
   

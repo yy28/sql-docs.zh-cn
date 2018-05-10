@@ -1,17 +1,17 @@
 ---
-title: "报表服务器 Web 服务 | Microsoft Docs"
-ms.custom: 
+title: 报表服务器 Web 服务 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - SSIS, Web service
 - Web service [Reporting Services]
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services]
 - Report Server Web service
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9d3da908870f8aac0d56217514625e055ae24d27
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 931bc8fccedfc7147d75a0e5dc9c08d8eb62f2b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-web-service"></a>报表服务器 Web 服务
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过报表服务器 Web 服务提供对报表服务器的全部功能的访问。 报表服务器 Web 服务是具有 SOAP API 的 XML Web 服务。 它使用 HTTP 上的 SOAP (SOAP over HTTP)，并且充当客户端程序与报表服务器之间的通信接口。 该 Web 服务提供两个端点（一个用于报表执行，一个用于报表管理）以及公开报表服务器的功能和使您能够为报表生命周期的任何部分创建自定义工具的方法。  

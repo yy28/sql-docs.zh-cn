@@ -1,48 +1,26 @@
 ---
-title: "属性和属性层次结构 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- regular attributes [Analysis Services]
-- parent attributes [Analysis Services]
-- hierarchies [Analysis Services], attribute
-- attributes [Analysis Services], about attributes
-- account attributes [Analysis Services]
-- dimensions [Analysis Services], attributes
-- key attributes [Analysis Services]
-- OLAP objects [Analysis Services], attributes
-- attributes [Analysis Services], relationships
-- attributes [Analysis Services]
-- relationships [Analysis Services], attributes
-ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 
-author: Minewiskan
+title: 属性和属性层次结构 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 009b5857470b106cb5c68301537dceb438ec4406
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>属性和属性层次结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-维度是属性的集合，这些属性绑定到数据源视图的表或视图中的一列或多列。  
+  维度是属性的集合，这些属性绑定到数据源视图的表或视图中的一列或多列。  
   
 ## <a name="key-attribute"></a>键属性  
- 每个维度都包含一个键属性。 每个属性都绑定到维度表中的一列或多列。 键属性是维度中标识维度主表中各列（在与事实数据表的外键关系中使用）的属性。 通常，键属性表示维度表中的一个或多个主键列。 您可以对在基础数据源内没有物理主键的数据源视图中的某个表定义逻辑主键。 **有关详细信息**，请参阅[定义逻辑主键在数据源视图 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). 当定义键属性时，多维数据集向导和维度向导会尝试使用数据源视图中维度表的主键列。 如果维度表未定义逻辑主键或物理主键，则上述向导可能无法正确地为维度定义键属性。  
+ 每个维度都包含一个键属性。 每个属性都绑定到维度表中的一列或多列。 键属性是维度中标识维度主表中各列（在与事实数据表的外键关系中使用）的属性。 通常，键属性表示维度表中的一个或多个主键列。 您可以对在基础数据源内没有物理主键的数据源视图中的某个表定义逻辑主键。 **有关详细信息**，请参阅[定义逻辑主键在数据源视图中&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)。 当定义键属性时，多维数据集向导和维度向导会尝试使用数据源视图中维度表的主键列。 如果维度表未定义逻辑主键或物理主键，则上述向导可能无法正确地为维度定义键属性。  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>将属性绑定到数据源视图表或视图中的列  
  属性将绑定到一个或多个数据源视图表或视图中的列。 属性始终绑定到一个或多个键列上，这些键列将确定属性包含的成员。 默认情况下，这是唯一绑定有属性的列。 还可以针对特定的目的将属性绑定到一个或多个其他列。 例如，属性的**NameColumn**属性确定向用户显示为每个特性成员的名称-此属性的属性可以绑定到通过数据源视图的特定维度列，也可以是绑定到数据源视图中的计算列。 有关详细信息，请参阅[维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)。  

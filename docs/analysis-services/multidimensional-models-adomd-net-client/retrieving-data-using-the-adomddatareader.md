@@ -1,33 +1,19 @@
 ---
-title: "检索数据使用 AdomdDataReader |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- retrieving data
-- AdomdDataReader object
-- data retrieval [ADOMD.NET], AdomdDataReader object
-ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 
-author: Minewiskan
+title: 检索数据使用 AdomdDataReader |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d5661d2a35a7f2d13c342fd2daadbf1c1bbc4a4d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>使用 AdomdDataReader 检索数据
   在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象可在开销和交互功能之间实现较好的平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象将从分析数据源检索只读、只进的平展数据流。 此未经缓冲的数据流使过程逻辑能够有效地按顺序处理分析数据源的结果。 当检索大量数据用于显示时，使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是一个不错的选择，因为这些数据未在内存中缓存。  

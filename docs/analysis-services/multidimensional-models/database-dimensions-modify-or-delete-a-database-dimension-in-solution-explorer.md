@@ -1,37 +1,23 @@
 ---
-title: "修改或删除数据库维度在解决方案资源管理器 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 修改或删除数据库维度在解决方案资源管理器 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- modifying dimensions
-- dimensions [Analysis Services], deleting
-- dimensions [Analysis Services], modifying
-- deleting dimensions
-- removing dimensions
-ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 67fc72907e0d15cfbd5edf14733f1e9669c1e0fe
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 98afd9b79ac311e44c99005f4bb67811ba98e0ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>数据库维度的修改或删除数据库维度在解决方案资源管理器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的维度设计器来修改或删除维度。 修改维度时，只有对维度进行处理后，所做的更改才对用户可用。 有关详细信息，请参阅[处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
+  可通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的维度设计器来修改或删除维度。 修改维度时，只有对维度进行处理后，所做的更改才对用户可用。 有关详细信息，请参阅[处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中修改维度  
   

@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services 中记录操作 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 中记录操作 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4a4968a3c66100fd40871fa5e8231f19711361e2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services 实例将会把服务器通知、错误和警告记录到 msmdsrv.log 文件中 – 你安装的每个实例都有该文件。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](http://support.microsoft.com/kb/2965035)中查看整个更改列表。  
+  Analysis Services 实例将会把服务器通知、错误和警告记录到 msmdsrv.log 文件中 – 你安装的每个实例都有该文件。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](http://support.microsoft.com/kb/2965035)中查看整个更改列表。  
   
  除了内置日志记录功能，许多管理员和开发人员还使用 Analysis Services 社区提供的工具来收集有关服务器操作（例如 **ASTrace**）的数据。 查看 [Microsoft SQL Server 社区示例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) ，获得下载链接。  
   

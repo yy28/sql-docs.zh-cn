@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。 当调用方没有查看源数据的权限时，函数将返回错误 208（对象名无效）。  
   
 ## <a name="remarks"></a>注释  
- 如果指定的 LSN 范围不在捕获实例的更改跟踪时间线范围之内，则函数将返回错误 208（对象名无效）。  
+ 如果指定的 LSN 范围不在捕获实例的更改跟踪时间线范围之内，则函数将返回错误 208（对象名无效）。
+
+ 上的唯一标识符的行的修改将会导致 fn_cdc_get_net_changes 来显示初始的更新命令与 DELETE，然后改为插入命令。  此行为是之前和之后更改跟踪密钥所必需的。
   
 ## <a name="examples"></a>示例  
  下面的示例使用函数`cdc.fn_cdc_get_net_changes_HR_Department`报告到源表所做的净更改`HumanResources.Department`在特定时间间隔。  

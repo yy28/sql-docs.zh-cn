@@ -1,38 +1,19 @@
 ---
-title: "多维模型程序集管理 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多维模型程序集管理 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], assemblies
-- calling user-defined functions
-- user impersonation [Analysis Services]
-- impersonation [Analysis Services]
-- Data Mining Extensions [Analysis Services], assemblies
-- MDX [Analysis Services], assemblies
-- user-defined functions [Analysis Services]
-- Analysis Services objects, assemblies
-- assemblies [Analysis Services]
-- application domains [Analysis Services]
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 89678cac9febb3adbed049e859876d646b3ddf82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +72,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  对于程序集，执行权限随 **PermissionSet** 对象的 **Assembly** 属性传递。 托管代码接收的权限由有效的安全策略确定。 非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主环境中已有三个有效的策略级别：企业、计算机和用户。 代码接收的有效权限列表由这三个级别获得的权限交集所确定。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果是 CLR 的宿主，它将为其提供宿主级别的安全策略级别，此策略是低于始终有效的三个策略级别的附加策略级别。 会为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建的每个应用程序域设置此策略。  
+ 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是 CLR 的宿主，它将为其提供宿主级别的安全策略级别，此策略是低于始终有效的三个策略级别的附加策略级别。 会为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建的每个应用程序域设置此策略。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主级别策略组合了用于系统程序集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定策略和用于用户程序集的用户指定策略。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主策略的用户指定部分基于程序集所有者，此所有者将为每个程序集指定三个权限存储桶中的一个：  
   

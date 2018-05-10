@@ -1,36 +1,19 @@
 ---
-title: "客户端体系结构要求 Analysis Services 开发 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- local mining models [Analysis Services]
-- Analysis Services, architecture
-- providers [Analysis Services]
-- data pumps [Analysis Services]
-- client architecture [Analysis Services]
-- local cubes [Analysis Services]
-ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 
-author: Minewiskan
+title: 客户端体系结构要求 Analysis Services 开发 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 63ba4a3a70f7fe763c33e05c30f186efa809d19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 开发的客户端体系结构要求
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +36,7 @@ ms.lasthandoff: 02/15/2018
 |.NET 语言|ADO MD.NET|  
 |支持 SOAP 的任何语言|XML for Analysis|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 小型和大型组织中具有与部署的完全可缩放中间层 Web 体系结构。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 为 Web 服务提供了广泛的中间层支持。 ASP.NET 应用程序支持由 ADOMD.NET、 OLAP 和 ADO MD 适用于 OLE DB 支持 ASP 应用程序。 中间层（如下图中所示）可进行伸缩以供众多并发用户使用。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的 Web 体系结构具有完全可伸缩的中间层，可方便小型和大型组织进行部署。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 为 Web 服务提供了广泛的中间层支持。 ASP.NET 应用程序支持由 ADOMD.NET、 OLAP 和 ADO MD 适用于 OLE DB 支持 ASP 应用程序。 中间层（如下图中所示）可进行伸缩以供众多并发用户使用。  
   
  ![中间层体系结构的逻辑关系图](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "中间层体系结构的逻辑关系图")  
   
@@ -62,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>表格或 SharePoint 模式下的 Analysis Services  
  在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，服务器可以在 xVelocity 内存中分析引擎 (VertiPaq) 模式下用于表格数据库和用于启动[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]发布到 SharePoint 站点的工作簿。  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]是用于创建和查询分别使用 SharePoint 或表格模式下，内存中数据库支持的唯一客户端环境。 嵌入[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]使用 Excel 创建的数据库和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工具包含在 Excel 工作簿，保存为 Excel.xlsx 文件的一部分。  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是支持创建和查询分别使用 SharePoint 或表格模式的内存中数据库的唯一客户端环境。 嵌入[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]使用 Excel 创建的数据库和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工具包含在 Excel 工作簿，保存为 Excel.xlsx 文件的一部分。  
   
  但是，如果您将多维数据集数据导入到某一 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿中，则该工作簿可以使用在传统多维数据集中存储的数据。 如果其他 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿已发布到某一 SharePoint 站点，您还可以从该工作簿中导入数据。  
   

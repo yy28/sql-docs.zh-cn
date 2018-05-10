@@ -1,36 +1,23 @@
 ---
-title: "配置服务帐户 (Analysis Services) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 配置服务帐户 (Analysis Services) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], logon accounts
-- logon accounts [Analysis Services]
-- accounts [Analysis Services]
-- logon accounts [Analysis Services], about logon accounts
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b2a6f76cc85c4e595f05d372b6318a862534408a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-产品范围的帐户设置在[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
+  产品范围的帐户设置在[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
   
  该主题提供了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的补充信息，包括表格和群集安装的必要附加权限。 它也介绍了支持服务器操作所需的权限。 例如，你可以配置要在服务账户下执行的处理和查询操作，在这种情况下，你需要授予附加权限使其运作。  
   
@@ -81,7 +68,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  请运行“GPEDIT.msc | 本地计算机策略 | 计算机配置 | Windows 设置 | 安全设置 | 本地策略 | 用户权限分配”。  
   
-2.  查看 **SQLServerMSASUser$**等现有策略。 这是在安装 Analysis Services 的计算机上找到的本地安全组。 Windows 特权和文件文件夹权限都授予此安全组。 双击 **作为服务登录** 策略，查看如何在你的系统上指定安全组。 安全组的全名会根据你是否将 Analysis Services 作为命名实例安装而变化。 添加账户特权时，使用此安全组，而不是实际的服务账户。  
+2.  查看 **SQLServerMSASUser$** 等现有策略。 这是在安装 Analysis Services 的计算机上找到的本地安全组。 Windows 特权和文件文件夹权限都授予此安全组。 双击 **作为服务登录** 策略，查看如何在你的系统上指定安全组。 安全组的全名会根据你是否将 Analysis Services 作为命名实例安装而变化。 添加账户特权时，使用此安全组，而不是实际的服务账户。  
   
 3.  若要在 GPEDIT 中添加账户特权，右键单击 **“增加进程工作集”** ，然后选择 **“属性”**。  
   
@@ -132,7 +119,7 @@ ms.lasthandoff: 02/15/2018
 3.  使用“计算机管理器”  |  |  |“MSASxx.MSSQLServer”|“”  |  验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
   
 > [!NOTE]  
->  切勿删除或修改 SID。 若要还原无意删除的 per-service SID，请参阅 [http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)。  
+>  切勿删除或修改 SID。 若要还原无意中删除每个服务 SID，请参阅[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
   
  **了解关于 per-service SID 的详细信息**  
   
@@ -143,7 +130,7 @@ ms.lasthandoff: 02/15/2018
  因为 SID 是不可变的，所以无论你更改服务账户的频率是多少，服务安装时创建的文件系统 ACL 均可无限使用。 作为一项附加的安全措施，通过 SID 指定权限的 ACL 可确保可执行程序和数据文件夹仅由单个服务实例访问，即使同一帐户下运行着其他服务时也如此。  
   
 ##  <a name="bkmk_tasks"></a> 为特定服务器操作授予附加 Analysis Services 权限  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在用于启动 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服务帐户（或登录帐户）的安全上下文中执行某些任务，而在发出任务请求的用户的安全上下文中执行另一些任务。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于启动的服务帐户 （或登录帐户） 的安全上下文中执行一些任务[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，并请求该任务的用户的安全上下文中执行其他任务。  
   
  下表说明了为作为服务帐户运行的任务提供支持所需的其他权限。  
   

@@ -1,31 +1,23 @@
 ---
-title: "配置 Power Pivot 和部署解决方案 (SharePoint 2016) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 配置 Power Pivot 和部署解决方案 (SharePoint 2016) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 384f1fdec5b77dcc980954e72fe5bfa07f617601
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-本主题介绍如何部署和配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置** 工具以便完成以下任务：  
+  本主题介绍如何部署和配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置** 工具以便完成以下任务：  
   
 -   部署 SharePoint 解决方案文件。  
   
@@ -124,7 +116,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  选择“确定”。  
   
- 有关解决数据刷新问题的详细信息，请参阅 [解决 Power Pivot 数据刷新问题](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关解决数据刷新的详细信息，请参阅[解决 Power Pivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  有关配置工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

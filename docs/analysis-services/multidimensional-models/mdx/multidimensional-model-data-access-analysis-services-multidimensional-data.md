@@ -1,41 +1,23 @@
 ---
-title: "多维模型数据访问 (Analysis Services-多维数据) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多维模型数据访问 (Analysis Services-多维数据) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- SSAS, data access interfaces
-- objects [Analysis Services], data access interfaces
-- Analysis Services data access interfaces
-- data retrieval [Analysis Services]
-- retrieving data
-- metadata [Analysis Services]
-- data access interfaces [Analysis Services]
-- manipulating objects [Analysis Services]
-- Analysis Services data access interfaces, about data access interfaces
-ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 01e59cc12667dd5ecba52649c056800b51d186fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-使用本主题中的信息可以了解如何使用编程方法、脚本或客户端应用程序（内置用于连接您网络上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的支持）来访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据。  
+  使用本主题中的信息可以了解如何使用编程方法、脚本或客户端应用程序（内置用于连接您网络上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的支持）来访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据。  
   
  本主题包含以下各节：  
   
@@ -76,11 +58,11 @@ ms.lasthandoff: 02/15/2018
   
  [使用 MDX 查询多维数据](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [MDX &#40; 中的重要概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [MDX 脚本编写基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 脚本编写基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> 编程接口  
  如果要创建使用多维数据的自定义应用程序，访问数据所用的方法很可能属于以下类别之一：  
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [连接到 Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
- [使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [使用 Analysis Services 中的 XMLA 进行开发](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [表格模型数据访问](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

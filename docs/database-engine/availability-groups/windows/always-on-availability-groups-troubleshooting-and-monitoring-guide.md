@@ -2,23 +2,22 @@
 title: Always On 可用性组故障排除和监视指南 (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 05/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性组故障排除和监视指南
  本指南可帮助你开始监视 Always On 可用性组并排查可用性组的一些常见问题。 它提供了原始内容，以及在其他位置发布的有用信息的登陆页。 尽管本指南不能全面探讨大范围可用性组中出现的所有问题，但它可为分析根本原因和解决问题指出正确的方向。 

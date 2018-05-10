@@ -1,27 +1,19 @@
 ---
 title: 在 SQL Server Management Studio 中使用 Analysis Services 模板 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d2f4f817acd9c83264ea1cb472bf9d39d898b120
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b7781ece8d5bd9feb014ebbaf7d067654a56d23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -65,13 +57,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  使用 **“元数据资源管理器”**，将下列字段和度量值拖到查询模板：  
   
-    1.  替换\<row_axis，mdx_set > 与**[产品类别]。 [Product Category Name]**。  
+    1.  替换\<row_axis，mdx_set > 与 **[产品类别]。 [Product Category Name]**。  
   
-    2.  替换\<column_axis，mdx_set > 与**[Date]。 [Calendar Year]。[Calendar Year]**.  
+    2.  替换\<column_axis，mdx_set > 与 **[Date]。 [Calendar Year]。[Calendar Year]**.  
   
-    3.  替换\<from_clause，mdx_name > 与**[Internet Sales]**。  
+    3.  替换\<from_clause，mdx_name > 与 **[Internet Sales]**。  
   
-    4.  替换\<where_clause，mdx_set > 与**[度量值]。 [Internet Total Sales]**。  
+    4.  替换\<where_clause，mdx_set > 与 **[度量值]。 [Internet Total Sales]**。  
   
 4.  您可以按原样执行此查询，但您可能会想要进行某些更改，例如添加函数以便返回特定成员。 例如，在 **[Product Category].[Product Category Name]** 后输入 **.members**。 有关详细信息，请参阅 [Using Member Expressions](../../mdx/using-member-expressions.md)。  
   
@@ -165,7 +157,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |--------------|-------------------|-----------------|  
 |DMX\模型内容|内容查询|演示如何使用 DMX SELECT FROM *\<模型 >*。要检索指定的挖掘模型的挖掘模型架构行集内容的内容语句。|  
 ||连续列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >* DMX 语句**RangeMin**和**RangeMax**函数来检索的一组从指定的挖掘模型中的连续列指定范围中的值。|  
-||离散列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >*语句从指定的挖掘模型中的离散列中检索一组完整的值。|  
+||离散列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 语句从指定的挖掘模型中的离散列中检索一组完整的值。|  
 ||钻取查询|演示如何将 DMX SELECT * FROM Model.CASES 语句与 DMX IsInNode 函数一起使用来执行钻取查询|  
 ||模型属性|演示如何使用 DMX System.GetModelAttributes 函数返回模型所用属性的列表。|  
 ||PMML 内容|演示如何使用 DMX 选择\*FROM *\<模型 >*。若要检索的挖掘模型，支持此功能的算法的预测模型标记语言 (PMML) 表示的 PMML 语句。|  
@@ -187,7 +179,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||定型嵌套结构|演示如何将 DMX INSERT INTO MINING STRUCTURE 语句和 SHAPE 源数据查询组合使用来定型这样的挖掘模型，该挖掘模型包含嵌套列，而嵌套列中的数据包含使用查询从现有数据源检索到的嵌套表。|  
 ||定型结构|演示如何将 DMX INSERT INTO MINING STRUCTURE 语句和 OPENQUERY 源数据查询组合使用来定型挖掘结构。|  
 |DMX\预测查询|基准预测|演示如何组合使用 DMX SELECT FROM *\<模型 >* PREDICTION JOIN 语句和 OPENQUERY 源数据查询，以执行针对使用数据，从使用查询中，检索挖掘模型的预测查询现有数据源。|  
-||嵌套预测|演示如何组合使用 DMX SELECT FROM *\<模型 >*使用形状和 OPENQUERY 源数据查询执行预测查询针对使用包含嵌套的数据挖掘模型的 PREDICTION JOIN 语句检索的表，使用查询中，从现有数据源。|  
+||嵌套预测|演示如何组合使用 DMX SELECT FROM *\<模型 >* 使用形状和 OPENQUERY 源数据查询执行预测查询针对使用包含嵌套的数据挖掘模型的 PREDICTION JOIN 语句检索的表，使用查询中，从现有数据源。|  
 ||嵌套单独预测|演示如何使用 DMX SELECT FROM *\<模型 >* NATURAL PREDICTION JOIN 子句，以执行针对使用单个值，在预测查询中，列中显式指定的挖掘模型的预测查询其名称与挖掘模型中的列相匹配，它包含的一组嵌套表创建使用 UNION 语句名称也匹配到挖掘模型中的嵌套列中的值。|  
 ||单独预测|演示如何使用 DMX SELECT FROM\<模型 > 要执行针对使用单个值，在其名称匹配中的列的列中的预测查询中显式指定的挖掘模型的预测查询 NATURAL PREDICTION JOIN 语句挖掘模型中。|  
 ||存储过程调用|演示如何使用 DMX CALL 语句调用存储过程|  

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,13 +25,12 @@ caps.latest.revision: 74
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 99794bf5f9adc7da4106ebffa7ffc27e6b469cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d662031dec5912311d252b3c5a44e2abc5059eba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +147,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  若要重新启用 AUTO_UPDATE_STATISTICS 选项行为，请不使用 NORECOMPUTE 选项再次运行 UPDATE STATISTICS，或运行 sp_autostats。  
   
 > [!WARNING]  
->  使用此选项可能会产生并非最佳的查询计划。 建议您尽量少用此选项，并且此选项只能由有资格的系统管理员使用。  
+> 使用此选项可能会产生并非最佳的查询计划。 建议您尽量少用此选项，并且此选项只能由有资格的系统管理员使用。  
   
  有关 AUTO_STATISTICS_UPDATE 选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
@@ -170,7 +167,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = max_degree_of_parallelism  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
  在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   

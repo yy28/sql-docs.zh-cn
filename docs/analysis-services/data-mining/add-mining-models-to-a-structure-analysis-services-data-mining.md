@@ -1,35 +1,23 @@
 ---
-title: "向结构中添加挖掘模型 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 向结构中添加挖掘模型 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], creating
-- mining models [Analysis Services], creating
-- mining models [Analysis Services], modifying
-ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 46207c91d6bfbbb122f42213b779841c91ac996a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>向结构中添加挖掘模型（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-挖掘结构旨在支持多个挖掘模型。 因此，在完成向导后，您可以打开结构并添加新的挖掘模型。 每当您创建模型时，可以使用一个不同的算法、更改参数或应用筛选器，以使用不同的数据子集。  
+  挖掘结构旨在支持多个挖掘模型。 因此，在完成向导后，您可以打开结构并添加新的挖掘模型。 每当您创建模型时，可以使用一个不同的算法、更改参数或应用筛选器，以使用不同的数据子集。  
   
 ## <a name="adding-new-mining-models"></a>添加新的挖掘模型  
  使用数据挖掘向导创建新的挖掘模型时，默认情况下，您必须总是先创建一个挖掘结构。 然后，该向导会为您提供用于向结构中添加初始挖掘模型的选项。 但是，不需要立即创建模型。 如果仅仅创建结构，则不需要决定将哪一列用作可预测的属性，或者如何在特定模型中使用这些数据。 您只需设置要在将来使用的通用数据结构，之后即可使用 [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) 来添加基于此结构的新挖掘模型。  
@@ -65,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  对于某些列，可能还需要指定“列内容” 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，每个数据列的“内容类型”属性都通知算法应如何处理该列中的数据。 例如，如果数据包括一个“收入”列，则您必须通过将内容类型设置为“连续”来指定该列包含连续数。 但是，您还可以通过将内容类型设置为“离散化”并选择指定存储桶的准确数目，来指定“收入”列中的数分成存储桶。 您可以创建以不同方式处理列的不同模型：例如，您可能尝试使用一种模型将客户分成三个年龄组，而另一个模型则将客户分成 10 个年龄组。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [创建关系挖掘结构](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)  

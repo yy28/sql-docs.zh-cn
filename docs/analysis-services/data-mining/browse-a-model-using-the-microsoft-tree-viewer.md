@@ -1,44 +1,23 @@
 ---
-title: "使用 Microsoft 树查看器浏览模型 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 使用 Microsoft 树查看器浏览模型 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Tree Viewer [Analysis Services]
-- predictions [Analysis Services], discrete attributes
-- mining model content, viewing
-- predictions [Analysis Services], continuous attributes
-- mining legend [Analysis Services]
-- discrete attributes [Analysis Services]
-- Microsoft Decision Trees algorithm [Analysis Services]
-- decision tree algorithms [Analysis Services]
-- Microsoft Tree Viewer
-- decision trees [Analysis Services]
-- dependencies [Analysis Services]
-- continuous attributes
-ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 61e3be434f2029216742813178b041b083174362
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6477ccf19b3f2e626f098e455fc999fd07c565dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 树查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
   
 > [!NOTE]  
 >  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
@@ -112,7 +91,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [挖掘模型查看器 &#40; 数据挖掘模型设计器 &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
+ [挖掘模型查看器 & #40; 数据挖掘模型设计器 & #41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  

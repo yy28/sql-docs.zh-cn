@@ -1,38 +1,19 @@
 ---
-title: "AMO 基础类 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data sources [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-- AMO, data sources
-- Analysis Management Objects, data sources
-ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 基础类 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ffa7973757ce41a3975bcbb70170679109527e42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-fundamental-classes"></a>AMO Fundamental 类
   基础类是使用分析管理对象 (AMO) 的起点。 通过这些类，您可以为将在应用程序中使用的其他对象建立自己的环境。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
@@ -73,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Database> 中的 <xref:Microsoft.AnalysisServices>。  
   
-##  <a name="DSandDSV">数据源和 DataSourceView 对象</a>  
+##  <a name="DSandDSV"></a> 数据源和 DataSourceView 对象  
  数据源是使用数据库类的 <xref:Microsoft.AnalysisServices.DataSourceCollection> 管理的。 可从 <xref:Microsoft.AnalysisServices.DataSource> 对象使用 Add 方法创建 <xref:Microsoft.AnalysisServices.DataSourceCollection> 实例。 可从 <xref:Microsoft.AnalysisServices.DataSource> 对象使用 Remove 方法删除 <xref:Microsoft.AnalysisServices.DataSourceCollection> 实例。  
   
  <xref:Microsoft.AnalysisServices.DataSourceView> 对象是从数据库类的 <xref:Microsoft.AnalysisServices.DataSourceViewCollection> 对象管理的。  
