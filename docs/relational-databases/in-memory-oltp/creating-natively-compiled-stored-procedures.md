@@ -4,33 +4,31 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab396ebe7a0b08dce7f8a52c54a9b301f80bc68b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4dec8aec1dc6e95b273002483674b4c2e1619843
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>创建本机编译的存储过程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本机编译的存储过程未实现完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可编程性和查询外围应用。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造不能在本机编译的存储过程内使用。 有关详细信息，请参阅 [本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
+本机编译的存储过程未实现完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可编程性和查询外围应用。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造不能在本机编译的存储过程内使用。 有关详细信息，请参阅 [本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
- 但是，有几个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能，仅本机编译的存储过程支持这些功能：  
+但是，有几个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能，仅本机编译的存储过程支持这些功能：  
   
 -   原子块。 有关详细信息，请参阅 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。  
   
@@ -44,30 +42,30 @@ ms.lasthandoff: 04/16/2018
   
 -   本机编译存储过程的架构绑定。  
   
- 使用 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md) 创建本机编译的存储过程。 下面的示例显示内存优化表以及用于将行插入表的本机编译存储过程。  
+使用 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md) 创建本机编译的存储过程。 下面的示例显示内存优化表以及用于将行插入表的本机编译存储过程。  
   
 ```sql  
-create table dbo.Ord  
-(OrdNo integer not null primary key nonclustered,   
- OrdDate datetime not null,   
- CustCode nvarchar(5) not null)   
- with (memory_optimized=on)  
-go  
+CREATE TABLE [dbo].[T2] (  
+  [c1] [int] NOT NULL, 
+  [c2] [datetime] NOT NULL,
+  [c3] nvarchar(5) NOT NULL, 
+  CONSTRAINT [PK_T1] PRIMARY KEY NONCLUSTERED ([c1])  
+  ) WITH ( MEMORY_OPTIMIZED = ON , DURABILITY = SCHEMA_AND_DATA )  
+GO  
   
-create procedure dbo.OrderInsert(@OrdNo integer, @CustCode nvarchar(5))  
-with native_compilation, schemabinding  
-as   
-begin atomic with  
-(transaction isolation level = snapshot,  
-language = N'English')  
-  
-  declare @OrdDate datetime = getdate();  
-  insert into dbo.Ord (OrdNo, CustCode, OrdDate) values (@OrdNo, @CustCode, @OrdDate);  
-end  
-go  
+CREATE PROCEDURE [dbo].[usp_2] (@c1 int, @c3 nvarchar(5)) 
+WITH NATIVE_COMPILATION, SCHEMABINDING  
+AS BEGIN ATOMIC WITH  
+(  
+ TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english'  
+)  
+  DECLARE @c2 datetime = GETDATE();  
+  INSERT INTO [dbo].[T2] (c1, c2, c3) values (@c1, @c2, @c3);  
+END  
+GO  
 ```  
-  
- 在代码示例中， **NATIVE_COMPILATION** 指示此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程是本机编译的存储过程。 以下选项是必需的：  
+ 
+在代码示例中， **NATIVE_COMPILATION** 指示此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程是本机编译的存储过程。 以下选项是必需的：  
   
 |选项|Description|  
 |------------|-----------------|  

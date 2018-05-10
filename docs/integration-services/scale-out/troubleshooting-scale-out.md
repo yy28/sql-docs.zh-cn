@@ -3,26 +3,24 @@ title: SQL Server Integration Services (SSIS) Scale Out 故障排除 | Microsoft
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
 ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac1235a122a37593eea61a7c7cfd918e46143eb0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5baceaa51a0e4f4b1059bce5e19a0fd79fa3a71d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
 

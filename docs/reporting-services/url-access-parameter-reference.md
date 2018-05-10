@@ -1,30 +1,28 @@
 ---
-title: "URL 访问参数引用 | Microsoft Docs"
-ms.custom: 
+title: URL 访问参数引用 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f7e0be913313c56b8f05eeb24e43534407ceec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -284,7 +282,7 @@ ms.lasthandoff: 01/09/2018
                   切换报表部分的显示和隐藏状态。 指定用于表示要切换的部分的正整数。  
   
 ##  <a name="bkmk_webpart"></a> 报表查看器 Web 部件命令 (rv:)  
- 以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留报表参数名称用于指向与 SharePoint 集成的报表查看器 Web 部件。 这些参数名称带有 *rv:*前缀。 报表查看器 Web 部件也接受 *rs:ParameterLanguage* 参数。  
+ 以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留报表参数名称用于指向与 SharePoint 集成的报表查看器 Web 部件。 这些参数名称带有 *rv:* 前缀。 报表查看器 Web 部件也接受 *rs:ParameterLanguage* 参数。  
   
 -   *Toolbar*：控制报表查看器 Web 部件的工具栏显示。 默认值是 **Full**秒。 可为以下值：  
   

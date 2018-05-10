@@ -1,17 +1,14 @@
 ---
 title: 复制、更改跟踪和更改数据捕获 - 可用性组 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -22,12 +19,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60f20c48befbd5dcb24db4e1c7e247cf9b8346c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +95,7 @@ ms.lasthandoff: 04/16/2018
   
      下例创建一个捕获作业。  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +107,7 @@ ms.lasthandoff: 04/16/2018
   
      为确保在新的主数据库上执行适当的清除，应始终创建本地清除作业。 下例创建一个清除作业。  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +133,7 @@ ms.lasthandoff: 04/16/2018
   
      可使用以下查询来确定是否已为承载 CDC 数据库的可用性组定义了可用性组侦听器名称。 如果已创建，则查询将返回相应的可用性组侦听器名称。  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +149,7 @@ ms.lasthandoff: 04/16/2018
   
      以下查询可用来确定是否需要只读意向才能连接到可读辅助副本。  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +161,7 @@ ms.lasthandoff: 04/16/2018
   
      当使用 **sp_addlinkedserver** 来创建链接服务器以访问次要副本时，将 *@datasrc* 参数用于可用性组侦听程序名称或显式服务器名称，并且将 *@provstr* 参数用于指定只读意向。  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +203,6 @@ ms.lasthandoff: 04/16/2018
   
     -   请求订阅：发布服务器、分发服务器和订阅服务器数据库都必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
   
--   不支持将分发数据库放置在可用性组上。  
-  
 -   发布服务器实例满足加入 AlwaysOn 可用性组所需的所有先决条件。 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
 ### <a name="restrictions"></a>限制  
@@ -224,7 +218,7 @@ ms.lasthandoff: 04/16/2018
   
  *故障转移到副本数据库是一个手动过程。 不提供自动故障转移。  
   
- **不支持将分发服务器数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像。  
+ **不支持将分发服务器数据库用于数据库镜像。  
   
 ### <a name="considerations"></a>注意事项  
   

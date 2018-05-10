@@ -13,17 +13,16 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
 ms.component: security
-ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1ca79d0f6c4bc501e7b03cd0c5b710eba2b50adf
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

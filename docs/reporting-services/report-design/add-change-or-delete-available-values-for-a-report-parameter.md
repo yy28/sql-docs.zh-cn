@@ -1,31 +1,29 @@
 ---
-title: "为报表参数添加、更改或删除可用值 | Microsoft Docs"
-ms.custom: 
+title: 为报表参数添加、更改或删除可用值 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.availablevalues.f1
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ff3ae7e2e01eab4629fa30f4ab188ac714d4fd2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4d3466964e2b2550e5b0dd6b90cbaac3a063e68e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>为报表参数添加、更改或删除可用值
   创建报表参数后，可以指定向用户显示的可用值列表。 可用值列表将限制用户只能选择参数的有效值。  

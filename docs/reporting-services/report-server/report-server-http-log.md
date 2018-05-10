@@ -1,29 +1,27 @@
 ---
-title: "报表服务器 HTTP 日志 | Microsoft Docs"
-ms.custom: 
+title: 报表服务器 HTTP 日志 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -65,24 +63,24 @@ ms.lasthandoff: 03/05/2018
 |字段|Description|，则“默认”|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
-|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|是|  
-|date|活动发生的日期。|是|  
-|Time|活动发生的时间。|是|  
+|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|“否”|  
+|date|活动发生的日期。|“否”|  
+|Time|活动发生的时间。|“否”|  
 |ClientIp|访问报表服务器的客户端的 IP 地址。|是|  
-|UserName|访问报表服务器的用户的名称。|是|  
-|ServerPort|连接使用的端口号。|是|  
-|主机|主机标头的内容。|是|  
+|UserName|访问报表服务器的用户的名称。|“否”|  
+|ServerPort|连接使用的端口号。|“否”|  
+|主机|主机标头的内容。|“否”|  
 |方法|从客户端调用的操作或 SOAP 方法。|是|  
 |UriStem|访问的资源。|是|  
-|UriQuery|用于访问资源的查询。|是|  
+|UriQuery|用于访问资源的查询。|“否”|  
 |ProtocolStatus|HTTP 状态代码。|是|  
-|BytesReceived|服务器接收的字节数。|是|  
-|TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|是|  
-|ProtocolVersion|客户端使用的协议版本。|是|  
-|UserAgent|客户端使用的浏览器类型。|是|  
-|CookieReceived|服务器接收的 cookie 的内容。|是|  
-|CookieSent|服务器发送的 cookie 的内容。|是|  
-|Referrer|客户端以前访问过的站点。|是|  
+|BytesReceived|服务器接收的字节数。|“否”|  
+|TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|“否”|  
+|ProtocolVersion|客户端使用的协议版本。|“否”|  
+|UserAgent|客户端使用的浏览器类型。|“否”|  
+|CookieReceived|服务器接收的 cookie 的内容。|“否”|  
+|CookieSent|服务器发送的 cookie 的内容。|“否”|  
+|Referrer|客户端以前访问过的站点。|“否”|  
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   

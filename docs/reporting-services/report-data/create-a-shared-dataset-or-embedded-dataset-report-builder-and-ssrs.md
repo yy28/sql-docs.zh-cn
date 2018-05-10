@@ -1,27 +1,25 @@
 ---
-title: "创建共享数据集或嵌入数据集（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 创建共享数据集或嵌入数据集（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6e3b33ffa6959181f4e599d9fce6007ad2095f9b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
 可在单个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表中使用嵌入的数据集。 报表服务器上的共享数据集可由多个报表使用，移动和分页皆可。 若要创建数据集，需要具有嵌入或共享的数据源。  
