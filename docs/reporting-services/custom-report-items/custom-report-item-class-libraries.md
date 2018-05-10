@@ -1,31 +1,30 @@
 ---
-title: "自定义报表项类库 | Microsoft Docs"
-ms.custom: 
+title: 自定义报表项类库 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: custom-report-items
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa3d1e9c7278efcac5af62d3a6d892d12944ba84
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 54ce65329f2be09e833e38be75bea1ddfcdd0149
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-report-item-class-libraries"></a>自定义报表项类库
   自定义报表项使用 Microsoft.ReportDesigner 命名空间中的类。 用于实现自定义报表项的类可分为两个主要类别：旨在支持自定义报表项基础结构的唯一类和用于封装相关报表定义语言 (RDL) 元素功能的托管包装类。 有关如何使用这些类的代码示例，请参阅 [SQL Server Reporting Services Product Samples（SQL Server Reporting Services 产品示例）](http://go.microsoft.com/fwlink/?LinkId=177889)。  
@@ -135,7 +134,7 @@ ms.lasthandoff: 01/09/2018
 |||  
 |-|-|  
 |DataSetName|包含要拖放的字段的数据集的名称。|  
-|Fields|要删除的字段 (Microsoft.ReportDesigner.Field) 集合。|  
+|**Fields**|要删除的字段 (Microsoft.ReportDesigner.Field) 集合。|  
   
 ## <a name="see-also"></a>另请参阅  
  [报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)   

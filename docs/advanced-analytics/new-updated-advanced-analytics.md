@@ -1,21 +1,26 @@
 ---
 title: 更新-为 SQL Server 文档高级分析 |Microsoft 文档
 description: 显示更新内容的最近更改中的文档，为 Microsoft SQL server 的高级分析的代码的段。
+manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.technology: release-landing
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 058278df1ee54a6440f8225ea15f727857df76f2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.prod_service: sql-non-specified
+ms.component: advanced-analytics
+ms.date: 04/28/2018
+ms.openlocfilehash: bbce32579b54647e167c25d2708a80027ae0e678
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新的和最近的更新： SQL Server 的高级分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+
 
 几乎每日 Microsoft 及其现有的文章的一些上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文档网站。 这篇文章显示摘录最近已更新的文章。 可能还会列出链接到新的文章。
 
@@ -25,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
 
 
-- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
+- *日期范围的更新：* &nbsp; **2018年-02-03** &nbsp;到&nbsp; **2018年-04-28**
 - *主题区域：* &nbsp; **for SQL Server 的高级分析**。
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -39,7 +44,17 @@ ms.lasthandoff: 04/16/2018
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [在 SQL Server 上安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
+1. [安装 SQL Server 自 2017 年 1 机器学习在 Windows 上的服务 （数据库）](install/sql-machine-learning-services-windows-install.md)
+2. [安装 SQL Server 自 2017 年 1 机器学习 Windows 上的服务器 （独立）](install/sql-machine-learning-standalone-windows-install.md)
+3. [从命令行安装 SQL Server 计算机学习组件](install/sql-ml-component-commandline-install.md)
+4. [安装 SQL Server 机器学习没有 internet 访问权限的组件](install/sql-ml-component-install-without-internet-access.md)
+5. [安装 SQL Server 2016 R Services （数据库）](install/sql-r-services-windows-install.md)
+6. [安装 SQL Server 2016 R Server （独立）](install/sql-r-standalone-windows-install.md)
+7. [设置 Python 客户端工具，用于 SQL Server 机器学习](python/setup-python-client-tools-sql.md)
+8. [使用在 SQL 中的 Python 模型进行定型集和评分](tutorials/train-score-using-python-in-tsql.md)
+9. [将 Python 代码包装在存储过程](tutorials/wrap-python-in-tsql-stored-procedure.md)
+10. [什么是 SQL Server 机器学习服务？](what-is-sql-server-machine-learning.md)
+11. [用于监视 PREDICT 语句的扩展事件](xe-event-predict-tsql.md)
 
 
 
@@ -65,9 +80,12 @@ ms.lasthandoff: 04/16/2018
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [机器学习服务中的已知的问题](#TitleNum_1)
-2. [转换执行数据库中的 R 代码](#TitleNum_2)
-3. [确定 SQL 服务器上安装哪些 R 包](#TitleNum_3)
+1. [查看 R 或在 SQL Server 上安装 Python 包](#TitleNum_1)
+2. [安装预先训练的机器学习模型上 SQL Server](#TitleNum_2)
+3. [设置 SQL Server 上的 R 开发数据科学客户端](#TitleNum_3)
+4. [SQL Server 计算机学习和 R Services （数据库）](#TitleNum_4)
+5. [运行 Python 使用 T-SQL](#TitleNum_5)
+6. [使用与 revoscalepy Python 创建模型](#TitleNum_6)
 
 
 
@@ -78,42 +96,46 @@ ms.lasthandoff: 04/16/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-known-issues-in-machine-learning-servicesknown-issues-for-sql-server-machine-learning-servicesmd"></a>1.&nbsp; [机器学习服务中的已知的问题](known-issues-for-sql-server-machine-learning-services.md)
+### <a name="1-nbsp-viewing-r-or-python-packages-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>1.&nbsp; [查看 R 或在 SQL Server 上安装 Python 包](r/determine-which-packages-are-installed-on-sql-server.md)
 
-*更新时间： 2018年-02-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
+*更新时间： 2018年-04-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
 
-<!-- Source markdown line 163.  ms.author= "jeannt".  -->
+<!-- Source markdown line 208.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c6f46adcf795c43f818120b88407a3a89304cb27 c781562605f5cd77f6c43bfe5e89810cb72ceae0  (PR=4789  ,  Filename=known-issues-for-sql-server-machine-learning-services.md  ,  Dirpath=docs\advanced-analytics\  ,  MergeCommitSha40=386bfb688843bac7fa4d83dc1cfef94dd19db110) -->
+<!-- git diff --ignore-all-space --unified=0 7a1df11f57e7bbf0abc37d3aa240dedd2b88c45f ec6859ac91b27539dc36f21aec82c99937c0187a  (PR=5610  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f1f96a990644c0d6cfa5a1d88ccee959cab6c2b2) -->
 
 
 
-有关可能会影响 R 解决方案的更多已知问题，请参阅[机器学习服务器](https://docs.microsoft.com/machine-learning-server/resources-known-issues)站点。
-
-**在非默认位置中的 SQL Server 上执行 R 脚本时，则拒绝警告**
+**Python**
 
 
-如果 SQL Server 的实例已安装到非默认位置，如外部`Program Files`文件夹中，当你尝试运行安装包的脚本时引发 ACCESS_DENIED 警告。 例如：
+此示例返回的 Python 中包含的文件夹列表`sys.path`变量。 该列表包括当前目录和标准库路径。
 
-> *在 normalizePath(path.expand(path)、 winslash、 mustWork）： 路径 [2] ="~ExternalLibraries/R/8/1": 访问被拒绝*
+```
+EXEC sp_execute_external_script
+  @language =N'Python',
+  @script=N'import sys; print("\n".join(sys.path))'
+```
 
-R 函数尝试进行读取的路径，而且如果失败，原因是内置的用户组**SQLRUserGroup**，不具有读取权限。 引发警告不会阻止执行当前的 R 脚本，但警告可能重复发生，每当用户在运行任何其他 R 脚本。
+**结果**
 
-如果在你安装 SQL Server 的默认位置，此错误不会发生，因为所有的 Windows 用户具有读取权限上`Program Files`文件夹。
+```
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\python35.zip
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\DLLs
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Sphinx-1.5.4-py3.5.egg
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Pythonwin
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
+```
 
-将在即将发布的服务版本中解决此问题。 一种解决方法，提供组， **SQLRUserGroup**，具有针对所有父文件夹的读取访问`ExternalLibraries`。
-
-**RevoScaleR 版本旧和新版本之间的序列化错误**
-
-
-如果你通过使用远程 SQL Server 实例的序列化的格式的模型，你可能会出现错误：
-
-> *MemDecompress 中的错误 (数据、 类型 = 解压缩) memDecompress(2) 中的内部错误-3。*
-
-如果保存模型时使用了新版本的序列化函数中，会出现此错误[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)，但其中你进行反序列化模型的 SQL Server 实例已 RevoScaleR Api，请从 SQL 的旧版本Server 2017 CU2 或更早版本。
+有关变量的详细信息`sys.path`以及如何使用它来设置的模块的解释程序的搜索路径，请参阅[Python 文档](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 
 
@@ -125,45 +147,43 @@ R 函数尝试进行读取的路径，而且如果失败，原因是内置的用
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-converting-r-code-for-execution-in-databaserconverting-r-code-for-use-in-sql-servermd"></a>2.&nbsp; [转换执行数据库中的 R 代码](r/converting-r-code-for-use-in-sql-server.md)
+### <a name="2-nbsp-install-pre-trained-machine-learning-models-on-sql-serverrinstall-pretrained-models-sql-servermd"></a>2.&nbsp; [安装预先训练的机器学习模型上 SQL Server](r/install-pretrained-models-sql-server.md)
 
-*更新时间： 2018年-01-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
+*更新时间： 2018年-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
 
-<!-- Source markdown line 136.  ms.author= "jeannt".  -->
+<!-- Source markdown line 140.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 a1d156fac1af5813ef75965071686b177e2aede7 fc8beff0aa0d7ea298e493b90984875e81e9143e  (PR=4493  ,  Filename=converting-r-code-for-use-in-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f486d12078a45c87b0fcf52270b904ca7b0c7fc8) -->
+<!-- git diff --ignore-all-space --unified=0 aa03623d819750d4919feb7910b07ec1875bb509 7382228fa68b04b500a5fde73c29995e12aa20ac  (PR=5504  ,  Filename=install-pretrained-models-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
 
 
 
-**包中的存储过程的 R 代码**
+1. 启动单独的基于 Windows 的安装程序或者[R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server)或[机器学习服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
 
-+ 如果代码是相对简单，你可以将其嵌入 T-SQL 的用户定义函数而不进行修改中,，这些示例中所述：
+2. 选择你想要更新，然后选择的语言**Pre-trained 模型**选项。
 
-    + [创建在 rxExec 中运行的 R 函数](r/../tutorials/deepdive-create-a-simple-simulation.md)
-    + [使用 T-SQL 和 R 的特征工程](r/../tutorials/sqldev-create-data-features-using-t-sql.md)
+    > [!TIP]
+    > 如果你以前运行安装程序来更新 R Server （独立），并只是想要添加预先训练的模型，保留所有以前选择**原样**，然后选择刚预 **-定型模型**选项. **不这样做**取消选择任何以前选择的选项; 如果这样做，则安装程序中删除组件。
 
-+ 如果更复杂的代码，则使用 R 包**sqlrutils**要转换你的代码。 此包旨在帮助编写良好的存储的过程代码的有经验的 R 用户。
+    我们建议你接受模型位置的默认设置。
 
-    第一步是重写 R 代码，作为单个函数具有明确定义的输入和输出。
+3. 单击 **“继续”**。
 
-    然后，使用**sqlrutils**包以正确的格式生成的输入和输出。 **Sqlrutils**包为你生成的完整存储的过程代码和还可以在数据库中注册该存储的过程。
+4. 接受所有其他提示，包括许可协议。
 
-    有关详细信息和示例，请参阅[SqlRUtils](r/../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)。
+安装完成后，你必须执行一些附加步骤以注册预先训练的模型。
 
-**与其他工作流集成**
+1. 打开 Windows 命令提示符**以管理员身份**。
 
-+ 利用 T-SQL 的工具和 ETL 过程。 执行特征工程、 功能提取和数据清理提前数据工作流的一部分。
+2. R server （独立），还包含 Microsoft R 安装程序，导航到安装程序启动文件夹。
 
-    当你处理的专用的 R 开发环境，例如 R Tools for Visual Studio 或 RStudio 时, 可能到你的计算机中提取数据、 以迭代方式，分析数据，然后写出或显示的结果。
+3. 运行`RSetup.exe`并指示要安装的组件、 版本和包含模型源文件，使用此语法的文件夹：
 
-    但是，当独立 R 代码迁移到 SQL Server 中，此过程的大部分可简化或委派给其他 SQL Server 工具。
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
 
-+ 使用安全、 异步可视化效果策略。
-
-    SQL Server 的用户通常无法访问在服务器上，文件和 SQL 客户端工具通常不支持 R 图形设备。 如果你生成图形或其他图形作为解决方案的一部分，请考虑为二进制数据导出绘图和保存到表，或者通过编写。
+    版本参数支持以下值：
 
 
 
@@ -175,52 +195,215 @@ R 函数尝试进行读取的路径，而且如果失败，原因是内置的用
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-determine-which-r-packages-are-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>3.&nbsp; [确定 SQL 服务器上安装哪些 R 包](r/determine-which-packages-are-installed-on-sql-server.md)
+### <a name="3-nbsp-set-up-a-data-science-client-for-r-development-on-sql-serverrset-up-a-data-science-clientmd"></a>3.&nbsp; [设置 SQL Server 上的 R 开发数据科学客户端](r/set-up-a-data-science-client.md)
 
-*更新时间： 2018年-01-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2))
+*更新时间： 2018年-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2) | [下一步](#TitleNum_4))
 
-<!-- Source markdown line 78.  ms.author= "jeannt".  -->
+<!-- Source markdown line 39.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9a065066398843a4bed318fa46d4982d712915a9 7a1df11f57e7bbf0abc37d3aa240dedd2b88c45f  (PR=4715  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=9e6a029456f4a8daddb396bc45d7874a43a47b45) -->
+<!-- git diff --ignore-all-space --unified=0 0583f8febcedc5dc2e14ca1a8073ca204ca37987 3d50ad8f35f2985944741a9b2211a461df2c13e4  (PR=5504  ,  Filename=set-up-a-data-science-client.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
+
+
+
+**R 工具**
+
+
+当与 SQL Server 安装 R 时，可以使用任何安装的相同 R 工具**基**R，如 RGui、 Rterm，等的安装。 因此从技术上讲，你具有所需开发和测试 R 代码的所有工具。
+
+以下标准 R 工具都将纳入*基本安装*，因此默认情况下安装。
+
++ **RTerm**： 用于运行 R 脚本的命令行终端
+
++ **RGui.exe**：适用于 R 的简单交互式编辑器。RGui.exe 和 RTerm 的命令行参数相同。
+
++ **RScript**：用于以批处理模式运行 R 脚本的命令行工具。
+
+若要找到这些工具，确定设置 SQL Server 或独立机器学习功能一起安装的 R 库。 例如，在默认安装中，R 工具位于以下文件夹：
+
++ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server 独立： `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 自 2017 年 1 机器学习服务： `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ 机器学习 Server （独立）： `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+如果你需要使用 R 工具的帮助，只需打开**RGui**，单击**帮助**，然后选择其中一个选项
+
+**Microsoft R Client**
+
+
+Microsoft R 客户端是一个免费下载，使你可以访问的开发使用 RevoScaleR 包。 通过安装 R 客户端，你可以创建可以在所有受支持的计算上下文，包括 SQL Server 数据库中分析和分布式 R 计算 Hadoop、 Spark 中或使用机器学习服务器的 Linux 上运行的 R 解决方案。
+
+如果你已安装不同的 R 开发环境，如 RStudio，一定要重新配置要使用的库和可执行文件由 Microsoft R 客户端提供的环境。 通过这样你可以使用 RevoScaleR 包的所有功能尽管性能将受到限制。
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### <a name="4-nbsp-sql-server-machine-learning-and-r-services-in-databasersql-server-r-servicesmd"></a>4.&nbsp; [SQL Server 计算机学习和 R Services （数据库）](r/sql-server-r-services.md)
+
+*更新时间： 2018年-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_3) | [下一步](#TitleNum_5))
+
+<!-- Source markdown line 83.  ms.author= heidist.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b1a95a7f6d391a518762eb271e8ea7e0d684d403 7fbfabf62917e03e2bcb99d297e1c9d0f0604440  (PR=5504  ,  Filename=sql-server-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
+
+
+
+选择该任务的最佳语言。 使用 SQL 难以实现统计计算，但适合使用 R 来实现。 对于基于集的数据操作，利用 *{包含的内容-会-此处}* 以获得最大性能。 对列进行快速计算时，可使用内存数据库引擎。
+
+**步骤 4： 优化你的解决方案**
+
+
+在该模型已准备好企业数据上的缩放，数据科研人员通常与 DBA 或 SQL 开发人员可以如优化进程方式工作：
+
++ 特征工程
++ 数据引入和数据转换
++ 计分
+
+通常，使用 R 的数据科研人员在性能和伸缩性两方面都会遇到问题，尤其是在使用大型数据集时。 因为通用运行时实现是单线程的，只能适应可装入本地计算机上可用内存的数据集。 与 SQl Server 机器学习服务集成可以提供多种功能，带来更好的性能，并处理更多的数据：
+
++ **RevoScaleR**： 此 R 包中包含的一些最常用 R 函数，重新设计，以提供并行度和缩放实现。 该包还包含函数来进一步提升性能和可扩展性，通过将推送到计算 *{包含的内容-会-此处}* 计算机，它通常具有大得多的内存和计算能力。
+
++ **revoscalepy**。 此 Python 库，位于 SQL Server 自 2017 年，例如远程计算上下文，RevoScaleR，在实现最常用的函数和许多支持的算法分布式处理。
+
+**资源**
+
++ [性能案例研究]
++ [R 和数据优化]
+
+**步骤 5： 部署和使用**
 
 
 
 
-**获取库位置和版本**
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### <a name="5-nbsp-run-python-using-t-sqltutorialsrun-python-using-t-sqlmd"></a>5.&nbsp; [运行 Python 使用 T-SQL](tutorials/run-python-using-t-sql.md)
+
+*更新时间： 2018年-04-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_4) | [下一步](#TitleNum_6))
+
+<!-- Source markdown line 306.  ms.author= heidist.  -->
+
+&nbsp;
 
 
-下面的示例获取在本地计算上下文中，以及程序包版本 RevoScaleR 的库位置。
+<!-- git diff --ignore-all-space --unified=0 bde8c6476df259d225847c08224cefd02f3529d5 cad56997abe7928b588ac4a0302384c5edc1ede5  (PR=5497  ,  Filename=run-python-using-t-sql.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=86c4e1879c5914676b9da384ab101b50b4a63bf1) -->
+
+
+
+2. 请注意索引值不是输出，即使你使用索引从 data.frame 获取特定值。
+
+    **结果**
+
+    |ResultValue|
+    |------|
+    |0.5|
+    |2|
+
+**输出值插入 data.frame 使用索引**
+
+
+让我们了解我们包含简单的数学运算结果的两个序列时，转换为 data.frame 的工作原理。 第一个已生成的 Python 的顺序值的索引。 第二个使用任意字符串值的索引。
+
+1. 此示例使用整数索引序列中获取一个值。
 
 ```
-rxFindPackage(RevoScaleR, "local")
-packageVersion("RevoScaleR")
+    EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    df = pd.DataFrame(s, index=[1])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
 ```
 
-**确定 SQL Server 使用的库路径**
+请记住从 0 开始的自动生成的索引。 尝试使用范围索引值外，请参阅会发生什么情况。
 
-
-如果你已升级机器学习使用绑定的组件，可能会更改 R 库的路径。 在此情况下，R 工具的以前快捷方式可能引用的早期版本。 若要确保的 SQL Server 使用的路径和包版本，你可以运行如下命令：
+2. 现在让我们从其他具有字符串索引的数据帧中获取单个值。
 
 ```
-EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    sql_r_path <- rxSqlLibPaths("local")
-      print(sql_r_path)
-    version_info <-packageVersion("RevoScaleR")
-      print(version_info)'
+    EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+    print(s)
+    df = pd.DataFrame(s, index=["simple math example 1"])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
 ```
 
 **结果**
 
-```
-STDOUT message(s) from external script:
-[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
-[1] '9.2.1'
-```
+|ResultValue|
+|------|
+|0.5|
+
+如果你尝试使用数字索引这一系列从获取一个值，则会出现错误。
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_6"/>
+
+### <a name="6-nbsp-use-python-with-revoscalepy-to-create-a-modeltutorialsuse-python-revoscalepy-to-create-modelmd"></a>6.&nbsp; [使用与 revoscalepy Python 创建模型](tutorials/use-python-revoscalepy-to-create-model.md)
+
+*更新时间： 2018年-04-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_5))
+
+<!-- Source markdown line 22.  ms.author= heidist.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5b642b391ca571412c30c8470875d3d4d3c57246 bd83387eb8a1076a1396bbd48dca12872843aa2f  (PR=5497  ,  Filename=use-python-revoscalepy-to-create-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=86c4e1879c5914676b9da384ab101b50b4a63bf1) -->
+
+
+
+如果你安装 SQL Server 自 2017 年的预发行版本，则应更新到至少的 RTM 版本。 更高版本的服务版本不断扩展和改进 Python 功能。 本教程中的某些功能可能无法在早期的预发行版本。
+
++ 此示例使用预定义的 Python 环境中，名为`PYTEST_SQL_SERVER`。 配置环境以包含**revoscalepy**和其他所需的库。
+
+    如果你没有配置为运行 Python 环境，你必须单独执行此操作。 如何创建或修改 Python 环境的讨论不在本教程的范围之内。 有关如何设置包含正确的库的 Python 客户端的详细信息，请参阅[安装 Python 客户端](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)和[到工具的链接 Python](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools)。
+
+**远程计算上下文和 revoscalepy**
+
+
+此示例演示如何在远程创建 Python 模型的过程_计算上下文_，该对话框允许您从客户端，但选择远程环境，如 SQL Server、 Spark 中或计算机学习服务器，其中实际执行的操作。 使用计算上下文，可以更轻松地编写代码一次，并将其部署到任何受支持的环境。
+
+若要在 SQL Server 中执行 Python 代码，需要**revoscalepy**包。 这是由 Microsoft，类似于提供特殊的 Python 包**RevoScaleR** R 语言包。 **Revoscalepy**包支持创建计算上下文，并提供用于在本地工作站和远程服务器之间传递数据和模型的基础结构。 **Revoscalepy**函数的支持的数据库中的代码将执行[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)。
 
 
 
@@ -233,40 +416,36 @@ STDOUT message(s) from external script:
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
-- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+- [新 + 更新 (11 + 6): &nbsp; &nbsp; **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新 + 更新 (18 + 0): &nbsp; &nbsp; **Analysis Services for SQL**文档](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (218 + 14):**连接到 SQL**文档](../connect/new-updated-connect.md)
+- [新 + 更新 (14 + 0): &nbsp; &nbsp; **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
+- [新 + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
+- [新 + 更新 (3 + 3): &nbsp; &nbsp; **sql Linux**文档](../linux/new-updated-linux.md)
+- [新 + 更新 (7 + 10): &nbsp; &nbsp; **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
+- [新 + 更新 (1 + 3): &nbsp; &nbsp; **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文档](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文档](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL 的工具**文档](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
-- [新 + 更新 (0 + 0): **ActiveX 数据对象 (ADO) sql**文档](../ado/new-updated-ado.md)
-- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (0 + 0): **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新 + 更新 (0 + 0): **sql Data Quality Services**文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
+- [新 + 更新 (0 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
 - [新 + 更新 (0 + 0): **SQL 的示例**文档](../samples/new-updated-samples.md)
-- [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)**文档](../ssma/new-updated-ssma.md)
-- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
+- [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)** 文档](../ssma/new-updated-ssma.md)
 - [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
-
 

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - grouping containers
 - tasks [Integration Services], grouping
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9fd4deab1f2dde19f6d5ec91fe72f10a2e71135d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d46c384df741705288b2a57f7d5759ee6455393c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-or-ungroup-components"></a>对组件分组或取消分组
   **设计器中的**“控制流” **、**“数据流” **和** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡支持可折叠的分组。 如果包包含许多组件，这些选项卡可能变得很拥挤，使您很难一次查看所有组件并找到要使用的项。 可折叠的分组功能可节省工作图面空间，从而简化大型包的处理。  

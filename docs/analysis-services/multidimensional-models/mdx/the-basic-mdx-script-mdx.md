@@ -1,36 +1,23 @@
 ---
-title: "基本 MDX 脚本 (MDX) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 基本 MDX 脚本 (MDX) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- default MDX scripts
-- statements [MDX]
-- expressions [MDX], scripts
-- scripts [MDX], about scripts
-ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f7b6971037be41c0aabcc310940b597dda2ed950
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 脚本 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-多维表达式 (MDX) 脚本定义 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的多维数据集的计算过程。 有两种类型的 MDX 脚本：  
+  多维表达式 (MDX) 脚本定义 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的多维数据集的计算过程。 有两种类型的 MDX 脚本：  
   
  **默认 MDX 脚本**  
  当创建多维数据集时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将为该多维数据集创建一个默认的 MDX 脚本。 此脚本定义整个多维数据集的计算过程。  
@@ -97,7 +84,7 @@ ms.lasthandoff: 02/15/2018
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 &#40;MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX 脚本编写基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 语言参考 & #40;MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX 脚本编写基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -1,30 +1,28 @@
 ---
-title: "为报表服务器应用程序配置可用内存 | Microsoft Docs"
-ms.custom: 
+title: 为报表服务器应用程序配置可用内存 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: dd6fcd0875993612dba6d8f787ba2d13df87d7f6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cd3c8b2a1d803610d0e1e6f086097d56aead9f77
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>为报表服务器应用程序配置可用内存
   尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可使用所有可用内存，但您可以通过为分配给 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器应用程序的内存资源总量配置上限来覆盖默认行为。 此外，您还可以设置阈值，以便报表服务器根据内存压力（低、中或高）来更改其排列请求优先级和处理请求的方式。 在内存压力较低时，报表服务器通过为交互式或按需报表处理提供一个略高的优先级进行响应。 在内存压力较高时，报表服务器使用多种方法在可用资源有限的情况下保持运行状态。  

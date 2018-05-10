@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
 - comparison options [Integration Services]
@@ -23,12 +22,11 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56adf456b22be6675f02c7ee6919428263156938
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c60572c425df10ab659239217424d789bfe2abc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-string-data"></a>比较字符串数据
   字符串比较是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]执行的许多转换中的重要组成部分，字符串比较也用在变量表达式和属性表达式的求值中。 例如，排序转换比较数据集中的值，从而以升序或降序对数据进行排序。  

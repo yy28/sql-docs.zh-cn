@@ -1,32 +1,23 @@
 ---
 title: 数据挖掘 (SSAS) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
-ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 82b5649d8893714b72aa38be381f8d2fbd0833fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-ssas"></a>数据挖掘 (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]预测分析领导者起已 2000年版本中，通过提供中的数据挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘的组合提供了针对预测分析的集成平台，其中包含数据清理和准备、机器学习和报告。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘包括多个标准算法，包括 EM 和 K-Means 群集模型、神经网络、逻辑回归和线性回归、决策树和 naive bayes 分类器。 所有模型具有集成的可视化效果，以帮助开发、优化和评估模型。  将数据挖掘集成到商业智能解决方案可帮助你针对复杂问题做出明智决策。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的数据挖掘，是自 2000 版本以来预测分析方面的领导者。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘的组合提供了针对预测分析的集成平台，其中包含数据清理和准备、机器学习和报告。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘包括多个标准算法，包括 EM 和 K-Means 群集模型、神经网络、逻辑回归和线性回归、决策树和 naive bayes 分类器。 所有模型具有集成的可视化效果，以帮助开发、优化和评估模型。  将数据挖掘集成到商业智能解决方案可帮助你针对复杂问题做出明智决策。  
   
 ## <a name="benefits-of-data-mining"></a>数据挖掘的优点  
  数据挖掘（也称为预测分析和机器学习）使用精心研究的统计原则来发现数据中的模式。 通过将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘算法应用于您的数据，您可以预测趋势、标识模式、创建规则和建议、分析复杂数据集中的事件顺序以及洞察新情况。  
@@ -52,18 +43,18 @@ ms.lasthandoff: 01/08/2018
   
 -   安全性和部署：通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供基于角色的安全性，包括用于钻取到模型和结构数据的单独权限。 轻松地将模型部署到其他服务器，以便用户可以访问模式或执行预测。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  本节中的主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘的主要功能和相关任务。  
   
 -   [数据挖掘概念](../../analysis-services/data-mining/data-mining-concepts.md)  
   
--   [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+-   [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+-   [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 -   [挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
--   [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+-   [测试和验证 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
 -   [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   
@@ -73,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [数据挖掘体系结构](../../analysis-services/data-mining/data-mining-architecture.md)  
   
--   [安全性概述（数据挖掘）](../../analysis-services/data-mining/security-overview-data-mining.md)  
+-   [安全概述 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  

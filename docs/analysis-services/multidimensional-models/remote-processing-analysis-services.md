@@ -1,31 +1,23 @@
 ---
-title: "远程处理 (Analysis Services) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 远程处理 (Analysis Services) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e59011361e6dad623fa5f5cab71d262eb5eb8338
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
+  可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
   
 ## <a name="prerequisites"></a>先决条件  
   
@@ -38,7 +30,7 @@ ms.lasthandoff: 02/15/2018
 -   先解决任何现有的本地处理错误，然后再尝试进行远程处理。 确认在处理请求位于本地时，可成功地从外部关系数据源检索数据。 有关指定用于检索数据的凭据的说明，请参阅[设置模拟选项（SSAS-多维）](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
 ## <a name="on-demand-remote-processing"></a>按需远程处理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接受从具有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员权限的用户或应用程序帐户发出的处理请求。 如果您是管理员，请确认您可连接到远程实例并可通过远程连接手动处理数据库。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]接受来自用户或应用程序具有的帐户的处理请求[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员权限。 如果您是管理员，请确认您可连接到远程实例并可通过远程连接手动处理数据库。  
   
 1.  在将用于安排处理的计算机上，启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
@@ -100,8 +92,8 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 代理组件](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [计划 SSAS Administrative Tasks with SQL Server 代理](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批处理 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [批处理 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [处理对象 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [处理对象 & #40;XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

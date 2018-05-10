@@ -1,40 +1,23 @@
 ---
-title: "授予对对象和操作 (Analysis Services) 的访问权限 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 授予对对象和操作 (Analysis Services) 的访问权限 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.general.f1
-- sql13.asvs.roledesignerdialog.membership.f1
-helpviewer_keywords:
-- access rights [Analysis Services], users
-- permissions [Analysis Services], users
-- security [Analysis Services], user access
-- user access rights [Analysis Services]
-- granting permissions [Analysis Services], users
-ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5a8dc16e1f2885141f20395cbe5e150996919e06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>授予对对象和操作的访问权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  
+  非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 通过将与用户或组所属的每个数据库角色关联的权限组合起来，以此确定特定 Windows 用户或组的有效权限。 因此，如果一个数据库角色没有授予用户或组对维度、度量值或属性的查看权限，但另一个数据库角色授予了该用户或组此项权限，则该用户或组将有权查看对象。  
   

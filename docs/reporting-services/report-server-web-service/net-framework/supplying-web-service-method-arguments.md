@@ -1,33 +1,32 @@
 ---
-title: "提供 Web 服务方法参数 | Microsoft Docs"
-ms.custom: 
+title: 提供 Web 服务方法参数 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, methods
 - Web service [Reporting Services], methods
 - methods [Reporting Services], arguments
 - XML Web service [Reporting Services], methods
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 581e5035565e24e011dc6b53331eb1ad3a04b83e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a273ce7fb8ddcb53545c4fe95db8e6062a1e5b45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服务方法参数
   报表服务器 Web 服务方法通过 HTTP 上的 SOAP 向位于指定 URL 处的服务发送请求。 此服务接收请求，对其进行处理，然后返回响应。 这些请求和响应采用 XML 文档形式。  

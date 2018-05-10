@@ -1,41 +1,23 @@
 ---
-title: "透视 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ready-only cube view
-- OLAP objects [Analysis Services], perspectives
-- storing data [Analysis Services], perspectives
-- perspectives [Analysis Services]
-- cubes [Analysis Services], perspectives
-- visibility [Analysis Services]
-- storage [Analysis Services], perspectives
-ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 
-author: Minewiskan
+title: 透视 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 815d1c6d75613855d84e9bb7ab6e5c369d97bf81
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b5c1fa57a32cdd18f779537fa74dc4b87523d516
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perspectives"></a>透视
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-透视是一种定义，允许用户以一种更简单的方式查看多维数据集。 透视是多维数据集功能的子集。 管理员使用透视可以创建多维数据集的视图，从而帮助用户将注意力集中在与他们关系最为密切的数据上。 透视包含多维数据集所有对象的子集。 但它不能包含父多维数据集中未定义的元素。  
+  透视是一种定义，允许用户以一种更简单的方式查看多维数据集。 透视是多维数据集功能的子集。 管理员使用透视可以创建多维数据集的视图，从而帮助用户将注意力集中在与他们关系最为密切的数据上。 透视包含多维数据集所有对象的子集。 但它不能包含父多维数据集中未定义的元素。  
   
  简单 <xref:Microsoft.AnalysisServices.Perspective> 对象由基本信息、维度、度量值组、计算、KPI 和操作组成。 基本信息包括透视的名称和默认度量值。 维度是多维数据集维度的子集。 度量值组是多维数据集度量值组的子集。 计算是多维数据集计算的子集。 KPI 是多维数据集 KPI 的子集。 操作是多维数据集操作的子集。  
   

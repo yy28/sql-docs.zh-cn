@@ -1,38 +1,19 @@
 ---
-title: "AMO 其他类和方法 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- AmoException class [AMO]
-- Analysis Management Objects, backup and restore
-- assembly objects [AMO]
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 其他类和方法 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9923daa4b7cb9b504fde047f073579279b3d05e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他类和方法
   本部分包含公共类，并不特定于 olap 数据或数据挖掘，并且在管理或管理中的对象时，很有帮助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 它们包括诸如存储过程、跟踪、异常、备份和还原等功能。  
@@ -53,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
  ![AMO 其他类](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "AMO 其他类")  
   
-##  <a name="Assembly">程序集对象</a>  
+##  <a name="Assembly"></a> 程序集对象  
  <xref:Microsoft.AnalysisServices.Assembly> 对象的创建方法是：将其添加到服务器的程序集集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Assembly> 对象更新到服务器中。  
   
  若要删除<xref:Microsoft.AnalysisServices.Assembly>对象时，它具有要使用的 Drop 方法删除<xref:Microsoft.AnalysisServices.Assembly>对象。 从数据库的程序集集合中删除 <xref:Microsoft.AnalysisServices.Assembly> 对象不会删除程序集，只会使您在下次运行应用程序之前在应用程序中看不到它。  
@@ -63,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 > [!IMPORTANT]  
 >  COM 程序集可能会造成安全风险。 由于此风险和其他注意事项， [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]中不推荐使用 COM 程序集。 未来版本可能不支持 COM 程序集。  
   
-##  <a name="Backup">备份和还原方法</a>  
+##  <a name="Backup"></a> 备份和还原方法  
  Backup 和 Restore 方法分别用于创建 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库的副本及使用副本恢复数据库。 Backup 方法属于 <xref:Microsoft.AnalysisServices.Database> 对象，Restore 方法属于 <xref:Microsoft.AnalysisServices.Server> 对象。  
   
  只有服务器管理员和数据库管理员可以执行数据库的备份。 只有服务器管理员可以将数据库还原到与其备份之前所在服务器不同的服务器中。 数据库管理员只有在拥有某个现有数据库时，才可以通过覆盖该数据库来还原数据库。 如果数据库还原时带有其原始安全定义，则还原之后，数据库管理员可能会失去对还原后的数据库的访问权限。  
@@ -116,7 +97,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **密码**，如果非空，指定服务器将加密备份文件。  
   
-##  <a name="Traces">跟踪对象</a>  
+##  <a name="Traces"></a> 跟踪对象  
  跟踪是用于监视、重播和管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的框架。 客户端应用程序（如 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]）订阅跟踪，服务器发回跟踪定义中指定的跟踪事件。  
   
  每个事件都由事件类来描述。 事件类描述所生成事件的类型。 在事件类中，事件子类描述更细一层分类。 每个事件都由多个列来描述。 描述跟踪事件的各列对于所有事件都是一致的且符合 SQL 跟踪结构。 每列中记录的信息可能会因事件类而异；即为每个跟踪定义一组预定义的列，但列的含义可能会因事件类而异。 例如，TextData 列用于记录所有语句事件的原始 ASSL。  
@@ -155,14 +136,14 @@ ms.lasthandoff: 02/15/2018
   
 6.  继续执行应用程序。  
   
-##  <a name="CaptureLog">CaptureLog 类和 CaptureXML 属性</a>  
+##  <a name="CaptureLog"></a> CaptureLog 类和 CaptureXML 属性  
  AMO 要执行的所有操作都会作为 XMLA 消息发送到服务器。 AMO 提供捕获所有这些没有 SOAP 标头的消息的方法。 有关详细信息，请参阅[简介 AMO 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)。 CaptureLog 是 AMO 中用于编写对象和操作脚本的机制；对象和操作脚本将以 XMLA 编写。  
   
  若要开始捕获 XML，CaptureXML 服务器对象属性应设置为**true**。 然后，将开始在 CaptureLog 类中捕获所有要发送到服务器的操作，不包括正在向服务器进行发送的操作。 CaptureLog 之所以被视为类，是因为它有一个 Clear 方法，该方法用于清除捕获日志。  
   
  若要读取该日志，请获取字符串集合并开始循环访问这些字符串。 此外，还可以使用服务器对象方法 ConcatenateCaptureLog 将所有日志串联到一个字符串中。 ConcatenateCaptureLog 要求有三个参数，其中两个是必需的。 必需的参数*事务*，为 Boolean 类型和*并行*，为 Boolean 类型。 如果*事务*设置为**true**，它指示 XML 批处理文件在由于而不是每个命令在单个事务视为分隔的事务将会创建。 如果*并行*设置为**true**，它指示与记录将并发执行，而不是按顺序记录批处理文件中的所有命令。  
   
-##  <a name="AMO">AMOException 异常类</a>  
+##  <a name="AMO"></a> AMOException 异常类  
  可以使用 AMOException 异常类轻松地捕获应用程序中由 AMO 引发的异常。  
   
  AMO 将在发现各种不同的问题时引发异常。 下表列出了 AMO 所处理的异常的种类。 异常从 <xref:Microsoft.AnalysisServices.AmoException> 类派生。  
@@ -178,7 +159,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices>   
  [引入 AMO 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [逻辑体系结构 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [逻辑体系结构 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

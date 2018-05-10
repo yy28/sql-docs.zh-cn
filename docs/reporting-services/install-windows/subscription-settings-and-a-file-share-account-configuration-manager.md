@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
@@ -18,12 +17,11 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8faf295d4afa2967adaa1bcb922f8b360bbc138e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f556e8d26ab7652edfdef620d30de00bd0a0b7db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>订阅设置和文件共享帐户（配置管理器）
   使用 **配置管理器的**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “订阅设置”页为本机模式报表服务器和文件共享订阅配置文件共享帐户。 文件共享帐户运行使用将报表传递给文件共享的多个订阅中的单组凭据。 需要更改凭据时，可以为文件共享帐户配置更改并且无需更新每个单独的订阅。  

@@ -1,34 +1,23 @@
 ---
-title: "创建会话作用域的计算成员 (MDX) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 创建会话作用域的计算成员 (MDX) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- CREATE MEMBER statement
-- session-scoped calculated members [MDX]
-ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 273553132fd9a3cd32900fef28800d28c9f6c1d5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1f587c6a34d69da4ad3a218678eaa5b3f026f01b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX 计算成员的会话作用域的计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-若要创建在整个多维表达式 (MDX) 会话中都可用的计算成员，请使用 [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) 语句。 直到 MDX 会话关闭才会删除使用 CREATE MEMBER 语句创建的计算成员。  
+  若要创建在整个多维表达式 (MDX) 会话中都可用的计算成员，请使用 [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) 语句。 直到 MDX 会话关闭才会删除使用 CREATE MEMBER 语句创建的计算成员。  
   
  如本主题中所介绍，CREATE MEMBER 语句的语法很直观且易于使用。  
   
@@ -59,6 +48,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建查询作用域计算成员 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
+ [创建查询作用域计算成员 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

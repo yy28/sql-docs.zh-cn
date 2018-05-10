@@ -1,32 +1,23 @@
 ---
 title: 使用 Microsoft 一般内容树查看器浏览模型 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- mining model content, viewing
-ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
-caps.latest.revision: 23
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6489f35c5d438dd234e97eeed3d042ea41cc291c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 540228c694ee222d9c854b32b3c0939adcaeadb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>使用 Microsoft 一般内容树查看器浏览模型
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]一般挖掘模型内容查看器提供有关挖掘算法中，找到的模式的详细的信息，并可以访问在分析过程中生成的各种统计信息。 信息的数量和类型取决于使用的算法，但可包括以下几类：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般挖掘模型内容查看器，可以查看有关挖掘算法找到的模式的详细信息，以及访问在分析过程中生成的各种统计信息。 信息的数量和类型取决于使用的算法，但可包括以下几类：  
   
 -   数据段及其特征。  
   
@@ -55,7 +46,7 @@ SELECT * FROM [<mining model name>].CONTENT
  有关详细信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft 一般内容树查看器 & #40; 数据挖掘 & #41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

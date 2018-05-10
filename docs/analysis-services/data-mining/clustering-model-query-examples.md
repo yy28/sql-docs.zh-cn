@@ -1,35 +1,23 @@
 ---
-title: "聚类分析模型查询示例 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 聚类分析模型查询示例 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- clustering [Data Mining]
-- content queries [DMX]
-- clustering algorithms [Analysis Services]
-ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a3a59f8e64dcdefc69c70c3025ed2af3dea0767b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
+  依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的模型创建查询。  
   
@@ -380,17 +368,17 @@ NATURAL PREDICTION JOIN
 |[分类 (DMX)](../../dmx/cluster-dmx.md)|返回最可能包含输入事例的分类。|  
 |[ClusterDistance (DMX)](../../dmx/clusterdistance-dmx.md)|返回输入事例与指定分类之间的距离；如果未指定分类，则返回输入事例与可能性最大的分类之间的距离。<br /><br /> 返回输入事例属于指定分类的概率。|  
 |[ClusterProbability (DMX)](../../dmx/clusterprobability-dmx.md)|返回输入事例属于指定分类的概率。|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
-|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
+|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
 |[PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md)|返回输入事例适合现有模型的可能性。|  
 |[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   

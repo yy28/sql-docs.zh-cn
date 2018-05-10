@@ -1,31 +1,23 @@
 ---
-title: "新 RestoreFolder cmdlet |Microsoft 文档"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 新 RestoreFolder cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3aaf4630511f792a5ecb3ce5437bf2486db6549a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>New-RestoreFolder cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-将原始文件夹还原到新文件夹。  
+  将原始文件夹还原到新文件夹。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -42,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-originalfolder-string"></a>-OriginalFolder \<string>  
+### <a name="-originalfolder-string"></a>-OriginalFolder\<字符串 >  
  获取原始文件夹位置。  
   
 |||  
@@ -53,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|true|  
 |接受通配符？|false|  
   
-### <a name="-newfolder-string"></a>-NewFolder \<string>  
+### <a name="-newfolder-string"></a>-NewFolder\<字符串 >  
  设置新文件夹的位置。  
   
 |||  
@@ -64,7 +56,7 @@ ms.lasthandoff: 02/15/2018
 |接受管道输入？|true|  
 |接受通配符？|false|  
   
-### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter >  
  指定是否应在内存中创建并返回该对象。  
   
 |||  
@@ -87,7 +79,7 @@ ms.lasthandoff: 02/15/2018
 |接受通配符？|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅[配置 HTTP 访问 Analysis Services 上 Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)为 HTTP 连接。  
+ 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅[到在 Internet Information Services 上的 Analysis Services 配置 HTTP 访问&#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)为 HTTP 连接。  
   
  如果指定此参数，将使用用户名和密码连接到指定的 Analysis Server 实例。 如果未指定凭据，将使用正在运行该工具的用户的默认 Windows 帐户。  
   

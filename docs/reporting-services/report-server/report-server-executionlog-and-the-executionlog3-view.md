@@ -1,30 +1,28 @@
 ---
-title: "报表服务器 ExecutionLog 和 ExecutionLog3 视图 | Microsoft Docs"
-ms.custom: 
+title: 报表服务器 ExecutionLog 和 ExecutionLog3 视图 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2127c8b47f7b61114b8a2b9aa7bce78df5682f5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  

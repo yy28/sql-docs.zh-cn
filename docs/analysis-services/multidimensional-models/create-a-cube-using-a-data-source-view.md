@@ -1,31 +1,23 @@
 ---
-title: "创建多维数据集使用数据源视图 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 创建多维数据集使用数据源视图 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2ec11a7d770d87f157d191a791b31545d42fb146
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用数据源视图创建多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果您想要使用现有的数据源视图，则可以使用这个生成新多维数据集的方法。 使用此方法，您可以指定数据源视图并选择您要在数据源视图中使用的事实数据表和维度表。 然后，您选择要包括在多维数据集中的维度和度量值。  
+  如果您想要使用现有的数据源视图，则可以使用这个生成新多维数据集的方法。 使用此方法，您可以指定数据源视图并选择您要在数据源视图中使用的事实数据表和维度表。 然后，您选择要包括在多维数据集中的维度和度量值。  
   
  若要使用数据源创建多维数据集，请在解决方案资源管理器中右键单击“多维数据集”，然后选择“新建多维数据集”。 多维数据集向导将打开。  
   
@@ -58,7 +50,7 @@ ms.lasthandoff: 02/15/2018
 > [!NOTE]  
 >  在“关系图”选项卡上，可以放大或最大化向导窗口以便查看架构。  
   
- 如果在数据源视图中存在时间维度表，则在 **“时间维度表”** 列表中选择该表。 如果没有任何故障，请将**\<无 >**选。 这是列表上的默认项。 将某个表选择为时间维度表还将在 **“表”** 和 **“关系图”** 选项卡上将其作为维度表选择。  
+ 如果在数据源视图中存在时间维度表，则在 **“时间维度表”** 列表中选择该表。 如果没有任何故障，请将**\<无 >** 选。 这是列表上的默认项。 将某个表选择为时间维度表还将在 **“表”** 和 **“关系图”** 选项卡上将其作为维度表选择。  
   
 ## <a name="defining-time-periods"></a>定义时间段  
  如果您在选择表类型时指定了某一时间维度表，则使用向导的 **“定义时间段”** 页可以指定表中与标准时间段相对应的列。 在 **“时间属性名称”**下查找标准期间。 对于在时间维度表中具有相应列的每一行，选择 **“时间表列”**下的正确的列。 该向导使用您指定的关联创建属性并建议对于您的数据有意义的时间层次结构。 这些关联还为新的时间维度中的相应属性设置 **“类型”** 属性。 然后，该向导基于时间维度表创建时间维度。  
@@ -95,7 +87,7 @@ ms.lasthandoff: 02/15/2018
   
  若要从多维数据集中删除任何对象，请取消选中该对象旁边的复选框。 取消选中某一对象旁边的复选框还会删除该对象之下的所有对象。 对象之间的依赖关系是强制的，因此，如果您删除某一属性，则依赖于该属性的所有层次结构级别也将被删除。 例如，取消选中某一层次结构旁的复选框将清除该层次结构中所有级别旁的复选框，并且将删除这些级别以及层次结构。 无法删除维度的键属性。  
   
- 你可以重命名任何维度、 属性、 层次结构或级别是通过单击的名称或通过右键单击名称，然后在快捷菜单上单击**重命名\<对象 >**，其中 **\<对象 >**是**维度**，**属性**，或**级别**。  
+ 你可以重命名任何维度、 属性、 层次结构或级别是通过单击的名称或通过右键单击名称，然后在快捷菜单上单击**重命名\<对象 >**，其中 **\<对象 >** 是**维度**，**属性**，或**级别**。  
   
  在向导的“标识事实数据表和维度表”页上定义的维度表的数目和此向导页上列出的维度数目之间不一定存在一对一关系。 根据数据源视图中各表之间的关系，该向导可以使用两个或更多的表来生成维度（例如，按照雪花型架构的要求）。  
   

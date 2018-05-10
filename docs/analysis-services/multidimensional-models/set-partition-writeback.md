@@ -1,36 +1,23 @@
 ---
-title: "设置分区写回 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 设置分区写回 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- write-enabled partitions [Analysis Services]
-- partitions [Analysis Services], writeback
-- partitions [Analysis Services], write-enabled
-- writeback [Analysis Services], partitions
-ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 66b06d7c6dabeeb83707dabe1d454267f6c4bf3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-partition-writeback"></a>设置分区写回
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果对度量值组执行写启用操作，则最终用户可在浏览多维数据集数据时对其进行更改，所做的更改保存在一个称为“写回表”的单独表中，而不是多维数据集数据或源数据中。 浏览已启用写操作的分区的最终用户将看到对该分区在这个写回表中所做的全部更改的实际结果。  
+  如果对度量值组执行写启用操作，则最终用户可在浏览多维数据集数据时对其进行更改，所做的更改保存在一个称为“写回表”的单独表中，而不是多维数据集数据或源数据中。 浏览已启用写操作的分区的最终用户将看到对该分区在这个写回表中所做的全部更改的实际结果。  
   
  可以浏览或删除写回数据。 还可以将写回数据转换为分区。 在已启用写操作的分区上，可使用多维数据集角色授予用户和用户组读/写权限，并限制对分区中特定单元或单元组的访问。  
   

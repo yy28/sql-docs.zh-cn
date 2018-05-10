@@ -1,34 +1,23 @@
 ---
-title: "创建、 修改或删除属性关系 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 创建、 修改或删除属性关系 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- attributes [Analysis Services], member properties
-- member properties [Analysis Services], creating
-ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e521c6eb3bbcb1c40dde10c5767ea024e6eaa3c1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ff70fdc646a801382fbeb866022c852ea1310233
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>属性关系的创建、 修改或删除关系
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可以使用 **中的维度设计器的** “属性关系” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡，创建、修改或删除一个维度中的属性之间的属性关系。  
+  可以使用 **中的维度设计器的** “属性关系” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡，创建、修改或删除一个维度中的属性之间的属性关系。  
   
 ### <a name="to-create-an-attribute-relationship"></a>创建属性关系  
   

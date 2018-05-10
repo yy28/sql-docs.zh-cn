@@ -1,32 +1,19 @@
 ---
-title: "交叉验证 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 交叉验证 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- stored procedures [Analysis Services], data mining
-- cross-validation [data mining]
-- scoring [data mining]
-- accuracy testing [data mining]
-ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3cac76036969ad837035a69a12b108623bb6f248
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉验证（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -118,17 +105,17 @@ ms.lasthandoff: 02/15/2018
   
  在第一个阶段中，您将调用一个系统存储过程，该过程根据您在数据集中指定的数量创建相同数量的分区，并返回每个分区的准确性结果。 对于每个度量，Analysis Services 都会计算各个分区的平均偏差和标准偏差。  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetCrossValidationResults & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
  **生成整个数据集的度量**  
   
  在第二个阶段中，您将调用另一组存储过程。 这些存储过程不会对数据集进行分区，但会生成整个指定数据集的准确性结果。 如果您已对挖掘结构进行分区和处理，则可以调用第二组存储过程来获取结果。  
   
--   [SystemGetAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetAccuracyResults & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 #### <a name="defining-the-testing-data"></a>定义测试数据  
  在运行计算准确性的交叉验证存储过程（SystemGetAccuracyResults 或 SystemGetClusterAccuracyResults）时，可以指定交叉验证过程中用于测试的数据源。 此选项在用户界面中不可用。  
@@ -188,16 +175,16 @@ ms.lasthandoff: 02/15/2018
   
 |主题|链接|  
 |------------|-----------|  
-|介绍如何在 SQL Server Development Studio 中设置交叉验证参数。|[交叉验证选项卡 &#40;挖掘准确性图表视图 &#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
+|介绍如何在 SQL Server Development Studio 中设置交叉验证参数。|[交叉验证选项卡 & #40;挖掘准确性图表视图 & #41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
 |介绍由交叉验证提供的度量|[交叉验证公式](../../analysis-services/data-mining/cross-validation-formulas.md)|  
 |说明交叉验证报表格式并定义为每种模型类型提供的统计度量值。|[交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
-|列出用于计算交叉验证统计信息的存储过程。|[数据挖掘存储过程 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
+|列出用于计算交叉验证统计信息的存储过程。|[数据挖掘存储过程 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
 |||  
 |介绍如何为挖掘结构和相关模型创建测试数据集。|[定型集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|查看其他安全性图表类型示例。|[分类矩阵 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [提升图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|介绍创建各种安全性图表的步骤。|[测试和验证任务和操作指南 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|查看其他安全性图表类型示例。|[分类矩阵 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [提升图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|介绍创建各种安全性图表的步骤。|[测试和验证任务和操作指南 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

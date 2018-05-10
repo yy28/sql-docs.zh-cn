@@ -1,27 +1,25 @@
 ---
-title: "Tablix 数据区域（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: Tablix 数据区域（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e3bd85c7fee051173c5b6b6860d0e978dacc42d4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e7c8f1c0b70fddbe7e2193ff17ddbfff60f7a374
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，Tablix 数据区域有四个包含 tablix 单元的区域：   

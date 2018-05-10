@@ -1,38 +1,19 @@
 ---
-title: "执行批处理操作 (XMLA) |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- multiple projects
-- XML for Analysis, batches
-- parallel batch execution [XMLA]
-- transactional batches
-- serial batch execution [XMLA]
-- XMLA, batches
-- batches [XML for Analysis]
-- nontransactional batches
-ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 
-author: Minewiskan
+title: 执行批处理操作 (XMLA) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7fcf1074de0d233c3df24ddf1696e26a8d3bd84a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>执行批处理操作 (XMLA)
   你可以使用[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML 用于 Analysis (XMLA) 若要运行多个 XMLA 命令使用的单个 XMLA 命令[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 你可以运行多个命令中包含**批处理**是作为单个事务或在为每个命令的单个事务、 以串行或并行命令。 你还可以指定的外部绑定和其他属性**批处理**命令处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
  如果任何命令失败的事务性批处理中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在中回滚任何命令**批处理**以前失败的命令运行的命令和**批处理**命令立即结束。 中的任何命令**批处理**尚未运行的命令不会执行。 后**批处理**命令结束，**批处理**命令会报告遇到的失败的命令的任何错误。  
   
- **Nontransactional**  
+ **非事务性**  
  如果**事务**属性设置为 false，**批处理**命令运行所包含的每个命令**批处理**命令，在单独的事务- *非事务性*批处理。 如果任何命令失败到非事务性批处理中，**批处理**命令会继续运行之后失败的命令运行命令。 后**批处理**命令尝试运行所有命令，**批处理**命令包含，**批处理**命令报告发生的任何错误。  
   
  返回由命令中包含的所有结果**批处理**命令返回与命令包含在相同的顺序**批处理**命令。 返回的结果**批处理**命令取决于是否**批处理**命令是事务性还是非事务性。  
@@ -128,8 +109,8 @@ ms.lasthandoff: 02/15/2018
     >  A**过程**命令不能包括**绑定**，**数据源**， **DataSourceView**，或**ErrorConfiguration**属性，如果**过程**命令包含在**批处理**命令。 如果你必须指定这些属性**过程**命令中，提供所需信息的对应属性中**批处理**命令包含**过程**命令。  
   
 ## <a name="see-also"></a>另请参阅  
- [Batch 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Process 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
+ [Batch 元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [处理元素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

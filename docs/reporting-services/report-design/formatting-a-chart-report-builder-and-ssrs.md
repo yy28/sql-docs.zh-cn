@@ -1,16 +1,15 @@
 ---
-title: "设置图表格式（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 设置图表格式（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10214"
 - sql13.rtp.rptdesigner.charttitleproperties.shadow.f1
@@ -53,16 +52,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3d38b2ce46120e435ac1b94623587816ff20307d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 744758362c1c9a9e8b76fbd28dc652ed7a4e4699
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>设置图表格式（报表生成器和 SSRS）
   为图表定义数据并且该图表按预期方式显示之后，您可添加格式设置以改善整体外观效果并突出显示关键数据点。 可以从“属性”对话框修改最常用的格式设置选项，此对话框在右键单击某图表元素以显示其快捷菜单时出现。 每个图表元素都有其相对应的对话框。 有关图表元素的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

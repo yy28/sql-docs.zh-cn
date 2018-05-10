@@ -1,32 +1,31 @@
 ---
-title: "实现 ISubscriptionBaseUIUserControl 接口 | Microsoft Docs"
-ms.custom: 
+title: 实现 ISubscriptionBaseUIUserControl 接口 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - user controls [Reporting Services]
 - ISubscriptionBaseUIUserControl interface
 - delivery extensions [Reporting Services], user controls
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: de645a67fc9997fdc4d527035ec83108798d8941
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 538c4b578cd8ed323bd3e335bc395f9720664c75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface"></a>实现 ISubscriptionBaseUIUserControl 接口
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件可以包含订阅用户界面 (UI) 的实现，以便在报表管理器中收集扩展插件特定的信息。 当用户创建新的订阅或修改现有订阅时，将调用此 UI。 当创建新订阅时，此 UI 显示适当的默认值并使得用户能够与传递提供程序交互。 当修改订阅时，将使用当前订阅中的信息预填充此 UI。  

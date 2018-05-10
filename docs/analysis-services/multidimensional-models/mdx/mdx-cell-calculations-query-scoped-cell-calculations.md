@@ -1,34 +1,23 @@
 ---
-title: "创建查询作用域的单元计算 (MDX) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 创建查询作用域的单元计算 (MDX) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- WITH keyword
-- query-scoped cell calculations [MDX]
-ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 72d0b1bceafcf65ce32dfd746e4498301cbc0afb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX 单元计算的查询作用域的单元计算
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-在多维表达式 (MDX) 中，可以使用 **WITH** 关键字描述查询上下文中的计算单元。 **WITH** 关键字的语法如下：  
+  在多维表达式 (MDX) 中，可以使用 **WITH** 关键字描述查询上下文中的计算单元。 **WITH** 关键字的语法如下：  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -61,6 +50,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  另一方面，只要对多维数据集发出的 MDX 查询涉及计算单元定义中包含的单元，MDX 将就会处理计算公式。 此处理的发生不受创建作用域的限制。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建单元格计算语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [创建单元格计算语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

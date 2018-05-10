@@ -1,30 +1,28 @@
 ---
-title: "“定义查询参数”对话框（报表生成器）| Microsoft Docs"
-ms.custom: 
+title: “定义查询参数”对话框（报表生成器）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.definequeryparameters.f1
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5827e2d7ebe9525e0c72a0ffb4a91c61cdf61b47
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9b06cbb646ad58446a4c2def9f24e148262c362a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-query-parameters-dialog-box"></a>“定义查询参数”对话框
   当您在设计阶段在查询设计器中运行查询以查看示例数据时，可以使用 **“定义查询参数”** 对话框指定参数值。 查询参数对数据源的数据进行筛选，并帮助限制报表处理的数据量。 这些值不会保存到报表定义中。  

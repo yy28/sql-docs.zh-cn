@@ -1,37 +1,23 @@
 ---
 title: 授予维度 (Analysis Services) 的权限 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensions.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- read/write permissions
-- user access rights [Analysis Services], dimensions
-- permissions [Analysis Services], dimensions
-ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dba9778b626da43a404c773eaeb1745b3bcd3528
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79894aabd721017897db2bbd9c5aab4b2410bd57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授予维度的权限 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]维度安全用于设置维度对象，而非其数据的权限。 通常，允许或拒绝访问处理操作是在设置维度权限时的主要目标。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  维度安全用于设置维度对象（而非其数据）的权限。 通常，允许或拒绝访问处理操作是在设置维度权限时的主要目标。  
   
  但是，也许你的目标不是控制处理操作，而是控制维度的数据访问或其包含的属性和层次结构。 例如，具有不同地区销售部门的公司可能想要部门外人员不得接触销售绩效信息。 为了允许或拒绝不同组成人员访问某部分的维度数据，可以对属性和维度成员设置权限。 请注意，你无法拒绝对单个维度对象本身的访问，仅可拒绝对其数据的访问。 如果近期目标是允许或拒绝访问维度中的成员（包括对单个属性结构层次的访问权限），请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 了解更多信息。  
   
@@ -75,9 +61,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [角色和权限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予维度数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [授予多维数据集或模型权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [授予对数据挖掘结构和模型的权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予维度数据 & #40; 的自定义访问权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授予单元数据 & #40; 的自定义访问权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

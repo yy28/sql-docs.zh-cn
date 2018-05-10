@@ -1,38 +1,23 @@
 ---
-title: "使用数据源视图设计器 (Analysis Services) 中的关系图 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用数据源视图设计器 (Analysis Services) 中的关系图 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dsvdesigner.findtable.f1
-- sql13.asvs.dsvdesigner.diagramorganizerpane.f1
-- sql13.asvs.dsvdesigner.diagrampane.f1
-helpviewer_keywords:
-- data source views [Analysis Services], diagrams
-- diagrams [Analysis Services]
-ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 99390ff49d6c0a868826cc860439ebd644f18777
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>使用数据源视图设计器中的关系图 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据源视图 (DSV) 关系图是 DSV 中对象的直观表示形式。 您可以交互使用该关系图以添加、隐藏、删除或修改特定对象。 还可以对同一 DSV 创建多个关系图以特别关注对象的某个子集。  
+  数据源视图 (DSV) 关系图是 DSV 中对象的直观表示形式。 您可以交互使用该关系图以添加、隐藏、删除或修改特定对象。 还可以对同一 DSV 创建多个关系图以特别关注对象的某个子集。  
   
  若要更改关系图窗格中显示的关系图区域，请单击该窗格右下角的四向箭头，然后在关系图的缩略图上拖动选择框，直到选定要在关系图窗格中显示的区域为止。  
   
@@ -97,6 +82,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [数据源视图设计器 &#40;Analysis Services-多维数据 &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
+ [数据源视图设计器 & #40;Analysis Services-多维数据 & #41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

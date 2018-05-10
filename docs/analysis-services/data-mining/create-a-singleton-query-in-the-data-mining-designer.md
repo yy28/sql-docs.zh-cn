@@ -1,34 +1,23 @@
 ---
-title: "在数据挖掘设计器中创建单独查询 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 在数据挖掘设计器中创建单独查询 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- singleton queries [Analysis Services]
-- Mining Model Prediction [Analysis Services], singleton queries
-ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 88119afa32933b6c35d8e404de13bc1c5acfefb1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 56be277d752c3be83f83b7d657a633d80a9688d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在数据挖掘设计器中创建单独查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果需要为单个事例创建预测，单独查询是非常有用的。 有关单独查询的详细信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
+  如果需要为单个事例创建预测，单独查询是非常有用的。 有关单独查询的详细信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   
  在数据挖掘设计器的 **“挖掘模型预测”** 选项卡中，可以创建许多不同类型的查询。 可以通过使用设计器或者通过键入数据挖掘扩展插件 (DMX) 语句来创建查询。 还可以从设计器开始工作，并通过更改 DMX 语句或者通过添加 WHERE 或 ORDER BY 子句来修改它所创建的查询。  
   
@@ -87,6 +76,6 @@ AS [t]
      此时将出现一个新屏幕，显示查询的结果。 若要查看刚创建的 DMX 语句，请单击 **SQL**。  
   
 ## <a name="see-also"></a>另请参阅  
- [预测查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [预测查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

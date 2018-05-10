@@ -1,31 +1,23 @@
 ---
-title: "数据连接用户无法进行委托 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
-caps.latest.revision: 
-author: Minewiskan
+title: 数据连接用户无法进行委托 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f54b444beb513ec4cc81432d3a58c27b4f6fc43
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 04aa862fa8a0cd4b6a7619b79645c04c3c325745
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>数据连接用户无法进行委托
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 无法连接到 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器实例，则会返回此错误。  
+  对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 无法连接到 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器实例，则会返回此错误。  
   
 ## <a name="details"></a>详细信息  
   

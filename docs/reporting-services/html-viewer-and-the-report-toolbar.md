@@ -1,30 +1,28 @@
 ---
-title: "HTML 查看器和报表工具栏 | Microsoft Docs"
+title: HTML 查看器和报表工具栏 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  

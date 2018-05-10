@@ -1,33 +1,25 @@
 ---
-title: "对挖掘结构的钻取 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 对挖掘结构的钻取 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ac35e52322e82cff60dd9f62504db59f8f4b982e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f2337e47bccd3d8dbfd07174f3628e887344e068
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供两个不同选项来钻取到事例数据。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>钻取到模型事例与钻取到结构  
  钻取到“模型事例”  用于查找与模型中的规则、模式或群集有关的其他详细信息。  
@@ -62,7 +54,7 @@ ms.lasthandoff: 02/15/2018
 |-|-|  
 |从挖掘模型查看器对结构使用钻取|[从模型查看器使用钻取](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |有关特定的模型类型，请参阅钻取查询的示例。|[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)|  
-|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予对数据挖掘结构和模型 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [在挖掘模型的钻取](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  

@@ -1,38 +1,23 @@
 ---
-title: "创建日期类型维度 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 创建日期类型维度 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- dimensions [Analysis Services], time
-- adding time intelligence
-- server time dimensions [Analysis Services]
-- calendars [Analysis Services]
-- time intelligence [Analysis Services]
-ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2e42e3d8a3a3f33840d1004119b84fbe4a247888
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>数据库维度-创建日期类型维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，时间维度是指其属性表示时间段（如年、半期、季度、月和天）的维度类型。 时间维度中的时间段可提供用于分析和报告的基于时间的粒度级别。 属性将按层次结构进行组织，并且时间维度的粒度主要由历史数据的业务和报表需求决定。 例如，商业智能应用程序中的大多数财务数据和销售数据使用月粒度或季度粒度。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，时间维度是指其属性表示时间段（如年、半期、季度、月和天）的维度类型。 时间维度中的时间段可提供用于分析和报告的基于时间的粒度级别。 属性将按层次结构进行组织，并且时间维度的粒度主要由历史数据的业务和报表需求决定。 例如，商业智能应用程序中的大多数财务数据和销售数据使用月粒度或季度粒度。  
   
  通常， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的多维数据集会以某种形式合并一个时间维度。 多维数据集可能包含多个时间维度，也可以包含来自同一时间维度的多个层次结构，具体将取决于数据的粒度和报表需求。 但是，并非所有多维数据集都需要时间维度。 某些 OLAP 应用程序（例如，基于活动的开销）不需要时间维度，因为基于活动的维度内的开销是基于活动的，而不是基于时间的。  
   

@@ -3,29 +3,28 @@ title: 为 AlwaysOn 可用性组创建群集 DTC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: 2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c766dd57d08e1673c4fb3231a6a7ba86af26886f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 482bb916d7a9e7a75116ef85f3b9284d942ed94d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 本主题介绍如何为 SQL Server AlwaysOn 可用性组完整配置群集 DTC 资源。 完整配置过程可能要长达一小时才能完成。 
 
 本演练将按照[为 SQL Server 可用性组群集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的要求，创建群集 DTC 资源和 SQL Server 可用性组。

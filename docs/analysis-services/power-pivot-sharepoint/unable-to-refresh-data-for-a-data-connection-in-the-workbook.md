@@ -1,31 +1,23 @@
 ---
-title: "无法刷新工作簿中的数据连接的数据 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 
-author: Minewiskan
+title: 无法刷新工作簿中的数据连接的数据 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c1961c883a5e38c56acf65def83272aa1e5adb8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>无法刷新工作簿中用于数据连接的数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 提交对某一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的连接请求并且该请求失败，则会返回此错误。  
+  对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 提交对某一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的连接请求并且该请求失败，则会返回此错误。  
   
 ## <a name="details"></a>详细信息  
   
@@ -67,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
  若要解决此问题，请将计算机加入到与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器相同的域中，或在本地计算机上安装一个域控制器。 第二种解决方案是安装域控制器，这将要求您为所有服务和用户创建本地域帐户。 您将需要为您定义的帐户配置服务帐户和 SharePoint 权限。  
   
- 如果你的目标是在脱机状态下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的详细说明，请参阅 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 上的博客文章“使服务器断开网络”。  
+ 如果你的目标是在脱机状态下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则在计算机上安装域控制器将非常有用。 有关详细说明如何使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]脱机，请参阅博客文章以了解"采用你[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务器与网络断开"上[ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)。  
   
  **应用场景 4：服务器不稳定**  
   

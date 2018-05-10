@@ -1,31 +1,23 @@
 ---
-title: "数据挖掘服务和数据源 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 数据挖掘服务和数据源 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ad48f9f2f3a769dad964fb47cae33618f3b4ecb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据挖掘需要连接到 SQL Server Analysis Services 实例才能工作。 数据挖掘不需要多维数据集中的数据，建议使用关系源；但是，数据挖掘使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎提供的组件。  
+  数据挖掘需要连接到 SQL Server Analysis Services 实例才能工作。 数据挖掘不需要多维数据集中的数据，建议使用关系源；但是，数据挖掘使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎提供的组件。  
   
  本主题提供了在连接到 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建、处理、部署或查询数据挖掘模型时需要了解的信息。  
   
@@ -95,7 +87,7 @@ ms.lasthandoff: 02/15/2018
  还可以设置允许用户优化服务器并控制客户端使用的安全性的属性。 有关详细信息，请参阅 [Feature Properties](../../analysis-services/server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  有关在各个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中对插件算法的支持的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关支持版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>对数据挖掘对象的编程访问  
  您可以使用下列对象模型创建与 Analysis Services 数据库的连接和处理数据挖掘对象：  
@@ -131,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [物理体系结构（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理体系结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [物理体系结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [数据挖掘解决方案和对象的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

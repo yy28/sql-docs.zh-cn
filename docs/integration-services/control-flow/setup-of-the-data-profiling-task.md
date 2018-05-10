@@ -1,30 +1,28 @@
 ---
-title: "设置数据事件探查任务 | Microsoft Docs"
-ms.custom: 
+title: 设置数据事件探查任务 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c32f01f1da74bf83f2c38b889934a37ea85d5817
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d60d99a6bbe09da6f05d77675606e8478e004a13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
   在可以查看源数据的配置文件之前，第一步是设置和运行数据事件探查任务。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内创建此任务。 若要配置数据事件探查任务，可以使用数据事件探查任务编辑器。 使用此编辑器，可以选择输出配置文件的位置以及要计算哪些配置文件。 设置此任务后，可以运行包来计算数据配置文件。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/25/2018
 |计算对象|帮助标识|使用此配置文件|  
 |----------------|-------------------------|----------------------|  
 |所选列中字符串值的所有不同长度和每个长度表示的行在表中的百分比。|**无效的字符串值—**例如，如果对某列进行事件探查，假定该列使用两个字符来表示美国的州代码，但发现它的值长于两个字符。|**列长度分布—**对具有下列其中一种字符数据类型的列有效：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|一组正则表达式，涵盖字符串列中指定的百分比值。<br /><br /> 还可以查找将来可用于验证新值的正则表达式|**无效或格式不正确的字符串值—**例如，Zip Code/Postal Code 列中的模式配置文件可能产生正则表达式：\d\{5\}-\d\{4\}、\d\{5\} 和 \d\{9\}。 如果输出中包含其他正则表达式，则数据包含的值可能无效或者格式不正确。|**列模式配置文件—**对具有下列其中一种字符数据类型的列有效：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
+|一组正则表达式，涵盖字符串列中指定的百分比值。<br /><br /> 还可以查找将来可用于验证新值的正则表达式|**无效或格式不正确的字符串值** - 例如，邮政编码列的模式配置文件可能会生成正则表达式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果输出中包含其他正则表达式，则数据包含的值可能无效或者格式不正确。|**列模式配置文件—**对具有下列其中一种字符数据类型的列有效：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |所选列中 null 值的百分比。|**列中 null 值所占比率意外地高—**例如，对某个应包含美国邮政编码的列进行事件探查时发现，该列中缺少邮政编码的行所占的比例超出允许的范围。|**列 Null 比率—**对具有下列其中一种数据类型的列有效：<br /><br /> **图像**<br /><br /> **text**<br /><br /> **xml**<br /><br /> 用户定义类型<br /><br /> 变量类型|  
 |数值列的最小值、最大值、平均值和标准偏差等统计信息，以及 **datetime** 列的最小值和最大值。|**无效的数值和日期—**例如，在对包含历史日期的列进行事件探查时发现，最大日期是一个将来的日期。|**列统计信息配置文件—**对具有下列其中一种数据类型的列有效。<br /><br /> 数字数据类型：<br /><br /> 整数类型（除了 **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 请注意：对于具有日期和时间数据类型的列，配置文件仅计算最小值和最大值。|  
 |所选列中的所有非重复值以及每个值表示的行在表中的百分比。 或者表示大于表中指定百分比的值。|**列中非重复值的个数不正确**—例如，如果对包含美国各州的列进行事件探查，但发现非重复值大于 50 个。|**列值分布—**对具有下列其中一种的列有效。<br /><br /> 数字数据类型：<br /><br /> 整数类型（除了 **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/25/2018
   
 -   生成处理数据质量信息的自定义工具。  
   
- 目标命名空间在该架构内标识为 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 目标命名空间在架构中被标识为 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="next-step"></a>下一步  
  [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  

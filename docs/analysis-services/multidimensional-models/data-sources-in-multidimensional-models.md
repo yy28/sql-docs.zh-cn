@@ -1,39 +1,23 @@
 ---
-title: "多维模型中的数据源 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多维模型中的数据源 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- metadata [Analysis Services]
-- Analysis Services objects, data sources
-- storing data [Analysis Services], data sources
-- data sources [Analysis Services], about data sources
-- security [Analysis Services], data sources
-- data sources [Analysis Services]
-- storage [Analysis Services], data sources
-ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 99bdc630a51bd2bb4f9cbfeb7860d2dffb9392a0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9d438cbd6bdbcd77e6f00cf8baea770fb0e16fad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多维模型中的数据源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您导入或加载到多维模型中的所有数据都来自外部数据源。 通常源数据来自用于报告目的数据仓库，但它也可以来自可直接访问或通过媒介（如 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包）间接访问的任意关系数据库。  
+  您导入或加载到多维模型中的所有数据都来自外部数据源。 通常源数据来自用于报告目的数据仓库，但它也可以来自可直接访问或通过媒介（如 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包）间接访问的任意关系数据库。  
   
  **中的** “数据源” [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象指定与外部数据源的直接连接。 除了物理位置之外，数据源对象还指定连接字符串、数据访问接口、凭据和控制连接行为的其他属性。  
   
@@ -62,15 +46,15 @@ ms.lasthandoff: 02/15/2018
 |主题|Description|  
 |-----------|-----------------|  
 |[支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)|介绍可以在多维模型中使用的数据源的类型。|  
-|[创建数据源 &#40;SSAS 多维 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|说明如何将数据源对象添加到多维模型。|  
-|[删除解决方案资源管理器 &#40; 中的数据源SSAS 多维 &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此过程可从多维模型中删除数据源对象。|  
-|[设置数据源属性 &#40;SSAS 多维 &#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|描述每个属性，并说明如何设置每个属性。|  
-|[设置模拟选项 &#40;SSAS-多维 &#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|说明如何在“模拟信息”对话框中配置选项。|  
+|[创建数据源 & #40;SSAS 多维 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|说明如何将数据源对象添加到多维模型。|  
+|[删除解决方案资源管理器 & #40; 中的数据源SSAS 多维 & #41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此过程可从多维模型中删除数据源对象。|  
+|[设置数据源属性 & #40;SSAS 多维 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|描述每个属性，并说明如何设置每个属性。|  
+|[设置模拟选项 & #40;SSAS-多维 & #41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|说明如何在“模拟信息”对话框中配置选项。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [逻辑体系结构 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [逻辑体系结构 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [数据源和绑定 &#40;SSAS 多维 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [数据源和绑定 & #40;SSAS 多维 & #41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

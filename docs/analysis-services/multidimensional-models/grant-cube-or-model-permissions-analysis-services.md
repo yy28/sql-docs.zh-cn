@@ -1,37 +1,23 @@
 ---
 title: 授予多维数据集或模型权限 (Analysis Services) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cubes
-- cubes [Analysis Services], security
-- read/write permissions
-- permissions [Analysis Services], cubes
-ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e15e73da6c4c4a064a6730873dd866b87d5727d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 75b810d559b167e3f6db6ff6bdd22b41e397f6a9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集或表格模型是 Analysis Services 数据模型中的主要查询对象。 为进行即席数据浏览从 Excel 连接到多维或表格数据时，用户通常选择一个特定多维数据集或表格模型作为透视报表对象背后的数据结构，以此开始。 本主题说明了如何授予对多维数据集或表格数据的访问权限。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  多维数据集或表格模型是 Analysis Services 数据模型中的主要查询对象。 为进行即席数据浏览从 Excel 连接到多维或表格数据时，用户通常选择一个特定多维数据集或表格模型作为透视报表对象背后的数据结构，以此开始。 本主题说明了如何授予对多维数据集或表格数据的访问权限。  
   
  默认情况下，无人（“服务器管理员”或“数据库管理员”除外）具有在数据库中查询多维数据集的权限。 非管理员访问多维数据集需要具备为包含此多维数据集的数据库创建的角色中的成员身份。 支持 Windows 用户或组帐户的成员身份，在 Active Directory 中或本地计算机上定义成员身份。 开始前，确定将向哪些帐户分配要创建的角色的成员身份。  
   
@@ -108,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 支持的身份验证方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予对数据挖掘结构和模型的权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予对数据源对象 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

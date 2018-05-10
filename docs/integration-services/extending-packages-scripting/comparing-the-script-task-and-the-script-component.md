@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,12 +22,11 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 806031144d6668dbfeeb0ae95ab2a6e2d4a459ea
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 194f4ded206617e7cb97e3cffb85f02019b5bb3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比较脚本任务和脚本组件
   脚本任务在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计器的“控制流”窗口中，脚本组件在“数据流”窗口中，它们在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的用途非常不同。 任务是一般用途的控制流工具，而组件用作数据流中的源、转换或目标。 尽管它们的用途不同，但是脚本任务和脚本组件在所使用的编码工具和在包中供开发人员使用的对象方面还是有一些相似之处的。 了解它们的相似与不同之处有助于您更有效地使用任务和组件。  

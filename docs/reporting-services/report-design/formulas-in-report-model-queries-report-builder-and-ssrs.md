@@ -1,29 +1,27 @@
 ---
-title: "报表模型查询中的公式（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 报表模型查询中的公式（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f2cfbf236eb77cd97f53f0104889f7872177d32c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>报表模型查询中的公式（报表生成器和 SSRS）
   公式用于对报表中将报表模型用作数据源的值进行计算。 当你为报表模型数据源定义查询时，可以在报表模型查询设计器的“定义公式”对话框中定义公式。  公式可以包含函数、运算符、常量和对字段或实体的引用。 使用公式，您可以对数字和文本数据进行组合、聚合、筛选和计算。 您可以创建公式并将其另存为新字段；或者您也可以修改现有字段的公式。  

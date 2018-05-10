@@ -1,35 +1,23 @@
 ---
-title: "决策树模型查询示例 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 决策树模型查询示例 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- decision tree algorithms [Analysis Services]
-- content queries [DMX]
-- decision trees [Analysis Services]
-ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be3c1ddd743204b18823ef4d77c054504328fc3c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 123de8ac0fd3b29be624528b063056caca12a650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decision-trees-model-query-examples"></a>决策树模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
+  在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型创建查询。  
   
@@ -265,16 +253,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
-|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
+|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -282,6 +270,6 @@ WHERE NODE_TYPE = 25
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [决策树模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

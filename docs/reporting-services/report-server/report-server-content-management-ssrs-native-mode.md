@@ -1,32 +1,30 @@
 ---
-title: "报表服务器内容管理（SSRS 本机模式）| Microsoft Docs"
-ms.custom: 
+title: 报表服务器内容管理（SSRS 本机模式）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - published reports [Reporting Services], managing
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5f40de7d519da0def4ad65cf5f1d96a592489b5a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9669a8356c4f20705bfb18e220d49f68fa93f0ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。 从 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 开始，提供了  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户。 本文将介绍报表管理器和新的 Web 门户体验。  

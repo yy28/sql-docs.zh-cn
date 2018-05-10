@@ -1,48 +1,23 @@
 ---
-title: "使用成员、 元组和集 (MDX) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用成员、 元组和集 (MDX) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- MDX [Analysis Services], tuples
-- member keys [MDX]
-- MDX [Analysis Services], sets
-- calculated members [MDX]
-- members [MDX]
-- Multidimensional Expressions [Analysis Services], members
-- named sets [MDX]
-- Multidimensional Expressions [Analysis Services], tuples
-- member functions [MDX]
-- sets [MDX]
-- MDX [Analysis Services], members
-- member names [MDX]
-- Multidimensional Expressions [Analysis Services], sets
-- tuple functions
-- tuples
-- set functions [MDX]
-ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6bfa28850b007de34937834d80c79fe81c58b7fc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a38de43b77e4b028c7dae24095ac2b556b64a217
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成员、元组和集 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-MDX 提供多个可返回一个或多个成员、元组或集的函数，或对成员、元组或集进行操作的函数。  
+  MDX 提供多个可返回一个或多个成员、元组或集的函数，或对成员、元组或集进行操作的函数。  
   
 ## <a name="member-functions"></a>成员函数  
  MDX 提供多个用于从其他 MDX 实体（如从维度、级别、集或元组）检索成员的函数。 例如， [FirstChild](../../../mdx/firstchild-mdx.md) 函数是一个对成员进行操作的函数，该函数返回一个成员。  
@@ -133,8 +108,8 @@ FROM [Adventure Works]
  字符串函数对 MDX 表达式进行操作，返回一个字符串。 例如，[UniqueName (MDX)](../../../mdx/uniquename-mdx.md) 函数返回一个字符串值，该字符串包含维度、层次结构、级别或成员的唯一名称。 有关字符串函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX &#40; 中的重要概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 函数引用 &#40;MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 函数引用 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

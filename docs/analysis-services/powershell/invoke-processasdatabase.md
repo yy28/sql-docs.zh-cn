@@ -1,30 +1,23 @@
 ---
-title: "调用 ProcessASDatabase |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 调用 ProcessASDatabase |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 08d7ab5ef918b64fb7570ce5a407c23718fc6f03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]执行**过程**上指定的操作**数据库**具有特定**ProcessType**或**RefreshType**具体取决于基础元数据类型。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  使用特定的 **ProcessType** 或 **RefreshType** 对指定的 **Database** 执行 **Process** 操作，具体取决于基础元数据类型。  
   
  将 **ProcessType** 用于具有多维元数据的数据库（这包括兼容级别为 1050、1100 或 1103 的表格数据库）。  
   
@@ -60,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>服务器\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  如果你未在使用上下文的 **SQLAS** 提供程序目录，则可以选择性地指定要连接到的服务器实例。  
   
 |||  
@@ -71,24 +64,24 @@ ms.lasthandoff: 01/08/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType >  
+### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType>  
  指定的表格数据库的进程类型。  有效值为 Full、ClearValues、Calculate、DataOnly、Automatic、Add 和 Defragment。 有关说明和指南，请参阅[处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)。  
   
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType>  
  为兼容级别为 1050-1103 的多维数据库或表格数据库指定处理类型。 有效值包括 ProcessFull、ProcessAdd、ProcessUpdate、ProcessIndexes、ProcessData、ProcessDefault、ProcessClear、ProcessStructure、ProcessCelarStructureOnly、ProcessScriptCache 或 ProcessRecalc。 有关说明和指南，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  

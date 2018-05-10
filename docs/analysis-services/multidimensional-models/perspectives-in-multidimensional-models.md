@@ -1,41 +1,23 @@
 ---
-title: "多维模型中的透视 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多维模型中的透视 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- default members
-- hiding objects from perspective
-- renaming perspectives
-- attributes [Analysis Services], default members
-- removing perspectives
-- perspectives [Analysis Services]
-- names [Analysis Services], perspectives
-- cubes [Analysis Services], perspectives
-- deleting perspectives
-ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 94508cf2bb7347d3b8cef15ce5c743f33c04a018
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e5e8a1748e54ea08b124b1db1b6048fce456b2f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多维模型中的透视
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-透视是为特定应用程序或用户组创建的多维数据集的子集。 多维数据集本身是一个默认的透视。 透视针对客户端显示为一个多维数据集。 当用户查看透视时，该透视看上去像另一个多维数据集。 在透视中通过写回对多维数据集数据所做的任何更改也会作用于原始多维数据集。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中视图的详细信息，请参阅 [透视图](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
+  透视是为特定应用程序或用户组创建的多维数据集的子集。 多维数据集本身是一个默认的透视。 透视针对客户端显示为一个多维数据集。 当用户查看透视时，该透视看上去像另一个多维数据集。 在透视中通过写回对多维数据集数据所做的任何更改也会作用于原始多维数据集。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中视图的详细信息，请参阅 [透视图](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
   
  使用多维数据集设计器的 **“透视”** 选项卡，可以创建或修改多维数据集中的透视。 **“透视”** 选项卡的第一列是 **“多维数据集对象”** 列，该列列出多维数据集中的所有对象。 这对应于多维数据集的默认透视，该透视是多维数据集本身。  
   

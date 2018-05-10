@@ -1,37 +1,23 @@
 ---
-title: "创建关系挖掘结构 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 创建关系挖掘结构 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], creating
-- relational mining models [Analysis Services]
-- OLAP mining models [Analysis Services]
-ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7d5898485017bc2d1be59e1e5db7b147926ea5b3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-大多数数据挖掘模型都基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
+  大多数数据挖掘模型都基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
   
  关系挖掘结构可从不同源绘制数据。 只要原始数据可定义为数据源视图的一部分，就可以将该数据存储在表、文件或关系数据库系统中。 例如，如果数据位于 Excel、SQL Server 数据仓库或 SQL Server 报表数据库中，或位于通过 OLE DB 或 ODBC 访问接口访问的外部源中，则应使用关系挖掘结构。  
   
@@ -133,7 +119,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘设计器](../../analysis-services/data-mining/data-mining-designer.md)   
- [数据挖掘向导 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [数据挖掘向导 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)   
  [挖掘结构和结构列的属性](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

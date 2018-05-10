@@ -1,37 +1,23 @@
 ---
-title: "关联模型查询示例 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 关联模型查询示例 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- itemsets [Analysis Services]
-- association algorithms [Analysis Services]
-- rules [Data Mining]
-- association rules
-- content queries [DMX]
-ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 965faf24b55fb206746076d5773c158fa20375de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-model-query-examples"></a>关联模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在对数据挖掘模型创建查询时，可以创建内容查询，也可创建预测查询。内容查询提供有关在分析过程中发现的规则和项集的详细信息，预测查询使用在数据中发现的关联来做出预测。 对于关联模型来说，预测通常基于规则且可用来给出建议，而内容查询通常用于浏览项集之间的关系。 此外，还可检索有关模型的元数据。  
+  在对数据挖掘模型创建查询时，可以创建内容查询，也可创建预测查询。内容查询提供有关在分析过程中发现的规则和项集的详细信息，预测查询使用在数据中发现的关联来做出预测。 对于关联模型来说，预测通常基于规则且可用来给出建议，而内容查询通常用于浏览项集之间的关系。 此外，还可检索有关模型的元数据。  
   
  本节讲述如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则的算法的模型创建这些类型的查询。  
   
@@ -232,19 +218,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
-|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回预测值的方差。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
+|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回预测值的方差。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 关联算法技术参考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [关联模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [关联模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -1,45 +1,26 @@
 ---
-title: "要求和注意事项 Analysis Services 部署 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 要求和注意事项 Analysis Services 部署 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- memory [Analysis Services]
-- scalability [Analysis Services]
-- space [Analysis Services]
-- Analysis Services deployments, requirements
-- deploying [Analysis Services], requirements
-- disk space [Analysis Services]
-- requirements [Analysis Services]
-- processors [Analysis Services]
-- system requirements [Analysis Services]
-- availability [Analysis Services]
-ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 88b91944e1ffb99d684e53bda09465d995b416f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的要求和注意事项
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-解决方案的性能和可用性取决于许多因素，包括基础硬件的性能、服务器部署的拓扑结构、您的解决方案特性（例如，具有跨多个服务器分布的分区或者使用要求对关系引擎的直接访问权限的 ROLAP 存储区）、服务级别协议和您的数据模型的复杂程度。  
+  解决方案的性能和可用性取决于许多因素，包括基础硬件的性能、服务器部署的拓扑结构、您的解决方案特性（例如，具有跨多个服务器分布的分区或者使用要求对关系引擎的直接访问权限的 ROLAP 存储区）、服务级别协议和您的数据模型的复杂程度。  
   
 ## <a name="memory-and-processor-requirements"></a>内存和处理器要求  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在以下情况下需要更多的内存和处理器资源：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]需要在以下情况下的更多内存和处理器资源：  
   
 -   处理大型或复杂多维数据集时。 与小型或简单的多维数据集相比，它们需要更多的内存和处理器资源。  
   

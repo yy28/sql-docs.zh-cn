@@ -1,32 +1,23 @@
 ---
 title: 在挖掘模型上创建内容查询 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77cca4b8462befde098dc522067b44131a009fc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e1a41f83a2fb2f4f12c781adbd04a00f706f3e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以以编程方式查询挖掘模型内容使用 AMO 或 XML/A，但很容易地创建使用 DMX 查询。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  使用 AMO 或 XML/A 可以采用编程方式查询挖掘模型内容，但是使用 DMX 创建查询更简单。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
   
  下面的过程介绍如何使用 DMX 针对挖掘模型创建查询以及如何查询数据挖掘架构行集。  
   
@@ -52,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  在行中， `SELECT` *\<选择列表中，expr 列表\* >* ，键入在挖掘模型内容架构行集中的列的名称。  
   
-     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
+     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 7.  或者，您也可以在模板的 WHERE 子句中键入条件，以将返回的行限制为特定的节点或值。  
   
@@ -84,7 +75,7 @@ ms.lasthandoff: 01/08/2018
     >  若要查看当前实例上可查询的所有架构行集的列表，请使用以下查询： `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，若要查看特定于数据挖掘的架构行集的列表，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘架构行集](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "删除 Power Pivot 数据馈送的库 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 删除 Power Pivot 数据馈送的库 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1f2ed93aa09903f34ba5d6e1e177920157ea4dd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e299d55af93cecdf7efdc142cc5939ec6631e716
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>删除 Power Pivot 数据馈送库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您必须是站点所有者才能删除数据馈送库。 如果库中包含项，则它们将随同库一起被删除。  
+  您必须是站点所有者才能删除数据馈送库。 如果库中包含项，则它们将随同库一起被删除。  
   
  您必须知道您要删除的数据馈送库的名称。  
   

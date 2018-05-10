@@ -1,42 +1,23 @@
 ---
-title: "数据挖掘算法 (Analysis Services-数据挖掘) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 数据挖掘算法 (Analysis Services-数据挖掘) |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- segmentation algorithms [Analysis Services]
-- clustering [Data Mining]
-- learning algorithms
-- data mining [Analysis Services], models
-- algorithms [data mining]
-- mining models [Analysis Services], algorithms
-- inductive learning
-- mining models [Analysis Services], creating
-- data mining [Analysis Services], algorithms
-- machine learning algorithms [Analysis Services]
-ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 43652986e789837299feacf5387cd8b6e6d57a8b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a85e6a07b22f0577b23a0e8bd679050dbe00038a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据挖掘（或机器学习）中的算法是根据数据创建模型的一组试探法和计算。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析在许多次迭代中的结果来查找用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
+  数据挖掘（或机器学习）中的算法是根据数据创建模型的一组试探法和计算。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析在许多次迭代中的结果来查找用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
   
  算法根据您的数据创建的挖掘模型可以采用多种形式，这包括：  
   
@@ -91,7 +72,7 @@ ms.lasthandoff: 02/15/2018
 |**技术参考**|提供与算法实施有关的技术细节，并且根据需要提供学术方面的参考。 列出了可在模型中设置以便控制算法行为并自定义结果的参数。 描述数据要求并根据需要提供性能提示。|  
 ||[Microsoft 关联算法技术参考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 逻辑回归算法技术参考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 算法技术参考](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |**模型内容**|说明在每种类型的数据挖掘模型内信息是如何组织的，并且说明如何解释在各节点中存储的信息。|  
-||[关联模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [线性回归模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [序列聚类分析模型 &#40; 挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[关联模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [线性回归模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [序列聚类分析模型 & #40; 挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**数据挖掘查询**|提供可用于各模型类型的多个查询。 示例包括可让您了解与模型中的模式有关的详细信息的内容查询以及可帮助您基于这些模式生成预测的预测查询。|  
 ||[关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [逻辑回归模型查询示例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes 模型查询示例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
@@ -103,7 +84,7 @@ ms.lasthandoff: 02/15/2018
 |创建自定义插件算法|[插件算法](../../analysis-services/data-mining/plugin-algorithms.md)|  
 |使用特定于算法的查看器浏览模型|[数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |使用一般的表格式查看模型的内容|[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|了解如何设置您的数据，并使用算法来创建模型|[挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [挖掘模型 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
+|了解如何设置您的数据，并使用算法来创建模型|[挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [挖掘模型 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)  

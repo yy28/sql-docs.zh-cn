@@ -1,35 +1,23 @@
 ---
-title: "向维度中添加帐户智能 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 向维度中添加帐户智能 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], account intelligence
-- account intelligence [Analysis Services]
-ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6f8d62ccc2fe1a5ec8983c406f7c47153744eeed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 向导-向维度中添加帐户智能
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在多维数据集或维度中添加帐户智能增强功能，以向具有某一帐户属性的成员分配标准帐户分类，如收入和支出。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以随着时间的推移使用分类来聚合帐户。  
+  在多维数据集或维度中添加帐户智能增强功能，以向具有某一帐户属性的成员分配标准帐户分类，如收入和支出。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以随着时间的推移使用分类来聚合帐户。  
   
 > [!NOTE]  
 >  帐户智能仅可用于基于现有数据源的维度。 对于不使用数据源创建的维度，必须先运行架构生成向导创建数据源视图，然后再添加帐户智能。  

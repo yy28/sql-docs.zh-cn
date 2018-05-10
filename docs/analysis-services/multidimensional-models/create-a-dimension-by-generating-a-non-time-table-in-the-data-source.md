@@ -1,36 +1,23 @@
 ---
-title: "通过在数据源中生成非时间表来创建维度 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 通过在数据源中生成非时间表来创建维度 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data sources [Analysis Services], dimensions without data source
-- dimensions [Analysis Services], standard
-- dimensions [Analysis Services], creating without data source
-- standard dimensions [Analysis Services]
-ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e4c37f93352f149a1368081170ce47dc80d4aa04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>通过在数据源中生成非时间表来创建维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以借助 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以借助 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
   
  维度向导提供了示例维度模板，您可以使用这些模板生成常用的维度类型。 可以从下列维度类型中选择：  
   

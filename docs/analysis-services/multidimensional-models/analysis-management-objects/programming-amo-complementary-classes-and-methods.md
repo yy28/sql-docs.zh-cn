@@ -1,38 +1,19 @@
 ---
-title: "编程 AMO 互补类和方法 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- assemblies [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- programming [AMO]
-- Analysis Management Objects, backup and restore
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 
-author: Minewiskan
+title: 编程 AMO 互补类和方法 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8972d0659180558689302c77994f0c14f931593d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO 补充类和方法的编程
   本主题包含以下各节：  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [CaptureLog 类和 CaptureXML 属性](#CL)  
   
-##  <a name="Assembly">程序集类</a>  
+##  <a name="Assembly"></a> 程序集类  
  程序集让扩展的功能的用户[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]通过添加新的存储的过程或多维表达式 (MDX) 函数。 有关详细信息，请参阅[AMO 其他类和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)。  
   
  添加和删除程序集很简单，可以联机执行。 只有数据库管理员才能向数据库添加程序集，只有服务器管理员才能向服务器对象添加程序集。  
@@ -106,7 +87,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC">Trace 类</a>  
+##  <a name="TRC"></a> Trace 类  
  监视服务器活动需要使用两种跟踪：会话跟踪和服务器跟踪。 通过跟踪服务器，可以了解当前任务在服务器中的执行情况（会话跟踪），或者在不连接到服务器的情况下即可了解服务器中的总体活动情况（服务器跟踪）。  
   
  跟踪当前活动（会话跟踪）时，服务器会向当前应用程序发送有关服务器中正在发生的由该应用程序引发的事件的通知。 在当前应用程序中，使用事件处理程序来捕获事件。 首先应为 <xref:Microsoft.AnalysisServices.SessionTrace> 对象指定事件处理例程，然后启动会话跟踪。  
@@ -287,8 +268,8 @@ static public string TestCaptureLog(Server svr)
  <xref:Microsoft.AnalysisServices>   
  [引入 AMO 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 其他类和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
- [逻辑体系结构 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [逻辑体系结构 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

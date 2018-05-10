@@ -1,31 +1,29 @@
 ---
-title: "关于 URL 保留项和注册（SSRS 配置管理器）| Microsoft Docs"
-ms.custom: 
+title: 关于 URL 保留项和注册（SSRS 配置管理器）| Microsoft Docs
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 94c0184320284272524932ce8d9b1bcda60f1d2b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2f5459ca526980c9a77fe79ecb482f0b2c1ce0bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 保留项和注册 （SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 保留项。 URL 保留项定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 保留项。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为您创建 URL 保留项：  

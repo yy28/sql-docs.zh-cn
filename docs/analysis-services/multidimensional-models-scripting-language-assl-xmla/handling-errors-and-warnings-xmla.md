@@ -1,39 +1,19 @@
 ---
-title: "处理错误和警告 (XMLA) |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- inline errors [XMLA]
-- SOAP faults [XML for Analysis]
-- XML for Analysis, errors
-- faults [XML for Analysis]
-- messages [XML for Analysis]
-- XMLA, errors
-- warnings [XML for Analysis]
-- inline warnings [XMLA]
-ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 
-author: Minewiskan
+title: 处理错误和警告 (XMLA) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e5aa002079080e8c4e3fc4816539fda866e8293b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: de925e6bb83f7219ec1bd453f47d63a3fb3624a1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>处理错误和警告 (XMLA)
   错误处理时是必需的 XML 有关 Analysis (XMLA)[发现](../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用不会运行、 任务成功运行，但生成错误或警告，或任务成功运行，但返回的结果包含错误。  
@@ -45,7 +25,7 @@ ms.lasthandoff: 02/15/2018
 |方法调用运行成功，但结果中包含错误|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括内联**错误**或**警告**的错误或警告，元素分别中相应[单元格](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)或[行](../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)方法调用的结果的元素。<br /><br /> 有关详细信息，请参阅明[处理内联错误和警告](#handling_inline_errors_and_warnings)。|  
   
 ##  <a name="handling_soap_faults"></a> 处理 SOAP 错误  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在以下情况发生时，请返回 SOAP 错误：  
+ 出现以下情况时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会返回 SOAP 错误：  
   
 -   包含 XMLA 方法的 SOAP 消息格式不正确，或者无法由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例验证。  
   
@@ -99,7 +79,7 @@ HelpFile="" />
   
  **消息**属性遵循元素中包含的所有其他属性**根**元素，并且可以包含一个或多个**消息**元素。 接下来，每个**消息**元素可以包含单个**错误**或**警告**分别描述任何错误或警告，针对发生的元素指定的命令。  
   
- 有关错误和警告中包含的详细信息**消息**属性，请参阅[消息元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md).  
+ 有关错误和警告中包含的详细信息**消息**属性，请参阅[消息元素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)。  
   
 ### <a name="handling-errors-during-serialization"></a>处理序列化期间发生的错误  
  如果错误发生后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例是否已经开始序列化的成功运行命令的输出[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]返回[异常](../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)错误在不同的命名空间中的元素。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例随后会关闭所有已打开的元素，以确保发送到客户端的 XML 文档为有效文档。 该实例还返回**消息**元素包含错误的说明。  

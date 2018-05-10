@@ -1,38 +1,23 @@
 ---
-title: "管理作用域和上下文 (MDX) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 管理作用域和上下文 (MDX) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- scripts [MDX], context
-- scope [MDX]
-- CALCULATE statement
-- This function [MDX]
-- SCOPE statement
-- scripts [MDX], scope
-ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5e07ed3463c73d1eaeb14854e5eb4bc3d8fa81b6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c28d82a47821af0903f5b60747c47b4f4ca86c75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理作用域和上下文 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，多维表达式 (MDX) 脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
+  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，多维表达式 (MDX) 脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
   
 > [!NOTE]  
 >  有关计算传递如何影响计算的详细信息，请参阅[理解传递次序和求解次序 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)。  
@@ -121,8 +106,8 @@ END SCOPE;
  有关 SCOPE 语句的语法详细信息，请参阅 [SCOPE 语句 (MDX)](../../../mdx/mdx-scripting-scope.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 &#40;MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [基本 MDX 脚本 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 语言参考 & #40;MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [基本 MDX 脚本 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

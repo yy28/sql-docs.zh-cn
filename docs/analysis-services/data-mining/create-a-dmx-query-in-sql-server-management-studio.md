@@ -1,39 +1,23 @@
 ---
-title: "在 SQL Server Management Studio 中创建 DMX 查询 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 在 SQL Server Management Studio 中创建 DMX 查询 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- templates [Analysis Services], queries
-- SQL Server Management Studio [Analysis Services], DMX queries
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- prediction queries [DMX]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 939d21c596a3f023afaae6931ba1c53efe0ab85b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 DMX 查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组功能，可帮助您创建针对挖掘模型和挖掘结构的预测查询、内容查询和数据定义查询。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了一套功能，可帮助您创建预测查询、 内容查询和针对挖掘模型和挖掘结构的数据定义查询。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都提供了图形预测查询生成器，旨在简化编写预测查询并将数据集映射到模型的过程。  
   
@@ -57,7 +41,7 @@ ms.lasthandoff: 02/15/2018
  还可以为经常运行的查询或命令创建自定义模板。  
   
 ## <a name="xmla-query-templates"></a>XMLA 查询模板  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还提供了 XMLA 查询模板。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]此外提供了 XMLA 查询模板。  
   
  可使用 XMLA 和 DMX 执行的查询类型之间存在某种重叠。 例如，可通过使用 DMX 或数据挖掘架构行集创建一些模型内容查询，但是架构行集有时包含不在 DMX 内容查询显示的信息。  
   
@@ -93,6 +77,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -1,32 +1,19 @@
 ---
-title: "使用分析管理对象 (AMO) 进行开发 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, programming
-- AMO, programming
-ms.assetid: 91354fc9-22da-4724-b97f-3b1e7b0e69d3
-caps.latest.revision: 
-author: Minewiskan
+title: 使用分析管理对象 (AMO) 进行开发 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4a44da0b795bcb7e8ed05510d8caf0178bb789e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: edd91a0d4608f03dd622ef2b25820d10f9b4f455
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-with-analysis-management-objects-amo"></a>使用分析管理对象 (AMO) 进行开发
 分析管理对象 (AMO) 是以编程方式访问的对象的完整库，使应用程序来管理正在运行的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。
@@ -44,5 +31,5 @@ ms.lasthandoff: 02/15/2018
 针对早期版本的 AMO 编写的应用程序和自定义脚本将继续不使用任何修改。 但是，如果你有脚本或应用程序面向 SQL Server 2016 具体而言，或需要重新生成自定义解决方案，请确保将新的程序集和命名空间添加到你的项目。
 
 ## <a name="see-also"></a>另请参阅
-[使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md) 
+[开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)
 [使用 Analysis Services 中的 XMLA 进行开发](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)

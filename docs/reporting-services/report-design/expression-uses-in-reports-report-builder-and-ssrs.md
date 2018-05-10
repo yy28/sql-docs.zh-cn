@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
@@ -18,12 +17,11 @@ caps.latest.revision: 59
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: bc3cfbff325d163ca9ddde120ecc17db97e91c03
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d3f8432e1e1ce62e37d2f875eb071db76afd685f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>在报表中使用表达式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，可以在整个报表定义中使用表达式来指定或计算以下各项的值：参数、查询、筛选器、报表项属性、组和排序定义、文本框属性、书签、文档结构图、动态页眉和页脚内容、图像以及动态数据源定义。 本主题提供了一些可在其中使用表达式更改报表内容或外观的示例。 此列表并不全面。 可以在显示表达式 (fx) 按钮的对话框中或在显示“\<Expression...>”的下拉列表中设置表达式的任何属性。  

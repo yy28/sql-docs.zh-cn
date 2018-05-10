@@ -1,35 +1,27 @@
 ---
-title: "使用数据馈送 (Power Pivot for SharePoint) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用数据馈送 (Power Pivot for SharePoint) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8f0b6c60d3f68d7a643264d3e850b7ce6cd56c22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用数据馈送 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据馈送是从联机数据源生成并流向目标文档或应用程序的一个或多个数据流。 如果使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，数据馈送可帮助你将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  
+  数据馈送是从联机数据源生成并流向目标文档或应用程序的一个或多个数据流。 如果使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，数据馈送可帮助你将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  
   
  数据馈送的使用方式取决于您使用的是支持 Atom 数据馈送的应用程序中的内置导出功能，还是创建并使用自定义数据服务。 能够发布并读取 Atom XML 数据的应用程序提供了无缝的数据传输，可对用户隐藏数据源和数据服务的机制。 对于用户而言，他或她只是将数据从一个应用程序移到另一个应用程序。  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Microsoft SharePoint 2010 提供数据源都可在[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿。 可以使用本主题中的信息了解如何从已有的报表和列表访问数据馈送。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Microsoft SharePoint 2010 提供了可在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中使用的数据馈送。 可以使用本主题中的信息了解如何从已有的报表和列表访问数据馈送。  
   
  本主题包含以下各节：  
   

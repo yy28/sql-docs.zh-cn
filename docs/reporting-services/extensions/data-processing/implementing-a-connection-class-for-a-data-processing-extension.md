@@ -1,32 +1,31 @@
 ---
-title: "为数据处理扩展插件实现 Connection 类 | Microsoft Docs"
-ms.custom: 
+title: 为数据处理扩展插件实现 Connection 类 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [Reporting Services], data processing extensions
 - Connection class
 - data processing extensions [Reporting Services], connections
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62b85cbe9d745999db7d7494779f3080ff4fca1e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f77a34196a6299e07942fc5809b80cb81955cf08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>为数据处理扩展插件实现 Connection 类
   Connection 对象表示数据库连接或类似的资源，它是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的用户的起点。 它表示与数据库服务器的连接，尽管可以将任何具有类似行为的实体公开为 Connection。  

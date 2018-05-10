@@ -1,33 +1,25 @@
 ---
-title: "在挖掘模型的钻取 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 在挖掘模型的钻取 |Microsoft 文档
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a96c9b650169d49552cde217dbd9aa1d851a602c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>对挖掘模型的钻取功能
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来生成数据的事例，也可以钻取到挖掘结构中的事例。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供两个不同选项来钻取到事例数据。 您可以钻取到用来生成数据的事例，也可以钻取到挖掘结构中的事例。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>钻取到模型事例与钻取到结构  
  钻取到“模型事例”  用于查找与模型中的规则、模式或群集有关的其他详细信息。 例如，您可能未在聚类分析模型中使用客户联系信息进行分析，即使数据可用，但通过使用钻取，您可以获取对模型中信息的访问权限。  

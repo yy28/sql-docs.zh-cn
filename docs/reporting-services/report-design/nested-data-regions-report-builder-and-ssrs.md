@@ -1,27 +1,25 @@
 ---
-title: "嵌套数据区域（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 嵌套数据区域（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3333479da0d2989354242869c430712a3688e968
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 06a44ab13532845e8b894a3b936746ef7d0e1588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>嵌套数据区域（报表生成器和 SSRS）
   可以在一个数据区域（如矩阵）内嵌套另一个数据区域（如图表），通常用于简明显示数据摘要或提供可视显示和表或矩阵显示。  

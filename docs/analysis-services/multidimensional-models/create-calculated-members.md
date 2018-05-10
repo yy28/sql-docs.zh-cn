@@ -1,36 +1,23 @@
 ---
-title: "创建计算的成员 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 创建计算的成员 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- calculated members [Analysis Services]
-- custom measures [Analysis Services]
-- members [Analysis Services], calculated
-- calculations [Analysis Services], calculated members
-ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e819f86b102dd979f529a4eb3ffd9cc12966482b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-calculated-members"></a>创建计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  
+  可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  
   
  计算成员的定义将存储起来，而它们的值则只存在于内存中。 在上面的示例中，虽然马克的值会显示给最终用户，但这些值并没有存储为多维数据集数据。  
   

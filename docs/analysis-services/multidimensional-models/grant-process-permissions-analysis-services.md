@@ -1,34 +1,23 @@
 ---
-title: "授予处理权限 (Analysis Services) |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 授予处理权限 (Analysis Services) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], process
-- process permissions [Analysis Services]
-ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b2cde8f68861eb47766b13cf95fb51a4fd2a6969
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-作为管理员，你可以创建专用于 Analysis Services 处理操作的角色，从而可以委派特定任务到其他用户，或者委派到用于无人参与的预定处理的应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
+  作为管理员，你可以创建专用于 Analysis Services 处理操作的角色，从而可以委派特定任务到其他用户，或者委派到用于无人参与的预定处理的应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
   
  权限通过角色授予，将对象与权限以及 Windows 用户或组帐户进行关联。 请记住，权限是可以累加的。 如果一个角色授予处理多维数据集的权限，同时另一个角色授予同一用户处理维度的权限，那么两个不同角色的权限会合并以授予用户在该数据库内的处理多维数据集和处理特定维度的权限。  
   
@@ -99,7 +88,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另请参阅  
  [处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Grant 数据库权限 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [授予读取定义权限对象元数据 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Grant 数据库权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [授予读取定义权限对象元数据 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

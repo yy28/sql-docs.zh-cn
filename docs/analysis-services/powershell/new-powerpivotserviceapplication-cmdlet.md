@@ -1,31 +1,23 @@
 ---
-title: New-PowerPivotServiceApplication cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 新 PowerPivotServiceApplication cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e36e6b170a141c7611c5eb246fd999beee970bf8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-创建新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
+  创建新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -67,7 +59,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName \<string>  
+### <a name="-databasename-string"></a>-DatabaseName\<字符串 >  
  指定存储应用程序数据的 SQL Server 关系数据库的名称。 请确保指定与应用程序相对应的名称，以便您可以更轻松地标识其用途。 你可以创建新的数据库，或者为你创建的新的应用程序指定现有的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库。  
   
 |||  
@@ -91,7 +83,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  此 cmdlet 支持以下常用参数：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

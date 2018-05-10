@@ -1,39 +1,23 @@
 ---
-title: "附加和分离 Analysis Services 数据库 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 附加和分离 Analysis Services 数据库 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.ssmsimbi.AttachDatabase.f1
-- sql13.asvs.ssms.attachdatabase.f1
-- sql13.asvs.ssmsimbi.DetachDatabase.f1
-- sql13.asvs.ssms.detachdatabase.f1
-helpviewer_keywords:
-- databases [Analysis Services], attach
-- databases [Analysis Services], detach
-ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4abef02a67a334486b123a2ed29b8119e7a29f8b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ead2b7b28bb716473beb071b7d91f6b1148f965b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和分离 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况，通过“附加”和“分离”命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地使数据库脱机和恢复联机。  
+  在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况，通过“附加”和“分离”命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地使数据库脱机和恢复联机。  
   
 ## <a name="attach-and-detach-commands"></a>附加和分离命令。  
  通过 **Attach** 命令可使已脱机的数据库恢复联机。 可以将该数据库附加到原始的服务器实例，也可以附加到另一个实例。 在附加数据库时，用户可以为该数据库指定 **ReadWriteMode** 设置。 使用 **Detach** 命令可使数据库与服务器脱机。  

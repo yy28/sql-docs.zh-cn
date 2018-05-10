@@ -1,31 +1,23 @@
 ---
-title: "计划 SSAS Administrative Tasks with SQL Server 代理 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 计划 SSAS Administrative Tasks with SQL Server 代理 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3187f8ae761fa4b9cb4b1eb9b1f40a0be4448e94
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用 SQL Server 代理服务，你可以根据所需顺序和时间来计划要运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理任务。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
+  使用 SQL Server 代理服务，你可以根据所需顺序和时间来计划要运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理任务。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
   
  使用作业步骤，可以控制执行流。 如果一个作业失败，则可以配置 SQL Server 代理以继续运行剩下的任务或停止执行。 也可以配置 SQL Server 代理以发送有关作业执行成功或失败的通知。  
   
@@ -229,6 +221,6 @@ ms.lasthandoff: 02/15/2018
 16. 在作业完成后，请单击 **“关闭”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [处理选项和设置 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [处理选项和设置&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

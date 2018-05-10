@@ -1,34 +1,23 @@
 ---
-title: "指定查询轴 (MDX) 的内容 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 指定查询轴 (MDX) 的内容 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- cellsets [MDX]
-- query axis [MDX]
-ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 99ee0b35cbb913a1e0332bda07394fe6541309a4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f4203cd77010e9f93be32da71eb0bf61ceb16dfb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX 查询轴和切片器轴-指定查询轴的内容
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-查询轴用于指定多维表达式 (MDX) SELECT 语句返回的单元集的范围。 通过指定单元集的范围可以限定客户端可以看到的返回数据。  
+  查询轴用于指定多维表达式 (MDX) SELECT 语句返回的单元集的范围。 通过指定单元集的范围可以限定客户端可以看到的返回数据。  
   
  若要指定查询轴，请使用 `<SELECT query axis clause>` 将某个集分配给特定的查询轴。 每个 `<SELECT query axis clause>` 值均定义一个查询轴。 数据集中的轴数等于 SELECT 语句中 `<SELECT query axis clause>` 值的数目。  
   
@@ -122,6 +111,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [指定切片器轴 &#40; 的内容MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [指定切片器轴 & #40; 的内容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

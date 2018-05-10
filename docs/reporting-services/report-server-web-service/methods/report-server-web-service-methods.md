@@ -1,17 +1,17 @@
 ---
-title: "报表服务器 Web 服务方法 | Microsoft Docs"
-ms.custom: 
+title: 报表服务器 Web 服务方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, methods
 - Web service [Reporting Services], methods
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c577245ad46a2989d7e3c7fbc33a1f9e8cfc19e7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6f0730ea9ab0ea2a79e6716922739203568977d4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-web-service-methods"></a>报表服务器 Web 服务方法
   根据不同的组件功能，报表服务器 Web 服务方法包含不同的类别。 这些方法通过作为 <xref:ReportService2010.ReportingService2010> 和 <xref:ReportExecution2005.ReportExecutionService> 类的成员公开的若干 Web 服务端点（三个用于报表管理，一个用于报表执行）提供。 这些类可使用代理类工具（如 wsdl.exe）生成，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 中包含此工具。 有关使用报表服务器 Web 服务和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的详细信息，请参阅[使用 Web 服务和 .NET Framework 生成应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  

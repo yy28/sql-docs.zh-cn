@@ -1,31 +1,23 @@
 ---
-title: Get-PowerPivotSystemService cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Get-powerpivotsystemservice cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 33231250-3880-4d75-936b-d70662a01855
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 20c13c68abadafcbe4cc357345a4b3ba7d0668f7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: df353738db74393d9347064e0215daaa89d0087c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-powerpivotsystemservice-cmdlet"></a>Get-PowerPivotSystemService cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-返回场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务对象的全局属性。 
+  返回场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务对象的全局属性。 
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -54,7 +46,7 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
 |接受管道输入？|true|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  此 cmdlet 支持以下常用参数：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

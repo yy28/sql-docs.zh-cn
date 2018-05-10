@@ -1,30 +1,23 @@
 ---
-title: "合并分区 cmdlet |Microsoft 文档"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 合并分区 cmdlet |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 897104785c82686879a83811d070c3e1ce8391ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e5ca667b3172de982ea98a6d13c1fe6f810377b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merge-partition-cmdlet"></a>Merge-Partition cmdlet
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]将一个或多个源分区的数据合并到目标分区，然后删除源分区。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  将一个或多个源分区的数据合并到目标分区中，然后删除源分区。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -45,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-name-string"></a>-名称\<字符串 >  
+### <a name="-name-string"></a>-Name \<string>  
  指定源分区数据将合并到其中的目标分区。 此分区必须已存在。  
   
 |||  
@@ -62,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  
@@ -100,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-server-string"></a>服务器\<字符串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定 cmdlet 要连接和执行的 Analysis Services 实例。 如果未提供服务器名称，将连接到本地主机。 对于默认实例，仅指定服务器名称。 对于命名实例，请使用格式 servername\instancename。 对于 HTTP 连接，请使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  
@@ -112,7 +105,7 @@ ms.lasthandoff: 01/08/2018
 |接受通配符？|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅[配置 HTTP 访问 Analysis Services 上 Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)为 HTTP 连接。  
+ 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅[到在 Internet Information Services 上的 Analysis Services 配置 HTTP 访问&#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)为 HTTP 连接。  
   
  如果指定此参数，将使用用户名和密码连接到指定的 Analysis Server 实例。 如果未指定凭据，将使用正在运行该工具的用户的默认 Windows 帐户。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
 - checking packages
@@ -32,12 +31,11 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cca41d32fe50ba017ac442f4b53355a052de3169
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 命令提示实用工具用于管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 该实用工具可以复制、移动、删除包，也可以验证包是否存在。 可对存储于以下三个位置之一的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包执行上述操作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区和文件系统。 如果此实用工具要访问存储在 **msdb**中的包，命令提示符可能要求输入用户名和密码。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则命令提示符要求输入用户名和密码。 如果缺少用户名， **dtutil** 将尝试使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 包的存储类型由 **/SQL**、 **/FILE**和 **/DTS** 选项标识。  

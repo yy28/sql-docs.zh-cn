@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
 helpviewer_keywords:
@@ -20,12 +19,11 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 84fc2d366101e410f301bf76cbccc8e61eea6b38
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 722890bcdd6b8f412052f87f38eea279b8f0c05f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
 Reporting Services 包括电子邮件传递扩展插件，以便可以通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
@@ -77,7 +75,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **1** 。选择“使用安全连接”会将 `SMTPUseSSL` 设置为“True”。 将在 `<SendUserName>` 中将“用户名”设置为一个加密值。 将在 `<SendPassword>` 中将“密码”设置为一个加密值。
      
-     - **报表服务器服务帐户 (NTLM)**将使用你为报表服务器指定的服务帐户。 如果使用报表服务器服务帐户进行身份验证，请验证该服务帐户在 SMTP 服务器上是否具有“发送方式”权限。
+     - **报表服务器服务帐户 (NTLM)** 将使用你为报表服务器指定的服务帐户。 如果使用报表服务器服务帐户进行身份验证，请验证该服务帐户在 SMTP 服务器上是否具有“发送方式”权限。
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **2** 。
 

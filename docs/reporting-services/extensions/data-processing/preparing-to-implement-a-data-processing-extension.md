@@ -1,31 +1,30 @@
 ---
-title: "准备实现数据处理扩展插件 | Microsoft Docs"
-ms.custom: 
+title: 准备实现数据处理扩展插件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 457524a8fb05069961a80ccebbe719261b616bd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>准备实现数据处理扩展插件
   在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁。  

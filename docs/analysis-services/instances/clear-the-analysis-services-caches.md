@@ -1,31 +1,23 @@
 ---
-title: "清除 Analysis Services 缓存 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 清除 Analysis Services 缓存 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 19055dc68ebd1e9baa2fa1b1330370d01f7d864a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d5c736d07a6bac184e255e38abbe6d3f3afa416d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 缓存
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services 通过缓存数据来提高查询性能。 本主题提供关于使用 XMLA ClearCache 命令来清除为响应 MDX 查询而创建的缓存的建议。 根据您使用的表格模型还是多维模型，运行 ClearCache 的影响有所不同。  
+  Analysis Services 通过缓存数据来提高查询性能。 本主题提供关于使用 XMLA ClearCache 命令来清除为响应 MDX 查询而创建的缓存的建议。 根据您使用的表格模型还是多维模型，运行 ClearCache 的影响有所不同。  
   
  **何时清除多维模型的缓存**  
   

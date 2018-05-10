@@ -1,33 +1,19 @@
 ---
-title: "检索数据使用 XmlReader |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- retrieving data
-- XmlReader object
-- data retrieval [ADOMD.NET], XmlReader object
-ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 
-author: Minewiskan
+title: 检索数据使用 XmlReader |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b5bfef8a355dea36e3444afe4ff32a1e783f96da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 43ce3cda885ec3583fb69d565b5dae875b492db6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>使用 XmlReader 检索数据
   **XmlReader**类的一部分**System.Xml** Microsoft.NET Framework 类库，命名空间是类似于<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>在于类**XmlReader**类还提供快速、 非缓存、 只进对访问数据。 如果没有数据使用的内存中的分析视图无需<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>对象， **XmlReader**对象非常适用于检索 XML 数据，尤其是对于大量数据。 因为**XmlReader**流式处理数据， **XmlReader**没有用于检索和缓存的所有数据公开给调用方，数据之前，会出现情况<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>对象用于将转换为分析对象模型表示形式的分析响应的 XML。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-builder
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,12 +17,11 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9157b167f69807cf4d4cbf7eae75e207ec2b1a42
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3ea774628fc4297853ee4503668ed8cdfe0f0565
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>“Reporting Services 登录”对话框（报表生成器）
   使用 **“Reporting Services 登录”** 对话框可以提供向报表服务器发布报表时要使用的凭据。 若要获取有关这些凭据的帮助，请与报表服务器管理员联系。  

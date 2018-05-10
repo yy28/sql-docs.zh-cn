@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: wmi-provider-library-reference
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - DatabaseLogonAccount
 apilocation:
@@ -23,12 +22,11 @@ caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: efbde911a4fe861310abb2678723c5e3696d95e0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 61710393a480226e1257dc55dea566c1acfd2a81
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>ConfigurationSetting 属性 - DatabaseLogonAccount
   指定报表服务器连接到报表服务器数据库时使用的登录帐户。 只读。  

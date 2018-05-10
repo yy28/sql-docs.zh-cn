@@ -1,43 +1,23 @@
 ---
 title: 授予对维度数据 (Analysis Services) 的自定义访问权限 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f6a10ec3bab74c2bd5c540b1816d77c2dcbd104c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]启用到多维数据集的读取访问权限后, 你可以设置显式允许或拒绝对维度成员 （包含在多维数据集中使用的度量值的所有度量值维度中包括包含度量值） 访问的其他权限。 例如，假设有多个经销商类别，您可能想要设置权限以排除某个具体业务类型的数据。 下图是拒绝访问“经销商”维度中“仓库”业务类型的前后对比效果。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  启用对多维数据集的读取访问权限后，可以设置明确允许或拒绝访问维度成员的其他权限（包括包含在度量值维度中的度量值，此维度包含在多维数据集中使用的全部度量值）。 例如，假设有多个经销商类别，您可能想要设置权限以排除某个具体业务类型的数据。 下图是拒绝访问“经销商”维度中“仓库”业务类型的前后对比效果。  
   
  ![数据透视表使用和不使用的维度成员](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "数据透视表使用和不使用的维度成员")  
   
@@ -50,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  以下说明假设有一个在 MDX 中发出查询的客户端连接。 如果该客户端使用 DAX（如 Power BI 中的 Power View），则维度安全性在查询结果中不明显。 有关详细信息，请参阅[了解用于多维模型的 Power View](understanding-power-view-for-multidimensional-models.md)。
       
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
  并非所有度量值或维度成员都可用于自定义访问方案。 如果某个角色限制访问默认度量值或成员，或者限制访问属于度量值表达式的度量值，则连接将失败。  
   
  **检查对维度安全性的阻碍：默认度量值、默认成员和度量值表达式中使用的度量值**  
@@ -97,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  可以使用 MDX 生成器编写 MDX 语句。 有关详细信息，请参阅 [MDX 生成器（Analysis Services -多维数据）](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)。 **“高级”** 选项卡包含以下选项：  
   
- **Attribute**  
+ **属性**  
  选择要管理成员安全性的属性。  
   
  **允许的成员集**  
@@ -106,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  创建 AllowedSet 会在该属性加入多层层次结构时产生波纹效果。 例如，假设角色允许访问“华盛顿州”（假设这样一个场景：角色为公司华盛顿州销售部门授予权限）。 对于通过该角色连接的用户，包括上级（美国）或下级（西雅图和雷德蒙德）的查询将只能查看包括华盛顿州在内的链中的成员。 由于其他州未获得显式允许，因此效果将如同其被拒绝访问一样。  
   
 > [!NOTE]  
->  如果定义属性成员为空集 ({})，则无属性成员将对数据库角色可见。 缺少允许集不会被解释为空集。  
+>  如果定义一个空集 ({}) 的属性成员属性的任何成员都将可见到数据库角色。 缺少允许集不会被解释为空集。  
   
  **拒绝的成员集**  
  DeniedSet 属性可以解析为“无成员”、“全部成员”（默认）或“部分属性成员”。 当拒绝集只包含一组特定属性成员时，将仅对那些特定成员和下级（如果该属性位于多层层次结构中）拒绝访问数据库角色。 以华盛顿州销售部门为例。 如果“华盛顿”位于 DeniedSet，则通过该角色连接的用户可以看到除华盛顿及其下级属性以外的所有其他州。  
@@ -136,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授予单元数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予对单元数据的自定义访问权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [授予对数据挖掘结构和模型的权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予对数据源对象 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

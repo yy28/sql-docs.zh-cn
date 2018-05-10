@@ -1,31 +1,23 @@
 ---
-title: "为 Kerberos 约束委派配置 Analysis Services |Microsoft 文档"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 为 Kerberos 约束委派配置 Analysis Services |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 277372a74d58ece125c4d7e7b8a2b59a447031ff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 约束委派配置 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在配置 Analysis Services 以使用 Kerberos 身份验证时，您很可能希望实现以下两个结果中的一个或全部两个：在查询数据时让 Analysis Services 模拟某个用户标识；或者让 Analysis Services 将某个用户标识委托给下级服务。 每个方案都具有稍有不同的配置要求。 这两个方案都要求进行验证，以便确保正确完成配置。  
+  在配置 Analysis Services 以使用 Kerberos 身份验证时，您很可能希望实现以下两个结果中的一个或全部两个：在查询数据时让 Analysis Services 模拟某个用户标识；或者让 Analysis Services 将某个用户标识委托给下级服务。 每个方案都具有稍有不同的配置要求。 这两个方案都要求进行验证，以便确保正确完成配置。  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
@@ -123,6 +115,6 @@ ms.lasthandoff: 02/23/2018
  [使用 Kerberos 进行相互身份验证](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [针对 Analysis Services 实例的 SPN 注册](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [连接字符串属性 &#40;Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [连接字符串属性 & #40;Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

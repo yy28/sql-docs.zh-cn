@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services 工具 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
 - Reporting Services, tools
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 
+caps.latest.revision: 80
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ed20fdaf6d06ae31e903e5043f51a5f8ba5491fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含支持在托管环境中开发和使用具有丰富功能的报表的一组图形和脚本编写工具。 该工具集包括开发工具、配置和管理工具以及报表查看工具。 本主题简要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的各工具以及如何访问该工具。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/15/2018
 |----------|-----------------|-------------------|  
 |Reporting Services 配置管理器|使用此工具可以配置 Reporting Services 安装。 可用任务包括：<br /><br /> 配置本地和远程报表服务器实例<br /><br /> 配置报表服务器服务帐户。<br /><br /> 创建和配置一个或多个 Web 服务 URL。<br /><br /> 配置报表管理器 URL<br /><br /> 创建和配置报表服务器数据库。<br /><br /> 配置扩展部署。<br /><br /> 备份、还原或替换用于加密存储的连接字符串以及凭据的对称密钥。<br /><br /> 配置无人参与的执行帐户。<br /><br /> 配置 SMTP 服务器以进行电子邮件传递。<br /><br /> <br /><br /> 注意：Reporting Services 配置管理器并不会帮助你管理报表服务器内容、启用额外功能或授予对服务器的访问权。<br /><br /> 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。|“开始”菜单|  
 |SQL Server Management Studio|使用此工具可以在单一环境中管理一个或多个报表服务器实例，包括：<br /><br /> 管理本地和远程报表服务器实例<br /><br /> 设置报表服务器属性<br /><br /> 修改角色定义<br /><br /> 关闭不使用的报表服务器功能<br /><br /> 管理作业<br /><br /> 管理共享计划|“开始”菜单|  
-|SQL Server 配置管理器|使用此工具可以：<br /><br /> 启动和停止 Reporting Services Windows 服务<br /><br /> 配置客户反馈报告、转储目录位置和错误报告<br /><br /> <br /><br /> **\*\* 警告 \*\***请不要使用此工具来配置服务帐户。 请改用 Reporting Services 配置工具。<br /><br /> 有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。|“开始”菜单|  
+|SQL Server 配置管理器|使用此工具可以：<br /><br /> 启动和停止 Reporting Services Windows 服务<br /><br /> 配置客户反馈报告、转储目录位置和错误报告<br /><br /> <br /><br /> **\*\* 警告 \*\*** 请不要使用此工具来配置服务帐户。 请改用 Reporting Services 配置工具。<br /><br /> 有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。|“开始”菜单|  
 |Rsconfig 实用工具|使用此工具可配置和管理报表服务器与报表服务器数据库的连接。 您还可以使用该工具来指定用于无人参与报表处理的用户帐户。<br /><br /> 有关详细信息，请参阅[报表服务器命令提示实用工具 (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)。|命令提示符|  
 |Rskeymgmt 实用工具|使用此工具可以：<br /><br /> 提取、还原、创建和删除用于加密报表服务器数据的对称密钥<br /><br /> 在扩展部署中联接报表服务器实例<br /><br /> <br /><br /> 有关详细信息，请参阅[报表服务器命令提示实用工具 (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)。|命令提示符|  
 |Windows Management Instrumentation (WMI) 类|通过使用这些类，无需使用图形用户界面即可自动化 Reporting Services 配置管理器中的配置任务。<br /><br /> 有关详细信息，请参阅 [Accessing the WMI Provider Programmatically](../../reporting-services/accessing-the-wmi-provider-programmatically.md)。|Visual Basic 脚本|  

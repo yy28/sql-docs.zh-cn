@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: ''
 ms.suite: sql
@@ -28,12 +27,11 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2fb694b47ad0256aeab5f9d184bbc7d8aa80388
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bc9254469d7c798540346741edb7427872e2a072
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
   开发人员可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到任意自定义数据源并在其中存储数据的自定义目标组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  

@@ -1,31 +1,30 @@
 ---
-title: "使用 URL 访问集成 Reporting Services | Microsoft Docs"
-ms.custom: 
+title: 使用 URL 访问集成 Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5f82228cfa6f52195c7d0836fe557aad9da068f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 73b3b700a3aee874d2f18a0fb00d342cff9ee02b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 访问集成 Reporting Services
   借助于 URL 访问，您可以通过报表服务器 URL 访问报表。 使用 URL 请求，您可以访问特定的报表服务器以及报表服务器数据库中的报表、资源和其他项。 还可以为用户自定义报表查看和导航体验。 URL 的查询字符串包含设备信息设置，以及针对报表和所选呈现输出的报表参数。 报表服务器处理 URL 请求的方法取决于您通过 URL 访问的项的参数、参数前缀和类型。  

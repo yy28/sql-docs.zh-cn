@@ -1,41 +1,23 @@
 ---
-title: "度量值和度量值组 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 度量值和度量值组 |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services]
-- measures [Analysis Services], about measures
-- OLAP objects [Analysis Services], measures
-- aggregate functions [Analysis Services]
-- granularity
-- measure groups [Analysis Services], about measure groups
-- measures [Analysis Services]
-- aggregations [Analysis Services], measures
-- fact tables [Analysis Services]
-ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 171ee494ad3d4b89ab923b4b2f0a769da0d7012c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
+  多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
   
  本主题将介绍 [Measures](#bkmk_measure) 和 [Measure Groups](#bkmk_mg)。 它还包含以下表格，以及指向有关创建和配置度量值和度量值组的过程步骤的链接。  
   

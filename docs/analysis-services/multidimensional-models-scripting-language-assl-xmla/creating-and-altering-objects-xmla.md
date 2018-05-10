@@ -1,37 +1,19 @@
 ---
-title: "创建和更改对象 (XMLA) |Microsoft 文档"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [XML for Analysis]
-- subordinate objects [XML for Analysis]
-- XML for Analysis, objects
-- modifying objects
-- removing objects
-- deleting objects
-- XMLA, objects
-ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: 
-author: Minewiskan
+title: 创建和更改对象 (XMLA) |Microsoft 文档
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3a57805854f7a7dfa51546425090f9e323511112
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0089b086d6e2da0ce171ad517e9e558dd06d8f72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>创建和更改对象 (XMLA)
   可以单独创建、更改和删除主要对象。 主要对象包括以下对象：  
@@ -61,15 +43,15 @@ ms.lasthandoff: 02/15/2018
  你使用[创建](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)命令以创建一个主对象的实例上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和[Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)命令更改实例上的现有主要对象。 这两个命令使用运行[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 ## <a name="creating-objects"></a>创建对象  
- 通过创建对象时**创建**方法，必须首先确定父对象，其中包含[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]要创建对象。 通过提供中的对象引用来标识父对象[ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)属性**创建**命令。 每个对象引用包含唯一标识的父对象所需的对象标识符**创建**命令。 有关对象引用的详细信息，请参阅[定义和标识对象 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ 通过创建对象时**创建**方法，必须首先确定父对象，其中包含[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]要创建对象。 通过提供中的对象引用来标识父对象[ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)属性**创建**命令。 每个对象引用包含唯一标识的父对象所需的对象标识符**创建**命令。 有关对象引用的详细信息，请参阅[定义和标识对象&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)。  
   
  例如，若要为某一多维数据集创建新的度量值组，则必须提供对该多维数据集的对象引用。 在多维数据集的对象引用**ParentObject**属性包含的数据库标识符和多维数据集标识符，如相同的多维数据集标识符可能被用另一个数据库上。  
   
- [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md)元素包含定义要创建的主要对象的 Analysis Services 脚本语言 (ASSL) 元素。 ASSL 有关的详细信息，请参阅[使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md)元素包含定义要创建的主要对象的 Analysis Services 脚本语言 (ASSL) 元素。 ASSL 有关的详细信息，请参阅[使用 Analysis Services 脚本语言进行开发&#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
   
  如果你设置**AllowOverwrite**属性**创建**命令为 true，你可以覆盖具有指定的标识符的现有主要对象。 否则，如果具有指定标识符的主要对象仍存在于父对象中，则会发生错误。  
   
- 有关详细信息**创建**命令，请参阅[创建元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
+ 有关详细信息**创建**命令，请参阅[创建元素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)。  
   
 ### <a name="creating-session-objects"></a>创建会话对象  
  会话对象是一些临时对象，它们仅可用于客户端应用程序所使用的显式或隐式会话，且在会话结束后会删除这些会话对象。 您可以通过设置创建会话对象**作用域**属性**创建**命令*会话*。  
@@ -78,11 +60,11 @@ ms.lasthandoff: 02/15/2018
 >  使用时*会话*设置， **ObjectDefinition**元素只能包含[维度](../../analysis-services/scripting/objects/dimension-element-assl.md)，[多维数据集](../../analysis-services/scripting/objects/cube-element-assl.md)，或[MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL 元素。  
   
 ## <a name="altering-objects"></a>更改对象  
- 通过使用修改对象时**Alter**方法，必须首先确定要修改通过提供中的对象引用的对象[对象](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)属性**Alter**命令。 每个对象引用包含唯一标识的对象所需的对象标识符**Alter**命令。 有关对象引用的详细信息，请参阅[定义和标识对象 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ 通过使用修改对象时**Alter**方法，必须首先确定要修改通过提供中的对象引用的对象[对象](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)属性**Alter**命令。 每个对象引用包含唯一标识的对象所需的对象标识符**Alter**命令。 有关对象引用的详细信息，请参阅[定义和标识对象&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)。  
   
  例如，若要修改某一多维数据集的结构，必须提供对该多维数据集的对象引用。 在多维数据集的对象引用**对象**属性包含的数据库标识符和多维数据集标识符，如相同的多维数据集标识符可能被用另一个数据库上。  
   
- **ObjectDefinition**元素包含定义要修改的主要对象的 ASSL 元素。 ASSL 有关的详细信息，请参阅[使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ **ObjectDefinition**元素包含定义要修改的主要对象的 ASSL 元素。 ASSL 有关的详细信息，请参阅[使用 Analysis Services 脚本语言进行开发&#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
   
  如果你设置**AllowCreate**属性**Alter**命令为 true，如果不存在该对象，可以创建指定的主要对象。 否则，如果指定的主要对象尚不存在，则会出现错误。  
   
@@ -98,7 +80,7 @@ ms.lasthandoff: 02/15/2018
 >  使用时*会话*设置， **ObjectDefinition**元素只能包含[维度](../../analysis-services/scripting/objects/dimension-element-assl.md)，[多维数据集](../../analysis-services/scripting/objects/cube-element-assl.md)，或[MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL 元素。  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>创建或更改从属对象  
- 尽管**创建**或**Alter**命令创建或更改只有一个最顶层的主要对象时，正在创建或修改的主要对象可能包含定义内封闭**ObjectDefinition**都从属于它的其他主版本号和次对象属性。 例如，如果你定义多维数据集，则指定中的父数据库**ParentObject**，和的多维数据集定义中**ObjectDefinition**可以定义多维数据集，而在度量值的度量值组你可以定义每个度量值组的分区的组。 次要对象只能在其所属的主要对象下定义。 有关主版本号和次对象的详细信息，请参阅[数据库对象 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
+ 尽管**创建**或**Alter**命令创建或更改只有一个最顶层的主要对象时，正在创建或修改的主要对象可能包含定义内封闭**ObjectDefinition**都从属于它的其他主版本号和次对象属性。 例如，如果你定义多维数据集，则指定中的父数据库**ParentObject**，和的多维数据集定义中**ObjectDefinition**可以定义多维数据集，而在度量值的度量值组你可以定义每个度量值组的分区的组。 次要对象只能在其所属的主要对象下定义。 有关主版本号和次对象的详细信息，请参阅[数据库对象&#40;Analysis Services-多维数据&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -154,8 +136,8 @@ ms.lasthandoff: 02/15/2018
  **ObjectExpansion**属性**Alter**命令设置为*ObjectProperties*。 此设置允许[ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md)元素中，要排除从数据源中定义一个次要对象**ObjectDefinition**。 因此，该数据源的模拟信息仍设置为在第一个示例中所指定的服务帐户。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
- [使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [执行方法&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
+ [开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

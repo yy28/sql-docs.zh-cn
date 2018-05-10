@@ -1,16 +1,15 @@
 ---
-title: "页眉和页脚（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 页眉和页脚（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10125"
 - sql13.rtp.rptdesigner.pagefooter.border.f1
@@ -25,16 +24,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1835b4d7a6ede5de5d442f36fe2ea7c85e9e330d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>页眉和页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 页眉和页脚可以包含静态文本、图像、线条、矩形、边框、背景色、背景图像和表达式。 表达式包含只具有一个数据集的报表的数据集字段引用，以及作为作用域包括的数据集的聚合函数调用。  
@@ -63,9 +61,9 @@ ms.lasthandoff: 01/09/2018
   
 |提供支持的表达式|ReportItems 聚合|数据集聚合（作用域必须是数据集名称）|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|表体中的文本框|是|是|  
-|&PageNumber|是|是|  
-|&TotalPages|是|是|  
+|表体中的文本框|是|“否”|  
+|&PageNumber|是|“否”|  
+|&TotalPages|是|“否”|  
 |聚合函数|是。 例如，<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|是。 例如，<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |页面上各个项的字段集合|间接支持。 例如，<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|是。 例如，<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |数据绑定图像|间接支持。 例如： `=ReportItems!TXT_Photo.Value`|是。 例如，<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

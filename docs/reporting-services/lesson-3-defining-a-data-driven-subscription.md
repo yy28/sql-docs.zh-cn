@@ -1,28 +1,27 @@
 ---
-title: "第 3 课：定义数据驱动订阅 | Microsoft Docs"
-ms.custom: 
+title: 第 3 课：定义数据驱动订阅 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e17d01c4ec9d288a3385c96645a3a8080487a201
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，将使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户数据驱动订阅页来连接到订阅数据源，生成一个检索订阅数据的查询，然后将结果集映射到报表和传递选项。  
