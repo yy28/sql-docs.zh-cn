@@ -1,22 +1,23 @@
 ---
-title: 安装和管理 SQL Server 中的机器学习包 |Microsoft 文档
+title: R 和 Python 包在 SQL Server 机器学习中的管理 |Microsoft 文档
+description: 获取 R 和 Python 包信息、 添加新包，并启用配置对机器学习的 SQL Server 实例上的客户端访问。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cbab4687dd0d5a8cb250fa38fc4c4c7dbb9d68a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abc77eee8d803fd94a58abfdab6f1c3cbe6621dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="install-and-manage-machine-learning-packages-in-sql-server"></a>安装和管理 SQL Server 中的机器学习包
+# <a name="r-and-python-package-management-in-sql-server-machine-learning"></a>在 SQL Server 机器学习中的 R 和 Python 包管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何安装新的 R 或 Python 包和 SQL Server 2016 中 SQL Server 自 2017 年。 它还描述你可以在 SQL Server 安装的包上的限制。
+此文章还介绍了 R 和 Python 包在 SQL Server 自 2017 年 1 机器学习和 SQL Server 2016 R Services 的管理。 它还描述你可以在 SQL Server 安装的包上的限制。
 
 ## <a name="overview-of-package-management-methods-and-requirements"></a>包管理方法和要求概述
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 但是，这些限制一定数据科学家和分析师工作的方法中的某些更改：
 
-+ 通常情况下，到服务器的管理访问权限是必需的。 在 SQL Server 自 2017 年，数据库管理员可以使用角色来使某些用户能够安装包用于是私有的但管理员仍必须启用此功能。
++ 通常情况下，SQL Server 上的包安装需要管理访问权限。 在 SQL Server 自 2017 年，数据库管理员可以使用角色来使某些用户能够安装包用于是私有的但管理员仍必须启用此功能。
 + 许多服务器没有 Internet 访问权限。 程序包安装到这些计算机需要一些额外的准备工作。
 + 包将安装到实例库。 包无法在实例之间共享。
 + 用户无法运行任何用户库中已安装的包。
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 
 有关如何安装新的 R 或 Python 包，请参阅以下文章以了解详细步骤。 
 
-### <a name="install-new-r-packages"></a>安装新的 R 包
+### <a name="r-packages"></a>R 包
 
 + [在 SQL Server 上安装其他 R 包](install-additional-r-packages-on-sql-server.md)
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 
     你还可以在使用 DDL 语句的 SQL Server 2017 安装 R 包。
 
-### <a name="install-new-python-packages"></a>安装新的 Python 软件包
+### <a name="python-packages"></a>Python 包
 
 + [在 SQL Server 上安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 
 在尝试下载或安装任何新包之前，查看的要求：
 
-+ 请确保包的 Windows 版本：[获取正确的包版本和格式](#packageVersion)
++ 请确保包的 Windows 版本。
 
 + 确定所有包依赖关系，并确定其与 SQL Server 环境的兼容性。
 
@@ -84,4 +85,4 @@ ms.lasthandoff: 04/16/2018
 
 识别所有依赖项可能很复杂。 R、 中，我们建议你使用[miniCRAN](create-a-local-package-repository-using-minicran.md)准备一个脱机包存储库。
 
-对于 Python，必须同样准备所有依赖项，然后将它们保存到本地。 请务必使用兼容 Windows 的二进制文件并使用 WHL 格式。
+对于 Python，必须同样准备所有依赖项，然后将它们保存到本地。 请务必使用兼容 Windows 的二进制文件和 WHL 格式。

@@ -2,9 +2,9 @@
 title: Microsoft SQL 操作 Studio （预览版） 发行说明 |Microsoft 文档
 description: Microsoft SQL 操作 Studio （预览版） 发行说明
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio （预览版） 发行说明
 
-**[下载年 4 月公共预览版](download.md)**
+**[下载可能公共预览版](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>5 月 2018年 （可能公共预览版）
+
+发布日期： 2018 5 月 7，  
+版本： 0.29.3
+
+*可能公共预览版*侧重于达到稳定状态和 bug 修复。 此生成包含如下要点：  
+
+- 宣布可在扩展管理器使用 Redgate SQL 搜索扩展。
+- 可用于 10 种语言的社区本地化： 德语、 西班牙语、 法语、 意大利语、 日语、 朝鲜语、 葡萄牙语、 俄语、 简体中文和繁体中文。
+- GDPR 符合生成具有隐私声明 》 减少遥测数据收集、 改进的选择退出体验和产品内链接。
+- 扩展管理器已改进体验来轻松地发现社区扩展的应用商店。
+- 扩展的 SQL 代理作业和作业历史记录查看改善。
+- Whoisactive 和服务器报表扩展的更新。
+- 提高管理仪表板属性滚动。
+- 修复 GitHub 问题：
+   - 修复[发出 703](https://github.com/Microsoft/sqlopsstudio/issues/703)： 编辑数据中输入类似于 HTML 的文本会导致值未正确显示之前刷新
+   - 修复[发出 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb 的包依赖关系
+   - 修复[发出 1260年](https://github.com/Microsoft/sqlopsstudio/issues/1260): distinct 未突出显示的关键字
+   - 修复[发出 1332年](https://github.com/Microsoft/sqlopsstudio/issues/1332)： 编辑数据还原行不起作用
+   - 修复[发出 1215年](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL 代理扩展和状态栏
+   - 修复[发出 1316年](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL 代理不再调整大小后更改 windows 大小
+
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
+
 
 
 ## <a name="april-2018-april-public-preview"></a>年 4 月 2018 （年 4 月公共预览版）

@@ -8,28 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2db7792c8c7a69647c0525c3d34bf94b090dd524
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安装新的 Python 软件包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何在 SQL Server 自 2017 年 1 机器学习 Services 的实例上安装新的 Python 包。
+本文介绍如何在 SQL Server 自 2017 年 1 机器学习 Services 的实例上安装新的 Python 包。 通常情况下，安装新包的过程是类似于在标准的 Python 环境。 但是，执行一些其他步骤是必需的如果服务器没有 internet 连接。
 
-通常情况下，安装新包的过程是类似于在标准的 Python 环境。 但是，执行一些其他步骤是必需的如果服务器没有 internet 连接。
-
-了解其中安装包，或者安装了哪些包的帮助，请参阅[查看安装 R 或 Python 包](../r/determine-which-packages-are-installed-on-sql-server.md)。
+了解其中安装包，或者安装了哪些包的帮助，请参阅[获取 R 或 Python 包信息](../r/determine-which-packages-are-installed-on-sql-server.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
-+ 你必须已安装了机器学习服务 （数据库） 与 Python 语言选项。 有关说明，请参阅[安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-services-windows-install.md)。
++ 你必须已安装了 SQL Server 自 2017 年 1 机器学习 Services （数据库） 与 Python 语言选项。 有关说明，请参阅[安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-services-windows-install.md)。
 
 + 对于每个服务器实例，你必须安装包的单独副本。 包无法在实例之间共享。
 
-+ 确定是否使用 Python 3.5 和 Windows 环境中，则你想要使用的包将起作用。 
++ 包必须在 Windows 上的 Python 3.5 符合要求和运行。 
 
 + 评估包是否非常适合于在 SQL Server 环境中使用。 通常，数据库服务器支持多个服务和应用程序，并且文件系统上的资源可能受限，以及连接到服务器。 在许多情况下会完全阻止 Internet 访问。
 
@@ -82,11 +80,11 @@ ms.lasthandoff: 05/08/2018
 
 + 如果你习惯于使用 Python 命令行，使用 PIP.exe 安装新包。 你可以找到**pip**中的安装程序`Scripts`子文件夹。 
 
-    如果收到错误`pip`未识别为内部或外部命令，你可以将 Python 可执行文件和 Python 脚本文件夹的路径添加到 Windows 中的 PATH 变量。
+  SQL Server 安装程序不将脚本添加到系统路径中。 如果收到错误`pip`未识别为内部或外部命令，你可以将脚本文件夹添加到 Windows 中的路径变量。
 
-    完整路径**脚本**默认安装中的文件夹是，如下所示：
+  完整路径**脚本**默认安装中的文件夹是，如下所示：
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+    C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + 如果使用 Visual Studio 2017 或 Visual Studio 2015 使用的 Python 扩展，你可以运行`pip install`从**Python 环境**窗口。 单击**包**，并在文本框中提供的名称或要安装的包的位置。 你不需要键入`pip install`; 它为你自动填充。 
 
@@ -131,7 +129,7 @@ cntk._version_
 
 如果你使用 Python 命令行，则可以使用**conda**包管理器中，这是包含由 SQL Server 安装程序添加的 Anaconda Python 环境。
 
-若要查看已安装在当前环境的 Python 包，请从命令提示符运行以下命令：
+假设你添加到 PATH 环境变量的脚本文件夹，若要列出你的 Python 环境中的包的管理员的命令提示符下运行此命令。
 
 ```python
 conda list

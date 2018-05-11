@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: olap
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71bc0c4663cb33b57408e6f79ddd35dfa1c71438
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ba8e337ea864dcd8e2a556cc44b985e2286b857
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>分区-写入的分区
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  对叶单元更改和非叶单元更改的处理方式不同。 叶单元表示度量值和度量值组引用的每个维度中的叶成员的交集。 叶单元的值直接从事实数据表中获取，不能通过深化进一步细分。 如果对某个多维数据集或任意分区启用写操作，则可以对叶单元进行更改。 仅当客户端应用程序提供在组成非叶单元的叶单元当中分发更改的方法时，才能对非叶单元进行更改。 此进程（称为分配）通过多维表达式 (MDX) 中的 UPDATE CUBE 语句进行管理。 商业智能开发人员可以使用 UPDATE CUBE 语句包含分配功能。 有关详细信息，请参阅[UPDATE CUBE 语句&#40;MDX&#41;](../../mdx/mdx-data-manipulation-update-cube.md)。  
   
 > [!IMPORTANT]  
->  如果更新的单元不相互重叠，则 **Update Isolation Level** 连接字符串属性可用于提高 UPDATE CUBE 的性能。 有关详细信息，请参阅 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。  
+>  如果更新的单元不相互重叠，则 **Update Isolation Level** 连接字符串属性可用于提高 UPDATE CUBE 的性能。 有关详细信息，请参阅<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。  
   
  无论客户端应用程序是否分发对非叶单元的更改，一旦对查询进行评估，写回表中的更改就会应用于叶单元和非叶单元，这样业务用户就可以查看更改对整个多维数据集的影响。  
   

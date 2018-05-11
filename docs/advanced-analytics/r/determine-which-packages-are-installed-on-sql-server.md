@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: e19217fb00cba1f9369bf79a09790f58f9dc2e66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 #  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>获取有关 SQL Server 机器学习的 R 和 Python 包信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-如果你已安装多个 Python 环境，或使用多个 R 工具，很容易包安装到的错误的库或环境，然后不能以更高版本查找。 本文提供了查询和指南适用于 determininga 包版本，以及若要列出在当前的 SQL Server 环境中安装的包。
+如果你已安装多个 Python 环境，或使用多个 R 工具，很容易包安装到的错误的库或环境，然后不能以更高版本查找。 本文提供了查询和指南适用于 determinin ga 包版本，以及若要列出在当前的 SQL Server 环境中安装的包。
 
 ## <a name="verify-the-current-default-library"></a>验证当前的默认库
 

@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 140d84717f7343f52b1c553964cce8f0c40e2c7c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,9 @@ SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有�
 
 对于 SQL Server 2016 R Services 客户，有两个路径可用来获取新的和更新的 R 程序包。 一种需要升级到 SQL Server 2017;其次，绑定到 Microsoft 机器学习服务器。
 
-升级到 SQL Server 2017 获取你的 R 程序包处包含在该版本中，以及 Python 功能的版本。 或者，绑定获取你更新的 R 包，可以进一步在 Microsoft 机器学习 Server 的每个新的主版本号和次版本刷新。 绑定未提供 Python 支持，这是 SQL Server 2017 功能。 
+升级到 SQL Server 2017 获取你的 R 程序包处包含在该版本中，以及 Python 功能的版本。 或者，绑定获取你更新的 R 包，可以进一步在 Microsoft 机器学习 Server 的每个新的主版本号和次版本刷新。 
+
+绑定未提供 Python 支持，这是 SQL Server 2017 功能。 
 
 **可通过 Microsoft 机器学习服务器组件升级**
 
@@ -47,7 +49,7 @@ SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有�
 组件 |初始版本 | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
 ----------|----------------|----------------|--------------|---------|-------|
 通过 R 的 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 9.0 | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [预先训练的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -58,24 +60,26 @@ SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有�
 
 组件 |初始版本 | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
-通过 R 的 Microsoft R Open (MRO) | R 3.4.1 | R 3.4.3 | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.3 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
+通过 R 的 Microsoft R Open (MRO) | R 3.3.3 | R 3.4.3 | | | |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
 Anaconda 4.2 通过 Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.3  | 9.3| | | |
- [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
-[预先训练的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.3 | 9.3| | | |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
+ [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
+[预先训练的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
 ## <a name="how-component-upgrade-works"></a>组件升级的工作原理
 
-组件升级是通过*绑定*到 Microsoft 机器学习服务器的 SQL Server 2016 R Services 实例 （或 SQL Server 自 2017 年 1 机器学习 Services 实例）。 [Microsoft 机器学习 Server](https://docs.microsoft.com/machine-learning-server/index)是在本地服务器产品分隔来自 SQL Server，但具有相同的解释程序和包。 绑定交换出 SQL Server 服务更新机制，以便你可以使用的 R 包和 Python 包传送与 Microsoft 机器学习服务器，这通常是较新的 SQL Server 服务。 切换支持策略是需要更高版本生成 R 数据科学团队吸引力和其解决方案的 Python 模块。 
+组件升级是通过*绑定*到的 SQL Server 2016 R Services 实例 （或 SQL Server 自 2017 年 1 机器学习 Services 实例） [Microsoft 机器学习 Server](https://docs.microsoft.com/machine-learning-server/index)。 
+
+Microsoft 机器学习服务器是本地服务器产品分隔来自 SQL Server，但具有相同的解释程序和包。 绑定交换出 SQL Server 服务更新机制，以便你可以使用的 R 包和 Python 包传送与 Microsoft 机器学习服务器，这通常是日期早于 SQL Server 安装的。 切换支持策略是需要更高版本生成 R 数据科学团队吸引力和其解决方案的 Python 模块。 
 
 通过执行绑定[MLS installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。 安装更新特定的 R 和 Python 包，但不是将替换的独立且断开连接的服务器安装的 SQL Server 数据库中实例。
 
 + 不绑定，R 和 Python 包时你安装 SQL Server service pack 或累积更新 (CU) 对于 bug 修复修补。 
-+ 使用绑定，则较新的包版本可以应用于您的实例，不考虑 CU 版本计划下[现代生命周期策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft 机器学习 Server。 现代的生命周期支持策略更短、 一年使用期限相比具有更频繁的更新。 
++ 使用绑定，则较新的包版本可以应用于您的实例，不考虑 CU 版本计划下[现代生命周期策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft 机器学习 Server。 现代的生命周期支持策略更短、 一年使用期限相比具有更频繁的更新。 绑定后，你将继续在变得 Microsoft 机器学习 Server 中提供的 R 和 Python 的将来更新中使用 MLS 安装程序。
 
 绑定适用于 R 和 Python 功能。 也就是说，R 和 Python 功能 （Microsoft R Open、 Anaconda） 和专有的开放源代码包包 RevoScaleR、 revoscalepy，等。 绑定不会更改的数据库引擎实例的支持模型并不会更改 SQL Server 的版本。
 
@@ -90,25 +94,31 @@ Anaconda 4.2 通过 Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 
 在用户体验方面技术，并且您与它的工作方式保持不变。 唯一的区别是存在较新版本的包和可能的其他包最初可通过 SQL Server （如 SQL Server 2016 R Services 客户 MicrosoftML)。
 
-## <a name="bkmk_BindWizard"></a>使用安装程序升级
+## <a name="bkmk_BindWizard"></a>将绑定到 MLS 使用安装程序
 
-Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本，并调用名为 SqlBindR.exe 若要更改绑定的实用工具。 在内部，SqlBindR 是链接到安装程序，间接使用。 更高版本，你可以直接从命令行以执行特定的选项运行 SqlBindR。
+Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本，并调用名为 SqlBindR.exe 若要更改绑定的实用工具。 在内部，SqlBindR 是链接到安装程序，间接使用。 更高版本，你可以直接从命令行以执行特定的选项调用 SqlBindR。
 
-1. 检查以确认现有的版本比你打算将其替换为更小的 R 和 RevoScaleR 的版本。 有关详细信息，请参阅[获取 R 和 Python 包信息](determine-which-packages-are-installed-on-sql-server.md)。
+1. 验证你的服务器满足最低版本要求。 对于 SQL Server 2016 R 服务，最小值是[Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)和[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 在 SSMS 中，运行`SELECT @@version`返回服务器版本信息。 
 
-1. [下载 Microsoft 机器学习 Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)到具有你想要升级的实例的计算机上。 
+1. 检查以确认现有的版本比你打算将其替换为更小的 R 和 RevoScaleR 的版本。 对于 SQL Server 2016 R 服务，R 基本包很 3.2.2 以及 RevoScaleR 8.0.3。
 
-1. 解压缩文件夹并启动安装程序。
+    + 请转到 files\microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
+    + 双击**R**打开控制台。
+    + 若要获取程序包版本，请使用`library(help="base")`和`library(help="RevoScaleR")`。 
 
-    ![Microsoft 机器学习 Server 安装向导](media/mls-921-installer-start.PNG)
+1. 下载到具有你想要升级的实例的计算机上的 Microsoft 机器学习服务器。 我们建议[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)。
+
+1. 解压缩文件夹并启动 ServerSetup.exe，位于 MLSWIN93。
+
+   ![Microsoft 机器学习 Server 安装向导](media/mls-921-installer-start.PNG)
 
 1. 上**配置安装**，确认要升级的组件，并查看兼容的实例的列表。 
 
-   在左侧，选择你想要保留还是升级每个功能。 不能升级某些功能并不是其他。 空的复选框指示您希望删除假设它当前已安装该功能。 在屏幕截图中，选择 SQL Server 自 2017 年 1 机器学习服务 (MSSQL14) 使用 R 和 Python 的实例。 支持此配置，因为 SQL Server 2017 具有 R 和 Python。
+   在左侧，选择你想要保留还是升级每个功能。 不能升级某些功能并不是其他。 空的复选框中删除该功能，而假定当前已安装。 在屏幕截图中，给定的 SQL Server 2016 R Services (MSSQL13) 实例选择 R 和预先训练的模型的 R 版本。 此配置是有效的因为 SQL Server 2016 支持 R，但不是 Python 支持。
 
-   在右侧，选择实例名称旁边的复选框。 如果未不列出任何实例，则必须组合不兼容。 如果不选择实例，创建新的独立安装机器学习 Server 后，和 SQL Server 库保持不变。
+   在右侧，选择实例名称旁边的复选框。 如果未不列出任何实例，则必须组合不兼容。 如果不选择实例，创建新的独立安装机器学习 Server 后，和 SQL Server 库保持不变。 如果您不能选择一个实例，则可能不是在[SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 
 
-    ![Microsoft 机器学习 Server 安装向导](media/configure-the-installation.PNG)
+    ![Microsoft 机器学习 Server 安装向导](media/mls-931-installer-mssql13.png)
 
 1. 上**许可协议**页上，选择**我接受这些条款**机器学习服务器接受许可条款。 
 
@@ -118,15 +128,51 @@ Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本�
 
     如果你想要更改安装文件夹，请单击**高级**以返回到向导的第一页。 但是，你必须重复所有以前的选择。
 
-1. 如果你是[安装组件脱机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)，系统可能提示您为所需的计算机学习组件，如 Microsoft R Open、 Python 服务器和 Python 打开的位置。
-
-在安装过程中，替换为 SQL Server 使用的任何 R 或 Python 库和快速启动板更新为使用较新的组件。 因此，如果实例以前使用的默认 R_SERVICES 文件夹中的库，升级后这些库已删除并快速启动板服务的属性发生更改，以在新位置中使用的库。
+在安装过程中，替换为 SQL Server 使用的任何 R 或 Python 库和快速启动板更新为使用较新的组件。 因此，如果实例以前使用的默认 R_SERVICES 文件夹中的库，升级后这些库已删除并快速启动板服务的属性将更改以在新位置中使用的库。
 
 绑定会影响这些文件夹的内容： C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library 替换 C:\Program Files\Microsoft\ML Server\R_SERVER 的内容。 由 Microsoft 机器学习 Server 安装程序创建第二个文件夹及其内容。 
 
+如果升级失败，请检查[SqlBindR 错误代码](#sqlbindr-error-codes)有关详细信息。
+
 ## <a name="confirm-binding"></a>确认绑定
 
-重新检查以确认你拥有较新版本的 R 和 RevoScaleR 的版本。 有关详细信息，请参阅[获取 R 和 Python 包信息](determine-which-packages-are-installed-on-sql-server.md)。 SQL Server 2016 R Services 客户还应具有 MicrosoftML。
+重新检查以确认你拥有较新版本的 R 和 RevoScaleR 的版本。 使用与你的数据库引擎实例中的 R 包一起分发的 R 控制台来获取包信息：
+
++ 请转到 files\microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
++ 双击**R**打开控制台。
++ 若要获取程序包版本，请使用`library(help="base")`和`library(help="RevoScaleR")`。 
+
+对于绑定到机器学习服务器 9.3 SQL Server 2016 R Services，R 基程序包应为 3.4.1、 RevoScaleR 应 9.3，并还应该 MicrosoftML 9.3。 
+
+如果你添加预先训练的模型，模型都嵌入到 MicrosoftML 库和你可通过 MicrosoftML 函数对其进行调用。 有关详细信息，请参阅[MicrosoftML 的 R 示例](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)。
+
+## <a name="offline-no-internet-access"></a>脱机 （没有 internet 访问）
+
+对于未连接 internet 的系统，可以安装程序和.cab 文件，下载到连接 internet 的计算机，然后将文件传输到独立的服务器。 
+
+安装程序 (ServerSetup.exe) 包括 Microsoft 包 （RevoScaleR、 MicrosoftML、 olapR、 sqlRUtils）。 .Cab 文件提供了其他核心组件。 例如，"SRO"cab 提供 R Open，Microsoft 的分发的开放源代码。
+
+下面的说明解释如何放置的脱机安装文件。
+
+1. 下载 MLS 安装程序。 它将作为单个 zip 文件下载。 我们建议[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)，但你也可以安装[早期版本](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)。
+
+1. 下载.cab 文件。 以下链接是 9.3 版本。 如果你需要早期版本，可以在中找到更多链接[R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)。 回想一下，Python/Anaconda 可以仅添加到 SQL Server 自 2017 年 1 机器学习 Services 实例。 R 和 Python; 已存在预先训练的模型.cab 提供了正在使用的语言中的模型。
+
+    | 功能 | 下载 |
+    |---------|----------|
+    | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
+    | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
+    | 预先训练的模型 | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
+
+1. 将.zip 和.cab 文件传输到目标服务器。
+
+1. 在服务器上，键入`%temp%`中运行命令，以获取临时目录的物理位置。 物理路径因计算机，但通常是`C:\Users\<your-user-name>\AppData\Local\Temp`。
+
+1. 在 %temp%文件夹中的 Place.cab 文件。
+
+1. 解压缩安装。
+
+1. 运行 ServerSetup.exe，并按照屏幕上的提示完成安装。
 
 ## <a name="bkmk_BindCmd"></a>命令行操作
 
@@ -239,21 +285,25 @@ Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
 |*bind*| 将指定的 SQL 数据库实例升级至 R Server 最新版本，并确保实例会自动获取 R Server 的未来升级|
 |*unbind*|从指定的 SQL 数据库实例中卸载 R Server 最新版本，并防止未来 R Server 升级影响该实例|
 
+< a name ="sqlbinder 错误代码"<a/>
+
 ### <a name="errors"></a>错误
 
 该工具返回以下错误消息：
 
-|错误|解决方法|
-|------|------|
-|绑定实例时出错| 无法绑定实例。 请与支持部门联系获取帮助。|
-|实例已绑定| 已运行 *bind* 命令，但指定的实例已绑定。 选择其他实例。|
-|实例未绑定| 已运行 *unbind* 命令，但指定的实例未绑定。 选择一个兼容的不同实例。|
-|不是有效的 SQL 实例 ID| 键入的实例名称可能不正确。 使用 *list* 参数再次运行该命令，查看可用的实例 ID。|
-|未找到任何实例| 此计算机不具有 SQL Server R Services 的实例。|
-|实例必须已安装 SQL R Services（数据库内）的兼容版本。| 有关详细信息，请参阅本主题中的兼容性要求。|
-|取消绑定实例时出错| 无法取消绑定实例。 请与支持部门联系获取帮助。|
-|发生意外错误| 其他错误。 请与支持部门联系获取帮助。  |
-|未找到任何 SQL 实例| 此计算机不具有 SQL Server 的实例。 |
+|错误代码  | 消息           | 详细信息               |
+|------------|-------------------|-----------------------|
+|将绑定错误 | 确定 （成功） | 无错误通过绑定。 |
+|将绑定错误 1 | 参数无效 | 语法错误。 |
+|将绑定错误 2 | 无效的操作 | 语法错误。 |
+|将绑定错误 3 | 无效的实例 | 实例存在，但不是有效的绑定。 |
+|将绑定错误 4 | 不绑定 | |
+|将绑定错误 5 | 已绑定 | 已运行 *bind* 命令，但指定的实例已绑定。 |
+|将绑定错误 6 | 绑定失败 | 取消绑定实例时出错。 |
+|将绑定错误 7 | 未绑定 | 数据库引擎实例已 R Services 或 SQL Server 计算机学习 Services。 实例未绑定到 Microsoft 机器学习 Server。 |
+|将绑定错误 8 | 取消绑定失败 | 取消绑定实例时出错。 |
+|将绑定错误 9 | 未找到任何实例 | 在此计算机上未不找到任何实例。 |
+
 
 ## <a name="see-also"></a>另请参阅
 

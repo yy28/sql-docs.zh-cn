@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 43ce3cda885ec3583fb69d565b5dae875b492db6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 2c8f4392b3cd37abb57ef2b7294e4b1ed223b27a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>使用 XmlReader 检索数据
   **XmlReader**类的一部分**System.Xml** Microsoft.NET Framework 类库，命名空间是类似于<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>在于类**XmlReader**类还提供快速、 非缓存、 只进对访问数据。 如果没有数据使用的内存中的分析视图无需<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>对象， **XmlReader**对象非常适用于检索 XML 数据，尤其是对于大量数据。 因为**XmlReader**流式处理数据， **XmlReader**没有用于检索和缓存的所有数据公开给调用方，数据之前，会出现情况<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>对象用于将转换为分析对象模型表示形式的分析响应的 XML。  

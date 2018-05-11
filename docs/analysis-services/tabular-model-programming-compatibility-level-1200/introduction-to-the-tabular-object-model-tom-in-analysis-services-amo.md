@@ -1,6 +1,6 @@
 ---
-title: 在分析中的表格对象模型 (TOM) 简介服务 AMO |Microsoft 文档
-ms.date: 05/07/2018
+title: 了解在分析中的表格对象模型 (TOM) 服务 AMO |Microsoft 文档
+ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03171e57bc57e3caa3d6cc475fd1fee4910cdf4d
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 6c5f4a9e8c7190801bc6f0ef7b19833f1921ade5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格对象模型 (TOM) 简介
+# <a name="understanding-tabular-object-model-tom-in-analysis-services-amo"></a>了解 Analysis Services AMO 中的表格对象模型 (TOM)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   表格对象模型 (TOM) 是为支持的兼容性级别 1200年或更高版本生成的表格模型的编程方案创建的 Analysis Services 管理对象 (AMO) 客户端库的扩展。 使用 AMO，如 TOM 提供以编程方式处理管理功能，例如，创建模型、 导入和刷新数据，以及分配角色和权限。  
   

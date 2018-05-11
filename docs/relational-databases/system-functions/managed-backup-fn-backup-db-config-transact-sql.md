@@ -25,11 +25,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1bc7964fafb35a4da03f8d5414f93835b49ed17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|值 1 指示此数据库为已删除数据库。|  
 |credential_name|SYSNAME|用于对存储帐户进行身份验证的 SQL 凭据的名称。 NULL 值指示未设置 SQL 凭据。|  
 |retention_days|INT|当前的保留期（以天为单位）。 NULL 值指示从未为此数据库配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
-|is_smart_backup_enabled|INT|指示当前是否为此数据库启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 值 1 指示 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 当前已启用，值 0 指示已为此数据库禁用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
+|is_managed_backup_enabled|INT|指示当前是否为此数据库启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 值 1 指示 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 当前已启用，值 0 指示已为此数据库禁用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |storage_url|NVARCHAR(1024)|存储帐户的 URL。|  
 |Encryption_algorithm|NCHAR(20)|返回当前要在加密备份时使用的加密算法。|  
 |Encryptor_type|NCHAR(15)|返回加密程序设置：证书或非对称密钥。|  

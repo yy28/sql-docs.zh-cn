@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee2c8124cf3487ca300c0b08ea113c8e66b114f4
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server 中的默认 R 和 Python 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,17 +61,17 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="r-components"></a>R 组件
 
-组件包括 Microsoft 的开放源代码 R 作为分布[Microsoft R Open](https://mran.microsoft.com/open)。 基本 R 包包括核心功能，如**统计信息**和**utils**。 你可以运行`installed.packages(priority = "base")`返回的包列表。 基础安装的 R 还包括大量样本数据集，以及标准的 R 工具，如 RGui （轻量交互式编辑器） 和 RTerm （R 命令提示符）。
+开放源代码 R 是 Microsoft 的分布[Microsoft R Open (MRO)](https://mran.microsoft.com/open)。 基本 R 包包括核心功能，如**统计信息**和**utils**。 你可以运行`installed.packages(priority = "base")`返回的包列表。 基础安装的 R 还包括大量样本数据集，以及标准的 R 工具，如 RGui （轻量交互式编辑器） 和 RTerm （R 命令提示符）。
 
-Microsoft 包中包含[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)为远程计算上下文，流式处理，并行执行的数据导入和转换的 rx 函数，建模，可视化效果和分析。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)添加机器学习建模中。其他包包括[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)用于在 R 中，编写 MDX 语句和[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)用于在存储过程中包括 R 脚本。
+专有 R 包中包含[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)为远程计算上下文，流式处理，并行执行的数据导入和转换的 rx 函数，建模，可视化效果和分析。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)添加机器学习建模中。其他 Microsoft 包包括[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)用于在 R 中，编写 MDX 语句和[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)用于在存储过程中包括 R 脚本。
 
 
 |发行版本             | R 版本       | Microsoft 包    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2016 R Services | 3.2.2   | RevoScaleR sqlrutil  |
-| SQL Server 2017 机器学习服务| 3.4.3 | RevoScaleR，MicrosoftML，olapR sqlrutil|
+| SQL Server 2017 机器学习服务| 3.3.3 | RevoScaleR，MicrosoftML，olapR sqlrutil|
 
-可以将包和预安装的模型添加到 SQL Server 2016 R Services 通过绑定到现代的生命周期支持策略。 绑定更改服务的模式。 默认情况下，初始安装后，R 包刷新一次通过 service pack 和累积更新。 其他包和核心 R 组件的完整版本升级才有可能通过产品升级 （从 SQL Server 2017 到 SQL Server 2016) 或通过将绑定 R 支持到 Microsoft 机器学习服务器。 有关详细信息，请参阅[中 SQL Server 的升级 R 和 Python 组件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+你可以升级 R 组件包，将新的 R 包和预安装的模型通过将绑定添加到现代的生命周期支持策略。 绑定更改服务的模式。 默认情况下，初始安装后，R 包刷新一次通过 service pack 和累积更新。 其他包和核心 R 组件的完整版本升级才有可能通过产品升级 （从 SQL Server 2017 到 SQL Server 2016) 或通过将绑定 R 支持到 Microsoft 机器学习服务器。 有关详细信息，请参阅[中 SQL Server 的升级 R 和 Python 组件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 ### <a name="python-components"></a>Python 组件
 
@@ -89,9 +89,9 @@ SQL Server 自 2017 年 1 机器学习是具有 R 和 Python 支持的第一个�
 
 ## <a name="administrative-permissions-for-package-installation"></a>包安装的管理权限
 
-包安装所需的权限更改 SQL Server 2016 和 SQL Server 自 2017 年之间。
+包库数据库中实例所使用的物理上位于 Program Files 文件夹的 SQL Server 实例。 写入到此位置需要管理员权限。 但是，SQL Server 2017 提供使非管理员能够将包添加的包安装某些其他方法。
 
-+ SQL Server 2016 中管理访问权限是新的 R 包安装所必需的。
++ SQL Server 2016 中管理访问权限是新的包安装所必需的。
 + 在 SQL Server 自 2017 年，你可以继续以管理员身份安装包，R 和 Python，和这很可能是最简单的方法。 
 
     DDL 语句，创建外部库，允许数据库管理员，而无需使用 R 工具安装包。 
@@ -105,9 +105,9 @@ SQL Server 自 2017 年 1 机器学习是具有 R 和 Python 支持的第一个�
 ## <a name="next-steps"></a>后续步骤
 
 + [获取包信息](determine-which-packages-are-installed-on-sql-server.md)
-+ [安装新的 R 包](install-additional-r-packages-on-sql-server.md)
-+ [安装新的 Python 软件包](../python/install-additional-python-packages-on-sql-server.md)
++ [安装新 R 包](install-additional-r-packages-on-sql-server.md)
++ [安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)
 + [启用远程 R 包管理](r-package-how-to-enable-or-disable.md)
-+ [用于 R 程序包管理 RevoScaleR 函数](use-revoscaler-to-manage-r-packages.md)
++ [用于 R 包管理的 RevoScaleR 函数](use-revoscaler-to-manage-r-packages.md)
 + [R 包同步](package-install-uninstall-and-sync.md)
-+ [本地 R 程序包存储库的 miniCRAN](create-a-local-package-repository-using-minicran.md)
++ [本地 R 包存储库的 miniCRAN](create-a-local-package-repository-using-minicran.md)
