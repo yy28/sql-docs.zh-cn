@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  若要查看代理警告和阈值的相关信息，请单击 **“警告”** 选项卡。有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
-6.  若要查看有关跟踪令牌的信息，请单击 **“跟踪令牌”** 选项卡。有关如何使用跟踪令牌的详细信息，请参阅 [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
+6.  若要查看有关跟踪令牌的信息，请单击 **“跟踪令牌”** 选项卡。有关如何使用跟踪令牌的详细信息，请参阅 [为事务复制测量滞后时间和验证连接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

@@ -93,7 +93,7 @@ ms.lasthandoff: 05/03/2018
  有关详细信息，请参阅本主题后面的[可能延迟日志截断的因素](#FactorsThatDelayTruncation)。  
   
 > [!NOTE]
-> 日志截断并不减小物理日志文件的大小。 若要减少物理日志文件的物理大小，则必须收缩日志文件。 有关收缩物理日志文件大小的信息，请参阅 [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)。  
+> 日志截断并不减小物理日志文件的大小。 若要减少物理日志文件的物理大小，则必须收缩日志文件。 有关收缩物理日志文件大小的信息，请参阅 [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)。  
 > 但是，请记住[可能延迟日志截断的因素](#FactorsThatDelayTruncation)。 如果在日志收缩后还需要存储空间，则会再次增加事务日志，导致在增加日志操作期间产生性能开销。
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
