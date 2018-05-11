@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: ''
-ms.component: configure-windows
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e2e898fcfce83f0d9d4472271c4eae7fc46bd72
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bb82ed8c4a4dc7c881ac2b94dee9ea88ce009858
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -79,7 +75,7 @@ RECONFIGURE
   
 -   选项 5：Linux 上的 Hortonworks HDP 2.0  
   
--   选项 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11 和 5.12  
+-   选项 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11、5.12 和 5.13  
   
 -   选项 7：Linux 上的 Hortonworks 2.1、2.2、2.3、2.4、2.5 和 2.6  
   

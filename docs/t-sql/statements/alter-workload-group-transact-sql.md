@@ -1,15 +1,13 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,15 +19,14 @@ helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: 56
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32863fbfbc8849cc0561d4aecc4144800b67d523
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,13 +105,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > 默认情况下，如果超过最长时间，Resource Governor 并不会阻止继续发出请求。 但会生成一个事件。 有关详细信息，请参阅 [CPU Threshold Exceeded 事件类](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
 
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始，通过使用[跟踪标志 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，Resource Governor 将在超出最大时间时终止请求。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =value  
  指定查询等待内存授予（工作缓冲区内存）变为可用的最长时间（以秒为单位）。  
   
 > [!NOTE]  
->  查询并不总是在达到内存授予超时的时候失败。 仅当有太多并发查询运行时，查询才失败。 否则，查询只能获取最小内存授予，从而导致查询性能下降。  
+> 查询并不总是在达到内存授予超时的时候失败。 仅当有太多并发查询运行时，查询才失败。 否则，查询只能获取最小内存授予，从而导致查询性能下降。  
   
  value 必须是正整数。 value 的默认设置为 0，表示使用基于查询开销的内部计算来确定最长时间。  
   
@@ -122,10 +119,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  指定并行请求的最大并行度 (DOP)。 value 必须为 0 或正整数（1 到 255）。 value 为 0 时，服务器选择最大并行度。 这是默认设置，也是推荐设置。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)]为 MAX_DOP 设置的实际值可能小于指定值。 最终值由公式 min(255, CPU 的数目) 确定。  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]为 MAX_DOP 设置的实际值可能小于指定值。 最终值由公式 min(255, CPU 的数目) 确定。  
   
 > [!CAUTION]  
->  更改 MAX_DOP 可能会对服务器的性能产生不利影响。 如果必须更改 MAX_DOP，我们建议将其设置为小于或等于在单个 NUMA 节点中存在的硬件计划程序的最大数目。 我们建议您不要将 MAX_DOP 设置为大于 8 的值。  
+> 更改 MAX_DOP 可能会对服务器的性能产生不利影响。 如果必须更改 MAX_DOP，我们建议将其设置为小于或等于在单个 NUMA 节点中存在的硬件计划程序的最大数目。 我们建议您不要将 MAX_DOP 设置为大于 8 的值。  
   
  按如下方式处理 MAX_DOP：  
   
@@ -148,7 +145,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  与 ALTER WORKLOAD GROUP 一起使用时，选项 "default" 必须用引号 ("") 引起来或用方括号 ([]) 括起来，以免与系统保留字 DEFAULT 冲突。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
 > [!NOTE]  
->  选项 "default" 区分大小写。  
+> 选项 "default" 区分大小写。  
   
 ## <a name="remarks"></a>Remarks  
  允许对默认组使用 ALTER WORKLOAD GROUP。  
@@ -160,7 +157,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   如果将 MAX_DOP 从 1 更改为 0 或大于 1 的值，则不需要执行 DBCC FREEPROCCACHE。 但串行计划不能并行运行，因此清除相应的缓存将允许使用并行编译新计划。  
   
 > [!CAUTION]  
->  从多个工作负载组关联的资源池中清除缓存计划将影响用户定义资源池由 pool_name 标识的所有工作负载。  
+> 从多个工作负载组关联的资源池中清除缓存计划将影响用户定义资源池由 pool_name 标识的所有工作负载。  
   
  建议您在熟悉资源调控器状态之后再执行 DDL 语句。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
@@ -176,7 +173,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="examples"></a>示例  
  下面的示例说明了如何将默认组中请求的重要性从 `MEDIUM` 更改为 `LOW`。  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -186,7 +183,7 @@ GO
   
  下面的示例说明了如何将一个工作负荷组从它所在的池中移到默认池中。  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

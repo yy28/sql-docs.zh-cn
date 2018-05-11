@@ -1,6 +1,6 @@
 ---
 title: SQL Server 文档 | Microsoft Docs
-ms.date: 04/26/2018
+ms.date: 05/03/2018
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
@@ -8,7 +8,7 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
 helpviewer_keywords:
@@ -23,13 +23,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Active
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d375db4cbc060dbd5245446e2e3de4ee3f8fe146
-ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
+ms.openlocfilehash: fe7bb29dbea7d45687cc0a1395b93e8b54fbc142
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,6 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 中处于领先水平。 本文档可帮助你在 Windows 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
 ::: moniker-end
 
-
-
-
-
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
 -->
@@ -55,6 +50,12 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |---------|---------|
 |[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 内容很快会合并到 .docs 站点中。  现在，请参阅：
+- [SQL Server 2014 联机丛书](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2014 中的新增功能](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
+- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
+- [先前版本](https://docs.microsoft.com/en-us/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -68,16 +69,6 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |---------|---------|
 |[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
-
-
-
-
-
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 内容很快会合并到 .docs 站点中。  现在，请参阅：
-- [SQL Server 2014 联机丛书](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2014 中的新增功能](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
-- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [先前版本](https://docs.microsoft.com/en-us/previous-versions/sql/)
 
 ::: moniker range="= sql-server-2016"
 **试用 SQL Server！**
@@ -96,7 +87,6 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 - [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
-::: moniker range=">= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="sql-server-technologies"></a>SQL Server 技术
 
 |||
@@ -109,7 +99,6 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |![复制服务](../sql-server/media/replication-services.png "复制服务")|**[复制](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 复制是一组技术，用于在数据库间复制和分发数据和数据库对象，然后在数据库间进行同步操作，使其保持一致。 使用复制时，可以通过局域网和广域网、拨号连接、无线连接和 Internet，将数据分发到不同位置以及分发给远程用户或移动用户。|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) 为你提供知识驱动型数据清理解决方案。 DQS 使您可以生成知识库，然后使用此知识库，同时采用计算机辅助方法和交互方法，执行数据更正和消除重复的数据。 您可以使用基于云的引用数据服务，并可以生成一个数据管理解决方案将 DQS 与 SQL Server Integration Services 和 Master Data Services 相集成。|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 是用于主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 基于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 生成的解决方案可帮助确保报表和分析均基于适当的信息。 使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您可以为主数据创建中央存储库，并随着主数据随时间变化而维护一个可审核的安全对象记录。|
-::: moniker-end
 
 ::: moniker range="= sql-server-2016"
 ## <a name="migrate-and-move-data"></a>迁移和移动数据
