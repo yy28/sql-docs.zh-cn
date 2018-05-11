@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  仅读意向连接  
  辅助数据库仅适用于其**应用程序意向**连接属性设置为“ReadOnly”（读意向连接）。  
   
- 有关此连接属性的信息，请参阅 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 有关此连接属性的信息，请参阅 [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
  允许任何只读连接  
  辅助数据库全部可用于读访问连接。 此选项允许较低版本的客户端进行连接。  

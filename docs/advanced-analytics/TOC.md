@@ -29,9 +29,9 @@
 ## SQL Server 2016
 ### [R Services（数据库内）](install/sql-r-services-windows-install.md)
 ### [R Server（独立版）](install/sql-r-standalone-windows-install.md)
-### [绑定到 Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [命令提示符设置](install/sql-ml-component-commandline-install.md)
 ## [脱机设置（无 Internet）](install/sql-ml-component-install-without-internet-access.md)
+## [升级 R 和 Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [设置 R 工具](r/set-up-a-data-science-client.md)
 ## [设置 Python 工具](python/setup-python-client-tools-sql.md)
 
@@ -95,15 +95,16 @@
 # [操作指南](r/sql-server-machine-learning-tasks.md)
 
 ## [包管理](r/r-package-management-for-sql-server-r-services.md)
-### [在 SQL Server 上安装新 R 包](r/install-additional-r-packages-on-sql-server.md)
-### [在 SQL Server 上安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
-### [为 SQL Server 实例启用 R 包管理](r/r-package-how-to-enable-or-disable.md)
-### [确定要在 SQL Server 上安装的包](r/determine-which-packages-are-installed-on-sql-server.md)
-### [使用 RevoScaleR 函数在 SQL Server 上查找或安装 R 包](r/use-revoscaler-to-manage-r-packages.md)
-### [同步 SQL Server 上安装的 R 包](r/package-install-uninstall-and-sync.md)
-### [随 SQL Server 一起安装的 R 包](r/installing-and-managing-r-packages.md)
-### [使用 miniCRAN 创建本地包存储库](r/create-a-local-package-repository-using-minicran.md)
-### [避免用户 R 包库出错](r/packages-installed-in-user-libraries.md)
+### [默认包](r/installing-and-managing-r-packages.md)
+### [获取包信息](r/determine-which-packages-are-installed-on-sql-server.md)
+### [安装新 R 包](r/install-additional-r-packages-on-sql-server.md)
+### [安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
+### 仅限 R
+#### [启用远程 R 包管理](r/r-package-how-to-enable-or-disable.md)
+#### [用于 R 包管理的 RevoScaleR 函数](r/use-revoscaler-to-manage-r-packages.md)
+#### [R 包同步](r/package-install-uninstall-and-sync.md)
+#### [本地 R 包存储库的 miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [R“用户库”的解决方法](r/packages-installed-in-user-libraries.md)
 
 ## 数据探索和建模
 ### [R 库和数据类型](r/r-libraries-and-data-types.md)
@@ -155,7 +156,6 @@
 ## [已知问题](known-issues-for-sql-server-machine-learning-services.md)
 ## [发行说明](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 ## [新的和已更新的项目](new-updated-advanced-analytics.md)
-## [在 Azure SQL 数据库中使用 R](r/using-r-in-azure-sql-database.md)
 
 ## [安装和故障排除技巧](machine-learning-troubleshooting-faq.md)
 ### [设置虚拟机](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
