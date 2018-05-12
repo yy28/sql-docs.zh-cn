@@ -8,8 +8,8 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
@@ -98,13 +98,23 @@ Microsoft 机器学习服务器是本地服务器产品分隔来自 SQL Server�
 
 Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本，并调用名为 SqlBindR.exe 若要更改绑定的实用工具。 在内部，SqlBindR 是链接到安装程序，间接使用。 更高版本，你可以直接从命令行以执行特定的选项调用 SqlBindR。
 
-1. 验证你的服务器满足最低版本要求。 对于 SQL Server 2016 R 服务，最小值是[Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)和[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 在 SSMS 中，运行`SELECT @@version`返回服务器版本信息。 
+1. 在 SSMS 中，运行`SELECT @@version`验证服务器是否满足最低版本要求。 
 
-1. 检查以确认现有的版本比你打算将其替换为更小的 R 和 RevoScaleR 的版本。 对于 SQL Server 2016 R 服务，R 基本包很 3.2.2 以及 RevoScaleR 8.0.3。
+   对于 SQL Server 2016 R 服务，最小值是[Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)和[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。
 
-    + 请转到 files\microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
-    + 双击**R**打开控制台。
-    + 若要获取程序包版本，请使用`library(help="base")`和`library(help="RevoScaleR")`。 
+1. 检查 R 基和 RevoScaleR 包以确认现有的版本比你打算将其替换为较低的版本。 对于 SQL Server 2016 R 服务，R 基本包很 3.2.2 以及 RevoScaleR 8.0.3。
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. 下载到具有你想要升级的实例的计算机上的 Microsoft 机器学习服务器。 我们建议[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)。
 
@@ -138,15 +148,23 @@ Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本�
 
 重新检查以确认你拥有较新版本的 R 和 RevoScaleR 的版本。 使用与你的数据库引擎实例中的 R 包一起分发的 R 控制台来获取包信息：
 
-+ 请转到 files\microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
-+ 双击**R**打开控制台。
-+ 若要获取程序包版本，请使用`library(help="base")`和`library(help="RevoScaleR")`。 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 对于绑定到机器学习服务器 9.3 SQL Server 2016 R Services，R 基程序包应为 3.4.1、 RevoScaleR 应 9.3，并还应该 MicrosoftML 9.3。 
 
 如果你添加预先训练的模型，模型都嵌入到 MicrosoftML 库和你可通过 MicrosoftML 函数对其进行调用。 有关详细信息，请参阅[MicrosoftML 的 R 示例](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)。
 
-## <a name="offline-no-internet-access"></a>脱机 （没有 internet 访问）
+## <a name="offline-binding-no-internet-access"></a>脱机绑定 （没有 internet 访问）
 
 对于未连接 internet 的系统，可以安装程序和.cab 文件，下载到连接 internet 的计算机，然后将文件传输到独立的服务器。 
 
@@ -168,7 +186,7 @@ Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本�
 
 1. 在服务器上，键入`%temp%`中运行命令，以获取临时目录的物理位置。 物理路径因计算机，但通常是`C:\Users\<your-user-name>\AppData\Local\Temp`。
 
-1. 在 %temp%文件夹中的 Place.cab 文件。
+1. 将.cab 文件放在 %temp%文件夹中。
 
 1. 解压缩安装。
 
@@ -285,7 +303,7 @@ Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
 |*bind*| 将指定的 SQL 数据库实例升级至 R Server 最新版本，并确保实例会自动获取 R Server 的未来升级|
 |*unbind*|从指定的 SQL 数据库实例中卸载 R Server 最新版本，并防止未来 R Server 升级影响该实例|
 
-< a name ="sqlbinder 错误代码"<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### <a name="errors"></a>错误
 
@@ -299,10 +317,10 @@ Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
 |将绑定错误 3 | 无效的实例 | 实例存在，但不是有效的绑定。 |
 |将绑定错误 4 | 不绑定 | |
 |将绑定错误 5 | 已绑定 | 已运行 *bind* 命令，但指定的实例已绑定。 |
-|将绑定错误 6 | 绑定失败 | 取消绑定实例时出错。 |
+|将绑定错误 6 | 绑定失败 | 取消绑定实例时出错。 如果不选择任何功能的情况下运行 MLS 安装程序，则可能出现此错误。|
 |将绑定错误 7 | 未绑定 | 数据库引擎实例已 R Services 或 SQL Server 计算机学习 Services。 实例未绑定到 Microsoft 机器学习 Server。 |
 |将绑定错误 8 | 取消绑定失败 | 取消绑定实例时出错。 |
-|将绑定错误 9 | 未找到任何实例 | 在此计算机上未不找到任何实例。 |
+|将绑定错误 9 | 未找到任何实例 | 此计算机上未不找到任何数据库引擎实例。 |
 
 
 ## <a name="see-also"></a>另请参阅
