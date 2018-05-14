@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -23,15 +21,14 @@ helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: 47
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de17c3a1d00554e36537ce76eafcebba2ac0e55d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 82f3df3e82ae7be0c8df9e12e29afbffdb43f92d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ CREATE WORKLOAD GROUP group_name
 > 默认情况下，如果超过最长时间，Resource Governor 并不会阻止继续发出请求。 但会生成一个事件。 有关详细信息，请参阅 [CPU Threshold Exceeded 事件类](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
 
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始，通过使用[跟踪标志 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，Resource Governor 将在超出最大时间时终止请求。 
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =value  
  指定查询等待内存授予（工作缓冲区内存）变为可用状态的最长时间（以秒为单位）。  
