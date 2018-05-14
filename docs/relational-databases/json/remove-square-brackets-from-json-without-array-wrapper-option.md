@@ -10,7 +10,7 @@ ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITHOUT_ARRAY_WRAPPER
 ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
@@ -18,13 +18,12 @@ caps.latest.revision: 11
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f5b69fb76ef69433dceac9797f5c05cf8bcd3d23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 73b376d0e05c495659d6b61bdc2204312ece1891
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>从 JSON 中删除方括号 - WITHOUT_ARRAY_WRAPPER 选项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
--   SQL Server 2016 和 JSON 支持[](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+-   [SQL Server 2016 和 JSON 支持](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
 -   [在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 

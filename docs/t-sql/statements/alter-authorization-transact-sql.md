@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -32,13 +30,12 @@ caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21d2654f72fca0a136a9369190b73edada80b316
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 69a1483b2bc515d0c03a5f11dc1ba520ab185c08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +179,7 @@ ALTER AUTHORIZATION ON
  另请注意下列事项：    
     
 > [!IMPORTANT]    
->  查找对象所有者的唯一可靠的方式是查询 sys.objects 目录视图。 查找类型所有者的唯一可靠的方式是使用 TYPEPROPERTY 函数。    
+>  查找对象所有者的唯一可靠的方式是查询 **sys.objects** 目录视图。 查找类型所有者的唯一可靠的方式是使用 TYPEPROPERTY 函数。    
     
 ## <a name="special-cases-and-conditions"></a>特殊事例和条件    
  下表列出了适用于更改授权的特殊事例、异常和条件。    
@@ -198,7 +195,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|主体必须为登录名。|    
   
 ## <a name="AlterDB"></a>对数据库执行 ALTER AUTHORIZATION  
-适用范围：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**适用范围**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>对于 SQL Server：  
 **对新所有者的要求：**   
 新所有者主体必须是以下项之一：  
@@ -207,7 +204,7 @@ ALTER AUTHORIZATION ON
 -   表示 Windows 组的 Windows 用户，通过 Windows 身份验证登录名进行身份验证。  
   
 **对执行 ALTER AUTHORIZATION 语句的人员的要求：**  
-如果不是 sysadmin 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限。   
+如果不是 **sysadmin** 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限。   
 
 ### <a name="for-azure-sql-database"></a>对于 Azure SQL 数据库：  
 **对新所有者的要求：**   

@@ -71,7 +71,7 @@ GO
 如需其他选项和详细信息，请参阅 [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)。
  
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>如果添加或删除断字符  
-如果您添加、删除或更改了断字符，则需要刷新为全文索引和查询而支持的 Microsoft Windows 区域设置标识符 (LCID) 列表。 有关详细信息，请参阅 [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
+如果您添加、删除或更改了断字符，则需要刷新为全文索引和查询而支持的 Microsoft Windows 区域设置标识符 (LCID) 列表。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="default"></a> 设置默认的全文语言选项  
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将把 **default full-text language** 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的非本地化版本， **或** 选项为“英语”。  

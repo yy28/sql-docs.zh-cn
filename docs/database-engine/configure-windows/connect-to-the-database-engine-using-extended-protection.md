@@ -3,15 +3,12 @@ title: 使用扩展保护连接到数据库引擎 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
 - service binding
@@ -24,12 +21,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f0eae05397ebe6ce2c73841e9c27746e9a946dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,11 +66,11 @@ ms.lasthandoff: 04/16/2018
   
 -   **强行加密**  
   
-     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **扩展保护**  
   
-     可能的值为 **“关闭”**、 **“允许”**和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 **“扩展保护”** 位于配置管理器中的 **“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“关闭”**、 **“允许”**和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 **“扩展保护”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
     -   当设置为 **“关闭”**时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 **“关闭”** 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 当您知道客户端操作系统不支持扩展保护时，请使用此设置。  
   

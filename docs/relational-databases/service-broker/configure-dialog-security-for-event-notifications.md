@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: service-broker
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
@@ -19,12 +18,11 @@ caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 158f2c0de23665345398202407d6dcec576b0d3a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 797aef8ddeab8daaf094556e5ba2ec96754a6ffe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>配置事件通知的对话安全模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |-------------------|-------------------|  
 |选择或创建一个数据库以包含事件通知和主密钥。|选择或创建一个数据库以包含主密钥。|  
 |如果没有用于源数据库的主密钥，则 [创建主密钥](../../t-sql/statements/create-master-key-transact-sql.md)。 源数据库和目标数据库都需要主密钥来保护它们各自的证书。|如果没有用于目标数据库的主密钥，则创建主密钥。|  
-|为源数据库[创建登录名](../../t-sql/statements/create-login-transact-sql.md) 和相应的 [用户](../../t-sql/statements/create-user-transact-sql.md)。|为目标数据库创建登录名和相应的用户。|  
+|为源数据库[创建登录名](../../t-sql/statements/create-login-transact-sql.md) 和相应的 [用户](../../t-sql/statements/create-user-transact-sql.md) 。|为目标数据库创建登录名和相应的用户。|  
 |为源数据库的用户[创建证书](../../t-sql/statements/create-certificate-transact-sql.md) 。|创建属于目标数据库的用户的证书。|  
 |在目标服务器可以访问的文件中[备份证书](../../t-sql/statements/backup-certificate-transact-sql.md) 。|将证书备份到可以由源服务器访问的文件。|  
 |[创建用户](../../t-sql/statements/create-user-transact-sql.md)，指定目标数据库的用户和 WITHOUT LOGIN。 此用户将拥有要通过备份文件创建的目标数据库证书。 用户不必映射到登录名，因为此用户的唯一目的是拥有在下面的步骤 3 中创建的目标数据库证书。|创建用户，指定源数据库的用户和 WITHOUT LOGIN。 此用户将拥有要通过备份文件创建的源数据库证书。 用户不必映射到登录名，因为此用户的唯一目的是拥有在下面的步骤 3 中创建的源数据库证书。|  

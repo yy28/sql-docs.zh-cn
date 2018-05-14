@@ -5,25 +5,23 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: json
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ''
 caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9dfb96a67a6356a0c220b852b48db9541eda8959
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f17fe3754cae9be4e6701e237b380d43cceed7e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 现在可在 SQL Server 或 SQL 数据库中存储 JSON 文档并查询 JSON 数据，操作与在 NoSQL 数据库中类似。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
@@ -117,7 +115,7 @@ create table WebSite.Logs (
 
 如果希望在集合中进行大量更新、插入和删除操作，可将 JSON 文档存储在内存优化表中。 内存优化 JSON 集合始终将数据保留在内存中，因此不会产生任何存储 I/O 开销。 此外，内存优化 JSON 集合是完全无锁的，这意味着文档上的操作不会锁定其他任何操作。
 
-将经典集合转换为内存优化集合只需执行一个操作，即在表定义后指定 with (memory_optimized=on) 选项，如下例所示。 完成操作后，即可获得内存优化版的 JSON 集合。
+将经典集合转换为内存优化集合只需执行一个操作，即在表定义后指定 **with (memory_optimized=on)** 选项，如下例所示。 完成操作后，即可获得内存优化版的 JSON 集合。
 
 ```sql
 create table WebSite.Logs (
@@ -142,7 +140,7 @@ create table WebSite.Logs (
 ) with (memory_optimized=on)
 ```
 
-若要最大化性能，请将 JSON 值强制转换为用于保留属性值的最小可能类型。 在前面的示例中，使用的是 tinyint。
+若要最大化性能，请将 JSON 值强制转换为用于保留属性值的最小可能类型。 在前面的示例中，使用的是 **tinyint**。
 
 还可将更新 JSON 文档的 SQL 查询放置在存储过程中，以获得本机编译的优势。 例如：
 
@@ -176,7 +174,7 @@ END
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
--   SQL Server 2016 和 JSON 支持[](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+-   [SQL Server 2016 和 JSON 支持](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
 -   [在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 

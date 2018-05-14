@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/10/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
 - partitioned tables [SQL Server], replicating
@@ -23,12 +22,11 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8efe1264f1b844fdcec35b9343321e4081e5b159
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 73fe6b11ef6b4e4f60f02eb8b1791be8a2aa3ca7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +47,9 @@ ms.lasthandoff: 04/16/2018
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   
-    -   用于事务复制的[sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) f或 transactional replication  
+    -   用于事务复制的[sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 transactional replication  
   
-    -   用于合并复制的[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) f或 merge replication  
+    -   用于合并复制的[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 或 merge replication  
   
      若要复制上一个表中列出的对象，请指定相应架构选项值。 有关如何指定架构选项的信息，请参阅 [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md)。  
   
