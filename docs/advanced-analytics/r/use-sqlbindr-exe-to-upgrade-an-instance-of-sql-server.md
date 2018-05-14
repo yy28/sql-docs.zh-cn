@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>错误
+## <a name="binding-errors"></a>绑定错误
 
-该工具返回以下错误消息：
+MLS 安装程序和 SqlBindR 都返回以下错误代码和消息。
 
 |错误代码  | 消息           | 详细信息               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
 |将绑定错误 3 | 无效的实例 | 实例存在，但不是有效的绑定。 |
 |将绑定错误 4 | 不绑定 | |
 |将绑定错误 5 | 已绑定 | 已运行 *bind* 命令，但指定的实例已绑定。 |
-|将绑定错误 6 | 绑定失败 | 取消绑定实例时出错。 如果不选择任何功能的情况下运行 MLS 安装程序，则可能出现此错误。|
+|将绑定错误 6 | 绑定失败 | 取消绑定实例时出错。 如果不选择任何功能的情况下运行 MLS 安装程序，则可能出现此错误。 绑定需要选择一个 MSSQL 实例和 R 和 Python，假定为的实例是 SQL Server 自 2017 年。|
 |将绑定错误 7 | 未绑定 | 数据库引擎实例已 R Services 或 SQL Server 计算机学习 Services。 实例未绑定到 Microsoft 机器学习 Server。 |
 |将绑定错误 8 | 取消绑定失败 | 取消绑定实例时出错。 |
 |将绑定错误 9 | 未找到任何实例 | 此计算机上未不找到任何数据库引擎实例。 |

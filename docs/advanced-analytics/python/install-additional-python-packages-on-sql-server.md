@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安装新的 Python 软件包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>如何查看已安装的软件包使用 conda
+## <a name="list-installed-packages-using-conda"></a>使用 conda 列出已安装包
 
 有可以获取已安装的包列表的不同方法。 例如，你可以查看在已安装的软件包**Python 环境**的 Visual Studio 的 windows。
 
-如果你使用 Python 命令行，则可以使用**conda**包管理器中，这是包含由 SQL Server 安装程序添加的 Anaconda Python 环境。
+如果你使用的 Python 命令行，可以使用**Pip**或**conda**程序包管理器，包含由 SQL Server 安装程序添加的 Anaconda Python 环境。
 
-假设你添加到 PATH 环境变量的脚本文件夹，若要列出你的 Python 环境中的包的管理员的命令提示符下运行此命令。
+假设你添加到 PATH 环境变量的脚本文件夹，若要列出你的 Python 环境中的包的管理员的命令提示符下运行此命令。 否则，请参阅[获取 R 和 Python 包信息](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda)有关如何在 SQL Server 中运行 Python tools 的指针。
 
 ```python
 conda list

@@ -3,82 +3,48 @@ title: 在 SQL Server 计算机学习 Services 上安装新的 R 包 |Microsoft 
 description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 自 2017 年 1 机器学习 Services （数据库）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何将新的 R 包安装到何处启用机器学习的 SQL Server 的实例。
+本文介绍如何将新的 R 包安装到何处启用机器学习的 SQL Server 的实例。 有多种方法可以安装新的 R 包，具体取决于你拥有 SQL Server 的版本，以及服务器是否具有 internet 连接。
 
-有多种方法可以安装新的 R 包，具体取决于你拥有 SQL Server 的版本，以及服务器是否具有 internet 访问权限。
+## <a name="bkmk_rInstall"></a> 安装 R 包通过 Internet 连接
 
-+ [安装新包使用 R 工具具有 internet 访问权限](#bkmk_rInstall)
-
-    使用传统的 R 命令从 Internet 安装包。 这是最简单的方法，但需要管理访问权限。
-
-    **适用于：**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]。 此外所需的实例[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]通过 Ddl 的包管理尚未启用。
-
-+ [使用的服务器上安装新的 R 包**没有**internet 访问权限](#bkmk_offlineInstall)
-
-    如果服务器没有 internet 访问权限，需要执行一些其他步骤来准备的包。 本部分介绍如何准备所需的包及其依赖项安装文件。
-
-+ [使用创建外部库语句安装包](#bkmk_createlibrary) 
-
-    [创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句提供 SQL Server 自 2017 年，以使其可以创建无需运行 R 包库中或直接的 Python 代码。 但是，此方法要求你提前准备所有必需的程序包，并需要附加的数据库的权限。
-
-    **适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 其他限制条件
-
-## <a name="bkmk_rInstall"></a> 安装新的 R 包，使用 Internet
-
-你可以使用标准 R 工具的 SQL Server 2016 或 SQL Server 2017 实例上安装新包。 此过程需要你计算机上的管理员。
+你可以使用标准 R 工具的 SQL Server 2016 实例上安装新包或 SQL Server 2017，提供在计算机已打开端口 80 并且你具有管理员权限。
 
 > [!IMPORTANT] 
 > 请务必将包安装到当前实例相关联的默认库。 永远不会将包安装到用户目录中。
 
-此过程描述如何安装使用 RGui; 包但是，你可以使用 RTerm 或任何其他 R 命令行工具，它支持提升的访问权限。
+此过程使用 RGui，但是你可以使用 RTerm 或任何其他 R 命令行工具，它支持提升的访问权限。
 
-### <a name="install-a-package-using-rgui-or-rterm"></a>使用 RGui 或 RTerm 安装程序包
+### <a name="install-a-package-using-rgui"></a>使用 RGui 安装程序包
 
-1. 导航到安装实例的 R 库的位置的服务器上的文件夹。
+1. [确定实例库的位置](installing-and-managing-r-packages.md)。 导航到其中安装 R 工具的文件夹。 例如，SQL Server 2017 默认实例的默认路径如下所示： `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-  **默认实例**
+1. 右键单击 RGui.exe，然后选择**以管理员身份运行**。 如果你没有所需的权限，请与数据库管理员联系并提供所需的包的列表。
 
-    SQL Server 自 2017 年 1: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+1. 从命令行中，如果您知道包名称中，你可以键入：`install.packages("the_package-name")`双引号所需的包名称。
 
-  **命名实例**
+1. 当系统询问的镜像站点，选择适用于你的位置的任何站点。
 
-    SQL Server 自 2017 年 1: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+如果目标包依赖于其他包，R 安装程序将自动下载依赖项，并为你安装它们。
 
-  如果已使用绑定来升级机器学习组件，则路径可能已更改。 在安装新包之前，始终检查实例路径。 
-
-2. 右键单击 RGui.exe，然后选择**以管理员身份运行**。
-
-    如果你没有所需的权限，请与数据库管理员联系并提供所需的包的列表。
-
-3. 从命令行中，如果您知道包名称中，你可以键入：`install.packages("the_package-name")`双引号所需的包名称。
-
-4. 当系统询问的镜像站点，选择适用于你的位置的任何站点。
-
-5. 如果目标包依赖于其他包，R 安装程序将自动下载依赖项，并为你安装它们。
-
-6. 对于每个实例，你需要使用包，可单独运行安装。 包无法在实例之间共享。
+如果你有多个实例的 SQL Server，如通过并行实例的 SQL Server 2016 R Services 和 SQL Server 自 2017 年 1 机器学习 Services，运行单独为每个实例的安装，如果你想要使用两个上下文中的包。 包无法在实例之间共享。
 
 ## <a name = "bkmk_offlineInstall"></a> 使用 R 工具的脱机安装
 
-若要在没有 internet 访问的服务器上安装 R 包，你必须：
+如果服务器没有 internet 访问权限，需要其他步骤来准备的包。 若要在没有 internet 访问的服务器上安装 R 包，你必须：
 
 + 提前分析依赖关系。
 + 目标包下载到具有 Internet 访问的计算机。
@@ -96,21 +62,9 @@ ms.lasthandoff: 05/08/2018
 
 1. 复制包压缩文件，或对于多个包，包含中的所有程序包的完整存储库压缩格式，服务器可以访问的位置。
 
-2. 打开其中安装实例的 R 库服务器上的文件夹。 例如，如果使用 Windows 命令提示符，导航到 RTerm.Exe 或 RGui.exe 所在位置的目录。
+2. 打开其中安装 R 工具的实例的服务器上的文件夹。 例如，如果使用的具有 SQL Server 2016 R Services 的系统上的 Windows 命令提示符下，切换到`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`。
 
-  **默认实例**
-
-    SQL Server 自 2017 年 1: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
-
-  **命名实例**
-
-    SQL Server 自 2017 年 1: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
-
-3. 右键单击 RGui 或命令提示符，然后选择**以管理员身份运行**。
+3. 右键单击 RGui 或 RTerm 并选择**以管理员身份运行**。
 
 4. 运行 R 命令`install.packages`并指定包或存储库名称和压缩文件的位置。
 
@@ -122,17 +76,17 @@ ms.lasthandoff: 05/08/2018
 
     如果任何所需的程序包不是实例库中存在，并且无法在压缩文件中找到，目标包的安装将失败。
 
-## <a name="bkmk_createlibrary"></a> 使用 DDL 语句要安装包 
+## <a name="bkmk_createlibrary"></a> 使用创建外部库
 
-在 SQL Server 自 2017 年，你可以使用[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句以将包或组的包添加到特定数据库或实例。 此 DDL 语句和支持的数据库角色旨在促进安装和管理包由数据库所有者无需使用 R 或 Python 工具。
+**适用于：**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-此过程需要一些准备工作，相比安装包使用常规的 R 或 Python 方法。
+[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句使可以向特定数据库或实例中添加一个包或一组的包，而无需运行 R 或 Python 代码直接。 但是，此方法需要包准备和附加的数据库权限。
 
-+ 所有包都必须可用作本地压缩文件，而不是从 internet 下载。
++ 所有包必须是可用作本地 zip 文件，而不是按需从 internet 下载。
 
     如果在服务器上没有对文件系统的访问，你还可以传递一个完整的软件包作为变量，使用的二进制格式。 有关详细信息，请参阅[创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)。
 
-+ 如果所需包不可用，则语句将失败。 你必须分析你想要安装并确保包将上载到服务器和数据库的包的依赖关系。 我们建议使用**miniCRAN**或**igraph**用于分析包依赖关系。
++ 必须由名称和版本，并将 zip 文件中包括所有依赖项。 如果所需包不可用，包括下游包的依赖项，则语句将失败。 我们建议使用**miniCRAN**或**igraph**用于分析包依赖关系。 安装了错误版本的包或包的依赖项也会导致语句失败。 
 
 + 你必须在数据库上具有必需的权限。 有关详细信息，请参阅[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
 
@@ -167,19 +121,7 @@ ms.lasthandoff: 05/08/2018
     library(randomForest)'
     ```
 
-### <a name="known-issues-with-create-external-library"></a>创建外部库的已知的问题
-
-在这些情况下支持创建外部库：
-
-+ 没有依赖项安装单个包。
-+ 要安装包具有依赖项，并已事先准备好所有包。 
-
-如果缺少任何包的依赖项，DDL 语句将失败。 例如，已知安装过程会在这些情况下失败：
-
-+ 安装具有第二层依赖关系的包并不会分析未扩展到第二级别包。 例如，你想要安装**gglot2**，并标识清单中列出的所有包; 但是，这些包具有未安装其他依赖项。
-+ 你已安装一组要求不同版本的支持包的包，并且你的服务器具有错误版本。
-
-## <a name="package-installation-tips"></a>包安装提示
+## <a name="tips-for-package-installation"></a>包安装的提示
 
 本部分提供各种的提示和与 SQL Server 上的 R 包安装相关的常见问题。
 
@@ -219,18 +161,14 @@ R 包经常依赖于多个其他包，其中一些可能不可用的实例所使
 如果你需要安装多个包，或想要确保你的组织中的每个人都获得正确的包类型和版本，我们建议你使用[miniCRAN](https://mran.microsoft.com/package/miniCRAN)包以分析完成的依赖关系链。 minicRAN 创建可以在多个用户或计算机之间共享的本地存储库。 有关详细信息，请参阅[创建本地包存储库使用 miniCRAN](create-a-local-package-repository-using-minicran.md)。
 
 
-### <a name="know-which-library-you-are-using-for-installation"></a>了解用于安装的库
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>知道要安装到的库和已安装的包。
 
 如果以前已修改的 R 环境的计算机上，然后才能安装任何内容，暂停一段时间，并确保 R 环境变量`.libPath`使用一个路径。
 
-此路径应指向实例 R_SERVICES 文件夹。 有关详细信息，请参阅[与 SQL Server 安装的 R 包](installing-and-managing-r-packages.md)。
+此路径应指向实例 R_SERVICES 文件夹。 有关详细信息，包括如何确定哪些包已安装，请参阅[与 SQL Server 安装的 R 包](installing-and-managing-r-packages.md)。
 
-### <a name="side-by-side-installation-with-r-server"></a>使用 R Server 通过并行安装
+### <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>与独立 R 或 Python 服务器通过并行安装
 
-如果已安装除了 SQL Server 计算机学习 Services 的 Microsoft 机器学习 Server （独立版），则计算机应该具有单独的安装中的 R 对于每个，与所有的 R 工具和库的重复项。
+如果你安装 SQL Server 自 2017 年 1 Microsoft 机器学习 Server （独立） 或 SQL Server 2016 R Server （独立） 除了数据库中分析 （SQL Server 自 2017 年 1 机器学习服务和 SQL Server 2016 R Services），你的计算机拥有分隔为每个包含重复项的所有 R 工具和库的 R 安装。
 
-安装到 R_SERVER 库的包只由 Microsoft R Server 和 SQL Server 无法访问。 请务必使用`R_SERVICES`库安装你想要使用 SQL Server 中的包时。
-
-### <a name="how-to-determine-which-packages-are-already-installed"></a>如何确定哪些包已安装？
-
- 请参阅[与 SQL Server 安装的 R 包](installing-and-managing-r-packages.md)
+这些包安装到 R_SERVER 库只由独立服务器，并且不由 SQL Server （数据库） 实例访问。 始终使用`R_SERVICES`库安装你想要使用 SQL Server 上的数据库中的包时。

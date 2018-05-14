@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d39d96a32223e9ebe90315dc01c0cd7ab82c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>在 Linux 和 macOS 用于高可用性和灾难恢复的支持上的 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Linux 和 macOS 支持的 ODBC 驱动程序[!INCLUDE[ssHADR](../../../includes/s
 
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接
 
-始终指定**MultiSubnetFailover = Yes** (或 **= True**) 时连接到[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性组侦听器或[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]故障转移群集实例。 **MultiSubnetFailover**可以实现更快的故障转移的所有可用性组和故障转移群集实例中的[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]。 **MultiSubnetFailover**也大大降低了单个和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行连接。 子网故障转移期间，该驱动程序积极地重试 TCP 连接。
+始终指定**MultiSubnetFailover = Yes**时连接到[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性组侦听器或[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]故障转移群集实例。 **MultiSubnetFailover**可以实现更快的故障转移的所有可用性组和故障转移群集实例中的[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]。 **MultiSubnetFailover**也大大降低了单个和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行连接。 子网故障转移期间，该驱动程序积极地重试 TCP 连接。
 
 **MultiSubnetFailover** 连接属性指示将在可用性组或故障转移群集实例中部署应用程序。 此驱动程序尝试连接到主计算机上数据库[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]实例尝试连接到所有 IP 地址。 在连接时**MultiSubnetFailover = Yes**，客户端的重试 TCP 连接的频率比操作系统的默认 TCP 重新传输间隔快。 **MultiSubnetFailover=Yes** 会在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例的故障转移之后进行更快速的重新连接。 **MultiSubnetFailover = Yes**适用于单-和多-subnet 可用性组和故障转移群集实例。  
 

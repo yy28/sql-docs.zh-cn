@@ -3,17 +3,17 @@ title: 表格模型编程的兼容性级别 1050 通过 1103年 |Microsoft 文�
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: db96c4344841212fe2992c7f84836b6a562cec02
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: a1e14033255d45eaacda1d553c71224e11dfe964
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>表格模型编程的兼容性级别 1050年通过 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
