@@ -1,10 +1,10 @@
 # [1200 或更高兼容级别的表格模型编程](tabular-model-programming-for-compatibility-level-1200.md)
 
+# [了解 Analysis Services AMO 中表格对象模型 (TOM)](introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)
 # [将数据源添加到表格模型 (Analysis Services AMO-TOM)](add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
 # [连接到现有的 Analysis Services 表格服务器和数据库](connect-to-existing-analysis-services-tabular-server-and-database.md)
 # [创建并部署空数据库 (Analysis Services AMO-TOM)](create-and-deploy-an-empty-database-analysis-services-amo-tom.md)
 # [在表格模型中创建表格、分区和列](create-tables-partitions-and-columns-in-a-tabular-model.md)
 # [处理 TOM API 中的错误 (Analysis Services AMO-TOM)](handling-errors-in-the-tom-api-analysis-services-amo-tom.md)
 # [安装、分发和引用表格对象模型](install-distribute-and-reference-the-tabular-object-model.md)
-# [Analysis Services AMO 中表格对象模型 (TOM) 简介](introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)
 # [列出表格服务器中现有的数据库 (Analysis Services AMO-TOM)](list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)

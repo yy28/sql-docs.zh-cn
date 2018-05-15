@@ -30,6 +30,7 @@
 ## [验证部署到 Azure 的包](lift-shift/ssis-azure-validate-packages.md)
 ## [连接到 Azure 上的 SSIS 目录](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [计划在 Azure 上执行包](lift-shift/ssis-azure-schedule-packages.md)
+## [使用 SSMS，计划在 Azure 上执行包](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [安装或升级](../integration-services/install-windows/install-integration-services.md)
 
