@@ -21,11 +21,11 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 961c9f7e093f61db909360f0dd7f8ac30f2d13e1
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e812b2dcdc7293a51f1c014681d04674c9995d37
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>教程：在 SQL Server Management Studio 中编写对象脚本
 本教程将指导如何为 SQL Server Management Studio (SSMS) 中找到的各种对象生成 Transact-SQL (T-SQL) 脚本。 本教程提供如何编写以下对象的脚本的示例：
@@ -43,11 +43,11 @@ ms.lasthandoff: 05/10/2018
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- 安装 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
 - 下载 [AdventureWorks2016 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 
 ## <a name="script-queries-from-the-gui"></a>从 GUI 编写查询脚本
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/10/2018
    ![编写对象脚本](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > 如果为“要编写脚本的数据的类型”选项选择“架构和数据”，可以为数据库的数据编写脚本。 但是，这对于大型数据库来说并不是理想之选。 它可能需要比 SSMS 分配更多的内存。 这个限制也适用于小型数据库。 如果要移动大型数据库的数据，请使用[导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
+   > 如果为“要编写脚本的数据的类型”选项选择“架构和数据”，可以为数据库的数据编写脚本。 但是，这对于大型数据库来说并不是理想之选。 它可能需要比 SSMS 分配更多的内存。 这个限制也适用于小型数据库。 如果要移动大型数据库的数据，请使用[导入和导出向导](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
 
 1. 选择“确定”，然后选择“下一步”。
@@ -173,7 +173,7 @@ ms.lasthandoff: 05/10/2018
     ![编写存储过程脚本](media/scripting-ssms/scriptstoredprocedure.PNG)
 
 ## <a name="script-extended-events"></a>编写扩展事件脚本
-本部分介绍如何编写[扩展事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)脚本。
+本部分介绍如何编写[扩展事件](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events)脚本。
 
 1. 连接到运行 SQL Server 的服务器。
 2. 展开“管理”节点。
