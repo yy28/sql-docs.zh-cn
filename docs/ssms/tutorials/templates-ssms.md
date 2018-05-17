@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f981d8455f82db44979a04611e861bb4d13d20d4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>教程：在 SQL Server Management Studio 中使用模板
 本教程将介绍 SQL Server Management Studio (SSMS) 中提供的预建 Transact-SQL (T-SQL) 模板。 本文将指导如何：
@@ -39,8 +39,8 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio 以及针对 SQL Server 的访问权限。 
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
+- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 
  
 

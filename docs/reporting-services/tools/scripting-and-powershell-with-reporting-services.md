@@ -58,12 +58,12 @@ ms.lasthandoff: 05/03/2018
   
 -   [使用 PowerShell 来创建带有本机模式报表服务器的 Azure VM](http://msdn.microsoft.com/library/azure/dn449661.aspx)。  
   
--   请参阅 [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)中的“使用 PowerShell 访问 WMI 类”一节。  
+-   请参阅 [访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)中的“使用 PowerShell 访问 WMI 类”一节。  
   
 
 ## <a name="rsexe-scripting-samples"></a>RS.exe 脚本示例  
   
--   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+-   [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
 -   有关其他脚本、应用程序和扩展插件的示例，请参阅 [SQL Server Reporting Service 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
   

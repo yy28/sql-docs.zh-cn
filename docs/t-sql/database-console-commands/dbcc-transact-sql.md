@@ -40,11 +40,11 @@ caps.latest.revision: 50
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a244e1e6a1f0c32f56e183f389ac4940b25cb00f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6dbf227ec42614e77cb4129c273ec55609781b2f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ sys.dm_exec_requests 目录视图包含有关 DBCC CHECKDB、CHECKFILEGROUP 和 
   
 进度单位的定义取决于 DBCC 命令的当前执行阶段。 有时，根据数据库页的粒度报告进度，而在其他阶段，则根据单个数据库或分配修复的粒度报告进度。 下表对每个执行阶段以及命令报告进度的粒度进行了说明。
   
-|执行阶段|Description|进度报告粒度|  
+|执行阶段|描述|进度报告粒度|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|在该阶段中将检查数据库中对象的逻辑和物理一致性。|在数据库页级别报告进度。<br /><br /> 每检查 1000 个数据库页更新进程报告值一次。|  
 |DBCC TABLE REPAIR|如果指定 REPAIR_FAST、REPAIR_REBUILD 或 REPAIR_ALLOW_DATA_LOSS 并且存在必须修复的对象错误，则在该阶段执行数据库修复。|在单个修复级别报告进度。<br /><br /> 每次完成修复时更新计数器。|  
@@ -146,6 +146,6 @@ sys.dm_exec_requests 目录视图包含有关 DBCC CHECKDB、CHECKFILEGROUP 和 
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2。|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **适用范围**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
   

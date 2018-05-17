@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -29,12 +28,11 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3cccb42d089124c5d57eaad656ff00676b385f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +94,8 @@ ms.lasthandoff: 04/16/2018
 |清除作业|Description|默认计划|  
 |------------------|-----------------|----------------------|  
 |代理历史记录清除：分发|从分发数据库中删除复制代理历史记录。|每十分钟运行一次|  
-|分发清除：分发|从分发数据库中删除复制的事务。 停用在最大分发保持期内尚未同步的订阅。|每十分钟运行一次|  
-|过期订阅清除|从发布数据库检测和删除过期的订阅。|每天凌晨 1:00 运行|  
+|分发清除：分发|从分发数据库中删除复制的事务。 |每十分钟运行一次|  
+|过期订阅清除|从发布数据库检测和删除过期的订阅。 在分发服务器上停用在最大分发保持期内尚未同步的订阅。|每天凌晨 1:00 运行| 
 |重新初始化数据验证失败的订阅|检测所有未通过数据验证的订阅并标记它们以进行重新初始化。 下次合并代理或分发代理运行时，订阅服务器上将应用新快照。|无默认调度（默认情况下未启用）。|  
 |复制代理检查|检测未积极记录历史信息的复制代理。 如果作业步骤失败，它将写入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件日志。|每十分钟运行一次。|  
 |分发的复制监视刷新器|刷新复制监视器所使用的缓存的查询。|连续运行。|  

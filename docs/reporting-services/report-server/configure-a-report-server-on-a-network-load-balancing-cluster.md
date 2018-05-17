@@ -1,29 +1,27 @@
 ---
-title: "在网络负载均衡群集上配置报表服务器 | Microsoft Docs"
-ms.custom: 
+title: 在网络负载均衡群集上配置报表服务器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: ecf545bf56a9886fa2409b570673ba36ad698eff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
   如果要将报表服务器扩展配置为在网络负载平衡 (NLB) 群集上运行，必须执行以下操作：  

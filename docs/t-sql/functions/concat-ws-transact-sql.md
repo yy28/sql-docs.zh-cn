@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
@@ -24,18 +22,17 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 171d063e746393709629720dae40eb207d45d584
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-使用第 1 个参数中指定的分隔符连接可变数量的参数。 （`CONCAT_WS` 指示使用分隔符连接。）
+此函数以端到端的方式返回从串联或联接的两个或更多字符串值生成的字符串。 它会用第一个函数参数中指定的分隔符分隔连接的字符串值。 （`CONCAT_WS` 指示使用分隔符连接。）
 
 ##  <a name="syntax"></a>语法   
 ```sql
@@ -44,33 +41,33 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>参数   
 separator  
-任何字符类型的表达式（`nvarchar`、`varchar``nchar` 或 `char`）。
+任何字符类型的表达式（`char`、`nchar`、`nvarchar` 或 `varchar`）。
 
 argument1、argument2、argumentN  
-是任何类型的表达式。
+任何类型的表达式。
 
 ## <a name="return-types"></a>返回类型
-字符串。 长度和类型取决于输入。
+长度和类型取决于输入的字符串值。
 
 ## <a name="remarks"></a>Remarks   
-`CONCAT_WS` 采用可变数量的参数，并使用第一个参数作为分隔符将它们连接成单个字符串。 它需要一个分隔符和至少两个参数；否则将引发错误。 所有参数都隐式转换为字符串类型，然后连接在一起。 
+`CONCAT_WS` 采用可变数量的字符串自变量，并将它们串联（或联接）成单个字符串。 它会用第一个函数参数中指定的分隔符分隔连接的字符串值。 `CONCAT_WS` 需要分隔符参数和两个其他字符串值参数的最小值，否则，`CONCAT_WS` 将引发错误。 `CONCAT_WS` 在串联前会将所有自变量隐式转换为字符串类型。 
 
-隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关行为和数据类型转换的详细信息，请参阅 [CONCAT (Transact SQL)](../../t-sql/functions/concat-transact-sql.md)。
+隐式转换为字符串的过程遵循现有的数据类型转换规则。 请参阅 [CONCAT (Transact SQL)](../../t-sql/functions/concat-transact-sql.md) 获取有关行为和数据类型转换的详细信息。
 
 ### <a name="treatment-of-null-values"></a>NULL 值处理方式
 
 `CONCAT_WS` 忽略 `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}` 设置。
 
-如果所有参数都为 Null，则返回 `varchar(1)` 类型的空字符串。 
+如果 `CONCAT_WS` 接收到全部为 NULL 值的自变量，它将返回类型为 varchar(1) 的空字符串。
 
-连接过程中会忽略 Null 值，并且不会添加分隔符。 这简化了连接字符串的常见方案，这些字符串通常具有空白值，如第二个地址字段。 请参阅示例 B。
+串联过程中 `CONCAT_WS` 会忽略 Null 值，并且不会在 null 值之间添加分隔符。 因此，`CONCAT_WS` 可以完全处理可能具有“空”值（例如，次要地址字段）的字符串串联。 请参阅示例 B 获取详细信息。
 
-如果方案需要使用分隔符将 null 值包括其中，请参阅使用 `ISNULL` 函数的示例 C。
+如果方案涉及由分隔符分隔的 null 值，请考虑 `ISNULL` 函数。 请参阅示例 C 获取详细信息。
 
 ## <a name="examples"></a>示例   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  使用分隔符连接值
-以下示例连接 sys.databases 表中的三列，并使用 `- ` 分隔这些值。   
+此示例串联 sys.databases 表中的三列，并使用 `- ` 分隔这些值。   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -88,7 +85,7 @@ FROM sys.databases;
 
 
 ### <a name="b--skipping-null-values"></a>B.  跳过 NULL 值
-以下示例忽略参数列表中的 `NULL` 值。
+此示例忽略参数列表中的 `NULL` 值。
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -103,7 +100,7 @@ Address
 ```
 
 ### <a name="c--generating-csv-file-from-table"></a>C.  从表中生成 CSV 文件
-以下示例使用逗号作为分隔符，并添加回车符以生成列分隔值格式。
+此示例使用逗号 `,` 作为分隔符，并在结果集的列分隔值格式中添加回车符 `char(13)`。
 
 ```sql
 SELECT 
@@ -122,7 +119,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS 将忽略列中的 NULL 值。 如果某些列可以为 null，请使用 `ISNULL` 函数包装它并提供默认值，如下例所示：
+CONCAT_WS 会忽略列中的 NULL 值。 用 `ISNULL` 函数包装可以为 null 的列，并提供默认值。 参阅此示例获取详细信息：
 
 ```sql
 SELECT 

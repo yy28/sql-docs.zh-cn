@@ -1,29 +1,23 @@
 ---
 title: 动态数据掩码 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +35,9 @@ ms.lasthandoff: 04/16/2018
 
 例如，呼叫中心支持人员通过身份证号或信用卡号的几个数字就可以辨识呼叫者，但系统不会将这些数据内容完全公开给该支持人员。 可以通过定义屏蔽规则来屏蔽查询结果集中身份证号或信用卡号最后四位数字以外的所有数字。 另一个例子就是，在需要进行故障排除时，开发人员可以通过对数据进行适当的数据屏蔽来保护个人身份信息 (PII) 数据，因此可以在不违反遵从性法规的情况下，对生产环境进行查询。
 
- 动态数据屏蔽旨在限制敏感数据的公开，防止没有访问权限的用户查看敏感数据。 动态数据屏蔽并不是要防止数据库用户直接连接到数据库并运行可以公开敏感数据的详尽查询。 动态数据屏蔽是对其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全功能（审核、加密、行级别安全性…）的补充，因此，强烈建议你将此功能与上述功能一起使用，以便更好地保护数据库中的敏感数据。  
+动态数据屏蔽旨在限制敏感数据的公开，防止没有访问权限的用户查看敏感数据。 动态数据屏蔽并不是要防止数据库用户直接连接到数据库并运行可以公开敏感数据的详尽查询。 动态数据屏蔽是对其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全功能（审核、加密、行级别安全性…）的补充，因此，强烈建议你将此功能与上述功能一起使用，以便更好地保护数据库中的敏感数据。  
   
- 动态数据屏蔽在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中提供，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令进行配置。 有关如何使用 Azure 门户来配置动态数据屏蔽的更多信息，请参阅 [开始使用 SQL 数据库动态数据屏蔽（Azure 门户）](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
+动态数据屏蔽在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中提供，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令进行配置。 有关如何使用 Azure 门户来配置动态数据屏蔽的更多信息，请参阅 [开始使用 SQL 数据库动态数据屏蔽（Azure 门户）](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>定义动态数据屏蔽  
  针对表中的列定义屏蔽规则即可模糊该列中的数据。 可以使用四种类型的屏蔽。  
@@ -70,12 +64,12 @@ ms.lasthandoff: 04/16/2018
   
 -   使用 `SELECT INTO` 或 `INSERT INTO` 将数据从经过屏蔽的列复制到另一表中会导致目标表中显示屏蔽的数据。  
   
--   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出时，将应用动态数据屏蔽。 数据库包含屏蔽列会导致备份文件也包含屏蔽数据（假定该文件是由没有 **UNMASK** 特权的用户导出的），而导入的数据库则会包含静态屏蔽数据。  
+-   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出时，将应用动态数据屏蔽。 数据库包含已掩码的列将导致导出的数据文件也包含已掩码的数据（假定该文件是由没有 UNMASK 特权的用户导出的），并且导入的数据库将包含已静态掩码的数据。  
   
 ## <a name="querying-for-masked-columns"></a>查询屏蔽列  
  使用 **sys.masked_columns** 视图可查询对其应用了屏蔽函数的表列。 该视图继承自 **sys.columns** 视图。 该视图会返回 **sys.columns** 视图中的所有列，以及 **is_masked** 和 **masking_function** 列，表明该列是否被屏蔽，以及在该列被屏蔽的情况下定义了什么屏蔽函数。 该视图仅显示在其上应用了屏蔽函数的列。  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -108,7 +102,7 @@ WHERE is_masked = 1;
 例如，请考虑一个数据库主体，该主体具有足够权限来对数据库运行即席查询，尝试“猜测”基础数据并最终推断实际值。 假设我们对 `[Employee].[Salary]` 列定义了一个掩码，此用户直接连接到数据库并开始猜测值，从而最终推断一组员工的 `[Salary]` 值：
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -128,7 +122,7 @@ WHERE Salary > 99999 and Salary < 100001;
 ### <a name="creating-a-dynamic-data-mask"></a>创建动态数据屏蔽  
  以下示例创建的表使用三种不同类型的动态数据屏蔽。 该示例会对表进行填充，在执行选择操作后即可显示结果。  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -145,7 +139,7 @@ SELECT * FROM Membership;
   
  创建了一个新用户并向其授予了对表的 **SELECT** 权限。 执行查询后， `TestUser` 看到的是经过屏蔽的数据。  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -166,14 +160,14 @@ REVERT;
  使用 **ALTER TABLE** 语句可以添加对表中现有列的屏蔽，或者对该列的屏蔽进行编辑。  
 以下示例向 `LastName` 列添加了一个屏蔽函数：  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  以下示例更改了 `LastName` 列的屏蔽函数：  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -181,7 +175,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>授权查看未经屏蔽数据的权限  
  授予 **UNMASK** 权限即可让 `TestUser` 查看未经屏蔽的数据。  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -194,7 +188,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>删除动态数据屏蔽  
  以下语句将删除上述示例中创建的针对 `LastName` 列的屏蔽：  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -205,5 +199,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition (Transact-SQL)](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [开始使用 SQL 数据库动态数据屏蔽（Azure 预览门户）](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  

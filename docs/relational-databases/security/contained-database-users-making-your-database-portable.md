@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="firewalls"></a>防火墙  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Windows 防火墙规则适用于所有连接，并且对登录名（传统模型连接）和包含的数据库用户具有相同影响。 有关 Windows 防火墙的详细信息，请参阅 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
+ Windows 防火墙规则适用于所有连接，并且对登录名（传统模型连接）和包含的数据库用户具有相同影响。 有关 Windows 防火墙的详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火墙  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 允许适用于服务器级别连接（登录名）和适用于数据库级别连接（包含的数据库用户）的单独防火墙规则。 连接到用户数据库时，会首先检查数据库防火墙规则。 如果没有允许访问数据库的规则，则检查服务器级别防火墙规则，这将需要对逻辑服务器 master 数据库的访问权限。 与包含的数据库用户相结合的数据库级别防火墙规则可以无需在连接过程中访问服务器的 master 数据库，从而提供改进的连接可伸缩性。  

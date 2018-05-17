@@ -404,7 +404,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在 **“执行包”** 对话框中，选择 **“高级”** 选项卡。  
   
-4.  在 **“日志记录级别”**下，选择日志记录级别。 本主题包含可用值的说明。  
+4.  在 **“日志记录级别”** 下，选择日志记录级别。 本主题包含可用值的说明。  
   
 5.  完成所有其他包配置，然后单击 **“确定”** 运行该包。  
   
@@ -416,7 +416,7 @@ ms.lasthandoff: 05/03/2018
 |InclusionThresholdSetting|关闭日志记录。 仅记录包执行状态。|  
 |“基本”|除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
 |运行时沿袭|收集跟踪数据流中的沿袭信息所需的数据。 可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。|  
-|“性能”|仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **“执行性能”** 报表显示包数据流组件的活动时间和总时间。 仅当上次包执行的日志记录级别设置为 **“性能”** 或 **“详细”**时，此信息才可用。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 视图显示数据流组件在执行的每个阶段的开始时间和结束时间。 仅当包执行的日志记录级别设置为 **“性能”** 或 **“详细”**时，此视图才会为这些组件显示以上信息。|  
+|“性能”|仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **“执行性能”** 报表显示包数据流组件的活动时间和总时间。 仅当上次包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此信息才可用。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 视图显示数据流组件在执行的每个阶段的开始时间和结束时间。 仅当包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此视图才会为这些组件显示以上信息。|  
 |“详细”|记录所有事件，包括自定义事件和诊断事件。<br /><br /> 自定义事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务记录的那些事件。 有关自定义事件的详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。<br /><br /> 诊断事件的一个例子就是“DiagnosticEx”  事件。 每当执行包任务执行子包时，此事件均将捕获传递给子包的参数值。<br /><br /> “DiagnosticEx”事件还有助于获取其中出现行级错误的列的名称。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 每当数据流组件向下游组件发送数据时， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 视图就会显示一行。 日志记录级别必须设置为 **“详细”** ，才能在该视图中捕获此信息。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>使用“自定义日志记录级别管理”对话框来创建和管理自定义日志记录级别  

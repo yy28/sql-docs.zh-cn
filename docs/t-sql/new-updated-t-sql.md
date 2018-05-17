@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: t-sql
-ms.date: 02/03/2018
-ms.openlocfilehash: a3a64bb1daf2dc38aabaf723bdf6794801c6218d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: b1bc891bf7edc4cd82c38c8d647c279828190298
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>新的和最近更新的文章：Transact-SQL 文档
 
@@ -28,7 +30,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
+- 更新日期范围：2018-02-03 到 2018-04-28&nbsp;&nbsp;&nbsp;
 - 主题区域：&nbsp; T-SQL。
 
 
@@ -67,8 +69,8 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [CREATE STATISTICS (Transact-SQL)](#TitleNum_1)
-2. [UPDATE STATISTICS (Transact-SQL)](#TitleNum_2)
+1. [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](#TitleNum_1)
+2. [RESTORE 语句 (Transact-SQL)](#TitleNum_2)
 
 
 
@@ -79,34 +81,36 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1.&nbsp; [CREATE STATISTICS (Transact-SQL)](statements/create-statistics-transact-sql.md)
+### <a name="1-nbsp-alter-database-scoped-configuration-transact-sqlstatementsalter-database-scoped-configuration-transact-sqlmd"></a>1.&nbsp; [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](statements/alter-database-scoped-configuration-transact-sql.md)
 
-更新日期：2018-01-04 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[下一篇](#TitleNum_2)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一篇](#TitleNum_2))
 
-<!-- Source markdown line 200.  ms.author= "edmaca".  -->
+<!-- Source markdown line 150.  ms.author= "carlrab".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 384e68493597bcc36876a3c7bada2630106256e2 c22168ea59b6020e8ebe1ccac5fa6a6049e6db4d  (PR=4460  ,  Filename=create-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 f6833910b664d0059a9073589807b195052325b3 bf969f123b22e6ebc650380a6905156f26ed6ca6  (PR=0  ,  Filename=alter-database-scoped-configuration-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = max_degree_of_parallelism
- 适用于 SQL Server（从 SQL Server 2017 CU3 开始）。
+XTP_PROCEDURE_EXECUTION_STATISTICS  = { ON | OFF }
 
- 在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。
+适用于：{Included-Content-Goes-Here}
 
- max_degree_of_parallelism 可以是：
+启用或禁用对当前数据库的本机编译的 T-SQL 模块在模块级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_procedure_stats] 中。
 
- 1 取消生成并行计划。
+如果该选项为“开”，或通过 [sp_xtp_control_proc_exec_stats] 启用了统计信息收集，则收集对本机编译的 T-SQL 模块的模块级别执行统计信息。
 
- \>1 基于当前系统工作负载，将并行统计信息操作中使用的最大处理器数限制为指定数量或更少。
+XTP_QUERY_EXECUTION_STATISTICS  = { ON | OFF }
 
- 0（默认值）根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。
+适用于：{Included-Content-Goes-Here}
 
- \<update_stats_stream_option> 标识为仅供参考。 不提供支持。 不保证以后的兼容性。
+启用或禁用对当前数据库的本机编译的 T-SQL 模块语句级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_query_stats] 和[查询存储]中。
 
+如果该选项为“开”，或通过 [sp_xtp_control_query_exec_stats] 启用了统计信息收集，则收集对本机编译的 T-SQL 模块的语句级别执行统计信息。
+
+有关本机编译的 T-SQL 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的执行]。
 
 
 
@@ -118,33 +122,45 @@ MAXDOP = max_degree_of_parallelism
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2.&nbsp; [UPDATE STATISTICS (Transact-SQL)](statements/update-statistics-transact-sql.md)
+### <a name="2-nbsp-restore-statements-transact-sqlstatementsrestore-statements-transact-sqlmd"></a>2.&nbsp; [RESTORE 语句 (Transact-SQL)](statements/restore-statements-transact-sql.md)
 
-更新日期：2018-01-04 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[上一篇](#TitleNum_1)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_1))
 
-<!-- Source markdown line 167.  ms.author= "edmaca".  -->
+<!-- Source markdown line 339.  ms.author= "barbkess".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5721e21a9f43fa784fe9357c47cb2a814385e63d 24ae47c553635f389a182e5e643bf9bd6bf59e78  (PR=4460  ,  Filename=update-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 2902efb58bb964d3e9a0660956690d37f0397c00 36186a7cffd26ffa54a83e383ffd752dbc568a4d  (PR=0  ,  Filename=restore-statements-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = max_degree_of_parallelism
+**一般注释 - SQL 数据库托管实例**
 
-适用范围：SQL Server（从 SQL Server 2017 CU3 开始）。
 
- 在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。
+对于异步还原，即使客户端连接中断，还原操作也会继续运行。 如果连接断开，可检查 [sys.dm_operation_status] 视图，查看还原操作的状态（以及查看 CREATE 和 DROP 数据库）。
 
- max_degree_of_parallelism 可以是：
+已设置/覆盖以下数据库选项，这些选项稍后无法进行更改：
 
- 1 取消生成并行计划。
+- NEW_BROKER（如果 .bak 文件中未启用中转站）
+- ENABLE_BROKER（如果 .bak 文件中未启用中转站）
+- AUTO_CLOSE=OFF（如果 .bak 文件中的数据库具有 AUTO_CLOSE=ON）
+- RECOVERY FULL（如果 .bak 文件中的数据库具有 SIMPLE 或 BULK_LOGGED 恢复模式）
+- 如果源 .bak 文件中不存在内存优化文件组，则会添加一个，并将其命名为 XTP。 任何现有内存优化文件组都会重命名为 XTP
+- SINGLE_USER 和 RESTRICTED_USER 选项会转换为 MULTI_USER
 
- \>1 基于当前系统工作负载，将并行统计信息操作中使用的最大处理器数限制为指定数量或更少。
+**限制 - SQL 数据库托管实例**
 
- 0（默认值）根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。
+这些限制包括：
 
+- 无法还原包含多个备份集的 .BAK 文件。
+- 无法还原包含多个日志文件的 .BAK 文件。
+- 如果 .bak 中包含 FILESTREAM 数据，则还原将失败。
+- 如果备份中包含的数据库具有活动的内存中对象，则该备份当前无法还原。
+- 如果备份中包含的数据库中某些时候存在内存中对象，则该备份当前无法还原。
+- 如果备份包含处于只读模式的数据库，则该备份当前无法还原。 此限制很快就会取消。
+
+有关详细信息，请参阅[托管实例]
 
 
 
@@ -157,40 +173,36 @@ MAXDOP = max_degree_of_parallelism
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
-- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+- [新文章和更新的文章 (11+6)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (18+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (218+14)：连接到 SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (14+0)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (3+2)： SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (3+3)： Linux for SQL 文档](../linux/new-updated-linux.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (7+10)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (0+2)：Reporting Services for SQL 文档](../reporting-services/new-updated-reporting-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+3)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (2+3)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (5+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+1)：SQL 工具文档](../tools/new-updated-tools.md)&nbsp; &nbsp;
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
-- [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (0+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
+- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../samples/new-updated-samples.md)
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
-
 

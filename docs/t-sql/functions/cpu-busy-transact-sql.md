@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -30,20 +28,19 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da3fd1c4b0e66be485dcf25fdd0b3bdcb0079c6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 27eb30bf1a8b176024610affa368a8db1c6607e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次启动后的工作时间。 其结果以 CPU 时间增量或“滴答数”表示，此值为所有 CPU 时间的累积，因此，可能会超出实际占用的时间。 乘以 @@TIMETICKS 可转换为微秒。
+此函数返回自最近一次开始以来，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在活动操作中所花的时间。 `@@CPU_BUSY` 返回一个以 CPU 时间增量或“滴答数”计算的结果。 此值为所有 CPU 时间的累积，因此，可能会超出实际占用的时间。 若要转换为微秒，请乘以 [@@TIMETICKS](./timeticks-transact-sql.md)。
   
 > [!NOTE]  
->  如果 @@CPU_BUSY 或 @@IO_BUSY 中返回的时间超过累积的 CPU 时间约 49 天，则你会收到算术溢出警告。 在这种情况下，@@CPU_BUSY、@@IO_BUSY 和 @@IDLE 变量值并不精确。  
+>  如果 @@CPU_BUSY 或 @@IO_BUSY 中返回的时间超过 49 天（大约）的累积 CPU 时间，则会收到算术溢出警告。 在这种情况下，`@@CPU_BUSY``@@IO_BUSY` 和 `@@IDLE` 变量值并不精确。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,10 +54,10 @@ ms.lasthandoff: 04/16/2018
 **integer**
   
 ## <a name="remarks"></a>Remarks  
-若要显示包含若干个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括 CPU 活动）的报表，请运行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)。
+若要查看包含若干个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括 CPU 活动）的报表，请运行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
-以下示例显示了返回当前日期和时间之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 活动。 为了避免将值转换为微秒时出现算术溢出，此示例将其中一个值转换为 `float` 数据类型。
+此示例显示了返回当前日期和时间之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 活动。 此示例将其中一个值转换为 `float` 数据类型。 这样就避免了计算以微秒为单位的值时的算术溢出问题。
   
 ```sql
 SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   

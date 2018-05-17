@@ -1,27 +1,25 @@
 ---
-title: "添加筛选器（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 添加筛选器（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9802327aa4eedb46086927e67c4b6673963157c4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c7138aa01512abe74931e7e0fd3510a597baaa0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>添加筛选器（报表生成器和 SSRS）
   如果您希望在计算或显示时包含或排除特定值，可向数据集、数据区域或组添加筛选器。 在运行时应用筛选器的顺序为：先对数据集，再对数据区域，最后对组，并按照组层次结构自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 **“设计”** 视图中打开报表。  
   
-2.  在设计图面上选择数据区域，然后右键单击“\<data region>属性”。 对于仪表，选择 **“仪表面板属性”**。 此时将打开“\<data region>属性”对话框。  
+2.  在设计图面上选择数据区域，然后右键单击“*\<data region>*”属性。对于仪表，选择 **“仪表面板属性”**。此时将打开“\<data region>***属性”* 对话框。  
   
     > [!NOTE]  
     >  在 Tablix 数据区域上，右键单击角部单元格或行或列的控点，然后单击“Tablix 属性”。  
@@ -48,13 +46,13 @@ ms.lasthandoff: 01/09/2018
   
 4.  单击 **“添加”**。 此时将显示一个新的空白筛选器公式。  
   
-5.  在 **“表达式”**中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
+5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
 6.  从下拉框中选择与您在步骤 5 中创建的表达式的数据类型相匹配的数据类型。  
   
 7.  在 **“运算符”** 框中，选择一个供筛选器使用的运算符，以比较 **“表达式”** 框和 **“值”** 框中的值。 您所选择的运算符将决定下一步中使用的值数。  
   
-8.  在 **“值”** 框中，键入筛选器对 **“表达式”**中的值进行比较时的目标表达式或值。  
+8.  在 **“值”** 框中，键入筛选器对 **“表达式”** 中的值进行比较时的目标表达式或值。  
   
      有关筛选器公式的示例，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -72,13 +70,13 @@ ms.lasthandoff: 01/09/2018
   
 5.  单击 **“添加”**。 此时将显示一个新的空白筛选器公式。  
   
-6.  在 **“表达式”**中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
+6.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
 7.  从下拉框中选择与您在步骤 5 中创建的表达式的数据类型相匹配的数据类型。  
   
 8.  在 **“运算符”** 框中，选择一个供筛选器使用的运算符，以比较 **“表达式”** 框和 **“值”** 框中的值。 您所选择的运算符将决定下一步中使用的值数。  
   
-9. 在 **“值”** 框中，键入筛选器对 **“表达式”**中的值进行比较时的目标表达式或值。  
+9. 在 **“值”** 框中，键入筛选器对 **“表达式”** 中的值进行比较时的目标表达式或值。  
   
      有关筛选器公式的示例，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -96,13 +94,13 @@ ms.lasthandoff: 01/09/2018
   
 5.  单击 **“添加”**。 此时将显示一个新的空白筛选器公式。  
   
-6.  在 **“表达式”**中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
+6.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
 7.  从下拉框中选择与您在步骤 5 中创建的表达式的数据类型相匹配的数据类型。  
   
 8.  在 **“运算符”** 框中，选择一个供筛选器使用的运算符，以比较 **“表达式”** 框和 **“值”** 框中的值。 您所选择的运算符将决定下一步中使用的值数。  
   
-9. 在 **“值”** 框中，键入筛选器对 **“表达式”**中的值进行比较时的目标表达式或值。  
+9. 在 **“值”** 框中，键入筛选器对 **“表达式”** 中的值进行比较时的目标表达式或值。  
   
      有关筛选器公式的示例，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -120,13 +118,13 @@ ms.lasthandoff: 01/09/2018
   
 5.  单击 **“添加”**。 此时将显示一个新的空白筛选器公式。  
   
-6.  在 **“表达式”**中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
+6.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
 7.  从下拉框中选择与您在步骤 5 中创建的表达式的数据类型相匹配的数据类型。  
   
 8.  在 **“运算符”** 框中，选择一个供筛选器使用的运算符，以比较 **“表达式”** 框和 **“值”** 框中的值。 您所选择的运算符将决定下一步中使用的值数。  
   
-9. 在 **“值”** 框中，键入筛选器对 **“表达式”**中的值进行比较时的目标表达式或值。  
+9. 在 **“值”** 框中，键入筛选器对 **“表达式”** 中的值进行比较时的目标表达式或值。  
   
      有关筛选器公式的示例，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   

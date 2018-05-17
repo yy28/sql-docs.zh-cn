@@ -1,31 +1,29 @@
 ---
-title: "地图向导和地图层向导（报表生成器和 SSRS）| Microsoft Docs"
-ms.custom: 
+title: 地图向导和地图层向导（报表生成器和 SSRS）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8799fa0b54d60990ee701f4fef2950cf5e0d2b86
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1ea786a129d8ce3607269c55d12405543104b637
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -122,7 +120,7 @@ ms.lasthandoff: 01/09/2018
  地图库所包含的地图来自面向报表创作环境的地图库文件夹中的报表。 库中的地图提供支持向报表快速添加地图。 库中预先定义的地图是由地图提供商提供的。  
   
 > [!NOTE]  
->  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 许可的 TIGER/Line 形状文件。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
+>  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
  若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅 [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   

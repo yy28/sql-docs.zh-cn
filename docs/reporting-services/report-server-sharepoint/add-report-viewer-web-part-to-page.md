@@ -1,25 +1,23 @@
 ---
-title: "将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页 | Microsoft Docs"
-ms.custom: 
+title: 将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页
 
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
 
     ![编辑 Web 部件下拉列表中的网页。](media/sharepoint-edit-web-part.png)
 
-2. 为承载报表的报表服务器输入“报表服务器 URL”。 这看起来应类似于 http://myrsserver/reportserver。
+2. 为承载报表的报表服务器输入“报表服务器 URL”。 这看起来应该类似于 http://myrsserver/reportserver。
 
 3. 输入想要在 Web 部件中显示的报表的路径和名称。 这看起来应类似于 /AdventureWorks Sample Reports/Company Sales。 在此示例中，报表“公司销售额”位于名为 AdventureWorks 示例报表的文件夹中。
 

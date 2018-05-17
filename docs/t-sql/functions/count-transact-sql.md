@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -29,18 +27,17 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9872e4754e375168a3ba3d2687018cc32157c71f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 665edc29f3989f73ba997e1ac693634356689aa4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回组中的项数。 COUNT 与 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函数类似。 两个函数唯一的差别是它们的返回值。 COUNT 始终返回 int 数据类型值。 COUNT_BIG 始终返回 bigint 数据类型值。
+此函数返回组中找到的项数量。 `COUNT` 的操作与 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函数类似。 这些函数区别只在于其返回的值的数据类型。 `COUNT` 始终返回“int”数据类型值。 `COUNT_BIG` 始终返回“bigint”数据类型值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -69,38 +66,38 @@ COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
   
 ## <a name="arguments"></a>参数  
 **ALL**  
-向所有值应用此聚合函数。 ALL 为默认值。
+向所有值应用此聚合函数。 ALL 充当默认值。
   
 DISTINCT  
-指定 COUNT 返回唯一非 Null 值的数量。
+指定 `COUNT` 返回唯一非 Null 值的数量。
   
 *expression*  
-任意类型（text、image 或 ntext 除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。
+任意类型（“image”、“ntext”或“text”除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 注意，`COUNT` 不支持表达式中的聚合函数或子查询。
   
 \*  
-指定应该计算所有行以返回表中行的总数。 COUNT(\*) 不需要任何参数，而且不能与 DISTINCT 一起使用。 COUNT(\*) 不需要 expression 参数，因为根据定义，该函数不使用有关任何特定列的信息。 COUNT(*) 返回指定表中行数而不删除副本。 它对各行分别计数。 包括包含空值的行。
+指定 `COUNT` 应对所有行计数，以确定要返回的总表行计数。 `COUNT(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT(*)` 不需要“expression”参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT(*)` 返回指定表中的行数，但保留副本行。 它对各行分别计数。 包括包含空值的行。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
-  
+“partition_by_clause”将 `FROM` 子句生成的结果集划分为要应用 `COUNT` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。 
+
 ## <a name="return-types"></a>返回类型
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-COUNT(*) 返回组中的项数。 包括 NULL 值和重复项。
+COUNT(\*) 返回组中的项数。 包括 NULL 值和重复项。
   
 COUNT(ALL expression) 计算组中每行的 expression，然后返回非 null 值的数量。
   
 COUNT (DISTINCT expression) 计算组中每行的 expression，然后返回独一无二的非 null 值的数量。
   
-对于大于 2^31-1 的返回值，COUNT 生成一个错误。 这时应使用 COUNT_BIG。
+对于超出 2 ^31-1 的返回值，`COUNT` 会返回错误。 对于这些情况，请改为使用 `COUNT_BIG`。
   
-COUNT 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+`COUNT` 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)获取详细信息。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-count-and-distinct"></a>A. 使用 COUNT 和 DISTINCT  
-以下示例列出了在 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 工作的雇员可以拥有的不同职位的数量。
+此示例返回 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 员工可以保存的不同的标题数。
   
 ```sql
 SELECT COUNT(DISTINCT Title)  
@@ -117,8 +114,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. 使用 COUNT(*)  
-以下示例计算 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的雇员总数。
+### <a name="b-using-count"></a>B. 使用 COUNT(\*)  
+此示例返回 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 员工的总数。
   
 ```sql
 SELECT COUNT(*)  
@@ -135,8 +132,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="c-using-count-with-other-aggregates"></a>C. 组合使用 COUNT(*) 和其他聚合函数  
-以下示例显示可以组合使用 `COUNT(*)` 和选择列表中的其他聚合函数。 该示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。
+### <a name="c-using-count-with-other-aggregates"></a>C. 组合使用 COUNT(\*) 和其他聚合函数  
+此示例演示 `COUNT(*)` 与 `SELECT` 列表中的其他聚合函数配合使用。 该示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。
   
 ```sql
 SELECT COUNT(*), AVG(Bonus)  
@@ -155,7 +152,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. 使用 OVER 子句  
-以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Department` 表中的每个部门提供聚合值。
+此示例将 `MIN``MAX``AVG` 和 `COUNT` 函数与 `OVER` 子句配合使用，以返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库 `HumanResources.Department` 表中每个部门的聚合值。
   
 ```sql
 SELECT DISTINCT Name  
@@ -200,7 +197,7 @@ Tool Design                   8.62                  29.8462               23.505
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>E. 使用 COUNT 和 DISTINCT  
-以下示例列出了在一家特定公司任职的雇员可以拥有的不同职位的数量。
+此示例返回特定公司的员工可以保存的不同的标题数。
   
 ```sql
 USE ssawPDW;  
@@ -216,8 +213,8 @@ FROM dbo.DimEmployee;
 67
 ```  
   
-### <a name="f-using-count"></a>F. 使用 COUNT(*)  
-下面的示例返回 `dbo.DimEmployee` 表中的总行数。
+### <a name="f-using-count"></a>F. 使用 COUNT(\*)  
+此示例返回 `dbo.DimEmployee` 表中的总行数。
   
 ```sql
 USE ssawPDW;  
@@ -233,8 +230,8 @@ FROM dbo.DimEmployee;
 296
 ```  
   
-### <a name="g-using-count-with-other-aggregates"></a>G. 组合使用 COUNT(*) 和其他聚合函数  
-下面的示例组合使用 `COUNT(*)` 和 SELECT 列表中的其他聚合函数。 该查询返回年度销售配额大于 $500,000 和平均销售配额的销售代表的人数。
+### <a name="g-using-count-with-other-aggregates"></a>G. 组合使用 COUNT(\*) 和其他聚合函数  
+此示例组合 `COUNT(*)` 与 `SELECT` 列表中的其他聚合函数。 它返回年度销售配额大于 $500,000 的销售代表的人数和这些销售代表的平均销售配额。
   
 ```sql
 USE ssawPDW;  
@@ -254,7 +251,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>H. 将 COUNT 与 HAVING 配合使用  
-下面的示例将 COUNT 与 HAVING 子句配合使用，返回公司中员工数超过 15 人的部门。
+此示例将 `COUNT` 与 `HAVING` 子句配合使用以返回某家公司的部门，每个部门有超过 15 位员工。
   
 ```sql
 USE ssawPDW;  
@@ -276,7 +273,7 @@ Production      179
 ```
   
 ### <a name="i-using-count-with-over"></a>I. 将 COUNT 与 OVER 配合使用  
-下面的示例将 COUNT 与 OVER 子句配合使用，返回指定的每个销售订单中包含的产品数。
+此示例将 `COUNT` 与 `OVER` 子句配合使用，返回指定的每个销售订单中包含的产品数。
   
 ```sql
 USE ssawPDW;  

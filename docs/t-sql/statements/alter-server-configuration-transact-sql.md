@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,12 +25,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,19 +190,22 @@ SQLDUMPEREDUMPFLAGS
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  HADR CLUSTER CONTEXT = { 'remote_windows_cluster' | LOCAL }****  
- 将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC) 群集。 *HADR 群集上下文*用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理由服务器实例承载的可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
+ 将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC)。 “HADR 群集上下文”用于确定什么 WSFC 管理由服务器实例承载的可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC r 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
   
- 您只能将 HADR 群集上下文从本地 WSFC 群集切换到远程群集，然后再从远程群集切换回本地群集。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不承载任何可用性副本时，才能将 HADR 群集上下文切换到远程群集。  
+ 只能将 HADR 群集上下文从本地 WSFC 切换到远程 WSFC，然后再从远程 WSFC 切换回本地 WSFC。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不承载任何可用性副本时，才能将 HADR 群集上下文切换到远程群集。  
   
  远程 HADR 群集上下文随时可以切换回本地群集。 但是，只要服务器实例承载任何可用性副本，该上下文将无法再进行切换。  
   
  若要标识目标群集，请指定下列值之一：  
   
  *windows_cluster*  
- WSFC 群集的群集对象名称 (CON)。 您可以指定短名称或者完整的域名称。 为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 解析。 在某些情况下，短名称可能导致混淆，DNS 可能返回错误的 IP 地址。 因此，我们建议您指定完整的域名。  
+ WSFC 的 netwirj 名称。 您可以指定短名称或者完整的域名称。 为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 解析。 在某些情况下，短名称可能导致混淆，DNS 可能返回错误的 IP 地址。 因此，我们建议您指定完整的域名。  
+  
+  > [!NOTE] 
+  > 不再支持使用此设置的跨群集迁移。 要执行跨群集迁移，请使用分布式可用性组或其他一些方法（如日志传送）。 
   
  LOCAL  
- 本地 WSFC 群集。  
+ 本地 WSFC。  
   
  有关详细信息，请参阅[更改服务器实例的 HADR 群集上下文 (SQL Server)](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)。  
   
@@ -247,7 +247,7 @@ SQLDUMPEREDUMPFLAGS
 > 3) 重新启动 SQL Server 实例。  
 > 4) 启动 SQL Server 代理实例。  
   
-**详细信息：**如果在重新启动 SQL Server 服务之前执行了带有 SET SOFTNUMA 命令的 ALTER SERVER CONFIGURATION，那么当 SQL Server 代理服务停止时，它将执行 T-SQL RECONFIGURE 命令，该命令会将 SOFTNUMA 设置还原回执行 ALTER SERVER CONFIGURATION 之前的状态。 
+**详细信息：** 如果在重新启动 SQL Server 服务之前执行了带有 SET SOFTNUMA 命令的 ALTER SERVER CONFIGURATION，那么当 SQL Server 代理服务停止时，它将执行 T-SQL RECONFIGURE 命令，该命令会将 SOFTNUMA 设置还原回执行 ALTER SERVER CONFIGURATION 之前的状态。 
   
 ## <a name="general-remarks"></a>一般备注  
  除非另有明确说明，否则此语句不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，它不需要重新启动该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集资源。  

@@ -12,11 +12,11 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: b2c850ac32aebf78441234327ec33b6223dc447b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 51fb197c3b5177c699134a48fc4888cd134e1711
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教程：SQL Server Management Studio 组件和配置
 本教程介绍 SQL Server Management Studio (SSMS) 中的不同窗口组件和一些适用于工作区的基本配置选项。 本文将介绍以下内容： 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio。  
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件
 本部分介绍工作区中提供的不同窗口组件及其用途。 

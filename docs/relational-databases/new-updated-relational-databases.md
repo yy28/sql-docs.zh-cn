@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: relational-databases
-ms.date: 02/03/2018
-ms.openlocfilehash: fc37abbb88aa597a6173fa5579fa320e0024581f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>新文章和最近更新的文章：关系数据库文档
 
@@ -28,7 +30,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
+- 更新日期范围：2018-02-03 到 2018-04-28&nbsp;&nbsp;&nbsp;
 - 主题领域：&nbsp; 关系数据库。
 
 
@@ -41,8 +43,13 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [在 SQL Server 或 SQL 数据库中存储 JSON 文档](json/store-json-documents-in-sql-tables.md)
-2. [SQL 漏洞评估](security/sql-vulnerability-assessment.md)
+1. [联接 (SQL Server)](performance/joins.md)
+2. [子查询 (SQL Server)](performance/subqueries.md)
+3. [在 Always On 可用性组中设置复制分发数据库](replication/configure-distribution-availability-group.md)
+4. [SQL 数据发现和分类](security/sql-data-discovery-and-classification.md)
+5. [事务锁定和行版本控制指南](sql-server-transaction-locking-and-row-versioning-guide.md)
+6. [sys.dm_os_job_object（Azure SQL 数据库）](system-dynamic-management-views/sys-dm-os-job-object-transact-sql.md)
+7. [Filestream 和 FileTable 系统存储过程 (Transact-SQL)](system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
 
 
 
@@ -68,15 +75,16 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [数据库文件初始化](#TitleNum_1)
-2. [tempdb 数据库](#TitleNum_2)
-3. [SQL Server 中的 JSON 数据](#TitleNum_3)
-4. [第 1 课：连接到数据库引擎](#TitleNum_4)
-5. [管理事务日志文件的大小](#TitleNum_5)
-6. [bcp_bind](#TitleNum_6)
-7. [SQL Server 索引设计指南](#TitleNum_7)
-8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
-9. [创建主键](#TitleNum_9)
+1. [使用格式化文件跳过表列 (SQL Server)](#TitleNum_1)
+2. [SQL Server 中的 JSON 数据](#TitleNum_2)
+3. [查询处理体系结构指南](#TitleNum_3)
+4. [教程：为复制准备 SQL Server - 发布服务器、分发服务器、订阅服务器](#TitleNum_4)
+5. [教程：在两个完全连接的服务器之间配置复制（事务）](#TitleNum_5)
+6. [教程：配置服务器和移动客户端之间的复制（合并）](#TitleNum_6)
+7. [使用全文搜索查询](#TitleNum_7)
+8. [使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密](#TitleNum_8)
+9. [PowerShell 和 CLI：使用 Azure Key Vault 中的自有密钥启用透明数据加密](#TitleNum_9)
+10. [关于变更数据捕获 (SQL Server)](#TitleNum_10)
 
 
 
@@ -87,32 +95,43 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-database-file-initializationdatabasesdatabase-instant-file-initializationmd"></a>1.&nbsp; [数据库文件初始化](databases/database-instant-file-initialization.md)
+### <a name="1-nbsp-use-a-format-file-to-skip-a-table-column-sql-serverimport-exportuse-a-format-file-to-skip-a-table-column-sql-servermd"></a>1.&nbsp; [使用格式化文件跳过表列 (SQL Server)](import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 
-更新日期：2018-01-23 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[下一篇](#TitleNum_2)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一篇](#TitleNum_2))
 
-<!-- Source markdown line 81.  ms.author= "sstein".  -->
+<!-- Source markdown line 221.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
+<!-- git diff --ignore-all-space --unified=0 167916d79c5de1e7f13990cb7acc41ceb541b9a7 cb92eb201292294e3397879c98f353fba45f1c1c  (PR=0  ,  Filename=use-a-format-file-to-skip-a-table-column-sql-server.md  ,  Dirpath=docs\relational-databases\import-export\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
+
+**使用 OPENROWSET(BULK...)**
+
+
+若要使用 XML 格式化文件通过 `OPENROWSET(BULK...)` 跳过表列，必须提供选择列表以及目标表中列的显式列表，如下所示：
 
 ```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)
 ```
 
-适用对象：SQL Server（从 SQL Server 2012 SP4、SQL Server 2014 SP2 和 SQL Server 2016 起，直到 SQL Server 2017）
+下面的示例使用 `OPENROWSET` 大容量行集提供程序和 `myTestSkipCol2.xml` 格式化文件。 此示例将 `myTestSkipCol2.dat` 数据文件大容量导入至 `myTestSkipCol` 表。 语句中包含了需要提供的选择列表以及目标表中列的显式列表。
 
-**安全注意事项**
+在 SSMS 中，运行以下代码。 更新计算机上示例文件位置的文件系统路径。
 
-使用即时文件初始化 (IFI) 时，由于只有在新数据写入文件中时才覆盖删除的磁盘内容，因此，在数据文件的该特定区域中发生某些其他的数据写入前，未授权的主体可能会访问删除的内容。 当数据库文件连接到 SQL Server 实例之后，可以通过文件中的随机访问控制列表 (DACL) 来降低此信息泄露的风险。 此 DACL 仅允许 SQL Server 服务帐户和本地管理员访问文件。 但是，当文件分离以后，可以由不具有 SE\_MANAGE\_VOLUME_NAME 的用户或服务访问。 备份数据库时，将需要以下类似考虑：如果未使用适当的 DACL 对备份文件进行保护，则未授权的用户或服务将可以使用删除的内容。
-
-另一个注意事项是，如果使用 IFI 增加文件大小，SQL Server 管理员可能会访问原始页面内容并查看以前删除的内容。
-
-如果数据库文件托管在存储区域网络上，则存储区域网络也可能始终以预初始化方式呈现新页面，并且操作系统重新初始化页面可能导致不必要的开销。
+```
+USE WideWorldImporters;
+GO
+INSERT INTO myTestSkipCol
+  (Col1,Col3)
+    SELECT Col1,Col3
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',
+      FORMATFILE='C:\myTestSkipCol2.Xml'
+       ) as t1 ;
+GO
+```
 
 
 
@@ -124,46 +143,53 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>2. &nbsp; [tempdb 数据库](databases/tempdb-database.md)
+### <a name="2-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>2.&nbsp; [SQL Server 中的 JSON 数据](json/json-data-sql-server.md)
 
-更新日期：2018-01-17 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_1) | [下一篇](#TitleNum_3)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_1) | [下一篇](#TitleNum_3))
 
-<!-- Source markdown line 100.  ms.author= "sstein".  -->
+<!-- Source markdown line 145.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5 e2f2e8b4732779b3f24561cc0c4da3a958f4edbb  (PR=0  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- 有关这些数据库选项的说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md)。
+JSON 文档可能包含无法直接映射到标准关系列中的子元素和层次结构数据。 在这种情况下，可通过将父实体与子数组联接，平展 JSON 层次结构。
 
-**SQL 数据库中的 Tempdb 数据库**
+在下面的示例中，数组中的第二个对象包含表示人员技能的子数组。 每个子对象都可使用附加 `OPENJSON` 函数调用进行分析：
 
+```
+DECLARE @json NVARCHAR(MAX)
+SET @json =
+N'[
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }
+ ]'
 
-|SLO|最大 tempdb 数据文件大小 (MB)|tempdb 数据文件数|最大 tempdb 数据大小 (MB)|
-|---|---:|---:|---:|
-|“基本”|14,225|@shouldalert|14,225|
-|S0|14,225|@shouldalert|14,225|
-|S1|14,225|@shouldalert|14,225|
-|S2|14,225| @shouldalert|14,225|
-|S3|32,768|@shouldalert|32,768|
-|S4|32,768|2|65,536|
-|S6|32,768|3|98,304|
-|S7|32,768|6|196,608|
-|S9|32,768|12|393,216|
-|S12|32,768|12|393,216|
-|P1|32,768|12|393,216|
-|P2|32,768|12|393,216|
-|P4|32,768|12|393,216|
-|P6|32,768|12|393,216|
-|P11|32,768|12|393,216|
-|P15|32,768|12|393,216|
-|高级弹性池（所有 DTU 配置）|14,225|12|170,700|
-|标准弹性池（所有 DTU 配置）|14,225|12|170,700|
-|基本弹性池（所有 DTU 配置）|14,225|12|170,700|
-||||
+SELECT *
+FROM OPENJSON(@json)
+  WITH (id int 'strict $.id',
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json)
+    outer apply openjson( a.skills )
+                     with ( skill nvarchar(8) '$' ) as b
+```
+首个 `OPENJSON` 中返回技能数组，作为原始 JSON 文本片段，并使用 `APPLY` 运算符传递给其他 `OPENJSON` 函数。 第二个 `OPENJSON` 函数将分析 JSON 数组并将字符串值返回为单列行集，这一行集将与第一个 `OPENJSON` 的结果联接。
+此查询的结果如下表所示：
+
+**结果**
+
+|id|firstName|lastName|age|dateOfBirth|技能|
+|--------|---------------|--------------|---------|-----------------|----------|
+|2|John|Smith|25|||
+|5|Jane|Smith||2005-11-04T12:00:00|SQL|
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` 将联接一级实体和子数组，并返回平展后的结果集。 由于 JOIN，将对每个技能重复第二行。
 
 
 
@@ -176,40 +202,54 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>3.&nbsp; [SQL Server 中的 JSON 数据](json/json-data-sql-server.md)
+### <a name="3-nbsp-query-processing-architecture-guidequery-processing-architecture-guidemd"></a>3.&nbsp; [查询处理体系结构指南](query-processing-architecture-guide.md)
 
-更新日期：2018-02-01 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_2) | [下一篇](#TitleNum_4)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_2) | [下一篇](#TitleNum_4))
 
-<!-- Source markdown line 233.  ms.author= "douglasl".  -->
+<!-- Source markdown line 34.  ms.author= "jroth".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
+<!-- git diff --ignore-all-space --unified=0 96d91b39acdb2f32aaff323e374e92d6f229d241 2c1d2f8585632ada174388399782dc3ed2721dba  (PR=0  ,  Filename=query-processing-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   [Loading GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)（将 GeoJSON 数据加载到 SQL Server 2016）
+**逻辑运算符的优先顺序**
 
-**使用 SQL 查询分析 JSON 数据**
 
-如果必须筛选或聚合 JSON 数据用于报表，可以使用 OPENJSON 将 JSON 转换为关系格式。 然后，可使用标准 Transact-SQL 和内置函数来准备报表。
+当一个语句中使用了多个逻辑运算符时，计算顺序依次为：`NOT`、`AND`最后是 `OR`。 算术运算符和位运算符优先于逻辑运算符处理。 有关详细信息，请参阅[运算符优先级]。
+
+在下面的示例中，颜色条件适用于产品型号 21，而不适用于产品型号 20，因为 `AND` 的优先级高于 `OR`。
 
 ```
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
-FROM   SalesOrderRecord AS Tab
-          CROSS APPLY
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
-           WITH (
-              Number   varchar(200) N'$.Order.Number',
-              Date     datetime     N'$.Order.Date',
-              Customer varchar(200) N'$.AccountNumber',
-              Quantity int          N'$.Item.Quantity'
-           )
-  AS SalesOrderJsonData
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
 ```
+
+可以通过添加括号强制先计算 `OR` 来改变查询的含义。 以下查询只查找型号 20 和 21 中红色的产品。
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+因为运算符存在优先级，所以使用括号（即使不需要）可以提高查询的可读性，并减少出现细微错误的可能性。 使用括号不会造成重大的性能损失。 下面的示例比原始示例更可读，虽然它们在语义上是相同的。
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 
 
 
@@ -221,35 +261,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_4"/>
 
-### <a name="4-nbsp-lesson-1-connecting-to-the-database-enginelesson-1-connecting-to-the-database-enginemd"></a>4.&nbsp; [第 1 课：连接到数据库引擎](lesson-1-connecting-to-the-database-engine.md)
+### <a name="4-nbsp-tutorial-prepare-sql-server-for-replication---publisher-distributor-subscriberreplicationtutorial-preparing-the-server-for-replicationmd"></a>4.&nbsp; [教程：为复制准备 SQL Server - 发布服务器、分发服务器、订阅服务器](replication/tutorial-preparing-the-server-for-replication.md)
 
-更新日期：2017-12-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_3) | [下一篇](#TitleNum_5)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_3) | [下一篇](#TitleNum_5))
 
-<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 56.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+<!-- git diff --ignore-all-space --unified=0 6e5caedacff193ce79bdd98708ae1b9dc91f0a8f 9f7af4d3f8b1cffd048db2a5b29fc9e6013f5ed2  (PR=0  ,  Filename=tutorial-preparing-the-server-for-replication.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-2.  选择“数据库引擎”。
+- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。
 
-    ![object-explorer](../relational-databases/media/object-explorer.png)
+>[!NOTE]
+> - 在相差两个版本以上的 SQL Server 上不支持复制。 有关详细信息，请参阅[复制拓扑中受支持的 SQL 版本](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)。
+> - 在 {Included-Content-Goes-Here} 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器。 有关 sysadmin 角色的详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。
 
-3.  在“服务器名称”框中，键入数据库引擎实例的名称。 对于默认的 SQL Server 实例，服务器名称即计算机名称。 对于 SQL Server 的命名实例，服务器名称为 <computer_name>\\<instance_name>，如 ACCTG_SRVR\SQLEXPRESS**。 以下屏幕截图显示如何连接到名为“PracticeComputer”的计算机上 SQL Server 的默认（未命名）实例。 已登录到 Windows 的用户是 Contoso 域中的 Mary。 使用 Windows 身份验证时，无法更改用户名称。
 
-    ![connect-to-server](../relational-databases/media/connect-to-server.png)
+本教程的预计学时：30 分钟
 
-4.  单击 **“连接”**。
+**为复制创建 Windows 帐户**
 
-> [!NOTE]
-> 本教程假定用户刚接触 SQL Server，并且连接时没有出现特殊问题。 这应足以满足大多数人的需求，并使本教程保持简单。 有关疑难解答步骤的详细信息，请参阅 [对连接到 SQL Server 数据库引擎的疑难解答](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
+在本部分中，将创建 Windows 帐户以运行复制代理。 您将在本地服务器上为以下代理创建一个单独的 Windows 帐户：
 
-**<a name="additional"></a>授权其他连接**
-
-现在，已经以管理员身份连接到了 SQL Server，首要任务之一是授权其他用户进行连接。 实现此任务的步骤是创建一个登录名，然后授权此登录名以用户身份访问数据库。 登录名可以是使用 Windows 凭据的 Windows 身份验证登录名；也可以是 SQL Server 身份验证登录名（这些登录名在 SQL Server 中存储身份验证信息并独立于 Windows 凭据）。 尽可能使用 Windows 身份验证。
+|代理|位置|帐户名|
+|---------|------------|----------------|
+|快照代理|发布服务器|<*machine_name*>\repl_snapshot|
 
 
 
@@ -261,28 +303,41 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_5"/>
 
-### <a name="5-nbsp-manage-the-size-of-the-transaction-log-filelogsmanage-the-size-of-the-transaction-log-filemd"></a>5.&nbsp; [管理事务日志文件的大小](logs/manage-the-size-of-the-transaction-log-file.md)
+### <a name="5-nbsp-tutorial-configure-replication-between-two-fully-connected-servers-transactionalreplicationtutorial-replicating-data-between-continuously-connected-serversmd"></a>5.&nbsp; [教程：在两个完全连接的服务器之间配置复制（事务）](replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
-更新日期：2018-01-17 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_4) | [下一篇](#TitleNum_6)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_4) | [下一篇](#TitleNum_6))
 
-<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+<!-- Source markdown line 162.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 0d74f984d0ffc01cce0376837e6d94df3c5654d7 4ecf4d724286130927dd43687d6845059af6f9b7  (PR=0  ,  Filename=tutorial-replicating-data-between-continuously-connected-servers.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   小型的增长增量可能生成过多的 [VLF](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且可能降低性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+**创建事务发布的订阅**
 
--   大型的增长增量可能生成过少的大型 [VLF](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且也可能影响性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+在此节中，介绍如何将订阅服务器添加到先前创建的发布中。 本教程使用远程订阅服务器 (NODE2\SQL2016)，但订阅也可在本地添加到发布服务器。
 
--   即使启用自动增长，如果增长速度不能满足查询需求，也可能收到提示事务日志已满的消息。 有关更改增长增量的详细信息，请参阅 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+**创建订阅**
 
--   在数据库中有多个日志文件不会以任何方式提升性能，因为事务日志文件不会像同一文件组中的数据文件一样使用[比例填充](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)。
 
--   日志文件可以设为自动收缩。 但是，不建议这样做，auto_shrink 数据库属性默认设为 FALSE。 如果 auto_shrink 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。
+1.  在 {Included-Content-Goes-Here} 中连接到发布服务器，然后依次展开服务器节点和“复制”文件夹。
+
+2.  在“本地发布”文件夹中，右键单击“AdvWorksProductTrans”发布，然后选择“新建订阅”。  新建订阅向导将启动。
+
+    “新建订阅”
+
+3.  在“发布”页上，选择“AdvWorksProductTrans”，然后选择“下一步”：
+
+    选择 Tran 发布服务器
+
+4.  在“分发代理位置”页上，选择“在分发服务器上运行所有代理”，然后选择“下一步”。  有关请求订阅和推送订阅的详细信息，请参阅[订阅发布](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications)：
+
+    在 Dist 运行代理
+
+5.  在“订阅服务器”页上，如果未显示订阅服务器实例的名称，选择“添加订阅服务器”，然后从下拉列表选择“添加 SQL Server 订阅服务器”。 这将启动“连接到服务器”对话框。 输入订阅服务器实例名称，然后选择“连接”。
 
 
 
@@ -294,62 +349,39 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_6"/>
 
-### <a name="6-nbsp-bcpbindnative-client-odbc-extensions-bulk-copy-functionsbcp-bindmd"></a>6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+### <a name="6-nbsp-tutorial-configure-replication-between-a-server-and-mobile-clients-mergereplicationtutorial-replicating-data-with-mobile-clientsmd"></a>6.&nbsp; [教程：配置服务器和移动客户端之间的复制（合并）](replication/tutorial-replicating-data-with-mobile-clients.md)
 
-更新日期：2018-01-30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_5) | [下一篇](#TitleNum_7)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_5) | [下一篇](#TitleNum_7))
 
-<!-- Source markdown line 127.  ms.author= "genemi".  -->
+<!-- Source markdown line 93.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+<!-- git diff --ignore-all-space --unified=0 0eed78dfe83c88358c030539a2b25d11ef5ec2d3 79b2a3f32c940fede94b11ad2a3ef8a00b911a39  (PR=0  ,  Filename=tutorial-replicating-data-with-mobile-clients.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- 下表列出了有效的枚举数据类型以及相应的 ODBC C 数据类型。
+“Employee”表包含数据类型为 hierarchyid 的列 (OrganizationNode)，仅 SQL 2017 中的复制支持。 如果使用低于 SQL 2017 的内部版本，会在屏幕底部看到一条消息，通知你在双向复制中使用此列可能出现数据丢失。 对于此教程，可以忽略此错误消息。 但是，除非使用受支持的内部版本，否则不应在生产坏境中复制此数据类型。 有关如何复制 hierarchyid 数据类型的详细信息，请参阅[在复制中使用 Hierarchyid 列](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
 
-|eDataType|C 类型|
-|-----------------------|------------|
-|SQLTEXT|char *|
-|SQLNTEXT|wchar_t *|
-|SQLCHARACTER|char *|
-|SQLBIGCHAR|char *|
-|SQLVARCHAR|char *|
-|SQLBIGVARCHAR|char *|
-|SQLNCHAR|wchar_t *|
-|SQLNVARCHAR|wchar_t *|
-|SQLBINARY|unsigned char *|
-|SQLBIGBINARY|unsigned char *|
-|SQLVARBINARY|unsigned char *|
-|SQLBIGVARBINARY|unsigned char *|
-|SQLBIT|char|
-|SQLBITN|char|
-|SQLINT1|char|
-|SQLINT2|short int|
-|SQLINT4|ssNoversion|
-|SQLINT8|_int64|
-|SQLINTN|cbIndicator<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
-|SQLFLT4|FLOAT|
-|SQLFLT8|FLOAT|
-|SQLFLTN|cbIndicator<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
-|SQLDECIMALN|SQL_NUMERIC_STRUCT|
-|SQLNUMERICN|SQL_NUMERIC_STRUCT|
-|SQLMONEY|DBMONEY|
-|SQLMONEY4|DBMONEY4|
-|SQLMONEYN|cbIndicator<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
-|SQLTIMEN|SQL_SS_TIME2_STRUCT|
-|SQLDATEN|SQL_DATE_STRUCT|
-|SQLDATETIM4|DBDATETIM4|
-|SQLDATETIME|DBDATETIME|
-|SQLDATETIMN|cbIndicator<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
-|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
-|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
-|SQLIMAGE|unsigned char *|
-|SQLUDT|unsigned char *|
-|SQLUNIQUEID|SQLGUID|
-|SQLVARIANT|除以下数据类型之外的任意数据类型：<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|
-|SQLXML|支持的 C 数据类型：<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|
+
+-  在“筛选表行”页上，选择“添加”，然后选择“添加筛选器”。
+
+-  在“添加筛选器”对话框中，在“选择要筛选的表”中选择“Employee (HumanResources)”。 选择 LoginID 列，再选择向右键以将此列添加到筛选查询的 WHERE 子句，并将 WHERE 子句修改如下：
+
+    ```
+    WHERE [LoginID] = HOST_NAME()
+    ```
+
+    A. 选择“此表中的行将仅转到一个订阅”，再选择“确定”：
+
+    添加筛选器
+
+
+
+- 在“筛选表行”页上，选择“Employee (Human Resources)”，选择“添加”，然后选择“添加联接以扩展所选筛选器”。
+
+    A. 在“添加联接”对话框的“联接的表”下，选择“Sales.SalesOrderHeader”。 在“手动编写联接语句”框中，按如下所示完成联接语句：
 
 
 
@@ -361,36 +393,36 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_7"/>
 
-### <a name="7-nbsp-sql-server-index-design-guidesql-server-index-design-guidemd"></a>7.&nbsp; [SQL Server 索引设计指南](sql-server-index-design-guide.md)
+### <a name="7-nbsp-query-with-full-text-searchsearchquery-with-full-text-searchmd"></a>7.&nbsp; [使用全文搜索查询](search/query-with-full-text-search.md)
 
-更新日期：2018-01-02 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_6) | [下一篇](#TitleNum_8)）
+更新日期：2018-04-13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_6) | [下一篇](#TitleNum_8))
 
-<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 247.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+<!-- git diff --ignore-all-space --unified=0 5ec67b56aa0a6eadadbcfa8b73b6726e75eca2bb 4eb108b202d3dd035a312bac7872cf02bcf31cfa  (PR=0  ,  Filename=query-with-full-text-search.md  ,  Dirpath=docs\relational-databases\search\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-从 SQL Server 2016 开始，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引将存储数据的副本，因此你需要提供额外的存储。 但是，列存储索引中的数据压缩成的大小比行存储表所需的大小更小。  如果采取这种做法，你可以同时对列存储索引以及行存储索引上的事务运行分析。 当行存储表中的数据更改时，列存储将会更新，因此这两个索引适用于相同的数据。
-
-从 SQL Server 2016 开始，可以对一个列存储索引使用一个或多个非聚集行存储索引。 这样，便可以针对基础列存储上执行有效的表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于不唯一的值无法插入行存储表，SQL Server 无法将值插入列存储。
-
-**性能注意事项**
+**有关派生词搜索的详细信息**
 
 
--   非聚集列存储索引定义支持使用筛选的条件。 若要尽量减少在 OLTP 表中添加列存储索引的性能影响，请使用筛选条件，以便创建仅关于运行工作负荷冷数据的非聚集列存储索引。
+*变形*是动词的不同时态和语态形式，或是名词的单数和复数形式。
 
--   一个内存中表可以有一个列存储索引。 你可以在创建表时创建它，也可以稍后使用 [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md) 来添加。 在低于 SQL Server 2016 的版本中，仅基于磁盘的表可以有列存储索引。
+例如，搜索词“drive”的变形。 如果表中不同的行包含词“drive”、“drives”、“drove”、“driving”和“driven”，则这些词都会出现在结果集中，原因是它们每一个都可以从词 drive 变形而来。
 
-有关详细信息，请参阅[列存储索引 - 查询性能](../relational-databases/indexes/columnstore-indexes-query-performance.md)。
+[FREETEXT] 和 [FREETEXTTABLE] 默认情况下查找所有指定词的变形。 [CONTAINS] 和 [CONTAINSTABLE] 支持可选的 `INFLECTIONAL` 参数。
 
-**设计指南**
+**搜索特定词的同义词**
 
 
--   一个行存储表可以有一个可更新的非聚集列存储索引。 在低于 SQL Server 2014 的版本中，非聚集列存储索引是只读的。
+*同义词库*为词定义用户指定的同义词。 有关同义词库文件的详细信息，请参阅[为全文搜索配置和管理同义词库文件]。
+
+例如，如果将项“{car, automobile, truck, van}”添加到同义词库，则可以搜索单词“car”的同义词库形式。 所查询表中所有包括单词“automobile”、“truck”、“van”或“car”的行都会出现在结果集中，因为所有这些单词都属于包含单词“car”的同义词扩展集。
+
+[FREETEXT] 和 [FREETEXTTABLE] 默认情况下使用同义词库。 [CONTAINS] 和 [CONTAINSTABLE] 支持可选的 `THESAURUS` 参数。
 
 
 
@@ -402,63 +434,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_8"/>
 
-### <a name="8-nbsp-spexecuteexternalscript-transact-sqlsystem-stored-proceduressp-execute-external-script-transact-sqlmd"></a>8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+### <a name="8-nbsp-transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehousesecurityencryptiontransparent-data-encryption-byok-azure-sqlmd"></a>8.&nbsp; [使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密](security/encryption/transparent-data-encryption-byok-azure-sql.md)
 
-更新日期：2018-01-23 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_7) | [下一篇](#TitleNum_9)）
+更新日期：2018-04-24 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_7) | [下一篇](#TitleNum_9))
 
-<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+<!-- Source markdown line 110.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+<!-- git diff --ignore-all-space --unified=0 9527658848d430bf0148be84474a75b232cbd112 70ed2a129c580962384f808e8526673957f00d2c  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-要生成使用 Python 的类似模型，需要将语言标识符从 `@language=N'R'` 更改为 `@language = N'Python'`，并对 `@script` 参数进行必要的修改。 否则，所有参数均与 R 在功能上相同。
-
-**C.创建 Python 模型并通过该模型生成分数**
+**如何使用 Azure Key Vault 配置 Geo-DR**
 
 
-本示例演示了如何使用 sp\_execute\_external\_ 在 Python 模型中生成分数。
+要保持用于加密数据库的 TDE 保护程序的高可用性，需要基于现有的或所需的 SQL 数据库故障转移组或活动异地复制实例配置冗余 Azure Key Vault。  每个异地复制服务器都需要一个单独的 Key Vault，该 Key Vault 必须与服务器位于同一个 Azure 区域。 如果因为一个区域发生中断而无法访问主数据库，且触发了故障转移，则可以使用辅助密钥保管库让辅助数据库进行接管。
 
-```
-CREATE PROCEDURE [dbo].[py_generate_customer_scores]
-AS
-BEGIN
+对于异地复制的 Azure SQL 数据库，需要以下 Azure Key Vault 配置：
+- 区域中需要有一个具有 Key Vault 的主数据库和一个具有 Key Vault 的辅助数据库。
+- 至少需要一个辅助数据库，最多支持四个辅助数据库。
+- 不支持链式辅助数据库。
 
-**Input query to generate the customer data**
+以下部分将详细说明安装和配置步骤。
 
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+**Azure Key Vault 配置步骤**
 
-EXEC sp_execute_external_script @language = N'Python', @script = N'
-import pandas as pd
-from sklearn.cluster import KMeans
 
-**Get data from input query**
-
-customer_data = my_input_data
-
-**Define the model**
-
-n_clusters = 4
-est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
-clusters = est.labels_
-customer_data["cluster"] = clusters
-
-OutputDataSet = customer_data
-'
-, @input_data_1 = @input_query
-, @input_data_1_name = N'my_input_data'
-WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
-END;
-GO
-```
-
-Python 代码中使用的列标题不是对 SQL Server 的输出；因此，使用 WITH RESULTS 语句来为 SQL 指定要使用的列名称和数据类型。
-
-要进行评分，还可以使用本机 [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
-
+- 安装 [PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
+- 使用 Key Vault 中的 [PowerShell 启用“软删除”属性](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell)，在两个不同区域创建两个 Azure Key Vault（该选项在 AKV 门户中还不可用，但 SQL 需要该选项）。
+- 这两个 Azure Key Vault 都必须位于在相同 Azure 地域中可用的两个区域，才能备份和恢复密钥。  如果需要将两个 Key Vault 位于不同地区以满足 SQL Geo-DR 要求，请遵循 [BYOK 过程](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys)，该过程允许从本地 HSM 导入密钥。
 
 
 
@@ -470,42 +476,89 @@ Python 代码中使用的列标题不是对 SQL Server 的输出；因此，使�
 
 <a name="TitleNum_9"/>
 
-### <a name="9-nbsp-create-primary-keystablescreate-primary-keysmd"></a>9.&nbsp; [创建主键](tables/create-primary-keys.md)
+### <a name="9-nbsp-powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vaultsecurityencryptiontransparent-data-encryption-byok-azure-sql-configuremd"></a>9.&nbsp; [PowerShell 和 CLI：使用 Azure Key Vault 中的自有密钥启用透明数据加密](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
 
-更新日期：2018-01-18 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[上一篇](#TitleNum_8)）
+更新日期：2018-04-24 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_8) | [下一篇](#TitleNum_10))
 
-<!-- Source markdown line 102.  ms.author= "sstein".  -->
+<!-- Source markdown line 196.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 a0e00f5701d9a493f503a477c69097ce65aba174 721e8fb856a55ee1e8e9e7fc06036a03adab647b  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql-configure.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-**在新表中创建具有非聚集索引的主键**
+**CLI 的先决条件**
 
 
-1.  在“对象资源管理器”中，连接到数据库引擎实例。
+- 必须有 Azure 订阅，并且成为订阅中的管理员。
+- [推荐但可选]具有硬件安全性模块 (HSM) 或本地密钥存储，用于创建 TDE 保护程序密钥材料的本地副本。
+- 命令行接口版本 2.0 或更高版本。 若要安装最新版本并连接到 Azure 订阅，请参阅[安装和配置 Azure 跨平台命令行接口 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。
+- 创建用于 TDE 的 Azure Key Vault 和密钥。
+   - [使用 CLI 2.0 管理 Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [有关使用硬件安全模块 (HSM) 和 Key Vault 的说明](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - 密钥保管库必须具有以下用于 TDE 的属性：
+   - [软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [如何将 Key Vault 软删除与 CLI 配合使用](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli)
+- 密钥必须具有以下用于 TDE 的属性：
+   - 无过期日期
+   - 未禁用
+   - 能够执行 get、wrap key 和 unwrap key 操作
 
-2.  在标准菜单栏上，单击 **“新建查询”**。
+**步骤：创建服务器并将 Azure AD 标识分配给服务器**
 
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例创建一个表并针对 `CustomerID`列定义一个主键，针对 `TransactionID` 定义一个群集索引。
+      cli
+      # create server (with identity) and database
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### <a name="10-nbsp-about-change-data-capture-sql-servertrack-changesabout-change-data-capture-sql-servermd"></a>10.&nbsp; [关于变更数据捕获 (SQL Server)](track-changes/about-change-data-capture-sql-server.md)
+
+更新日期：2018-04-17 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_9))
+
+<!-- Source markdown line 112.  ms.author= "jroth".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 588bff652adefd719e799e9777a416b70184c5f8 77ebdbb1b98b24054d5c5afbb3f1d40e94d1e6bc  (PR=5574  ,  Filename=about-change-data-capture-sql-server.md  ,  Dirpath=docs\relational-databases\track-changes\  ,  MergeCommitSha40=bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68) -->
+
+
+
+**使用数据库和表排序规则的差异**
+
+
+请务必了解在数据库与为变更数据捕获而配置的表的列之间具有不同的排序规则。 CDC 使用临时存储来填充副表。 如果表的 CHAR 或 VARCHAR 列的排序规则与数据库排序规则不同，并且这些列存储了非 ASCII 字符（例如双字节 DBCS 字符），则 CDC 可能无法将更改后的数据与基表中的数据保持一致。 这是因为临时存储变量不能包含与之关联的排序规则。
+
+请考虑以下方法之一，确保变更数据捕获与基表保持一致：
+
+- 将 NCHAR 或 NVARCHAR 数据类型用于包含非 ASCII 数据的列。
+
+- 或者，将相同的排序规则用于列和数据库。
+
+例如，如果有使用 SQL_Latin1_General_CP1_CI_AS 排序规则的数据库，请考虑下表：
 
 ```
-    USE AdventureWorks2012;
-    GO
-    CREATE TABLE Production.TransactionHistoryArchive1
-    (
-       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
-       TransactionID int IDENTITY (1,1) NOT NULL,
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
-    );
-    GO
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-    -- Now add the clustered index
-    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
-    GO
+CDC 可能无法为列 C2 捕获二进制数据，因为它的排序规则不同 (Chinese_PRC_CI_AI)。 使用 NVARCHAR 可避免此问题：
+
+```
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
 
@@ -519,40 +572,36 @@ Python 代码中使用的列标题不是对 SQL Server 的输出；因此，使�
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
-- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+- [新文章和更新的文章 (11+6)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (18+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (218+14)：连接到 SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (14+0)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (3+2)： SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (3+3)： Linux for SQL 文档](../linux/new-updated-linux.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (7+10)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (0+2)：Reporting Services for SQL 文档](../reporting-services/new-updated-reporting-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+3)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (2+3)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (5+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+1)：SQL 工具文档](../tools/new-updated-tools.md)&nbsp; &nbsp;
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
 
-
-- [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
-- [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (0+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
+- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../samples/new-updated-samples.md)
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
-
 

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,12 +22,11 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 941eb7f9cdf39475631b8ab45789cd2082ad3084
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 132843721491423d20860ec16e7a8541c7db5668
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
  例如，点的理想缓冲区距离为圆圈，但是这必须与多边形近似。 公差越小，多边形具有的点就越多，这将增加结果的复杂度，但可减少错误。  
   
- relative  
+ *relative*  
  一个指定 tolerance 值是相对值还是绝对值的 bit 值。 如果为“TRUE”或 1，则公差为相对值，并按 *tolerance* 参数与该实例的边框直径之间的乘积进行计算。 如果为“FALSE”或 0，则公差为绝对值，并且 tolerance 值为理想缓冲区距离与返回的线性近似值之间的绝对最大偏差。  
   
 ## <a name="return-types"></a>返回类型  

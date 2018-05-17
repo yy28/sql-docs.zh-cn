@@ -1,27 +1,25 @@
 ---
-title: "使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: 使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1072350a30a5f28ac16cda48f72720a383012d02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
 
@@ -106,7 +104,7 @@ ms.lasthandoff: 01/09/2018
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     有关使用 PowerShell 的详细信息，请参阅 [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
+     有关使用 PowerShell 的详细信息，请参阅[Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安装 Web 部件  
   
@@ -148,9 +146,9 @@ ms.lasthandoff: 01/09/2018
   
 6.  当页面处于编辑模式时，在报表查看器 Web 部件中单击 **“编辑 Web 部件”** 。  
   
-7.  在 **“报表管理器 URL”**中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法：http://\<servername>/reports。  
+7.  在 **“报表管理器 URL”** 中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法：http://\<servername>/reports。  
   
-8.  在 **“报表路径”**中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products**中。  
+8.  在 **“报表路径”** 中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products**中。  
   
 9. 单击“确定” 。  
   
@@ -160,7 +158,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  在报表资源管理器 Web 部件上下文菜单中，单击 **“编辑 Web 部件”**。  
   
-3.  在 **“报表管理器 URL”**中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。  
+3.  在 **“报表管理器 URL”** 中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。  
   
 4.  （可选）设置 **“开始路径”**。 开始路径是报表服务器文件夹层次结构中的文件夹。 如果希望默认页面是深入文件夹层次结构的某个文件夹，则可以指定开始路径。 该路径必须以正斜杠开头。 您必须指定从报表服务器文件夹层次结构根节点开始的完整路径，但不包含服务器名称或报表管理器虚拟目录。 例如，若要打开紧邻根节点下名为 Adventure Works 的文件夹，请在“开始路径”中指定 **/Adventure Works** 。  
   

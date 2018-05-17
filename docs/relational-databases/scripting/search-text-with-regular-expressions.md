@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -25,13 +23,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de05d593aa47001a5afd2f698d5d1c181757d4c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +41,9 @@ ms.lasthandoff: 04/16/2018
 2.  **“查找内容”** 字段旁边的 **“引用列表”** 三角形按钮将变为可用状态。 单击此按钮可显示一组最常用的正则表达式。 如果选择了表达式生成器中的某个项，则可将该项插入 **“查找内容”** 字符串。  
   
 > [!NOTE]  
->  **“查找内容”** 字符串中使用的正则表达式与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程中的有效正则表达式相比，语法上存在差异。 例如，在 **“查找和替换”**对话框中，大括号 {} 用于表示带标记的表达式。 因此，表达式“zo\{1\}”可匹配“zo”后跟标记 1 的所有项，如“Alonzo1”和“Gonzo1”。 但在 .NET Framework 中,{} 符号用于表示量词。 因此，表达式“zo\{1\}”可匹配“z”后跟一个“o”的所有项，如匹配“zone”，但不匹配“zoo”。  
+>  **“查找内容”** 字符串中使用的正则表达式与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程中的有效正则表达式相比，语法上存在差异。 例如，在“查找和替换”对话框中，大括号 {} 用于表示带标记的表达式。 所以，表达式“zo{1}”将匹配所有“zo”后带标记 1 的匹配项，如“Alonzo1”和“Gonzo1”。 但在 .NET Framework 中，{} 符号用于表示量词。 因此，表达式“zo{1}”将匹配所有“z”后跟一个“o”的匹配项，如匹配“zone”，但不匹配“zoo”。  
   
- 下表对 **“引用列表”**中提供的正则表达式进行了说明。  
+ 下表对 **“引用列表”** 中提供的正则表达式进行了说明。  
   
 |表达式|语法|Description|  
 |----------------|------------|-----------------|  
@@ -68,7 +65,7 @@ ms.lasthandoff: 04/16/2018
 |空格或制表符|:b|匹配空格或制表符。|  
 |Integer|:z|匹配表达式 ([0-9]+)。|  
   
- **“引用列表”** 中只列出了部分可在 **“查找和替换”**操作中使用的正则表达式。 还可以将下列任一正则表达式插入 **“查找内容”** 字符串：  
+ **“引用列表”** 中只列出了部分可在 **“查找和替换”** 操作中使用的正则表达式。 还可以将下列任一正则表达式插入 **“查找内容”** 字符串：  
   
 |表达式|语法|Description|  
 |----------------|------------|-----------------|  

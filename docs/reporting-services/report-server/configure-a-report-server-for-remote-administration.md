@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="tasks"></a>“任务”  
  启用远程报表服务器配置的任务包括：  
   
--   在 Windows 防火墙中启用端口以允许报表服务器和 SQL Server 数据库引擎实例所使用的端口的请求。  请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 和 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
+-   在 Windows 防火墙中启用端口以允许报表服务器和 SQL Server 数据库引擎实例所使用的端口的请求。  请参阅 [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 和 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
 -   启用与承载报表服务器数据库的数据库引擎实例之间的远程连接。 远程连接是配置报表服务器数据库连接和管理加密密钥所必需的。  
   
@@ -108,9 +108,9 @@ ms.lasthandoff: 05/03/2018
   
 6.  单击 **“COM 安全”**。  
   
-7.  在 **“启动和激活权限”**中单击 **“编辑限制”**。  
+7.  在 **“启动和激活权限”** 中单击 **“编辑限制”**。  
   
-8.  如果在 **“启动权限”**中没有看到您的名称，请单击 **“添加”**。  
+8.  如果在 **“启动权限”** 中没有看到您的名称，请单击 **“添加”**。  
   
 9. 键入您的用户帐户名，然后单击 **“确定”**。  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 05/03/2018
   
 12. 单击 **“添加”**，然后键入将用于管理服务器的用户帐户。  
   
-13. 在 **“允许”** 列中，选择 **“启用帐户”**、 **“远程启用”**和 **“读取安全”**，然后单击 **“确定”**。  
+13. 在 **“允许”** 列中，选择 **“启用帐户”**、 **“远程启用”** 和 **“读取安全”**，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  

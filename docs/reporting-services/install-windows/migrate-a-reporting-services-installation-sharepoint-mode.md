@@ -1,27 +1,25 @@
 ---
-title: "迁移 Reporting Services 安装（SharePoint 模式）| Microsoft Docs"
-ms.custom: 
+title: 迁移 Reporting Services 安装（SharePoint 模式）| Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 
+caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 94cb6edf73b942b7cf3d41aee922fa25ca25c755
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
 
@@ -73,7 +71,7 @@ ms.lasthandoff: 02/15/2018
 |Temp 数据库|ReportingService_[服务应用程序 GUID]TempDB **(\*)**|用户迁移。|  
 |警报数据库|ReportingService_[服务应用程序 GUID]_Alerting|在创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序时创建。|  
   
- **(\*)**该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
+ **(\*)** 该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
   
 ####  <a name="bkmk_backup_operations"></a> 备份操作  
  本节介绍迁移所需的信息的类型以及用于完成备份的工具或过程。  
@@ -83,7 +81,7 @@ ms.lasthandoff: 02/15/2018
 ||对象|方法|说明|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥。|**Rskeymgmt.exe** 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。|指出的工具可用于备份操作；但对于还原操作，您将使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序管理页或 PowerShell。|  
-|**2**|SharePoint 内容数据库。||备份数据库和分离数据库。<br /><br /> 请参阅 [确定升级方法 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)中的“数据库附加升级”部分。|  
+|**2**|SharePoint 内容数据库。||备份数据库和分离数据库。<br /><br /> 请参阅[确定升级方法 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)中的“数据库附加升级”部分。|  
 |**3**|作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]目录数据库的 SQL Server 数据库。|SQL Server 数据库备份和还原<br /><br /> 或多个<br /><br /> SQL Server 数据库分离和附加。||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|如果您对文件进行了自定义，则仅需复制 rsreportserver.config。 文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*：<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> 针对报表服务器 ASP.NET 应用程序的 Web.config。<br /><br /> 针对 ASP.NET 的 Machine.config|  
   
@@ -94,7 +92,7 @@ ms.lasthandoff: 02/15/2018
   
 ||对象|方法|说明|  
 |-|-------------|------------|-----------|  
-|**1**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> <br /><br /> 请参阅 [确定升级方法 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)中的“数据库附加升级”部分和 [附加数据库和升级到 SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)。|  
+|**1**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> <br /><br /> 请参阅[确定升级方法 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) 和[附加数据库和升级到 SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx) 中的“数据库附加升级”部分。|  
 |**2**|还原作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库 (ReportServer) 的 SQL Server 数据库。|SQL Database 库备份和还原。<br /><br /> **或**<br /><br /> SQL Server 数据库分离和附加。|首次使用数据库时，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将根据需要更新数据库架构，以便数据库可用于 SQL Server 2016 环境。|  
 |**3**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 有关使用 SharePoint 管理中心的详细信息，请参阅 [Install The First Report Server in SharePoint Mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)中的“步骤 3：创建 Reporting Services 服务应用程序”。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
 |**4**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting。|  
@@ -130,7 +128,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [开始升级到 SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx)。  
   
--   [SharePoint 2013 的升级过程概述 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx)。  
+-   [升级到 SharePoint 2013 的过程概述 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx)。  
 
 ## <a name="next-steps"></a>后续步骤
 

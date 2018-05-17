@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,12 +22,11 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc2b4c67d3224781e648be0615e77760dddedef3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d0aa4291944b92dd83f2ce1d5d39704c171d8c76
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
  最小限制为距离的 0.1%，任何小于此限制的公差都将向上舍入到此最小限制。  
   
- relative  
+ *relative*  
  一个指定 tolerance 值是相对值还是绝对值的 bit 值。 如果为 TRUE 或 1，则公差为相对值并按公差参数与椭圆体的角度范围 \* 赤道半径的乘积进行计算。 如果为“FALSE”或 0，则公差为绝对值，并且 tolerance 值为理想缓冲区距离与返回的线性近似值之间的绝对最大偏差。  
   
 ## <a name="return-types"></a>返回类型  

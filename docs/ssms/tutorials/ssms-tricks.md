@@ -18,11 +18,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 4f41aaa169e87a246b91304d24142195e7a21988
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e358fb73ff4f248b7de368364b8bb758f70018ff
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教程：使用 SSMS 的其他提示和技巧
 本教程将提供一些使用 SQL Server Management Studio 的其他技巧。 本文将指导如何： 
@@ -37,9 +37,9 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio、针对 SQL Server 的访问权限以及 AdventureWorks 数据库。 
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
-- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 ## <a name="comment--uncomment-your-t-sql-code"></a>注释/取消注释 T-SQL 代码
 可使用工具栏中的注释按钮注释和取消注释部分文本。 系统不会执行已注释掉的文本。 

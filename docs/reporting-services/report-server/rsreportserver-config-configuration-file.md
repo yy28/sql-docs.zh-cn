@@ -1,27 +1,25 @@
 ---
-title: "RsReportServer.config 配置文件 | Microsoft Docs"
-ms.custom: 
+title: RsReportServer.config 配置文件 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]RsReportServer.config 文件存储报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -65,7 +63,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  下表提供有关在文件的第一部分显示的常规配置设置的信息。 将按设置在配置文件中的显示顺序依次列出： 表的最后一列指示设置是适用于本机模式报表服务器 **(N)** 还是 SharePoint 模式报表服务器 **(S)** 或两者均适用。  
   
 > [!NOTE]  
->  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅 [整数限制](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
   
 |设置|Description|“模式”|  
 |-------------|-----------------|----------|  
@@ -98,7 +96,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  URLReservations 为当前实例定义报表服务器 Web 服务和 Web 门户的 HTTP 访问。 URL 会在配置报表服务器时保留和存储在 HTTP.SYS 中。  
   
 > [!WARNING]  
->  对于 SharePoint 模式，在 SharePoint 管理中心中配置 URL 保留项。 有关详细信息，请参阅 [配置备用访问映射 (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
+>  对于 SharePoint 模式，在 SharePoint 管理中心中配置 URL 保留项。 有关详细信息，请参阅[配置备用访问映射 (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
   
  请不要直接在该配置文件中修改 URL 保留。 请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器或报表服务器 WMI 提供程序创建或修改用于本机模式报表服务器的 URL 保留。 如果在配置文件中修改此值，则可能会破坏保留，这将导致服务器运行时错误或在卸载软件时将孤立的保留留在未删除的 HTTP.SYS 中。 有关详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)和[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。  
   

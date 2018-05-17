@@ -1,16 +1,15 @@
 ---
-title: "初始化报表服务器（SSRS 配置管理器）| Microsoft Docs"
-ms.custom: 
+title: 初始化报表服务器（SSRS 配置管理器）| Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -19,23 +18,22 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2b5b5a5142b8712196484e3cca32aeae7373639b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f51884df3e202153f3da1b75b63cd2155270eedc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 加密密钥 - 初始化报表服务器
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，已初始化的服务器是指可以在报表服务器数据库中加密和解密数据的服务器。 初始化是一项必需的报表服务器操作。 初始化在报表服务器服务第一次启动时发生。 在将报表服务器联接到现有部署，或在恢复进程中手动重新创建密钥时也需要进行初始化。 有关使用加密密钥的方法和原因的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)和[存储加密的报表服务器数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
   
  加密密钥部分基于报表服务器服务的配置文件信息。 如果更改用于运行报表服务器服务的用户标识，则必须相应地更新密钥。 如果使用 Reporting Services 配置工具更改标识，将自动处理此步骤。  
   
- 如果由于某些原因导致初始化失败，则报表服务器在响应用户和服务请求时将返回 **RSReportServerNotActivated** 错误。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅 Technet Wiki 中的 [SSRS：解决与 Reporting Services 有关的问题和错误 (SSRS: Troubleshoot Issues and Errors with Reporting Services)](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)。  
+ 如果由于某些原因导致初始化失败，则报表服务器在响应用户和服务请求时将返回 **RSReportServerNotActivated** 错误。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅 Technet Wiki 中的 [SSRS：解决 Reporting Services 的问题和错误](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)。  
   
 ## <a name="overview-of-the-initialization-process"></a>初始化过程概述  
  初始化过程将创建并存储一个用于加密的对称密钥。 对称密钥由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 加密服务创建，随后由报表服务器服务用来加密和解密数据。 对称密钥本身通过非对称密钥进行加密。  

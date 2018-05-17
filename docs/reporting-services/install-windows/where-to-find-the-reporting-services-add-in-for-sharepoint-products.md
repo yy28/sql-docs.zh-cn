@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
@@ -18,12 +17,11 @@ caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c0f23f6d5410bf5eeeb59476ae491fc82afd93dc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 90971587434165ebafccd2867736c56ce781c732
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>在何处查找用于 SharePoint 产品的 Reporting Services 外接程序
 
@@ -59,9 +57,9 @@ ms.lasthandoff: 01/09/2018
   
  若要下载并安装该外接程序，请访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心：  
   
--   **SP1 外接程序：**[用于 Microsoft® SharePoint® 的 Microsoft® SQL Server® 2012 SP1 Reporting Services 外接程序](http://www.microsoft.com/download/details.aspx?id=35583) (http://www.microsoft.com/download/details.aspx?id=35583)。  
+-   SP1 加载项：  [用于 Microsoft® SharePoint® 的 Microsoft® SQL Server® 2012 SP1 Reporting Services 加载项](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583)。  
   
--   **SP1：**[Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906)。  
+-   **SP1：**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906)。  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 用于 SharePoint 2010 产品的 Reporting Services 外接程序
 

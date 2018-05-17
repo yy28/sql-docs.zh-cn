@@ -1,16 +1,15 @@
 ---
-title: "rskeymgmt 实用工具 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: rskeymgmt 实用工具 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c2bdcd2610eb4a4c6d351868a8fbb7aac9a44bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
   提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  
@@ -65,12 +63,12 @@ rskeymgmt {-?}
  **-e**  
  提取为报表服务器数据加密和解密所用的对称密钥，以便将其复制到文件中。  
   
- 此参数不带值。 但是，您必须在命令行中包含其他参数，才能完成提取。 必须指定的参数包括 **-f** 和**-p**。  
+ 此参数不带值。 但是，您必须在命令行中包含其他参数，才能完成提取。 必须指定的参数包括 **-f** 和 **-p**。  
   
  **-a**  
  使用受密码保护的备份文件中提供的副本替换现有对称密钥。 这将会更新对称密钥的所有实例。  
   
- 此参数不带值。 但是，您必须在命令行中包含其他参数，才能选择包含要应用的密钥的文件。 可以指定的参数包括 **-f** 和**-p**。  
+ 此参数不带值。 但是，您必须在命令行中包含其他参数，才能选择包含要应用的密钥的文件。 可以指定的参数包括 **-f** 和 **-p**。  
   
  **-d**  
  删除报表服务器数据库中的所有对称密钥实例和所有加密数据。 此参数不带值。  
@@ -101,7 +99,7 @@ rskeymgmt {-?}
  指定远程计算机名称，该计算机将承载加入报表服务器扩展部署的报表服务器实例。 请使用网络中标识该计算机的计算机名称。  
   
  **-n**  
- 指定远程计算机上报表服务器实例的名称。 如果已在默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中安装了报表服务器，则此参数是可选的（ **-n** 的默认值为 MSSQLSERVER）。 如果已按命名实例的形式安装了报表服务器，则 **-n** 为必需项。  
+ 指定远程计算机上报表服务器实例的名称。 如果已在默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中安装了报表服务器，则此参数是可选的（ **-n** 的默认值为 MSSQLSERVER）。 如果已按命名实例的形式安装报表服务器，则 **-n** 为必需项。  
   
  **-u**  *useraccount*  
  指定要加入扩展部署的远程计算机上的管理员帐户。 如果未指定帐户，则使用当前用户的凭据。  
@@ -171,7 +169,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>文件位置  
- Rskeymgmt.exe 位于 \<drive>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 \<drive>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** 下。 可以在文件系统的任何文件夹中运行此实用工具。  
+ Rskeymgmt.exe 位于 **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** 下。 可以在文件系统的任何文件夹中运行此实用工具。  
   
 ## <a name="remarks"></a>Remarks  
  报表服务器对存储的凭据和连接信息进行加密。 公钥和对称密钥可用于对数据进行加密。 要运行报表服务器，报表服务器数据库必须具有有效的密钥。 你可以使用 **rskeymgmt** 来备份、删除或还原密钥。 如果无法还原密钥，此工具将为您提供一种方法，以删除不再使用的加密内容。  

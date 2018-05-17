@@ -1,35 +1,33 @@
 ---
-title: "角色定义 | Microsoft Docs"
-ms.custom: 
+title: 角色定义 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - roles [Reporting Services], security
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7618d07d7329a92c4c059b68f099fb6acbf3e338
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: da412b8111447506dce76b2c5d88569faec1b26a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions"></a>角色定义
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，“角色定义”是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，“角色**定义”是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>使用角色授予对报表服务器的访问权限  
  角色只有在角色分配中使用时才有效。 有关角色如何提供安全性的详细信息，请参阅 [角色分配](../../reporting-services/security/role-assignments.md)。  

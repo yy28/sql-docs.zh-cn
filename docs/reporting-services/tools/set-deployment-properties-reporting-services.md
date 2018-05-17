@@ -1,32 +1,30 @@
 ---
-title: "设置部署属性 (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 设置部署属性 (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3646d424b9f2f66546369c74a4bb310d0fb6a4cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
   在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你必须指定报表服务器，并视需要指定报表文件夹和共享数据源，以便你可以将报表服务器项目中的项发布到报表服务器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成、预览和部署报表所需的属性和值存储在报表服务器项目的项目配置中。 可以为这些项目属性创建多个命名集，从而方便地在属性集之间切换。 每个属性集都是一个配置。 例如，可拥有一个向测试服务器发布报表的配置，还可拥有另一个向生产服务器发布报表的配置。  
@@ -79,9 +77,9 @@ ms.lasthandoff: 01/09/2018
   
 2.  在该项目的 **“属性页”** 对话框中，单击 **“配置管理器”**。  
   
-3.  在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(\<配置>)”。  
+3.  在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(***\<配置>***)”。  
   
-4.  在 **“项目上下文”**中，为解决方案中的每个项目选中或清除 **“生成”** 或 **“部署”**。  
+4.  在 **“项目上下文”** 中，为解决方案中的每个项目选中或清除 **“生成”** 或 **“部署”**。  
   
     > [!NOTE]  
     >  如果选中 **“生成”** ，报表设计器将生成报表项目，并在预览或发布到报表服务器之前检查错误。 如果选中 **“部署”** ，报表设计器将按照部署属性中的定义，将报表发布到报表服务器。 如果未选中 **“部署”** ，报表设计器将在本地预览窗口中显示在 **StartItem** 属性中指定的报表。  

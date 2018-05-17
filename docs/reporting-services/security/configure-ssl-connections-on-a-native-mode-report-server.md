@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
@@ -18,17 +17,17 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0eead8d73153621430037141e0a509adac4cd1fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留项，以支持通过加密通道建立报表服务器连接。  
   
 > [!TIP]  
->  如果您在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，请参阅 SharePoint 文档了解有关的详细信息。 例如， [如何在 SharePoint 2010 Web 应用程序上启用 SSL (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
+>  如果您在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，请参阅 SharePoint 文档了解有关的详细信息。 例如[如何在 SharePoint 2010 web 应用程序上启用 SSL (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
   
  由于 Internet Information Services (IIS) 也使用 HTTP SSL，因此在同一计算机上运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，必须考虑到一些重要的互操作性问题。 请务必查看“与 IIS 的互操作性问题”部分以获取有关如何解决这些问题的指南。  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  单击 **“高级”**。  
   
-3.  在 **“报表管理器的多个 SSL 标识”**中，单击 **“添加”**。  
+3.  在 **“报表管理器的多个 SSL 标识”** 中，单击 **“添加”**。  
   
 4.  选择证书，再单击 **“确定”**，然后单击 **“应用”**。  
   

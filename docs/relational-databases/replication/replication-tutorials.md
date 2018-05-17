@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -23,26 +22,25 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3900aae4e96b5490b0b65cbbee004fc66337ff63
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f168e135dd563d1b76d99254bfa17d7ba8cf721a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-tutorials"></a>复制教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-复制是一种功能强大的解决方案，可用于在服务器之间移动数据或数据子集。 可以使用事务复制在完全连接的服务器之间复制数据。 此外，还可以使用合并复制在间歇连接的服务器和客户端之间复制数据。 接下来，你将发现可帮助准备复制的服务器的教程，以及介绍如何配置事务复制和合并复制的教程。 
+复制是一种功能强大的解决方案，可用于在服务器之间移动数据或数据子集。 可以使用事务复制在完全连接的服务器之间复制数据。 此外，还可以使用合并复制在间歇连接的服务器和客户端之间复制数据。 在本文中，你将发现可帮助准备服务器复制的教程，以及介绍如何配置事务复制和合并复制的教程。 
   
-在复制教程中，“发布服务器”是指包含将要复制的源数据的服务器，“订阅服务器”是指目标服务器。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，但这不是必须的。 有关详细信息，请参阅 [复制发布模型概述](../../relational-databases/replication/publish/replication-publishing-model-overview.md)。  
+在复制教程中，“发布服务器”是指包含将要复制的源数据的服务器。 “订阅服务器”是指目标服务器。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但这不是必需的。 有关详细信息，请参阅[复制发布模型概述](../../relational-databases/replication/publish/replication-publishing-model-overview.md)。  
 
-上述教程使用 NODE1\SQL2016 作为发布服务器和分发服务器，使用 NODE2\SQL2016 作为订阅服务器。 
+上述教程使用 NODE1\SQL2016 作为发布服务器和分发服务器。 使用 NODE2\SQL2016 作为订阅服务器。 
   
 > [!NOTE]  
-> 这些教程中列举的大多数任务都能够以编程方式执行。 有关详细信息，请参阅 [复制开发人员文档](../../relational-databases/replication/concepts/replication-developer-documentation.md)。  
+> 这些教程中列举的大多数任务都能够以编程方式执行。 有关详细信息，请参阅[复制开发人员文档](../../relational-databases/replication/concepts/replication-developer-documentation.md)。  
   
 ## <a name="replication-tutorials"></a>复制教程  
-[教程：为复制准备 SQL Server - 发布服务器、分发服务器、订阅服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
+[教程：为复制准备 SQL Server（发布服务器、分发服务器、订阅服务器）](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
  
 学习如何准备服务器以便以最少的权限运行复制。 开始其他复制教程之前，必须先完成本教程。  
   

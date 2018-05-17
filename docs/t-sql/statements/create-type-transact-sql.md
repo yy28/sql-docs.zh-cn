@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: be6c818401a74f4f14d6a8381fe696bc02a48e6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>权限  
  要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name*的 ALTER 权限。 如果未指定 *schema_name* ，则将应用用于确定当前用户的架构的默认名称解析规则。 如果指定了 assembly_name，则用户必须拥有该程序集或对其具有 REFERENCES 权限。  
+
+ 如果 CREATE TABLE 语句中的任何列被定义为用户定义类型，则需要具有对此用户定义类型的 REFERENCES 权限。
+ 
+   >[!NOTE]
+  > 对于创建表（包含使用用户定义类型的列）的用户，需要用户定义类型的 REFERENCES 权限。
+  > 如果必须在 TempDB 中创建此表，那么在创建表之前每次都需要显式授予 REFERENCES 权限，或需要将此数据类型和 REFERENCES 权限添加到 Model 数据库中。 如果这样做，该数据类型和权限将永久在 TempDB 中可用。 否则，当 SQL Server 重新启动时，用户定义的数据类型和权限将消失。 有关详细信息，请参阅 [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)
   
 ## <a name="examples"></a>示例  
   

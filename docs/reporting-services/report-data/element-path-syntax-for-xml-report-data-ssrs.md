@@ -1,30 +1,28 @@
 ---
-title: "用于 XML 报表数据的元素路径语法 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: 用于 XML 报表数据的元素路径语法 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e9ef6761a754f9f25dc47cb033ef491be544ee74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
   在报表设计器中，可以通过定义元素路径（区分大小写）来指定 XML 数据源中要用于报表的数据。 元素路径指示如何遍历 XML 数据源中的 XML 层次结构节点及其属性。 若要使用默认元素路径，请将数据集查询或 XML **ElementPath** 的 XML **Query** 保留为空。 从 XML 数据源检索数据时，具有文本值的元素节点和元素节点属性将成为结果集中的列。 运行查询时，节点值和属性将成为行数据。 该列在“报表数据”窗格中显示为数据集字段集合。 本主题介绍元素路径语法。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
 ||（垂直条）|分隔语法项。 只能选择其中一项。|  
 |`[ ]`（方括号）|可选语法项。 不要键入方括号。|  
 |**{ }** （大括号）|分隔语法项的参数。|  
-|[**,**...*n*]|指示前面的项可以重复 *n* 次。 各项之间以逗号分隔。|  
+|[...*n*]|指示前面的项可以重复 *n* 次。 各项之间以逗号分隔。|  
   
 ## <a name="syntax"></a>语法  
   

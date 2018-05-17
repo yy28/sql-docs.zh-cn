@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services 日志文件和来源 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 日志文件和来源 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
 - logs [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b36566dce410fff0122e66c735a3058061e2af8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d2bbaf2046f8cf62264005e787938a8d61fee6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 日志文件和来源
   报表服务器和报表服务器环境使用各种日志目标来记录有关服务器操作和状态的信息。 有两个基本日志记录类别：执行日志记录和跟踪日志记录。 执行日志记录包含有关报表执行统计信息、审核、性能诊断和优化的信息。 跟踪日志记录是有关错误消息和一般诊断的信息。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 |[Windows 应用程序日志](../../reporting-services/report-server/windows-application-log.md)|Microsoft Windows 应用程序日志包含报表服务器事件的有关信息。|  
 |Windows 性能日志|Windows 性能日志包含报表服务器的性能数据。 您可以创建性能日志，然后选择计数器来确定要收集的数据。 有关详细信息，请参阅 [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md)。|  
 |SQL Server 安装日志文件|在安装过程中还会创建日志文件。 如果安装失败，或虽然成功但显示警告消息或其他消息，您可以检查日志文件以排除问题。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。|  
-|IIS 日志|由 Microsoft Internet Information Services (IIS) 创建的日志文件。 有关详细信息，请参阅 [如何在 Internet Information Services (IIS) 中启用日志记录](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437)。|  
+|IIS 日志|由 Microsoft Internet Information Services (IIS) 创建的日志文件。 有关详细信息，请参阅[如何启用登录 Internet 信息服务 (IIS)](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437)。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

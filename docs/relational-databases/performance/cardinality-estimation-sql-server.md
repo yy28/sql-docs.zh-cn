@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
@@ -21,18 +20,16 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71d5c75e27a71a76f014376ad61a04a13bac389c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f967039ead6e8ef7377cfc069ae4d7e9afca5f56
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 本文将阐释如何评估和选择 SQL 系统的最佳基数估计 (CE) 配置。 大多数系统受益于最新的 CE，因为它最准确。 CE 将预测查询可能返回的行数。 查询优化器使用基数预测来生成最佳查询计划。 通过更准确的估计，查询优化器通常可以更好地生成更优查询计划。  
   
 你的应用程序系统可能具有重要的查询，其计划由于新的 CE 而更改为较慢计划。 此类查询可能为以下任一种：  
@@ -40,84 +37,92 @@ ms.lasthandoff: 04/16/2018
 - OLTP（联机事务处理）查询，由于该查询运行相当频繁，因此它的多个实例经常同时运行。  
 - 在 OLTP 工作期间运行的具有大量聚合函数的 SELECT 查询。  
   
-你可以使用技术来识别因新的 CE 而执行变慢的查询。 你也可以选择如何解决此性能问题。  
-  
+你可以使用技术来识别因新的 CE 而执行变慢的查询。 你也可以选择如何解决此性能问题。     
   
 ## <a name="versions-of-the-ce"></a>CE 的版本  
+在 1998 年，CE 的重大更新是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 的一部分，其兼容级别为 70。 此版本的 CE 模型建立在四个基本假设之上：
+
+-  **独立性：** 假设不同列上的数据分布是独立于彼此的，除非可获取相关性信息且信息可用。
+-  **一致性：** 不同值均匀分布且具有相同的频率。 更确切地说，是在每个[直方图](../../relational-databases/statistics/statistics.md#histogram)步骤中，不同值均匀分布，并且每个值都具有相同的频率。 
+-  **包含（简单）：** 用户查询已存在的数据。 例如，对于两个表之间的等值联接，在联接直方图以评估联接选择性之前，考虑每个输入直方图中的谓词选择性<sup>1</sup>。 
+-  **包含：** 对于 `Column = Constant` 的筛选器谓词，通常假定事实上关联列存在常数。 如果相应的直方图步骤非空，则假定该步骤的其中一个不同值匹配谓词的值。
+
+  <sup>1</sup>满足谓词的行计数。
+
+后续更新从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，意味着兼容性级别为 120 及以上。 级别 120 及以上的 CE 更新中引入了已更新的假设和算法，非常适用于现代数据仓库和 OLTP 工作负荷。 从 CE 70 假设开始，以下模型假设已自 CE 120 起更改：
+
+-  独立性转变为相关性：不同列值的组合不一定独立。 这可能类似于更真实的数据查询。
+-  简单包含转变为基础包含：用户可能查询不存在的数据。 例如，对于两个表之间的等值联接，我们使用基本表直方图来评估联接选择性，然后考虑谓词选择性因素。
   
- 在 1998 年，CE 的重大更新是 Microsoft SQL Server 7.0 的一部分，其兼容级别为 70。 后续更新从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，意味着兼容性级别为 120 及以上。 级别 120 及以上的 CE 更新中引入了非常适用于现代数据仓库和 OLTP 工作负荷的假设和算法。  
-  
- **兼容性级别：** 通过使用以下 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 Transact-SQL 代码，可以确保数据库位于特定级别。  
+**兼容性级别：** 通过使用以下 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，可以确保数据库位于特定级别。  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
-go  
+GO  
   
 ALTER DATABASE <yourDatabase>  
-    SET COMPATIBILITY_LEVEL = 130;  
-go  
+SET COMPATIBILITY_LEVEL = 130;  
+GO  
   
 SELECT d.name, d.compatibility_level  
-    FROM sys.databases AS d  
-    WHERE d.name = 'yourDatabase';  
-go  
+FROM sys.databases AS d  
+WHERE d.name = 'yourDatabase';  
+GO  
 ```  
   
- 对于在兼容级别 120 及以上设置的 SQL Server 数据库，激活[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 会强制系统使用 CE 版本 70。  
+对于在兼容级别 120 及以上设置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，激活[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 会强制系统使用 CE 版本 70。  
   
- 旧版 CE：对于在兼容级别 120 及以上设置的 SQL Server 数据库，CE 版本 70 可通过在数据库级别使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 来激活。
+**旧版 CE：** 对于在兼容级别 120 及以上设置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，CE 版本 70 可通过在数据库级别使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 来激活。
   
 ```sql  
-ALTER DATABASE
-    SCOPED CONFIGURATION  
-        SET LEGACY_CARDINALITY_ESTIMATION = ON;  
-go  
+ALTER DATABASE SCOPED CONFIGURATION 
+SET LEGACY_CARDINALITY_ESTIMATION = ON;  
+GO  
   
 SELECT name, value  
-    FROM sys.database_scoped_configurations  
-    WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
+FROM sys.database_scoped_configurations  
+WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
+GO
 ```  
  
- 或者从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1，[查询提示](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` 开始。
+或者从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1，[查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` 开始。
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01'; 
-    OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- 查询存储：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点。  
+查询存储：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
-    SET QUERY_STORE = ON;  
-go  
+SET QUERY_STORE = ON;  
+GO  
   
-SELECT  
-        q.actual_state_desc AS [actual_state_desc-ofQueryStore],  
+SELECT q.actual_state_desc AS [actual_state_desc_of_QueryStore],  
         q.desired_state_desc,  
         q.query_capture_mode_desc  
-    FROM  
-        sys.database_query_store_options  AS q;  
-go  
+FROM sys.database_query_store_options AS q;  
+GO  
   
 ALTER DATABASE <yourDatabase>  
-    SET QUERY_STORE CLEAR;  
+SET QUERY_STORE CLEAR;  
 ```  
   
- > [!TIP] 
- > 建议安装最新版本的 [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 并且经常更新。  
+> [!TIP] 
+> 建议安装最新版本的 [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 并且经常更新。  
   
- 跟踪基数估计过程的另一种方法是使用名为 query_optimizer_estimate_cardinality 的扩展事件。 以下 T-SQL 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。 它将 .xel 文件写入 C:\Temp\（尽管可以更改路径）。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
+跟踪基数估计过程的另一种方法是使用名为 query_optimizer_estimate_cardinality 的扩展事件。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行。 它将 .xel 文件写入 `C:\Temp\`（尽管可以更改路径）。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
 CREATE EVENT SESSION Test_the_CE_qoec_1  
-    ON SERVER  
-    ADD EVENT sqlserver.query_optimizer_estimate_cardinality  
+ON SERVER  
+ADD EVENT sqlserver.query_optimizer_estimate_cardinality  
     (  
         ACTION (sqlserver.sql_text)  
             WHERE (  
@@ -125,25 +130,24 @@ CREATE EVENT SESSION Test_the_CE_qoec_1
                 and sql_text LIKE '%SUM(%'  
             )  
     )  
-    ADD TARGET package0.asynchronous_file_target   
+ADD TARGET package0.asynchronous_file_target   
         (SET  
             filename = 'c:\temp\xe_qoec_1.xel',  
             metadatafile = 'c:\temp\xe_qoec_1.xem'  
         );  
-go  
+GO  
   
 ALTER EVENT SESSION Test_the_CE_qoec_1  
-    ON SERVER  
-    STATE = START;  --STOP;  
-go  
+ON SERVER  
+STATE = START;  --STOP;  
+GO  
 ```  
   
- 有关为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 定制的扩展事件的信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
-  
+有关为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 定制的扩展事件的信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
   
 ## <a name="steps-to-assess-the-ce-version"></a>评估 CE 版本的步骤  
   
- 以下步骤用于评估当使用最新 CE 时最重要的查询的执行是否不佳。 其中一些步骤通过运行上一节中提供的代码示例来执行。  
+以下步骤用于评估当使用最新 CE 时最重要的查询的执行是否不佳。 其中一些步骤通过运行上一节中提供的代码示例来执行。  
   
 1.  打开 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]。 确保将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库设为最高可用兼容性级别。  
   
@@ -205,17 +209,19 @@ go
   
 ## <a name="how-to-activate-the-best-query-plan"></a>如何激活最佳查询计划  
   
-假设在使用新 CE 的情况下，针对查询生成了较慢的查询计划。 以下是一些可以用来激活较快计划的方法。  
+假设在使用 CE 120 的或更高版本情况下，针对查询生成了效率较低的查询计划。 以下是一些可以用来激活更好计划的方法：  
   
-可以将整个数据库的兼容性级别设置为低于最新级别的值。  
+1. 可以将整个数据库的兼容性级别设置为低于最新级别的值。  
   
-- 这可以激活旧版 CE，但是也使所有查询受制于较旧和不太准确的 CE。  
+   - 例如，将兼容性级别设置为 110 或更低会激活 CE 70，但这会使所有查询都受制于以前的 CE 模型。  
   
-- 此外，先前级别的兼容性还将失去查询优化器中的优质改进。  
+   - 此外，设置较低的兼容性级别也会遗漏最新版本中查询优化器的大量改进。  
   
-可以使用 `LEGACY_CARDINALITY_ESTIMATION` 使整个数据库使用较旧 CE 或仅使用特定查询，同时保留查询优化器中的改进。  
+2. 可以使用 `LEGACY_CARDINALITY_ESTIMATION` 数据库选项使整个数据库使用较旧 CE，同时保留查询优化器中的其他改进。   
+
+3. 可以使用 `LEGACY_CARDINALITY_ESTIMATION` 查询提示，让单个查询使用较旧 CE，同时保留查询优化器中的其他改进。  
   
-最好的控制方式是强制 SQL 系统在测试期间使用通过较旧 CE 生成的计划。 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。 该方法将在后面详细说明。  
+为了实现更好的控制，可以强制系统在测试期间使用通过 CE 70 生成的计划。 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。 该方法将在后面详细说明。  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>如何强制使用特定的查询计划  
   
@@ -225,8 +231,7 @@ go
   
 - 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。  
   
- 有关查询存储的详细信息，请参阅 [《Monitoring Performance By Using the Query Store》](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)（使用查询存储监控性能）。  
-  
+有关查询存储的详细信息，请参阅 [《Monitoring Performance By Using the Query Store》](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)（使用查询存储监控性能）。  
   
 ## <a name="examples-of-ce-improvements"></a>CE 改进示例  
   
@@ -234,7 +239,7 @@ go
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>示例 A. CE 认为最大值可能大于最近收集统计信息时的值  
   
-如果 OrderAddedDate 的最大值为 2016-04-30，则假设为 OrderTable 收集统计信息的最近日期为 2016-04-30。 兼容性级别为 120（和更高级别）的 CE 认为数据按升序排序的 OrderTable 中的列的值可能大于由统计信息记录的最大值。 这种假设改进了 SQL SELECT 语句的查询计划，如下所示。  
+当 `OrderAddedDate` 的最大值为 `2016-04-30` 时，假定上次在 `2016-04-30` 收集 `OrderTable` 的统计信息。 CE 120（和更高版本）认为数据按升序排序的 `OrderTable` 中的列的值可能大于由统计信息记录的最大值。 这种假设改进了 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的查询计划，如下所示。  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -244,33 +249,32 @@ WHERE OrderAddedDate >= '2016-05-01';
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>示例 B. CE 认为同一个表的筛选谓词通常是相关的  
   
-在以下 SELECT 语句中，我们看到 Model 和 ModelVariant 上的筛选谓词。 我们直观地了解到，当 Model 是“Xbox”时，ModelVariant 有一个机会是“One”，因为 Xbox 有一个名为 One 的变体。  
+在下面的 SELECT 语句中我们看到 `Model` 和 `ModelVariant` 的筛选谓词。 我们直观地了解到，当 `Model` 是“Xbox”时，`ModelVariant` 有可能是“One”，因为 Xbox 有一个名为 One 的变体。  
   
-级别 120 的 CE 认为同一表中 Model 和 ModelVariant 两列之间存在相关性。 CE 对于查询将返回多少行进行更准确的估计，并且查询优化器将生成更优的计划。  
+从 CE 120 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 认为同一表中 `Model` 和 `ModelVariant` 两个列之间存在相关性。 CE 对于查询将返回多少行进行更准确的估计，并且[查询优化器](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)将生成更优的计划。  
   
 ```sql  
 SELECT Model, Purchase_Price  
 FROM dbo.Hardware  
-WHERE Model  = 'Xbox'  AND  
+WHERE Model = 'Xbox' AND  
       ModelVariant = 'One';  
 ```  
   
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>示例 C. CE 不再假设不同表的筛选谓词之间存在任何相关性 
-对现代工作负荷和实际业务数据的延伸性的新研究表明，从不同表中筛选的谓词通常没有相互关联性。 在下面的查询中，CE 假设 s.type 与 r.date 之间没有相关性。 因此，CE 对于返回的行数有一个偏低的估计值。  
+对现代工作负荷和实际业务数据的延伸性的新研究表明，从不同表中筛选的谓词通常没有相互关联性。 在下面的查询中，CE 假设 `s.type` 与 `r.date` 之间没有相关性。 因此，CE 对于返回的行数有一个偏低的估计值。  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
 FROM dbo.Sales    AS s  
 CROSS JOIN dbo.Returns  AS r  
-WHERE s.ticket = r.ticket  AND  
-      s.type   = 'toy'     AND  
-      r.date   = '2016-05-11';  
+WHERE s.ticket = r.ticket AND  
+      s.type = 'toy' AND  
+      r.date = '2016-05-11';  
 ```  
-  
   
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [使用 SQL Server 2014 基数估算器优化查询计划](http://msdn.microsoft.com/library/dn673537.aspx)  
- [查询提示](../../t-sql/queries/hints-transact-sql-query.md)    
+ [查询提示](../../t-sql/queries/hints-transact-sql-query.md) [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)   

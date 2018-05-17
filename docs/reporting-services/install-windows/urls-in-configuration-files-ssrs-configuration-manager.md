@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
@@ -18,12 +17,11 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5172946097907df635c6ce812bcc68b2eba471dc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5bc15384a80a29bed2b70ba9036f354fb0d11693
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>配置文件中的 URL（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 RSReportServer.config 文件中存储应用程序设置。 在此文件内，有一些既用于 URL 又用于 URL 保留的配置设置。 这些配置设置的用途和修改规则大不相同。 如果您习惯于通过修改配置文件来优化部署，则本主题可帮助您了解每项 URL 设置的用法。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
   
  当您配置用于应用程序访问的 URL 时，将在 RSReportServer.config 文件中自动指定**UrlRoot** 。 如果在配置文件中修改该值，则必须指定连接到报表服务器数据库（包含要传递的报表）的报表服务器 Web 服务的有效 URL 地址。 您只可以为一个报表服务器实例指定一个 **UrlRoot** ；对于任何给定的报表服务器实例，RSReportServer.config 文件中只能存在一个 **UrlRoot** 条目。 如果您为报表服务器 Web 服务保留了多个 URL，则必须为 **UrlRoot**选择其中一个可用值。  
   
- 在大多数情况下，您无需修改 **UrlRoot**。 然而，如果将通过完全限定的 URL 访问报表服务器，并且你未将使用主机标头的 URL 配置为完全限定的站点名称，则必须手动编辑 RSReportServer.config 以将 **UrlRoot** 设置为将用于呈现报表的完全限定的报表服务器 URL（例如，https://www.adventure-works.com/mywebapp/reportserver）。  
+ 在大多数情况下，您无需修改 **UrlRoot**。 然而，如果将通过完全限定的 URL 访问报表服务器，并且你未将使用主机标头的 URL 配置为完全限定的站点名称，则必须手动编辑 RSReportServer.config 以将 **UrlRoot** 设置为将用于呈现报表的完全限定的报表服务器 URL（例如，https://www.adventure-works.com/mywebapp/reportserver)）。  
   
 #### <a name="urls-connecting-the-includessrswebportalincludesssrswebportalmd-and-web-parts-to-the-report-server-web-service"></a>用于将 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 Web 部件连接到报表服务器 Web 服务的 URL  
  Reporting Services 的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 SharePoint 2.0 Web 部件是连接到报表服务器的 Web 前端组件。 用于连接到后端报表服务器的 URL 包括：  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/09/2018
   
 |设置|用法|Description|  
 |-------------|-----------|-----------------|  
-|**ReportServerUrl**|可选。 除非您自己添加此元素，否则此元素不包含在 RSReportServer.config 文件中。<br /><br /> 仅当您配置以下方案之一时才应设置此元素：<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 提供对在另一台计算机上运行或在同一台计算机上的另一实例上运行的报表服务器 Web 服务的 Web 前端访问。<br /><br /> 当你有指向一个报表服务器的多个 URL，并且你希望 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 使用特定的 URL 时。<br /><br /> 你有特定的报表服务器 URL，你希望所有 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 连接均使用此 URL。<br /><br /> 例如，你可能为网络中的所有计算机都启用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 访问，但需要通过一个本地连接使 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 连接到报表服务器。 在这种情况下，可以将 ReportServerUrl 配置为“`http://localhost/reportserver`”。|该值指定一个指向报表服务器 Web 服务的 URL。 此值由 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 应用程序在启动时读取。 如果已设置该值，则 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 将连接到此 URL 中指定的报表服务器。<br /><br /> 默认情况下， [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 提供对与 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]运行在同一报表服务器实例中的报表服务器 Web 服务的 Web 前端访问。 然而，如果希望将 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 与作为另一实例一部分或在另一台计算机的实例上运行的报表服务器 Web 服务一起使用，则可以将此 URL 设置为定向 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 使之连接到外部报表服务器 Web 服务。<br /><br /> 如果安全套接字层 (SSL) 证书安装在你要连接的报表服务器上，则 **ReportServerUrl** 值必须是为该证书注册的服务器的名称。 如果出现“基础连接已经关闭：未能为 SSL/TLS 安全通道建立信任关系”错误，请将 **ReportServerUrl** 设置成为其颁发 SSL 证书的服务器的完全限定域名。 例如，如果向 https://adventure-works.com.onlinesales 注册了此证书，则报表服务器 URL 将为 https://adventure-works.com.onlinesales/reportserver。|  
+|**ReportServerUrl**|可选。 除非您自己添加此元素，否则此元素不包含在 RSReportServer.config 文件中。<br /><br /> 仅当您配置以下方案之一时才应设置此元素：<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 提供对在另一台计算机上运行或在同一台计算机上的另一实例上运行的报表服务器 Web 服务的 Web 前端访问。<br /><br /> 当你有指向一个报表服务器的多个 URL，并且你希望 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 使用特定的 URL 时。<br /><br /> 你有特定的报表服务器 URL，你希望所有 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 连接均使用此 URL。<br /><br /> 例如，你可能为网络中的所有计算机都启用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 访问，但需要通过一个本地连接使 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 连接到报表服务器。 在这种情况下，可以将 ReportServerUrl 配置为“`http://localhost/reportserver`”。|该值指定一个指向报表服务器 Web 服务的 URL。 此值由 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 应用程序在启动时读取。 如果已设置该值，则 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 将连接到此 URL 中指定的报表服务器。<br /><br /> 默认情况下， [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 提供对与 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]运行在同一报表服务器实例中的报表服务器 Web 服务的 Web 前端访问。 然而，如果希望将 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 与作为另一实例一部分或在另一台计算机的实例上运行的报表服务器 Web 服务一起使用，则可以将此 URL 设置为定向 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 使之连接到外部报表服务器 Web 服务。<br /><br /> 如果安全套接字层 (SSL) 证书安装在你要连接的报表服务器上，则 **ReportServerUrl** 值必须是为该证书注册的服务器的名称。 如果出现“基础连接已经关闭：未能为 SSL/TLS 安全通道建立信任关系”错误，请将 **ReportServerUrl** 设置成为其颁发 SSL 证书的服务器的完全限定域名。 例如，如果证书注册到 https://adventure-works.com.onlinesales，则报表服务器 URL 将为 https://adventure-works.com.onlinesales/reportserver。|  
 |**ReportServerExternalUrl**|可选。 除非您自己添加此元素，否则此元素不包含在 RSReportServer.config 文件中。<br /><br /> 仅当您使用的是 SharePoint 2.0 Web 部件且希望用户能够检索报表并在新的浏览器窗口中打开该报表时，才应设置此元素。<br /><br /> 将 \<ReportServerExternalUrl> 添加在 \<ReportServerUrl> 元素下方，然后将其设置为完全限定的报表服务器名称，在单独的浏览器窗口中访问该名称时可解析为报表服务器实例。 请勿删除 \<ReportServerUrl>。<br /><br /> 下面的示例说明了相应的语法：<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|该值由 SharePoint 2.0 Web 部件使用。<br /><br /> 在早期版本中，建议您设置该值以在面向 Internet 的报表服务器上部署报表生成器。 这是未经测试的部署方案。 如果您在过去使用此设置支持对报表生成器的 Internet 访问，那么现在您应考虑使用替代策略。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92aa59127e07e684c6325a811e17469689e403ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -851,9 +851,9 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 
 ![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "拆分页")
 
-**步骤 1：**分配两个新页（P1 和 P2），将旧 P1 页中的行拆分到这些新页上，包括新插入的行。 使用页映射表中的新槽存储 P2 页的物理地址。 此时，任何并发操作都还无法访问 P1 和 P2 页。 此外，设置了从 P1 指向 P2 的逻辑指针。 然后，在一个原子步骤中更新页映射表，将指针从旧 P1 更改到新 P1。 
+**步骤 1：** 分配两个新页（P1 和 P2），将旧 P1 页中的行拆分到这些新页上，包括新插入的行。 使用页映射表中的新槽存储 P2 页的物理地址。 此时，任何并发操作都还无法访问 P1 和 P2 页。 此外，设置了从 P1 指向 P2 的逻辑指针。 然后，在一个原子步骤中更新页映射表，将指针从旧 P1 更改到新 P1。 
 
-**步骤 2：**非叶页指向 P1，但是没有指针从非叶页直接指向 P2。 只能通过 P1 到达 P2。 要创建从非叶页指向 P2 的指针，需要分配新的非叶页（内部索引页），复制旧的非叶页中的所有行，并添加一个指向 P2 的新行。 完成此操作后，在一个原子步骤中更新页映射表，将指针从旧的非叶页更改为新的非叶页。
+**步骤 2：** 非叶页指向 P1，但是没有指针从非叶页直接指向 P2。 只能通过 P1 到达 P2。 要创建从非叶页指向 P2 的指针，需要分配新的非叶页（内部索引页），复制旧的非叶页中的所有行，并添加一个指向 P2 的新行。 完成此操作后，在一个原子步骤中更新页映射表，将指针从旧的非叶页更改为新的非叶页。
 
 #### <a name="merge-page"></a>合并页
 如果 `DELETE` 操作导致某页的大小低于最大页大小（当前为 8 KB）的 10%，或该页上只有一行，那么该页会与相邻的页合并。
@@ -864,11 +864,11 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 
 ![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "合并页")
 
-**步骤 1：**创建表示键值 10（蓝色三角形）的增量页，并将该增量页在非叶页 Pp1 上的指针设置为新的增量页。 此外，创建一个特殊的合并增量页（绿色三角形），并链接该页，使其指向增量页。 在此阶段，这两个页（增量页和合并增量页）对任何并发事务都不可见。 在一个原子步骤中，页映射表中指向叶级别页 P1 的指针更新为指向合并增量页的指针。 执行此步骤之后，Pp1 中键值 10 对应的项现在指向合并增量页。 
+**步骤 1：** 创建表示键值 10（蓝色三角形）的增量页，并将该增量页在非叶页 Pp1 上的指针设置为新的增量页。 此外，创建一个特殊的合并增量页（绿色三角形），并链接该页，使其指向增量页。 在此阶段，这两个页（增量页和合并增量页）对任何并发事务都不可见。 在一个原子步骤中，页映射表中指向叶级别页 P1 的指针更新为指向合并增量页的指针。 执行此步骤之后，Pp1 中键值 10 对应的项现在指向合并增量页。 
 
-**步骤 2：**需要删除非叶页 Pp1 中表示键值 7 的行，然后将键值 10 对应的项更新为指向 P1。 为此，需要分配新的非叶页 Pp2，复制 Pp1 中除表示键值 7 的行之外的所有行，然后将键值 10 表示的行更新为指向页 P1。 完成此操作后，在一个原子步骤中将 Pp1 的页映射表入口点更新为指向 Pp2。 无法再访问 Pp1。 
+**步骤 2：** 需要删除非叶页 Pp1 中表示键值 7 的行，然后将键值 10 对应的项更新为指向 P1。 为此，需要分配新的非叶页 Pp2，复制 Pp1 中除表示键值 7 的行之外的所有行，然后将键值 10 表示的行更新为指向页 P1。 完成此操作后，在一个原子步骤中将 Pp1 的页映射表入口点更新为指向 Pp2。 无法再访问 Pp1。 
 
-**步骤 3：**合并叶级别页 P2 和 P1，并删除增量页。 为此，分配新页 P3，合并 P2 和 P1 中的行，并在新的 P3 中包含增量页的更改。 然后，在一个原子步骤中将页 P1 的页映射表入口点更新为指向页 P3。 
+**步骤 3：** 合并叶级别页 P2 和 P1，并删除增量页。 为此，分配新页 P3，合并 P2 和 P1 中的行，并在新的 P3 中包含增量页的更改。 然后，在一个原子步骤中将页 P1 的页映射表入口点更新为指向页 P3。 
 
 ### <a name="performance-considerations"></a>性能注意事项
 
@@ -881,6 +881,11 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 > 非聚集索引键列中的列包含许多重复值时，更新、插入和删除的性能会降低。 在这种情况下提高性能的一种方法是向非聚集索引添加另一列。
 
 ##  <a name="Additional_Reading"></a> 其他阅读主题  
+[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX (Transact-SQL)](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX (Transact-SQL)](../t-sql/statements/create-spatial-index-transact-sql.md)     
+[重新组织和重新生成索引](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [使用 SQL Server 2008 索引视图提高性能](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [创建主键](../relational-databases/tables/create-primary-keys.md)    
@@ -890,8 +895,5 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 [内存优化表动态管理视图 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [计算列上的索引](../relational-databases/indexes/indexes-on-computed-columns.md)   
-[索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
-[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX (Transact-SQL)](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
-[CREATE SPATIAL INDEX (Transact-SQL)](../t-sql/statements/create-spatial-index-transact-sql.md)  
+[索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
+[自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
