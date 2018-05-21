@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
  参数化筛选器在单个表中使用，通常与联接筛选器配合使用来将筛选扩展到相关表。 有关详细信息，请参阅 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
- 若要定义或修改参数化行筛选器，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+ 若要定义或修改参数化行筛选器，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 ## <a name="how-parameterized-filters-work"></a>参数化筛选器的工作机制  
  参数化行筛选器使用 WHERE 子句来选择要发布的适当数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数：SUSER_SNAME() 和 HOST_NAME()。 也可以使用用户定义函数，但是函数主体中必须包含 SUSER_SNAME() 或 HOST_NAME()，或者计算这些系统函数之一（如 `MyUDF(SUSER_SNAME()`）。 如果用户定义函数的主体中包含 SUSER_SNAME() 或 HOST_NAME()，则无法向该函数传递参数。  

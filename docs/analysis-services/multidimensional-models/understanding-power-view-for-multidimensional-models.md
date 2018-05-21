@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1428f577c1a6094d1fe58cfdcd7cd8f62f8036
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/10/2018
  ![Power View 中不可聚合的层次结构](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
 ### <a name="implicit-measures"></a>隐式度量值  
-  表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据以不同方式存储，查询隐式度量值可能需要很长时间。 因此，在 Power View 中不提供隐式度量值。  
+  表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据存储不同，查询隐式度量值可能需要长时间。 因此，在 Power View 中不提供隐式度量值。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>维度、属性和层次结构  
  多维数据集维度显示为表格元数据中的表。 在 Power View 字段列表中，维度属性在显示文件夹中显示为列。  其 AttributeHierarchyEnabled 属性设置为 false（例如 Customer 维度中的 Birth Date 属性）或 AttributeHierarchyVisible 属性设置为 false 的维度属性将不显示在 Power View 字段列表中。 多级层次结构或用户层次结构（例如 Customer 维度中的 Customer Geography）显示为 Power View 字段列表中的层次结构。 维度属性的隐藏 UnknownMember 在 DAX 查询和 Power View 中显示。  

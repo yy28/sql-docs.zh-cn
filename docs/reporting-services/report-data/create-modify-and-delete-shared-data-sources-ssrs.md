@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 |Description|说明在您查看文件夹的内容时在报表管理器中与该项一起出现。|  
 |连接类型|与数据源一起使用的数据处理扩展插件。 您只能使用部署在报表服务器上的数据处理扩展插件。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的数据处理扩展插件的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
 |连接字符串|数据库的连接字符串。 有关详细信息和常用数据源的连接字符串示例，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
-|凭据类型|指定如何为连接获取凭据以及在建立连接后是否使用这些凭据。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
+|凭据类型|指定如何为连接获取凭据以及在建立连接后是否使用这些凭据。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  共享数据源不包含用于检索数据的查询信息。 查询始终保存在报表定义中。  
   
@@ -182,13 +182,13 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  如果在菜单上没有看到 **“报表数据源”** 项，说明报表数据源内容类型尚未启用。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
-3.  在 **“名称”**中，为 .rsds 文件输入一个说明性名称。  
+3.  在 **“名称”** 中，为 .rsds 文件输入一个说明性名称。  
   
-4.  在 **“数据源类型”**中，从列表中选择数据源的类型。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+4.  在 **“数据源类型”** 中，从列表中选择数据源的类型。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-5.  在 **“连接字符串”**中，指定指向数据源的指针和建立外部数据源连接所必需的任何其他设置。 您所使用的数据源类型决定了连接字符串的语法。 有关详细信息和示例，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+5.  在 **“连接字符串”** 中，指定指向数据源的指针和建立外部数据源连接所必需的任何其他设置。 您所使用的数据源类型决定了连接字符串的语法。 有关详细信息和示例，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
-6.  在 **“凭据”**中，指定报表服务器如何获取访问外部数据源的凭据。 凭据可通过存储、提示、集成或配置方式用于无人参与的报表处理。  
+6.  在 **“凭据”** 中，指定报表服务器如何获取访问外部数据源的凭据。 凭据可通过存储、提示、集成或配置方式用于无人参与的报表处理。  
   
     -   若要使用打开报表的用户凭据访问数据，请选择“Windows 身份验证(集成)”。 如果 SharePoint 站点或场使用窗体身份验证或通过可信帐户连接至报表服务器，请不要选择此选项。 若要为此报表计划订阅或数据处理，请不要选择此选项。 如果您的域启用了 Kerberos 身份验证或者数据源与报表服务器位于同一台计算机上，则此选项最为有效。 如果未启用 Kerberos 身份验证，则只能将 Windows 凭据传递到另一台计算机。 也就是说，如果外部数据源位于需要另行连接的其他计算机上，则会出现错误而不会获得期望的数据。  
   

@@ -3,7 +3,7 @@ title: 在 SQL 操作 Studio （预览版） 中创建的代码段 |Microsoft �
 description: 了解如何创建和使用 SQL 操作 Studio （预览版） 中的 SQL 代码段
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02090dad07927fb51c12bd73ac85c87f58378117
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e8cd2dc80f7a719f82bd4ff09729cbbd5dfb4186
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>创建和使用代码片段来快速创建中的 TRANSACT-SQL (T-SQL) 脚本 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

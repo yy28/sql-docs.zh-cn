@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果 **allow_push** 的值为 **0**，则执行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，将 **allow_push** 指定为 **@property** ，将 **@value** 指定为 **@value**。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber** ，将 **@destination_db**。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新 Subscription 的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber** ，将 **@destination_db**。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新 Subscription 的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
     -   分发服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** ，将 **@job_password**。  
   
-        > **注意：**使用 Windows 集成身份验证进行的连接始终使用 **@job_login** 和 **@job_password** 指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用 **@job_login** 和 **@job_password** 指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
     -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password**。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 05/03/2018
   
     -   分发服务器中的合并代理运行时所使用的 **@job_login** ，将 **@job_password**。  
   
-        > **注意：**使用 Windows 集成身份验证进行的连接始终使用 **@job_login** 和 **@job_password** 指定的 Windows 凭据。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用 **@job_login** 和 **@job_password** 指定的 Windows 凭据。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
     -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password**。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   

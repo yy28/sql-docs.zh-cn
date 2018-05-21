@@ -14,11 +14,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c891393018f69c47e93e56cd49ddf318756256d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位信息
 从 Windows Server 2003 开始，Microsoft 操作系统具有支持的 64 位 ODBC 库。 ODBC 标头和库首次发布与 MDAC 2.7 SDK 包含以允许程序员可以轻松地写入新的 64 位平台的代码的更改。 通过确保你的代码使用下面列出的 ODBC 定义类型，可以编译为 64 位和 32 位平台的两个基于相同的源代码 **_WIN64**或**WIN32**宏。  
@@ -397,7 +397,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetDescField**  
   
- 当*FieldIdentifier*参数具有以下值之一，传入的 64 位值 **ValuePtr*:  
+ 当*FieldIdentifier*参数具有以下值之一，64 位值传递中*ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -421,7 +421,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- 当*属性*参数具有以下值之一，传入的 64 位值 **ValuePtr*:  
+ 当*属性*参数具有以下值之一，64 位值传递中*ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -489,7 +489,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- 当*选项*参数具有以下值之一，传入的 64 位值 **值*:  
+ 当*选项*参数具有以下值之一，64 位值传递中*值*:  
   
  SQL_KEYSET_SIZE  
   

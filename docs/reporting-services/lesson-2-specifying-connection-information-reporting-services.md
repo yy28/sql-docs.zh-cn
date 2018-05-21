@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >有关连接字符串的详细信息，请参阅： [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+    >有关连接字符串的详细信息，请参阅： [报表生成器中的数据连接、数据源和连接字符串](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
      
   
 6.  在左窗格中单击“凭据”，然后单击“使用 Windows 身份验证(集成安全性)”。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 已成功定义了到 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 示例数据库的连接。 下一步，将创建报表。 请参阅[第 3 课：为表报表定义数据集 (Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[报表生成器中的数据连接、数据源和连接字符串](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
   

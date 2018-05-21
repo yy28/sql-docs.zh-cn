@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
@@ -20,13 +19,12 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1a3f616c25da5e01234d6a8d4145783053e8bb11
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b22b47922534fc38d72c1d89104a9a301cb3637e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -221,7 +219,7 @@ ms.lasthandoff: 04/16/2018
     
     若要还原使用 TDE 加密的数据库备份，目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须先对用于加密的非对称 Key Vault 密钥进行复制。 为此，可执行如下操作：  
     
-    - 如果用于 TDE 的原始非对称密钥不再位于 Key Vault 中，请还原 Key Vault 密钥备份，或者从本地 HSM 重新导入该密钥。 **重要提示：**为了让密钥的指纹与数据库备份中记录的指纹匹配，密钥的名称与以前的原始名称必须为**同一 Key Vault 密钥名称**。
+    - 如果用于 TDE 的原始非对称密钥不再位于 Key Vault 中，请还原 Key Vault 密钥备份，或者从本地 HSM 重新导入该密钥。 **重要提示：** 为了让密钥的指纹与数据库备份中记录的指纹匹配，密钥的名称与以前的原始名称必须为**同一 Key Vault 密钥名称**。
     
     - 对目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例应用步骤 1 和 2 的操作。
     

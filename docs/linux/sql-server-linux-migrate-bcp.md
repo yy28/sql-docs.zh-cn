@@ -13,11 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 2c9e65193ad481d3e4d6f8256918616e08e4a709
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 53f1381285d8b42c59cde57eb47ce9628f0868ad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 bcp 将数据批量复制到 Linux 上的 SQL Server
 
@@ -120,7 +120,7 @@ Id          Name                Location
 
 在本教程中，你使用`bcp`将数据从我们之前创建到新的数据文件的示例表导出。
 
-复制并粘贴到终端窗口 followikng 命令。 这些命令使用`bcp`命令行实用工具将数据从表导出**TestEmployees**数据库中**BcpSampleDB**到调用的新数据文件 **~/test_export.txt**.  请记住将用户名和`<your_password>`根据需要在运行命令前。
+复制并粘贴到终端窗口的以下命令。 这些命令使用`bcp`命令行实用工具将数据从表导出**TestEmployees**数据库中**BcpSampleDB**到调用的新数据文件 **~/test_export.txt**.  请记住将用户名和`<your_password>`根据需要在运行命令前。
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

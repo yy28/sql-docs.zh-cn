@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  检查预定义角色，以确定是否可以按原样使用它们。 如果需要调整任务或额外定义角色，应该在开始向用户分配特定角色之前执行这些操作。  
   
-2.  明确需要访问报表服务器的用户和组以及访问级别。 应该为大多数用户分配 **“浏览者”** 角色或 **“报表生成者”** 角色。 应该为少量用户分配 **“发布者”** 角色。 应该只为极少数用户分配 **“内容管理员”**角色。  
+2.  明确需要访问报表服务器的用户和组以及访问级别。 应该为大多数用户分配 **“浏览者”** 角色或 **“报表生成者”** 角色。 应该为少量用户分配 **“发布者”** 角色。 应该只为极少数用户分配 **“内容管理员”** 角色。  
   
 3.  准备好向用户帐户和组帐户分配特定角色后，请使用报表管理器。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)角色。  
   
@@ -211,7 +211,7 @@ ms.lasthandoff: 05/03/2018
 |查看报表服务器属性|查看应用于报表服务器的属性，如应用程序名称，是否启用“我的报表”功能以及报表历史记录默认值。<br /><br /> 如果从“系统用户”角色中删除此任务，将无法访问“站点设置”页。  而且，在每页的顶部也不显示应用程序标题。 默认情况下，报表管理器的标题是“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]”。|  
 |查看共享计划|查看用于运行报表或刷新报表的共享计划。<br /><br /> 如果从“系统用户”角色中删除此任务，用户将不能选择用于订阅和其他计划操作的共享计划。 |  
   
- “系统用户”角色可用作对默认安全性的补充。   在用来向报表用户扩展报表服务器访问权限的新角色分配中，您可以加入此角色。 有关详细信息，请参阅 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
+ “系统用户”角色可用作对默认安全性的补充。   在用来向报表用户扩展报表服务器访问权限的新角色分配中，您可以加入此角色。 有关详细信息，请参阅 [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

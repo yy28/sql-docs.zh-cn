@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **切换更新模式**  
   
  若要切换更新模式，必须为这两种更新模式都启用发布和订阅，然后再根据需要进行切换。 有关详细信息，请参阅  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。  
+[切换可更新事务性订阅的更新模式](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>使用可更新订阅的注意事项  
   

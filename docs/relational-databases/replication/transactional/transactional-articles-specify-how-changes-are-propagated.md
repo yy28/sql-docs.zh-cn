@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  默认情况下，事务复制通过安装在每个订阅服务器上的一组存储过程，将更改传播到订阅服务器。 当发布服务器的表上出现插入、更新或删除操作时，该操作转换为调用订阅服务器上的存储过程。 存储过程接受映射到表中列的参数，从而可以在订阅服务器上对这些列进行更改。  
   
- 若要为事务项目的数据更改设置传播方法，请参阅 [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)。  
+ 若要为事务项目的数据更改设置传播方法，请参阅 [为事务项目的数据更改设置传播方法](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)。  
   
 ## <a name="default-and-custom-stored-procedures"></a>默认和自定义存储过程  
  默认情况下，复制为每个表项目创建的三个过程为：  

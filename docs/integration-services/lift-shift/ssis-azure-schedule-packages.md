@@ -1,6 +1,6 @@
 ---
-title: 计划安排 Azure 上的 SSIS 包执行 | Microsoft Docs
-ms.date: 05/07/2018
+title: 计划安排 Azure 上的 SSIS 包 | Microsoft Docs
+ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,25 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>计划安排 Azure 上的 SSIS 包执行
+# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>计划安排 Azure 上的 SSIS 包执行
 可以通过选择以下计划安排选项之一，计划安排存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的包的执行。
 -   [SQL Server Management Studio (SSMS) 中的计划安排选项](#ssms)
 -   [Azure 数据工厂执行 SSIS 包活动](#execute)
--   [Azure 数据工厂 SQL Server 存储过程活动](#stored proc)
+-   [Azure 数据工厂 SQL Server 存储过程活动](#storedproc)
 -   [SQL 数据库弹性作业](#elastic)
 -   [SQL Server 代理](#agent)
 
 ## <a name="ssms"></a> 使用 SSMS 计划安排包
 
-在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框。
+在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框。 有关详细信息，请参阅[使用 SSMS 计划安排 Azure 上的 SSIS 包执行](ssis-azure-schedule-packages-ssms.md)。
+
+此功能要求 SQL Server Management Studio 17.7 或更高版本。 若要获取 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 ## <a name="execute"></a> 通过“执行 SSIS 包”活动来计划安排包
 

@@ -94,7 +94,7 @@ ms.lasthandoff: 05/03/2018
  如何查看订阅信息的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>使用跟踪令牌确定滞后时间  
- 事务复制使您可以通过在发布数据库的事务日志中插入一个令牌（少量数据）并记录到达分发服务器和订阅服务器所用的时间，来测量系统的滞后时间。 使用令牌还可以识别数据是否未到达分发服务器或订阅服务器。 有关详细信息，请参阅 [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
+ 事务复制使您可以通过在发布数据库的事务日志中插入一个令牌（少量数据）并记录到达分发服务器和订阅服务器所用的时间，来测量系统的滞后时间。 使用令牌还可以识别数据是否未到达分发服务器或订阅服务器。 有关详细信息，请参阅 [为事务复制测量滞后时间和验证连接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>查看合并复制的详细同步性能  
  对于合并复制，复制监视器会显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息的详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  

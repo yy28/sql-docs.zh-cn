@@ -64,11 +64,11 @@ ms.lasthandoff: 05/03/2018
   
 1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上，在“筛选的表”窗格中选择行筛选器。  
   
-     逻辑记录关系与扩展行筛选器的联接筛选器相关联。 因此，必须定义一个行筛选器，才能用联接来扩展该筛选器并应用逻辑记录关系。 定义一个联接筛选器后，可使用其他联接筛选器来扩展此联接筛选器。 有关定义联接筛选器的详细信息，请参阅 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
+     逻辑记录关系与扩展行筛选器的联接筛选器相关联。 因此，必须定义一个行筛选器，才能用联接来扩展该筛选器并应用逻辑记录关系。 定义一个联接筛选器后，可使用其他联接筛选器来扩展此联接筛选器。 有关定义联接筛选器的详细信息，请参阅 [定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 2.  单击 **“添加”**，再单击 **“添加联接以扩展所选筛选器”**。  
   
-3.  在 **“添加联接”** 对话框中定义一个联接筛选器，然后选中 **“逻辑记录”**复选框。  
+3.  在 **“添加联接”** 对话框中定义一个联接筛选器，然后选中 **“逻辑记录”** 复选框。  
   
 4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
     1.  在新建发布向导的“筛选行”页或“发布属性 - \<发布>”对话框的“筛选行”页上，在“筛选的表”窗格中选择与逻辑记录关系关联的联接筛选器，然后单击“编辑”。  
   
-    2.  在 **“编辑联接”** 对话框中，清除 **“逻辑记录”**复选框。  
+    2.  在 **“编辑联接”** 对话框中，清除 **“逻辑记录”** 复选框。  
   
     3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -208,7 +208,7 @@ ms.lasthandoff: 05/03/2018
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## <a name="see-also"></a>另请参阅  
- [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [通过逻辑记录对相关行的更改进行分组](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   

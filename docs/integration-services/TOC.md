@@ -105,7 +105,7 @@
 
 # [导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [从 Excel 加载数据或将数据加载到 Excel](load-data-to-from-excel-with-ssis.md)
+# [从 Excel 导入或导出到 Excel](load-data-to-from-excel-with-ssis.md)
 # [将数据加载到 SQL 数据仓库](load-data-to-sql-data-warehouse.md)
 
 # [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)

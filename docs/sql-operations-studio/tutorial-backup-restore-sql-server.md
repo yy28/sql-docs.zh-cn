@@ -4,20 +4,20 @@ description: 了解如何使用 SQL Operations Studio (預覽) 以備份和還�
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
 ms.topic: tutorial
-author: erickangMSFT
-ms.author: erickang
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0285535beb45cbc6ad207280c3152fb875ffc46c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: df4eca076f18ce5b75a36d05c8ee26965d6a3bae
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>备份和还原使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

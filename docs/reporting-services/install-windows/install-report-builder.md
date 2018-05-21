@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="system-requirements"></a>系统要求
   
- 请参阅 Microsoft 下载中心上 [报表生成器下载页](http://go.microsoft.com/fwlink/?LinkID=734968) 的 **“系统要求”**部分。
+ 请参阅 Microsoft 下载中心上 [报表生成器下载页](http://go.microsoft.com/fwlink/?LinkID=734968) 的 **“系统要求”** 部分。
   
 ##  <a name="download"></a> 从下载站点安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
      此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 向导。  
   
-3.  完成 [To install Report Builder from the download site](#download)中的剩余步骤。  
+3.  完成 [从下载站点安装报表生成器](#download)中的剩余步骤。  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>从命令行安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
 

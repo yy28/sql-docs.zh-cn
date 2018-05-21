@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  在创建订阅时，可以选择输出文件格式。 并不是每个报表在每种格式下都能正常显示。 在订阅中选择格式之前，请打开报表并将其导出为不同格式以验证是否像预期的那样显示。  
   
- 如果用户希望能够创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅，则他们需要具有在 SharePoint 中“编辑项”列表的权限。 有关详细信息，请参阅 [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ 如果用户希望能够创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅，则他们需要具有在 SharePoint 中“编辑项”列表的权限。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  用来将报表传递到库或共享文件夹的订阅会创建一个基于原始报表的新静态文件，但它不是在报表查看器 Web 部件中运行的真正报表定义。 如果原始报表具有交互功能（如钻取链接）或动态内容，则这些功能在传递到目标位置的静态文件中将不可用。 如果选择“网页”，则可以保留一些交互功能，但由于该文档不是在报表查看器中运行的 .rdl 文件，因此在报表中单击浏览时将会在浏览器会话中创建一些新页，必须在这些新页中滚动才能返回站点。  
@@ -78,21 +78,21 @@ ms.lasthandoff: 05/03/2018
   
 3.  单击 **“添加订阅”**。  
   
-4.  在 **“传递扩展插件”**中选择 **“SharePoint 文档库”**。  
+4.  在 **“传递扩展插件”** 中选择 **“SharePoint 文档库”**。  
   
-5.  在 **“文档库”**中，选择同一站点中的库。  
+5.  在 **“文档库”** 中，选择同一站点中的库。  
   
-6.  在 **“文件选项”**中，为将由订阅创建的文档指定文件名和标题。  
+6.  在 **“文件选项”** 中，为将由订阅创建的文档指定文件名和标题。  
   
-7.  在 **“输出格式”**中，选择应用程序格式。  
+7.  在 **“输出格式”** 中，选择应用程序格式。  
   
      “Web 存档 (MHTML)”是默认值，这是因为它会生成自包含的 HTML 文件，但不会保留原始报表中可能存在的交互式报表功能。  
   
-8.  在 **“覆盖选项”**中，指定用于确定后续传递是否覆盖文件的选项。 如果要保留以前的传递，可以选择 **“使用唯一名称创建文件”**。 将向新文件追加数字以创建唯一的文件名。  
+8.  在 **“覆盖选项”** 中，指定用于确定后续传递是否覆盖文件的选项。 如果要保留以前的传递，可以选择 **“使用唯一名称创建文件”**。 将向新文件追加数字以创建唯一的文件名。  
   
-9. 在 **“传递事件”**中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
+9. 在 **“传递事件”** 中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 如果所选报表不包含参数，则“参数”部分在此页上不可见。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
+10. 在 **“参数”** 中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 如果所选报表不包含参数，则“参数”部分在此页上不可见。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_sharedfolder"></a> 为共享文件夹传递创建订阅  
   
@@ -102,23 +102,23 @@ ms.lasthandoff: 05/03/2018
   
 3.  单击 **“添加订阅”**。  
   
-4.  在 **“传递扩展插件”**中选择 **“Windows 文件共享”**。  
+4.  在 **“传递扩展插件”** 中选择 **“Windows 文件共享”**。  
   
-5.  在 **“文件名”**中，输入将在共享文件夹中创建的文件的名称。  
+5.  在 **“文件名”** 中，输入将在共享文件夹中创建的文件的名称。  
   
 6.  在“路径”中，使用包含计算机网络名称的通用命名约定 (UNC) 格式输入文件夹路径。 不能在文件夹路径中包含尾随反斜杠。 示例路径可如下所示： `\\ComputerName01\Public\MyReports`，其中 Public 和 MyReports 是共享文件夹。  
   
-7.  在 **“呈现格式”**中，为该报表选择应用程序格式。  
+7.  在 **“呈现格式”** 中，为该报表选择应用程序格式。  
   
-8.  在 **“写入模式”**中，选择 **“无”**、 **“Autoincrement”**或 **“覆盖”**。 这些选项将确定后续传递是否会覆盖文件。 如果要保留以前的传递，可以选择 **“Autoincrement”**。 将向新文件追加数字以创建唯一的文件名。 如果选择 **“无”**，当目标位置已存在具有相同名称的文件时，将不会进行传递。  
+8.  在 **“写入模式”** 中，选择 **“无”**、 **“Autoincrement”** 或 **“覆盖”**。 这些选项将确定后续传递是否会覆盖文件。 如果要保留以前的传递，可以选择 **“Autoincrement”**。 将向新文件追加数字以创建唯一的文件名。 如果选择 **“无”**，当目标位置已存在具有相同名称的文件时，将不会进行传递。  
   
-9. 在 **“文件扩展名”**中，选择 **True** 以添加与应用程序文件格式相对应的文件扩展名，或选择 False 以创建不具有扩展名的文件。  
+9. 在 **“文件扩展名”** 中，选择 **True** 以添加与应用程序文件格式相对应的文件扩展名，或选择 False 以创建不具有扩展名的文件。  
   
-10. 在 **“用户名”** 和 **“密码”**中，输入对共享文件夹具有写权限的凭据。  
+10. 在 **“用户名”** 和 **“密码”** 中，输入对共享文件夹具有写权限的凭据。  
   
-11. 在 **“传递事件”**中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
+11. 在 **“传递事件”** 中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-12. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
+12. 在 **“参数”** 中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_email"></a> 为报表服务器电子邮件传递创建订阅  
   
@@ -136,13 +136,13 @@ ms.lasthandoff: 05/03/2018
   
 7.  要在邮件的正文中嵌入报表 URL，请选择 **“包含指向报表的链接”** 。  
   
-8.  在 **“报表内容”**中，指定是否要在邮件正文嵌入实际的报表。  
+8.  在 **“报表内容”** 中，指定是否要在邮件正文嵌入实际的报表。  
   
      呈现格式和浏览器决定了报表是嵌入的还是作为附件发送。 如果您的浏览器支持 HTML 4.0 和 MHTML，并且您选择了 Web 存档呈现格式，那么报表将嵌入为邮件的一部分。 其他所有呈现格式（CSV、PDF 等）都将报表作为附件进行传递。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会检查附件或邮件的大小。 如果附件或邮件的大小超过了邮件服务器所允许的最大限制，则无法传递报表。 为大型报表选择其他传递选项之一（例如 URL 或通知）。  
   
-9. 在 **“传递事件”**中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
+9. 在 **“传递事件”** 中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
+10. 在 **“参数”** 中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_to_modify_subscription"></a> 删除或修改订阅  
   

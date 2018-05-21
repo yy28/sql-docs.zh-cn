@@ -78,11 +78,11 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-database"></a>创建数据库  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
 2.  右键单击“数据库”，然后单击“新建数据库”。  
   
-3.  在 **“新建数据库”**中，输入数据库名称。  
+3.  在 **“新建数据库”** 中，输入数据库名称。  
   
 4.  若要通过接受所有默认值创建数据库，请单击 **“确定”**；否则，请继续后面的可选步骤。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  “使用全文检索”选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
   
-6.  若要更改主数据文件和事务日志文件的默认值，请在 **“数据库文件”** 网格中单击相应的单元并输入新值。 有关详细信息，请参阅 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
+6.  若要更改主数据文件和事务日志文件的默认值，请在 **“数据库文件”** 网格中单击相应的单元并输入新值。 有关详细信息，请参阅 [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
 7.  若要更改数据库的排序规则，请选择 **“选项”** 页，然后从列表中选择一个排序规则。  
   
@@ -144,6 +144,6 @@ GO
  [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)   
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

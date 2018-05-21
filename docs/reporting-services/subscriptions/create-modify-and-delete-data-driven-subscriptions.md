@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
  创建数据驱动订阅之前，请确保满足下列要求：  
   
--   **报表要求**。 报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅使用模拟凭据或委托凭据连接至外部数据源的报表；处理订阅时将无法使用创建或拥有订阅的用户的凭据。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+-   **报表要求**。 报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅使用模拟凭据或委托凭据连接至外部数据源的报表；处理订阅时将无法使用创建或拥有订阅的用户的凭据。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
      无法订阅使用了作为数据源的模型或包含模型项安全设置的模型的报表生成器报表。 此限制仅适用于使用模型项安全性的报表。  
   

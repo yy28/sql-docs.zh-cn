@@ -4,7 +4,7 @@ description: 本快速入门演示如何使用 SQL 操作 Studio （预览版）
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 287cd20b7db0a1b816211d48bc7a19c8f5066e8c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 94a760c815b9933ff4d8d7da3dd24c292fcdc641
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 连接和查询 SQL Server 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门演示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 SQL Server，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
     - **身份验证类型：** SQL 登录名  
     - **用户名：** SQL Server 的用户名称  
     - **密码：** SQL 服务器密码  
-    - **数据库名称：**将此字段留空 
+    - **数据库名称：** 将此字段留空 
     - **服务器组：** \<默认\>  
 
    ![新的连接屏幕](media/quickstart-sql-server/new-connection-screen.png)

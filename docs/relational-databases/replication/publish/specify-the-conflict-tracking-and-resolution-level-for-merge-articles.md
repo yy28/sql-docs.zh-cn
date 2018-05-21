@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 -   如果在初始化订阅后修改跟踪级别，必须重新初始化这些订阅。 有关属性更改的影响的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
--   对于行级和列级跟踪，始终在行级执行冲突解决：入选行将覆盖落选行。 合并复制还允许您指定在逻辑记录级跟踪和解决冲突，但 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]没有提供这些选项。 有关在复制存储过程中设置这些选项的信息，请参阅 [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
+-   对于行级和列级跟踪，始终在行级执行冲突解决：入选行将覆盖落选行。 合并复制还允许您指定在逻辑记录级跟踪和解决冲突，但 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]没有提供这些选项。 有关在复制存储过程中设置这些选项的信息，请参阅 [定义合并表项目间的逻辑记录关系](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在“项目属性”对话框的“属性“选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
@@ -90,7 +90,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>另请参阅  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [定义合并表项目间的逻辑记录关系](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [检测并解决合并复制冲突](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9efff5dc4a12638b1a894352511d747690da58f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署脚本文件的分区和角色部署选项
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
      — 或 —  
   
--   打开\<*项目名称*>.deploymentoptions 在任何文本编辑器并手动更改的选项。  
+-   打开\<*项目名称*>.deploymentoptions 在任何文本编辑器并手动更改的选项。 用于 PartitionDeployment 的选项是 DeployPartitions，RetainPartitions。 用于 RoleDeployment 的选项是 DeployRolesAndMembers、 DeployRolesRetainMembers、 RetainRoles。
   
 ## <a name="see-also"></a>另请参阅  
  [指定安装目标](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   

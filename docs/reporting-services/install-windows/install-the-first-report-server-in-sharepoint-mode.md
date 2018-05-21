@@ -247,11 +247,11 @@ ms.lasthandoff: 05/03/2018
   
      为该应用程序池选择或创建一个安全帐户。 请确保指定一个域用户帐户。 通过域用户帐户，可以使用 SharePoint 的托管帐户功能，从而使您可以在一个位置中更新密码和帐户信息。 如果您计划扩展部署以便包括将在同一标识下运行的附加服务实例，则域帐户也是必需的。  
   
-6.  在 **“数据库服务器”**中，您可以使用当前服务器或选择其他 SQL Server。  
+6.  在 **“数据库服务器”** 中，您可以使用当前服务器或选择其他 SQL Server。  
   
 7.  在 **“数据库名称”** 中，默认值是 `ReportingService_<guid>`，这是唯一的数据库名称。 如果您键入一个新值，请键入唯一值。 这是您要专为服务应用程序创建的新数据库。  
   
-8.  在 **“数据库身份验证”**中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参阅 SharePoint 文档以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳做法。  
+8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参阅 SharePoint 文档以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳做法。  
   
 9. 在 **“Web 应用程序关联”** 部分中，选择要设置为供当前 Reporting Services 服务应用程序访问的 Web 应用程序。 可以将一个 Reporting Services 服务应用程序与一个 Web 应用程序相关联。 如果所有当前 Web 应用程序均已与一个 Reporting Services 服务应用程序相关联，将显示警告消息。  
   
@@ -287,7 +287,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  选择“激活”。 功能状态将更改为 **“活动”**。  
   
- 将对每个网站集完成此过程。 有关详细信息，请参阅 [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)。  
+ 将对每个网站集完成此过程。 有关详细信息，请参阅 [在 SharePoint 中激活报表服务器和 Power View 集成功能](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)。  
   
 ##  <a name="bkmk_full_script"></a> 等同于步骤 1-4 的 Windows PowerShell 脚本  
  本节中的 PowerShells 脚本等同于完成前面几节中的步骤 1 - 4。 此脚本将完成以下操作：  
@@ -415,7 +415,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  Reporting Services 数据警报功能会在电子邮件中发送警报。 若要发送电子邮件，可能需要配置 Reporting Services 服务应用程序，并可能需要修改该服务应用程序的电子邮件传递扩展插件。 如果计划将电子邮件传递扩展插件用于 Reporting Services 订阅功能，则需要进行电子邮件设置。 有关详细信息，请参阅[为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2013 和 SharePoint 2016）](http://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)。 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>将 Reporting Services 内容类型添加到内容库  
- Reporting Services 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”**和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+ Reporting Services 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>激活报表服务器文件同步功能  
  如果用户经常直接将已发布的报表项上载到 SharePoint 文档库，则 **“报表服务器文件同步”** 站点级别功能将很有用。 文件同步功能将更频繁地将报表服务器目录与文档库中的项进行同步。 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  

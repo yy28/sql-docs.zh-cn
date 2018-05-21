@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中查看[使用安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)以获取有关如何安装报表服务器实例的说明。  
   
--   如果打算在网络负载平衡 (NLB) 群集上承载扩展部署，则应当在配置扩展部署之前配置 NLB 群集。 有关详细信息，请参阅 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
+-   如果打算在网络负载平衡 (NLB) 群集上承载扩展部署，则应当在配置扩展部署之前配置 NLB 群集。 有关详细信息，请参阅 [在网络负载平衡群集上配置报表服务器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
   
 -   请查阅此主题中的过程以了解有关如何共享报表服务器数据库并将报表服务器联接到扩展部署的说明。  
   
@@ -75,9 +75,9 @@ ms.lasthandoff: 05/03/2018
 
 在处理扩展部署时，用于 Reporting Services 实例的服务帐户非常重要。 部署 Reporting Services 实例时，应执行以下操作之一。
 
-**选项 1：**应使用相同的域用户帐户为服务帐户配置所有的 Reporting Services 实例。
+**选项 1：** 应使用相同的域用户帐户为服务帐户配置所有的 Reporting Services 实例。
 
-**选项 2：**需要向每个单独的服务帐户（无论是否为域帐户）授予 SQL Server 数据库实例内的 dbadmin 权限，该数据库实例正在托管 ReportServer 目录数据库。
+**选项 2：** 需要向每个单独的服务帐户（无论是否为域帐户）授予 SQL Server 数据库实例内的 dbadmin 权限，该数据库实例正在托管 ReportServer 目录数据库。
 
 如果已配置不同于上述任一选项的配置，则在使用 SQL 代理修改任务时可能会遇到间歇性故障。 在编辑报表订阅时，这会作为错误同时显示在 Reporting Services 日志和 Web 门户中。
 
@@ -142,7 +142,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“Web 门户 URL”。  
   
- 如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
+ 如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [在网络负载平衡群集上配置报表服务器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 

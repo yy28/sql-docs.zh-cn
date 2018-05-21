@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   此错误在系统表 **MSmerge_contents**中进行插入时发生。  
   
-     发生此错误的原因是联接筛选器属性 **join_unique_key**的值不正确。 仅当父表中的联接列唯一时，才应将此属性设置为 TRUE。 如果此属性设置为 TRUE，而该列不唯一，则引发此错误。 有关设置此属性的详细信息，请参阅 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
+     发生此错误的原因是联接筛选器属性 **join_unique_key**的值不正确。 仅当父表中的联接列唯一时，才应将此属性设置为 TRUE。 如果此属性设置为 TRUE，而该列不唯一，则引发此错误。 有关设置此属性的详细信息，请参阅 [定义和修改合并项目间的联接筛选器](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)  

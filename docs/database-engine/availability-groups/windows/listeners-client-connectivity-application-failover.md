@@ -222,7 +222,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- 有关为 SQL Server 手动注册 SPN 的详细信息，请参阅 [Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  
+ 有关为 SQL Server 手动注册 SPN 的详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

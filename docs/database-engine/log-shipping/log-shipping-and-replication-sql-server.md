@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="log-shipping-with-transactional-replication"></a>事务复制的日志传送  
  对于事务复制，日志传送的行为取决于 **sync with backup** 选项。 可以对发布数据库和分发数据库设置此选项；发布服务器的日志传送仅与对发布数据库的设置有关。  
   
- 对发布数据库设置此选项可以确保事务在发布数据库上备份之前不会传递到分发数据库。 这样，便可以在辅助服务器中还原上次的发布数据库备份，而分发数据库不可能具有已还原发布数据库中没有的事务。 此选项可保证在发布服务器故障转移到辅助服务器时，发布服务器、分发服务器和订阅服务器之间保持一致性。 由于直到将事务在发布服务器中备份之后才能将其传递到分发数据库，因此滞后时间和吞吐量会受到影响；如果应用程序允许此滞后时间，则建议对发布数据库设置此选项。 如果未设置 **sync with backup** 选项，订阅服务器可能会收到辅助服务器中已恢复数据库中不再包含的更改。 有关详细信息，请参阅 [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
+ 对发布数据库设置此选项可以确保事务在发布数据库上备份之前不会传递到分发数据库。 这样，便可以在辅助服务器中还原上次的发布数据库备份，而分发数据库不可能具有已还原发布数据库中没有的事务。 此选项可保证在发布服务器故障转移到辅助服务器时，发布服务器、分发服务器和订阅服务器之间保持一致性。 由于直到将事务在发布服务器中备份之后才能将其传递到分发数据库，因此滞后时间和吞吐量会受到影响；如果应用程序允许此滞后时间，则建议对发布数据库设置此选项。 如果未设置 **sync with backup** 选项，订阅服务器可能会收到辅助服务器中已恢复数据库中不再包含的更改。 有关详细信息，请参阅 [快照复制和事务复制的备份和还原策略](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
  **使用 sync with backup 选项配置事务复制和日志传送**  
   
