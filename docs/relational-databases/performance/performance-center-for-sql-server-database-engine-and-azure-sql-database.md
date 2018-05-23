@@ -3,12 +3,9 @@ title: SQL Server 数据库引擎和 Azure SQL 数据库的性能中心 | Micros
 ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
-ms.component: performance
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +23,11 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4f95779084ebec71ed169abdb5d4461c7532d288
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dc039e723483777fee9d670ca943fb101a29aa5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL 数据库的性能中心
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [索引](../../relational-databases/indexes/indexes.md)|[重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[用于索引的 SORT_IN_TEMPDB 选项](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[改进全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[配置“每次查询占用的最小内存”服务器配置选项](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [索引](../../relational-databases/indexes/indexes.md)|[重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[用于索引的 SORT_IN_TEMPDB 选项](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[改进全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[配置“每次查询占用的最小内存”服务器配置选项](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|[分区的优点](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[联接](../../relational-databases/performance/joins.md)**|[联接基础知识](../../relational-databases/performance/joins.md#fundamentals)<br />[嵌套循环联接](../../relational-databases/performance/joins.md#nested_loops)<br />[合并联接](../../relational-databases/performance/joins.md#merge)<br />[联接](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[子查询](../../relational-databases/performance/subqueries.md)**|[子查询基础知识](../../relational-databases/performance/subqueries.md#fundamentals)<br />[相关子查询](../../relational-databases/performance/subqueries.md#correlated)<br />[子查询类型](../../relational-databases/performance/subqueries.md#types)|  

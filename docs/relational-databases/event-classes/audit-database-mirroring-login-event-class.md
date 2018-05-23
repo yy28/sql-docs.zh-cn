@@ -3,12 +3,9 @@ title: Audit Database Mirroring Login 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bc56d4598d39d31d26c43357c76fc6889c5e53c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac0ba1d2748dbb6d4e30c62af36ce2dd823a63c3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 事件类的数据列  
   
-|数据列|类型|Description|列号|可筛选|  
+|数据列|类型|描述|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|在此事件类中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
@@ -60,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|Description|  
+|ID|子类|描述|  
 |--------|--------------|-----------------|  
 |@shouldalert|Login Success|Login Success 事件报告相邻的数据库镜像登录进程已成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件报告数据库镜像登录收到一条格式正确但对登录进程的当前状态无效的消息。 消息可能已丢失，或未按顺序发送。|  

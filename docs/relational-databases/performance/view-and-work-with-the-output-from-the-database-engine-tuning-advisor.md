@@ -3,12 +3,9 @@ title: 查看和使用数据库引擎优化顾问的输出 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -32,11 +29,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8b53d26f286bb9c1573292cbb29f0938eb58dc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de3d07abb1b4e422662c2283873de739c59c6f9b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +220,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  在 **“操作”** 菜单上，单击 **“评估建议”**。 数据库引擎优化顾问将编辑过的建议作为假设配置来创建新的优化会话。 若要查看 XML 格式的假设配置，请选择 **“单击此处可查看配置部分”**。  
   
-7.  在 **“常规”** 选项卡的 **“会话名称”**中键入会话名称，并确保已指定正确的 **“工作负荷”** 。  
+7.  在 **“常规”** 选项卡的 **“会话名称”** 中键入会话名称，并确保已指定正确的 **“工作负荷”** 。  
   
 8.  在 **“优化选项”** 选项卡上，可以指定优化时间或任何 **“高级选项”**。  
   
@@ -238,7 +235,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在 **“操作”** 菜单上，单击 **“克隆会话”**。  
   
-3.  在 **“常规”** 选项卡的 **“会话名称”**中键入会话名称，并确保已指定正确的 **“工作负荷”** 。  
+3.  在 **“常规”** 选项卡的 **“会话名称”** 中键入会话名称，并确保已指定正确的 **“工作负荷”** 。  
   
 4.  在 **“优化选项”** 选项卡上，可以指定优化时间、数据库引擎优化顾问应考虑创建的物理设计结构以及应考虑在其建议中删除的内容。  
   
@@ -249,7 +246,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="UI"></a> 用户界面说明  
   
 ### <a name="sessions-monitor"></a>会话监视器  
- **“会话监视器”** 显示有关在数据库引擎优化顾问中打开的会话的信息。 若要在属性窗口中显示有关会话的信息，请在 **“会话监视器”**中选择会话名称。  
+ **“会话监视器”** 显示有关在数据库引擎优化顾问中打开的会话的信息。 若要在属性窗口中显示有关会话的信息，请在 **“会话监视器”** 中选择会话名称。  
   
 ### <a name="recommendations-tab"></a>“建议”选项卡  
  在数据库引擎优化顾问完成工作负荷的分析后，将显示 **“建议”** 选项卡。 此网格包含对涉及的每个对象的建议。 上方网格将显示分区建议（如果有的话），下方网格将显示索引建议。 如果没有建议，则不显示网格。  
@@ -286,7 +283,7 @@ ms.lasthandoff: 05/03/2018
  为提高性能而建议执行的操作。 可能的值为 Create 和 Drop。  
   
  **建议目标**  
- 受建议影响的索引或视图。 此列中的图标反映对删除或添加 **“建议目标”**的建议。  
+ 受建议影响的索引或视图。 此列中的图标反映对删除或添加 **“建议目标”** 的建议。  
   
  **详细信息**  
  “建议目标”的说明。 其值可能为聚集索引视图或者为空（表示非聚集索引）。 还指示索引是否是唯一的。  

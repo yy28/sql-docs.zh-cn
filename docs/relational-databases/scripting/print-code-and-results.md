@@ -3,9 +3,7 @@ title: 打印代码和结果 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -21,17 +19,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10bd9a932ebaf2ddfa82de528c159bd1b13c37bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 738b4c5bea4039e759adc6c7329c2f3e6455fd39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="print-code-and-results"></a>打印代码和结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   在打印查询或文件时，如果打印机支持彩色打印，并且打印机设置中启用了彩色打印功能，则以彩色打印方式打印设定了颜色的元素。  
   
- 不过，文本在编辑器中的字体和着色与文本在打印机上打印出的效果可能有所不同。 从 **“工具”** 菜单中，选择 **“选项”**。 在 **“环境”**选项下，单击 **“字体和颜色”**，然后选择各项在编辑器中所要显示的字体和颜色，以及在打印时生效的字体和颜色。 由于上述设置可能有所差异，因此输出结果可能与在编辑器中看到的效果有所差异。  
+ 不过，文本在编辑器中的字体和着色与文本在打印机上打印出的效果可能有所不同。 从 **“工具”** 菜单中，选择 **“选项”**。 在 **“环境”** 选项下，单击 **“字体和颜色”**，然后选择各项在编辑器中所要显示的字体和颜色，以及在打印时生效的字体和颜色。 由于上述设置可能有所差异，因此输出结果可能与在编辑器中看到的效果有所差异。  
   
  如果在编辑器中启用了行号，那么，除非在 **“文件”** 菜单的 **“打印”** 对话框中选择了 **“包括行号”** ，否则将不打印行号。  
   

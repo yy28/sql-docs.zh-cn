@@ -3,9 +3,7 @@ title: 运行 Transact-SQL 调试器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -28,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 15dfce3c722bb60ca8fed737785ea96d76b8c558
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f47339d4fb116778760ca571bd58f03b2c81ff1f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,12 +91,12 @@ ms.lasthandoff: 05/03/2018
 |**窗口/调用堆栈**|不可用|**断点/调用堆栈**|Ctrl+Alt+C|显示 **“调用堆栈”** 窗口。|  
 |**窗口/线程**|不可用|**断点/线程**|Ctrl+Alt+H|显示 **“线程”** 窗口。|  
 |**Continue**|不可用|**Continue**|Alt+F5|运行到下一个断点。 在将焦点放在处于调试模式的查询编辑器窗口上之前，**“继续”** 处于不活动状态。|  
-|**“调试”**|不可用|**“调试”**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”**替代。|  
+|**“调试”**|不可用|**“调试”**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”** 替代。|  
 |**全部中断**|不可用|**全部中断**|Ctrl+Alt+Break|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不使用此功能。|  
 |**停止调试**|不可用|**“停止调试”**|Shift+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  
 |**菜单上单击**|不可用|不可用|不可用|停止调试模式，但在查询编辑器窗口中执行剩余的语句。|  
 |**逐语句**|不可用|**逐语句**|F11|运行下一个语句，如果下一个语句运行存储过程、触发器或函数，还将打开处于调试模式的新查询编辑器窗口。|  
-|**逐过程**|不可用|**逐过程**|F10|与 **“逐语句”**相同，只不过它不会调试函数、存储过程或触发器。|  
+|**逐过程**|不可用|**逐过程**|F10|与 **“逐语句”** 相同，只不过它不会调试函数、存储过程或触发器。|  
 |**跳出**|不可用|**跳出**|Shift+F11|执行触发器、函数或存储过程中的剩余代码，而不在任何断点处暂停。 当控件返回到调用该模块的代码时，常规调试模式恢复。|  
 |不可用|**运行至光标处**|不可用|Ctrl+F10|从上次停止位置开始执行所有代码，一直到当前光标位置，在断点处不停止。|  
 |**快速监视**|**快速监视**|不可用|Ctrl+Alt+Q|显示 **“快速监视”** 窗口。|  

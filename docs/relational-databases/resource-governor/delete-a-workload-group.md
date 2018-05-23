@@ -3,12 +3,9 @@ title: 删除工作负荷组 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: resource-governor
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0d736f66b170dfca47c09b60ef131367d34ff37f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b851a58e2b24e52b485a97f6bb181cc454af5f25
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  右键单击包含要删除的工作负荷组的资源池，然后单击“属性”。 这将打开 **“资源调控器属性”** 页。  
   
-3.  在**“资源池的工作负荷组”**窗口中，单击要删除的工作负荷组所在的行，再右键单击该行左侧的向右箭头，然后单击“删除”。  
+3.  在 **“资源池的工作负荷组”** 窗口中，单击要删除的工作负荷组所在的行，再右键单击该行左侧的向右箭头，然后单击“删除”。  
   
 4.  若要删除工作负荷组，请单击 **“确定”**。  
   

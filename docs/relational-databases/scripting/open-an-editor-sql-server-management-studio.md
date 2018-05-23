@@ -3,9 +3,7 @@ title: 打开编辑器 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56b4b6bce2f58c37ad7b883f7469e52be2e80c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3462eb53657d873d1c2e2ce57a09dad99ff4b253
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 -   **Analysis Services XML/A 查询** - 打开一个新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML/A 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所需的信息。  
   
 ### <a name="using-object-explorer"></a>使用对象资源管理器  
- 在 **“对象资源管理器”**中：  
+ 在 **“对象资源管理器”** 中：  
   
 -   右键单击连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器节点，然后选择“新建查询”。 这将打开一个连接到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口，并将该窗口的数据库上下设置为登录帐户的默认数据库。  
   

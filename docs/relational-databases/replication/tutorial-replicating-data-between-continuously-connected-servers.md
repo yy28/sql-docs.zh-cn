@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 - 订阅服务器（目标）上，安装任意版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssEW](../../includes/ssew-md.md)] 除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 不能充当事务复制中的订阅服务器。  
   
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安装 [SQL Server 2017 开发人员版本](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
+- 安装 [SQL Server 2017 Developer 版本](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
 - 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
  
 >[!NOTE]
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 
 ![“启动”按钮和状态消息中的更改会显示“快照代理”已经运行](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-如果看到此处的错误，请参阅[对快照代理错误进行故障排除](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent)。 
+如果看到此处的错误，请参阅[对快照代理错误进行故障排除](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent)。 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>将分发代理登录名添加到 PAL  

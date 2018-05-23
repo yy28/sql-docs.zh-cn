@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6e1de5ffbafa9d17a3696ce556185aec80290
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a7393dfd780eb62aa6dff5ca70d89f297dc6952
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>内存中 OLTP 不支持的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |更改跟踪|可在包含内存中 OLTP 对象的数据库上启用更改跟踪。 但是，在内存优化表上的更改不会被跟踪。|  
 | DDL 触发器 | 内存中 OLTP 表或本机编译的模块不支持数据库级别和服务器级别的 DDL 触发器。 |  
 | 变更数据捕获 (CDC) | CDC 不能与具有内存优化表的数据库一起使用，因为它在内部使用 DROP TABLE 的 DDL 触发器。 |  
-| 纤程模式 | 内存优化表不支持纤程模式：<br /><br />如果启用纤程模式，则不能创建具有内存优化文件组的数据库，也不能向现有数据库添加内存优化文件组。<br /><br />如果有包含内存优化文件组的数据库，可以启用纤程模式。 不过，启用纤程模式需要重新启动服务器。 在这种情况下，具有内存优化文件组的数据库将无法恢复。 随后将看到一条错误消息，建议禁用纤程模式，以使用具有内存优化文件组的数据库。<br /><br />如果启用纤程模式，附加和还原具有内存优化文件组的数据库会失败。 数据库将标记为可疑。<br /><br />有关详细信息，请参阅 [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。 |  
+| 纤程模式 | 内存优化表不支持纤程模式：<br /><br />如果启用纤程模式，则不能创建具有内存优化文件组的数据库，也不能向现有数据库添加内存优化文件组。<br /><br />如果有包含内存优化文件组的数据库，可以启用纤程模式。 不过，启用纤程模式需要重新启动服务器。 在这种情况下，具有内存优化文件组的数据库将无法恢复。 随后将看到一条错误消息，建议禁用纤程模式，以使用具有内存优化文件组的数据库。<br /><br />如果启用纤程模式，附加和还原具有内存优化文件组的数据库会失败。 数据库将标记为可疑。<br /><br />有关详细信息，请参阅 [lightweight pooling 服务器配置选项](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。 |  
 |Service Broker 的限制|无法访问本机编译存储过程中的队列。<br /><br /> 无法在访问内存优化表的事务中访问远程数据库中的队列。|  
 |在订阅服务器上复制|支持对订阅服务器上的内存优化表进行事务复制，不过有一些限制。 有关详细信息，请参阅 [复制到内存优化表订阅服务器](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  
 
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 除若干例外情况，一般不支持跨数据库事务。 下表介绍支持的情况和相应的限制。 （另请参阅 [跨数据库查询](../../relational-databases/in-memory-oltp/cross-database-queries.md)。）  
 
 
-|“数据库”|Allowed|Description|  
+|“数据库”|Allowed|描述|  
 |---------------|-------------|-----------------|  
 | 用户数据库、模型和 msdb。 | “否” | 多数情况下，不支持跨数据库查询和事务。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外。 此时，master 数据库可进行只读访问。 |
 | 资源数据库和 tempdb | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制。

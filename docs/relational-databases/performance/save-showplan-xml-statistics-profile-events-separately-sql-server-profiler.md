@@ -3,12 +3,9 @@ title: 单独保存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +17,11 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c401557bc87d1462a97af5e5429a170d32750417
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 163991cab48d19e65493878c0c8a39023b7a4e4d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>单独保存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 4. 执行以下操作之一：  
   
-    -   要将跟踪内容捕获到文件，请选中“保存到文件”复选框。 指定 **“设置最大文件大小”**的值。  
+    -   要将跟踪内容捕获到文件，请选中“保存到文件”复选框。 指定 **“设置最大文件大小”** 的值。  
   
          也可以选中 **“启用文件滚动更新”** 复选框和 **“服务器处理跟踪数据”** 复选框。 
   

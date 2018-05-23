@@ -3,12 +3,9 @@ title: 性能监视和优化工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,11 +22,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c0cc4e5b9264c3259305027ad8ee54869c914f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 185096f5e4d9a2722d720fe37549f22cd5e608e7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 监视和优化工具：  
   
-|工具|Description|  
+|工具|描述|  
 |----------|-----------------|  
 |[sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于跟踪引擎进程事件（如批处理或事务的开始），使您能够监视服务器和数据库的活动（例如，死锁、错误或登录活动）。 您可以将 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据捕获到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或文件中供以后分析，还可以逐步重播在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上捕获的事件以确切了解所发生的事件。|  
 |[SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播可以使用多台计算机重播跟踪数据，并模拟任务关键型工作负荷。|  
@@ -69,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="windows-monitoring-tools"></a>Windows 监视工具  
  Windows 操作系统和 Windows Server 2003 也提供这些监视工具。  
   
-|工具|Description|  
+|工具|描述|  
 |----------|-----------------|  
 |任务管理器|显示在系统上运行的进程和应用程序的提要。|  
 |网络监视器代理|用于监视网络流量。|  

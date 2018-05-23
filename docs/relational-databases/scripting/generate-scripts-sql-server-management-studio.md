@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: mathoma
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,15 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4b1ce5863bc1b714b5e2248151aafe16f4979efd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d3d77c77be6e16e6d4deb5fd968774717230f88
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用“生成和发布脚本向导”为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”**菜单为单个对象或多个对象生成脚本。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用“生成和发布脚本向导”为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”** 菜单为单个对象或多个对象生成脚本。  
 
 有关使用 SQL Server Management Studio (SSMS) 编写各种对象的脚本的详细教程，请参阅[教程：在 SSMS 中编写脚本](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms)。
 
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  展开要编写脚本的对象类型的类别节点，如 **“表”** 节点。  
   
-4.  可通过选中 **F7** 或打开 **“视图”**菜单并选择 **“对象资源管理器详细信息”** 来打开 **“对象资源管理器详细信息”**窗格。  
+4.  可通过选中 **F7** 或打开 **“视图”** 菜单并选择 **“对象资源管理器详细信息”** 来打开 **“对象资源管理器详细信息”** 窗格。  
   
 5.  左键单击要编写脚本的对象之一。  
   

@@ -3,12 +3,9 @@ title: Broker:Conversation 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 36dbc61ba7241092d717a0d446f7bc437e44b59c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a61baa09c40042ad027f784531ce7989280419
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation 事件类的数据列  
   
-|数据列|类型|Description|列号|可筛选|  
+|数据列|类型|描述|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -65,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|Description|  
+|ID|子类|描述|  
 |--------|--------------|-----------------|  
 |@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **SEND Message** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行不包含 WITH ERROR 子句的 END CONVERSATION 语句时 **END CONVERSATION** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  

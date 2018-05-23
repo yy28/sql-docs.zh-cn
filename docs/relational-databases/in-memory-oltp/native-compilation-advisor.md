@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 26404f5f082b2c024f14a0d4cea643407f20b307
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b54a6bbf1009f595fde3b86eeecd8b9a21ea85d0
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用本机编译顾问的演练  
- 在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”**。 这将显示 **“存储过程本机编译顾问”**的欢迎使用页。 单击 **“下一步”** 继续。  
+ 在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”**。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击 **“下一步”** 继续。  
   
 ### <a name="stored-procedure-validation"></a>存储过程验证  
  此页将报告存储过程是否使用与本机编译不兼容的任何构造。 您可以单击 **“下一步”** 查看详细信息。 如果存在与本机编译不兼容的构造，可以单击 **“下一步”** 查看详细信息。  

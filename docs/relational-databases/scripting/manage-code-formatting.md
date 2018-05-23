@@ -3,9 +3,7 @@ title: 管理代码格式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -32,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c1021fe3aea1d1de328ac5a8e7d7d979c9ebb4c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 123bc07b21f6384388e0462916f59b111387faf7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="manage-code-formatting"></a>管理代码格式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  若要指定制表符和缩进操作的制表符字符数，请单击 **“保留制表符”**。 若要指定空格数，请选择 **“插入空格”**。  
   
-     如果选择 **“插入空格”**，请在 **“制表符大小”** 或 **“缩进大小”**下分别输入每个制表符或缩进所代表的空格数。  
+     如果选择 **“插入空格”**，请在 **“制表符大小”** 或 **“缩进大小”** 下分别输入每个制表符或缩进所代表的空格数。  
   
 #### <a name="to-indent-code"></a>缩进代码  
   

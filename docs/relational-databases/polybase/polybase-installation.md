@@ -7,19 +7,19 @@ ms.prod_service: database-engine
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebb1794c1fcefcab24c5c60f4fcceff42dacc6e0
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7a897b2a3a74900763cb6de6eb398e14b5d1bdb1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-installation"></a>PolyBase 安装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.lasthandoff: 05/07/2018
 ##  <a name="installing"></a> 使用命令提示符进行安装  
  使用此表中的值来创建安装脚本。 **SQL Server PolyBase 引擎** 和 **SQL Server PolyBase 数据移动服务** 这两项服务必须在同一帐户下运行。 在 PolyBase 横向扩展组中，所有节点上的 PolyBase 服务必须在同一个域帐户下运行。  
   
-|SQL Server 组件 (SQL Server component)|参数和值|Description|  
+|SQL Server 组件 (SQL Server component)|参数和值|描述|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 安装程序控件|**必需**<br /><br /> /FEATURES=PolyBase|选择 PolyBase 功能。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCACCOUNT|指定引擎服务的帐户。 默认为 **NT Authority\NETWORK SERVICE**。|  

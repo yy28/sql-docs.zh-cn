@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -22,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2f9ae5990fb55bb716fcd9368b80a56099a527be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21331b418a553a0a7a048a28b20f84faeed109c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="find-and-replace"></a>查找和替换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
  使用这些控件，可以指定将插入到匹配字符串或表达式位置的内容。  
   
  **Replace with**  
- 若要使用其他字符串替换“查找内容”中指定字符串的实例，请在此字段中输入替换字符串。 若要删除 **“查找内容”**框中指定文本的实例，请将此字段保留为空白。 选择下拉列表，以显示最近输入的 20 个项。 若要使 **“替换为”** 框中指定的字符串包含正则表达式，请单击 **“使用”** 复选框，然后单击 **“正则表达式”**。 只有在通过单击 **“快速替换”**打开此对话框时，才会显示此框。  
+ 若要使用其他字符串替换“查找内容”中指定字符串的实例，请在此字段中输入替换字符串。 若要删除 **“查找内容”** 框中指定文本的实例，请将此字段保留为空白。 选择下拉列表，以显示最近输入的 20 个项。 若要使 **“替换为”** 框中指定的字符串包含正则表达式，请单击 **“使用”** 复选框，然后单击 **“正则表达式”**。 只有在通过单击 **“快速替换”** 打开此对话框时，才会显示此框。  
   
  **Replace with**  
  若要使用其他字符串替换“查找内容”框中指定字符串的实例，请在此字段中输入替换字符串。 若要删除 **“查找内容”** 框中指定字符串的实例，请将此字段保留为空白。 选择下拉列表，以显示最近输入的 20 个项。 若要使 **“替换为”** 框中指定的字符串包含正则表达式，请单击 **“使用”** 复选框，然后单击 **“正则表达式”**。  
@@ -73,7 +72,7 @@ ms.lasthandoff: 05/03/2018
  此时，将显示一条提醒，其中包含一个 **“保持将已修改的文件打开”** 选项。 若要保留 **“撤消”** 选项，您必须选择此选项。 **“撤消”** 只在修改后仍保持打开状态以进行编辑的文件中可用。  
   
  **跳过文件**  
- 如果为“查找范围”指定的值包含多个文件，则此选项可用。 如果不希望搜索或修改当前文件，请单击此按钮。 此时，将继续在 **“查找范围”**列表中的下一个文件内进行搜索。  
+ 如果为“查找范围”指定的值包含多个文件，则此选项可用。 如果不希望搜索或修改当前文件，请单击此按钮。 此时，将继续在 **“查找范围”** 列表中的下一个文件内进行搜索。  
   
 ## <a name="look-in"></a>查找范围  
  **Look in**  
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  您可以展开或折叠 **“查找选项”** 部分。 您可以选中或清除下列选项：  
   
  **匹配大小写**  
- 选中此复选框后，“查找结果”窗口将仅显示与“查找内容”中指定的字符串的内容和大小写均匹配的字符串实例。 例如，在选中**“匹配大小写”**复选框的情况下搜索 **MyObject** 将返回“MyObject”，但不能返回“myobject”或“MYOBJECT”。  
+ 选中此复选框后，“查找结果”窗口将仅显示与“查找内容”中指定的字符串的内容和大小写均匹配的字符串实例。 例如，在选中 **“匹配大小写”** 复选框的情况下搜索 **MyObject** 将返回“MyObject”，但不能返回“myobject”或“MYOBJECT”。  
   
  **全字匹配**  
  选中此复选框后，“查找结果”窗口将仅显示与“查找内容”框中指定的字符串全字匹配的字符串实例。 例如，搜索 **MyObject** 将返回“MyObject”，而不会返回“CMyObject”或“MyObjectC”。  

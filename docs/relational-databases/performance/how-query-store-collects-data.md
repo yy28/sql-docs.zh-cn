@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 09/13/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dafc740c11cf79294786440204e8e284dcbd518e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3e839b220bb8a3464d8dfbc9a7f4afa8bbcb416
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="how-query-store-collects-data"></a>查询存储的数据收集方法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  **查看描述**  
   
-|“查看”|Description|  
+|“查看”|描述|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|提供对数据库执行的唯一查询文本。 将忽略查询文本之前和之后的注释和空格。 不忽略文本内部的注释和空格。 批中每个语句都会生成单独的查询文本项。|  
 |**sys.query_context_settings**|显示执行查询所依据的影响计划设置的独特组合。 由于 `context_settings_id` 是查询键的一部分，因此不同影响计划设置执行的相同查询文本将在查询存储中生成单独的查询条目。|  

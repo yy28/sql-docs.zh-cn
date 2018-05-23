@@ -3,9 +3,7 @@ title: “错误列表”窗口 (Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -23,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba5eb16f922bebc46784b36079060506d1322078
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b040b01371c7264784ad568e75d7f01a4c7fa9da
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 调试器 -“错误列表”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,9 +40,9 @@ ms.lasthandoff: 05/03/2018
   
 -   可以筛选要显示哪些项以及为每一项显示哪些列的信息。  
   
--   修复某错误后，相应错误项将从 **“错误列表”**中删除。  
+-   修复某错误后，相应错误项将从 **“错误列表”** 中删除。  
   
--   关闭某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的选项卡后，与该文件相关的错误将从 **“错误列表”**中删除。  
+-   关闭某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的选项卡后，与该文件相关的错误将从 **“错误列表”** 中删除。  
   
 ## <a name="working-with-the-error-list"></a>使用“错误列表”  
  若要显示 **“错误列表”**，请执行下列操作之一：  
@@ -53,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 -   使用键盘快捷键 CTRL+\\和 CTRL+E。  
   
- 打开 **“错误列表”**后，可以通过执行以下操作自定义视图：  
+ 打开 **“错误列表”** 后，可以通过执行以下操作自定义视图：  
   
 -   若要对列表进行排序，请单击任一列标题。 若要按其他列对列表进行进一步排序，请按住 Shift 键然后单击其他列标题。  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **查询编辑器底部的** “消息” [!INCLUDE[ssDE](../../includes/ssde-md.md)] 选项卡显示执行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 脚本时 [!INCLUDE[tsql](../../includes/tsql-md.md)] 返回的所有错误和警告。 只有再次执行该脚本此列表才会发生变化。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 找到一个或两个编译错误后，它将停止分析批处理；因此， **“消息”** 选项卡中可能不会列出脚本中的所有错误。  
   
- 有时候错误会同时在上述两个位置列出。 例如，某脚本文件可能存在已在 **“错误列表”**中列出的语法错误。 如果在纠正此错误之前执行了该脚本，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分析器会检测到相同的错误情形并在 **“消息”** 选项卡中返回此错误消息。  
+ 有时候错误会同时在上述两个位置列出。 例如，某脚本文件可能存在已在 **“错误列表”** 中列出的语法错误。 如果在纠正此错误之前执行了该脚本，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分析器会检测到相同的错误情形并在 **“消息”** 选项卡中返回此错误消息。  
   
 > [!NOTE]  
 >  “错误列表”仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”选项卡中。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -48,11 +47,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbfcc5d2674632686900c3501aa181ba4846908d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d755a56c4ee302ed0f249bac303b082b9031a239
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -129,7 +128,7 @@ ms.lasthandoff: 05/03/2018
 
   ![保存](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击**“浏览(…)”**按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
+-   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击 **“浏览(…)”** 按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
   
 -   **保存到剪贴板** - 将 Transact-SQL 脚本保存到剪贴板。  
   
@@ -180,7 +179,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **编写默认值脚本** - 在表列中包括用于设置默认值的默认对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)。  
   
--   “编写 DROP 和 CREATE 脚本” - 值为“编写脚本”时，将包括[!INCLUDE[tsql](../../includes/tsql-md.md)]语句以创建对象。 值为 **“编写 DROP 脚本”**时，将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以删除对象。 值为 **“编写 DROP 和 CREATE 脚本”**时，对于为其编写脚本的每个对象，脚本中将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 语句，随后是 CREATE 语句。 默认值为 **“编写 CREATE 脚本”**。  
+-   “编写 DROP 和 CREATE 脚本” - 值为“编写脚本”时，将包括[!INCLUDE[tsql](../../includes/tsql-md.md)]语句以创建对象。 值为 **“编写 DROP 脚本”** 时，将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以删除对象。 值为 **“编写 DROP 和 CREATE 脚本”** 时，对于为其编写脚本的每个对象，脚本中将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 语句，随后是 CREATE 语句。 默认值为 **“编写 CREATE 脚本”**。  
   
 -   **编写扩展属性脚本** - 如果对象具有扩展属性，则在脚本中包括扩展属性。 默认值为 **True**。  
   
@@ -192,7 +191,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **编写对象级权限脚本** - 包括在数据库中的对象上设置权限的脚本。 默认值为 **False**。  
   
--   **编写统计信息脚本** - 设置为 **“编写统计信息脚本”**时，此选项将包括 **CREATE STATISTICS** 语句以在对象上重新创建统计信息。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
+-   **编写统计信息脚本** - 设置为 **“编写统计信息脚本”** 时，此选项将包括 **CREATE STATISTICS** 语句以在对象上重新创建统计信息。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
 -   “编写 USE DATABASE 脚本” - 在脚本中添加 **USE DATABASE** 语句。 若要确保在正确的数据库中创建数据库对象，请包含 **USE DATABASE** 语句。 如果预计脚本将在其他数据库中使用，请选择 **False** 以省略 **USE DATABASE** 语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)。  
   
@@ -258,7 +257,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  **发布对象级权限** - 包括数据库中的选定对象上的权限。 默认值为 **False**。  
   
-8.  **发布统计信息** - 设置为 **“发布统计信息”**时，将包括 **CREATE STATISTICS** 语句以重新创建有关对象的统计信息。 **“发布统计信息和直方图”** 选项还会创建直方图信息。 默认值为 **“不发布统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
+8.  **发布统计信息** - 设置为 **“发布统计信息”** 时，将包括 **CREATE STATISTICS** 语句以重新创建有关对象的统计信息。 **“发布统计信息和直方图”** 选项还会创建直方图信息。 默认值为 **“不发布统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
 9. “发布 Vardecimal 选项” - 在源数据库表上启用该选项时，将在目标数据库表上启用 **vardecimal** 表格式。 默认值为 **True**。  
   

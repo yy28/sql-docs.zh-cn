@@ -3,9 +3,7 @@ title: 代码和文本定位 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -27,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a6997a46753f7b7c560cd585421038df5a665d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 640a26c7c3a7839e5da4dc457066cb8ae41b554a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="navigate-code-and-text"></a>代码和文本定位
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 -   使用 Ctrl+向上键和 Ctrl+向下键可以滚动视图而不移动插入点。  
   
 ## <a name="go-to-command"></a>Go To 命令  
- 使用 **GoTo** 命令可以转到特定的行号。 若要显示编号，请在 **“选项”** 对话框中依次单击 **“文本编辑器”**、 **“所有语言”**和 **“常规”**，然后选择 **“行号”**。  
+ 使用 **GoTo** 命令可以转到特定的行号。 若要显示编号，请在 **“选项”** 对话框中依次单击 **“文本编辑器”**、 **“所有语言”** 和 **“常规”**，然后选择 **“行号”**。  
   
  **转到特定行号**  
   

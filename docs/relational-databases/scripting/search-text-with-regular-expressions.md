@@ -3,9 +3,7 @@ title: 使用正则表达式搜索文本 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -24,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  下表对 **“引用列表”** 中提供的正则表达式进行了说明。  
   
-|表达式|语法|Description|  
+|表达式|语法|描述|  
 |----------------|------------|-----------------|  
 |任何单个字符|中提供的正则表达式进行了说明。|匹配除换行符外的所有单一字符。|  
 |零个或更多|*|匹配零或更多前导表达式的匹配项，执行所有可能的匹配。|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  **“引用列表”** 中只列出了部分可在 **“查找和替换”** 操作中使用的正则表达式。 还可以将下列任一正则表达式插入 **“查找内容”** 字符串：  
   
-|表达式|语法|Description|  
+|表达式|语法|描述|  
 |----------------|------------|-----------------|  
 |最少 - 零个或更多|@|匹配零个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
 |最少 - 一个或更多|#|匹配一个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了按标准 Unicode 字符属性匹配时的语法。 双字母缩写和 Unicode 字符属性数据库中列出的缩写相同。 可以将这些缩写指定为字符集的一部分。 例如，表达式 [:Nd:Nl:No] 匹配任何数字。  
   
-|表达式|语法|Description|  
+|表达式|语法|描述|  
 |----------------|------------|-----------------|  
 |大写字母|:Lu|匹配任何单个大写字母。 例如，:Luhe 匹配“The”，但不匹配“the”。|  
 |小写字母|:Ll|匹配任何单个小写字母。 例如，:Llhe 匹配“the”，但不匹配“The”。|  
@@ -126,7 +124,7 @@ ms.lasthandoff: 05/03/2018
   
  除了标准的 Unicode 字符属性以外，还可以将下列附加属性指定为字符集的一部分。  
   
-|表达式|语法|Description|  
+|表达式|语法|描述|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|匹配任何单字符。 例如，:Alhe 匹配“The”、“then” 和“reached”之类的字。|  
 |数字|:Nu|匹配任何数字。|  

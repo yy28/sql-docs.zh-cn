@@ -3,9 +3,7 @@ title: 状态栏（数据库引擎查询编辑器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 335c6d418a3c134718232dc7def65f3b16c6e792
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d892ad83519235c765192e5394cc435004c12fef
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,14 +31,14 @@ ms.lasthandoff: 05/03/2018
 3.  **使用状态颜色：**  [使用服务器颜色打开查询编辑器](#OpenServerColor)、 [打开查询编辑器并且指定状态颜色](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> 状态栏颜色  
- 您可以在 **“对象资源管理器”** 或 **“已注册服务器”**中将状态栏颜色与特定的服务器节点相关联。 只能为连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器节点指定颜色，不能为针对其他 SQL Server 技术的服务器节点指定颜色。 您还可以在每次将新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，指定自定义状态栏颜色。 然后，您可以使用为服务器节点定义的状态颜色打开查询编辑器窗口，或者为该编辑器窗口指定唯一颜色。  
+ 您可以在 **“对象资源管理器”** 或 **“已注册服务器”** 中将状态栏颜色与特定的服务器节点相关联。 只能为连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器节点指定颜色，不能为针对其他 SQL Server 技术的服务器节点指定颜色。 您还可以在每次将新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，指定自定义状态栏颜色。 然后，您可以使用为服务器节点定义的状态颜色打开查询编辑器窗口，或者为该编辑器窗口指定唯一颜色。  
   
  在对象资源管理器中为服务器节点设置自定义的状态栏颜色必须在进行连接时完成。 若要更改与某一现有服务器节点相关联的颜色，您必须首先断开连接，然后重新连接并且指定新颜色。  
   
 ##  <a name="SetOEServerColor"></a> 在对象资源管理器中为服务器设置状态颜色  
  **在对象资源管理器中设置服务器状态颜色**  
   
-1.  在 **“对象资源管理器”**中，选择 **“连接”** 按钮，然后选择 **“数据库引擎…”**。  
+1.  在 **“对象资源管理器”** 中，选择 **“连接”** 按钮，然后选择 **“数据库引擎…”**。  
   
 2.  在“连接到服务器”对话框上，选择“选项 >>”。  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="SetRegServerColor"></a> 为已注册服务器设置状态颜色  
  **为已注册服务器设置服务器颜色**  
   
-1.  在 **“已注册服务器”**中，右键单击服务器节点，然后选择 **“属性…”**。  
+1.  在 **“已注册服务器”** 中，右键单击服务器节点，然后选择 **“属性…”**。  
   
 2.  在 **“编辑服务器注册属性”** 对话框中，选择 **“连接属性”** 选项卡。  
   

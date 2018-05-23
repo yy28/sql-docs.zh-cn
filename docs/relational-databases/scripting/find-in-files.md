@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -21,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b6a24c77b509af9ab4b8dc7a2558ca09b57cad17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6416b27dc8c5ff853c74a4b6292878b29dd3b28b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="find-in-files"></a>在文件中查找
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  使用“查找和替换”窗口的 **“在文件中查找”** 选项卡，您可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”**中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
+  使用“查找和替换”窗口的 **“在文件中查找”** 选项卡，您可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”** 中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
   
  您也可使用工具栏按钮和快捷键打开 **“查找和替换”** 对话框。  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  从此列表中选择预定义的搜索范围，或使用“自定义目录集”对话框输入你自己的目录集。  
   
  **当前文档**  
- 当在编辑器中打开了一个文档时，此选项可用。 只在活动文档中搜索在 **“查找内容”**中指定的字符串。  
+ 当在编辑器中打开了一个文档时，此选项可用。 只在活动文档中搜索在 **“查找内容”** 中指定的字符串。  
   
  **所有打开的文档**  
  搜索当前打开以供编辑的所有文件。  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
  选择列表中的任意项，以输入将查找特定类型文件的预配置搜索字符串。  
   
 ## <a name="result-options"></a>“结果选项”  
- 确定单击 **“查找全部”**后查找结果的位置。 您可以展开或折叠 **“结果选项”** 部分。 您可以选中或清除下列选项：  
+ 确定单击 **“查找全部”** 后查找结果的位置。 您可以展开或折叠 **“结果选项”** 部分。 您可以选中或清除下列选项：  
   
  **“查找结果 1”窗口**  
  如果选中此复选框，则当前搜索的结果将追加到“查找结果 1”窗口内容的末尾。 此窗口将自动打开，以显示搜索结果。 若要手动打开此窗口，请在 **“视图”** 菜单上，单击 **“其他窗口”** ，再单击 **“查找结果 1”**。  

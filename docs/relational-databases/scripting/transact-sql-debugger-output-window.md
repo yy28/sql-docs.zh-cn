@@ -3,9 +3,7 @@ title: “输出”窗口 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -21,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c1c29a48f0a54c248aa1d9367220bab0ccc2a6ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b32b218e69b8b46e0071379cdc99d30e569d34d8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 调试器 -“输出”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  此窗口显示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各种功能的状态消息。 输出是从 **调试器、外部工具功能或调试器** “命令窗口” [!INCLUDE[tsql](../../includes/tsql-md.md)] 中运行的命令发送到 **“输出”**窗口的特殊窗格中。 此外，来自外部工具（例如 .bat 或 .com 文件）且通常在“命令提示符”窗口中显示的输出也在此窗口中显示。  
+  此窗口显示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各种功能的状态消息。 输出是从 **调试器、外部工具功能或调试器** “命令窗口” [!INCLUDE[tsql](../../includes/tsql-md.md)] 中运行的命令发送到 **“输出”** 窗口的特殊窗格中。 此外，来自外部工具（例如 .bat 或 .com 文件）且通常在“命令提示符”窗口中显示的输出也在此窗口中显示。  
   
  **访问“输出”窗口**  
   

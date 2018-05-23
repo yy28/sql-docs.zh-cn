@@ -3,12 +3,9 @@ title: Audit Broker Conversation 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ae99656a8afb60ef958612fb1e63bb46e4570820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ba8cd56b49c78810ebef16925073d0fedddade3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation 事件类的数据列  
   
-|数据列|类型|Description|列号|可筛选|  
+|数据列|类型|描述|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**BigintData1**|**bigint**|消息序列号。|52|“否”|  
@@ -57,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|Description|  
+|ID|子类|描述|  
 |--------|--------------|-----------------|  
 |@shouldalert|No Security Header|安全会话期间，Service Broker 接收到不包含会话密钥的消息。 建立了安全会话后，对话协议要求会话中的所有消息都包含会话密钥。|  
 |2|No Certificate|Service Broker 无法为会话中的某一名参与者找到可用的证书。 为了保证会话安全，数据库必须同时包含会话发送方和接收方的证书。|  

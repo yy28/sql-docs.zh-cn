@@ -3,9 +3,7 @@ title: 使用结果列表搜索文档 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -21,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 59c4169259ca091def5483dfe266d7ae58ead51f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e6f412c5380d546acb0ad21b61da2b3cd9ad57b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-documents-using-results-lists"></a>使用结果列表搜索文档
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,14 +55,14 @@ ms.lasthandoff: 05/03/2018
   
 4.  在 **“查找范围”** 列表中，单击 **“所有打开的文档”**、 **“当前项目”**、 **“整个解决方案”**，或者键入目录路径。  
   
-5.  单击 **“替换”** 以使用 **“替换为”** 框中的文本替换当前的搜索匹配项。 可以通过单击 **“查找下一个”** 跳过单个匹配项，或通过单击 **“跳过文件”**跳过整个文件。  
+5.  单击 **“替换”** 以使用 **“替换为”** 框中的文本替换当前的搜索匹配项。 可以通过单击 **“查找下一个”** 跳过单个匹配项，或通过单击 **“跳过文件”** 跳过整个文件。  
   
      \- 或 -  
   
      选择 **“全部替换”** 以使用 **“替换为”** 框中的文本替换所有匹配项。 若要在其他时间撤消某些替换，请选择 **“在全部替换后使已修改文件保持打开状态”** 。  
   
     > [!NOTE]  
-    >  如果选择**“全部替换”** ，则系统将替换所有搜索匹配项，包括已使用 **“跳过文件”** 或 **“查找下一个”**跳过的那些搜索匹配项。 只能针对在替换操作完成后仍保持打开状态的文件中进行的替换使用 **“撤消”** 操作。  
+    >  如果选择 **“全部替换”** ，则系统将替换所有搜索匹配项，包括已使用 **“跳过文件”** 或 **“查找下一个”** 跳过的那些搜索匹配项。 只能针对在替换操作完成后仍保持打开状态的文件中进行的替换使用 **“撤消”** 操作。  
   
  默认情况下，替换信息将显示在“查找结果 1”窗口中。 可以通过双击“查找结果 1”窗口中的各个条目来浏览替换项。  
   

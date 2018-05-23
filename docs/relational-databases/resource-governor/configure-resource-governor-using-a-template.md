@@ -3,12 +3,9 @@ title: 使用模板配置资源调控器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: resource-governor
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +15,11 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 019ac9b2b38d191f21032281dac8ff952dcb71f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d1299a1e646c2297ef2dc0e5979a42f9a5ebf6b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在**模板资源管理器**中，展开“资源调控器”，然后双击“配置资源调控器”。  
   
-3.  在 **“连接到数据库引擎”**中，输入所需信息，然后单击 **“确定”**。 查询编辑器中提供模板 Configure Resource Governor.sql。 使用此模板可创建和配置资源池、工作负荷组和分类器函数。  
+3.  在 **“连接到数据库引擎”** 中，输入所需信息，然后单击 **“确定”**。 查询编辑器中提供模板 Configure Resource Governor.sql。 使用此模板可创建和配置资源池、工作负荷组和分类器函数。  
   
 4.  若要更改模板中的值，请按 CTRL+SHIFT+M。 在 **“指定模板参数的值”** 窗口中，输入要使用的值。  
   
