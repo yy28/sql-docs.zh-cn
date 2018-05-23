@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs
 description: 自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: performance
@@ -17,11 +17,11 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2874e8bb59a47b5732d716924ec3d49a9f80992d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 464696823e99e81a763fbbc4a2835c86ef9bea5c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +83,31 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>内存授予反馈、资源调控器和查询提示
 实际内存授予服从资源调控器或查询提示确定的查询内存限制。
 
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用内存授予反馈
+可在数据库或语句范围内禁用内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 若要对源自数据库的所有查询执行禁用批处理模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+禁用后，此设置在 sys.database_scoped_configurations 将显示为已启用。
+
+若要对源自数据库的所有查询执行重新启用批处理模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+此外，将 DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK 指定为 USE HINT 查询提示也可对特定查询禁用批处理模式内存授予反馈。  例如：
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
+
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
 通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
 工作原理如下：
@@ -139,7 +164,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>跟踪自适应联接活动
 自适应联接运算符具有以下计划运算符属性：
 
-| 计划属性 | Description |
+| 计划属性 | 描述 |
 |--- |--- |
 | AdaptiveThresholdRows | 显示用于从哈希联接切换到嵌套循环联接的阈值。 |
 | EstimatedJoinType | 可能的联接类型。 |
@@ -165,6 +190,36 @@ WHERE [fo].[Quantity] = 361;
 下图显示了哈希联接的成本与嵌套循环联接替代的成本之间的示例交集。  在这个交点处，确定了阈值，该阈值将反过来确定将实际用于联接操作的算法。
 
 ![联接阈值](./media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用自适应联接
+
+可在数据库或语句范围内禁用自适应联接，同时将数据库兼容性级别维持在 140 或更高。  
+若要对源自数据库的所有查询执行禁用自适应联接，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+禁用后，此设置在 sys.database_scoped_configurations 将显示为已启用。
+若要对源自数据库的所有查询执行重新启用自适应联接，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+此外，将 DISABLE_BATCH_MODE_ADAPTIVE_JOINS 指定为 USE HINT 查询提示也可对特定查询禁用自适应联接。  例如：
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>多语句表值函数的交错执行
 交错执行可更改单一查询执行的优化和执行阶段之间的单向边界，并使计划能够根据修订后的基数估值进行调整。 如果遇到交错执行的候选项，该项当前为多语句表值函数 (MSTVF)，将暂停优化，执行适用的子树，捕获准确的基数估值，然后针对下游操作继续优化。
@@ -205,14 +260,14 @@ MSTVF 中简单的“SELECT*”不会获益于交错执行。
 ### <a name="tracking-interleaved-execution-activity"></a>跟踪交错执行活动
 可在实际查询执行计划中查看使用情况属性：
 
-| 执行计划属性 | Description |
+| 执行计划属性 | 描述 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 适用于 QueryPlan 节点。 如果为“true”，表示计划包含交错执行候选项。 |
 | IsInterleavedExecuted | TVF 节点的 RelOp 下的 RuntimeInformation 元素的属性。 如果为“true”，表示该操作已具体化为交错执行操作的一部分。 |
 
 还可以通过以下 xEvent 跟踪交错执行匹配项：
 
-| XEvent | Description |
+| XEvent | 描述 |
 | ---- | --- |
 | interleaved_exec_status | 发生交错执行时将引发此事件。 |
 | interleaved_exec_stats_update | 此事件介绍交错执行更新的基数估值。 |
@@ -226,6 +281,41 @@ MSTVF 中简单的“SELECT*”不会获益于交错执行。
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>交错执行和查询存储互操作性
 无法强制使用交错执行的计划。 该计划是具有基于初始执行的正确基数估值的版本。    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用交错执行
+
+可在数据库或语句范围内禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。  若要对源自数据库的所有查询执行禁用交错执行，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+禁用后，此设置在 sys.database_scoped_configurations 将显示为已启用。
+若要对源自数据库的所有查询执行重新启用交错执行，请在适用的数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+此外，将 DISABLE_INTERLEAVED_EXECUTION_TVF 指定为 USE HINT 查询提示也可对特定查询禁用交错执行。  例如：
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

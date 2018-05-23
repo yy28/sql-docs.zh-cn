@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/18/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -28,11 +28,11 @@ caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3bdc0c85068e4933b0c97cb508bd819ee1cc481d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a59000dabcaddbcb096fd715d1f6168dfbb7930
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,21 +70,20 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> 2018 年 1 月，在 SQL 数据库中，新创建的数据库的默认兼容性级别为 140。 我们不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。 不过，强烈建议客户计划转到最新的兼容性级别，以便利用最新的改进。
+> 从 2018 年 1 月起，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新创建的数据库的默认兼容性级别为 140。 我们不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。 不过，强烈建议客户计划转到最新的兼容性级别，以便利用最新的改进。
 > 
-> 如果你通常希望数据库的级别为 140，但有理由首选级别 110 基数估计算法，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特别是其关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
+> 如果想要对整个数据库利用数据库兼容性级别 140，但有理由优先选择映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的基数估计模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是其关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 >  
->  有关如何评估 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 注意，本文是指兼容性级别 130 和 SQL Server，但同样的方法也适用于转到 140 的 SQL Server 和 Azure SQL DB。
+> 有关如何评估 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 注意，本文是指兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但同样的方法也适用于转到 140 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
-
- 执行以下查询可确定连接到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。  
+执行以下查询可确定连接到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。  
   
 ```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
 > [!NOTE]  
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上并不支持所有功能（因兼容级别而异）。  
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上并不支持所有功能（因兼容级别而异）。  
 
  若要确定当前兼容级别，请查询 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的 **compatibility_level** 列。  
   
@@ -93,24 +92,60 @@ SELECT name, compatibility_level FROM sys.databases;
 ```  
   
 ## <a name="remarks"></a>Remarks  
-对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容级别都设置为[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 除非数据库具有更低的兼容级别，否则数据库会设置为此级别。 在将数据库从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本进行升级时，如果数据库至少是该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所允许的最低级别，则它会保留现有兼容级别。 升级兼容级别低于允许级别的数据库会将数据库设置为允许的最低兼容级别。 这既适用于系统数据库也适用于用户数据库。 使用 **ALTER DATABASE** 可更改数据库的兼容级别。 若要查看数据库的当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 **compatibility_level** 列。  
+对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容级别都设置为[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 除非数据库具有更低的兼容级别，否则数据库会设置为此级别。 在将数据库从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本进行升级时，如果数据库至少是该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所允许的最低级别，则它会保留现有兼容性级别。 升级兼容性级别低于允许级别的数据库会将数据库自动设置为允许的最低兼容性级别。 这既适用于系统数据库也适用于用户数据库。   
+
+附加或还原数据库时以及就地升级后，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 应出现以下行为： 
+- 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。    
+- 如果升级前用户数据库的兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 支持的最低兼容级别。    
+- 升级后，tempdb、model、msdb 和 Resource 数据库的兼容性级别将设置为当前兼容性级别。  
+- master 系统数据库保留它在升级之前的兼容性级别。
+
+使用 `ALTER DATABASE` 更改数据库的兼容性级别。 当发出 `USE <database>` 命令或使用该数据库作为默认数据库上下文来处理新登录时，数据库的新兼容性级别设置会生效。     
+若要查看数据库的当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 **compatibility_level** 列。  
 
 > [!NOTE]  
-> 在早期版本的 SQL Server 中创建并已升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或服务包 1 的[分发数据库](../../relational-databases/replication/distribution-database.md)的兼容性级别为 90，不受其他数据库的支持。 这并不影响复制功能。 升级到更高版本的服务包和 SQL Server 版本将导致分发数据库的兼容性级别增加到可与主数据库匹配。
-  
+> 在早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建并已升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或 Service Pack 1 的[分发数据库](../../relational-databases/replication/distribution-database.md)采用兼容性级别 90，其他数据库不支持该级别。 这并不影响复制功能。 升级到更高版本的服务包和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本将导致分发数据库的兼容性级别增加到可与主数据库匹配。
+
+## <a name="compatibility-levels-and-sql-server-upgrades"></a>兼容性级别和 SQL Server 升级  
+数据库兼容性级别是一个重要的工具，可通过允许升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，同时通过维持相同的升级前数据库兼容性级别保持连接应用程序功能状态，从而帮助实现数据库现代化。 只要应用程序不需要利用仅在更高数据库兼容性级别中可用的增强功能，它就是升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和维护之前的数据库兼容性级别的有效方法。 有关利用兼容性级别获取后向兼容性的详细信息，请参阅后文的[利用兼容性级别获得后向兼容性](#using-compatibility-level-for-backward-compatibility)。    
+
+对于新的开发工作，或当现有应用程序需要使用新功能以及查询优化器空间中完成的性能改进时，计划将数据库兼容性级别升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新级别，并验证应用程序可与该兼容性级别一起使用。 有关升级数据库兼容性级别的更多详细信息，请参阅后文的[升级数据库兼容性级别的最佳做法](#best-practices-for-upgrading-database-compatibility-level)。     
+
+> [!TIP] 
+> 如果在给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上测试和验证应用程序，则应用程序在该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本本机数据库兼容性级别上隐式测试和验证。
+> 
+> 因此，在使用对应于已测试 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的数据库兼容性级别时，数据库兼容性级别可为现有应用程序提供简易的认证途径。
+>
+> 有关兼容性级别之间的差异的详细信息，请参阅后文相应的部分。 
+
+若要将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 升级到最新版，同时将数据库兼容性级别维持在升级前的级别并维持其可支持性状态，建议在数据库中使用 [Microsoft 数据迁移助手](http://www.microsoft.com/download/details.aspx?id=53595)工具 (DMA) 对应用程序代码执行静态函数外围应用验证。 DMA 工具输出中没有关于缺失或不兼容功能的错误，可保护应用程序免受新目标版本上的任何功能回归影响。 有关 DMA 工具的详细信息，请参阅[此处](http://blogs.msdn.microsoft.com/datamigration/dma)。
+
+> [!NOTE] 
+> DMA 支持数据库兼容性级别 100 及更高级别。 排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作为源版本。 
+
+> [!IMPORTANT] 
+> Microsoft 建议执行一些最小测试来验证更新是否成功，同时维持之前的数据库兼容性级别。 应该确定适用于自己的应用程序和场景的最小测试。 
+
+> [!NOTE] 
+> Microsoft 在下列情况下提供查询计划形状保护：
+> - 新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（目标）在相当于之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本（源）运行的硬件上运行。 
+> - 目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 均使用同一[支持的数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks)。 
+> 
+> 上述情况下发生的任何查询计划形状回归（与源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相比）将得到解决。 如果出现这种情况，请与 Microsoft 客户支持服务部门联系。
+
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>利用兼容性级别获得向后兼容  
- 兼容性级别只影响指定数据库的行为，而不影响整个服务器的行为。 兼容性级别只实现与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本保持部分向后兼容。 从兼容性模式 130 开始，任何影响功能的新查询计划都仅添加到新兼容性模式中。 这样做是为了在由于查询计划更改导致性能降低而引发的升级过程中尽量减少风险。 从应用程序的角度来看，目标仍是处于最新兼容级别以便继承某些新功能，以及在查询优化器空间中完成的性能改进，不过是采用可控方式实现此目标。 通过将兼容性级别用作临时性的迁移辅助工具，可解决相关兼容性级别设置控制的行为之间存在的版本差异问题。 有关更多详细信息，请参阅本文后面部分的升级最佳做法。  
+数据库兼容性级别设置只影响指定数据库的行为，而不影响整个服务器的行为。 数据库兼容性级别只实现与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本保持部分后向兼容。   
+从兼容性模式 130 开始，任何影响功能的新查询计划都有意仅添加到新兼容性级别中。 这样做是为了在由于查询计划更改导致性能降低而引发的升级过程中尽量减少风险。   
+从应用程序的角度来看，目标仍应在某个时间点升级到最新兼容性级别以便继承某些新功能，以及在查询优化器空间中完成的性能改进，不过是采用可控方式实现此目标。 通过将较低兼容性级别用作更安全的迁移辅助工具，可解决相关兼容性级别设置控制的行为之间存在的版本差异问题。 有关更多详细信息，包括升级数据库兼容性级别的建议工作流，请参阅后文的[升级数据库兼容性级别的最佳做法](#best-practices-for-upgrading-database-compatibility-evel)。  
   
- 如果现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中行为差异的影响，请转换应用程序以便无缝使用新兼容性模式。 然后使用 `ALTER DATABASE` 将兼容级别更改为 130。 当发出 `USE <database>` 或使用该数据库作为默认数据库来处理新登录时，新数据库的新兼容性设置会生效。  
- 
 > [!IMPORTANT]
-> 给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的废止功能不受兼容级别保护。
+> 给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的废止功能不受兼容级别保护。 这指的是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中删除的功能。
 > 
 > 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容级别设置为 110 不会恢复废止的提示。
 > 有关废止功能的详细信息，请参阅 [SQL Server 2016 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中废止的数据库引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.120))、[SQL Server 2012 中废止的数据库引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.110))和 [SQL Server 2008 中废止的数据库引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.100))。
 
 > [!IMPORTANT]
-> 给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版 本中引入的重大更改**可能**不受兼容级别保护。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象**不**受兼容级别保护。
+> 给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版 本中引入的重大更改**可能**不受兼容级别保护。 这指的是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之间的行为变更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象**不**受兼容级别保护。
 >
 > 受兼容级别**保护**的一个重大更改示例是从 datetime 到 datetime2 数据类型的隐式转换。 在数据库兼容级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，这些转换显得更加准确。 若要还原以前的转换行为，请将数据库兼容级别设置为 120 或更低。
 >
@@ -120,9 +155,9 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 有关重大更改的详细信息，请参阅 [SQL Server 2017 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)[SQL Server 2014 中数据库引擎功能的重大更改](http://msdn.microsoft.com/library/ms143179(v=sql.120))、[SQL Server 2012 中数据库引擎功能的重大更改](http://msdn.microsoft.com/library/ms143179(v=sql.110))和 [SQL Server 2008 中数据库引擎功能的重大更改](http://msdn.microsoft.com/library/ms143179(v=sql.100))。
   
-## <a name="best-practices"></a>最佳实践  
+## <a name="best-practices-for-upgrading-database-compatibility-level"></a>升级数据库兼容性级别的最佳做法 
 有关用于升级兼容级别的建议工作流，请参阅[更改数据库兼容性模式和使用查询存储](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。  
-  
+
 ## <a name="compatibility-levels-and-stored-procedures"></a>兼容性级别和存储过程  
  执行某一存储过程时，该存储过程将使用定义它的数据库的当前兼容性级别。 在更改某一数据库的兼容性设置时，该数据库的所有存储过程都将随之自动重新编写。  
 
@@ -184,7 +219,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|不能使用 RC4 或 RC4_128 加密新材料。 而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|  
 |对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式为 121，当在计算列表达式中使用这些类型时除外。 对于计算列，默认样式为 0。 当创建用于涉及自动参数化的查询中或约束定义中的计算列时，此行为会影响计算列。<br /><br /> 下面“示例”部分中的示例 D 显示样式 0 与 121 之间的差异。 它并不演示上面所述的行为。 有关日期和时间样式的详细信息，请参阅 [CAST 和 CONVERT (Transact SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。|兼容级别为 110 时，对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式始终为 121。 如果您的查询依赖旧行为，请使用低于 110 的兼容性级别或在受影响的查询中显式指定 0 样式。<br /><br /> 将数据库升级到兼容性级别 110 将不更改已存储到磁盘的用户数据。 您必须相应手动更正此数据。 例如，如果使用了 `SELECT INTO` 来从包含上述计算列表达式的源创建表，将存储数据（使用样式 0）而非存储计算列定义本身。 您需要手动更新此数据，以匹配样式 121。|  
 |在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **datetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **datetime** 类型。|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **smalldatetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **smalldatetime** 类型。<br /><br /> 在升级到 110 后，分布式分区视图将由于数据类型不匹配而失败。 可以通过将针对远程表的数据类型更改为 **datetime** 或者将本地数据库的兼容级别设置为 100 或更低，解决上述问题。|  
-|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 当分隔两个具有相同 `SOUNDEX` 代码的辅音时，将忽略大写 H 或大写 W。<br /><br /> 2) 如果 *character_expression* 的前 2 个字符具有相同的 `SOUNDEX` 代码，则将包含这两个字符。 如果一组并行辅音具有相同的 `SOUNDEX` 代码，则将不包含它们，第一个辅音除外。|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 如果大写 H 或大写 W 分隔具有相同 `SOUNDEX` 代码的两个辅音，则将忽略右侧的辅音<br /><br /> 2) 如果一组并行辅音具有相同的 `SOUNDEX` 代码，则将不包含它们，第一个辅音除外。<br /><br /> <br /><br /> 其他规则可能导致由 `SOUNDEX` 函数计算的值不同于在更低数据库兼容级别时计算的值。 在升级到兼容级别 110 后，可能需要重新生成使用 `SOUNDEX` 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX (Transact-SQL)](../../t-sql/functions/soundex-transact-sql.md)|  
+|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 当分隔两个具有相同 `SOUNDEX` 代码的辅音时，将忽略大写 H 或大写 W。<br /><br /> 2) 如果 *character_expression* 的前 2 个字符具有相同的 `SOUNDEX` 代码，则将包含这两个字符。 如果一组并行辅音具有相同的 `SOUNDEX` 代码，则将不包含它们，第一个辅音除外。|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 如果大写 H 或大写 W 分隔具有相同 `SOUNDEX` 代码的两个辅音，则将忽略右侧的辅音<br /><br /> 2) 如果一组并行辅音具有相同的 `SOUNDEX` 代码，则将不包含它们，第一个辅音除外。<br /><br /> <br /><br /> 其他规则可能导致由 `SOUNDEX` 函数计算的值不同于在更低数据库兼容级别时计算的值。 在升级到兼容级别 110 后，可能需要重新生成使用 `SOUNDEX` 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX (Transact-SQL)](../../t-sql/functions/soundex-transact-sql.md)。|  
   
 ## <a name="differences-between-compatibility-level-90-and-level-100"></a>兼容性级别 90 和兼容性级别 100 之间的差异  
  本节介绍随兼容性级别 100 引入的新行为。  

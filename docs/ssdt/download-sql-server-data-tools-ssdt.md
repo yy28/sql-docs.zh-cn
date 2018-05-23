@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fad2e2a85608e6e621e019648880e3ba7f274c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b654697ff5304440e8616c0f5cebdf45ac4c0847
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下载 SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ SSDT 15.x 是 Visual Studio 2017 15.5 或更高版本中的 SQL Server 数据库
 > SSDT for Visual Studio 2017 15.6.x 的非英语版本不支持从 15.4.0 英语预览版升级，因此在安装 15.6.x 的其他语言版本之前，必须先卸载 15.4.0 英语预览版。 
 
 
-SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4：[下载数据层应用程序框架 (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
+SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4.1：[下载数据层应用程序框架 (DacFx) 17.4.1](https://www.microsoft.com/en-us/download/details.aspx?id=56508)
 
 
 

@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 346b5aada1a16e84aa3e74019e83dd7a74d9914a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d3b1e73a1e353fb87dcb7cd5782f551e9508a2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回用于表示任何表达式的字节数。
+此函数返回用于表示任何表达式的字节数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,18 +51,30 @@ DATALENGTH ( expression )
 任何数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-bigint（如果 expression 的数据类型为 varchar(max)、nvarchar (max) 或 varbinary(max)）；否则为 int。
+如果 expression 具有一个 nvarchar(max)、varbinary(max) 或 varchar(max) 数据类型，则为 bigint；否则为 int。
   
 ## <a name="remarks"></a>Remarks  
-对于 varchar、varbinary、text、image、nvarchar 和 ntext 数据类型，DATALENGTH 尤其有用，因为这些数据类型可以存储长度可变的数据。
+`DATALENGTH` 与数据类型配合使用时
+
+- **图像**
+- **ntext**
+- **nvarchar**
+- **text**
+- **varbinary**
+
+和
+
+- **varchar**
+
+尤其有用，因为这些数据类型可以存储可变长度数据。
   
-NULL 的 DATALENGTH 的结果是 NULL。
+对于 NULL 值，`DATALENGTH` 返回 NULL。
   
 > [!NOTE]  
->  兼容级别可能影响返回值。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+>  兼容级别可能影响返回值。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容性级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 ## <a name="examples"></a>示例  
-下面的示例查找 `Name` 表中的 `Product` 列的长度。
+此示例查找 `Product` 表中的 `Name` 列的长度：
   
 ```sql
 -- Uses AdventureWorks  

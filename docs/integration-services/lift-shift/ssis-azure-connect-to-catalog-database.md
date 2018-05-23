@@ -1,5 +1,5 @@
 ---
-title: 连接到 Azure 上的 SSISDB 目录数据库 | Microsoft Docs
+title: 连接到 Azure 中的 SSIS 目录数据库 (SSISDB) | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>连接到 Azure 上的 SSISDB 目录数据库
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>连接到 Azure 中的 SSIS 目录数据库 (SSISDB)
 
 获取连接到 Azure SQL 数据库服务器上托管的 SSISDB 目录数据库所需的连接信息。 连接时需要以下项：
 - 完全限定服务器名称
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 
 2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息：
 
-   | 设置       | 建议的值 | Description | 
+   | 设置       | 建议的值 | 描述 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 |

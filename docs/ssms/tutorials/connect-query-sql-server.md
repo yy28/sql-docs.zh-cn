@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
 本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文演示如何执行以下操作：
@@ -33,17 +33,16 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio 以及针对 SQL Server 实例的访问权限。 
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
-- **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
-- **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)。
+- **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>连接到 SQL Server 实例
 
-1. 启动 SQL Server Management Studio。  
-    首次运行 SSMS 时，系统将打开“连接到服务器”窗口。 如未打开，可以选择“对象资源管理器” > “连接” > “数据库引擎”，将其手动打开。
+1. 启动 SQL Server Management Studio。 首次运行 SSMS 时，系统将打开“连接到服务器”窗口。 如未打开，可以选择“对象资源管理器” > “连接” > “数据库引擎”，将其手动打开。
 
     ![对象资源管理器中的“连接”链接](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ ms.lasthandoff: 05/03/2018
 
     ![“服务器名称”字段与使用 SQL Server 实例的选项](media/connect-query-sql-server/connection2.png)
 
-    - 对于“身份验证”，选择“Windows 身份验证”。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”，系统将提示你输入用户名和密码。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine)。
+    - 对于“身份验证”，选择“Windows 身份验证”。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”，系统将提示你输入用户名和密码。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
 
     也可以通过选择“选项”来修改其他连接选项。 连接选项的示例包括你要连接到的数据库、连接超时值和网络协议。 本文对所有选项使用默认值。 
 
 3. 完成所有字段后，选择“连接”。 
 
-4. 浏览对象资源管理器中的对象，验证连接到 SQL Server 实例是否成功，如下所示： 
+### <a name="examples-of-successful-connections"></a>成功连接的示例
+可通过展开和浏览“对象资源管理器”中的对象，验证 SQL Server 连接是否成功。 这些对象可能有所不同，具体取决于要连接到的服务器的类型。 
 
-   ![成功的连接](media/connect-query-sql-server/successfulconnection.png)
+- 连接到本地 SQL Server，示例中为 NODE5\SQL2016ST：![连接到本地服务器](media/connect-query-sql-server/connect-on-prem.png)
+
+- 连接到 SQL Azure DB - 示例中为 msftestserver.database.windows.net：![连接到 SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > 在本教程中，之前已使用 Windows 身份验证连接到本地 SQL Server，但此方法不支持连接到 SQL Azure DB。 因此，此图像显示使用 SQL 身份验证连接到 SQL Azure DB。 有关详细信息，请参阅 [SQL 本地身份验证](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)。 
 
 ## <a name="create-a-database"></a>创建数据库
 按照以下步骤创建一个名为 TutorialDB 的数据库： 
@@ -170,8 +175,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>更改查询窗口连接到的服务器
 通过执行以下步骤，可以更改当前查询窗口连接到的服务器：
 
-1. 右键单击查询窗口，然后选择“连接” > “更改连接”。  
-    “连接到服务器”窗口将再次打开。
+1. 右键单击查询窗口，然后选择“连接” > “更改连接”。 “连接到服务器”窗口将再次打开。
 2. 更改查询连接到的服务器。 
  
    ![“更改连接”命令](media/connect-query-sql-server/changeconnection.png)

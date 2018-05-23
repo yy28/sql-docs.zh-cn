@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8a10829deda74850da86bfb066ad95a6effac83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -44,18 +44,16 @@ SSMS 是一种集成环境，用于管理从 SQL Server 到 SQL 数据库的任�
 
 SSMS 17.x 是最新一代的 SQL Server Management Studio，可支持 SQL Server 2017。
 
-[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
 
-[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 17.6 升级包（将 17.x 升级到 17.6）](https://go.microsoft.com/fwlink/?linkid=870041)
+[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 17.7 升级包（将 17.x 升级到 17.7）](https://go.microsoft.com/fwlink/?linkid=873128)
 
-> [!WARNING]
-> 存在已知问题：当使用[维护计划](../relational-databases/maintenance-plans/maintenance-plans.md)时，SSMS 17.6 变得不稳定，甚至崩溃。 如果使用维护计划，请勿安装 SSMS 17.6。 如果已经安装 SSMS 17.6，且此问题正在产生不良影响，请降级到 17.5。 
 
 **版本信息**
 
-版本号：17.6<br>
-生成号：14.0.17230.0<br>
-发布日期：2018 年 3 月 20 日
+版本号：17.7<br>
+内部版本号：14.0.17254.0<br>
+发布日期：2018 年 5 月 9 日
 
 SSMS 17.x 安装不会升级或替换 SSMS 16.x 或更早版本。 SSMS 17.x 与以前的版本并行安装，因此，这两个版本均可供使用。
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 17，并有一个新图标： 
@@ -71,11 +69,11 @@ SSMS 17.x 安装不会升级或替换 SSMS 16.x 或更早版本。 SSMS 17.x 与
 
 此版本的 SSMS 可以安装在以下语言中：
 
-SQL Server Management Studio 17.6：<br>
-[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+SQL Server Management Studio 17.7：<br>
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
-SQL Server Management Studio 17.6 升级包（将 17.x 升级到 17.6）：<br>
-[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40a)
+SQL Server Management Studio 17.7 升级包（将 17.x 升级到 17.7）：<br>
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模块现可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
@@ -84,36 +82,23 @@ SQL Server Management Studio 17.6 升级包（将 17.x 升级到 17.6）：<br>
 
 ## <a name="new-in-this-release"></a>此版本中的新增功能
 
-SSMS 17.6 是 SQL Server Management Studio 的最新版本。 SSMS 的 17.x 一代提供对 SQL Server 2008 到 SQL Server 2017 几乎所有功能领域的支持。 版本 17.x 也支持 SQL Analysis Service PaaS。
+SSMS 17.7 是 SQL Server Management Studio 的最新版本。 SSMS 的 17.x 一代提供对 SQL Server 2008 到 SQL Server 2017 几乎所有功能领域的支持。 版本 17.x 也支持 SQL Analysis Service PaaS。
 
-版本 17.6 包括：
+版本 17.7 包括：
 
 **常规 SSMS**
 
-SQL 数据库托管实例：
-
-- 添加了对 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)的支持。 Azure SQL 数据库托管实例（预览版）是 Azure SQL 数据库的一种新风格，提供与本地 SQL Server 的接近 100% 的兼容性，是一个解决常见安全问题的本机[虚拟网络 (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 实现和一个有利于本地 SQL Server 客户的[业务模型](https://azure.microsoft.com/pricing/details/sql-database/)。
-- 支持常见管理方案，例如：
-   - 创建和更改数据库。
-   - 备份和还原数据库。
-   - 导入、导出、提取和发布数据层应用程序。
-   - 查看和更改服务器属性。
-   - 完全支持对象资源管理器。
-   - 编写数据库对象的脚本。
-   - 支持 SQL 代理作业。
-   - 支持链接服务器。
-- 在[此处](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)了解有关托管实例的更多信息。
-
-
-对象资源管理器：
-- 添加了设置，以便在从对象资源管理器拖放至查询窗口时，不强制使用括号括住名称。 （用户建议 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 和 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)。）
-
-数据分类：
-- 一般改进和 bug 修复。
+复制监视器：   
+- 现在，在发布服务器数据库和/或分发服务器数据库属于可用性组的情况下，复制监视器支持注册侦听器。 现在可以监视发布服务器数据库和/或分发数据库属于 AlwaysOn 的复制环境。 
+ 
+Azure SQL 数据仓库： 
+- 为 Azure SQL 数据仓库的外部表添加了“已拒绝的行位置”支持。 
 
 **Integration Services (IS)**
 
-- 添加了支持，便于将包部署到 [SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
+- 为部署到 Azure SQL 数据库的 SSIS 包添加了计划安排功能。 本地 SQL Server 和 SQL 数据库托管实例（预览版）将 SQL Server 代理作为一级作业计划程序，与之不同的是，SQL 数据库并没有内置计划程序。 这项新的 SSMS 功能可提供类似于 SQL Server 代理的熟悉用户界面，用于计划安排部署到 SQL 数据库的包。 如果要使用 SQL 数据库承载 SSIS 目录数据库、SSISDB，可使用此 SSMS 功能生成计划 SSIS 包所需的数据工厂管道、活动和触发器。 然后可在数据工厂中编辑和扩展这些对象。 有关详细信息，请参阅[通过 SSMS 计划安排 Azure SQL 数据库上的 SSIS 包执行](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)。 若要了解 Azure 数据工厂管道、活动和触发器的详细信息，请参阅 [Azure 数据工厂中的管道和活动](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)和 [Azure 数据工厂中的管道执行和触发器](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)。
+- 支持在 SQL 代理中计划安排在 SQL 托管实例上执行的 SSIS 包。 现在可以创建 SQL 代理作业，在托管实例上执行 SSIS 包。 
+
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
@@ -150,9 +135,9 @@ SQL 数据库托管实例：
 
 ## <a name="release-notes"></a>发行说明
 
-以下是此 17.6 版本的问题和限制：
+以下是此 17.7 版本的问题和限制：
 
-目前存在一个已知问题，即在维护计划中配置日程安排时，SSMS 17.6 会发生故障。
+使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
 
 
 ## <a name="previous-releases"></a>以前的版本

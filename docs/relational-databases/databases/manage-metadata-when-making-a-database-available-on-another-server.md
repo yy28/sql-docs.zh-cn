@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题与下列情况有关：  
+  本文与下列情况有关：  
   
 -   配置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性组的可用性副本。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  将应用程序的数据库移动到其他服务器实例时，必须在目标服务器实例的 **master** 和 **msdb** 中重新创建依赖实体和依赖对象的所有元数据。 例如，如果数据库应用程序使用服务器级触发器，则仅在新系统上附加或还原数据库是不够的。 如果不手动在 **master** 数据库中重新创建这些触发器的元数据，则数据库不能按预期方式工作。  
   
 ##  <a name="information_entities_and_objects"></a> 存储在用户数据库外部的信息、实体和对象  
- 此主题的其余部分概要说明了可能影响在其他服务器实例上可用的数据库的潜在问题。 最好重新创建以下列表中列出的一种或多种信息、实体或对象。 若要查看概要内容，请单击该项的链接。  
+ 本文的其余部分概要说明了可能影响在其他服务器实例上可用的数据库的潜在问题。 最好重新创建以下列表中列出的一种或多种信息、实体或对象。 若要查看概要内容，请单击该项的链接。  
   
 -   [服务器配置设置](#server_configuration_settings)  
   
@@ -188,7 +188,8 @@ ms.lasthandoff: 05/03/2018
   
  扩展存储过程直接在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的地址空间中运行，它们可能会引起内存泄漏或其他问题，从而降低服务器的性能和可靠性。 您应考虑将扩展存储过程存储在独立于包含被引用数据的实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中。 还应考虑使用分布式查询访问数据库。  
   
-> **重要说明!!** 将扩展存储过程添加到服务器并向其他用户授予 EXECUTE 权限之前，系统管理员应全面查看每个扩展存储过程，以确保它不包含有害代码或恶意代码。  
+  > [!IMPORTANT]
+  > 将扩展存储过程添加到服务器并向其他用户授予 EXECUTE 权限之前，系统管理员应全面查看每个扩展存储过程，以确保它不包含有害代码或恶意代码。  
   
  有关更多详细信息，请参阅 [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)、[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md) 和 [REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)。  
   
@@ -266,7 +267,7 @@ ms.lasthandoff: 05/03/2018
   
  若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在 **“选择脚本选项”** 对话框中将 **“编写登录脚本”** 选项设置为 **True**。  
   
-> **注意：**有关如何为镜像数据库设置登录名的信息，请参阅[数据库镜像或 AlwaysOn 可用性组设置登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
+> **注意：** 有关如何为镜像数据库设置登录名的信息，请参阅[数据库镜像或 AlwaysOn 可用性组设置登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
 ##  <a name="permissions"></a> Permissions  
@@ -279,9 +280,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>对系统对象的 GRANT、REVOKE 和 DENY 权限  
  对系统对象（例如存储过程、扩展存储过程、函数和视图）的权限存储在 **master** 数据库中，并且必须在目标服务器实例上进行配置。  
   
- 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在“选择脚本选项”对话框中将“编写对象级权限脚本”选项设置为 **True**。  
+ 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在 **“选择脚本选项”** 对话框中将 **“编写对象级权限脚本”** 选项设置为 **True**。  
   
-> **重要说明!!** 如果编写登录脚本，则不编写密码的脚本。 如果登录名使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须在目标上修改脚本。  
+   > [!IMPORTANT]
+   > 如果编写登录脚本，则不编写密码的脚本。 如果登录名使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须在目标上修改脚本。  
   
  在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目录视图中可以查看系统对象。 在 **master** 数据库中的 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目录视图中可以查看对系统对象的权限。 有关查询这些目录视图并授予系统对象权限的信息，请参阅 [GRANT 系统对象权限 (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)。 有关更多详细信息，请参阅 [REVOKE 系统对象权限 (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 和 [DENY 系统权限 (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)。  
   
@@ -313,7 +315,10 @@ ms.lasthandoff: 05/03/2018
   
  有关证书和非对称密钥的详细信息，请参阅 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
-  
+## <a name="trustworthy-property"></a>Trustworthy 属性
+TRUSTWORTHY 数据库属性用于指明此 SQL Server 实例是否信任该数据库以及其中的内容。 为安全起见，默认情况下，附加数据库后此选项需设置为 OFF，即使源服务器上此选项被设置为 ON。 有关此属性的详细信息，请参阅 [TRUSTWORTHY 数据库属性](../security/trustworthy-database-property.md)，有关如何启用此选项的信息，请参阅 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  如果将复制数据库的备份还原到其他服务器或数据库，则无法保留复制设置。 在这种情况下，您必须在还原备份后重新创建所有发布和订阅。 为使此过程更加简单，请创建用于当前复制设置以及启用和禁用复制的脚本。 为了帮助重新创建复制设置，请复制这些脚本，并更改服务器名称引用以用于目标服务器实例。  
   
@@ -321,7 +326,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序的许多相关内容都将随数据库一起移动。 但是，应用程序的某些相关内容必须在新位置重新创建或重新配置。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序的许多相关内容都将随数据库一起移动。 但是，应用程序的某些相关内容必须在新位置重新创建或重新配置。  为安全起见，默认情况下，从其他服务器附加数据库后，is_broker_enabled 和 is_honoor_broker_priority_on 的选项设置为 OFF。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

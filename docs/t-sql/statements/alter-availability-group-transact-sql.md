@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
  FAILOVER  
- 启动可用性组的手动故障转移，并且没有对您连接到的辅助副本的数据丢失。 对其输入故障转移目标故障转移命令的副本称为“故障转移目标”。  故障转移目标将接管主要角色，恢复各数据库的副本并且使它们作为新的主数据库处于联机状态。 以前的主副本同时转换为辅助角色，并且其数据库将成为辅助数据库且立即挂起。 在发生一系列故障后，这些角色可能来回切换。  
+启动可用性组的手动故障转移，并且没有对您连接到的辅助副本的数据丢失。 将承载主要副本的副本是故障转移目标。  故障转移目标将接管主要角色，恢复各数据库的副本并且使它们作为新的主数据库处于联机状态。 以前的主副本同时转换为辅助角色，并且其数据库将成为辅助数据库且立即挂起。 在发生一系列故障后，这些角色可能来回切换。  
   
  仅在当前与主副本同步的同步提交辅助副本上支持。 请注意，对于要同步的辅助副本，主副本也必须在同步提交模式下运行。  
   

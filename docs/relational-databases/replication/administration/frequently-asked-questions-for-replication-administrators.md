@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>数据库维护  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>为什么无法对已发布的表运行 TRUNCATE TABLE？  
- TRUNCATE TABLE 是不会激发触发器的日志未记录的操作。 之所以不允许对已发布的表运行 TRUNCATE TABLE，是因为复制无法跟踪此操作导致的更改：事务复制通过事务日志来跟踪更改；合并复制通过已发布表的触发器来跟踪更改。  
+ TRUNCATE TABLE 是不会记录单个行删除且不激发 DML 触发器的 DDL 语句。 之所以不允许对已发布的表运行 TRUNCATE TABLE，是因为复制无法跟踪此操作导致的更改：事务复制通过事务日志来跟踪更改；合并复制通过已发布表的 DML 触发器来跟踪更改。  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>在复制的数据库上运行大容量插入命令，会产生什么效果？  
  对于事务复制，大容量插入命令跟踪和复制的方式和其他插入命令相同。 对于合并复制，则必须确保正确更新跟踪元数据的更改。  

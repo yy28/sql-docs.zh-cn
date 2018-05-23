@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 5/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc04195092a1371be93410cc77d8d06460c957da
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0ea81621b94490c267b6d7c9f3e010bd22279610
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,9 +133,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 <reject_options> ::=  
 {  
-    | REJECT_TYPE = value | percentage  
-    | REJECT_VALUE = reject_value  
-    | REJECT_SAMPLE_VALUE = reject_sample_value  
+    | REJECT_TYPE = value | percentage,  
+    | REJECT_VALUE = reject_value,  
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
   
 }  
 ```  
@@ -234,7 +235,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 > [!NOTE]  
 >  由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value。  
   
- 例如：  
+
+例如：  
   
  此示例演示三个 REJECT 选项相互之间如何交互。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30、REJECT_SAMPLE_VALUE = 100，可能出现以下情况：  
   
@@ -247,6 +249,13 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   重新计算的失败行的百分比为 50%。 失败行的百分比已超过 30% 的拒绝值。  
   
 -   在尝试返回前 200 行之后，PolyBase 查询失败，拒绝的行为 50%。 请注意，在 PolyBase 查询检测到超过拒绝阈值之前已返回了匹配行。  
+  
+REJECTED_ROW_LOCATION = 目录位置
+  
+  指定应该写入拒绝行和对应错误文件的外部数据源中的目录。
+如果指定的路径不存在，PolyBase 将代你创建一个。 创建的子目录的名称为“_rejectedrows”。除非在位置参数中明确命名，否则，“_”字符将确保对该目录转义以进行其他数据处理。 在此目录中，存在根据负荷提交时间创建的文件夹，采用 YearMonthDay -HourMinuteSecond 格式（例如， 20180330-173205）。 在此文件夹中，将写入两种文件类型，_原因文件和数据文件。 
+
+原因文件和数据文件均包含与 CTAS 语句关联的 queryID。 因为数据和原因位于单独的文件中，相应的文件具有匹配的后缀。 
   
  分片外部表选项  
  为[弹性数据库查询](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)指定外部数据源（非 SQL Server 数据源）和分发方法。  

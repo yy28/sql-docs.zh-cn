@@ -2,7 +2,7 @@
 title: SQL Server Integration Services (SSIS) Scale Out 故障排除 | Microsoft Docs
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,11 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5baceaa51a0e4f4b1059bce5e19a0fd79fa3a71d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d1fa967fa5e755a8072a6837df44c327b39087c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
 
@@ -141,7 +141,15 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     值数据：0 (False)
 
-4.  如果不能在步骤 2 中清除所有非自签名证书。 在步骤 3 中将注册表项的值设为 2。
+4.  如果不能清理如步骤 2 中所述的所有非自签名证书，将下面的注册表项值设置为 2。
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
+
+    值名称：ClientAuthTrustMode 
+
+    值类型：REG_DWORD 
+
+    值数据：2
 
 ## <a name="http-request-error"></a>HTTP 请求错误
 

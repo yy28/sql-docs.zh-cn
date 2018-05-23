@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5387cd3acba6a6d4dab83213fbb44ef7c9e8c3e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29765164d6eb5e677c307091cf37aa8623674f00
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回当前用户的名称。 此函数等价于 USER_NAME()。
+此函数返回当前用户的名称。 此函数等效于 `USER_NAME()`。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,14 +50,14 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>Remarks  
-CURRENT_USER 返回当前安全上下文的名称。 如果在调用 EXECUTE AS 开关上下文之后执行 CURRENT_USER，CURRENT_USER 将返回模拟上下文的名称。 如果 Windows 主体以组的成员身份的方式访问数据库，将返回该 Windows 主体的名称，而不是这个组的名称。
+`CURRENT_USER` 返回当前安全上下文的名称。 如果在 `EXECUTE AS` 的调用切换上下文后执行 `CURRENT_USER`，`CURRENT_USER` 将返回被模拟上下文的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 `CURRENT_USER` 将返回 Windows 主体的名称，而不是该组名。
   
-若要返回当前用户的登录名，请参阅[SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)。
+若要了解如何返回当前用户的登录名，请参阅 [SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-currentuser-to-return-the-current-user-name"></a>A. 使用 CURRENT_USER 返回当前用户名称  
-以下示例返回当前用户的名称。
+此示例返回当前用户的名称。
   
 ```sql
 SELECT CURRENT_USER;  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="b-using-currentuser-as-a-default-constraint"></a>B. 使用 CURRENT_USER 作为 DEFAULT 约束  
-以下示例创建的表使用 `CURRENT_USER` 作为销售行上的 `DEFAULT` 列的 `order_person` 约束。
+此示例创建的表使用 `CURRENT_USER` 作为销售行上 `DEFAULT` 列的 `order_person` 约束。
   
 ```sql
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ order_person char(30) NOT NULL DEFAULT CURRENT_USER
 GO  
 ```  
   
-以下代码在表中插入记录。 执行这些语句的用户名为 `Wanida`。
+此示例在表中插入记录。 名为 `Wanida` 的用户执行这些语句。
   
 ```sql
 INSERT orders22 (cust_id, order_amt)  
@@ -96,7 +96,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-下面的查询从 `orders22` 表中选择所有信息。
+此查询从 `orders22` 表中选择所有信息。
   
 ```sql
 SELECT * FROM orders22;  
@@ -114,12 +114,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 从模拟上下文使用 CURRENT_USER  
-在以下示例中，用户 `Wanida` 执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码。
+在此示例中，用户 `Wanida` 执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码。
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Arnalfo';  
+EXECUTE AS USER = 'Wanida';  
 GO  
 SELECT CURRENT_USER;  
 GO  

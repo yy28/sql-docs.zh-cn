@@ -25,16 +25,16 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 481c4205bec9032b31b4405830827405050abb8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a608d12c790b9b9808ef0f1d84264f1423ba472b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回连接上打开的上一个游标中的当前限定行的数目。 为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可异步填充大型键集和静态游标。 可调用 @@CURSOR_ROWS 以确定当 @@CURSOR_ROWS 被调用时检索了游标符合条件的行数。
+它返回在连接上打开的上一个游标中当前拥有的限定行的数目。 为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可异步填充大型键集和静态游标。 可调用 `@@CURSOR_ROWS` 以确定当 @@CURSOR_ROWS 被调用时检索了游标符合条件的行数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +49,18 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="return-value"></a>返回值  
   
-|返回值|Description|  
+|返回值|描述|  
 |---|---|
 |-m|游标被异步填充。 返回的值 (-m) 是键集中当前的行数*m*。|  
-|-1|游标为动态游标。 因为动态游标可反映所有更改，所以游标符合条件的行数不断变化。 因此，永远不能确定已检索到所有符合条件的行。|  
+|-1|游标为动态游标。 因为动态游标可反映所有更改，所以游标符合条件的行数不断变化。 游标不一定检索所有符合条件的行。|  
 |0|没有已打开的游标，对于上一个打开的游标没有符合条件的行，或上一个打开的游标已被关闭或被释放。|  
 |*n*|游标已完全填充。 返回值 (n) 是游标中的总行数。|  
   
 ## <a name="remarks"></a>Remarks  
-如果上一个游标是异步打开的，则 @@CURSOR_ROWS 返回的数字是负数。 如果 sp_configure cursor threshold 的值大于 0，且游标结果集中的行数大于游标阈值，则异步打开键集驱动程序或静态游标。
+如果异步打开最后一个游标，`@@CURSOR_ROWS` 返回负数。 如果 sp_configure cursor threshold 的值超过 0，且游标结果集中的行数大于游标阈值，则异步打开键集驱动程序或静态游标。
   
 ## <a name="examples"></a>示例  
-下面的示例声明了一个游标，并且使用 `SELECT` 显示 `@@CURSOR_ROWS` 的值。 在游标打开前，该设置的值为 `0`，值 `-1` 则表示游标键集被异步填充。
+此示例首先声明了一个游标，然后使用 `SELECT` 显示 `@@CURSOR_ROWS` 的值。 在游标打开前，该设置的值为 `0`，之后其值为 `-1`，后者表示游标键集被异步填充。
   
 ```sql
 USE AdventureWorks2012;  

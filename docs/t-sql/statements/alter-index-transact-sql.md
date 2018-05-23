@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7d913d7cf3214acb8683bca2bb0a7ebca0e7b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbd5a65f85fa7b54964abf60e01c24a94969753e
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -242,7 +242,7 @@ PARTITION
  PARTITION = ALL 重新生成所有分区。  
   
 > [!WARNING]
->  对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不支持。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。 我们建议当分区数超过 1000 时，仅使用对齐索引。  
+> 对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不支持。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。 我们建议当分区数超过 1000 时，仅使用对齐索引。  
   
  *partition_number*  
    
@@ -260,14 +260,11 @@ PARTITION
  将索引标记为已禁用，从而不能由 [!INCLUDE[ssDE](../../includes/ssde-md.md)]使用。 可禁用任何索引。 已禁用的索引的索引定义保留在没有基础索引数据的系统目录中。 禁用聚集索引将阻止用户访问基础表数据。 若要启用索引，请使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING。 有关详细信息，请参阅 [禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)和[启用索引和约束](../../relational-databases/indexes/enable-indexes-and-constraints.md)。  
   
  对行存储索引执行 REORGANIZE  
- 对于行存储索引，REORGANIZE 指定要重新组织索引叶级别。  REORGANIZE 操作：  
+ 对于行存储索引，REORGANIZE 指定要重新组织索引叶级别。 REORGANIZE 操作：  
   
 -   始终联机执行。 这意味着不保留长期阻塞的表锁，且对基础表的查询或更新可以在 ALTER INDEX REORGANIZE 事务处理期间继续。  
-  
 -   不允许用于禁用的索引  
-  
 -   在 ALLOW_PAGE_LOCKS 设置为 OFF 时不允许执行  
-  
 -   当在事务中执行而事务回滚时不会回滚。  
   
 REORGANIZE WITH **(** LOB_COMPACTION = { **ON** | OFF } **)**  
@@ -289,10 +286,8 @@ LOB_COMPACTION = OFF
   
 -   OFF 对堆没有影响。  
   
-对列存储索引执行 REORGANIZE  
-REORGANIZE 联机执行。  
-  
-对于列存储索引，REORGANIZE 会将每个关闭的增量行组作为压缩行组压缩到列存储中。  
+ 对列存储索引执行 REORGANIZE  
+ 对于列存储索引，REORGANIZE 会将每个关闭的增量行组作为压缩行组压缩到列存储中。 始终联机执行 REORGANIZE 操作。 这意味着不保留长期阻塞的表锁，且对基础表的查询或更新可以在 ALTER INDEX REORGANIZE 事务处理期间继续。 
   
 -   无需 REORGANIZE 即可将关闭的增量行组移动到压缩行组中。 后台 tuple-mover (TM) 进程会定期唤醒以压缩关闭的增量行组。 建议在 tuple-mover 落后时使用 REORGANIZE。 REORGANIZE 可以更主动地压缩行组。  
   
@@ -304,7 +299,7 @@ REORGANIZE 联机执行。
   
 -   合并一个或多个压缩行组以将每个行组的行增加到最多为 1,024,576 行。 例如，如果批量导入 5 批 102,400 行，则会获得 5 个压缩行组。 如果运行 REORGANIZE，则这些行组会合并为 1 个大小为 512,000 的压缩行组。 这假定不存在任何字典大小或内存限制。  
   
--   对于在其中已逻辑删除了 10% 或更多行的行组，SQL Server 会尝试将此行组与一个或多个行组合并。    例如，行组 1 使用 500,000 行进行压缩，行组 21 使用最大值 1,048,576 行进行压缩。  行组 21 删除了 60% 的行，剩下 409,830 行。 SQL Server 会优先合并这两个行组以压缩具有 909,830 行的新行组。  
+-   对于在其中已逻辑删除了 10% 或更多行的行组，SQL Server 会尝试将此行组与一个或多个行组合并。 例如，行组 1 使用 500,000 行进行压缩，行组 21 使用最大值 1,048,576 行进行压缩。  行组 21 删除了 60% 的行，剩下 409,830 行。 SQL Server 会优先合并这两个行组以压缩具有 909,830 行的新行组。  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
@@ -344,7 +339,7 @@ FILLFACTOR = fillfactor
  若要查看填充因子设置，请使用 **sys.indexes**。  
   
 > [!IMPORTANT]
->  使用 FILLFACTOR 值创建或更改聚集索引会影响数据占用的存储空间量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]在创建聚集索引时会再分发数据。  
+> 使用 FILLFACTOR 值创建或更改聚集索引会影响数据占用的存储空间量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]在创建聚集索引时会再分发数据。  
   
  SORT_IN_TEMPDB = { ON | OFF }  
  
@@ -633,27 +628,34 @@ ABORT
 中止已声明为可恢复的正在运行或已暂停的索引操作。 必须显式执行 **ABORT** 命令才能终止可恢复索引重新生成操作。 失败或暂停可恢复索引操作不会终止其执行；而是将操作停留在无限期暂停状态。
   
 ## <a name="remarks"></a>Remarks  
- ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组。 此语句不能用于修改索引定义，如添加或删除列，或更改列的顺序。 使用带有 DROP_EXISTING 子句的 CREATE INDEX 执行这些操作。  
+`ALTER INDEX` 不能用于对索引重新分区或将索引移到其他文件组。 此语句不能用于修改索引定义，如添加或删除列，或更改列的顺序。 将 `CREATE INDEX` 与 `DROP_EXISTING` 子句配合使用，执行下列操作。  
   
- 未显式指定选项时，则应用当前设置。 例如，如果未在 REBUILD 子句中指定 FILLFACTOR 设置，将在重新生成过程中使用系统目录中存储的填充因子值。 若要查看当前索引选项设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
+未显式指定选项时，则应用当前设置。 例如，如果未在 `REBUILD` 子句中指定 `FILLFACTOR` 设置，将在重新生成过程中使用系统目录中存储的填充因子值。 若要查看当前索引选项设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
-> [!NOTE]
-> 系统目录中不存储 ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值。 除非在索引语句中指定，否则，将使用选项的默认值。
+`ONLINE`、`MAXDOP` 和 `SORT_IN_TEMPDB` 的值不存储在系统目录中。 除非在索引语句中指定，否则，将使用选项的默认值。
   
- 在多处理器计算机中，就像其他查询那样，ALTER INDEX REBUILD 自动使用更多处理器来执行与修改索引相关联的扫描和排序操作。 运行 ALTER INDEX REORGANIZE 时，无论是否有 LOB_COMPACTION，**max degree of parallelism** 值均为单个线程化操作。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+在多处理器计算机中，就像其他查询那样，`ALTER INDEX ... REBUILD` 自动使用更多处理器来执行与修改索引相关联的扫描和排序操作。 运行 `ALTER INDEX ... REORGANIZE` 时，无论是否有 `LOB_COMPACTION`，max degree of parallelism 值均为单个线程化操作。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
- 如果索引所在的文件组脱机或设置为只读，则无法重新组织或重新生成索引。 如果指定了关键字 ALL，但有一个或多个索引位于脱机文件组或只读文件组中，该语句将失败。  
+> [!IMPORTANT]
+> 如果索引所在的文件组脱机或设置为只读，则无法重新组织或重新生成索引。 如果指定了关键字 `ALL`，但有一个或多个索引位于脱机文件组或只读文件组中，该语句将失败。  
   
 ## <a name="rebuilding-indexes"></a> 重新生成索引  
- 重新生成索引将会删除并重新创建索引。 这将根据指定的或现有的填充因子设置压缩页来删除碎片、回收磁盘空间，然后对连续页中的索引行重新排序。 如果指定 ALL，将删除表中的所有索引，然后在单个事务中重新生成。 不必预先删除 FOREIGN KEY 约束。 重新生成具有 128 个区或更多区的索引时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]延迟实际的页释放及其关联的锁，直到事务提交。  
+重新生成索引将会删除并重新创建索引。 这将根据指定的或现有的填充因子设置压缩页来删除碎片、回收磁盘空间，然后对连续页中的索引行重新排序。 如果指定 `ALL`，将删除表中的所有索引，然后在一个事务中重新生成。 不必预先删除外键约束。 重新生成具有 128 个区或更多区的索引时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]延迟实际的页释放及其关联的锁，直到事务提交。  
+ 
+有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。 
   
- 重新生成或重新组织小索引不会减少碎片。 小索引的页面有关存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少小索引中的碎片。  
+> [!NOTE]
+> 重新生成或重新组织小索引不会减少碎片。 小索引的页面有关存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少小索引中的碎片。  
   
- 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 CREATE STATISTICS 或 UPDATE STATISTICS 以及 FULLSCAN 子句。  
+> [!IMPORTANT]
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建或重新生成索引时，将通过扫描表中的所有行来创建或更新统计信息。
+> 
+> 但是，从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成这些统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS` 以及 `FULLSCAN` 子句。  
   
- 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您有时可以重新生成非聚集索引以纠正硬件故障导致的不一致问题。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，您仍然可以通过脱机重新生成非聚集索引来纠正索引和聚集索引之间的这种不一致问题。 但是，您不能通过联机重新生成索引来纠正非聚集索引的不一致，因为联机重新生成机制将会使用现有的非聚集索引作为重新生成的基础，因此仍存在不一致。 脱机重新生成索引有时会强制扫描聚集索引（或堆）并因此删除不一致。 要确保从聚集索引重新生成，请删除并重新创建非聚集索引。 与早期版本一样，建议通过从备份还原受影响的数据来从不一致状态进行恢复；但是，您可以通过脱机重新生成非聚集索引来纠正索引的不一致。 有关详细信息，请参阅 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。  
+在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您有时可以重新生成非聚集索引以纠正硬件故障导致的不一致问题。    
+在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，您仍然可以通过脱机重新生成非聚集索引来纠正索引和聚集索引之间的这种不一致问题。 但是，您不能通过联机重新生成索引来纠正非聚集索引的不一致，因为联机重新生成机制将会使用现有的非聚集索引作为重新生成的基础，因此仍存在不一致。 脱机重新生成索引有时会强制扫描聚集索引（或堆）并因此删除不一致。 要确保从聚集索引重新生成，请删除并重新创建非聚集索引。 与早期版本一样，建议通过从备份还原受影响的数据来从不一致状态进行恢复；但是，您可以通过脱机重新生成非聚集索引来纠正索引的不一致。 有关详细信息，请参阅 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。  
   
- 若要重新生成聚集列存储索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将：  
+若要重新生成聚集列存储索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将：  
   
 1.  在重新生成进行时获取表或分区上的排他锁。 在重新生成期间数据“处于脱机状态”并且不可用。  
   
@@ -664,28 +666,31 @@ ABORT
 4.  要求物理介质上的空间，以便在进行重新生成时存储列存储索引的两个副本。 在重新生成完成后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除原始聚集列存储索引。  
   
 ## <a name="reorganizing-indexes"></a> 重新组织索引  
- 使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。 若要查看填充因子设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
+使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。 若要查看填充因子设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
- 如果指定 ALL，将重新组织表中的关系索引（包括聚集索引和非聚集索引）和 XML 索引。 指定 ALL 时应用某些限制，请参阅“参数”部分的 ALL 定义。  
+如果指定了 `ALL`，将重新组织表中的关系索引（包括聚集索引和非聚集索引）和 XML 索引。 指定 `ALL` 时应用某些限制，请参阅本文“参数”部分的 `ALL` 定义。  
   
- 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+ 
+> [!IMPORTANT]
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重新组织索引时，不更新统计信息。
   
 ## <a name="disabling-indexes"></a> 禁用索引  
- 禁用索引可防止用户访问该索引，对于聚集索引，还可防止用户访问基础表数据。 索引定义保留在系统目录中。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用聚集索引将阻止对数据的访问，但在删除或重新生成索引之前，数据在 B 树中一直保持未维护的状态。 若要查看已启用索引或已禁用的索引的状态，请查询 **sys.indexes** 目录视图中的 **is_disabled** 列。  
+禁用索引可防止用户访问该索引，对于聚集索引，还可防止用户访问基础表数据。 索引定义保留在系统目录中。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用聚集索引将阻止对数据的访问，但在删除或重新生成索引之前，数据在 B 树中一直保持未维护的状态。 若要查看已启用索引或已禁用的索引的状态，请查询 **sys.indexes** 目录视图中的 **is_disabled** 列。  
   
- 如果表位于事务复制发布中，则无法禁用任何与主键列关联的索引。 复制需要使用这些索引。 若要禁用索引，必须先从发布中删除该表。 有关详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
+如果表位于事务复制发布中，则无法禁用任何与主键列关联的索引。 复制需要使用这些索引。 若要禁用索引，必须先从发布中删除该表。 有关详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
- 使用 ALTER INDEX REBUILD 语句或 CREATE INDEX WITH DROP_EXISTING 语句启用索引。 重新生成已禁用聚集索引不能在 ONLINE 选项设置为 ON 时执行。 有关详细信息，请参阅 [禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。  
+使用 ALTER INDEX REBUILD 语句或 CREATE INDEX WITH DROP_EXISTING 语句启用索引。 重新生成已禁用聚集索引不能在 ONLINE 选项设置为 ON 时执行。 有关详细信息，请参阅 [禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。  
   
 ## <a name="setting-options"></a>“设置选项”  
- 您可以为指定的索引设置选项 ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE，而不重新生成或重新组织该索引。 修改的值立即应用于索引。 若要查看这些设置，请使用 **sys.indexes**。 有关详细信息，请参阅 [设置索引选项](../../relational-databases/indexes/set-index-options.md)。  
+可为指定索引设置选项 `ALLOW_ROW_LOCKS`、`ALLOW_PAGE_LOCKS`、`IGNORE_DUP_KEY` 和 `STATISTICS_NORECOMPUTE`，而无需重新生成或重新组织该索引。 修改的值立即应用于索引。 若要查看这些设置，请使用 **sys.indexes**。 有关详细信息，请参阅 [设置索引选项](../../relational-databases/indexes/set-index-options.md)。  
   
 ### <a name="row-and-page-locks-options"></a>行锁和页锁选项  
- 如果 ALLOW_ROW_LOCKS = ON 并且 ALLOW_PAGE_LOCK = ON，则当访问索引时将允许行级别、页级别和表级别的锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将选择相应的锁，并且可以将锁从行锁或页锁升级到表锁。  
+如果 `ALLOW_ROW_LOCKS = ON` 并且 `ALLOW_PAGE_LOCK = ON`，则当访问索引时将允许行级别、页级别和表级别的锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将选择相应的锁，并且可以将锁从行锁或页锁升级到表锁。  
   
- 如果 ALLOW_ROW_LOCKS = OFF 并且 ALLOW_PAGE_LOCK = OFF，则当访问索引时只允许表级锁。  
+如果 `ALLOW_ROW_LOCKS = OFF` 并且 `ALLOW_PAGE_LOCK = OFF`，则当访问索引时将仅允许表级别的锁。  
   
- 设置行锁或页锁选项时，如果指定 ALL，这些设置将应用于所有索引。 基础表为堆时，通过以下方式应用这些设置：  
+设置行锁或页锁选项时，如果指定了 `ALL`，这些设置将应用于所有索引。 基础表为堆时，通过以下方式应用这些设置：  
   
 |||  
 |-|-|  
@@ -694,28 +699,27 @@ ABORT
 |ALLOW_PAGE_LOCKS = OFF|完全针对非聚集索引。 这意味着不允许对非聚集索引使用所有页锁。 在堆中，仅不允许使用有页的共享 (S) 锁、更新 (U) 锁和排他 (X) 锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]仍然可以获取意向页锁（IS、IU 或 IX），供内部使用。|  
   
 ## <a name="online-index-operations"></a> 联机索引操作  
- 重新生成索引且 ONLINE 选项设置为 ON 时，基础对象、表和关联的索引均可用于查询和数据修改。 您也可以联机重新生成单个分区上某索引的一部分。 更改过程中，排他表锁只保留非常短的时间。  
+重新生成索引且 ONLINE 选项设置为 ON 时，基础对象、表和关联的索引均可用于查询和数据修改。 您也可以联机重新生成单个分区上某索引的一部分。 更改过程中，排他表锁只保留非常短的时间。  
   
- 重新组织索引始终联机执行。 该进程不长期保留锁，因此，不阻塞正在运行的查询或更新。  
+重新组织索引始终联机执行。 该进程不长期保留锁，因此，不阻塞正在运行的查询或更新。  
   
- 只有在执行以下操作时，才能对同一个表或表部分执行并发联机索引操作：  
+只有在执行以下操作时，才能对同一个表或表部分执行并发联机索引操作：  
   
 -   创建多个非聚集索引。  
 -   在同一个表中重新组织不同索引。  
 -   在同一个表中重新生成不重叠的索引时，重新组织不同的索引。  
   
- 同一时间执行的所有其他联机索引操作都将失败。 例如，您不能在同一个表中同时重新生成两个索引或更多索引，也不能在同一个表中重新生成现有索引时创建新的索引。  
+同一时间执行的所有其他联机索引操作都将失败。 例如，您不能在同一个表中同时重新生成两个索引或更多索引，也不能在同一个表中重新生成现有索引时创建新的索引。  
 
 ### <a name="resumable-indexes"></a> 可恢复索引操作
 
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
-ONLINE INDEX REBUILD 可使用 RESUMABLE = ON 选项指定为可恢复。 
--  RESUMABLE 选项对于给定索引在元数据不持久，并且仅适用于当前 DDL 语句的持续时间。  因此，必须显式指定 RESUMABLE=ON 子句才能启用可恢复性。
--  请注意两个不同的 MAX_DURATION 选项。 一个与 low_priority_lock_wait 相关，另一个与 RESUMABLE=ON 选项相关。
-   -  RESUMABLE=ON 选项或 **low_priority_lock_wait** 参数选项支持 MAX_DURATION 选项。 
+联机索引重新生成可使用 `RESUMABLE = ON` 选项指定为可恢复。 
+-  `RESUMABLE` 选项对于给定索引在元数据不持久，并且仅适用于当前 DDL 语句的持续时间。 因此，必须显式指定 `RESUMABLE = ON` 子句才能启用可恢复性。
+-  RESUMABLE = ON 选项或 low_priority_lock_wait 参数选项支持 MAX_DURATION 选项。 
    -  用于 RESUMABLE 选项的 MAX_DURATION 为重新生成的索引指定时间间隔。 使用此时间之后，索引重新生成会暂停或完成其执行。 由用户确定何时可以恢复暂停的索引的重新生成。 MAX_DURATION 的**时间**（以分钟为单位）必须大于 0 分钟并且小于或等于一周（7 * 24 * 60 = 10080 分钟）。 让索引操作长时间暂停可能会影响特定表的 DML 性能以及数据库磁盘容量，因为原始索引和新创建的索引需要磁盘空间并且需要在 DML 操作期间更新。 如果省略 MAX_DURATION 选项，则索引操作会继续，直到其完成或发生失败。 
--   通过 \<low_priority_lock_wait> 参数选项可以确定在 SCH-M 锁上阻塞时，索引操作如何才能继续。
+   -  通过 \<low_priority_lock_wait> 参数选项可以确定在 SCH-M 锁上阻塞时，索引操作如何才能继续。
  
 -  使用相同参数重新执行原始 ALTER INDEX REBUILD 语句会恢复暂停的索引重新生成操作。 还可以通过执行 ALTER INDEX RESUME 语句来恢复暂停的索引重新生成操作。
 -  可恢复索引不支持 SORT_IN_TEMPDB=ON 选项 

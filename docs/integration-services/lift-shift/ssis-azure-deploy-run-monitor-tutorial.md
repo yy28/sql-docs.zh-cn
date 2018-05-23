@@ -1,5 +1,5 @@
 ---
-title: 在 Azure 上部署、运行和监视 SSIS 包 | Microsoft Docs
+title: 在 Azure 中部署和运行 SSIS 包 | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>在 Azure 上部署、运行和监视 SSIS 包
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>在 Azure 中部署和运行 SSIS 包
 本教程演示如何将 SQL Server Integration Services 项目部署到 Azure SQL 数据库上的 SSISDB 目录数据库、在 Azure-SSIS Integration Runtime 中运行包，以及监视正在运行的包。
 
 ## <a name="prerequisites"></a>必备条件
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 
 2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息：
 
-   | 设置       | 建议的值 | Description | 
+   | 设置       | 建议的值 | 描述 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |

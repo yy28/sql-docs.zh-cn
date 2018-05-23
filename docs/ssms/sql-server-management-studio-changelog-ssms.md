@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-版本号：17.6<br>
+版本号：17.7<br>
+内部版本号：14.0.17254.0<br>
+发布日期：2018 年 5 月 9 日
+
+### <a name="whats-new"></a>新增功能
+
+**常规 SSMS**
+
+复制监视器：   
+- 现在，在发布服务器数据库和/或分发服务器数据库属于可用性组的情况下，复制监视器支持注册侦听器。 现在可以监视发布服务器数据库和/或分发数据库属于 AlwaysOn 的复制环境。 
+ 
+Azure SQL 数据仓库： 
+- 为 Azure SQL 数据仓库的外部表添加了“已拒绝的行位置”支持。 
+
+**Integration Services (IS)**
+
+- 为部署到 Azure SQL 数据库的 SSIS 包添加了计划安排功能。 本地 SQL Server 和 SQL 数据库托管实例（预览版）将 SQL Server 代理作为一级作业计划程序，与之不同的是，SQL 数据库并没有内置计划程序。 这项新的 SSMS 功能可提供类似于 SQL Server 代理的熟悉用户界面，用于计划安排部署到 SQL 数据库的包。 如果要使用 SQL 数据库承载 SSIS 目录数据库、SSISDB，可使用此 SSMS 功能生成计划 SSIS 包所需的数据工厂管道、活动和触发器。 然后可在数据工厂中编辑和扩展这些对象。 有关详细信息，请参阅[通过 SSMS 计划安排 Azure SQL 数据库上的 SSIS 包执行](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)。 若要了解 Azure 数据工厂管道、活动和触发器的详细信息，请参阅 [Azure 数据工厂中的管道和活动](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)和 [Azure 数据工厂中的管道执行和触发器](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)。
+- 支持在 SQL 代理中计划安排在 SQL 托管实例上执行的 SSIS 包。 现在可以创建 SQL 代理作业，在托管实例上执行 SSIS 包。 
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS** 
+
+维护计划：   
+- 修复了尝试更改现有维护计划时会引发异常的错误。 有关详细信息，请参阅[单击维护计划中的日程安排时 SSMS 17.6 崩溃](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924)。
+
+Always On： 
+- 修复了 AlwaysOn 延迟仪表板无法与 SQL Server 2012 一起使用的问题。
+ 
+脚本： 
+- 修复了针对 Azure SQL 数据仓库的存储过程编写脚本不适用于非管理员用户的问题。
+- 修复了针对 Azure SQL 数据库编写数据库脚本时不会为 SCOPED CONFIGURATION 属性编写脚本的问题。
+ 
+遥测： 
+- 修复了选择退出发送遥测后尝试连接服务器时 SSMS 崩溃的问题。
+ 
+Azure SQL 数据库： 
+- 修复了用户无法设置或更改兼容性级别（下拉列表为空）的问题。 注意：若要将兼容性级别设置为 150，用户仍需使用“脚本”按钮并手动编辑脚本。 
+ 
+SMO： 
+- 公开了 SMO 中的“错误日志大小”设置。 有关详细信息，请参阅[设置 SQL Server 错误日志的最大大小](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115)。  
+- 修复了 Linux 上的 SMO 中的换行符脚本。
+- 改进了检索极少使用的属性时的杂项性能。  
+
+Intellisense： 
+- 性能改进：减少了列数据的 IntelliSense 查询量。 处理包含大量列的表时，此功能特别有用。 
+
+SSMS 用户设置：
+- 修复了不能正确调整选项页大小的问题。
+
+杂项：  
+- 改进了“统计详细信息”页上文本的显示方式。 
+
+**Integration Services (IS)**
+
+- 实现了对 Azure SQL 数据库托管实例的更好支持。
+- 修复了用户无法为 SQL Server 2014 或早期版本创建目录的问题。
+- 修复了两个有关报表问题：
+   - 删除了 Azure 服务器的计算机名称。
+   - 改进了对本地化对象名称的处理方式。
+
+
+### <a name="known-issues"></a>已知问题
+
+使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![下载](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 生成号：14.0.17230.0<br>
 发布日期：2018 年 3 月 20 日
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>新增功能
 
@@ -832,7 +901,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * SSMS 月度版本目前以数字命名。
 
-* [新身份验证选项**“Active Directory 通用身份验证”**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 这是一种由 Azure Active Directory 驱动的基于令牌的身份验证机制，支持多重身份验证、密码身份验证和集成身份验证机制。
+* [新身份验证选项 **“Active Directory 通用身份验证”**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 这是一种由 Azure Active Directory 驱动的基于令牌的身份验证机制，支持多重身份验证、密码身份验证和集成身份验证机制。
 
 * 新扩展事件模板匹配 SQL Server Profiler 模板的功能[（Microsoft Connect 项目 #2543925）。](../tools/sql-server-profiler/sql-server-profiler-templates.md)
 

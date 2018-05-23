@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 
  下表包含用于 Reporting Services SharePoint 共享服务的 PowerShell cmdlet。  
   
-|Cmdlet|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Install-SPRSService|安装并注册（或卸载）Reporting Services 共享服务。 这只能在 SharePoint 模式下具有 SQL Server Reporting Services 安装的计算机上进行。 对于安装，将发生两个操作：<br /><br /> -Reporting Services 服务安装在场中。<br /><br /> -Reporting Services 服务实例安装到当前计算机上。<br /><br /> 对于卸载，将发生两个操作：<br /><br /> -Reporting Services 服务从当前计算机上卸载。<br /><br /> -Reporting Services 服务从场中卸载。<br /><br /> <br /><br /> 如果在场中存在安装了 Reporting Services 服务的任何其他计算机，或者场中仍有 Reporting Services 服务应用程序在运行，将显示警告消息。|  
 |Install-SPRSServiceProxy|安装并注册（或卸载）SharePoint 场中的 Reporting Services 服务代理。|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 
  下表包含用于 Reporting Services 服务应用程序及其关联代理的 PowerShell cmdlet。  
   
-|cmdlet|Description|  
+|cmdlet|描述|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|获取一个或多个 Reporting Services 服务应用程序对象。|  
 |New-SPRSServiceApplication|创建一个新的 Reporting Services 服务应用程序及关联的数据库。<br /><br /> LogonType 参数：指定报表服务器是否使用 SSRS 应用程序池帐户或 SQL Server 登录名来访问报表服务器数据库。 有效值为<br /><br /> 0 Windows 身份验证<br /><br /> 1 SQL Server<br /><br /> 2 应用程序池帐户（默认值）|  
@@ -102,9 +102,9 @@ ms.lasthandoff: 05/03/2018
 |Get-SPRSDatabaseRightsScript|将数据库权限脚本输出到 Reporting Services 服务应用程序的屏幕。 系统会提示所需的用户和数据库，然后返回您可以运行以修改权限的 Transact SQL。 然后，您可以在 SQL Server Management Studio 中运行此脚本。|  
 |Get-SPRSDatabaseUpgradeScript|将数据库升级脚本输出到此屏幕。 该脚本将 Reporting Services 服务应用程序数据库升级到当前 Reporting Services 安装的数据库版本。|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services 自定义功能 cmdlet
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Reporting Services 自定义功能 cmdlet
   
-|Cmdlet|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|为指定的 Reporting Services 服务应用程序更新加密密钥并且重新加密其数据。|  
 |Restore-SPRSEncryptionKey|还原以前为 Reporting Services 服务应用程序备份的加密密钥。|  

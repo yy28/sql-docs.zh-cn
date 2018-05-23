@@ -66,20 +66,20 @@ ms.lasthandoff: 05/03/2018
   
 |策略名称|问题|类别**\***|方面|  
 |-----------------|-----------|--------------------|-----------|  
-|WSFC 群集状态|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|严重|SQL Server 实例|  
-|可用性组联机状态|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|严重|可用性组 (availability group)|  
+|WSFC 群集状态|[WSFC 群集服务处于脱机状态](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|严重|SQL Server 实例|  
+|可用性组联机状态|[可用性组处于脱机状态。](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|严重|可用性组 (availability group)|  
 |可用性组自动故障转移就绪|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|严重|可用性组 (availability group)|  
-|可用性副本数据同步状态|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性组 (availability group)|  
-|同步副本数据同步状态|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性组 (availability group)|  
-|可用性副本角色状态|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性组 (availability group)|  
-|可用性副本连接状态|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)。|警告|可用性组 (availability group)|  
-|可用性副本角色状态|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|严重|可用性副本|  
-|可用性副本连接状态|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|严重|可用性副本|  
+|可用性副本数据同步状态|[一些可用性副本未同步数据](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性组 (availability group)|  
+|同步副本数据同步状态|[一些同步副本不同步](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性组 (availability group)|  
+|可用性副本角色状态|[一些可用性副本不具有正常运行的角色](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性组 (availability group)|  
+|可用性副本连接状态|[断开一些可用性副本的连接](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)。|警告|可用性组 (availability group)|  
+|可用性副本角色状态|[可用性副本不具有运行状况良好的角色](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|严重|可用性副本|  
+|可用性副本连接状态|[断开可用性副本的连接](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|严重|可用性副本|  
 |可用性副本联接状态|[可用性副本未联接](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md)。|警告|可用性副本|  
-|可用性副本数据同步状态|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性副本|  
+|可用性副本数据同步状态|[一些可用性数据库的数据同步状态不正常](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性副本|  
 |可用性数据库挂起状态|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性数据库|  
-|可用性数据库联接状态|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性数据库|  
-|可用性数据库数据同步状态|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性数据库|  
+|可用性数据库联接状态|[未联接辅助数据库](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性数据库|  
+|可用性数据库数据同步状态|[可用性数据库的数据同步状态不正常](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性数据库|  
   
 > [!IMPORTANT]  
 >  **\*** 对于 AlwaysOn 策略，类别名称作为 ID 使用。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，请不要修改 AlwaysOn 类别的名称。  

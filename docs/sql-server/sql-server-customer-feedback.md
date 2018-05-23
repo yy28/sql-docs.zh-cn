@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>配置 SQL Server 以向 Microsoft 发送反馈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ AND instance_name = '_Total'
 - 通过使用错误和使用情况报告应用程序
 - 通过在服务器上设置注册表子项
 
-对于 Linux 上的 SQL Server，请参阅 [Linux 上的 SQL Server 客户反馈](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)
+对于 Linux 上的 SQL Server，请参阅 [Linux 上的 SQL Server 客户反馈](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)
 
 > [!NOTE]
 > 只能在付费版本的 SQL Server 中禁用向 Microsoft 发送信息的功能。
@@ -107,15 +106,15 @@ AND instance_name = '_Total'
 
     条目类型 DWORD：0 表示选择退出；1 表示选择加入
 
-此外，若要在 Visual Studio 级别禁用使用情况和错误报告，请设置以下注册表子项和设置：
+    此外，SSMS 17.x 基于 Visual Studio 2015 shell，且 Visual Studio 安装默认支持客户反馈。  
 
--    子项 = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    若要配置 Visual Studio 以在单台计算机上禁用客户反馈，将以下注册表子项的值更改为字符串“0”：  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    注册表项名称 = TurnOffSwitch
+    例如，将子项更改为下面的内容：  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    条目类型 DWORD：0 表示选择退出；1 表示选择加入
- 
-这些注册表子项上基于注册表的组策略适用于 SQL Server 2017 使用情况数据收集。
+    这些注册表子项上基于注册表的组策略适用于 SQL Server 2017 使用情况数据收集。
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>设置故障转储收集的注册表子项
 

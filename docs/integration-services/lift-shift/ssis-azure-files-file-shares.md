@@ -1,5 +1,5 @@
 ---
-title: 在本地和 Azure 中存储和检索文件共享上的文件 | Microsoft Docs
+title: 连接到本地和 Azure 中的文件和文件共享 | Microsoft Docs
 description: 本文介绍如何将本地和 Azure 中的文件系统和文件共享与 SSIS 结合使用。
 ms.date: 11/27/2017
 ms.topic: conceptual
@@ -9,13 +9,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7fcc0c0f61ce62a2e891d269eea16902ff691080
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6472263658ed831aade7d0951b10a712dfee312d
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>借助 SSIS 存储和检索本地和 Azure 中文件共享上的文件
+# <a name="connect-to-files-and-file-shares-on-premises-and-in-azure-with-ssis"></a>使用 SSIS 连接到本地和 Azure 中的文件和文件共享
 本文介绍将使用本地文件系统的包提升和迁移到 Azure 中的 SSIS 时，如何更新 SQL Server Integration Services (SSIS) 包。
 
 > [!IMPORTANT]

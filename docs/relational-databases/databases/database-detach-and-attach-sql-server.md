@@ -33,11 +33,11 @@ caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7254b34f1664953d92723371f26c3c58fdd168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,10 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Metadata"></a> 附加数据库时的元数据更改  
  分离再重新附加只读数据库后，会丢失有关当前差异基准的备份信息。 “差异基准”  是数据库或其文件或文件组子集中所有数据的最新完整备份。 如果没有基准备份信息，**master** 数据库会变得与只读数据库不同步，这样之后进行的差异备份可能会产生意外结果。 因此，如果对只读数据库使用差异备份，在重新附加数据库后，应通过进行完整备份来建立新的差异基准。 有关差异备份的信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
- 附加时，数据库会启动。 通常，附加数据库时会将数据库重置为它分离或复制时的状态。 但是，附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 此外，附加数据库时，TRUSTWORTHY 均设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+ 附加时，数据库会启动。 通常，附加数据库时会将数据库重置为它分离或复制时的状态。 但是，附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 
+
+ >[!IMPORTANT]
+ > 为安全起见，，默认情况下，每当附加数据库时，is_broker_enabled、is_honoor_broker_priority_on 和 is_trustworthy_on 的选项均设置为 OFF。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  有关元数据的详细信息，请参阅[使数据库在其他服务器上可用时管理元数据](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
   
 ### <a name="backup-and-restore-and-attach"></a>备份、还原及附加  
  与任何完全或部分脱机的数据库一样，不能附加正在还原文件的数据库。 如果停止了还原顺序，则可以附加数据库。 然后，可以重新启动还原顺序。  
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  无法在早期版本的 SQL Server 中附加由较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建的数据库。  
   
- 将数据库附加到其他服务器实例时，为了给用户和应用程序提供一致的体验，您最好在其他服务器实例上为数据库重新创建部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 将数据库附加到其他服务器实例时，为了给用户和应用程序提供一致的体验，您最好在其他服务器实例上为数据库重新创建部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **分离数据库**  

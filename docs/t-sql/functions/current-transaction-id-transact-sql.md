@@ -22,16 +22,16 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5170c6a3b96710ea42d1acdb88256c33be0eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a9583e40d73a48b7e8ddfdf8eddf8d38b743c7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-返回当前会话中当前事务的事务 ID。
+此函数返回当前会话中当前事务的事务 ID。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,7 +52,7 @@ CURRENT_TRANSACTION_ID( )
 任何用户都可返回当前会话的事务 ID。
   
 ## <a name="examples"></a>示例  
-以下示例返回当前会话的事务 ID：
+此示例返回当前会话的事务 ID：
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  

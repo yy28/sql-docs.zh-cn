@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a07cd66ebc67b5885ce535425ce8984f0181dc04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>使用 Windows 身份验证连接到本地数据源和 Azure 文件共享
+# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>在 SSIS 中使用 Windows 身份验证连接到本地数据源和 Azure 文件共享
 本文介绍如何将 Azure SQL 数据库上的 SSIS 目录配置为运行以下包：使用 Windows 身份验证连接到本地数据源和 Azure 文件共享的包。 可以使用 Windows 身份验证连接到本地和 Azure 虚拟机以及 Azure 文件中与 Azure SSIS Integration Runtime 位于同一虚拟网络的数据源。
 
 > [!WARNING]

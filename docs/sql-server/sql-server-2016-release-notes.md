@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ ms.lasthandoff: 05/03/2018
 SQL Server 2016 SP2 安装可能需要在安装后重新启动。 作为最佳做法，建议在安装 SQL Server 2016 SP2 后计划并执行重新启动。
 
 SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
-|功能|Description|详细信息|
+|功能|描述|详细信息|
 |   --- |   --- |   --- |
 |分发数据库清除过程已改进 |   分发数据库表过大导致出现阻塞和死锁情况。 改进的清理过程旨在消除其中某些阻塞或死锁情况的发生。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |更改跟踪清除    |   改进了更改跟踪端表的更改跟踪清除性能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |利用 CPU 超时来取消 Resource Governor 请求   |   如果已达到请求的 CPU 阈值，则通过实际取消请求改进查询请求的处理工作。 已在跟踪标志 2422 下启用此行为。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |用于在文件组中创建目标表的 SELECT INTO 语句    |   从 SQL Server 2016 SP2 开始，SELECT INTO T-SQL 语法支持在 T-SQL 语法中使用 ON <Filegroup name> 关键字将表加载到用户默认文件组以外的文件组。 |       |
 |TempDB 间接检查点已改进    |   已对 TempDB 的间接检查点进行改进，从而最大程度地减少 DPList 上的旋转锁争用。 此项改进让 SQL Server 2016 上的 TempDB 工作负载可以在为 TempDB 启用了间接检查点功能的情况下向外扩展。    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
-|大内存计算机上的数据库备份性能已改进  |   SQL Server 2016 SP2 优化了备份过程中对正在进行的 I/O 的排出方式，从而显著提高了中小型数据库的备份性能。 在 2TB 计算机上进行系统数据库备份时，可发现改进后的性能较以前提高了 100 倍以上。 下面分享了各种数据库大小的更广泛的性能测试结果。 当备份页面和备份 I/O 占用的时间超过缓冲池迭代时，数据库大小将增加，此时性能提高的幅度会降低。 对于在具备较大内存的大型高端服务器上托管多个小型数据库的客户，此项改进有助于提升备份性能。 |       |
+|大内存计算机上的数据库备份性能已改进  |   SQL Server 2016 SP2 优化了备份过程中对正在进行的 I/O 的排出方式，从而显著提高了中小型数据库的备份性能。 在 2TB 计算机上进行系统数据库备份时，可发现改进后的性能较以前提高了 100 倍以上。 当备份页面和备份 I/O 占用的时间超过缓冲池迭代时，数据库大小将增加，此时性能提高的幅度会降低。 对于在具备较大内存的大型高端服务器上托管多个小型数据库的客户，此项更改有助于提升备份性能。    |       |
 |为启用了 TDE 的数据库提供的 VDI 备份压缩支持   |   SQL Server 2016 SP2 添加了 VDI 支持，允许 VDI 备份解决方案将压缩功能用于启用了 TDE 的数据库。 借助此项改进，引进了新的备份格式，为启用了 TDE 的数据库提高备份压缩支持。 SQL Server 引擎将以透明的方式处理新的和旧的备份格式，从而还原备份。   |       |
 |复制代理配置文件参数的动态加载    |   凭借此项增强功能，可在不重启代理的情况下动态加载复制代理参数。 此更改仅适用于最常用的代理配置文件参数。 |       |
 |支持用于统计信息创建/更新的 MAXDOP 选项 |    此项增强功能允许为 CREATE/UPDATE 统计信息语句指定 MAXDOP 选项，并确保创建或重新生成所有类型索引过程中，在更新统计信息时采用的是正确的 MAXDOP 设置（如果存在 MAXDOP 选项）   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
 |增量统计信息的自动更新统计信息功能已改进 |    在某些情况下，如果表中的多个分区出现大量数据更改，递增统计信息的总修改计数器超过自动更新阈值，但是任何单独分区都未超过自动更新阈值，那么统计信息更新可能会推迟，直到该表中出现更多的修改。 已在跟踪标志 11024 下更正此行为。   |       |
 
 SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
-|功能 |Description   |详细信息   |
+|功能 |描述   |详细信息   |
 |   --- |   --- |   --- |
 |对可用性组中数据库的完整 DTC 支持    |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |       |
 |更新到 sys.databases is_encrypted 列，准确反映 TempDB 的加密状态 |   对于 TempDB，sys.databases 中 is_encryptedcolumn 列的值为 1，即使是在关闭所有用户数据库的加密并重新启动 SQL Server 后也一样。 由于 TempDB 在这种情况下不再处于加密状态，因此该列中的值本该为 0。 从 SQL Server 2016 SP2 开始，sys.databases.is_encrypted 现可准确反映 TempDB 的加密状态。  |       |
@@ -64,6 +64,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 |用于监视 TempDB 版本存储空间使用情况的新 DMV    |   SQL Server 2016 SP2 中引入了新的 sys.dm_tran_version_store_space_usage DMV，用于监视 TempDB 的版本存储使用情况。 DBA 现可根据每个数据库的版本存储使用情况要求主动地规划 TempDB 大小，且在生产服务器上运行时无需任何性能开销。 |       |
 |对复制代理的完全转储支持 | 现在，如果复制代理遇到未经处理的异常，则会默认创建异常现象的微型转储。 这使得难以对未经处理的异常问题进行故障排除。 通过此更改，我们引入了新的注册表项，这将允许为复制代理创建完全转储。  |       |
 |针对可用性组的读取路由故障的扩展事件增强 |   在之前，如果存在路由列表但是其中没有可用于连接的服务器，则会激发 read_only_rout_fail xEvent。 SQL Server 2016 SP2 包含有助于故障排除的其他信息，并且还扩展了激发此 xEvent 的码位。  |       |
+|用于监视事务日志的新 DMV |   新增了 DMV sys.dm_db_log_stats，用于返回有关数据库的事务日志文件的摘要级别属性和信息。 |       |
 |用于监视 VLF 信息的新 DMV |   SQL Server 2016 SP2 引入了新的 DMV sys.dm_db_log_info，可公开类似于 DBCC LOGINFO 的 VLF 信息，用于监视、警报和避免客户遭遇潜在的 T 日志问题。    |       |
 |sys.dm_os_sys_info 中的处理器信息|   向 sys.dm_os_sys_info DMV 添加了新的列，用于公开与处理器相关的信息（如 socket_count 和 cores_per_numa）。  |       |
 |sys.dm_db_file_space_usage 中的盘区修改信息| 向 sys.dm_db_file_space_usage 添加了新的列，用于跟踪自上次完整备份以来修改的盘区数量。  |       |
@@ -105,7 +106,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
 下表总结了 SQL Server 2016 SP1 中提供的重要改进。
 
-|功能|Description|有关详细信息，请参阅：|
+|功能|描述|有关详细信息，请参阅：|
 |---|---|---|
 |在 TF 715 下与自动 TABLOCK 成堆的大容量插入| 跟踪标志 715 为没有非聚集索引的堆中的大容量加载操作启用表锁。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
 |CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -144,7 +145,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
 **问题及对用户的影响：** Microsoft 已发现影响 Microsoft VC++ 2013 运行时二进制文件的一个问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 现在有可用的更新来修复该问题。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请检查计算机是否需要 [KB 3164398](http://support.microsoft.com/kb/3164398)中所述的修补程序。 此修补程序也包含在 [SQL Server 2016 RTM 的累积更新包 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) 中。 
 
-**解决方案：**请使用下列解决方案之一：
+**解决方案：** 请使用下列解决方案之一：
 
 - 安装 [KB 3138367 - Visual C++ 2013 和 Visual C++ 可再发行包的更新](http://support.microsoft.com/kb/3138367)。 KB 是首选的解决方案。 可以在安装 SQL Server 2016 之前或之后安装此更新。 
 
@@ -160,7 +161,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
  
     如果使用 **KB 3164398**，可以在 SQL Server 安装过程中、通过 Microsoft 更新或从 Microsoft 下载中心进行安装。 
 
-    - **在 SQL Server 2016 安装过程中：**如果运行 SQL Server 安装程序的计算机具有 Internet 访问权限，那么作为整个 SQL Server 安装的一部分，SQL Server 安装程序将检查更新。 如果接受更新，安装程序将下载二进制文件并在安装过程中对文件进行更新。
+    - **在 SQL Server 2016 安装过程中：** 如果运行 SQL Server 安装程序的计算机具有 Internet 访问权限，那么作为整个 SQL Server 安装的一部分，SQL Server 安装程序将检查更新。 如果接受更新，安装程序将下载二进制文件并在安装过程中对文件进行更新。
 
     - **Microsoft 更新：** 该更新作为 SQL Server 2016 的重要的非安全更新，可从 Microsoft 更新获取。 通过 Microsoft 更新进行安装，更新后 SQL Server 2016 需要重新启动服务器。 
 
@@ -171,7 +172,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>与数据库或表名称中的特定字符有关的问题
 
-**问题和对客户的影响：**尝试对数据库或表启用 Stretch Database 将失败，并出现错误。 将对象名称从小写转换为大写时，如果名称中包含被视为其他字符的一个字符，则会出现此问题。 导致此问题的一个示例字符是字符“ƒ”（通过键入 ALT+159 创建）。
+**问题和对客户的影响：** 尝试对数据库或表启用 Stretch Database 将失败，并出现错误。 将对象名称从小写转换为大写时，如果名称中包含被视为其他字符的一个字符，则会出现此问题。 导致此问题的一个示例字符是字符“ƒ”（通过键入 ALT+159 创建）。
 
 **解决方法：** 如果想要对数据库或表启用 Stretch Database，唯一的方法是重命名对象并删除问题字符。
 
@@ -217,16 +218,17 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
  **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按 F1 时，将在浏览器中显示 F1 帮助文章的联机版本。 此问题在于基于浏览器的帮助，即使已配置并安装了本地帮助也不例外。 
 
-**更新内容：**在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。    
+**更新内容：** 在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。    
     
 * 在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings |HlpViewer_VisualStudio14_en US.settings 文件，并将下面代码中的日期更改为在将来的某个日期。
 
+```
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 
-## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+## <a name="additional-information"></a>其他信息
++ [SQL Server 2016 安装](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

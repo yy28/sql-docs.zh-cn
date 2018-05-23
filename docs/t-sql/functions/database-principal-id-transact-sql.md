@@ -25,16 +25,16 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: e0583570ce9a4d11b2e4aa6c019c8f4ccc753239
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e297fd93c5e91eac02008fab13d7c66c71ce0e90
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回当前数据库中的主体的 ID 号。 有关主体的详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。
+此函数返回当前数据库中的主体的 ID 号。 有关主体的详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,20 +46,19 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>参数  
 principal_name  
-是 sysname 类型的表达式，表示数据库主体。  
-如果省略 principal_name，则返回当前用户的 ID。 需要使用括号。
+sysname 类型的表达式，表示数据库主体。 如果省略 principal_name，`DATABASE_PRINCIPAL_ID` 返回当前用户的 ID。 `DATABASE_PRINCIPAL_ID` 需要使用括号。
   
 ## <a name="return-types"></a>返回类型
 **int**  
 数据库主体不存在时为 NULL。
   
 ## <a name="remarks"></a>Remarks  
-可以在选择列表、WHERE 子句或表达式允许的任意位置使用 DATABASE_PRINCIPAL_ID。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。
+在所选列表、WHERE 子句或允许使用表达式的任何位置使用 `DATABASE_PRINCIPAL_ID`。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-retrieving-the-id-of-the-current-user"></a>A. 检索当前用户的 ID  
-以下示例返回当前用户的数据库主体 ID。
+此示例返回当前用户的数据库主体 ID。
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID();  
@@ -67,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>B. 检索指定数据库主体的 ID  
-以下示例返回数据库角色 `db_owner` 的数据库主体 ID。
+此示例返回数据库角色 `db_owner` 的数据库主体 ID。
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID('db_owner');  

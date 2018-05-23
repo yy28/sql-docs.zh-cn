@@ -21,11 +21,11 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9536b898df7a0f232d81dc85be3f3d6526f0741d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-a-database"></a>附加数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
      **“状态”**  
      显示下表中相应的数据库状态。  
   
-    |图标|状态文本|Description|  
+    |图标|状态文本|描述|  
     |----------|-----------------|-----------------|  
     |（无图标）|（无文本）|此对象的附加操作尚未启动或者可能挂起。 这是打开该对话框时的默认值。|  
     |绿色的右向三角形|正在进行|已启动附加操作，但是该操作未完成。|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 05/03/2018
      显示所选数据库文件的路径。 可以手动编辑该路径。  
   
      **消息**  
-     显示空消息或**“找不到文件”**超链接。  
+     显示空消息或 **“找不到文件”** 超链接。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -163,7 +163,8 @@ ms.lasthandoff: 05/03/2018
   ``` 
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ <br>[使数据库在其他服务器上可用时管理元数据](/manage-metadata-when-making-a-database-available-on-another-server.md)  
  [分离数据库](../../relational-databases/databases/detach-a-database.md)  
   
   

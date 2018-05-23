@@ -1,7 +1,7 @@
 ---
 title: 联机索引操作准则 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 05/14/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 03b9ea68c0c0139a3faca89fb0e3c5c59e5b11f8
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,16 @@ ms.lasthandoff: 05/07/2018
 - 更新量大的工作负载可能出现一定程度的吞吐量下降（测试结果为下降幅度低于 10%）。
 
 通常情况下，可恢复和非可恢复的联机索引重新生成之间没有碎片整理质量差异。
+
+## <a name="online-default-options"></a>联机默认选项 
+
+通过设置 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 数据库范围的配置选项，可以在数据库级别设置默认的“联机”或“可恢复”选项。 使用以下默认选项，可避免意外执行使数据库脱机的操作。 这两个选项都会导致引擎自动将特定操作提升为联机或可恢复执行。  
+可将任一选项设置为 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 NEVER。 可为“联机”和“可恢复”设置不同的值。 
+
+ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 均仅适用于分别支持联机和可恢复语法的 DDL 语句。 例如，如果试图使用 ELEVATE_ONLINE=FAIL_UNSUPORTED 创建 XML 索引，操作将脱机运行，因为 XML 索引不支持 ONLINE= 语法。 该选项仅影响提交时未指定 ONLINE 或 RESUMABLE 选项的 DDL 语句。 例如，通过提交带有 ONLINE=OFF 或 RESUMABLE=OFF 的语句，用户可替代 FAIL_UNSUPPORTED 设置并以脱机和/或不可恢复的方式运行语句。 
+ 
+> [!NOTE]
+> ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 不适用于 XML 索引操作。 
  
 ## <a name="related-content"></a>相关内容  
  [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  

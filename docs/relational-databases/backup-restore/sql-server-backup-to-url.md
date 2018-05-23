@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e63134bbf85d2894140d8640fb5ade10daa4340f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 -   不支持备份到高级存储。  
   
--   使用页 blob 时支持的最大备份大小受到单个页 blob 的最大大小（即 1 TB）的限制。 使用块 blob 时支持的最大备份大小不受块 blob 的最大大小（即 200 GB）的限制，因为备份到块 blob 支持条带化以支持实质上更大的备份大小。  
+-   SQL Server 将使用页 blob 支持的最大备份大小限制为 1 TB。 并将使用块 blob 支持的最大备份大小限制为 200 MB 左右（50,000 块 * 4 MB MAXTRANSFERSIZE）。 块 blob 支持条带化，因而支持更大的备份大小。  
   
 -   可使用 TSQL、SMO, PowerShell cmdlet、SQL Server Management Studio 备份或还原向导发出备份或还原语句。   
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在“常规”页上，“目标”部分中，**URL**选项在“备份到：”下拉列表中可用。  **URL**选项用于向 Microsoft Azure 存储创建备份。 单击“添加”，“选择备份目标”对话框将打开：
    
-    1.  **Azure 存储容器：**用于存储备份文件的 Microsoft Azure 存储容器的名称。  从下拉列表中选择一个现有容器或手动输入该容器。 
+    1.  **Azure 存储容器：** 用于存储备份文件的 Microsoft Azure 存储容器的名称。  从下拉列表中选择一个现有容器或手动输入该容器。 
   
     2.  **共享访问策略：** 对手动输入的容器输入共享访问签名。  如果已选择现有容器，则此字段不可用。 
   
@@ -248,13 +248,13 @@ ms.lasthandoff: 05/03/2018
 
 4.  从“备份媒体类型:”下拉列表中选择 **URL**。  单击“添加”可打开“选择备份文件位置”对话框。
 
-    1.  **Azure 存储容器：**包含备份文件的 Microsoft Azure 存储容器的完全限定名称。  从下拉列表中选择一个现有容器或手动输入该完全限定容器名称。
+    1.  **Azure 存储容器：** 包含备份文件的 Microsoft Azure 存储容器的完全限定名称。  从下拉列表中选择一个现有容器或手动输入该完全限定容器名称。
       
     2.  **共享访问签名：**  用于输入指定容器的共享访问签名。
       
     3.  **添加：**  用于注册没有共享访问签名的现有容器。  请参阅[连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
       
-    4.  **确定：**SQL Server 使用所提供的 SQL 凭据信息连接到 Microsoft Azure 存储，然后打开“在 Microsoft Azure 上定位备份文件”对话框。 此页上显示位于存储容器中的备份文件。 选择要用于还原的文件，然后单击 **“确定”**。 此操作将返回“选择备份设备”对话框，而单击此对话框上的“确定”将返回“还原”主对话框，从中将可完成还原。 
+    4.  **确定：** SQL Server 使用所提供的 SQL 凭据信息连接到 Microsoft Azure 存储，然后打开“在 Microsoft Azure 上定位备份文件”对话框。 此页上显示位于存储容器中的备份文件。 选择要用于还原的文件，然后单击 **“确定”**。 此操作将返回“选择备份设备”对话框，而单击此对话框上的“确定”将返回“还原”主对话框，从中将可完成还原。 
   
      [还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)  
   

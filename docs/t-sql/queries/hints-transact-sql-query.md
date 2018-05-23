@@ -1,7 +1,7 @@
 ---
 title: 查询提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|queries
@@ -59,11 +59,11 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b7db0c558788f168324b121237181237dcb98e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -279,6 +279,9 @@ ms.lasthandoff: 05/03/2018
  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查询优化器[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，导致 SQL Server 使用联接的简单包含假设而非默认的基本包含假设来生成查询计划。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 等效。 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
  强制查询优化器使用与当前数据库兼容级别相对应的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示替代[数据库作用域域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION=ON 或[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
+* “DISABLE_INTERLEAVED_EXECUTION_TVF”对多语句表值函数禁用交错执行。
+* “DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK”禁用批处理模式内存授予反馈。
+* “DISABLE_BATCH_MODE_ADAPTIVE_JOINS”禁用批处理模式自适应联接。
  
 > [!TIP]
 > 提示名称不区分大小写。

@@ -13,19 +13,19 @@ ms.service: sql-database
 ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/10/2018
+ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc007f1021c68c782d8a3e2e426cad3c43f3047a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>用于 SQL 数据库和数据仓库的透明数据加密
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-透明数据加密有助于保护 Azure SQL 数据库和 Azure 数据仓库免受恶意活动的威胁。 它对数据库、关联备份和静态事务日志文件执行实时加密和解密，且无需更改应用程序。
+透明数据加密 (TDE) 有助于保护 Azure SQL 数据库和 Azure 数据仓库免受恶意活动的威胁。 它对数据库、关联备份和静态事务日志文件执行实时加密和解密，且无需更改应用程序。 默认情况下，TDE 对所有新部署的 Azure SQL 数据库启用，但可能需要对较旧的数据库手动启用。  
 
 透明数据加密使用称为数据库加密密钥 (DEK) 的对称密钥对整个数据库的存储进行加密。 此数据库加密密钥受透明数据加密保护程序保护。 该保护程序可以是服务托管的证书（服务托管的透明数据加密），也可以是存储在 Azure Key Vault 中的非对称密钥（“自带密钥”）。 在服务器级别设置透明数据加密保护程序。 
 
@@ -84,7 +84,7 @@ Microsoft 也可无缝移动和管理异地复制和还原所需的密钥。
 
 若要通过 PowerShell 配置透明数据加密，用户必须作为 Azure 所有者、参与者或 SQL 安全管理员进行连接。 
 
-| Cmdlet | Description |
+| Cmdlet | 描述 |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |启用或禁用数据库的透明数据加密|
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |获取数据库的透明数据加密状态 |
@@ -100,7 +100,7 @@ Microsoft 也可无缝移动和管理异地复制和还原所需的密钥。
 
 使用管理员或主数据库中 dbmanager 角色成员的登录名连接到数据库。
 
-| Command | Description |
+| Command | 描述 |
 | --- | --- |
 | [ALTER DATABASE（Azure SQL 数据库）](/sql/t-sql/statements/alter-database-azure-sql-database) | SET ENCRYPTION ON/OFF 可加密或解密数据库 |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |返回与数据库加密状态以及相关联数据库加密密钥有关的信息 |
@@ -113,7 +113,7 @@ Microsoft 也可无缝移动和管理异地复制和还原所需的密钥。
  
 若要通过 REST API 配置透明数据加密，用户必须作为 Azure 所有者、参与者或 SQL 安全管理员进行连接。 
 
-| Command | Description |
+| Command | 描述 |
 | --- | --- |
 |[创建或更新服务器](/rest/api/sql/servers/createorupdate)|将 Azure Active Directory 标识添加到 SQL Server 实例（用于授予对 Key Vault 的访问权限）|
 |[创建或更新服务器密钥](/rest/api/sql/serverkeys/createorupdate)|将 Key Vault 密钥添加到 SQL Server 实例|
