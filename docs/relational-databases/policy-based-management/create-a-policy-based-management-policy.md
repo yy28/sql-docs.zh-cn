@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 11. 若要将策略限制为目标类型的子集，请在 **“服务器限制”** 框中选择限制条件，或者创建一个新条件。  
   
-     有关 **“创建新策略”** 对话框中的可用选项的详细信息，请参阅 [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 或 [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+     有关 **“创建新策略”** 对话框中的可用选项的详细信息，请参阅 [“创建新策略”或“打开策略”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 或 [“创建新策略”或“打开策略”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 12. 完成后，单击 **“确定”**。  
   

@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
+# <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Oracle 数据类型并非始终与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 -   使用存储过程全局更改所有将来项目的默认数据类型映射（不更改现有项目的默认数据类型映射）。  
   
- 若要指定备用数据类型映射，请参阅 [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)。  
+ 若要指定备用数据类型映射，请参阅 [指定 Oracle 发布服务器的数据类型映射](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

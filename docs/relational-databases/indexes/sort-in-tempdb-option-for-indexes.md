@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 # <a name="sortintempdb-option-for-indexes"></a>用于索引的 SORT_IN_TEMPDB 选项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  当创建或重新生成索引时，通过将 SORT_IN_TEMPDB 选项设置为 ON，可以指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 来存储用于生成索引的中间排序结果。 虽然此选项会增加创建索引所用的临时磁盘空间量，但是当 **tempdb** 与用户数据库位于不同的磁盘集上时，该选项可减少创建或重新生成索引所需的时间。 有关 **tempdb**的详细信息，请参阅 [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  
+  当创建或重新生成索引时，通过将 SORT_IN_TEMPDB 选项设置为 ON，可以指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 来存储用于生成索引的中间排序结果。 虽然此选项会增加创建索引所用的临时磁盘空间量，但是当 **tempdb** 与用户数据库位于不同的磁盘集上时，该选项可减少创建或重新生成索引所需的时间。 有关 **tempdb**的详细信息，请参阅 [配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  
   
 ## <a name="phases-of-index-building"></a>索引生成阶段  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成索引时经历下面两个阶段：  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="related-content"></a>相关内容  
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
  [索引 DDL 操作的磁盘空间要求](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   

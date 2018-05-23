@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 超时之前远程操作可以执行的时间（秒）。默认为 600 秒，或等待 10 分钟。  
   
  **需要将分布式事务用于服务器到服务器的通信**  
- 通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器过程的操作。 有关详细信息，请参阅 [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  
+ 通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器过程的操作。 有关详细信息，请参阅 [配置远程过程事务服务器配置选项](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  
   
 ## <a name="property-page-display-options"></a>属性页显示选项  
  **配置值**  

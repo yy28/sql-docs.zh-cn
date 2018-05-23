@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |Guest 权限|[对用户数据库的 Guest 权限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |上次成功备份的日期|[过时的备份](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |未授予公共服务器权限|[服务器 public 权限](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|SQL Server 64 位关联掩码重叠|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 位关联掩码重叠|[正确的关联掩码和关联输入/输出掩码重叠](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server 关联掩码|[保留关联掩码默认值](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |SQL Server 阻塞的进程阈值|[增加或禁用阻塞的进程阈值](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server 默认跟踪|[默认跟踪日志文件已禁用](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 |Windows 事件日志中的设备驱动程序控制错误|[设备驱动程序控制错误](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
 |Windows 事件日志中的设备未就绪错误|[设备未就绪错误](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
 |Windows 事件日志中的失败的 I_O 请求错误|[Detect Failed Input and Output Requests](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
-|Windows 事件日志中的 I_O 延迟警告|[Check Disk Input and Output Subsystem for IO Delay Problems](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Windows 事件日志中的 I_O 延迟警告|[检查磁盘输入和输出子系统是否存在 IO 延迟问题](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 事件日志中的硬件分页错误期间的 I_O 错误|[Input and Output Error During Hard Page Fault](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
 |Windows 事件日志中的读取重试错误|[检查磁盘 I/O 子系统是否存在读取重试问题](../../relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Windows 事件日志中的存储系统 I_O 超时错误|[存储系统输入输出超时](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  

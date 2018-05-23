@@ -114,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  为要联接到的项目（又称为父项目）定义筛选。  
   
-    -   对于使用参数化行筛选器筛选的项目，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+    -   对于使用参数化行筛选器筛选的项目，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
     -   对于使用静态行筛选器筛选的项目，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
   
- 此示例定义了合并发布中的一组项目，并针对 `Employee` 表使用一系列联接筛选器来筛选这些项目，而该表本身则使用参数化行筛选器按 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 列中的 **HOST_NAME** 值进行筛选。 有关详细信息，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+ 此示例定义了合并发布中的一组项目，并针对 `Employee` 表使用一系列联接筛选器来筛选这些项目，而该表本身则使用参数化行筛选器按 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 列中的 **HOST_NAME** 值进行筛选。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   

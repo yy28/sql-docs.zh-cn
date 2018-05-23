@@ -74,14 +74,14 @@ ms.lasthandoff: 05/03/2018
   
 -   向示例报表提供数据的 **AdventureWorks2014** 示例数据库。  
   
--   包括管理示例报表中所有订阅任务的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 角色分配。 定义数据驱动订阅时需要执行该任务。 如果您是计算机管理员，则本地管理员的默认角色分配将提供创建数据驱动订阅所必需的权限。 有关详细信息，请参阅 [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
+-   包括管理示例报表中所有订阅任务的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 角色分配。 定义数据驱动订阅时需要执行该任务。 如果您是计算机管理员，则本地管理员的默认角色分配将提供创建数据驱动订阅所必需的权限。 有关详细信息，请参阅 [授予对本机模式报表服务器的权限](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
   
 -   您具有写入权限的共享文件夹。 共享文件夹必须可以通过网络连接进行访问。  
   
 **学完本教程的估计时间：** 30 分钟。 如果您还没有完成基本报表教程，则还需要 30 分钟。  
   
 ## <a name="see-also"></a>另请参阅  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[数据驱动订阅](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

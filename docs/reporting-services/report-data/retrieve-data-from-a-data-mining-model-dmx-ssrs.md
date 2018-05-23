@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  可以创建供单个报表使用的嵌入数据源定义，也可以创建可由多个报表使用的共享数据源定义。 本主题中的过程介绍如何创建嵌入数据源。 有关共享数据源的详细信息，请参阅[嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)和[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源后，可以创建一个或多个数据集。 对于每个数据集，您都可以使用数据挖掘预测表达式 (DMX) 查询设计器来创建指定字段集合的 DMX 查询。 有关详细信息，请参阅 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
+ 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源后，可以创建一个或多个数据集。 对于每个数据集，您都可以使用数据挖掘预测表达式 (DMX) 查询设计器来创建指定字段集合的 DMX 查询。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
   
  创建数据集后，数据集的名称将在“报表数据”窗格中该数据集的数据源节点下显示为节点。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  单击 **“凭据”**。  
   
-     设置用于连接到数据源的凭据。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+     设置用于连接到数据源的凭据。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
     > [!NOTE]  
     >  若要测试数据源连接，请单击 **“编辑”**。 单击 **“连接属性”** 对话框中的 **“测试连接”**。 如果测试成功，您将会看到信息性消息“连接测试成功”。 如果测试失败，您将会看到一条警告消息，其中包含有关测试失败原因的详细信息。  
@@ -72,9 +72,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  在 **“数据集属性”** 对话框的 **“名称”** 文本框中键入名称。  
   
-3.  在 **“数据源”**框中，验证名称是否为连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源的数据源的名称。  
+3.  在 **“数据源”** 框中，验证名称是否为连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源的数据源的名称。  
   
-4.  单击 **“查询设计器”** 打开图形查询设计器，从而以交互方式生成查询。 如果查询设计器以 MDX 模式打开，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")）以切换到数据挖掘查询设计器。 有关详细信息，请参阅 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
+4.  单击 **“查询设计器”** 打开图形查询设计器，从而以交互方式生成查询。 如果查询设计器以 MDX 模式打开，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")）以切换到数据挖掘查询设计器。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
   
      或者，若要从另一个报表导入现有的 DMX 查询，请单击 **“导入”**，然后导航到包含 DMX 查询的 .rdl 文件。 不支持从 .dmx 文件导入查询。  
   

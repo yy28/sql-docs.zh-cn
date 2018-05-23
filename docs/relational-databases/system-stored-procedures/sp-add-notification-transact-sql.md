@@ -80,7 +80,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>示例  
  以下示例为指定的警报 (`Test Alert`) 添加电子邮件通知。  
   
-> **注意：**此示例假定`Test Alert`已存在且`François Ajenstat`是有效的运算符名称。  
+> **注意：** 此示例假定`Test Alert`已存在且`François Ajenstat`是有效的运算符名称。  
   
 ```  
 USE msdb ;  
