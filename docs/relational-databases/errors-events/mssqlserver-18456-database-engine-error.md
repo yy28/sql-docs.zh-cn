@@ -3,8 +3,6 @@ title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49aeb80c984dd3b01f300e38d81e423a1fee56d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="additional-error-information"></a>其他错误信息  
 为了增强安全性，返回到客户端的错误消息有意隐藏身份验证错误的本质。 但是，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中，对应的错误包含映射到身份验证失败条件的错误状态。 将错误状态与以下列表进行比较以确定登录失败的原因。  
   
-|State|Description|  
+|State|描述|  
 |---------|---------------|  
 |@shouldalert|无法获得错误信息。 此状态通常意味着您不拥有接收错误详细信息的权限。 请联系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员以获得详细信息。|  
 |2|用户 ID 无效。|  
@@ -87,7 +85,7 @@ ms.lasthandoff: 05/04/2018
   
 **其他不常见的可能原因**  
   
-在以下情况下可能会返回错误原因**“尝试使用 SQL Server 身份验证登录失败。服务器配置为仅使用 Windows 身份验证。** 可能会在下列情况下返回。  
+在以下情况下可能会返回错误原因 **“尝试使用 SQL Server 身份验证登录失败。服务器配置为仅使用 Windows 身份验证。** 可能会在下列情况下返回。  
   
 -   当服务器配置为混合模式身份验证并且某个 ODBC 连接使用 TCP 协议，且该连接未显式指定该连接应使用某一可信连接时。  
   

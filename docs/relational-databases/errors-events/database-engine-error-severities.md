@@ -3,8 +3,6 @@ title: 数据库引擎错误严重性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -21,11 +19,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48c7c90062c05084bf004a592d192563d7aa7f80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d5c5a6ddee7f8d5e9b734651fa7722df56349db
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-error-severities"></a>数据库引擎错误严重性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="levels-of-severity"></a>严重性级别  
  下表列出并说明 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所引起错误的严重级别。  
   
-|严重级别|Description|  
+|严重级别|描述|  
 |--------------------|-----------------|  
 |0-9|返回不太严重的状态信息或报表错误的信息性消息。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会引起严重级别为 0 到 9 的系统错误。|  
 |10|返回不太严重的状态信息或报表错误的信息性消息。 由于兼容性原因， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在将错误信息返回到调用应用程序前将严重性级别从 10 转换为 0。|  

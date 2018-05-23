@@ -3,7 +3,6 @@ title: 保护主数据管理器 Web 应用程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: mds
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -14,11 +13,11 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71be238c026dd60db13c10e5d391b8dabdd237dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69007b20b70a8be2bbbca07fad46c51dee693ac7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在您确认已使用 HTTP 正确配置了 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序后，在 IIS 中创建一个证书。 有关详细信息，请参阅 [在 IIS 7 中配置服务器证书](http://technet.microsoft.com/library/cc732230\(WS.10\).aspx)。  
   
-2.  在 **“连接”** 窗格中的 **“站点”**的下面，单击承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的站点。  
+2.  在 **“连接”** 窗格中的 **“站点”** 的下面，单击承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的站点。  
   
 3.  在 **“操作”** 窗格中，单击 **“绑定”**。  
   

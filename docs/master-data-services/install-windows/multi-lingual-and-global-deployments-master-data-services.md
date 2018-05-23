@@ -3,7 +3,6 @@ title: 多语言和全球部署 (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: mds
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -14,11 +13,11 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d4cc04faa4bde038b9b8c811ed587ad19ba443fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12e796619f7ab5674f5f94b34ea15d4e2aefe595
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多语言和全球部署 (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="how-languages-are-used"></a>如何使用语言  
  下表说明了对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 组件和工具的语言支持情况。  
   
-|组件或工具|Description|  
+|组件或工具|描述|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装程序|当希望以不同于安装程序语言的语言来提供和支持 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，请选择“英语”安装程序。 有关详细信息，请参阅下面的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 说明。|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|安装程序语言决定 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 语言。 例如，如果为安装程序语言选择了“德语”，则在该计算机上提供德语形式的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。|  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
@@ -17,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7c5a6fa406e4ac16da7641053ab1804887a6a96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>本机过程中的 ATOMIC 块
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -138,14 +137,14 @@ GO
   
  以下选项对于 **BEGIN ATOMIC**而言是必需的：  
   
-|必需设置|Description|  
+|必需设置|描述|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|支持的值为 **SNAPSHOT**、 **REPEATABLEREAD**和 **SERIALIZABLE**。|  
 |**LANGUAGE**|确定日期和时间格式以及系统消息。 支持 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的所有语言和别名。|  
   
  以下设置是可选的：  
   
-|可选设置|Description|  
+|可选设置|描述|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后， **DATEFORMAT** 将取代与 **LANGUAGE**相关联的默认日期格式。|  
 |**DATEFIRST**|指定后， **DATEFIRST** 将取代与 **LANGUAGE**相关联的默认设置。|  

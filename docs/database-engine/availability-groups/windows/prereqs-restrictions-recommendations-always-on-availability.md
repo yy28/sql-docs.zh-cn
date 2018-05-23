@@ -23,11 +23,11 @@ caps.latest.revision: 151
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 018db964697d8aacf29422c901bda17fddecd1c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c01e469a1b7a8883f7f2643a0db0cdb182e4386
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>先决条件、限制、建议 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
 ####  <a name="ChangeHostRecordTTLps"></a> 更改 HostRecordTTL（使用 Windows PowerShell）  
   
-1.  通过 **“以管理员身份运行”**打开 PowerShell 窗口。  
+1.  通过 **“以管理员身份运行”** 打开 PowerShell 窗口。  
   
 2.  导入 FailoverClusters 模块。  
   
@@ -146,12 +146,12 @@ ms.lasthandoff: 05/03/2018
 ||先决条件|链接|  
 |-|------------------|-----------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|主机必须是一个 WSFC 节点。 托管给定可用性组的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例驻留在单独的群集节点上。 迁移到其他群集时，一个可用性组可能会暂时跨两个群集。 SQL Server 2016 引入了分布式可用性组。 在分布式可用性组中，两个可用性组驻留在不同的群集上。|[Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分布式可用性组（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您希望将可用性组与 Kerberos 一起使用：<br /><br /> 承载可用性组的可用性副本的所有服务器实例都必须使用相同的 SQL Server 服务帐户。<br /><br /> 域管理员需要在可用性组侦听器的虚拟网络名称 (VNN) 的 SQL Server 服务帐户上使用 Active Directory 手动注册服务主体名称 (SPN)。 如果在 SQL Server 服务帐户之外的帐户上注册 SPN，则身份验证将失败。<br /><br /> <br /><br /> **\*\* 重要提示 \*\*** 如果你更改 SQL Server 服务帐户，则域管理员必须重新手动注册 SPN。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **简要说明：**<br /><br /> Kerberos 和 SPN 强制实施相互身份验证。 SPN 将映射到启动 SQL Server 服务的 Windows 帐户。 如果未正确注册 SPN 或注册失败，则 Windows 安全层将无法确定与 SPN 关联的帐户，因而无法使用 Kerberos 身份验证。<br /><br /> <br /><br /> 注意：NTLM 没有此要求。|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您希望将可用性组与 Kerberos 一起使用：<br /><br /> 承载可用性组的可用性副本的所有服务器实例都必须使用相同的 SQL Server 服务帐户。<br /><br /> 域管理员需要在可用性组侦听器的虚拟网络名称 (VNN) 的 SQL Server 服务帐户上使用 Active Directory 手动注册服务主体名称 (SPN)。 如果在 SQL Server 服务帐户之外的帐户上注册 SPN，则身份验证将失败。<br /><br /> <br /><br /> <b>\*\* 重要提示 \*\*</b> 如果你更改 SQL Server 服务帐户，则域管理员必须重新手动注册 SPN。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **简要说明：**<br /><br /> Kerberos 和 SPN 强制实施相互身份验证。 SPN 将映射到启动 SQL Server 服务的 Windows 帐户。 如果未正确注册 SPN 或注册失败，则 Windows 安全层将无法确定与 SPN 关联的帐户，因而无法使用 Kerberos 身份验证。<br /><br /> <br /><br /> 注意：NTLM 没有此要求。|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和要求](#FciArLimitations) （本主题的后面将介绍）|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都必须正在运行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的 Enterprise Edition。|[SQL Server 2016 的各版本和支持的功能](../../../sql-server/editions-and-supported-features-for-sql-server-2016.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为某一可用性组承载可用性副本的所有服务器实例必须都使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则。|[设置或更改服务器排序规则](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> **\*\*重要提示\*\*** 如果销毁并重新创建了 WSFC，则必须在每个服务器实例上禁用并重新启用已在原始群集上为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> <br /><br /> **\*\* 安全说明 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的传输安全性与数据库镜像的传输安全性相同。|[数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\*重要提示\*\*</b> 如果销毁并重新创建了 WSFC，则必须在每个服务器实例上禁用并重新启用已在原始群集上为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> <br /><br /> <b>\*\* 安全说明 \*\*</b> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的传输安全性与数据库镜像的传输安全性相同。|[数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果使用 FILESTREAM 的任何数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果任何包含的数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上将 **contained database authentication** 服务器选项都设置为 **1** 。|[contained database authentication 服务器配置选项](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
@@ -224,7 +224,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 > 故障转移群集实例支持群集共享卷 (CSV)。 有关 CSV 的详细信息，请参阅 [了解故障转移群集中的群集共享卷](http://technet.microsoft.com/library/dd759255.aspx)。  
   
--   **FCI 的群集节点只能托管给定可用性组的一个副本：**如果在 FCI 上添加可用性副本，作为 FCI 的可能所有者的 WSFC 节点不能托管同一个可用性组的另一个副本。  
+-   **FCI 的群集节点只能托管给定可用性组的一个副本：** 如果在 FCI 上添加可用性副本，作为 FCI 的可能所有者的 WSFC 节点不能托管同一个可用性组的另一个副本。  
   
      此外，其他每个副本都必须由驻留在同一个 Windows Server 故障转移群集中其他群集节点上的 SQL Server 2016 实例托管。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
   
@@ -265,12 +265,12 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="RestrictionsAG"></a> 限制（可用性组）  
   
--   **可用性副本必须由一个 WSFC 的不同节点托管：**对于某个给定可用性组，可用性副本必须由在同一个 WSFC 的不同节点上运行的服务器实例托管。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
+-   **可用性副本必须由一个 WSFC 的不同节点托管：** 对于某个给定可用性组，可用性副本必须由在同一个 WSFC 的不同节点上运行的服务器实例托管。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
   
     > [!NOTE]  
     >  同一物理计算机上的多个虚拟机可分别为同一可用性组承载可用性副本，因为每个虚拟机都充当一个单独的计算机。  
   
--   **唯一的可用性组名称：**每个可用性组名称在 WSFC 上必须唯一。 可用性组名称的最大长度为 128 个字符。  
+-   **唯一的可用性组名称：** 每个可用性组名称在 WSFC 上必须唯一。 可用性组名称的最大长度为 128 个字符。  
   
 -   **可用性副本：**  每个可用性组支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
   
@@ -287,7 +287,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="RequirementsAG"></a> 先决条件（可用性组）  
  在创建或重新配置可用性组配置时，请确保您遵守以下要求。  
   
-||先决条件|Description|  
+||先决条件|描述|  
 |-|------------------|-----------------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[有关使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制](#FciArLimitations) （本主题的前面予以介绍）|  
   

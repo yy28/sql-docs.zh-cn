@@ -1,7 +1,7 @@
 ---
 title: 使用脚本任务处理 Excel 文件 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
@@ -23,21 +23,21 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9976b6c895b701d0e12cfd30e9af52cf6c93717b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 90a2b35f3e47affb8fb7a305eb0d24e88c58af39
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。
   
-> [!TIP]  
->  如果希望创建可重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
-
 > [!IMPORTANT]
 > 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
  
+> [!TIP]  
+>  如果希望创建可重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
+
 ##  <a name="configuring"></a> 配置用于测试示例的包  
  您可以配置单个包来测试本主题中的所有示例。 这些示例使用许多相同的包变量和相同的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类。  
   
@@ -190,9 +190,9 @@ Public Class ScriptMain
   
     Dts.Variables("ExcelTableExists").Value = False  
     If File.Exists(fileToTest) Then  
-      connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+      connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & fileToTest & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
       excelConnection = New OleDbConnection(connectionString)  
       excelConnection.Open()  
       excelTables = excelConnection.GetSchema("Tables")  
@@ -227,8 +227,8 @@ public class ScriptMain
             Dts.Variables["ExcelTableExists"].Value = false;  
             if (File.Exists(fileToTest))  
             {  
-                connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + fileToTest + ";Extended Properties=Excel 8.0";  
+                connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + fileToTest + ";Extended Properties=Excel 12.0";  
                 excelConnection = new OleDbConnection(connectionString);  
                 excelConnection.Open();  
                 excelTables = excelConnection.GetSchema("Tables");  
@@ -282,7 +282,7 @@ public class ScriptMain
 ```vb  
 Public Class ScriptMain  
   Public Sub Main()  
-    Const FILE_PATTERN As String = "*.xls"  
+    Const FILE_PATTERN As String = "*.xlsx"  
   
     Dim excelFolder As String  
     Dim excelFiles As String()  
@@ -302,7 +302,7 @@ public class ScriptMain
 {  
   public void Main()  
   {  
-    const string FILE_PATTERN = "*.xls";  
+    const string FILE_PATTERN = "*.xlsx";  
   
     string excelFolder;  
     string[] excelFiles;  
@@ -371,9 +371,9 @@ Public Class ScriptMain
     Dim excelTables As String()  
   
     excelFile = Dts.Variables("ExcelFile").Value.ToString  
-    connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+    connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & excelFile & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
     excelConnection = New OleDbConnection(connectionString)  
     excelConnection.Open()  
     tablesInFile = excelConnection.GetSchema("Tables")  
@@ -408,8 +408,8 @@ public class ScriptMain
             string[] excelTables = new string[5];  
   
             excelFile = Dts.Variables["ExcelFile"].Value.ToString();  
-            connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + excelFile + ";Extended Properties=Excel 8.0";  
+            connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + excelFile + ";Extended Properties=Excel 12.0";  
             excelConnection = new OleDbConnection(connectionString);  
             excelConnection.Open();  
             tablesInFile = excelConnection.GetSchema("Tables");  

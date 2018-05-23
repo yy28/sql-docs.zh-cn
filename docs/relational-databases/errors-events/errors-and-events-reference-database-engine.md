@@ -3,8 +3,6 @@ title: 错误和事件参考（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -19,11 +17,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b28a5ca483dded374cb7c5bdc31a205fd18c23ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de9cc2a589a7dbf9f8322a02841688f551de3f7a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>错误和事件参考（数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  下表提供了指向这些资源的链接并说明了这些资源。  
   
-|资源|Description|  
+|资源|描述|  
 |--------------|-----------------|  
 |[SQL Server 社区](http://go.microsoft.com/fwlink/?LinkId=42455)|此网站提供指向由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社区监视的新闻组和论坛的链接。 还列出了诸如博客和网站之类的社区信息资源。 尽管不能保证得到答案，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社区对于解决问题还是非常有帮助。|  
 |[SQL Server 开发人员中心社区](http://go.microsoft.com/fwlink/?LinkId=42456)|此站点专门提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开发人员有用的新闻组、论坛和其他社区资源。|  

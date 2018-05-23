@@ -3,7 +3,6 @@ title: 向 SQL Server 的实例添加功能（安装程序）| Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -18,11 +17,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59091eaee7c04613f06d0b5b2652a2377b825420
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 560dd6622ecde88c8b0973cf71f104ddcd539793
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
   
 15. 使用“ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 - FILESTREAM”页对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。 有关 FILESTREAM 的详细信息，请参阅 [数据库引擎配置 - 文件流](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 若要继续，请单击“下一步”。  
   
-16. 使用“ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置 – 帐户设置”页指定服务器模式以及将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员权限的用户或帐户。 服务器模式决定哪些内存和存储子系统用于服务器。 不同的解决方案类型在不同的服务器模式下运行。 如果您计划在服务器上运行多维数据集数据库，则选择默认选项“多维”和“数据挖掘”服务器模式。 对于管理员权限，您必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定至少一个系统管理员。 若要添加当前正在运行 SQL Server 安装程序的帐户，请单击 **“添加当前用户”**按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关服务器模式和管理员权限的详细信息，请参阅 [Analysis Services 配置-帐户设置](http://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)。  
+16. 使用“ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置 – 帐户设置”页指定服务器模式以及将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员权限的用户或帐户。 服务器模式决定哪些内存和存储子系统用于服务器。 不同的解决方案类型在不同的服务器模式下运行。 如果您计划在服务器上运行多维数据集数据库，则选择默认选项“多维”和“数据挖掘”服务器模式。 对于管理员权限，您必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定至少一个系统管理员。 若要添加当前正在运行 SQL Server 安装程序的帐户，请单击 **“添加当前用户”** 按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关服务器模式和管理员权限的详细信息，请参阅 [Analysis Services 配置-帐户设置](http://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)。  
   
      完成对该列表的编辑后，请单击 **“确定”**。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
   

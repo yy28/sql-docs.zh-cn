@@ -13,16 +13,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91cf1a6e8889e210f0d1e64145af64aa83ba70ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74e3b96d96fa0906e92b3aa6df5f10fcdd248847
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="how-row-compression-affects-storage"></a>行压缩影响存储的方式  
  下表介绍了行压缩是如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]中的现有类型的。 此表不包括通过使用页压缩可以节省的空间。  
   
-|数据类型|是否影响存储？|Description|  
+|数据类型|是否影响存储？|描述|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|“否”|1 个字节是所需的最小存储单位。|  
 |**int**|是|如果值使用 1 个字节即可存储，则将只使用 1 个字节。|  

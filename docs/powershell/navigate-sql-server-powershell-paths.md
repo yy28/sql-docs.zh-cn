@@ -3,12 +3,9 @@ title: 导航 SQL Server PowerShell 路径 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: powershell
-ms.component: powershell
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
@@ -16,11 +13,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b1f62d53dc997408907da7e111837db06b308f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37be2c3dc4c2307cea99164a5fa955dfbbfdd6d9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +33,7 @@ Windows PowerShell 实现 cmdlet 以便导航表示 PowerShell 提供程序支�
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序实现了提供程序 cmdlet 的一部分，如下表中所示：  
   
-|cmdlet|规范别名|cmd 别名|UNIX shell 别名|Description|  
+|cmdlet|规范别名|cmd 别名|UNIX shell 别名|描述|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|获取当前节点。|  
 |**Set-Location**|**sl**|**cd、chdir**|**cd、chdir**|更改当前节点。|  

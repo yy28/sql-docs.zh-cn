@@ -3,12 +3,9 @@ title: Deadlock Graph 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cb293ada4722dd254de612cf56e42c6d18c5a81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76996f5ae8445d53237ae6a55e718011d86030aa
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 事件类
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="deadlock-graph-event-class-data-columns"></a>Deadlock Graph 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|事件类型 = 148。|27|“否”|  
 |**EventSequence**|**int**|给定事件在请求中的顺序。|51|“否”|  
