@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 # <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
   
- 引用数据集可以是缓存文件、现有的表或视图、新表或 SQL 查询的结果。 查找转换使用 OLE DB 连接管理器或缓存连接管理器来连接到引用数据集。 有关详细信息，请参阅 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
+ 引用数据集可以是缓存文件、现有的表或视图、新表或 SQL 查询的结果。 查找转换使用 OLE DB 连接管理器或缓存连接管理器来连接到引用数据集。 有关详细信息，请参阅 [OLE DB 连接管理器](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
   
  可以用以下方式来配置查找转换：  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 -   如果引用表中有多个匹配项，则查找转换只返回查找查询返回的第一个匹配项。 如果发现多个匹配项，则仅当转换被配置为将所有引用数据集加载到缓存中时查找转换才生成错误或警告。 在这种情况下，如果查找转换在填充缓存时检测到多个匹配项，则该查找转换将生成警告。  
   
- 联接可以是组合联接，即可以将转换输入中的多个列联接到引用数据集中的列。 除了 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAGE 外，转换支持联接其他任何数据类型的列。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 联接可以是组合联接，即可以将转换输入中的多个列联接到引用数据集中的列。 除了 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAGE 外，转换支持联接其他任何数据类型的列。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  通常，将来自引用数据集的值添加到转换输出中。 例如，查找转换可以使用输入列的值从表中提取产品名，然后将产品名添加到转换输出中。 来自引用表的值可以替换列值，也可以添加到新列中。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
      此缓存选项与 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]中查找转换的完全缓存选项兼容。  
   
--   在查找转换运行之前，从数据流中的已连接数据源或从缓存文件生成引用数据集并将该引用数据集加载到缓存中。 您可以使用缓存连接管理器并根据需要使用缓存转换来访问该数据集。 有关详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)。  
+-   在查找转换运行之前，从数据流中的已连接数据源或从缓存文件生成引用数据集并将该引用数据集加载到缓存中。 您可以使用缓存连接管理器并根据需要使用缓存转换来访问该数据集。 有关详细信息，请参阅 [缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [缓存转换](../../../integration-services/data-flow/transformations/cache-transform.md)。  
   
 -   在执行查找转换过程中，通过使用表、视图或 SQL 查询生成引用数据集。 在引用数据集中有匹配项的行以及在该数据集中没有匹配项的行都会加载到缓存中。  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 05/03/2018
  **新建**  
  使用“缓存连接管理器编辑器”对话框创建新的连接。  
   
- 在 **“查找转换编辑器”**对话框的“常规”页上选择 **“完全缓存”**、 **“部分缓存”**或 **“无缓存”**以及 **“OLE DB 连接管理器”** 时，下列选项可用：  
+ 在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”**、 **“部分缓存”** 或 **“无缓存”** 以及 **“OLE DB 连接管理器”** 时，下列选项可用：  
   
  **“无缓存”**  
  从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”创建一个新连接。  
@@ -198,7 +198,7 @@ ms.lasthandoff: 05/03/2018
  从列表中选择现有表或视图，或单击“新建”创建新表。  
   
 > [!NOTE]  
->  在此处选择的表名将由在 **“查找转换编辑器”** 的 **“高级”**页上指定的 SQL 语句覆盖和替换。 有关详细信息，请参阅 [查找转换编辑器（“高级”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)。  
+>  在此处选择的表名将由在 **“查找转换编辑器”** 的 **“高级”** 页上指定的 SQL 语句覆盖和替换。 有关详细信息，请参阅 [查找转换编辑器（“高级”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)。  
   
  **新建**  
  通过使用“创建表”对话框创建一个新表。  
@@ -270,7 +270,7 @@ ms.lasthandoff: 05/03/2018
  修改用来生成引用数据集的 SQL 语句。  
   
 > [!NOTE]  
->  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”**页上指定的表名。 有关详细信息，请参阅 [查找转换编辑器（“连接”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)。  
+>  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”** 页上指定的表名。 有关详细信息，请参阅 [查找转换编辑器（“连接”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)。  
   
  **设置参数**  
  使用“设置查询参数”对话框将输入列映射到参数。  

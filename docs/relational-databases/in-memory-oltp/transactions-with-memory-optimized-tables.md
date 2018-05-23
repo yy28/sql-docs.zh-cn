@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f258adcc432f932dcc88a816eff17d9f89124199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 647bf6e7d60b30fb3a698232552f0b3760c6a8e3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ALTER DATABASE CURRENT
   
 下表按照从低到高的顺序列出了可能的事务隔离级别。 有关可能发生的冲突以及用于处理这些冲突的重试逻辑的详细信息，请参阅 [冲突检测和重试逻辑](#confdetretry34ni)。 
   
-| 隔离级别 | Description |   
+| 隔离级别 | 描述 |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 不可用：无法在 Read Uncommitted 隔离下访问内存优化表。 如果通过使用 WITH (SNAPSHOT) 表提示，或通过将数据库设置 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设为 ON，将会话级别 TRANSACTION ISOLATION LEVEL 设置为 READ UNCOMMITTED，则仍有可能在 SNAPSHOT 隔离下访问内存优化表。 | 
 | READ COMMITTED | 仅当自动提交模式生效时，内存优化表才支持此隔离级别。 如果通过使用 WITH (SNAPSHOT) 表提示，或通过将数据库设置 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设为 ON，将会话级别 TRANSACTION ISOLATION LEVEL 设置为 READ COMMITTED，则仍有可能在 SNAPSHOT 隔离下访问内存优化表。<br/><br/>如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，则不允许使用相同的语句在 READ COMMITTED 隔离下访问内存优化表和基于磁盘的表。 |  
@@ -164,7 +163,7 @@ ALTER DATABASE CURRENT
 
 下面是当事务访问内存优化表时可能导致事务失败的错误条件。
 
-| 错误代码 | Description | 原因 |
+| 错误代码 | 描述 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 尝试更新自从启动现有事务以来，已在其他事务中更新的行。 | 如果两个并发事务试图同时更新或删除同一行，则会发生此错误条件。 其中一个事务会收到此错误消息，并需要重试。 <br/><br/>  | 
 | **41305**| 可重复读验证失败。 此事务从内存优化表中读取的行已由另一个在此事务提交前提交的事务更新。 | 如果使用 REPEATABLE READ 或 SERIALIZABLE 隔离，并且某个并发事务的操作导致外键约束冲突，则会发生此错误。 <br/><br/>这种并发的外键约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误。 因此，建议始终在内存优化表中的外键列上创建索引。 <br/><br/> 有关外键冲突导致的验证失败的更多详细注意事项，请参阅 SQL Server 客户咨询团队发布的 [这篇博客文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  

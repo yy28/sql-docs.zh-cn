@@ -3,9 +3,7 @@ title: 管理编辑器和视图模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -26,18 +24,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b7b511dfb299b6089523984a0d60b72b4f81e46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62557aec41fcf47cee73acecad95b1cf8ee68443
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理编辑器和视图模式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   利用编辑器，您可以通过多种方法来控制代码视图。  
   
 ## <a name="changing-the-view-mode"></a>更改视图模式  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种名为 **“选项卡式文档”**的视图模式。通过这种视图模式，您可以同时打开多个编辑器和文档，并通过编辑器顶部的选项卡来对其进行访问。 另外，您也可以在多文档界面 (MDI) 模式下打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 环境，这种模式将不带选项卡的窗口联接起来，并允许对每个窗口执行平铺、最小化等操作。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种名为 **“选项卡式文档”** 的视图模式。通过这种视图模式，您可以同时打开多个编辑器和文档，并通过编辑器顶部的选项卡来对其进行访问。 另外，您也可以在多文档界面 (MDI) 模式下打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 环境，这种模式将不带选项卡的窗口联接起来，并允许对每个窗口执行平铺、最小化等操作。  
   
 #### <a name="to-switch-between-view-modes"></a>切换视图模式  
   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 451db2e715c07f79d617e4688fec862f197195fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e7c060facf52098f4f20d6b147f04cbaa0d1a7f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.lasthandoff: 05/03/2018
  有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用内存优化顾问进行演练  
- 在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”**。 这将显示 **“表内存优化顾问”**的欢迎使用页。  
+ 在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”**。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  
   
 ### <a name="memory-optimization-checklist"></a>内存优化核对清单  
- 当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”**时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 **“表内存优化顾问”** 不会修改基于磁盘的表，以便它可以迁移到使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处， **“表内存优化顾问”** 都会显示一个链接，指向可帮助您修改基于磁盘的表的信息。  
+ 当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”** 时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 **“表内存优化顾问”** 不会修改基于磁盘的表，以便它可以迁移到使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处， **“表内存优化顾问”** 都会显示一个链接，指向可帮助您修改基于磁盘的表的信息。  
   
  如果您想要保留这些不兼容之处的列表以便计划您的迁移，则单击 **“生成报表”** 以便生成一个 HTML 列表。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -28,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 848faca088e9ddf0ddf1efa2f48a84df042471c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a43ec3925304c5d895ebedbf157ebfecf8f82c0
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>数据库引擎查询编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  在“结果”窗口中以一个或多个网格的形式返回查询结果。  
   
  **将结果保存到文件**  
- 在执行查询时，“保存结果”对话框将会打开。 在 **“保存于”**中，选择要将文件保存到的文件夹。 在 **“文件名”**中键入文件名，然后单击 **“保存”** 将查询结果保存为具有 .rpt 扩展名的 **“报表”** 文件。 对于高级选项，请单击“保存”按钮上的向下箭头，再单击“编码保存”。  
+ 在执行查询时，“保存结果”对话框将会打开。 在 **“保存于”** 中，选择要将文件保存到的文件夹。 在 **“文件名”** 中键入文件名，然后单击 **“保存”** 将查询结果保存为具有 .rpt 扩展名的 **“报表”** 文件。 对于高级选项，请单击“保存”按钮上的向下箭头，再单击“编码保存”。  
   
  **注释选定内容**  
  在当前行的开头处添加一个注释运算符 (--)，以对该行进行注释。  
@@ -125,7 +124,7 @@ ms.lasthandoff: 05/03/2018
  **指定模板参数的值**  
  打开一个对话框，在此对话框中可以指定存储过程或函数中参数的值。  
   
- 通过依次选择 **“视图”** 菜单、 **“工具栏”**和 **“SQL 编辑器”**，还可添加 SQL 编辑器工具栏。 如果在没有打开任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口时添加 SQL 编辑器工具栏，则所有按钮都不可用。  
+ 通过依次选择 **“视图”** 菜单、 **“工具栏”** 和 **“SQL 编辑器”**，还可添加 SQL 编辑器工具栏。 如果在没有打开任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口时添加 SQL 编辑器工具栏，则所有按钮都不可用。  
   
 ## <a name="sql-editor-toolbar"></a>SQL 编辑器工具栏  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口打开后，可以通过以下方法添加调试工具栏：在 **“视图”** 菜单上选择 **“工具栏”**，然后选择 **“调试”**。 如果在没有打开任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的情况下添加调试工具栏，则所有按钮都不可用。  

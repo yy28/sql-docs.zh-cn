@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
@@ -17,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf8badc1a77acc58f410a412b4d3f2838fe9310f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ddd883651796b31d1cc8745df47a9e0eb44bc7b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,13 +32,13 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-create-a-database-with-a-memory-optimized-data-filegroup"></a>使用内存优化的数据文件组创建数据库  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例，然后展开该实例。  
   
 2.  右键单击“数据库”，然后单击“新建数据库”。  
   
 3.  若要添加新内存优化的数据文件组，请单击“文件组”页。 在“内存优化数据”下，单击“添加文件组”，然后输入内存优化数据文件组的名称。  标有 **“FILESTREAM 文件”** 的列表示文件组中的容器数。 容器是在 **“常规”** 页上添加的。  
   
-4.  要向文件组添加文件（容器），请单击“常规”页。 在 **“数据库文件”**下，单击 **“添加”**。 在“文件类型”中选择“FILESTREAM 数据”，指定容器的逻辑名称，选择内存优化文件组，并确保“自动增长/最大大小”设置为“无限制”。  
+4.  要向文件组添加文件（容器），请单击“常规”页。 在 **“数据库文件”** 下，单击 **“添加”**。 在“文件类型”中选择“FILESTREAM 数据”，指定容器的逻辑名称，选择内存优化文件组，并确保“自动增长/最大大小”设置为“无限制”。  
   
      有关如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建新数据库的更多信息，请参阅[创建数据库](../../relational-databases/databases/create-a-database.md)。  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
      此时会显示用于创建本机编译存储过程的模板。  
   
-2.  若要替换模板参数，请单击 **“指定模板参数的值”** （在 **“查询”**菜单上）。  
+2.  若要替换模板参数，请单击 **“指定模板参数的值”** （在 **“查询”** 菜单上）。  
   
      有关如何创建新存储过程的更多信息，请参阅 [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)。  
   
@@ -133,7 +132,7 @@ ms.lasthandoff: 05/03/2018
   
         -   生成脚本。  
   
-             在 **“生成和发布脚本向导”**中， **“检查对象是否存在”** 脚本编写选项的默认值是 FALSE。 如果“检查对象是否存在”脚本编写选项的值在向导的“设置脚本编写选项”屏幕中设置为 TRUE，则生成的脚本将包含“CREATE PROCEDURE <过程名称> AS”和“ALTER PROCEDURE <过程名称> <过程定义>”。 在执行时，生成的脚本将返回错误，因为在本机编译的存储过程中不支持 ALTER PROCEDURE。  
+             在 **“生成和发布脚本向导”** 中， **“检查对象是否存在”** 脚本编写选项的默认值是 FALSE。 如果“检查对象是否存在”脚本编写选项的值在向导的“设置脚本编写选项”屏幕中设置为 TRUE，则生成的脚本将包含“CREATE PROCEDURE <过程名称> AS”和“ALTER PROCEDURE <过程名称> <过程定义>”。 在执行时，生成的脚本将返回错误，因为在本机编译的存储过程中不支持 ALTER PROCEDURE。  
   
              更改每个本机编译的存储过程的生成的脚本：  
   
@@ -145,7 +144,7 @@ ms.lasthandoff: 05/03/2018
   
         -   导入和导出数据。 使用“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
   
-            1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”**中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”**。 再单击 **“下一步”**。  
+            1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”** 中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”**。 再单击 **“下一步”**。  
   
             2.  单击 **“编辑映射”**。 然后选择 **“创建目标表”** 并单击 **“编辑 SQL”**。 在目标数据库上输入用于创建内存优化表的 CREATE TABLE 语法。 单击 **“确定”** 并完成向导中的剩余步骤。  
   

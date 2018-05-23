@@ -3,9 +3,7 @@ title: IntelliSense 故障排除 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -21,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39d166a541613a3da09798b0f817fdce87455a52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0aabca85b3cc915a798abb1d5bd5e2aeff83eb0f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="troubleshooting-intellisense"></a>IntelliSense 故障排除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 -   IntelliSense 功能不适用于在您的编辑器窗口连接到数据库后由其他连接创建的数据库对象。 如果对象缺少完成列表之类的 IntelliSense 功能，您可以选择以下三种机制之一以便为您的编辑器窗口刷新对象缓存：  
   
-    -   依次选择 **“编辑”** 菜单、 **“IntelliSense”**和 **“刷新本地缓存”**。  
+    -   依次选择 **“编辑”** 菜单、 **“IntelliSense”** 和 **“刷新本地缓存”**。  
   
     -   使用键盘快捷键 Ctrl+Shift+R。  
   

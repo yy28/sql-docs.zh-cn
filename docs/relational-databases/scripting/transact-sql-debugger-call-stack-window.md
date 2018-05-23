@@ -3,9 +3,7 @@ title: “调用堆栈”窗口 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -20,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd12b280b42e751445a9e35043004fa89d2e6b05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 998271096a21f61ae07a0afc502eb1db29737457
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 调试器 -“调用堆栈”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="stack-frames"></a>堆栈帧  
  **“调用堆栈”** 窗口中的每一行称为一个堆栈帧，表示一个从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件到模块的调用或从一个模块到另一个模块的调用。 所显示的最下面的堆栈帧指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中最先调用此堆栈的行。 最上面一行指示调试器暂停执行时所在的行，由该窗口左边距中的黄色箭头标出。 中间的每一行指示调用下一个更高堆栈帧的模块和源代码的行号。  
   
- **“局部变量”**、 **“监视”**和 **“快速监视”** 窗口中的所有表达式都是基于当前堆栈帧求值的。 查询编辑器窗口显示当前帧的代码。 默认情况下，当前堆栈帧是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器暂停执行时所在的帧。 如果使另一个帧成为当前堆栈帧，则 **“局部变量”**、 **“监视”**和 **“快速监视”** 窗口中的表达式将在新帧环境下重新求值，且查询编辑器窗口中显示此新帧的源代码。  
+ **“局部变量”**、 **“监视”** 和 **“快速监视”** 窗口中的所有表达式都是基于当前堆栈帧求值的。 查询编辑器窗口显示当前帧的代码。 默认情况下，当前堆栈帧是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器暂停执行时所在的帧。 如果使另一个帧成为当前堆栈帧，则 **“局部变量”**、 **“监视”** 和 **“快速监视”** 窗口中的表达式将在新帧环境下重新求值，且查询编辑器窗口中显示此新帧的源代码。  
   
 ## <a name="columns"></a>“列”  
  **名称**  

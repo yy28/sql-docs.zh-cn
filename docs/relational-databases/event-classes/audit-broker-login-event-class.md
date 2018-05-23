@@ -3,12 +3,9 @@ title: Audit Broker Login 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73220c28a2a5399247ff7c7aab96adbab9cd3b8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1064f0902369f81cff96f94ee68520ded419d39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login 事件类的数据列  
   
-|数据列|类型|Description|列号|可筛选|  
+|数据列|类型|描述|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|在此事件类中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
@@ -58,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|Description|  
+|ID|子类|描述|  
 |--------|--------------|-----------------|  
 |@shouldalert|Login Success|Login Success 事件报告相邻的 broker 登录进程已经成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件报告 broker 接收到一个消息，该消息格式正确但对于登录进程的当前状态无效。 消息可能已丢失，或未按顺序发送。|  

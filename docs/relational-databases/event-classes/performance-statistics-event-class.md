@@ -3,12 +3,9 @@ title: Performance Statistics 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aef48d5ad774acfc01f127400863272b8c9d3c3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54ba7634152d355f16d73a48f0a430e83b861fc5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**图像**|NULL|2|是|  
@@ -53,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新编译此计划的累积次数。|52|是|  
 |BinaryData|**图像**|已编译计划的二进制 XML。|2|是|  
@@ -77,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新编译此计划的累积次数。|52|是|  
 |BinaryData|**图像**|已编译计划的二进制 XML。|2|是|  
@@ -100,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新编译此计划的累积次数。|52|是|  
 |BinaryData|**图像**|NULL|2|是|  
@@ -120,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**图像**|NULL|2|是|  
@@ -140,7 +137,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**图像**|NULL|2|是|  

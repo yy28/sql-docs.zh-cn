@@ -3,12 +3,9 @@ title: 启动并使用数据库引擎优化顾问 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +22,11 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b23898d9d14b75608d86518fa25ef750a9192d0c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bb4357c90eb0d4cd7aface5deccdb9096f0615d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>通过 Windows“开始”菜单启动数据库引擎优化顾问  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”**和 **“性能工具”**，然后单击 **“数据库引擎优化顾问”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“性能工具”**，然后单击 **“数据库引擎优化顾问”**。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中启动数据库引擎优化顾问  
   
@@ -166,7 +163,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  选择 **“计划缓存”** 作为工作负荷选项。 数据库引擎优化顾问将从计划缓存中选择前 1,000 个事件用于分析。  
   
-4.  选择要优化的数据库，或者可选择从 **“选择的表”**中为每个数据库选择一个或多个表。 若要包括所有数据库的缓存项，请从 **“优化选项”**中单击 **“高级选项”** ，然后选中 **“包括来自所有数据库的计划缓存事件”**。  
+4.  选择要优化的数据库，或者可选择从 **“选择的表”** 中为每个数据库选择一个或多个表。 若要包括所有数据库的缓存项，请从 **“优化选项”** 中单击 **“高级选项”** ，然后选中 **“包括来自所有数据库的计划缓存事件”**。  
   
 5.  选中 **“保存优化日志”** 以保存优化日志的副本。 如果不希望保存优化日志的副本，请清除该复选框。  
   
@@ -180,7 +177,7 @@ ms.lasthandoff: 05/03/2018
   
     -   选择“停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
   
-    -   选择**“停止分析”** 将停止优化会话而不生成任何建议。  
+    -   选择 **“停止分析”** 将停止优化会话而不生成任何建议。  
   
 > [!NOTE]  
 >  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。  
@@ -222,7 +219,7 @@ ms.lasthandoff: 05/03/2018
   
     -   选择“停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
   
-    -   选择**“停止分析”** 将停止优化会话而不生成任何建议。  
+    -   选择 **“停止分析”** 将停止优化会话而不生成任何建议。  
   
 > [!NOTE]  
 >  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。  
@@ -459,7 +456,7 @@ database_name.owner_name.table_name
  只包括添加索引视图建议。 不会为聚集和非聚集索引提供建议。  
   
  **包括筛选的索引**  
- 包括用来添加筛选索引的建议。 只有在选择了下列物理设计结构之一时，此选项才可用： **“索引和索引视图”**、 **“索引”**或 **“非聚集索引”**。  
+ 包括用来添加筛选索引的建议。 只有在选择了下列物理设计结构之一时，此选项才可用： **“索引和索引视图”**、 **“索引”** 或 **“非聚集索引”**。  
   
  **“索引”**  
  只包括添加聚集和非聚集索引建议。 不会为索引视图提供建议。  
@@ -501,7 +498,7 @@ database_name.owner_name.table_name
   
 -   选择“停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
   
--   选择**“停止分析”** 将停止优化会话而不生成任何建议。  
+-   选择 **“停止分析”** 将停止优化会话而不生成任何建议。  
   
  **优化进度**  
  指示进度的当前状态。 其中包含已执行操作的数量，以及接收到的错误、成功和警告消息的数量。  

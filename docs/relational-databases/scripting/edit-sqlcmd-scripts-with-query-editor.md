@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -22,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eea43371071a0664c5aece98541cc37977c4867f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 158e4af0992cc6a07e3beb90f092c6ace95f5951
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查询编辑器编辑 SQLCMD 脚本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,12 +86,12 @@ ms.lasthandoff: 05/03/2018
     -   (4 row(s) affected)  
   
 > [!IMPORTANT]  
->  从命令行执行 **sqlcmd** 实用工具时，该工具允许与操作系统完全交互。 在 **“SQLCMD 模式”**下使用查询编辑器时，必须注意不要执行交互语句。 查询编辑器无法响应操作系统提示。  
+>  从命令行执行 **sqlcmd** 实用工具时，该工具允许与操作系统完全交互。 在 **“SQLCMD 模式”** 下使用查询编辑器时，必须注意不要执行交互语句。 查询编辑器无法响应操作系统提示。  
   
  有关如何运行 SQLCMD 的详细信息，请参阅 [sqlcmd Utility](../../tools/sqlcmd-utility.md)或学习 SQLCMD 教程。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>默认启用 SQLCMD 脚本撰写  
- 若要默认启用 SQLCMD 脚本撰写，请在 **“工具”** 菜单中选择 **“选项”**，展开 **“查询执行”**和 **SQL Server**，单击 **“常规”** 页面，然后选中 **“默认情况下，在 SQLCMD 模式下打开新查询”** 框。  
+ 若要默认启用 SQLCMD 脚本撰写，请在 **“工具”** 菜单中选择 **“选项”**，展开 **“查询执行”** 和 **SQL Server**，单击 **“常规”** 页面，然后选中 **“默认情况下，在 SQLCMD 模式下打开新查询”** 框。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>编写和编辑 SQLCMD 脚本  
  启用脚本撰写模式后，可以编写 SQLCMD 命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 下列规则适用：  

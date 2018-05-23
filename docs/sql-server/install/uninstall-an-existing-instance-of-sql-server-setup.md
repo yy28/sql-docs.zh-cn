@@ -3,11 +3,10 @@ title: 卸载现有 SQL Server 实例（安装程序）| Microsoft Docs
 ms.custom: ''
 ms.date: 01/27/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,11 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 38c2b04996f8a3323e834a8f31088551852a6733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a9357b20ef28d78ceebd1df7db336235b9e34f8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 >**重要说明！** 若要卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，您必须是拥有“作为服务登录”权限的本地管理员。  
   
-> **注意：**若要卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供的删除节点功能分别删除每个节点。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+> **注意：** 若要卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供的删除节点功能分别删除每个节点。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，请注意以下重要方案：  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
   
-6.  在卸载最后一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联的其他程序仍显示在 **“程序和功能”**的程序列表中。 但是，如果关闭 **“程序和功能”**，则下次打开 **“程序和功能”**时，将会刷新程序列表以仅显示仍实际安装的程序。  
+6.  在卸载最后一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联的其他程序仍显示在 **“程序和功能”** 的程序列表中。 但是，如果关闭 **“程序和功能”**，则下次打开 **“程序和功能”** 时，将会刷新程序列表以仅显示仍实际安装的程序。  
   
 ### <a name="if-the-uninstallation-fails"></a>如果卸载失败  
   
