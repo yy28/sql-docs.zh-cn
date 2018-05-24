@@ -25,17 +25,17 @@ ms.lasthandoff: 04/19/2018
   
 -   有权访问管理控制台监视设备分析平台系统登录。  
   
--   域管理员帐户登录到*< appliance_domain > * * *-HST01** 节点。  
+-   域管理员帐户登录到 *< appliance_domain > * * *-HST01** 节点。  
   
 -   知识库文章编号，为了使修补程序以卸载。  
   
 ## <a name="HowToUninstallPDW"></a>若要卸载 SQL Server PDW 修补程序  
   
-1.  登录到*< appliance_domain > * * *-HST01** 节点作为构造域管理员联系。  
+1.  登录到 *< appliance_domain > * * *-HST01** 节点作为构造域管理员联系。  
   
 2.  使用作为管理员选项运行以打开命令提示符。  
   
-3.  将目录更改为`C:\PDWINST\Patches\<kbarticle>\media`其中*<kbarticle>*是为了使修补程序的知识库文章编号，以卸载。  
+3.  将目录更改为`C:\PDWINST\Patches\<kbarticle>\media`其中*<kbarticle>* 是为了使修补程序的知识库文章编号，以卸载。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ]  *** * * 登录* 是 Windows 组，Windows 登录名的名称或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名映射到新的数据库用户。Windows 组和 Windows 登录名的名称必须用在窗体中的 Windows 域名称进行限定*域*\\* 登录 *; 例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *登录名*是**sysname**，无默认值。  
+ [  **@loginame =** ]  *** * * 登录* 是 Windows 组，Windows 登录名的名称或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名映射到新的数据库用户。Windows 组和 Windows 登录名的名称必须用在窗体中的 Windows 域名称进行限定*域*\\*登录 *; 例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *登录名*是**sysname**，无默认值。  
   
  [  **@name_in_db=**] *****name_in_db***** [**输出**]  
  新数据库用户的名称。 *name_in_db*是数据类型为一个输出变量**sysname**，和默认值为 NULL。 如果未指定，*登录*使用。 如果指定为输出变量的值为 NULL，与**@name_in_db**设置为*登录*。 *name_in_db*当前数据库中不必须已存在。  

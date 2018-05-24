@@ -179,7 +179,7 @@ sp_addpublication [ @publication = ] 'publication'
  指定快照的备用文件夹的位置。 *alternate_snapshot_folder*是**nvarchar （255)** 默认值为 NULL。  
   
  [  **@pre_snapshot_script=** ] *****pre_snapshot_script*****  
- 指定指向的指针 **.sql**文件位置。 *pre_snapshot_script*是**nvarchar （255)，**默认值为 NULL。 分发代理将运行之前运行的任何复制的对象脚本时应用在订阅服务器上快照的快照前脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  
+ 指定指向的指针 **.sql**文件位置。 *pre_snapshot_script*是**nvarchar （255)，** 默认值为 NULL。 分发代理将运行之前运行的任何复制的对象脚本时应用在订阅服务器上快照的快照前脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  
   
  [  **@post_snapshot_script=** ] *****post_snapshot_script*****  
  指定指向的指针 **.sql**文件位置。 *post_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 分发代理将在初始同步过程中已应用所有其他复制的对象脚本和数据之后才运行快照后脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  

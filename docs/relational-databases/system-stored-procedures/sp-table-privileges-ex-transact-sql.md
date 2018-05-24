@@ -69,7 +69,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持三部分命名表 (*限定符***。***所有者***。***名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持三部分命名表 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**授权者**|**sysname**|已授予此权限的数据库用户名**TABLE_NAME**到列出**被授权者**。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列始终是相同**TABLE_OWNER**。 此字段始终返回值。 此外，授权者该列可能是数据库所有者 (**TABLE_OWNER**) 或用户向其数据库所有者授予权限的 GRANT 语句中使用 WITH GRANT OPTION 子句。|  

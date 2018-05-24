@@ -413,7 +413,7 @@ dtexec /option [value] [/option [value]]...
   
      指定 **/ISServer** 选项时，必须指定 **/Ser[ver]** 选项。  
   
---   /SQ[L] **package_path*：加载存储在 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdb **数据库中的包*****。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。   
+--   /SQ[L] **package_path *：加载存储在 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdb **数据库中的包*****。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。   
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -529,7 +529,7 @@ dtexec /sq pkgOne /verifyv {c200e360-38c5-11c5-11ce-ae62-08002b2b79ef}
 dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"  
 ```  
   
-> **注意：**如果路径或文件名包含空格，则 /SQL、/DTS 或 /FILE 选项的 package_path 或 filespec 参数必须用引号引起来。 如果没有使用引号将参数引起来，则该参数不能包含空格。  
+> **注意：** 如果路径或文件名包含空格，则 /SQL、/DTS 或 /FILE 选项的 package_path 或 filespec 参数必须用引号引起来。 如果没有使用引号将参数引起来，则该参数不能包含空格。  
   
  **日志记录选项**  
   

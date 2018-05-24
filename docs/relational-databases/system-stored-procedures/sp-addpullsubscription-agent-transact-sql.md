@@ -108,7 +108,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。  
   
  [  **@subscriber_security_mode=**] *subscriber_security_mode*  
- 同步时连接到订阅服务器所使用的安全模式。 *subscriber_security_mode*是**int、**默认值为 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  
+ 同步时连接到订阅服务器所使用的安全模式。 *subscriber_security_mode*是**int、** 默认值为 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 分发代理始终使用 Windows 身份验证连接到本地订阅服务器。 如果非 NULL 值或**1**指定对于此参数，将返回一条警告消息。  

@@ -31,7 +31,7 @@ ms.lasthandoff: 04/19/2018
   
 -   有权访问管理控制台来监视的设备状态分析平台系统登录。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   要连接到的结构域管理员帐户的知识*< 域名 > * * *-HST01** 节点。  
+-   要连接到的结构域管理员帐户的知识 *< 域名 > * * *-HST01** 节点。  
   
 ## <a name="HowToInstallPDW"></a>要应用 Analytics Platform System 修补程序  
 与 Microsoft 更新中，不同的分析平台系统软件修补程序不处理通过 WSUS 中。 它们具有不同的工作流和通过运行修补程序包安装。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/19/2018
   
     2.  使用**以管理员身份运行**选项来打开命令提示符。  
   
-    3.  运行以下命令，替换*<HotfixPackageName>*同名的修补程序可执行文件包，并将其他占位符项*/<*的相应信息。  
+    3.  运行以下命令，替换*<HotfixPackageName>* 同名的修补程序可执行文件包，并将其他占位符项 */<* 的相应信息。  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  

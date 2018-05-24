@@ -23,7 +23,7 @@ ms.lasthandoff: 04/19/2018
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>若要将用户添加到 Domain Admins 组  
   
-1.  登录到活动的 AD 节点**(*appliance_domain*-AD01**或 ***appliance_domain *-AD02**) 使用现有的设备域管理员帐户。  
+1.  登录到活动的 AD 节点 **(*appliance_domain*-AD01**或 ***appliance_domain *-AD02**) 使用现有的设备域管理员帐户。  
   
 2.  在“开始”菜单上，单击“运行”。 在**打开**框中，键入**dsa.msc**。 单击 **“确定”**。  
   

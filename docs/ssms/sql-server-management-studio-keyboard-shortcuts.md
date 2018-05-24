@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”**下的 **“键盘”** 页中选择所需的键盘方案。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
   
 > [!NOTE]  
 >  若要仅显示标题，请单击此页顶部的“全部折叠”。  
@@ -377,10 +377,10 @@ ms.lasthandoff: 05/03/2018
 |查找当前选定文本的上一个匹配项|Ctrl+Shift+F3|Ctrl+Shift+F3|  
 |显示 **“在文件中替换”** 对话框|Ctrl+Shift+H|Ctrl+Shift+H|  
 |反向渐进式搜索，从文件末尾搜索到开头|Ctrl+Shift+I|Ctrl+Shift+I|  
-|选中或清除 **“查找和替换”** 中的 **“向上搜索”**选项|Alt+F3、B|Alt+F3、B|  
+|选中或清除 **“查找和替换”** 中的 **“向上搜索”** 选项|Alt+F3、B|Alt+F3、B|  
 |停止 **“在文件中查找”** 搜索|Alt+F3、S|Alt+F3、S|  
-|选中或清除 **“查找和替换”** 中的 **“全字匹配”**选项|Alt+F3、W|Alt+F3、W|  
-|选择或清除 **“查找和替换”** 中的 **“通配符”**选项|Alt+F3、P|Alt+F3、P|  
+|选中或清除 **“查找和替换”** 中的 **“全字匹配”** 选项|Alt+F3、W|Alt+F3、W|  
+|选择或清除 **“查找和替换”** 中的 **“通配符”** 选项|Alt+F3、P|Alt+F3、P|  
 |将插入号放置于标准工具栏的“查找/命令”框|Ctrl+/|无等效项|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>剪切和粘贴键盘快捷键  
@@ -441,13 +441,13 @@ ms.lasthandoff: 05/03/2018
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |取消或停止当前正在运行的查询|Ctrl+T|Ctrl+T|  
-|显示 **“查询设计器”**的关系图窗格|Ctrl+1|Ctrl+1|  
-|显示 **“查询设计器”**的条件窗格|Ctrl+2|Ctrl+2|  
-|显示 **“查询设计器”**的 SQL 窗格|Ctrl+3|Ctrl+3|  
-|显示 **“查询设计器”**的结果窗格|Ctrl+4|Ctrl+4|  
-|运行 **“查询设计器”**中指定的查询|Ctrl+R|Ctrl+R|  
+|显示 **“查询设计器”** 的关系图窗格|Ctrl+1|Ctrl+1|  
+|显示 **“查询设计器”** 的条件窗格|Ctrl+2|Ctrl+2|  
+|显示 **“查询设计器”** 的 SQL 窗格|Ctrl+3|Ctrl+3|  
+|显示 **“查询设计器”** 的结果窗格|Ctrl+4|Ctrl+4|  
+|运行 **“查询设计器”** 中指定的查询|Ctrl+R|Ctrl+R|  
 |在处于结果窗格中时，将焦点移到停靠在设计器底部的工具条上|Ctrl+G|Ctrl+G|  
-|在 **“查询设计器”**中启用 JOIN 模式|Ctrl+Shift+J|Ctrl+Shift+J|  
+|在 **“查询设计器”** 中启用 JOIN 模式|Ctrl+Shift+J|Ctrl+Shift+J|  
   
 ## <a name="designer-keyboard-shortcuts"></a>设计器键盘快捷键  
   

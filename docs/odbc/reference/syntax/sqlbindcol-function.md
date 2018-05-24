@@ -133,7 +133,7 @@ SQLRETURN SQLBindCol(
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与*StatementHandle*不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- **SQLBindCol**用于将相关联，或*绑定，*结果中的列设置为数据缓冲区和应用程序中的长度/指示器缓冲区。 在应用程序调用**SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**以提取数据，该驱动程序返回的数据绑定的列指定的缓冲区中; 对于详细信息，请参阅[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)。 在应用程序调用**SQLBulkOperations**若要更新或插入行或**SQLSetPos**若要更新的行，该驱动程序将检索的数据绑定中的列的指定缓冲区; 有关详细信息请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。 有关绑定的详细信息，请参阅[检索结果 (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
+ **SQLBindCol**用于将相关联，或*绑定，* 结果中的列设置为数据缓冲区和应用程序中的长度/指示器缓冲区。 在应用程序调用**SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**以提取数据，该驱动程序返回的数据绑定的列指定的缓冲区中; 对于详细信息，请参阅[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)。 在应用程序调用**SQLBulkOperations**若要更新或插入行或**SQLSetPos**若要更新的行，该驱动程序将检索的数据绑定中的列的指定缓冲区; 有关详细信息请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。 有关绑定的详细信息，请参阅[检索结果 (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
   
  请注意列不需要将绑定到从中检索数据。 应用程序还可以调用**SQLGetData**从列检索数据。 但也可以将绑定中的行和调用的某些列**SQLGetData**对于其他操作系统，这会受到某些限制。 有关详细信息，请参阅[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
   

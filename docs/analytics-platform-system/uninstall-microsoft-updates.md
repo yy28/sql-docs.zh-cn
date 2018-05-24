@@ -31,7 +31,7 @@ ms.lasthandoff: 04/19/2018
   
 1.  登录到 *<Fabric Domain>* * *-HST01** 节点作为构造域管理员联系。  
   
-2.  若要卸载所有的 WSUS，以卸载批准的更新，请打开命令提示符窗口并输入以下命令。 替换占位符项*/<*的相应信息。  
+2.  若要卸载所有的 WSUS，以卸载批准的更新，请打开命令提示符窗口并输入以下命令。 替换占位符项 */<* 的相应信息。  
   
     ```  
     C:\pdwinst\media\setup.exe /action="RemoveMicrosoftUpdate" /DomainAdminPasswords="<password>"  

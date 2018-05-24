@@ -74,7 +74,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
- 各种 DBMS 产品支持三部分命名表 (*目录***。***架构***。***表*)，这表示在结果集中。  
+ 各种 DBMS 产品支持三部分命名表 (*目录 ***。*** 架构 ***。*** 表*)，这表示在结果集中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

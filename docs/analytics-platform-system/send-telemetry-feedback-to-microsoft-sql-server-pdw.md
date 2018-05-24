@@ -25,7 +25,7 @@ ms.lasthandoff: 04/19/2018
 若要提供最大的隐私保护，AP 附带而不启用遥测。 在之前启用此功能，首先查看[Microsoft 分析平台系统隐私声明](http://go.microsoft.com/fwlink/?LinkId=400902)。 若要选择加入，请运行如下所述的 PowerShell 脚本。  
   
 ## <a name="enable"></a>启用遥测  
-**DNS 转发：**向 Microsoft 发送遥测数据需要分析平台系统连接到在 internet 上通过 DNS 转发器。 若要启用此功能，必须启用转发所有主机和工作负荷 Vm 上的 DNS。 调用`Enable-RemoteMonitoring`命令`SetupDnsForwarder`选项正确配置 DNS 转发和启用遥测。 调用`Enable-RemoteMonitoring`命令而不`SetupDnsForwarder`选项在已配置 DNS 转发且你只想要启用检测信号监视。  
+**DNS 转发：** 向 Microsoft 发送遥测数据需要分析平台系统连接到在 internet 上通过 DNS 转发器。 若要启用此功能，必须启用转发所有主机和工作负荷 Vm 上的 DNS。 调用`Enable-RemoteMonitoring`命令`SetupDnsForwarder`选项正确配置 DNS 转发和启用遥测。 调用`Enable-RemoteMonitoring`命令而不`SetupDnsForwarder`选项在已配置 DNS 转发且你只想要启用检测信号监视。  
   
 > [!IMPORTANT]  
 > 启用 DNS 转发打开所有主机和工作负荷 Vm 的 internet 连接。  

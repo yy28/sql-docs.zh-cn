@@ -20,13 +20,13 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="HowToDSRM"></a>若要重置管理员密码  
   
-1.  打开命令提示符窗口的设备 AD 节点上***appliance_domain*– AD*xx***虚拟机。  
+1.  打开命令提示符窗口的设备 AD 节点上***appliance_domain *– AD*xx***虚拟机。  
   
 2.  在命令提示符处，键入`ntdsutil`。  
   
 3.  在**ntdsutil**提示符下，键入`set dsrm password`。  
   
-4.  在**重置管理员密码：**提示符下，键入`reset password on server null`。  
+4.  在**重置管理员密码：** 提示符下，键入`reset password on server null`。  
   
 5.  在提示符处，键入新密码。  
   

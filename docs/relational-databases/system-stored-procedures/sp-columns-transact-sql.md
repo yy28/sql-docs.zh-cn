@@ -58,7 +58,7 @@ sp_columns [ @table_name = ] object
  如果当前用户拥有一个具有指定名称的对象，则返回该对象的列。 如果*所有者*未指定当前用户不拥有具有指定的对象和*对象*， **sp_columns**查找具有指定的对象*对象*拥有的数据库所有者。 如果存在这样的对象，则返回该对象的列。  
   
  [ **@table_qualifier****=**] *qualifier*  
- 对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名对象 (*限定符***。***所有者***。***名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
+ 对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名对象 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
   
  [  **@column_name=**]*列*  
  一个单独的列，当只需要目录信息的一列时可使用该参数。 *列*是**nvarchar(384)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示的列名称，如所示**syscolumns**表。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  

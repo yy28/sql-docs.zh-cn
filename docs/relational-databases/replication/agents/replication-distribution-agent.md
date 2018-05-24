@@ -97,13 +97,13 @@ distrib [-?]
  输出所有可用的参数。  
   
  **-Publisher** *server_name*[**\\***i**nstance_name*]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\*** instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  **-PublisherDB** *publisher_database*  
  发布服务器数据库的名称。  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\*** instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  **-SubscriberDB** *subscriber_database*  
  订阅服务器数据库的名称。  

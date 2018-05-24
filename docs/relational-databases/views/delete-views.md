@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
-1.  在 **“对象资源管理器”**中，展开包含要删除的视图的数据库，然后展开 **“视图”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，展开包含要删除的视图的数据库，然后展开 **“视图”** 文件夹。  
   
 2.  右键单击要删除的视图，然后单击“删除”。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

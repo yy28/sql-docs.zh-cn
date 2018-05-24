@@ -123,7 +123,7 @@ sp_add_job [ @job_name = ] 'job_name'
  InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
- **@originating_server** 中存在**sp_add_job，**但未列在自变量。 **@originating_server** 是保留供内部使用。  
+ **@originating_server** 中存在**sp_add_job，** 但未列在自变量。 **@originating_server** 是保留供内部使用。  
   
  后**sp_add_job**已执行来添加作业， **sp_add_jobstep**可以用于添加作业执行活动的步骤。 **sp_add_jobschedule**可用于创建此计划[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务将使用来执行该作业。 使用**sp_add_jobserver**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作业的执行位置的实例和**sp_delete_jobserver**若要删除的作业[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   

@@ -84,7 +84,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持三部分命名表 (*限定符***。***所有者***。***名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些其他产品中，该列表示表的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持三部分命名表 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些其他产品中，该列表示表的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**TABLE_TYPE**|**varchar （32)**|表、系统表或视图。|  

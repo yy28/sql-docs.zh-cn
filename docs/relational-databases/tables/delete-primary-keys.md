@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-a-primary-key-constraint"></a>删除主键约束  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

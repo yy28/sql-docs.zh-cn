@@ -61,7 +61,7 @@ sp_tables [ [ @table_name = ] 'name' ]
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定所有者，且当前用户未拥有指定名称的表，则该过程查找由数据库所有者拥有的具有指定名称的表。 如果存在，则返回该表的列。  
   
  [  **@table_qualifier=** ] *****限定符*****  
- 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*限定符***。***所有者***。***名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [ **，** [  **@table_type=** ] **"***类型*****， 类型 **"** ]  
  由逗号分隔的值列表，该列表提供有关所有指定的表类型的表的信息。 其中包括**表**， **SYSTEMTABLE**，和**视图**。 *类型*是**varchar(100)**，默认值为 NULL。  

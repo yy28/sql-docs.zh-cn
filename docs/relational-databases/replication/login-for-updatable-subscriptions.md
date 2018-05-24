@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
  输入仅具有本主题中所描述权限的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
  **“密码”**  
- 为 **“登录名”**中指定的登录名输入一个强密码。  
+ 为 **“登录名”** 中指定的登录名输入一个强密码。  
     
  **使用您指定的链接服务器或远程服务器。**  
  此选项需要使用您所定义的链接服务器或远程服务器。 有关详细信息，请参阅[链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)和[远程服务器](../../database-engine/configure-windows/remote-servers.md)。 请确保用于链接服务器或远程服务器的登录名具有强密码，并且仅具有本主题中描述的权限。  

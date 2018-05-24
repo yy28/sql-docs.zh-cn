@@ -73,7 +73,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表或视图限定符的名称。 各种 DBMS 产品支持三部分命名表 (*限定符***。***所有者***。***名称*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表或视图限定符的名称。 各种 DBMS 产品支持三部分命名表 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**TABLE_SCHEM**|**sysname**|表或视图所有者的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该列表示创建表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表或视图名称。 此字段始终返回值。|  
 |**COLUMN_NAME**|**sysname**|列名称，为每个列的**TABLE_NAME**返回。 此字段始终返回值。|  

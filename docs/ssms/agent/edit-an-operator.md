@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-edit-an-operator"></a>编辑操作员  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要编辑的操作员的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要编辑的操作员的服务器。  
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-edit-an-operator"></a>编辑操作员  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

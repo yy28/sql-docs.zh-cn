@@ -176,7 +176,7 @@ GO
   
      您可以控制在备份或还原操作后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是保持磁带处于打开状态，还是在磁带满后释放磁带并倒带。 默认行为是倒带 (REWIND)。  
   
-> **注意：**有关 BACKUP 语法和参数的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。 有关 RESTORE 语法和参数的详细信息，请分别参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
+> **注意：** 有关 BACKUP 语法和参数的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。 有关 RESTORE 语法和参数的详细信息，请分别参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
 ###  <a name="OpenTapes"></a> 管理打开的磁带  
  若要查看打开的磁带设备列表以及装入请求状态，请查询 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 动态管理视图。 此视图显示了所有打开的磁带。 其中包括正在使用的磁带，它们等待下一个 BACKUP 或 RESTORE 操作时暂时处于空闲状态。  

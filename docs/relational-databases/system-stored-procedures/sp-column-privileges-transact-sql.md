@@ -56,7 +56,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  如果当前用户拥有具有指定名称的表，则返回该表的列。 如果*table_owner*未指定当前用户不拥有具有指定的表和*table_name*，sp_column 特权查找具有指定的表*table_name*拥有的数据库所有者。 如果有，则返回该表的列。  
   
  [ @table_qualifier=] '*table_qualifier*  
- 表限定符的名称。 *table_qualifier*是*sysname*，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*限定符***。***所有者***。***名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 表限定符的名称。 *table_qualifier*是*sysname*，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [ @column_name=] '*列*  
  只获取一列目录信息时所用的单独的列。 *列*是**nvarchar (** 384 **)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示 sys.columns 表中列出的列名称。 *列*可以包含通配符字符使用通配符匹配的基础的 DBMS 的模式。 为了达到最佳的互操作性，网关客户端应只采用 ISO 标准模式匹配（% 和 _ 通配符）。  

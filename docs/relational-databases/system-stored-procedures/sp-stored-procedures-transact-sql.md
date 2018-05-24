@@ -61,7 +61,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   当前数据库中的 **dbo** 架构。  
   
  [  **@qualifier =** ] *****限定符*****  
- 过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持由三部分命名窗体中的表 (*限定符***。***架构***。***名称*。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示的数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ 过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持由三部分命名窗体中的表 (*限定符 ***。*** 架构 ***。*** 名称*。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示的数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
  [  **@fUsePattern =** ] *****fUsePattern*****  
  确定是否将下划线 (_)、百分号 (%) 或 方括号 ([ ]) 解释为通配符。 *fUsePattern*是**位**，默认值为 1。  

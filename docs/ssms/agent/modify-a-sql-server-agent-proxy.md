@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-modify-a-includessnoversionincludesssnoversionmdmd-agent-proxy"></a>修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要修改的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要修改的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户的服务器。  
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-modify-a-includessnoversionincludesssnoversionmdmd-agent-proxy"></a>修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

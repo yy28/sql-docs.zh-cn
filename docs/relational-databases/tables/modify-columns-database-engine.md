@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>修改列的数据类型  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

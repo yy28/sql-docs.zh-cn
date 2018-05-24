@@ -149,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="master"></a> 移动 master 数据库  
  若要移动 master 数据库，请按下列步骤进行操作。  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”**和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
 2.  在“SQL Server 服务”节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)**），并选择“属性”。  
   
@@ -217,7 +217,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在 **“服务器属性”** 对话框中，选择 **“数据库设置”**。  
   
-3.  在 **“数据库默认位置”**下，找到数据文件和日志文件的新位置。  
+3.  在 **“数据库默认位置”** 下，找到数据文件和日志文件的新位置。  
   
 4.  先停止然后启动 SQL Server 服务以完成更改。  
   

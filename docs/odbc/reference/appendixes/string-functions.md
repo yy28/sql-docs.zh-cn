@@ -46,10 +46,10 @@ ms.lasthandoff: 05/03/2018
 |**CHARACTER_LENGTH (** *string_exp* **)** (ODBC 3.0)|以字符为单位的字符串表达式，返回的长度，如果字符串表达式的字符数据类型;否则，返回的长度以字节为单位的字符串表达式 （的最小整数不小于除以 8 的比特数）。 （此函数是 CHAR_LENGTH 函数相同。）|  
 |**CONCAT (** *string_exp1*，*string_exp2 * * *)** (ODBC 1.0)|返回字符串的串联结果*string_exp2*到*string_exp1*。 生成的字符串依赖于 DBMS。 例如，如果列由*string_exp1*包含 NULL 值，则 DB2 将返回 NULL 但 SQL Server 将返回非 NULL 字符串。|  
 |**差异 (** *string_exp1*，*string_exp2 * * *)** (ODBC 2.0)|返回一个整数值，该值指示的 SOUNDEX 函数返回的值之间的差异*string_exp1*和*string_exp2*。|  
-|**插入 (** *string_exp1*，*启动*，*长度*， *string_exp2 * * *)** (ODBC 1.0)|返回一个字符字符串位置*长度*从已删除字符*string_exp1*开始，*启动*，以及在何处*string_exp2*已插入到*string_exp，*开始*启动*。|  
+|**插入 (** *string_exp1*，*启动*，*长度*， *string_exp2 * * *)** (ODBC 1.0)|返回一个字符字符串位置*长度*从已删除字符*string_exp1*开始，*启动*，以及在何处*string_exp2*已插入到*string_exp，* 开始*启动*。|  
 |**LCASE (** *string_exp* **)** (ODBC 1.0)|返回一个字符串等于，在*string_exp*，所有大写字符转换为小写字符。|  
 |**左 (** *string_exp*，*计数 * * *)** (ODBC 1.0)|返回最左边*计数*字符*string_exp*。|  
-|**长度 (** *string_exp* **)** (ODBC 1.0)|返回中的字符数*string_exp，*不包括尾随空格。<br /><br /> **长度**仅接受字符串。 因此将隐式转换*string_exp*为字符串，然后返回此字符串 （不内部的数据类型大小） 的长度。|  
+|**长度 (** *string_exp* **)** (ODBC 1.0)|返回中的字符数*string_exp，* 不包括尾随空格。<br /><br /> **长度**仅接受字符串。 因此将隐式转换*string_exp*为字符串，然后返回此字符串 （不内部的数据类型大小） 的长度。|  
 |**找到 (** *string_exp1*， *string_exp2*[，*启动*]**)** (ODBC 1.0)|返回的第一个匹配项的起始位置*string_exp1*内*string_exp2*。 第一个匹配项的搜索*string_exp1*开头的第一个字符位置在*string_exp2*除非可选参数，*启动*，指定。 如果*启动*的值指示的字符位置开始执行搜索的指定*启动*。 第一个字符置于*string_exp2*由值 1。 如果*string_exp1*中找不到*string_exp2*，返回值 0。<br /><br /> 如果应用程序可以调用具有的定位标量函数*string_exp1*， *string_exp2*，和*启动*自变量，该驱动程序返回 SQL_FN_STR_LOCATE 时**SQLGetInfo**使用调用*选项*SQL_STRING_FUNCTIONS。 如果应用程序可以调用具有唯一的定位标量函数*string_exp1*和*string_exp2*自变量，该驱动程序返回 SQL_FN_STR_LOCATE_2 时**SQLGetInfo**使用调用*选项*SQL_STRING_FUNCTIONS。 调用具有两个或三个参数的查找函数的支持返回 SQL_FN_STR_LOCATE 和 SQL_FN_STR_LOCATE_2 的驱动程序。|  
 |**LTRIM (** *string_exp* **)** (ODBC 1.0)|返回的字符*string_exp*，用前导空白已删除。|  
 |**OCTET_LENGTH (** *string_exp* **)** (ODBC 3.0)|返回字符串表达式的长度（以字节为单位）。 结果为不小于位数除以 8 所得数的最小整数。<br /><br /> 不只对字符串数据类型不起作用，因此将不隐式转换*string_exp*字符串而是将返回它会获得任何数据类型 （内部） 大小。|  

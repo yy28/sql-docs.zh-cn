@@ -155,7 +155,7 @@ GO
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
-2.  在 **“SQL Server 配置管理器”**中，单击 **“SQL Server 服务”**。  
+2.  在 **“SQL Server 配置管理器”** 中，单击 **“SQL Server 服务”**。  
   
 3.  在详细信息窗格中，右键单击“SQL Server (\<instancename>)”****，然后单击“属性”。  
   

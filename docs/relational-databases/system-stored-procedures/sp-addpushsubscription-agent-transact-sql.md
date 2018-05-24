@@ -83,7 +83,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  订阅服务器的名称。 *订阅服务器*是**sysname**，默认值为 NULL。  
   
  [  **@subscriber_db =**] *****subscriber_db*****  
- 是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。 对于非 SQL Server 订阅服务器，指定的值**（默认目标）**为*subscriber_db*。  
+ 是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。 对于非 SQL Server 订阅服务器，指定的值 **（默认目标）** 为*subscriber_db*。  
   
  [  **@subscriber_security_mode =**] *subscriber_security_mode*  
  同步时连接到订阅服务器所使用的安全模式。 *subscriber_security_mode*是**int**，默认值为 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  

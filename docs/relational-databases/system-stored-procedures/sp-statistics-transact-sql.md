@@ -59,7 +59,7 @@ sp_statistics [ @table_name = ] 'table_name'
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的索引。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程查找具有指定的表*名称*归数据库所有者。 如果存在这样的表，则返回该表的索引。  
   
  [  **@table_qualifier=** ] *****限定符*****  
- 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*限定符***。***所有者***。***名称*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [  **@index_name=** ] *****index_name*****  
  是的索引名称。 *index_name*是**sysname**，默认值为 %。 支持通配符模式匹配。  

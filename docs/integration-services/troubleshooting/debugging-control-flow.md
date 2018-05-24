@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="debug-windows"></a>调试窗口  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含多个窗口，可以用来处理断点，以及用来调试包含断点的包。 若要了解每个窗口的更多信息，请打开该窗口，然后按 F1 显示该窗口的帮助。  
   
- 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开这些窗口，请单击 **“调试”** 菜单，指向 **“窗口”**，然后单击 **“断点”**、 **“输出”**或 **“即时”**。  
+ 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开这些窗口，请单击 **“调试”** 菜单，指向 **“窗口”**，然后单击 **“断点”**、 **“输出”** 或 **“即时”**。  
   
  下表介绍这些窗口。  
   

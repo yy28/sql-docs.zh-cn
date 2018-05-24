@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
  返回**字符串**值，该值指示对象或应用程序的名称。  
   
 ## <a name="remarks"></a>注释  
- 使用**源**属性[错误](../../../ado/reference/ado-api/error-object.md)对象确定最初生成了错误的应用程序的对象的名称。 这可能是对象的类名称或以编程方式的 id。 属性值将是在 ADO 中的错误，**ADODB。 * * * ObjectName*，其中*ObjectName*是触发错误的对象的名称。 对于 ADOX ADO MD，则值将是 **ADOX。 * * * ObjectName*和 **ADOMD。 * * * ObjectName，*分别。  
+ 使用**源**属性[错误](../../../ado/reference/ado-api/error-object.md)对象确定最初生成了错误的应用程序的对象的名称。 这可能是对象的类名称或以编程方式的 id。 属性值将是在 ADO 中的错误，**ADODB。 * * * ObjectName*，其中*ObjectName*是触发错误的对象的名称。 对于 ADOX ADO MD，则值将是 **ADOX。 * * * ObjectName*和 **ADOMD。 * * * ObjectName，* 分别。  
   
  基于的错误文档**源**，[数](../../../ado/reference/ado-api/number-property-ado.md)，和[说明](../../../ado/reference/ado-api/description-property.md)属性**错误**对象，你可以编写代码将相应地处理错误。  
   

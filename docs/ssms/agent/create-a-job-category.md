@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-job-category"></a>创建作业类别  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开您想要在其中创建作业类别的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开您想要在其中创建作业类别的服务器。  
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-job-category"></a>创建作业类别  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
   若要支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询，SQL Server 的 OLE DB 驱动程序**IDBSchemaRowset**接口返回链接服务器上的元数据。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 当限制架构行集输出的目录，用于 SQL Server 的 OLE DB 驱动程序识别出两部分名称包含的链接的服务器和目录名称。 下表中的架构行集，指定一个两部分目录名称作为*linked_server***。***目录*将输出限制为的适用目录中的命名的链接服务器。  
+ 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 当限制架构行集输出的目录，用于 SQL Server 的 OLE DB 驱动程序识别出两部分名称包含的链接的服务器和目录名称。 下表中的架构行集，指定一个两部分目录名称作为*linked_server ***。*** 目录*将输出限制为的适用目录中的命名的链接服务器。  
   
 |架构行集|目录限制|  
 |-------------------|-------------------------|  

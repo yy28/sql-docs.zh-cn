@@ -81,7 +81,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-a-user-defined-function"></a>删除用户定义函数  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
