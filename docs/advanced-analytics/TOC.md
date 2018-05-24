@@ -97,13 +97,14 @@
 ## [包管理](r/r-package-management-for-sql-server-r-services.md)
 ### [默认包](r/installing-and-managing-r-packages.md)
 ### [获取包信息](r/determine-which-packages-are-installed-on-sql-server.md)
-### [安装新 R 包](r/install-additional-r-packages-on-sql-server.md)
 ### [安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
-### 仅限 R
+### [安装新 R 包](r/install-additional-r-packages-on-sql-server.md)
+#### [使用 R 包管理器](r/install-additional-r-packages-on-sql-server.md)
+#### [使用 RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [使用 T-SQL](r/install-r-packages-tsql.md)
+#### [使用 miniCRAN 存储库](r/create-a-local-package-repository-using-minicran.md)
 #### [启用远程 R 包管理](r/r-package-how-to-enable-or-disable.md)
-#### [用于 R 包管理的 RevoScaleR 函数](r/use-revoscaler-to-manage-r-packages.md)
-#### [R 包同步](r/package-install-uninstall-and-sync.md)
-#### [本地 R 包存储库的 miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [同步 R 包](r/package-install-uninstall-and-sync.md)
 #### [R“用户库”的解决方法](r/packages-installed-in-user-libraries.md)
 
 ## 数据探索和建模

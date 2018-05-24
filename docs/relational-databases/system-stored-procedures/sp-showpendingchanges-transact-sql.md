@@ -86,7 +86,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  sp_showpendingchanges 的结果不包括第 0 代中的行。  
   
- 当为指定的项目*文章*不属于为指定的发布*发布，*对 pending_deletes 和 pending_ins_and_upd 返回的计数为 0。  
+ 当为指定的项目*文章*不属于为指定的发布*发布，* 对 pending_deletes 和 pending_ins_and_upd 返回的计数为 0。  
   
 ## <a name="permissions"></a>权限  
  只有 sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员才能执行 sp_showpendingchanges。  

@@ -71,7 +71,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **0** 。
      
-     - **用户名和密码（基本）**允许你指定用户名和密码以连接到邮件服务器。 还可以选择“使用安全连接”将此连接通过加密连接转至你的邮件服务器。
+     - **用户名和密码（基本）** 允许你指定用户名和密码以连接到邮件服务器。 还可以选择“使用安全连接”将此连接通过加密连接转至你的邮件服务器。
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **1** 。选择“使用安全连接”会将 `SMTPUseSSL` 设置为“True”。 将在 `<SendUserName>` 中将“用户名”设置为一个加密值。 将在 `<SendPassword>` 中将“密码”设置为一个加密值。
      

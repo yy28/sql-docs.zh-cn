@@ -81,7 +81,7 @@ ms.lasthandoff: 05/03/2018
   
      \*字段长度、前缀长度和终止符一起决定了在以 **char** 文件存储类型导出的非字符数据的数据文件中分配的存储空间量。  
   
-     \*\***的未来版本中将删除**ntext **、**text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 在新的开发工作中，请避免使用这些数据类型，并修改当前使用它们的应用程序。 请改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  
+     \*\***的未来版本中将删除**ntext **、** text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 在新的开发工作中，请避免使用这些数据类型，并修改当前使用它们的应用程序。 请改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  
   
 ## <a name="native-file-storage-types"></a>本机文件存储类型  
  在格式化文件中，每种本机文件存储类型都记录为相应的宿主文件数据类型。  

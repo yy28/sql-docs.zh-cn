@@ -109,9 +109,9 @@ ms.lasthandoff: 05/03/2018
   
 6.  如果计算机上安装了源代码管理软件，请选择 **“添加到源代码管理”**  ，以将项目与源代码管理关联起来。  
   
-7.  如果源代码管理软件是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe， **“Visual SourceSafe 登录”** 对话框就会打开。 在 **“Visual SourceSafe 登录”**对话框中，提供用户名、密码和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库的名称。 单击 **“浏览”** 查找数据库。  
+7.  如果源代码管理软件是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe， **“Visual SourceSafe 登录”** 对话框就会打开。 在 **“Visual SourceSafe 登录”** 对话框中，提供用户名、密码和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库的名称。 单击 **“浏览”** 查找数据库。  
   
-    > **注意：**若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”菜单上的“选项”，然后展开“源代码管理”节点。  
+    > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”菜单上的“选项”，然后展开“源代码管理”节点。  
   
 8.  单击“确定”  ，将解决方案添加到 **解决方案资源管理器** ，并将项目添加到解决方案。  
   
@@ -145,7 +145,7 @@ ms.lasthandoff: 05/03/2018
   
 9. 如果要从 **.ispac** 文件导入，请在 **“路径”** 文本框中键入包含文件名的路径。 单击 **“浏览”** 导航到要存储解决方案的文件夹，在 **“文件名”** 文本框中键入文件名，然后单击 **“打开”**。  
   
-     如果要从 **“Integration Services 目录”**导入，请在 **“服务器名称”** 文本框中键入数据库实例名称，或者单击 **“浏览”** 选择包含该目录的数据库实例。  
+     如果要从 **“Integration Services 目录”** 导入，请在 **“服务器名称”** 文本框中键入数据库实例名称，或者单击 **“浏览”** 选择包含该目录的数据库实例。  
   
      单击 **“路径”** 文本框旁边的 **“浏览”** ，展开目录中的文件夹，选择要导入的项目，然后单击 **“确定”**。  
   

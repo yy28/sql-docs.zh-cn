@@ -205,15 +205,15 @@ ms.lasthandoff: 05/03/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**Foreach 文件枚举器**|枚举文件。 选择此值将显示 **“Foreach 文件枚举器”**部分中的动态选项。|  
-|**Foreach 项枚举器**|枚举项中的值。 选择此值将显示 **“Foreach Item 枚举器”**部分中的动态选项。|  
-|**Foreach ADO 枚举器**|枚举表或表中的行。 选择此值将显示 **“Foreach ADO 枚举器”**部分中的动态选项。|  
-|**Foreach ADO.NET 架构行集枚举器**|枚举架构。 选择此值将显示 **“Foreach ADO.NET 枚举器”**部分中的动态选项。|  
-|**Foreach 源变量枚举器**|枚举变量中的值。 选择此值将显示 **“Foreach 源变量枚举器”**部分中的动态选项。|  
-|**Foreach Nodelist 枚举器**|枚举 XML 文档中的节点。 选择此值将显示 **“Foreach Nodelist 枚举器”**部分中的动态选项。|  
-|**Foreach SMO 枚举器**|枚举 SMO 对象。 选择此值将显示 **“Foreach SMO 枚举器”**部分中的动态选项。|  
+|**Foreach 文件枚举器**|枚举文件。 选择此值将显示 **“Foreach 文件枚举器”** 部分中的动态选项。|  
+|**Foreach 项枚举器**|枚举项中的值。 选择此值将显示 **“Foreach Item 枚举器”** 部分中的动态选项。|  
+|**Foreach ADO 枚举器**|枚举表或表中的行。 选择此值将显示 **“Foreach ADO 枚举器”** 部分中的动态选项。|  
+|**Foreach ADO.NET 架构行集枚举器**|枚举架构。 选择此值将显示 **“Foreach ADO.NET 枚举器”** 部分中的动态选项。|  
+|**Foreach 源变量枚举器**|枚举变量中的值。 选择此值将显示 **“Foreach 源变量枚举器”** 部分中的动态选项。|  
+|**Foreach Nodelist 枚举器**|枚举 XML 文档中的节点。 选择此值将显示 **“Foreach Nodelist 枚举器”** 部分中的动态选项。|  
+|**Foreach SMO 枚举器**|枚举 SMO 对象。 选择此值将显示 **“Foreach SMO 枚举器”** 部分中的动态选项。|  
 |**Foreach HDFS 文件枚举器**|在指定的 HDFS 位置枚举 HDFS 文件。 选择此值将显示“Foreach HDFS 文件枚举器” 部分中的动态选项。|  
-|**Foreach Azure Blob 枚举器**|枚举指定 blob 位置中的 blob 文件。 选择此值将显示 **“Foreach Azure Blob 枚举器”**部分中的动态选项。|  
+|**Foreach Azure Blob 枚举器**|枚举指定 blob 位置中的 blob 文件。 选择此值将显示 **“Foreach Azure Blob 枚举器”** 部分中的动态选项。|  
 |**Foreach ADLS 文件枚举器**|枚举指定 Data Lake Store 目录中的文件。 选择此值会显示“Foreach ADLS 文件枚举器”部分中的动态选项。|
   
  **表达式**  

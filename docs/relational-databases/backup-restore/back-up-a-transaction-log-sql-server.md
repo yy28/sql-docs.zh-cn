@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  在 **“备份类型”** 列表框中，选择 **“事务日志”**。  
   
-7.  还可以根据需要选择 **“仅复制备份”**创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
+7.  还可以根据需要选择 **“仅复制备份”** 创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   
     >** 注意！**选择“差异”选项时，无法创建仅复制备份。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **完成后验证备份**。  
   
-    -   **“写入介质前检查校验和”**和 **“出现校验和错误时继续”**（可选）。 有关校验和的信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **“写入介质前检查校验和”** 和 **“出现校验和错误时继续”**（可选）。 有关校验和的信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
 15. 在 **“事务日志”** 区域中：  
   
@@ -114,9 +114,9 @@ ms.lasthandoff: 05/03/2018
   
          备份日志尾部失败后执行结尾日志备份，以防丢失所做的工作。 在失败之后且在开始还原数据库之前，或者在故障转移到辅助数据库时，备份活动日志（结尾日志备份）。 选择此选项等效于在 Transact-SQL BACKUP LOG 语句中指定 NORECOVERY 选项。 有关结尾日志备份的详细信息，请参阅[结尾日志备份 (SQL Server) ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
-16. 如果备份到磁带驱动器（如同 **“常规”**页的 **“目标”**部分指定的一样），则 **“备份后卸载磁带”**选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。  
+16. 如果备份到磁带驱动器（如同 **“常规”** 页的 **“目标”** 部分指定的一样），则 **“备份后卸载磁带”** 选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”**来压缩备份，并且可以通过选中 **“不压缩备份”**来防止压缩备份。  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”** 来压缩备份，并且可以通过选中 **“不压缩备份”** 来防止压缩备份。  
   
      **查看当前备份压缩默认值**  
   

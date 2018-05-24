@@ -2,9 +2,10 @@
 # [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [配置具有 NVDIMM-N 回写式缓存的存储空间](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
-# [自适应查询处理](adaptive-query-processing.md)
 # [自动优化](../automatic-tuning/automatic-tuning.md)
 # [基数估计](cardinality-estimation-sql-server.md)  
+# [智能查询处理](intelligent-query-processing.md)
+## [自适应查询处理](adaptive-query-processing.md)
 
 # [监视和优化性能](monitor-and-tune-for-performance.md)  
 ## [监视 SQL Server 组件](monitor-sql-server-components.md)  

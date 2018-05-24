@@ -46,9 +46,9 @@ ms.lasthandoff: 05/03/2018
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 请注意，`instance of`运算符， `Occurrence indicator`，指定的基数，所产生的序列中的项数。 如果未指定，则假定基数为 1。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，仅问号 (**？)** 支持发生指示符。 **？** 发生指示符指示`Expression`可以返回零个或一个项。 如果**？** 指定发生指示符，则`instance of`时才返回 True`Expression`类型匹配所指定`SequenceType`，无论`Expression`返回单一实例或空序列。  
+ 请注意，`instance of`运算符， `Occurrence indicator`，指定的基数，所产生的序列中的项数。 如果未指定，则假定基数为 1。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，仅问号 (**？)** 支持发生指示符。 **？** 发生指示符指示`Expression`可以返回零个或一个项。 如果 **？** 指定发生指示符，则`instance of`时才返回 True`Expression`类型匹配所指定`SequenceType`，无论`Expression`返回单一实例或空序列。  
   
- 如果**？** 未指定发生指示符，`sequence of`返回 True，仅当`Expression`键入匹配`Type`指定和`Expression`返回单一实例。  
+ 如果 **？** 未指定发生指示符，`sequence of`返回 True，仅当`Expression`键入匹配`Type`指定和`Expression`返回单一实例。  
   
  **请注意**的加号 (**+**) 和星号 (**\***) 中不支持发生指示符[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   

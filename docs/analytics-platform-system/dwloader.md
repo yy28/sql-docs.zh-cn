@@ -134,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用参数文件， *parameter_file_name*，代替命令行参数。 *parameter_file_name*可以包含除任何命令行参数*user_name*和*密码*。 如果在命令行和参数文件中指定参数，则命令行重写文件的参数。  
   
-参数文件包含一个参数，而不**-**前缀，每行。  
+参数文件包含一个参数，而不**-** 前缀，每行。  
   
 示例：  
   
@@ -425,7 +425,7 @@ Microsoft 支持部门，建议仅用于*batchsize*是 DMS 执行到计算节点
 指定用于确定加载程序将允许的加载失败的数目的选项。 如果加载失败超出阈值时，加载程序将暂停并提交的任何行。  
   
 **-rt** {**值**| 百分比}  
-指定是否-*reject_value*中**-rv** *reject_value*选项为文本的行 （值） 或失败 （百分比） 的速率。 默认值为值。  
+指定是否-*reject_value*中 **-rv** *reject_value*选项为文本的行 （值） 或失败 （百分比） 的速率。 默认值为值。  
   
 百分比选项是实时计算-rs 选项根据时间间隔发生。  
   
@@ -460,9 +460,9 @@ Microsoft 支持部门，建议仅用于*batchsize*是 DMS 执行到计算节点
 **-m**  
 使用多事务模式的第二个阶段的加载;当数据从临时表加载到分布式表。  
   
-与**– m**，SQL Server PDW 执行并提交并行的负载。 这比默认加载模式下，更快地执行，但不是事务安全。  
+与 **– m**，SQL Server PDW 执行并提交并行的负载。 这比默认加载模式下，更快地执行，但不是事务安全。  
   
-而无需**– m**，SQL Server PDW 执行并在每个计算节点中, 分布区同时跨计算节点将按顺序提交加载。 此方法比多事务模式慢，而且是事务安全。  
+而无需 **– m**，SQL Server PDW 执行并在每个计算节点中, 分布区同时跨计算节点将按顺序提交加载。 此方法比多事务模式慢，而且是事务安全。  
   
 **-m**对于是可选的*追加*，*重新加载*，和*upsert*。  
   
@@ -474,7 +474,7 @@ Microsoft 支持部门，建议仅用于*batchsize*是 DMS 执行到计算节点
   
 没有多事务模式中，这意味着从失败或已中止负载恢复必须由你自己的加载过程回滚。  
   
-我们建议使用**– m**仅时加载到一个空表，以便你可以恢复的数据丢失。 若要从负载故障中恢复： 删除目标表、 解决负载问题、 重新创建目标表中，和重新运行负载。  
+我们建议使用 **– m**仅时加载到一个空表，以便你可以恢复的数据丢失。 若要从负载故障中恢复： 删除目标表、 解决负载问题、 重新创建目标表中，和重新运行负载。  
   
 **-N**  
 验证目标设备具有来自受信任颁发机构的有效 SQL Server PDW 证书。 用于帮助确保你的数据将不会让攻击者截获和发送到未经授权的位置。 证书必须已安装在设备上。 安装证书的唯一受支持的方法是让设备管理员能够使用 Configuration Manager 工具安装它。 如果你不确定设备是否具有安装受信任的证书要求设备管理员。  
@@ -545,7 +545,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 追加可以以多事务 （使用 – m 自变量） 的模式运行，但它不是事务安全。 因此追加 （不使用 – m 自变量） 用作事务操作。 遗憾的是，在最终 INSERT SELECT 操作时，事务模式低于当前大约六倍多事务模式。  
   
-追加模式将数据加载在两个阶段。 第一阶段将数据从原始文件加载到临时表同时 （碎片可以发生）。 第二个阶段将数据从临时表加载到最终表。 第二个阶段执行**INSERT INTO...选择 WITH (TABLOCK)**操作。 下表显示的锁定行为对最终的目录，并使用时的日志记录行为追加模式：  
+追加模式将数据加载在两个阶段。 第一阶段将数据从原始文件加载到临时表同时 （碎片可以发生）。 第二个阶段将数据从临时表加载到最终表。 第二个阶段执行**INSERT INTO...选择 WITH (TABLOCK)** 操作。 下表显示的锁定行为对最终的目录，并使用时的日志记录行为追加模式：  
   
 |表类型|多事务<br />模式 (-m)|表为空|支持的并发|日志记录|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
@@ -599,7 +599,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-以下脚本代码段使用 dwloader 数据加载到 DimAccount 和 DimCurrency 表。 此脚本使用以太网地址。 如果它已使用 InfiniBand，服务器将*< appliance_name >*`-SQLCTL01`。  
+以下脚本代码段使用 dwloader 数据加载到 DimAccount 和 DimCurrency 表。 此脚本使用以太网地址。 如果它已使用 InfiniBand，服务器将 *< appliance_name >*`-SQLCTL01`。  
   
 ```  
 set server=10.193.63.134  
@@ -686,7 +686,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe �
   
 -   *-R DimAccount.bad*指定加载失败的行将写入到名为 DimAccount.bad 的文件。  
   
--   *– t"|"*指示用管道字符分隔的输入文件 DimAccount.txt 中的字段。  
+-   *– t"|"* 指示用管道字符分隔的输入文件 DimAccount.txt 中的字段。  
   
 -   *-r \r\n*指定 DimAccount.txt 中的每一行结尾回车符和换行符。  
   
