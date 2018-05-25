@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f5670a83fc6510f7c31966075fce911814ee7e5
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: cc1293a87ddfb743964a40377ba126a2f745d59d
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ ms.lasthandoff: 05/07/2018
   
  Sys.dm_exec_connections、 sys.dm_exec_sessions 和 sys.dm_exec_requests 动态管理视图映射到[sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系统表。  
   
-> **注意：**调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_sessions**。  
+> **注意：** 调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_sessions**。  
   
 |列名|数据类型|说明和特定于版本的信息|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|标识与每个活动主连接关联的会话。 不可为 null。|  
 |login_time|**datetime**|建立会话的时间。 不可为 null。|  
-|host_name|**nvarchar(128)**|特定于会话的客户端工作站名称。 对于内部会话，该值为 NULL。 可以为 Null。<br /><br /> **安全说明：**客户端应用程序提供工作站名称，并且可以提供不准确的数据。 不要将 HOST_NAME 作为安全功能使用。|  
+|host_name|**nvarchar(128)**|特定于会话的客户端工作站名称。 对于内部会话，该值为 NULL。 可以为 Null。<br /><br /> **安全说明：** 客户端应用程序提供工作站名称，并且可以提供不准确的数据。 不要将 HOST_NAME 作为安全功能使用。|  
 |program_name|**nvarchar(128)**|启动会话的客户端程序的名称。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |host_process_id|**int**|启动会话的客户端程序的进程 ID。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |client_version|**int**|客户端连接到服务器所用接口的 TDS 协议版本。 对于内部会话，该值为 NULL。 可以为 Null。|  

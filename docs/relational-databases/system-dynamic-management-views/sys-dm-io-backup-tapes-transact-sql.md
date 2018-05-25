@@ -3,8 +3,6 @@ title: sys.dm_io_backup_tapes (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 330d0d76891271cc7dce210ff8021ba98e62c73f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 93a8e8d5c0d123bd8d226e43926f727bf2cc81e4
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ ms.lasthandoff: 05/07/2018
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|可以执行备份的实际物理设备的名称。 不可为 null。|  
 |**logical_device_name**|**nvarchar(256)**|用户指定该驱动器的名称 (从**sys.backup_devices**)。 如果用户指定名称不可用，则为 NULL。 可以为 Null。|  
-|**status**|**int**|磁带的状态：<br /><br /> 1 = 打开，可以使用<br /><br /> 2 = 装入挂起<br /><br /> 3 = 在使用中<br /><br /> 4 = 正在加载<br /><br /> **注意：**加载磁带时 (**状态 = 4**)，介质标签时不会尚未读取。 如复制介质标签值的列**media_sequence_number**，预期的显示值，从磁带上的实际值可能不同。 已读取标签后，**状态**更改为**3** （正在使用中），和介质标签列然后反映实际加载的磁带。<br /><br /> 不可为 null。|  
+|**status**|**int**|磁带的状态：<br /><br /> 1 = 打开，可以使用<br /><br /> 2 = 装入挂起<br /><br /> 3 = 在使用中<br /><br /> 4 = 正在加载<br /><br /> **注意：** 加载磁带时 (**状态 = 4**)，介质标签时不会尚未读取。 如复制介质标签值的列**media_sequence_number**，预期的显示值，从磁带上的实际值可能不同。 已读取标签后，**状态**更改为**3** （正在使用中），和介质标签列然后反映实际加载的磁带。<br /><br /> 不可为 null。|  
 |**status_desc**|**nvarchar(520)**|磁带状态的说明：<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> 不可为 null。|  
 |**mount_request_time**|**datetime**|装入的请求时间。 如果没有装入处于挂起状态则为 NULL (**状态 ！ = 2**)。 可以为 Null。|  
 |**mount_expiration_time**|**datetime**|装入请求的过期时间（超时）。 如果没有装入处于挂起状态则为 NULL (**状态 ！ = 2**)。 可以为 Null。|  

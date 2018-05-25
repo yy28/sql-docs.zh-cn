@@ -3,8 +3,6 @@ title: sys.dm_filestream_file_io_handles (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0ab584a398b3b03b5597e3033079de9558575bc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 87dc96a297933b6981e1e2ada432d355287b4ce2
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +43,8 @@ ms.lasthandoff: 05/07/2018
 |**creation_client_process_id**|**varbinary(8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
 |**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID。 这是返回的值**get_filestream_transaction_context**函数。 使用此字段来将联接到**sys.dm_filestream_file_io_requests**视图。 可以为 Null。|  
 |**access_type**|**nvarchar(60)**|不可为 null。|  
-|**logical_path**|**nvarchar(256)**|显示此句柄打开的文件的逻辑路径名。 这是通过返回的同一路径名称**。路径名**方法**varbinary**(**max**) filestream。 可以为 Null。|  
-|**physical_path**|**nvarchar(256)**|显示文件的实际 NTFS 路径名。 这是通过返回的同一路径名称**。PhysicalPathName**方法**varbinary**(**max**) filestream。 它由跟踪标志 5556 启用。 可以为 Null。|  
+|**logical_path**|**nvarchar(256)**|显示此句柄打开的文件的逻辑路径名。 这是通过返回的同一路径名称 **。路径名**方法**varbinary**(**max**) filestream。 可以为 Null。|  
+|**physical_path**|**nvarchar(256)**|显示文件的实际 NTFS 路径名。 这是通过返回的同一路径名称 **。PhysicalPathName**方法**varbinary**(**max**) filestream。 它由跟踪标志 5556 启用。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio （预览版） 发行说明
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/10/2018
 
 - 宣布可在扩展管理器使用 Redgate SQL 搜索扩展。
 - 可用于 10 种语言的社区本地化： 德语、 西班牙语、 法语、 意大利语、 日语、 朝鲜语、 葡萄牙语、 俄语、 简体中文和繁体中文。
-- GDPR 符合生成具有隐私声明 》 减少遥测数据收集、 改进的选择退出体验和产品内链接。
+- 减少遥测数据收集、 改进的选择退出体验和产品内的隐私声明的链接。
 - 扩展管理器已改进体验来轻松地发现社区扩展的应用商店。
 - 扩展的 SQL 代理作业和作业历史记录查看改善。
 - Whoisactive 和服务器报表扩展的更新。

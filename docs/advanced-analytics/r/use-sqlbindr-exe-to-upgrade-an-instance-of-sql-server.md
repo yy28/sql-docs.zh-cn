@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -258,37 +258,6 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 可能具有到包库添加了其他开放源代码或第三方包。 由于反转绑定切换默认包库的位置，你必须重新安装程序包添加到 R，但现在使用 Python 库。 有关详细信息，请参阅[默认包](installing-and-managing-r-packages.md)，[安装新的 R 包](install-additional-r-packages-on-sql-server.md)，和[安装新的 Python 软件包](../python/install-additional-python-packages-on-sql-server.md)。
 
-## <a name="known-issues"></a>已知问题
-
-本部分列出了已知的问题特定于使用 SqlBindR.exe 实用工具中，或可能会影响 SQL Server 实例的计算机学习服务器的升级。
-
-### <a name="restoring-packages-that-were-previously-installed"></a>还原以前安装的程序包
-
-如果你升级到 Microsoft R Server 9.0.1，该版本的版本的 SqlBindR.exe 无法还原原始包或 R 组件完全，要求用户在实例中，运行 SQL Server 修复应用所有的服务版本，然后重新启动实例。
-
-更高版本的 SqlBindR 自动还原原始的 R 功能，无需重新安装的 R 组件，或重新修补程序服务器。 但是，你必须安装可能在初始安装后添加任何 R 程序包更新。
-
-如果已使用包管理角色来安装并共享包，此任务是要容易得多： 你可以使用 R 命令同步到文件系统在数据库中，使用记录的已安装的程序包，反之亦然。 有关详细信息，请参阅[for SQL Server 的 R 包管理](r-package-management-for-sql-server-r-services.md)。
-
-### <a name="problems-with-multiple-upgrades-from-sql-server"></a>从 SQL Server 的多个升级的问题
-
-如果运行的新安装 Microsoft R Server 9.1.0 程序时，你有以前升级到 9.0.1，SQL Server 2016 R Services 的实例，它将显示所有的有效实例的列表，然后默认情况下，选择以前绑定的实例。 如果继续，则以前绑定的实例是未绑定。 因此，更早版本 9.0.1 删除安装，包括任何相关的包，但未安装 Microsoft R Server (9.1.0) 的新版本。
-
-一种解决方法，您可以修改现有的 R Server 安装，如下所示：
-1. 在 Control Panel 中，打开**添加或删除程序**。
-2. 找到 Microsoft R Server，并单击**更改/修改**。
-3. 安装程序启动时，选择你想要将绑定到 9.1.0 的实例。
-
-Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
-
-### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>绑定或取消绑定离开多个临时文件夹
-
-有时也无法清理临时文件夹的绑定和正在取消绑定操作。
-如果您发现具有类似名称的文件夹，则可以删除它在安装完成后： R_SERVICES_<guid>
-
-> [!NOTE]
-> 请务必等待，直到安装已完成。 它可能需要很长时间才能删除关联使用某一版本的 R 库，然后添加新的 R 库。 操作完成后，会删除临时文件夹。
-
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe 命令语法
 
 ### <a name="usage"></a>用法
@@ -322,6 +291,36 @@ MLS 安装程序和 SqlBindR 都返回以下错误代码和消息。
 |将绑定错误 8 | 取消绑定失败 | 取消绑定实例时出错。 |
 |将绑定错误 9 | 未找到任何实例 | 此计算机上未不找到任何数据库引擎实例。 |
 
+## <a name="known-issues"></a>已知问题
+
+本部分列出了已知的问题特定于使用 SqlBindR.exe 实用工具中，或可能会影响 SQL Server 实例的计算机学习服务器的升级。
+
+### <a name="restoring-packages-that-were-previously-installed"></a>还原以前安装的程序包
+
+如果你升级到 Microsoft R Server 9.0.1，该版本的版本的 SqlBindR.exe 无法还原原始包或 R 组件完全，要求用户在实例中，运行 SQL Server 修复应用所有的服务版本，然后重新启动实例。
+
+更高版本的 SqlBindR 自动还原原始的 R 功能，无需重新安装的 R 组件，或重新修补程序服务器。 但是，你必须安装可能在初始安装后添加任何 R 程序包更新。
+
+如果已使用包管理角色来安装并共享包，此任务是要容易得多： 你可以使用 R 命令同步到文件系统在数据库中，使用记录的已安装的程序包，反之亦然。 有关详细信息，请参阅[for SQL Server 的 R 包管理](r-package-management-for-sql-server-r-services.md)。
+
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>从 SQL Server 的多个升级的问题
+
+如果运行的新安装 Microsoft R Server 9.1.0 程序时，你有以前升级到 9.0.1，SQL Server 2016 R Services 的实例，它将显示所有的有效实例的列表，然后默认情况下，选择以前绑定的实例。 如果继续，则以前绑定的实例是未绑定。 因此，更早版本 9.0.1 删除安装，包括任何相关的包，但未安装 Microsoft R Server (9.1.0) 的新版本。
+
+一种解决方法，您可以修改现有的 R Server 安装，如下所示：
+1. 在 Control Panel 中，打开**添加或删除程序**。
+2. 找到 Microsoft R Server，并单击**更改/修改**。
+3. 安装程序启动时，选择你想要将绑定到 9.1.0 的实例。
+
+Microsoft 机器学习 Server 9.2.1 和 9.3 不具有此问题。
+
+### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>绑定或取消绑定离开多个临时文件夹
+
+有时也无法清理临时文件夹的绑定和正在取消绑定操作。
+如果您发现具有类似名称的文件夹，则可以删除它在安装完成后： R_SERVICES_<guid>
+
+> [!NOTE]
+> 请务必等待，直到安装已完成。 它可能需要很长时间才能删除关联使用某一版本的 R 库，然后添加新的 R 库。 操作完成后，会删除临时文件夹。
 
 ## <a name="see-also"></a>另请参阅
 

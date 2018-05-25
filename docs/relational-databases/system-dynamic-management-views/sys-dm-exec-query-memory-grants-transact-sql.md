@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 45edfc03c4389e03de66560647eec40076ef1a07
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 6ad96038b59e283053b944f4bb88a7b0fdd0406f
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/07/2018
 |**max_used_memory_kb**|**bigint**|到此刻为止所用的最大物理内存 (KB)。|  
 |**query_cost**|**float**|估计查询开销。|  
 |**timeout_sec**|**int**|查询放弃内存授予请求前的超时时间（秒）。|  
-|**resource_semaphore_id**|**int**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：**此 ID 是唯一的版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题中后面的"备注"部分。|  
+|**resource_semaphore_id**|**int**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：** 此 ID 是唯一的版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题中后面的"备注"部分。|  
 |**queue_id**|**int**|查询等待内存授予时所在等待队列的 ID。 如果已授予内存，则为 NULL。|  
 |**wait_order**|**int**|等待查询在指定的连续顺序**queue_id**。 如果其他查询获得内存授予或超时，则给定查询的该值可以更改。如果已授予内存，则为 NULL。|  
 |**is_next_candidate**|**bit**|下一个内存授予的候选对象。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已授予内存。|  

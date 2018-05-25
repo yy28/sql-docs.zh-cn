@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 0087d33c0eabcff4ebc81de80fc69999e3017828
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a7c1c73ca70e0d42104e74c868d6acd32cc01b1
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>导出和导入与 SSMS 或 Windows 上的 SqlPackage.exe Linux 上的数据库
 
@@ -25,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 这篇文章演示如何使用[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)和[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)导出和导入在 Linux 上的 SQL Server 2017 上的数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此使用此方法，当你有一台 Windows 计算机可以连接到 Linux 上的远程 SQL Server 实例。
 
-应始终安装并使用最新版本的 SQL Server Management Studio (SSMS) 中所述[以连接到 Linux 上的 SQL Server 的 Windows 上使用 SSMS](sql-server-linux-develop-use-ssms.md)
+应始终安装并使用最新版本的 SQL Server Management Studio (SSMS) 中所述[以连接到 Linux 上的 SQL Server 的 Windows 上使用 SSMS](sql-server-linux-manage-ssms.md)
 
 > [!NOTE]
 > 如果你要从一个 SQL Server 实例到另一个迁移数据库，建议是使用[备份和还原](sql-server-linux-migrate-restore-database.md)。
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 
 1. 启动 SSMS，通过键入**Microsoft SQL Server Management Studio**在窗口中搜索框中，并依次桌面应用程序。
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. 在对象资源管理器中连接到源数据库。 源数据库可以位于在本地或云中、在 Linux、Windows 或 Docker 上以及在 Azure SQL 数据库或 Azure SQL 数据仓库中运行的 Microsoft SQL Server 中。
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 
 1. 启动 SSMS，通过键入**Microsoft SQL Server Management Studio**在窗口中搜索框中，并依次桌面应用程序。
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. 在对象资源管理器中连接到目标服务器。 目标服务器可在本地运行的 Microsoft SQL Server 或在云中，在 Linux、 Windows 或 Docker 和 Azure SQL 数据库或 Azure SQL 数据仓库上。
 

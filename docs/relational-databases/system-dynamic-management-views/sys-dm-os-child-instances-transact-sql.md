@@ -3,8 +3,6 @@ title: sys.dm_os_child_instances (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -26,11 +24,11 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a3dbd375a127868b86c3d66827bd595f79d0959
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 66f4d8c770cc10c2ba47769576d8f9625edac0cf
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 05/07/2018
   
  从返回的信息**sys.dm_os_child_instances**可确定每个用户实例 (heart_beat) 的状态并获取用于创建与用户的连接的管道名称 (instance_pipe_name)实例使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQLCmd。 只有在外部进程（例如客户端应用程序）启动了用户实例之后，您才能连接到该用户实例。 SQL 管理工具无法启动用户实例。  
   
-> **注意：**用户实例是一项功能的[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]仅。  
+> **注意：** 用户实例是一项功能的[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]仅。  
   
 > **请注意**调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_child_instances**。  
   

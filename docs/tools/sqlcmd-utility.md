@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6454e750ae8ed30c3e06a91e374ffae47037d566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MTE
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -679,7 +679,7 @@ sqlcmd
   
  SQL Server 保留了介于 -1 到 -99 之间的返回值；sqlcmd 定义了以下附加返回值：  
   
-|返回值|Description|  
+|返回值|描述|  
 |-------------------|-----------------|  
 |-100|选择返回值前遇到错误。|  
 |-101|选择返回值时找不到行。|  

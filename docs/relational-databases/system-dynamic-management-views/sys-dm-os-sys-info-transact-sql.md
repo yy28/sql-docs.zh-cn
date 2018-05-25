@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -27,18 +26,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 53467f6dfcab26fa4fded8a9b32086417c8c0af6
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 45adf233cb8e5ee4e5046fd922426d7d087e5b2f
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   返回一组有关计算机和有关 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 可用资源及其已占用资源的有用杂项信息。  
   
-> **注意：**调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_sys_info**。  
+> **注意：** 调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_sys_info**。  
   
 |列名|数据类型|说明和特定于版本的注释 |  
 |-----------------|---------------|-----------------|  
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/07/2018
 |**virtual_machine_type_desc**|**nvarchar(60)**|适用范围：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 描述**virtual_machine_type**列。 不可为 Null。<br /><br /> NONE =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未运行在虚拟机。<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在某一 hypervisor 内运行，这意味着硬件辅助虚拟化。 安装 Hyper_V 角色时，虚拟机监控程序将承载操作系统，因此在主机操作系统上运行的实例将在虚拟机监控程序中运行。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在某一虚拟机内运行，该虚拟机未采用 Microsoft Virtual PC 之类的硬件助手。|  
 |**softnuma_configuration**|**int**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定配置方式 NUMA 节点。 不可为 Null。<br /><br /> 0 = OFF 指示硬件默认值<br /><br /> 1 = 自动软件 NUMA<br /><br /> 2 = 通过注册表的手动软件 NUMA|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 关闭 = SOFT-NUMA 功能为关闭<br /><br /> 在 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动确定软件 NUMA 的 NUMA 节点大小<br /><br /> 手动 = 手动配置的软件 NUMA|
-|**process_physical_affinity**|**nvarchar(3072)** |**适用于：**开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]。<br /><br />做好的信息。 |
+|**process_physical_affinity**|**nvarchar(3072)** |**适用于：** 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]。<br /><br />做好的信息。 |
 |**sql_memory_model**|**int**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定使用的内存模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配内存。 不可为 Null。<br /><br />1 = 常规内存模型<br />2 = 锁定内存页<br /> 3 = 在内存中的大型页|
 |**sql_memory_model_desc**|**nvarchar(120)**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定使用的内存模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配内存。 不可为 Null。<br /><br />**常规** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用传统的内存模型来分配内存。 这是默认 sql 内存模型时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务帐户锁定页中没有内存权限在启动过程。<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在使用中内存中锁定页面以分配内存。 当 SQL Server 服务帐户在 SQL Server 启动过程中内存特权拥有锁定页时，这是默认 sql 内存管理器。<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在使用中内存大型页以分配内存。 SQL Server 使用大型页分配器时 SQL Server 服务帐户拥有内存特权锁定页在服务器启动时以及在开启跟踪标志 834 时将仅有企业版的内存分配。|
 |**pdw_node_id**|**int**|**适用于：** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  

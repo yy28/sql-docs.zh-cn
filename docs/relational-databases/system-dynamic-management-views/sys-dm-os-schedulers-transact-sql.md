@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a02ce91a67a8df3970428ad63e3abc61565bdb64
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7ecf29c32131972d2802eae9cf735582252cf145
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/07/2018
 |is_online|**bit**|如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只使用服务器中某些可用的处理器，那么此配置可以表示某些计划程序被映射到不在关联掩码中的处理器。 如果情况是这样，则此列将返回 0。 此值表示此计划程序不会用来处理查询或批。<br /><br /> 不可为 null。|  
 |is_idle|**bit**|1 = 计划程序空闲。 当前未运行工作线程。 不可为 null。|  
 |preemptive_switches_count|**int**|此计划程序的工作线程已切换到抢先模式的次数。<br /><br /> 若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。|  
-|context_switches_count|**int**|此计划程序已经发生的上下文切换数。 不可为 null。<br /><br /> 若要允许其他工作线程运行，当前正在运行的工作线程必须放弃对计划程序或切换上下文的控制权。<br /><br /> **注意：**如果辅助进程生成计划程序并将自身放入可运行的队列，然后查找未其他辅助角色，该工作人员将选择本身。 在这种情况下，context_switches_count 不会更新，但是 yield_count 会更新。|  
+|context_switches_count|**int**|此计划程序已经发生的上下文切换数。 不可为 null。<br /><br /> 若要允许其他工作线程运行，当前正在运行的工作线程必须放弃对计划程序或切换上下文的控制权。<br /><br /> **注意：** 如果辅助进程生成计划程序并将自身放入可运行的队列，然后查找未其他辅助角色，该工作人员将选择本身。 在这种情况下，context_switches_count 不会更新，但是 yield_count 会更新。|  
 |idle_switches_count|**int**|计划程序在空闲时已等待事件的次数。 此列类似于 context_switches_count。 不可为 null。|  
 |current_tasks_count|**int**|与此计划程序关联的当前任务数。 此计数包括：<br /><br /> -等待执行它们的辅助角色的任务。<br />-当前正在等待或 （在已挂起或可运行状态） 下运行的任务。<br /><br /> 完成任务时，此计数将减少。 不可为 null。|  
 |runnable_tasks_count|**int**|已分配任务并且正在可运行队列中等待被调度的工作线程数。 不可为 null。|  

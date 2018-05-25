@@ -3,8 +3,6 @@ title: sys.dm_resource_governor_configuration (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35aa9247ce699f771d7f439d0134cc5a36940e60
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: bccb033127cf295efc5f5980e37a6313e35fd6e0
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmresourcegovernorconfiguration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +36,8 @@ ms.lasthandoff: 05/07/2018
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|资源调控器当前使用的分类器函数的 ID。 如果没有正在使用的函数，则返回值 0。 不可为 null。<br /><br /> **注意：**此函数可用于将新请求，并使用规则来将这些请求路由到相应的工作负荷组。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。|  
-|is_reconfiguration_pending|**bit**|指示是否由 ALTER RESOURCE GOVERNOR RECONFIGURE 语句对组或池进行了更改但尚未应用到内存中配置。 返回值是以下值之一：<br /><br /> 0 - 不需要重新配置语句。<br /><br /> 1 - 需要重新配置语句或重新启动服务器，以便应用挂起的配置更改。<br /><br /> **注意：**返回的值始终为 0 时禁用资源调控器。<br /><br /> 不可为 null。|  
+|classifier_function_id|**int**|资源调控器当前使用的分类器函数的 ID。 如果没有正在使用的函数，则返回值 0。 不可为 null。<br /><br /> **注意：** 此函数可用于将新请求，并使用规则来将这些请求路由到相应的工作负荷组。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。|  
+|is_reconfiguration_pending|**bit**|指示是否由 ALTER RESOURCE GOVERNOR RECONFIGURE 语句对组或池进行了更改但尚未应用到内存中配置。 返回值是以下值之一：<br /><br /> 0 - 不需要重新配置语句。<br /><br /> 1 - 需要重新配置语句或重新启动服务器，以便应用挂起的配置更改。<br /><br /> **注意：** 返回的值始终为 0 时禁用资源调控器。<br /><br /> 不可为 null。|  
 |max_outstanding_io_per_volume|**int**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 每个卷待定 I/O 的最大数目。|  
   
 ## <a name="remarks"></a>注释  

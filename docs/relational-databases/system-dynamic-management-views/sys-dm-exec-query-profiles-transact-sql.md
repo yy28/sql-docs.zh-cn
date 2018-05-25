@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2598c37c60955a93f2aed426db705d2b2ca7f204
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/07/2018
 |segment_read_count|**int**|迄今为止的段预读数。|  
 |segment_skip_count|**int**|迄今为止跳过的段数。| 
 |actual_read_row_count|**bigint**|应用残留谓词之前读取运算符的行数。| 
-|estimated_read_row_count|**bigint**|**适用于：**开头[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估计残留谓词应用之前，操作员要读取的行数。|  
+|estimated_read_row_count|**bigint**|**适用于：** 开头[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估计残留谓词应用之前，操作员要读取的行数。|  
   
 ## <a name="general-remarks"></a>一般备注  
  如果查询计划节点没有任何 IO，则所有与 IO 相关的计数器均设置为 NULL。  

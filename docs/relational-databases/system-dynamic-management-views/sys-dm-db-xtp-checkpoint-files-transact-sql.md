@@ -3,7 +3,6 @@ title: sys.dm_db_xtp_checkpoint_files (Transact SQL) |Microsoft 文档
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -26,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cae0fb4ca29959382ac64307ea52851557d0174f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   显示有关检查点文件的信息，包括文件大小、物理位置和事务 ID。  
   
-> **注意：**当前检查点未关闭，s 的状态列`ys.dm_db_xtp_checkpoint_files`建设将新的文件。 检查点将自动关闭当没有足够的事务日志增长，因为最后一个检查点，或者如果发出`CHECKPOINT`命令 ([检查点&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
+> **注意：** 当前检查点未关闭，s 的状态列`ys.dm_db_xtp_checkpoint_files`建设将新的文件。 检查点将自动关闭当没有足够的事务日志增长，因为最后一个检查点，或者如果发出`CHECKPOINT`命令 ([检查点&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
   
  内存优化文件组内部使用的仅追加文件来存储为内存中表的插入的和删除行。 有两种类型的文件。 数据文件包含插入的行，而差异文件包含对已删除的行的引用。 
   

@@ -3,8 +3,6 @@ title: sys.dm_hadr_availability_replica_states (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +23,11 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eeb949d9bdd664a942f75157296312cdf00d32b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e04fa466f018e114fe66686b81c5e5899dd2371e
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="RolesAndOperationalStates"></a> 角色和操作状态  
  该角色，**角色**，反映给定的可用性副本的状态和操作的状态， **operational_state**，描述副本是否已准备好要处理的所有客户端请求可用性副本的数据库。 以下是可用于每个角色的操作状态的摘要： 解决、 主和辅助。  
   
- **解决：**解析角色的可用性副本时，可能的操作状态包括下表中所示。  
+ **解决：** 解析角色的可用性副本时，可能的操作状态包括下表中所示。  
   
 |操作状态|Description|  
 |-----------------------|-----------------|  
@@ -70,7 +68,7 @@ ms.lasthandoff: 05/04/2018
 |FAILED|在试图从 WSFC 群集中检索信息时发生了读取失败。|  
 |FAILED_NO_QUORUM|本地 WSFC 节点没有仲裁。 这是一种推断状态。|  
   
- **主站点：**可用性副本正在执行的主角色，它是当前主副本。 可能的操作状态包括下表中所示。  
+ **主站点：** 可用性副本正在执行的主角色，它是当前主副本。 可能的操作状态包括下表中所示。  
   
 |操作状态|Description|  
 |-----------------------|-----------------|  
@@ -78,7 +76,7 @@ ms.lasthandoff: 05/04/2018
 |ONLINE|可用性组资源已处于联机状态，并且所有数据库工作线程均已选取。|  
 |FAILED|可用性副本无法从 WSFC 群集读取和/或写入。|  
   
- **辅助：**可用性副本正在执行辅助角色，它是当前辅助副本。 可能的操作状态包括下表中所示。  
+ **辅助：** 可用性副本正在执行辅助角色，它是当前辅助副本。 可能的操作状态包括下表中所示。  
   
 |操作状态|Description|  
 |-----------------------|-----------------|  

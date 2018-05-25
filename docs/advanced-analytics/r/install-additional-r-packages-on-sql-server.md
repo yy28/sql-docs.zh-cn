@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何将新的 R 包安装到何处启用机器学习的 SQL Server 的实例。 有多种方法可以安装新的 R 包，具体取决于你拥有 SQL Server 的版本，以及服务器是否具有 internet 连接。
+本文介绍如何将新的 R 包安装到何处启用机器学习的 SQL Server 的实例。 有多种方法可以安装新的 R 包，具体取决于你拥有 SQL Server 的版本，以及服务器是否具有 internet 连接。 采用以下方法来新包安装是可能的。
+
+| 方法                           | 权限  | 远程/本地 |
+|------------------------------------|---------------------------|-------|
+| [使用传统的 R 包管理器](#bkmk_rInstall)  | 管理员 | Local |
+| [使用 RevoScaleR](use-revoscaler-to-manage-r-packages.md) | 管理员 | Local |
+| [使用 T-SQL （创建外部库）](install-r-packages-tsql.md) | 安装程序，之后数据库角色的管理员 | both 
+| [使用 miniCRAN 创建本地存储库](create-a-local-package-repository-using-minicran.md) | 安装程序，之后数据库角色的管理员 | both |
 
 ## <a name="bkmk_rInstall"></a> 安装 R 包通过 Internet 连接
 
@@ -75,51 +82,6 @@ ms.lasthandoff: 05/11/2018
     此命令将 R 包提取`mynewpackage`从其本地 zip 文件，假定副本保存在目录`C:\Temp\Downloaded packages`，并在本地计算机上安装包。 如果包具有任何依赖关系，安装程序正在检查库中的现有包。 如果你已创建包括依赖项的存储库，则安装程序将安装所需的包。
 
     如果任何所需的程序包不是实例库中存在，并且无法在压缩文件中找到，目标包的安装将失败。
-
-## <a name="bkmk_createlibrary"></a> 使用创建外部库
-
-**适用于：**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句使可以向特定数据库或实例中添加一个包或一组的包，而无需运行 R 或 Python 代码直接。 但是，此方法需要包准备和附加的数据库权限。
-
-+ 所有包必须是可用作本地 zip 文件，而不是按需从 internet 下载。
-
-    如果在服务器上没有对文件系统的访问，你还可以传递一个完整的软件包作为变量，使用的二进制格式。 有关详细信息，请参阅[创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)。
-
-+ 必须由名称和版本，并将 zip 文件中包括所有依赖项。 如果所需包不可用，包括下游包的依赖项，则语句将失败。 我们建议使用**miniCRAN**或**igraph**用于分析包依赖关系。 安装了错误版本的包或包的依赖项也会导致语句失败。 
-
-+ 你必须在数据库上具有必需的权限。 有关详细信息，请参阅[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
-
-### <a name="prepare-the-packages-in-archive-format"></a>准备存档格式中的包
-
-1. 如果你正在安装单个包，下载 zip 格式中的包。 
-
-2. 如果包需要其他任何包，你必须验证所需的包是否可用。 MiniCRAN 可用于分析目标包并确定其所有依赖项。 
-
-3. 将压缩的文件或包含所有程序包添加到服务器上的本地文件夹的 miniCRAN 存储库的复制。
-
-4. 打开**查询**窗口中，使用具有管理权限的帐户。
-
-5. 运行 T-SQL 语句`CREATE EXTERNAL LIBRARY`将压缩的包集合上传到数据库。
-
-    例如，以下语句名称作为包源 miniCRAN 存储库包含**randomForest**包，以及其依赖项。 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    不能使用的任意名称;外部库名称必须有期望加载或调用包时要使用的相同名称。
-
-6. 如果已成功创建了库，你可以通过调用存储过程内 SQL Server 中运行包。
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>包安装的提示
 

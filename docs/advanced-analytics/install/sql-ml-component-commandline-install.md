@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>从命令行安装 SQL Server 计算机学习组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文提供有关安装 SQL Server 机器学习组件从命令行说明：
 
-+ [在数据库实例](#indb)
++ [新的中数据库实例](#indb)
 + [将添加到现有的数据库引擎实例](#add-existing)
 + [无提示安装](#silent)
-+ [独立服务器](#shared-feature)
++ [新的独立服务器](#shared-feature)
 
 你可以指定与安装程序用户界面的无提示、 基本，或完全交互。 这篇文章补充[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，涵盖特有 R 和 Python 机学习组件的参数。
 

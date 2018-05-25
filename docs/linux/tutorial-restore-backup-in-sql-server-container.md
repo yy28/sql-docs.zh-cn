@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>还原 Linux Docker 容器中的 SQL Server 数据库
 
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
 备份文件现在位于容器内。 还原备份之前, 务必知道逻辑文件名称和备份内的文件类型。 以下 TRANSACT-SQL 命令检查备份和还原使用执行**sqlcmd**容器中。
 
 > [!TIP]
-> 本教程使用**sqlcmd**在容器中，由于容器附带了预安装此工具。 但是，你还可以运行 TRANSACT-SQL 语句与其他客户端工具之外容器，如[Visual Studio Code](sql-server-linux-develop-use-vscode.md)或[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)。 若要连接，使用已映射到容器中的端口 1433年的主机端口。 在此示例中，这是**localhost，1401年**主机计算机上和**Host_IP_Address，1401年**远程。
+> 本教程使用**sqlcmd**在容器中，由于容器附带了预安装此工具。 但是，你还可以运行 TRANSACT-SQL 语句与其他客户端工具之外容器，如[Visual Studio Code](sql-server-linux-develop-use-vscode.md)或[SQL Server Management Studio](sql-server-linux-manage-ssms.md)。 若要连接，使用已映射到容器中的端口 1433年的主机端口。 在此示例中，这是**localhost，1401年**主机计算机上和**Host_IP_Address，1401年**远程。
 
 1. 运行**sqlcmd**到逻辑文件名称和备份内的路径的列表容器内。 这通过完成**RESTORE FILELISTONLY** TRANSACT-SQL 语句。
 

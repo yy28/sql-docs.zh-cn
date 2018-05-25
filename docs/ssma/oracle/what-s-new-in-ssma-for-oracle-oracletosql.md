@@ -15,11 +15,11 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ca29dddb3ce5a6c933cd118c703b0ee3d09e388b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80bf7637c5c17cdade7c47f25265a6d2b6c94c1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 的新增功能
 本主题列出每个版本中的 Oracle 更改 SSMA。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   - 可用于执行自定义转换供 SSMA 的库。
     - 你现在可以构造自定义的语法转换和先前未由 SSMA 处理的转换可以处理的代码。
       - 在此博客文章中，提供了有关如何构造的自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      - 用于转换的示例项目可以下载这个[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+      - 下载此转换的示例项目[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 
 ## <a name="ssma-v72"></a>SSMA 7.2 版
@@ -103,18 +103,28 @@ ms.lasthandoff: 05/03/2018
 ## <a name="may-2016"></a>2016 年 5 月  
 适用于 Oracle 的 SSMA 的 2016 年 5 月版本包含以下更改：  
 
--   添加了对 SQL Server 2016 的支持。
--   向 SQL Server 临时表的 Oracle 闪回存档表添加的转换。
--   添加了的 Oracle VPD 策略将转换为 SQL Server 策略对象 （适用于 Oracle 的行级别安全性） 的转换。
--   适用于 Oracle 的初始加载降低的时间。
--   改进的分析器和冲突解决程序。
--   删除安装程序检查 for.Net 2.0。
--   更新到.Net 4.0 通过.Net 3.5 的扩展包依赖性。
--   "保存项目"固定和 SSMA 控制台的"打开项目"命令。
--   SSMA 控制台的固定"securepassword"命令。
--   固定的初始加载的对象计数。
--   修复对于 Oracle 的字符数据类型转换。
--   全局设置中的已修复的 bug。
+- 添加了对 SQL Server 2016 的支持。
+- 向 SQL Server 临时表的 Oracle 闪回存档表添加的转换。
+
+    **请注意**-SSMA 不会复制从 Oracle 闪回数据存档表的历史记录数据。 因此，必须在迁移过程中手动复制历史记录数据。 此外，虽然 SSMA 不在 SQL Server 元数据资源管理器中显示历史记录表，因为它将被视为系统表，你可以在 SQL Server Management Studio 中查看历史记录表。
+    SQL Server 2016 中不支持多个 Oracle 闪回功能，包括：
+    - Oracle 闪回事务查询
+    - DBMS_FLASHBACK 包
+    - 闪回事务
+    - 闪回数据存档
+    - 闪回表
+    - 闪回拖放
+    - 闪回数据库
+- 添加的转换 Oracle VPD 策略为 SQL Server 策略对象 （适用于 Oracle 的行级别安全性）。
+- 适用于 Oracle 的初始加载降低的时间。
+- 改进的分析器和冲突解决程序。
+- 删除安装程序检查 for.Net 2.0。
+- 更新到.Net 4.0 通过.Net 3.5 的扩展包依赖性。
+- "保存项目"固定和 SSMA 控制台的"打开项目"命令。
+- SSMA 控制台的固定"securepassword"命令。
+- 固定的初始加载的对象计数。
+- 修复对于 Oracle 的字符数据类型转换。
+- 全局设置中的已修复的 bug。
   
 ## <a name="march-2016"></a>2016 年 3 月  
 适用于 Oracle 的 SSMA 的 2016 年 3 月预览版本包含以下更改：  

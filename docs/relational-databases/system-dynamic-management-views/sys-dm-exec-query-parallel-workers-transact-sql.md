@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 159ffff959336672ed9547b9311caae247b1110a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f2bc4634a5e2fddb4a3c8eda009eb28019089596
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 |**scheduler_count**|**int**|在此节点上的计划程序数。|  
 |**max_worker_count**|**int**|最大并行查询的辅助进程数。|  
 |**reserved_worker_count**|**int**|并行查询保留的辅助进程数加上的所有请求都使用的主辅助进程数。| 
-|**free_worker_count**|**int**|可用于任务的辅助进程数。<br /><br />**注意：**每个传入请求消耗减去可用辅助进程计数的至少一个辅助进程。  很可能可用的工作线程数，可以是负数负载较重的服务器上。| 
+|**free_worker_count**|**int**|可用于任务的辅助进程数。<br /><br />**注意：** 每个传入请求消耗减去可用辅助进程计数的至少一个辅助进程。  很可能可用的工作线程数，可以是负数负载较重的服务器上。| 
 |**used_worker_count**|**int**|使用并行查询的辅助进程数。|  
   
 ## <a name="permissions"></a>权限  

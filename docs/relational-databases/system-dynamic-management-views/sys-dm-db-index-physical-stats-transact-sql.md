@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -26,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 230833a06bfdfdfdc237b1f446d63b91eb7a71db
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 1853bdbf62701cfbaa5302615eac61684089ac5a
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA 分配单元的叶级别中的一个碎片的平均页数。<br /><br /> 对于索引的非叶级别，以及 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，为 NULL。<br /><br /> 为 NULL 堆时*模式*= SAMPLED。|  
 |page_count|**bigint**|索引或数据页的总数。<br /><br /> 对于索引，表示 IN_ROW_DATA 分配单元中 b 树的当前级别中的索引页总数。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的数据页总数。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示该分配单元中的总页数。|  
 |avg_page_space_used_in_percent|**float**|所有页中使用的可用数据存储空间的平均百分比。<br /><br /> 对于索引，平均百分比应用于 IN_ROW_DATA 分配单元中 b 树的当前级别。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中所有数据页的平均百分比。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW DATA 分配单元，表示该分配单元中所有页的平均百分比。<br /><br /> 为 NULL 时*模式*= LIMITED。|  
-|record_count|**bigint**|总记录数。<br /><br /> 对于索引，记录的总数应用于 IN_ROW_DATA 分配单元中 b 树的当前级别。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的总记录数。<br /><br /> **注意：**对于堆，此函数返回的记录数可能不匹配由运行选择计数的行数 (\*) 针对堆。 这是因为一行可能包含多个记录。 例如，在某些更新情况下，单个堆行可能由于更新操作而包含一条前推记录和一条被前推记录。 此外，多数大型 LOB 行在 LOB_DATA 存储中拆分为多个记录。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中总记录数。<br /><br /> 为 NULL 时*模式*= LIMITED。|  
+|record_count|**bigint**|总记录数。<br /><br /> 对于索引，记录的总数应用于 IN_ROW_DATA 分配单元中 b 树的当前级别。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的总记录数。<br /><br /> **注意：** 对于堆，此函数返回的记录数可能不匹配由运行选择计数的行数 (\*) 针对堆。 这是因为一行可能包含多个记录。 例如，在某些更新情况下，单个堆行可能由于更新操作而包含一条前推记录和一条被前推记录。 此外，多数大型 LOB 行在 LOB_DATA 存储中拆分为多个记录。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中总记录数。<br /><br /> 为 NULL 时*模式*= LIMITED。|  
 |ghost_record_count|**bigint**|分配单元中将被虚影清除任务删除的虚影记录数。<br /><br /> 对于 IN_ROW_DATA 分配单元中索引的非叶级别，为 0。<br /><br /> 为 NULL 时*模式*= LIMITED。|  
 |version_ghost_record_count|**bigint**|由分配单元中未完成的快照隔离事务保留的虚影记录数。<br /><br /> 对于 IN_ROW_DATA 分配单元中索引的非叶级别，为 0。<br /><br /> 为 NULL 时*模式*= LIMITED。|  
 |min_record_size_in_bytes|**int**|最小记录大小（字节）。<br /><br /> 对于索引，为 IN_ROW_DATA 分配单元中 b 树当前级别的最小记录大小。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的最小记录大小。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中的最小记录大小。<br /><br /> 为 NULL 时*模式*= LIMITED。|  

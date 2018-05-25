@@ -12,72 +12,72 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be472ed5594a523497244c25264e16530e2a12ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ace1f771ef3a77a6f7db0072442affe181d7872
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 数据生成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-WideWorldImporters 和 WideWorldImportersDW 数据库的已发布的版本包含数据开始 2013 年 1 月 1，最多天生成这些数据库。
+WideWorldImporters 和 WideWorldImportersDW 数据库的已发布的版本具有从 2013 年 1 月 1 日，最多天生成数据库的数据。
 
-如果使用了示例数据库，可能有益包括最新示例数据。
+当你使用这些示例数据库时，你可能想要包括最新示例数据。
 
 ## <a name="data-generation-in-wideworldimporters"></a>WideWorldImporters 中的数据生成
 
-若要生成截至当前日期的示例数据，请按照下列步骤：
+若要生成截至当前日期的示例数据：
 
-1. 如果尚未这样做，安装 WideWorldImporters 数据库的干净的版本。 有关安装说明， **WideWorldImporters 安装和配置**。
+1. 如果你尚未这样做，则安装 WideWorldImporters 数据库的清洁版本。 有关安装说明，请参阅[安装和配置](wide-world-importers-oltp-install-configure.md)。
 2. 在数据库中执行以下语句：
 
-```
-    EXECUTE DataLoadSimulation.PopulateDataToCurrentDate
-        @AverageNumberOfCustomerOrdersPerDay = 60,
-        @SaturdayPercentageOfNormalWorkDay = 50,
-        @SundayPercentageOfNormalWorkDay = 0,
-        @IsSilentMode = 1,
-        @AreDatesPrinted = 1;
-```
+    ```
+        EXECUTE DataLoadSimulation.PopulateDataToCurrentDate
+            @AverageNumberOfCustomerOrdersPerDay = 60,
+            @SaturdayPercentageOfNormalWorkDay = 50,
+            @SundayPercentageOfNormalWorkDay = 0,
+            @IsSilentMode = 1,
+            @AreDatesPrinted = 1;
+    ```
 
-此语句将添加在数据库中，截至当前日期的示例销售和采购数据。 它生成日常输出数据的进度。 可能需要大约 10 分钟时间供需要数据每年。 有一些差异的运行，因为有处于数据生成一个随机因子之间生成的数据。
+    此语句将添加到数据库，截至当前日期的示例销售和采购数据。 它按天显示的数据生成的进度。 数据生成可能需要大约 10 分钟时间供需要数据每年。 由于在数据生成一个随机因子，有一些差异的生成运行之间的数据。
 
-若要增加或减少的生成，在每日的订单方面的数据量更改参数的值`@AverageNumberOfCustomerOrdersPerDay`。 参数`@SaturdayPercentageOfNormalWorkDay`和`@SundayPercentageOfNormalWorkDay`用于确定周末天订单量。
+    若要增加或减少生成的每日的订单的数据量，请更改参数的值`@AverageNumberOfCustomerOrdersPerDay`。 使用参数`@SaturdayPercentageOfNormalWorkDay`和`@SundayPercentageOfNormalWorkDay`以确定周末天订单量。
 
-## <a name="importing-generated-data-in-wideworldimportersdw"></a>导入 WideWorldImportersDW 中生成的数据
+## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW 中生成的导入数据
 
-要导入 OLAP 数据库 WideWorldImportersDW 中的当前日期之前的示例数据，请按照下列步骤：
+导入到 WideWorldImportersDW OLAP 数据库中的当前日期的示例数据：
 
-1. 在 WideWorldImporters OLTP 数据库中，使用上述步骤中执行数据生成逻辑。
-2. 如果尚未这样做，则安装 WideWorldImportersDW 数据库的清洁版本。 有关安装说明， **WideWorldImporters 安装和配置**。
+1. 通过使用上一节中的步骤执行 WideWorldImporters OLTP 数据库中的数据生成逻辑。
+2. 如果你尚未尚未这样做，则安装 WideWorldImportersDW 数据库的清洁版本。 有关安装说明，请参阅[安装和配置](wide-world-importers-oltp-install-configure.md)。
 3. 种子 OLAP 数据库重新设定通过数据库中执行以下语句：
 
     ```sql
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. 运行 SSIS 包**每日 ETL.ispac**若要将数据导入 OLAP 数据库。 有关如何运行 ETL 作业的说明，请参阅**WideWorldImporters ETL 工作流**。
+4. 运行*每日 ETL.ispac*要将数据导入 OLAP 数据库的 SQL Server Integration Services 包。 若要了解如何运行 ETL 作业，请参阅[WideWorldImporters ETL 工作流](wide-world-importers-perform-etl.md)。
 
-## <a name="generating-data-in-wideworldimportersdw-for-performance-testing"></a>性能测试中 WideWorldImportersDW 生成数据
+## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>在 WideWorldImportersDW 中生成数据，进行性能测试
 
-WideWorldImportersDW 具有任意增加数据大小，为了性能测试，例如与聚集列存储功能。
+WideWorldImportersDW 任意可以增加进行性能测试的数据大小。 例如，就有可能增加要使用聚集列存储索引使用的数据大小。
 
-面临的挑战之一是保持下载的大小足够小，无法下载轻松，但大型足以演示 SQL Server 性能功能。 例如，仅当使用更大数量的行时，会发生显著的好处的列存储索引。 
+面临的挑战之一是保持下载的大小足够小，无法下载轻松，但大型足以演示 SQL Server 性能功能。 例如，仅当您使用更大数量的行时，可以获得显著的好处的列存储索引。 
 
-该过程`Application.Configuration_PopulateLargeSaleTable`可用来大幅提高中的行数`Fact.Sale`表。 请注意，在 2012年日历年，以避免与现有 World Wide Importers 数据开始在 2013 年 1 月 1 冲突中插入行。
+你可以使用`Application.Configuration_PopulateLargeSaleTable`的步骤来增大中的行数`Fact.Sale`表。 在 2012年日历年，以避免与现有开始 2013 年 1 月 1 日的 World Wide Importers 数据冲突中插入行。
 
 ### <a name="procedure-details"></a>过程的详细信息
 
-#### <a name="name"></a>名称： 
+#### <a name="name"></a>名称
 
     Application.Configuration_PopulateLargeSaleTable
 
-#### <a name="parameters"></a>参数：
+#### <a name="parameters"></a>Parameters
 
   `@EstimatedRowsFor2012` **bigint** （与默认值为 12000000）
 
-#### <a name="result"></a>结果：
+#### <a name="result"></a>结果
 
-大约所需的行数插入到`Fact.Sale`2012 年中的表。 该过程人为地限制为 50000 每天的行数。 此限制可能会更改，但存在是为了避免意外 overinflations 的表。
+大约所需的行数插入到`Fact.Sale`2012 年中的表。 该过程人为地限制为 50000 每日的行数。 你可以更改此限制，但限制可帮助你避免意外 overinflations 的表。
 
-此外，过程所适用聚集列存储索引，如果未已应用。
+该过程也适用聚集列存储索引如果它尚未已应用。

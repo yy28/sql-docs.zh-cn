@@ -3,8 +3,6 @@ title: sys.dm_db_mirroring_connections (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f6ec4e26115c9b5fdfd4996ef6b411a8b9fed1a
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 444464519806c67056a83a864bf098d57f677308
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringconnections"></a>数据库镜像的 sys.dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +49,8 @@ ms.lasthandoff: 05/07/2018
 |**login_state**|**int**|此连接的登录进程状态。 可能的值：<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = 联机<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|远程计算机的当前登录状态。 可能的值：<br /><br /> 连接握手正在初始化。<br /><br /> 连接握手正在等待“登录协商”消息。<br /><br /> 连接握手已初始化并发送了用于身份验证的安全上下文。<br /><br /> 连接握手已收到并接受用于身份验证的安全上下文。<br /><br /> 连接握手已初始化并发送了用于身份验证的安全上下文。 提供可用于对对等方进行身份验证的可选机制。<br /><br /> 连接握手已收到并发送了用于身份验证的已接受安全上下文。 提供可用于对对等方进行身份验证的可选机制。<br /><br /> 连接握手正在等待“初始化安全上下文确认”消息。<br /><br /> 连接握手正在等待“接受安全上下文确认”消息。<br /><br /> 连接握手正在等待失败的身份验证的 SSPI 拒绝消息。<br /><br /> 连接握手正在等待“预主密钥”消息。<br /><br /> 连接握手正在等待“验证”消息。<br /><br /> 连接握手正在等待“仲裁”消息。<br /><br /> 连接握手已完成，准备进行消息交换。<br /><br /> 连接错误。|  
 |**peer_certificate_id**|**int**|身份验证远程实例所用证书的本地对象 ID。 该证书的所有者必须对数据库镜像端点具有 CONNECT 权限。|  
-|**encryption_algorithm**|**int**|用于此连接的加密算法。 可以为 NULL。 可能的值：<br /><br /> **值：**0<br /><br /> **描述：**无<br /><br /> **DDL 选项：**已禁用<br /><br /> **值：**1<br /><br /> **描述：** RC4<br /><br /> **DDL 选项：** {所需&#124;所需的算法 RC4}<br /><br /> **值：**2<br /><br /> **描述：** AES<br /><br /> **DDL 选项：**必需的算法 AES<br /><br /> **值：**3<br /><br /> **描述：** None、 RC4<br /><br /> **DDL 选项：** {支持&#124;支持算法 RC4}<br /><br /> **值：**4<br /><br /> **描述：** none、 AES<br /><br /> **DDL 选项：**支持算法 RC4<br /><br /> **值：**5<br /><br /> **描述：** RC4、 AES<br /><br /> **DDL 选项：**必需的算法 RC4 AES<br /><br /> **值：**6<br /><br /> **描述：** AES、 RC4<br /><br /> **DDL 选项：**所需算法 AES RC4<br /><br /> **值：**7<br /><br /> **描述：** NONE、 RC4、 AES<br /><br /> **DDL 选项：**支持算法 RC4 AES<br /><br /> **值：**8<br /><br /> **描述：** NONE、 AES RC4<br /><br /> **DDL 选项：**支持算法 AES RC4<br /><br /> **注意：** RC4 算法仅支持向后兼容。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本中，使用 RC4 或 RC4_128 加密的材料可以进行解密在任何兼容级别。|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的文本表示形式。 可以为 NULL。 可能的值：<br /><br /> **描述：**无<br /><br /> **DDL 选项：**已禁用<br /><br /> **描述：** RC4<br /><br /> **DDL 选项：** {所需&#124;所需算法 RC4}<br /><br /> **描述：** AES<br /><br /> **DDL 选项：**所需算法 AES<br /><br /> **描述：** NONE、 RC4<br /><br /> **DDL 选项：** {支持&#124;支持算法 RC4}<br /><br /> **描述：** NONE、 AES<br /><br /> **DDL 选项：**支持算法 RC4<br /><br /> **描述：** RC4、 AES<br /><br /> **DDL 选项：**所需算法 RC4 AES<br /><br /> **描述：** AES、 RC4<br /><br /> **DDL 选项：**所需算法 AES RC4<br /><br /> **描述：** NONE、 RC4、 AES<br /><br /> **DDL 选项：**支持算法 RC4 AES<br /><br /> **描述：** NONE、 AES RC4<br /><br /> **DDL 选项：**支持算法 AES RC4|  
+|**encryption_algorithm**|**int**|用于此连接的加密算法。 可以为 NULL。 可能的值：<br /><br /> **值：** 0<br /><br /> **描述：** 无<br /><br /> **DDL 选项：** 已禁用<br /><br /> **值：** 1<br /><br /> **描述：** RC4<br /><br /> **DDL 选项：** {所需&#124;所需的算法 RC4}<br /><br /> **值：** 2<br /><br /> **描述：** AES<br /><br /> **DDL 选项：** 必需的算法 AES<br /><br /> **值：** 3<br /><br /> **描述：** None、 RC4<br /><br /> **DDL 选项：** {支持&#124;支持算法 RC4}<br /><br /> **值：** 4<br /><br /> **描述：** none、 AES<br /><br /> **DDL 选项：** 支持算法 RC4<br /><br /> **值：** 5<br /><br /> **描述：** RC4、 AES<br /><br /> **DDL 选项：** 必需的算法 RC4 AES<br /><br /> **值：** 6<br /><br /> **描述：** AES、 RC4<br /><br /> **DDL 选项：** 所需算法 AES RC4<br /><br /> **值：** 7<br /><br /> **描述：** NONE、 RC4、 AES<br /><br /> **DDL 选项：** 支持算法 RC4 AES<br /><br /> **值：** 8<br /><br /> **描述：** NONE、 AES RC4<br /><br /> **DDL 选项：** 支持算法 AES RC4<br /><br /> **注意：** RC4 算法仅支持向后兼容。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本中，使用 RC4 或 RC4_128 加密的材料可以进行解密在任何兼容级别。|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的文本表示形式。 可以为 NULL。 可能的值：<br /><br /> **描述：** 无<br /><br /> **DDL 选项：** 已禁用<br /><br /> **描述：** RC4<br /><br /> **DDL 选项：** {所需&#124;所需算法 RC4}<br /><br /> **描述：** AES<br /><br /> **DDL 选项：** 所需算法 AES<br /><br /> **描述：** NONE、 RC4<br /><br /> **DDL 选项：** {支持&#124;支持算法 RC4}<br /><br /> **描述：** NONE、 AES<br /><br /> **DDL 选项：** 支持算法 RC4<br /><br /> **描述：** RC4、 AES<br /><br /> **DDL 选项：** 所需算法 RC4 AES<br /><br /> **描述：** AES、 RC4<br /><br /> **DDL 选项：** 所需算法 AES RC4<br /><br /> **描述：** NONE、 RC4、 AES<br /><br /> **DDL 选项：** 支持算法 RC4 AES<br /><br /> **描述：** NONE、 AES RC4<br /><br /> **DDL 选项：** 支持算法 AES RC4|  
 |**receives_posted**|**int**|尚未针对此连接完成的异步网络接收数。|  
 |**is_receive_flow_controlled**|**bit**|网络接收是否由于流控制（因为网络忙）而推迟。<br /><br /> 1 = True|  
 |**sends_posted**|**int**|尚未针对此连接完成的异步网络发送数。|  

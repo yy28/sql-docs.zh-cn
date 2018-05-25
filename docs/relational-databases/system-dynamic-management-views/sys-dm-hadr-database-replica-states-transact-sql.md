@@ -3,8 +3,6 @@ title: sys.dm_hadr_database_replica_states (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 02/11/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +23,11 @@ caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b9d3677268ccf0dbaecf226711734315d68ff75
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f90bf8e9d7a22b8100de48af6ec6562e893b6e89
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +45,13 @@ ms.lasthandoff: 05/04/2018
 |**group_database_id**|**uniqueidentifier**|可用性组内数据库的标识符。 在此数据库联接到的每个副本上，该标识符都是相同的。|  
 |**is_local**|**bit**|可用性数据库是否是本地的，可以是下列值之一：<br /><br /> 0 = 数据库对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例而言不是本地的。<br /><br /> 1 = 数据库对于服务器实例而言是本地的。|  
 |**is_primary_replica**|**bit**|如果副本是主要副本则返回 1；如果副本是辅助副本则返回 0。<br /><br />适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**synchronization_state**|**tinyint**|数据移动状态，下列值之一。<br /><br /> 0 = 不同步。 对于某一主数据库，指示该数据库未做好将其事务日志与相应的辅助数据库同步的准备。 对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。<br /><br /> 1 = 正在同步。 对于主数据库，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。 对于辅助数据库，指示对于该数据库正在发生活动数据移动。<br /><br /> 2 = 已同步。 主数据库显示 SYNCHRONIZED 来代替 SYNCHRONIZING。 同步提交辅助数据库在以下情况下将显示已同步：本地缓存指示数据库副本可供故障转移并且数据库正在同步。<br /><br /> 3 = Reverting。 指示撤消进程中辅助数据库主动从主数据库获取页时的阶段。<br />**注意：**当辅助副本上的数据库处于 REVERTING 状态时，强制故障转移到辅助副本使数据库处于顺序它无法启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。<br /><br /> 4 = 正在初始化。 指示在正在辅助副本上传送和强制写入辅助数据库跟上撤消 LSN 所需的事务日志时的撤消阶段。<br />**注意：**辅助副本上的数据库处于正在初始化状态时，强制故障转移到辅助副本使数据库处于状态它启动作为主数据库。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。|  
+|**synchronization_state**|**tinyint**|数据移动状态，下列值之一。<br /><br /> 0 = 不同步。 对于某一主数据库，指示该数据库未做好将其事务日志与相应的辅助数据库同步的准备。 对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。<br /><br /> 1 = 正在同步。 对于主数据库，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。 对于辅助数据库，指示对于该数据库正在发生活动数据移动。<br /><br /> 2 = 已同步。 主数据库显示 SYNCHRONIZED 来代替 SYNCHRONIZING。 同步提交辅助数据库在以下情况下将显示已同步：本地缓存指示数据库副本可供故障转移并且数据库正在同步。<br /><br /> 3 = Reverting。 指示撤消进程中辅助数据库主动从主数据库获取页时的阶段。<br />**注意：** 当辅助副本上的数据库处于 REVERTING 状态时，强制故障转移到辅助副本使数据库处于顺序它无法启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。<br /><br /> 4 = 正在初始化。 指示在正在辅助副本上传送和强制写入辅助数据库跟上撤消 LSN 所需的事务日志时的撤消阶段。<br />**注意：** 辅助副本上的数据库处于正在初始化状态时，强制故障转移到辅助副本使数据库处于状态它启动作为主数据库。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。|  
 |**synchronization_state_desc**|**nvarchar(60)**|数据移动状态的说明，可以是下列值之一：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 就此数据库而言，事务提交未同步。<br /><br /> 1 = 就此数据库而言，事务提交同步。<br /><br /> 对于异步提交可用性副本上的数据库，该值始终为 0。<br /><br /> 对于同步提交可用性副本上的数据库，该值仅在主数据库上是准确的。|  
 |**synchronization_health**|**tinyint**|反映数据库联接到可用性组的可用性副本的同步状态和可用性副本 （同步提交或异步提交模式） 之一的可用性模式的交集的以下值。<br /><br /> 0 = 不正常。 **Synchronization_state**的数据库是 0 （不同步）。<br /><br /> 1 = 部分正常运行。 同步提交可用性副本上的数据库被视为部分正常如果**synchronization_state**为 1 （正在同步）。<br /><br /> 2 = 正常。 同步提交可用性副本上的数据库被视为正常如果**synchronization_state**为 2 （同步），异步提交可用性副本上的数据库被视为正常如果**synchronization_state**为 1 （正在同步）。|  
 |**synchronization_health_desc**|**nvarchar(60)**|说明**synchronization_health**可用性数据库。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
-|**database_state**|**tinyint**|0 = 联机<br /><br /> 1 = 正在还原<br /><br /> 2 = 正在恢复<br /><br /> 3 = 恢复挂起<br /><br /> 4 = 可疑<br /><br /> 5 = 紧急<br /><br /> 6 = 脱机<br /><br /> **注意：**相同**状态**sys.databases 中的列。|  
-|**database_state_desc**|**nvarchar(60)**|说明**database_state**的可用性副本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：**相同**state_desc** sys.databases 中的列。|  
+|**database_state**|**tinyint**|0 = 联机<br /><br /> 1 = 正在还原<br /><br /> 2 = 正在恢复<br /><br /> 3 = 恢复挂起<br /><br /> 4 = 可疑<br /><br /> 5 = 紧急<br /><br /> 6 = 脱机<br /><br /> **注意：** 相同**状态**sys.databases 中的列。|  
+|**database_state_desc**|**nvarchar(60)**|说明**database_state**的可用性副本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：** 相同**state_desc** sys.databases 中的列。|  
 |**is_suspended**|**bit**|数据库状态，可以是下列值之一：<br /><br /> 0 = 已恢复<br /><br /> 1 = 已挂起|  
 |**suspend_reason**|**tinyint**|如果数据库处于已挂起状态，则为已挂起状态的原因，可以是下列值之一：<br /><br /> 0 = 用户操作<br /><br /> 1 = 挂起来自伙伴<br /><br /> 2 = 重做<br /><br /> 3 = 捕获<br /><br /> 4 = 应用<br /><br /> 5 = 重新启动<br /><br /> 6 = 撤消<br /><br /> 7 = 重新验证<br /><br /> 8 = 计算辅助副本同步点时出错|  
 |**suspend_reason_desc**|**nvarchar(60)**|数据库挂起状态的原因的说明，可以是下列值之一：<br /><br /> SUSPEND_FROM_USER = 用户手动挂起的收据移动<br /><br /> SUSPEND_FROM_PARTNER = 在强制故障转移后挂起数据库副本<br /><br /> SUSPEND_FROM_REDO = 在重做阶段中出错<br /><br /> SUSPEND_FROM_APPLY = 在将日志写入文件时出错（请参阅错误日志）<br /><br /> SUSPEND_FROM_CAPTURE = 在捕获主副本上的日志时出错<br /><br /> SUSPEND_FROM_RESTART = 在重新启动数据库前挂起数据库副本（请参阅错误日志）<br /><br /> SUSPEND_FROM_UNDO = 在撤消阶段中出错（请参阅错误日志）<br /><br /> SUSPEND_FROM_REVALIDATION = 在重新连接时检测到了日志更改不匹配（请参阅错误日志）<br /><br /> SUSPEND_FROM_XRF_UPDATE = 找不到公共日志点（请参阅错误日志）|  

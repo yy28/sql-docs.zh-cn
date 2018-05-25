@@ -5,7 +5,7 @@ ms.prod_service: sql-tools
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 91b23e9b9fff61b03f30606d9d698330c00713a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a789b00930a68280a314072725a5d902d9dfe240
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB (AccessToSQL)
 用于连接到 SQL Azure 对话框连接到你想要迁移的 SQL Azure 数据库。  
@@ -60,13 +60,13 @@ SSMA 建议加密的连接到 SQL Azure。
   
 2.  如果没有数据库，会出现两个菜单项  
   
-    1.  **（未找到数据库）**这将禁用且灰出所有的时间  
+    1.  **（未找到数据库）** 这将禁用且灰出所有的时间  
   
     2.  **创建新的数据库**其始终处于启用状态，使用户可以在 SQL Azure 帐户上创建新的 azure 数据库。 单击此菜单项，在创建 azure 数据库对话框中是否存在与数据库名称和大小。  
   
 3.  在创建数据库时，这两个参数作为输入提供。  
   
-    1.  **数据库名称：**输入数据库名称。  
+    1.  **数据库名称：** 输入数据库名称。  
   
-    2.  **数据库大小：**选择你需要在 SQL Azure 帐户中创建的数据库大小。  
+    2.  **数据库大小：** 选择你需要在 SQL Azure 帐户中创建的数据库大小。  
   

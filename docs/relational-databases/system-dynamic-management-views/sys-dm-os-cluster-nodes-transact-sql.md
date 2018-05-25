@@ -3,8 +3,6 @@ title: sys.dm_os_cluster_nodes (Transact SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,18 +22,18 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 899240e32383b283396c45d866682dc6f1bafb45
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 6fb5b957cfdaa340ec90a9bb30a5e9db6a54ca31
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为故障转移群集实例配置中的每个节点返回一行。 如果当前实例是故障转移群集的实例，则会返回的节点在其定义此故障转移群集实例 （以前称为"虚拟服务器"） 的列表。 如果当前服务器实例不是故障转移群集实例，则返回空行集。  
   
-> **注意：**调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_cluster_nodes**。  
+> **注意：** 调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_cluster_nodes**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +46,7 @@ ms.lasthandoff: 05/07/2018
 ## <a name="remarks"></a>注释  
  启用故障转移群集时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可在指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置一部分的故障转移群集的任何节点上运行。  
   
-> **注意：**此视图替换 fn_virtualservernodes 函数，将在未来版本中弃用。  
+> **注意：** 此视图替换 fn_virtualservernodes 函数，将在未来版本中弃用。  
   
 ## <a name="permissions"></a>权限  
  需要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例具有 VIEW SERVER STATE 权限。  
