@@ -1,6 +1,6 @@
 ---
 title: 在 Azure 中部署和运行 SSIS 包 | Microsoft Docs
-ms.date: 02/05/2018
+ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,29 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>在 Azure 中部署和运行 SSIS 包
 本教程演示如何将 SQL Server Integration Services 项目部署到 Azure SQL 数据库上的 SSISDB 目录数据库、在 Azure-SSIS Integration Runtime 中运行包，以及监视正在运行的包。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-另外确保已经设置 SSISDB 数据库并预配 Azure-SSIS Integration Runtime。 有关如何在 Azure 上预配 SSIS 的信息，请参阅[将 SSIS 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
+另外确保已经在 Azure 中设置 SSISDB 数据库并预配了 Azure-SSIS Integration Runtime。 有关如何在 Azure 上预配 SSIS 的信息，请参阅[将 SQL Server Integration Services 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
-> [!NOTE]
-> 若要部署到 Azure，只能使用项目部署模型。
+## <a name="for-azure-sql-database-get-the-connection-info"></a>对于 Azure SQL 数据库，请获取连接信息
+
+要在 Azure SQL 数据库上运行包，请获取连接到 SSIS 目录数据库 (SSISDB) 所需的连接信息。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
+
+1. 登录到 [Azure 门户](https://portal.azure.com/)。
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
+3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
+4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
 ## <a name="connect-to-the-ssisdb-database"></a>连接到 SSISDB 数据库
 
@@ -45,11 +51,11 @@ ms.lasthandoff: 05/15/2018
 
 2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息：
 
-   | 设置       | 建议的值 | 描述 | 
+   | 设置       | 建议的值 | 说明 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
-   | **身份验证** | SQL Server 身份验证 | 本快速入门使用 SQL 身份验证。 |
+   | **身份验证** | SQL Server 身份验证 | 无法通过 Windows 身份验证连接到 Azure SQL 数据库。 |
    | **登录** | 服务器管理员帐户 | 在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 在创建服务器时指定的密码。 |
 
@@ -62,6 +68,9 @@ ms.lasthandoff: 05/15/2018
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>使用部署向导部署项目
 
 若要详细了解如何部署包和部署向导，请参阅[部署 Integration Services (SSIS) 项目和包](../packages/deploy-integration-services-ssis-projects-and-packages.md)和 [Integration Services 部署向导](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
+
+> [!NOTE]
+> 若要部署到 Azure，只能使用项目部署模型。
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>启动 Integration Services 部署向导
 1. 在 SSMS 的对象资源管理器中，在展开“Integration Services 目录”节点和“SSISDB”节点后，展开一个项目文件夹。
@@ -84,8 +93,9 @@ ms.lasthandoff: 05/15/2018
   
 3.  在“选择目标”页上，选择项目目标。
     -   使用 `<server_name>.database.windows.net` 格式输入完全限定服务器名称。
+    -   提供身份验证信息，然后选择“连接”。
     -   然后选择“浏览”，在 SSISDB 中选择目标文件夹。
-    -   选择“下一步”打开“查看”页。  
+    -   再选择“下一步”打开“评审”页。 （仅当选择“连接”后，才会启用“下一步”按钮。）
   
 4.  在“查看”页上，查看所选的设置。
     -   可以通过选择“上一步”或选择左窗格中的任意步骤来更改所做的选择。
@@ -182,7 +192,7 @@ Write-Host "All done."
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>监视 Azure-SSIS Integration Runtime
 
-若要获取有关正在运行包的 Azure-SSIS Integration Runtime 的状态信息，请使用以下 PowerShell 命令：对于每个命令，均提供数据工厂、Azure-SSIS IR 和资源组的名称。
+若要获取有关运行有包的 Azure-SSIS Integration Runtime 的状态信息，请使用以下 PowerShell 命令。 对于每个命令，请提供数据工厂、Azure-SSIS IR 和资源组的名称。 有关详细信息，请参阅[监视 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>获取有关 Azure-SSIS Integration Runtime 的元数据
 

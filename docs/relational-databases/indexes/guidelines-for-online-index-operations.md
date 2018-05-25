@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/15/2018
 - 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  下表显示了可以联机执行的索引操作、从这些联机操作中排除的索引以及可恢复的索引限制。 其中还包括其他限制。  
   
@@ -114,8 +114,11 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="online-default-options"></a>联机默认选项 
 
-通过设置 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 数据库范围的配置选项，可以在数据库级别设置默认的“联机”或“可恢复”选项。 使用以下默认选项，可避免意外执行使数据库脱机的操作。 这两个选项都会导致引擎自动将特定操作提升为联机或可恢复执行。  
-可将任一选项设置为 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 NEVER。 可为“联机”和“可恢复”设置不同的值。 
+> [!IMPORTANT]
+> 这些选项处于公共预览状态。
+
+通过设置 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 数据库范围的配置选项，可以在数据库级别设置默认的“联机”或“可恢复”选项。 使用这些默认选项，可避免意外执行使数据库表脱机的操作。 这两个选项都会导致引擎自动将特定操作提升为联机或可恢复执行。  
+可使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 命令将任一选项设为 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 OFF。 可为“联机”和“可恢复”设置不同的值。 
 
 ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 均仅适用于分别支持联机和可恢复语法的 DDL 语句。 例如，如果试图使用 ELEVATE_ONLINE=FAIL_UNSUPORTED 创建 XML 索引，操作将脱机运行，因为 XML 索引不支持 ONLINE= 语法。 该选项仅影响提交时未指定 ONLINE 或 RESUMABLE 选项的 DDL 语句。 例如，通过提交带有 ONLINE=OFF 或 RESUMABLE=OFF 的语句，用户可替代 FAIL_UNSUPPORTED 设置并以脱机和/或不可恢复的方式运行语句。 
  

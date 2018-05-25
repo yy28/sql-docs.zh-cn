@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -138,6 +138,33 @@ Azure SQL 数据仓库：
 以下是此 17.7 版本的问题和限制：
 
 使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
+
+
+## <a name="uninstall-and-reinstall-ssms"></a>卸载并重装 SSMS
+
+如果安装 SSMS 时遇到问题，并且标准的卸载和重装无法解决问题，可以先尝试下[修复](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell。 如果修复 Visual Studio 2015 IsoShell 不能解决此问题，可以尝试下面的步骤来解决许多偶然的问题：
+
+1.  像卸载任意应用程序那样卸载 SSMS（使用“应用和功能”、“程序和功能”等，具体取决于 Windows 版本）。
+
+2.  通过提升的 cmd 提示符卸载 Visual Studio 2015 IsoShell：
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3.  像卸载任何应用程序那样卸载 Microsoft Visual C++ 2015 可再发行组件。 如果计算机上有 x86 和 x64，则卸载它们。
+
+4.  通过提升的 cmd 提示符重装 Visual Studio 2015 IsoShell：  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+ 
+    ```vs_isoshell.exe /PromptRestart```
+
+5.  重装 SSMS。
+
+6.  如果当前不是最新版本的话，则升级到[最新版本的 Visual C++ 2015 可再发行组件](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。
+
+
 
 
 ## <a name="previous-releases"></a>以前的版本
