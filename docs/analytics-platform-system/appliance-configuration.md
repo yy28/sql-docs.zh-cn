@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 37d07fe45768d40b74e3b48739590648867efd94
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 17099af36994f24d182c7465bcbdc3f82e670328
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>针对分析平台系统的设备配置清单
 提供有关为你自己的环境配置 Analytics Platform System 所需的任务的清单。 你可以使用该设备，还需要执行这些配置任务。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/19/2018
   
 2.  请确保你有以下信息，由你 IHV 提供：  
   
-    -   PDW 控制节点的外部 IP 地址 (*PDW_region-*CTL01)  
+    -   PDW 控制节点的外部 IP 地址 (*PDW_region-* CTL01)  
   
     -   设备的域名  
   
@@ -56,7 +56,8 @@ SQL Server PDW**Configuration Manager** (PDWCM) 是 SQL Server PDW 系统管理�
 |更改的密码**sa**登录|SQL Server PDW 具有名为的系统管理员登录**sa**。 **Sa**登录帐户是否具有所有权限。 它可以授予、 拒绝或撤消任何权限。 它还可以查看所有系统视图。<br /><br />有关详细信息，请参阅[密码重置&#40;Analytics Platform System&#41;](password-reset.md)。|  
 |设置设备的时区|设置设备的所有节点的时间 （本地或其他所需的时间）。<br /><br />有关详细信息，请参阅[设备的时区配置&#40;Analytics Platform System&#41;](appliance-time-zone-configuration.md)。|  
 |指定 SQL Server PDW 设备的面向外部的网络设置|[设备网络配置&#40;分析平台系统&#41;](appliance-network-configuration.md)|  
-|安全证书导入的管理控制台|证书可以提供安全套接字层 (SSL) 连接，通过 HTTPS 向[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 默认情况下，**管理控制台**包括自签名的证书，它提供的隐私，但不是服务器的身份验证。 此证书也在 Internet Explorer 指出会返回错误:"没有此网站的安全证书有问题"当用户连接。 尽管此连接对客户端和服务器之间的正在进行数据进行加密，但连接仍然是来自的攻击者的风险。<br /><br />SQL Server PDW 管理员应立即获取证书链接至受信任的证书颁发机构的客户端，以便建立的安全连接并删除 Internet 资源管理器报告的错误识别。 这要求完全限定的域名映射 （推荐） 管理节点的虚拟 IP 地址或用户在其浏览器地址中键入的值匹配的证书名称条访问管理控制台。<br /><br />使用**Configuration Manager**添加或删除受信任的证书。 直接使用 Microsoft Windows HTTP Services 证书配置工具 (`winHttpCertCfg.exe`) 来管理证书不受支持。<br /><br />有关详细信息，请参阅[PDW 证书预配&#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md)。|  
+|安全证书导入的管理控制台|证书可以提供安全套接字层 (SSL) 连接，通过 HTTPS 向[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 默认情况下，**管理控制台**包括自签名的证书，它提供的隐私，但不是服务器的身份验证。 此证书也在 Internet Explorer 指出会返回错误:"没有此网站的安全证书有问题"当用户连接。 尽管此连接对客户端和服务器之间的正在进行数据进行加密，但连接仍然是来自的攻击者的风险。<br /><br />SQL Server PDW 管理员应立即获取证书链接至受信任的证书颁发机构的客户端，以便建立的安全连接并删除 Internet 资源管理器报告的错误识别。 这要求完全限定的域名映射 （推荐） 管理节点的虚拟 IP 地址或用户在其浏览器地址中键入的值匹配的证书名称条访问管理控制台。<br /><br />使用**Configuration Manager**添加或删除受信任的证书。 直接使用 Microsoft Windows HTTP Services 证书配置工具 (`winHttpCertCfg.exe`) 来管理证书不受支持。<br /><br />有关详细信息，请参阅[PDW 证书预配&#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md)。|
+|功能开关|显示有关分析平台系统 AU7 中引入的功能开关的信息。 使用此页可以更新或启用/禁用功能和分析平台系统中的设置。 更改交换机特征值需要重新启动服务。<br /><br />有关详细信息，请参阅[PDW 功能开关&#40;Analytics Platform System&#41;](appliance-feature-switch.md)。|
 |启用或禁用 Windows 防火墙规则来允许或阻止对 SQL Server PDW 设备上的特定端口的访问。|你 IHV 将配置并启用防火墙规则所需的设备都能正常运行。 在大多数情况下将启用或禁用防火墙规则。<br /><br />有关详细信息，请参阅[PDW 防火墙配置&#40;Analytics Platform System&#41;](pdw-firewall-configuration.md)。|  
 |启动和停止 SQL Server PDW 设备|停止或启动 SQL Server PDW 设备。 有关详细信息，请参阅[PDW 服务状态&#40;Analytics Platform System&#41;](pdw-services-status.md)。|  
 |查看即时文件初始化选项使用**特权**对话框|即时文件初始化功能允许数据文件操作更快地运行 SQL Server 功能。 仅当网络服务帐户授予了 SE_MANAGE_VOLUME_NAME 特权，它是 SQL Server PDW 上启用。 默认情况下，它处于关闭状态。<br /><br />有关详细信息，请参阅[即时文件初始化配置&#40;Analytics Platform System&#41;](instant-file-initialization-configuration.md)。|  
