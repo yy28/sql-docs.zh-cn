@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 41eabe46f654f2cb0464d2f7589cb0ce50a7c214
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: efc03030c4d0c329fa7736e3622c621f684eecb3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 
@@ -27,7 +26,7 @@ SQL Server Data Tools (SSDT) 可将 Visual Studio 转变为一种强大的开发
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>安装 Visual Studio 和 SQL Server Data Tool
 
-1. 如果你尚未安装 Visual Studio 在 Windows 计算机上[下载和安装 Visual Studio]。 如果你没有 Visual Studio 许可证，Visual Studio Community edition 是学生版的免费的完整功能 IDE 的开源和各个开发人员。
+1. 如果你尚未安装 Visual Studio 在 Windows 计算机上[下载并安装 Visual Studio]。 如果你没有 Visual Studio 许可证，Visual Studio Community edition 是学生版的免费的完整功能 IDE 的开源和各个开发人员。
 
 2. 在 Visual Studio 安装过程中选择**自定义**为**选择安装类型**选项。 单击 **“下一步”**
 
@@ -109,12 +108,12 @@ SQL Server Data Tools (SSDT) 可将 Visual Studio 转变为一种强大的开发
 
 ## <a name="next-steps"></a>后续步骤
 
-如果你不熟悉 T-SQL 的请参阅[教程： 编写 TRANSACT-SQL 语句]和[TRANSACT-SQL 参考 （数据库引擎）]。
+如果你不熟悉 T-SQL 的请参阅[教程：编写 Transact-SQL 语句]和[TRANSACT-SQL 参考 （数据库引擎）]。
 
 有关开发具有 SQL Data Tools 的数据库的详细信息，请参阅[SSDT MSDN 文档]
 
-[下载和安装 Visual Studio]:https://www.visualstudio.com/downloads/
+[下载并安装 Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN 文档]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
-[教程： 编写 TRANSACT-SQL 语句]:https://msdn.microsoft.com/library/ms365303.aspx
+[教程：编写 Transact-SQL 语句]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 参考 （数据库引擎）]:https://msdn.microsoft.com/library/bb510741.aspx
