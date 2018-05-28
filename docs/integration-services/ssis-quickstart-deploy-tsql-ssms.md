@@ -1,6 +1,6 @@
 ---
 title: 使用 Transact-SQL (SSMS) 部署 SSIS 项目 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,31 +12,35 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 975bf68b5d3255ff965e9092e84b2dabf982b90b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bbcae0e5aea6521ad75401002d0a1488b5dbdf6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 从 SSMS 部署 SSIS 项目
 
 快速入门将演示如何使用 SQL Server Management Studio (SSMS) 连接到 SSIS 目录数据库，然后使用 Transact-SQL 语句向 SSIS 目录部署 SSIS 项目。 
 
-> [!NOTE]
-> 使用 SSMS 连接至 Azure SQL 数据库服务器时，本文中所述的方法不可用。 `catalog.deploy_project` 存储过程需使用指向本地文件系统中 `.ispac` 文件的路径。
-
 SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 到 SQL 数据库的任何 SQL 基础结构。 有关 SSMS 的详细信息，请参阅 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。
 
 ## <a name="prerequisites"></a>必备条件
 
-开始之前，请确保具有最新版本的 SQL Server Management Studio。 若要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+开始之前，请确保具有最新版本的 SQL Server Management Studio。 要下载 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+
+## <a name="supported-platforms"></a>支持的平台
+
+可使用此快速入门中的信息将 SSIS 项目部署到以下平台：
+
+-   Windows 上的 SQL Server。
+
+无法使用此快速入门中的信息将 SSIS 包部署到 Azure SQL 数据库。 `catalog.deploy_project` 存储过程需使用指向本地文件系统中 `.ispac` 文件的路径。 有关在 Azure 中部署和运行包的详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+无法使用此快速入门中的信息将 SSIS 包部署到 Linux 上的 SQL Server。 有关在 Linux 上运行包的详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../linux/sql-server-linux-migrate-ssis.md)。
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>连接到 SSIS 目录数据库
 
 使用 SQL Server Management Studio 与 SSIS 目录建立连接。 
-
-> [!NOTE]
-> Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
 1. 打开 SQL Server Management Studio。
 
@@ -46,7 +50,7 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 |  |
-   | **身份验证** | SQL Server 身份验证 | 本快速入门使用 SQL 身份验证。 |
+   | **身份验证** | SQL Server 身份验证 | |
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
 

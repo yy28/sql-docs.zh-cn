@@ -26,37 +26,30 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22b55997d2631001afe9e220f87056026c49b4aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-
-  本主题介绍备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的优点、基本的备份和还原术语，还介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的备份和还原策略以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的安全注意事项。 
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本文介绍备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的优点、基本的备份和还原术语，还介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的备份和还原策略以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的安全注意事项。 
 
 > **在查找分步说明？** 本主题 **未提供任何关于如何备份的具体步骤！** 如果希望立即开始实际备份操作，请向下滚动该页面到链接部分，该部分包含备份任务以及是要使用 SSMS 还是 T-SQL 的内容。  
   
- SQL Server 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了最大限度地降低灾难性数据丢失的风险，您需要定期备份数据库以保留对数据所做的修改。 规划良好的备份和还原策略有助于防止数据库因各种故障而造成数据丢失。 通过还原一组备份，然后恢复数据库来测试您的策略，以便为有效地应对灾难做好准备。  
+ SQL Server 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了最大限度地降低灾难性数据丢失的风险，您需要定期备份数据库以保留对数据所做的修改。 规划良好的备份和还原策略有助于防止数据库因各种故障而造成数据丢失。 通过还原一组备份，然后恢复数据库来测试您的策略，以便为有效地应对灾难做好准备。
   
  除了在本地存储中存储备份外，SQL Server 还支持备份到 Windows Azure Blob 存储服务和从其还原。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 对于使用 Microsoft Azure Blob 存储服务存储的数据库文件， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供相应的选项让你使用 Azure 快照来实现接近实时的备份和更快的还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ##  <a name="why-back-up"></a>为何备份？  
--   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 **备份是保护数据的唯一方法。**
+-   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法。
 
      使用有效的数据库备份，可从多种故障中恢复数据，例如：  
   
-    -   介质故障。  
-  
-    -   用户错误（例如，误删除了某个表）。  
-  
-    -   硬件故障（例如，磁盘驱动器损坏或服务器报废）。  
-  
+    -   介质故障。    
+    -   用户错误（例如，误删除了某个表）。    
+    -   硬件故障（例如，磁盘驱动器损坏或服务器报废）。    
     -   自然灾难。 通过使用 SQL Server 备份到 Windows Azure Blob 存储服务，您可以在本地位置之外的其他区域创建一个站外备份，这样在发生影响您的本地位置的自然灾难时仍可以使用数据库。  
   
 -   此外，数据库备份对于进行日常管理（如将数据库从一台服务器复制到另一台服务器、设置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像以及进行存档）非常有用。  
@@ -75,7 +68,7 @@ ms.lasthandoff: 05/03/2018
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
   
 **数据备份 (data backup)**  
- 完整数据库的数据备份（数据库备份）、部分数据库的数据备份（部分备份）或一组数据文件或文件组（文件备份）。  
+ 完整数据库的数据备份（数据库备份）、部分数据库的数据备份（部分备份）或一组数据文件或文件组的数据备份（文件备份）。  
   
 **数据库备份 (database backup)**  
  数据库的备份。 完整数据库备份表示备份完成时的整个数据库。 差异数据库备份只包含自最近完整备份以来对数据库所做的更改。  
@@ -104,8 +97,8 @@ ms.lasthandoff: 05/03/2018
  ##  <a name="backup-and-restore-strategies"></a>备份和还原策略  
  备份和还原数据必须根据特定环境进行自定义，并且必须使用可用资源。 因此，可靠使用备份和还原以实现恢复需要有一个备份和还原策略。 设计良好的备份和还原策略在考虑到特定业务要求的同时，可以尽量提高数据的可用性并尽量减少数据的丢失。  
   
-#### <a name="important"></a>重要说明！ 
-**请将数据库和备份放置在不同的设备上。否则，如果包含数据库的设备失败，备份也将不可用。此外，将数据和备份放置在不同的设备上还可以提高写入备份和使用数据库时的 I/O 性能。**  
+  > [!IMPORTANT] 
+  > 请将数据库和备份放置在不同的设备上。 否则，如果包含数据库的设备失败，备份也将不可用。 此外，将数据和备份放置在不同的设备上还可以提高写入备份和使用数据库时的 I/O 性能。**  
   
  备份和还原策略包含备份部分和还原部分。 策略的备份部分定义备份的类型和频率、备份所需硬件的特性和速度、备份的测试方法以及备份介质的存储位置和方法（包括安全注意事项）。 策略的还原部分定义负责执行还原的人员以及如何执行还原以满足数据库可用性和尽量减少数据丢失的目标。 建议您将备份和还原过程记录下来并在运行手册中保留记录文档的副本。  
   
@@ -151,12 +144,46 @@ ms.lasthandoff: 05/03/2018
    
 >  有关备份过程中的并发限制的信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
- 确定所需的备份类型和必须执行每种备份类型的频率后，建议您将定期备份计划为数据库维护计划的一部分。 有关维护计划以及如何为数据库备份和日志备份创建维护计划的信息，请参阅 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
+ 确定所需的备份类型和必须执行每种备份类型的频率后，建议您将定期备份计划为数据库维护计划的一部分。 有关维护计划以及如何为数据库备份和日志备份创建维护计划的信息，请参阅 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。
   
 ### <a name="test-your-backups"></a>测试备份！  
- 直到完成备份测试后，才会生成还原策略。 必须通过将数据库副本还原到测试系统，针对每个数据库的备份策略进行全面测试。 您必须对每种要使用的备份类型进行还原测试。  
+ 直到完成备份测试后，才会生成还原策略。 必须通过将数据库副本还原到测试系统，针对每个数据库的备份策略进行全面测试。 您必须对每种要使用的备份类型进行还原测试。
   
- 建议您为每个数据库维护一个操作手册。 此操作手册应记录备份的位置、备份设备名称（如果有），以及还原测试备份所需的时间。  
+ 建议您为每个数据库维护一个操作手册。 此操作手册应记录备份的位置、备份设备名称（如果有），以及还原测试备份所需的时间。
+
+## <a name="monitor-progress-with-xevent"></a>使用 xEvent 监视进度
+由于数据库的大小和所涉及操作的复杂性，备份和还原操作可能需要很长时间。 当任一操作出现问题时，可使用 backup_restore_progress_trace 扩展事件来监控实时进度。 有关扩展事件的详细信息，请参阅 [扩展事件](../extended-events/extended-events.md)。
+
+  >[!WARNING]
+  > 使用 backup_restore_progress_trace 扩展事件可能会导致性能问题并使用大量磁盘空间。 请在短时间内谨慎使用，并在生产中实现前进行彻底测试。
+
+
+```sql
+-- Create the backup_restore_progress_trace extended event esssion
+CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
+ADD EVENT sqlserver.backup_restore_progress_trace
+ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+GO
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = start;  
+GO  
+
+-- Stop the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = stop;  
+GO  
+```
+
+### <a name="sample-output-from-extended-event"></a>扩展事件的示例输出 
+
+![备份 xevent 输出示例](media/back-up-and-restore-of-sql-server-databases/backup-xevent-example.png)
+![还原 xevent 输出示例](media/back-up-and-restore-of-sql-server-databases/restore-xevent-example.png)
+ 
   
 ## <a name="more-about-backup-tasks"></a>有关备份任务的详细信息  
 -   [创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  

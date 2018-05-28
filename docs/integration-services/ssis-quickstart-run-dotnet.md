@@ -1,6 +1,6 @@
 ---
 title: 使用 .NET 代码 (C#) 运行 SSIS 项目 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,14 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d53d460267c8eaee91da326000db806a28e2db39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>使用 .NET 应用中的 C# 代码运行 SSIS 包
-本快速入门教程演示如何编写用于连接数据库服务器和运行 SSIS 包的 C# 代码。
+本快速入门演示如何编写用于连接数据库服务器和运行 SSIS 包的 C# 代码。
 
 可以使用 Visual Studio、Visual Studio Code 或所选的另一工具来创建 C# 应用。
 
@@ -27,19 +27,18 @@ ms.lasthandoff: 05/03/2018
 
 开始之前，请确保已安装 Visual Studio 或 Visual Studio Code。 从 [Visual Studio 下载](https://www.visualstudio.com/downloads/)中下载免费的社区版 Visual Studio 或免费的 Visual Studio Code。
 
-> [!NOTE]
-> Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
+Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>如果部署到 SQL 数据库，则获取连接信息。
+## <a name="for-azure-sql-database-get-the-connection-info"></a>对于 Azure SQL 数据库，请获取连接信息
 
-如果包部署到 Azure SQL 数据库，则获取所需的信息以连接到 SSIS 目录数据库 (SSISDB)。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
+要在 Azure SQL 数据库上运行包，请获取连接到 SSIS 目录数据库 (SSISDB) 所需的连接信息。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
 1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 从左侧的菜单选择“SQL 数据库”，然后单击“SQL 数据库”页中的 SSISDB 数据库。 
-3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想显示“单击以复制”选项，将鼠标悬停在服务器名称上。 
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
+3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 5. 单击“显示数据库连接字符串”。
-6. 查看完整的 ADO.NET 连接字符串。 此示例代码使用 `SqlConnectionStringBuilder` 和提供的独立参数值重新创建此连接字符串。
+6. 查看完整的 ADO.NET 连接字符串。 或者，此代码可使用 `SqlConnectionStringBuilder` 和提供的独立参数值重新创建此连接字符串。
 
 ## <a name="create-a-new-visual-studio-project"></a>创建一个新的 Visual Studio 项目
 
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 2. 使用以下代码替换 Program.cs 的内容。 为服务器、数据库、用户和密码添加适当的值。
 
 > [!NOTE]
-> 以下示例使用 Windows 身份验证。 若要使用 SQL Server 身份验证，请使用 `User ID=<user name>;Password=<password>;` 替换 `Integrated Security=SSPI;` 参数。
+> 以下示例使用 Windows 身份验证。 要使用 SQL Server 身份验证，请将 `Integrated Security=SSPI;` 参数替换为 `User ID=<user name>;Password=<password>;`。 如果连接到 Azure SQL 数据库服务器，则无法使用 Windows 身份验证。
 
 
 ```csharp

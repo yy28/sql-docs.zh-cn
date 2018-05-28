@@ -1,5 +1,5 @@
 ---
-title: 使用 SSIS 从 Excel 加载数据或将数据加载到 Excel | Microsoft Docs
+title: 使用 SSIS 从 Excel 导入数据或将数据导出到 Excel | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
 ms.date: 04/10/2018
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd5a4863f2f94a693ae7216f39fbe0472a94a68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 075cb9c74fa551a6d6053c70ebfe77255b56a7a8
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel
+# <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
 本文介绍如何使用 SQL Server Integration Services (SSIS) 将数据导入 Excel 或从 Excel 导出数据。 本文还会介绍先决条件、限制和已知问题。
 
 可通过创建 SSIS 包和使用 Excel 连接管理器、Excel 源或 Excel 目标提供程序，从 Excel 导出文件或将文件导入 Excel。 还可使用内置于 SSIS 的 SQL Server 导入和导出向导。
 
 本文包含在 SSIS 中成功使用 Excel 或者了解和排除常见问题所必需的三组信息：
--   [所需文件](#files-you-need)。
--   从 Excel 中加载数据或将数据加载到 Excel 时需要提供的信息。
+1.  [所需文件](#files-you-need)。
+2.  从 Excel 中加载数据或将数据加载到 Excel 时需要提供的信息。
     -   [指定 Excel](#specify-excel) 作为数据源。
     -   提供 [Excel 文件和路径](#excel-file)。
     -   选择 [Excel 版本](#excel-version)。
     -   指定[第一行是否包含列名称](#first-row)。
     -   提供[包含数据的工作表或范围](#sheets-ranges)。
--   已知问题和限制。
+3.  已知问题和限制。
     -   [数据类型](#issues-types)的问题。
     -   [导入](#issues-importing)的问题。
     -   [导出](#issues-exporting)的问题。
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 
 如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
 
-## <a name="specify-excel"></a>开始操作
+## <a name="specify-excel"></a> 指定 Excel
 
 第一步需要指出希望连接到 Excel。
 

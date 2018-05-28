@@ -1,6 +1,6 @@
 ---
 title: 从命令提示符运行 SSIS 包 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,19 +12,29 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0dec4f11b797cc138f11f20a521e1c304efa0463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 018a1b6e8e75ce89a1c1679262d185381f432b39
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>使用 DTExec.exe 从命令提示符运行 SSIS 包
-本快速入门教程演示如何通过运行包含相应参数的 `DTExec.exe`，从命令提示符处运行 SSIS 包。
+本快速入门演示如何通过运行包含相应参数的 `DTExec.exe`，从命令提示符处运行 SSIS 包。
 
 > [!NOTE]
 > 本文介绍的方法尚未使用部署到 Azure SQL 数据库服务器的包进行测试。
 
 有关 `DTExec.exe` 的详细信息，请参阅 [dtexec 实用工具](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)。
+
+## <a name="supported-platforms"></a>支持的平台
+
+可使用此快速入门中的信息在以下平台上运行 SSIS 包：
+
+-   Windows 上的 SQL Server。
+
+本文介绍的方法尚未使用部署到 Azure SQL 数据库服务器的包进行测试。 有关在 Azure 中部署和运行包的详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+无法使用此快速入门中的信息在 Linux 上运行 SSIS 包。 有关在 Linux 上运行包的详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../linux/sql-server-linux-migrate-ssis.md)。
 
 ## <a name="run-a-package-with-dtexec"></a>使用 dtexec 运行包
 

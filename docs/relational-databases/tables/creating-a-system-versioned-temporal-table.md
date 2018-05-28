@@ -15,11 +15,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ ALTER TABLE InsurancePolicy
   
 -   添加期间将对当前表执行数据一致性检查，以确保期间列的默认值有效。  
   
--   如果在启用 **SYSTEM_VERSIONING**时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 **DATA_CONISTENCY_CHECK = OFF** 指定为一个附加参数，则可跳过此项检查。  
+-   如果在启用 **SYSTEM_VERSIONING**时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 DATA_CONISTENCY_CHECK = OFF 指定为一个附加参数，则可跳过此项检查。  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>将现有表迁移到内置支持  
  此示例演示如何基于触发器将现有解决方案迁移到内置临时支持。 对于此示例，我们假定当前自定义解决方案将当前数据和历史数据拆分为两个单独的用户表（**ProjectTaskCurrent** 和 **ProjectTaskHistory**）。 如果现有解决方案使用单个表来存储实际行和历史行，则应在执行此示例所示的此迁移步骤前将数据拆分为两个表：  

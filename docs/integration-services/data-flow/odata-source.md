@@ -21,11 +21,11 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdf20d18d4397b0d8ed2f0598b287a88d03caf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="odata-source"></a>OData 源
 在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。 该组件支持 OData v3 和 v4 协议。  
@@ -37,7 +37,10 @@ ms.lasthandoff: 05/03/2018
 OData 源包括对以下数据源的支持：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
 -   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL：http://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。
-  
+
+> [!NOTE]
+> OData 源组件不支持 SharePoint 列表中的复杂类型，例如多选项。
+
 ## <a name="odata-format-and-performance"></a>OData 格式和性能
  大多数 OData 服务都可以多种格式返回结果。 可以使用 `$format` 查询选项指定结果集的格式。 JSON 和 JSON 轻型这类格式比 ATOM 或 XML 更高效，并且在传输大量数据时的性能更佳。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换至 JSON 后，性能提高 30-53%，从 ATOM 切换至新的 JSON 轻型格式（WCF Data Services 5.1 中提供）后，性能提高 67%。  
   
@@ -69,7 +72,7 @@ OData 源包括对以下数据源的支持：
  **使用集合或资源路径**  
  指定从源选择数据的方法。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |集合|使用集合名称查询从 OData 源检索数据。|  
 |资源路径|使用资源路径查询从 OData 源检索数据。|  

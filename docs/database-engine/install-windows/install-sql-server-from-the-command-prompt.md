@@ -89,11 +89,11 @@ caps.latest.revision: 255
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac7f9dc22f86f5da53efaa0b348362e582045683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5842e2885aff9fa774ab98d4ededb1c18f7e9ac2
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -192,11 +192,12 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Install"></a> 安装参数  
  使用下表中的参数可开发用于安装的命令行脚本。  
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **安装**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTROPENLICENSETERMS <br /><br /> **仅在为包括 R Services（数据库中）或 Microsoft R Server 的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> 仅在为包含 Anaconda Python 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTROPENLICENSETERMS <br /><br /> 仅在为包含 Microsoft R Open 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateSource<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 `.\MyUpdates` 或一个 UNC 共享）。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将通过 Windows Server Update Services 搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或 Windows Update 服务。|  
@@ -275,7 +276,8 @@ ms.lasthandoff: 05/03/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|R Services（数据库内）|MRCACHEDIRECTORY|使用此参数指定 Microsoft R Open 和 Microsoft R Server 或 Machine Learning Server 组件的缓存目录，如[本文](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)所述。 从没有 Internet 访问的计算机上的命令行安装 SQL Server 机器学习时，通常使用此设置。|  
+|Python/机器学习服务（数据库内）|MPYCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 机器学习服务器（独立版）中指定用于 Python 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 Python 组件时，通常使用此设置。|  
+|R/机器学习服务（数据库内）|MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 R 组件时，通常使用此设置。|  
   
 ###### <a name="sample-syntax"></a>示例语法：  
  安装新的具有 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、复制和全文搜索组件的独立实例并启用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的即时文件初始化。 
@@ -292,7 +294,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>准备映像参数  
  使用下表中的参数可开发用于准备但不配置 SQL Server 实例的命令行脚本。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -325,7 +327,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>完成映像参数  
  使用下表中的参数可开发用于完成和配置已准备好的 SQL Server 实例的命令行脚本。 
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -390,7 +392,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> 升级参数  
  使用下表中的参数可开发用于升级的命令行脚本。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> **升级**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> **EditionUpgrade** 值用于将现有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到另一版本。 有关支持的版本升级的详细信息，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -428,7 +430,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> 修复参数  
  使用下表中的参数可开发用于修复的命令行脚本。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示修复工作流。<br /><br /> 支持的值： **修复**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
@@ -452,7 +454,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> 重新生成系统数据库参数  
  使用下表中的参数可开发命令行脚本来重新生成 master、model、msdb 和 tempdb 系统数据库。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示重新生成数据库工作流。<br /><br /> 支持的值： **Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)。|  
@@ -471,7 +473,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> 卸载参数  
  使用下表中的参数可开发用于卸载的命令行脚本。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示卸载工作流。<br /><br /> 支持的值： **卸载**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -601,7 +603,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>准备故障转移群集参数  
  使用下表中的参数可开发用于故障转移群集准备的命令行脚本。 这是高级群集安装的第一步，在此步骤中您必须在故障转移群集的所有节点上准备故障转移群集实例。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集准备工作流。<br /><br /> 支持的值： **PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -666,7 +668,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>完成故障转移群集参数  
  使用下表中的参数可开发用于执行故障转移群集完成操作的命令行脚本。 这是高级故障转移群集安装选项的第二步。 在所有的故障转移群集节点上运行了 prepare 后，在拥有共享磁盘的节点上运行此命令。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集完成工作流。<br /><br /> 支持的值： **CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
@@ -729,7 +731,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>升级故障转移群集参数  
  使用下表中的参数可开发用于故障转移群集升级的命令行脚本。 有关详细信息，请参阅[升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集实例（安装程序）](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)和 [Always On 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **升级**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -759,7 +761,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a>添加节点参数  
  使用下表中的参数可开发用于 AddNode 的命令行脚本。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 AddNode 工作流。<br /><br /> 支持的值： **AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -804,7 +806,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>删除节点参数  
  使用下表中的参数可开发用于 RemoveNode 的命令行脚本。 若要卸载故障转移群集，必须在每个故障转移群集节点上运行 RemoveNode。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 RemoveNode 工作流。<br /><br /> 支持的值： **RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -842,7 +844,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> 功能参数  
  若要安装特定功能，请使用 /FEATURES 参数并指定下表中的父功能或功能值： 有关 SQL Server 各版本支持的功能列表，请参阅 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 的版本和支持的功能。 
   
-|父功能参数|功能参数|Description|  
+|父功能参数|功能参数|描述|  
 |:---|:---|:---|  
 |SQL||安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、复制、全文组件和 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。|  
 ||SQLEngine|仅安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
@@ -850,7 +852,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||FullText|将全文组件与 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]一起安装。|  
 ||DQ|复制完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装所需的文件。 在完成 SQL Server 安装后，必须运行 DQSInstaller.exe 文件来完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。 这也将安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 ||PolyBase|安装 PolyBase 组件。|  
-||AdvancedAnalytics|安装 R Services（数据库中）。|  
+||AdvancedAnalytics|安装 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)或 [SQL Server 2016 R Services（数据库内）](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)。|  
+||SQL_INST_MR |适用于 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 R Open 和专有 R 包。|  
+||SQL_INST_MPY|适用于 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 Anaconda 和专有 Python 包。|  
 |AS||安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |RS||安装所有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
 |RS_SHP||安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
@@ -858,7 +862,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |DQC||安装 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。|  
 |IS||安装所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。|  
 |MDS||安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|  
-|SQL_SHARED_MR||安装 Microsoft R Server。|  
+|SQL_SHARED_MPY||为 [SQL Server 2017 机器学习服务器（独立版）](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install)安装 Python 包 |  
+|SQL_SHARED_MR||为 [SQL Server 2016 R Server（独立版）](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install)或 SQL Server 2017 机器学习服务器（独立版）安装 R 包 |  
 |工具*||安装客户端工具和 SQL Server 联机丛书组件。|  
 ||BC|安装向后兼容组件。|  
 ||Conn|安装连接组件。|
@@ -874,7 +879,7 @@ LocalDB 是安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任�
   
 ### <a name="feature-parameter-examples"></a>功能参数示例：  
   
-|参数和值|Description| 
+|参数和值|描述| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，不带复制和全文组件。|  
 |/FEATURES=SQLEngine, FullText|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文组件。|  
@@ -887,7 +892,7 @@ LocalDB 是安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任�
   
  AllFeatures_WithDefaults 角色是各版本 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认行为，可减少向用户提供的对话框数量。 当安装的 SQL Server 版本不是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，可以从命令行指定此角色。 
   
-|角色|Description|安装…|  
+|角色|描述|安装…|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装在现有 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场或独立服务器上。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算引擎，为内存中数据存储和处理而预先配置的。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server 联机丛书|  
 |SPI_AS_NewFarm|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装在新的、未配置的 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场或独立服务器上。 SQL Server 安装程序将在功能角色安装过程中配置场。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算引擎，为内存中数据存储和处理而预先配置的。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包<br /><br /> SQL Server 联机丛书<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 配置工具<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

@@ -1,5 +1,4 @@
-title: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.prod_service: "database-engine, sql-database" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
-  - "database-engine" ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
+title: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.reviewer: "" ms.suite: "sql" ms.technology: supportability ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
   - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: craigg
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
@@ -8,7 +7,7 @@ title: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14/2
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  

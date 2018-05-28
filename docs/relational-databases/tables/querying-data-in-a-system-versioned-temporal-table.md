@@ -15,18 +15,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c39296fd2ea72e8107c9c1dc558e636810726848
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfdb035f176c2fcdb9e71b5621b76e4ecb72c2b4
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制临时表中查询数据
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将 **PERIOD** 列指定为隐藏，其值将不会出现在 SELECT \* 查询中。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。  
   
- 若要执行任何一种基于时间的分析，请将新的  **FOR SYSTEM_TIME** 子句和四个特定于临时表的子子句结合使用，以便跨当前表和历史记录表查询数据。 有关这些子句的详细信息，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)和 [FROM (Transact SQL)](../../t-sql/queries/from-transact-sql.md)  
+ 若要执行任何一种基于时间的分析，请将新的 FOR SYSTEM_TIME 子句和四个特定时态的子子句结合使用，以便跨当前表和历史记录表查询数据。 有关这些子句的详细信息，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)和 [FROM (Transact SQL)](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <date_time>  
   
@@ -41,8 +41,8 @@ ms.lasthandoff: 05/03/2018
  可以在查询中为每个表单独指定**FOR SYSTEM_TIME** 。 它可以在公用表表达式、表值函数和存储过程内使用。  
   
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>使用 AS OF 子子句查询特定时间  
- 当你因为数据处于过去的任意特定时间而需要重新构造数据状态时，可使用**AS OF** 子子句。  你可以使用 **PERIOD** 列定义中指定的 datetime2 类型的精度来重新构造数据。    
-**AS OF** 子子句可以与常量文字或变量结合使用，从而允许你动态指定时间条件。 所提供的值解释为 UTC 时间。  
+ 当因为数据处于过去的任意特定时间而需要重新构造数据状态时，可使用 AS OF 子子句。 你可以使用 **PERIOD** 列定义中指定的 datetime2 类型的精度来重新构造数据。    
+AS OF 子子句可以与常数文本或变量结合使用，从而让你动态指定时间条件。 所提供的值解释为 UTC 时间。  
   
  第一个示例返回 dbo.Department 表从过去某个特定日期起的状态。  
   

@@ -31,11 +31,11 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>结果集  
 下表对结果集中的列进行了说明。
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]试图收缩的文件的数据库标识号。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试收缩的文件的文件标识号。|  
@@ -93,6 +93,10 @@ DBCC SHRINKDATABASE
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]不显示未收缩的文件的行。  
   
 ## <a name="remarks"></a>Remarks  
+
+>[!NOTE]
+> 当前，Azure SQL 数据仓库不支持 DBCC SHRINKDATABASE。 不建议运行此命令，因为这是 I/O 密集型操作，可能会使数据仓库离线。 此外，运行此命令后，还会对数据仓库快照产生成本影响。 
+
 若要收缩特定数据库的所有数据和日志文件，请执行 DBCC SHRINKDATABASE 命令。 若要一次收缩一个特定数据库中的一个数据或日志文件，请执行 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 命令。
   
 若要查看数据库中当前的可用（未分配）空间量，请运行 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)。
@@ -106,9 +110,6 @@ DBCC SHRINKDATABASE
 要收缩的数据库不必在单用户模式下；其他的用户仍可以在数据库收缩时对其进行工作。 这也包括系统数据库。
   
 不能在备份数据库时收缩数据库。 反之，也不能在数据库执行收缩操作时备份数据库。
-
->[!NOTE]
-> 当前，Azure SQL 数据仓库不支持启用了 TDE 的 DBCC SHRINKDATABASE。
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 的工作原理  
 DBCC SHRINKDATABASE 以每个文件为单位对数据文件进行收缩。然而，DBCC SHRINKDATABASE 在对日志文件进行收缩时，它将视为所有的日志文件都存在于一个连续的日志池中。 文件始终从末尾开始收缩。

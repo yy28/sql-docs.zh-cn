@@ -1,6 +1,6 @@
 ---
 title: 使用 .NET 代码 (C#) 部署 SSIS 项目 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,14 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0fc40c9db57dece328a8bcc205115c0570a167e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eaac43b601808460fad9714a98bb1f444df67546
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>使用 .NET 应用中的 C# 代码 部署 SSIS 项目
-本快速入门教程演示如何编写用于连接数据库服务器和部署 SSIS 项目的 C# 代码。
+本快速入门演示如何写入用于连接数据库服务器和部署 SSIS 项目的 C# 代码。
 
 若要创建 C# 应用，可以使用 Visual Studio、Visual Studio Code 或所选的另一工具。
 
@@ -27,19 +27,28 @@ ms.lasthandoff: 05/03/2018
 
 开始之前，请确保已安装 Visual Studio 或 Visual Studio Code。 从 [Visual Studio 下载](https://www.visualstudio.com/downloads/)中下载免费的社区版 Visual Studio 或免费的 Visual Studio Code。
 
-> [!NOTE]
-> Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
+Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>如果部署到 SQL 数据库，则获取连接信息。 
+## <a name="supported-platforms"></a>支持的平台
 
-如果包部署到 Azure SQL 数据库，则获取所需的信息以连接到 SSIS 目录数据库 (SSISDB)。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
+可使用此快速入门中的信息将 SSIS 项目部署到以下平台：
+
+-   Windows 上的 SQL Server。
+
+-   Azure SQL 数据库。 有关在 Azure 中部署和运行包的详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+无法使用此快速入门中的信息将 SSIS 包部署到 Linux 上的 SQL Server。 有关在 Linux 上运行包的详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../linux/sql-server-linux-migrate-ssis.md)。
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>对于 Azure SQL 数据库，请获取连接信息
+
+要将项目部署到 Azure SQL 数据库，则获取所需的信息以连接到 SSIS 目录数据库 (SSISDB)。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
 1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 从左侧的菜单选择“SQL 数据库”，然后单击“SQL 数据库”页中的 SSISDB 数据库。 
-3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想显示“单击以复制”选项，将鼠标悬停在服务器名称上。 
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
+3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 5. 单击“显示数据库连接字符串”。
-6. 查看完整的 ADO.NET 连接字符串。 此示例代码使用 `SqlConnectionStringBuilder` 和提供的独立参数值重新创建此连接字符串。
+6. 查看完整的 ADO.NET 连接字符串。 或者，此代码可使用 `SqlConnectionStringBuilder` 和提供的独立参数值重新创建此连接字符串。
 
 ## <a name="create-a-new-visual-studio-project"></a>创建一个新的 Visual Studio 项目
 
@@ -65,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 2. 使用以下代码替换 Program.cs 的内容。 为服务器、数据库、用户和密码添加适当的值。
 
 > [!NOTE]
-> 以下示例使用 Windows 身份验证。 若要使用 SQL Server 身份验证，请使用 `User ID=<user name>;Password=<password>;` 替换 `Integrated Security=SSPI;` 参数。
+> 以下示例使用 Windows 身份验证。 要使用 SQL Server 身份验证，请将 `Integrated Security=SSPI;` 参数替换为 `User ID=<user name>;Password=<password>;`。 如果连接到 Azure SQL 数据库服务器，则无法使用 Windows 身份验证。
 
 ```csharp
 using Microsoft.SqlServer.Management.IntegrationServices;

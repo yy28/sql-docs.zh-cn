@@ -16,11 +16,11 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c0f95bb10af0e466d139a8da8d499b9caea7ea2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 902b6783930b5e939e3f522964a19ceeaebc2055
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 组件
   此部分包含介绍 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 的三个组件的主题：  
@@ -29,8 +29,11 @@ ms.lasthandoff: 05/03/2018
   
 -   SAP BW 源  
   
--   SAP BW 目标  
-  
+-   SAP BW 目标
+
+> [!IMPORTANT]
+> Microsoft 预计不会提供 SAP BW 连接器的更新版本。 Microsoft 未拥有由第三方开发的 SAP BW 组件的源代码，因此无法更新它们。 考虑从 Microsoft ISV 合作伙伴（例如 [Theobald 软件](https://theobald-software.com/en/xtract-is-productinfo.html)）购买最新的 SAP 连接组件。 Microsoft 的 ISV 合作伙伴已为 SSIS 调整了其 SAP 连接组件，以便在 Azure 中安装。
+
 > [!IMPORTANT]  
 >  针对 Microsoft Connector 1.1 for SAP BW 的文档假定您熟悉 SAP Netweaver BW 环境。 有关 SAP NetWeaver BW 的详细信息，或者有关如何配置 SAP Netweaver BW 对象和过程的信息，请参阅您的 SAP 文档。  
   

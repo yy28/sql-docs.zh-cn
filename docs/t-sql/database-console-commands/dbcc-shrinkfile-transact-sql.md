@@ -33,11 +33,11 @@ caps.latest.revision: 87
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,8 @@ FILESTREAM 文件组容器不支持此选项。
 如果指定了 target_size，则 DBCC SHRINKFILE 尝试将文件收缩到指定大小。 将要释放的文件部分中的已使用页重新定位到保留的文件部分中的可用空间。 例如，如果数据文件为 10 MB，则 target_size 为 8 的 DBCC SHRINKFILE 操作会将文件最后 2 MB 中所有的已使用页重新分配到文件前 8 MB 中的任何未分配页中。 DBCC SHRINKFILE 不会将文件收缩到小于存储文件中的数据所需要的大小。 例如，如果使用 10 MB 数据文件中的 7 MB，则带有 target_size 为 6 的 DBCC SHRINKFILE 语句只能将该文件收缩到 7 MB，而不能收缩到 6 MB。
   
 EMPTYFILE  
-将指定文件中的所有数据迁移到同一文件组中的其他文件。 也就是说，EmptyFile 会将指定文件中的数据迁移到同一文件组中的其他文件。 Emptyfile 可确保不向文件中添加新数据。可使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句删除该文件。
+将指定文件中的所有数据迁移到同一文件组中的其他文件。 也就是说，EmptyFile 会将指定文件中的数据迁移到同一文件组中的其他文件。 Emptyfile 可确保不向文件中添加新数据，尽管未将此文件标记为只读。可使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句删除该文件。 如果使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句更改文件大小，则将重置只读标记并可添加数据。
+
 对于 FILESTREAM 文件组容器，将无法使用 ALTER DATABASE 删除该文件，直到已运行垃圾收集器并删除了 EMPTYFILE 已复制到其他容器的所有多余文件组容器文件。 有关详细信息，请参阅 [sp_filestream_force_garbage_collection (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
@@ -98,7 +99,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>结果集  
 下表对结果集中的列进行了说明。
   
-|列名|Description|  
+|列名|描述|  
 |---|---|
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]试图收缩的文件的数据库标识号。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]试图收缩的文件的文件标识号。|  

@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -188,7 +188,7 @@ LOG 适用范围：SQL Server
 > [!NOTE]  
 >  执行典型日志备份后，如果没有指定 `WITH NO_TRUNCATE` 或 `COPY_ONLY`，某些事务日志记录将变为不活动状态。 一个或多个虚拟日志文件中的所有记录变为不活动状态后，日志将被截断。 如果日志在常规日志备份后未被截断，则可能是某些操作延迟了日志截断。 有关详细信息，请参阅[可能延迟日志截断的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。  
   
- { database_name | @***database_name_var } 是备份事务日志、部分数据库或完整的数据库时所用的源数据库*。如果作为变量 (**@***database_name_var) 提供，则可以将此名称指定为字符串常量 (*@database_name_var=***database name) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量***。  
+ { database_name | @***database_name_var } 是备份事务日志、部分数据库或完整的数据库时所用的源数据库 *。如果作为变量 (**@***database_name_var) 提供，则可以将此名称指定为字符串常量 (*@database_name_var=***database name) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量***。  
   
 > [!NOTE]  
 > 不能备份数据库镜像伙伴关系中的镜像数据库。  
@@ -231,7 +231,7 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
   
 \<backup_device> 适用范围：SQL Server。指定用于备份操作的逻辑备份设备或物理备份设备。  
   
- { logical_device_name | @logical_device_name_var } 适用范围：SQL Server。要将数据库备份到的备份设备的逻辑名称*。逻辑名称必须遵守标识符规则。如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量 (@logical_device_name_var*= logical backup device name) 或任何字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+ { logical_device_name | @logical_device_name_var } 适用范围：SQL Server。要将数据库备份到的备份设备的逻辑名称 *。逻辑名称必须遵守标识符规则。如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量 (@logical_device_name_var*= logical backup device name) 或任何字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
   
  { DISK | TAPE | URL} = { 'physical_device_name' | *@***physical_device_name_var | 'NUL' } 适用范围：磁盘、磁带和用于 SQL Server 的 URL****。 仅 URL 适用于 SQL 数据库托管实例。指定磁盘文件或磁带设备，或者 Windows Azure 存储服务。 此 URL 格式用于创建到 Windows Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 有关教程的信息，请参阅[教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
 
@@ -285,7 +285,7 @@ MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三�
  用于在使用 Azure Blob 存储服务存储所有 SQL Server 数据库文件时，创建数据库文件的 Azure 快照。 有关详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份将数据库文件（数据和日志文件）的 Azure 快照保持为一致的状态。 一组一致的 Azure 快照构成备份并记录在备份文件中。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` 和 `BACKUP LOG TO URL WITH FILE_SNAPSHOT` 之间的唯一区别是后者会截断事务日志，而前者不会。 借助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份，在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立备份链时所需的初始完整备份之后，只需单个事务日志备份即可将数据库还原到事务日志备份的时间点。 此外，只需两次事务日志备份即可将数据库还原到两次事务日志备份之间的时间点。  
     
  DIFFERENTIAL  
-**适用范围：**SQL Server。只能与 BACKUP DATABASE 一起使用，指定数据库备份或文件备份应该只包含上次完整备份后更改的数据库或文件部分。 差异备份一般会比完整备份占用更少的空间。 对于上一次完整备份后执行的所有单个日志备份，使用该选项可以不必再进行备份。  
+**适用范围：** SQL Server。只能与 BACKUP DATABASE 一起使用，指定数据库备份或文件备份应该只包含上次完整备份后更改的数据库或文件部分。 差异备份一般会比完整备份占用更少的空间。 对于上一次完整备份后执行的所有单个日志备份，使用该选项可以不必再进行备份。  
   
 > [!NOTE]  
 > 默认情况下，`BACKUP DATABASE` 创建完整备份。  
@@ -700,10 +700,11 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，这为 TDE 加密数据库启用优化的压缩算法，该算法先解密页面，然后将其压缩并再次对其进行加密。 如果使用 `MAXTRANSFERSIZE = 65536` (64 KB)，对使用 TDE 加密的数据库执行备份压缩时会直接压缩加密的页面，且可能不会得到良好的压缩比率。 有关详细信息，请参阅[支持 TDE 的数据库的备份压缩](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)。
 
 > [!NOTE]  
-> 在以下情况下，自动使用 TDE 加密数据库的优化压缩算法：
-> * 
->  使用时，默认的 `MAXTRANSFERSIZE` 更改为 1048576 (1 MB) 且不强制为较低值。
-> * 数据库具有多个数据文件，默认的 `MAXTRANSFERSIZE` 更改为 65536 (64 KB) 的倍数，且不更改为较低值（如 `MAXTRANSFERSIZE = 65536`）。 
+> 某些情况下，默认的 `MAXTRANSFERSIZE` 大于 64K：
+> * 数据库创建了多个数据文件时，它使用 `MAXTRANSFERSIZE` > 64K
+> * 执行 URL 备份时，默认 `MAXTRANSFERSIZE = 1048576` (1MB)
+>   
+> 即使其中一个条件适用，也必须在备份命令中显式设置 `MAXTRANSFERSIZE` 大于 64K，才能获得新的备份压缩算法。
   
 默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   

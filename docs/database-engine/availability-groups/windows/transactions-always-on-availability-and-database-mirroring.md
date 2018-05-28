@@ -1,7 +1,7 @@
 ---
 title: 事务 - AlwaysOn 可用性组和数据库镜像 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/01/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -20,23 +20,25 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 77e578babc3efa230a0da00c42187e50e650dd32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96dc8231a20f8ef1528390bc6b29752ded20f101
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本主题介绍了用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务。  
+本文介绍了用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务。  
 
 ## <a name="support-for-distributed-transactions"></a>对分布式事务的支持
 
 SQL Server 2017 支持用于可用性组中数据库的分布式事务。 包括支持相同 SQL Server 实例上的数据库或不同 SQL Server 实例上的数据库。 为数据库镜像配置的数据库不支持分布式事务。
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)]SQL Server 2016 对可用性组中数据库的分布式事务的支持存在限制。 只有当事务中的任何其他数据库均不在同一个 SQL Server 实例中时，才支持使用可用性组中的数据库的分布式事务。 有关详细信息，请参阅[可用性组中的 SQL Server 2016 DTC 支持](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-gr)
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 
+>
+>在服务包 2 之前的 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 版本中，不支持涉及可用性组中数据库的跨数据库分布式事务（即在同一 SQL Server 实例上使用数据库的事务）。
 
 若要为分布式事务配置可用性组，请参阅[为分布式事务配置可用性组](configure-availability-group-for-distributed-transactions.md)。
 
@@ -46,14 +48,14 @@ SQL Server 2017 支持用于可用性组中数据库的分布式事务。 包括
 - [DTC 开发人员指南](http://msdn.microsoft.com/library/ms679938.aspx)
 - [DTC 程序员参考](http://msdn.microsoft.com/library/ms686108.aspx)
 
-## <a name="sql-server-2016-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 及以前版本：对同一个 SQL Server 实例中的跨数据库事务的支持  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 及以前版本：支持同一个 SQL Server 实例中的跨数据库事务  
 
-在 SQL Server 2016 及以前版本中，可用性组不支持同一个 SQL Server 实例中的跨数据库事务。 这意味着同一数据库中的两个跨数据库事务不可能由相同的 SQL Server 实例托管。 即使这些数据库属于同一个可用性组，也是如此。  
+在 SQL Server 2016 SP1 及以前版本中，可用性组不支持同一个 SQL Server 实例中的跨数据库事务。 如果其中一个或两个数据库位于可用性组中，同一 SQL Server 实例无法托管跨数据库事务中的两个数据库。 即使这些数据库属于同一个可用性组，这些限制也适用。  
   
 数据库镜像也不支持跨数据库事务。  
   
-##  <a name="dtcsupport"></a> SQL Server 2016：对分布式事务的支持  
-可用性组支持分布式事务。 这适用于由两个不同的 SQL Server 实例托管的数据库之间的分布式事务。 它也适用于 SQL Server 和其他兼容 DTC 的服务器之间的分布式事务。  
+##  <a name="dtcsupport"></a> SSQL Server 2016 SP1 及较早版本：支持分布式事务  
+当数据库由不同的 SQL Server 实例托管时，可用性组支持分布式事务。 它也适用于 SQL Server 实例和其他兼容 DTC 的服务器之间的分布式事务。  
  
 Microsoft 分布式事务处理协调器（MSDTC 或 DTC）是一项 Windows 服务，用于为分布式系统提供事务基础结构。 MSDTC 允许客户端应用程序在一个事务中包含多个数据源，然后跨该事务包含的所有服务器提交该事务。 例如，可以使用 MSDTC 来协调跨不同服务器上多个数据库的事务。
 
@@ -61,7 +63,7 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
   
  必须满足以下要求：  
   
--   可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)。  
+-   可用性组必须在 Windows Server 2012 R2 或更高版本上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)。  
   
 -   必须使用 CREATE AVAILABILITY GROUP 命令和 WITH DTC\_SUPPORT = PER_DB 子句创建可用性组。 当前不可更改现有可用性组。  
 
@@ -70,9 +72,9 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
  ## <a name="non-support-for-distributed-transactions"></a>不支持分布式事务
  不支持分布式事务的特定情况包括：
  
- - 在 SQL Server 2016 及以前版本中，事务包含的多个数据库位于同一个可用性组中。
+ - 在 SQL Server 2016 SP1 及以前版本中，事务包含的多个数据库位于同一个可用性组中。
  
- - 在 SQL Server 2016 及以前版本中，每个可用性组中至少有一个数据库，并且其他数据库位于相同的 SQL Server 实例。 
+ - 在 SQL Server 2016 SP1 及以前版本中，每个可用性组中至少有一个数据库，并且其他数据库位于相同的 SQL Server 实例。 
  
  - 其中未通过启用分布式事务创建可用性组。
  
@@ -89,7 +91,7 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
  使用 MS DTC 事务时可能会出现类似的情况。 例如，故障转移后，新主体将访问 MS DTC。 但是 MS DTC 不能识别新的主体服务器，因而会终止被认为已在其他数据库中提交了的、所有“准备提交”的事务。  
   
 > [!NOTE]  
->  通过本主题未批准的方式配合 DTC 使用数据库镜像或配合 DTC 使用可用性组不受支持。  这并不意味着不支持与 DTC 不相关的产品方面；而是不支持因错误使用分布式事务而引发的任何问题。  
+>  通过本文未批准的方式配合 DTC 使用数据库镜像或配合 DTC 使用可用性组不受支持。  这并不意味着不支持与 DTC 不相关的产品方面；而是不支持因错误使用分布式事务而引发的任何问题。  
   
 ## <a name="next-steps"></a>后续步骤  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  

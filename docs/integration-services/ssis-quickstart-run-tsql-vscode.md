@@ -1,6 +1,6 @@
 ---
 title: 使用 Transact-SQL (VS Code) 运行 SSIS 包 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51905916c70b07b40aea5f8f025ac0b09527d468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33c48b9438d141fac721d246ff2218cb0ccde542
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 从 Visual Studio Code 运行 SSIS 包
 本快速入门演示如何使用 Visual Studio Code 连接到 SSIS 目录数据库，然后使用 Transact-SQL 语句运行存储在 SSIS 目录中的 SSIS 包。
@@ -29,6 +29,16 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 -   [下载 Visual Studio Code](https://code.visualstudio.com/Download)
 -   [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
+## <a name="supported-platforms"></a>支持的平台
+
+可使用此快速入门中的信息在以下平台上运行 SSIS 包：
+
+-   Windows 上的 SQL Server。
+
+-   Azure SQL 数据库。 有关在 Azure 中部署和运行包的详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+无法使用此快速入门中的信息在 Linux 上运行 SSIS 包。 有关在 Linux 上运行包的详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../linux/sql-server-linux-migrate-ssis.md)。
+
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>在 VS Code 中将语言模式设置为 SQL
 
 若要启用 `mssql` 命令和 T-SQL IntelliSense，请在 Visual Studio Code 中将语言模式设置为 SQL。
@@ -38,6 +48,15 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 2. 在状态栏的右下角单击“纯文本”。
 
 3. 在打开的“选择语言模式”下拉菜单中选择或输入“SQL”，然后按 ENTER 将语言模式设置为 SQL。 
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>对于 Azure SQL 数据库，请获取连接信息
+
+要在 Azure SQL 数据库上运行包，请获取连接到 SSIS 目录数据库 (SSISDB) 所需的连接信息。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
+
+1. 登录到 [Azure 门户](https://portal.azure.com/)。
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
+3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
+4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>连接到 SSIS 目录数据库
 
@@ -58,7 +77,7 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | 完全限定的服务器名称 | 如果要连接到 Azure SQL 数据库服务器，该名称为以下格式：`<server_name>.database.windows.net`。 |
    | **数据库名称** | **SSISDB** | 要连接到的数据库的名称。 |
-   | **身份验证** | SQL 登录名| 本快速入门使用 SQL 身份验证。 |
+   | **身份验证** | SQL 登录名 | 使用 SQL Server 身份验证，可连接到 SQL Server 或 Azure SQL 数据库。 如果连接到 Azure SQL 数据库服务器，则无法使用 Windows 身份验证。 |
    | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |

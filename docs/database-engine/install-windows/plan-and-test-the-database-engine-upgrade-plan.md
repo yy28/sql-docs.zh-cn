@@ -1,7 +1,7 @@
 ---
 title: 计划并测试数据库引擎升级计划 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: install
 ms.reviewer: ''
@@ -15,11 +15,11 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccdef1d662006900a6d1338acbb24db907bc9192
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbe0ecaee2d03865f7e8f6700b6aa5a146c533f1
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>计划并测试数据库引擎升级计划
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **第三方组件：** 确定第三方组件（如集成备份）的兼容性。  
   
--   **目标环境：** 验证你的目标环境是否符合硬件和软件要求，以及是否能够支持原始系统的要求。 例如，升级可能涉及将多个 SQL Server 实例合并为单个新 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例，或将你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境虚拟化为一个私有或公有云。  
+-   **目标环境：** 验证目标环境是否符合硬件和软件要求，以及是否能够支持原始系统的要求。 例如，升级可能涉及将多个 SQL Server 实例合并为单个新 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例，或将你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境虚拟化为一个私有或公有云。  
   
 -   **版本：** 确定升级的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 适当版本，并确定升级的有效升级路径。 有关详细信息，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。 在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。  
   
@@ -65,20 +65,20 @@ ms.lasthandoff: 05/03/2018
   
 -   **向后兼容性：** 查看 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 数据库引擎向后兼容性文章，了解 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 和要从其开始升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间的行为变化。 请参阅 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
   
--   **升级顾问：**  运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 升级顾问，以帮助诊断可能会阻止升级过程或由于重大更改而需要修改现有脚本或应用程序的问题。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 包含升级顾问的新版本，可帮助客户准备升级现有系统。  此工具的功能还包括在升级完成后检查你的现有数据库以查看它们能否利用新功能（例如“拉伸表格”）。   
-    可从 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]此处  [下载](https://www.microsoft.com/en-us/download/details.aspx?id=48119)升级顾问。  
+-   **数据迁移助手：** 运行数据迁移助手，以帮助诊断可能会阻止升级过程或由于重大更改而需要修改现有脚本或应用程序的问题。
+    可在[此处](https://aka.ms/get-dma)下载数据迁移助手。  
   
--   **系统配置检查器：**  运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 系统配置检查器 (SCC) 以确定 SQL Server 安装程序是否在你实际计划升级以前检测到任何阻塞问题。 有关详细信息，请参阅 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)。  
+-   **系统配置检查器：** 运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 系统配置检查器 (SCC) 以确定 SQL Server 安装程序是否在你计划升级以前检测到任何阻塞问题。 有关详细信息，请参阅 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)。  
   
 -   **升级内存优化表：** 将包含内存优化表的 SQL Server 2014 数据库实例升级到 SQL Server 2016 时，升级进程将需要更多时间以将内存优化表转换为新的磁盘上格式（进行这些步骤时，数据库将处于脱机状态）。   时间量取决于内存优化表的大小和 I/O 子系统的速度。 针对就地和新安装升级，升级需要三个数据操作（滚动升级不需要进行步骤 1，但需要进行步骤 2 和步骤 3）：  
   
-    1.  使用旧的磁盘上格式运行数据库恢复（此操作包含将内存优化表中的所有数据从磁盘上加载到内存中）  
+    1.  使用旧的磁盘上格式运行数据库恢复（包含将内存优化表中的所有数据从磁盘上加载到内存中）  
   
     2.  以新的磁盘上格式将数据序列化到磁盘  
   
-    3.  使用新格式运行数据库恢复（此操作包含将内存优化表中的所有数据从硬盘上加载到内存中）  
+    3.  使用新格式运行数据库恢复（包含将内存优化表中的所有数据从磁盘上加载到内存中）  
   
-     此外，在此过程中磁盘空间不足将导致恢复失败。 请确保磁盘上具有用于存储现有数据库的充足空间，并具有大小等于数据库中 EMORY_OPTIMIZED_DATA 文件组中的容器的当前大小的其他存储空间，以便执行就地升级或将 SQL Server 2014 数据库附加到 SQL Server 2016 实例。使用以下查询来确定 MEMORY_OPTIMIZED_DATA 文件组当前所需的磁盘空间，以及成功升级所需的空闲磁盘空间容量：  
+     此外，在此过程中磁盘空间不足将导致恢复失败。 确保磁盘上有足够的空间来存储现有数据库以及与数据库中 MEMORY_OPTIMIZED_DATA 文件组中容器的当前大小相等的其他存储，以执行就地升级或将 SQL Server 2014 数据库附加到 SQL Server 2016 实例。 使用以下查询来确定 MEMORY_OPTIMIZED_DATA 文件组当前所需的磁盘空间，以及升级成功所需的可用磁盘空间量：  
   
     ```  
     select cast(sum(size) as float)*8/1024/1024 'size in GB'   
@@ -87,17 +87,18 @@ ms.lasthandoff: 05/03/2018
     ```  
   
 ## <a name="develop-and-test-the-upgrade-plan"></a>开发和测试升级计划  
- 最好的方法是像对待任何 IT 项目一样对待升级。 你应当组织一个升级团队，该团队具有数据库管理、网络、提取、转换和加载 (ETL) 以及升级所需的其他技能。 团队需要进行以下工作：  
+ 最好的方法是像对待任何 IT 项目一样对待升级。 组织一个升级团队，该团队具有数据库管理、网络、提取、转换和加载 (ETL) 以及升级所需的其他技能。 团队需要进行以下工作：  
   
 -   **选择升级方法：** 请参阅 [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   
--   **制定回滚计划：**。 如果你需要回滚，执行此计划可以还原原始环境。  
+-   **制定回滚计划：** 如果需要回滚，执行此计划可以还原原始环境。  
   
--   **决定验收条件：** 你需要在你将用户剪切到已升级环境之前知道升级已成功完成。  
+-   **决定验收条件：** 将用户切换到已升级环境之前，验证升级是否成功成。  
   
 -   **测试升级计划：** 若要使用你的实际工作负荷测试性能，请使用 Microsoft SQL Server Distributed Replay 实用工具。 此实用工具可以使用多台计算机模拟任务关键型工作负荷，从而重播跟踪数据。 通过在 SQL Server 升级前和升级后在测试服务器上执行重播，可以测量性能差异，并查找你的应用程序可能与升级版本不兼容的问题。 有关详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) 和[管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)。  
   
 ## <a name="next-steps"></a>后续步骤  
- [升级数据库引擎](../../database-engine/install-windows/upgrade-database-engine.md)  
+[升级数据库引擎](../../database-engine/install-windows/upgrade-database-engine.md) 
   
-  
+## <a name="additional-resources"></a>其他资源 
+[数据库迁移指南](https://aka.ms/datamigration)  

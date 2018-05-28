@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +340,8 @@ filegroup_name
 -   uniqueidentifier（适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）  
 
 **非聚集列存储索引：**
--   包含的列数不能超过 1024。  
--   具有非聚集列存储索引的表可以具有唯一约束、主键约束或外键约束，但这些约束不能包括在非聚集列存储索引中。  
+-   包含的列数不能超过 1024。
+-   无法创建为基于约束的索引。 对于具有列存储索引的表，可以具有唯一约束、主键约束和外键约束。 总是通过行存储索引强制执行约束。 无法使用列存储（群集或非群集）索引强制执行约束。
 -   不能基于视图或索引视图创建。  
 -   不能包含稀疏列。  
 -   不能使用 **ALTER INDEX** 语句进行更改。 若要更改非聚集索引，必须先删除该列存储索引，然后重新创建它。 可以使用 **ALTER INDEX** 禁用并重新生成列存储索引。  

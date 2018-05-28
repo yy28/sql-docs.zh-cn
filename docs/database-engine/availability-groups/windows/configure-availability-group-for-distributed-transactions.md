@@ -1,7 +1,7 @@
 ---
 title: 为分布式事务配置可用性组 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73563a02f1e51e91719a4831ac8b5dd34465aaa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>为分布式事务配置可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 为确保分布式事务的一致性，必须配置可用性组，使其将数据库注册为分布式事务资源管理器。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 还支持分布式事务，但 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 中的支持存在限制。 在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 中，如果某个分布式事务包含多个位于同一服务器上的数据库并且具有在可用性组中的数据库，则此事务不受支持。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 版本中，不支持涉及可用性组中数据库的跨数据库分布式事务（即在同一 SQL Server 实例上使用数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 
 可在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更高版本上为分布式事务创建可用性组。 若要为分布式事务创建可用性组，请在可用性组定义中包含 `DTC_SUPPORT = PER_DB`。 以下脚本将为分布式事务创建可用性组。 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -82,7 +82,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 可在 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 或更高版本上更改分布式事务的可用性组。 若要更改分布式事务的可用性组，请在 `ALTER AVAILABILITY GROUP` 脚本中包含 `DTC_SUPPORT = PER_DB`。 示例脚本将更改可用性组以支持分布式事务。 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -167,19 +167,19 @@ following the guideline for Troubleshooting DTC Transactions.
 
    * 若要提交事务，请更新并运行以下脚本 - 使用前一条错误消息中的未决事务 UOW 替换 `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy`，然后运行：
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * 若要回滚事务，请更新并运行以下脚本 - 使用前一条错误消息中的未决事务 UOW 替换 `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy`，然后运行：
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 提交或回滚事务后，可使用 `ALTER DATABASE` 将数据库设置为联机。 更新并运行以下脚本 - 为可疑数据库设置名称：
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

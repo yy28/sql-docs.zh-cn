@@ -27,14 +27,17 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e91aeecb953f97d51591947c258fb7860864b48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe9d96b588130d1b4bab8e611dc2e0143ab457c9
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="run-integration-services-ssis-packages"></a>运行 Integration Services (SSIS) 包
   要运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，您可以根据包的存储位置使用某个工具。 下表中列出了这些工具。  
+
+> [!NOTE]
+> 借助适用于 Linux 的 SQL Server 的发布，可在 Linux 上运行 SSIS 包。 有关详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../../linux/sql-server-linux-migrate-ssis.md)。
   
  为了在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储包，您使用项目部署模型将项目部署到服务器。 有关信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  右键单击包名称，然后选择“执行”。  
   
-4.  使用 **“执行包”**对话框中的 **“参数”**、 **“连接管理器”** 和 **“高级”** 选项卡上的设置来配置包执行。  
+4.  使用 **“执行包”** 对话框中的 **“参数”**、 **“连接管理器”** 和 **“高级”** 选项卡上的设置来配置包执行。  
   
 5.  单击 **“确定”** 运行包。  
   

@@ -1,7 +1,7 @@
 ---
 title: 将 Excel 数据导入 SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: import-export
@@ -15,36 +15,41 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f65476db62b4d7eb617ca17cb0a400a8721fb75e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebd7a83bb1decc8c75dfdd11255f2b09b4ba7d49
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 将 Excel 文件中的数据导入 SQL Server 或 Azure SQL 数据库的方法有多种。 本文总结了每个选项，并提供了更为详细说明的链接。
--   可通过使用以下工具之一从 Excel 到 SQL 一步导入数据：
+
+SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本表的范围。 若要详细了解感兴趣的解决方案，请单击所提供的链接查看详细信息。
+
+-   可通过使用以下任一工具直接从 Excel 导入数据到 SQL：
     -   SQL Server 导入和导出向导
     -   SQL Server Integration Services (SSIS)
     -   OPENROWSET 函数
--   可通过将数据保存为文本，然后使用以下工具之一分两步导入数据：
+-   可分两步导入数据，将数据从 Excel 导出为文本，然后使用以下任一工具导入文本文件：
     -   BULK INSERT 语句
     -   BCP
     -   Azure 数据工厂
 
-SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本概述的范围。 若要详细了解感兴趣的解决方案，请单击所提供的链接查看详细信息。
+如果要从 Excel 工作簿导入多个工作表，通常必须为每个工作表运行一次这些工具。
 
 > [!IMPORTANT]
 > 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../../integration-services/load-data-to-from-excel-with-ssis.md)。
 
 ## <a name="sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导
 
-通过单步执行 SQL Server 导入和导出向导各页面，直接从 Excel 文件导入数据。 根据需要，将导入/导出设置保存为可以自定义和重用的 SQL Server Integration Services (SSIS) 包。
+通过单步执行 SQL Server 导入和导出向导各页面，直接从 Excel 文件导入数据。 （可选）将设置保存为可以自定义和重用的 SQL Server Integration Services (SSIS) 包。
 
 ![连接到 Excel 数据源](media/excel-connection.png)
 
 有关使用向导将 Excel 导数据入 SQL Server 的示例，请参阅[从导入和导出向导的这个简单示例入手](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+
+要了解如何启动向导，请参阅[启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
 ## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
 
@@ -59,6 +64,10 @@ SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本�
 若要开始学习如何生成 SSIS 包，请参阅教程[如何创建 ETL 包](../../integration-services/ssis-how-to-create-an-etl-package.md)。
 
 ## <a name="openrowset-and-linked-servers"></a>OPENROWSET 和链接服务器
+
+> [!NOTE]
+> 在 Azure 中，OPENROWSET 和 OPENDATASOURCE 函数仅在 SQL 数据库托管实例（预览版）上可用。
+
 > [!NOTE]
 > 连接到 Excel 数据源的 ACE 提供程序（前身为 Jet 提供程序）旨在用于交互式客户端用途。 如果在服务器上使用 ACE 提供程序，尤其是在自动进程或并行运行的进程中，可能会发生意外结果。
 
@@ -151,10 +160,12 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 -   [如何通过 SQL Server 链接服务器和分布式查询使用 Excel](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 -   [如何将 Excel 数据导入 SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## <a name="prerequisite---save-excel-data-as-text"></a>先决条件 - 将 Excel 数据保存为文本
+## <a name="prereq"></a>先决条件 - 将 Excel 数据保存为文本
 若要使用本页上的其他方法（BULK INSERT 语句、BCP 工具或 Azure 数据工厂），必须先将 Excel 数据导出到文本文件中。
 
 在 Excel 中，依次选择“文件”|“另存为”，再选择“文本文件(制表符分隔)(\*.txt)”或“CSV (逗号分隔)(\*.csv)”作为目标文件类型。
+
+如果要从工作簿中导出多个工作表，请选择每个工作表，然后重复此过程。 “另存为”命令仅导出活动工作表。
 
 > [!TIP]
 > 为在使用数据导入工具时获得最佳结果，保存仅包含列标题和数据行的工作表。 如果保存的数据包含页标题、空白行、注释等，稍后可能会在导入数据时发生意外结果。
@@ -162,6 +173,8 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 ## <a name="bulk-insert-command"></a>BULK INSERT 命令
 
 `BULK INSERT` 是可以通过 SQL Server Management Studio 运行的 Transact-SQL 命令。 下面的示例将 `Data.csv` 逗号分隔文件中的数据加载到现有数据库表中。
+
+如前面[先决条件](#prereq)部分中所述，必须先将 Excel 数据导出为文本，然后才能使用 BULK INSERT 导入它。 BULK INSERT 无法直接读取 Excel 文件。
 
 ```sql
 USE ImportFromExcel;
@@ -182,6 +195,8 @@ GO
 
 BCP 是通过命令提示符运行的程序。 下面的示例将 `Data.csv` 逗号分隔文件中的数据加载到现有 `Data_bcp` 数据库表中。
 
+如前面[先决条件](#prereq)部分中所述，必须先将 Excel 数据导出为文本，然后才能使用 BCP 导入它。 BCP 无法直接读取 Excel 文件。
+
 ```sql
 bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ```
@@ -194,12 +209,16 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ## <a name="copy-wizard-azure-data-factory"></a>复制向导（Azure 数据工厂）
 通过单步执行复制向导各页面，导入保存为文本文件的数据。
 
+如前面[先决条件](#prereq)部分中所述，必须先将 Excel 数据导出为文本，然后才能使用 Azure 数据工厂导入它。 数据工厂无法直接读取 Excel 文件。
+
 有关复制向导的详细信息，请参阅以下主题：
 -   [数据工厂复制向导](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [教程：使用数据工厂复制向导创建带有复制活动的管道](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
 ## <a name="azure-data-factory"></a>Azure 数据工厂
 如果熟悉 Azure 数据工厂，并且不想运行复制向导，请创建带有复制活动的管道，用于将文本文件复制到 SQL Server 或 Azure SQL 数据库。
+
+如前面[先决条件](#prereq)部分中所述，必须先将 Excel 数据导出为文本，然后才能使用 Azure 数据工厂导入它。 数据工厂无法直接读取 Excel 文件。
 
 若要详细了解如何使用这些数据工厂源和接收器，请参阅以下主题：
 -   [文件系统](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
@@ -211,4 +230,4 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 -   [教程：使用 Azure 门户创建带有复制活动的管道](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="see-also"></a>另请参阅
-[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../../integration-services/load-data-to-from-excel-with-ssis.md)
+[使用 SQL Server Integration Services (SSIS) 将数据导入 Excel 或从 Excel 导出数据](../../integration-services/load-data-to-from-excel-with-ssis.md)
