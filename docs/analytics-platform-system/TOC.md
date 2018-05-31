@@ -17,7 +17,8 @@
 ## [备份服务器容量计划工作表](backup-capacity-planning-worksheet.md)
 ## [配置 InfiniBand 网络适配器](configure-infiniband-network-adapters.md)
 
-# Query
+# 查询
+## [配置自动统计信息](configure-auto-statistics.md)
 ## [监视活动查询](monitoring-active-queries.md)
 
 # 加载
@@ -50,7 +51,7 @@
 ## [工作负荷管理](workload-management.md)
 ### [工作负荷管理任务](workload-management-tasks.md)
 
-# 安全性
+# Security
 ## [透明数据加密](transparent-data-encryption.md)
 ## [预配证书](provision-certificate.md)
 
@@ -69,6 +70,7 @@
 ### [设备网络网络](appliance-network-configuration.md)
 ### [PDW 拓扑](pdw-topology.md)
 ### [PDW 证书预配](pdw-certificate-provisioning.md)
+### [PDW 功能开关](appliance-feature-switch.md)
 ### [PDW 防火墙配置](pdw-firewall-configuration.md)
 ### [PDW 服务状态](pdw-services-status.md)
 ### [即时文件初始化配置](instant-file-initialization-configuration.md)
