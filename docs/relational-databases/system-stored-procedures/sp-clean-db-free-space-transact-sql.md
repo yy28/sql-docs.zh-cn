@@ -23,11 +23,12 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 7256efe9d5d9a978e57be5e6038db399cdde868d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4e8f84f3539ea192a132282eee280f26ba80da5d
+ms.sourcegitcommit: e37f017cbebb22ad9d12e4daf863190933a4d8a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689255"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ sp_clean_db_free_space
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  从表中删除操作或更新某一行移可以立即释放空间页上通过删除对行的引用导致的操作。 但是，在某些情况下，该行仍然作为虚影记录而保留在数据页上。 后台进程定期清除虚影记录。 此残留的数据不由返回[!INCLUDE[ssDE](../../includes/ssde-md.md)]响应查询。 但是，在数据或备份文件处于其物理安全性面临风险的环境中时，可以使用 sp_clean_db_free_space 来清除虚影记录。  
   
  运行 sp_clean_db_free_space 所需的时间依文件大小、磁盘的可用空间和容量而定。 由于运行 sp_clean_db_free_space 对 I/O 活动有较大的影响，我们建议您在常规运行时间之外运行此过程。  
@@ -77,7 +78,8 @@ EXEC sp_clean_db_free_space
 @dbname = N'AdventureWorks2012' ;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ <br>[虚影清除过程指南](../ghost-record-cleanup-process-guide.md) 
   
   
