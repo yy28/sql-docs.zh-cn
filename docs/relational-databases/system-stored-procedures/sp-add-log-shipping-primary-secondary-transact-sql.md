@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0598d778953e96e8247c8011c5e41cbc03380bba
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33240697"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ sp_add_log_shipping_primary_secondary
 ## <a name="result-sets"></a>结果集  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_primary_secondary**必须从运行**master**主服务器上的数据库。  
   
 ## <a name="permissions"></a>权限  
@@ -78,8 +79,8 @@ EXEC master.dbo.sp_add_log_shipping_primary_secondary
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>请参阅  
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -25,10 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221288"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/04/2018
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**< 继承的列 >**||继承中的列[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**port**|int|端点正在侦听的端口号。 不可为 null。|  
+|**port**|ssNoversion|端点正在侦听的端口号。 不可为 null。|  
 |**is_dynamic_port**|bit|1 = 动态分配端口号。<br /><br /> 不可为 null。|  
 |**ip_address**|**nvarchar(45)**|LISTENER_IP 子句指定的侦听器 IP 地址。 可以为 Null。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  执行以下查询来收集有关端点和连接的信息。 没有当前连接或 TCP 连接的端点将显示为 NULL 值。 添加**其中**子句`WHERE des.session_id = @@SPID`返回有关当前连接的信息。  
   
 ```  
@@ -62,7 +63,7 @@ LEFT JOIN sys.dm_exec_connections AS dec
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [终结点目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   

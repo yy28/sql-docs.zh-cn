@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bef1fdf427c6bc510e77f8df55f3281d5b5db6cd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33263558"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,11 +57,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **第一个**和**最后一个**触发器必须是两个不同的触发器。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**第一个**|触发器被第一个触发。|  
 |**上一次**|触发器被最后一个触发。|  
-|**InclusionThresholdSetting**|触发器以未定义的顺序触发。|  
+|**无**|触发器以未定义的顺序触发。|  
   
  [  **@stmttype=** ] *****statement_type*****  
  指定触发触发器的 SQL 语句。 *statement_type*是**varchar(50)** 和可以插入、 更新、 删除、 登录，或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中列出的语句事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 不能指定事件组。  
@@ -77,7 +78,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>返回代码值  
  0 （成功） 和 1 （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="dml-triggers"></a>DML 触发器  
  可能只有一个**第一个**和一个**最后一个**为单个表上每个语句的触发器。  
@@ -133,7 +134,7 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)  

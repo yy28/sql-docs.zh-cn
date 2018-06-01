@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33181313"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 |uses_ansi_nulls|**bit**|在创建表时，将 SET ANSI_NULLS 数据库选项设置为 ON。||  
 |data_source_id|**int**|外部数据源的对象 ID。||  
 |file_format_id|**int**|对于通过 HADOOP 外部数据源的外部表，这是外部文件格式的对象 ID。||  
-|位置|**nvarchar(4000)**|对于通过 HADOOP 外部数据源的外部表，这是在 HDFS 中的外部数据的路径。||  
+|location|**nvarchar(4000)**|对于通过 HADOOP 外部数据源的外部表，这是在 HDFS 中的外部数据的路径。||  
 |reject_type|**tinyint**|对于通过 HADOOP 外部数据源的外部表，这是在查询外部数据时，将计算被拒绝的行的方式。|值 – 被拒绝的行数。<br /><br /> 百分比 – 的被拒绝的行的百分比。|  
 |reject_value|**float**|通过 HADOOP 外部数据源的外部表：<br /><br /> 有关*reject_type =* 值，这是行拒绝查询失败前允许的数目。<br /><br /> 有关*reject_type* = 百分比，这是行拒绝查询失败前允许的百分比。||  
 |reject_sample_value|**int**|有关*reject_type* = 百分比，这是要加载，成功或失败之前计算的被拒绝的行的百分比, 的行数。|如果 reject_type = VALUE。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>权限  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.external_file_formats &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
  [sys.external_data_sources &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  

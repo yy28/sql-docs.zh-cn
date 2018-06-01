@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36c5433f51191004a994b1afb3486db89a317acb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33220688"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  排除数据库邮件故障时，请使用该视图来查看附件的属性。  
   
  系统表中存储的附件可能会导致**msdb**数据库增长。 使用**sysmail_delete_mailitems_sp**删除邮件项和其关联的附件。 有关详细信息，请参阅[创建一个 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>权限  
  授予**sysadmin**固定的服务器角色和**DatabaseMailUserRole**数据库角色。 由的成员执行时**sysadmin**固定服务器角色，此视图显示所有的附件。 所有其他用户仅可查看他们已提交的消息的附件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sysmail_allitems &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_faileditems &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [sysmail_sentitems &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   

@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c22415c34f0e25dc1117b6a5f86839c66f0ba53b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33237998"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|数据库的大小（以 KB 计）。|  
 |**备注**|**varchar(254)**|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  所返回的数据库名称可以作为 USE 语句的参数，用来更改当前数据库上下文。  
   
  **sp_databases**具有开放式数据库连接 (ODBC) 的无等效项。  
@@ -70,7 +71,7 @@ GO
 EXEC sp_databases;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   

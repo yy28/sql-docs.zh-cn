@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33253260"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**自助映射**|**int**|0 =**本地登录**映射到**远程登录**时连接到**链接服务器**。<br /><br /> 1 =**本地登录**映射到相同的登录名和密码连接到时**链接服务器**。|  
 |**远程登录**|**sysname**|上的登录名**LinkedServer**映射到**LocalLogin**时**IsSelfMapping**为 0。 如果**IsSelfMapping**为 1， **RemoteLogin**为 NULL。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  删除登录名映射之前，请使用**sp_helplinkedsrvlogin**以确定所涉及的链接的服务器。  
   
 ## <a name="permissions"></a>权限  
@@ -129,7 +130,7 @@ Sales            Mary          0               sa
 (2 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   

@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3c67450da61537edbf8164e343be2f279aa6ac44
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33234503"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ fn_trace_geteventinfo ( trace_id )
 |**eventid**|**int**|所跟踪的事件的 ID|  
 |**columnid**|**int**|为每个事件收集的所有列的 ID 号|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  传递特定的跟踪的 ID 时**fn_trace_geteventinfo**返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  
   
 ## <a name="permissions"></a>权限  
@@ -74,7 +75,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   

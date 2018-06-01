@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d91ef10c7f1e98c4ad65d014f90fc42b0317ec5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33252456"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>结果集  
  将报告的结果**sp_post_msx_operation**操作。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_resync_targetserver**删除当前的一组指令的目标服务器并发布一组新的目标服务器以下载。 新指令集中包括一条删除所有多服务器作业的指令，随后是当前以该服务器为目标的每个作业的插入指令。  
   
 ## <a name="permissions"></a>权限  
@@ -71,7 +72,7 @@ EXEC dbo.sp_resync_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_help_downloadlist &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
  [sp_post_msx_operation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

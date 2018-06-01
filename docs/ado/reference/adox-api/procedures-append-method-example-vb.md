@@ -20,10 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46af14e62769073be33f891bc11a7bf012c8924b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "32802574"
 ---
 # <a name="procedures-append-method-example-vb"></a>过程追加方法示例 (VB)
 下面的代码演示如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合[追加](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法在基础数据源中创建一个新的过程。  
@@ -77,7 +78,7 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append 方法 （ADOX 过程）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

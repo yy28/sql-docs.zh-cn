@@ -30,10 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221128"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|安全策略的名称，在数据库中是唯一的。|  
+|NAME|**sysname**|安全策略的名称，在数据库中是唯一的。|  
 |object_id|**int**|安全策略的 ID。|  
 |principal_id|**int**|注册到数据库的安全策略所有者的 ID。 如果通过架构确定所有者，则为 NULL。|  
 |schema_id|**int**|对象所在架构的 ID。|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>权限  
  具有主体**ALTER ANY SECURITY POLICY**权限有权访问此目录视图，以及具有任何人都中的所有对象**VIEW DEFINITION**对象上。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [行级安全性](../../relational-databases/security/row-level-security.md)   
  [sys.security_predicates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
