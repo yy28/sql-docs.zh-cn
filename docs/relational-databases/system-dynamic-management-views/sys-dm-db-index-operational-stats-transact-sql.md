@@ -24,16 +24,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553797"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  返回数据库中表或索引的每个分区的当前低级 I/O、锁定、闩锁和访问方法活动。    
+  返回数据库中的当前较低级别 I/O、 锁定、 闩锁，和将表或索引的每个分区的访问方法活动。    
     
  内存优化索引不会出现在此 DMV 中。    
     
@@ -131,7 +132,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|对于表、索引或索引视图的特定分区，针对 PAGE 级压缩计算的页数。 因为未能极大地节省空间，所以将包括未压缩的页。 始终为 0 的列存储索引。|    
 |**page_compression_success_count**|**bigint**|对于表、索引或索引视图的特定分区，使用 PAGE 压缩功能压缩的数据页数。 始终为 0 的列存储索引。|    
     
-## <a name="remarks"></a>注释    
+## <a name="remarks"></a>Remarks    
  此动态管理对象不接受来自 CROSS APPLY 和 OUTER APPLY 的相关参数。    
     
  你可以使用**sys.dm_db_index_operational_stats**跟踪的用户便可以读取或写入表、 索引或分区，并标识的表或索引时遇到大型 I/O 活动或热而必须等待的时间长度点。    
@@ -238,7 +239,7 @@ GO
     
 ```    
     
-## <a name="see-also"></a>另请参阅    
+## <a name="see-also"></a>请参阅    
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

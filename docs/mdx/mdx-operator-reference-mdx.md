@@ -1,42 +1,31 @@
 ---
 title: MDX 运算符参考 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1cdb8c31-a5f6-4430-b509-f81344f4622a
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05351149c5c4b7e5b639a1d3c6cb16e9894f181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580599"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 运算符参考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   多维表达式 (MDX) 语言支持算术、逻辑、比较、集、字符串和一元运算符。 下表列出了所支持的运算符及其说明。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |-----------|-----------------|  
-|[-& #40;注释 & #41;& #40;MDX & #41;](../mdx/comment-mdx-operator-reference.md)|表示用户提供的注释文本。|  
+|[-&#40;注释&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|表示用户提供的注释文本。|  
 |[-&#40;除&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|执行一个集运算，以返回两个集之间的不同项并删除重复成员。|  
 |[-&#40;负&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|执行一元运算，以返回数值表达式的负值。|  
 |[-&#40;减去&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|执行一个算术运算，将一个数减去另一个数。|  
@@ -44,8 +33,8 @@ ms.lasthandoff: 05/03/2018
 |[&#42;&#40;乘&#41; &#40;MDX&#41;](../mdx/multiply-mdx.md)|执行两个数相乘的算术运算。|  
 |[&#40;将划分&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|执行算术运算，将一个数除以另一个数。|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|执行以一个数为底、另一个数为幂求值的算术运算。|  
-|[注释 & #40;MDX & #41;](../mdx/comment-mdx.md)|表示用户提供的注释文本。|  
-|[& #40;注释 & #41;& #40;MDX & #41;](../mdx/comment-mdx-double-slash.md)|表示用户提供的文本。|  
+|[注释&#40;MDX&#41;](../mdx/comment-mdx.md)|表示用户提供的注释文本。|  
+|[&#40;注释&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|表示用户提供的文本。|  
 |[:&#40;范围&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|执行一个集运算以返回一个自然排序集，它将两个指定成员作为端点，并将这两个指定成员之间的所有成员作为该集的成员。|  
 |[+&#40;添加&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|执行两个数相加的算术运算。|  
 |[+&#40;正&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|执行一元运算，以返回数值表达式的正值。|  
@@ -63,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |[或者&AMP;#40;MDX&AMP;#41;](../mdx/or-mdx.md)|对数值表达式执行逻辑或运算。|  
 |[XOR &AMP;#40;MDX&AMP;#41;](../mdx/xor-mdx.md)|对两个数值表达式执行逻辑异运算。|  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 语言参考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

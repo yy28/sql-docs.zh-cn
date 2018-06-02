@@ -1,29 +1,20 @@
 ---
 title: IF 语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], IF
-ms.assetid: 8830cce5-9e06-4f89-a555-295bb0d0a8a1
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ffe88aae91e19f0f4e55d104a323870caf4e67b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e7426c609de80ab249cd71e4364979ff07165598
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579859"
 ---
 # <a name="mdx-scripting---if"></a>MDX 脚本编写-如果
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +35,7 @@ IF expression THEN assignment END IF
  *分配*  
  为子多维数据集或计算属性赋值的 MDX 表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  IF 语句用于控制流，这是与不同[IIf &#40;MDX&#41; ](../mdx/iif-mdx.md)函数和[CASE 语句&#40;MDX&#41; ](../mdx/case-statement-mdx.md) ，仅可用于返回值或对象。  
   
 ## <a name="examples"></a>示例  
@@ -56,7 +47,7 @@ IF expression THEN assignment END IF
   
  `END SCOPE`;  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,32 +1,20 @@
 ---
 title: 冻结语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- FREEZE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- FREEZE statement
-- locking cell values [MDX]
-ms.assetid: 59f1e860-6f37-41af-97d6-7708bdaac933
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bf02f73b4c1de617a0c66e34882cc63c32cd0517
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9b7eb3a3939ce8525dc57d27a24ac005ecb2cf2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579899"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 脚本编写的冻结
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +32,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  返回子多维数据集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **冻结**语句锁定中指定的子多维数据集的单元格的值，防止后续语句在 MDX 中的更改其值在后续计算中使用的脚本将传递。  
   
  在下面的示例中，A 和 B 表示 MDX 计算脚本中的子多维数据集：  
@@ -68,7 +56,7 @@ B = 3
   
  现在 A 等于 2，B 等于 3。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 脚本语句 & #40;MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 脚本编写语句&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -1,35 +1,20 @@
 ---
 title: 创建子多维数据集语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SUBCUBE
-- CREATE SUBCUBE
-- CREATE
-- SUBCUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- subcubes [MDX]
-- CREATE SUBCUBE statement
-ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 364bf7fe910e5073130bef1a75d88bfa560dd9f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 730d6f3b1445017cc1b1988c49bda176c6ba4ced
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580739"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 数据定义-创建子多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,16 +38,16 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  请参阅[SELECT 语句&#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md)有关在 Select 语句的详细的语法说明和**非直观**子句。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果将默认成员排除在子多维数据集的定义之外，坐标将会相应更改。 对于可以聚合的属性，默认成员会被移到 [All] 成员中。 对于不可聚合的属性，默认成员会被移到该子多维数据集中存在的某一成员中。 下表包含子多维数据集和默认成员组合的示例。  
   
 |原始默认成员|可以聚合|嵌套 select 语句|修改后的默认成员|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|是|{Time.Year.2003}|没有变化|  
 |Time.Year。[1997]|是|{Time.Year.2003}|Time.Year.All|  
-|Time.Year。[1997]|否|{Time.Year.2003}|Time.Year。[2003]|  
+|Time.Year。[1997]|“否”|{Time.Year.2003}|Time.Year。[2003]|  
 |Time.Year。[1997]|是|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year。[1997]|否|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 或<br /><br /> Time.Year.[2004]|  
+|Time.Year。[1997]|“否”|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 或<br /><br /> Time.Year.[2004]|  
   
  子多维数据集中始终存在 [All] 成员。  
   
@@ -143,10 +128,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] 和 [All Resellers] 分别为列和行，包含所有成员（而不仅是可见成员）的总数。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX & #40; 中的重要概念Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>请参阅  
+ [MDX 中的重要概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 脚本编写语句&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT 语句 & #40;MDX & #41;](../mdx/mdx-data-manipulation-select.md)  
+ [SELECT 语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

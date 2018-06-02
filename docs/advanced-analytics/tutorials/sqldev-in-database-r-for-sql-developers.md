@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585269"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>数据库中 R 分析 SQL 开发人员 （教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,9 +59,9 @@ ms.lasthandoff: 04/16/2018
 
 本教程使用的已知的公共数据集，基于在纽约出租车行程。 若要使示例代码更快速地运行，我们创建代表 1%采样的数据。 你将使用此数据来生成预测特定行程是否有可能收到一条提示，或不是，基于例如天、 距离和提取位置的时间的列的二元分类模型。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>要求
 
-本教程适用于用户已熟悉基本数据库操作，如创建数据库和表、 将数据导入表，以及创建 SQL 查询。 已提供所有 R 代码，因此不需要任何 R 开发环境。 有经验的 SQL 程序员应该能够通过使用来完成此示例[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，以及通过运行提供的 PowerShell 脚本。
+本教程适用于熟悉基本数据库操作，如创建数据库和表，将数据导入表，以及编写 SQL 查询的用户。 已提供所有 R 代码，因此不需要任何 R 开发环境。 可以使用经验的 SQL 程序员 [！ 包括 [tsql] (.../..包括 / tsql md.md)] 中 [！ 包括 [ssManStudioFull] (.../..包括 / ssmanstudiofull md.md) 并运行提供的 PowerShell 脚本，以完成此示例。 但是，在开始本教程之前，应该完成下列准备工作：
 
 但是，在开始本教程之前, 必须完成下列准备工作：
 

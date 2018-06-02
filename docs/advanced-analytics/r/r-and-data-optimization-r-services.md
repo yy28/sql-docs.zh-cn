@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563755"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-数据优化的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="factors"></a>因子
 
-R 语言提供"因素"，是的分类数据的特殊变量的概念。 数据科研人员通常在其公式中使用因素变量，因为处理分类变量作为因素，可确保数据由机器学习函数进行正确处理。 有关详细信息，请参阅 [虚拟值的 R： 因素变量] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
+R 语言提供"因素"，是的分类数据的特殊变量的概念。 数据科研人员通常在其公式中使用因素变量，因为处理分类变量作为因素，可确保数据由机器学习函数进行正确处理。 有关详细信息，请参阅[虚拟值的 R： 因素变量](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
 
 按照设计，因素变量可以从字符串转换为整数和回后再次存储或处理。 R`data.frame`函数作为因素变量处理所有字符串，除非参数*stringsAsFactors*设置为**False**。 这意味着是字符串的自动转换为整数以进行处理，并且随后映射回原始字符串。
 

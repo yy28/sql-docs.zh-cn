@@ -1,33 +1,20 @@
 ---
 title: 使用元组表达式 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- single-member tuples [MDX]
-- expressions [MDX], tuples
-- one-member tuples
-- tuples
-- implicit tuples
-ms.assetid: 0b802b76-9123-405e-ae43-d438754724ba
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: fba6675213e513806f27c85fe881fc3efdeb0166
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c53a3a80355fd33dc887b6a07991370838e97cf2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581619"
 ---
 # <a name="using-tuple-expressions"></a>使用元组表达式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,15 +37,15 @@ ms.lasthandoff: 05/03/2018
   
 -   如果隐式引用的层次结构有默认成员，则将该默认成员添加到元组中。  
   
--   如果隐式引用的层次结构不具有任何默认成员， **（全部）**使用的默认层次结构的成员。  
+-   如果隐式引用的层次结构不具有任何默认成员， **（全部）** 使用的默认层次结构的成员。  
   
 -   如果隐式引用的层次结构没有默认成员，则使用该层次结构最上层的第一个成员。  
   
 ## <a name="one-member-tuples"></a>一个成员的元组  
  如果元组表达式仅有一个成员，MDX 将把该成员转换为单成员元组，以计算该表达式。 换言之，使用成员表达式 `[Measures].[TestMeasure]`（而不是元组表达式）与使用元组表达式 `( [Measures].[TestMeasure] ).` 的效果相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

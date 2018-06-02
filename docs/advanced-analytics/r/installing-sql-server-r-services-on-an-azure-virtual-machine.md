@@ -7,16 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d2b7aefa675bc4cfe8ea6fab463053395d5f45d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a0780d4f974761af563ff2ed6e20e444b2d85ef9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563675"
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安装 SQL Server 机器学习 Azure 虚拟机上的功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-我们建议使用[数据科学虚拟机](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm)，但如果你想了刚 SQL Server 自 2017 年 1 机器学习 Services 或 SQL Server 2016 R Services 的 VM，本文将引导你完成的步骤。
+我们建议使用[数据科学虚拟机](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm)，但如果你想了刚 SQL Server 自 2017 年 1 机器学习 Services 或 SQL Server 2016 R Services 的 VM，本文将引导你完成的步骤。
 
 ## <a name="create-a-virtual-machine-on-azure"></a>在 Azure 上创建虚拟机
 

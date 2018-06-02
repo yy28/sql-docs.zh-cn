@@ -9,21 +9,22 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585779"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>使用插入的数据加载到并行数据仓库
 
-Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW) 分布式或复制表的。 有关插入的详细信息，请参阅[插入](../t-sql/statements/insert-transact-sql.md)。 对于复制的表和分布式表中的所有非分布列，PDW 使用 SQL Server 隐式转换为目标列的数据类型的语句中指定的数据值。 有关 SQL Server 数据转换规则的详细信息，请参阅[数据类型转换为 SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx)。 但是，对于分发列，PDW 支持 SQL Server 支持的隐式转换的一个子集。 因此，当使用 INSERT 语句将数据加载到分布列时，必须在下表中定义的格式之一指定源数据。  
+Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW) 分布式或复制表的。 有关插入的详细信息，请参阅[插入](../t-sql/statements/insert-transact-sql.md)。 对于复制的表和分布式表中的所有非分布列，PDW 使用 SQL Server 隐式转换为目标列的数据类型的语句中指定的数据值。 有关 SQL Server 数据转换规则的详细信息，请参阅[数据类型转换为 SQL](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx)。 但是，对于分发列，PDW 支持 SQL Server 支持的隐式转换的一个子集。 因此，当使用 INSERT 语句将数据加载到分布列时，必须在下表中定义的格式之一指定源数据。  
   
   
 ## <a name="InsertingLiteralsBinary"></a>将文本插入到二进制类型  
 下表定义接受文本的类型、 格式和的文本值插入分布列的类型的转换规则**二进制**(*n*) 或**varbinary**(*n*)。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |二进制文本|0x*hexidecimal_string*<br /><br />示例： 0x12Ef|必须以 0x 前缀二进制文本。<br /><br />数据源长度不能超过为数据类型指定的字节数。<br /><br />如果数据源长度小于大小**二进制**数据类型，数据填充到用零权访问的数据类型大小。|  
   
@@ -33,7 +34,7 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="datetime-data-type"></a>datetime 数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**datetime**。 任何空字符串 （"） 转换为默认值 1900年-01-01 12:00:00.000。 包含仅空格的字符串 () 生成错误。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串括起来**datetime**格式|YYYY MM DD hh: mm: [.nnn]<br /><br />示例: 2007年-05-08 12:35:29.123|插入值时，缺少小数位数均设置为 0。 例如，文本 2007年-05-08 12:35 作为插入 2007年-05-08 12:35:00.000。|  
 |字符串括起来**smalldatetime**格式|YYYY MM DD hh: mm<br /><br />示例: 2007年-05-08 12:35|秒数和剩余的小数位数设置为 0 时插入的值。|  
@@ -43,7 +44,7 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="smalldatetime-data-type"></a>smalldatetime 数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**smalldatetime**。 任何空字符串 （"） 转换为默认值 1900年-01-01 12:00。 包含仅空格的字符串 () 生成错误。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串括起来**smalldatetime**格式|YYYY MM DD hh: mm 或者 YYYY-月-日 hh:mm:00<br /><br />示例: 2007年-05-08 12:00 或 2007年-05-08 12:00:00|源数据必须为年、 月、 日期、 小时和分钟的值。 秒是可选的并且如果存在，必须设置为 00 的值。 任何其他值将生成错误。|  
 |字符串括起来**日期**格式|'YYYY-MM-DD'<br /><br />示例: 2007年-05-08|插入值时，时间值 （小时、 分钟、 秒和秒的小数部分） 将设置为 0。|  
@@ -51,21 +52,21 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="date-data-type"></a>日期数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**日期**。 任何空字符串 （"） 转换为默认值 1900年-01-01。 包含仅空格的字符串 () 生成错误。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串括起来**日期**格式|'YYYY-MM-DD'<br /><br />示例: 2007年-05-08|这是唯一接受的格式。|  
   
 ### <a name="time-data-type"></a>时间数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**时间**。 任何空字符串 （"） 转换为默认值"00:00:00.0000"。 包含仅空格的字符串 () 生成错误。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串括起来**时间**格式|'hh:mm:ss.nnnnnnn'<br /><br />示例:"12:35:29.1234567"|如果数据源都具有一个小于或等于精度 （数字的小数位数） 比的精度**时间**数据类型，数据填充到零右侧。 例如，文本值"12:35:29.123"可作为"12:35:29.1230000"插入。<br /><br />具有更大的精度，比目标数据类型的值将被拒绝。|  
   
 ### <a name="datetimeoffset-data-type"></a>datetimeoffset 数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**datetimeoffset** (*n*)。 默认格式是 ' YYYY-月-日 hh:mm:ss.nnnnnnn {+ |-} hh: mm。 空字符串 （"） 转换为默认值 1900年-01-01 12:00:00.0000000 + 00:00。 包含仅空格的字符串 () 生成错误。 小数位数取决于列定义。 例如，定义为一列**datetimeoffset** (2) 将具有两个小数位。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串括起来**datetime**格式|YYYY MM DD hh: mm: [.nnn]<br /><br />示例: 2007年-05-08 12:35:29.123|插入值时，缺少小数位数和偏移量的值将设置为 0。 例如，文本 2007年-05-08 12:35:29.123 作为插入 2007年-05-08 12:35:29.1230000 + 00:00。|  
 |字符串括起来**smalldatetime**格式|YYYY MM DD hh: mm<br /><br />示例: 2007年-05-08 12:35|插入值时，秒、 剩余的小数位数和偏移量的值将设置为 0。|  
@@ -76,7 +77,7 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="datetime2-data-type"></a>datetime2 数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**datetime2** (*n*)。 默认格式为 YYYY-月-日 hh:mm:ss.nnnnnnn。 空字符串 （"） 转换为默认值 1900年-01-01 12:00:00。 包含仅空格的字符串 () 生成错误。 小数位数取决于列定义。 例如，定义为一列**datetime2** (2) 将具有两个小数位。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串括起来**datetime**格式|YYYY MM DD hh: mm: [.nnn]<br /><br />示例: 2007年-05-08 12:35:29.123|秒的小数部分是可选的并且插入的值将设置为 0。<br /><br />具有小数部分位数多于目标数据类型的值将被拒绝。|  
 |字符串括起来**smalldatetime**格式|YYYY MM DD hh: mm<br /><br />示例: 2007年-05-08 12|插入值时，可选的秒数和剩余的小数位数将设置为 0。|  
@@ -99,7 +100,7 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="decimal-data-type"></a>decimal 数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**十进制**(*p、 s*)。 数据转换规则都与 SQL Server 的相同。 有关详细信息，请参阅[数据类型转换](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx)MSDN 上。  
   
-|文本类型|格式|  
+|文本类型|“格式”|  
 |----------------|----------|  
 |字符串括起来**整数**格式|nnnnnnnnnnnn<br /><br />示例:"321312313123"|  
 |字符串括起来**十进制**格式|'nnnnnn.nnnnn'<br /><br />示例:"123344.34455"|  
@@ -109,7 +110,7 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="float-and-real-data-types"></a>浮点型和实型数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**float**或**实际**。 数据转换规则都与 SQL Server 的相同。 有关详细信息，请参阅[数据类型转换](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx)MSDN 上。  
   
-|文本类型|格式|  
+|文本类型|“格式”|  
 |----------------|----------|  
 |字符串括起来**整数**格式|nnnnnnnnnnnn<br /><br />示例:"321312313123"|  
 |字符串括起来**十进制**格式|'nnnnnn.nnnnn'<br /><br />示例:"123344.34455"|  
@@ -121,7 +122,7 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="int-bigint-tinyint-smallint-data-types"></a>int、 bigint、 tinyint、 smallint 数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**int**， **bigint**， **tinyint**，或**smallint**。 数据源不能超过给定的数据类型所允许的范围。 例如，对于范围**tinyint**并 0 到 255 的范围**int**为-2,147,483,648 到 2,147,483,647。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |------------|------|----------------|
 |字符串括起来**整数**格式|nnnnnnnnnnnnnn<br /><br />示例:"321312313123"| InclusionThresholdSetting |  
 |整数文本|nnnnnnnnnnnnnn<br /><br />示例： 321312313123| InclusionThresholdSetting|  
@@ -130,7 +131,7 @@ Tsql INSERT 语句可用于将数据加载到 SQL Server 并行数据仓库 (PDW
 ### <a name="money-and-smallmoney-data-types"></a>money 和 smallmoney 数据类型  
 Money 文字值表示为带有可选小数点和作为前缀的货币符号的数字。 数据源不能超过给定的数据类型所允许的范围。 例如，对于范围**smallmoney**是-214，748.3648 214，748.3647 和的范围**money**是到 922337203685，477.5807-922337203685，477.5808。 下表定义的接受的格式和文本值插入分布列的类型的规则**money**或**smallmoney**。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串括起来**整数**格式|nnnnnnnn<br /><br />示例:"123433"|插入值时，即小数点后的缺少数字均设置为 0。 例如，作为 12345.0000 插入文本"12345"。|  
 |字符串括起来**十进制**格式|'nnnnnn.nnnnn'<br /><br />示例:"123344.34455"|如果小数点后的数字个数超过 4，值舍入为最接近的值。 例如，"123344.34455"的值可作为 123344.3446 插入。|  
@@ -145,7 +146,7 @@ Money 文字值表示为带有可选小数点和作为前缀的货币符号的�
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char、 varchar、 nchar 和 nvarchar 数据类型  
 下表定义的接受的格式和文本值插入分布列的类型的规则**char**， **varchar**， **nchar**和**nvarchar**。 数据源长度不能超过指定的数据类型的大小。 如果数据源长度小于大小**char**或**nchar**数据类型，数据填充到右侧空格来达到数据类型大小。  
   
-|文本类型|格式|转换规则|  
+|文本类型|“格式”|转换规则|  
 |----------------|----------|--------------------|  
 |字符串文本|格式: 字符字符串<br /><br />示例: ' abc'| InclusionThresholdSetting|  
 |Unicode 字符串文本|格式： N'character 字符串<br /><br />示例： N'abc'|  InclusionThresholdSetting |  
@@ -154,7 +155,7 @@ Money 文字值表示为带有可选小数点和作为前缀的货币符号的�
 |Money 文本|格式： $nnnnnn.nnnnn<br /><br />示例: $ 123456.99|货币符号不插入的值。 若要插入的货币符号，请为字符串文本插入的值。 这与匹配的格式**dwloader**工具，将每个文本视为字符串文字。<br /><br />不允许使用逗号。<br /><br />如果小数点后的数字个数超过 2，值舍入为最接近的值。 例如，值 123.946789 可作为 123.95 插入。<br /><br />使用 CONVERT 函数来插入 money 文本时，允许仅默认样式 0 （不带逗号和即小数点后的 2 位数）。|  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  
 [分布式的数据](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
 [Insert](../t-sql/statements/insert-transact-sql.md)  

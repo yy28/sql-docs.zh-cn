@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 23ff23c009a002f13a58340af8fc7f85ec1720b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585469"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>创建关系图和使用 SQL 和 R （演练） 的图形
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,8 +98,8 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="next-lesson"></a>下一课
 
-[创建使用 R 和 SQL 数据功能](/walkthrough-create-data-features.md)
+[创建使用 R 和 SQL 数据功能](walkthrough-create-data-features.md)
 
 ## <a name="previous-lesson"></a>上一课
 
-[使用 R 汇总数据](/walkthrough-view-and-summarize-data-using-r.md)
+[使用 R 汇总数据](walkthrough-view-and-summarize-data-using-r.md)

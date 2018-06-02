@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585449"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什么是 SQL Server 计算机学习 Services？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,4 +102,4 @@ SQL Server 文档的最新版本的版本不可知。 对于 SQL Server 机器�
 
 **步骤 3:** 添加你最喜欢的 R 和 Python 程序包并将它们与由 Microsoft 提供的包配合使用
 
-+ [SQL Server 的 R 包管理](r/r-package-management-for-sql-server-r-services.md)
++ [SQL Server 的 R 包管理](r/install-additional-r-packages-on-sql-server.md)

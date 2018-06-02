@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1f390f6f8b33e9dbf316fa98eb35574a5daebeed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585699"
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理和监视计算机学习解决方案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 
 + [Python 安全概述](../python/security-overview-sql-server-python-services.md)
 
-+ [安装和管理 R 包](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)
++ [SQL Server 中的默认 R 和 Python 包](installing-and-managing-r-packages.md)
 
 ## <a name="configuration-and-management"></a>配置和管理
 

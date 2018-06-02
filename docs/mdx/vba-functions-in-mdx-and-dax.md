@@ -1,25 +1,20 @@
 ---
 title: MDX 和 DAX 中的 VBA 函数 |Microsoft 文档
-ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6dce57c7a8043a8d25b31b389e47763df261baa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582519"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +23,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函数引用  
   
-|函数名称|Supported|说明|  
+|函数名称|是否支持|说明|  
 |-------------------|---------------|-----------|  
 |Abs|DAX、MDX||  
 |Array|不支持||  
@@ -56,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |CurDir|不支持||  
 |CVar|仅 MDX||  
 |CVErr|不支持||  
-|日期|仅 MDX|**警告**DAX 实现不同的函数具有相同名称; 用来从给定的自变量生成日期类型值的日期 （年、 月、 日） 函数|  
+|date|仅 MDX|**警告**DAX 实现不同的函数具有相同名称; 用来从给定的自变量生成日期类型值的日期 （年、 月、 日） 函数|  
 |DateAdd|仅 MDX|**警告**DAX 实现不同的函数具有相同名称; DATEADD (\<日期 >，< number_of_intervals >\<间隔 >) 函数，用于移动给定的日期由大量给定的时间间隔|  
 |DateDiff]|仅 MDX||  
 |DatePart|仅 MDX||  
@@ -73,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 |FileAttr|不支持||  
 |FileDateTime|不支持||  
 |FileLen|不支持||  
-|筛选|不支持|**警告**MDX 实现不同的函数具有相同的名称; 筛选器 （值赋，Logical_Expression） 函数返回筛选基于搜索条件从给定的自变量的指定的集后得到的集<br /><br /> **警告**DAX 实现不同的函数具有相同名称; 筛选器 (\<表 >，\<筛选器 >) 函数返回表示另一个表或从给定的自变量的表达式的一个子集的表|  
+|“筛选器”|不支持|**警告**MDX 实现不同的函数具有相同的名称; 筛选器 （值赋，Logical_Expression） 函数返回筛选基于搜索条件从给定的自变量的指定的集后得到的集<br /><br /> **警告**DAX 实现不同的函数具有相同名称; 筛选器 (\<表 >，\<筛选器 >) 函数返回表示另一个表或从给定的自变量的表达式的一个子集的表|  
 |Fix|仅 MDX||  
 |Format  (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|不支持||  
@@ -90,11 +85,11 @@ ms.lasthandoff: 05/03/2018
 |Hour|DAX、MDX||  
 |Iif|仅 MDX|**警告**DAX 实现具有名称的类似函数： 如果 （满足，value_if_true，value_if_false） 函数。|  
 |IMEStatus|不支持||  
-|輸入|不支持||  
+|输入|不支持||  
 |InputBox|不支持||  
 |InStr|仅 MDX||  
 |InStrRev|不支持||  
-|int|DAX、MDX||  
+|smallint|DAX、MDX||  
 |IPmt|仅 MDX||  
 |IRR|仅 MDX||  
 |IsArray|仅 MDX||  

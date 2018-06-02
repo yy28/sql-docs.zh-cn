@@ -1,33 +1,20 @@
 ---
 title: CALL 语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CALL
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- voids [MDX]
-- stored procedures [MDX]
-- CALL statement
-ms.assetid: b534a20b-924c-43b8-832d-24e57d50425c
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 079f29676bd1f71d70e182af2ee8664361916d49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b8610a0ed7fc0c90fb3e8c684b33b466eb3858f9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580099"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 数据操作的调用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +42,7 @@ CALL SP_Name
  *Cube_Expression*  
  提供多维数据集名称的有效字符串多维数据集表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **调用**语句运行指定已注册存储的过程，有选择性地包括指定的存储过程的一个或多个自变量。 **调用**语句是返回空白的存储过程仅适用于。 此语句不能在 MDX 表达式中与其他函数或运算符结合使用。 返回值的注册存储过程可以在 MDX 表达式中直接调用，并可以与其他 MDX 函数和运算符结合使用。  
   
  如果未指定多维数据集，该语句将在当前多维数据集上运行存储过程。  
@@ -63,7 +50,7 @@ CALL SP_Name
 > [!NOTE]  
 >  如果未在客户端上注册存储的过程**调用**语句尝试从的实例调用存储的过程[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [使用存储过程 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
