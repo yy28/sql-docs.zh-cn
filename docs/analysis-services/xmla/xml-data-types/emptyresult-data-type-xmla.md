@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9dd3cf815ee616c3519883a59ddcbb8fbd61eb8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7155c03203ad852573318056ab4e194fe19e7113
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573899"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 数据类型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[结果集](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|派生数据类型|无|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
-|子元素|無|  
+|父元素|InclusionThresholdSetting|  
+|子元素|InclusionThresholdSetting|  
 |派生元素|[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有些 XML for Analysis (XMLA) 命令正常情况下不会返回结果，有些由于错误而不返回结果。 不返回结果的 XMLA 命令返回**EmptyResult**数据类型、 上的命名空间**根**元素。  
   
 ## <a name="example"></a>示例  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/10/2018
 </return>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
  [XML 数据类型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

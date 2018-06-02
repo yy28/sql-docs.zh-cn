@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07e34958589bd9366cda6b42207c289bfda72453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2b2c5b195e2bc95d95a555557accd481aa9836f7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574759"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,17 +35,17 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[轴](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|父元素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |子元素|[成员](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
 |---------------|-----------------|  
 |Size|所需**整数**属性。 指示由跨产品中包含的元组的数目**CrossProduct**元素。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当客户端应用程序设置**AxisFormat**属性*ClusterFormat*，每个轴上的成员被划分到其中的每个群集都表示之间有序集的叉积的群集从每个层次结构的成员。 每个群集都由**CrossProduct**元素。 每个**CrossProduct**元素包含**成员**在轴上的每个层次结构的元素。 A **CrossProduct**元素可以包含来自单一层次结构的成员。  
   
 ## <a name="example"></a>示例  
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另请参阅
+ [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6e0fe3fa36a5a330e1b4fee926c0d2e4b10d809f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5aa19e54917a421567c5ede2013e019de609d8b6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585222"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server 的 R 包同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 
 + 你认为文件系统上的 R 包已损坏，因此，你运行`rxSyncPackages`SQL Server 上。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 您可以使用包同步之前，你必须具有适当版本的 Microsoft R 或机器学习服务器。 此功能被提供 Microsoft R 版本 9.1.0 或更高版本。 
 
@@ -123,4 +124,4 @@ rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", 
 
 ## <a name="related-resources"></a>相关资源
 
-[SQL Server 的 R 包管理](r-package-management-for-sql-server-r-services.md)
+[SQL Server 的 R 包管理](install-additional-r-packages-on-sql-server.md)

@@ -1,31 +1,20 @@
 ---
 title: 交叉联接 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CROSSJOIN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Crossjoin function
-ms.assetid: 503b8376-d244-4855-8f44-a749764162e4
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: fa3c8102678ebc47001ec55dfd0bf51b3333eabc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7a3eb0bc9faadafbec91d327d4c0a4bd79882361
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577739"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +39,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **叉积**函数返回跨产品的两个或多个指定集。 所得集中元组的顺序取决于要联接的集的顺序以及其成员的顺序。 例如，当第一组包含 {x1，x2，...，x*n*}，并在第二个集包含 {y1、 y2，...，y*n*}，个这些集的叉积是：  
   
  {(x1，y1)，(x1，y2)，...，(x1，y*n*)，(x2，y1)，(x2，y2)，...，  
@@ -139,7 +128,7 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

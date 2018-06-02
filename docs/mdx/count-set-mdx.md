@@ -1,31 +1,20 @@
 ---
 title: 计数 (Set) (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Count function [MDX]
-ms.assetid: 22f530e9-f8e1-4608-affa-9a2bc0821591
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5c720fb81ef0e7fe9a2d79a4a7d04de68912533b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4da622ef883ed1fabba137b0d30adcbdd7e32ded
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577599"
 ---
 # <a name="count-set-mdx"></a>Count（集）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +36,7 @@ Set_Expression.Count
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **计数 (Set)** 函数包括或排除空单元格，具体取决于所使用的语法。 如果使用标准的语法，则可排除或通过使用包含空单元格**EXCLUDEEMPTY**或**INCLUDEEMPTY**标记，分别。 如果使用备用语法，则函数始终包括空单元。  
   
  若要排除的一组数中的空单元格，请使用标准的语法和可选**EXCLUDEEMPTY**标志。  
@@ -102,17 +91,17 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [计数&#40;维度&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [计数&#40;层次结构级别&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
  [计数&#40;元组&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel & #40;MDX & #41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers & #40;MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize & #40;MDX & #41;](../mdx/hierarchize-mdx.md)   
- [属性 & #40;MDX & #41;](../mdx/properties-mdx.md)   
- [聚合 & #40;MDX & #41;](../mdx/aggregate-mdx.md)   
- [筛选器 & #40;MDX & #41;](../mdx/filter-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [属性&#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [聚合&#40;MDX&#41;](../mdx/aggregate-mdx.md)   
+ [筛选器&#40;MDX&#41;](../mdx/filter-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

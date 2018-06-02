@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8c4f015d5a606d67cb4c6b5f0519875db58b416
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bc3cd9330261d0ec4e13a715612d73e6ecb44eb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574869"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  取消当前正在运行的命令[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
+  取消当前正在运行命令的 Analysis Services 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +36,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 |父元素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |子元素|[CancelAssociated](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)， [ConnectionID](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)， [SessionID](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)， [SPID](../../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **取消**命令取消当前正在执行的会话的上下文中的命令。 如果客户端应用程序未请求会话，则不能取消命令。  
   
  如果**取消**的执行过程中执行命令**批处理**命令时，整个**批处理**取消命令。 如果**批处理**命令是事务性的所有包含的命令**批处理**命令都将回滚。 如果**批处理**命令不是事务性的仅包含那些命令**批处理**次执行的命令**取消**执行命令是回滚。 中非事务性命令**批处理**已执行的命令将不会回滚。  
@@ -57,8 +58,8 @@ ms.lasthandoff: 05/10/2018
   
  若要检索有关当前连接和会话信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例，**发现**可以执行方法若要请求，分别 DISCOVER_CONNECTIONS 和 DISCOVER_SESSIONS 架构行集。 具有给定数据库的管理员权限的角色成员可以在 DISCOVER_SESSIONS 架构行集的 SESSION_CURRENT_DATABASE 限制列中指定该数据库，以此限定只返回该给定数据库的会话。 有关详细信息**发现**方法，请参阅[发现方法&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [Batch 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另请参阅
+ [批处理元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

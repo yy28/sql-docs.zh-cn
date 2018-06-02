@@ -1,31 +1,20 @@
 ---
 title: OpeningPeriod (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- OPENINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- OpeningPeriod function
-ms.assetid: bebf55cf-e5c6-42b1-98f2-1d6e54093d4c
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3a9585c64d23a2c6547f9ed703c1038d2485fedf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f9384a2993423c68db1d65a92cb0b532502c110b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581359"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  该函数主要用于时间维度，但是也可以用于任何维度。  
   
 -   如果指定一个级别表达式，则**OpeningPeriod**函数使用的层次结构，包含指定的级别，并返回在指定的级别的默认成员的后代的第一个同级。  
@@ -91,9 +80,9 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
   
   

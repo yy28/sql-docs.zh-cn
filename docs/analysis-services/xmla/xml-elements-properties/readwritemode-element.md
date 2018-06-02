@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde6410ac0f6932fe11e5486342e1d836dcc8000
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576489"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|ReadWrite|  
@@ -42,20 +43,20 @@ ms.lasthandoff: 05/10/2018
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[数据库](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|子元素|无|  
+|父元素|[“数据库”](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在中创建数据库**ReadWrite**仅限模式。 无法在创建数据库**ReadOnly**模式。  
   
  值**ReadWriteMode**元素被限制为下表中列出的字符串之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|*ReadOnly*|不能向数据库应用任何更改或更新。|  
+|*readOnly*|不能向数据库应用任何更改或更新。|  
 |*ReadWrite*|可以向数据库应用更改和更新。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
  [附加元素](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [附加和分离 Analysis Services 数据库](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

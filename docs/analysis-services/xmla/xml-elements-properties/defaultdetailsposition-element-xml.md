@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 179fb9fa48340d84df7570b1a6222c2f8a8e1418
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae920ba37f210e4f9bbdf6305899eb79eac74167
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573839"
 ---
 # <a name="defaultdetailsposition-element-xml"></a>DefaultDetailsPosition 元素 (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|Integer|  
 |默认值|-1|  
@@ -43,9 +44,9 @@ ms.lasthandoff: 05/10/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有关**RelationshipEndVisualizationProperties**元素， **DefaultDetailsPosition**元素包含默认的详细信息元素的集合中的详细信息的位置。 默认值**false**指示没有要使用没有默认详细信息。  
   
   

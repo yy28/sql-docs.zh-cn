@@ -1,31 +1,20 @@
 ---
 title: 或者 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- OR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- OR operator
-ms.assetid: 7634c08a-5b70-44cd-9422-6555fed6ae05
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 217b6d803e73c3b9d38865a5443d04af5afdf9f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 215ed38ef7887d9815c6cf4ac79321b95a367707
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580619"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>返回值  
  返回一个布尔值**true**如果其中一种或两个自变量的计算结果为**true**; 否则为**false**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **或者**运算符将两个参数视为布尔值 (0，0，作为**false**; 否则为**true**) 运算符执行逻辑或运算之前。 下表说明了如何**或**运算符执行逻辑或运算。  
   
 |*Expression1*|*Expression2*|返回值|  
@@ -77,7 +66,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
