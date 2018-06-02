@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9bdc2cbe9d5dbcec93fa84503715de4d28ce761d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 88e7cf2387c8ee45936b5de21f529e142142d02c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575959"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -51,11 +52,11 @@ ms.lasthandoff: 05/10/2018
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|maxParallel|可选的 **Integer** 属性。 指示要以并行方式运行命令于其上的最大线程数量。 如果未指定或设置为 0，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例将根据计算机上可用的处理器数目来确定最优线程数。|  
+|maxParallel|可选的 **Integer** 属性。 指示要以并行方式运行命令于其上的最大线程数量。 如果未指定或设置为 0，Analysis Services 的实例确定最佳的基于在计算机上可用的处理器数目的线程数。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另请参阅
+ [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

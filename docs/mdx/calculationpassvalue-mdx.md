@@ -1,31 +1,20 @@
 ---
 title: CalculationPassValue (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CALCULATIONPASSVALUE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CalculationPassValue function
-ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f15c5cec26e55a403bea58883cf5de978b6a2b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 88d7d8c52105feb14c982586f9a819977fc81ed0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577229"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,19 +50,19 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  ALL  
  如果设置此标志，则除了存储引擎加载的值外，其余值均为空值。 如果未设置此标志，则聚合这些值而不进行任何计算。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果提供了数值表达式，则函数通过计算指定计算传递中的指定 MDX 数值表达式来返回一个数值，或者通过访问标志以及访问标志修饰符对其进行修改。  
   
- 如果提供的字符串表达式，则函数返回一个字符串值，通过计算指定的 MDX 字符串表达式中的指定的计算传递，并通过访问标志并访问标志修饰符 （可选） 修改*。*  
+ 如果提供的字符串表达式，则函数返回一个字符串值，通过计算指定的 MDX 字符串表达式中的指定的计算传递，并通过访问标志并访问标志修饰符 （可选） 修改 *。*  
   
  自动递归解析[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，此函数具有很少的实际用途。  
   
 > [!NOTE]  
 >  只有管理员才能使用**CalculationPassValue** MDX 脚本中的函数。 如果在不具有管理员特权的角色上下文中运行包含此函数的 MDX 脚本，则会发生错误。  
   
-## <a name="see-also"></a>另请参阅  
- [CalculationCurrentPass & #40;MDX & #41;](../mdx/calculationcurrentpass-mdx.md)   
+## <a name="see-also"></a>请参阅  
+ [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
