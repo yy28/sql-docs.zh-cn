@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563855"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +84,7 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 
 在发布版本中修复此问题。 此外，此限制不适用于 R 组件。
 
-**适用于：**使用 Python 的 SQL Server 自 2017 年 1
+**适用于：** 使用 Python 的 SQL Server 自 2017 年 1
 
 ### <a name="bkmk_sqlbindr"></a> 当你从连接到旧版本的 SQL Server R Services 客户端使用的不兼容版本警告 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
@@ -96,7 +97,7 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 + 您在通过使用安装向导的情况下将在客户端计算机上安装 R Server （独立） [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
 + 通过安装 Microsoft R Server[单独的 Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-若要确保服务器和客户端使用相同的版本可能需要使用_绑定_，支持的 Microsoft R Server 9.0 和更高版本升级 SQL Server 2016 实例中的 R 组件。 若要确定是否支持升级为可用，有关你的 R 服务版本，请参阅[使用 SqlBindR.exe R Services 的实例升级](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+若要确保服务器和客户端使用相同的版本可能需要使用_绑定_，支持的 Microsoft R Server 9.0 和更高版本升级 SQL Server 2016 实例中的 R 组件。 若要确定是否支持升级为可用，有关你的 R 服务版本，请参阅[使用 SqlBindR.exe R Services 的实例升级](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 **适用于：** SQL Server 2016 R Services，与 R Server 9.0.0 版或更早版本
 

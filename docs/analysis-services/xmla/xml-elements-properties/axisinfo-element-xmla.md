@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 858cb8be01a16d9ccb7d6455043d370865f1c3e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52c3b114c1082a895325170fa8fbf6fef656b8ca
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574329"
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|1-n：可多次出现的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -51,12 +52,12 @@ ms.lasthandoff: 05/10/2018
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|名称|所需**字符串**属性。 轴的名称。|  
+|“属性”|所需**字符串**属性。 轴的名称。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在**根**用元素**MDDataSet**对象， **AxisInfo**元素包含一套**HierarchyInfo**元素，结合的值**名称**属性，表示在多维数据集中返回单个轴的定义。  
   
-## <a name="see-also"></a>另请参阅  
- [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另请参阅
+ [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

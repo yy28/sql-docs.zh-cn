@@ -1,41 +1,20 @@
 ---
 title: MDX 函数引用 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- member functions [MDX]
-- level functions [MDX]
-- MDX [Analysis Services], functions
-- array functions
-- string functions
-- Multidimensional Expressions [Analysis Services], functions
-- hierarchy functions [MDX]
-- numeric functions [MDX]
-- tuple functions
-- subcube functions [MDX]
-- functions [MDX]
-- logical functions [MDX]
-- set functions [MDX]
-ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8f0be993df9a930e175de9d33aaff92271cda329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580029"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函数参考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -171,7 +150,7 @@ ms.lasthandoff: 05/03/2018
 |[DrilldownMemberTop &#40;MDX&#41;](../mdx/drilldownmembertop-mdx.md)|深化第一个指定集与第二个指定集的交集中的成员，并将结果集的成员数限制为指定数目。 另外，此函数可对元组集进行深化。|  
 |[DrillupLevel &#40;MDX&#41;](../mdx/drilluplevel-mdx.md)|浅化某个集在指定级别以下的成员。|  
 |[DrillupMember &#40;MDX&#41;](../mdx/drillupmember-mdx.md)|浅化第一个指定集和第二个指定集的交集的成员。|  
-|[Except &#40;MDX&#41;](../mdx/except-mdx-function.md)|查找两个集之间不同的项，可以选择保留重复项。|  
+|[除&#40;MDX&#41;](../mdx/except-mdx-function.md)|查找两个集之间不同的项，可以选择保留重复项。|  
 |[存在&#40;MDX&#41;](../mdx/exists-mdx.md)|返回一个集的一组成员，该组成员与一个或多个其他集的一个或多个元组共存。|  
 |[提取&#40;MDX&#41;](../mdx/extract-mdx.md)|返回由提取的维度元素中的元组构成的集。|  
 |[筛选器&#40;MDX&#41;](../mdx/filter-mdx.md)|返回根据搜索条件对指定集进行筛选后得到的集。|  
@@ -213,7 +192,7 @@ ms.lasthandoff: 05/03/2018
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|返回用 MDX 表达式对同一数据库中另一个指定的多维数据集求得的值。|  
 |[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|返回与指定成员对应的 MDX 格式的字符串。|  
 |[名称&#40;MDX&#41;](../mdx/name-mdx.md)|返回维度、层次结构、级别或成员的名称。|  
-|[属性 & #40;MDX & #41;](../mdx/properties-mdx.md)|返回一个包含成员属性值的字符串，或返回一个强类型值。|  
+|[属性&#40;MDX&#41;](../mdx/properties-mdx.md)|返回一个包含成员属性值的字符串，或返回一个强类型值。|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|返回与指定集对应的 MDX 格式的字符串。|  
 |[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|返回与指定元组对应的 MDX 格式的字符串。|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|返回指定的维度、层次结构、级别或成员的唯一名称。|  
@@ -223,7 +202,7 @@ ms.lasthandoff: 05/03/2018
   
 |函数|Description|  
 |--------------|-----------------|  
-|[这 & #40;MDX & #41;](../mdx/this-mdx.md)|返回当前的子多维数据集。|  
+|[这&#40;MDX&#41;](../mdx/this-mdx.md)|返回当前的子多维数据集。|  
 |[离开&#40;MDX&#41;](../mdx/leaves-mdx.md)|返回指定维度、成员或元组中的叶成员集。|  
   
 ## <a name="tuple-functions"></a>元组函数  
@@ -232,7 +211,7 @@ ms.lasthandoff: 05/03/2018
 |--------------|-----------------|  
 |[当前&#40;MDX&#41;](../mdx/current-mdx.md)|返回迭代过程中集内的当前元组。|  
 |[项&#40;元组&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|返回某个集中的元组。|  
-|[Root &#40;MDX&#41;](../mdx/root-mdx.md)|返回组成的元组**所有**多维数据集、 维度或元组中每个属性层次结构中的成员。|  
+|[根&#40;MDX&#41;](../mdx/root-mdx.md)|返回组成的元组**所有**多维数据集、 维度或元组中每个属性层次结构中的成员。|  
 |[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md)|返回由 MDX 格式的字符串指定的元组。|  
   
 ## <a name="other-functions"></a>其他函数  
@@ -241,7 +220,7 @@ ms.lasthandoff: 05/03/2018
 |--------------|-----------------|  
 |[错误&#40;MDX&#41;](../mdx/error-mdx.md)|引发错误，根据需要可以选择提供指定的错误消息。|  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 语言参考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

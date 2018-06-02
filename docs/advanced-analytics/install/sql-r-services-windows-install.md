@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 86263158581b92af42a7ad1ce9b538b2c1cdbfa7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5d8cf1c6bb2ac59a2745aceb979c5f566917548a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585589"
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>安装 SQL Server 2016 R Services (In-Database) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 + 不要在域控制器上安装 R 服务。 安装程序的 R Services 部分将会失败。
 
-+ 请不要安装**共享功能** > **R Server （独立）**同一台计算机上运行数据库中实例。 
++ 请不要安装**共享功能** > **R Server （独立）** 同一台计算机上运行数据库中实例。 
 
 + 因为 SQL Server 实例使用的开放源代码 R 和 Anaconda 分发版各自副本可能会与其他版本的 R 和 Python 的通过并行安装。 但是，运行 SQL Server 外部 SQL Server 计算机使用 R 和 Python 的代码可能导致各种问题：
     
@@ -146,7 +147,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
     | Hello |
     |----|
-    | 1|
+    | @shouldalert|
 
 ## <a name="bkmk_FollowUp"></a> 附加配置
 
@@ -257,7 +258,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 要通过 SQL Server 使用的包必须安装在实例使用的默认库中。 如果你有 R 的单独安装的计算机上，或包安装到用户库，你将无法使用从 T-SQL 的这些包。
 
-安装和管理 R 包的过程中是不同 SQL Server 2016 和 SQL Server 自 2017 年。 在 SQL Server 2016 中，数据库管理员必须安装用户需要的 R 包。 在 SQL Server 自 2017 年，可以将用户组设置为共享上的每个数据库级别，包或配置数据库角色，以使用户能够安装其自己的包。 有关详细信息，请参阅[包管理](../r/r-package-management-for-sql-server-r-services.md)。
+安装和管理 R 包的过程中是不同 SQL Server 2016 和 SQL Server 自 2017 年。 在 SQL Server 2016 中，数据库管理员必须安装用户需要的 R 包。 在 SQL Server 自 2017 年，可以将用户组设置为共享上的每个数据库级别，包或配置数据库角色，以使用户能够安装其自己的包。 有关详细信息，请参阅[安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)。
 
 
 ## <a name="get-help"></a>获取帮助

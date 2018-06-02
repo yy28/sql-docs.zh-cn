@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 226712010118a54ac1c5350e128bf50cc261a128
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585739"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>使用 R 函数的 SQL Server 数据 (SQL 快速入门中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,12 +72,6 @@ AS
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## <a name="related-resources"></a>相关资源
-
-+ 想要安装多个 R 包，以获取更多高级统计函数？ 请参阅[安装和管理 R 包](../r/installing-and-managing-r-packages.md)。
-
-+ 为了帮助你将独立 R 代码转换为可轻松地参数化使用 SQL Server 存储过程的格式，Microsoft R 团队已提供新的 R 包， **sqlrutils**。 有关详细信息，请参阅[如何创建存储的过程，请使用 sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>使用 R 实用工具函数进行故障排除
 

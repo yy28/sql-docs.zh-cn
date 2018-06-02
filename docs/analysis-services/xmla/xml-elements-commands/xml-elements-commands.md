@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e65ba594cee3bf24679326a9d0cd75451034b9ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0edfa63feef9af48290e5fe845d9c0cf02f53e29
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574589"
 ---
 # <a name="xml-elements---commands"></a>XML 元素的命令
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -21,9 +22,9 @@ ms.lasthandoff: 05/10/2018
   
 |元素|Description|  
 |-------------|-----------------|  
-|[Alter 元素 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|包含所使用的 Analysis Services 脚本语言 (ASSL) 元素[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法，以便更改对象的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
-|[Backup 元素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库备份到备份文件。|  
-|[Batch 元素](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|针对 Analysis (XMLA) 命令作为批处理操作，执行一个或多个 XML，按顺序或并行，实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
+|[Alter 元素 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|包含所使用的 Analysis Services 脚本语言 (ASSL) 元素[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法，以便更改上的 Analysis Services 实例的对象。|  
+|[Backup 元素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|备份到备份文件的 Analysis Services 数据库时。|  
+|[Batch 元素](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|执行一个或多个 XML Analysis (XMLA) 命令作为批处理操作，按顺序或并行，Analysis Services 实例上。|  
 |[BeginTransaction 元素](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|利用 Analysis Services 实例，在当前会话上开始一个事务。|  
 |[取消元素](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|取消 Analysis Services 实例上当前正在运行的命令。|  
 |[ClearCache 元素](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|清除 Analysis Services 实例上的指定对象的内存缓存。|  

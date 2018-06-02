@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 403074f1189bafc098f3fb9d76a19552407f0024
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3ada531d33baf7007d08ac8a719fca2bf8f1b2e4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574249"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |父元素|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |子元素|一个或多个单元属性定义|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **CellInfo**元素包含单元属性中返回多维数据集包含的单元格的集合**根**元素使用**MDDataSet**数据类型。 每个单元格属性**CellInfo**元素定义由单独的 XML 元素，每个都有**名称**属性和**类型**属性。 **名称**对单元属性的属性对应于的 OLE DB 的 XML 元素中，所表示的 OLAP 单元格属性的名称和**类型**属性表示单元格的 XML 数据类型属性。 XML 元素的名称用于标识的值中包含的单元格的单元格属性**CellData**元素**根**元素。  
   
  下列语法描述了单元属性定义：  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
 </OlapInfo>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另请参阅
+ [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
