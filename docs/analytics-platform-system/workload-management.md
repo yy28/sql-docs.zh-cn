@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707095"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
 
@@ -36,7 +37,7 @@ SQL Server PDW 工作负荷管理功能允许用户和管理员将分配请求�
 资源类  
 在 SQL Server PDW*资源类*是具有预分配的内存和并发限制的内置服务器角色。 SQL Server PDW 将资源分配给根据资源类服务器角色成员资格的提交请求的登录名的请求。  
   
-在计算节点上的资源类的实现在 SQL Server 中使用资源调控器功能。 有关资源调控器的详细信息，请参阅[资源调控器](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx)MSDN 上。  
+在计算节点上的资源类的实现在 SQL Server 中使用资源调控器功能。 有关资源调控器的详细信息，请参阅[资源调控器](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx)MSDN 上。  
   
 ### <a name="understand-current-resource-utilization"></a>了解当前的资源利用率  
 若要了解当前正在运行的请求的系统资源利用率，使用 SQL Server PDW 动态管理视图。 例如，您可以使用 Dmv 来了解运行速度缓慢的大型哈希联接无法方面获益： 有更多内存。  
@@ -59,7 +60,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |资源类|请求重要性|最大内存使用情况 *|并发槽 (最大 = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|默认值|Medium|400 MB|1|默认情况下，每个登录名被允许的少量内存和其请求的并发资源。<br /><br />当登录名添加到资源类时，新类将优先。 从所有资源类将被删除登录名，该登录名将恢复到默认资源分配。|  
+|默认值|Medium|400 MB|@shouldalert|默认情况下，每个登录名被允许的少量内存和其请求的并发资源。<br /><br />当登录名添加到资源类时，新类将优先。 从所有资源类将被删除登录名，该登录名将恢复到默认资源分配。|  
 |MediumRC|Medium|1200 MB|3|可能需要的中等规模的资源类的请求的示例：<br /><br />CTAS 操作具有大型哈希联接。<br /><br />选择需要更多内存，以避免缓存到磁盘的操作。<br /><br />数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织较小具有 10-15 列的表的聚集列存储索引。|  
 |largerc|High|2.8 GB|7|可能需要较大的资源类的请求的示例：<br /><br />非常大 CTAS 操作具有极大哈希联接，或包含大型聚合，例如大型的 ORDER BY 或 GROUP BY 子句。<br /><br />选择需要的内存量非常大进行操作，如哈希联接或聚合如 ORDER BY 或 GROUP BY 子句的操作<br /><br />数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织较小具有 10-15 列的表的聚集列存储索引。|  
 |xlargerc|High|8.4 GB|22|超大型资源类是用于请求可能需要在运行时的额外较大的资源消耗。|  
@@ -130,7 +131,7 @@ SQL 语句，并由资源类控制的操作：
   
 -   UPDATE  
   
--   DELETE  
+-   删除  
   
 -   还原到设备，但有更多计算节点还原时的数据库。  
   

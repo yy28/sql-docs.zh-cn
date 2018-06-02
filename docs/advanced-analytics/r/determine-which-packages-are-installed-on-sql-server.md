@@ -4,27 +4,28 @@ description: 确定 R 和 Python 包版本，验证安装，并获取 SQL Server
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707885"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>Get R 和 SQL Server 上的 Python 包信息
+#  <a name="get-r-and-python-package-information"></a>获取 R 和 Python 包信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-有时当您正在使用多个环境或 R 或 Python 的安装，你需要验证你正在运行的代码对。 Python，或正确的工作区中使用了预期的环境例如，如果你已升级机器学习使用绑定的组件，R 库路径可能是而不是默认的其他文件夹中。 另外，如果你安装 R 客户端或独立服务器实例，你可能有多个 R 库您的计算机上。
+有时当您正在使用多个环境或 R 或 Python 的安装，你需要验证你正在运行的代码对。 Python 或正确的工作区中使用了预期的环境例如，如果你已升级机器学习组件通过[绑定](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)，R 库路径可能是而不是默认的其他文件夹中。 另外，如果你安装 R 客户端或独立服务器实例，你可能有多个 R 库您的计算机上。
 
-这篇文章中的示例演示如何获取的路径和版本的 SQL Server 正在使用的库。
+本文中的 R 和 Python 脚本示例演示如何获取的路径和版本的 SQL Server 使用的包。
 
-## <a name="get-the-current-r-library"></a>获取当前的 R 库
+## <a name="get-the-r-library-location"></a>获取 R 库位置
 
-有关**R**在任何版本的 SQL Server，运行以下语句以验证当前实例的默认库：
+有关 SQL Server 任何版本，运行以下语句以验证[默认 R 包库](installing-and-managing-r-packages.md)当前实例：
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-或者，你可以在新版本的 SQL Server 自 2017 年 1 机器学习 Services 中的 RevoScaleR 使用 rxSqlLibPaths 或[R Services 升级后 R 到在最低 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 此存储的过程返回实例库的路径和版本的 SQL Server 使用 RevoScaleR:
+或者，你可以使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)在新版本的 SQL Server 自 2017 年 1 机器学习 Services 中的 RevoScaleR 或[R Services 升级后 R 到在最低 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 此存储的过程返回实例库的路径和版本的 SQL Server 使用 RevoScaleR:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>获取当前的 Python 库
+## <a name="get-the-python-library-location"></a>获取的 Python 库位置
 
 有关**Python**在 SQL Server 自 2017 年，运行以下语句以验证当前实例的默认库。 此示例返回的 Python 中包含的文件夹列表`sys.path`变量。 该列表包括当前目录和标准库路径。
 

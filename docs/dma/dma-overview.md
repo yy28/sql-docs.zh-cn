@@ -17,18 +17,19 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 16550b6c195f426d914f5a4b4d521cbd739765ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707965"
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手的概述
 
 数据迁移助手 (DMA) 使您能够通过检测可能会影响你的 SQL Server 和 Azure SQL 数据库的新版本中的数据库功能的兼容性问题升级到现代数据平台。 DMA 性能和你的目标环境的可靠性改进建议，并允许你将架构、 数据和非包含的对象从源服务器移到目标服务器。
 
 > [!NOTE] 
-> 对于大型 （在方面的数量和大小数据库） 迁移，建议使用[Azure 数据库迁移服务](https://docs.microsoft.com/en-us/azure/dms/dms-overview)，这将在规模较大的数据库迁移。
+> 对于大型 （在方面的数量和大小数据库） 迁移，建议使用[Azure 数据库迁移服务](https://docs.microsoft.com/azure/dms/dms-overview)，这将在规模较大的数据库迁移。
   
 ## <a name="capabilities"></a>功能
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 
 - 发现数据库可以受益于升级后的目标 SQL Server 平台中的新增功能。 这些被称为功能建议和分为以下类别：
 
-  - 性能
+  - “性能”
   - Security
   - 存储器
 

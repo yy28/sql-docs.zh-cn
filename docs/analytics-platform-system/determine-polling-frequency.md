@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8e2a1ccf469e6c587870c0d5921014d797f87d1
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 39597e0e4623a3006709acde7fe54f97545c362f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707615"
 ---
 # <a name="determine-polling-frequency"></a>确定轮询频率
 此文章介绍了如何确定 Analytics Platform System 设备警报的轮询频率。  
@@ -31,9 +32,9 @@ ms.lasthandoff: 04/19/2018
   
 一个常见的间隔轮询警报，也使用由 System Center，该是**每隔 15 分钟**。  显然，你可以更多或更少经常查询，但不是建议轮询小于每 6 小时。  
   
-更频繁地轮询可以接受，但过于频繁地轮询混乱不堪[sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/en-us/library/ms177648(v=sql11).aspx) DMV。  过于频繁地轮询变得困难用户也需要诊断查询性能问题时其快速滚动出视野。  
+更频繁地轮询可以接受，但过于频繁地轮询混乱不堪[sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV。  过于频繁地轮询变得困难用户也需要诊断查询性能问题时其快速滚动出视野。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [设备监视&#40;分析平台系统&#41;](appliance-monitoring.md)  
   

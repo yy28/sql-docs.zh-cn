@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cb906a8a05221204ec10310d652f6891861d35e2
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708265"
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>安装 SQL Server 自 2017 年 1 机器学习 Windows 上的服务器 （独立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +90,7 @@ SQL Server 2017 是必需的。 如果你有 SQL Server 2016，请安装[SQL Ser
 
 开发 IDE 不会安装安装程序的一部分。 不需要其他工具，如所有标准工具，将包括，将向你提供的 R 或 Python 的分布。
 
-我们建议你尝试的新发行版[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或[for Visual Studio 的 Python](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio)。 Visual Studio 支持同时 R 和 Python，以及数据库开发工具，与 SQL Server 的连接和 BI 工具。 但是，你可以使用任何首选的开发环境，包括 RStudio。
+我们建议你尝试的新发行版[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或[for Visual Studio 的 Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio)。 Visual Studio 支持同时 R 和 Python，以及数据库开发工具，与 SQL Server 的连接和 BI 工具。 但是，你可以使用任何首选的开发环境，包括 RStudio。
 
 ## <a name="get-help"></a>获取帮助
 

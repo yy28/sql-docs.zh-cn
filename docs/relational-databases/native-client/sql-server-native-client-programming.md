@@ -25,10 +25,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e7574f58ead9dc10afaf2cf6a9dc65c48a8c24f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706875"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 编程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 使用 Windows DAC 中的组件，但它并不显式依赖特定版本的 Windows DAC。 可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 与随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持的任一操作系统安装的 Windows DAC 版本一起使用。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client.md)  
  列出重大的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 新功能。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
  提供有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的信息。  
   
- [SQL Server Native Client & #40; ODBC & #41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  提供有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的信息。  
   
  [查找更多 SQL Server Native Client 信息](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server 本机客户端错误](http://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  包含有关与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 关联的运行时错误的主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [更新应用程序从 SQL Server 2005 的本机客户端](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [ODBC 操作指南主题](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 操作指南主题](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

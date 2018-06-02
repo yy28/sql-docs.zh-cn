@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dfb750024706470f28a6c93ea93b5cb9fb4d9c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708075"
 ---
 # <a name="install-sql-server-analysis-services"></a>安装 SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -65,14 +66,14 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 区分大小写。  所有值必须以大写形式表示。 下表对 **ASSERVERMODE**的有效值进行了说明。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |TABULAR|这是默认值。 如果你未设置**ASSERVERMODE**，在表格模式下安装了服务器。|
 |MULTIDIMENSIONAL|该值是可选的。|  
-|POWERPIVOT|该值是可选的。 实际上，如果设置 **ROLE** 参数，会自动将服务器模式设置为 1，从而使 **ASSERVERMODE** 成为 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装的可选项。 有关详细信息，请参阅 [从命令提示符安装 Power Pivot](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。|  
+|POWERPIVOT|该值是可选的。 实际上，如果设置 **ROLE** 参数，会自动将服务器模式设置为 1，从而使 **ASSERVERMODE** 成为 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装的可选项。 有关详细信息，请参阅 [从命令提示符安装 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。|  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [确定 Analysis Services 实例的服务器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [表格建模](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   

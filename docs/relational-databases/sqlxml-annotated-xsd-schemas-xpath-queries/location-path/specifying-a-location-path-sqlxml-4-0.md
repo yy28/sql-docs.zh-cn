@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708735"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路径 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>位置步骤  
  位置路径（绝对或相对）由位置步骤组成，而位置步骤包含三个部分：  
   
--   **轴**  
+-   **Axis**  
   
      轴指定根据位置步骤和上下文节点选择的节点之间的树关系。 **父**，**子**，**属性**，和**自助**支持轴。 如果**子**轴是路径中指定位置，查询选择的所有节点都是上下文节点的子级。 如果**父**指定轴，所选节点为上下文节点的父节点。 如果**属性**指定轴，所选的节点是上下文节点的特性。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
      位置步骤的语法为轴名称和节点测试（用双冒号 (::) 分隔），后跟零或多个表达式，每个表达式都位于方括号中。 例如，XPath 表达式 （位置路径） **child::Customer [@CustomerID= ALFKI]** 选择所有**\<客户 >** 元素的上下文节点的子级。 然后，在谓词中的测试应用于的节点集，仅返回**\<客户 >** 元素节点具有属性值 ALFKI 其**CustomerID**属性。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [指定轴&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  提供用于指定轴的示例。  
   

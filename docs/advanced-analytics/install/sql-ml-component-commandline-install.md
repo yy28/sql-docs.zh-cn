@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 814e0f8172e02d9b02be95888c8dab286429e533
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707955"
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>从命令行安装 SQL Server 计算机学习组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -159,7 +160,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 完成安装程序后，你有一台服务器、 Microsoft 包、 R 和 Python，工具，示例和脚本，属于分发的开源分发。 
 
-若要打开 R 控制台窗口，请转到 files\microsoft SQL Server\140 （或 130） \R_SERVER\bin\x64，然后双击**RGui.exe**。 不熟悉 R？ 此教程：[基本 R 命令和 RevoScaleR 函数： 25 的常见示例](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler)。
+若要打开 R 控制台窗口，请转到 files\microsoft SQL Server\140 （或 130） \R_SERVER\bin\x64，然后双击**RGui.exe**。 不熟悉 R？ 此教程：[基本 R 命令和 RevoScaleR 函数： 25 的常见示例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)。
 
 若要打开 Python 命令，请转到 files\microsoft SQL Server\140\PYTHON_SERVER\bin\x64，然后双击**python.exe**。
 

@@ -94,18 +94,18 @@
 
 # [操作指南](r/sql-server-machine-learning-tasks.md)
 
-## [包管理](r/r-package-management-for-sql-server-r-services.md)
+## 管理包
 ### [默认包](r/installing-and-managing-r-packages.md)
 ### [获取包信息](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
 ### [安装新 R 包](r/install-additional-r-packages-on-sql-server.md)
-#### [使用 R 包管理器](r/install-additional-r-packages-on-sql-server.md)
-#### [使用 RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [使用 R 包管理器](r/use-r-package-managers-on-sql-server.md)
 #### [使用 T-SQL](r/install-r-packages-tsql.md)
-#### [使用 miniCRAN 存储库](r/create-a-local-package-repository-using-minicran.md)
-#### [启用远程 R 包管理](r/r-package-how-to-enable-or-disable.md)
-#### [同步 R 包](r/package-install-uninstall-and-sync.md)
-#### [R“用户库”的解决方法](r/packages-installed-in-user-libraries.md)
+#### [使用 RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+##### [启用远程 R 包管理](r/r-package-how-to-enable-or-disable.md)
+##### [同步 R 包](r/package-install-uninstall-and-sync.md)
+#### [创建 miniCRAN 存储库](r/create-a-local-package-repository-using-minicran.md)
+#### [使用 R 包的技巧](r/packages-installed-in-user-libraries.md)
 
 ## 数据探索和建模
 ### [R 库和数据类型](r/r-libraries-and-data-types.md)
@@ -156,19 +156,18 @@
 
 ## [已知问题](known-issues-for-sql-server-machine-learning-services.md)
 ## [发行说明](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [新的和已更新的项目](new-updated-advanced-analytics.md)
-
-## [安装和故障排除技巧](machine-learning-troubleshooting-faq.md)
-### [设置虚拟机](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [收集数据进行故障排除](data-collection-ml-troubleshooting-process.md)
-### [升级和安装常见问题解答](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [执行外部脚本的常见问题](common-issues-external-script-execution.md)
+## [设置虚拟机](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [故障排除](machine-learning-troubleshooting-faq.md)
+### [数据收集](data-collection-ml-troubleshooting-process.md)
+### [安装和升级的错误](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [快速启动板和外部脚本执行错误](common-issues-external-script-execution.md)
+### [R 脚本错误](r-script-execution-errors.md)
 
 ## 博客
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [机器学习](https://blogs.technet.microsoft.com/machinelearning/)
 
-## 反馈论坛
+## 论坛
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [机器学习服务器](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

@@ -8,11 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707685"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,30 +27,26 @@ SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有�
 > [!NOTE]
 > 绑定适用于仅 （数据库） 实例。 绑定是不相关 （独立） 安装。
 
-**SQL Server 2017**
+**SQL Server 2017 绑定注意事项**
 
 对于 SQL Server 自 2017 年 1 机器学习服务，你应仅在 Microsoft 机器学习 Server 开始提供其他包或已有通过你的较新版本时，才考虑绑定。
 
-**SQL Server 2016**
+**SQL Server 2016 绑定注意事项**
 
-对于 SQL Server 2016 R Services 客户，有两个路径可用来获取新的和更新的 R 程序包。 一种需要升级到 SQL Server 2017;其次，绑定到 Microsoft 机器学习服务器。
+为 SQL Server 2016 R Services 客户，绑定提供更新新包不是原始安装和预先训练的模型，它们都可以进一步刷新在 Microsoft 机器学习 Server 的每个新的主版本号和次版本的一部分的 R 程序包。 绑定未提供 Python 支持，这是 SQL Server 2017 功能。 
 
-升级到 SQL Server 2017 获取你的 R 程序包处包含在该版本中，以及 Python 功能的版本。 或者，绑定获取你更新的 R 包，可以进一步在 Microsoft 机器学习 Server 的每个新的主版本号和次版本刷新。 
+## <a name="version-map"></a>版本映射
 
-绑定未提供 Python 支持，这是 SQL Server 2017 功能。 
+下表是版本映射时，跨版本汽车显示包版本，以便绑定到 Microsoft 机器学习 Server （以前称为 R Server Python 支持加法之前时，可以确定 potentional 升级路径从开始 MLS 9.2.1）。 
 
-**可通过 Microsoft 机器学习服务器组件升级**
-
-下表是一个版本代码图，显示与 SQL Server，可能的升级绑定到 Microsoft 机器学习 Server （以前称为 R Server Python 支持从 MLS 9.2.1 加法之前） 时一同安装的版本。 
-
-请注意绑定并不保证 R 或 Anaconda 的最新版本。 当绑定到 Microsoft 机器学习服务器时，可以通过安装程序，可能也可能不是在 web 上找到可用的最新版本安装的 R 或 Python 版本。
+请注意绑定并不保证 R 或 Anaconda 的最新版本。 当你将绑定到 Microsoft 机器学习服务器 (MLS) 时，可以安装执行安装程序，这可能不会在 web 上找到可用的最新版本的 R 或 Python 版本。
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-组件 |初始版本 | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+组件 |初始版本 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 通过 R 的 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [预先训练的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -266,7 +263,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="parameters"></a>Parameters
 
-|名称|Description|
+|“属性”|Description|
 |------|------|
 |*list*| 显示当前计算机上所有 SQL 数据库实例 ID 的列表|
 |*bind*| 将指定的 SQL 数据库实例升级至 R Server 最新版本，并确保实例会自动获取 R Server 的未来升级|
@@ -301,7 +298,7 @@ MLS 安装程序和 SqlBindR 都返回以下错误代码和消息。
 
 更高版本的 SqlBindR 自动还原原始的 R 功能，无需重新安装的 R 组件，或重新修补程序服务器。 但是，你必须安装可能在初始安装后添加任何 R 程序包更新。
 
-如果已使用包管理角色来安装并共享包，此任务是要容易得多： 你可以使用 R 命令同步到文件系统在数据库中，使用记录的已安装的程序包，反之亦然。 有关详细信息，请参阅[for SQL Server 的 R 包管理](r-package-management-for-sql-server-r-services.md)。
+如果已使用包管理角色来安装并共享包，此任务是要容易得多： 你可以使用 R 命令同步到文件系统在数据库中，使用记录的已安装的程序包，反之亦然。 有关详细信息，请参阅[for SQL Server 的 R 包管理](install-additional-r-packages-on-sql-server.md)。
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>从 SQL Server 的多个升级的问题
 

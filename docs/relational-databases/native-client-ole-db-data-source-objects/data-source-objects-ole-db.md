@@ -25,20 +25,21 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2c6d8057f9a85491a2936a78140e0da69299969f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708135"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端使用术语数据源的 OLE DB 接口用于建立的链接到数据存储，如集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是第一项任务的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端使用者。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端使用术语数据源的 OLE DB 接口用于建立的链接到数据存储，如集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是第一项任务的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端使用者。  
   
  每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序是 C/c + + GUID CLSID_SQLNCLI10 (SQLNCLI_CLSID 将解析为正确的符号 progid 引用 sqlncli.h 文件中)。 对于 CLSID，使用者使用 OLE **CoCreateInstance**函数制造数据源对象的实例。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端是一个进程内服务器。 实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序对象创建 CLSCTX_INPROC_SERVER 宏用于指示可执行上下文。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端是一个进程内服务器。 实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序对象创建 CLSCTX_INPROC_SERVER 宏用于指示可执行上下文。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序数据源对象显示允许的使用者连接到现有的 OLE DB 初始化接口[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
   
@@ -83,7 +84,7 @@ else
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [数据源属性 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [数据源属性&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [数据源信息属性](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -93,9 +94,9 @@ else
   
 -   [会话属性 - SQL Server Native Client OLE DB 提供程序](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
   
--   [持久的数据源对象](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
+-   [持久化数据源对象](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

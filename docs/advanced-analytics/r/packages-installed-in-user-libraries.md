@@ -1,30 +1,53 @@
 ---
-title: 避免使用 R 包安装在用户库时出现错误 |Microsoft 文档
+title: 使用安装的 SQL Server 上的用户库中的 R 程序包的提示 |Microsoft 文档
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4609504044e5ef014c4a73e2c4a64a21040db717
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e52a6f4a9a3830aab01e54819804785a7069c9d2
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708465"
 ---
-# <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>避免在用户库中安装的 R 包上的错误
+# <a name="tips-for-using-r-packages-in-sql-server"></a>在 SQL Server 中使用 R 包的技巧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-有经验的 R 用户习惯于在用户库中，安装 R 包，默认库时被阻止或不可用。 但是，此方法不支持在 SQL Server，并且安装到用户库通常以"找不到包"错误。
+本文为不熟悉 R 和有经验的 R 开发人员熟悉的包中的 SQL Server 实例的访问权限的 Dba 有单独的章节。
 
-本指南介绍了可帮助您避免此错误的解决方法。 本文档说明如何修改 R 代码，并提供有关使用从 SQL Server 实例的 R 包的正确 R 包安装进程的建议。
+## <a name="new-to-r"></a>新手 R
 
-## <a name="why-r-user-libraries-cannot-be-accessed-from-sql-server"></a>为什么不能 R 用户库从 SQL Server 访问
+以管理员身份安装 R 包第一次，但是知道有关 R 包管理的几个基础知识可以帮助你为开始。
 
-R 开发人员需要安装新的 R 包都习惯于安装包随意情况下，只要默认库不可用，或者当开发人员不是计算机上的管理员使用专用的、 用户库。
+### <a name="package-dependencies"></a>包的依赖项
 
-例如，在典型的 R 开发环境中，用户将添加包的位置的 R 环境变量`libPath`，或引用的完整包路径，如下：
+R 包经常依赖于多个其他包，其中一些可能不可用的实例所使用的默认 R 库中。 有时包需要已安装的从属包的不同版本。 包的依赖项在包中嵌入的描述文件中说明，但它只是有时不完整。 在可以使用调用的包[iGraph](http://igraph.org/r/)以清楚地表述了依赖项关系图。
+
+如果你需要安装多个包，或想要确保你的组织中的每个人都获得正确的包类型和版本，我们建议你使用[miniCRAN](https://mran.microsoft.com/package/miniCRAN)包以分析完成的依赖关系链。 minicRAN 创建可以在多个用户或计算机之间共享的本地存储库。 有关详细信息，请参阅[创建本地包存储库使用 miniCRAN](create-a-local-package-repository-using-minicran.md)。
+
+### <a name="package-sources-versions-and-formats"></a>包源、 版本和格式
+
+如有多个来源获取 R 包， [CRAN](https://cran.r-project.org/)和[Bioconductor](https://www.bioconductor.org/)。 R 语言官方站点 (<https://www.r-project.org/>) 列出了很多这些资源。 Microsoft 提供了[MRAN](https://mran.microsoft.com/)对于其分布的开放源代码 R ([MRO](https://mran.microsoft.com/open)) 和其他包。 很多包发布到 GitHub，开发人员可以从何处获取源代码。
+
+在多个计算平台上运行的 R 程序包。 请确保你安装的版本是 Windows 二进制文件。
+
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>知道要安装到的库和已安装的包。
+
+如果以前已修改的 R 环境的计算机上，在安装任何内容之前，确保 R 环境变量`.libPath`使用一个路径。
+
+此路径应指向实例 R_SERVICES 文件夹。 有关详细信息，包括如何确定哪些包已安装，请参阅[SQL Server 中的默认 R 和 Python 包](installing-and-managing-r-packages.md)。
+
+## <a name="new-to-sql-server"></a>新到 SQL Server
+
+作为 R 开发人员处理在 SQL Server 上执行的代码，保护服务器的安全策略来限制你能够控制 R 环境。
+
+### <a name="r-user-libraries-not-supported-on-sql-server"></a>R 用户库： 不支持在 SQL Server 上
+
+R 开发人员需要安装新的 R 包都习惯于安装包随意情况下，只要默认库不可用，或者当开发人员不是计算机上的管理员使用专用的、 用户库。 例如，在典型的 R 开发环境中，用户将添加包的位置的 R 环境变量`libPath`，或引用的完整包路径，如下：
 
 ```R
 library("c:/Users/<username>/R/win-library/packagename")
@@ -34,13 +57,13 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 *Library(xxx) 时出错： 没有名为包-name 的包*
 
-## <a name="how-to-avoid-package-not-found-errors"></a>如何避免"找不到包"错误
+### <a name="avoid-package-not-found-errors"></a>避免"找不到包"错误
 
-+ 取消用户库上的依赖关系 
++ 取消用户库上的依赖关系。 
 
     错误开发做法若要将所需的 R 包安装到自定义用户的库，是因为它将导致错误，如果由不到库位置具有访问另一个用户运行解决方案。
 
-    此外，如果默认库中安装包，R 运行时加载包从默认库中，即使在 R 代码中指定的不同版本。
+    此外，如果默认库中安装包，R 运行时加载包从默认库中，即使在 R 代码中指定其他版本。
 
 + 修改你的代码在共享环境中运行。
 
@@ -50,4 +73,10 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + 更新代码以删除对 R 包或 R 库路径直接引用。 
 
-+ 知道哪个包库是与实例关联。 有关详细信息，请参阅[与 SQL Server 安装的 R 包](installing-and-managing-r-packages.md)
++ 知道哪个包库是与实例关联。 有关详细信息，请参阅[SQL Server 中的默认 R 和 Python 包](installing-and-managing-r-packages.md)。
+
+## <a name="see-also"></a>另请参阅
+
++ [安装新 R 包](install-additional-r-packages-on-sql-server.md)
++ [安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)
++ [教程、示例、解决方案](../tutorials/machine-learning-services-tutorials.md)

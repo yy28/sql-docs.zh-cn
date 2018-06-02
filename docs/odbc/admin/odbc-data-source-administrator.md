@@ -17,16 +17,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b31061c3a8c75e5d96d3ac6993ce8d90dd6199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706945"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 数据源管理器
 Microsoft® ODBC 数据源管理器管理数据库驱动程序和数据源。 此应用程序位于下 Windows 控制面板**管理工具**。 在 Windows 8 中从开始，图标名为**ODBC 数据源**，并且在 64 位操作系统上没有 32 位和 64 位版本。  
   
- ODBC 管理器的详细过程有关的信息，请打开[ODBC 数据源管理器](http://msdn.microsoft.com/en-us/eea94d94-f53b-4289-ae75-9ccccde15333)对话框中，单击**帮助**。  
+ ODBC 管理器的详细过程有关的信息，请打开[ODBC 数据源管理器](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)对话框中，单击**帮助**。  
   
  可以使用 PowerShell 命令来管理驱动程序和数据源。 有关这些 PowerShell 命令的详细信息，请参阅[Windows 数据访问组件 PowerShell 命令](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)。  
   
