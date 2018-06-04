@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869712"
 ---
 # <a name="server-properties---advanced-page"></a>服务器属性 -“高级”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
  **游标阈值**  
  指定游标集中的行数，超过此行数，将异步生成游标键集。 当游标为结果集生成键集时，查询优化器会估算将为该结果集返回的行数。 如果查询优化器估算出的返回行数大于此阈值，则将异步生成游标，使用户能够在继续填充游标的同时从该游标中提取行。 否则，同步生成游标，查询将一直等待到返回所有行。  
   
- 如果设置为 -1，则将同步生成所有键集；这适用于较小的游标集。 如果设置为 0，则将异步生成所有游标键集。 如果设置为其他值，则查询优化器将比较游标集中的预期行数，并在该行数超过所设置的数量时异步生成键集。 有关详细信息，请参阅 [Configure the cursor threshold Server Configuration Option](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md)。  
+ 如果设置为 -1，则将同步生成所有键集；这适用于较小的游标集。 如果设置为 0，则将异步生成所有游标键集。 如果设置为其他值，则查询优化器将比较游标集中的预期行数，并在该行数超过所设置的数量时异步生成键集。 有关详细信息，请参阅 [配置 cursor threshold 服务器配置选项](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md)。  
   
  **默认全文语言**  
  指定全文检索列的默认语言。 全文检索数据的语言分析取决于数据的语言。 该选项的默认值为服务器的语言。 有关与所显示设置相对应的语言，请参阅 [sys.fulltext_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
@@ -118,18 +119,18 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="parallelism"></a>并行：  
  **并行的开销阈值**  
- 指定阈值，在高于该阈值时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建并运行查询并行计划。 开销指的是在特定硬件配置中运行串行计划估计需要花费的时间（秒）。 只能为对称多处理器设置此选项。 有关详细信息，请参阅 [Configure the cost threshold for parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)。  
+ 指定阈值，在高于该阈值时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建并运行查询并行计划。 开销指的是在特定硬件配置中运行串行计划估计需要花费的时间（秒）。 只能为对称多处理器设置此选项。 有关详细信息，请参阅 [配置并行的开销阈值服务器配置选项](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)。  
   
  **锁**  
  设置可用锁的最大数目，以限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为锁分配的内存量。 默认设置为 0，即允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据不断变化的系统要求动态地分配和释放锁。  
   
- 推荐的配置是允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态地使用锁。 有关详细信息，请参阅 [Configure the locks Server Configuration Option](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)。  
+ 推荐的配置是允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态地使用锁。 有关详细信息，请参阅 [配置 locks 服务器配置选项](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)。  
   
  **最大并行度**  
- 限制执行并行计划时所使用的处理器数（最多为 64 个）。 如果默认值为 0，则使用所有可用的处理器。 如果该值为 1，则取消生成并行计划。 如果该值大于 1，则将限制执行的单个查询所使用的最大处理器数。 如果指定的值比可用的处理器数大，则使用实际可用数量的处理器。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 限制执行并行计划时所使用的处理器数（最多为 64 个）。 如果默认值为 0，则使用所有可用的处理器。 如果该值为 1，则取消生成并行计划。 如果该值大于 1，则将限制执行的单个查询所使用的最大处理器数。 如果指定的值比可用的处理器数大，则使用实际可用数量的处理器。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
  **查询等待值**  
- 指定在超时之前查询等待资源的秒数（0 到 2147483647）。如果使用默认值 -1，则按估计查询开销的 25 倍计算超时值。 有关详细信息，请参阅 [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。  
+ 指定在超时之前查询等待资源的秒数（0 到 2147483647）。如果使用默认值 -1，则按估计查询开销的 25 倍计算超时值。 有关详细信息，请参阅 [配置查询等待值服务器配置选项](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
