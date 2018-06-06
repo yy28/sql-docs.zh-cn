@@ -3,7 +3,6 @@ title: 完成数据库引擎升级 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -12,14 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 caps.latest.revision: 10
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b5a2c79af7502c44aa5b408f666bd2f5b2ed024
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f140aeb51832ccc44af5ee907d67e4506fb05bbd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771084"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成数据库引擎升级
 
@@ -29,9 +29,9 @@ ms.lasthandoff: 05/03/2018
   
 升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]后，请完成以下任务：  
   
-- **备份你的数据库：**为每个数据库执行完整备份。  
+- **备份你的数据库：** 为每个数据库执行完整备份。  
 
-- **启用新功能：**在 SQL Server 2016 和 SQL Server 2017 中，一些更改仅在数据库的 DATABASE_COMPATIBILITY 级别更改为 130 及以上后才可启用。  有关详细信息和建议工作流，请参阅 [更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 如果数据库在 SQL Server 2014 中创建了内存优化表，请查看[内存优化表的统计信息](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。
+- **启用新功能：** 在 SQL Server 2016 和 SQL Server 2017 中，一些更改仅在数据库的 DATABASE_COMPATIBILITY 级别更改为 130 及以上后才可启用。  有关详细信息和建议工作流，请参阅 [更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 如果数据库在 SQL Server 2014 中创建了内存优化表，请查看[内存优化表的统计信息](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。
   
 - **Integration Services：**  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 - **Reporting Services：** 对于新安装升级，还原 Reporting Services 加密密匙。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
-- **Master Data Services：**升级 MDS 数据库架构并创建 SQL Server 2017 Web 应用程序。 有关详细信息，请参阅 [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)。  
+- **Master Data Services：** 升级 MDS 数据库架构并创建 SQL Server 2017 Web 应用程序。 有关详细信息，请参阅 [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)。  
   
 - **Data Quality Services：** 升级 DQS 数据库架构并验证 DQS 数据库架构升级。 有关详细信息，请参阅 [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
   

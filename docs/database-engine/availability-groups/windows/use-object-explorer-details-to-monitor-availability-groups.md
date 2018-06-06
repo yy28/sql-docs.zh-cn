@@ -3,7 +3,6 @@ title: 使用“对象资源管理器详细信息”来监视可用性组 | Micr
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5525a27e67c6096713f4487ee3e5f4aae898190
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770183"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  可能的值如下：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**禁止连接**|当此可用性副本充当辅助副本时，不允许直接连接到可用性数据库。 辅助数据库不可用于读访问。|  
 |**只允许读意向连接**|当此副本充当辅助副本时，仅允许直接只读连接。 副本中的所有数据库都可用于读访问。|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  **连接状态**  
  指示辅助副本当前是否连接到主副本。 可能的值如下：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**已断开连接**|对于远程可用性副本，指示它与本地可用性副本已断开连接。 本地副本对于“已断开连接”状态的响应取决于它的角色，如下所示：<br /><br /> 在主副本上，如果辅助副本已断开连接，辅助数据库将在主副本上标记为 **“未同步”** ，主副本等待辅助副本重新连接。<br /><br /> 在辅助副本上，一旦检测到其未连接，辅助副本会尝试重新连接主副本。|  
 |**已连接**|远程可用性副本当前连接到本地副本。|  
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **同步状态**  
  指示辅助副本当前是否与主副本同步。 可能的值如下：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**“未同步”**|该数据库未同步或尚未联接到可用性组。|  
 |**已同步**|该数据库与当前主副本（如果有）或上一个主副本上的主数据库同步。<br /><br /> 注意：在性能模式中，数据库从不处于“已同步”状态。|  
@@ -129,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
  可能的同步状态如下所示：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”。|  
 |||  
@@ -137,7 +137,7 @@ ms.lasthandoff: 05/03/2018
  **已挂起**  
  指示可用性数据库当前是否联机。 可能的值如下：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**已挂起**|此状态指示该数据库在本地挂起，需要手动恢复。<br /><br /> 在主副本上，该值对于辅助数据库是不可靠的。 若要确认辅助数据库是否挂起，请在承载该数据库的辅助副本上进行查询。|  
 |**未联接**|指示辅助数据库要么未联接到可用性组，要么已从该组中删除。|  

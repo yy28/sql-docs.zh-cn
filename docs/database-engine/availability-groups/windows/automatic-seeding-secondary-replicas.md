@@ -5,7 +5,6 @@ services: data-lake-analytics
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a9c3487822eec82ebf294c01650a2296dcec5ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6576f0430a45300d76f675730f14b2a257441ffd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769693"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>次要副本的自动种子设定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,7 +245,7 @@ GO
 
 下表列出了与自动种子设定相关的扩展事件。
 
-|“属性”|Description|
+|“属性”|描述|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|种子设定请求消息。|
 |hadr_physical_seeding_backup_state_change|物理种子设定备份端状态更改。|

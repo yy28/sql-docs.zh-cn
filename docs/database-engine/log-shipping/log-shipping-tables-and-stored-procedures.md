@@ -3,8 +3,6 @@ title: 日志传送表和存储过程 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +16,15 @@ helpviewer_keywords:
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e306bcc54708e0548baa4052a2b657b3fd47228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc9e2c3aadf5bb153d40536a5145b259e2163a17
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771833"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="primary-server-tables"></a>主服务器表  
   
-|表|Description|  
+|表|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|存储警报作业 ID。 仅当尚未配置远程监视服务器时，主服务器上才会使用此表。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|存储与此主服务器关联的日志传送作业的错误详细信息。|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="primary-server-stored-procedures"></a>主服务器存储过程  
   
-|存储过程|Description|  
+|存储过程|描述|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|设置日志传送配置（包括备份作业、本地监视记录及远程监视记录）的主数据库。|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|向现有的主数据库添加辅助数据库名称。|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="secondary-server-tables"></a>辅助服务器表  
   
-|表|Description|  
+|表|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|存储警报作业 ID。 仅当尚未配置远程监视服务器时，辅助服务器上才会使用此表。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|存储与此辅助服务器关联的日志传送作业的错误详细信息。|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="secondary-server-stored-procedures"></a>辅助服务器存储过程  
   
-|存储过程|Description|  
+|存储过程|描述|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|设置用于日志传送的辅助数据库。|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|为指定的主数据库设置主服务器信息，添加本地和远程监视器链接，并在辅助服务器上创建复制作业和还原作业。|  
@@ -87,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="monitor-server-tables"></a>监视服务器表  
   
-|表|Description|  
+|表|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|存储警报作业 ID。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|存储日志传送作业的错误详细信息。|  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="monitor-server-stored-procedures"></a>监视服务器存储过程  
   
-|存储过程|Description|  
+|存储过程|描述|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|如果尚未创建日志传送警报作业，则创建它。|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|如果没有关联的主数据库，则删除日志传送警报作业。|  

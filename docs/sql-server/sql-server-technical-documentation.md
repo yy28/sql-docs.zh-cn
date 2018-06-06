@@ -24,11 +24,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2fc97c10ee40d90704459dd820882c5b97d22d2
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.openlocfilehash: 2d71913e69d5b4a7f10239f8afe24e65ef15fe27
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709065"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +53,10 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 内容很快会合并到 .docs 站点中。  现在，请参阅：
-- [SQL Server 2014 联机丛书](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2014 联机丛书](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2014 中的新增功能](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [先前版本](https://docs.microsoft.com/en-us/previous-versions/sql/)
+- [先前版本](https://docs.microsoft.com/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -106,7 +107,7 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 - [使用 SQL Server 导入和导出向导导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [将 SQL Server 数据库迁移至 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Azure 迁移进程 - 评估、迁移、优化](https://azure.microsoft.com/en-us/migration/)]
+- [Azure 迁移进程 - 评估、迁移、优化](https://azure.microsoft.com/migration/)]
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -125,8 +126,8 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 
 ## <a name="samples"></a>示例
 
-- [Wide World Importers 示例数据库](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is)
-- [适用于 SQL Server 2016 的 AdventureWorks 示例数据库和脚本](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are) 
+- [Wide World Importers 示例数据库](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
+- [适用于 SQL Server 2016 的 AdventureWorks 示例数据库和脚本](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [GitHub 上的 SQL Server 示例](https://github.com/Microsoft/sql-server-samples)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

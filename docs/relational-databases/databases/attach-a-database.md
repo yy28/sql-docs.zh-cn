@@ -21,11 +21,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 04097e3b88a7d15f13546eca3f9abffe09d15f19
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34581879"
 ---
 # <a name="attach-a-database"></a>附加数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +165,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
- <br>[使数据库在其他服务器上可用时管理元数据](/manage-metadata-when-making-a-database-available-on-another-server.md)  
+ <br>[使数据库在其他服务器上可用时管理元数据](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [分离数据库](../../relational-databases/databases/detach-a-database.md)  
   
   

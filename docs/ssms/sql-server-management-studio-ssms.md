@@ -10,16 +10,21 @@ ms.custom: ''
 ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
+f1_keywords:
+- sql13.ssms.viewhelp.f1
+helpviewer_keywords:
+- SQL Server Management Studio
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d09b2dab33e8c2c2b1f7fae579f5d6577402ebe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fa17a9e29159e4e4a16fdc23421b9b546c09177
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708976"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件  
   
-|Description|组件|  
+|描述|组件|  
 |---------------|---------|  
 |使用“对象资源管理器”查看和管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 的一个或多个实例中的所有对象。|[对象资源管理器](../ssms/object/object-explorer.md)|  
 |如何使用“模板资源管理器”生成和管理可用于加快查询和脚本开发的样板文本文件。|[模板资源管理器](../ssms/template/template-explorer.md)|  

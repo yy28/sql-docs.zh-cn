@@ -3,7 +3,6 @@ title: 创建或配置可用性组侦听程序 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 52
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 1b1106913af5e7b6c2e9cd4a2e8b329efa0d596a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769673"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>创建或配置可用性组侦听器 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.lasthandoff: 05/04/2018
  **静态 IP**  
  侦听器将使用一个或多个静态 IP 地址。 其他 IP 地址是可选的。 若要跨多个子网创建一个可用性组侦听器，必须在侦听器配置中为每个子网指定一个静态 IP 地址。 请与您的网络管理员联系以获取这些静态 IP 地址。  
   
- 如果您选择 **“静态 IP”** ，则会在 **“网络模式”** 字段下出现一个子网网格。 此网格将显示有关该可用性组侦听器可以访问的每个子网的信息。 在通过单击 **“添加”**添加静态 IP 地址之前，该网格为空。  
+ 如果您选择 **“静态 IP”** ，则会在 **“网络模式”** 字段下出现一个子网网格。 此网格将显示有关该可用性组侦听器可以访问的每个子网的信息。 在通过单击 **“添加”** 添加静态 IP 地址之前，该网格为空。  
   
  这些列如下所示：  
   
@@ -280,7 +280,7 @@ ms.lasthandoff: 05/04/2018
   
      **优点**：如果发生跨子网故障转移，则客户端恢复时间将比较短。  
   
-     **缺点：**半数的客户端连接将需要超过 20 秒的时间。  
+     **缺点：** 半数的客户端连接将需要超过 20 秒的时间。  
   
 -   如果您有权操作群集资源，则强烈建议您将可用性组侦听器的网络名称设置为 `RegisterAllProvidersIP=0`。 有关详细信息，请参阅本节后面的“RegisterAllProvidersIP 设置”。  
   

@@ -3,8 +3,6 @@ title: 向日志传送配置添加辅助数据库 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +15,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6da92384490ae4907390dbeceee8da4564f153d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42dec6a5e57f6b87775fe88a50f4d68115fabafb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771363"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +56,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”。  
   
-2.  在 **“选择页”**下，单击 **“事务日志传送”**。  
+2.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
   
-3.  在 **“辅助服务器实例和数据库”**下，单击 **“添加”**。  
+3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
   
 4.  单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -67,21 +66,21 @@ ms.lasthandoff: 05/03/2018
   
 6.  在 **“初始化辅助数据库”** 选项卡上，选择要用于初始化辅助数据库的选项。  
   
-7.  在 **“复制文件”**选项卡的 **“复制文件的目标文件夹”** 框中，键入应将事务日志备份复制到的文件夹的路径。 该文件夹通常位于辅助服务器上。  
+7.  在 **“复制文件”** 选项卡的 **“复制文件的目标文件夹”** 框中，键入应将事务日志备份复制到的文件夹的路径。 该文件夹通常位于辅助服务器上。  
   
-8.  请注意 **“复制作业”** 下的 **“计划”**框中列出的复制计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
+8.  请注意 **“复制作业”** 下的 **“计划”** 框中列出的复制计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-9. 在 **“还原”** 选项卡上的 **“还原备份时的数据库状态”**下，选择 **“无恢复模式”** 或 **“备用模式”** 选项。  
+9. 在 **“还原”** 选项卡上的 **“还原备份时的数据库状态”** 下，选择 **“无恢复模式”** 或 **“备用模式”** 选项。  
   
 10. 如果选择了 **“备用模式”** 选项，请选择是否要在进行还原操作时从辅助数据库断开用户连接。  
   
-11. 如果希望延迟辅助服务器上的还原进程，请在 **“延迟还原备份操作至少”**下选择延迟时间。  
+11. 如果希望延迟辅助服务器上的还原进程，请在 **“延迟还原备份操作至少”** 下选择延迟时间。  
   
-12. 在 **“在以下时间内没有执行还原时报警”**下选择警报阈值。  
+12. 在 **“在以下时间内没有执行还原时报警”** 下选择警报阈值。  
   
-13. 请注意 **“还原作业”** 下 **“计划”**框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
+13. 请注意 **“还原作业”** 下 **“计划”** 框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-14. 单击 **“确定”**中向现有的日志传送配置添加辅助数据库。  
+14. 单击 **“确定”** 中向现有的日志传送配置添加辅助数据库。  
   
 15. 在“数据库属性”对话框上单击 **“确定”** ，以开始配置过程。  
   

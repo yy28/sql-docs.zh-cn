@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470239"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 ![联机](media/bring-online.PNG)
 
 > [!NOTE]
-> 如果要单独故障转移 SSISDB 和 Scale Out Master，请按照 [7.配置 Windows 故障转移群集的 Scale Out Master 服务角色](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)操作
+> 如果要单独故障转移 SSISDB 和 Scale Out Master，请按照 [7.配置 Windows 故障转移群集的 Scale Out Master 服务角色](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)操作
 
 ## <a name="7-install-scale-out-workers"></a>7.安装 Scale Out Worker
 在辅助角色节点上安装 Scale Out Worker。 安装过程中，指定 https://[Sql Server 网络名称]:[主端口] 作为主终结点。 

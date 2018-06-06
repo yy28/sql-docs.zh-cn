@@ -3,12 +3,9 @@ title: 配置 Windows 防火墙以允许 SQL Server 访问 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,14 +23,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 48
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa7b14005bacef0d094abd18bfe7e4d2e2e81665
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772593"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **netsh**  
   
-     管理员可以在命令提示符下使用 **netsh.exe** 工具配置和监视基于 Windows 的计算机，也可以使用批处理文件执行此操作**。** 通过使用 **netsh** 工具，可以将输入的上下文命令定向到相应帮助器，然后由帮助器执行此命令。 帮助器是一个动态链接库 (.dll) 文件，它通过对一种或多种服务、实用工具或协议提供配置、监视和支持来扩展 **netsh** 工具的功能。 所有支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的操作系统都具有防火墙帮助器。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也具有称作 **advfirewall**的高级防火墙帮助器。 本文不讨论有关使用 **netsh** 的详细信息。 不过，所述配置选项中的许多选项都可以通过使用 **netsh**加以配置。 例如，在命令提示符下运行以下脚本，以打开 TCP 端口 1433：  
+     管理员可以在命令提示符下使用 **netsh.exe** 工具配置和监视基于 Windows 的计算机，也可以使用批处理文件执行此操作 **。** 通过使用 **netsh** 工具，可以将输入的上下文命令定向到相应帮助器，然后由帮助器执行此命令。 帮助器是一个动态链接库 (.dll) 文件，它通过对一种或多种服务、实用工具或协议提供配置、监视和支持来扩展 **netsh** 工具的功能。 所有支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的操作系统都具有防火墙帮助器。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也具有称作 **advfirewall**的高级防火墙帮助器。 本文不讨论有关使用 **netsh** 的详细信息。 不过，所述配置选项中的许多选项都可以通过使用 **netsh**加以配置。 例如，在命令提示符下运行以下脚本，以打开 TCP 端口 1433：  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -264,7 +262,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **仅我的网络(子网)**  
   
-         这是比 **“任何计算机”**更安全的设置。 只有网络的本地子网中的计算机可以连接到相应程序或端口。  
+         这是比 **“任何计算机”** 更安全的设置。 只有网络的本地子网中的计算机可以连接到相应程序或端口。  
   
     -   **自定义列表：**  
   

@@ -1,7 +1,7 @@
 ---
 title: 功能参考 (Reporting Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -20,11 +20,12 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7feb24933727c6d107404888f5c3fa5ca58a6a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550078"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括可用于创建、管理和查看报表的若干工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
@@ -34,9 +35,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>本节内容  
  [报表设计器的 F1 帮助](../reporting-services/tools/report-designer-f1-help.md)  
  提供报表设计器及其相关对话框、报表向导和图像向导的帮助。  
-  
- [报表管理器的 F1 帮助](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- 提供报表管理器（它是用于管理单个报表服务器实例的 Web 应用程序）的帮助  
   
  [Reporting Services 配置管理器帮助主题](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  提供用于部署和管理报表服务器实例的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置工具的帮助。  

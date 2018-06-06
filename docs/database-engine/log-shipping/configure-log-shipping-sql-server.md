@@ -3,8 +3,6 @@ title: 配置日志传送 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +13,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46efac6ba982cb9d6f2fa71f0679cd2b45dec73a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e353342652fd2468b1fe4b854c6bc0b96eda5642
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772373"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +65,11 @@ ms.lasthandoff: 05/03/2018
   
 1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击 **“属性”**。  
   
-2.  在 **“选择页”**下，单击 **“事务日志传送”**。  
+2.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
   
 3.  选中 **“将此数据库启用为日志传送配置中的主数据库”** 复选框。  
   
-4.  在 **“事务日志备份”**下，单击 **“备份设置”**。  
+4.  在 **“事务日志备份”** 下，单击 **“备份设置”**。  
   
 5.  在 **“备份文件夹的网络路径”** 框中，键入为事务日志备份文件夹创建的共享的网络路径。  
   
@@ -81,13 +80,13 @@ ms.lasthandoff: 05/03/2018
   
 7.  配置 **“删除文件，如果其保留时间超过”** 和 **“在以下时间内没有执行备份时报警”** 参数。  
   
-8.  请注意 **“备份作业”** 下的 **“计划”**框中列出的备份计划。 如果想要为安装自定义计划，则单击 **“计划”** 并根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。  
+8.  请注意 **“备份作业”** 下的 **“计划”** 框中列出的备份计划。 如果想要为安装自定义计划，则单击 **“计划”** 并根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为： **“使用默认服务器设置”**、 **“压缩备份”**或 **“不压缩备份”**。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为： **“使用默认服务器设置”**、 **“压缩备份”** 或 **“不压缩备份”**。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
-10. 单击 **“确定”**中配置日志传送。  
+10. 单击 **“确定”** 中配置日志传送。  
   
-11. 在 **“辅助服务器实例和数据库”**下，单击 **“添加”**。  
+11. 在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
   
 12. 单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -100,30 +99,30 @@ ms.lasthandoff: 05/03/2018
   
 15. 在 **“复制文件”** 选项卡上的 **“复制文件的目标文件夹”** 框中，键入应该将事务日志备份复制到其中的文件夹的路径。 该文件夹通常位于辅助服务器上。  
   
-16. 请注意 **“复制作业”** 下的 **“计划”**框中列出的复制计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
+16. 请注意 **“复制作业”** 下的 **“计划”** 框中列出的复制计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-17. 在 **“还原”** 选项卡上的 **“还原备份时的数据库状态”**下，选择 **“无恢复模式”** 或 **“备用模式”** 选项。  
+17. 在 **“还原”** 选项卡上的 **“还原备份时的数据库状态”** 下，选择 **“无恢复模式”** 或 **“备用模式”** 选项。  
   
 18. 如果选择了 **“备用模式”** 选项，请选择是否要在进行还原操作时从辅助数据库断开用户连接。  
   
-19. 如果希望延迟辅助服务器上的还原进程，请在 **“延迟还原备份操作至少”**下选择延迟时间。  
+19. 如果希望延迟辅助服务器上的还原进程，请在 **“延迟还原备份操作至少”** 下选择延迟时间。  
   
-20. 在 **“在以下时间内没有执行还原时报警”**下选择警报阈值。  
+20. 在 **“在以下时间内没有执行还原时报警”** 下选择警报阈值。  
   
-21. 请注意 **“还原作业”** 下 **“计划”**框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
+21. 请注意 **“还原作业”** 下 **“计划”** 框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-22. 单击 **“确定”**中配置日志传送。  
+22. 单击 **“确定”** 中配置日志传送。  
   
-23. 在 **“监视服务器实例”**下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”**。  
+23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”**。  
   
     > [!IMPORTANT]  
     >  若要监视此日志传送配置，必须现在添加监视服务器。 若要以后添加监视服务器，则需要先删除此日志传送配置，然后将其替换为包含监视服务器的新配置。  
   
 24. 单击 **“连接”** 连接到想要用作监视服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-25. 在 **“监视器连接”**下，选择备份、副本以及还原作业所使用的连接方法来连接到监视器服务器。  
+25. 在 **“监视器连接”** 下，选择备份、副本以及还原作业所使用的连接方法来连接到监视器服务器。  
   
-26. 在 **“历史记录保持期”**下，选择想要保留日志传送历史记录的时间长度。  
+26. 在 **“历史记录保持期”** 下，选择想要保留日志传送历史记录的时间长度。  
   
 27. 单击“确定” 。  
   

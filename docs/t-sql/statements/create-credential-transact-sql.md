@@ -29,11 +29,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b02629d9e51740907fdb1698e50bc9e8c241d26c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1dbc4b6f4cf3dcb464f8e402bfd9d2579e63078
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582019"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 令牌创建凭据  
  适用于：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- 下面的示例使用 SAS 令牌创建共享访问签名凭据。  若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及创建使用共享访问签名的凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md)。  
+ 下面的示例使用 SAS 令牌创建共享访问签名凭据。  若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及创建使用共享访问签名的凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 >  CREDENTIAL NAME 参数需要名称与容器路径匹配，以 https 开头并且末尾不包含正斜杠。 IDENTITY 参数需要名称 SHARED ACCESS SIGNATURE。 SECRET 参数需要共享访问签名令牌。  

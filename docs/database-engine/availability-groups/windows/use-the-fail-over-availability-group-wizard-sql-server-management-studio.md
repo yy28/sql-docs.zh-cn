@@ -3,7 +3,6 @@ title: 使用故障转移可用性组向导 (SQL Server Management Studio) | Mic
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -21,14 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 26
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60787866e1f26cb577c210c2c8b1a67e996ca871
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756f260b8e2b3459f2ac2bf4368a3e4bdafa74e7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771133"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用故障转移可用性组向导 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **仲裁状态**  
  对于群集类型 WSFC，显示以下可用性副本的仲裁状态之一：  
   
-   |ReplTest1|Description|  
+   |ReplTest1|描述|  
    |-----------|-----------------|  
    |**标准仲裁**|群集已开始标准仲裁。|  
    |**强制仲裁 (Forced quorum)**|群集已开始强制仲裁。|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/03/2018
  **可用性模式**  
  显示服务器实例的以下可用性模式之一：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**同步提交**|在同步提交模式下，在提交事务之前，同步提交主副本要等待同步提交辅助副本确认它已完成硬化日志。 同步提交模式可确保在给定的辅助数据库与主数据库同步时，充分保护已提交的事务。|  
 |**异步提交**|在异步提交模式下，主副本无需等待确认异步提交辅助副本已硬化日志，便可提交事务。 异步提交模式可最大限度地减少辅助数据库上的事务滞后时间，但允许它们滞后于主数据库，因此可能会导致某些数据丢失。|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
  **故障转移模式**  
  显示服务器实例的以下故障转移模式之一：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**自动**|只要辅助副本与主副本进行同步，配置为进行自动故障转移的辅助副本也会支持计划的手动故障转移。|  
 |**Manual**|存在两种类型的手动故障转移：计划的（不会造成数据丢失）和强制的（可能造成数据丢失）。 对于给定的辅助副本，仅支持这两种类型中的一种，具体取决于可用性模式，而对于同步提交模式，则取决于辅助副本的同步状态。 若要确定给定的辅助副本当前所支持的手动故障转移的形式，请参阅此网格的 **“故障转移就绪”** 列。|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 05/03/2018
  **“故障转移就绪”**  
  显示辅助副本的以下故障转移就绪情况之一：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**无数据丢失**|此辅助副本当前支持计划的故障转移。 只有当同步提交模式的辅助副本当前与主副本进行同步时，才会出现此值。|  
 |**数据丢失，警告(** *#* **)**|此辅助副本当前支持强制故障转移（可能造成数据丢失）。 只要辅助副本不与主副本进行同步，就会出现此值。 有关可能的数据丢失的信息，请单击数据丢失警告链接。|  
