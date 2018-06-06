@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708935"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 > 在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
-若要使用电子邮件或寻呼程序向操作员发送通知，必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理配置为使用数据库邮件。 有关详细信息，请参阅 [数据库邮件](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)。  
+若要使用电子邮件或寻呼程序向操作员发送通知，必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理配置为使用数据库邮件。 有关详细信息，请参阅 [数据库邮件](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)。  
   
 可以将操作员定义为一组个人的别名。 这样，该组的所有成员就可以同时收到通知。 有关详细信息，请参阅 [运算符](../../ssms/agent/operators.md)。  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定义了下表中列出的子系统：  
   
-|子系统名称|Description|  
+|子系统名称|描述|  
 |--------------|-----------|  
 |Microsoft ActiveX 脚本|运行 ActiveX 脚本作业步骤。<br /><br />**警告** 在未来版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |操作系统 (**CmdExec**)|运行可执行程序。|  
@@ -174,16 +175,16 @@ ms.lasthandoff: 05/03/2018
   
 通过以下任务以开始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理：  
   
-|Description|主题|  
+|描述|主题|  
 |-----------|-----|  
 |介绍如何配置 SQL Server 代理。|[配置 SQL Server 代理](../../ssms/agent/configure-sql-server-agent.md)|  
 |介绍如何启动、停止和暂停 SQL Server 代理服务。|[启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |介绍为 SQL Server 代理服务指定帐户时的注意事项。|[为 SQL Server 代理服务选择帐户](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |介绍如何使用 SQL Server 代理错误日志。|[SQL Server 代理错误日志](../../ssms/agent/sql-server-agent-error-log.md)|  
 |介绍如何使用性能对象。|[使用性能对象](../../ssms/agent/use-performance-objects.md)|  
-|介绍维护计划向导，它是一个实用工具，可用来帮助您创建作业、警报和运算符以对 SQL Server 实例进行自动管理。|[使用维护计划向导](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|介绍维护计划向导，它是一个实用工具，可用来帮助您创建作业、警报和运算符以对 SQL Server 实例进行自动管理。|[使用维护计划向导](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |介绍如何使用 SQL Server 代理将管理任务自动化。|[自动执行管理任务（SQL Server 代理）](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>另请参阅  
-[外围应用配置器](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[外围应用配置器](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

@@ -3,7 +3,6 @@ title: 故障转移群集实例的故障转移策略 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -12,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4b63755975f79e5dc601b952cc09eb5ab144116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772563"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
  查看 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)，因为此系统存储过程在故障条件级别中起重要作用。  
   
-|Level|条件|Description|  
+|Level|条件|描述|  
 |-----------|---------------|-----------------|  
 |0|无自动故障转移或重新启动|表示对于任何故障条件将不自动触发故障转移或重新启动。 此级别仅适用于系统维护目的。|  
 |@shouldalert|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  

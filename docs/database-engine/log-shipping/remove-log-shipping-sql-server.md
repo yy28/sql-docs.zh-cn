@@ -3,8 +3,6 @@ title: 删除日志传送 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +14,15 @@ helpviewer_keywords:
 - deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 18
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd0f022306bb9b171165dc35bd0587522a18d78f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9728613d59d3ae060d247431184d270ea759cbd6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771703"
 ---
 # <a name="remove-log-shipping-sql-server"></a>删除日志传送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
   
-3.  在 **“选择页”**下，单击 **“事务日志传送”**。  
+3.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
   
 4.  清除 **“将此数据库启用为日志传送配置中的主数据库”** 复选框。  
   

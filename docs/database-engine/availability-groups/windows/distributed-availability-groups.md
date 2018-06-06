@@ -3,7 +3,6 @@ title: 分布式可用性组 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b2f8ba15720726e177884aa4481fb43dae6084f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769333"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)进行了补充。
+分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)进行了补充。
 
 > [!NOTE]
 > “DAG”不是 Distributed Availability Group（分布式可用性组）的正式缩写，因为此缩写已用于 Exchange Database Availability Group（数据库可用性组）功能。 此 Exchange 功能与 SQL Server 可用性组或分布式可用性组无关。
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 
 ![分布式可用性组及其数据移动][2]
 
-使 AG 2 的主要副本接受插入、更新和删除的唯一方法是从 AG 1 手动故障转移分布式可用性组。 在前面的图中，因为 AG 1 包含数据库的可写入副本，所以发出故障转移将使 AG 2 成为可以处理插入、更新和删除的可用性组。 有关如何将一个分布式可用性组故障转移到另一个分布式可用性组的信息，请参阅[故障转移到次要可用性组]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)。
+使 AG 2 的主要副本接受插入、更新和删除的唯一方法是从 AG 1 手动故障转移分布式可用性组。 在前面的图中，因为 AG 1 包含数据库的可写入副本，所以发出故障转移将使 AG 2 成为可以处理插入、更新和删除的可用性组。 有关如何将一个分布式可用性组故障转移到另一个分布式可用性组的信息，请参阅[故障转移到次要可用性组]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)。
 
 > [!NOTE]
 > SQL Server 2016 中的分布式可用性组支持通过使用选项 FORCE_FAILOVER_ALLOW_DATA_LOSS 仅从一个可用性组故障转移到另一个可用性组。
@@ -90,7 +90,7 @@ ms.lasthandoff: 05/03/2018
 
 如果两个 WSFC 群集加入同一域（不受信任的域），创建分布式可用性组时无需执行任何特殊操作。 对于未加入同一域的可用性组和 WSFC 群集，通过证书启用分布式可用性组，方法类似于为独立于域的可用性组创建可用性组。 若要查看如何配置分布式可用性组的证书，请遵循[创建独立于域的可用性组](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)下的步骤 3-13。
 
-对于分布式可用性组，每个基础可用性组中的主要副本必须具有彼此的证书。 如果已有未使用证书的终结点，请使用 [ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql) 重新配置这些终结点，以反映证书的使用。
+对于分布式可用性组，每个基础可用性组中的主要副本必须具有彼此的证书。 如果已有未使用证书的终结点，请使用 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) 重新配置这些终结点，以反映证书的使用。
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>分布式可用性组使用方案
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 
 ![传统多站点可用性组][4]
 
-分布式可用性组可为跨多个数据中心的可用性组提供更加灵活的部署方案。 甚至可以在使用了[日志传送]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server)等功能的环境中使用分布式可用性组。 但是，与传统可用性组不同，分布式可用性组不能包含事务延迟的应用程序。 这意味着，对于错误更新或删除数据的人为过失事件，可用性组或分布式可用性组无法提供帮助。
+分布式可用性组可为跨多个数据中心的可用性组提供更加灵活的部署方案。 甚至可以在使用了[日志传送]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)等功能的环境中使用分布式可用性组。 但是，与传统可用性组不同，分布式可用性组不能包含事务延迟的应用程序。 这意味着，对于错误更新或删除数据的人为过失事件，可用性组或分布式可用性组无法提供帮助。
 
 分布式可用性组是松散耦合的，在这种情况下，这意味着它们无需单个 WSFC 群集，并且它们由 SQL Server 维护。 由于 WSFC 群集是单独进行维护的，且最初在这两个可用性组之间异步同步，因此很容易在其他站点配置灾难恢复。 每个可用性组中的主要副本都同步其自己的次要副本。
 
@@ -149,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 
 在前面两个示例中，三个可用性组中至多可以具有 27 个副本，这些副本可用于只读查询。 
 
-[只读路由]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)并不完全适用于分布式可用性组。 更具体地说，
+[只读路由]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)并不完全适用于分布式可用性组。 更具体地说，
 
 1. 只读路由可配置，且适用于分布式可用性组的主要可用性组。 
 2. 只读路由可配置，但不用于分布式可用性组的次要可用性组。 如果使用侦听器连接到次要可用性组，则所有查询将转到次要可用性组的主要副本。 否则，将需要配置每个副本，以允许将所有连接作为次要副本并直接访问它们。 但如果故障转移之后，次要可用性组变为主要可用性组，只读路由仍适用。 在 SQL Server 2016 的更新或将来的 SQL Server 版本中，此行为可能会发生更改。
@@ -157,7 +157,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>初始化分布式可用性组中的次要可用性组
 
-分布式可用性组将[自动种子设定]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)设计为用于初始化第二个可用性组上主要副本的主要方法。 如果执行以下操作，将可在第二个可用性组的主要副本上进行完整的数据库还原：
+分布式可用性组将[自动种子设定]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)设计为用于初始化第二个可用性组上主要副本的主要方法。 如果执行以下操作，将可在第二个可用性组的主要副本上进行完整的数据库还原：
 
 1. 通过 WITH NORECOVERY 还原数据库备份。
 2. 如有必要，通过 WITH NORECOVERY 还原适当的事务日志备份。
@@ -168,7 +168,7 @@ ms.lasthandoff: 05/03/2018
 
 * 第二个可用性组的主要副本上的 `sys.dm_hadr_automatic_seeding` 中所示的输出将显示 `current_state` 失败，原因是“种子设定检查消息超时”。
 
-* 第二个可用性组的主要副本上的当前 SQL Server 日志将显示种子设定已生效，且 [LSN]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) 已同步。
+* 第二个可用性组的主要副本上的当前 SQL Server 日志将显示种子设定已生效，且 [LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) 已同步。
 
 * 第一个可用性组的主要副本上的 `sys.dm_hadr_automatic_seeding` 中所示的输出将显示 COMPLETED 的 current_state。 
 

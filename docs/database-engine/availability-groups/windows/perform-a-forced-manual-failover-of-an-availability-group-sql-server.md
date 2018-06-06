@@ -3,7 +3,6 @@ title: 执行可用性组的强制手动故障转移 (SQL Server) | Microsoft Do
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 83
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa61e85b6e8db7a1e3dc967230ea2c939c13f2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2561d24c8d229a74ab4bf3379338c4ba41ae335
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769563"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  执行强制故障转移之后，故障转移到的辅助副本将变成新的主副本。 但是，要使客户端可访问可用性副本，您可能需要重新配置 WSFC 仲裁或调整可用性组的可用性模式配置，如下所示：  
   
-    -   **如果你故障转移到 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外：**调整 WSFC 节点的仲裁投票以反映新的可用性组配置。 如果承载目标辅助副本的 WSFC 节点不具有 WSFC 仲裁投票，则可能需要强制 WSFC 仲裁。  
+    -   **如果你故障转移到 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外：** 调整 WSFC 节点的仲裁投票以反映新的可用性组配置。 如果承载目标辅助副本的 WSFC 节点不具有 WSFC 仲裁投票，则可能需要强制 WSFC 仲裁。  
   
         > [!NOTE]  
         >  仅当两个可用性副本（包含之前的主副本）都配置为使用同步提交模式和自动故障转移时， [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 才存在。  
@@ -236,7 +236,7 @@ ms.lasthandoff: 05/03/2018
   
         -   [在无仲裁情况下强制启动 WSFC 群集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   **如果你故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外：**我们建议你考虑调整新的主要副本上和其他次要副本上的可用性模式和故障转移模式，以反映你所需的同步提交模式和自动故障转移配置。  
+    -   **如果你故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外：** 我们建议你考虑调整新的主要副本上和其他次要副本上的可用性模式和故障转移模式，以反映你所需的同步提交模式和自动故障转移配置。  
   
         > [!NOTE]  
         >  只有在当前主副本配置为同步提交模式时， [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 才存在。  

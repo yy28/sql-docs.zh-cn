@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4454cfd34cf23c1fb22417acf275d7172c16063b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563715"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系统版本控制临时表与内存优化表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   无论创建者是最终用户还是系统，用于内存优化系统版本控制表的历史记录表都必须基于磁盘。  
   
--   仅影响当前表（内存中）的查询可用于 [本机编译的 T-SQL 模块](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx)。 本机编译的模块中不支持使用 FOR SYSTEM TIME 子句的临时查询。 支持在即席查询和非本机模块中将 FOR SYSTEM TIME 子句与内存优化表一起使用。  
+-   仅影响当前表（内存中）的查询可用于 [本机编译的 T-SQL 模块](https://msdn.microsoft.com/en-us/library/dn133184.aspx)。 本机编译的模块中不支持使用 FOR SYSTEM TIME 子句的临时查询。 支持在即席查询和非本机模块中将 FOR SYSTEM TIME 子句与内存优化表一起使用。  
   
 -   当 **SYSTEM_VERSIONING = ON**时，系统将自动创建内部内存优化临时表，以接受对内存优化当前表执行更新和删除操作时所产生的最新系统版本控制更改。  
   

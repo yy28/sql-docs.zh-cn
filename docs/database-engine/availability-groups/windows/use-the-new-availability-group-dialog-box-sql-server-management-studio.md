@@ -3,7 +3,6 @@ title: 使用“新建可用性组”对话框 (SQL Server Management Studio) | 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -13,14 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 caps.latest.revision: 40
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b6fc2746ab71011d50a563a489178dc0ef4b7dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1432b9b6dc32096cd535cbd7947689c6067436b2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770263"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用“新建可用性组”对话框 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  使用 **“常规”** 页上的 **“可用性组名称”** 字段，输入新的可用性组的名称。 此名称必须是有效的 SQL Server 标识符，该标识符在 WSFC 群集的所有可用性组中保持唯一。 可用性组名称的最大长度为 128 个字符。  
   
-6.  在 **“可用性数据库”** 网格中，单击 **“添加”** ，然后输入希望属于此可用性组的本地数据库的名称。 对要添加的每个数据库重复此操作。 单击 **“确定”**后，该对话框将验证指定的数据库是否满足属于可用性组的先决条件。 有关先决条件的详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
+6.  在 **“可用性数据库”** 网格中，单击 **“添加”** ，然后输入希望属于此可用性组的本地数据库的名称。 对要添加的每个数据库重复此操作。 单击 **“确定”** 后，该对话框将验证指定的数据库是否满足属于可用性组的先决条件。 有关先决条件的详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 7.  在 **“可用性数据库”** 网格中，单击 **“添加”** ，然后输入要承载辅助副本的服务器实例名称。 该对话框将不尝试连接到这些实例。 如果指定不正确的服务器名称，将添加辅助副本，但是您将无法连接到该副本。  
   

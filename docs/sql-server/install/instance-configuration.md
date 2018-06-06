@@ -3,12 +3,9 @@ title: 安装向导帮助 | Microsoft Docs
 ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +14,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772763"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="uielement-list"></a>UIElement 列表  
   
-|Description|默认目录|建议|  
+|描述|默认目录|建议|  
 |-----------------|-----------------------|---------------------|  
 |数据根目录|C:\Program Files\Microsoft SQL Server\MSASnn.\<InstanceID>\OLAP\Data\ |确保通过限制权限对 \Program files\Microsoft SQL Server\ 文件夹进行保护。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录放置在附加到系统上的最高性能存储区中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
 |日志文件目录|C:\Program Files\Microsoft SQL Server\MSASnn.\<InstanceID>\OLAP\Log\ |这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录，该目录包含 FlightRecorder 日志。 如果要延长网络流量记录器持续时间，请确保该日志目录有足够的空间。|  
@@ -173,7 +171,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="uielement-list"></a>UIElement 列表  
   
-|Description|支持的存储类型|默认目录|建议|  
+|描述|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |数据根目录|本地磁盘、SMB 文件服务器、共享存储* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。|  
 |用户数据库目录|本地磁盘、SMB 文件服务器、共享存储*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data |用户数据目录的最佳实践取决于工作量和性能要求。|  
@@ -185,7 +183,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的故障转移群集实例支持的存储类型和默认目录，用户可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中配置这些内容。  
   
-|Description|支持的存储类型|默认目录|建议|  
+|描述|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |数据根目录|共享存储、SMB 文件服务器|\<驱动器:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。|  
 |用户数据库目录|共享存储、SMB 文件服务器|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|用户数据目录的最佳实践取决于工作量和性能要求。|  
@@ -225,7 +223,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="uielement-list"></a>UIElement 列表  
   
-|Description|默认目录|建议|  
+|描述|默认目录|建议|  
 |-----------------|-----------------------|---------------------|  
 |数据根目录 |C:\Program Files\Microsoft SQL Server\MSASnn.\<InstanceID>\OLAP\Data |确保通过限制权限对 \Program files\Microsoft SQL Server\ 文件夹进行保护。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录放置在附加到系统上的最高性能存储区中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
 |日志文件目录|C:\Program Files\Microsoft SQL Server\MSASnn.\<InstanceID>\OLAP\Log |这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录，该目录包含 FlightRecorder 日志。 如果要延长网络流量记录器持续时间，请确保该日志目录有足够的空间。|  
@@ -369,7 +367,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例的数据和日志目录  
  下表列出了用户可以在安装过程中配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例支持的存储类型和默认目录。  
   
-|Description|支持的存储类型|默认目录|建议|  
+|描述|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**数据目录**|本地磁盘、SMB 文件服务器、共享存储* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。<br /><br /> **temdb** 目录的最佳实践取决于工作量和性能要求。 指定多个文件夹/驱动器以在多个卷上分布数据文件。|  
 |**日志目录**|本地磁盘、SMB 文件服务器、共享存储*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data|确保日志目录有足够的空间。|  
@@ -379,7 +377,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的数据和日志目录  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的故障转移群集实例支持的存储类型和默认目录，用户可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中配置这些内容。  
   
-|Description|支持的存储类型|默认目录|建议|  
+|描述|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**tempdb** 数据目录|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。<br /><br /> 确保指定的一个目录或多个目录（如果指定了多个文件）对于所有群集节点有效。 在故障转移期间，如果 **tempdb** 目录在故障转移目标节点上不可用，则 SQL Server 资源将无法联机。|  
 |**tempdb** 日志目录|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|用户数据目录的最佳实践取决于工作量和性能要求。<br /><br /> 请确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 **tempdb** 目录在故障转移目标节点上不可用，则 SQL Server 资源将无法联机。<br /><br /> 确保日志目录有足够的空间。|  

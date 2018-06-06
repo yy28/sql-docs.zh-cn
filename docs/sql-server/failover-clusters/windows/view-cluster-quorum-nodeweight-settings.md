@@ -3,7 +3,6 @@ title: 查看群集仲裁 NodeWeight 设置 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 caps.latest.revision: 17
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1a8becafee57802c7ed68233894a32b3f82d68f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38ecc6f872647423998f2429b9afcc840ddd8be3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772483"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>查看群集仲裁 NodeWeight 设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##### <a name="to-view-nodeweight-settings"></a>查看 NodeWeight 设置  
   
-1.  通过 **“以管理员身份运行”**启动提升的 Windows PowerShell。  
+1.  通过 **“以管理员身份运行”** 启动提升的 Windows PowerShell。  
   
 2.  导入 `FailoverClusters` 模块以启用群集 commandlet。  
   
@@ -94,7 +94,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##### <a name="to-view-nodeweight-settings"></a>查看 NodeWeight 设置  
   
-1.  通过 **“以管理员身份运行”**启动提升的命令提示符。  
+1.  通过 **“以管理员身份运行”** 启动提升的命令提示符。  
   
 2.  使用 **cluster.exe** 以返回节点状态和 NodeWeight 值  
   

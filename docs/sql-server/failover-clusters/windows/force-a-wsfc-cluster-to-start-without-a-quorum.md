@@ -3,7 +3,6 @@ title: 在无仲裁情况下强制启动 WSFC 群集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-caps.latest.revision: 21
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2ee5f8db6c52e2ce28a8e1d4fc894791e38ebf6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7bf3d4cc778ae9c92a994d33223433ca3537422
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772093"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动 WSFC 群集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动群集  
   
-1.  通过 **“以管理员身份运行”**启动提升的 Windows PowerShell。  
+1.  通过 **“以管理员身份运行”** 启动提升的 Windows PowerShell。  
   
 2.  导入 `FailoverClusters` 模块以启用群集 commandlet。  
   
@@ -92,7 +91,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 1.  使用远程桌面连接到所需的群集节点，以强制联机。  
   
-2.  通过 **“以管理员身份运行”**启动提升的命令提示符。  
+2.  通过 **“以管理员身份运行”** 启动提升的命令提示符。  
   
 3.  使用 **net.exe** 以确保本地群集服务已停止。  
   

@@ -3,7 +3,6 @@ title: 使用 SysPrep 安装 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: 29
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5ae0e2aec2dc85d8a95bb4d56f4d5529e16160e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7732cf31c3bc96531c5cf533f868ac4e3e3729fd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770643"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安装 SQL Server
 
@@ -88,13 +88,13 @@ ms.lasthandoff: 05/03/2018
   
 2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“高级”页上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”。 
   
-3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 4. 在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果你不想包括更新，则取消选中“包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新”复选框。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。 
   
 5. 在“安装安装程序文件”页上，安装程序将提供下载、提取和安装这些安装程序文件的进度。 如果找到了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的更新，并且指定了包括该更新，则也将安装该更新。 
   
-6. 系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+6. 系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 7. 在“准备映像类型”页中，选择“准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例”。 
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。 
   
-10. 在 **“准备映像规则”** 页上，系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+10. 在 **“准备映像规则”** 页上，系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 11. 在“实例配置”页上，指定实例的实例 ID。 单击 **“下一步”** 继续。 
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 05/03/2018
   
 12. **“磁盘空间要求”** 页计算指定的功能所需的磁盘空间， 然后将所需空间与可用磁盘空间进行比较。 
   
-13. 系统配置检查器将运行准备映像规则来针对您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+13. 系统配置检查器将运行准备映像规则来针对您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 14. **“已可以准备映像”** 页显示您在安装过程中指定的安装选项的树视图。 在此页上，安装程序指示是启用还是禁用产品更新功能以及最终的更新版本。 若要继续，请单击 **“准备”**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将首先安装所选功能的必备组件，然后安装所选功能。 
   
@@ -144,11 +144,11 @@ ms.lasthandoff: 05/03/2018
   
 1. 如果在您的计算机的映像中包括了一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，则在“开始”菜单中会看到一个相应的快捷方式。 你也可以启动安装中心，然后在“高级”页上单击“已准备独立实例的映像完成”。 
   
-2. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+2. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 3. 在 **“安装程序支持文件”** 页，单击 **“安装”** 以安装安装程序支持文件。 
   
-4. 系统配置检查器将在安装继续之前验证计算机的系统状态。 检查完成后，请单击 **“下一步”** 继续。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+4. 系统配置检查器将在安装继续之前验证计算机的系统状态。 检查完成后，请单击 **“下一步”** 继续。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 5. 在 **“产品密钥”** 页上，选择某一选项按钮，该按钮指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 如果您在安装 Evaluation 版，则 180 天的试用期将从您完成此步骤时开始。 
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 05/03/2018
   
      **安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。 
   
-8. 在 **“查看功能”** 页上，您将看到在安装的准备步骤中包括的所选功能和组件。 如果您要向未在已准备实例中包括的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加更多功能，则必须首先完成此步骤以完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后从 **“安装中心”** 的 **“添加功能”**上添加功能。 
+8. 在 **“查看功能”** 页上，您将看到在安装的准备步骤中包括的所选功能和组件。 如果您要向未在已准备实例中包括的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加更多功能，则必须首先完成此步骤以完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后从 **“安装中心”** 的 **“添加功能”** 上添加功能。 
   
     > [!NOTE]  
     >  您可以添加可用于您正在安装的产品版本的功能。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
@@ -210,7 +210,7 @@ ms.lasthandoff: 05/03/2018
   
 17. 在 **“错误报告”** 页上，指定要发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 以帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的信息。 默认情况下，将启用用于错误报告的选项。 
   
-18. 在 **“完整映像规则”** 页上，系统配置检查器将运行完整的映像规则，以便使用您所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置来验证您的计算机配置。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+18. 在 **“完整映像规则”** 页上，系统配置检查器将运行完整的映像规则，以便使用您所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置来验证您的计算机配置。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 19. **“已准备好完成映像”** 页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“安装”**。 
   
@@ -230,7 +230,7 @@ ms.lasthandoff: 05/03/2018
   
 2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能，请单击“高级”页上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”。 
   
-3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 4. 在“安装程序支持文件”页，单击 **“安装”** 以安装安装程序支持文件。 
   
@@ -240,11 +240,11 @@ ms.lasthandoff: 05/03/2018
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。 
   
-7. 在 **“准备映像规则”** 页上，系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+7. 在 **“准备映像规则”** 页上，系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 8. “磁盘空间要求”页将计算指定的功能所需的磁盘空间， 然后将所需空间与可用磁盘空间进行比较。 
   
-9. 在 **“准备映像规则”** 页上，系统配置检查器将运行准备映像规则，以便使用您所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。 您可以通过单击 **“显示详细信息”**在屏幕上查看详情，或通过单击 **“查看详细报告”**从而以 HTML 报告的形式进行查看。 
+9. 在 **“准备映像规则”** 页上，系统配置检查器将运行准备映像规则，以便使用您所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 10. **“已可以准备映像”** 页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“安装”**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将首先安装所选功能的必备组件，然后安装所选功能。 
   

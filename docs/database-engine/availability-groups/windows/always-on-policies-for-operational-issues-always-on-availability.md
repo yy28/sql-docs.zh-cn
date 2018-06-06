@@ -3,7 +3,6 @@ title: 针对运行问题的 AlwaysOn 策略 - AlwaysOn 可用性 | Microsoft Do
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc2a4f92bad4d12a8fd1b54601a53e3d801d23e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fe881c82173877dba98e99c1af5b197ce5fba20
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768983"
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>针对运行问题的 AlwaysOn 策略 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
  用户定义策略可以使用任何可用的 PBM 方面，包括那些由 AlwaysOn 预定义策略使用的方面（请参阅本主题前面的 [预定义策略和问题](#Always OnPBM)）。 服务器方面提供了下列用于监视 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况的属性：（**IsHadrEnabled** 和 **HadrManagerStatus**）。 服务器方面还提供了下列用于监视 WSFC 群集配置的策略： **ClusterQuorumType**和 **ClusterQuorumState**。  
   
- 有关详细信息，请参阅 [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx) （SQL Server AlwaysOn 团队博客）。  
+ 有关详细信息，请参阅 [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) （SQL Server AlwaysOn 团队博客）。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -122,9 +122,9 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [AlwaysOn 运行状况模型第 1 部分 - 运行状况模型体系结构](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [AlwaysOn 运行状况模型第 1 部分 - 运行状况模型体系结构](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
--   [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

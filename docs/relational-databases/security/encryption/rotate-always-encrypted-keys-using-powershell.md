@@ -15,11 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0b16ad6c18bec1954d9c52ada5fd22202e3ff9da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fed2dac0cb435e906a3c880022f53fdc35880754
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34581979"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 轮换 Always Encrypted 密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -312,7 +313,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 |步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | “否”
 |步骤 4. 生成新的列加密密钥，使用列主密钥对其加密，并在数据库中创建列加密密钥元数据。  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注意：** 使用内部生成并加密列加密密钥的 cmdlet 的变体。<br>实际上，该 cmdlet 发布 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句来创建密钥元数据。 | 是 | 是
 |步骤 5. 查找使用旧的列加密密钥加密的所有列。 | [SQL Server 管理对象 (SMO) 编程指南](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | “否” | 是
-|步骤 6. 为每个受影响的列创建 *SqlColumnEncryptionSettings* 对象。  SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 在此情况下，该对象应指定使用新的列加密密钥加密受影响的列。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeysettings) | “否” | “否”
+|步骤 6. 为每个受影响的列创建 *SqlColumnEncryptionSettings* 对象。  SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 在此情况下，该对象应指定使用新的列加密密钥加密受影响的列。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | “否” | “否”
 |步骤 7. 使用新的列加密密钥重新加密步骤 5 中标识的列。 | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步骤可能需要较长时间。 你的应用程序可能无法通过整个操作或部分操作访问表，具体取决于你所选择的方法（联机或脱机）。 | 是 | 是
 |步骤 8. 删除旧的列加密密钥的元数据。 | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | “否” | 是
 

@@ -3,7 +3,6 @@ title: “结果”页（AlwaysOn 可用性组向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ f1_keywords:
 - sql13.swb.adddatabasewizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33de5f659afe7e81cdc5b04c7bcf792caa5deea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2e9eafbd63a68d6b996494f51f0c757e1eae1ee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768673"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  **结果**  
  对于每个已完成的步骤，显示下列超链接文本之一。  
   
-|结果|Description|  
+|结果|描述|  
 |------------|-----------------|  
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
 |**成功**|指示此验证步骤已成功完成。|  

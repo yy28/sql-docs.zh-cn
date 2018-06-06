@@ -3,7 +3,6 @@ title: 调整可用性组的压缩 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: MikeRayMSFT
+author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 9576b598e4bbdbab86708691540c1bae2b238b24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ab713b7089f4c76214fe5e290196757cce43317
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770933"
 ---
 # <a name="tune-compression-for-availability-group"></a>调整可用性组的压缩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
 下表显示将更改 SQL Server 的默认压缩行为的跟踪标志。 
 
-跟踪标志 | Description
+跟踪标志 | 描述
 ------------- | -------------
 1462          | 对包含异步副本的可用性组禁用日志流压缩。 默认情况下，对异步副本启用此功能，以优化网络带宽。
 9567          | 对自动种子设定过程中的可用性组启用数据流压缩。 自动种子设定过程中，压缩可大幅缩短传输时间，并且将增加处理器上的负载。

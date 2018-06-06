@@ -3,8 +3,6 @@ title: 从日志传送配置中删除辅助数据库 (SQL Server) | Microsoft Do
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +16,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d78ce5aa542301d6fc3ade415a24a24216fd87f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cc92606ae505a48e66abdc95886d4081e40c82c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771663"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>从日志传送配置中删除辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
   
-3.  在 **“选择页”**下，单击 **“事务日志传送”**。  
+3.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
   
-4.  在 **“辅助服务器实例和数据库”**下，单击要删除的数据库。  
+4.  在 **“辅助服务器实例和数据库”** 下，单击要删除的数据库。  
   
 5.  单击 **“删除”**。  
   

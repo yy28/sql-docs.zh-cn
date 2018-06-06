@@ -21,11 +21,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 44f4992239c15b7382ede007b5da47ef13b03566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550528"
 ---
 # <a name="authentication-with-the-report-server"></a>针对报表服务器的身份验证
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="authentication-types"></a>身份验证类型  
  请求对报表服务器内容或操作进行访问的所有用户或应用程序都必须首先使用对报表服务器配置的身份验证类型进行身份验证，然后才允许访问。 下表介绍了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持的身份验证类型。  
   
-|AuthenticationType 名称|HTTP 身份验证层值|默认情况下是否使用|Description|  
+|AuthenticationType 名称|HTTP 身份验证层值|默认情况下是否使用|描述|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|是|尝试首先将 Kerberos 用于 Windows 集成的身份验证，但是如果 Active Directory 无法将客户端请求的票证授予报表服务器，则回退到 NTLM。 仅当票证不可用时，Negotiate 才会回退到 NTLM。 如果第一次尝试导致出错而不是缺少票证，则报表服务器不会进行再次尝试。|  
 |RSWindowsNTLM|NTLM|是|将 NTLM 用于 Windows 集成的身份验证。<br /><br /> 将不会在其他请求中对凭据进行委托或模拟。 后续请求将遵循新的质询响应顺序。 根据网络安全设置的不同，系统可能提醒用户输入凭据，或者会以透明方式处理身份验证请求。|  
@@ -89,7 +90,6 @@ ms.lasthandoff: 05/03/2018
 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [实现安全扩展插件](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[配置报表生成器访问权限](../../reporting-services/report-server/configure-report-builder-access.md)   
 [安全扩展插件概述](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Reporting Services 中的身份验证](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Reporting Services 中的授权](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

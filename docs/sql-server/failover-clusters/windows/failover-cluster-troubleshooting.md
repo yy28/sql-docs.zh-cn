@@ -3,7 +3,6 @@ title: 故障转移群集故障排除 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2015
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03a5f0599ef3851b77e298f2f14ec1a857816eee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772525"
 ---
 # <a name="failover-cluster-troubleshooting"></a>故障转移群集疑难解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>问题：在迁移到另一个节点之后，SQL Server 无法登录到网络  
  **问题 1：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务帐户无法与域控制器取得联系。  
   
- **解决方法 1：**检查事件日志以查看是否存在网络连接问题，例如适配器故障或 DNS 问题。 验证是否能成功对域控制器运行 ping 命令。  
+ **解决方法 1：** 检查事件日志以查看是否存在网络连接问题，例如适配器故障或 DNS 问题。 验证是否能成功对域控制器运行 ping 命令。  
   
  **问题 2：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户密码在所有群集节点上并非全都一致，或者节点没有重启从失败的节点迁移过来的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。  
   

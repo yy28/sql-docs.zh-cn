@@ -3,22 +3,21 @@ title: 配置 FailureConditionLevel 属性设置 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-caps.latest.revision: 29
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b244e64ff7c648572793349839428ed4bc2b271e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0197b89a1109a1a834b2bb285da3ac4e71a9da21
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772383"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-configure-failureconditionlevel-settings"></a>配置 FailureConditionLevel 设置  
   
-1.  通过 **“以管理员身份运行”**启动提升的 Windows PowerShell。  
+1.  通过 **“以管理员身份运行”** 启动提升的 Windows PowerShell。  
   
 2.  导入 **FailoverClusters** 模块以启用群集 cmdlet。  
   

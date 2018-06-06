@@ -3,7 +3,6 @@ title: 连接到现有的次要副本页 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ f1_keywords:
 - sql13.swb.addreplicawizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: 7
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca86da903a230aeb3aa030ce8705b905175d1807
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b1429d1b439b4361ef8c1e2e3fc42e630b695b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768363"
 ---
 # <a name="connect-to-existing-secondary-replicas-page"></a>连接到现有的次要副本页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  显示将承载可用性副本的服务器实例的名称。  
   
  **连接为**  
- 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示**“未连接”**，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
+ 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示 **“未连接”**，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
   
  **“连接”**  
  如果此服务器实例正基于与您将需要连接到的其他服务器实例不同的帐户运行，则单击此选项。  

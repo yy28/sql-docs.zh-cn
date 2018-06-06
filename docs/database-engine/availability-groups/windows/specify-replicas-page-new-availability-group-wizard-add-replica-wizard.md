@@ -3,7 +3,6 @@ title: “指定副本”页（新建可用性组向导：添加副本向导）|
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ f1_keywords:
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23035b6eb4d2089917777d5bb19bb4a432e67164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2802a87f9e4803451d3cb40860585910f943a90
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769873"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
 -   如果每个服务器实例都基于域服务帐户运行，也就是说，如果 **“SQL Server 服务帐户”** 列显示每个服务器实例的域服务帐户，则单击 **“下一步”**。  
   
--   如果任何服务器实例基于非域服务帐户运行，则您需要首先对您的服务器实例进行手动更改，然后才能在向导中继续执行。 在此情况下，单击 **“下一步”** 将会显示一个警告对话框；您应该单击 **“否”**，从而返回到**“端点”** 选项卡。在 **“指定副本”** 页离开向导时，对 **“SQL Server 服务帐户”** 列显示非域服务帐户的每个服务器实例进行以下更改之一：  
+-   如果任何服务器实例基于非域服务帐户运行，则您需要首先对您的服务器实例进行手动更改，然后才能在向导中继续执行。 在此情况下，单击 **“下一步”** 将会显示一个警告对话框；您应该单击 **“否”**，从而返回到 **“端点”** 选项卡。在 **“指定副本”** 页离开向导时，对 **“SQL Server 服务帐户”** 列显示非域服务帐户的每个服务器实例进行以下更改之一：  
   
     -   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户更改为某一域帐户。 有关详细信息，请参阅[为 SQL Server 更改服务启动帐户（SQL Server 配置管理器）](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)  
   

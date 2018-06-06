@@ -3,7 +3,6 @@ title: AlwaysOn 可用性组的 Transact-SQL 语句 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5ef4a3f3c578041c5c1595048e82a981a0435e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a483026bde8d7b70ab380ac9426370c4fff98db
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771193"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性组的 Transact-SQL 语句
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
  [DROP AVAILABILITY GROUP](../../../t-sql/statements/drop-availability-group-transact-sql.md) 删除指定的可用性组及其所有副本。 DROP AVAILABILITY GROUP 可以从 WSFC 故障转移群集的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 节点上运行。  
   
-##  <a name="Restrictions"></a> 有关 AVAILABILITY GROUP Transact-SQL 语句的限制  
+##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
  CREATE AVAILABILITY GROUP、ALTER AVAILABILITY GROUP 和 DROP AVAILABILITY GROUP [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句具有以下限制：  
   
 -   执行这些语句需要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上启用 HADR 服务，但 DROP AVAILABILITY GROUP 除外。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  

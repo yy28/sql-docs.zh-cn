@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e5dfdc3c08bd548530e4ba2deb50871808efc00f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34706855"
 ---
 # <a name="extended-events"></a>扩展事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  下表描述了扩展事件中的概念。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[SQL Server 扩展事件包](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|介绍了扩展事件包，扩展事件会话运行期间这些包中的对象将用于获取和处理数据。|  
 |[SQL Server 扩展事件目标](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|介绍了在事件会话期间可接收数据的事件使用者。|  

@@ -3,7 +3,6 @@ title: 选择数据库引擎升级方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -12,14 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3ac9ae5a47adce9d5c46de99d00d7463becd590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9504b667d4bf6a3e955ca3c1f048a1238bbbd024
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771443"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
  新的安装升级所需的步骤根据你是否在使用连接存储或 SAN 存储而存在少许差异。  
   
--   **连接存储环境：**如果你具有使用连接存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，以下图表和图表内的链接可指导你完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新安装升级所需执行的步骤。  
+-   **连接存储环境：** 如果你具有使用连接存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，以下图表和图表内的链接可指导你完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新安装升级所需执行的步骤。  
   
      ![为连接存储使用备份和还原的新安装升级方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "为连接存储使用备份和还原的新安装升级方法")  
   

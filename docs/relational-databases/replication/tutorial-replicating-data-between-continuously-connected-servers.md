@@ -22,11 +22,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550478"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/23/2018
 
 ![“启动”按钮和状态消息中的更改会显示“快照代理”已经运行](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-如果看到此处的错误，请参阅[对快照代理错误进行故障排除](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent)。 
+如果看到此处的错误，请参阅[对快照代理错误进行故障排除](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)。 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>将分发代理登录名添加到 PAL  
