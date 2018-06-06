@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32926212"
 ---
 # <a name="increase-the-size-of-a-database"></a>增加数据库的大小
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,11 +66,11 @@ ms.lasthandoff: 05/03/2018
   
 2.  展开“数据库”，右键单击要扩展的数据库，再单击“属性”。  
   
-3.  在 **“数据库属性”**中，选择 **“文件”** 页。  
+3.  在 **“数据库属性”** 中，选择 **“文件”** 页。  
   
 4.  若要增加现有文件的大小，请增加文件的“初始大小 (MB)”列中的值。 数据库的大小必须至少增加 1 MB。  
   
-5.  若要通过添加新文件增加数据库大小，请单击 **“添加”** ，然后输入新文件的值。 有关详细信息，请参阅 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
+5.  若要通过添加新文件增加数据库大小，请单击 **“添加”** ，然后输入新文件的值。 有关详细信息，请参阅 [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
 6.  单击“确定” 。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/03/2018
  有关更多示例，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
+ [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
  [收缩数据库](../../relational-databases/databases/shrink-a-database.md)  
   
   
