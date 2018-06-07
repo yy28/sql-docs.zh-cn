@@ -3,8 +3,7 @@
 # [转换](data-type-conversion-database-engine.md)  
 # [优先级](data-type-precedence-transact-sql.md)  
 # [同义词](data-type-synonyms-transact-sql.md)  
-# [精度、小数位数和长度](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [精度、小数位数和长度](precision-scale-and-length-transact-sql.md)    
 # [cursor](cursor-transact-sql.md)  
 # [日期和时间](date-and-time-types.md)  
 ## [date](date-transact-sql.md)  
@@ -27,6 +26,7 @@
 ## [Write（数据库引擎）](write-database-engine.md)  
 
 # [Numeric](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal 和 numeric](decimal-and-numeric-transact-sql.md)  
 ## [float 和 real](float-and-real-transact-sql.md)  
 ## [int、bigint、smallint 和 tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  
