@@ -1,6 +1,6 @@
 ---
 title: 创建度量值语句 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98ca479c266d9e8c25b2e75d8b15da1cd76a46aa
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aa895099420b022cf15d7cd3a91472511c1100e3
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579349"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741429"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 数据定义-创建度量值
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   在表格模型中创建度量值。  
   

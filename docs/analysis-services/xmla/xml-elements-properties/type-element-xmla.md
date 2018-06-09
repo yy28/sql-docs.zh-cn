@@ -9,17 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca05cb4bc5ea8951db028ed4da53ee3bfd7131dc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576709"
 ---
 # <a name="type-element-xmla"></a>Type 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   确定要执行的处理的类型[过程](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)元素。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```xml  
   
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|无|  
+|默认值|InclusionThresholdSetting|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/10/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[处理](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
- 有关处理提供给对象的实例上的选项的详细信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
+## <a name="remarks"></a>Remarks  
+ Analysis Services 实例上可用的对象的处理选项的详细信息，请参阅[处理多维模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  值**类型**元素被限制为下表中列出的字符串之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*ProcessFull*|删除受影响的对象中的所有数据，然后处理该受影响的对象。|  
 |*ProcessAdd*|将新数据添加到受影响的对象。|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/10/2018
 |*ProcessStructure*|仅处理受影响的对象的结构。|  
 |*ProcessClearStructureOnly*|仅清除受影响的对象中的数据。|  
   
-## <a name="see-also"></a>另请参阅  
- [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另请参阅
+ [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

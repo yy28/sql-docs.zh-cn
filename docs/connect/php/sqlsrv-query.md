@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_query |Microsoft 文档
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -22,11 +22,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1f752f298ce1e8b45bda07b8abd30b92fde5af4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0c1c14aaeff26111ebb66ce8aa77f9a25b599ba
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563895"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,7 +78,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="return-value"></a>返回值  
 语句资源。 如果该语句不能进行创建和/或执行， **false**返回。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 **Sqlsrv_query**函数非常适合一次性查询，并应为执行查询，除非特殊情况下应用的默认选项。 此函数提供了一个简化的方法，以便使用最少的代码来执行查询。 **Sqlsrv_query**函数不会语句准备和语句执行，并可用于执行参数化的查询。  
   
 有关详细信息，请参阅 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
@@ -166,7 +167,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。
+> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。 这同样适用于 bigint 列，尤其是在有效值的范围之外时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将绑定十进制值作为输入参数。  
@@ -193,7 +194,7 @@ sqlsrv_close($conn);
 ```
 
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [如何：执行参数化查询](../../connect/php/how-to-perform-parameterized-queries.md)  

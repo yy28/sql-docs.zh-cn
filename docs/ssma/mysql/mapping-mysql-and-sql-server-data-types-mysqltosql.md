@@ -1,8 +1,6 @@
 ---
 title: 映射 MySQL 和 SQL Server 数据类型 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d35530153b4e26f865b6fd8fefa102718752dafa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248e908567dfa40f0a8f64596e3f9e9754e03e44
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776503"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>将 MySQL 和 SQL Server 数据类型 (MySQLToSQL) 映射
 MySQL 数据库类型与不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库类型。 当转换到的 MySQL 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象，你必须指定如何将从到 MySQL 的数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以接受默认数据类型映射，也可以自定义映射，如以下过程中所示。  
@@ -89,6 +88,6 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是为[创建评估报表](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)或[转换 MySQL 数据库对象，为 SQL Server 或 SQL Azure 语法](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)。 如果你创建报表，MySQL 对象将自动转换此评估过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

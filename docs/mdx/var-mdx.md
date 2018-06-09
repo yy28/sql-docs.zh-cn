@@ -1,6 +1,6 @@
 ---
 title: Var (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5a9f9461f531f3a37feac40ac1f4af03f620bd3f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 14caf6e96b41fdf2e7f8b4d20f16852e890bd166
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581689"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743916"
 ---
 # <a name="var-mdx"></a>Var (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回数值表达式对集求得使用无偏差的总体公式的样本方差 (除以*n*)。  
   

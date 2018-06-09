@@ -1,8 +1,6 @@
 ---
 title: 使用 SSMA 项目 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e4526d78daa021731c09a04a6704c9a66411e178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f9cf55498ec5637b18f542ea079517571640b0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775553"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 项目 (DB2ToSQL)
 迁移到 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，首先创建新的 SSMA 项目。 项目是一个文件，其中包含以下信息：  
@@ -103,7 +102,7 @@ SSMA 进行转换和加载数据库对象、 迁移数据，和与 DB2 同步 SS
   
         保存元数据可能需要几分钟。 如果你不想保存元数据，不选中所有复选框。  
   
-    2.  单击 **保存** 按钮。  
+    2.  单击**保存**按钮。  
   
         SSMA 将分析 DB2 架构并将元数据保存到项目文件。  
   
@@ -125,7 +124,7 @@ SSMA 进行转换和加载数据库对象、 迁移数据，和与 DB2 同步 SS
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[连接到 DB2 数据库](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

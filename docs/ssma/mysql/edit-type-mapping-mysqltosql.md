@@ -1,8 +1,6 @@
 ---
 title: 编辑类型映射 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cd02b4aa75298fbe5c70751dc9e7e7c101a67377
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 148080708068f364323f2b4daac0d96fa7950e6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776023"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>编辑类型映射 (MySQLToSQL)
 **编辑类型映射**对话框中，可以指定类型的源和目标的数据库对象对象之间的映射方式。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   特定于表的类型映射重写数据库和项目类型映射。 特定于数据库的映射覆盖项目映射。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ##### <a name="source-type"></a>源类型  
 选择要映射到 SQL Server 数据类型的源数据类型。  

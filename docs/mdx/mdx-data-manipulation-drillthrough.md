@@ -1,6 +1,6 @@
 ---
 title: 钻取语句 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f5b56c03ec6e575b647ed7eecaf26d35bfae047
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580059"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742276"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 数据操作的钻取
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   检索用于在多维数据集中创建指定单元的基础表行。  
   
@@ -43,7 +43,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  以逗号分隔的维度属性和度量值列表。  
   
 ## <a name="remarks"></a>Remarks  
- 钻取是一种操作，最终用户可通过该操作选择多维数据集中的一个单元，然后在该单元的源数据中检索结果集，以获取更加详细的信息。 默认情况下，钻取结果集来自表行（通过求值来计算选定的多维数据集单元的值）。 如果最终用户要执行钻取操作，则他们的客户端应用程序必须支持此功能。 在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，结果是直接从存储中检索 MOLAP，除非查询 ROLAP 分区或维度。  
+ 钻取是一种操作，最终用户可通过该操作选择多维数据集中的一个单元，然后在该单元的源数据中检索结果集，以获取更加详细的信息。 默认情况下，钻取结果集来自表行（通过求值来计算选定的多维数据集单元的值）。 如果最终用户要执行钻取操作，则他们的客户端应用程序必须支持此功能。 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，结果是直接从存储中检索 MOLAP，除非查询 ROLAP 分区或维度。  
   
 > [!IMPORTANT]  
 >  钻取安全性基于为多维数据集定义的常规安全选项。 如果无法用 MDX 获取一些数据，钻取也将以同样的方式限制用户。  

@@ -1,8 +1,6 @@
 ---
 title: 用户界面参考 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,16 +13,17 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bf07df733aad0657fa24791eb8b0ca4a01def782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 981fd5efeda156774de298be5f45d5a9387279e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778123"
 ---
 # <a name="user-interface-reference-oracletosql"></a>用户界面参考 (OracleToSQL)
 本部分包括有关的帮助主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 适用于 Oracle。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 下表列出 SSMA 对话框：  
   
 |||  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |[从数据库刷新&#40;OracleToSQL&#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|使用**从数据库刷新**对话框中选择要从 Oracle 数据库刷新的对象。|  
 |[将元数据保存&#40;OracleToSQL&#41;](../../ssma/oracle/save-metadata-oracletosql.md)|**保存元数据**对话框中将显示当你保存缺少元数据的项目。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [入门 Oracle SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

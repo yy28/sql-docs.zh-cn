@@ -1,39 +1,23 @@
 ---
 title: ALTER CUBE 语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cube
-- ALTER_CUBE
-- ALTER CUBE
-- ALTER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ALTER CUBE statement
-- cubes [Analysis Services], modifying
-- modifying cubes
-ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6a91092f5a62f1c21312ca585834795d678216ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741566"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 数据定义的 ALTER 多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   更改指定多维数据集的结构，通常用于支持维度写回。 有关应用程序中使用写回的详细信息，请参阅此博客文章：[构建写回应用程序与 Analysis Services （博客）](http://go.microsoft.com/fwlink/?LinkId=394977)  
   
@@ -130,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  提供成员名称或成员键的有效字符串表达式。  
   
-### <a name="remarks"></a>注释  
+### <a name="remarks"></a>Remarks  
  如果未使用 WITH DESCENDANTS 子句，则已删除成员的子级将成为已删除成员父级的子级。 如果使用 WITH DESCENDANTS 子句，则还会删除维度表内的所有后代及其对应的行。  
   
 > [!NOTE]  
@@ -146,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  返回单个成员的有效 MDX 表达式。  
   
-### <a name="remarks"></a>注释  
+### <a name="remarks"></a>Remarks  
  指定的 MDX 表达式可以为静态或动态。  
   
 ## <a name="moving-a-dimension-member"></a>移动维度成员  
@@ -180,7 +164,7 @@ CELL CALCULATION Calculation_Name
 ## <a name="creating-a-cell-calculation"></a>创建单元计算  
  有关创建使用 ALTER CUBE 语句的单元计算的详细信息，请参阅[DROP 单元格计算语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

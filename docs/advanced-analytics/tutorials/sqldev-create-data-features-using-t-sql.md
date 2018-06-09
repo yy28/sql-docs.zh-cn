@@ -1,19 +1,21 @@
 ---
-title: 课使用 T-SQL 的 4 请数据功能 |Microsoft 文档
+title: 课 4 请数据功能，使用 T-SQL 的函数 （SQL Server 机器学习） |Microsoft 文档
+description: 本教程演示如何将 R 嵌入在 SQL Server 中存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249540"
 ---
-# <a name="lesson-4-create-data-features-using-t-sql"></a>第 4 课： 创建使用 T-SQL 的数据功能
+# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>第 4 课： 创建使用 R 和 T-SQL 数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是教程的有关如何在 SQL Server 中使用 R 的 SQL 开发人员的一部分。
@@ -125,4 +127,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>上一课
 
-[第 3 课： 浏览和可视化数据](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[第 3 课： 浏览并使用 R 和存储的过程的数据可视化](../tutorials/sqldev-explore-and-visualize-the-data.md)

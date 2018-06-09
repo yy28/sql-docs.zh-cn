@@ -1,8 +1,6 @@
 ---
 title: 用于 Oracle 控制台 (OracleToSQL) 入门 SSMA |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 95da4265bcaf56f7abbd5e445d93760790752b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f80a1d1dde407c2269a29c4c18c0ad583dc39b93
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777313"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>用于 Oracle 控制台 (OracleToSQL) 入门 SSMA
 本部分介绍的过程启动并开始使用 Oracle 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口。  
@@ -69,6 +68,6 @@ ms.lasthandoff: 05/03/2018
 |绿色|提示用户输入|  
 |青色|启动，完成和操作的结果|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装适用于 Oracle SSMA](http://msdn.microsoft.com/en-us/9211013a-ab24-4c52-9b26-87994b35e502)  
   

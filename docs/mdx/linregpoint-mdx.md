@@ -1,6 +1,6 @@
 ---
 title: LinRegPoint (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d6c1eea47fd6585b5cab99e72c4ddf99ca4ca5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: cc47b5910f0d5323b1b7e29cd3313b36d615265c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579079"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741126"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   一组中，线性回归计算，并返回的值*y 轴截距*在回归行中，y = ax + b x 的特定值。  
   

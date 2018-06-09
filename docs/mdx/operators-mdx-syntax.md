@@ -1,6 +1,6 @@
 ---
 title: 运算符 （MDX 语法） |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580659"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742746"
 ---
 # <a name="operators-mdx-syntax"></a>运算符（MDX 语法）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   在多维表达式 (MDX) 中，可以使用运算符执行下列操作：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580659"
  同时使用多个运算符时，MDX 计算运算符的顺序非常重要。 同样，运算符的用户可能需要在计算运算符之前将一个数据类型转换为另一个数据类型。  
   
 ## <a name="evaluating-complex-expressions"></a>计算复杂表达式  
- 可以通过使用运算符合并几个较小的表达式来生成一个表达式。 在这些复杂的表达式中，MDX 计算顺序由运算符优先级在定义基于运算符[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 MDX 先计算具有较高优先级的运算符，后计算具有较低优先级的运算符。  
+ 可以通过使用运算符合并几个较小的表达式来生成一个表达式。 在这些复杂的表达式中，MDX 计算顺序由运算符优先级在定义基于运算符[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 MDX 先计算具有较高优先级的运算符，后计算具有较低优先级的运算符。  
   
 ### <a name="understanding-operator-precedence"></a>了解运算符优先级  
  以下列表显示了运算符优先级，按从最高到最低的顺序排列。 位于同一行中的运算符具有相同的优先级，按从左到右的顺序进行计算，除非使用括号进行强制：  

@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541066ac00efc1b15f8cae838097cfd8ee49df3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 754140cbc1c2b35338794b6919076b99c3052562
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249730"
 ---
 # <a name="step-1-download-the-sample-data"></a>步骤 1： 下载示例数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 
 3. 具体取决于你的 internet 连接，下载可能需要一些时间。 
 
-## <a name="view-the-results"></a>查看结果
+## <a name="view-results"></a>查看结果
 
 所有文件下载完成之后，PowerShell 脚本将打开 DestDir 指定的文件夹。 
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
 
 [数据库中 Python 分析 SQL 开发人员](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [机器学习服务与 Python](../python/sql-server-python-services.md)
 

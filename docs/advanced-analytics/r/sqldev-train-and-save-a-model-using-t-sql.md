@@ -1,24 +1,26 @@
 ---
-title: 课 5 训练和保存模型使用 T-SQL |Microsoft 文档
+title: 课 5 训练和保存模型使用 R 和 T-SQL （SQL Server 机器学习） |Microsoft 文档
+description: 本教程演示如何将 R 嵌入在 SQL Server 中存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd5bdc7d256a22dbab6662a74dc39073892dbb4d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250060"
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>第 5 课： 训练和保存模型使用 T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是教程的有关如何在 SQL Server 中使用 R 的 SQL 开发人员的一部分。
 
-在本课程中，你将学习如何使用。 来训练机器学习模型你将使用刚创建的数据功能训练该模型，然后保存训练的模型中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 在这种情况下，与已安装 R 包[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，因此所有内容可以从 SQL。
+在本课程中，你将学习如何使用。 来训练机器学习模型你将使用你在上一课中创建的数据功能训练该模型，然后保存训练的模型中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 在这种情况下，与已安装 R 包[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，因此所有内容可以从 SQL。
 
 ## <a name="create-the-stored-procedure"></a>创建存储的过程
 
@@ -80,7 +82,7 @@ ms.lasthandoff: 04/16/2018
     EXEC TrainTipPredictionModel
     ```
 
-2. 监视**消息**窗口[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的消息将传送到 R 的**stdout**流，如此 messaage: 
+2. 监视**消息**窗口[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的消息将传送到 R 的**stdout**流，如此消息： 
 
     "来自外部脚本的 STDOUT 消息： 行读取： 1193025，总行处理： 1193025，总区块时间： 0.093 （秒)"
 
@@ -104,5 +106,5 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>上一课
 
-[第 4 课： 创建使用 T-SQL 的数据功能](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[第 4 课： 创建使用 R 和 T-SQL 的函数的数据功能](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

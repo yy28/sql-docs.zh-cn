@@ -1,8 +1,6 @@
 ---
 title: 用户界面参考 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 881a94b3ced6f208d65bd168c469ee1a60b460f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd6d2126b4023231d2d1594816c93a94555a9e95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776623"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>用户界面参考 (MySQLToSQL)
 本部分包括帮助主题的 SQL Server 迁移助手 (SSMA) 的 MySQL。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 下表列出 SSMA 对话框：  
   
 |||  
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 |[从数据库刷新&#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|使用**从数据库刷新**对话框中选择要刷新从 MySQL 数据库的对象。|  
 |[将元数据保存&#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|**保存元数据**对话框中将显示当你保存缺少元数据的项目。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [入门 MySQL SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

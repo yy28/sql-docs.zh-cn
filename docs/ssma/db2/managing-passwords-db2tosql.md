@@ -1,8 +1,6 @@
 ---
 title: 管理密码 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b45905d666e7ccd5c5379ea18cede72cd6941ae6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df108bc5fb4989c8e26de9be9926819af12e19a0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775083"
 ---
 # <a name="managing-passwords-db2tosql"></a>管理密码 (DB2ToSQL)
 本节是有关保护数据库密码和导入或将其导出跨服务器的过程：  
@@ -42,7 +41,7 @@ SSMA 允许你保护你的数据库的密码。
   
     以明文形式的密码是不安全的。 因此，你将遇到控制台输出中的以下警告消息： *"服务器&lt;服务器 id&gt;密码是提供以不安全的明文形式，SSMA 控制台应用程序提供了一个选项来保护密码通过加密，请参阅帮助文件了解详细信息中 SSMA – securepassword 选项。"*  
   
-    **加密的密码：**指定的密码，在这种情况下，存储在 ProtectedStorage.ssma 的本地计算机上以加密形式。  
+    **加密的密码：** 指定的密码，在这种情况下，存储在 ProtectedStorage.ssma 的本地计算机上以加密形式。  
   
     -   **保护密码**  
   
@@ -135,6 +134,6 @@ SSMA 控制台应用程序，可将加密的数据库密码存在于本地计算
     Please confirm password: xxxxxxxx
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

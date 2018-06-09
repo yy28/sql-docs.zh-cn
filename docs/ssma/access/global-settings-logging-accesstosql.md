@@ -1,8 +1,6 @@
 ---
 title: 全局设置 （日志记录） (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 457471b585ac15389e2df39943b781b6ed1771ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaf2ccc19a6acdaba9aa1d44d563293ae8e0e390
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774303"
 ---
 # <a name="global-settings-logging-accesstosql"></a>全局设置 （日志记录） (AccessToSQL)
 使用**全局设置**对话框中，指定 SSMA 的日志记录设置。 通常情况下，仅当使用产品支持时，才会更改这些设置。  
   
 若要访问此对话框中，在**工具**菜单上，选择**全局设置**，然后单击**日志记录**在左窗格的底部的按钮。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **消息级别**  
 下下面的选项将可用**消息级别**:  
   

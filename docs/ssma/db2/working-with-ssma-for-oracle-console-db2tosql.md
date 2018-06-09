@@ -1,8 +1,6 @@
 ---
 title: SSMA 使用的 Oracle 控制台 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1c6910724293b2dfc2871bd17043b726caec8d2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4906c70c84d0bd0c3d9f298cbd4b47cb2ecc078
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775473"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>SSMA 使用的 Oracle 控制台 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] DB2 的迁移助手 (SSMA) 版本现在是可通过在命令行控制台应用程序访问的。 脚本文件窗体的应用程序执行命令的输入。 作为控制台应用程序，SSMA 支持脚本级别进行连接、 减少迁移周期，并缩放迁移工作量。  
@@ -45,6 +44,6 @@ ms.lasthandoff: 05/03/2018
 |[生成报表&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)|列出的命令生成报表。|  
 |[故障排除&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|提供关于修复的迁移问题的信息摘要。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [入门 DB2 控制台 SSMA](http://msdn.microsoft.com/en-us/f245c017-023e-4880-8721-8908d339525e)  
   

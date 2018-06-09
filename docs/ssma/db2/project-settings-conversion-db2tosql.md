@@ -1,8 +1,6 @@
 ---
 title: 项目设置 （转换） (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 64f014daf9dc81362b55931729bf33ac97fa105e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31f00a9fbc779ae0054a04a9890fcca9a0be33a9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775603"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>项目设置 （转换） (DB2ToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 语法的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语法。  
@@ -40,9 +39,9 @@ ms.lasthandoff: 05/03/2018
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式模式：**否  
+**默认/开放式模式：** 否  
   
-**完整模式：**否  
+**完整模式：** 否  
   
 ## <a name="miscellaneous-options"></a>其他选项  
   
@@ -69,20 +68,20 @@ ms.lasthandoff: 05/03/2018
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/完整模式：**否  
+**默认/完整模式：** 否  
   
-**开放式模式：**是  
+**开放式模式：** 是  
   
 ### <a name="default-schema-mapping"></a>默认架构映射  
 此设置指定如何 DB2 架构映射到 SQL Server 架构。 在此设置中有两个选项：  
   
-1.  **到数据库的架构：**在此模式下 DB2 架构 sch1 将映射到 SQL Server 数据库 sch1 中的 dbo SQL Server 架构的默认情况下。  
+1.  **到数据库的架构：** 在此模式下 DB2 架构 sch1 将映射到 SQL Server 数据库 sch1 中的 dbo SQL Server 架构的默认情况下。  
   
-2.  **架构与架构：**在此模式下 DB2 架构 sch1 将映射到连接对话框中提供的默认 SQL Server 数据库中的 sch1 SQL Server 架构的默认情况下。  
+2.  **架构与架构：** 在此模式下 DB2 架构 sch1 将映射到连接对话框中提供的默认 SQL Server 数据库中的 sch1 SQL Server 架构的默认情况下。  
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/完整模式：**到数据库的架构  
+**默认/Optimistic/完整模式：** 到数据库的架构  
   
 ### <a name="conversion-ways-of-merge-statement"></a>MERGE 语句的转换方法  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/完整模式：**使用合并语句  
+**默认/Optimistic/完整模式：** 使用合并语句  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>将使用默认自变量的子程序的调用转换  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 函数不支持函数调用中省略的参数。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]函数和过程不支持作为默认参数值的表达式。  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="convert-count-function-to-countbig"></a>将 COUNT 函数转换为 COUNT_BIG  
 如果计数函数很可能返回值大于 2147483647，即 2<sup>31</sup>-1，则应将函数转换到 COUNT_BIG。  
@@ -117,9 +116,9 @@ ms.lasthandoff: 05/03/2018
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/完整模式：**是  
+**默认/完整模式：** 是  
   
-**开放式模式：**否  
+**开放式模式：** 否  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>将 FORALL 语句转换为 WHILE 语句  
 定义如何 SSMA 将处理 FORALL 循环上 PL/SQL 集合元素。  
@@ -130,9 +129,9 @@ ms.lasthandoff: 05/03/2018
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式模式：**否  
+**默认/开放式模式：** 否  
   
-**完整模式：**是  
+**完整模式：** 是  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>使用 SET NULL 引用操作于列的转换外键不为 NULL  
 DB2，可以创建外键约束，其中一个设置为 NULL 的操作无法可能执行，因为被引用列中不允许使用 null 值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不允许此类外的密钥配置。  
@@ -143,7 +142,7 @@ DB2，可以创建外键约束，其中一个设置为 NULL 的操作无法可�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**否  
+**默认/开放式/完整模式：** 否  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>将为过程调用的函数调用转换  
 某些 DB2 函数定义为自治事务，或包含不会在中有效的语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 在这些情况下，SSMA 创建过程和函数，则该过程的包装器。 转换后的函数调用的实现过程。  
@@ -158,7 +157,7 @@ SSMA 可以将对包装函数的调用转换为对该过程的调用。 这将�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/完整模式：**尽可能  
+**默认/Optimistic/完整模式：** 尽可能  
   
 ### <a name="convert-lock-table-statements"></a>转换锁 TABLE 语句  
 SSMA 可以将很多锁表语句转换为表提示。 SSMA 不能转换包含分区，分区，任何锁 TABLE 语句@dblink，和 NOWAIT 子句，并将标记此类语句与转换错误消息。  
@@ -181,7 +180,7 @@ SSMA 可以将很多锁表语句转换为表提示。 SSMA 不能转换包含分
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="convert-open-for-statements-for-ref-cursor-out-parameters"></a>将转换为 REF CURSOR OUT 参数打开 FOR 语句  
 在 DB2，打开 FOR 语句可用于返回的结果与 OUT 参数类型 REF CURSOR 的子程序集。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，存储的过程直接返回 SELECT 语句的结果。  
@@ -194,7 +193,7 @@ SSMA 可以将很多打开 FOR 语句转换为 SELECT 语句。
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="convert-record-as-a-list-of-separates-variables"></a>将记录转换为离职变量的列表  
 SSMA 可以将 DB2 记录转换到分隔变量和具有特定结构的 XML 变量。  
@@ -205,7 +204,7 @@ SSMA 可以将 DB2 记录转换到分隔变量和具有特定结构的 XML 变�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>SUBSTR 函数将调用转换为子字符串函数调用  
 SSMA 可以转换到 DB2 SUBSTR 函数调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**子字符串**函数调用，具体取决于参数的数目。 如果 SSMA 不能转换 SUBSTR 函数调用，或不支持参数的数目，SSMA 会将 SUBSTR 函数调用转换为自定义的 SSMA 函数调用。  
@@ -216,9 +215,9 @@ SSMA 可以转换到 DB2 SUBSTR 函数调用[!INCLUDE[ssNoVersion](../../include
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式模式：**是  
+**默认/开放式模式：** 是  
   
-**完整模式：**否  
+**完整模式：** 否  
   
 ### <a name="convert-subtypes"></a>将子类型转换  
 SSMA 可以将两种方式的 PL/SQL 子类型转换：  
@@ -229,7 +228,7 @@ SSMA 可以将两种方式的 PL/SQL 子类型转换：
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**否  
+**默认/开放式/完整模式：** 否  
   
 ### <a name="convert-synonyms"></a>将同义词转换  
 以下的 DB2 对象同义词可以迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
@@ -260,7 +259,7 @@ SSMA 可以将两种方式的 PL/SQL 子类型转换：
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="convert-tochardate-format"></a>转换时出现 TO_CHAR （日期，格式）  
 SSMA 可以将 DB2 TO_CHAR(date, format) 转换 sysdb 数据库中的过程。  
@@ -271,9 +270,9 @@ SSMA 可以将 DB2 TO_CHAR(date, format) 转换 sysdb 数据库中的过程。
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：**使用 TO_CHAR_DATE 函数  
+**默认/Optimistic 模式：** 使用 TO_CHAR_DATE 函数  
   
-**完整模式：**使用 TO_CHAR_DATE_LS 函数 （NLS 小心）  
+**完整模式：** 使用 TO_CHAR_DATE_LS 函数 （NLS 小心）  
   
 ### <a name="convert-transaction-processing-statements"></a>转换事务处理语句  
 SSMA 可转换 DB2 事务处理语句：  
@@ -287,7 +286,7 @@ SSMA 可转换 DB2 事务处理语句：
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="emulate-db2-null-behavior-in-order-by-clauses"></a>模拟 DB2 ORDER BY 子句中的 null 行为  
 NULL 值进行排序以不同方式在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和 DB2:  
@@ -306,9 +305,9 @@ NULL 值进行排序以不同方式在[!INCLUDE[ssNoVersion](../../includes/ssno
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式模式：**否  
+**默认/开放式模式：** 否  
   
-**完整模式：**是  
+**完整模式：** 是  
   
 ### <a name="emulate-row-count-exceptions-in-select"></a>模拟中选择的行计数异常  
 如果带 INTO 子句的 SELECT 语句不返回任何行，DB2 引发 NO_DATA_FOUND 异常。 如果语句返回两个或多个行，则 TOO_MANY_ROWS 在引发异常。 中的转换后的语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不会引发任何异常，如果从一个不同的行计数。  
@@ -319,7 +318,7 @@ NULL 值进行排序以不同方式在[!INCLUDE[ssNoVersion](../../includes/ssno
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="generate-error-for-dbmssqlparse"></a>为 DBMS_SQL 生成错误。分析  
   
@@ -329,7 +328,7 @@ NULL 值进行排序以不同方式在[!INCLUDE[ssNoVersion](../../includes/ssno
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**错误  
+**默认/开放式/完整模式：** 错误  
   
 ### <a name="generate-rowid-column"></a>生成 ROWID 列  
 SSMA 创建中的表时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，它可以创建 ROWID 列。 迁移数据时，每个行获取 newid （） 函数生成的一个新的唯一标识符值。  
@@ -345,16 +344,16 @@ SSMA 创建中的表时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：**添加包含触发器的表的 ROWID 列  
+**默认/Optimistic 模式：** 添加包含触发器的表的 ROWID 列  
   
-**完整模式：**是  
+**完整模式：** 是  
   
 ### <a name="generate-unique-index-on-rowid-column"></a>生成 ROWID 列上的唯一索引  
 指定或不 SSMA 是否生成 ROWID 生成列上的唯一索引列。 如果将选项设置为"是"，生成唯一索引函数，如果设置为"否"，在 ROWID 列上无法生成唯一索引。  
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="local-modules-conversion"></a>本地模块转换  
 定义的嵌套的 DB2 子程序 （在独立存储过程或函数中声明） 转换的类型。  
@@ -365,7 +364,7 @@ SSMA 创建中的表时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**内联  
+**默认/开放式/完整模式：** 内联  
   
 ### <a name="use-isnull-in-string-concatenation"></a>在字符串串联中使用 ISNULL  
 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]字符串串联时将包含 NULL 值时返回不同的结果。 DB2 将如空字符集的 NULL 值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 返回 NULL。  
@@ -385,9 +384,9 @@ ISNULL 语句替换函数调用中使用，以模拟 DB2 行为。 存在为此�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式模式：**否  
+**默认/开放式模式：** 否  
   
-**完整模式：**是  
+**完整模式：** 是  
   
 ### <a name="use-isnull-in-concat-function-calls"></a>在 CONCAT 函数调用中使用 ISNULL  
 ISNULL 语句 CONCAT 函数调用中使用，以模拟 DB2 行为。 存在为此设置提供了以下选项：  
@@ -398,9 +397,9 @@ ISNULL 语句 CONCAT 函数调用中使用，以模拟 DB2 行为。 存在为�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式模式：**否  
+**默认/开放式模式：** 否  
   
-**完整模式：**是  
+**完整模式：** 是  
   
 ### <a name="use-native-convert-function-when-possible"></a>使用本机 convert 函数尽可能  
   
@@ -410,9 +409,9 @@ ISNULL 语句 CONCAT 函数调用中使用，以模拟 DB2 行为。 存在为�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式模式：**是  
+**默认/开放式模式：** 是  
   
-**完整模式：**否  
+**完整模式：** 否  
   
 ### <a name="use-selectfor-xml-when-converting-selectinto-for-record-variable"></a>使用选择...对于 XML 转换时选择...INTO 记录变量  
 指定是否生成 XML 结果集时选择到记录变量。  
@@ -423,7 +422,7 @@ ISNULL 语句 CONCAT 函数调用中使用，以模拟 DB2 行为。 存在为�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**否  
+**默认/开放式/完整模式：** 否  
   
 ## <a name="returning-clause-conversion"></a>返回子句转换  
   
@@ -436,7 +435,7 @@ DB2 作为一种方法以立即获取已删除的值提供的 RETURNING 子句�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>将在 INSERT 语句中的 RETURNING 子句转换为输出  
 DB2 作为一种方法以立即获取插入的值提供的 RETURNING 子句。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] OUTPUT 子句中提供该功能。  
@@ -447,7 +446,7 @@ DB2 作为一种方法以立即获取插入的值提供的 RETURNING 子句。 [
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>将 UPDATE 语句中的 RETURNING 子句转换为输出  
 DB2 作为一种方法以立即获取更新后的值提供的 RETURNING 子句。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] OUTPUT 子句中提供该功能。  
@@ -458,7 +457,7 @@ DB2 作为一种方法以立即获取更新后的值提供的 RETURNING 子句�
   
 当选择中的转换模式**模式**框，SSMA 适用以下设置：  
   
-**默认/开放式/完整模式：**是  
+**默认/开放式/完整模式：** 是  
   
 ## <a name="sequence-conversion"></a>序列转换  
   
@@ -486,6 +485,6 @@ SSMA 还提供了一个选项以将 DB2 序列转换为 SSMA 序列仿真程序�
   
 -   如果你选择**否**，SSMA 会将标记为外部上转换后的触发器序列 CURRVAL 出现错误的所有引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [用户界面参考&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

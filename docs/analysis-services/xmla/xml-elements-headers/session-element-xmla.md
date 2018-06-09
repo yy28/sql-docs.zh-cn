@@ -9,19 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6be7e6cde72908273261e09020305441d6a42738
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 02b4c93919e6354a59aad9b42a4f6dc8373c880f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34577499"
 ---
 # <a name="session-element-xmla"></a>Session 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  使用在 SOAP 请求消息的 SOAP 标头来标识实例上的现有的显式会话[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  使用在 SOAP 请求消息的 SOAP 标头来标识的 Analysis Services 实例上的现有的显式会话。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```xml  
   
@@ -41,18 +42,18 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
-|子元素|无|  
+|父元素|InclusionThresholdSetting|  
+|子元素|InclusionThresholdSetting|  
   
 ## <a name="attributes"></a>属性  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/10/2018
 |---------------|-----------------|  
 |SessionId|所需**字符串**标识要使用的会话的属性。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用全局唯一标识符 (GUID) 识别会话。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **会话**标头元素标识的现有的显式启动的会话上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 **会话**元素是在以下类型的消息的 SOAP 标头的一部分：  
   
 -   包含的 SOAP 响应[BeginSession](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md) SOAP 标头元素。  
@@ -71,9 +72,9 @@ ms.lasthandoff: 05/10/2018
   
  如果**会话**元素不会发送 SOAP 请求的一部分[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例隐式开始的会话的持续时间**发现**或**执行**方法调用，然后结束完成方法调用后该会话。  
   
-## <a name="see-also"></a>另请参阅  
- [EndSession 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [管理连接和会话 & #40;XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [标头 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>另请参阅
+ [EndSession 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
+ [管理连接和会话&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [标头&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

@@ -1,8 +1,6 @@
 ---
 title: 将 MySQL 和 SQL Server 字符映射设置 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5c31cdc9bab3881452c3a03cc0a97cc382481587
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776413"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>将 MySQL 和 SQL Server 字符映射设置 (MySQLToSQL)
 可以为 MySQL 字符数据类型、 表达式和文本指定字符集 （字符集）。  
@@ -63,9 +62,9 @@ ms.lasthandoff: 05/03/2018
 >   
 > 它们分别是：  
 >   
-> 1.  **应用：**应用用户，仅当字符集的映射进行编辑，尚未保存时，才启用所做的更改。  
+> 1.  **应用：** 应用用户，仅当字符集的映射进行编辑，尚未保存时，才启用所做的更改。  
 > 2.  **取消:** 取消用户所做的更改。 字符集的映射进行了编辑，但不是会保存时，获取启用该按钮。  
-> 3.  **重置为默认值：**将所有映射重都置为默认值。  
+> 3.  **重置为默认值：** 将所有映射重都置为默认值。  
   
 1.  **在根元数据节点级别：** Charset 映射网格包含 charset 网格与每个字符集为一个单独的列。 网格中的列是：  
   
@@ -124,7 +123,7 @@ ms.lasthandoff: 05/03/2018
     |cp932|对于 Windows 日文 SJIS|NCHAR/NVARCHAR （默认值）|  
     |eucjpms|对于 Windows 日文 UJIS|NCHAR/NVARCHAR （默认值）|  
   
-2.  **数据库、 类别或对象节点级别上：**在数据库、 类别或对象节点级别中，字符集映射网格包含根元数据节点级别上的相同行 viz。:  
+2.  **数据库、 类别或对象节点级别上：** 在数据库、 类别或对象节点级别中，字符集映射网格包含根元数据节点级别上的相同行 viz。:  
   
     1.  标题为，网格的第一列**字符设置名称**包含字符集名称。  
   

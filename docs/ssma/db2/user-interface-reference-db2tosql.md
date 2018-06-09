@@ -1,8 +1,6 @@
 ---
 title: 用户界面参考 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7b2f512f062909cbb92611bac1e34ad13d508d34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf70c785021f352d000acd0c6237b1aa70e69756
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775933"
 ---
 # <a name="user-interface-reference-db2tosql"></a>用户界面参考 (DB2ToSQL)
 本部分包括有关的帮助主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) for DB2。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 下表列出 SSMA 对话框：  
   
 |||  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |[从数据库刷新&#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|使用**从数据库刷新**对话框中选择要刷新从 DB2 数据库的对象。|  
 |[将元数据保存&#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|**保存元数据**对话框中将显示当你保存缺少元数据的项目。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [入门 DB2 SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [迁移 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

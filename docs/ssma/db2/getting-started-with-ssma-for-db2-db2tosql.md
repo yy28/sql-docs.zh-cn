@@ -1,8 +1,6 @@
 ---
 title: 入门 DB2 SSMA (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 10e2df8ac76797a8781716c75bc8cd83d0686ce7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 199380adb63e330a04aa0d8f7ee1d3e94aaa4fd9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775133"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>入门 DB2 SSMA (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 的 DB2 使你能够快速地转换到 DB2 数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构，上载生成架构转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和将数据迁移到的 DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -98,7 +97,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
   
 |菜单|Description|  
 |----|-----------|  
-|**文件**|包含用于处理项目、 连接到 DB2，并且连接到的命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
+|**File**|包含用于处理项目、 连接到 DB2，并且连接到的命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**编辑**|包含用于查找和处理的详细信息页中，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql_md.md)]从 SQL 详细信息窗格。 此外包含**管理书签**选项，其中你将能够查看现有的书签的列表。 可以使用对话框右侧的按钮来管理在书签。|  
 |**“视图”**|包含**同步元数据资源管理器**命令。 同步之间 DB2 元数据资源管理器的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 此外包含用于显示和隐藏的命令**输出**和**错误列表**窗格和一个选项**布局**管理两种布局。|  
 |**工具**|包含用于创建报表，报表和迁移对象和数据的命令。 此外提供对访问**全局设置**和**项目设置**对话框。|  
@@ -111,7 +110,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
   
 -   错误列表窗格可排序的列表中显示错误、 警告和信息性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 DB2 数据迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
 [用户界面参考&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

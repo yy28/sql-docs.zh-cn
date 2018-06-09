@@ -1,8 +1,6 @@
 ---
 title: 转换设置 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 13a3bfc9f8fe001d31b1d231438cece9752e08df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70450580a3b473f7b549578924e7f965531ad30f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776013"
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **设置**选项卡允许用户级别设置节点。 选项卡将出现在以下的元数据库节点：  
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
         -   是  
   
-        -   否  
+        -   “否”  
   
         -   根据项目设置将转换  
   
@@ -82,6 +81,6 @@ ms.lasthandoff: 05/03/2018
   
     3.  用户所做的设置保存在单击的级联首选项文件**应用**按钮。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [项目设置 （转换） (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

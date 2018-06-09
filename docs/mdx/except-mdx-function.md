@@ -1,6 +1,6 @@
 ---
 title: 除非 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ec5eba8f7df7fa7aabd65479fcf08ee7afec9c7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 03d9b5140eb0cbf9d868e43c65213efe917994a9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578289"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739996"
 ---
 # <a name="except-mdx-function"></a>除非 (MDX) 函数
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   计算两个集并删除第一个集中与第二个集中的元组重复的元组，也可以选择保留重复项。  
   

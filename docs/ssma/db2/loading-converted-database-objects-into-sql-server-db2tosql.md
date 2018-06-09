@@ -1,8 +1,6 @@
 ---
 title: 加载转换到 SQL Server (DB2ToSQL) 数据库对象 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 04d7ce18baed888af7b0de96faec99b72a6b4586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 915456e1dd679b62c42fb0bd29feeb0c861a85c2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775113"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>加载转换到 SQL Server (DB2ToSQL) 数据库对象
 转换到 DB2 架构后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以将生成数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以让 SSMA 创建对象，或可以编写对象脚本时，还可以自行运行脚本。 此外，SSMA 使你可以更新目标元数据的实际内容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
@@ -113,6 +112,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[迁移到 SQL Server 的 DB2 数据](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 DB2 数据迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

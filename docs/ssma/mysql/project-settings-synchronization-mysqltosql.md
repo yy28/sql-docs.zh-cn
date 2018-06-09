@@ -1,8 +1,6 @@
 ---
 title: 项目设置 （同步） (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d40f9d8fdab09b242143ee859b01a79a0974943b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16ddb4db77140eb57c893d68d954b538db2f418a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776193"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>项目设置 （同步） (MySQLToSQL)
 同步**项目设置**让你配置 MySQL 数据库对象都在与 SQL Server 数据库对象进行同步。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   若要对指定为当前项目中，设置**工具**菜单上，单击**项目设置**，然后单击**同步**在左窗格的底部。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ##### <a name="misc"></a>杂项  
   

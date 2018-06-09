@@ -1,6 +1,6 @@
 ---
 title: 保留关键字 （MDX 语法） |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b82117f17ecc1d7b98648a6641dc697b2fd40b9c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582259"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742626"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>保留关键字（MDX 语法）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 保留供其独占使用某些关键字。 有关保留关键字的列表，请参阅[MDX 保留字](../mdx/mdx-reserved-words.md)。  
+
+  Analysis Services 保留为专用某些关键字。 有关保留关键字的列表，请参阅[MDX 保留字](../mdx/mdx-reserved-words.md)。  
   
  保留关键字遵循下列指导原则：  
   

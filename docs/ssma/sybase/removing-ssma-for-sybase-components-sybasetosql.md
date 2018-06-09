@@ -3,8 +3,6 @@ title: 为 Sybase 组件 (SybaseToSQL) 删除 SSMA |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d59d3d18b4eb5b5ec81cb12422cc16cf64592731
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a9434f0fbaab5188a275af279626832df528b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779303"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>为 Sybase 组件 (SybaseToSQL) 删除 SSMA
 完成后将数据库迁移从 Sybase 自适应 Server Enterprise (ASE) 中，到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可能想要卸载 SSMA 组件。 你可以在任何时候，卸载客户端组件，但你不应卸载来自的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]除非您确信你已迁移的数据库不再使用中的函数**ssma_syb**架构**sysdb**数据库。  
@@ -61,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 卸载后，你可以确认**sysdb.ssma_syb**架构，甚至整个**sysdb**数据库，是否使用已删除[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。 但是，如果你使用其他 SSMA 产品，它们也使用**sysdb**数据库。 如果数据库存在并且可确保没有其他数据库引用此数据库中的对象，你可以分离数据库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Sybase 客户端安装 SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
 [在 SQL Server 上安装 SSMA 组件&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   

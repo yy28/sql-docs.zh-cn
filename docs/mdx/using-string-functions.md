@@ -1,6 +1,6 @@
 ---
 title: 使用字符串函数 |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 464bbe4ad20085571103a64f48716773c8352dea
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581749"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743818"
 ---
 # <a name="using-string-functions"></a>使用字符串函数
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   可以对多维表达式 (MDX) 中的几乎所有对象使用字符串函数。 在存储过程中，字符串函数主要用于将对象转换为字符串表示形式。 还可以使用字符串函数为对象计算字符串表达式，以返回一个值。  
   

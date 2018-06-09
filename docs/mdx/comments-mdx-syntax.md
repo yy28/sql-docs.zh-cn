@@ -1,6 +1,6 @@
 ---
 title: 注释 （MDX 语法） |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578449"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740756"
 ---
 # <a name="comments-mdx-syntax"></a>注释（MDX 语法）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   注释是程序代码中不执行的文本字符串。 （注释又称为“备注”。） 可以使用注释说明代码，或者暂时禁用正在诊断的部分多维表达式 (MDX) 语句和脚本。 通过使用注释说明代码，可使程序代码在日后更易于维护。 通常使用注释记录程序名称、作者姓名和主要代码更改的日期。 也可以使用注释说明复杂的计算或解释编程方法。  
   
  MDX 中的注释遵循下列指导原则：  
   
--   注释中可以使用所有字母数字字符或符号。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将忽略的注释内的所有字符。  
+-   注释中可以使用所有字母数字字符或符号。  将忽略的注释内的所有字符。  
   
 -   语句或脚本中的注释没有最大长度限制。 一条注释可由一行或多行组成。  
   

@@ -1,6 +1,6 @@
 ---
 title: SCOPE 语句 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c390d13d2f916dc287646f85def1513f910b635
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579959"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741766"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 脚本编写的作用域
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   将指定多维表达式 (MDX) 语句的作用域限制于指定的子多维数据集。  
   

@@ -1,24 +1,26 @@
 ---
-title: 第 6 课实施 R 模型 |Microsoft 文档
+title: 课 6 预测潜在结果使用 R 模型 （SQL Server 机器学习） |Microsoft 文档
+description: 本教程演示如何将 R 嵌入在 SQL Server 中存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249850"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>第 6 课： 具有可操作性 R 模型
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>第 6 课： 预测在存储过程中使用 R 模型的潜在结果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是教程的有关如何在 SQL Server 中使用 R 的 SQL 开发人员的一部分。
 
-在此步骤中，您学习*具有可操作性*模型时使用存储的过程。 此存储过程可由其他应用程序直接调用，以就新的观测进行预测。 本演练演示了两种方法执行存储过程中使用 R 模型评分：
+在此步骤中，你了解如何使用针对新的观测值的模型来预测潜在的结果。 模型包装在存储过程的其他应用程序可以直接调用。 本演练演示了几种方式执行评分：
 
 - **批量计分模式**: SELECT 查询用作存储过程的输入。 存储过程将返回与输入事例对应的观测表。
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="basic-scoring"></a>基本评分
 
-存储过程 _PredictTip_ 说明了在存储过程中包装预测调用的基本语法。
+存储过程 **PredictTip** 说明了在存储过程中包装预测调用的基本语法。
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + SELECT 语句从数据库中获取的序列化的模型，并将该模型存储在 R 变量`mod`进行进一步处理使用。
 
-+ 获取新用例以获得评分[!INCLUDE[tsql](../../includes/tsql-md.md)]中指定查询`@inquery`，存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧将被传递给 R 中的 `rxPredict` 函数，该函数将生成评分。
++ 获取新用例以获得评分[!INCLUDE[tsql](../../includes/tsql-md.md)]中指定查询`@inquery`，存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧传递给[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)函数中[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)，这将生成分数。
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    此查询可以用作存储的过程中，输入_PredictTipBatchMode_、 下载中提供。
+    此查询可以用作存储的过程中，输入**PredictTipMode**、 下载中提供。
 
-2. 花点时间查看存储过程的代码_PredictTipBatchMode_中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+2. 花点时间查看存储过程的代码**PredictTipMode**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ GO
 
 在本部分中，你将了解如何创建使用存储的过程的单个预测。
 
-1. 花点时间查看存储过程 _PredictTipSingleMode_的代码，它作为下载的一部分提供。
+1. 花点时间查看存储过程的代码**PredictTipSingleMode**，即下载的一部分包括。
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

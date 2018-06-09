@@ -3,8 +3,6 @@ title: 映射 Sybase ASE 和 SQL Server 数据类型 (SybaseToSQL) |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -21,11 +19,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8015121c04b75b0f99d56503715a43539db8dceb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775d251eb43ae33457d6707f1d881a72d54c0112
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779134"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>映射 Sybase ASE 和 SQL Server 数据类型 (SybaseToSQL)
 Sybase 自适应 Server Enterprise (ASE) 数据库类型与不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库类型。 ASE 到的数据库对象的转换时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象，您必须指定如何映射到的 ASE 中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
@@ -71,7 +70,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换**框。  
   
-    5.  单击 **“确定”**。  
+    5.  单击“确定” 。  
   
 3.  若要编辑的数据类型映射，请执行以下操作：  
   
@@ -98,6 +97,6 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
 ## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是为[创建评估报表](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)或[转换 Sybase ASE 的数据库对象添加到 SQL Server 或 SQL Azure 语法](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3)。 如果创建了一个评估报告，Sybase ASE 对象将自动转换此评估过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 Sybase ASE 数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

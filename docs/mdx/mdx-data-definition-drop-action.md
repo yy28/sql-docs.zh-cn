@@ -1,41 +1,23 @@
 ---
 title: 删除操作语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DROP
-- DROP ACTION
-- Action
-- DROP_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DROP ACTION statement
-- deleting actions
-- removing actions
-- actions [MDX]
-- dropping actions
-ms.assetid: 74b3cfee-dea8-4968-a54c-1754d52ee1bd
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f91406c2af7698067ca31760d6a3984ee1246225
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f47eaad9a13966abd1d08b0121fdd9c0a64a7438
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741646"
 ---
 # <a name="mdx-data-definition---drop-action"></a>MDX 数据定义-删除操作
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   从指定多维数据集中删除指定的操作。  
   
@@ -54,7 +36,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  *Action_Name*  
  提供要删除操作的名称的有效字符串表达式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE ACTION 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: 创建成员语句 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4458554d8b3aa6b0cb87d59629c70a18b609df44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579359"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742246"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 数据定义-创建成员
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   创建计算成员。  
   
@@ -106,14 +106,14 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>标准属性  
- 每个计算成员都有一个默认属性集。 当客户端应用程序连接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，默认属性为受支持，或可用于支持，如管理员将选择。  
+ 每个计算成员都有一个默认属性集。 当客户端应用程序连接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，默认属性为受支持，或可用于支持，如管理员将选择。  
   
  其他成员属性是否可用取决于多维数据集定义。 下列属性表示与多维数据集中的维度级别有关的信息。  
   
 |属性标识符|含义|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|在一个计算成员引用另一个计算成员（即计算成员相交）的情况下，计算成员的求解次序。|  
-|FORMAT_STRING|显示单元值时，客户端应用程序可以使用的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 样式格式字符串。|  
+|FORMAT_STRING|显示单元格的值时，客户端应用程序可以使用一个 Office 样式格式字符串。|  
 |VISIBLE|指示计算成员在架构行集中是否可见的值。 可见性计算成员可以添加到与一组[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函数。 非零值表示计算成员可见。 此属性的默认值是*可见*。<br /><br /> 不可见（此值设置为零时）的计算成员通常用作更复杂的计算成员中的中间步骤。 这些计算成员也可以由其他类型的成员（如度量值）引用。|  
 |NON_EMPTY_BEHAVIOR|解析空单元时，用来确定计算成员的行为的度量值或集。<br /><br /> **\*\* 警告\* \*** 此属性已弃用。 避免将其设置。 有关详细信息，请参阅 [SQL Server 2016 中不推荐使用的 Analysis Services 功能](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)。|  
 |CAPTION|客户端应用程序用作成员标题的字符串。|  

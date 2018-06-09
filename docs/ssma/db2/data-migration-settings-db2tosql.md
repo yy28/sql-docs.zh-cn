@@ -1,8 +1,6 @@
 ---
 title: 数据迁移设置 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 54f7f3b8c7c5158a51ac54cc7c7bf53568268d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b5d6ad21b98229d79ebcedddfe16c98cbc2d706
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774973"
 ---
 # <a name="data-migration-settings-db2tosql"></a>数据迁移设置 (DB2ToSQL)
   
@@ -55,10 +54,10 @@ ms.lasthandoff: 05/03/2018
   
 有两个按钮存在 viz。:  
   
--   **应用：**单击**应用**将已更改的设置。  
+-   **应用：** 单击**应用**将已更改的设置。  
   
 -   **取消:** 单击**取消**之前进行的更改已还原存在的设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 DB2 数据迁移到 SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

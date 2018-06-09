@@ -1,6 +1,6 @@
 ---
 title: 使用标量表达式 |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d7b33042ad26fbf8dbf98bf2ea19e00ea0f4562
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a80933b1a9845ec2676fba470ed39e06ee7f4ad8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582359"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743896"
 ---
 # <a name="using-scalar-expressions"></a>使用标量表达式
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   在多维表达式 (MDX) 中，标量表达式是 MDX 语法的一个元素；在计算时，它在计算上下文中返回单个值。  
   

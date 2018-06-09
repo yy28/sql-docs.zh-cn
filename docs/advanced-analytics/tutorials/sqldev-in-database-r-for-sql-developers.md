@@ -1,20 +1,21 @@
 ---
-title: 数据库中 R 分析 SQL 开发人员 （教程） |Microsoft 文档
+title: SQL Server 机器学习开发人员的嵌入的 R 分析教程 |Microsoft 文档
+description: 本教程演示如何将 R 嵌入在 SQL Server 中存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3d2b77d73bb1b8f5d4c507b884d0a09f4647012b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585269"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250020"
 ---
-# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>数据库中 R 分析 SQL 开发人员 （教程）
+# <a name="tutorial-embedded-r-in-stored-procedures-and-t-sql-functions"></a>教程： 将 R 嵌入在存储的过程和 T-SQL 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本教程的目标是 SQL 程序员提供生成机器学习在 SQL Server 中的解决方案的实践经验。 在本教程中，你将学习如何通过 R 代码包装在存储过程中将 R 合并到应用程序或 BI 解决方案。
@@ -31,41 +32,30 @@ ms.locfileid: "34585269"
 
 在本教程中，我们假定您已被授予的解决方案和专注于构建和部署使用 SQL Server 的解决方案所需的所有 R 代码。
 
-- [第 1 课： 下载示例数据](../tutorials/sqldev-download-the-sample-data.md)
+- [第 1 课： 下载的示例数据和脚本](../tutorials/sqldev-download-the-sample-data.md)
 
-    将示例数据集和示例 SQL 脚本文件下载到本地计算机。
+- [第 2 课： 设置教程环境](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
-- [第 2 课： 将数据导入到 SQL Server 使用 PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [第 3 课： 浏览和可视化数据形状和分发，通过调用存储过程中的 R 函数](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    执行在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例上创建数据库和表的 PowerShell 脚本，并将示例数据加载到该表。
-
-- [第 3 课： 浏览和可视化数据](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    通过从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程调用 R 包和函数来执行基本的数据浏览和可视化。
-
-- [第 4 课： 创建使用 T-SQL 的数据功能](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    使用自定义 SQL 函数创建新数据特征。
+- [第 4 课： 创建数据功能在 T-SQL 的函数中使用 R](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
--   [第 5 课： 训练和保存使用 T-SQL 的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    生成的存储过程中使用 R 的机器学习模型。 将模型保存到的 SQL Server 表。
+- [第 5 课： 训练和保存使用函数和存储的过程的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [第 6 课： 实施该模型](../tutorials/sqldev-operationalize-the-model.md)
+- [第 6 课： 在操作化的存储过程包装 R 代码](../tutorials/sqldev-operationalize-the-model.md)。 
+  将模型保存到数据库后，使用存储过程从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用该模型用于预测。
 
-    将模型保存到数据库后，使用存储过程从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用该模型用于预测。
-
-### <a name="scenario"></a>应用场景
+## <a name="scenario"></a>应用场景
 
 本教程使用的已知的公共数据集，基于在纽约出租车行程。 若要使示例代码更快速地运行，我们创建代表 1%采样的数据。 你将使用此数据来生成预测特定行程是否有可能收到一条提示，或不是，基于例如天、 距离和提取位置的时间的列的二元分类模型。
 
-### <a name="requirements"></a>要求
+## <a name="requirements"></a>要求
 
-本教程适用于熟悉基本数据库操作，如创建数据库和表，将数据导入表，以及编写 SQL 查询的用户。 已提供所有 R 代码，因此不需要任何 R 开发环境。 可以使用经验的 SQL 程序员 [！ 包括 [tsql] (.../..包括 / tsql md.md)] 中 [！ 包括 [ssManStudioFull] (.../..包括 / ssmanstudiofull md.md) 并运行提供的 PowerShell 脚本，以完成此示例。 但是，在开始本教程之前，应该完成下列准备工作：
+本教程假定你熟悉基本数据库操作，如创建数据库和表、 导入数据，以及编写 SQL 查询。 它不会假定你知道。在这种情况下，提供了所有 R 代码。 技术精湛的 SQL 程序员可以使用提供的 PowerShell 脚本，在 GitHub 上，示例数据和[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]若要完成此示例。 
 
-但是，在开始本教程之前, 必须完成下列准备工作：
+在开始本教程： 之前
 
-- 连接到带有 R Services 的 SQL Server 2016 或使用机器学习服务和启用的 R 2017 年 SQL Server 的实例。
+- 验证是否有的已配置的实例[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)或[使用 R 启用的 SQL Server 自 2017 年 1 机器学习 Services](../install/sql-machine-learning-services-windows-install.md#verify-installation)。 此外，[确认你拥有的 R 库](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)。
 - 对于本教程使用的登录名必须有权创建数据库和其他对象，若要上载的数据，选择数据，并运行存储的过程。
 
 > [!NOTE]

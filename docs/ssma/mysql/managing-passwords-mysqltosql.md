@@ -1,8 +1,6 @@
 ---
 title: 管理密码 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d7e8e7cc64df1c5c8211e1d0ead7ef1642116dff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd1cec17f25598637f26642d2416b1b796c356b8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776483"
 ---
 # <a name="managing-passwords-mysqltosql"></a>管理密码 (MySQLToSQL)
 本节是有关保护数据库密码和导入或将其导出跨服务器的过程：  
@@ -45,7 +44,7 @@ SSMA 允许你保护你的数据库的密码。
   
     以明文形式的密码是不安全的。 因此，你将遇到控制台输出中的以下警告消息： *"服务器&lt;服务器 id&gt;密码是提供以不安全的明文形式，SSMA 控制台应用程序提供了一个选项来保护密码通过加密，请参阅帮助文件了解详细信息中 SSMA – securepassword 选项。"*  
   
-    **加密的密码：**指定的密码，在这种情况下，存储在 ProtectedStorage.ssma 的本地计算机上以加密形式。  
+    **加密的密码：** 指定的密码，在这种情况下，存储在 ProtectedStorage.ssma 的本地计算机上以加密形式。  
   
     -   **保护密码**  
   
@@ -137,6 +136,6 @@ SSMA 控制台应用程序，可将加密的数据库密码存在于本地计算
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台 (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   
