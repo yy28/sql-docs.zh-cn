@@ -3,8 +3,6 @@ title: 连接到 Sybase (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2152c6a02a7c02d7aea5fb5ab01c2aa5b74dfad4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778394"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>连接到 Sybase (SybaseToSQL)
 使用**连接到 Sybase**对话框中，若要连接到你想要迁移的 Sybase 自适应 Server Enterprise (ASE) 实例。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 Sybase**。 如果你以前连接，则命令是**重新连接到 Sybase**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **提供程序**  
 选择任何用于连接到 Sybase 服务器计算机上安装提供程序。  
   
@@ -59,10 +58,10 @@ ms.lasthandoff: 05/03/2018
   
     |设置|Sybase 12.5 参数|Sybase 15 参数|  
     |-----------|-------------------------|-----------------------|  
-    |服务器名称|服务器名称|Server|  
+    |服务器名称|服务器名称|“服务器”|  
     |端口|服务器端口地址|端口|  
-    |用户名|用户 ID|用户 ID|  
-    |密码|密码|密码|  
+    |“用户名”|用户 ID|用户 ID|  
+    |Password|Password|Password|  
     |提供程序|提供程序|提供程序|  
   
     Sybase ASE 12.5 的一个示例连接字符串如下所示：  
@@ -78,9 +77,9 @@ ms.lasthandoff: 05/03/2018
     |设置|Sybase 12.5 月 15 日参数|  
     |-----------|-----------------------------|  
     |驱动程序名称|驱动程序|  
-    |服务器名称|Server|  
+    |服务器名称|“服务器”|  
     |用户名|uid|  
-    |密码|pwd|  
+    |Password|pwd|  
     |端口号|端口|  
   
     对于 Sybase ASE 12.5 或 15 中，连接字符串的示例如下所示：  
@@ -91,9 +90,9 @@ ms.lasthandoff: 05/03/2018
   
     |设置|Sybase 12.5 月 15 日参数|  
     |-----------|-----------------------------|  
-    |服务器名称|Server|  
+    |服务器名称|“服务器”|  
     |用户名|uid|  
-    |密码|pwd|  
+    |Password|pwd|  
     |端口号|端口|  
   
     请按照是的 ADO.NET 提供程序的连接字符串示例：  

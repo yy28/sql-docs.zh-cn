@@ -1,6 +1,6 @@
 ---
 title: Filestore 属性 |Microsoft 文档
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 62db68cf9b20f0b7cb3e210f65d1f1167a4202e9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a5bf8e90352218b222bbd6a58ad876ca0e1364b
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239037"
 ---
 # <a name="filestore-properties"></a>FileStore 属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下列各表中列出的文件存储服务器属性。 这些属性都是高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改这些属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持`filestore`下表中列出的服务器属性。 这些属性都是高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改这些属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用于：** 多维和表格服务器模式  
   
@@ -35,9 +37,9 @@ ms.lasthandoff: 05/10/2018
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
  **RandomFileAccessMode**  
- 这是一项布尔属性，指示是否在随机文件访问模式下访问数据库文件和缓存文件。 默认情况下禁用此属性。 默认情况下，在打开分区数据文件以便进行读访问时，Analysis Services 不设置随机文件访问标志。  
+ 这是一项布尔属性，指示是否在随机文件访问模式下访问数据库文件和缓存文件。 默认情况下禁用此属性。 默认情况下，服务器不设置随机文件访问标志，打开分区数据文件进行读取访问时。  
   
- 在高端系统上，特别是在具有大型内存资源和多个 NUMA 节点的系统上，使用随机文件访问可能会给您带来好处。 在随机访问模式中，Windows 会绕过将数据从磁盘读入系统文件缓存的页映射操作，因此会降低对缓存的争用。  
+ 在高端系统上，特别是在具有大型内存资源和多个 NUMA 节点的系统上，使用随机文件访问可能会给您带来好处。 在随机访问模式下，Windows 会绕过页映射操作的数据从磁盘读入系统文件缓存，因此可降低对缓存的争用。  
   
  您将需要执行比较测试，以便确定查询性能是否由于更改此属性而得到改善。 有关执行比较测试的最佳做法，包括清除缓存和避免常见错误，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。 关于权衡上使用此属性的其他信息，请参阅[ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369)。  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 05/10/2018
  **MemoryModel\InitialBonus**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

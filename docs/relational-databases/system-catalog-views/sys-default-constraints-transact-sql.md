@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81fbef54212e53ae2e99ec3d6d0d73b630e50862
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9da755e03c4cbdf9390db34e167da20ad3b78a61
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239357"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |**\<列继承自 sys.objects >**||该视图继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**parent_column_id**|**int**|中的列 ID **parent_object_id**所属此默认设置。|  
-|**“定义”**|**nvarchar(max)**|定义此默认值的 SQL 表达式。|  
+|**定义**|**nvarchar(max)**|定义此默认值的 SQL 表达式。|  
 |**is_system_named**|**bit**|1 = 名称由系统生成。<br /><br /> 0 = 名称由用户提供。|  
   
 ## <a name="permissions"></a>权限  
@@ -60,7 +61,7 @@ WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')
 AND c.name = 'VacationHours';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

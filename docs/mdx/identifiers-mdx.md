@@ -1,40 +1,25 @@
 ---
 title: 标识符 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- formats [Analysis Services]
-- Multidimensional Expressions [Analysis Services], identifiers
-- identifiers [MDX]
-- MDX [Analysis Services], identifiers
-- delimited identifiers [MDX]
-- regular identifiers [MDX]
-- formats [Analysis Services], identifiers
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a04d387c0ee40d825fddf3c50f02793e722cdbc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740806"
 ---
 # <a name="identifiers-mdx"></a>标识符 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  标识符是的名称[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]对象。 每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象可以有且仅有一个标识符。 这些对象包括多维数据集、维度、层次结构、级别、成员等等。 可以使用对象的标识符在多维表达式 (MDX) 语句中引用对象。  
+
+  标识符是 Analysis Services 对象的名称。 每个对象可以和必须具有的标识符。 这些对象包括多维数据集、维度、层次结构、级别、成员等等。 可以使用对象的标识符在多维表达式 (MDX) 语句中引用对象。  
   
  根据命名对象的方式，对象标识符可以是常规标识符，也可以是分隔标识符。  
   
@@ -95,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 -   当对象的名称或名称中的一部分使用保留关键字时。  
   
-     建议不要将保留关键字用作对象名称。 升级从早期版本的数据库[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含在早期版本中，包括未保留的词的标识符但保留的字[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
+     建议不要将保留关键字用作对象名称。 升级从早期版本的数据库[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含在早期版本中，包括未保留的词的标识符，但现在保留。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
   
 -   当对象的名称使用未被列为限定标识符的字符时。  
   
@@ -138,9 +123,9 @@ ms.lasthandoff: 05/03/2018
   
  此外，还分隔了上一示例中的 Measures 标识符，以说明分隔多个标识符的情况。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 语言参考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+## <a name="see-also"></a>请参阅  
+ [MDX 语言参考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查询基础知识&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

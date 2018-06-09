@@ -1,34 +1,23 @@
 ---
 title: LookupCube (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LOOKUPCUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LookupCube function
-ms.assetid: 243fa101-328a-4016-86e0-d8b5977e15a9
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b21de8eae8df0d591ab99038065a24ed85453ed1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741716"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回用多维表达式 (MDX) 对同一数据库中的另一个指定多维数据集求得的值。  
   
@@ -53,7 +42,7 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  一个有效的字符串表达式，通常为返回一个字符串的单元坐标的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定数值表达式，则**LookupCube**函数中指定的多维数据集的指定数值表达式的计算结果并返回生成的数字值。  
   
  如果指定的字符串表达式，则**LookupCube**函数中指定的多维数据集的指定的字符串表达式的计算结果并返回结果的字符串值。  
@@ -76,7 +65,7 @@ LookupCube(Cube_Name, String_Expression )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,8 +1,6 @@
 ---
 title: 生成报表 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fb20d4d18555d015b16226624b03190d51ae2486
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c4a567293e2bd18dd37e83cef1cfbc8d9c4b982
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775003"
 ---
 # <a name="generating-reports-db2tosql"></a>生成报表 (DB2ToSQL)
 使用命令执行特定活动的报告中在对象树级别的 SSMA 控制台中生成。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl。不。**|**Command**|**报表标题**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|迁移数据|DataMigrationReport&lt;n&gt;。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|verbose=”false”|生成的活动汇总的报告。|  
+    |@shouldalert|verbose=”false”|生成的活动汇总的报告。|  
     |2|verbose=”true”|生成每个活动的摘要和详细状态报表。|  
   
     > [!NOTE]  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|report-errors=”false”|没有错误的详细信息 / 警告 / 信息消息。|  
+    |@shouldalert|report-errors=”false”|没有错误的详细信息 / 警告 / 信息消息。|  
     |2|report-errors=”true”|详细的错误 / 警告 / 信息消息。|  
   
     > [!NOTE]  
@@ -93,7 +92,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="synchronize-target"></a>同步目标：  
 该命令**同步目标**具有**报表-到错误**参数，指定该同步操作的错误报告的位置。 然后，名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
   
-**注意：**如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
+**注意：** 如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -106,9 +105,9 @@ ms.lasthandoff: 05/03/2018
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**对象名称：**指定为同步 （它还可以具有 indivdual 对象名称或组对象名称） 被视为对象。  
+**对象名称：** 指定为同步 （它还可以具有 indivdual 对象名称或组对象名称） 被视为对象。  
   
-**-错误：**指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
+**-错误：** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
 -   为警告报告总数  
   
@@ -119,7 +118,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="refresh-from-database"></a>刷新从数据库：  
 该命令**从数据库中刷新**具有**报表-到错误**参数，指定刷新操作的错误报告的位置。 然后，名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
   
-**注意：**如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
+**注意：** 如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -134,9 +133,9 @@ ms.lasthandoff: 05/03/2018
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**对象名称：**指定刷新 （它还可以具有 indivdual 对象名称或组对象名称） 被视为对象。  
+**对象名称：** 指定刷新 （它还可以具有 indivdual 对象名称或组对象名称） 被视为对象。  
   
-**-错误：**指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
+**-错误：** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
 -   为警告报告总数  
   
@@ -144,6 +143,6 @@ ms.lasthandoff: 05/03/2018
   
 -   失败脚本  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

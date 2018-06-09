@@ -1,43 +1,20 @@
 ---
 title: 数据挖掘扩展插件 (DMX) 引用 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DMX [Analysis Services]
-- statements [DMX]
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], about Data Mining Extensions
-- DMX [Analysis Services], statements
-- data definition statements [DMX]
-- predictions [DMX]
-- Data Mining Extensions [Analysis Services]
-- SSAS, DMX
-- queries [DMX], extensions reference
-- SQL Server Analysis Services, DMX
-- OLE DB for Data Mining
-- data manipulation statements [DMX]
-- Data Mining Extensions [Analysis Services], about Data Mining Extensions
-- mining models [Analysis Services], DMX
-ms.assetid: 6d85ca20-de67-4e20-b3b5-b734c6cfcece
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2a9338c6db570ae14e78b0aa7b8c6e891b648385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842820"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>数据挖掘扩展插件 (DMX) 参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -119,14 +96,14 @@ ms.lasthandoff: 05/03/2018
   
  使用 DMX 函数可以获取在模型定型过程中发现的信息，并且还可以计算新的信息。 这些函数可用于多种用途，包括返回说明基础数据或预测精确性的统计信息，或返回预测的详细说明。  
   
- **有关详细信息****信息：** [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)，[常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[数据挖掘扩展插件&#40;DMX&#41;函数引用  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **有关详细信息****信息：** [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)，[常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [返回到 DMX 语句](#BKMK_DMXStatements)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

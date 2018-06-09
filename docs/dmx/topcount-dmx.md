@@ -1,31 +1,20 @@
 ---
 title: TopCount (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopCount function
-ms.assetid: cbe031c9-4ff0-45df-9810-ebaebacf161d
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 48a53d01219290dd50bd192a6ee2adf5b51ad7b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842770"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由提供的值\<排名表达式 > 自变量确定中提供的行级别的递减顺序\<表表达式 > 自变量，并在指定的最顶层的行数\<计数 > 返回自变量。  
   
  TopCount 函数引入最初了启用关联的预测，并通常情况下，生成与包含语句相同的结果**选择前**和**ORDER BY**子句。 如果你使用，您将获得更好的性能，关联的预测**预测 (DMX)** 函数，该支持多个预测，以返回的规范函数。  
@@ -70,7 +59,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -106,7 +95,7 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29…|0.25…|  
 |Water Bottle|2866|0.19…|0.17…|  
@@ -122,7 +111,7 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  结果包含按支持值排序的前 3 个预测。 您可以将 $SUPPORT 替换为 $PROBABILITY 或 $ADJUSTED_PROBABILITY，以便返回按概率或调整后的概率排名的预测。 有关详细信息，请参阅**预测 (DMX)**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   

@@ -1,8 +1,6 @@
 ---
 title: 数据迁移报告 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,20 +13,21 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: 67131d3dd05c48f9e7dfa4600e6172d3354db9ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9001e61cb409be635f99780085a47656ab53b8d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777033"
 ---
 # <a name="data-migration-report--oracletosql"></a>数据迁移报告 (OracleToSQL)
 **数据迁移报告**对话框中将显示在您迁移到的数据后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="options"></a>选项  
-**状态**  
+## <a name="options"></a>“常规”  
+**“状态”**  
 显示从迁移数据源到目标数据库的状态。  
   
-**从**  
+**From**  
 源表。  
   
 **若要**  

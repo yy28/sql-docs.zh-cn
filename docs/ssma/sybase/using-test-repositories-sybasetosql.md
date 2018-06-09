@@ -3,8 +3,6 @@ title: 使用测试存储库 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b367c2e29949b0dcf6960eeacc501d308b131ff1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 880262cf0342c66a91a1f88e50477e0685e1d1e0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779533"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用测试存储库 (SybaseToSQL)
 SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将来使用。 存储库数据保存在 SQL Server 表**TestCaseRepository**和**RunTestCaseResultRepository**架构中**ssma_sybase_utilities**的**ssmatesterdb_syb**数据库。  
@@ -81,7 +80,7 @@ SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将
   
 -   单击**删除**按钮以删除所选的测试结果  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [运行测试用例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

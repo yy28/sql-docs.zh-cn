@@ -1,8 +1,6 @@
 ---
 title: 用于访问控制台 (AccessToSQL) 入门 SSMA |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 60c9a1775c1d5acf9f3c4b26d061d991941d07d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c37a486c560a5dc0cb6298f93b4486accc18354b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773913"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>用于访问控制台 (AccessToSQL) 入门 SSMA
 本部分介绍的过程启动并开始使用访问控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口。  
@@ -69,6 +68,6 @@ ms.lasthandoff: 05/03/2018
 |绿色|提示用户输入|  
 |青色|启动，完成和操作的结果|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装访问的 SQL Server 迁移的助手](http://msdn.microsoft.com/en-us/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
   

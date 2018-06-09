@@ -1,8 +1,6 @@
 ---
 title: 连接到 Oracle (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f682fd589ed585c84c7cb3a4f9efed5f2d185999
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d002682b0671bedbe15a3c790429b9a80452a35
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776993"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>连接到 Oracle (OracleToSQL)
 使用**连接到 Oracle**对话框中，连接到你想要迁移的 Oracle 数据库。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 Oracle**。 如果你以前连接，则命令是**重新连接到 Oracle**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **提供程序**  
 选择与 Oracle 数据库的连接的数据访问提供程序。 可用的提供程序是 Oracle 客户端提供程序和 OLE DB 访问接口。 默认值为 Oracle 客户端提供程序。  
   

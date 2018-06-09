@@ -1,8 +1,6 @@
 ---
 title: 连接到 MySQL (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2290b67ac66a1fa06d62b88390a538a3e06621ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4de2590221535410b5095494dd6f1801460f73
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775693"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 使用**连接到 MySQL**对话框以连接到你想要迁移的 MySQL 数据库。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 MySQL**。 如果你以前连接，则命令是**重新连接到 MySQL**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **提供程序**  
   
 可用的 MySQL 提供程序是 MySQL ODBC 5.1 驱动程序 （受信任）。  
@@ -67,11 +66,11 @@ ms.lasthandoff: 05/03/2018
   
 单击"配置"按钮，会出现一个对话框。 若要使用加密，而必须连接到 MySQL 数据库，对以下三个证书文件在对话框中存在的路径定义 [隐私增强邮件证书 (PEM)]:  
   
--   **SSL 证书颁发机构：**的信任 SSL Ca 的列表中指定文件的路径。  
+-   **SSL 证书颁发机构：** 的信任 SSL Ca 的列表中指定文件的路径。  
   
--   **SSL 证书：**指定要用于建立安全连接使用的 SSL 证书文件的名称。  
+-   **SSL 证书：** 指定要用于建立安全连接使用的 SSL 证书文件的名称。  
   
--   **SSL 密钥：**指定 SSL 密钥文件用于建立的安全连接的名称。  
+-   **SSL 密钥：** 指定 SSL 密钥文件用于建立的安全连接的名称。  
   
 > [!NOTE]  
 > -   **确定**按钮启用时提供了所需的信息。 如果任何文件路径无效，"确定"按钮将一直保持禁用。  

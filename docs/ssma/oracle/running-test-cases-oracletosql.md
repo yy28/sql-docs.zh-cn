@@ -1,8 +1,6 @@
 ---
 title: 运行测试用例 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a0affe85a5c823fdeecf530cd2c661011076c18f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 283dac366a8cfdf7e6fba39037a7c728945e0f67
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777903"
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Oracle 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -47,10 +46,10 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 ||||  
 |-|-|-|  
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
-|USER_TABLE$ AUD|table|保存已删除并覆盖的行的表。|  
-|USER_TABLE$ AUDID|table|保存新的和已更改行的表。|  
+|USER_TABLE$ AUD|表|保存已删除并覆盖的行的表。|  
+|USER_TABLE$ AUDID|表|保存新的和已更改行的表。|  
 |USER_TABLE|view|简化的表示形式的表修改。|  
 |新 USER_TABLE $|view|简化的表示形式插入的和被覆盖的行。|  
 |USER_TABLE$ NEW_ID|view|插入的和已更改行的标识。|  
@@ -60,16 +59,16 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 ||||  
 |-|-|-|  
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
   
 和以下对象创建在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb 数据库中。  
   
 ||||  
 |-|-|-|  
-|名称|类型|Description|  
-|USER_TABLE$ Aud|table|保存已删除并覆盖的行的表。|  
-|USER_TABLE$ AudID|table|保存新的和已更改行的表。|  
+|“属性”|类型|Description|  
+|USER_TABLE$ Aud|表|保存已删除并覆盖的行的表。|  
+|USER_TABLE$ AudID|表|保存新的和已更改行的表。|  
 |USER_TABLE|view|简化的表示形式的表修改。|  
 |新的 USER_TABLE $|view|简化的表示形式插入的和被覆盖的行。|  
 |USER_TABLE$ new_id|view|插入的和已更改行的标识。|  
@@ -84,7 +83,7 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
 ## <a name="next-step"></a>下一步  
 [查看测试用例报表&#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [选择并配置的对象添加到测试&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
 [选择并配置受影响的对象&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

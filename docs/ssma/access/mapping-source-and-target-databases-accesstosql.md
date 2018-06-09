@@ -1,8 +1,6 @@
 ---
 title: 映射源和目标数据库 (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,11 +24,12 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ade8c301a8cb519c22413a4db9a236f58f5dd870
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb290594fc878a2df4cd6345ce6f9cc8f86ff51d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773823"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源和目标数据库 (AccessToSQL)
 当您连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你需要指定用于迁移的目标数据库。 如果你有多个访问数据库可以将它们映射到多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库 （或架构） 或连接的 SQL Azure 数据库下的多个架构。  
@@ -77,6 +76,6 @@ SSMA 方式可以将映射到每个访问数据库[!INCLUDE[ssNoVersion](../../i
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[转换数据库对象](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

@@ -3,8 +3,6 @@ title: 菜单命令和其他快捷键 (Sybase SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b02ec727dabf9db7ce614ee804ca6df619bd01b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab3cf6f49004144b325d051ce308fd53215c1760
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779343"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>菜单命令和其他快捷键 (Sybase SQL)
 以下各节描述了用于访问菜单命令和其他 Sybase 应用程序的 SSMA 的各种对话框中使用键盘快捷方式的键盘快捷键。  
@@ -204,6 +203,6 @@ ms.lasthandoff: 05/03/2018
 |启动快速信息。|CTRL + SHIFT + 空间|  
 |请转到声明。|F12|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [键盘快捷方式&#40;Sybase To SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

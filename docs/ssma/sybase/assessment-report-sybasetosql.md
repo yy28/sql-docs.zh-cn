@@ -3,8 +3,6 @@ title: 评估报表 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 777fab9d35118b4cffab8ed8f947a4e91cb2480d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92cca8bf4661902f8028893c108319968c070cc8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778663"
 ---
 # <a name="assessment-report-sybasetosql"></a>评估报表 (SybaseToSQL)
 评估报表窗口中显示的数据库的对象添加到转换的结果[!INCLUDE[tsql](../../includes/tsql_md.md)]语法，并且还可以帮助您评估的复杂性和成本的迁移项目。  
   
 若要访问评估报表中，选择的对象将转换源元数据资源管理器中右键单击**数据库**，然后选择**创建报表**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **转换统计信息**  
 显示按语句类型转换统计信息。 此窗格是可见的组对象，如架构时仅, 或左窗格中选择而无需代码的对象。  
   

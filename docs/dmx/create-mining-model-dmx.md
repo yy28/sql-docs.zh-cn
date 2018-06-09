@@ -1,38 +1,20 @@
 ---
 title: 创建挖掘模型 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842630"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  来检索当前的提供程序支持的算法的列表，只需使用[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看的当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *参数列表*  
- 選擇性。 由提供程序定义的算法所需参数的逗号分隔列表。  
+ 可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *XML 字符串*  
  （仅适用于高级用户。）XML 编码的模型 (PMML)。 字符串必须以单引号 (') 引起。  
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  有关可用于定义列的一组数据类型、内容类型、列分布和建模标志，请参阅下列主题：  
   
--   [数据类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [数据类型&#40;数据挖掘&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [内容类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [内容类型&#40;数据挖掘&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [列分布&#40;数据挖掘&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [建模标志 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [建模标志&#40;数据挖掘&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持以下使用\<列关系 > 子句。  
   
@@ -142,7 +124,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  有关与每个算法关联的参数的列表，请参阅[数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果要创建具有内置测试数据集的模型，则应当使用 CREATE MINING STRUCTURE 语句，然后再使用 ALTER MINING STRUCTURE 语句。 但是，并非所有挖掘模型类型都支持维持数据集。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
  有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时间序列预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
@@ -205,9 +187,9 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

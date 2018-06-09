@@ -1,8 +1,6 @@
 ---
 title: 故障排除 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a1652278a5bc89fb702321a8f07d0e6af749208c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c42002b789eb9572ddcd5a653af16798d6d2297
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778003"
 ---
 # <a name="troubleshooting-oracletosql"></a>故障排除 (OracleToSQL)
 并不少见运行迁移问题中途执行控制台脚本或命令。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  过程  
   
-3.  视图  
+3.  “查看”  
   
 4.  触发器  
   

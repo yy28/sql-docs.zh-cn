@@ -1,31 +1,20 @@
 ---
 title: PredictSequence (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictSequence
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictSequence function
-ms.assetid: c2992dfc-b99d-4430-8dcd-21ad3ffd4590
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 57085d5459855afbe39db3e3b6af836ad8c8aaeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 813641b7fa72405a0ba5a026e255f03feb94bd05
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841550"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +33,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>返回类型  
  A\<表表达式 >。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果*n*指定参数，它将返回以下值：  
   
 -   如果*n*大于零，下一步中最可能的序列值*n*步骤。  
@@ -61,7 +50,7 @@ From
   [Sequence Clustering]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

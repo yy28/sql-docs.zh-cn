@@ -3,8 +3,6 @@ title: 数据迁移报告 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,20 +16,21 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ac2b50c622d276ae87ba063248160702dd99b54f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e4f2e50603b970a2b1ec5c1eec4e258e80cfb3b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778504"
 ---
 # <a name="data-migration-report-sybasetosql"></a>数据迁移报告 (SybaseToSQL)
 **数据迁移报告**对话框中将显示在您迁移到的数据后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="options"></a>选项  
-**状态**  
+## <a name="options"></a>“常规”  
+**“状态”**  
 显示从迁移数据源到目标数据库的状态。  
   
-**从**  
+**From**  
 源表。  
   
 **若要**  

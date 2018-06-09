@@ -1,8 +1,6 @@
 ---
 title: 设置项目选项 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbe36fd3276ae6a5de2f5f41a8694fa9331d75a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbaeadbc97a178f3c90f43e26fc13cde416ecc5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776643"
 ---
 # <a name="setting-project-options-mysqltosql"></a>设置项目选项 (MySQLToSQL)
 对于每个 SSMA 项目，你可以设置项目级别选项。 这些选项用于指定如何转换对象、 如何迁移数据，以及如何源数据类型映射到目标数据类型。  在将对象转换为 SQL Server 或 SQL Azure，或将数据迁移到 SQL Server 或 SQL Azure 之前，验证的配置选项适用于项目。  
@@ -46,11 +45,11 @@ SSMA 有五个集的项目设置：
   
 可以四种方法配置项目设置：  
   
--   默认  
+-   ，则“默认”  
   
 -   Optimistic  
   
--   “完全”  
+-   完全  
   
 -   自定义  
   
@@ -85,7 +84,7 @@ SSMA 有五个集的项目设置：
   
     3.  若要指定自定义设置，选择或输入新的设置或值。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 你还可以自定义当前项目的设置。 设置保存到当前的项目文件。  
   
@@ -99,7 +98,7 @@ SSMA 有五个集的项目设置：
   
     2.  若要指定自定义模式，请选择**自定义**从**模式**下拉框。 然后选择相应的项目设置。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 ## <a name="next-step"></a>下一步  
 迁移的下一步取决于您的项目需求：  
@@ -108,6 +107,6 @@ SSMA 有五个集的项目设置：
   
 -   否则，你可以将 MySQL 数据库对象定义转换为 SQL Server 或 SQL Azure 对象定义。 有关详细信息，请参阅[转换 MySQL 数据库&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 MySQL 和 SQL Server 数据类型映射&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

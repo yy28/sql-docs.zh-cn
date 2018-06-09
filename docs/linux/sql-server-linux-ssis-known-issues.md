@@ -5,24 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 8e666a50f90a390307f00e8fd310f965fb7a50b7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822200"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制和 Linux 上的 SSIS 的已知的问题
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍了当前限制和已知的问题的 SQL Server Integration Services (SSIS) 在 Linux 上。
+本指南介绍了限制和已知的问题的 SQL Server Integration Services (SSIS) 在 Linux 上。
 
 ## <a name="general-limitations-and-known-issues"></a>常规限制和已知的问题
 
@@ -41,11 +42,9 @@ ms.lasthandoff: 05/19/2018
 
 ## <a name="components"></a> 支持和不支持组件
 
-在 Linux 上支持以下内置 Integration Services 组件。 下表中所述，其中一些具有 Linux 平台上的限制。
+在 Linux 上支持以下内置 Integration Services 组件。 其中一些 Linux 平台上存在限制。 在 Linux 上不支持未在此处列出的内置组件。
 
-在 Linux 上不支持未在此处列出的内置组件。
-
-### <a name="supported-control-flow-tasks"></a>支持控制流任务
+## <a name="supported-control-flow-tasks"></a>支持控制流任务
 - 大容量插入任务
 - 数据流任务
 - 数据事件探查任务
@@ -54,9 +53,9 @@ ms.lasthandoff: 05/19/2018
 - 表达式任务
 - FTP 任务
 - Web 服务任务
-- XML Task
+- XML 任务
 
-### <a name="control-flow-tasks-supported-with-limitations"></a>支持限制的控制流任务
+## <a name="control-flow-tasks-supported-with-limitations"></a>支持限制的控制流任务
 
 | 任务 | 限制 |
 |------------|---|
@@ -67,16 +66,34 @@ ms.lasthandoff: 05/19/2018
 | 传输数据库任务 | 不支持 UNC 路径。 |
 | | |
 
-### <a name="supported-control-flow-containers"></a>支持控制流容器
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>支持和不支持维护计划任务
+
+在 SQL Server 维护计划中，通常可以使用各种 SSIS 任务。
+
+在 Linux 上不支持以下维护计划任务：
+- 通知操作员
+- 执行 SQL Server 代理作业
+
+在 Linux 上支持以下维护计划任务：
+- 检查数据库完整性
+- 收缩数据库
+- 重新组织索引
+- 重新生成索引
+- 更新统计信息
+- 清理历史记录
+- 备份数据库
+- T-SQL 语句
+
+## <a name="supported-control-flow-containers"></a>支持控制流容器
 - 序列容器
 - For 循环容器
 - Foreach 循环容器
 
-### <a name="supported-data-flow-sources-and-destinations"></a>支持的数据数据流源和目标
+## <a name="supported-data-flow-sources-and-destinations"></a>支持的数据数据流源和目标
 - 原始文件源和目标
 - XML 源
 
-### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>数据流源和目标支持限制
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>数据流源和目标支持限制
 
 | 组件 | 限制 |
 |------------|---|
@@ -87,7 +104,7 @@ ms.lasthandoff: 05/19/2018
 | OLE DB 源和目标 | 仅支持为 SQL Server 的 SQL Server Native Client 11.0 和 Microsoft OLE DB 访问接口。 |
 | | |
 
-### <a name="supported-data-flow-transformations"></a>支持数据流转换
+## <a name="supported-data-flow-transformations"></a>支持数据流转换
 - Aggregate
 - 审核
 - 平衡的数据分发服务器
@@ -112,7 +129,7 @@ ms.lasthandoff: 05/19/2018
 - Union All
 - 逆透视
 
-### <a name="data-flow-transformations-supported-with-limitations"></a>数据流转换支持限制
+## <a name="data-flow-transformations-supported-with-limitations"></a>数据流转换支持限制
 
 | 组件 | 限制 |
 |------------|---|
@@ -120,7 +137,7 @@ ms.lasthandoff: 05/19/2018
 | 脚本组件 | 仅支持标准的.NET Framework Api。 |
 | | |
 
-### <a name="supported-and-unsupported-log-providers"></a>支持和不支持的日志提供程序
+## <a name="supported-and-unsupported-log-providers"></a>支持和不支持的日志提供程序
 所有内置的 SSIS 日志提供程序支持在 Linux 上除非 Windows 事件日志提供程序。
 
 SQL Server 日志提供程序仅支持 SQL 身份验证;它不支持 Windows 身份验证。

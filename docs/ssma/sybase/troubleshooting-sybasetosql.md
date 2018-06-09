@@ -3,8 +3,6 @@ title: 故障排除 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0a7870ca60e9ddd0ff8870745f85f82af0f8a996
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38f374290f7580a25e0be38ba4921476fd821e7e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779423"
 ---
 # <a name="troubleshooting-sybasetosql"></a>故障排除 (SybaseToSQL)
 并不少见运行迁移问题中途执行控制台脚本或命令。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  过程  
   
-3.  视图  
+3.  “查看”  
   
 4.  触发器  
   

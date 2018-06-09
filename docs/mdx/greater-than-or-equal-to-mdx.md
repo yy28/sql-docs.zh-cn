@@ -1,35 +1,23 @@
 ---
 title: '&gt;= (大于或等于) (MDX) |Microsoft 文档'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- '>='
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- '>= (greater than or equal to operator)'
-- greater than or equal to (>=)
-ms.assetid: 272f4614-9ba3-46bd-8306-181c26e798f1
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 121ae9eb5fceae6ff1663c2447498a005112506c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 14babb777aa4c5de85c0a0324621aebf91cb5367
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740796"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (大于或等于) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   执行比较运算，以确定一个多维表达式 (MDX) 的值是否大于等于另一个 MDX 表达式的值。  
   
@@ -73,7 +61,7 @@ WHERE
     ([Measures].[HighGPM])  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

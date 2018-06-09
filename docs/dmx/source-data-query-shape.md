@@ -1,32 +1,20 @@
 ---
 title: 形状 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SHAPE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SHAPE statement
-- multiple data sources
-ms.assetid: b9526ec2-40bc-4bf5-b4e5-774f71075065
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 0c31d8d4725d90200f7f2811f974ffd9b98bcaa2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841670"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询&gt;的形状
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +55,7 @@ APPEND ({ <child table query> }
  *列的表名称*  
  在父表中为嵌套表新追加的列名。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  必须按与父表和子表都相关的列对查询排序。  
   
 ## <a name="examples"></a>示例  
@@ -83,10 +71,10 @@ SHAPE {
   RELATE OrderNumber to OrderNumber)   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [&#60;源数据查询&#62;](../dmx/source-data-query.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

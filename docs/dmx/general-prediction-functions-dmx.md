@@ -1,35 +1,20 @@
 ---
 title: 常规预测函数 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DMX [Analysis Services], functions
-- mapping functions to query types [DMX]
-- DMX [Analysis Services], prediction queries
-- prediction queries [DMX]
-- SELECT statement [DMX]
-- Data Mining Extensions [Analysis Services], functions
-- Data Mining Extensions [Analysis Services], prediction queries
-ms.assetid: e128159a-0458-43c9-bfe9-129cb6cfbe1c
-caps.latest.revision: 48
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e1ae136608aab3a90430512dc809bfa179da7e51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c8de92033c58f2583fc7ba93e6c326d4a406c90a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842670"
 ---
 # <a name="general-prediction-functions-dmx"></a>通用预测函数 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[预测 & #40; DMX & #41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
+|[预测&#40;DMX&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
 |[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|  
 |[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
   
@@ -51,13 +36,13 @@ ms.lasthandoff: 05/03/2018
   
 -   [存在&#40;DMX&#41;](../dmx/exists-dmx.md)  
   
--   [IsDescendant & #40; DMX & #41;](../dmx/isdescendant-dmx.md)  
+-   [IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)  
   
 -   [则 IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)  
   
 -   [则 IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)  
   
--   [预测 & #40; DMX & #41;](../dmx/predict-dmx.md)  
+-   [预测&#40;DMX&#41;](../dmx/predict-dmx.md)  
   
 -   [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
   
@@ -74,21 +59,21 @@ ms.lasthandoff: 05/03/2018
   
  有关在 DMX 中的函数的常规信息，请参阅[数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-|查询类型|支持的函数|注释|  
+|查询类型|支持的函数|Remarks|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM\<模型 >](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|这些函数可用于为包含数值数据类型的任何列提供最大值、最小值和平均值，而无需考虑该列是连续的还是离散化的。|  
-|[SELECT FROM\<模型 >。内容](../dmx/select-from-model-content-dmx.md)<br /><br /> 或<br /><br /> [SELECT FROM\<模型 >。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant & #40; DMX & #41;](../dmx/isdescendant-dmx.md)|此函数检索模型中的指定节点的子节点，并且可用于（举例而言）循环访问挖掘模型内容中的节点。 节点在挖掘模型内容中的排列取决于模型类型。 有关每个挖掘模型类型的结构的信息，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。<br /><br /> 如果您已将挖掘模型内容另存为一个维度，则还可以使用其他多维表达式 (MDX) 函数，这些函数可用于查询属性层次结构。|  
-|[SELECT FROM\<模型 >。用例](../dmx/select-from-model-cases-dmx.md)|[IsInNode & #40; DMX & #41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag 类](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [则 IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [则 IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Lag 函数仅支持时序模型。<br /><br /> 则 IsTestCase 函数支持基于使用创建维持选项，以创建测试数据集的结构的模型。 如果模型不是基于具有维持测试集的结构，则所有事例都将被视为定型事例。|  
-|[SELECT FROM\<模型 >。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode & #40; DMX & #41;](../dmx/isinnode-dmx.md)|在此上下文中，一部分，则 IsInNode 函数将返回属于一组理想化的示例用例的用例。|  
+|[SELECT FROM\<模型 >。内容](../dmx/select-from-model-content-dmx.md)<br /><br /> 或多个<br /><br /> [SELECT FROM\<模型 >。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|此函数检索模型中的指定节点的子节点，并且可用于（举例而言）循环访问挖掘模型内容中的节点。 节点在挖掘模型内容中的排列取决于模型类型。 有关每个挖掘模型类型的结构的信息，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。<br /><br /> 如果您已将挖掘模型内容另存为一个维度，则还可以使用其他多维表达式 (MDX) 函数，这些函数可用于查询属性层次结构。|  
+|[SELECT FROM\<模型 >。用例](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag 类](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [则 IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [则 IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Lag 函数仅支持时序模型。<br /><br /> 则 IsTestCase 函数支持基于使用创建维持选项，以创建测试数据集的结构的模型。 如果模型不是基于具有维持测试集的结构，则所有事例都将被视为定型事例。|  
+|[SELECT FROM\<模型 >。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|在此上下文中，一部分，则 IsInNode 函数将返回属于一组理想化的示例用例的用例。|  
 |SELECT FROM\<模型 >。PMML|不适用。 请改用 XML 查询函数。|仅下列模型类型支持 PMML 表示形式：<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析|  
 |[SELECT FROM\<模型 > PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|专门用于生成模型所用的算法的预测函数。|有关每个模型类型的预测函数的列表，请参阅[数据挖掘查询](../analysis-services/data-mining/data-mining-queries.md)。|  
 |[SELECT FROM\<模型 >](../dmx/select-from-model-dmx.md)|专门用于生成模型所用的算法的预测函数。|有关每个模型类型的预测函数的列表，请参阅[数据挖掘查询](../analysis-services/data-mining/data-mining-queries.md)。|  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

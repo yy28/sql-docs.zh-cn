@@ -1,8 +1,6 @@
 ---
 title: 使用测试存储库 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aea9c873a139ed53b64098ef88c9e23aef39bef4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b17f0cf6eabbf1268b849e63c24233aefabc089c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778473"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用测试存储库 (OracleToSQL)
 SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将来使用。 存储库数据保存在 SQL Server 表**TestCaseRepository**和**RunTestCaseResultRepository**架构中**ssma_oracle_utilities**的**ssmatesterdb**数据库。  
@@ -79,7 +78,7 @@ SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将
   
 -   单击**删除**按钮以删除所选的测试结果  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [运行测试用例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

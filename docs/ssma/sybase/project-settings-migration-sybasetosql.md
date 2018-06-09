@@ -3,8 +3,6 @@ title: 项目设置 （迁移） (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 42420de655264630bf03dde19e9a257439d10e7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92294164becfdc79556118e4402938c87d083c28
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779163"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>项目设置 （迁移） (SybaseToSQL)
 迁移页的**项目设置**对话框中包含自定义 SSMA 如何将数据迁移从 Sybase 自适应 Server Enterprise (ASE) 中，到设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 |**激发触发器**|指定当它将数据添加到 SQL Server 表 SSMA 是否应激发插入触发器。<br /><br />**默认模式**: False<br /><br />**开放式模式**: False<br /><br />**完整模式**: False|  
 |**保留标识**|指定是否将数据添加到 SQL Server 时，SSMA 仍会保留 Sybase 标识值。 值为 False，则由目标分配标识值。<br /><br />**默认模式**: True<br /><br />**开放式模式**: True<br /><br />**完整模式**: True|  
 |**保留 Null**|指定是否 SSMA 保留源数据中的 null 值，当它将数据添加到 SQL Server 的而不考虑 SQL Server 中指定的默认值。<br /><br />**默认模式**: True<br /><br />**开放式模式**: True<br /><br />**完整模式**: True|  
-|**出错时**|发生错误时，请停止数据迁移。 它具有三个选项：<br /><br />**停止迁移：**停止数据迁移操作<br /><br />**转到下一个表：**停止数据迁移到当前表，并将继续到下一个<br /><br />**继续执行下一批：**停止数据迁移到当前批次，并将继续到下一个<br /><br />**默认模式**： 继续执行下一批<br /><br />**开放式模式**： 继续执行下一批<br /><br />**完整模式**： 继续执行下一批|  
+|**出错时**|发生错误时，请停止数据迁移。 它具有三个选项：<br /><br />**停止迁移：** 停止数据迁移操作<br /><br />**转到下一个表：** 停止数据迁移到当前表，并将继续到下一个<br /><br />**继续执行下一批：** 停止数据迁移到当前批次，并将继续到下一个<br /><br />**默认模式**： 继续执行下一批<br /><br />**开放式模式**： 继续执行下一批<br /><br />**完整模式**： 继续执行下一批|  
 |**舍入的小数部分的数字**|指定是否为整数类型的迁移期间修剪 decimal 和 numeric 数据的小数部分，或如果小数部分为非普通显示错误消息<br /><br />**默认模式**： 否<br /><br />**开放式模式**： 否<br /><br />**完整模式**： 否|  
 |**Sybase Unicode Endian**|指定 Sybase Unicode 字符串的 endian 类型。 为此特定设置，可以设置以下选项：<br /><br />小 endian<br /><br />Big endian<br /><br />**默认模式**: little-endian<br /><br />**开放式模式**: little-endian<br /><br />**完整模式**: little-endian|  
 |**表锁**|指定当它将添加数据到表数据迁移期间，SSMA 是否锁定表。 大容量复制操作期间获取大容量更新锁。 如果值为 False，在行级别设置锁。<br /><br />**默认模式**: True<br /><br />**开放式模式**: True<br /><br />**完整模式**: True|  

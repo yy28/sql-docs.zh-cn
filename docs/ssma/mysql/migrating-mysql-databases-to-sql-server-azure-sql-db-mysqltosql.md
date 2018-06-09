@@ -1,8 +1,6 @@
 ---
 title: 将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6ab959da887abd67ec7f80eae94cb4bfcacd0883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1914549671a4a9ccd78ce859f59f55e5a9f9a3e4
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776733"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB (MySQLToSql)
 SQL Server 迁移助手 (SSMA) mysql 是一个全面的环境，可帮助你快速将 MySQL 数据库迁移到 SQL Server 或 SQL Azure。 通过使用面向 MySQL 的 SSMA，你可以查看数据库对象和数据、 评估迁移的数据库，迁移到 SQL Server 或 SQL Azure 的数据库对象，然后将数据迁移到 SQL Server 或 SQL Azure。  
@@ -61,7 +60,7 @@ SQL Server 迁移助手 (SSMA) mysql 是一个全面的环境，可帮助你快�
 > [!NOTE]  
 > 您无法迁移 Information_schema 和 MySQL 的架构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装适用于 MySQL SSMA &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
 [入门 MySQL SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   

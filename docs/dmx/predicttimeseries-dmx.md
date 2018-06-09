@@ -1,35 +1,20 @@
 ---
 title: PredictTimeSeries (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictTimeSeries
-dev_langs:
-- DMX
-helpviewer_keywords:
-- time series algorithms [Analysis Services]
-- time series [Analysis Services]
-- EXTEND_MODEL_CASES parameter
-- REPLACE_MODEL_CASES parameter
-- PredictTimeSeries function
-ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: 56
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 97094e9f59e9e4e505ad1aa16592871500b35eef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842740"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +68,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>返回类型  
  A \<*表表达式*>。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当使用 PREDICTION JOIN 语句添加新数据时，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法不支持历史预测。  
   
  在 PREDICTION JOIN 中，预测过程总是从原始定型系列的末尾之后的时间步长立即开始。 即使您添加新的数据也是如此。 因此， *n*参数和*n 开始*参数值必须大于 0 的整数。  
@@ -215,7 +200,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  数量： M200 Europe。 EXTEND_MODEL_CASES:  
   
-|$TIME|数量|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |7/25/2008 0:00|10|  
 |8/25/2008 0:00|15|  
@@ -225,7 +210,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  数量： M200 太平洋。 EXTEND_MODEL_CASES:  
   
-|$TIME|数量|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |7/25/2008 0:00|46|  
 |8/25/2008 0:00|44|  
@@ -267,9 +252,9 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  在此示例中使用了 FLATTENED 关键字，目的是为了更好地在表中呈现结果；但是，如果提供程序支持分层行集，则可以省略 FLATTENED 关键字。 如果省略了 FLATTENED 关键字，则查询将返回两个列，第一列包含标识 `[Model Region]` 数据序列的值，第二列包含统计信息的嵌套表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [时间时序模型查询示例](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [预测 & #40; DMX & #41;](../dmx/predict-dmx.md)  
+ [预测&#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

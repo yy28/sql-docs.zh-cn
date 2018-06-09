@@ -1,36 +1,20 @@
 ---
 title: SELECT FROM&lt;模型&gt;。SAMPLE_CASES (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SAMPLE_CASES
-- SELECT
-- FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <model>.SAMPLE_CASES statement
-- mining models [Analysis Services], sample cases
-- sample cases [DMX]
-- training mining models
-ms.assetid: e7a34b9b-3562-4503-bfa7-dd9b12db480a
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 013b98a8f70d99810ba3032e3c0f3ac65db27acf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f4443f05fbee790f5f1d266f451e1105b9c00197
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841520"
 ---
 # <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM&lt;模型&gt;。SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +33,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定返回行数的整数。  
+ 可选。 一个指定返回行数的整数。  
   
  *表达式列表*  
  相关列标识符的逗号分隔列表。  
@@ -58,12 +42,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  一个模型标识符。  
   
  *条件列表*  
- 選擇性。 限制条件，用于限制从列列表返回的值。  
+ 可选。 限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可能生成样本事例，但其可能并不实际存在于定型数据中。 返回的事例代表指定的内容节点。  
   
  尽管[!INCLUDE[msCoName](../includes/msconame-md.md)]序列聚类分析算法是唯一[!INCLUDE[msCoName](../includes/msconame-md.md)]支持选择从使用的算法\<模型 >。SAMPLE_CASES，第三方算法可能还支持它。  
@@ -76,10 +60,10 @@ Select * from [Sequence Clustering].SAMPLE_Cases
 WHERE IsInNode('000000003')  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

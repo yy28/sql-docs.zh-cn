@@ -1,8 +1,6 @@
 ---
 title: 访问清单架构 (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,15 +39,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773303"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL)
 下列各节描述 SSMA 在导出到的访问架构时创建的表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -92,7 +90,7 @@ ms.lasthandoff: 05/03/2018
 |**LinkedTable**|**nvarchar(4000)**|另一个表，如果有的话，链接表。 链接表允许通过使用此表添加、 删除和对其他表的更新。|  
 |**ExternalSource**|**nvarchar(4000)**|数据源中，如果有的话，与该键相关联的表。 如果链接表，它具有在此字段中指定外部数据源。|  
   
-## <a name="columns"></a>列  
+## <a name="columns"></a>“列”  
 列元数据导出到**SSMA_Access_InventoryColumns**表。 此表包含以下列：  
   
 |列名|数据类型|Description|  
@@ -102,7 +100,7 @@ ms.lasthandoff: 05/03/2018
 |**ColumnId**|**int**|一个递增整数，用于标识列。 **ColumnId**是表的主键。|  
 |**ColumnName**|**nvarchar(4000)**|列的名称。|  
 |**IsNullable**|**bit**|指定是否此列可以包含 null 值。 如果值为 1，列可以包含 null 值。 如果值为 0，则列不能包含 null 值。 请注意，验证规则还可用来防止 null 值。|  
-|**数据类型**|**nvarchar(4000)**|访问数据的列，如键入**文本**或**长**。|  
+|**DataType**|**nvarchar(4000)**|访问数据的列，如键入**文本**或**长**。|  
 |**IsAutoIncrement**|**bit**|指定是否该列自动递增整数值。 如果值为 1，将自动递增整数。|  
 |**Ordinal**|**int**|在表中，从零开始的列的顺序。|  
 |**DefaultValue**|**nvarchar(4000)**|列的默认值。|  
@@ -187,6 +185,6 @@ ms.lasthandoff: 05/03/2018
 |**ModuleId**|**int**|一个用于标识该模块的递增整数。 此列是表的主键。|  
 |**moduleName**|**nvarchar(4000)**|模块的名称。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [导出 Access 清单](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   

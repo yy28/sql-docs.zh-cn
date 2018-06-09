@@ -3,8 +3,6 @@ title: 项目设置 （类型映射） (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 93d23239f4dc60dc419dde62ab0a4923f286669d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779443"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置 （类型映射） (SybaseToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Sybase 自适应 Server Enterprise (ASE) 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   若要对指定为当前项目中，设置**工具**菜单上，选择**项目设置**，然后选择**类型映射**在左窗格的底部。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **源类型**  
 映射的 ASE 数据类型。  
   

@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM&lt;模型&gt;。内容 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- Content
-dev_langs:
-- DMX
-helpviewer_keywords:
-- schema rowsets [Analysis Services], data mining
-- SELECT FROM <model>.CONTENT statement
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c68fe4831c0fcbae281eae4ca3ed823d737267cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842660"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。内容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定返回行数的整数。  
+ 可选。 一个指定返回行数的整数。  
   
  *表达式列表*  
  从内容架构行集派生的一组列，各列间以逗号分隔。  
@@ -55,12 +41,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  一个模型标识符。  
   
  *条件表达式*  
- 選擇性。 一个限制条件，用于限制从列列表返回的值。  
+ 可选。 一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **SELECT FROM** *\<模型 > * * *。内容** 语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 你可以使用**SELECT FROM\<模型 >。内容**语句以返回模型的 NODE_RULE 列中值。  
   
  下表列出了挖掘模型内容中包含的列。  
@@ -76,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|与节点相对应的属性的名称。|  
 |NODE_NAME|节点的名称。|  
 |NODE_UNIQUE_NAME|节点在模型中的唯一名称。|  
-|NODE_TYPE|表示节点类型的整数。 。|  
+|NODE_TYPE|表示节点类型的整数。 实例时都提供 SQL Server 登录名。|  
 |NODE_GUID|节点 GUID。 如果没有 GUID，则为 NULL。|  
 |NODE_CAPTION|与节点关联的标签或标题， 主要用于显示目的。 如果不存在标题，则返回 NODE_NAME。|  
 |CHILDREN_CARDINALITY|节点所具有的子节点的数目。|  
@@ -135,9 +121,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|缺少|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|@shouldalert|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|0.493314784759255|0||  
   
  下面的示例演示如何使用嵌套 select 语句，仅从嵌套表返回部分列。 您可以通过对嵌套表的表名使用别名来简化显示，如下所示。  
   
@@ -153,13 +139,13 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|缺少|0|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|1|6383|  
+|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

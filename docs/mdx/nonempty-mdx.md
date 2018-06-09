@@ -1,32 +1,23 @@
 ---
 title: 非空 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- NonEmpty function
-ms.assetid: dfbfa747-3175-405c-aa5b-15c187b06338
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a568734c2e46b3653a5b2c38491dc5a362aeb252
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742296"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   根据第一个指定集与第二个集的叉积，返回指定集中的非空元组集。  
   
@@ -44,7 +35,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数返回位于第一个指定集中并且在对第二个集中的元组求值时不为空的元组。 **NonEmpty**函数将考虑帐户计算和保留了重复元组。 如果未提供第二个集，将在多维数据集中属性层次结构和度量值的成员的当前坐标上下文中对表达式求值。  
   
 > [!NOTE]  
@@ -96,11 +87,11 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [筛选器 & #40;MDX & #41;](../mdx/filter-mdx.md)   
+ [筛选器&#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

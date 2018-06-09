@@ -1,8 +1,6 @@
 ---
 title: 将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6fc24887570cd1cf4422705282514530308706d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ad7ad2647e0f1c9c6145d3277c1bee911fdcde9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776713"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL)
 默认情况下，SSMA for MySQL 将迁移到 MySQL 架构中的所有对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或架构名为的 SQL Azure 数据库。 但是，你可以自定义 MySQL 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库。  
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-steps"></a>后续步骤  
 如果你想要分析的 MySQL 对象转换为 SQL Server 或 SQL Azure 的对象，则可以[创建转换报表](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)否则可以[转换的 MySQL 数据库对象定义](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)到 SQL Server 或 SQL Azure 的架构  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [项目设置&#40;转换&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [连接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

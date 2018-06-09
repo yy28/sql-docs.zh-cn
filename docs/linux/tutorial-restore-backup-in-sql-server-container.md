@@ -11,11 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842810"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>还原 Linux Docker 容器中的 SQL Server 数据库
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/23/2018
 
 本教程使用[Wide World Importers 示例数据库](../sample/world-wide-importers/wide-world-importers-documentation.md)。 使用以下步骤来下载并将 Wide World Importers 数据库备份文件复制到你的 SQL Server 容器。
 
-1. 首先，使用**docker exec**创建备份文件夹。 以下命令将创建 **/var/选择/mssql/** 目录在 SQL Server 容器内。
+1. 首先，使用**docker exec**创建备份文件夹。 以下命令将创建 **/var/opt/mssql/backup**目录在 SQL Server 容器内。
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup

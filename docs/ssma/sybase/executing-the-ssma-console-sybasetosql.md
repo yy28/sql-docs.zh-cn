@@ -3,8 +3,6 @@ title: 执行 SSMA 控制台 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbad5207581a713327112b9d319c69f706ad2f61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c208784d3399b0ab37a046b1452320544f143163
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778563"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>执行 SSMA 控制台 (SybaseToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。 接下来的部分详细介绍相同。  
@@ -238,7 +237,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <generate-assessment-report  
@@ -303,7 +302,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <convert-schema  
@@ -359,7 +358,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 </migrate-data>  
 ```  
-或  
+或多个  
   
 ```xml  
 <migrate-data  
@@ -438,7 +437,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target  
@@ -447,7 +446,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target>  
@@ -499,7 +498,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database  
@@ -508,7 +507,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database>  
@@ -553,7 +552,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <save-as-script  
@@ -627,7 +626,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  
@@ -652,7 +651,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  

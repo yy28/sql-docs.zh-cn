@@ -1,8 +1,6 @@
 ---
 title: 入门 MySQL 控制台 (MySQLToSQL) SSMA |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 30fe5fba0bd0b9321c16c72642f29a515320cb63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75e189d89c9a1bbc7207521b8156d0f4b56ca759
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776233"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Getting Started with SSMA MySQL 控制台 (MySQLToSQL)
 本部分介绍的过程启动并开始使用 MySQL 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口。  
@@ -72,6 +71,6 @@ ms.lasthandoff: 05/03/2018
 |绿色|提示用户输入|  
 |青色|启动，完成和操作的结果|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装适用于 MySQL SSMA](http://msdn.microsoft.com/en-us/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
   

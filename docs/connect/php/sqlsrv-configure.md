@@ -21,11 +21,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 449c20bcbe3ff21675c51f483519607d5c37b034
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8ae03b541a28330045793e427b4c4aed76e4199
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239267"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +47,7 @@ sqlsrv_configure( string $setting, mixed $value )
   
 |设置|$Value 参数的可能值（括号中为等效整数）|默认值|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
-|ClientBufferMaxKBSize<sup>1</sup>|达到 PHP 内存限制的非负数。<br /><br />零 (0) 表示对缓冲区大小没有任何限制。|10240|  
+|ClientBufferMaxKBSize<sup>1</sup>|达到 PHP 内存限制的非负数。<br /><br />不允许零和负数。|10240 KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL (-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN (2)<br /><br />SQLSRV_LOG_SYSTEM_INIT (1)<br /><br />SQLSRV_LOG_SYSTEM_OFF (0)<br /><br />SQLSRV_LOG_SYSTEM_STMT (4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL (8)|SQLSRV_LOG_SYSTEM_OFF (0)|  
 |WarningsReturnAsErrors<sup>3</sup>|**true** (1) 或**false** (0)|**true** (1)|  
@@ -54,14 +55,14 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>返回值  
 如果使用不受支持的设置或值调用 **sqlsrv_configure** ，该函数将返回 **false**。 否则，该函数返回 **true**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 （1） 有关客户端查询的详细信息，请参阅[游标类型&#40;SQLSRV 驱动程序&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 （2） 有关日志记录活动的详细信息，请参阅[日志记录活动](../../connect/php/logging-activity.md)。  
   
 （3） 有关配置错误和警告处理的详细信息，请参阅[如何： 配置错误和警告处理使用 SQLSRV 驱动程序](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md) 

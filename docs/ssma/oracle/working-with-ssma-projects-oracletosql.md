@@ -1,8 +1,6 @@
 ---
 title: 使用 SSMA 项目 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 854d604680082375bba1d7fe5cca77d264ea7c9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b1b28a2a9b6bf9210aa23d0f7914693f938bbf53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778053"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 项目 (OracleToSQL)
 若要迁移到的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，首先创建新的 SSMA 项目。 项目是一个文件，其中包含以下信息：  
@@ -104,7 +103,7 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
   
         保存元数据可能需要几分钟。 如果你不想保存元数据，不选中所有复选框。  
   
-    2.  单击 **保存** 按钮。  
+    2.  单击**保存**按钮。  
   
         SSMA 将分析 Oracle 架构并将元数据保存到项目文件。  
   
@@ -126,7 +125,7 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[连接到 Oracle 数据库 (OracleToSQL)](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
 [连接到 Oracle 数据库&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [连接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  

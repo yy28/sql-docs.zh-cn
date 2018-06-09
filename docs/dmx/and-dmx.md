@@ -1,31 +1,20 @@
 ---
 title: 和 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AND
-dev_langs:
-- DMX
-helpviewer_keywords:
-- AND, DMX
-ms.assetid: d337b20c-f80e-48be-9354-371367e53735
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a1655d992e0b09001f353f028b72f29ff98d6c9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a53a2e309d427ee3868478a17186cad1070d4f81
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841220"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>返回值  
  一个布尔值。如果两个参数的处理结果均为 TRUE，则返回 TRUE；否则返回 FALSE。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在运算符执行逻辑与运算之前，两个参数都被视为布尔值（0 为 FALSE；其他为 TRUE）。 下表列出了不同参数值组合的返回值。  
   
 |如果 Expression1 为|如果 Expression2 为|则返回值为|  
@@ -59,7 +48,7 @@ Expression1 AND Expression2
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [逻辑运算符&#40;DMX&#41;](../dmx/operators-logical.md)   
  [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  

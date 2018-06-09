@@ -3,8 +3,6 @@ title: 用户界面参考 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,16 +16,17 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c157057dfb313c52ea4c3988f1c73a7449e7292e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5a7a8d163592b8234c99c7608c70da64cbc6fb0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779553"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>用户界面参考 (SybaseToSQL)
 本部分包括有关的帮助主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 用于 Sybase。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |---------|---------------|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |[项目设置&#40;类型映射&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|使用的类型映射页**项目设置**对话框中，以指定 SSMA for Sybase 项目中的所有数据库和数据库对象的默认类型映射。|  
 |[将元数据保存&#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|**保存元数据**对话框中将显示当你保存缺少元数据的项目。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [快速入门用于 Sybase 的 SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
 [将 Sybase ASE 数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

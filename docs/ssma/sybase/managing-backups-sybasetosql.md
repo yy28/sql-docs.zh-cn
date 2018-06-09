@@ -3,8 +3,6 @@ title: 管理备份 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 85ccefaddf6e8f0bad35d3a01d1b355f0482db9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ca7901e604bfce6649211e87cc7909730640842
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778945"
 ---
 # <a name="managing-backups-sybasetosql"></a>管理备份 (SybaseToSQL)
 Sybase 备份管理允许你备份和还原表数据之前或之后运行测试。 你还可以管理与管理备份内容对话框备份内容。  
@@ -100,6 +99,6 @@ SQL Server 备份管理允许你备份和还原表数据之前或之后运行测
   
 -   单击**关闭**按钮以关闭对话框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

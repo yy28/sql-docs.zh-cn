@@ -1,8 +1,6 @@
 ---
 title: 设置转换和迁移选项 (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 61814a4d5f4b62c3f7262c7c249b165dd8a99571
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d727866a07be1f796eb81b9e26a755fd7991560
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774173"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>设置转换和迁移选项 (AccessToSQL)
 对于每个 SSMA 项目，你可以设置项目级别选项。 这些选项用于指定如何转换对象、 如何迁移数据，以及如何源数据类型映射到目标数据类型。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，验证是否适用于项目的配置选项。  
@@ -67,7 +66,7 @@ SSMA 有四个集的配置设置和配置这些设置的四种模式： 默认�
   
     -   若要指定自定义模式，请选择**自定义**中**模式**框中，在左窗格中选择一个选项，单击设置或在右窗格中，值，然后选择或输入新的设置或值。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 你还可以自定义当前项目的设置。 这些设置将保存到当前的项目文件。  
   
@@ -81,7 +80,7 @@ SSMA 有四个集的配置设置和配置这些设置的四种模式： 默认�
   
     -   若要指定自定义模式，请选择**自定义**中**模式**框中，在左窗格中选择一个选项，单击设置或在右窗格中，值，然后选择或输入新的设置或值。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于您的项目需求：  
@@ -92,6 +91,6 @@ SSMA 有四个集的配置设置和配置这些设置的四种模式： 默认�
   
 -   否则，将转换到的访问数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象定义。 有关详细信息，请参阅[转换访问数据库对象](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

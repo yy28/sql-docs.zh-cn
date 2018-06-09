@@ -1,8 +1,6 @@
 ---
 title: 初始化测试用例 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 20d8a3748c7f2f5f3dc66c088ef6ef5d5acc72e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dc31aba88922a961f8e399e4fd9c4187c2b5c0a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777573"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>初始化测试用例 (OracleToSQL)
 在此步骤中，你将指定为新的测试用例的初始信息。  
@@ -40,6 +39,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>下一步  
 [选择并配置的对象添加到测试&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

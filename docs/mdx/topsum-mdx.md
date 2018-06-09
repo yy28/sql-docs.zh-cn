@@ -1,34 +1,23 @@
 ---
 title: TopSum (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPSUM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- TopSum function
-ms.assetid: e32496fd-4897-43c9-a388-4028609f4ffb
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a48c78b874b4ed602cb2dce21dbc17b5b73a7c76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 853390f99f02352fd7814fcec208bba1508c03a7
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743406"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   对集进行排序并返回累计合计至少达到指定值的最前面的元素。  
   
@@ -43,13 +32,13 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *Value*  
+ *ReplTest1*  
  指定与每个元组相比较的值的有效数值表达式。  
   
  *Numeric_Expression*  
  返回度量值的有效数值表达式，通常是多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **TopSum**函数计算指定的度量值，计算对指定集，以降序顺序对集进行排序的总和。 然后，该函数返回最大值元素，其指定数值表达式的合计至少为指定值。 此函数返回集的最小子集，其累积合计至少为指定值。 返回的元素按从大到小的顺序排序。  
   
 > [!IMPORTANT]  
@@ -69,7 +58,7 @@ FROM [Adventure Works]
 WHERE([Product].[Product Categories].Bikes)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

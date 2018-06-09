@@ -1,8 +1,6 @@
 ---
 title: SSMA 控制台 (OracleToSQL) 中的命令行选项 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: b3eeca8d9afb45b68d67f08b285624f3eee7cc5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54e126873dd4ade8112d2e37f66c085e06425f8f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776853"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 控制台 (OracleToSQL) 中的命令行选项
 Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选项。 接下来的部分详细介绍相同。  

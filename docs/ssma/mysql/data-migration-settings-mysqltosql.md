@@ -1,8 +1,6 @@
 ---
 title: 数据迁移设置 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bd5108c0a3d9c7e63b247be36d28ba71f5ac2337
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b00ea42e99670a2da51fbacb571f63f4c1c7585d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775923"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>数据迁移设置 (MySQLToSQL)
   
@@ -55,10 +54,10 @@ ms.lasthandoff: 05/03/2018
   
 有两个按钮存在 viz。:  
   
--   **应用：**单击**应用**将已更改的设置。  
+-   **应用：** 单击**应用**将已更改的设置。  
   
 -   **取消:** 单击**取消**之前进行的更改已还原存在的设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 MySQL 数据迁移到 SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

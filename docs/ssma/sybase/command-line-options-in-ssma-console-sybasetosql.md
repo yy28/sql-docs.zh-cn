@@ -3,8 +3,6 @@ title: SSMA 控制台 (SybaseToSQL) 中的命令行选项 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7ca88b6398fd6f46eb4fef7ee38a4d0da5eca85f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d55867d0563f5f805212806bc3710abaf7804f7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778303"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 控制台 (SybaseToSQL) 中的命令行选项
 Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA 活动。 接下来的部分详细介绍相同。  

@@ -1,31 +1,20 @@
 ---
 title: 正斜杠星型 （注释） (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- commenting characters
-- forward slash-asterisk character pairs
-- /*...*/ (comment)
-ms.assetid: 163976cc-aa47-4eda-bd98-03c1a397f80e
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 37858f818ec35e6eb68c13034fc8ca7e56dc0150
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1d96c65ea1dd187d5678987447415ca419ad10d7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842290"
 ---
 # <a name="slash-star-comment-dmx"></a>斜杠星型 （注释） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,14 +32,14 @@ ms.lasthandoff: 05/03/2018
  *Comment_Text*  
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  多行的注释必须用 /* 和 \*/ 指明。  
   
  注释没有最大长度限制。  
   
  有关如何在 DMX 中使用不同类型的注释的详细信息，请参阅[注释&#40;DMX&#41;](../dmx/comments-dmx.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [双斜线&#40;注释&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [-&#40;注释&#41; &#40;DMX&#41;摘要](../dmx/comment-dmx-summary.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   

@@ -3,8 +3,6 @@ title: 连接到 Azure SQL DB (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,23 +16,24 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f73b6e88e457ef74a82512876715a333d0a52d71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb6a49072e16f00ba12dd32f1ccd4b6cab8a3620
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778833"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>连接到 Azure SQL DB (SybaseToSQL)
 用于连接到 Azure SQL DB 对话框连接到你想要迁移的 Azure SQL DB 数据库。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 Azure SQL DB**。 如果你以前连接，则命令是**重新连接到 Azure SQL DB。**  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **服务器名称**  
   
 选择或输入用于连接到 Azure SQL DB 服务器名称。  
   
-**数据库**  
+**“数据库”**  
   
 选择中，输入或**浏览**数据库名称。  
   
@@ -62,13 +61,13 @@ SSMA 建议加密的连接到 Azure SQL DB。
   
 2.  如果不有任何数据库，将显示以下两个菜单项。  
   
-    1.  **（未找到数据库）**这将禁用且灰出所有的时间  
+    1.  **（未找到数据库）** 这将禁用且灰出所有的时间  
   
     2.  **创建新的数据库**即 enabled 仅当在 Azure SQL DB 帐户上没有任何数据库时。 如果单击此菜单项，创建 Azure 数据库对话框中不存在与数据库名称和大小。  
   
 3.  在创建数据库时，作为输入指定了以下两个参数：  
   
-    1.  **数据库名称：**输入数据库名称。  
+    1.  **数据库名称：** 输入数据库名称。  
   
-    2.  **数据库大小：**选择你需要在 Azure SQL DB 帐户中创建的数据库大小。  
+    2.  **数据库大小：** 选择你需要在 Azure SQL DB 帐户中创建的数据库大小。  
   

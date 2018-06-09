@@ -1,8 +1,6 @@
 ---
 title: 加载转换到 SQL Server (OracleToSQL) 数据库对象 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a6e65bb6c795cb5216bf32889b6dfe7eb75c2a53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ac7029947dcf826c19851b5988b5e898783f7c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777613"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>加载转换到 SQL Server (OracleToSQL) 数据库对象
 Oracle 架构转换为 SQL Server 后，你可以加载到 SQL Server 生成的数据库对象。 您可以让 SSMA 创建对象，或可以编写对象脚本时，还可以自行运行脚本。 此外，SSMA 使你可以更新目标元数据的 SQL Server 数据库的实际内容。  
@@ -113,6 +112,6 @@ Oracle 架构转换为 SQL Server 后，你可以加载到 SQL Server 生成的�
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[将数据迁移到 SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

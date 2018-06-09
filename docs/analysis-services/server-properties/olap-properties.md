@@ -1,6 +1,6 @@
 ---
 title: OLAP 属性 |Microsoft 文档
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239287"
 ---
 # <a name="olap-properties"></a>OLAP 属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用范围：** 仅限多维服务器模式  
@@ -201,7 +203,7 @@ ms.lasthandoff: 05/10/2018
  **ROLAPDimensionProcessingEffort**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="query"></a>Query  
+## <a name="query"></a>查询  
  **AggregationsUseEnabled**  
  一个布尔值属性，定义在运行时是否使用存储聚合。 此属性允许在不更改聚合设计或不重新处理的情况下禁用聚合，用于基准确定，可供参考。  
   
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   影响服务器上的所有数据库。 **DimensionPropertyCachesize** 是服务器范围内的属性。 更改此属性会影响当前实例上运行的所有数据库。  
   
- 用于估计维度缓存要求的方法：  
+用于估计维度缓存要求的方法：  
   
 1.  首先通过显著增加大小来确定增加维度缓存大小是否有好处。 例如，您可能需要在执行初始步骤时将默认值扩大一倍。  
   
 2.  如果性能显著提高，则以递增方式减小该值，直至在性能和内存利用率之间找到平衡点。  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\ MemoryModel\ Tax**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="jobs"></a>作业  
+## <a name="jobs"></a>中执行计划的管理任务，即“作业”  
  **ProcessAggregation\ MemoryModel\ Income**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -391,7 +394,7 @@ ms.lasthandoff: 05/10/2018
  **ProcessAggregation\ ProcessProperty\ Tax**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

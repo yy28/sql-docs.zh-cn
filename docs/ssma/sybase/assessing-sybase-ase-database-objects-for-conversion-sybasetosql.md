@@ -3,8 +3,6 @@ title: 评估 SAP ASE 数据库对象的转换 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7f28d8f35adacfa4443ed804e1233386f3794606
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e2115578b95ab5ca682d7d8c4f1c4a84907179e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778334"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>评估 SAP ASE 数据库对象的转换 (SybaseToSQL)
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL，您应确定如何在迁移的复杂性和应该花费多少时间。 SSMA 可以创建显示的对象和已成功将转换为的过程的百分比评估报表[!INCLUDE[tsql](../../includes/tsql_md.md)]。 SSMA 还可以查看可能会导致转换失败的特定问题。  
@@ -84,6 +83,6 @@ SSMA 创建此评估报告时，将转换到所选的 SAP 自适应 Server Enter
 ## <a name="next-steps"></a>后续步骤  
 [转换 SAP ASE 数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 SAP ASE 数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

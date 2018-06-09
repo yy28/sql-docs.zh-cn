@@ -1,8 +1,6 @@
 ---
 title: 将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 030f43c1d44a10b3fb299083fd1c84c71558450f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1df8413ce7fce639d53942b5c3157823c114ddb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777533"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL)
 在 Oracle 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将迁移到 Oracle 架构中的所有对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构名为的数据库。 但是，你可以自定义 Oracle 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
@@ -66,7 +65,7 @@ Oracle 数据库包含架构。 实例[!INCLUDE[ssNoVersion](../../includes/ssno
 ## <a name="next-steps"></a>后续步骤  
 如果你想要分析的 Oracle 对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你可以[创建转换报表](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)。 否则，你可以[转换 Oracle 数据库对象定义](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象定义。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [连接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

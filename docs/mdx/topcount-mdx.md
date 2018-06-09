@@ -1,34 +1,23 @@
 ---
 title: TopCount (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPCOUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- TopCount function
-ms.assetid: 15026a8f-35c5-4307-8856-348f5c44bfd5
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 66fa6fb9929b62c99fa829b1a55cdfc93139ee7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fa8edcf8af510a41affdcbcc9924edf69cf4c220
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743216"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   按降序对集进行排序，并返回指定数目的最大值元素。  
   
@@ -43,13 +32,13 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *Count*  
+ *计数*  
  指定要返回的元组数的有效数值表达式。  
   
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定数值表达式，则**TopCount**函数以降序顺序，指定通过根据指定的数值表达式的值指定一组为指定集求得集中的元组排序。 对集进行排序之后**TopCount**函数然后返回指定的数目的具有最高值的元组。  
   
 > [!IMPORTANT]  
@@ -82,7 +71,7 @@ FROM [Adventure Works]
 WHERE([Product].[Product Categories].Bikes)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

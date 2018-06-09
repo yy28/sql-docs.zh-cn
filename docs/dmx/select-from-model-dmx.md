@@ -1,33 +1,20 @@
 ---
 title: SELECT FROM&lt;模型&gt;(DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- empty prediction joins [DMX]
-- SELECT FROM <model> statement
-ms.assetid: dc5b9a01-e308-4ee8-84fc-ba4b991c60aa
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2e913f066149fd6949547fff32f06f027378e9d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842170"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,18 +35,18 @@ SELECT <expression list> [TOP <n>] FROM <model>
  一组以逗号分隔的表达式、预测列或仅预测列。  
   
  *n*  
- 選擇性。 一个指定返回行数的整数。  
+ 可选。 一个指定返回行数的整数。  
   
  *model*  
  一个模型标识符。  
   
  *条件列表*  
- 選擇性。 限制条件，用于限制从列列表返回的值。  
+ 可选。 限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  中的列*表达式列表*必须定义为预测或预测仅，或与可预测列相关的。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  
@@ -77,10 +64,10 @@ SELECT [Model Region], PredictTimeSeries(Amount, 4)
 FROM Forecasting  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
