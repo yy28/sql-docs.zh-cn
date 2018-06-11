@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="FKeys"></a> Foreign Key Constraints  
  外键 (FK) 是用于在两个表中的数据之间建立和加强链接的一列或多列的组合，可控制可在外键表中存储的数据。 在外键引用中，当包含一个表的主键值的一个或多个列被另一个表中的一个或多个列引用时，就在这两个表之间创建了链接。 这个列就成为第二个表的外键。  
   
- 例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表中不存在外键关系，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。  
+ 例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表的主键中不存在 **SalesPersonID** 的值，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。  
   
  表最多可以将 253 个其他表和列作为外键引用（传出引用）。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 将可在单独的表中引用的其他表和列（传入引用）的数量限制从 253 提高至 10,000。 （兼容性级别至少必须为 130。）数量限制的提高带来了下列约束：  
   
