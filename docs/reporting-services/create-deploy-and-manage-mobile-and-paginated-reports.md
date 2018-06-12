@@ -2,7 +2,7 @@
 title: 什么是 SQL Server Reporting Services (SSRS) | Microsoft Docs
 description: 了解用于本地移动和分页 Reporting Services 报表的工具和服务。
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,17 +22,18 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24f4671203d4efecd58cfd9e613bf3dd9dbb8bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c594502d7a63ce437e680a4b9b6accd095a102d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550328"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]要查找 Power BI 报表服务器？ 请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]要查找 Power BI 报表服务器？ 请参阅[什么是 Power BI 报表服务器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
 
 使用 SQL Server Reporting Services (SSRS) 提供的一系列现成工具和服务本地创建、部署和管理移动和分页 Reporting Services 报表。
 

@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563745"
 ---
 # <a name="-equals-transact-sql"></a>=（等于）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  Boolean  
   
 ## <a name="remarks"></a>Remarks  
- 比较两个 NULL 表达式时，结果将取决于 `ANSI_NULLS` 设置：  
+ 使用 NULL 表达式进行比较时，结果取决于 `ANSI_NULLS` 设置：  
   
--   如果 `ANSI_NULLS` 设置为 ON，则根据 ANSI 有关一个空值（或未知值）与另一个空值或未知值不相等的约定，结果为 NULL。  
+-   如果 `ANSI_NULLS` 设置为 ON，根据 ANSI 约定，即 NULL 是未知值且不能与任何其他值（包括其他 NULL）进行比较，任何与 NULL 进行比较的结果均为 UNKNOWN。  
   
--   如果 `ANSI_NULLS` 设置为 OFF，则 NULL 与 NULL 的比较结果为 TRUE。  
+-   如果 `ANSI_NULLS` 设置为 OFF，将 NULL 与 NULL 进行比较的结果为 TRUE，将 NULL 与任何其他值进行比较的结果为 FALSE。  
 
 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。
   
- 将空值（未知值）与非空值进行任何比较的结果始终为 FALSE。  
+ 在大多数情况下（并非所有情况），导致 UNKNOWN 的布尔表达式的行为类似于 FALSE。 请参阅 [NULL 和 UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) 和 [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md) 了解详细信息。  
   
   
 ## <a name="examples"></a>示例  

@@ -23,16 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: d221859035c02156005bdbf36d0a39ff79297f6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bd6f1e2c6b0e6163325e6e3c83a4cbc7d2ac2f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779363"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回当前数据库的当前 **timestamp** 数据类型的值。 此时间戳在数据库中保证是唯一的。
+此函数返回当前数据库的当前 timestamp 数据类型的值。 当前数据库将具有确保唯一的时间戳值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,12 +47,12 @@ ms.lasthandoff: 05/03/2018
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-@@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 **timestamp** 列的行时，将产生一个新的时间戳值。
+@@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 timestamp 列的行时，会产生一个新的时间戳值。
   
-@@DBTS 函数不受事务隔离级别中的更改影响。
+事务隔离级别的更改不会影响 @@DBTS 函数。
   
 ## <a name="examples"></a>示例  
-以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp。
+此示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp。
   
 ```sql
 USE AdventureWorks2012;  

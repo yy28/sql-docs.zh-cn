@@ -1,7 +1,7 @@
 ---
 title: 注册标准 .NET Framework 数据提供程序 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550428"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  添加 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的条目。  
   
-    |Attribute|Description|  
+    |Attribute|描述|  
     |---------------|-----------------|  
     |**名称**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，此处包含的值显示在数据源类型下拉列表中。|  
     |**类型**|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  URL 成员身份仅是您可能为数据访问接口选择的多个成员身份条件之一。  
   
 ### <a name="verifying-the-deployment-and-registration"></a>验证部署和注册  
- 打开报表管理器，然后验证可用数据源列表中是否包含该数据访问接口，从而验证是否已将该数据访问接口成功部署到报表服务器上。 有关报表管理器和数据源的详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
+ 打开 Web 门户，然后验证可用数据源列表中是否包含该数据访问接口，从而验证是否已将该数据访问接口成功部署到报表服务器上。 有关 Web 门户和数据源的详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>在报表设计器客户端上注册 .NET Framework 数据访问接口  
  若要创作使用此 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口作为数据源的报表，必须在运行报表设计器的客户端计算机上安装该程序集。 必须修改两个配置文件。 修改 RSReportDesigner.config 以将该数据访问接口注册为数据源，并使用通用查询设计器。 修改 RSPreviewPolicy.config 以授予对数据访问接口程序集的代码访问安全权限。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  添加该数据访问接口的条目。  
   
-    |Attribute|Description|  
+    |Attribute|描述|  
     |---------------|-----------------|  
     |**名称**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，在此处包含的值显示在数据源类型下拉列表中。|  
     |**类型**|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  必须先关闭本地计算机上的所有 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 实例，然后才能验证部署。 结束所有当前会话之后，可以在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中创建一个新报表项目，以验证数据访问接口是否已成功部署到报表设计器。 为报表创建新的数据集时，该数据访问接口应当包含在可用数据源类型列表中。  
   
 ## <a name="platform-considerations"></a>平台注意事项  
- 在 64 位 (x64) 平台上， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在 32 位 WOW 模式下运行。 在 x64 平台上创作报表时，需要在报表创作客户端上安装 32 位数据访问接口，以便预览报表。 如果在同一系统上发布报表，则需要 x64 数据访问接口，以便使用报表管理器查看报表。  
+ 在 64 位 (x64) 平台上， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在 32 位 WOW 模式下运行。 在 x64 平台上创作报表时，需要在报表创作客户端上安装 32 位数据访问接口，以便预览报表。 如果在同一系统上发布报表，则需要 x64 数据提供程序，以便在 Web 门户中查看报表。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不受基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的平台支持。  
   

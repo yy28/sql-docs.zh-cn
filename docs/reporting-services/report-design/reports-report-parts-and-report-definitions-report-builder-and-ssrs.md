@@ -1,7 +1,7 @@
 ---
 title: 报表、报表部件和报表定义（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -18,11 +18,12 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd2c743dbff40d700bf50533028994bf78fb40fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 918cf42c76038411777628c200f0ed71fe3e8788
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550468"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>报表、报表部件和报表定义（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用各种术语来描述不同状态的分页报表，包括初始定义、发布的报表以及显示给用户查看的报表。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  发布的报表是通过角色分配进行保护的，这种角色分配使用的是基于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 角色的安全模式。 通过 URL、SharePoint Web 部件或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户，即可访问发布的报表，也可以导航到发布的报表并在报表生成器中打开这些报表。  
   
 ### <a name="report-snapshots"></a>报表快照  
- 报表也可以作为包含自报表最初运行时起的布局信息和数据的快照进行发布。 报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 有关详细信息，请参阅[在报表管理器中查找和查看报表（报表生成器和 SSRS）](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)。  
+ 报表也可以作为包含自报表最初运行时起的布局信息和数据的快照进行发布。 报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 有关详细信息，请参阅[在 Web 门户中查找和查看报表](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)。  
   
 ## <a name="rendered-reports"></a>呈现的报表  
  呈现的报表是经过完全处理的报表，其中包含格式适于查看（例如 HTML）的数据和布局信息。 只有在报表以输出格式呈现之后，才能查看报表。 您可以通过执行以下操作之一来呈现报表：  

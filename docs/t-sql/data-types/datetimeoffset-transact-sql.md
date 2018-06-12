@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a86b7102b60c5485afe849f32d32cf8f369f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71483471c764f9af60208be2acd79bc77c89717b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550838"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset 支持的字符串文字格式
 下表列出了 datetimeoffset 支持的 ISO 8601 字符串文字格式。 有关 datetimeoffset 日期和时间部分的字母、数值、未分隔的的字符串文字格式和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)。
   
-|ISO 8601|Description|  
+|ISO 8601|描述|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|这两种格式不受 SET LANGUAGE 和 SET DATEFORMAT 会话的区域设置的影响。 datetimeoffset 和 datetime 部分之间不允许有空格。|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|这种遵从 ISO 定义的格式表明 datetime 部分应采用协调世界时 (UTC) 表示。 例如，1999-12-12 12:30:30.12345 -07:00 应表示为 1999-12-12 19:30:30.12345Z。|  

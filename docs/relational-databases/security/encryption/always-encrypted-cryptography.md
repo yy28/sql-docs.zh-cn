@@ -19,11 +19,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550698"
 ---
 # <a name="always-encrypted-cryptography"></a>始终加密的加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  列加密密钥 (CEK) 是受 CMK 保护的内容加密密钥（即用来保护数据的密钥）。  
   
- 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存储提供程序通过将 RSA 与具有节 A.2.1 中由 RFC 3447 指定的默认参数的最佳非对称加密填充 (RSA-OAEP) 配合使用来加密 CEK。 这些默认参数使用 SHA-1 哈希函数和具有 SHA-1 的 MGF1 掩码生成函数。  
+ 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存储提供程序都通过将 RSA 与具有节 A.2.1 中由 RFC 8017 指定的默认参数的最佳非对称加密填充 (RSA-OAEP) 配合使用来加密 CEK。 这些默认参数使用 SHA-1 哈希函数和具有 SHA-1 的 MGF1 掩码生成函数。  
   
 ## <a name="data-encryption-algorithm"></a>数据加密算法  
  始终加密使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 算法来加密数据库中的数据。  

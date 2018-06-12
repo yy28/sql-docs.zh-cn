@@ -3,7 +3,6 @@ title: 读取缩放可用性组 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,19 +10,20 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dca3919c6ec8b74342122a750da6d4b77e37d93c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee88654a69d926c2d467876d9e9e7c4f824d0b49
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769413"
 ---
 # <a name="read-scale-availability-groups"></a>读取缩放可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-可用性组是一种全面的解决方案，赋予了 SQL Server 高可用性功能，并提供集成缩放解决方案。 在典型的数据库应用程序中，有多个客户端运行多种类型的工作负荷。 有时会由于资源限制出现瓶颈。 可以释放资源并增加 OLTP 工作负荷的吞吐量。 还可以提高性能并缩放只读工作负荷。 利用 SQL Server 的最快复制技术，并创建一组复制数据库，分担对只读副本的报告和分析工作负荷。 
+可用性组是一种全面的解决方案，赋予了 SQL Server 高可用性功能，并提供集成缩放解决方案。 在典型的数据库应用程序中，有多个客户端运行多种类型的工作负荷。 有时会由于资源限制出现瓶颈。 可以释放资源并增加 OLTP 工作负荷的吞吐量。 还可以提高性能并缩放只读工作负荷。 利用 SQL Server 的最快复制技术，并创建一组复制数据库，分担对只读副本的报告和分析工作负荷。
 
 利用可用性组，可将一个或多个次要副本配置为支持以只读方式访问辅助数据库。
 
@@ -31,12 +31,12 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="read-scale-availability-groups-without-cluster"></a>不需要群集的读取缩放可用性组
 
-在 [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] 及更早版本中，所有可用性组都需要群集。 群集用于提供业务连续性，实现高可用性和灾难恢复 (HADR)。 此外，配置次要副本以执行读取操作。 如果目标不是高可用性，配置和运行群集消耗了相当大的运营开销。 SQL Server 2017 引入了不需要群集的读取缩放可用性组。 
+在 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 及更早版本中，所有可用性组都需要群集。 群集用于提供业务连续性，实现高可用性和灾难恢复 (HADR)。 此外，配置次要副本以执行读取操作。 如果目标不是高可用性，配置和运行群集消耗了相当大的运营开销。 SQL Server 2017 引入了不需要群集的读取缩放可用性组。 
 
 如果业务要求是转换主要副本上运行的任务关键型工作负荷的资源，用户现在可以使用只读路由或直接连接到可读次要副本。 而无需依赖于与任何群集技术的集成。 Windows 和 Linux 平台上的 SQL Server 2017 支持这些新功能。
 
 >[!IMPORTANT]
->这不是高可用性安装程序。 不需要监视基础结构、协调故障检测和进行自动故障转移。 如果没有群集，SQL Server 无法提供自动化高可用性解决方案可提供的低恢复时间目标 (RTO)。 如果需要高可用性功能，请使用群集管理器（Windows 上的 Windows Server 故障转移群集或 Linux 上的 Pacemaker）。 
+>这不是高可用性安装程序。 不需要监视基础结构、协调故障检测和进行自动故障转移。 如果没有群集，SQL Server 无法提供自动化高可用性解决方案可提供的低恢复时间目标 (RTO)。 如果需要高可用性功能，请使用群集管理器（Windows 上的 Windows Server 故障转移群集或 Linux 上的 Pacemaker）。
 >
 >读取缩放可用性组可提供灾难恢复功能。 当只读副本处于同步提交模式时，可提供恢复点目标 (RPO) 0。 要对读取缩放可用性组进行故障转移，请参阅[对读取缩放可用性组上的主要副本进行故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)。
 
@@ -49,11 +49,11 @@ ms.lasthandoff: 05/03/2018
 
 
 
-## <a name="next-steps"></a>后续步骤 
+## <a name="next-steps"></a>后续步骤
 
 [在 Linux 上配置读取缩放可用性组](../../../linux/sql-server-linux-availability-group-configure-rs.md)
+[在 Windows 上配置读取缩放可用性组](configure-read-scale-availability-groups.md)
 
-## <a name="see-also"></a>另请参阅 
- [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
-  
-  
+## <a name="see-also"></a>另请参阅
+
+ [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

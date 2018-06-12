@@ -25,16 +25,17 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9e1e678fba7a2b2d24a85f4d57f1112b3d4cb8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779473"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用对称密钥对数据进行解密。  
+此函数使用对称密钥解密数据。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +48,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>参数  
- ciphertext  
- 已使用密钥进行加密的数据。 ciphertext 的数据类型为 varbinary。  
+ciphertext  
+varbinary 类型的变量，包含使用密钥加密的数据。  
   
- **@ciphertext**  
- 是 **varbinary** 类型的变量，包含已使用密钥进行加密的数据。  
+**@ciphertext**  
+varbinary 类型的变量，包含使用密钥加密的数据。  
   
  add_authenticator  
- 指示是否与明文一起加密验证器。 对数据进行加密时，该值必须与传递给 EncryptByKey 的值相同。 add_authenticator 的数据类型为 int。  
+指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 add_authenticator 具有 int 数据类型。  
   
  authenticator  
- 用于生成验证器的数据。 必须与提供给 EncryptByKey 的值相匹配。 authenticator 的数据类型为 sysname。  
-  
- **@authenticator**  
- 包含用于生成验证器的数据的变量。 必须与提供给 EncryptByKey 的值相匹配。  
-  
+用作验证器生成基础的数据。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 authenticator 具有 sysname 数据类型。  
+
+**@authenticator**  
+包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型。  
+
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。
- 
-如果用于数据加密的对称密钥未打开或 ciphertext 为 NULL，则返回 NULL。
+varbinary（最大大小为 8,000 个字节）。 如果用于数据加密的对称密钥未打开，或者如果 ciphertext 为 NULL，则 `DECRYPTBYKEY` 返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKey 使用对称密钥。 该对称密钥必须已经在数据库中打开。 可以同时打开多个密钥。 不必只在解密密码之前才打开密钥。  
+`DECRYPTBYKEY` 使用对称密钥。 该数据库必须已打开此对称密钥。 `DECRYPTBYKEY` 将允许同时打开多个密钥。 在密文解密之前，不必立即打开密钥。  
   
- 对称加密和解密速度相对较快，适于处理大量数据。  
+对称加密和解密的运行速度通常较快，并且对涉及大量数据的操作而言，运行良好。  
   
 ## <a name="permissions"></a>权限  
- 需要已在当前会话中打开对称密钥。 有关详细信息，请参阅 [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)。  
+该对称密钥必须已经在当前会话中打开。 有关详细信息，请参阅 [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. 使用对称密钥进行解密  
- 以下示例使用对称密钥对密码进行解密。  
+此示例使用对称密钥解密已加密文本。  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. 通过使用对称密钥和验证哈希进行解密  
- 以下示例对使用验证器加密的数据进行解密。  
+此示例解密最初使用验证器加密的数据。  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

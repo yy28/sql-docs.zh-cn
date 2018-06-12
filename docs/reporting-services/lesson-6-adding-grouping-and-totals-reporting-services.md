@@ -17,11 +17,12 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6da904a6bcc7f70ca5185c0e59a6075b651ce1b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550798"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教程课程中，你将向 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中添加分组和总计以便组织和汇总数据。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  可以向总计行添加背景色。 选择两个累加求和单元和标签单元。  
   
-6.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅灰色”**和 **“确定”**。  
+6.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅灰色”** 和 **“确定”**。  
   
     ![设计视图：带有订单总计的基本表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Design view: Basic table with order total")  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  选定 **Daily Total** 单元、两个 **Sum** 单元及其之间的空单元。  
   
-4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“橙色”**和 **“确定”**。  
+4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“橙色”** 和 **“确定”**。  
   
     ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
@@ -104,11 +105,11 @@ ms.lasthandoff: 05/03/2018
   
 3.  选定 **Grand Total** 单元、两个 **Sum** 单元及其之间的空单元。  
   
-4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅蓝色”**和 **“确定”**。  
+4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅蓝色”** 和 **“确定”**。  
   
     ![设计视图：基本表中的总计](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Design view: Grand total in basic table")  
   
-5.  单击 **“预览”**的行上面。  
+5.  单击 **“预览”** 的行上面。  
   
     最后一页的外观应该如下图所示。 在工具栏中，单击“最后一页” ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png)按钮。   
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="bkmk_publishreport"></a>将报表发布到报表服务器（可选）  
   
-1.  一个可选步骤是将已完成的报表发送到本机模式报表服务器上，以便您可以从报表管理器查看该报表。  
+1.  一个可选步骤是将已完成的报表发送到本机模式报表服务器上，以便可以在 Web 门户中查看该报表。  
   
 2.  单击“项目”菜单，然后单击“教程属性...”  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 05/03/2018
 7.  使用管理员权限浏览到 Web 门户，例如，右键单击 Internet Explorer 图标，然后单击“以管理员身份运行”。  
   
     浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户 URL。   
-    **注意：**门户 URL 为“Reports”，而不是“Reportserver”的报表服务器 URL。  例如：   
+    **注意：** 门户 URL 为“Reports”，而不是“Reportserver”的报表服务器 URL。  例如：   
     - `http://<server name>/reports`的行上面。  
      - `http://localhost/reports` 如果你的设计报表在报表服务器上，则使用。  
   

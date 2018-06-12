@@ -1,7 +1,7 @@
 ---
 title: 向下钻取操作（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -45,14 +45,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1250e47366e8beab3cdee5f07e6d17e76827a597
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550708"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>深化操作（报表生成器和 SSRS）
-  B 在文本框上提供了加号和减号图标，使用户能够以交互方式隐藏和显示项。 这称为 *深化* 操作。 对于表或矩阵，可以显示或隐藏静态行和列，或者与组关联的行和列。  
+通过在文本框上提供加号和减号图标，使用户能够以交互方式隐藏和显示项。 这称为 *深化* 操作。 对于表或矩阵，可以显示或隐藏静态行和列，或者与组关联的行和列。  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  在明细报表中，用户单击加号或减号按钮即可展开或折叠报表的某个部分，以显示详细信息数据。 在钻取报表中，用户单击摘要值的链接即可打开一个单独的相关报表，来显示详细信息数据。 详细信息数据仅在运行详细信息报表时检索。 钻取报表所需的资源通常少于明细报表。 有关详细信息，请参阅 [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>呈现扩展插件对隐藏报表项的支持  
- 只有支持用户交互功能的呈现扩展插件（如在报表生成器和报表管理器中运行报表时使用的 HTML 呈现扩展插件）才支持报表项在显示状态和隐藏状态之间的切换功能。 其他呈现扩展插件会显示隐藏项。 下面的列表说明了对具有条件可见性的报表项的支持：  
+ 只有支持用户交互功能的呈现扩展插件（如在报表生成器和 Web 门户中运行报表时使用的 HTML 呈现扩展插件）才支持报表项在显示状态和隐藏状态之间的切换功能。 其他呈现扩展插件会显示隐藏项。 下面的列表说明了对具有条件可见性的报表项的支持：  
   
 -   在 HTML 中，如果项已隐藏，则在 HTML 源中不可见。  
   

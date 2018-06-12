@@ -28,11 +28,12 @@ caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3a59000dabcaddbcb096fd715d1f6168dfbb7930
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689135"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -172,7 +173,7 @@ SELECT name, compatibility_level FROM sys.databases;
 |包含联接运算符的批处理模式查询有资格使用三种物理联接算法，包括嵌套循环、哈希联接和合并联接。 如果基数估计对于联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，则性能会降低，并且不适当的联接算法会保持使用，直到缓存计划进行重新编译。|有一个名为**自适应联接**的其他联接运算符。 如果基数估计对于外部生成联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，并且语句有资格进行自适应联接，则会将嵌套循环用于较小联接输入，将哈希联接动态用于较大联接输入，而无需重新编译。 |
 |引用列存储索引的普通计划没有资格进行批处理模式执行。 |引用列存储索引的普通计划会被放弃，以便支持有条件进行批处理模式执行的计划。|
 |`sp_execute_external_script` UDX 运算符只能在行模式下运行。|`sp_execute_external_script` UDX 运算符有资格进行批处理模式执行。|  
-|多语句表值函数 (TVF) 没有交错执行 |用于改进计划质量的多语句 TVF 的交错执行。 |
+|多语句表值函数 (TVF) 没有交错执行 |用于改进计划质量的多语句 TVF 交错执行。|
 
 SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下的修补程序现在默认情况下会启用。 具有兼容性模式 140。 跟踪标志 4199 仍会适用于在 SQL Server 2017 之后发布的新查询优化器修补程序。 有关跟踪标志 4199 的信息，请参阅[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。  
   
@@ -181,16 +182,17 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 
 |兼容级别设置为 120 或更低|兼容级别设置为 130|  
 |--------------------------------------------------|-----------------------------------------|  
-|Insert-select 语句中的 Insert 是单线程。|Insert-select 语句中的 Insert 是多线程，或者可以具有并行计划。|  
+|INSERT-SELECT 语句中的 INSERT 是单线程。|INSERT-SELECT 语句中的 INSERT 是多线程，或者可以具有并行计划。|  
 |内存优化表的查询执行单线程。|内存优化表的查询现在可以具有并行计划。|  
-|引入了 SQL 2014 基数估算器 **CardinalityEstimationModelVersion="120"**|基数估计模型 130 带来了进一步基数估计 (CE) 改进（在查询计划中可见）。 **CardinalityEstimationModelVersion="130"**|  
-|列存储索引的批处理模式与行模式更改<br /><br /> 具有列存储索引的表上的排序处于行模式<br /><br /> 开窗函数聚合在行模式（如 `LAG` 或 `LEAD`）下运行<br /><br /> 具有多个不同子句的列存储表的查询在行模式下运行<br /><br /> 在 MAXDOP 1 下运行或具有串行计划的查询在行模式下执行 | 列存储索引的批处理模式与行模式更改<br /><br /> 具有列存储索引的表上的排序现在处于批处理模式<br /><br /> 开窗聚合现在在批处理模式（如 `LAG` 或 `LEAD`）下运行<br /><br /> 具有多个不同子句的列存储表的查询在批处理模式下运行<br /><br /> 在 Maxdop1 下运行或具有串行计划的查询在批处理模式下执行|  
-| 可以自动更新统计信息。 | 自动更新统计信息的逻辑对大型表更主动。  在实践中，这应减少以下情况：对于经常查询新插入的行，但是未更新统计信息以包括这些值的查询，客户遇到性能问题。 |  
-| 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，跟踪 2371 默认情况下会关闭。 | 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，[Trace 2371（跟踪 2371）](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)默认情况下会打开。 跟踪标志 2371 告知自动统计信息更新程序在具有许多行的表中采样更小但更智能的行子集。 <br/> <br/> 一个重要改进是在采样中包括更多最近插入的行。 <br/> <br/> 另一个改进是让查询在更新统计信息进程运行期间运行，而不阻塞查询。 |  
-| 对于级别 120，统计信息通过单线程进程进行采样。 | 对于级别 130，统计信息通过多线程进程进行采样。 |  
-| 253 传入外键是限制。 | 给定表可以通过最多 10,000 个传入外键或类似引用进行引用。 有关限制，请参阅 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
+|引入了 SQL 2014 基数估算器 **CardinalityEstimationModelVersion="120"**|基数估计模型 130 带来了进一步基数估计 (CE) 改进（在查询计划中可见）。 **CardinalityEstimationModelVersion="130"**| 
+|列存储索引的批处理模式与行模式更改：<br /><ul><li>具有列存储索引的表上的排序处于行模式 <li>开窗函数聚合在行模式（如 `LAG` 或 `LEAD`）下运行 <li>具有多个不同子句的列存储表的查询在行模式下运行 <li>在 MAXDOP 1 下运行或具有串行计划的查询在行模式下执行</li></ul>| 列存储索引的批处理模式与行模式更改：<br /><ul><li>具有列存储索引的表上的排序现在处于批处理模式 <li>开窗聚合现在在批处理模式（如 `LAG` 或 `LEAD`）下运行 <li>具有多个不同子句的列存储表的查询在批处理模式下运行 <li>在 MAXDOP 1 下运行或具有串行计划的查询在批处理模式下执行</li></ul>|  
+|可以自动更新统计信息。 | 自动更新统计信息的逻辑对大型表更主动。  在实践中，这应减少以下情况：对于经常查询新插入的行，但是未更新统计信息以包括这些值的查询，客户遇到性能问题。 |  
+|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，跟踪 2371 默认情况下会关闭。 | 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，[Trace 2371（跟踪 2371）](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)默认情况下会打开。 跟踪标志 2371 告知自动统计信息更新程序在具有许多行的表中采样更小但更智能的行子集。 <br/> <br/> 一个重要改进是在采样中包括更多最近插入的行。 <br/> <br/> 另一个改进是让查询在更新统计信息进程运行期间运行，而不阻塞查询。 |  
+|对于级别 120，统计信息通过单线程进程进行采样。|对于级别 130，统计信息通过多线程进程进行采样。 |  
+|253 传入外键是限制。| 给定表可以通过最多 10,000 个传入外键或类似引用进行引用。 有关限制，请参阅 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
 |允许使用弃用的 MD2、MD4、MD5、SHA 和 SHA1 哈希算法。|只允许使用 SHA2_256 和 SHA2_512 哈希算法。|
 ||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包括对某些数据类型转换和某些不常见操作的改进。 有关详细信息，请参阅 [SQL Server 2016 improvements in handling some data types and uncommon operations（SQL Server 2016 在处理某些数据类型和不常见操作方面所做的改进）](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
+|STRING_SPLIT 函数不可用。|STRING_SPLIT 函数在兼容性级别 130 或更高级别下可用。 如果数据库兼容性级别低于 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法找到并执行 STRING_SPLIT 函数。|
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中处于跟踪标志 4199 下的修补程序现在默认情况下会启用。 具有兼容性模式 130。 跟踪标志 4199 仍会适用于在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之后发布的新查询优化器修补程序。 若要在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中使用较旧的查询优化器，必须选择兼容级别 110。 有关跟踪标志 4199 的信息，请参阅[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。  
   

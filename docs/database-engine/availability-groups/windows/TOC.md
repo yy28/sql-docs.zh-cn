@@ -61,6 +61,7 @@
 ### [配置副本备份](configure-backup-on-availability-replicas-sql-server.md)  
 ### [配置分布式可用性组](configure-distributed-availability-groups.md)
 ### [配置分布式事务](configure-availability-group-for-distributed-transactions.md)
+### [配置读取缩放可用性组](configure-read-scale-availability-groups.md)
 ### [配置只读访问副本](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [配置只读路由](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [删除侦听器](remove-an-availability-group-listener-sql-server.md)  

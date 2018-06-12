@@ -16,16 +16,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d199b9822d591c10f1f4d9af232b9f74d7e8a81
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b17fcc15be4c8faf496c469bb1e46fe2c6d42012
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550488"
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  修改[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中复制表、分布式表和事务日志的最大数据库大小选项。 使用此语句可在数据库大小增长或收缩时管理数据库的磁盘空间分配。  
+  修改[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中复制表、分布式表和事务日志的最大数据库大小选项。 使用此语句可在数据库大小增长或收缩时管理数据库的磁盘空间分配。 本主题还介绍与并行数据仓库中设置数据库选项相关的语法。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -67,10 +71,33 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  将数据库设置为加密的 (ON) 或未加密的 (OFF)。 只能在 [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) 已设置为 **1** 时为 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 配置加密。 必须先创建数据库加密密钥，然后才能配置透明数据加密。 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF } 在自动创建统计信息选项 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有直方图的列上创建。
+
+ 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。 
+
+ 有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } 在自动更新统计信息选项 AUTO_UPDATE_STATISTICS 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。
+
+ 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。 
+
+ 有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)。
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 异步统计信息更新选项 AUTO_UPDATE_STATISTICS_ASYNC 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。
+
+ 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。 
+
+ 有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)。
+
   
 ## <a name="permissions"></a>权限  
  需要具有针对数据库的 ALTER 权限。  
   
+## <a name="error-messages"></a>错误消息
+如果“自动统计信息”功能被禁用，而你尝试更改统计信息设置，则 PDW 会给出错误“PDW 中不支持此选项”。 系统管理员可通过启用功能开关 [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) 来启用“自动统计信息”功能。
+
 ## <a name="general-remarks"></a>一般备注  
  REPLICATED_SIZE、DISTRIBUTED_SIZE 和 LOG_SIZE 的值可以大于、等于或小于数据库的当前值。  
   
@@ -78,6 +105,8 @@ ALTER DATABASE database_name
  增长和收缩操作是近似的。 所得到的实际大小可能因大小参数而异。  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 不会将 ALTER DATABASE 语句作为原子操作执行。 如果在执行期间中止该语句，将保持已发生的更改。  
+
+统计信息设置只有在管理员已启用“自动统计信息”功能时才可工作。管理员可使用功能开关 [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) 启用或禁用“自动统计信息”功能。 
   
 ## <a name="locking-behavior"></a>锁定行为  
  在 DATABASE 对象上采用共享锁。 无法更改另个用户正在读取或写入的数据库。 这包括已在数据库上发出 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) 语句的会话。  
@@ -165,6 +194,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### <a name="e-check-for-current-statistics-values"></a>E. 检查当前的统计信息值
+
+以下查询返回所有数据库的当前统计信息值。 值 1 表示功能处于开启状态，而 0 表示功能处于关闭状态。
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. 为数据库实现自动创建和自动更新统计信息
+使用以下语句可为数据库 CustomerSales 自动且异步地创建和更新统计信息。  这将根据需要创建和更新单列统计信息，从而创建高质量的查询计划。
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE（并行数据仓库）](../../t-sql/statements/create-database-parallel-data-warehouse.md)   

@@ -27,11 +27,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 981391e55cc73844ee8c6f7c4975b38305e350fc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585919"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -129,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port'  
+       LISTENER_URL = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -473,15 +475,15 @@ ALTER AVAILABILITY GROUP group_name
 >  NetBIOS 只识别 dns_name 中的前 15 个字符。 如果您的两个 WSFC 群集均由同一 Active Directory 控制，而您试图使用超过 15 个字符的名称（具有相同的 15 字符前缀）在这两个群集中创建可用性组侦听器，此时您将收到错误，报告无法使虚拟网络名称资源联机。 有关 DNS 名称的前缀命名规则的信息，请参阅 [分配域名](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)。  
   
  JOIN AVAILABILITY GROUP ON  
- 联接到分布式可用性组。 创建分布式可用性组时，在群集上创建的可用性组为主要可用性组。 联接分布式可用性组的可用性组为次要可用性组。  
+ 联接到分布式可用性组。 创建分布式可用性组时，在群集上创建的可用性组为主要可用性组。 执行 JOIN 时，本地服务器实例的可用性组是辅助可用性组。  
   
  \<ag_name>  
  指定构成一半分布式可用性组的可用性组名称。  
   
- LISTENER ='TCP://system-address:port'****  
+ LISTENER_URL ='TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL 路径。  
   
- 必须有 LISTENER 子句。  
+ 必须有 LISTENER_URL 子句。  
   
  'TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL。 URL 参数如下所示：  
@@ -490,7 +492,7 @@ ALTER AVAILABILITY GROUP group_name
  一个字符串，例如系统名称、完全限定的域名或 IP 地址，它们明确标识了侦听器。  
   
  *port*  
- 是与可用性组的镜像终结点关联的端口号。 请注意，这不是侦听器的端口。  
+ 是与可用性组的镜像终结点关联的端口号。 请注意，这不是侦听器上配置的客户端连接端口。  
   
  AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  指定在主要副本可以在给定主数据库上提交事务前，是否必须等待次要可用性组确认日志记录硬编码（写入）到磁盘。  

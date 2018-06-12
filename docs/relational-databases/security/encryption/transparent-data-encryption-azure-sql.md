@@ -16,11 +16,12 @@ ms.topic: conceptual
 ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34462365"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>用于 SQL 数据库和数据仓库的透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,7 +67,7 @@ Microsoft 也可无缝移动和管理异地复制和还原所需的密钥。
 
 例如，如果从本地 SQL Server 实例中导出 BACPAC 文件，则不会自动加密新数据库的导入内容。 同样，如果将 BACPAC 文件导出到本地 SQL Server 实例，也不会自动加密新数据库。
 
-导入 Azure SQL 数据库和从中导出的情况例外。 在新数据库中启用了透明数据加密，但 PACPAC 文件本身仍未加密。
+导入 Azure SQL 数据库和从中导出的情况例外。 在新数据库中启用了透明数据加密，但 BACPAC 文件本身仍未加密。
 
 ## <a name="manage-transparent-data-encryption-in-the-azure-portal"></a>在 Azure 门户中管理透明数据加密
 

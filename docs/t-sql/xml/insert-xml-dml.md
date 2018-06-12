@@ -22,11 +22,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c851283cd546038c11700ed111282a9aa1a039ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22bc1b365e04c5e06e6278974346b1626434a24b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744066"
 ---
 # <a name="insert-xml-dml"></a>插入 (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. 将属性插入文档中  
- 以下示例说明了如何将属性插入文档中。首先，将文档分配给 xml 类型的变量。 然后，使用一系列 insert XML DML 语句将属性插入文档中。 每次插入属性后，SELECT 语句都会显示结果。  
+ 以下示例说明了如何将属性插入文档中。 首先，将文档分配给 xml 类型变量。 然后，使用一系列 insert XML DML 语句将属性插入文档中。 每次插入属性后，SELECT 语句都会显示结果。  
   
 ```  
 USE AdventureWorks;  

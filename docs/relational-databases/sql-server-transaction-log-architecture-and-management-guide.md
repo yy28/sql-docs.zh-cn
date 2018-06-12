@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467973"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
   
  要了解预写日志的工作方式，了解如何将修改的数据写入磁盘很重要。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护一个缓冲区缓存，在必须检索数据时从其中读取数据页。 在缓冲区缓存中修改页后，不会将其立即写回磁盘；而是将其标记为“脏”。 在将数据页物理写入磁盘之前，可以将其逻辑写入多次。 对于每次逻辑写入，都会在记录修改的日志缓存中插入一条事务日志记录。 在将关联的脏页从缓冲区缓存中删除并写入磁盘之前，必须将这条些日志记录写入磁盘。 检查点进程定期在缓冲区高速缓存中扫描包含来自指定数据库的页的缓冲区，然后将所有脏页写入磁盘。 CHECKPOINT 可创建一个检查点，在该点保证全部脏页都已写入磁盘，从而在以后的恢复过程中节省时间。  
   
- 将修改后的数据页从高速缓冲存储器写入磁盘的操作称为刷新页。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有一个逻辑，它可以在写入关联的日志记录前防止刷新脏页。 日志记录将在提交事务时写入磁盘。  
+ 将修改后的数据页从高速缓冲存储器写入磁盘的操作称为刷新页。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有一个逻辑，它可以在写入关联的日志记录前防止刷新脏页。 日志记录将在刷新日志缓冲区时写入磁盘。  只要事务提交或日志缓冲区已满，就会发生这种情况。  
   
 ##  <a name="Backups"></a> 事务日志备份  
  本节介绍了有关如何备份和还原（应用）事务日志的概念。 在完整恢复模式和批量日志恢复模式下，执行例行事务日志备份（“日志备份”）对于恢复数据十分必要。 可以在任何完整备份运行的时候备份日志。 有关恢复模型的详细信息，请参阅 [SQL Server 数据库的备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  

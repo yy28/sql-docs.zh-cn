@@ -1,7 +1,7 @@
 ---
 title: 管理报表数据源 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -20,16 +20,17 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 80ae6fcf181e3fe48a4be6c9d29b3637e8e70bd3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5271a770bc8118ce08cb4794bd4a082204b96656
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550748"
 ---
 # <a name="manage-report-data-sources"></a>管理报表数据源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表、报表模型以及数据驱动订阅都从外部数据源检索数据。 若要连接到外部数据源，报表服务器可以使用报表、模型或订阅中定义的或从中引用的数据源连接信息。 数据源连接属性始终在创建报表或模型时通过该报表或模型进行定义，但是可以在将报表或模型发布到报表服务器后对这些属性进行单独管理。  
   
- 若要管理报表数据源，对于本机模式下的报表服务器，可使用报表管理器，如果报表服务器部署在 SharePoint 集成模式下，则可以使用 SharePoint 站点上的应用程序页。  
+ 若要管理报表数据源，对于本机模式下的报表服务器，可使用 Web 门户，如果报表服务器部署在 SharePoint 集成模式下，则可以使用 SharePoint 站点上的应用程序页。  
   
  管理数据源连接的特点是包含下列任务，本主题对这些任务进行了介绍：  
   
@@ -46,10 +47,10 @@ ms.lasthandoff: 05/03/2018
 ## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>托管属性：数据源类型、连接字符串和凭据  
  可以在报表服务器上管理的数据源属性为：  
   
-|“属性”|Description|管理方式|  
+|“属性”|描述|管理方式|  
 |--------------|-----------------|----------------------|  
 |数据源类型|确定要对外部数据使用的报表服务器数据处理扩展插件。 数据处理器的示例包括 SQL Server、Analysis Services 和 Oracle。|数据源类型是托管属性，因为它是可配置的。 但是，如果要创建新的共享数据源，则应仅配置数据源类型。<br /><br /> 请不要在已发布报表或模型的属性页中更改数据源类型，这样做几乎可以肯定会使连接无效。 不同数据平台上的报表或模型所需的数据结构不太可能相同。|  
-|连接字符串|建立到外部数据源的初始连接。 报表可以使用静态或动态连接字符串。<br /><br /> “静态连接字符串”  是报表在每次运行时始终用于连接到同一数据源的一组值。<br /><br /> “动态连接字符串”  是允许用户选择将要在运行时使用的数据源的报表内置表达式。 在报表设计器中创建报表时，必须将该表达式和数据源选择列表置入该报表中。|更改连接字符串在以下情况中非常有用：将数据源移到另一个计算机中，或如果您使用测试数据创建了报表，但是希望根据生产数据库部署该报表。<br /><br /> 可以通过将原始字符串替换为另一个字符串来管理静态连接字符串。<br /><br /> 若要在报表管理器或 SharePoint 站点中管理动态连接字符串，只能将原始字符串替换为静态字符串。 您不能编辑表达式本身，也不能更改数据源选择列表。 若要更改表达式或有效值列表，必须编辑报表定义并将它重新发布到报表服务器。 有关详细信息，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
+|连接字符串|建立到外部数据源的初始连接。 报表可以使用静态或动态连接字符串。<br /><br /> “静态连接字符串”  是报表在每次运行时始终用于连接到同一数据源的一组值。<br /><br /> “动态连接字符串”  是允许用户选择将要在运行时使用的数据源的报表内置表达式。 在报表设计器中创建报表时，必须将该表达式和数据源选择列表置入该报表中。|更改连接字符串在以下情况中非常有用：将数据源移到另一个计算机中，或如果您使用测试数据创建了报表，但是希望根据生产数据库部署该报表。<br /><br /> 可以通过将原始字符串替换为另一个字符串来管理静态连接字符串。<br /><br /> 若要在 Web 门户或 SharePoint 站点中管理动态连接字符串，只能将原始字符串替换为静态字符串。 您不能编辑表达式本身，也不能更改数据源选择列表。 若要更改表达式或有效值列表，必须编辑报表定义并将它重新发布到报表服务器。 有关详细信息，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
 |凭据|提供有权读取数据源中数据的用户名和密码。<br /><br /> 如果数据源不支持身份验证（例如，如果数据源是文件系统中的 XML 文件），则可以配置无人参与的执行帐户，以允许报表服务器在不传递凭据的情况下连接到外部数据源。|可以通过在用户帐户或密码过期时进行更新来管理凭据。<br /><br /> 还可以更改获取凭据的方式（例如，在运行时提示用户输入凭据）。<br /><br /> 如果希望用户能够订阅报表，必须将报表配置为使用存储凭据。|  
   
 ## <a name="creating-and-using-shared-data-sources"></a>创建和使用共享数据源  
@@ -70,9 +71,9 @@ ms.lasthandoff: 05/03/2018
 |向报表定义 (.rdl) 文件添加数据源连接属性。|报表设计器|[创建嵌入数据源或共享数据源 (SSRS)](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
 |添加并链接到报表项目中的共享数据源 (.rds) 文件。|报表设计器|[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |创建运行时用户可以选择的预定义的数据源列表。 当用户请求报表时，该报表将提供一个数据源列表。 用户运行报表前必须选择要使用的数据源。 若要向报表添加数据源选择列表，请使用表达式。<br /><br /> 这称为动态数据源连接。|报表设计器|[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|在报表服务器上创建共享数据源项。|报表管理器|[创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)|  
-|将凭据存储为用于创建订阅或报表快照的必备组件。|报表管理器|[在 Reporting Services 数据源中存储凭据](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
-|编辑已发布报表的数据源连接属性。|报表管理器|[配置报表的数据源属性（报表管理器）](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
+|在报表服务器上创建共享数据源项。|[创建、修改和删除共享数据源](create-modify-and-delete-shared-data-sources-ssrs.md) |  
+|将凭据存储为用于创建订阅或报表快照的必备组件。|Web 门户|[在 Reporting Services 数据源中存储凭据](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
+|编辑已发布报表的数据源连接属性。|Web 门户|[配置报表的数据源属性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
 |在报表服务器上创建共享数据源项。|SharePoint 站点|[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
 |在报表中使用现有 .odc 连接信息。|SharePoint 站点|[将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
@@ -81,7 +82,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [将报表或模型绑定到共享数据源 (SSRS)](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [在 Reporting Services 数据源中存储凭据](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   

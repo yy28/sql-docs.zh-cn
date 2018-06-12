@@ -39,11 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f9df0c2da8892d380635f8949f10625baf9fda3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdc629623e8de28a0aaf18d384ba2e9db3a63269
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585949"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +368,7 @@ ON (p.ProductID = v.ProductID);
  table_alias  
  输出表的别名。 必须指定 pivot_table_alias。  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  指定输入表从 column_list 中的多个列缩减为名为 pivot_column 的单个列。 有关 PIVOT 和 UNPIVOT 的详细信息，请参阅[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
  AS OF \<date_time>  

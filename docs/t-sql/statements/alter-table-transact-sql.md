@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -64,11 +64,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b6b4aca07714a7153cc0b6920daca92667e0dff6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744126"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -260,7 +261,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       } 
     | { SPLIT | MERGE } RANGE (boundary_value)  
     | SWITCH [ PARTITION source_partition_number  
-        TO target_table_name [ PARTITION target_partition_number ]  
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
 }  
 [;]  
   
@@ -318,7 +319,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   与默认定义关联的列。 但是，如果不更改数据类型，则可以更改列的长度、精度或小数位数。  
   
-只能通过下列方式更改 text、ntext 和 image 数据类型的列：  
+只能通过下列方式更改 text、ntext 和 image 列的数据类型：  
   
 -   text 更改为 varchar(max)、nvarchar(max) 或 xml  
   
@@ -326,7 +327,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   image 更改为 varbinary(max)  
   
-更改某些数据类型可能导致更改相关数据。 例如，将 nchar 或 nvarchar 列改为 char 或 varchar 可能导致转换扩展字符。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 降低列的精度或减少小数位数可能导致数据截断。  
+更改某些数据类型可能导致更改相关数据。 例如，将 nchar 或 nvarchar 列改为 char 或 varchar 可能导致扩展字符转换。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 降低列的精度或减少小数位数可能导致数据截断。  
   
 > [!NOTE]
 > 无法更改已分区表的列的数据类型。  
@@ -533,7 +534,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = max_degree_of_parallelism  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 只在操作期间覆盖 max degree of parallelism 配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 只在操作期间覆盖 max degree of parallelism 配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
  使用 MAXDOP 选项来限制执行并行计划时所用的处理器数量。 最大数量为 64 个处理器。  
   
@@ -864,7 +865,7 @@ IF EXISTS
  不能在联机操作中添加 varchar(max)、nvarchar(max)、varbinary(max)、xml、text, ntext、image、hierarchyid、geometry、geography 或 CLR UDTS 类型的列。 如果在联机操作中添加这些列，将导致最大可能行大小超过 8,060 字节的限制。 在这种情况下将在脱机操作中添加列。  
   
 ## <a name="parallel-plan-execution"></a>并行计划执行  
- 在 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和更高版本中，根据 max degree of parallelism 配置选项和当前工作负荷，确定运行单个 ALTER TABLE ADD（基于索引）CONSTRAINT 或 DROP（聚集索引）CONSTRAINT 语句采用的处理器数。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]检测到系统正忙，则在语句执行开始之前将自动降低操作并行度。 可以通过指定 MAXDOP 选项，手动配置用于运行此语句的处理器数。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 在 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和更高版本中，根据 max degree of parallelism 配置选项和当前工作负荷，确定运行单个 ALTER TABLE ADD（基于索引）CONSTRAINT 或 DROP（聚集索引）CONSTRAINT 语句采用的处理器数。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]检测到系统正忙，则在语句执行开始之前将自动降低操作并行度。 可以通过指定 MAXDOP 选项，手动配置用于运行此语句的处理器数。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 ## <a name="partitioned-tables"></a>已分区表  
  除了执行涉及到已分区表的 SWITCH 操作外，ALTER TABLE 还可用于更改已分区表的列、约束和触发器的状态，就像它用于非分区表一样。 但是，该语句不能用于更改表本身进行分区的方式。 若要对已分区表进行重新分区，请使用 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 和 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)。 此外，不能更改已分区表中列的数据类型。  

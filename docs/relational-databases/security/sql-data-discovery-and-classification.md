@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743966"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 数据发现和分类引入了全新工具，并将其内置于 SQL Server Management Studio (SSMS)，以便发现数据库中的敏感数据并对其进行分类、标记和报告。
-发现最敏感的数据（如商业、金融、医疗和 PII 等）并对其进行分类在组织的信息保护中可起到关键作用。 它可以充当基础结构，用于：
-* 帮助满足数据隐私标准和监管符合性需求，如 GDPR。
+发现最敏感的数据（如商业、金融、医疗等）并对其进行分类在组织的信息保护中可起到关键作用。 它可以充当基础结构，用于：
+* 帮助满足数据隐私标准。
 * 控制对包含高度敏感数据的数据库/列的访问，并加强其安全性。
-
 
 > [!NOTE]
 > SQL Server 2008 及更高版本支持数据发现和分类。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](https://go.microsoft.com/fwlink/?linkid=866265)。
@@ -94,7 +94,57 @@ ms.lasthandoff: 05/03/2018
     ![“导航”窗格][10]
 
 
-## <a id="subheading-3"></a>后续步骤
+## <a id="subheading-3"></a>访问分类元数据
+
+“信息类型”和“敏感度标签”的分类元数据存储在以下扩展属性中： 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+可以使用扩展属性目录视图 [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) 访问元数据。
+
+以下代码示例返回具有相应分类的所有已分类列：
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>后续步骤
 
 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](https://go.microsoft.com/fwlink/?linkid=866265)。
 
@@ -106,7 +156,8 @@ ms.lasthandoff: 05/03/2018
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

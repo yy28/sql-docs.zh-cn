@@ -20,16 +20,17 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 2d2b965d3177be06b46bb51b8f5238f5a4b21dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b6412856e373c3b1ad5ac838f9b15486d451a2b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779193"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  使用 GZIP 算法解压缩输入表达式。 压缩的结果是字节数组（varbinary(max) 类型）。  
+此函数将使用 GZIP 算法解压缩输入表达式值。 `DECOMPRESS` 将返回字节数组（VARBINARY(MAX) 类型）。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +42,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- Is a varbinary(n)、varbinary(max) 或 binary(n)********。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+varbinary(n)、varbinary(max) 或 binary(n) 值********。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回 varbinary(max) 类型的数据类型。 输入参数使用 ZIP 算法进行了解压缩。 如果需要，用户应显式将结果强制转换为目标类型。  
+数据类型 varbinary(max) 的值。 `DECOMPRESS` 将使用 ZIP 算法解压缩输入参数。 如有必要，用户应显式将结果强制转换为目标类型。  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. 在查询时解压缩数据  
- 以下示例演示如何显示表中的压缩数据：  
+此示例演示如何返回已压缩的表数据：  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -60,10 +61,10 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. 使用计算列显示已压缩数据  
- 下面的示例演示如何创建表来存储解压缩的数据：  
+此示例演示如何创建用于解压缩数据存储的表：  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

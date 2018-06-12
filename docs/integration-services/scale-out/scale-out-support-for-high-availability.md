@@ -2,7 +2,7 @@
 title: SQL Server Integration Services (SSIS) Scale Out 对高可用性的支持 | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25660b9e6b4edbdd8a2654d092990fef94313bed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476039"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -47,7 +48,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 在 Scale Out Master 证书的 CN 中包含 Scale Out Master 服务的 DNS 主机名
 
-此主机名将用于 Scale Out Master 终结点。 
+此主机名将用于 Scale Out Master 终结点。 （确保提供 DNS 主机名而非服务器名称。）
 
 ![HA 主节点配置](media/ha-master-config.PNG)
 
@@ -61,9 +62,9 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 > [!NOTE]
 > 通过对其他辅助节点上的 Scale Out Master 重复这些操作，可设置多个备份 Scale Out Master。
 
-## <a name="4-set-up-ssisdb-always-on"></a>4.设置 SSISDB Always On
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4.为 Always On 设置并配置 SSISDB 支持
 
-按照[针对 SSIS 目录 (SSISDB) 的 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 提供的说明，为 SSISDB 设置 Always On。
+按照[针对 SSIS 目录 (SSISDB) 的 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 中的说明，为 Always On 设置并配置 SSISDB 支持。
 
 此外，还需为 SSISDB 添加到的可用性组创建可用性组侦听程序。 请参阅[创建或配置可用性组侦听程序](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。
 
@@ -85,7 +86,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7.配置 Windows 故障转移群集的 Scale Out Master 服务角色
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7.配置 Windows Server 故障转移群集的 Scale Out Master 服务角色操作
 
 1.  在故障转移群集管理器中，连接到 Scale Out 的群集。选择群集。 在菜单中选择“操作”，然后选择“配置角色”。
 
@@ -96,6 +97,12 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
     ![HA 向导 1](media/ha-wizard1.PNG)
 
 4.  完成该向导。
+
+在 Azure 虚拟机上，此配置步骤需要额外的步骤。 这些概念和这些步骤的完整解释超出了本文的范围。
+
+1.  必须设置 Azure 域。 Windows Server 故障转移群集要求群集中的所有计算机都是同一个域的成员。 有关详细信息，请参阅[使用 Azure 门户启用 Azure Active Directory 域服务](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)。
+
+2. 必须设置 Azure 负载均衡器。 这是可用性组侦听程序的一项要求。 有关详细信息，请参阅[教程：使用 Azure 门户通过基本负载均衡器将内部流量在各台 VM 之间进行负载均衡](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8.在 SSISDB 中更新 Scale Out Master 地址
 

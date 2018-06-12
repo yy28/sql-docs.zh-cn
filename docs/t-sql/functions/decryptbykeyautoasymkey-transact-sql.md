@@ -22,16 +22,17 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: f7378e62b4cf30697ca69868602dc7483649abcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779543"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  使用对称密钥执行解密，而该对称密钥则使用非对称密钥进行自动解密。  
+此函数对已加密的数据进行解密。 为此，该函数首先使用单独的非对称密钥解密对称密钥，然后使用在第一个“步骤”中提取的对称密钥解密已加密的数据。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,40 +48,40 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## <a name="arguments"></a>参数  
  akey_ID  
- 用于保护对称密钥的非对称密钥的 ID。 akey_ID 是 int。  
+用于加密对称密钥的非对称密钥的 ID。 akey_ID 具有 int 数据类型。  
   
  akey_password  
- 用于保护非对称密钥私钥的密码。 如果私钥受数据库主密钥保护，则该值可以为 NULL。 akey_password 是 nvarchar。  
+保护非对称密钥的密码。 如果数据库主密钥保护非对称私钥，则 akey_password 可具有 NULL 值。 akey_password 具有 nvarchar 数据类型。  
   
  'ciphertext'  
- 使用密钥进行加密的数据。 ciphertext 的数据类型为 varbinary。  
+使用密钥进行加密的数据。 ciphertext 具有 varbinary 数据类型。  
   
  @ciphertext  
- 包含已使用密钥进行加密的数据的 varbinary 类型变量。  
+varbinary 类型的变量，包含使用对称密钥进行加密的数据。  
   
  add_authenticator  
- 指示是否与明文一起加密验证器。 对数据进行加密时，该值必须与传递给 EncryptByKey 的值相同。 如果使用了验证器，则为 1。 add_authenticator 的数据类型为 int。  
+指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 如果加密过程使用验证器，则 add_authenticator 具有 1 值。 add_authenticator 具有 int 数据类型。  
   
  @add_authenticator  
- 指示是否与明文一起加密验证器。 对数据进行加密时，该值必须与传递给 EncryptByKey 的值相同。  
+变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @add_authenticator 具有 int 数据类型。
   
  authenticator  
- 从中生成验证器的数据。 必须与提供给 EncryptByKey 的值相匹配。 authenticator 的数据类型为 sysname。  
+用作验证器生成基础的数据。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 authenticator 具有 sysname 数据类型。  
   
  @authenticator  
- 包含用于生成验证器的数据的变量。 必须与提供给 EncryptByKey 的值相匹配。  
+包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKeyAutoAsymKey 组合了 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 在单个操作中，它可以解密对称密钥，并使用该密钥解密密码文本。  
+`DECRYPTBYKEYAUTOASYMKEY` 组合了 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 在单个操作中，它可以解密对称密钥，然后使用该密钥解密已加密文本。  
   
 ## <a name="permissions"></a>权限  
- 需要对对称密钥拥有 VIEW DEFINITION 权限以及对非对称密钥拥有 CONTROL 权限。  
+需要对对称密钥拥有 `VIEW DEFINITION` 权限以及对非对称密钥拥有 `CONTROL` 权限。  
   
 ## <a name="examples"></a>示例  
- 下例显示如何用 `DecryptByKeyAutoAsymKey` 来简化执行解密的代码。 应在还没有数据库主密钥的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库上运行此代码。  
+此示例演示如何使用 `DECRYPTBYKEYAUTOASYMKEY` 简化解密代码。 应在还没有数据库主密钥的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库上运行此代码。  
   
 ```  
 --Create the keys and certificate.  

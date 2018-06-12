@@ -1,7 +1,7 @@
 ---
 title: 部署 Integration Services (SSIS) 项目和包 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -24,11 +24,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772135"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和旧的包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -36,8 +37,13 @@ ms.lasthandoff: 05/03/2018
 有关早期包部署模型的详细信息，请参阅[包部署 (SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
   
 > [!NOTE]  
->  项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 如果使用此模型，则不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。  
-  
+>  项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 使用此部署模型时，不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入了包部署模型，借助该模型可在未部署整个项目的情况下部署一个或多个包。  
+
+> [!NOTE]
+> 本文介绍如何在一般情况下部署 SSIS 包以及如何在本地部署包。 还可将 SSIS 包部署到以下平台：
+> - **Microsoft Azure 云**。 有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+> - **Linux**。 有关详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../../linux/sql-server-linux-migrate-ssis.md)。
+
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>比较项目部署模型和旧的包部署模型  
  您为项目选择的部署模型的类型将决定可用于该项目的开发和管理选项。 下表显示使用项目部署模型和使用包部署模型之间的差异和相似之处。  
   
@@ -60,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="features-of-project-deployment-model"></a>项目部署模型的功能  
  下表列出的功能仅可用于为项目部署模型开发的项目。  
   
-|功能|Description|  
+|功能|描述|  
 |-------------|-----------------|  
 |Parameters|参数指定包将使用的数据。 您可以分别使用包参数和项目参数将参数范围限定在包级别或项目级别。 参数可用于表达式或任务中。 在将项目部署到目录时，可为每个参数分配文字值，或者使用在设计时分配的默认值。 还可以引用环境变量来代替文字值。 在包执行时解析环境变量值。|  
 |环境|环境是可由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目引用的变量的容器。 每个项目可以具有多个环境引用，但包执行的单个实例只能引用来自单个环境的变量。 环境允许您对分配给包的值进行组织。 例如，您可以具有名为“开发”、“测试”和“生产”的环境。|  
@@ -294,7 +300,7 @@ static void Main()
 
  - 在 SQL Server 安装文件夹下搜索可执行文件 **ISDeploymentWizard.exe** ；例如：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
  
- > **注意：**如果显示“简介”页，则单击“下一步”切换到“选择源”页。 
+ > **注意：** 如果显示“简介”页，则单击“下一步”切换到“选择源”页。 
  
  对于每个部署模型，此页上的设置会有所不同。 基于你在此页中选择的模型，按照 [Project Deployment Model](#ProjectModel) 部分或 [Package Deployment Model](#PackageModel) 部分的步骤进行操作。  
   
@@ -307,7 +313,7 @@ static void Main()
  若要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中选择项目的目标文件夹，请输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或单击 **“浏览”** 从服务器列表中选择。 然后输入 SSISDB 中的项目路径或单击 **“浏览”** 以选择此路径。 单击“下一步”  以查看“检查”  页。  
   
 #### <a name="review-and-deploy"></a>查看（和部署）  
- 该页使你能够查看你所选择的设置。 可以通过单击 **“上一步”**或单击左窗格中的任意步骤来更改所做的选择。 单击“部署”  以启动部署过程。  
+ 该页使你能够查看你所选择的设置。 可以通过单击 **“上一步”** 或单击左窗格中的任意步骤来更改所做的选择。 单击“部署”  以启动部署过程。  
   
 #### <a name="results"></a>结果  
  部署过程完成之后，将看到“结果”  页。 该页显示每个操作是成功了还是失败了。 如果操作失败，单击 **“结果”** 列中的 **“失败”** 可以显示错误说明。 单击“保存报表...”以将结果保存到 XML 文件，或单击“关闭”以退出向导。

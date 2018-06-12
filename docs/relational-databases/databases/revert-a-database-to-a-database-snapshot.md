@@ -19,11 +19,12 @@ caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6bdd055cc32d6f01ec017f72c7caa8f503754f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fdedcbb66bbf9c62a7001750c1dc149c4427cbb
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799827"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Restrictions"></a> 限制和局限  
  下列情况不支持恢复：  
   
--   数据库当前肯定只有一个数据库快照，并且您计划恢复到该快照。  
+-   数据库存在多个快照。 还原时，对于计划恢复的数据库，只能存在一个快照。  
   
 -   数据库中存在任何只读或压缩的文件组。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  在恢复数据库之前，请考虑以下限制：  
   
--   恢复并不适用于介质恢复。 实例时都提供 SQL Server 登录名。 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   恢复并不适用于介质恢复。 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果需要能够将源数据库还原至创建数据库快照的时点，请使用完整恢复模式并实施允许您执行该操作的备份策略。  

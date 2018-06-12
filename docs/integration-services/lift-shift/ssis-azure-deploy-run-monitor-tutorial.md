@@ -12,16 +12,17 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585629"
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>在 Azure 中部署和运行 SSIS 包
 本教程演示如何将 SQL Server Integration Services 项目部署到 Azure SQL 数据库上的 SSISDB 目录数据库、在 Azure-SSIS Integration Runtime 中运行包，以及监视正在运行的包。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/23/2018
 
 2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息：
 
-   | 设置       | 建议的值 | 说明 | 
+   | 设置       | 建议的值 | 描述 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
@@ -101,7 +102,8 @@ ms.lasthandoff: 05/23/2018
     -   可以通过选择“上一步”或选择左窗格中的任意步骤来更改所做的选择。
     -   选择“部署”启动部署过程。
 
-    > ![注意] 如果收到错误消息“没有任何活动工作代理。(.Net SqlClient 数据提供程序)”，请确保 Azure SSIS Integration Runtime 正在运行。 如果尝试在 Azure SSIS IR 处于停止状态时进行部署，则会发生此错误。
+    > [!NOTE]
+    > 如果收到错误消息“没有任何活动工作代理。(.Net SqlClient 数据提供程序)”，请确保 Azure-SSIS Integration Runtime 正在运行。 如果尝试在 Azure SSIS IR 处于停止状态时进行部署，则会发生此错误。
 
 5.  部署过程完成之后，“结果”页随即打开。 该页显示每个操作是成功了还是失败了。
     -   如果操作失败，则选择“结果”列中的“失败”以显示错误说明。
@@ -190,9 +192,17 @@ Write-Host "All done."
 
 有关如何在 SSMS 中监视正在运行的包的详细信息，请参阅[监视正在运行的包和其他操作](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)。
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>监视 SSIS 包活动的执行
+
+如果使用“执行 SSIS 包”活动将包作为 Azure 数据工厂管道的一部分运行，则可以在数据工厂 UI 中监视管道运行。 然后可以从活动运行的输出中获取 SSISDB 执行 ID，并使用该 ID 在 SSMS 中查看更全面的执行日志和错误消息。
+
+![在数据工厂中获取包执行 ID](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>监视 Azure-SSIS Integration Runtime
 
-若要获取有关运行有包的 Azure-SSIS Integration Runtime 的状态信息，请使用以下 PowerShell 命令。 对于每个命令，请提供数据工厂、Azure-SSIS IR 和资源组的名称。 有关详细信息，请参阅[监视 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
+若要获取有关运行有包的 Azure-SSIS Integration Runtime 的状态信息，请使用以下 PowerShell 命令。 对于每个命令，请提供数据工厂、Azure-SSIS IR 和资源组的名称。
+
+有关详细信息，请参阅[监视 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>获取有关 Azure-SSIS Integration Runtime 的元数据
 

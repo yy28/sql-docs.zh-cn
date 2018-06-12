@@ -1,7 +1,7 @@
 ---
 title: SSIS 目录 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: service
@@ -20,15 +20,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 711bc7d70060cc3e5b1ac9f6fa38187bc82a48de
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772663"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   **SSISDB**目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
-  
+ 
+> [!NOTE]
+> 本文介绍常规 SSIS 目录及在本地运行的 SSIS 目录。 还可在 Azure SQL 数据库中创建 SSIS 目录，并在 Azure 中部署和运行 SSIS 包。 有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+>
+> 虽然也可在 Linux 上运行 SSIS 包，但在 Linux 上不支持 SSIS 目录。 有关详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../../linux/sql-server-linux-migrate-ssis.md)。
+ 
  **SSISDB** 目录中存储的对象包括项目、包、参数、环境和操作历史记录。  
   
  可通过查询 **“SSISDB”** 数据库中的视图来检查 **“SSISDB”** 目录中存储的对象、设置和操作数据。 可通过调用 **SSISDB** 数据库中的存储过程或通过使用 **SSISDB** 目录的 UI 来管理对象。 在很多情况下，同一个任务既可使用 UI 执行，也可以通过调用存储过程来执行。  
@@ -355,7 +361,7 @@ ms.lasthandoff: 05/03/2018
   
     ```  
   
-     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
 
 ## <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
   使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
@@ -381,7 +387,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="options"></a>“常规”  
  下表描述该对话框中的某些属性以及 catalog.catalog_property 视图中的相应属性。  
   
-|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|Description|  
+|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|描述|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |加密算法名称|ENCRYPTION_CLEANUP_ENABLED|指定用于对于目录中的敏感参数值进行加密的加密类型。 下面是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256（默认值）|  
 |验证超时（秒）|VALIDATION_TIMEOUT|指定项目验证或包验证最长可以运行多少秒。 默认值为 300 秒。<br /><br /> 执行验证是一个异步操作。 项目或包越大，验证所需时间就越长。<br /><br /> 有关验证项目和包的信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。|  

@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84313f1bedd406c39a862c57bdc94436eb0c7cbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563795"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools 客户体验改善计划
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,23 +60,25 @@ ms.lasthandoff: 05/03/2018
   
  相关注册表项和设置如下所示：  
   
- Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- RegEntry name = OptIn  
-  
- 注册表项类型 DWORD：  
-  
--   0 表示选择不加入  
-  
--   1 表示选择加入  
+- 64 位 OS，项 = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- 32 位 OS，项 = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+启用组策略时，项 = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+条目 = OptIn
+
+值 = (DWORD)
+- 0 表示选择退出（关闭 VSCEIP）
+- 1 表示选择加入（开启 VSCEIP）
+
   
 > [!CAUTION]  
 >  错误编辑注册表可能会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
   
  有关 CEIP 收集、处理或传送的信息的详细信息，请参阅 [Microsoft 客户体验改善计划隐私声明](http://go.microsoft.com/fwlink/?LinkId=52143)。  
  
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>对适用于 Visual Studio 2015 的 SQL Server Data Tools 和 CEIP 的选择与控制  
- 适用于 Visual Studio 2015 的 SSDT 是附带 SQL Server 2016 的数据建模工具。 它使用内置于 Visual Studio 2015 的 CEIP 选项。 可以根据此 [Visual Studio 的帮助文档](http://go.microsoft.com/fwlink/?LinkId=517102)来了解有关如何在 Visual Studio 2015 中通过 CEIP 提交反馈的详细信息。  
+### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>对适用于 Visual Studio 2015 的 SQL Server Data Tools 和 CEIP 的选择与控制  
+ 适用于 Visual Studio 2015 的 SSDT 是附带 SQL Server 2016 的数据建模工具。 它使用 Visual Studio 2015 中内置的 CEIP 选项。 可以参阅这篇 [Visual Studio 帮助文档](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，详细了解如何在 Visual Studio 2015 中通过 CEIP 提交反馈。  
   
  对于 SQL Server 2016 的预览版本，默认启用 CEIP。 可以按照下面的说明将其关闭，或重新打开。  
   

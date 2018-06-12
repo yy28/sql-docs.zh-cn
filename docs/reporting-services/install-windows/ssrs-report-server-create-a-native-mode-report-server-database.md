@@ -1,7 +1,7 @@
 ---
 title: 创建本机模式报表服务器数据库（SSRS 配置管理器）| Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,11 +18,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 507308300934270e9008f775b4da6221278c2d18
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550508"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>创建本机模式报表服务器数据库
 
@@ -118,7 +119,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  检查“摘要”页上的信息以确保设置正确，然后选择“下一步”。  
   
-8.  选择“报表服务器 URL”页或“报表管理器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，您会在浏览器窗口中看到报表服务器文件夹层次结构或报表管理器。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+8.  选择“报表服务器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，将看到报表服务器文件夹层次结构。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
 
 ## <a name="change-database-credentials"></a>更改数据库凭据
 

@@ -1,7 +1,7 @@
 ---
 title: 创建文档结构图（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550408"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>查看报表时隐藏文档结构图  
   
-1.  在报表管理器中，浏览到包含文档结构图的报表。  
+1.  在 Web 门户中，浏览到包含文档结构图的报表。  
   
      例如，对于 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 示例报表，下面的 URL 指定名为 Product Catalog 的报表。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
      若要使用此 URL，请复制此 URL，并删除所有换行符。  
   
-4.  将此 URL 粘贴到报表管理器中，然后按 Enter。 将运行报表，并隐藏文档结构图。  
+4.  将此 URL 粘贴到 Web 门户中，然后按 Enter。 将运行报表，并隐藏文档结构图。  
   
 > [!NOTE]  
 >  有关下载示例报表的详细信息，请参阅 [报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
