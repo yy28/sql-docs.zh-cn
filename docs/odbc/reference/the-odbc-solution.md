@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918922"
 ---
 # <a name="the-odbc-solution"></a>ODBC 解决方案
 问题，然后，是 ODBC 如何标准化数据库访问权限？ 有两个体系结构要求：  

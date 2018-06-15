@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912872"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 动态游标
 动态游标就是： 动态。 它可以检测到成员资格、 顺序和值的结果集打开光标后所做的任何更改。 例如，假设动态游标提取两行，另一个应用程序，然后更新这些行之一并删除其他。 如果动态游标然后尝试重新提取这些行，它不会查找删除的行，但会返回更新的行的新值。  

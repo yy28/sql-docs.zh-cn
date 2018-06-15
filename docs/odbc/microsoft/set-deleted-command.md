@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901682"
 ---
 # <a name="set-deleted-command"></a>设置已删除命令
 指定是否已处理标记为删除的记录，并指明它们是否可在其他命令中使用。  

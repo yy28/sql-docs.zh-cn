@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908582"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>分配 ODBC 连接句柄
 应用程序可以连接到数据源或驱动程序，它必须先分配然后连接句柄，如下所示：  

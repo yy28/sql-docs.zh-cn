@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910722"
 ---
 # <a name="data-types-in-odbc"></a>ODBC 中的数据类型
 ODBC 使用的数据类型的两个集： SQL 数据类型和 C 数据类型。 在数据源中，使用 SQL 数据类型和应用程序中的 C 代码中使用 C 数据类型。  

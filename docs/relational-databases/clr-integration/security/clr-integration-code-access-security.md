@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931242"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 |权限|值/说明|  
 |----------------|-----------------------------|  
-|**SecurityPermission**|**执行：**执行托管的代码的权限。|  
+|**SecurityPermission**|**执行：** 执行托管的代码的权限。|  
 |**SqlClientPermission**|**上下文连接 = true**，**上下文连接 = yes**： 只可以使用上下文连接并且连接字符串可以仅指定的值"上下文连接 = true"或"上下文连接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允许密码为空。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
@@ -72,20 +73,20 @@ ms.lasthandoff: 05/03/2018
   
 |权限|值/说明|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**不受限制地：**允许分布式事务。|  
-|**DNSPermission**|**不受限制地：**从域名服务器请求信息的权限。|  
-|**EnvironmentPermission**|**不受限制地：**完整允许对系统和用户环境变量的访问。|  
-|**EventLogPermission**|**管理：**允许以下操作： 创建事件源，读取现有的日志，删除事件源或日志，响应条目，清除事件日志，侦听事件，并访问的所有事件日志集合。|  
-|**FileIOPermission**|**不受限制地：**的完全访问权限的文件，允许文件夹。|  
-|**KeyContainerPermission**|**不受限制地：**完整允许对密钥容器的访问。|  
-|**NetworkInformationPermission**|**访问：**允许 Pinging。|  
+|**DistributedTransactionPermission**|**不受限制地：** 允许分布式事务。|  
+|**DNSPermission**|**不受限制地：** 从域名服务器请求信息的权限。|  
+|**EnvironmentPermission**|**不受限制地：** 完整允许对系统和用户环境变量的访问。|  
+|**EventLogPermission**|**管理：** 允许以下操作： 创建事件源，读取现有的日志，删除事件源或日志，响应条目，清除事件日志，侦听事件，并访问的所有事件日志集合。|  
+|**FileIOPermission**|**不受限制地：** 的完全访问权限的文件，允许文件夹。|  
+|**KeyContainerPermission**|**不受限制地：** 完整允许对密钥容器的访问。|  
+|**NetworkInformationPermission**|**访问：** 允许 Pinging。|  
 |**RegistryPermission**|允许读取的权限**HKEY_CLASSES_ROOT**， **HKEY_LOCAL_MACHINE**， **HKEY_CURRENT_USER**， **HKEY_CURRENT_CONFIG**，和**HKEY_USERS。**|  
-|**SecurityPermission**|**断言：**断言的此代码的所有调用方拥有该操作的所需权限的能力。<br /><br /> **ControlPrincipal:** 操作的主体对象的能力。<br /><br /> **执行：**执行托管的代码的权限。<br /><br /> **SerializationFormatter:** 能够提供序列化服务。|  
-|**SmtpPermission**|**访问：**允许出站连接到 SMTP 主机端口 25。|  
-|**SocketPermission**|**连接：**允许出站连接 （所有协议中的所有端口） 上的传输地址。|  
-|**SqlClientPermission**|**不受限制地：**完整允许访问数据源。|  
-|**StorePermission**|**不受限制地：**完全访问存储允许到 X.509 证书。|  
-|**WebPermission**|**连接：**允许对 web 资源的出站连接。|  
+|**SecurityPermission**|**断言：** 断言的此代码的所有调用方拥有该操作的所需权限的能力。<br /><br /> **ControlPrincipal:** 操作的主体对象的能力。<br /><br /> **执行：** 执行托管的代码的权限。<br /><br /> **SerializationFormatter:** 能够提供序列化服务。|  
+|**SmtpPermission**|**访问：** 允许出站连接到 SMTP 主机端口 25。|  
+|**SocketPermission**|**连接：** 允许出站连接 （所有协议中的所有端口） 上的传输地址。|  
+|**SqlClientPermission**|**不受限制地：** 完整允许访问数据源。|  
+|**StorePermission**|**不受限制地：** 完全访问存储允许到 X.509 证书。|  
+|**WebPermission**|**连接：** 允许对 web 资源的出站连接。|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE 允许程序集不受限制地访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部和外部的资源。 代码中执行**UNSAFE**程序集还可以调用非托管的代码。  

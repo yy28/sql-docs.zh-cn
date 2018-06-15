@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917032"
 ---
 # <a name="function-summary"></a>函数摘要
 在以下部分进行总结用的函数按 ODBC 启用应用程序和相关的软件。  

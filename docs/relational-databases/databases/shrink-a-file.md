@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931912"
 ---
 # <a name="shrink-a-file"></a>收缩文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  展开 **“数据库”** ，再右键单击要收缩的数据库。  
   
-3.  依次指向 **“任务”**和 **“收缩”**，再单击 **“文件”**。  
+3.  依次指向 **“任务”** 和 **“收缩”**，再单击 **“文件”**。  
   
      **“数据库”**  
      显示所选数据库的名称。  

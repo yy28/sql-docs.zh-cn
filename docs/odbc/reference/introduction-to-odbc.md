@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917122"
 ---
 # <a name="introduction-to-odbc"></a>ODBC 简介
 本部分提供的结构化查询语言和 ODBC，简要的历史记录，并包括 ODBC 接口的概念性信息。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911082"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>环境、 连接和语句属性
 ODBC 定义大量的与环境、 连接或语句相关联的属性。  

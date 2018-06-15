@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915203"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 和 ODBC 简介
 创建 ODBC 是为了提供对不同的或异类，数据库管理系统 (Dbms) 的访问的统一方法。 本简介讨论与 ODBC 开发相关的概念。  

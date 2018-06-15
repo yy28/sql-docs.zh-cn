@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32932532"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -217,7 +218,7 @@ Service Broker 标识符
  指定数据库是否为只读。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则用户只能读取数据库中的数据。 用户不能修改数据或数据库对象；然而，数据库本身可以通过使用 `DROP DATABASE` 语句自行删除。 在为 **“数据库为只读”** 选项指定新值时，数据库不能处于使用状态。 master 数据库是个例外，在设置该选项时，只有系统管理员才能使用 master 数据库。  
   
  **数据库状态**  
- 查看数据库的当前状态。 它是不可编辑的。 有关 **“数据库状态”**的详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
+ 查看数据库的当前状态。 它是不可编辑的。 有关 **“数据库状态”** 的详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
 
  **已启用加密**  
  设置为 **True**时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  

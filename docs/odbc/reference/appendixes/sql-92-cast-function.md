@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910932"
 ---
 # <a name="sql-92-cast-function"></a>SQL 92 CAST 函数
 **强制转换**SQL 92 中定义的函数等效于**转换**ODBC 中定义的函数。 等效的函数的语法如下所示：  

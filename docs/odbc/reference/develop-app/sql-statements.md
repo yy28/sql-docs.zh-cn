@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910522"
 ---
 # <a name="sql-statements"></a>SQL 语句
 ODBC 应用程序可以通过执行 SQL 语句执行几乎所有的数据库访问。 这些语句的形式 — 硬编码或构造在运行的时，可互操作或数据源 – 特定，等等 — 取决于应用程序的需要。  

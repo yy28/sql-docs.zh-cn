@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916625"
 ---
 # <a name="structured-query-language-sql"></a>结构化查询语言 (Structured Query Language) (SQL)
 典型的 DBMS 允许用户存储、 访问和修改数据组织、 高效的方式。 最初，Dbms 的用户已程序员。 访问存储的数据所需如 COBOL 用编程语言编写的程序。 虽然这些程序通常被编写为向非技术的用户友好界面，访问数据本身所需的有经验的程序员的服务。 非正式访问数据实际上并不是。  

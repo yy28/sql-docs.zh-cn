@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911322"
 ---
 # <a name="connecting-using-file-data-sources"></a>使用文件数据源连接
 .Dsn 文件中存储文件数据源的连接信息。 因此，可以重复使用单个用户或如果他们具有适当的驱动程序安装在多个用户之间共享的连接字符串。 该文件包含驱动程序名称 （或对于非共享的文件数据源的另一个数据源名称） 和 （可选） 可以使用的连接字符串**SQLDriverConnect**。 驱动程序管理器生成连接字符串，调用**SQLDriverConnect**从.dsn 文件中的关键字。  

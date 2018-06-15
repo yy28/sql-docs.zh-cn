@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899152"
 ---
 # <a name="date-arithmetic"></a>日期算术
 驱动程序支持增加和减少从日期、 时间戳列的整数。 对于日期列中，整数指定的天数加上或减去的数目。 时间戳列，整数指定加上或减去秒数。

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32964302"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否允许使用备份文件来初始化订阅。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
  **允许非 SQL Server 订阅服务器**  
- 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 **True** 可将其他发布属性设置为支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”**或 **“允许对等订阅”**设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 **True** 可将其他发布属性设置为支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”** 或 **“允许对等订阅”** 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ### <a name="data-transformation"></a>数据转换  
  **允许数据转换**  
@@ -121,7 +122,7 @@ ms.lasthandoff: 05/03/2018
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否通过预先计算哪些数据行属于哪个分区来优化同步。 如果发布满足预计算分区的条件，则此设置在默认情况下为 **True** 。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
  **优化同步**  
- 确定是否通过在每个订阅服务器上存储其他元数据来优化合并处理。 此优化功能已被预计算分区取代；只有在 **“预计算分区”** 设置为 **False** 时，才需要使用 **“优化同步”**选项。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 确定是否通过在每个订阅服务器上存储其他元数据来优化合并处理。 此优化功能已被预计算分区取代；只有在 **“预计算分区”** 设置为 **False** 时，才需要使用 **“优化同步”** 选项。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 ### <a name="merge-processes"></a>合并进程  
  **限制并发进程**  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912422"
 ---
 # <a name="statement-attributes"></a>语句属性
 语句属性是语句的特性。 例如，若要使用书签和什么类型的光标若要使用的语句的结果集是否是语句属性。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903142"
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE 语句
 当使用 Microsoft Access、 dBASE 或 Paradoxdriver 时，ALTER TABLE 语句支持添加和删除表约束定义子句。 （ALTER TABLE 语句不支持的 Microsoft Excel 或文本驱动程序。）  

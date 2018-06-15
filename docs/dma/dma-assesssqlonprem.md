@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870722"
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>执行 SQL Server 迁移评估
 下面的分步说明将帮助你迁移到本地 SQL Server，SQL Server 上的 Azure VM 或 Azure SQL 数据库，运行通过使用数据迁移助手执行你的第一个评估。

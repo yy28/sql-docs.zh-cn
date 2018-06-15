@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913062"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs 提供有关原因的警告或错误的详细的信息。 本手册中的 SQLSTATEs 基于这些在 ISO/IEF CLI 规范中，找到特定于 ODBC 开头 IM 这些 SQLSTATEs 虽然。  

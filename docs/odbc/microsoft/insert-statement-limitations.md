@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904452"
 ---
 # <a name="insert-statement-limitations"></a>插入语句的限制
 如果太长，无法适应列，而不发出警告右侧截断插入的数据。  

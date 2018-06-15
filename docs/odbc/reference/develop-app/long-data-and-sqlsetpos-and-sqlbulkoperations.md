@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913932"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 数据和 SQLSetPos 和 SQLBulkOperations
 当更新行与在 SQL 语句中使用参数情况一样，可以发送的长整型数据**SQLBulkOperations**或**SQLSetPos**或插入的行时**SQLBulkOperations**. 将数据发送在部件中，通过多个调用**SQLPutData**。 在执行时为其发送数据的列称为*执行中的数据列*。  

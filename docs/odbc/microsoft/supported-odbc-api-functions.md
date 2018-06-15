@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913332"
 ---
 # <a name="supported-odbc-api-functions"></a>支持的 ODBC API 函数
 调配的目的是通知应用程序哪些功能可用于向其驱动程序中。 Microsoft ODBC 桌面数据库驱动程序支持核心和级别 1 的所有函数。  

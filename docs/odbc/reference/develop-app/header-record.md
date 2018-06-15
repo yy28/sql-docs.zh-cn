@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908952"
 ---
 # <a name="header-record"></a>标头记录
 标头记录中的字段包含有关函数的执行，包括返回代码，行计数、 状态记录数以及执行语句的类型的常规信息。 除非该函数将返回 SQL_INVALID_HANDLE，始终会创建标头记录。 标头记录中的字段的完整列表，请参阅[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。

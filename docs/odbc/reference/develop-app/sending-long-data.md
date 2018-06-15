@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913962"
 ---
 # <a name="sending-long-data"></a>发送的长整型数据
 Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 254 个字符的二进制数据。 它可能不能将整个项的长整型数据存储在内存中，如当该项表示长文本文档或位图。 由于此类数据不能存储在单个缓冲区中，数据源将其发送到使用部件中的驱动程序**SQLPutData**时执行的语句。 在执行时为其发送数据的参数名为*执行中的数据参数*。  

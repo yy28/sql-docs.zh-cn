@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900872"
 ---
 # <a name="setting-extendedansisql"></a>设置 ExtendedAnsiSQL
 该属性可通过添加 ExtendedAnsiSQL 属性控制的连接字符串：  

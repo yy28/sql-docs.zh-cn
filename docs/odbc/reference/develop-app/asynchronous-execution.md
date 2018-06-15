@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907452"
 ---
 # <a name="asynchronous-execution"></a>异步执行
 ODBC 支持对语句和连接操作的异步操作。 有两种方法来确定异步操作何时完成：  

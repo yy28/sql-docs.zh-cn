@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908112"
 ---
 # <a name="database-access-architecture"></a>数据库访问体系结构
 ODBC 开发中的问题之一就是标准化的数据库访问体系结构的哪个部分。 编程接口上一节中所述的 SQL-嵌入式 SQL，SQL 模块和 Cli — 只有一个属于此体系结构。 事实上，因为 ODBC 主要用于连接到小型计算机和大型机 Dbms 基于个人计算机的应用程序，还有大量的网络组件，无法采用其中一些进行标准化。  

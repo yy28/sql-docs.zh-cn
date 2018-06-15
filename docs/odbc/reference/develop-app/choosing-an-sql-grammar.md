@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911482"
 ---
 # <a name="choosing-an-sql-grammar"></a>选择的 SQL 语法
 可以在构造 SQL 语句时使用的第一个决定是要使用的语法。 除了可从各种标准的正文，如 Open Group、 ANSI 和 ISO，语法几乎每个 DBMS 供应商定义其自己的语法，其中每个会稍有不同于标准。  

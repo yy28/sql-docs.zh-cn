@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916719"
 ---
 # <a name="translation-dll-function-summary"></a>转换 DLL 函数摘要
 下表介绍转换 DLL 函数。 有关语法和语义为每个函数的详细信息，请参阅[转换 DLL 函数引用](../../../odbc/reference/syntax/translation-dll-api-reference.md)。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914322"
 ---
 # <a name="column-size"></a>列大小
 数值数据类型的列 （或参数） 大小定义为最多的使用的数据类型的列或参数或数据的精度的位数。 对于字符类型，这是以字符为单位的数据; 的长度对于二进制数据类型，列大小被指以字节为单位的数据的长度。 对于时间、 时间戳，和所有 interval 数据类型，这是此数据的字符表示形式中的字符数。 下表中显示为每种简洁的 SQL 数据类型定义的列大小。  

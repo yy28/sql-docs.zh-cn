@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913512"
 ---
 # <a name="parameter-binding-offsets"></a>参数绑定偏移量
 应用程序可以指定偏移量添加绑定参数的缓冲区地址和相应的长度/指示器缓冲区地址时**SQLExecDirect**或**SQLExecute**调用。 这些添加的结果确定这些操作中使用的地址。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924542"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 05/03/2018
   
 -   程序集是受支持的程序集之一。 有关详细信息，请参阅[支持.NET Framework 库](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
--   你使用 **CREATE ASSEMBLY FROM * * *\<位置 >，*和所有引用的程序集和其依赖项可以在*\<位置 >*。  
+-   你使用 **CREATE ASSEMBLY FROM * * *\<位置 >，* 和所有引用的程序集和其依赖项可以在*\<位置 >*。  
   
--   你使用 **CREATE ASSEMBLY FROM * * *\<字节...>，*和所有引用指定通过空格分隔字节。  
+-   你使用 **CREATE ASSEMBLY FROM * * *\<字节...>，* 和所有引用指定通过空格分隔字节。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**程序集必须满足以下条件：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916912"
 ---
 # <a name="installer-dll-api-reference-function"></a>安装程序 DLL API 参考函数
 本部分介绍在安装程序 DLL API 函数的语法。 安装程序 DLL API 包含 20 函数。 这些函数的三个**SQLGetTranslator**， **SQLRemoveDSNFromIni**，和**SQLWriteDSNToIni**，只能由安装程序 Dll 调用。 其他函数所调用的设置和管理程序。  

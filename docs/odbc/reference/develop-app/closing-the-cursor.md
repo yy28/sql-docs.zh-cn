@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907712"
 ---
 # <a name="closing-the-cursor"></a>关闭游标
 当应用程序已完成使用游标时，它将调用**SQLCloseCursor**要关闭游标。 例如：  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912552"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>检索 SQLGetTypeInfo 的数据类型信息
 ODBC 基础 SQL 数据类型从到 ODBC 类型标识符的映射是近似值，因为提供函数 (**SQLGetTypeInfo**) 通过该驱动程序可以完全描述了每个数据源中的 SQL 数据类型。 此函数将返回一个结果集，其中每个行所说明的一种数据类型，例如名称、 类型标识符、 精度、 小数位数和可为 null 的特征。  

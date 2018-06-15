@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915542"
 ---
 # <a name="sql-modules"></a>SQL 模块
 将 SQL 语句发送到 DBMS 的第二个方法是通过模块。 简言之，模块包含一组过程，从宿主编程语言调用。 每个过程包含单个 SQL 语句中，并且数据将通过参数传递到和从过程。  

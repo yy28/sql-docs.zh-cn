@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909182"
 ---
 # <a name="data-source-example"></a>数据源示例
 运行 Microsoft® Windows NT® Server/Windows 2000 Server、 Microsoft Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98，机数据的计算机上源信息存储在注册表中。 具体取决于哪一个注册表密钥信息存储在下，数据源称为*用户数据源*或*系统数据源*。 用户数据源存储在 HKEY_CURRENT_USER 键下，并且仅适用于当前用户。 系统数据源存储在 HKEY_LOCAL_MACHINE 键下，并且可以由一台计算机上的多个用户。 它们还可以使用由系统级服务，即使没有用户登录到计算机，然后可以获得对数据源的访问。 有关用户和系统数据源的详细信息，请参阅[SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)。  

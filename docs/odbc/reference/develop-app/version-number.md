@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917302"
 ---
 # <a name="version-number"></a>版本号
 有多个版本的 ODBC，每个都有不同的功能。 应用程序确定驱动程序管理器的 ODBC 版本和特定的驱动程序支持通过调用**SQLGetInfo**使用 SQL_ODBC_VER 和 SQL_DRIVER_ODBC_VER 选项。

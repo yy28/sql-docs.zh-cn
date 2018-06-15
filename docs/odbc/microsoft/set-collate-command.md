@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904042"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 在后续索引和排序操作中指定字符字段排序规则的序列。  

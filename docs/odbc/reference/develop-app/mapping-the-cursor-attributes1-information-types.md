@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910542"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>将光标 Attributes1 信息类型映射
 当一个 ODBC 3。*x*应用程序调用**SQLGetInfo** ODBC 2 中 *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 信息类型的驱动程序 (对于动态、 只进、 键集-驱动程序，或静态游标） 返回由驱动程序管理器中的位设置依赖于哪些 ODBC 2。*x*驱动程序将返回相应的 ODBC 2。*x*信息类型。 位将设置以下表中所示。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910902"
 ---
 # <a name="odbc-static-cursors"></a>功能，ODBC 静态游标
 静态游标是一个结果集似乎是静态的。 它通常不检测在对成员资格、 顺序或值的结果集打开光标后所做的更改。 例如，假定静态游标提取行和另一个应用程序，然后更新该行。 静态游标提取此行，如果它发现的值是不变，尽管已被其他应用程序所做的更改。  

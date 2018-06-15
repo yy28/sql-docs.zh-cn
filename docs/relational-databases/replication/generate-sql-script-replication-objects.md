@@ -25,12 +25,13 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32955702"
 ---
 # <a name="generate-sql-script-replication-objects"></a>生成 SQL 脚本（复制对象）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   复制脚本包含实现已编写脚本的复制组件（如发布或订阅）所需的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系统存储过程。 制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 复制提供了两个对话框用以编写复制对象的脚本：  
   
--   **“生成 SQL 脚本”**对话框，可以在 **msCoName** 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]文件夹和所有子文件夹的上下文菜单中找到。 使用此对话框，可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上编写所有复制对象的脚本。  
+-   **“生成 SQL 脚本”** 对话框，可以在 **msCoName** 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]文件夹和所有子文件夹的上下文菜单中找到。 使用此对话框，可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上编写所有复制对象的脚本。  
   
 -   **生成 SQL 脚本 \<对象名称>**，可以在发布和订阅的上下文菜单中找到。 使用此对话框，可以编写单个对象的脚本。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908192"
 ---
 # <a name="diagnostic-handling-examples"></a>诊断处理示例
 下面的示例演示如何各种组件中的 ODBC 连接可能会生成诊断消息以及如何各种驱动程序可能会返回到应用程序使用的诊断**SQLGetDiagRec**。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913412"
 ---
 # <a name="programming-considerations"></a>编程时的注意事项
 本部分简要讨论数与编写 ODBC 应用程序和驱动程序相关的主题。  

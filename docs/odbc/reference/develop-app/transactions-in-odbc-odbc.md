@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915473"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC ODBC 中的事务
 在连接级别; 完成 ODBC 中的事务即，应用程序完成事务，它将提交或回滚通过该连接上的所有语句句柄的所有工作。  

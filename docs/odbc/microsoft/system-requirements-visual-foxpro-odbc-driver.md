@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909242"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系统要求 （Visual FoxPro ODBC 驱动程序）
 安装的系统要求提供的最小操作系统和已成功安装驱动程序所需的磁盘空间。 已安装了驱动程序后，你可以选择想要用于访问 Visual FoxPro 数据的特定应用程序软件。  

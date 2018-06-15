@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902692"
 ---
 # <a name="other-access-driver-programming-details"></a>其他访问驱动程序编程的详细信息
 > [!NOTE]  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902563"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>支持的并发模型 （Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序支持*只读并发*。 你的应用程序可以调用[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY SQL_CONCURRENCY 选项。  

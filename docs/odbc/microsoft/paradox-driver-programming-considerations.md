@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900742"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Paradox 驱动程序编程注意事项
 本节包含下列主题：  

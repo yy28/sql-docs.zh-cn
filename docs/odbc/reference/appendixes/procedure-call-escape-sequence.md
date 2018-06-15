@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908622"
 ---
 # <a name="procedure-call-escape-sequence"></a>过程调用转义序列
 ODBC 使用过程调用中的转义序列。 此转义序列的语法如下所示：  

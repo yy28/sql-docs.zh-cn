@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917400"
 ---
 # <a name="what-is-odbc"></a>什么是 ODBC？
 有关 ODBC 的许多错误理解中计算都存在。 向最终用户，它是 Microsoft® Windows® 控制面板中的图标。 对应用程序程序员，它是包含数据访问例程的库。 多个其他很出人意料的所有数据库访问权限问题的答案。  

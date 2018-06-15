@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921462"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/03/2018
   
     -   若要使备份集在特定天数后过期，请单击 **“之后”**（默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
-         默认值在 **“服务器属性”**对话框（位于 **“数据库设置”**页上）的 **“默认备份媒体保持期(天)”**选项中设置。 若要访问它，请在对象资源管理器中右键单击服务器名称，选择属性，再选择“数据库设置”页。  
+         默认值在 **“服务器属性”** 对话框（位于 **“数据库设置”** 页上）的 **“默认备份媒体保持期(天)”** 选项中设置。 若要访问它，请在对象资源管理器中右键单击服务器名称，选择属性，再选择“数据库设置”页。  
   
     -   若要使备份集在特定日期过期，请单击 **“在”**，并输入备份集的过期日期。  
   
@@ -123,14 +124,14 @@ ms.lasthandoff: 05/03/2018
   
     -   **完成后验证备份**。  
   
-    -   **“写入介质前检查校验和”**和 **“出现校验和错误时继续”**（可选）。 有关校验和的信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **“写入介质前检查校验和”** 和 **“出现校验和错误时继续”**（可选）。 有关校验和的信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
-14. 如果备份到磁带驱动器（如同 **“常规”**页的 **“目标”**部分指定的一样），则 **“备份后卸载磁带”**选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。  
+14. 如果备份到磁带驱动器（如同 **“常规”** 页的 **“目标”** 部分指定的一样），则 **“备份后卸载磁带”** 选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。  
   
     > [!NOTE]  
     >  除非备份的是事务日志（如同“常规”页的“备份类型”部分中指定的一样），否则“事务日志”部分中的选项处于不活动状态。  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”**来压缩备份，并且可以通过选中 **“不压缩备份”**来防止压缩备份。  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”** 来压缩备份，并且可以通过选中 **“不压缩备份”** 来防止压缩备份。  
   
      **查看当前备份压缩默认值**  
   

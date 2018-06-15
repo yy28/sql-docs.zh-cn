@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909202"
 ---
 # <a name="driver-manager-diagnostic-example"></a>驱动程序管理器诊断示例
 驱动程序管理器还可以生成诊断消息。 例如，如果应用程序传递的方向无效选项**SQLDataSources**，驱动程序管理器可能格式和返回中的以下值**SQLGetDiagRec**:  

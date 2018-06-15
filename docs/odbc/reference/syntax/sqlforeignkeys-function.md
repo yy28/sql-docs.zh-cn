@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923402"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函数
 **一致性**  
@@ -160,7 +161,7 @@ SQLRETURN SQLForeignKeys(
   
  VARCHAR 列的长度不表所示;实际长度依赖于数据源。 若要确定 PKTABLE_CAT 或 FKTABLE_CAT、 PKTABLE_SCHEM 或 FKTABLE_SCHEM 的实际长度，PKTABLE_NAME 或 FKTABLE_NAME，和 PKCOLUMN_NAME 或 FKCOLUMN_NAME 列，应用程序可以调用**SQLGetInfo**与 SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN、 SQL_MAX_TABLE_NAME_LEN 和 SQL_MAX_COLUMN_NAME_LEN 选项。  
   
- 下面的列已重命名为 ODBC 3*。 x。* 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
+ 下面的列已重命名为 ODBC 3 *。 x。* 列名称更改不会影响向后兼容性原因是应用程序绑定的列号。  
   
 |ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  

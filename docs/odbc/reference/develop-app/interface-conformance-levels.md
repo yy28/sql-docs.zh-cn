@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912042"
 ---
 # <a name="interface-conformance-levels"></a>界面一致性级别
 调配的目的是通知应用程序哪些功能可用于向其驱动程序中。 基于函数的均衡方案不足够实现此目标。 在 ODBC 3。*x*，驱动程序是否已分类基于它们具有的功能。 支持该功能可以包括支持函数;它还包括支持通过返回的信息类型描述符字段、 语句属性、"Y"值**SQLGetInfo**，依次类推。  

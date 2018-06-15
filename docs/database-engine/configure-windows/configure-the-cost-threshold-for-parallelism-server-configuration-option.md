@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32867262"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>配置并行的开销阈值服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +89,7 @@ FROM sys.dm_os_sys_info
   
 2.  单击 **“高级”** 节点。  
   
-3.  在 **“并行”**下，将 **“CostThresholdForParallelism”** 选项更改为所需值。 键入或选择一个值（介于 0 到 32767 之间）。  
+3.  在 **“并行”** 下，将 **“CostThresholdForParallelism”** 选项更改为所需值。 键入或选择一个值（介于 0 到 32767 之间）。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915602"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>步骤 1： 连接到数据源
 在任何应用程序中的第一步是将连接到数据源。 下图中显示此阶段中，包括它需要的函数。  

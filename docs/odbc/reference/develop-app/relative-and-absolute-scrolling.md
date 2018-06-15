@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914122"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相对和绝对滚动
 中的滚动选项大多数**SQLFetchScroll**将光标位置相对于当前的位置或位置的绝对位置。 **SQLFetchScroll**支持提取下一行，之前，第一个和最后一个行集，作为很好地为相对提取 (提取行集*n*从开始的当前行集的行) 和绝对提取 （提取行集开始在行*n*)。 如果*n*是中的绝对读取负，行进行计数从结果集的末尾。 因此，行为-1 的绝对读取意味着提取开头结果集中的最后一行的行集。  

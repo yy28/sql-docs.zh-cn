@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912055"
 ---
 # <a name="row-wise-binding"></a>按行绑定
 在使用按行绑定时，应用程序定义结构包含一个或两个，或在某些情况下三种模型，每个列的数据是要返回的元素。 第一个元素包含数据值，和第二个元素包含长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，该结构包含第三个元素。 然后，应用程序分配一个数组这些结构，其中包含有行的行集中的所有元素。  

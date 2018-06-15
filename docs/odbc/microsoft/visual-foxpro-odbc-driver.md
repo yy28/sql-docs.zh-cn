@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914472"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 驱动程序
 Microsoft Visual FoxPro 是数据库构造和应用程序开发功能强大的面向对象的环境。 Microsoft Visual FoxPro ODBC 驱动程序使应用程序可以打开，查询，并更新 Visual FoxPro 和早期版本的 FoxPro 通过打开数据库连接 (ODBC) 界面中的数据。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913292"
 ---
 # <a name="sql-conformance-levels"></a>SQL 一致性级别
 由通过调用返回的值指示的驱动程序支持的 SQL 92 语法级别**SQLGetInfo** SQL_SQL_CONFORMANCE 信息类型。 这指示该驱动程序是否符合 SQL 92 中定义的项、 FIPS 过渡、 中间，或完全级别。  

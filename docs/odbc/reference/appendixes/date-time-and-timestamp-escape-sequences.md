@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905562"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日期、 时间和时间戳转义序列
 ODBC 定义日期、 时间和时间戳文本转义序列。 这些转义序列的语法如下所示：  

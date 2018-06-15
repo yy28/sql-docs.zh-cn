@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912262"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>获取具有 SQLBulkOperations 行
 可以通过调用转换为行，该集合使用书签 refetched 数据**SQLBulkOperations。** 由绑定的书签列中的书签标识要提取的行。 不会提取具有 SQL_COLUMN_IGNORE 值的列。  

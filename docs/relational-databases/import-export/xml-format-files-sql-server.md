@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32941402"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -356,7 +357,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **数据文件（记录）：**Age\<tab>Firstname\<tab>Lastname\<return>  
+ **数据文件（记录）：** Age\<tab>Firstname\<tab>Lastname\<return>  
   
  以下 XML 格式化文件从数据文件读取数据到表中。  
   
@@ -429,7 +430,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **数据文件（记录）：**Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **数据文件（记录）：** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   
  在 `<RECORD>` 元素中，格式化文件将所有四个字段中的数据值表示为字符数据。 对于每个字段，TERMINATOR 属性指示位于数据值后面的终止符。  
   

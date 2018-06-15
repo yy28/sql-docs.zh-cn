@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913972"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>替换函数映射的向后兼容性应用程序
 ODBC 3 *.x*应用程序工作到 ODBC 3 *.x*对 ODBC 2 起驱动程序管理器。*x*驱动程序，只要使用任何新功能。 同时复制功能和行为的更改，但是，影响的方式，ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序。 当使用 ODBC 2。*x*驱动程序，驱动程序管理器映射以下 ODBC 3。*x*函数，已替换一个或多个 ODBC 2。*x*函数，到相应的 ODBC 2。*x*函数。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914952"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 驱动程序子项
 ODBC 驱动程序子项下的值列表安装的驱动程序。 下表中显示这些值的格式。  
