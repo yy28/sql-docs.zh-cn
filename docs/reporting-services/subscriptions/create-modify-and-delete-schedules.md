@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035214"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   通过本主题，可以了解有关创建、修改和删除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共享计划的信息。  若要在本机模式下管理共享计划，请使用 Web 门户中的“计划”页或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的“共享计划”文件夹。 对于 SharePoint 模式，请使用针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的管理页。  
@@ -65,12 +66,12 @@ ms.lasthandoff: 05/03/2018
   
  如果您正在修改某个共享计划，可以在进行更改前将其暂停。 当您恢复该计划时，更改立即生效。  
 
-1.  在 Web 门户中，在工具栏中单击“设置”![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。 **注意：**如果“站点设置”不可用，则说明没有访问站点设置的权限。
+1.  在 Web 门户中，在工具栏中单击“设置”![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。 **注意：** 如果“站点设置”不可用，则说明没有访问站点设置的权限。
 2.  click **“网站设置”**。  
 3.  单击 **“计划”**。  
 4.  单击 **“新建计划”**。 若要修改现有计划，请单击计划的名称。  
 5.  为计划键入说明性名称。  
-6.  选择 **“时”**、 **“天”**、 **“周”**或 **“月”**。 单击 **“一次”** 可以创建仅运行一次的计划。 指定计划的上述基本设置之后，页面上将会显示其他选项。  
+6.  选择 **“时”**、 **“天”**、 **“周”** 或 **“月”**。 单击 **“一次”** 可以创建仅运行一次的计划。 指定计划的上述基本设置之后，页面上将会显示其他选项。  
 7.  根据需要，可以选择开始计划的日期。 默认值为当天。 选择以后的某一天可以推迟计划的开始时间。  
 8.  根据需要，可以选择结束计划的日期。 计划将在此日期停止运行，但不会删除。  
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/03/2018
 4.  为计划键入说明性名称。  
 5.  根据需要，可以选择开始计划的日期。 默认值为当天。  
 6.  根据需要，可以选择结束计划的日期。 计划将在此日期停止运行，但不会删除。  
-7.  若要配置重复执行的计划，请选择 **“小时”**、 **“天”**、 **“周”**或 **“月”**。 此时，将显示其他选项。 使用这些附加选项可以根据前面选择的小时、天、周或月来配置计划频率。  
+7.  若要配置重复执行的计划，请选择 **“小时”**、 **“天”**、 **“周”** 或 **“月”**。 此时，将显示其他选项。 使用这些附加选项可以根据前面选择的小时、天、周或月来配置计划频率。  
   
      或者，若要指定一次性（不重复执行）计划，请选择“一次”，然后指定“开始时间”。  
   

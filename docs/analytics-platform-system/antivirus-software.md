@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550039"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>分析平台系统的防病毒软件
 如果你的数据中心要求防病毒软件，使用这些准则在分析平台系统上安装防病毒软件。 我们建议不安装防病毒软件，除非它是你的数据中心的硬性要求。  

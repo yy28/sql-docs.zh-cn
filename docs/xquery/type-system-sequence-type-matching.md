@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33078024"
 ---
 # <a name="type-system---sequence-type-matching"></a>类型系统的序列的类型匹配
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +430,7 @@ RETURN
   
 -   在元素测试中，类型名称后面必须跟发生指示符 (**？**)。  
   
--   **元素 （ElementName，TypeName）**不支持。  
+-   **元素 （ElementName，TypeName）** 不支持。  
   
 -   **元素 (\*，TypeName)** 不支持。  
   

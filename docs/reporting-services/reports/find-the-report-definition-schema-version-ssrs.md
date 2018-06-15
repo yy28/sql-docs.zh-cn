@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027674"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>查找报表定义架构版本 (SSRS)
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在 **“模板”** 窗格中，单击 **“报表”**。  
   
-4.  在 **“名称”**中，键入报表名称，或接受默认名称。  
+4.  在 **“名称”** 中，键入报表名称，或接受默认名称。  
   
 5.  单击 **“添加”**。 报表设计器将在“设计”视图中打开一个新的空白报表。  
   

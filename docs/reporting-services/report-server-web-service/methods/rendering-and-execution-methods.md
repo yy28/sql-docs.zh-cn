@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025234"
 ---
 # <a name="rendering-and-execution-methods"></a>呈现和执行方法
   可以使用这些方法来管理项执行和缓存以及报表呈现。  

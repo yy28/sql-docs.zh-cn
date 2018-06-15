@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34321908"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 迁移助手自动执行到 Linux 的数据库迁移
 

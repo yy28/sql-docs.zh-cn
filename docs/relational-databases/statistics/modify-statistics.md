@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32970732"
 ---
 # <a name="modify-statistics"></a>修改统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-modify-statistics"></a>修改统计信息  
   
-1.  在 **“对象资源管理器”**中，单击加号以便展开要修改统计信息的数据库。  
+1.  在 **“对象资源管理器”** 中，单击加号以便展开要修改统计信息的数据库。  
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018604"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 设备信息设置
   下表列出的是以 Web 存档 (MHTML) 格式呈现报表时的设备信息设置。  

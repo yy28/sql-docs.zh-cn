@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33012174"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>查看 DML 触发器的定义  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要查看其定义的触发器的表。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>查看 DML 触发器的依赖关系  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要查看的触发器及其依赖关系的表。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
      若要查看 DML 所依赖的对象，请选择“\<DML 触发器名称> 所依赖的对象”。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
   
-5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”**、 **“类型”**和 **“依赖关系类型”** 框中提供信息。  
+5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”**、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
   
 6.  若要关闭 **“对象依赖关系”** 窗口，请单击 **“确定”**。  
   

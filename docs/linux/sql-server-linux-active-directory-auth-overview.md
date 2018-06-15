@@ -18,6 +18,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34320928"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>有关在 Linux 上的 SQL Server 的 active Directory 身份验证
 

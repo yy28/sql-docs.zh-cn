@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020714"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，递归层次结构组可组织来自包含多个层次结构级别的单个报表数据集的数据。例如，表示组织层次结构中的经理－雇员关系的报告结构。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  右键单击表中的任意位置以选择该表。 “分组”窗格将显示所选表的详细信息组。 在“行组”窗格中，右键单击“详细信息”，然后单击“编辑组”。 此时将打开 **“组属性”** 对话框。  
   
-3.  在 **“组表达式”**中，单击 **“添加”**。 此时将在网格中显示一个新行。  
+3.  在 **“组表达式”** 中，单击 **“添加”**。 此时将在网格中显示一个新行。  
   
 4.  在 **“分组方式”** 列表中，键入或选择要分组的字段。  
   

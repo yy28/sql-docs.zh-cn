@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026964"
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
   通过将资源替换为新资源，可以更新资源。 资源是存储在报表服务器上的项，包含您上载的文件中的内容。 通过向现有资源中导入新的文件内容或其他文件内容，即可替换现有资源。 通过更新资源，可以在保留资源的现有属性和安全设置的同时更新内容。  

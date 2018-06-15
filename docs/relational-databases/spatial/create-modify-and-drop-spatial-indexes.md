@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32974012"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
   
      有关这些属性的详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)。  
   
-12. 单击 **“确定”**中的“备注”部分。  
+12. 单击 **“确定”** 中的“备注”部分。  
   
 > [!NOTE]  
 >  若要对同一空间数据列或另一个空间数据列再创建一个空间索引，请重复上述步骤。  

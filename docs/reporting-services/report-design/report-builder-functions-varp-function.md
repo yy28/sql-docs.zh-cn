@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024424"
 ---
 # <a name="report-builder-functions---varp-function"></a>报表生成器函数 - VarP 函数
   返回在给定作用域上下文中计算的、由表达式指定的所有非 Null 数值的总体方差。  

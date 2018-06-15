@@ -35,6 +35,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34324028"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和支持的功能在 Linux 上的 SQL Server 2017
 
