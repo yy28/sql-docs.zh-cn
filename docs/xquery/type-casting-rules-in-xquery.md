@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077904"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的类型转换规则
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   内置派生的数值类型可以升级为其基类型。 例如，**整数**可能被提升为**十进制**。  
   
--   A**十进制**可能被提升为**float、**和**float**可能被提升为**double**。  
+-   A**十进制**可能被提升为**float、** 和**float**可能被提升为**double**。  
   
  因为只允许对数值类型进行隐式转换，所以不允许以下转换：  
   

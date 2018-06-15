@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032274"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
   配置为 SharePoint 集成模式的报表服务器包含可用于向 SharePoint 库中发送报表的传递扩展插件。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  选择报表，单击它旁边的向下箭头，然后选择 **“管理订阅”**。  
   
-3.  单击 **“创建”**、 **“编辑”**或 **“删除”**。  
+3.  单击 **“创建”**、 **“编辑”** 或 **“删除”**。  
   
  有关“管理订阅”列表的状态消息中显示有关订阅的当前信息，包括订阅是否成功以及上次运行订阅的日期和时间。  
   

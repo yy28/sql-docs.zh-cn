@@ -28,11 +28,12 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077264"
 ---
 # <a name="functions-on-string-values---substring"></a>对字符串值的子字符串函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回值的一部分 *$sourceString*处的值指示的位置开始， *$startingLoc，*并执行的值指示的字符数，持续 *$长度*。  
+  返回值的一部分 *$sourceString*处的值指示的位置开始， *$startingLoc，* 并执行的值指示的字符数，持续 *$长度*。  
   
 ## <a name="syntax"></a>语法  
   

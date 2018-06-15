@@ -28,6 +28,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33182123"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  在“ [全文非索引字表属性](http://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ”对话框中：  
   
-    1.  在 **“操作”** 列表框中，选择下列操作之一： **“添加非索引字”**、 **“删除非索引字”**、 **“删除所有非索引字”**或 **“清除非索引字表”**。  
+    1.  在 **“操作”** 列表框中，选择下列操作之一： **“添加非索引字”**、 **“删除非索引字”**、 **“删除所有非索引字”** 或 **“清除非索引字表”**。  
   
     2.  如果对选定的操作启用了 **“非索引字”** 文本框，请输入一个非索引字。 该非索引字必须是唯一的，也就是说，在针对所选语言的此非索引字表中还不存在该非索引字。  
   

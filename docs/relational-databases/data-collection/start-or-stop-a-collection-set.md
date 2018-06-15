@@ -21,6 +21,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33145588"
 ---
 # <a name="start-or-stop-a-collection-set"></a>启动或停止收集组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-start-a-collection-set"></a>启动收集组  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
   
 2.  右键单击要启动的收集组，然后单击“启动数据收集组”。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-stop-a-collection-set"></a>停止收集组  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
   
 2.  右键单击要停止的收集组，然后单击“停止数据收集组”。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32962152"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
  选择此选项可显示前五列以及所有包含冲突的列。 当表包含很多列，而您只想查看与解决冲突最相关的列时，这非常有用。 前五列始终包含在此视图中，因为标识行的字段（如主键或名称字段）通常位于表的前几列中。  
   
  **显示列信息** (**…**)  
- 单击此项可查看列信息： **“表名”**、 **“列名”**、 **“数据类型”**和 **“列值”**。 除非值显示为只读，否则**“列值”** 是可编辑的。  
+ 单击此项可查看列信息： **“表名”**、 **“列名”**、 **“数据类型”** 和 **“列值”**。 除非值显示为只读，否则 **“列值”** 是可编辑的。  
   
  **提交入选方**  
  单击此项可将冲突解决程序确定的行保留为入选方。 在单击此按钮之前，可以更改未显示为只读的任何列的值。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/03/2018
  单击此项可将冲突解决程序确定的行接受为落选方。 在单击此按钮之前，可以更改未显示为只读的任何列的值。  
   
  **记录冲突详细信息**  
- 选中此框可将冲突的详细信息记录到文件。 若要指定文件的位置，请指向 **“视图”** 菜单，再单击 **“选项”**。 输入一个值，或单击**“浏览(...)”**，然后导航到相应的文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
+ 选中此框可将冲突的详细信息记录到文件。 若要指定文件的位置，请指向 **“视图”** 菜单，再单击 **“选项”**。 输入一个值，或单击 **“浏览(...)”**，然后导航到相应的文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和解决合并发布的数据冲突 (SQL Server Management Studio)](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   

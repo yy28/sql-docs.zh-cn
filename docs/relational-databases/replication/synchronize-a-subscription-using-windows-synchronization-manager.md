@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32964162"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **标识**  
   
-    -   **“订阅服务器登录”**、 **“分发服务器登录”**和 **“发布服务器登录”** （仅适用于合并复制）  
+    -   **“订阅服务器登录”**、 **“分发服务器登录”** 和 **“发布服务器登录”** （仅适用于合并复制）  
   
     -   **“Web 服务器信息”** （适用于运行 SQL Server 2005 或更高版本的订阅服务器中的合并订阅）  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 05/03/2018
      选定的行然后应用于发布服务器和/或订阅服务器，并在后续同步过程中传播到拓扑中的其他节点。  
   
 > [!NOTE]  
->  所做的编辑只有在属于为解决冲突而选择的行时才生效。 例如，如果在 **“发布服务器”**下进行编辑，然后单击 **“接受订阅服务器”**，那么所做的编辑将被忽略。  
+>  所做的编辑只有在属于为解决冲突而选择的行时才生效。 例如，如果在 **“发布服务器”** 下进行编辑，然后单击 **“接受订阅服务器”**，那么所做的编辑将被忽略。  
   
 ## <a name="see-also"></a>另请参阅  
  [交互式冲突解决方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

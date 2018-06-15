@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34037401"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>启动或停止 Power Pivot for SharePoint Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
   
  不能启动、暂停或停止特定 Web 应用程序的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务，但可以从默认连接列表中删除服务，使其不可用。 有关详细信息，请参阅 [将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-1.  在管理中心的 **“系统设置”**中，单击 **“管理服务器上的服务”**。  
+1.  在管理中心的 **“系统设置”** 中，单击 **“管理服务器上的服务”**。  
   
 2.  在本页顶部的“服务器”中，单击下箭头，然后单击 **“更改服务器”**。  
   

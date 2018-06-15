@@ -20,6 +20,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33145218"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
   
     1.  在 **“跟踪名称”** 框中，键入该跟踪要使用的名称。 在本示例中，跟踪名称为 **SPgt80**。  
   
-    2.  在 **“使用模板”**列表中，选择要用于该跟踪的模板。 在本示例中，请单击“TSQL_SPs”。  
+    2.  在 **“使用模板”** 列表中，选择要用于该跟踪的模板。 在本示例中，请单击“TSQL_SPs”。  
   
 7.  在 **“事件选择”** 选项卡上，请执行下列操作：  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/04/2018
   
 10. 在工具栏上，单击 **“停止所选跟踪”** 或 **“暂停所选跟踪”**。  
   
-11. 在 **“文件”** 菜单上，依次指向 **“导出”**和 **“编写跟踪定义的脚本”**，然后单击 **“用于 SQL 跟踪收集组”**。  
+11. 在 **“文件”** 菜单上，依次指向 **“导出”** 和 **“编写跟踪定义的脚本”**，然后单击 **“用于 SQL 跟踪收集组”**。  
   
 12. 在 **“另存为”** 对话框中，在 **“文件名”** 框中键入要为该跟踪定义使用的名称，然后将跟踪定义保存到所需位置。 在本示例中，文件名与跟踪名称 (SPgt80) 相同。  
   

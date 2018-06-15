@@ -25,9 +25,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27a824b14839fd82284f151ffbcf92658c2fef78
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077384"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 查看和分析跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
  您可以配置 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 日期和时间显示格式以便有助于跟踪分析。  
   
 ## <a name="troubleshooting-data"></a>排除数据故障  
- 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时，您可以按 **“持续时间”**、 **CPU**、 **“读”**或 **“写”** 数据列将跟踪或跟踪文件分组来排除数据故障。 例如，您可以对性能差的查询或逻辑读取操作数特别高的查询进行数据故障排除。  
+ 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时，您可以按 **“持续时间”**、 **CPU**、 **“读”** 或 **“写”** 数据列将跟踪或跟踪文件分组来排除数据故障。 例如，您可以对性能差的查询或逻辑读取操作数特别高的查询进行数据故障排除。  
   
  通过将跟踪保存至表和使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询事件数据，可以找到其他信息。 例如，若要确定哪些 **SQL:BatchCompleted** 事件的等待时间过长，可执行：  
   
@@ -58,7 +59,7 @@ AND     CPU < (Duration * 1000)
 ## <a name="displaying-object-names-when-viewing-traces"></a>查看跟踪时显示对象名称  
  如果你要显示对象名称而不是对象标识符（**对象 ID**），必须捕获“服务器名称”和“数据库 ID”数据列以及“对象名称”数据列。  
   
- 如果您选择按 **“对象 ID”** 数据列分组，请确保先按 **“服务器名称”** 和 **“数据库 ID”** 数据列分组，然后按 **“对象 ID”** 数据列分组。 同样，如果您选择按 **“索引 ID”** 数据列分组，请确保先按 **“服务器名称”**、 **“数据库 ID”**和 **“对象 ID”** 数据列分组，然后按 **“索引 ID”** 数据列分组。 您必须按照此顺序分组，因为对象 ID 和索引 ID 在服务器和数据库之间并不是唯一的，而索引 ID 甚至在各对象之间都不是唯一的。  
+ 如果您选择按 **“对象 ID”** 数据列分组，请确保先按 **“服务器名称”** 和 **“数据库 ID”** 数据列分组，然后按 **“对象 ID”** 数据列分组。 同样，如果您选择按 **“索引 ID”** 数据列分组，请确保先按 **“服务器名称”**、 **“数据库 ID”** 和 **“对象 ID”** 数据列分组，然后按 **“索引 ID”** 数据列分组。 您必须按照此顺序分组，因为对象 ID 和索引 ID 在服务器和数据库之间并不是唯一的，而索引 ID 甚至在各对象之间都不是唯一的。  
   
 ## <a name="finding-specific-events-within-a-trace"></a>查找跟踪内的特定事件  
  若要查找跟踪中的事件并对事件进行分组，请按下列步骤执行操作：  
@@ -67,7 +68,7 @@ AND     CPU < (Duration * 1000)
   
     -   定义跟踪时，除了要捕获的任何其他数据列外，还要捕获 **“事件类”**、 **ClientProcessID**和 **“开始时间”** 数据列。 有关详细信息，请参阅[创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)。  
   
-    -   按“事件类” **“事件类”**数据列对捕获的数据进行分组，并将跟踪内容捕获到文件或表中。 若要将捕获的数据分组，请单击“跟踪属性”对话框中 **“事件选择”** 选项卡中的 **“组织列”** 。 有关详细信息，请参阅[组织跟踪中显示的列 (SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)。  
+    -   按“事件类” **“事件类”** 数据列对捕获的数据进行分组，并将跟踪内容捕获到文件或表中。 若要将捕获的数据分组，请单击“跟踪属性”对话框中 **“事件选择”** 选项卡中的 **“组织列”** 。 有关详细信息，请参阅[组织跟踪中显示的列 (SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)。  
   
     -   开始跟踪，并在经过适当时间或捕获了一定数量的事件后停止。  
   
@@ -81,7 +82,7 @@ AND     CPU < (Duration * 1000)
   
     -   显示跟踪属性，并按“ClientProcessID” **ClientProcessID**数据列（而不是“事件类” **“事件类”** 数据列。  
   
-    -   展开要查看的每个客户端进程 ID 的节点。 手动搜索整个跟踪内容，或使用“查找” **的** 直到找到目标事件的“开始时间” **“开始时间”**值（如上所述）。 这些事件与属于每个选定客户端进程 ID 的其他事件一起按时间顺序进行显示。 例如，跟踪内容中捕获的“死锁”和“死锁链”事件在展开的客户端进程 ID 内紧跟在“SQL:BatchStarting”事件之后显示。  
+    -   展开要查看的每个客户端进程 ID 的节点。 手动搜索整个跟踪内容，或使用“查找” **的** 直到找到目标事件的“开始时间” **“开始时间”** 值（如上所述）。 这些事件与属于每个选定客户端进程 ID 的其他事件一起按时间顺序进行显示。 例如，跟踪内容中捕获的“死锁”和“死锁链”事件在展开的客户端进程 ID 内紧跟在“SQL:BatchStarting”事件之后显示。  
   
  可以使用相同的方法查找任何已分组的事件。 找到要查找的事件后，按 **ClientProcessID**、 **ApplicationName**或其他事件类分组，以便按时间顺序查看相关活动。  
   
