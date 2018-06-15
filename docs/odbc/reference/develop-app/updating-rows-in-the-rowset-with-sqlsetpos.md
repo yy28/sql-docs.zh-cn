@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916332"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>使用 SQLSetPos 更新的行集中的行
 更新操作的**SQLSetPos**使更新一个或多个选定的行的表，使用数据的应用程序缓冲区中的每个绑定列 （除非长度/指示器缓冲区中的值是 SQL_COLUMN_IGNORE） 的数据源。 未绑定的列将不会更新。  

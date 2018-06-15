@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018794"
 ---
 # <a name="define-query-parameters-dialog-box"></a>“定义查询参数”对话框
   当您在设计阶段在查询设计器中运行查询以查看示例数据时，可以使用 **“定义查询参数”** 对话框指定参数值。 查询参数对数据源的数据进行筛选，并帮助限制报表处理的数据量。 这些值不会保存到报表定义中。  

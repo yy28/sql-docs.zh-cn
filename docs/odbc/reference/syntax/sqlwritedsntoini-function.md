@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918162"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 函数
 **一致性**  

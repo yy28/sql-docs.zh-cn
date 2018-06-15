@@ -24,10 +24,11 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32953112"
 ---
 # <a name="results-detailed-view-dialog-box"></a>“结果详细视图”对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 **“评估策略”** 对话框运行策略并单击 **“评估”**后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  
+  使用 **“评估策略”** 对话框运行策略并单击 **“评估”** 后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  
   
 ## <a name="options"></a>“常规”  
  **AndOr**  

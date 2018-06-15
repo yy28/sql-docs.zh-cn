@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32964762"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **“FTP 快照和 Internet”** 页，用于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器的合并发布。  
   
-2.  为 **“FTP 服务器名称”**、 **“端口号”**、 **“从 FTP 根文件夹开始的路径”**、 **“登录名”**和 **“密码”**指定值。  
+2.  为 **“FTP 服务器名称”**、 **“端口号”**、 **“从 FTP 根文件夹开始的路径”**、 **“登录名”** 和 **“密码”** 指定值。  
   
      例如，如果 FTP 服务器的根目录是 \\\ftpserver\home，但你想将快照存储在 \\\ftpserver\home\snapshots，请为“从 FTP 根文件夹开始的路径”属性指定 \snapshots\ftp（复制在创建快照文件时将“ftp”追加到快照文件夹路径）。  
   

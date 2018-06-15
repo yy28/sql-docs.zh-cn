@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32962942"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“警告”** 选项卡。若要查看有关此选项卡上的选项的详细信息，请在顶部菜单上单击 **“帮助”** 。  
   
-3.  通过选中 **“如果订阅将在阈值内过期，则发出警告”**复选框来启用警告。  
+3.  通过选中 **“如果订阅将在阈值内过期，则发出警告”** 复选框来启用警告。  
   
 4.  在 **“阈值”** 列中，为警告设置阈值。 例如，可以在 **“阈值”** 列中选择值 **70%** 。  
   

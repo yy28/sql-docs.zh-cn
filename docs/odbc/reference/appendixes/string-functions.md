@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914042"
 ---
 # <a name="string-functions"></a>字符串函数
 下表列出的字符串操作函数。 应用程序可以确定由驱动程序支持哪些字符串函数，应调用**SQLGetInfo**与*信息类型*SQL_STRING_FUNCTIONS。  

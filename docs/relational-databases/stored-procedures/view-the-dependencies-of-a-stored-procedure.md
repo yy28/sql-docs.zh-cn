@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32974042"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>查看存储过程的依赖关系
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/03/2018
  系统函数： **sys.dm_sql_referencing_entities**  
  此函数用于显示依赖于过程的对象。  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 05/03/2018
  系统函数： **sys.dm_sql_referenced_entities**  
  此函数用于显示过程所依赖的对象。  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   
@@ -170,7 +171,7 @@ ms.lasthandoff: 05/03/2018
  此视图可以用于显示过程所依赖的对象或依赖于过程的对象。  
   
  显示依赖于过程的对象。  
- 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+ 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 05/03/2018
     ```  
   
  显示过程所依赖的对象。  
- 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+ 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   

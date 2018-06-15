@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019704"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分区报表中，数据区域可显示来自报表数据集的数据。 数据区域包括表、矩阵、列表、图表和仪表。 若要将一个数据区域嵌套到另一个数据区域中，请分别添加每个数据区域，然后将子数据区域拖到父数据区域中。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="to-add-a-data-region"></a>添加数据区域  
   
-1.  在 **“功能区”**上的 **“数据区域”** 组中，单击要添加的数据区域。  
+1.  在 **“功能区”** 上的 **“数据区域”** 组中，单击要添加的数据区域。  
   
 2.  单击设计图面，然后拖动鼠标根据所需数据区域的大小创建一个框。  
   

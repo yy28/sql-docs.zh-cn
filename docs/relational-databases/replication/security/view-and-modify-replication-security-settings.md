@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32964782"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +210,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击“发布服务器”旁边的属性按钮 (**...**)。  
   
-2.  在 **“到发布服务器的代理连接”** 部分，将 **“代理连接模式”** 选项指定为 **“模拟代理进程帐户”** 或 **“SQL Server 身份验证”** 。 如果指定 **“SQL Server 身份验证”**，还需输入 **“登录名”** 和 **“密码”**的值。  
+2.  在 **“到发布服务器的代理连接”** 部分，将 **“代理连接模式”** 选项指定为 **“模拟代理进程帐户”** 或 **“SQL Server 身份验证”** 。 如果指定 **“SQL Server 身份验证”**，还需输入 **“登录名”** 和 **“密码”** 的值。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

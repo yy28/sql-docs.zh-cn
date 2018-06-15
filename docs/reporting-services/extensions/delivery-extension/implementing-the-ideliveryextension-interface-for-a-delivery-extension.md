@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017134"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>为传递扩展插件实现 IDeliveryExtension 接口
   传递扩展插件类用于根据报表通知的内容将通知传递给用户。 传递扩展插件类还提供了基础结构，用于验证传递到传递扩展插件的用户设置。 此外，传递扩展插件类应包含特定的属性，客户端可以使用这些属性获得有关扩展插件的名称、扩展插件支持的设置以及可用于传递扩展插件的呈现格式的信息。  

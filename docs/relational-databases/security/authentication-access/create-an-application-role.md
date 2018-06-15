@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32966452"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”。  
   
-5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”**页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
+5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”** 页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
   
 6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号 **(…)** 以打开 **“定位架构”** 对话框。  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-an-application-role"></a>创建应用程序角色  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

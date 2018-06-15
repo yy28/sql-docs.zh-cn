@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913472"
 ---
 # <a name="procedure-parameters"></a>过程参数
 在过程调用中的参数可作为输入、 输入/输出，或输出参数。 这是在所有其他 SQL 语句中，后者始终是输入的参数的参数不同。  

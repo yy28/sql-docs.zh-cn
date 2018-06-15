@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946312"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用实用工具资源管理器管理 SQL Server 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
  当某一节点中包含大量对象时，可能会很难找到要查找的对象。 在此类情况下，使用实用工具资源管理器的筛选功能可以减小列表。 例如，你可能想要查找 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定实例或者仅查找其文件空间使用不足的计算机。 右键单击要筛选的文件夹，单击筛选按钮，然后单击 **“筛选设置”** 以便打开“实用工具资源管理器筛选设置”对话框。 您可以按名称、计算机 CPU、实例 CPU、文件空间、卷空间、策略覆盖设置或上次报告的时间筛选该列表。 **“运算符”** 和 **“值”** 列在下拉列表中提供附加的筛选运算符。  
   
 ### <a name="starting-powershell"></a>启动 PowerShell  
- 在对象资源管理器树中，可通过右键单击大多数文件夹和对象并选择 **“启动 PowerShell”**来启动 PowerShell 会话。 这将启动已启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell 支持的 Powershell 会话，并将路径设置为在对象资源管理器中右键单击的对象。 然后，您可以在交互式 Powershell 环境中输入 Powershell 命令。 有关详细信息，请参阅 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)。  
+ 在对象资源管理器树中，可通过右键单击大多数文件夹和对象并选择 **“启动 PowerShell”** 来启动 PowerShell 会话。 这将启动已启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell 支持的 Powershell 会话，并将路径设置为在对象资源管理器中右键单击的对象。 然后，您可以在交互式 Powershell 环境中输入 Powershell 命令。 有关详细信息，请参阅 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)。  
   
  Powershell 没有 F1 帮助，但包含 **Get-Help** cmdlet，它提供了有关使用 Powershell 的信息。 有关使用 Get-Help 的详细信息，请参阅 [获取 SQL Server PowerShell 帮助](../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   

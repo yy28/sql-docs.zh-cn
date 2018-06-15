@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32972242"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,11 +65,11 @@ ms.lasthandoff: 05/03/2018
   
 3.  展开“存储过程”，右键单击要针对其授予权限的过程，再单击“属性”。  
   
-4.  在 **“存储过程属性”**中，选择 **“权限”** 页。  
+4.  在 **“存储过程属性”** 中，选择 **“权限”** 页。  
   
 5.  若要为用户、数据库角色或应用程序角色授予权限，请单击 **“搜索”**。  
   
-6.  在 **“选择用户或角色”**中，单击 **“对象类型”** 以添加或清除所需的用户和角色。  
+6.  在 **“选择用户或角色”** 中，单击 **“对象类型”** 以添加或清除所需的用户和角色。  
   
 7.  单击 **”浏览“** 以显示用户或角色列表。 选择应对其授予权限的用户或角色。  
   

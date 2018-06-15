@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913312"
 ---
 # <a name="fetching-a-row-of-data"></a>提取数据的行
 若要提取的数据行，应用程序调用**SQLFetch**。 **SQLFetch**可以调用与任何类型的游标，但它仅会移动行集只进的方向。 **SQLFetch**将光标前进到下一行，并返回的数据绑定通过调用任何列**SQLBindCol**。 设置光标在到达结果的末尾， **SQLFetch**返回 SQL_NO_DATA。 有关调用的示例**SQLFetch**，请参阅[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  

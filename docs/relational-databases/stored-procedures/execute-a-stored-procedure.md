@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32972942"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,9 +139,9 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
-2.  展开所需的数据库，然后依次展开 **“可编程性”**和 **“存储过程”**。  
+2.  展开所需的数据库，然后依次展开 **“可编程性”** 和 **“存储过程”**。  
   
 3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”。  
   

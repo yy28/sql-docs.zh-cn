@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905682"
 ---
 # <a name="using-connection-strings"></a>使用连接字符串
 连接字符串可用于连接到 Visual FoxPro 数据源。  

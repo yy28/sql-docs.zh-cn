@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923382"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函数
 **一致性**  
@@ -198,7 +199,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD:
  [可以设置中 IPD 2] 的 SQL_DESC_DATA_PTR 字段来强制执行一致性检查。 中的后续调用**SQLGetDescField**或**SQLGetDescRec**，驱动程序不需要返回 SQL_DESC_DATA_PTR 已设置为的值。  
   
 ## <a name="fieldidentifier-argument"></a>FieldIdentifier 自变量  
- *FieldIdentifier*参数指示要设置的描述符字段。 描述符包含*描述符标头，*中下一节，"标头字段，"和零个或更多描述的标头字段组成*描述符记录*包含的记录字段节"标头字段"部分所述。  
+ *FieldIdentifier*参数指示要设置的描述符字段。 描述符包含*描述符标头，* 中下一节，"标头字段，"和零个或更多描述的标头字段组成*描述符记录*包含的记录字段节"标头字段"部分所述。  
   
 ## <a name="header-fields"></a>标头字段  
  每个描述符具有标头包含以下字段：  

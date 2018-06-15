@@ -24,13 +24,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32963372"
 ---
 # <a name="subscription-synchronization-history"></a>订阅，同步历史记录
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **“同步历史记录”** 选项卡显示有关合并代理的详细信息，包括状态、项目统计信息、历史记录、信息性消息和所有错误信息。  
   
 ## <a name="options"></a>“常规”  
- 从 **“视图”** 菜单中选择要查看的合并代理会话，然后在标记为 **“合并代理的会话”**的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中已处理的项目”**的网格中。  
+ 从 **“视图”** 菜单中选择要查看的合并代理会话，然后在标记为 **“合并代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中已处理的项目”** 的网格中。  
   
  **“视图”**  
  选择要查看的合并代理会话。  

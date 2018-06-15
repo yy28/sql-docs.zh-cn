@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32953882"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>查看基于策略的管理方面的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-view-the-properties-of-a-facet"></a>查看方面的属性  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开您要查看其属性的方面所在的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开您要查看其属性的方面所在的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32953372"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>创建新的基于策略的管理条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  确认 **“方面”** 列表中的方面正确无误，或者选择一个不同的方面。  
   
-8.  在 **“表达式”**下，通过在 **“字段”** 框中选择一个方面属性及与其关联的运算符和值，构造条件表达式。 在添加多个表达式时，可使用 **And** 或 **Or**来联接这些表达式。 有关此对话框中可用选项的详细信息，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑(条件)”对话框](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)。  
+8.  在 **“表达式”** 下，通过在 **“字段”** 框中选择一个方面属性及与其关联的运算符和值，构造条件表达式。 在添加多个表达式时，可使用 **And** 或 **Or**来联接这些表达式。 有关此对话框中可用选项的详细信息，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑(条件)”对话框](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)。  
   
 9. 完成后，单击 **“确定”**。  
   

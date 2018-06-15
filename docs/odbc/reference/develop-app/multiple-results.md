@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913842"
 ---
 # <a name="multiple-results"></a>多个结果
 A*结果*是内容的源返回的数据后执行的语句。 ODBC 具有两种类型的结果： 结果集和行计数。 *行计数*被删除，或 insert 语句的更新，受影响的行数。 批中所述[SQL 语句的批处理](../../../odbc/reference/develop-app/batches-of-sql-statements.md)，可以生成多个结果。  

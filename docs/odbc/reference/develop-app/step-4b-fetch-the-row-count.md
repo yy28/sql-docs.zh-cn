@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915248"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>步骤 4b： 提取的行计数
 下一步是提取的行计数，如下面的插图中所示。  

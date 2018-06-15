@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32992924"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**compress_snapshot**|**true**|备用快照文件夹中的快照将压缩为 CAB 格式。 不能压缩默认快照文件夹中的快照。 若要更改此属性，则需要新的快照。|  
 ||**false**|默认情况下，不压缩快照。 若要更改此属性，则需要新的快照。|  
 |**conflict_logging**|**publisher**|在发布服务器上存储冲突记录。|  
-||**订阅服务器**|在导致冲突的订阅服务器上存储冲突记录。 不支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器*。*|  
+||**订阅服务器**|在导致冲突的订阅服务器上存储冲突记录。 不支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器 *。*|  
 ||**两者**|在发布服务器和订阅服务器上都存储冲突记录。|  
 |**conflict_retention**||**Int** ，以天为单位，冲突将保留为其指定的保持期。 设置*conflict_retention*到**0**意味着不需要任何冲突清理。|  
 |**说明**||对发布的说明。|  

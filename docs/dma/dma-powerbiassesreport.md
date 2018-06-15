@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869002"
 ---
 # <a name="report-on-your-consolidated-assessments-by-using-power-bi-data-migration-assistant"></a>报告合并评估使用 Power BI （数据迁移助手）
 

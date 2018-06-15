@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32956842"
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 -   对于每一个架构，都向订阅数据库添加一个与架构同名的用户。  
   
- **“将 XML 转换为 NTEXT”**、 **“将 MAX 数据类型转换为 NTEXT 和 IMAGE”**、 **“将新的 datetime 转换为 NVARCHAR”**、 **“将文件流转换为 MAX 数据类型”**、 **“将大型 CLR 转换为 MAX 数据类型”**、 **“将 hierarchyId 转换为 MAX 数据类型”**以及 **“将 spatial 转换为 MAX 数据类型”**。  
+ **“将 XML 转换为 NTEXT”**、 **“将 MAX 数据类型转换为 NTEXT 和 IMAGE”**、 **“将新的 datetime 转换为 NVARCHAR”**、 **“将文件流转换为 MAX 数据类型”**、 **“将大型 CLR 转换为 MAX 数据类型”**、 **“将 hierarchyId 转换为 MAX 数据类型”** 以及 **“将 spatial 转换为 MAX 数据类型”**。  
  确定是否按规定转换数据类型和属性。 如果要将这些数据类型复制到较低版本的 **中，则将此选项值指定为** “True” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， 从而确保它们可以在订阅服务器得到正确处理。  
   
  **目标对象名称**  

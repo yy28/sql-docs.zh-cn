@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911912"
 ---
 # <a name="retrieving-bookmarks"></a>检索书签
 如果应用程序将使用书签，必须设置为之前准备或执行该语句的 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARKS 语句属性。 这是必要的因为它们使用构建和维护书签可以代价高昂的操作，因此仅当应用程序可以进行良好时，才应启用书签。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044861"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-为报表配置表行为属性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -100,7 +101,7 @@ ms.lasthandoff: 05/10/2018
   
  ![默认组将 2 集中到 1](../../analysis-services/tabular-models/media/ssas-jonyang-norowid.gif "默认组将 2 集中到 1")  
   
- 若要更改默认分组行为，请设置 **“行标识符”** 和 **“保留唯一行”** 属性。 在 **“保留唯一行”**中，选择“姓氏”列，这样，此值将对某行重复，即使它已出现在不同行中。 当你更改属性并重新发布工作簿之后，你可以创建同一个报表，只有在此时，你才能看到这两个名为 **Jon Yang**的客户，且 **年收入** 正确地分配给其中每个人。  
+ 若要更改默认分组行为，请设置 **“行标识符”** 和 **“保留唯一行”** 属性。 在 **“保留唯一行”** 中，选择“姓氏”列，这样，此值将对某行重复，即使它已出现在不同行中。 当你更改属性并重新发布工作簿之后，你可以创建同一个报表，只有在此时，你才能看到这两个名为 **Jon Yang**的客户，且 **年收入** 正确地分配给其中每个人。  
   
  ![行数据包含重复项基于行 ID](../../analysis-services/tabular-models/media/ssas-jonyang.gif "行包含基于行 ID 的重复项的数据")  
   

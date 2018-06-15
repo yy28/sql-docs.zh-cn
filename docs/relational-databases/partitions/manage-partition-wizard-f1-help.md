@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32957092"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +48,10 @@ ms.lasthandoff: 05/03/2018
   
  有关分区和索引的一般信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
- 本节提供使用 **“管理分区向导”**管理、修改和实现分区时所需的信息。  
+ 本节提供使用 **“管理分区向导”** 管理、修改和实现分区时所需的信息。  
   
 ##  <a name="Top"></a> 本节内容  
- 以下章节提供关于 **“管理分区向导”**页的帮助。  
+ 以下章节提供关于 **“管理分区向导”** 页的帮助。  
   
  [管理分区向导（“选择分区操作”页）](#SelectPartitionAction)  
   
@@ -271,7 +272,7 @@ ms.lasthandoff: 05/03/2018
  ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="Progress"></a> “进度”页  
- 使用 **“进度”** 页可以监视有关 **“管理分区向导”**操作的状态信息。 根据在向导中选择的选项， **“进度”** 页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
+ 使用 **“进度”** 页可以监视有关 **“管理分区向导”** 操作的状态信息。 根据在向导中选择的选项， **“进度”** 页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
   
 ### <a name="options"></a>“常规”  
  **详细信息**  

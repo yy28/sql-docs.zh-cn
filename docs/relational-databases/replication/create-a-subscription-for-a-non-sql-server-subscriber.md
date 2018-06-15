@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32956642"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  在 **“添加非 SQL Server 订阅服务器”** 对话框中，选择订阅服务器的类型。  
   
-6.  在 **“数据源名称”**中输入值：  
+6.  在 **“数据源名称”** 中输入值：  
   
     -   对于 Oracle，该值是您配置的透明网络底层 (TNS) 的名称。  
   
@@ -106,11 +107,11 @@ ms.lasthandoff: 05/03/2018
   
 9. 在 **“分发代理安全性”** 对话框中：  
   
-    -   在 **“进程帐户”**、 **“密码”**和 **“确认密码”** 字段中输入运行分发代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户和密码，与分发服务器建立本地连接。  
+    -   在 **“进程帐户”**、 **“密码”** 和 **“确认密码”** 字段中输入运行分发代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户和密码，与分发服务器建立本地连接。  
   
          该帐户需要下列最低权限：分发数据库中 **db_owner** 固定数据库角色的成员、发布访问列表 (PAL) 的成员、快照共享上的读取权限、OLE DB 访问接口的安装目录上的读取权限。 有关 PAL 的详细信息，请参阅[保护发布服务器](../../relational-databases/replication/security/secure-the-publisher.md)。  
   
-    -   在 **“连接到订阅服务器”**下的 **“登录名”**、 **“密码”**和 **“确认密码”** 字段中，输入用于连接到订阅服务器的登录名和密码。 该登录名应该已配置好且应该具有足够的权限可以在订阅数据库中创建对象。  
+    -   在 **“连接到订阅服务器”** 下的 **“登录名”**、 **“密码”** 和 **“确认密码”** 字段中，输入用于连接到订阅服务器的登录名和密码。 该登录名应该已配置好且应该具有足够的权限可以在订阅数据库中创建对象。  
   
     -   在 **“其他连接选项”** 字段中，以连接字符串的形式为订阅服务器指定任意连接选项（Oracle 不需要其他选项）。 应使用分号分隔每个选项。 下面是 DB2 连接字符串的示例（分行符是为了阅读方便）：  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **@subscriber** 和 **@publication** 参数。  
   
-    -   **@subscriber_db** 的值**（默认目标）**  
+    -   **@subscriber_db** 的值 **（默认目标）**  
   
     -   非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的属性 **@subscriber_provider**、**@subscriber_datasrc**、**@subscriber_location**、**@subscriber_provider_string** 和 **@subscriber_catalog**。  
   
