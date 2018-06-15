@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,11 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b67e2f2f4e588fabfe5f901e20401316081d3c18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2fd307e4da6c4fbfc74445001b75dba9847d2dcf
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304866"
 ---
 # <a name="persisted-data-source-objects"></a>持久的数据源对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
   
  **IPersistFile::Save**方法可以调用之前或之后调用**idbinitialize:: Initialize**。 在成功的返回后调用方法**idbinitialize:: Initialize**确保有效的数据源规范持续不断。  
   
-## <a name="see-also"></a>另请参阅  
- [数据源对象 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

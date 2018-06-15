@@ -2,7 +2,6 @@
 title: 状态属性 （ADO 字段） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1514ffc90b09c35df70a6bf32ee55b47dae3a71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70baf781839fe9a606f1aed2c26676dffe102d69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282006"
 ---
 # <a name="status-property-ado-field"></a>状态属性 （ADO 字段）
 指示的状态[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>返回值  
  返回[FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)值。 默认值是**adFieldOK**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="record-field-status"></a>记录字段状态  
  更改为的值**字段**的字段集合中对象[记录](../../../ado/reference/ado-api/record-object-ado.md)对象缓存之前对象的[更新](../../../ado/reference/ado-api/update-method.md)调用方法。 此时，如果对字段的值的更改导致出现错误，OLE DB 引发错误**DB_E_ERRORSOCCURRED** (2147749409)。 任一种情况的 Status 属性**字段**中的对象**字段**导致错误的集合将包含一个介于[FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)描述的原因此问题。  
@@ -51,6 +51,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [状态属性示例 （字段） (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [State 属性示例 (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

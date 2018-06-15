@@ -2,7 +2,6 @@
 title: 排序属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a42a5160c1e9e86f25c4547aef0e0ead5babe250
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281906"
 ---
 # <a name="sort-property"></a>排序属性
 指示在其上的一个或多个字段名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)进行排序，并且每个字段是否以升序或降序进行排序。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**中的值，该值指示字段名称**记录集**排序依据。 每个名称使用逗号分隔，并且 （可选） 可以后跟空白和关键字， **ASC**，其中进行排序以升序，字段或**DESC**，这对按降序字段进行排序。 默认情况下，如果未指定关键字，该字段是以升序排序。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此属性需要[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。 对于每个字段中指定将创建一个临时索引**排序**如果索引不存在的属性。  
   
  排序操作是高效的因为数据不以物理方式重新排列，但只由索引指定的顺序进行访问。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [排序属性示例 (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [排序属性示例 （VC + +）](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [优化属性的动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

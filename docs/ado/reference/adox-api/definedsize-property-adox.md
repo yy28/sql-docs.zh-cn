@@ -2,7 +2,6 @@
 title: DefinedSize 属性 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 522f1124f2c6f943b88a8c28b776707b2431122b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 291065218fc76fa60875a408714f789747983ac2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285536"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 属性 (ADOX)
 指示列的规定的最大大小。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回**长**是以字符为单位的数据值的最大长度的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  默认值为零 (0)。  
   
  此属性是只读的[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到集合的对象。  
@@ -44,5 +44,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DefinedSize 属性示例 (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)

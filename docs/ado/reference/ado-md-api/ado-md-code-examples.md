@@ -2,7 +2,6 @@
 title: ADO MD 代码示例 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14021f4e91210ac76a55d3e2e2628bd3ffc99e4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2e16e92b952218e01c46e4071ee1cf99720d737
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283256"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 代码示例
 使用下面的代码示例以了解如何使用 ADO MD 对象、 方法和属性。 这些示例是与 SQL Server 7.0 的 Microsoft SQL Server OLAP Services 安装的示例应用程序的子集。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Visual Basic Scripting Edition 中的 ADO MD 代码示例](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO MD API 参考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [ADO MD 枚举常量](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

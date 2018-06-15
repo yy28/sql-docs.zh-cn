@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,11 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 429597c628a6d5c6b08b3fb688dc848f110fd052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 839a7f8a029d84ce406c83109bcb0271c8f739d2
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305406"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>从结果集中提取行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -380,7 +380,7 @@ int ProcessResultSet() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [处理结果操作指南主题 & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [处理结果操作指南主题&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

@@ -2,7 +2,6 @@
 title: 成员对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6629f860fb8043387526019ec17c0e1775915a66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284036"
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示多维数据集中，某一级别的成员级别的成员或沿 x 轴的单元集的位置的成员的子级。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  属性**成员**与不同，具体取决于使用它的上下文。 A**成员**的[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)中[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)具有[子级](../../../ado/reference/ado-md-api/children-property-ado-md.md)返回的属性**成员**上从当前层次结构中的下一步较低级别**成员**。 有关**成员**的[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)、**子级**集合始终为空。 此外，[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)属性仅适用于**成员**的**级别**。  
   
  A**成员**的**位置**具有两个属性，可显示时[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)和[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 如果上访问这些属性，将出现错误**成员**的**级别**。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |ChildrenCardinality|成员具有的子级的个数。|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录 (VB) 示例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Members 集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -2,7 +2,6 @@
 title: DataControl 对象 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8784dcbaa65a755a6469edaceb58288ab1e9c25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 587557a35fc80966151602eb965ab0a756596415
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287586"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 对象 (RDS)
 将绑定数据查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到一个或多个控件 （例如，文本框中，网格控件或组合框） 以显示**记录集**在网页上的数据。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  类 ID **rds.DataControl**对象是 BD96C556-65A3-11 D 0 983A 00C04FC29E33。  
   
 > [!NOTE]
@@ -112,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [DataControl 对象 (RDS) 属性、方法和事件](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataControl 对象示例 (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

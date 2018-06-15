@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: aefa55bf8da7b978e6371d91f0ca1a642a882cbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fcf1f47a220a818ec0280ad6c90b425f52cd53a7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304506"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.lasthandoff: 05/03/2018
   
  使用以下示例之一创建此示例读取的表：  
   
--   [将数据发送到 FILESTREAM 列使用 ISequentialStream 绑定到 ICommandText 参数 & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [将数据发送到 FILESTREAM 列使用 ISequentialStream 绑定到 ICommandText 参数&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [将数据发送到 FILESTREAM 列使用 IRowsetFastUpload & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [将数据发送到 FILESTREAM 列使用 IRowsetFastUpload &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  复制第一个代码列表，并将其粘贴到名为 ISSHelper.h 的文件中。  
   

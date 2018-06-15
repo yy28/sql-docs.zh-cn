@@ -2,7 +2,6 @@
 title: 单元格对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22227f22f42e5848b0826028a855b31b4b82443a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f82bfdf0e1b61d3b6fdab096af77f8b843178384
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283426"
 ---
 # <a name="cell-object-ado-md"></a>单元格对象 (ADO MD)
 表示包含在单元集中的轴坐标的交叉点处的数据。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**单元格**会返回对象[项](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)属性[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。  
   
  使用集合和属性的**单元格**对象，你可以执行以下操作：  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
 |BackColor|显示该单元格时使用的背景色。|  
 |FontFlags|位掩码细节效果字体。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [轴示例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

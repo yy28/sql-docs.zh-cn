@@ -2,7 +2,6 @@
 title: 创建表的示例 (VB) 之间的新外键关系 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42668a15a942df6061e95cb35c1be2cdb6b7693b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d62296909a1d55a908d9ee22c06deea3cd36379c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286497"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)
 下面的代码演示如何创建新的外键关系，两个名为的现有表之间**客户**和**订单**。  
@@ -76,7 +76,7 @@ End Sub
 ' EndCreateKeyVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 键）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

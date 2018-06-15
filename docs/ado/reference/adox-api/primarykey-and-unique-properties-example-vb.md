@@ -2,7 +2,6 @@
 title: PrimaryKey 和唯一属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ee188dfe7c5b40484580aa6c50f9ed99bda4ec2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fdb442faab89d88577449c136ba4ffb1cf2781f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286696"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和唯一属性示例 (VB)
 此示例演示[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[Unique](../../../ado/reference/adox-api/unique-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将使用两个列创建一个新表。 **PrimaryKey**和**Unique**属性用于将一个列将不允许重复值的主键。  
@@ -116,7 +116,7 @@ End Sub
 ' EndPrimaryKeyVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [PrimaryKey 属性 (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique 属性 (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

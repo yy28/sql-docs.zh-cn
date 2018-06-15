@@ -2,7 +2,6 @@
 title: 查找方法和索引的属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f2561dfb1d7c934f909f894f4227b538232a8e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95bb888ad6bc57ec6fb29e94237953d86f6b0582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281576"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>查找方法和索引的属性示例 （VC + +）
 此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Seek](../../../ado/reference/ado-api/seek-method.md)方法和[索引](../../../ado/reference/ado-api/index-property.md)属性与结合给定***员工 ID***，以找到中的员工的姓名***员工***Nwind.mdb 数据库表。  
@@ -229,7 +229,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [索引属性](../../../ado/reference/ado-api/index-property.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

@@ -2,7 +2,6 @@
 title: 流对象属性、 方法和事件 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c3470868631523147823d8b9327dc67cb516aeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 309dc7655ed7d586deace8869b2ebc245312ec6b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282709"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>流对象属性、 方法和事件
 ## <a name="properties"></a>属性  
@@ -73,5 +73,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -2,7 +2,6 @@
 title: 值属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -21,11 +20,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a7a96d3b663afb8c30eea502e475487ae0572d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45f028bf6aaa1273f7220519fc5dfa76c1365437
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282826"
 ---
 # <a name="value-property-ado"></a>值属性 (ADO)
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 
 设置或返回**Variant**值，该值指示对象的值。 默认值取决于[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。
   
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 使用**值**属性来设置或返回数据自**字段**对象，设置或返回参数值和**参数**对象，或用于设置或返回与属性设置**属性**对象。 是否**值**属性为读/写或只读取决于多种因素。 请参阅各自对象主题以了解更多信息。
 
@@ -52,7 +52,7 @@ ADO 允许设置和返回长度的二进制数据与**值**属性。
 |-|-|-|  
 |[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [值属性示例 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
 [值属性示例 （VC + +）](../../../ado/reference/ado-api/value-property-example-vc.md) 

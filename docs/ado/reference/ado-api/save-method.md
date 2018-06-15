@@ -2,7 +2,6 @@
 title: Save 方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a24e0be39417235e86a86e239b8f6918fadda5dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281436"
 ---
 # <a name="save-method"></a>Save 方法
 将保存[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)文件中或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -39,12 +39,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameters  
  *目标*  
- 選擇性。 A **Variant** ，表示该文件的完整路径名称其中**记录集**保存，或对引用**流**对象。  
+ 可选。 A **Variant** ，表示该文件的完整路径名称其中**记录集**保存，或对引用**流**对象。  
   
  *PersistFormat*  
- 選擇性。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，该值指定在其中的格式**记录集**（XML 或 ADTG） 保存。 默认值是**adPersistADTG**。  
+ 可选。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，该值指定在其中的格式**记录集**（XML 或 ADTG） 保存。 默认值是**adPersistADTG**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)方法只能在 open 上调用**记录集**。 使用[Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)到更高版本的还原方法**记录集**从*目标*。  
   
  如果[筛选器属性](../../../ado/reference/ado-api/filter-property.md)属性实际上是为**记录集**，然后保存筛选器访问的行。 如果**记录集**是分层的然后当前子**记录集**和其子都得到保存，包括父**记录集**。 如果子 Save 方法**记录集**是调用子及其所有子级都保存，但不是父。  
@@ -97,7 +97,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |-|-|  
 |[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保存和打开方法的示例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [保存和打开方法的示例 （VC + +）](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

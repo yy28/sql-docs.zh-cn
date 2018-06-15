@@ -2,7 +2,6 @@
 title: GetObjectOwner 和 SetObjectOwner 方法示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f54c3102bea0d32d28ab7f3fa35b8dee0b12b81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9599d5b1130b5e19a3c42614ae49df3183918e2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285946"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 和 SetObjectOwner 方法示例 (VB)
 此示例演示[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)和[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此代码假定组是否存在记帐 (请参阅[组和用户追加，ChangePassword 方法示例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)若要了解如何将此组添加到系统)。 类别表的所有者设置为记帐。  
@@ -65,7 +65,7 @@ End Sub
 ' EndOwnersVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetObjectOwner 方法 (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)

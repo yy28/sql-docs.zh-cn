@@ -2,7 +2,6 @@
 title: SeekEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fcf7dabb3c12f7919c317c7ecabeaf51995fe85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281586"
 ---
 # <a name="seekenum"></a>SeekEnum
 指定的一种[Seek](../../../ado/reference/ado-api/seek-method.md)执行。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|查找第一个键等于*KeyValues*。|  
+|**adSeekFirstEQ**|@shouldalert|查找第一个键等于*KeyValues*。|  
 |**adSeekLastEQ**|2|查找等于的最后一个键*KeyValues*。|  
 |**adSeekAfterEQ**|4|查找这两个密钥等于*KeyValues*或紧随其后将要发生匹配。|  
 |**adSeekAfter**|8|紧随其后的位置查找某个键包含的匹配项*KeyValues*应发生。|  

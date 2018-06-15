@@ -2,7 +2,6 @@
 title: 属性集合 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec8c65a08d43accf92131e3e013ecb9727c7c73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 557f24dcc7695efadb9a3db5c18f81ae6a26b59d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280648"
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
 包含所有[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的特定实例的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  一些 ADO 对象具有**属性**组成的集合**属性**对象。 每个**属性**对象都对应于特定于所提供的 ADO 对象的特征。  
   
 > [!NOTE]
@@ -43,6 +43,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性集合属性、 方法和事件](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

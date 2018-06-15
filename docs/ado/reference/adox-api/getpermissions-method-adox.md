@@ -2,7 +2,6 @@
 title: GetPermissions 方法 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 666dc7b1303162d9f65c6af7e45e825b0ef7ffd2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 55a5d4f9096d5a75855d4b612a202afd034b11da
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286036"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
 返回的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象或对象容器上。  
@@ -50,7 +50,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  A**长**值可以是之一的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常量，用于指定要为其获取权限对象的类型。  
   
  *ObjectTypeId*  
- 選擇性。 A **Variant** OLE DB 规范所定义值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
+ 可选。 A **Variant** OLE DB 规范所定义值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
   
 ## <a name="applies-to"></a>适用范围  
   
@@ -58,7 +58,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 |-|-|  
 |[组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetPermissions 和 SetPermissions 方法示例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

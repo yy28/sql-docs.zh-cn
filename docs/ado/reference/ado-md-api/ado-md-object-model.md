@@ -2,7 +2,6 @@
 title: ADO MD 对象模型 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4461c8b6465ddf272830726898d29fbc9ff7c007
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0b7a7213732cc9d244cc59244def04e1f302861
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283216"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 对象模型
 本主题介绍如何表示和 ADO MD.的相关对象  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  [轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)， [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)，[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)，和[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)每个对象具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO MD API 参考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 代码示例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ade365add5b89069e86f67d82dfa84638bcb71f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 31917fb7724ac9009db2d789ad08db8200944b1b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305976"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 |OLE DB 数据类型|SQL Server<br /><br /> 数据类型|其他信息|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**二进制**， **varbinary**，**映像，**或**varbinary （max)**|SQL Server 的 OLE DB 驱动程序检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于的值和版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，OLE DB 驱动程序的 SQL Server 映射到类型**映像**。<br /><br /> 如果值*ulColumnSize*小于的最大长度**二进制**数据类型列中，则 SQL Server 的 OLE DB 驱动程序检查 DBCOLUMNDESC *rgPropertySets*成员。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序映射到类型**二进制**。 如果属性的值是 VARIANT_FALSE，SQL Server 的 OLE DB 驱动程序映射到类型**varbinary**。 在任一情况下，DBCOLUMNDESC *ulColumnSize*成员确定创建的 SQL Server 列的宽度。|  
+|DBTYPE_BYTES|**二进制**， **varbinary**，**映像，** 或**varbinary （max)**|SQL Server 的 OLE DB 驱动程序检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于的值和版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，OLE DB 驱动程序的 SQL Server 映射到类型**映像**。<br /><br /> 如果值*ulColumnSize*小于的最大长度**二进制**数据类型列中，则 SQL Server 的 OLE DB 驱动程序检查 DBCOLUMNDESC *rgPropertySets*成员。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序映射到类型**二进制**。 如果属性的值是 VARIANT_FALSE，SQL Server 的 OLE DB 驱动程序映射到类型**varbinary**。 在任一情况下，DBCOLUMNDESC *ulColumnSize*成员确定创建的 SQL Server 列的宽度。|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_NUMERIC|**numeric**|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bPrecision*和*bScale*成员确定精度和扩展，从而**数值**列。|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**char**， **varchar**，**文本，**或**varchar （max)**|SQL Server 的 OLE DB 驱动程序检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于的值和版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，OLE DB 驱动程序的 SQL Server 映射到类型**文本**。<br /><br /> 如果值*ulColumnSize*小于一个多字节字符数据类型列，然后 OLE DB 驱动程序的最大长度为 SQL Server 检查 DBCOLUMNDESC *rgPropertySets*成员。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序映射到类型**char**。 如果属性的值是 VARIANT_FALSE，SQL Server 的 OLE DB 驱动程序映射到类型**varchar**。 在任一情况下，DBCOLUMNDESC *ulColumnSize*成员确定的宽度[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建列。|  
+|DBTYPE_STR|**char**， **varchar**，**文本，** 或**varchar （max)**|SQL Server 的 OLE DB 驱动程序检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于的值和版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，OLE DB 驱动程序的 SQL Server 映射到类型**文本**。<br /><br /> 如果值*ulColumnSize*小于一个多字节字符数据类型列，然后 OLE DB 驱动程序的最大长度为 SQL Server 检查 DBCOLUMNDESC *rgPropertySets*成员。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序映射到类型**char**。 如果属性的值是 VARIANT_FALSE，SQL Server 的 OLE DB 驱动程序映射到类型**varchar**。 在任一情况下，DBCOLUMNDESC *ulColumnSize*成员确定的宽度[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建列。|  
 |DBTYPE_UDT|**UDT**|在使用以下信息**DBCOLUMNDESC**结构通过**ITableDefinition::CreateTable**需要 UDT 列时：<br /><br /> *pwSzTypeName*将被忽略。<br /><br /> *rgPropertySets*必须包括**DBPROPSET_SQLSERVERCOLUMN**属性设置在上一部分中所述**DBPROPSET_SQLSERVERCOLUMN**中[使用用户定义类型](../../oledb/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  在创建新表时，SQL Server 的 OLE DB 驱动程序映射仅 OLE DB 数据类型枚举指定的值上表中。 尝试创建其中某一列为任何其他 OLE DB 数据类型的表时将生成错误。  
 
-## <a name="see-also"></a>另请参阅  
- [数据类型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据类型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

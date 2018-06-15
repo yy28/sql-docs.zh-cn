@@ -2,7 +2,6 @@
 title: Description 属性 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62938b58b97abfb621cd4e9ea9f9c9e583c124e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b073b4719de6554159947502a525d242f37e6707
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284066"
 ---
 # <a name="description-property-ado-md"></a>Description 属性 (ADO MD)
 返回当前对象的文本说明。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>返回值  
  返回**字符串**和是只读的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有关[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象，**说明**仅适用于度量值和公式的成员。 **说明**返回空字符串 ("") 对于所有其他类型的成员。 有关各种类型的成员的详细信息，请参阅[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)属性。  
   
  在上才支持此属性**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。 从引用此属性时出现错误**成员**属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。  

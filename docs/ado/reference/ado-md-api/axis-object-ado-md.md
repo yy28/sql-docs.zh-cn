@@ -2,7 +2,6 @@
 title: 轴对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 689bc6f49df65025bea7df44110cf02b4ec09ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66dfcb418d7a440b260956d411ae87b9601d4274
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283366"
 ---
 # <a name="axis-object-ado-md"></a>轴对象 (ADO MD)
 表示一个位置或筛选器轴的单元集，包含所选的成员的一个或多个维度。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **轴**可被包含对象[轴](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)集合，或者由[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
   
  使用集合和属性的**轴**对象，你可以执行以下操作：  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [轴示例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [轴集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

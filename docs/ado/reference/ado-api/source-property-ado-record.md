@@ -2,7 +2,6 @@
 title: Source 属性 （ADO 记录） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bff992c2c2406c7ea6df95ca92f67da3bf52e3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281976"
 ---
 # <a name="source-property-ado-record"></a>源属性 （ADO 记录）
 指示数据源或由表示对象[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**Variant**值，该值指示所表示的实体**记录**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **源**属性返回*源*参数**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 它可以包含一个绝对或相对 URL 字符串。 绝对 URL 可用但不包括设置[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性以直接打开**记录**对象。 一种隐式**连接**在这种情况下创建对象。  
   
  **源**属性还可以包含对已打开的引用**记录集**，这将打开**记录**表示中的当前行对象**记录集**。  
@@ -54,6 +54,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [源属性 （ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source 属性（ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)

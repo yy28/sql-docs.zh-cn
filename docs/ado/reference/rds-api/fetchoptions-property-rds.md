@@ -2,7 +2,6 @@
 title: FetchOptions 属性 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcbb951a5d17c7b7f0d8be540bef5c74e96b101d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288122"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 属性 (RDS)
 指示异步获取数据的类型。  
@@ -42,13 +42,13 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  使用这些常量每个客户端的可执行文件必须提供其声明。 你可剪切并粘贴文件 Adcvbs.inc，位于 RDS 库的默认安装文件夹中的所需的常量声明。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在 Web 应用程序，你通常需要使用**adcFetchAsync** （默认值），因为它提供更好的性能。 在编译的客户端应用程序中，通常要使用**adcFetchBackground**。  
   
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ExecuteOptions 和 FetchOptions 属性示例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

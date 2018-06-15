@@ -2,7 +2,6 @@
 title: 查看集合 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5f72f87ad913e1c423c99a917fc601a67028bb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6feb1cf590598724a4464d6cbcb2a6d555fb088a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287286"
 ---
 # <a name="views-collection-adox"></a>视图集合 (ADOX)
 包含所有[视图](../../../ado/reference/adox-api/view-object-adox.md)的目录对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [追加](../../../ado/reference/adox-api/append-method-adox-views.md)方法**视图**集合是唯一的 ADOX。 您可以：  
   
 -   将新视图添加到具有集合**追加**方法。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [视图集合属性、方法和事件](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [视图和字段集合示例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [视图追加方法示例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [视图集合，CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   

@@ -2,7 +2,6 @@
 title: ParentCatalog 属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6d6c999e0df8036f64a949704309088bce4a145
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcf2ade63bf882a3b3fe8681d2126fd6a47e5d2b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286736"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 属性示例 (VB)
 下面的代码演示如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性来访问提供程序特定属性，然后追加到目录的表。 该属性是**AutoIncrement**，这将在 Microsoft Jet 数据库中创建 AutoIncrement 字段。  
@@ -87,7 +87,7 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

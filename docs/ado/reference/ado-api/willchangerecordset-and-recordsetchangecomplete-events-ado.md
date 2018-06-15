@@ -2,7 +2,6 @@
 title: WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56c6c85597af2724d3f00e2bb5096508f52471d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63962d0ce3c8c4a5bf5aa0274a4084a9f8d84a5f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282796"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
 **WillChangeRecordset**挂起的操作更改之前，将调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **RecordsetChangeComplete**事件后，会调用**记录集**已更改。  
@@ -62,13 +62,13 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  A**记录集**对象。 **记录集**此事件发生的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A **WillChangeRecordset**或**RecordsetChangeComplete**事件可能会发生由于**记录集** [Requery](../../../ado/reference/ado-api/requery-method.md)或[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法。  
   
  如果提供程序不支持书签， **RecordsetChange**新行从提供程序检索每次发生的事件通知。 此事件的频率取决于**RecordsetCacheSize**属性。  
   
  必须设置**adStatus**参数**adStatusUnwantedEvent**对每个可能**adReason**值完全停用包括任何事件的事件通知**adReason**参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

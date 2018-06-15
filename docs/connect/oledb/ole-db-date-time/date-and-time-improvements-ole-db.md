@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e68372886ee77daaafb0fdeced0d030f8973d812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40d4cec0a013a482cf2d25685c1f6d2bb23c7277
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305806"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和时间改进 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  有关日期和时间数据类型的更多常规信息，请参阅[datetime &#40;TRANSACT-SQL&#41;](../../../t-sql/data-types/datetime-transact-sql.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [针对 OLE DB 日期和时间改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  提供有关 OLE DB （OLE DB 驱动程序的 SQL Server） 的信息类型支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期和时间数据类型。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
  介绍日期/时间类型和**IRowsetFind**。  
  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -2,7 +2,6 @@
 title: 源属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9ac80bb5c2fb75de6e9343847b3dff1db37b068
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc97f27fd4ac2ce65368946fdb8d386b959ffc27
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282066"
 ---
 # <a name="source-property-example-vb"></a>源属性示例 (VB)
 此示例演示[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)通过打开三个属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象基于不同的数据源。  
@@ -130,6 +130,6 @@ End Sub
 'EndSourceVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source 属性（ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)

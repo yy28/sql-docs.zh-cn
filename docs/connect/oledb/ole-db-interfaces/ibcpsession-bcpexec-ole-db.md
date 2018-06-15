@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f7605b7ffd804ca3c90ecb98bf4e77312fd8902a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df0a1447d081f7054ed65a1c975ebddd6607d8ca
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305186"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ HRESULT BCPExec(
       DBROWCOUNT *pRowsCopied);  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **BCPExec**方法复制将数据从用户文件到数据库表或者反之亦然，具体取决于值*eDirection*参数用于[IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法。  
   
  之前调用**BCPExec**，调用**BCPInit**具有有效的用户文件名称的方法。 如果没有这样做，会导致错误。 唯一的例外就是如果查询要用于大容量复制操作。 在这种情况下为中的表名称中指定 NULL **BCPInit**方法，然后指定使用 BCP_OPTION_HINTS 选项的查询。  
@@ -72,7 +72,7 @@ HRESULT BCPExec(
  DB_S_ERRORSOCCURRED  
  在大容量复制操作期间出现错误，可能尚未复制某些行。 错误数仍然小于允许的最大错误数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
   

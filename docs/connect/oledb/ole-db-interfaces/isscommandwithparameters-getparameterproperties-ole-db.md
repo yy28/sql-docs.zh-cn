@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c969100441cfc901ded13e7d1cdc7c551db23d42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a8e0d02ab4aef8d9550e0ea25b6166ccbf03da5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305606"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>返回代码值  
  **GetParameterProperties**方法返回作为核心 OLE DB 相同的错误代码**ICommandProperties::GetProperties**方法，除非该 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 不能为引发。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ISSCommandWithParameters::GetParameterProperties**方法行为保持一致相对于**GetParameterInfo**。 如果[ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未调用或与 cParams 等于零，调用了**GetParameterInfo**派生参数信息，并将其返回。 如果**ISSCommandWithParameters::SetParameterProperties**或**SetParameterInfo**已调用至少一个参数， **ISSCommandWithParameters::GetParameterProperties**方法为其返回这些参数的属性仅**ISSCommandWithParameters::SetParameterProperties**已调用。 如果**ISSCommandWithParameters::SetParameterProperties**后，会调用**ISSCommandWithParameters::GetParameterProperties**或**GetParameterInfo**，后续调用**ISSCommandWithParameters::GetParameterProperties**为其返回的这些参数的重写的值**ISSCommandWithParameters::SetParameterProperties**调用方法。  
   
  SSPARAMPROPS 结构的定义如下所示：  
@@ -71,7 +71,7 @@ HRESULT GetParameterProperties(
 |*cPropertySets*|DBPROPSET 数结构中*rgPropertySets*。|  
 |*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
-## <a name="see-also"></a>另请参阅  
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 79887c62b3cd26c194bf140b29b836bf9140eb85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 90c5a3086523b2cadce84678f2056cf265294648
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304447"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,14 +66,14 @@ ms.lasthandoff: 05/03/2018
   
 -   如果在从服务器转换为客户端时截断了秒或秒的小数部分，则设置 DBSTATUS_S_TRUNCATED。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [在客户端和服务器之间执行的转换](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
  描述执行之间的日期/时间转换为 SQL Server 与 OLE DB 驱动程序编写的客户端应用程序和[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）。  
   
  [在服务器和客户端之间执行的转换](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  描述执行之间的日期/时间转换[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本） 和用 OLE DB 驱动程序编写的 SQL Server 客户端应用程序。  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

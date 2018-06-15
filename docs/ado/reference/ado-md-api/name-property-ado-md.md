@@ -2,7 +2,6 @@
 title: Name 属性 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -27,11 +26,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 219fe0d23545cc73e0378c1d2b0a9d593ed45643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07a54616c2dd16a3a1c7582cbfe36c31ca0bef09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284716"
 ---
 # <a name="name-property-ado-md"></a>Name 属性 (ADO MD)
 指示对象的名称。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>返回值  
  返回**字符串**和是只读的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  你可以检索**名称**按序号引用，此后可以按名称直接引用对象的对象属性。 例如，如果`cdf.CubeDefs(0).Name`产生"Bobs 视频存储"，您可以参考此[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)作为`cdf.CubeDefs("Bobs Video Store")`。  
   
 ## <a name="applies-to"></a>适用范围  
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |[维度对象 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[层次结构对象 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[级别对象 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
 |[成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录 (VB) 示例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Caption 属性 (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description 属性 (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   

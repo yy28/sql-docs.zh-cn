@@ -2,7 +2,6 @@
 title: 目录对象 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b30a6725a58c96fc414f9ac4c15cc86fc9599329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae03190406dd6a37a7670fe749d76762e6e6674d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285236"
 ---
 # <a name="catalog-object-adox"></a>目录对象 (ADOX)
 包含集合 ([表](../../../ado/reference/adox-api/tables-collection-adox.md)，[视图](../../../ado/reference/adox-api/views-collection-adox.md)，[用户](../../../ado/reference/adox-api/users-collection-adox.md)，[组](../../../ado/reference/adox-api/groups-collection-adox.md)，和[过程](../../../ado/reference/adox-api/procedures-collection-adox.md))，描述的架构目录中的数据源。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  你可以修改**目录**通过添加或删除对象，或者通过修改现有对象的对象。 某些访问接口可能不支持的所有**目录**对象，或在仅支持查看架构信息。  
   
  使用的属性和方法**目录**对象，你可以：  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [目录对象属性、方法和事件](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录 ActiveConnection 属性示例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [命令和 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [连接关闭方法，表类型的属性示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

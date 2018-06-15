@@ -2,7 +2,6 @@
 title: 组集合 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c98bb6f455878df0605d1e7f7c9fc1d9554a1cb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 253cf76adf8f32734b4bd878cb2f623e79489ccb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285966"
 ---
 # <a name="groups-collection-adox"></a>组集合 (ADOX)
 包含所有存储[组](../../../ado/reference/adox-api/group-object-adox.md)目录或用户的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **组**集合[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示所有目录的组帐户。 **组**集合[用户](../../../ado/reference/adox-api/user-object-adox.md)表示仅用户所属的组。  
   
  [追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法**组**集合是唯一的 ADOX。 您可以：  
@@ -55,6 +55,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [组集合属性、方法和事件](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

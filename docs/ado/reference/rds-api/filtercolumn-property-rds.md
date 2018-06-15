@@ -2,7 +2,6 @@
 title: FilterColumn 属性 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 013511cbcb2455909a02b8c142f1dc15a7aa4b06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fb8c194319931a5bf6ef48d5264a8e791eeb229
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288139"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 属性 (RDS)
 指示要在其中计算的筛选条件的列。  
@@ -44,13 +44,13 @@ DataControl.FilterColumn = String
  *字符串*  
  A**字符串**值，该值指定要在其中计算的筛选条件的列。 中指定的筛选器条件[FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)属性。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)，和**FilterColumn**属性提供了排序和筛选功能对客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于时完整的查找条件的记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在缓存。 [重置](../../../ado/reference/rds-api/reset-method-rds.md)方法将执行条件，并将当前**记录集**与可更新**记录集**。  
   
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [FilterColumn、 FilterCriterion、 FilterValue、 SortColumn，和 SortDirection 属性和重置方法示例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [FilterCriterion 属性 (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
  [FilterValue 属性 (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   

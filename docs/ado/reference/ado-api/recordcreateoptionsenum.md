@@ -2,7 +2,6 @@
 title: RecordCreateOptionsEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3109e7e7116fac22e007c65167bb718edf2b29b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb2c6a46518a64989bd59fc5106dde52e93b6dd5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281166"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是否现有**记录**应打开或新**记录**为创建[记录](../../../ado/reference/ado-api/record-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 可以使用 AND 运算符组合的值。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|创建一个新**记录**在指定的节点*源*参数，而不是打开的现有**记录**。 如果源指向现有节点中，就会发生运行时错误，除非**adCreateCollection**与结合**adOpenIfExists**或**adCreateOverwrite**。|  
 |**adCreateNonCollection**|0|创建一个新**记录**类型的[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)。|  

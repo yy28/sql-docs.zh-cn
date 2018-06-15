@@ -2,7 +2,6 @@
 title: IndexNulls 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23390e73b92f29cbaff19e2ec3a44db9aa5a2980
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a401cd927223e38a21ce496ed771cd0e56248635
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286576"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 属性示例 （VC + +）
 此示例演示[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将创建一个新的索引并设置的值**IndexNulls**根据用户输入。 然后，**索引**追加到**员工**[表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**应用于[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**表，与**记录集**打开。 一条新记录添加到**员工**表，与**Null**索引的字段中的值。 是否显示此新记录依赖于设置**IndexNulls**属性。  

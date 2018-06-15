@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: node-js
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 313adb458786f009cd2cbd4fa86c09d7d5302b29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f918eead7fb0af9d28cd85b173e3e076c5ba9416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288956"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步骤 1： 配置用于 Node.js 开发的开发环境
 你将需要配置你的开发环境满足先决条件，以便开发应用程序使用的 SQL Server Node.js 驱动程序。  最常见方法是使用 node 程序包管理器 (npm) 安装需要很长时间的模块，但你可以下载此模块需要很长时间直接在[Github](https://github.com/pekim/tedious)如果你愿意。  
@@ -29,8 +29,8 @@ ms.lasthandoff: 05/03/2018
 ## <a name="windows"></a>Windows  
   
 1. **安装 Node.js 运行时和 npm 包管理器**  
-a. 转到[Node.js](https://nodejs.org/en/download/)  
-b. 单击相应的 Windows installer msi 链接。   
+A. 转到[Node.js](https://nodejs.org/en/download/)  
+B. 单击相应的 Windows installer msi 链接。   
 c. 下载完成后，运行 msi 安装 Node.js  
   
 2. **打开 cmd.exe**  
@@ -81,8 +81,8 @@ c. 下载完成后，运行 msi 安装 Node.js
 ## <a name="mac"></a>Mac  
   
 1. **安装 Node.js 运行时和 npm 包管理器**  
-a. 转到[Node.js](https://nodejs.org/en/download/)  
-b. 单击相应的 Mac OS 安装程序链接。  
+A. 转到[Node.js](https://nodejs.org/en/download/)  
+B. 单击相应的 Mac OS 安装程序链接。  
 c. 下载完成后，运行 dmg 安装 Node.js  
   
 2. **打开终端**  

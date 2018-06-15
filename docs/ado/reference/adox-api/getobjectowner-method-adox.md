@@ -2,7 +2,6 @@
 title: GetObjectOwner 方法 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49c25e4171602d760a54c70ed9bba80d5d6eac96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06f3cb14603c7799e7084af407df437b12be4769
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285916"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 方法 (ADOX)
 返回中的某个对象的所有者[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。  
@@ -48,14 +48,14 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  A**长**值可以是之一的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常量，，指定要为其获取所有者的对象的类型。  
   
  *ObjectTypeId*  
- 選擇性。 A **Variant** OLE DB 规范所定义值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
+ 可选。 A **Variant** OLE DB 规范所定义值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果提供程序不支持返回对象所有者，将会出错。  
   
 ## <a name="applies-to"></a>适用范围  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetObjectOwner 和 SetObjectOwner 方法示例 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)

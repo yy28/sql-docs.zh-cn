@@ -2,7 +2,6 @@
 title: 支持方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e89dde5395bcf58a5958effceb26ae4d07bde0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282646"
 ---
 # <a name="supports-method-example-vc"></a>支持方法示例 （VC + +）
 此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法以显示数据集所支持的选项将打开具有不同的游标类型。 若要运行此示例需要 DisplaySupport 函数。  
@@ -229,6 +229,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

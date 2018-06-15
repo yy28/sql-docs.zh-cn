@@ -2,7 +2,6 @@
 title: 准备属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2a104e2b18f80d390e940c6edfea4368ffa7300
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66efabdcbd3475a873dea67aa8540f9c36a560a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280596"
 ---
 # <a name="prepared-property-example-vb"></a>已准备好的属性示例 (VB)
 此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象-准备的一个，另一个未准备好。  
@@ -118,6 +118,6 @@ End Sub
 'EndPreparedVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

@@ -2,7 +2,6 @@
 title: 过程刷新方法示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ad5229cc50c58b49e22d6a88808fc14c23703d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb1e831fafeeadd47e87928fe7d829ea83d93e58
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286776"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>过程刷新方法示例 (VB)
 下面的代码演示如何刷新[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 这必需的之前[过程](../../../ado/reference/adox-api/procedure-object-adox.md)对象从**目录**可访问。  
@@ -58,7 +58,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

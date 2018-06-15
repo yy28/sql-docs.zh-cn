@@ -2,7 +2,6 @@
 title: 属性的属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29d31a09c384784b067a7b8c2bfaa4bee2162bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0372befbf0c69beaf036228d97e217766f99d480
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285346"
 ---
 # <a name="attributes-property-example-vc"></a>属性的属性示例 （VC + +）
 此示例演示[属性](../../../ado/reference/adox-api/attributes-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分不知道数据的记录和记录数据中不适用。  
@@ -206,6 +206,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Attributes 属性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

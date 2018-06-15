@@ -2,7 +2,6 @@
 title: SchemaEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cdc032d770f587e8c78c4df0f195d9535688888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f10586341f780615c3955c32a9b02f9913ff2e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281556"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的架构的类型**记录集**， [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法检索。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  为主题中找不到每个 ADO 常量返回有关函数和列的其他信息[附录 b： 架构行集](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程序员参考。 下表的描述部分中的括号中列出的每个主题的名称。  
   
  为每个 ADO MD 常量可以找到主题中返回有关函数和列的其他信息[OLE DB for OLAP 对象和架构行集](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)的 OLE DB 中的联机分析处理 (OLAP) 文档。 下表描述列中的括号中列出的每个主题的名称。  
@@ -38,10 +38,10 @@ ms.lasthandoff: 05/03/2018
   
  ADO 将会生成类似于架构的结果为常量， **adSchemaDBInfoKeywords**和**adSchemaDBInfoLiterals**。 ADO 创建**记录集**，然后以分别返回的值填充每个行**IDBInfo::GetKeywords**和**IDBInfo::GetLiteralInfo**方法。 有关这些方法的其他信息可在[IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB 程序员参考的部分。  
   
-|常量|“值”|Description|约束列|  
+|常量|ReplTest1|Description|约束列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|返回由给定用户所拥有的断言的目录中定义。<br /><br /> （断言行集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
-|**adSchemaCatalogs**|1|返回与从 DBMS 可访问的目录关联的物理属性。<br /><br /> （目录行集）|CATALOG_NAME|  
+|**adSchemaCatalogs**|@shouldalert|返回与从 DBMS 可访问的目录关联的物理属性。<br /><br /> （目录行集）|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|返回定义的字符集在目录中与给定用户可访问。<br /><br /> （CHARACTER_SETS 行集）|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|返回由给定用户所拥有的 check 约束的目录中定义。<br /><br /> (CHECK_CONSTRAINTS)行集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|返回字符定义的排序规则在目录中与给定用户可访问。<br /><br /> （排序规则行集）|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  

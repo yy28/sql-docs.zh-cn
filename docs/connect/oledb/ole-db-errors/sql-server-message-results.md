@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d9ab76565bac6a1fbf41dd5f8372776ea8625975
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1962b1fa4b3f384988239901a4521fff41e9479e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305446"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 消息结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server 使用者允许动态规范查询文本的 OLE DB 驱动程序应检查返回代码，是否存在返回的每个成员函数执行无论值后的错误接口**IRowset**或**IMultipleResults**接口引用或受影响的行的计数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  
   
   

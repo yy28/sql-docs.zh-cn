@@ -2,7 +2,6 @@
 title: SaveToFile 方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9beb8a1e2bfcc307c93b293a35dcac26cf0847a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dda2aaf0d73889ac74e171c48ed3bb3d320ddc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281596"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
 将保存的二进制内容组成[流](../../../ado/reference/ado-api/stream-object-ado.md)到文件。  
@@ -47,7 +47,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  如果覆盖现有文件 (时**adSaveCreateOverwrite**设置)， **SaveToFile**截断按照新的原始的现有文件任何字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **SaveToFile**可能使用的内容复制**流**到本地文件的对象。 不没有中的内容或属性的任何更改**流**对象。 **流**对象必须是打开之前调用**SaveToFile**。  
   
  此方法不会更改的关联**流**与其基础数据源的对象。 **流**对象仍将与原始的 URL 关联或**记录**已打开时其源。  
@@ -57,6 +57,6 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="applies-to"></a>适用范围  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Open 方法 （ADO 流）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

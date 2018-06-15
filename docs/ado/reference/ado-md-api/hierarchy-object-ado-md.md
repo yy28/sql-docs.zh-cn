@@ -2,7 +2,6 @@
 title: 层次结构对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee43d975b4f173d7cfb8fa819d6cd7e3635aab97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6853d2a3fcc0540f23a914e3e39c8720ce3a317
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284056"
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示在其中的一种方式的成员[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)可以聚合或"汇总。" 可以在一个或多个层次结构上聚合的维度。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用集合和属性的**层次结构**对象，你可以执行以下操作：  
   
 -   标识**层次结构**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)和[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)属性。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
 |AllMember|在层次结构中的汇总最高级别成员。|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CubeDef 示例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [维度对象 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [层次结构集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   

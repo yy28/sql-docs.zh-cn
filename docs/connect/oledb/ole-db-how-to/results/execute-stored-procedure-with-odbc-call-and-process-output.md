@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5c7b5119e2f8dd00076e0e746ccf3352371c503f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5a7ac8e2f84bf428e743c6a9aaff3e2337835408
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305666"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>执行存储的过程通过 ODBC 调用以及如何处理输出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -358,7 +358,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [处理结果操作指南主题 & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [处理结果操作指南主题&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

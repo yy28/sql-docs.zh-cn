@@ -2,7 +2,6 @@
 title: FilterCriterion 属性 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adc1d9d22b94ab3b6e03bddf37fa6058f4ccaca3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015cf292a4b9cd0720e379b83d5fcf254c841c8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288242"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 属性 (RDS)
 指示要使用的筛选器值中的评估运算符。  
@@ -44,7 +44,7 @@ DataControl.FilterCriterion = String
  *字符串*  
  A**字符串**值，该值指定的计算运算符[FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)对这些记录。 可以是以下任何一： <， \<=、 >、 > =、 =、 或 <>。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， **FilterCriterion**，和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供了排序和筛选功能对客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于时完整的查找条件的记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在缓存。 [重置](../../../ado/reference/rds-api/reset-method-rds.md)方法将执行条件，并将当前**记录集**与可更新**记录集**。  
   
  "！ ="运算符不适合**FilterCriterion**; 相反，使用"<>"。  
@@ -54,7 +54,7 @@ DataControl.FilterCriterion = String
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [FilterColumn、 FilterCriterion、 FilterValue、 SortColumn，和 SortDirection 属性和重置方法示例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [FilterColumn 属性 (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
  [FilterValue 属性 (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   

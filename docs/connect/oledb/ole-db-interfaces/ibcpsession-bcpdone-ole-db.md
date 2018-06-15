@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: be47a1af02449515eeea9e5c395796f602bbcf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fddedfa4a3a3619c3d976c57c8940729cec50da7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305486"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以在调用任何其他操作[IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)之后调用的接口**BCPDone**方法。 唯一方法就是调用[IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法可开始新的大容量复制操作。 这是类似于调用[IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -464,7 +464,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
   

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca37010f2c0c0e42dd7e75f2dc87b0654fb31474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 420568e3da65d145851ca8b9e2ffdfb7d8c6d3dc
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305906"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |[ISSAsynchStatus::GetStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|返回异步执行操作的状态。|  
 |[ISSAsynchStatus::WaitForAsynchCompletion &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)|等待，直到以异步方式执行的操作已完成或发生超时。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus**实现**ISSAsynchStatus::GetStatus**方法等同于**IDBAsynchStatus::GetStatus**方法，但，如果数据源对象的初始化已中止，而不是 DB_E_CANCELED 返回 E_UNEXPECTED (尽管**ISSAsynchStatus::WaitForAsynchCompletion**返回 DB_E_CANCELED)。 这是因为数据源对象未处于以下中止操作，常用状态，以便进一步初始化操作可能已尝试。  
   
  以下方法支持在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中执行异步操作：  
@@ -48,8 +48,8 @@ ms.lasthandoff: 05/03/2018
   
 -   **IMultipleResults::GetResult**  
   
-## <a name="see-also"></a>另请参阅  
- [接口 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+## <a name="see-also"></a>请参阅  
+ [接口&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)  
   
   

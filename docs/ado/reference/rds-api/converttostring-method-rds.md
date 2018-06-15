@@ -2,7 +2,6 @@
 title: ConvertToString 方法 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da21cb2208e11ffa502b3788e36a1bc034ae1c33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 495ff412b2865cfbda4576f3b4631b850e2d37e3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287576"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
 将转换[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)表示的记录集数据的 MIME 字符串。  
@@ -44,7 +44,7 @@ DataFactory.ConvertToString(Recordset)
  *Recordset*  
  表示的对象变量**记录集**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  发送相应的.asp 文件后，使用**ConvertToString**嵌入**记录集**以其传输到客户端计算机在服务器上生成的 HTML 页中。  
   
  **ConvertToString**首次加载**记录集**游标服务到表，，然后生成 MIME 格式的流。  
@@ -57,7 +57,7 @@ DataFactory.ConvertToString(Recordset)
 ## <a name="applies-to"></a>适用范围  
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ConvertToString 方法示例 (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [ConvertToString 方法示例 (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 

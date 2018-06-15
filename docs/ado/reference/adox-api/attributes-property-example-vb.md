@@ -2,7 +2,6 @@
 title: 属性的属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a275c6f39d2e16afcf53b753380e9f1ad20684a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6c125a1d3e720647d06e7a33689e0c5e883946
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285376"
 ---
 # <a name="attributes-property-example-vb"></a>属性的属性示例 (VB)
 此示例演示[属性](../../../ado/reference/adox-api/attributes-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分不知道数据的记录和记录数据中不适用。  
@@ -129,7 +129,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Attributes 属性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

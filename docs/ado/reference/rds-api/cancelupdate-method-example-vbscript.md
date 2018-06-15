@@ -2,7 +2,6 @@
 title: 正在执行方法示例 (VBScript) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4131f381b9ffb6c929aca57cce07172311c1009c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000a63882a7f4ec64e0fa0c9cb4e6d88d3264df1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287346"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>正在执行方法示例 (VBScript)
 > [!IMPORTANT]
@@ -121,7 +121,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

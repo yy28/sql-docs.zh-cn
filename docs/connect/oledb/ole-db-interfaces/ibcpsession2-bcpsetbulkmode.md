@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -17,18 +16,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edc24c92138ebfa8e1bb72e64a50ed0dc7a2c234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c41f484dbbe2877e2d358b3d19ee2b7d33107a56
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304896"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2::BCPSetBulkMode 提供的替代方法[IBCPSession::BCPColFmt & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)用于指定的列格式。 与 IBCPSession::BCPColFmt，设置单独的列格式属性，不同 IBCPSession2::BCPSetBulkMode 设置的所有属性。  
+  IBCPSession2::BCPSetBulkMode 提供的替代方法[IBCPSession::BCPColFmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)用于指定的列格式。 与 IBCPSession::BCPColFmt，设置单独的列格式属性，不同 IBCPSession2::BCPSetBulkMode 设置的所有属性。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
   
@@ -42,7 +42,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>参数  
- *属性*  
+ property  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
@@ -68,14 +68,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|自变量无效。|  
 |**E_OUTOFMEMORY**|内存不足的错误。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  IBCPSession2::BCPSetBulkMode 可以用于大容量复制完查询或表。 当 IBCPSession2::BCPSetBulkMode 用于大容量复制从查询语句时，它必须调用，然后再调`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 ICommandPrepare::Prepare 以返回错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
  下表列出的常量*属性*参数。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于在 BCP – c 的选项。EXE，以及与 IBCPSession::BCPColFmt *eUserDataType*属性设置为**BCP_TYPE_SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于在 BCP-w 选项。EXE 和与 IBCPSession::BCPColFmt *eUserDataType*属性设置为**BCP_TYPE_SQLNCHAR**。|  
@@ -364,7 +364,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [IBCPSession2 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

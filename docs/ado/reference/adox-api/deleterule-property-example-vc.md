@@ -2,7 +2,6 @@
 title: DeleteRule 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f42d9f926498e09b5dce0e4e4a0dcf2a4d4ed5d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14078d26c88384e8253bff8bd31c4aa01416b957
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285856"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 属性示例 （VC + +）
 此示例演示[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)属性[密钥](../../../ado/reference/adox-api/key-object-adox.md)对象。 代码将追加一个新[表](../../../ado/reference/adox-api/table-object-adox.md)然后定义新的主要密钥，设置**DeleteRule**到**adRICascade**。  
@@ -111,6 +111,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DeleteRule 属性 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

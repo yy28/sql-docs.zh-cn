@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,18 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d10258b631c5ed6852d940682815793497ffb7a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4153cfc2aacf881d6996472ceaec6e387a4d6caa
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305386"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   按照序号基于每个参数设置参数属性，或者通过指定 SSPARAMPROPS 结构数组来设置大容量参数属性。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -50,7 +50,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>返回代码值  
  **ISSCommandWithParameters::SetParameterProperties**方法返回作为核心 OLE DB 相同的错误代码**ICommandProperties::SetProperties**方法。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用此方法设置参数属性基于每个参数允许序号，或使用单个**ISSCommandWithParameters::SetParameterProperties**调用后 SSPARAMPROPS 由属性数组。  
   
  **SetParameterInfo**方法必须调用，然后再调**ISSCommandWithParameters::SetParameterProperties**方法。 调用 `SetParameterProperties(0, NULL)` 可清除所有指定的参数属性，而调用 `SetParameterInfo(0,NULL,NULL)` 则会清除所有参数信息（包括可能与某个参数相关的任何属性）。  
@@ -83,7 +83,7 @@ HRESULT SetParameterProperties(
 |*cPropertySets*|DBPROPSET 数结构中*rgPropertySets*。|  
 |*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
-## <a name="see-also"></a>另请参阅  
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

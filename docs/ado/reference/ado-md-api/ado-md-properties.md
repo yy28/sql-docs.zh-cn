@@ -2,7 +2,6 @@
 title: ADO MD 属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,22 +17,23 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c342d5f4b44c855ec729dfbb41341f337e14a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40916a54d3279b2a4afaee83fe56b4ef9c4d4199
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283346"
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|指示哪些 ADO**连接**对象的当前的单元集或当前所属的编录。|  
-|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指示要使用时显示的文本标题**级别**或**成员**对象。|  
+|[标题](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指示要使用时显示的文本标题**级别**或**成员**对象。|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|指示为其成员的数目当前**成员**对象是层次结构中的父级。|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|返回的集合**成员**为其当前**成员**是层次结构中的父级。|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
+|[计数](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
 |[深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|指示之间级别数**级别**和层次结构级别的根。|  
-|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|返回当前对象的文本说明。|  
+|[说明](../../../ado/reference/ado-md-api/description-property-ado-md.md)|返回当前对象的文本说明。|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|指示轴上的维度数。|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|指示是否没有子级在轴上紧跟在该成员之后。|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|指示当前的单元集的筛选器信息。|  
@@ -51,9 +51,9 @@ ms.lasthandoff: 05/03/2018
 |[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|指示单元集的当前状态。|  
 |[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)|指示当前的成员的类型。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|指示当前对象的明确名称。|  
-|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指示当前单元格的值。|  
+|[ReplTest1](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指示当前单元格的值。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO MD API 参考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 代码示例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   

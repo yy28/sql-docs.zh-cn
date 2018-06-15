@@ -2,7 +2,6 @@
 title: 连接关闭方法，表类型的属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98e7ba7600ddcb19487d604f2f62f520770a6543
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285326"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>连接关闭方法，表类型的属性示例 (VB)
 设置[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性**执行任何操作**应关闭给该目录的连接。 关联的集合将为空。 将孤立从目录中的架构对象创建的任何对象。 已缓存这些对象上的任何属性仍将可用，但尝试读取属性需要访问接口的调用将失败。  
@@ -76,7 +76,7 @@ End Sub
 Attribute VB_Name = "Connection"  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   

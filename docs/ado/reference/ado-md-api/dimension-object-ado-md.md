@@ -2,7 +2,6 @@
 title: 维度对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fa6ce43c85ae474a9482e9fb76277960fe1a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10378c62ec05008529e1d271208f3e5657d6a140
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283906"
 ---
 # <a name="dimension-object-ado-md"></a>维度对象 (ADO MD)
 表示多维数据集中，包含一个或多个层次结构的成员的维度之一。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用集合和属性的**维度**对象，你可以执行以下操作：  
   
 -   标识**维度**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)和[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)属性。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CubeDef 示例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [CubeDef 对象 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [维度集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   

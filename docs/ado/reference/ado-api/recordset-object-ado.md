@@ -2,7 +2,6 @@
 title: 记录集对象 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4667e510edb12f0c916c6b2da7afd6cc73204c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b150dc9d60620cc50a5560415e72f0197ae78d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281236"
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示整个组记录从基表或执行命令的结果。 在任何时候，**记录集**对象是指仅为当前记录集内的单个记录。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  你使用**记录集**对象来操作从提供程序的数据。 使用 ADO 时，操作几乎完全使用数据**记录集**对象。 所有**记录集**对象包含的记录 （行） 和字段 （列）。 根据提供程序，支持的功能某些**记录集**方法或属性可能不可用。  
   
  ADODB。记录集是用于创建的 ProgID**记录集**对象。 引用过时的 ADOR 的现有应用程序。记录集 ProgID 将继续工作无需重新编译，但新的开发应引用 ADODB。记录集。  
@@ -80,7 +80,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [记录集对象属性、 方法和事件](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d5aed67da19db68097f57f689ad0a26692d75f63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 835990d0b788ccea6d4900dfcf59598931d505c8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305146"
 ---
 # <a name="sessions"></a>会话
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -190,7 +190,7 @@ EXIT:
 > [!NOTE]  
 >  在前面的示例中， **IDBCreateCommand**使用接口的原因是**ICommand**接口实现**GetDBSession**方法，允许该对象来确定在其创建的会话的命令或行集的作用域中的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
-## <a name="see-also"></a>另请参阅  
- [数据源对象 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

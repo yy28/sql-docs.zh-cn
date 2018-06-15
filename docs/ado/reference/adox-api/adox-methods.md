@@ -2,7 +2,6 @@
 title: ADOX 方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284796"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 |||  
@@ -43,6 +43,6 @@ ms.lasthandoff: 05/03/2018
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|在目录中指定的对象的所有者。|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|指定对某个对象的组或用户的权限。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -2,7 +2,6 @@
 title: UpdateBatch 方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75fa802b85b1bdb9f2dcd97af8c244a41f7ec37b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282806"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 方法
 将写入磁盘的所有挂起的批更新。  
@@ -39,12 +39,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parameters  
  *AffectRecords*  
- 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**UpdateBatch**方法将会影响。  
+ 可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**UpdateBatch**方法将会影响。  
   
  *PreserveStatus*  
- 選擇性。 A**布尔**值，该值指定是否本地更改，如所示[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性，应将其提交。 如果此值设置为**True**、**状态**在更新完成后，每个记录的属性保持不变。  
+ 可选。 A**布尔**值，该值指定是否本地更改，如所示[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性，应将其提交。 如果此值设置为**True**、**状态**在更新完成后，每个记录的属性保持不变。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**UpdateBatch**方法修改时**记录集**在批处理更新模式下传输中所做的所有更改的对象**记录集**到基础数据库对象。  
   
  如果**记录集**对象支持批处理更新，你可以本地直到你调用缓存到一个或多个记录的多个更改**UpdateBatch**方法。 如果你要编辑的当前记录或添加一条新记录，当你调用**UpdateBatch**方法时，将自动调用 ADO[更新](../../../ado/reference/ado-api/update-method.md)方法将任何挂起的更改保存到之前的当前记录传输到提供程序的批处理的更改。 你应使用批处理使用的键集或仅静态游标更新。  
@@ -63,7 +63,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UpdateBatch 和执行方法示例 (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch 和执行方法示例 （VC + +）](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [执行方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

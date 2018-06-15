@@ -2,7 +2,6 @@
 title: 表集合 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80093f384c8b25f16b59b267429675566ff94ddf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6b97d189907d8f226867748e25e64972b8aba2b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287206"
 ---
 # <a name="tables-collection-adox"></a>表集合 (ADOX)
 包含所有[表](../../../ado/reference/adox-api/table-object-adox.md)的目录对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [追加](../../../ado/reference/adox-api/append-method-adox-tables.md)方法**表**集合是唯一的 ADOX。 您可以：  
   
 -   将新表添加到具有集合**追加**方法。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [表集合属性、方法和事件](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录 ActiveConnection 属性示例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [列和表追加方法名称的属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [连接关闭方法，表类型的属性示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
