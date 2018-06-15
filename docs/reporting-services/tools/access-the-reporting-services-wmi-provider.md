@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029764"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>访问 Reporting Services WMI 提供程序
   Reporting Services WMI 提供程序公开了两个 WMI 类，用于通过脚本管理本机模式报表服务器实例：  

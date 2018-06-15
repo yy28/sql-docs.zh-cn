@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030164"
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting 属性 - InstanceName
   指定特定计算机上报表服务器实例的名称。 只读。  

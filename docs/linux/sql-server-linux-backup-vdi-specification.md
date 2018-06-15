@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34324008"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 

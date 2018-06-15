@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34468585"
 ---
 # <a name="change-data-capture---sysdmcdcerrors"></a>变更数据捕获的 sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

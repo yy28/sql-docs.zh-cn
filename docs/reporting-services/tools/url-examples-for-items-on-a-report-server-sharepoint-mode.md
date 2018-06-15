@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036984"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  

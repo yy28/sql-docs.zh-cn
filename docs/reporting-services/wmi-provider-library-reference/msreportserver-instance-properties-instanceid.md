@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029704"
 ---
 # <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance 属性 - InstanceID
   此对象支持 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基础结构，但不能通过代码直接使用。  

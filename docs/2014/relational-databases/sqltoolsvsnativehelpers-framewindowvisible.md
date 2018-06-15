@@ -20,6 +20,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "34424062"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   指定特定窗口框架是否可见的属性。 帮助器方法是从托管代码使用的。  

@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5399f119fdc4182079971367fa7fd4a62ee2fb0
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33066794"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>适用于 &lt;服务器&gt; 的协议（SQL Server 配置管理器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

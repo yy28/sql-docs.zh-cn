@@ -21,6 +21,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34332618"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

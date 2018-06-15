@@ -16,6 +16,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323638"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-在 Linux 上的 SQL Server
 

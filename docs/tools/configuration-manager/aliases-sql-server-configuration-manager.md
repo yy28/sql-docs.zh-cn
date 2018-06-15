@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d724e9a838a81eba99e388546406da54503af6d3
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33066404"
 ---
 # <a name="aliases-sql-server-configuration-manager"></a>别名（SQL Server 配置管理器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

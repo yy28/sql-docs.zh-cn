@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028474"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留项，以支持通过加密通道建立报表服务器连接。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550638"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是分析平台系统向外扩展 MPP 数据仓库中的新增功能
 请参阅什么是最新设备更新的 Microsoft® 分析平台系统 (AP) 中的新增功能。 AP 是承载 MPP SQL Server 并行数据仓库的横向扩展本地设备。 

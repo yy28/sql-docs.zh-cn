@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027144"
 ---
 # <a name="report-builder-functions---lookup-function"></a>报表生成器函数 - Lookup 函数
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  

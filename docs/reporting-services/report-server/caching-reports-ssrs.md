@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027634"
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
   报表服务器可以缓存已处理报表的副本，并在用户打开此报表时返回该副本。 对用户而言，可指示报表为缓存副本的唯一证据是报表的运行日期和时间。 如果日期或时间不是当前的日期或时间，并且报表不是快照，则说明该报表是从缓存中检索的。  

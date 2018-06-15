@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028946"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是较小的简单图表，它们可以在很小的空间中传递很多信息，并且常常与文本并排。   
