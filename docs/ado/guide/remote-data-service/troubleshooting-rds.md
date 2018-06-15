@@ -2,7 +2,6 @@
 title: 故障排除 RDS |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 427dbfcea1f76ba20c58bd549ebc25c52afbb8cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 188e1194a3c2f95bf8c97ad608e80a9cebb4a419
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274676"
 ---
 # <a name="troubleshooting-rds"></a>故障排除 RDS
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [最大程度降低日志文件空间使用](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

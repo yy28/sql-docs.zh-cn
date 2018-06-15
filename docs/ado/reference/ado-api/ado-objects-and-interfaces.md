@@ -2,7 +2,6 @@
 title: ADO 对象和接口 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 047e1a7a0cafee0b562edc5b3ec47f9f4dd3989d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4251e50ad3f31ccf79b66e4ae4d302723fd6e840
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275606"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 对象和接口
 这些对象之间的关系都包含在[ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|表示基表或执行命令的结果的记录集。 在任何时候，**记录集**对象是指仅为当前记录集内的单个记录。<br /><br /> **记录集**对象是可安全执行脚本。|  
 |[流](../../../ado/reference/ado-api/stream-object-ado.md)|表示数据的二进制流。<br /><br /> **流**对象是可安全执行脚本。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

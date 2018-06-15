@@ -2,7 +2,6 @@
 title: ADORecordsetConstruction 接口 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ff32133f7959b598d2c6bc7f2eb029906e66761
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275616"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction**接口用于构造 ADO**记录集**从 OLE DB 对象**行集**C/c + + 应用程序中的对象。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  提供 OLE DB**行集**对象 (`pRowset`)，构造的 ADO**记录集**对象 (`adoRs`) 都可对以下三个基本操作：  
   
 1.  创建 ADO**记录集**对象：  
@@ -75,13 +75,13 @@ ms.lasthandoff: 05/03/2018
   
  你还可以构造 ADO**记录集**从 OLE DB 对象**章**或**RowPosition**对象。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 及更高版本  
   
  **库：** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset 属性 (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

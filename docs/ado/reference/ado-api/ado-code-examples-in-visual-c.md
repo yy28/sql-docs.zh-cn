@@ -2,7 +2,6 @@
 title: Visual c + + 中的 ADO 代码示例 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c016f4d882baa22c4721c89c74b566eee6e5001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9085d135e0a96ea78de3a6bf75827c8a6149907a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275396"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual c + + 中的 ADO 代码示例
 使用下面的代码示例以了解如何使用 ADO 方法、 属性和事件时在 Microsoft Visual c + + 中写入。  
@@ -149,7 +149,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [ADO 事件模型示例](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [附录 D：ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

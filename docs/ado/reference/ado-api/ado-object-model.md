@@ -2,7 +2,6 @@
 title: ADO 对象模型 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b282ebb1ba7ce6b2ad80c95891aade57df93758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc3332a971f32de99f923f3ffff0f5ad904a4261
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275546"
 ---
 # <a name="ado-object-model"></a>ADO 对象模型
 下图显示了 ADO 对象以及它们的集合。  
   
  ![ADO 对象模型](../../../ado/reference/ado-api/media/ado_object_model.gif "ADO_object_model")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 枚举常量](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

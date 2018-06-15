@@ -2,7 +2,6 @@
 title: ADORecordConstruction 接口 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76a13ea05920d1a479734b26bdc57bedfe2d6817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275626"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
 **ADORecordConstruction**接口用于构造 ADO**记录**从 OLE DB 对象**行**C/c + + 应用程序中的对象。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  提供 OLE DB**行**对象 (`pRow`)，构造的 ADO**记录**对象 (`adoR`)，都可对以下三个基本操作：  
   
 1.  创建 ADO**记录**对象：  
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  ADO**记录**还可从 OLE DB 的容器构造对象**行**对象。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 及更高版本  
   
  **库：** msado15.dll  

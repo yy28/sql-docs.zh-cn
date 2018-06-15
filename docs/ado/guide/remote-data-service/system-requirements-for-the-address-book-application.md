@@ -2,7 +2,6 @@
 title: 系统要求的地址预订应用程序 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 170ffd05b3dd40be067d4793f9c8f79600f96776
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 063a8d6dd6001c612bb52efa2773deafa546fd86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274536"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>通讯簿应用程序的系统要求
 若要设置通讯簿示例应用程序，需要满足以下软件和数据库要求：  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  如果你没有权限，数据库管理员可能需要设置系统并授予你访问的数据库权限，或为你设置数据库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行地址簿 SQL 脚本](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [运行通讯簿示例应用程序](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

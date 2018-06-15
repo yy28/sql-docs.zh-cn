@@ -2,7 +2,6 @@
 title: 追加和 CreateParameter 方法示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ac8f84c243245ecd5a928b58f62fb1e056a0570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 684c0b96d383558b70176f726cf3f1df992537ea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275716"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>追加和 CreateParameter 方法示例 (VB)
 此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法执行具有输入参数的存储的过程。  
@@ -123,7 +123,7 @@ End Sub
 'EndAppendVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [字段对象](../../../ado/reference/ado-api/field-object.md)   

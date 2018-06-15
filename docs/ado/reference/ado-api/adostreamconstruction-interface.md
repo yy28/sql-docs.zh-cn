@@ -2,7 +2,6 @@
 title: ADOStreamConstruction 接口 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55e7f81233b7cc5cbdf79ea2a71858b3376f46f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c5e698ecebee93e6b78d884b0b2978750db63e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275686"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
 **ADOStreamConstruction**接口用于构造 ADO**流**从 OLE DB 对象**IStream** C/c + + 应用程序中的对象。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  提供 OLE DB **IStream**对象 (`pStream`)，构造的 ADO**流**对象 (`adoStr`) 都可对以下三个基本操作：  
   
 1.  创建 ADO**流**对象：  
@@ -69,12 +69,12 @@ adoStrConstruct->put_Stream(pUnk);
   
  所产生的`adoStr`对象现在表示 ADO**流**构造从 OLE DB 对象**IStream**对象。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 或更高版本  
   
  **库：** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)
