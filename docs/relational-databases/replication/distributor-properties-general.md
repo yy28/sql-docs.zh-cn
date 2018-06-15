@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32955082"
 ---
 # <a name="distributor-properties-general"></a>分发服务器属性，常规
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  **数据库**  
  **“数据库”** 属性网格显示了分发服务器上分发数据库的名称和保持期属性。 **“事务保持期”** 是指为事务复制存储事务的时间长度（事务保持期也称为分发保持期）。 **“历史记录保持期”** 是指为所有类型的复制存储历史记录元数据的时间长度。 有关分发保持期的详细信息，请参阅[订阅过期和停用](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
- 单击**“数据库”**属性网格中的属性按钮 ( **...** ) 可启动 **“分发数据库属性”** 对话框。  
+ 单击 **“数据库”** 属性网格中的属性按钮 ( **...** ) 可启动 **“分发数据库属性”** 对话框。  
   
  **新建**  
  单击此项可创建一个新的分发数据库。  

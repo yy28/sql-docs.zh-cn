@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32950662"
 ---
 # <a name="using-catalog-functions"></a>使用目录函数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
      返回链接服务器包含的目录的列表。  
   
- 你具有链接的服务器名称和目录的名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用的两部分名称从目录获取信息*linked_server_name***。***目录*为*CatalogName*上以下 ODBC 目录函数：  
+ 你具有链接的服务器名称和目录的名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用的两部分名称从目录获取信息*linked_server_name ***。*** 目录*为*CatalogName*上以下 ODBC 目录函数：  
   
 -   **SQLColumnPrivileges**  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **SQLTables**  
   
- 两个部分构成*linked_server_name***。***目录*也支持*FKCatalogName*和*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
+ 两个部分构成*linked_server_name ***。*** 目录*也支持*FKCatalogName*和*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要以下文件：  
   
