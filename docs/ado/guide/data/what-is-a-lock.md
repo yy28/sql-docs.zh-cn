@@ -2,7 +2,6 @@
 title: 什么是锁定？ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97d36e1fdfa054de01862d8978c8efdae8cadb86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 396faecd122eef7ad6e40f790252a0902a508ba8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273286"
 ---
 # <a name="what-is-a-lock"></a>什么是锁定？
 锁定是 DBMS 多用户环境中的一行限制访问的过程。 当以独占方式锁定的行或列时，不允许其他用户访问锁定的数据，直至该锁被释放。 这可确保两个用户不能同时更新某一行中的同一列。  

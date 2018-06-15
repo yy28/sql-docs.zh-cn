@@ -2,7 +2,6 @@
 title: XML 记录集持久化方案 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0676644c7429d73d551b65fa56c2203025734b38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c16d37a0ded8b8a4a24666a426e123505eeff8f0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273406"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集持久化方案
 在此方案中，你将创建的 Active Server Pages (ASP) 应用程序直接与 ASP 响应对象保存记录集对象的内容。  
@@ -116,6 +116,6 @@ ms.lasthandoff: 05/03/2018
   
  关闭 default.htm 文件，并将其保存到保存 XMLResponse.asp 的相同文件夹。 使用 Internet Explorer 4.0 版或更高版本，打开 URL http://*sqlserver*/XMLPersist/default.htm 并观察结果。 绑定的 DHTML 表中显示的数据。 现在打开 URL http:// *sqlserver* /XMLPersist/XMLResponse.asp 并观察结果。 显示的 XML。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)   
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

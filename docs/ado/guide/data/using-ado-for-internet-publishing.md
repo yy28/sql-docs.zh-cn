@@ -2,7 +2,6 @@
 title: 用于 Internet 发布的 ADO |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4adf31cd66246cd078bb31dc99ac5e8025f04636
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3261fc8eb910fb0b7b627b11a3bc89bb682f01bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273206"
 ---
 # <a name="using-ado-for-internet-publishing"></a>ADO 用于 Internet 发布
 [OLE DB Provider for Internet 发布](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)显示访问用 ADO 异类数据的特定示例。 尽管此部分中的示例将特定于使用 Internet 发布提供程序，与其他提供程序与异类数据，如到电子邮件存储区提供程序一起使用 ADO 时应类似演示的原则。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [记录和提供程序提供的字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)

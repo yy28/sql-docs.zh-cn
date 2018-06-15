@@ -2,7 +2,6 @@
 title: 使用 ADO 的 ADO MD |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00a999350e2aed86e74bb0bfaea77c05207a21a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d6aed08b40b25eb0f725697eb6fac8908894ebd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273527"
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 的 ADO MD
 ADO 和 ADO MD 是相关但独立的对象模型。 ADO 提供的对象用于连接到数据源、 执行命令、 检索表格数据和架构以表格格式的元数据和查看提供程序错误的信息。 ADO MD 提供用于检索多维数据和查看多维架构元数据的对象。  
@@ -48,7 +48,7 @@ ADO 和 ADO MD 是相关但独立的对象模型。 ADO 提供的对象用于连
   
  ADO 对象和方法有关的详细信息，请参阅[ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO （多维） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多维架构和数据概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

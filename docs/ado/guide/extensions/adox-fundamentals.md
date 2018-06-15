@@ -2,7 +2,6 @@
 title: ADOX 基础知识 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d2798c3d8cfeaa2680a794ceb79dfa26f32fbdb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8807daf163515780aa7f514a6145c4035ed3afc6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273426"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基础知识
 适用于数据定义语言和安全 (ADOX) 的 Microsoft® ActiveX® 数据对象扩展是对 ADO 对象和编程模型的扩展。 ADOX 包括架构创建和修改，以及安全的对象。 因为它是架构操作的基于对象的方法，你可以编写代码来处理各种数据源而不考虑其本机语法方面的差异。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [ADOX 示例](../../../ado/reference/adox-api/adox-code-examples.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 代码示例](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)   
