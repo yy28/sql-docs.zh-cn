@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034164"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>MSReportServer_ConfigurationSetting 属性
   MSReportServer_ConfigurationSetting 类用于表示报表服务器实例的安装和运行时参数。 这些设置存储在 RSReportServer.config 配置文件中。  

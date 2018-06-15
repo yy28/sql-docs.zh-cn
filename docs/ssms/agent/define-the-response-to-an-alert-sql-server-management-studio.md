@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33046514"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定义对警报的响应 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-define-the-response-to-an-alert"></a>定义对警报的响应  
   
-1.  在 **“对象资源管理器”**中，单击加号以便展开包含您要对其定义响应的警报的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以便展开包含您要对其定义响应的警报的服务器。  
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
@@ -77,9 +78,9 @@ ms.lasthandoff: 05/03/2018
   
 5.  在“alert_name警报属性”对话框的“选择页”下，选择“响应”。  
   
-6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”**来创建新的作业。 也可以单击 **“查看作业”**查看有关作业的详细信息。 若要深入了解“新建作业”和“作业属性job_name”对话框中的可用选项，请参阅[创建作业](../../ssms/agent/create-a-job.md)和[查看作业](../../ssms/agent/view-a-job.md)。  
+6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”** 来创建新的作业。 也可以单击 **“查看作业”** 查看有关作业的详细信息。 若要深入了解“新建作业”和“作业属性job_name”对话框中的可用选项，请参阅[创建作业](../../ssms/agent/create-a-job.md)和[查看作业](../../ssms/agent/view-a-job.md)。  
   
-7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下用于通知操作员的一个或多个方法：“电子邮件”、“寻呼程序”或“Net Send”。 您可以单击 **“新建操作员”**创建新的操作员。 也可以单击 **“查看操作员”**查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
+7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下用于通知操作员的一个或多个方法：“电子邮件”、“寻呼程序”或“Net Send”。 您可以单击 **“新建操作员”** 创建新的操作员。 也可以单击 **“查看操作员”** 查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
   
 8.  完成后，单击 **“确定”**。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-define-the-response-to-an-alert"></a>定义对警报的响应  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028494"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本文概要介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/03/2018
  报表服务器项包括你可以发布、上传或保存到报表服务器的分页和移动报表、KPI、共享数据源、共享数据集和其他项。 在本机报表服务器上的报表服务器分层文件夹结构中对项进行组织，或者在 SharePoint 站点上的 SharePoint 内容库中对项进行组织。 有关详细信息，请参阅[报表服务器内容管理（SSRS 本机模式）](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)。  
   
 ### <a name="folders"></a>文件夹
- 在本机报表服务器上，文件夹提供了报表服务器中存储的所有可寻址项的分层形式的导航结构和路径。 您使用文件夹层次结构以及站点和文件夹权限来帮助控制对报表服务器项的访问（通称为 *“项级安全性”*）。 默认情况下，您为特定文件夹定义的角色分配由文件夹层次结构中的子文件夹继承。 如果您将特定的角色分配给某一文件夹，则继承规则将不再适用。 文件夹结构由名为 **“主文件夹”**的根节点和支持可选的 **“我的报表”** 功能的保留文件夹组成。 在浏览器中，该根节点是报表服务器虚拟目录的名称，例如 `http://myreportserver/reports`。 有关更多信息，请参见 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
+ 在本机报表服务器上，文件夹提供了报表服务器中存储的所有可寻址项的分层形式的导航结构和路径。 您使用文件夹层次结构以及站点和文件夹权限来帮助控制对报表服务器项的访问（通称为 *“项级安全性”*）。 默认情况下，您为特定文件夹定义的角色分配由文件夹层次结构中的子文件夹继承。 如果您将特定的角色分配给某一文件夹，则继承规则将不再适用。 文件夹结构由名为 **“主文件夹”** 的根节点和支持可选的 **“我的报表”** 功能的保留文件夹组成。 在浏览器中，该根节点是报表服务器虚拟目录的名称，例如 `http://myreportserver/reports`。 有关更多信息，请参见 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
   
  在 SharePoint 站点上，在文档库和内容库中使用 SharePoint 文件夹来对项进行组织。  
   

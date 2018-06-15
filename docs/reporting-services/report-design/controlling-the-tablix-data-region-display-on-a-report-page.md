@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022004"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制 Tablix 数据区域在报表页上的显示
 了解可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表为表、矩阵或列表数据区域设置以更改其在查看报表时的显示方式的属性。  

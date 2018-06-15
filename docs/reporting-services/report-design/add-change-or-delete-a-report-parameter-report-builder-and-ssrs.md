@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020364"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
   报表参数为选择报表数据、连接相关报表以及更改报表显示提供了一种方法。 您可以提供一个默认值和一列可用值，用户可以更改所选值。  
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 或报表设计器的“报表数据”窗格中，右键单击“参数”节点，然后单击“添加参数”。 此时将打开 **“报表参数属性”** 对话框。  
   
-2.  在 **“名称”**中，键入参数的名称，或接受默认名称。  
+2.  在 **“名称”** 中，键入参数的名称，或接受默认名称。  
   
-3.  在 **“提示”**中，键入当用户运行报表时，参数文本框旁边将会显示的文本。  
+3.  在 **“提示”** 中，键入当用户运行报表时，参数文本框旁边将会显示的文本。  
   
-4.  在 **“数据类型”**中，选择参数值的数据类型。  
+4.  在 **“数据类型”** 中，选择参数值的数据类型。  
   
 5.  如果参数可以包含空白值，请选择 **“允许空白值”**。  
   

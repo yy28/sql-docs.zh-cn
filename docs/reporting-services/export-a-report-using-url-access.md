@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015064"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 访问导出报表
   可以选择使用 *rs:Format* URL 参数指定呈现报表的格式。  HTML4.0 和 HTM5 格式（呈现扩展插件）将呈现在浏览器中，对于其他格式，浏览器将会提示将报告输出保存到本地文件。  

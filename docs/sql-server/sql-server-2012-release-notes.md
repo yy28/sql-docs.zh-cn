@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036944"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -301,7 +302,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ## <a name="BOL"></a>3.0 联机丛书  
   
 ### <a name="31-help-viewer-for-sql-server-crashes-in-environments-configured-to-run-only-ipv6"></a>3.1 用于 SQL Server 的帮助查看器在配置为“仅运行 IPv6”的环境中崩溃  
-**问题：**如果你的环境配置为仅运行 IPv6，则用于 SQL Server 2012 的帮助查看器将崩溃，并且将显示以下错误消息：  
+**问题：** 如果你的环境配置为仅运行 IPv6，则用于 SQL Server 2012 的帮助查看器将崩溃，并且将显示以下错误消息：  
   
 `HelpLibAgent.exe has stopped working.`  
   
@@ -330,7 +331,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安装数据质量服务器，请在卸载数据质量服务器后删除 DQS 对象  
 **问题：** 如果卸载数据质量服务器，则 DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
   
-**解决方法：**要重新安装同一台计算机上和相同 SQL Server 实例中的数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](http://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
+**解决方法：** 要重新安装同一台计算机上和相同 SQL Server 实例中的数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](http://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 知识发现或交互式清理活动已终止的指示被延迟  
 **问题：** 如果管理员在“活动监视”屏幕中终止某一活动，则在正在运行知识发现、域管理或交互式清理活动的交互用户执行下一操作前，将不会收到指出其活动已终止的任何指示。  
@@ -345,7 +346,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 对于大字号，控件不能正确缩放  
 **问题：** 如果将文本大小更改为“更大 – 150%”（在 Windows Server 2008 或 Windows 7 中），或者将自定义 DPI 设置更改为 200%（在 Windows 7 中），则“ **新建知识库** ”页上的“ **取消** ”和“ **创建** ”按钮将无法访问。  
   
-**解决方法：**若要解决此问题，请设置较小的字号。  
+**解决方法：** 若要解决此问题，请设置较小的字号。  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 不支持 800x600 的屏幕分辨率  
 **问题：** 如果屏幕分辨率设置为 800x600，则数据质量客户端应用程序未正确显示。  
@@ -378,7 +379,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 **解决方法：** 从包含要映射的源数据的 Excel 文件的工作表名称中删除 ;（分号），然后重试。  
   
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 在清理和匹配期间 Excel 中未映射的源字段中 Date 或 DateTime 值的问题  
-**问题：**如果源数据为 Excel 且未映射包含 **Date** 或 **DateTime** 数据类型的值的源字段，在清理和匹配活动期间将发生以下事件：  
+**问题：** 如果源数据为 Excel 且未映射包含 **Date** 或 **DateTime** 数据类型的值的源字段，在清理和匹配活动期间将发生以下事件：  
   
 -   以 yyyymmdd 格式显示和导出未映射的 **Date** 值。  
   
@@ -539,7 +540,7 @@ MultiSubnetFailover 是 SQL Server 2012 中用于允许使用 AlwaysOn 可用性
   
     **优点**：如果发生跨子网故障转移，则客户端恢复时间将比较短。  
   
-    **缺点：**半数的客户端连接将需要超过 20 秒的时间。  
+    **缺点：** 半数的客户端连接将需要超过 20 秒的时间。  
   
 -   如果你有权操作群集资源，则更强烈推荐的方法是将你的可用性组侦听器的网络名称设置为 **RegisterAllProvidersIP**=0。 有关详细信息，请参阅本部分后面的“用于禁用 RegisterAllProvidersIP 和减少 TTL 的示例 PowerShell 脚本”。  
   

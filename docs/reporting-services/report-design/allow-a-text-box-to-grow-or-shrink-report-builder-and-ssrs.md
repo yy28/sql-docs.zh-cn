@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020064"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>允许文本框扩大或收缩（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，文本框不只是报表设计图面上的独立框。 表或矩阵（Tablix 数据区域）中的每个单元也都包含文本框，可以使用独立文本框的格式设置方式来设置这些文本框的格式。默认情况下，文本框的大小是固定的。 你可以设置允许文本框基于其内容扩大或收缩的选项。 这些选项与“属性”窗格中的 **CanGrow** 或 **CanShrink** 属性相对应。  

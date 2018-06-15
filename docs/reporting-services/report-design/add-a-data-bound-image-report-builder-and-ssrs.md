@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019634"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>添加数据绑定图像（报表生成器和 SSRS）
   报表可以包括对存储在数据库中的图像的引用。 此类图像称为“数据绑定图像”。 例如，在产品列表中产品名称旁边显示的图片就是数据绑定图像。  
@@ -41,11 +42,11 @@ ms.lasthandoff: 05/03/2018
   
 5.  （可选）在“工具提示”文本框中，键入当用户将鼠标指针悬停在以 HTML 格式呈现的报表中的图像上时所要显示的文本。  
   
-6.  在 **“选择图像源”**中，选择 **“数据库”**。  
+6.  在 **“选择图像源”** 中，选择 **“数据库”**。  
   
-7.  在 **“使用此字段”**中，选择在您的报表中包含图像的字段。  
+7.  在 **“使用此字段”** 中，选择在您的报表中包含图像的字段。  
   
-8.  在 **“使用此 MIME 类型”**中，选择图像的 MIME 类型或文件格式，如 bmp。  
+8.  在 **“使用此 MIME 类型”** 中，选择图像的 MIME 类型或文件格式，如 bmp。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

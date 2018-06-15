@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021094"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多个页中显示行标题和列标题（报表生成器和 SSRS）
   可以控制跨多个页的 Tablix 数据区域（表、矩阵或列表）的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页式报表的每页上是否重复行标题和列标题。
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
   
-2.  在 **“行标题”**中，选择 **“在每一页上重复标题行”**。  
+2.  在 **“行标题”** 中，选择 **“在每一页上重复标题行”**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
   
-2.  在 **“列标题”**中，选择 **“在每一页上重复标题列”**。  
+2.  在 **“列标题”** 中，选择 **“在每一页上重复标题列”**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550889"
 ---
 #<a name="appliance-feature-switch"></a>设备功能开关
 **功能开关**页中分析平台系统 AU7 显示有关这两个功能开关引入的信息。 使用此页可以更新或启用/禁用功能和分析平台系统中的设置。 更改交换机特征值需要重新启动服务。

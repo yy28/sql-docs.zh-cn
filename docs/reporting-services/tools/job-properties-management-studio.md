@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031194"
 ---
 # <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
   使用“作业属性”页可以在取消正在执行的报表或订阅之前查看相关信息。  

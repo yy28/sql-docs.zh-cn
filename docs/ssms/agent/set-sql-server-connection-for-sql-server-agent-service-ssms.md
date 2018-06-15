@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33043285"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>为 SQL Server 代理服务设置 SQL Server 连接 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-set-the-sql-server-connection"></a>设置 SQL Server 连接  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开要使用到其 SQL Server 代理服务的连接进行设置的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开要使用到其 SQL Server 代理服务的连接进行设置的服务器。  
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   

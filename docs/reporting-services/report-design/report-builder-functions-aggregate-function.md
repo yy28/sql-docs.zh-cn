@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025954"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>报表生成器函数 - 聚合函数
   按照数据访问接口的定义返回指定表达式的自定义聚合。  

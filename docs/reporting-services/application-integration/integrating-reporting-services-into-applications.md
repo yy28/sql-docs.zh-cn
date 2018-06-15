@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017294"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>将 Reporting Services 集成到应用程序中
 

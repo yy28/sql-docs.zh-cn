@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33044864"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  在 **“指令类型”** 列表中，选择 **“同步时钟”**。  
   
-5.  在 **“收件人”**下，执行以下操作之一：  
+5.  在 **“收件人”** 下，执行以下操作之一：  
   
     -   单击 **“所有目标服务器”** 使所有目标服务器时钟与主服务器时钟同步。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-synchronize-target-server-clocks"></a>同步目标服务器的时钟  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

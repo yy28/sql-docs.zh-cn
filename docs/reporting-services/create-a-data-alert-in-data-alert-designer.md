@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017774"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/03/2018
   
      默认开始日期为当前日期。  
   
-17. 或者，选中 **“停止警报时间”**旁的复选框，然后选择用于停止警报消息的日期。  
+17. 或者，选中 **“停止警报时间”** 旁的复选框，然后选择用于停止警报消息的日期。  
   
      默认情况下，警报消息没有停止日期。  
   

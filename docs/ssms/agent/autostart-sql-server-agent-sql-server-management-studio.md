@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33040914"
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Autostart SQL Server Agent (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-configure-sql-server-agent-to-automatically-restart"></a>将 SQL Server 代理配置为自动重新启动  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开要将 SQL Server 代理配置为自动重新启动的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开要将 SQL Server 代理配置为自动重新启动的服务器。  
   
 2.  右键单击“SQL Server 代理”，然后单击“属性”。  
   

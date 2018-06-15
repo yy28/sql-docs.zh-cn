@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036754"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +125,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
   
 不提供某些语言的报表生成器和 PowerPivit 内容。 
 
-**问题：**不提供以下语言的报表生成器内容：  
+**问题：** 不提供以下语言的报表生成器内容：  
   
 -   希腊语 (el-GR)  
 -   挪威语（博克马尔）(nb-NO)  
@@ -135,7 +136,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
   
 **解决方法：** 无。  
   
-**问题：**不提供以下语言的 Power Pivot 内容：
+**问题：** 不提供以下语言的 Power Pivot 内容：
   
 -   希腊语 (el-GR)  
 -   挪威语（博克马尔）(nb-NO)  
@@ -164,7 +165,7 @@ SQL Server 2014 Standard 具有以下更改：
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>内存优化顾问将默认约束标记为不兼容  
 **问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中支持的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)(#本机编译的存储过程中支持的构造)。  
   
-**解决方法：**如果要使用顾问识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
+**解决方法：** 如果要使用顾问识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
   
 1.  从表定义中删除默认约束。    
 2.  使用顾问生成对表的迁移脚本。    
@@ -257,7 +258,7 @@ optimized table or natively compiled stored procedure with object ID
     ```  
   
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>在本机编译存储过程中对 DATEPART 和相关函数使用字符串参数或变量会导致错误  
-**问题：**在对内置函数 DATEPART、DAY、MONTH 和 YEAR 使用利用字符串参数或变量的本机编译存储过程时，会显示一条错误消息，说明本机编译存储过程不支持 datetimeoffset。  
+**问题：** 在对内置函数 DATEPART、DAY、MONTH 和 YEAR 使用利用字符串参数或变量的本机编译存储过程时，会显示一条错误消息，说明本机编译存储过程不支持 datetimeoffset。  
   
 **解决方法：** 将字符串参数或变量分配给一个新的 datetime2 类型的变量，在函数 DATEPART、DAY、MONTH 或 YEAR 中使用该变量。 例如：  
   
@@ -296,7 +297,7 @@ DATEPART(weekday, @d)
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 本机模式报表服务器不能与 SQL Server 2014 Reporting Services SharePoint 组件并行运行  
-**问题：**同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 无法启动。  
+**问题：** 同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 无法启动。  
   
 **解决方法：** 卸载 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件并重新启动 Microsoft SQL Server 2012 Reporting Services Windows 服务。  
   

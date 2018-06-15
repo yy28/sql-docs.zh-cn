@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33011294"
 ---
 # <a name="modify-data-through-a-view"></a>通过视图修改数据
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-modify-table-data-through-a-view"></a>通过视图修改表数据  
   
-1.  在 **“对象资源管理器”**中，展开包含视图的数据库，然后展开 **“视图”**。  
+1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”**。  
   
 2.  右键单击该视图，然后选择“编辑前 200 行”。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-update-table-data-through-a-view"></a>通过视图更新表数据  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-insert-table-data-through-a-view"></a>通过视图插入表数据  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025894"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移动或删除项（报表管理器）
   发布到报表服务器的报表和与报表相关的项将存储在文件夹中。 您可以将这些项移动到不同文件夹，并且报表服务器自动维护对这些项的引用。 在删除项之前，请注意是否有其他项依赖它。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  在 **“位置”**中，指定要将该项移动到的文件夹。 可以键入完全限定文件夹名称，或使用树控件导航到相应的文件夹。  
+6.  在 **“位置”** 中，指定要将该项移动到的文件夹。 可以键入完全限定文件夹名称，或使用树控件导航到相应的文件夹。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

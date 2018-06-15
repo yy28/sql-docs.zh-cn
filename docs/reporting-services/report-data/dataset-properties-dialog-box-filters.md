@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019444"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>“数据集属性”对话框 -&gt;“筛选器”
   在 **“数据集属性”** 对话框中选择 **“筛选器”** 可创建数据集的筛选器。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
  键入或选择要对其应用筛选器的表达式。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
  **Data type**  
- 为“值”选择数据类型。 如果可能，请选择与 **“表达式”**的数据类型匹配的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
+ 为“值”选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
  **“运算符”**  
  选择要用于比较表达式和值的运算符。  

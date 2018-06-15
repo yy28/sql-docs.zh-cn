@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035964"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>创建和管理 SharePoint 模式报表服务器的订阅
   你可以创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅以便从与 SharePoint 模式报表服务器集成的 SharePoint Web 应用程序传递报表。 订阅可以将报表传递到文档库、文件夹或作为电子邮件传递。 本主题概述了创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅的要求和步骤。  

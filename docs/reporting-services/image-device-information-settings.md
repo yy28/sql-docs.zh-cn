@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018014"
 ---
 # <a name="image-device-information-settings"></a>图像设备信息设置
   下表列出了用于以 IMAGE 格式呈现的设备信息设置。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022814"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>钻取、深化、子报表和嵌套数据区域
   可以通过多种方法组织数据，以显示一般信息与详细信息之间的关系。  您可以将所有数据都放在报表中，但将这些数据设置为在用户单击以显示详细信息之前处于隐藏状态，这就是“深化”  操作。 可以在“嵌套”  在其他数据区域（例如表或矩阵）内的一个数据区域（例如表或图表）内显示数据。 还可以在完全包含在主报表内的“子报表”  中显示数据。 或者，可以将详细信息数据放在“钻取”  报表中，钻取报表是在用户单击链接时显示的单独报表。  

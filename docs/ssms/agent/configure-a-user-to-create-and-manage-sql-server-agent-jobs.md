@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33044224"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  在 **“登录属性”** 对话框的 **“用户映射”** 页上，选择包含 **msdb**的行。  
   
-5.  在 **“数据库角色成员身份: msdb”**下，选中适当的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理固定数据库角色。  
+5.  在 **“数据库角色成员身份: msdb”** 下，选中适当的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理固定数据库角色。  
   
 **配置代理帐户以创建和管理 SQL Server 代理作业步骤**  
   

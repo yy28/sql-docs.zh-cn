@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33012475"
 ---
 # <a name="rename-user-defined-functions"></a>重命名用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-rename-user-defined-functions"></a>重命名用户定义函数  
   
-1.  在 **“对象资源管理器”**中，单击包含您要重命名的函数的数据库旁边的加号，然后  
+1.  在 **“对象资源管理器”** 中，单击包含您要重命名的函数的数据库旁边的加号，然后  
   
 2.  单击 **“可编程性”** 文件夹旁的加号。  
   
