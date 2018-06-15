@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023134"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理连接和会话 (XMLA)
   *Statefulness*是在此期间服务器将保留的标识和方法调用之间的客户端的上下文的条件。 *无状态*是在此期间服务器不会记住的标识和客户端上下文方法调用完成后的条件。  

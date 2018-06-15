@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34016874"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/10/2018
   
 -   如果选择 **“允许钻取”**，则会在模型中启用 *钻取* 。 利用钻取，具有相应权限的用户可以浏览用于生成模型的源数据。  
   
--   如果要生成 OLAP 模型，您可以选择 **“创建新数据挖掘多维数据集”**或 **“创建数据挖掘维度”**选项。 可利用这两个选项更轻松地浏览已完成的模型并钻取到基础数据。  
+-   如果要生成 OLAP 模型，您可以选择 **“创建新数据挖掘多维数据集”** 或 **“创建数据挖掘维度”** 选项。 可利用这两个选项更轻松地浏览已完成的模型并钻取到基础数据。  
   
  完成数据挖掘向导后，使用数据挖掘设计器来修改挖掘结构和模型、查看模型的准确性、查看结构和模型的特征或者使用模型进行预测。  
   

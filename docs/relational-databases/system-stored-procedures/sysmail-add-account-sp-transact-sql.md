@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33262697"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +99,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>注释  
- 数据库邮件提供单独的参数**@email_address**， **@display_name**，和**@replyto_address**。 **@email_address**参数是从其发送消息的地址。 **@display_name**参数是中显示的名称**从：**字段的电子邮件。 **@replyto_address**参数是地址回复电子邮件将发送到的位置。 例如，用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户可以从仅用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的电子邮件地址发送电子邮件。 来自该地址的邮件应显示友好名称，以便收件人可以轻松确定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发来的邮件。 如果收件人回复该邮件，则回复应发送给数据库管理员，而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用的地址。 对于此方案，此帐户使用**SqlAgent@Adventure-Works.com**作为电子邮件地址。 显示名称设置为**SQL Server Agent Automated Mailer**。 此帐户使用**danw@Adventure-Works.com**作为对地址的答复，因此对此帐户发送的邮件回复转到数据库管理员，而不是的电子邮件地址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 通过为上述三个参数提供独立的设置，数据库邮件允许您配置邮件来适应您的需求。  
+ 数据库邮件提供单独的参数**@email_address**， **@display_name**，和**@replyto_address**。 **@email_address**参数是从其发送消息的地址。 **@display_name**参数是中显示的名称**从：** 字段的电子邮件。 **@replyto_address**参数是地址回复电子邮件将发送到的位置。 例如，用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户可以从仅用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的电子邮件地址发送电子邮件。 来自该地址的邮件应显示友好名称，以便收件人可以轻松确定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发来的邮件。 如果收件人回复该邮件，则回复应发送给数据库管理员，而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用的地址。 对于此方案，此帐户使用**SqlAgent@Adventure-Works.com**作为电子邮件地址。 显示名称设置为**SQL Server Agent Automated Mailer**。 此帐户使用**danw@Adventure-Works.com**作为对地址的答复，因此对此帐户发送的邮件回复转到数据库管理员，而不是的电子邮件地址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 通过为上述三个参数提供独立的设置，数据库邮件允许您配置邮件来适应您的需求。  
   
  **@mailserver_type**参数支持值**SMTP**。  
   
@@ -110,7 +111,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
- 以下示例将创建一个名为 `AdventureWorks Administrator` 的帐户。 此帐户使用电子邮件地址 `dba@Adventure-Works.com`，并将邮件发送到 SMTP 邮件服务器 `smtp.Adventure-Works.com`。 此帐户显示发送电子邮件`AdventureWorks Automated Mailer`上**从：**邮件的行。 对此邮件的回复将发往 `danw@Adventure-Works.com`。  
+ 以下示例将创建一个名为 `AdventureWorks Administrator` 的帐户。 此帐户使用电子邮件地址 `dba@Adventure-Works.com`，并将邮件发送到 SMTP 邮件服务器 `smtp.Adventure-Works.com`。 此帐户显示发送电子邮件`AdventureWorks Automated Mailer`上**从：** 邮件的行。 对此邮件的回复将发往 `danw@Adventure-Works.com`。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_account_sp  

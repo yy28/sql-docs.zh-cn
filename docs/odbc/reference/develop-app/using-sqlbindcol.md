@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917472"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
 应用程序将列绑定通过调用**SQLBindCol**。 此函数将一个列绑定一次。 通过该对话框，指定以下应用程序：  

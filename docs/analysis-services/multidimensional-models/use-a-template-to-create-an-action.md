@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026614"
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用模板创建操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="to-use-a-template-to-create-an-action"></a>使用模板创建操作  
   
--   打开要为其创建操作的多维数据集，然后在 **“设计”**下单击 **“操作”** 选项卡。  
+-   打开要为其创建操作的多维数据集，然后在 **“设计”** 下单击 **“操作”** 选项卡。  
   
 -   在“计算工具”下，单击“模板”选项卡，展开包含要创建的操作类型的节点，然后双击要使用的模板。  
   

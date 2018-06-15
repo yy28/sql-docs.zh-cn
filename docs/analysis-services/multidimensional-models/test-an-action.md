@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025794"
 ---
 # <a name="test-an-action"></a>测试操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="to-test-an-action"></a>测试操作  
   
-1.  打开包含要测试的操作的多维数据库，然后在 **“视图”**下，单击 **“浏览器”**。  
+1.  打开包含要测试的操作的多维数据库，然后在 **“视图”** 下，单击 **“浏览器”**。  
   
 2.  将目标对象拖到 **“将列字段拖至此处”** 或 **“将行字段拖至此处”**。  
   

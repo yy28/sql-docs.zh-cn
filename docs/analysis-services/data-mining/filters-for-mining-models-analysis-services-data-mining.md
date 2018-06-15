@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34016754"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/10/2018
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用数据挖掘设计器创建模型筛选器  
  可以通过更改挖掘模型的 **Filter** 属性在数据挖掘设计器中筛选模型。 可以在 **“属性”** 窗格中直接键入筛选表达式，也可以打开一个筛选器对话框来生成条件。  
   
- 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可使用 **AND**/**OR** 运算符链接多个条件。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 **greater than** 和 **less than** 运算符。 但是，对于离散值，则仅可使用 **=（等于）**、 **!=（不等于）**和 **is null** 运算符。  
+ 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可使用 **AND**/**OR** 运算符链接多个条件。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 **greater than** 和 **less than** 运算符。 但是，对于离散值，则仅可使用 **=（等于）**、 **!=（不等于）** 和 **is null** 运算符。  
   
 > [!NOTE]  
 >  不支持使用 **LIKE** 关键字。 如果您希望包括多个离散属性，则必须创建不同条件并使用 **OR** 运算符来链接它们。  

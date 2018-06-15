@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538597"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>设备拓扑-分析平台系统
 在整个分析平台系统上显示的摘要信息。  

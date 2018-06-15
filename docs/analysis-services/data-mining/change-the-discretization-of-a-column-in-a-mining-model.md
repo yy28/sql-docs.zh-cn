@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34015614"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>更改挖掘模型中列的离散化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="to-change-the-discretization-method"></a>更改离散化方法  
   
-1.  在 **“挖掘属性”** 窗口中，单击 **“内容”**旁的文本框，然后从下拉列表中选择 **Discretized** 。  
+1.  在 **“挖掘属性”** 窗口中，单击 **“内容”** 旁的文本框，然后从下拉列表中选择 **Discretized** 。  
   
      <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 属性均处于启用状态。  
   

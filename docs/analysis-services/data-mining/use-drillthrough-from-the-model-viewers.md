@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34016924"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>从模型查看器使用钻取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="use-drillthrough-in-the-microsoft-tree-viewer"></a>在 Microsoft 树查看器中使用钻取  
   
-1.  在数据挖掘设计器中，选择某一决策树模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 树查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”  
+1.  在数据挖掘设计器中，选择某一决策树模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 树查看器”** 中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”  
   
 2.  右键单击树图形中的任何节点，然后选择“钻取”。  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="use-drillthrough-in-the-microsoft-cluster-viewer"></a>在 Microsoft 分类查看器中使用钻取  
   
-1.  在数据挖掘设计器中，选择某一聚类分析模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 分类查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”。  
+1.  在数据挖掘设计器中，选择某一聚类分析模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 分类查看器”** 中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”。  
   
 2.  对“分类”选项卡上，右键单击任何节点。  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>在 Microsoft 关联规则查看器中使用钻取  
   
-1.  在数据挖掘设计器中，选择某一关联模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 关联规则查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”  
+1.  在数据挖掘设计器中，选择某一关联模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 关联规则查看器”** 中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”  
   
 2.  在“规则”选项卡上，右键单击表示某一规则的任何行。 在 **“项集”** 选项卡上，单击包含某一项集的任何行。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="use-drillthrough-in-the-microsoft-sequence-cluster-viewer"></a>在 Microsoft 序列分类查看器中使用钻取  
   
-1.  在数据挖掘设计器中，选择某一聚类分析模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 分类查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”。  
+1.  在数据挖掘设计器中，选择某一聚类分析模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 分类查看器”** 中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”。  
   
 2.  对“分类关系图”选项卡上，右键单击表示某一分类的任何节点。 从 **“分类剖面图”** 选项卡，在分类剖面图中或者表示模型总量的分类中单击任何地方。  
   

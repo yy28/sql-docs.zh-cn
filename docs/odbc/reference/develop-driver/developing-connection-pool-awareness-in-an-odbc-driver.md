@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922062"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>开发中的 ODBC 驱动程序的连接池感知
 本主题讨论开发 ODBC 驱动程序，其中包含有关该驱动程序应如何提供连接池的服务的信息的详细信息。  

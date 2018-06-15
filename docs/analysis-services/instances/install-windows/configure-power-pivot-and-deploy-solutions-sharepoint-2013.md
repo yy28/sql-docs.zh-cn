@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019324"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  单击“配置或修复 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint”，然后单击“确定”。  
   
-3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”**和 **“退出”** 命令。  
+3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
   
 4.  在 **“参数”** 选项卡上：  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 中的“用于配置服务器的输入值”部分。  
   
-6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”**复选框。  
+6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”** 复选框。  
   
 7.  单击 **“验证”** 以便检查该工具是否有足够的信息来处理列表中的操作。 如果看到验证错误，请单击左窗格中的警告查看验证错误的详细信息。 更正任何验证错误，然后再次单击 **“验证”** 。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/10/2018
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序：**  
   
-1.  在“管理中心”的 **“应用程序管理”**中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理服务应用程序”**。  
   
 2.  确认服务应用程序状态为 **“已启动”**。 默认名称为**默认的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”**。  
   

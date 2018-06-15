@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917332"
 ---
 # <a name="translation-dll-api-reference"></a>转换 DLL API 参考
 本部分介绍的转换包括两个函数的 DLL API 的语法： **SQLDriverToDataSource**和**SQLDataSourceToDriver**。 这些函数必须包含在驱动程序执行转换的 DLL。  

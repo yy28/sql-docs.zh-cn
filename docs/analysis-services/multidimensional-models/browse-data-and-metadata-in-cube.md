@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022604"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>浏览多维数据集中的数据和元数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
  使用 **“语言”** 列表选择为多维数据集定义的翻译。 在多维数据集设计器的 **“翻译”** 选项卡中定义翻译。 **“浏览器”** 选项卡最初显示默认语言的标题，该语言由多维数据集的 **“语言”** 属性指定。 若要切换到不同的语言，请选择列表中的任意语言。  
   
 ##### <a name="formatting-the-data-pane"></a>设置“数据”窗格的格式  
- 可以在“数据”窗格中设置标题和单元的格式。 右键单击要设置格式的所选单元格或标题，然后单击“命令和选项”。 根据您的选择内容， **“命令和选项”** 对话框将显示 **“格式”**、 **“筛选和分组”**、 **“报表”**或 **“行为”**的设置。  
+ 可以在“数据”窗格中设置标题和单元的格式。 右键单击要设置格式的所选单元格或标题，然后单击“命令和选项”。 根据您的选择内容， **“命令和选项”** 对话框将显示 **“格式”**、 **“筛选和分组”**、 **“报表”** 或 **“行为”** 的设置。  
   
 ## <a name="setting-up-the-data"></a>设置数据  
   

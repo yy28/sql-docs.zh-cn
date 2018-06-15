@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924242"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>检查使用数据库邮件发送的电子邮件的状态
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  若要检查外部程序返回的电子邮件的状态，请将 **sysmail_allitems** 联接到 **sysmail_event_log** 视图中的 **mailitem_id** 列，如下所示。  
   
-     默认情况下，外部程序不会记录有关发送成功的邮件的信息。 若要记录所有邮件，请使用 **“数据库邮件配置向导”** 的 **“配置系统参数”**页，将日志级别设置为“详细”。  
+     默认情况下，外部程序不会记录有关发送成功的邮件的信息。 若要记录所有邮件，请使用 **“数据库邮件配置向导”** 的 **“配置系统参数”** 页，将日志级别设置为“详细”。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例列出了有关发送到 `danw` 的所有电子邮件（外部程序无法成功发送）的信息。 该语句列出了邮件的主题、外部程序发送邮件失败的日期和时间以及来自数据库邮件日志的错误消息。  

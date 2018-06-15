@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020624"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>使用 CellSet 检索数据
   在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象提供了最大的交互功能和灵活性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象是分层数据和元数据的内存缓存，用于保留数据的原始维数。 还可以在连接或断开连接状态中对 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象进行遍历。 由于此断开连接的功能，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象还可用于以任何顺序查看数据和元数据，并为数据检索提供最全面的对象模型。 此断开连接的功能还会导致 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象有最大的开销，并成为要填充的最慢的 ADOMD.NET 数据检索对象模型。  

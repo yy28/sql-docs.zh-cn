@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025774"
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>数据库维度的修改或删除数据库维度在解决方案资源管理器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  在解决方案资源管理器中，右键单击要修改的维度，然后单击“打开”。  
   
-2.  在 **“维度结构”** 选项卡的 **“属性”**、 **“层次结构”**或 **“数据源视图”** 窗格中，单击要修改的项，然后即可进行修改。  
+2.  在 **“维度结构”** 选项卡的 **“属性”**、 **“层次结构”** 或 **“数据源视图”** 窗格中，单击要修改的项，然后即可进行修改。  
   
      有关可以进行更改的类型的详细信息，请参阅[处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   

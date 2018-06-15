@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34017944"
 ---
 # <a name="data-mining-model-viewers"></a>数据挖掘模型查看器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
      此特定自定义查看器自动创建时序图形，并提供五个预测。  
   
-2.  接下来，您可看到使用 **“Microsoft 一般内容树查看器”**显示的相同模型。  
+2.  接下来，您可看到使用 **“Microsoft 一般内容树查看器”** 显示的相同模型。  
   
      在左图中，一般查看器显示模型中节点的列表。 您可以单击一个节点在右侧窗格中查看其内容。  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019174"
 ---
 # <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +88,7 @@ FROM LR_PredictIncome.CONTENT
 |年龄|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
- 我们来做个比较，在 **“挖掘图例”**中，该回归公式显示如下：  
+ 我们来做个比较，在 **“挖掘图例”** 中，该回归公式显示如下：  
   
  `Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)`  
   

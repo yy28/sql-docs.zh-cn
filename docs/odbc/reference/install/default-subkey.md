@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917504"
 ---
 # <a name="default-subkey"></a>默认子项
 注册表可能会与默认子项指定的默认数据源。 此子项是一种特殊情况的数据源规范子项，具有与任何其他数据源规范子项相同的值。 唯一的区别是未列为 ODBC 数据源子项下一个值。

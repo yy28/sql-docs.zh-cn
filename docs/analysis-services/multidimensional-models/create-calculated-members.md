@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023174"
 ---
 # <a name="create-calculated-members"></a>创建计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/10/2018
  您可以将多维数据集组件从 **“计算工具”** 窗格的 **“元数据”** 选项卡拖动或复制到“计算表达式”窗格的 **“表达式”** 框中。 您可以将函数从 **“计算工具”** 窗格的 **“函数”** 选项卡拖动或复制到“计算表达式”窗格的 **“表达式”** 框中。  
   
 ## <a name="addressing-calculated-members"></a>寻址计算成员  
- 在 **“多维数据集设计器”** 的 **“计算”**选项卡中创建计算成员时，需要指定在其中存储计算成员的父层次结构。 父层次结构按以下规则确定如何为计算成员寻址：  
+ 在 **“多维数据集设计器”** 的 **“计算”** 选项卡中创建计算成员时，需要指定在其中存储计算成员的父层次结构。 父层次结构按以下规则确定如何为计算成员寻址：  
   
 -   如果计算成员是在度量值维度中创建的，则计算成员在该维度中是可寻址的。  
   

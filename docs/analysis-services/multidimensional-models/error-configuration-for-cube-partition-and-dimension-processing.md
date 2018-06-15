@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025544"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>多维数据集、 分区和维度处理的错误配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/10/2018
 |**KeyErrorAction**|这是发生 **KeyNotFound** 错误时服务器执行的操作。 针对此错误的有效响应包括 **ConvertToUnknown** 或 **DiscardRecord**。|  
 |**KeyErrorLogFile**|这是用户定义的文件名，必须具有 .log 文件扩展名，位于服务帐户拥有读/写权限的文件夹中。 此日志文件仅包含处理期间生成的错误。 如果您需要详细信息，请使用网络流量记录器。|  
 |**KeyErrorLimit**|这是在处理失败前服务器将允许的最大数据完整性错误数目。 值为 -1 表示没有限制。 默认值为 0，表示处理在发生第一个错误时停止。 您还可以将其设置为整数。|  
-|**KeyErrorLimitAction**|这是键错误数达到上限时服务器执行的操作。 设置为 **“停止处理”**时，处理立即终止。 设置为 **“停止日志记录”**时，处理继续进行，但是错误不再进行报告或计数。|  
+|**KeyErrorLimitAction**|这是键错误数达到上限时服务器执行的操作。 设置为 **“停止处理”** 时，处理立即终止。 设置为 **“停止日志记录”** 时，处理继续进行，但是错误不再进行报告或计数。|  
   
 ##  <a name="bkmk_tools"></a> 在何处设置错误配置属性  
  使用部署数据库之后的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的属性页，或是 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目中的属性页。 两个工具中有相同的属性。 还可以在 msmdrsrv.ini 文件中设置错误配置属性以更改针对错误配置的服务器默认值，以及在 **Batch** 和 **Process** 命令（如果处理作为脚本操作运行）中设置这些属性。  

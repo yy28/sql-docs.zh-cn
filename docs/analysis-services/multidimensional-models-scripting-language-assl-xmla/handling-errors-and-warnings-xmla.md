@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021444"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>处理错误和警告 (XMLA)
   错误处理时是必需的 XML 有关 Analysis (XMLA)[发现](../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用不会运行、 任务成功运行，但生成错误或警告，或任务成功运行，但返回的结果包含错误。  

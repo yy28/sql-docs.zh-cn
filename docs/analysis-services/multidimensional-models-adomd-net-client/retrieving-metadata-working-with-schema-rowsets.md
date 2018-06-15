@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020374"
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>检索元数据-使用架构行集
   当需要的元数据超过 ADOMD.NET 对象模型中提供的元数据时，ADOMD.NET 会提供检索 XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP 以及 OLE DB for Data Mining 的所有架构行集的功能：  

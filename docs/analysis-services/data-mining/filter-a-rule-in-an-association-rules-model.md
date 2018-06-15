@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014484"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,9 +27,9 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="filter-a-rule-in-an-association-model"></a>筛选关联模型中的规则  
   
-1.  使用 **“关联规则查看器”**打开挖掘模型。 若要在 SQL Server Management Studio 中执行此操作，右键单击模型名称，然后选择 **“浏览”**。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中执行此操作，请双击包含该模型的挖掘结构，然后单击“数据挖掘设计器”的“挖掘模型查看器”选项卡。  
+1.  使用 **“关联规则查看器”** 打开挖掘模型。 若要在 SQL Server Management Studio 中执行此操作，右键单击模型名称，然后选择 **“浏览”**。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中执行此操作，请双击包含该模型的挖掘结构，然后单击“数据挖掘设计器”的“挖掘模型查看器”选项卡。  
   
-2.  单击 **“关联规则查看器”** 的 **“规则”**选项卡。  
+2.  单击 **“关联规则查看器”** 的 **“规则”** 选项卡。  
   
 3.  在 **“筛选规则”** 框中键入规则条件。 例如，规则条件可以为“Bike Stand”，该条件还可以返回“Bike Stands”。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  对于 **“最低重要性”**，增大重要性的值以查看较少的规则，减小该值以查看较多的规则。  
   
-6.  对于 **“显示”**，选择以下选项之一： **“显示属性名称和值”**、 **“仅显示属性名称”**或 **“仅显示属性值”**。  
+6.  对于 **“显示”**，选择以下选项之一： **“显示属性名称和值”**、 **“仅显示属性名称”** 或 **“仅显示属性值”**。  
   
 7.  对于 **“最大行数”**，增大该值以增加符合指定条件的规则的总数，减小该值以限制返回的规则数。 规则按概率排序，所以您可以消除符合指定的概率或重要性条件的其他规则。  
   

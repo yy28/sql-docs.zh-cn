@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023464"
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 向导-向维度中添加帐户智能
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/10/2018
  在向导的 **“配置维度属性”** 页中，指定选定帐户维度中的帐户属性。 首先，在 **“包括”** 列中，选中要映射到维度中维度属性的每个帐户属性类型旁边的复选框。 然后，在“维度属性”列中，展开下拉列表，并选择维度中对应于选定属性类型的属性。 从列表中选择特性会设置帐户特性的 **Type** 属性。  
   
 ## <a name="mapping-account-types"></a>映射帐户类型  
- 第二个 **“定义帐户智能”** 页将维度表中的帐户类型值映射到由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]识别的帐户类型。 仅当维度中包含 **“帐户类型”** 维度属性时，才出现该页。 若要包含 **“帐户类型”** 维度，请在向导的 **“定义帐户智能设置”** 页中，选中 **“帐户类型”**旁边的复选框，然后选择相应的属性。  
+ 第二个 **“定义帐户智能”** 页将维度表中的帐户类型值映射到由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]识别的帐户类型。 仅当维度中包含 **“帐户类型”** 维度属性时，才出现该页。 若要包含 **“帐户类型”** 维度，请在向导的 **“定义帐户智能设置”** 页中，选中 **“帐户类型”** 旁边的复选框，然后选择相应的属性。  
   
  在第二个 **“定义帐户智能”** 页中，具有两个列：  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  在解决方案资源管理器中，右键单击 Analysis Services 项目，再单击“编辑数据库”。  
   
-2.  在 **“帐户类型映射”** 框的 **“名称”**中，选择帐户类型。  
+2.  在 **“帐户类型映射”** 框的 **“名称”** 中，选择帐户类型。  
   
 3.  在 **“别名”** 文本框中，键入此帐户类型的别名。  
   

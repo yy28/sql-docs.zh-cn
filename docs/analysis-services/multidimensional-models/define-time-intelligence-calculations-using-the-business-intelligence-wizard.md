@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026914"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/10/2018
  选择时间层次结构后，请在 **“可用时间计算”** 列表中选择将应用于该层次结构的计算。 列出的计算取决于在层次结构中的级别以及每个级别的特性的 **Type** 属性设置。 例如，“年份”层次结构支持“本年度截止到现在”和“年度同比增长量”，但是“季度”层次结构则不支持。  
   
 > [!NOTE]  
->  Timeintelligence.xml 模板文件定义了在 **“可用时间计算”**中列出的时间计算。 如果列出的计算不能满足需要，可以更改现有计算，或在 Timeintelligence.xml 文件中添加新的计算。  
+>  Timeintelligence.xml 模板文件定义了在 **“可用时间计算”** 中列出的时间计算。 如果列出的计算不能满足需要，可以更改现有计算，或在 Timeintelligence.xml 文件中添加新的计算。  
   
 > [!TIP]  
 >  若要查看计算的说明，请使用向上和向下键突出显示该计算。  

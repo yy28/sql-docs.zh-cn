@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019424"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -102,7 +103,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
  [返回页首](#bkmk_top2)  
   
 ## <a name="finding-information-about-clusters"></a>查找有关分类的信息  
- 聚类分析模型中最有用的内容查询通常返回与使用 **“分类查看器”**可浏览的信息同类的信息。 这包括分类配置文件、分类特征以及分类对比。 本节提供检索这些信息的查询示例。  
+ 聚类分析模型中最有用的内容查询通常返回与使用 **“分类查看器”** 可浏览的信息同类的信息。 这包括分类配置文件、分类特征以及分类对比。 本节提供检索这些信息的查询示例。  
   
 ###  <a name="bkmk_Query3"></a> 示例查询 3：返回分类或分类列表  
  因为所有分类的节点类型都为 5，所以通过仅仅查询该类型的节点的模型内容可轻松地检索分类的列表。 您还可以筛选按概率或支持所返回的节点，如下例所示。  

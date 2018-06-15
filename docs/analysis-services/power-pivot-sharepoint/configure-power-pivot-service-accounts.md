@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025724"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>配置 Power Pivot 服务帐户
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -69,13 +70,13 @@ ms.lasthandoff: 05/10/2018
   
 2.  选择“Windows 服务 - SQL Server Analysis Services”以更改 Analysis Services 服务帐户。  
   
-3.  在 **“为此服务选择帐户”**中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
+3.  在 **“为此服务选择帐户”** 中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
   
 4.  选择“服务应用程序池 - SharePoint Web 服务系统”以更改默认 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序的应用程序池标识。 根据配置您的安装的方式，可基于为 SharePoint 服务创建的现有服务应用程序池运行服务。 默认情况下，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具将该服务注册为“默认 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序）”。  
   
      如果 SharePoint 管理员已手动配置该服务，则该服务最有可能具有自己的服务应用程序池。  
   
-5.  在 **“为此服务选择帐户”**中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
+5.  在 **“为此服务选择帐户”** 中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
   
 6.  单击 **“确定”**。  
   

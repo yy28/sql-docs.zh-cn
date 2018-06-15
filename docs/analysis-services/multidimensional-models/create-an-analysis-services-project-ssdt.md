@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025250"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>创建 Analysis Services 项目 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/10/2018
   
      - 或 -  
   
-     若要创建新的解决方案，请在“解决方案”下拉列表中选择“创建新解决方案”。 若要为新解决方案创建新的文件夹，请选择 **“创建解决方案的目录”**。 在 **“解决方案名称”**中，键入新解决方案的名称。  
+     若要创建新的解决方案，请在“解决方案”下拉列表中选择“创建新解决方案”。 若要为新解决方案创建新的文件夹，请选择 **“创建解决方案的目录”**。 在 **“解决方案名称”** 中，键入新解决方案的名称。  
   
 6.  单击 **“确定”**。  
   

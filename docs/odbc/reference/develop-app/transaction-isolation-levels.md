@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919042"
 ---
 # <a name="transaction-isolation-levels"></a>事务隔离级别
 *事务隔离级别*是事务隔离成功的范围内的度量。 具体而言，事务隔离级别是根据存在以下现象相符合定义的：  

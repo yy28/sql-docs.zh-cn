@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025974"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -105,7 +106,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  **SharePoint 2010：** 在“自定义视图”中，单击 **“修改此视图”**。  
   
-     **SharePoint 2013：** 在 **“管理视图”**中，单击 **“修改视图”**。  
+     **SharePoint 2013：** 在 **“管理视图”** 中，单击 **“修改视图”**。  
   
 4.  在“排序”中，指定将用来确定工作簿在列表中的显示方式的条件。 默认情况下，文档按添加的先后顺序列出。  
   

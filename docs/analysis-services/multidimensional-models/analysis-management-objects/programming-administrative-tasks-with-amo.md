@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020814"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>使用 AMO 对管理任务进行编程
   分析管理对象 (AMO) 是在客户端应用程序中用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的编程库。 在本节中，您将了解如何使用 AMO 对象进行编程。  

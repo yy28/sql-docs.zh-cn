@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020584"
 ---
 # <a name="amo-classes---introduction"></a>AMO 类-简介
   分析管理对象 (AMO) 是用于管理的实例的类的库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序。 AMO 类可用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象，例如数据库、维度、多维数据集、挖掘结构和模型、角色和权限、异常以及其他对象。  

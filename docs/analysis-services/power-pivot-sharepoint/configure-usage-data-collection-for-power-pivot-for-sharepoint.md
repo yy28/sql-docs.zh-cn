@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026874"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>配置使用情况数据收集 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  在管理中心中，单击 **“监视”**。  
   
-2.  在 **“报告”**部分中，单击 **“配置 Usage and Health Data Collection”**。  
+2.  在 **“报告”** 部分中，单击 **“配置 Usage and Health Data Collection”**。  
   
 3.  选中 **“启用使用率数据集”**。  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  [打开“Power Pivot 服务应用程序”页](#openconfig)。  
   
-2.  在 **“使用情况数据收集”** 部分的 **“使用情况数据历史记录”**中，输入您希望为每个工作簿保留数据刷新活动记录的天数。  
+2.  在 **“使用情况数据收集”** 部分的 **“使用情况数据历史记录”** 中，输入您希望为每个工作簿保留数据刷新活动记录的天数。  
   
     -   默认值为 365 天。  
   
@@ -165,13 +166,13 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="openconfig"></a> 打开“Power Pivot 服务应用程序”页以访问配置设置  
  您必须是场管理员或服务管理员才能修改服务应用程序设置。 如果在场中定义了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则必须单独修改每个应用程序。  
   
-1.  在 SharePoint 管理中心内，在 **“应用程序管理”**中单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心内，在 **“应用程序管理”** 中单击 **“管理服务应用程序”**。  
   
 2.  查找 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 您可以通过类型来确定服务应用程序。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序类型是“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”。  
   
 3.  单击 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称。 将打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板。  
   
-4.  在 **“操作”**中，单击 **“配置服务应用程序设置”**。 将打开“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序设置”页。  
+4.  在 **“操作”** 中，单击 **“配置服务应用程序设置”**。 将打开“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序设置”页。  
   
 ##  <a name="defaultconfig"></a> Power Pivot 使用情况数据收集的默认配置  
  可以使用默认设置启用针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务操作的使用情况数据收集，以使其立即可用于支持 Analysis Services 集成功能的应用程序。 默认设置包括触发使用情况数据收集的事件、对存储多长时间的使用情况数据的限制以及用于对查询响应时间进行分类的阈值。  

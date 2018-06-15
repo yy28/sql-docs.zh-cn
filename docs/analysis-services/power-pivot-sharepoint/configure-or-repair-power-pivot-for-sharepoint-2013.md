@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025224"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>配置或修复 Power Pivot for SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,9 +74,9 @@ ms.lasthandoff: 05/10/2018
   
 2.  单击“配置或修复 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint”。  
   
-3.  将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”**和 **“退出”** 命令。  
+3.  将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
   
-4.  **默认帐户：** 在“参数”选项卡上，键入 **“默认帐户用户名”**的域用户帐户。 此帐户用于设置重要服务，包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
+4.  **默认帐户：** 在“参数”选项卡上，键入 **“默认帐户用户名”** 的域用户帐户。 此帐户用于设置重要服务，包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
   
      **通行短语：** 键入通行短语。 如果该 SharePoint 场是新场，则在向该 SharePoint 场中添加新的服务器或应用程序时，需要使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/10/2018
   
 7.  或者，查看用于完成各操作的剩余输入值。 有关每个输入值的详细信息，请参阅本主题中的 [用于配置服务器的输入值](#bkmk_input) 。  
   
-8.  您还可以选择删除不想处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”**复选框。  
+8.  您还可以选择删除不想处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”** 复选框。  
   
 9. 单击 **“验证”** 以便检查该工具是否有足够的信息来处理列表中的操作。  
   

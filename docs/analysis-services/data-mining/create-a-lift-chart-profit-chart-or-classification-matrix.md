@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34015384"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>创建提升图、利润图或分类矩阵
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,11 +61,11 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="select-testing-data"></a>选择测试数据  
   
-1.  在 **“挖掘准确性图表”** 选项卡的 **“输入选择”** 选项卡上，通过选择 **“选择要用于准确性图表的数据集”**组中的一个选项来指定将用来生成图表的数据源。  
+1.  在 **“挖掘准确性图表”** 选项卡的 **“输入选择”** 选项卡上，通过选择 **“选择要用于准确性图表的数据集”** 组中的一个选项来指定将用来生成图表的数据源。  
   
     -   如果您想要使用挖掘结构测试事例和在模型创建期间可能已应用的任何筛选器的交集定义的事例的子级，则选择选项 **“使用挖掘模型测试事例”**。  
   
-    -   选择 **“使用挖掘结构测试事例”**选项可以使用已作为挖掘结构维持数据集的一部分定义的测试事例的完整集合。  
+    -   选择 **“使用挖掘结构测试事例”** 选项可以使用已作为挖掘结构维持数据集的一部分定义的测试事例的完整集合。  
   
     -   若要使用外部数据，请选择“指定其他数据集”选项。   数据集必须可用作数据源视图。   单击浏览 (**…**) 按钮可选择要用于准确性图表的数据表。 有关详细信息，请参阅 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)。  
   

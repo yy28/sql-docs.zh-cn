@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026154"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>设置模拟选项（SSAS - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击该数据库并选择“属性”。  
   
-2.  在 **“数据源模拟信息”**中，指定 Windows 用户名和密码。  
+2.  在 **“数据源模拟信息”** 中，指定 Windows 用户名和密码。  
   
 3.  右键单击每个数据源并查看其属性，以便确保每个数据源都在使用“继承”选项。  
   
