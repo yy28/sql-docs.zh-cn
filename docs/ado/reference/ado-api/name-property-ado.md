@@ -2,7 +2,6 @@
 title: Name 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1990ae16694a9ddee3747850773a4c361881a307
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 834a04e01587be21938d461ac1645802bad624d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279576"
 ---
 # <a name="name-property-ado"></a>Name 属性 (ADO)
 指示对象的名称。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值，该值指示对象的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**名称**属性分配一个名称或检索的名称**命令**，**属性**，**字段**，或**参数**对象。  
   
  值为读/写上**命令**对象和在只读**属性**对象。  
@@ -51,6 +51,6 @@ ms.lasthandoff: 05/03/2018
 |[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[字段对象](../../../ado/reference/ado-api/field-object.md)|  
 |[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [特性和名称属性示例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [特性和名称属性示例 （VC + +）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

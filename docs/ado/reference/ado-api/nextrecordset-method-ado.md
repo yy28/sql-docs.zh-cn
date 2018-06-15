@@ -2,7 +2,6 @@
 title: 方法签名 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1773c2bd8709a429a2e388b8a38a192107f2e7f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1df02b14168a15f9bccc476b62583334b2f0c3f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279636"
 ---
 # <a name="nextrecordset-method-ado"></a>方法签名 (ADO)
 清除当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象并返回下一个**记录集**方法通过一系列的命令。  
@@ -43,12 +43,12 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Parameters  
  *RecordsAffected*  
- 選擇性。 A**长**变量到该提供程序返回的当前操作所影响的记录数。  
+ 可选。 A**长**变量到该提供程序返回的当前操作所影响的记录数。  
   
 > [!NOTE]
 >  此参数仅返回操作; 所影响的记录的数它不从用于生成 select 语句返回的记录计数**记录集**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**签名**方法以返回结果的复合命令语句中的下一步命令或存储过程返回多个结果。 如果你打开**记录集**复合命令语句上基于的对象 (例如，"选择\*从 table1;选择\*从 table2") 使用[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法[命令](../../../ado/reference/ado-api/command-object-ado.md)或[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**，ADO 执行仅第一个命令并返回到结果*记录集*。 若要访问的语句中的后续命令的结果，调用**签名**方法。  
   
  只要有更多结果和**记录集**包含复合语句未断开连接或跨进程边界封送**签名**方法将继续到返回**记录集**对象。 如果返回行的命令成功执行，但未返回任何记录，返回**记录集**对象将被打开，但为空。 通过验证，这种情况下的测试[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性均**True**。 如果非返回行的命令执行成功，返回**记录集**对象将被关闭，你可以通过测试来验证其[状态](../../../ado/reference/ado-api/state-property-ado.md)属性**记录集**. 当没有更多结果，*记录集*将设置为*执行任何操作*。  
@@ -66,6 +66,6 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [方法签名示例 (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
  [NextRecordset 方法示例 (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

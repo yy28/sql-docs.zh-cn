@@ -2,7 +2,6 @@
 title: DeleteRecord 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 168b53d0ad68f55656e005f7523a0c09ba599004
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277636"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 删除所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -39,12 +39,12 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Parameters  
  *数据源*  
- 選擇性。 A**字符串**值，该值包含要删除的 URL 标识的实体 （例如，文件或目录）。 如果*源*省略或指定空字符串，表示由当前的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)被删除。 如果记录集合记录 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，如目录) 所有子项 （例如，子目录） 也将被都删除。  
+ 可选。 A**字符串**值，该值包含要删除的 URL 标识的实体 （例如，文件或目录）。 如果*源*省略或指定空字符串，表示由当前的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)被删除。 如果记录集合记录 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，如目录) 所有子项 （例如，子目录） 也将被都删除。  
   
  *异步*  
- 選擇性。 A**布尔**值，当**True**，指定删除操作是异步。  
+ 可选。 A**布尔**值，当**True**，指定删除操作是异步。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  表示此对象上的操作**记录**此方法完成后可能会失败。 在调用**DeleteRecord**、**记录**应关闭，因为的行为**记录**可能会变得不可预知根据提供程序的更新时**记录**与数据源。  
   
  如果此**记录**通过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，则此操作的结果将不会立即反映到**记录集**。 刷新**记录集**通过关闭并重新打开它，或通过执行**记录集** [Requery](../../../ado/reference/ado-api/requery-method.md)方法，[更新](../../../ado/reference/ado-api/update-method.md)方法，或[重新同步](../../../ado/reference/ado-api/resync-method.md)方法。  
@@ -55,7 +55,7 @@ Record.DeleteRecord Source, Async
 ## <a name="applies-to"></a>适用范围  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Delete 方法 （ADO 字段集合）](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete 方法 （ADO 参数集合）](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete 方法（ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

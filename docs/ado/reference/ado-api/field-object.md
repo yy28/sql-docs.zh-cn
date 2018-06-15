@@ -2,7 +2,6 @@
 title: 字段对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49960f2763b402a291531a2ab010ef6a0682107f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b815da825f777b51a43a90af26eba955050b785
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278466"
 ---
 # <a name="field-object"></a>字段对象
 表示对类型为通用数据类型的数据列。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  每个**字段**对象中的列对应[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 你使用[值](../../../ado/reference/ado-api/value-property-ado.md)属性**字段**对象设置或返回当前记录的数据。 根据的功能提供程序的公开，一些集合、 方法或属性的**字段**对象可能不可用。  
   
  使用集合、 方法和属性的**字段**对象，你可以执行以下操作：  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [字段对象属性、 方法和事件](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

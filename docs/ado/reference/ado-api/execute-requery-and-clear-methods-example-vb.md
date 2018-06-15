@@ -2,7 +2,6 @@
 title: 执行、 重新执行查询，并清除方法示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9a861132f3cabfbafe4b9ab8aff2242e5f97b23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9f877a63f05fd6fd8d31623b8e79aa1bac4464c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278106"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>执行、 重新执行查询，并清除方法示例 (VB)
 此示例演示**执行**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法来检索当前数据中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**错误**通过访问集合**连接**对象[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。)ExecuteCommand 和 PrintOutput 过程所需运行此过程。  
@@ -171,7 +171,7 @@ End Sub
 'EndExecuteVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

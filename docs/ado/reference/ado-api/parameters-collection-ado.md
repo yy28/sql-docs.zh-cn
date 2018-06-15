@@ -2,7 +2,6 @@
 title: 参数集合 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9976679454881af9279dc74ff86eacdb01d2a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280649"
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
 包含所有[参数](../../../ado/reference/ado-api/parameter-object.md)的对象[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**命令**对象具有**参数**组成的集合**参数**对象。  
   
  使用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法**命令**对象的**参数**集合检索提供程序的存储的过程或参数化的查询的参数信息指定在**命令**对象。 某些提供程序不支持存储的过程调用或参数化的查询;调用**刷新**方法**参数**集合时使用此类提供程序将返回错误。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [参数集合属性、 方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)

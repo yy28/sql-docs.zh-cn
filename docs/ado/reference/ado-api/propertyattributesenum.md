@@ -2,7 +2,6 @@
 title: PropertyAttributesEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db96074b46b31a826d8abc22da15f66d2af3a52f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31260a4336954a2efa0cf001d244b7ad7ff7d6a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280796"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 指定的属性[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指示提供程序不支持该属性。|  
-|**adPropRequired**|1|指示数据源初始化之前，用户必须指定此属性的值。|  
+|**adPropRequired**|@shouldalert|指示数据源初始化之前，用户必须指定此属性的值。|  
 |**adPropOptional**|2|指示用户不必指定此属性的值之前初始化的数据源。|  
 |**adPropRead**|512|指示用户可以读取该属性。|  
 |**adPropWrite**|1024|指示用户可以设置此属性。|  

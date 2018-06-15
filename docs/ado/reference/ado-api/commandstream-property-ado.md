@@ -2,7 +2,6 @@
 title: CommandStream 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff08261349b73b7aef5c8b9fe1375b288941d41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8696706c0a785c77d7ca6a811811e1aba5fe133
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276696"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 属性 (ADO)
 指示用作输入的流[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回用作输入的流**命令**对象。 此流的格式是特定于提供程序;请参阅详细信息的提供程序的文档。 此属性是类似于[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性，用于指定的输入的字符串**命令**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **CommandStream**和**CommandText**是互相排斥。 当用户设置**CommandStream**属性， **CommandText**属性将设置为空字符串 ("")。 如果用户设置**CommandText**属性， **CommandStream**属性将设置为**执行任何操作**。  
   
  行为**Command.Parameters.Refresh**和**Command.Prepare**方法定义提供程序。 无法刷新流中的参数值。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [方言属性](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

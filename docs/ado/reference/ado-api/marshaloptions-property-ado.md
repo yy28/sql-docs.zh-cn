@@ -2,7 +2,6 @@
 title: MarshalOptions 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca3cb11f425b94145b89638012844d64265bd6b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b81646d7d4339f06e5682c1886651cf69ea0dc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279336"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 属性 (ADO)
 指示的哪些记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)要封送回服务器。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)值。 默认值是**adMarshalAll**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用客户端时[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，已在客户端修改的记录到中间层或通过调用封送处理，打包并发送接口方法的过程的技术的 Web 服务器写回跨线程或进程边界的参数。 设置**MarshalOptions**修改后的远程数据封送回中间层或 Web 服务器更新时，属性可以提高性能。  
   
 > [!NOTE]
@@ -41,6 +41,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MarshalOptions 属性示例 (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [MarshalOptions 属性示例 (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

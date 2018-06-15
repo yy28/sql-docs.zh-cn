@@ -2,7 +2,6 @@
 title: 记录对象 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bd0c6e6e5ad0e9d5ff059e0e9f4125137fb08fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be0a2d0f3124f4f0718fd9f8063f23eb46c9deb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280876"
 ---
 # <a name="record-object-ado"></a>记录对象 (ADO)
 表示从行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或数据提供程序或返回由半结构化的数据提供程序，如文件或目录的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**记录**对象表示一行数据，并具有一个行与一些概念相似之处**记录集**。 根据你提供程序，功能**记录**可能直接从你的提供商，而不是一个行返回对象**记录集**，例如在 SQL 查询选择只有一个行时为执行。 或者，**记录**对象可以直接从获取**记录集**对象。 或者，**记录**于半结构化数据，如 Microsoft Exchange OLE DB 提供程序可以直接从提供程序中返回。  
   
  你可以查看与关联的字段**记录**对象通过[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合**记录**对象。 ADO 允许对象值的列，包括**记录集**， **SafeArray**，和中的标量值**字段**集合**记录**对象。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [记录对象属性、方法和事件](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [记录和流](../../../ado/guide/data/records-and-streams.md)   

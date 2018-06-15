@@ -2,7 +2,6 @@
 title: 字段 (ADO-WFC 语法) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b355a11d2916403c7574c547aac02c61d7b0d71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278176"
 ---
 # <a name="field-ado---wfc-syntax"></a>字段 (ADO-WFC 语法)
 ## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
@@ -102,5 +102,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)

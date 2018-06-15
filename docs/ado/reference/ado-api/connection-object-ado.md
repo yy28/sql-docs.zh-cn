@@ -2,7 +2,6 @@
 title: 连接对象 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba405d7993c5f9c327d5789cfa3bf3c9ccfba2b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08a8c8fd224d2405674b30969cf44f672831f1c5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276986"
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
 表示与数据源的开放连接。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**连接**对象表示与数据源的唯一会话。 在客户端/服务器数据库系统中，它可能等效于与服务器的实际网络连接。 具体取决于提供程序、 一些集合、 方法或属性的支持的功能**连接**对象可能不可用。  
   
  使用集合、 方法和属性的**连接**对象，你可以执行以下操作：  
@@ -98,7 +98,7 @@ cnn. "parameter"
   
 -   [连接对象的属性、 方法和事件](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

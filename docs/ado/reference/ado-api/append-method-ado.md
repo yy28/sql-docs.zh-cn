@@ -2,7 +2,6 @@
 title: Append 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275896"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 将对象追加到集合。 如果该集合为[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，新[字段](../../../ado/reference/ado-api/field-object.md)追加到集合之前，可以创建对象。  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *字段*  
  A**字段**集合。  
   
- *对象*  
+ 对象  
  对象变量表示要追加的对象。  
   
  *名称*  
@@ -54,15 +54,15 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，其默认值为**adEmpty**，，指定新的字段的数据类型。 ADO，不支持以下数据类型和应不时使用追加到的新字段[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**， **adIUnknown**， **adVariant**。  
   
  *DefinedSize*  
- 選擇性。 A**长**表示的定义的大小，以字符数或字节为单位的新字段的值。 此参数的默认值派生自*类型*。 具有的字段*DefinedSize*大于 255 个字节将被视为可变长度列。 默认值为*DefinedSize*未指定。  
+ 可选。 A**长**表示的定义的大小，以字符数或字节为单位的新字段的值。 此参数的默认值派生自*类型*。 具有的字段*DefinedSize*大于 255 个字节将被视为可变长度列。 默认值为*DefinedSize*未指定。  
   
  *Attrib*  
- 選擇性。 A [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值，其默认值为**adFldDefault**，，指定新字段的特性。 如果未指定此值，该字段将包含派生自的特性*类型*。  
+ 可选。 A [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值，其默认值为**adFldDefault**，，指定新字段的特性。 如果未指定此值，该字段将包含派生自的特性*类型*。  
   
  *FieldValue*  
- 選擇性。 A **Variant** ，表示新字段的值。 如果未指定，字段被追加一个 null 值。  
+ 可选。 A **Variant** ，表示新字段的值。 如果未指定，字段被追加一个 null 值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Parameters 集合  
  必须设置[类型](../../../ado/reference/ado-api/type-property-ado.md)属性[参数](../../../ado/reference/ado-api/parameter-object.md)之前追加到的对象[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 如果你选择的可变长度数据类型，还必须设置[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)属性的值大于零。  
@@ -82,7 +82,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  如果将发生运行时错误**追加**方法调用**字段**集合打开**记录集**，或在**记录集**其中[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)设置属性。 你可以仅将附加到的字段**记录集**未处于打开状态，尚未连接到数据源。 这通常是这种情况时**记录集**对象制造与[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)方法或分配给变量的对象。  
   
-## <a name="record"></a>記錄  
+## <a name="record"></a>录制  
  如果将不会发生运行时错误**追加**方法调用**字段**集合打开**记录**。 新的字段将添加到**字段**集合**记录**对象。 如果**记录**派生自**记录集**，新的字段不会出现在**字段**集合**记录集**对象。  
   
  可以创建一个非存在的字段，并将其追加到**字段**通过将值分配给字段对象，就像它已存在于集合中的集合。 赋值将触发的自动创建并追加的**字段**对象，然后分配将会完成。  
@@ -94,7 +94,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [追加和 CreateParameter 方法示例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [追加和 CreateParameter 方法示例 （VC + +）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

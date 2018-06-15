@@ -2,7 +2,6 @@
 title: Index 属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279168"
 ---
 # <a name="index-property"></a>索引属性
 指示当前对有效的索引名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值，该值是索引的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  通过名为索引**索引**属性必须之前已声明对基表基础**记录集**对象。 也就是说，索引必须已经声明以编程方式为 ADOX[索引](../../../ado/reference/adox-api/index-object-adox.md)对象，或创建基本表时。  
   
  如果索引不能设置，将发生运行时错误。 **索引**以下情况下，不能设置属性：  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查找方法和索引的属性示例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

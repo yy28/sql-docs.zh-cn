@@ -2,7 +2,6 @@
 title: ADO 代码示例以 Microsoft JScript |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef0f2f2e7238fde0655de5df584492e22afecb0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c65e6242525e0c3615e7b00d9067897a9ac898c0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275346"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>ADO 代码示例以 Microsoft JScript
 使用下面的代码示例以了解如何使用 ADO 方法、 属性和事件时在 JScript 中编写。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [筛选器和 RecordCount 属性示例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual c + + 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   

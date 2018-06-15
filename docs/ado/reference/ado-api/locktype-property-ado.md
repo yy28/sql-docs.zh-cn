@@ -2,7 +2,6 @@
 title: LockType 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35d413ea9bfaded1494270d837f433fc9546e0b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f981f14e4eedb9dad3724f91c5ce70f6535ee0a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279226"
 ---
 # <a name="locktype-property-ado"></a>LockType 属性 (ADO)
 指示编辑过程上记录放置锁的类型。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值。 默认值是**adLockReadOnly**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  设置**LockType**属性在打开之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)以指定在打开时，应使用哪种类型的锁定的提供程序。 读取要返回的锁定中处于打开状态的使用类型的属性**记录集**对象。  
   
  提供程序可能不支持所有的锁类型。 如果提供程序不能支持所请求**LockType**设置，它将替换另一个类型的锁定。 若要确定中可用的实际锁定功能**记录集**对象，请使用[支持](../../../ado/reference/ado-api/supports-method.md)方法替换**adUpdate**和**adUpdateBatch**.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [游标类型、 LockType，以及 EditMode 属性示例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [游标类型、 LockType 和 EditMode 属性示例 （VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [执行方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

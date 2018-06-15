@@ -2,7 +2,6 @@
 title: ParameterDirectionEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd6f885b4e69ce73262961cf545eed2fa5a1c4da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f66aebdd140d1ce3fe505dfd40fd5f412de7cd9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280567"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定是否[参数](../../../ado/reference/ado-api/parameter-object.md)表示输入的参数、 输出参数，这两个输入和输出参数或存储过程的返回值。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|默认值。 指示该参数表示输入的参数。|  
+|**adParamInput**|@shouldalert|默认值。 指示该参数表示输入的参数。|  
 |**adParamInputOutput**|3|指示该参数表示一个输入和输出参数。|  
 |**adParamOutput**|2|指示该参数表示输出参数。|  
 |**adParamReturnValue**|4|指示该参数表示的返回值。|  

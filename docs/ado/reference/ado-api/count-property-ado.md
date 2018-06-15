@@ -2,7 +2,6 @@
 title: Count 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edda8415ad83ee3aa874ec1e3e6dd6f8e20b41b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277226"
 ---
 # <a name="count-property-ado"></a>Count 属性 (ADO)
 指示集合中的对象数。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>返回值  
  返回**长**值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**计数**属性来确定在给定集合中对象数。  
   
  由于集合的成员计数从零开始，你应始终将循环零成员开始和结束值为**计数**减 1 的属性。 如果你正在使用 Microsoft Visual Basic 并想要循环访问集合的成员，而不会检查**计数**属性，请使用**每个...下一步**命令。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |[属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [计数属性示例 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [计数属性示例 （VC + +）](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

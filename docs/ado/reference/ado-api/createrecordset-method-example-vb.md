@@ -2,7 +2,6 @@
 title: CreateRecordset 方法示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9aaea6cd4e646b351c472159496eb8ca30ec8a50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ecaf020aaef33580142c7f6dde3fb6eba57b7cb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277266"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 方法示例 (VB)
 你可以创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，并指定的列信息。 你可以然后数据插入到**记录集**对象; 基础的行集缓冲区插入。  

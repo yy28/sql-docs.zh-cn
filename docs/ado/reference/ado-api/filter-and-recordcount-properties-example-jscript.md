@@ -2,7 +2,6 @@
 title: 筛选器和 RecordCount 属性示例 (JScript) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3f3b971a2dca5a9b51467f42ae028c70ec0793
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278606"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>筛选器和 RecordCount 属性示例 (JScript)
 此示例打开**记录集**的 Northwind 数据库，然后使用公司表[筛选器](../../../ado/reference/ado-api/filter-property.md)以限制可见的记录这些位置的公司名称字段以字母开头的属性D.剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**FilterJS.asp**。  
@@ -152,7 +152,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 属性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

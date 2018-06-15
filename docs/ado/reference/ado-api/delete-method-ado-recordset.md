@@ -2,7 +2,6 @@
 title: Delete 方法 （ADO 记录集） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afb1071d48cb6c4c1652cc5caab96de97beefae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46ffdefd753d10067c2c120690fd900ddd114abd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277566"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete 方法 （ADO 记录集）
 删除当前记录或一组记录。  
@@ -44,7 +44,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll**和**adAffectAllChapters**不是有效的自变量到**删除**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**删除**方法将当前记录或一组中的记录标记[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象以备删除。 如果**记录集**对象不允许记录删除，将会出错。 如果要立即更新模式中，删除数据库中会立即发生。 如果无法成功删除记录 （由于数据库完整性的冲突，例如），该记录将保持处于编辑模式的调用后[更新](../../../ado/reference/ado-api/update-method.md)。 这意味着你必须取消的更新[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)之前离开当前记录 (例如，对于[关闭](../../../ado/reference/ado-api/close-method-ado.md)，[移动](../../../ado/reference/ado-api/move-method-ado.md)，或[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  
   
  如果要在批处理更新模式下，记录将被标记为从缓存中删除，当你调用，时会发生实际删除[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性以查看已删除的记录。  
@@ -60,7 +60,7 @@ recordset.Delete AffectRecords
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [删除方法示例 (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [删除方法示例 (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [删除方法示例 （VC + +）](../../../ado/reference/ado-api/delete-method-example-vc.md)   

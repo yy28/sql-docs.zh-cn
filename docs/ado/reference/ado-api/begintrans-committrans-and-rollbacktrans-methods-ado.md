@@ -2,7 +2,6 @@
 title: BeginTrans、 CommitTrans 和不方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -27,11 +26,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80ae8b47737573aa7ff0c81bafd882ca162a157f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42f43c3dfc508ac6885f0e42811af26d89cd6692
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275976"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、 CommitTrans 和不方法 (ADO)
 这些事务方法管理在内部处理的事务[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，如下所示：  
@@ -56,7 +56,7 @@ object.RollbackTrans
  **BeginTrans**可以作为返回的函数调用**长**变量，用于指示事务的嵌套级别。  
   
 #### <a name="parameters"></a>Parameters  
- *对象*  
+ 对象  
  A**连接**对象。  
   
 ## <a name="connection"></a>连接  
@@ -79,7 +79,7 @@ object.RollbackTrans
 ## <a name="applies-to"></a>适用范围  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [BeginTrans、 CommitTrans，以及如果不方法示例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [BeginTrans、 CommitTrans 和不方法示例 （VC + +）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

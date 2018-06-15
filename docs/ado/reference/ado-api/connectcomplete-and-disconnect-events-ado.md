@@ -2,7 +2,6 @@
 title: ConnectComplete 并断开连接事件 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee97139616af7b632ec2008f916b76d87d7f4bae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ac6301a8ed8ab0c84f26225e20c2bfd971ff761
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276836"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 和断开连接事件 (ADO) 连接
 **ConnectComplete**连接启动后，将调用事件。 **断开连接**连接结束后，将调用事件。  
@@ -55,6 +55,6 @@ Disconnect adStatus, pConnection
  *pConnection*  
  **连接**对象为此事件时应用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -2,7 +2,6 @@
 title: 最大记录的属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fc309cebef284d20dd738c3ba5ed39c5997f3f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279326"
 ---
 # <a name="maxrecords-property-example-vc"></a>最大记录的属性示例 （VC + +）
 此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)以打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)包含中的 10 成本最高标题***标题***表。  
@@ -180,6 +180,6 @@ void PrintComError(_com_error &e) {
 **长时间的数据 Deprivation： 四个案例研究---19.99**  
 **寿司，任何人？---14.99**  
 **Buckingham 宫殿厨房---11.95 中的 50 个年**   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [最大记录属性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

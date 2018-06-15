@@ -2,7 +2,6 @@
 title: OpenSchema 方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52eaf3a58ae7f6eeaddecb943b5a129dec5e44e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 780e708d5e852601333fb319291e1e9db9450c39
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280526"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 从提供程序获取数据库架构信息。  
@@ -45,12 +45,12 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  任何[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)值，该值表示架构运行查询的类型。  
   
  *条件*  
- 選擇性。 数组的每个查询约束*QueryType*选项，因为列入[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)。  
+ 可选。 数组的每个查询约束*QueryType*选项，因为列入[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)。  
   
  *SchemaID*  
  提供程序架构查询未定义的 OLE DB 规范的 GUID。 此参数是必需的如果*QueryType*设置为**adSchemaProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **OpenSchema**方法返回有关数据源，例如什么表是在数据源，在表中，列中的自我描述的信息和支持数据类型。  
   
  *QueryType*自变量是一个 GUID，指示返回的列 （架构）。 OLE DB 规范有架构的完整列表。  
@@ -73,7 +73,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="applies-to"></a>适用范围  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OpenSchema 方法示例 (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [OpenSchema 方法示例 （VC + +）](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
  [Open 方法 （ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   

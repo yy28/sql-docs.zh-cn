@@ -2,7 +2,6 @@
 title: ActiveCommand 属性示例 (JScript) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a45371bc6ab4a03df228632a081f9b3cc791aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4272cda6ce23406661c216944a155b2de6d61349
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275006"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 属性示例 (JScript)
 此示例演示[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActiveCommandJS.asp**。  
@@ -129,7 +129,7 @@ if (strName.length > 0)
 <!-- EndActiveCommandJS -->  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveCommand 属性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

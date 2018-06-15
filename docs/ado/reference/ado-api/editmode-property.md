@@ -2,7 +2,6 @@
 title: EditMode 属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e31414c353a1157d25da420428502772872cb35e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fd943679fc15cde9a3349b455decc778889b0c6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277926"
 ---
 # <a name="editmode-property"></a>EditMode 属性
 指示当前记录的编辑状态。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>返回值  
  返回[EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ADO 维护一个与当前记录关联的编辑缓冲区。 此属性指示是否进行了更改到此缓冲区，或是否已创建一条新记录。 使用**EditMode**属性来确定当前记录的编辑状态。 你可以测试挂起的更改被中断编辑过程并确定是否需要使用[更新](../../../ado/reference/ado-api/update-method.md)或[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  
   
  在*立即更新模式* **EditMode**属性重置为**adEditNone**后成功调用**更新**调用方法. 当调用[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)不会成功删除或多个数据源中的记录 （例如，由于引用完整性冲突），[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在编辑模式 (**EditMode** = **adEditInProgress**)。 因此，**正在执行**离开当前的记录之前必须调用 (例如，使用[移动](../../../ado/reference/ado-api/move-method-ado.md)，[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)，或[关闭](../../../ado/reference/ado-api/close-method-ado.md) ).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [游标类型、 LockType，以及 EditMode 属性示例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [游标类型、 LockType 和 EditMode 属性示例 （VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

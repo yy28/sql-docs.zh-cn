@@ -2,7 +2,6 @@
 title: Open 方法 （ADO 连接） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252afc6de9b6cf405fba7ae21a191beef2c198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8035a40949e269fd8d8b039eb1931e8ed17c73c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280006"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 （ADO 连接）
 打开与数据源的连接。  
@@ -40,18 +40,18 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Parameters  
  *ConnectionString*  
- 選擇性。 A**字符串**值，该值包含连接信息。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有关有效的设置的详细信息的属性。  
+ 可选。 A**字符串**值，该值包含连接信息。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有关有效的设置的详细信息的属性。  
   
  *用户 Id*  
- 選擇性。 A**字符串**值，该值包含用于建立连接时所使用的用户名。  
+ 可选。 A**字符串**值，该值包含用于建立连接时所使用的用户名。  
   
  *密码*  
- 選擇性。 A**字符串**值，该值包含要建立连接时使用的密码。  
+ 可选。 A**字符串**值，该值包含要建立连接时使用的密码。  
   
- *Options*  
- 選擇性。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，该值确定是否将此方法应返回后 （同步） 或 （异步） 建立连接之前。  
+ *选项*  
+ 可选。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，该值确定是否将此方法应返回后 （同步） 或 （异步） 建立连接之前。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**打开**方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象建立到数据源的物理连接。 此方法成功完成后，连接处于活动状态并可以发出对其的命令，还可以处理的结果。  
   
  使用可选*ConnectionString*自变量以指定包含一系列的连接字符串*参数* *= value*语句由分号分隔，或提供一个 URL 标识的文件或目录资源。 **ConnectionString**属性都将自动继承的值用于*ConnectionString*自变量。 因此，你可以设置**ConnectionString**属性**连接**对象然后再打开它，或使用*ConnectionString*参数用于设置或重写在当前连接参数**打开**方法调用。  
@@ -69,7 +69,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="applies-to"></a>适用范围  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [打开和关闭方法的示例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [打开和关闭方法的示例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [打开和关闭方法的示例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

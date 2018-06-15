@@ -2,7 +2,6 @@
 title: 错误对象属性、 方法和事件 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab6625b93d0d58e8ab1fd823e69f5cbc77737851
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdfd2a117fea0d2bdf85f1fc54c3cd847ff93458
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277996"
 ---
 # <a name="error-object-properties-methods-and-events"></a>错误对象属性、 方法和事件
 ## <a name="properties"></a>属性  
@@ -43,5 +43,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误对象](../../../ado/reference/ado-api/error-object.md)

@@ -2,7 +2,6 @@
 title: 优化属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881d332c6f7e1ac0f74a54dcacc7e9e7e3382006
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b750a30030d3f37e0b53af36001fa10929756a4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279996"
 ---
 # <a name="optimize-property-example-vb"></a>优化属性示例 (VB)
 此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象的动态**优化**属性。 ***Zip***字段***作者***表中***Pubs***数据库未被索引。 设置[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性**True**上***zip***字段授权 ADO 建立索引，可改进的性能[查找](../../../ado/reference/ado-api/find-method-ado.md)方法。  
@@ -90,6 +90,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
  [Optimize 属性 - 动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

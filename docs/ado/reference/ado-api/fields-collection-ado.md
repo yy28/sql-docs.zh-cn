@@ -2,7 +2,6 @@
 title: 字段集合 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4eebfb3b3e401585829446872545063448ec87d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2641f21c0726d010990964d84f89148814e866c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278486"
 ---
 # <a name="fields-collection-ado"></a>字段集合 (ADO)
 包含所有[字段](../../../ado/reference/ado-api/field-object.md)的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**记录集**对象具有**字段**组成的集合**字段**对象。 每个**字段**对象中的列对应**记录集**。 你可以填充**字段**集合，然后再打开**记录集**通过调用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)对集合的方法。  
   
 > [!NOTE]
@@ -49,5 +49,5 @@ ms.lasthandoff: 05/03/2018
   
 -   [字段集合属性、 方法和事件](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)

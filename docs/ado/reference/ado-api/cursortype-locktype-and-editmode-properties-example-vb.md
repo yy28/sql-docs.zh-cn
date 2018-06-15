@@ -2,7 +2,6 @@
 title: 游标类型、 LockType，以及 EditMode 属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 207ef59f8dd2263fcc3f32aee1ba63270bdcda61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e624b9b45ae02524cba20d6a01915818b5589fa
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277316"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>游标类型、 LockType，以及 EditMode 属性示例 (VB)
 此示例演示如何设置[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性在打开之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各种条件下的属性。 有关运行此过程需要 EditModeOutput 函数。  
@@ -126,7 +126,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [游标类型属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode 属性](../../../ado/reference/ado-api/editmode-property.md)   

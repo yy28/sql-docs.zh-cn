@@ -2,7 +2,6 @@
 title: '集合 （Visual c + + 语法索引与 #import） |Microsoft 文档'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92ffc11b2011ff5f37aee25266d0f229b1dfd617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276526"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合 （Visual c + + 语法索引与 #import）
 它是有助于你了解集合继承某些常见的方法和属性。  
@@ -100,7 +100,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

@@ -2,7 +2,6 @@
 title: GetRows 方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a22412b6ffdcbc2884292f482996973dd99158a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3f4af181439ea74b0f55f49e97f19e955eec517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278866"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法示例 （VC + +）
 此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索指定的数目的行从[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并使用生成的数据来填充数组。 **GetRows**方法将返回所需的行数小于在两种情况： 任一如果[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**只有第二种情况发生时。 有关运行此过程需要 GetRowsOK 函数。  
@@ -232,7 +232,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- 輸入  
+ 输入  
   
 ```  
 2  
@@ -247,7 +247,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [BOF，EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

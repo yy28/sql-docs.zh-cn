@@ -2,7 +2,6 @@
 title: LockTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,21 +19,22 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 672e2c781dfa25eb44b0531e44885a58fe25cc48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4137ced62a083bb355a685222a044fdd9efacdf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279216"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定的编辑期间在记录上放置的锁的类型。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|指示开放式批量更新。 批处理更新模式，所需。|  
 |**adLockOptimistic**|3|指示乐观锁定，记录的记录。 提供程序使用乐观锁定，锁定记录，仅在调用[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
 |**adLockPessimistic**|2|指示悲观锁定，记录的记录。 提供程序执行必要的操作以确保成功编辑的记录，通常通过编辑后立即锁定数据源中的记录。|  
-|**adLockReadOnly**|1|指示只读的记录。 无法更改的数据。|  
+|**adLockReadOnly**|@shouldalert|指示只读的记录。 无法更改的数据。|  
 |**adLockUnspecified**|-1|未指定锁的类型。 克隆，具有相同的锁类型与原始创建克隆。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  

@@ -2,7 +2,6 @@
 title: Clone 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33fee6bf55b3175d75879e06949744d0730f6af0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f993cee93bce398020fdb5ae2b43a7911114a270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276426"
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 创建副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从现有对象**记录集**对象。 （可选） 指定的克隆是只读的。  
@@ -48,9 +48,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  标识的对象变量**记录集**可以进行复制的对象。  
   
  *LockType*  
- 選擇性。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值指定与原始的锁类型**记录集**，或只读模式**记录集**。 有效值为**adLockUnspecified**或**adLockReadOnly**。  
+ 可选。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值指定与原始的锁类型**记录集**，或只读模式**记录集**。 有效值为**adLockUnspecified**或**adLockReadOnly**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**克隆**方法来创建多个重复**记录集**对象，尤其是如果你想要维护多个给定的一组记录中的当前记录。 使用**克隆**方法是比创建并打开新更高效**记录集**使用相同的定义作为原始的对象。  
   
  [筛选器](../../../ado/reference/ado-api/filter-property.md)属性的原始**记录集**，如果任何，不会应用于克隆。 设置**筛选器**属性的新**记录集**以筛选的结果。 将复制任何现有的最简单方法**筛选器**值是将它分配直接、，如下所示。  
@@ -73,22 +73,22 @@ rsNew.Filter = rsOriginal.Filter
   
 |事件|在克隆中触发？|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|否|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|否|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|否|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|“否”|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|“否”|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|“否”|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|否|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|“否”|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|“否”|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|否|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|“否”|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|“否”|  
   
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [克隆方法示例 (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [克隆方法示例 (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Clone 方法示例 (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

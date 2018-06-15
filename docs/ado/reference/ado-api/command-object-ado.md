@@ -2,7 +2,6 @@
 title: 命令对象 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf4a875b8ffbae9442f415fcf56d72809900da81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42d1e3e442de94bd9cc062fc903a694c20a9a547
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276636"
 ---
 # <a name="command-object-ado"></a>命令对象 (ADO)
 定义要对数据源执行的特定命令。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**命令**对象，用于查询数据库并返回中的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，来执行大容量操作，或操作数据库的结构。 一些具体的提供程序的功能取决于**命令**集合、 方法或属性会引用它们时，可能会生成错误。  
   
  使用集合、 方法和属性的**命令**对象，你可以执行以下操作：  
@@ -80,7 +80,7 @@ objCmd(0)
   
 -   [命令对象属性、 方法和事件](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

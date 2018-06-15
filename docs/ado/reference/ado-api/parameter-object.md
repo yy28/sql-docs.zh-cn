@@ -2,7 +2,6 @@
 title: 参数对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59474a000d3def675caf66085380c6a3791805c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280706"
 ---
 # <a name="parameter-object"></a>Parameter 对象
 表示参数或参数与关联[命令](../../../ado/reference/ado-api/command-object-ado.md)对象基于参数化的查询或存储的过程。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  许多提供程序支持参数化的命令。 这些是在其中一次，定义所需的操作的命令，但变量 （或参数） 用于更改该命令的某些详细信息。 例如，一个 SQL SELECT 语句可以使用一个参数定义的 WHERE 子句，另一个用于定义的排序依据子句的列名称的匹配条件。  
   
  **参数**对象表示与参数化查询，关联的参数或输入/输出参数和返回值的存储过程。 具体取决于提供程序、 一些集合、 方法或属性的功能**参数**对象可能不可用。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [参数对象属性、 方法和事件](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

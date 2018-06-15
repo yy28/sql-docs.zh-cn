@@ -2,7 +2,6 @@
 title: 正在执行方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a5b570920e0a9b44263c0ae8783da1eee99040
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14557cb420d3a878ae6fa6e7cd70cce45fa6bd71
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276316"
 ---
 # <a name="cancelupdate-method-ado"></a>正在执行方法 (ADO)
 取消对当前或新的行进行任何更改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，然后再调用[更新](../../../ado/reference/ado-api/update-method.md)方法。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 recordset.CancelUpdaterecord.Fields.CancelUpdate  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>记录集  
  使用**正在执行**方法可取消对当前行进行任何更改，或放弃新添加的行。 您无法取消对当前行或新行的更改后调用**更新**方法，除非所做的更改是你可以回滚，事务的任一一部分[不](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法或部分批量更新。 对于批处理更新时，你可以取消**更新**与**正在执行**或[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法。  
@@ -45,7 +45,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  如果你处于编辑模式，并想要离开当前记录 (例如，通过使用[移动](../../../ado/reference/ado-api/move-method-ado.md)，[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)，或[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法)，你可以使用**正在执行**取消任何挂起的更改。 你可能需要执行此操作，如果更新不能成功发布到数据源。 例如，尝试删除失败由于违反了引用完整性而将保留**记录集**在编辑模式下调用了[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)。  
   
-## <a name="record"></a>記錄  
+## <a name="record"></a>录制  
  **正在执行**方法取消任何挂起的插入或删除[字段](../../../ado/reference/ado-api/field-object.md)对象，并取消挂起的现有字段的更新并将它们还原到其原始值。 [状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性中的所有字段**字段**集合设置为**adFieldOK**。  
   
 ## <a name="applies-to"></a>适用范围  
@@ -54,7 +54,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 |-|-|  
 |[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [更新和正在执行的方法示例 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [更新和正在执行的方法示例 （VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

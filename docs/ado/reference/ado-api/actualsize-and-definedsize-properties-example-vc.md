@@ -2,7 +2,6 @@
 title: ActualSize 和 DefinedSize 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe74dafe719743f9726d8e5980091865b500c48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275056"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 属性示例 （VC + +）
 此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小的字段的属性。  
@@ -150,6 +150,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **存储名称： Bookbeat**  
 **定义大小： 40**  
 **实际大小： 8**   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActualSize 属性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 属性](../../../ado/reference/ado-api/definedsize-property.md)
