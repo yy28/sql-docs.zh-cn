@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851122"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>使用不带参数的 SQL 语句
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

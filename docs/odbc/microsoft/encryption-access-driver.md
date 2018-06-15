@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899392"
 ---
 # <a name="encryption-access-driver"></a>加密 （Access 驱动程序）
 (此控件的本质时才可用版本 4。*x*选择格式。)  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853112"
 ---
 # <a name="system-requirements"></a>系统要求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +58,7 @@ Linux 和 macOS 驱动程序是仅适用于以下操作系统的 64 位版本：
   
 -   针对 64 位 SQLLEN/SQLULEN 生成的 64 位 UnixODBC 2.3.0 驱动程序管理器。 Linux 上的 ODBC 驱动程序不支持更高版本的 64 位 UnixODBC 驱动程序管理器。 有关详细信息，请参阅 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 。  
   
--   ODBC 驱动程序**Red Hat Enterprise Linux 5 （64 位）**需要以下包，并且可以在此处下载： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
+-   ODBC 驱动程序**Red Hat Enterprise Linux 5 （64 位）** 需要以下包，并且可以在此处下载： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -65,7 +66,7 @@ Linux 和 macOS 驱动程序是仅适用于以下操作系统的 64 位版本：
     -   `krb5-libs`  
     -   `openssl`  
   
--   ODBC 驱动程序**Red Hat Enterprise Linux 6 （64 位）**需要以下包，并且可以在此处下载： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
+-   ODBC 驱动程序**Red Hat Enterprise Linux 6 （64 位）** 需要以下包，并且可以在此处下载： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -73,7 +74,7 @@ Linux 和 macOS 驱动程序是仅适用于以下操作系统的 64 位版本：
     -   `krb5-libs`  
     -   `openssl`  
   
--   ODBC 驱动程序**SUSE Linux Enterprise 11 Service Pack 2 （64 位）**需要以下包，并且可以在此处下载： [for SQL Server-SUSE Linux 的 Microsoft ODBC Driver 11 预览](http://go.microsoft.com/fwlink/?LinkId=264916)  
+-   ODBC 驱动程序**SUSE Linux Enterprise 11 Service Pack 2 （64 位）** 需要以下包，并且可以在此处下载： [for SQL Server-SUSE Linux 的 Microsoft ODBC Driver 11 预览](http://go.microsoft.com/fwlink/?LinkId=264916)  
     -   `glibc`  
     -   `libstdc++46`  
     -   `libgcc46`  

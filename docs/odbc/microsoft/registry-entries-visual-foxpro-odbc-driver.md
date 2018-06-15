@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903522"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>注册表项 （Visual FoxPro ODBC 驱动程序）
 在安装 Visual FoxPro ODBC 驱动程序时，安装程序将更新你的系统注册表中，注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，添加新项称为 Microsoft Visual FoxPro 驱动程序中。 在该注册表项，添加以下表中描述的值。  

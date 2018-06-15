@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870842"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,17 +71,17 @@ ms.lasthandoff: 05/03/2018
   
 -   **扩展保护**  
   
-     可能的值为 **“关闭”**、 **“允许”**和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 **“扩展保护”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“关闭”**、 **“允许”** 和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 **“扩展保护”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
-    -   当设置为 **“关闭”**时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 **“关闭”** 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 当您知道客户端操作系统不支持扩展保护时，请使用此设置。  
+    -   当设置为 **“关闭”** 时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 **“关闭”** 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 当您知道客户端操作系统不支持扩展保护时，请使用此设置。  
   
-    -   当设置为 **“允许”**时，来自支持 **扩展保护** 的操作系统的连接需要 **扩展保护**。 来自不支持**扩展保护** 的操作系统的连接将忽略 **扩展保护**。 来自运行在受保护客户端操作系统上的不受保护客户端应用程序的连接被拒绝。 此设置虽比 **“关闭”**更安全，但仍不是最安全的设置。 在混合环境（即有些操作系统支持 **扩展保护** ，有些不支持）中使用此设置。  
+    -   当设置为 **“允许”** 时，来自支持 **扩展保护** 的操作系统的连接需要 **扩展保护**。 来自不支持**扩展保护** 的操作系统的连接将忽略 **扩展保护**。 来自运行在受保护客户端操作系统上的不受保护客户端应用程序的连接被拒绝。 此设置虽比 **“关闭”** 更安全，但仍不是最安全的设置。 在混合环境（即有些操作系统支持 **扩展保护** ，有些不支持）中使用此设置。  
   
-    -   当设置为 **“必需”**时，只接受来自受保护操作系统上受保护应用程序的连接。 此设置是最安全的，但来自不支持 **扩展保护** 的操作系统或应用程序的连接将无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+    -   当设置为 **“必需”** 时，只接受来自受保护操作系统上受保护应用程序的连接。 此设置是最安全的，但来自不支持 **扩展保护** 的操作系统或应用程序的连接将无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   **接受的 NTLM SPN**  
   
-     当多个 SPN 知道一个服务器时，需要 **“接受的 NTLM SPN”** 变量。 当客户端尝试使用服务器不知道的有效 SPN 连接到服务器时，服务绑定将失败。 为避免此问题，用户可以使用 **“接受的 NTLM SPN”**指定表示服务器的多个 SPN。 **“接受的 NTLM SPN”** 是一系列由分号分隔的 SPN。 例如，若要允许 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，请在“接受的 NTLM SPN”  框中键入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 变量的最大长度为 2048 个字符。 **“接受的 NTLM SPN”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     当多个 SPN 知道一个服务器时，需要 **“接受的 NTLM SPN”** 变量。 当客户端尝试使用服务器不知道的有效 SPN 连接到服务器时，服务绑定将失败。 为避免此问题，用户可以使用 **“接受的 NTLM SPN”** 指定表示服务器的多个 SPN。 **“接受的 NTLM SPN”** 是一系列由分号分隔的 SPN。 例如，若要允许 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，请在“接受的 NTLM SPN”  框中键入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 变量的最大长度为 2048 个字符。 **“接受的 NTLM SPN”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>为数据库引擎启用扩展保护  
  若要使用 **扩展保护**，服务器和客户端都必须具有支持 **扩展保护**的操作系统，并且必须在操作系统上启用 **扩展保护** 。 有关如何为操作系统启用 **扩展保护** 的详细信息，请参阅 [针对验证的扩展保护](http://support.microsoft.com/kb/968389)。  

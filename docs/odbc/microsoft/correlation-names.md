@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897672"
 ---
 # <a name="correlation-names"></a>相关名称
 完全支持相关名称，包括表列表中。 例如，以下字符串中 E1 是名为 Emp 的表的相关名：  

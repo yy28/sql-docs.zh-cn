@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32865552"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>配置 remote login timeout 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“高级”** 节点。  
   
-3.  在 **“网络”**下，为 **“远程登录超时值”** 框选择一个值。  
+3.  在 **“网络”** 下，为 **“远程登录超时值”** 框选择一个值。  
   
      使用 **remote login timeout** 选项可以指定从远程登录失败返回前等待的秒数。  
   
