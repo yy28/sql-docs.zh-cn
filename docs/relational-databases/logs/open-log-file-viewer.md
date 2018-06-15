@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32943302"
 ---
 # <a name="open-log-file-viewer"></a>打开日志文件查看器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,31 +65,31 @@ ms.lasthandoff: 05/03/2018
   
     -   展开“SQL Server 日志”，右键单击任何日志文件，然后单击“查看 SQL Server 日志”。 还可以双击任何日志文件。  
   
-     这些日志包括 **“数据库邮件”**、 **“SQL Server”**、 **“SQL Server 代理”**和 **“Windows NT”**。  
+     这些日志包括 **“数据库邮件”**、 **“SQL Server”**、 **“SQL Server 代理”** 和 **“Windows NT”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-jobs"></a>查看与作业相关的日志  
   
 -   在对象资源管理器中，展开“SQL Server 代理”，右键单击“作业”，然后单击“查看历史记录”。  
   
-     这些日志包括 **“数据库邮件”**、 **“作业历史记录”**和 **“SQL Server 代理”**。  
+     这些日志包括 **“数据库邮件”**、 **“作业历史记录”** 和 **“SQL Server 代理”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>查看与维护计划相关的日志  
   
 -   在对象资源管理器中，展开“管理”，右键单击“维护计划”，然后单击“查看历史记录”。  
   
-     这些日志包括 **“数据库邮件”**、 **“作业历史记录”**、 **“维护计划”**、 **“远程维护计划”**和 **“SQL Server 代理”**。  
+     这些日志包括 **“数据库邮件”**、 **“作业历史记录”**、 **“维护计划”**、 **“远程维护计划”** 和 **“SQL Server 代理”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-data-collection"></a>查看与数据收集相关的日志  
   
 -   在对象资源管理器中，展开“管理”，右键单击“数据收集”，然后单击“查看日志”。  
   
-     这些日志包括 **“数据收集”**、 **“作业历史记录”**和 **“SQL Server 代理”**。  
+     这些日志包括 **“数据收集”**、 **“作业历史记录”** 和 **“SQL Server 代理”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-database-mail"></a>查看与数据库邮件相关的日志  
   
 -   在对象资源管理器中，展开“管理”，右键单击“数据库邮件”，然后单击“查看数据库邮件日志”。  
   
-     这些日志包括 **“数据库邮件”**、“作业历史记录”、 **“维护计划”**、 **“远程维护计划”**、 **“SQL Server”**、 **“SQL Server 代理”**和 **“Windows NT”**。  
+     这些日志包括 **“数据库邮件”**、“作业历史记录”、 **“维护计划”**、 **“远程维护计划”**、 **“SQL Server”**、 **“SQL Server 代理”** 和 **“Windows NT”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
   

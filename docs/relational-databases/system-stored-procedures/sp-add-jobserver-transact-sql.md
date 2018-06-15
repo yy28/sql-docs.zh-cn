@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237875"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  任一*job_id*或*job_name*必须指定，但不能同时指定。  
   
  [ **@server_name =** ] **'***server***'**  
- 该作业的目标服务器的名称。 *服务器*是**nvarchar (30)**，默认值为 N'(LOCAL)。 *服务器*可以是**（本地）**本地服务器，或现有的目标服务器的名称。  
+ 该作业的目标服务器的名称。 *服务器*是**nvarchar (30)**，默认值为 N'(LOCAL)。 *服务器*可以是 **（本地）** 本地服务器，或现有的目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

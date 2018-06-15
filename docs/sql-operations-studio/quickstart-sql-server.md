@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235387"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 连接和查询 SQL Server 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门演示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 SQL Server，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。

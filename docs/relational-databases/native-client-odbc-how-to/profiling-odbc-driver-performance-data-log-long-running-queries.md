@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946692"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驱动程序的性能数据的日志长时间运行查询
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  选择**将长时间运行查询保存到日志文件**。 在该框中，放置应记录长时间运行的查询的文件的名称。 （可选） 单击**浏览**浏览文件系统对查询日志。  
   
-7.  设置查询超时间隔，以毫秒为单位，在**长查询时间 （毫秒）**框。  
+7.  设置查询超时间隔，以毫秒为单位，在**长查询时间 （毫秒）** 框。  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以编程方式记录长时间运行的查询数据  
   
