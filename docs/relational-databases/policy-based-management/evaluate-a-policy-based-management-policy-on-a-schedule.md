@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32952672"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>定期评估基于策略的管理策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-evaluate-a-policy-on-a-schedule"></a>按计划评估策略  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要评估的策略计划的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要评估的策略计划的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  在“打开策略 - policy_name”对话框的“评估模式”列表中，选择“按计划”。  
   
-7.  在 **“计划”**中，单击 **“选取”** 指定现有的计划，或 **“新建”** 创建新的计划。  
+7.  在 **“计划”** 中，单击 **“选取”** 指定现有的计划，或 **“新建”** 创建新的计划。  
   
 8.  完成后，单击 **“确定”**。  
   
