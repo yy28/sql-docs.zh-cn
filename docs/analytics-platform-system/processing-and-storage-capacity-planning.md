@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539597"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>分析平台系统中的处理和存储容量
 你的业务需求确定数据缩放单位数和计算节点磁盘中你分析平台系统 (AP) 的设备所需的大小。 使用这些处理和存储的计算来指导你购买和规划决策的容量。  

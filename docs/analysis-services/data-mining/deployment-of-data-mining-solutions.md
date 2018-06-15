@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34015214"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署数据挖掘解决方案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
  在部署解决方案时，将在与解决方案文件同名的数据库中的指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中创建用于数据挖掘的对象。  
   
 ###  <a name="bkmk_RelationalSltn"></a> 部署关系解决方案  
- 在部署关系数据挖掘解决方案时，将在新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中创建所需的数据挖掘对象，并且默认情况下会处理这些对象。 可以使用配置属性 **“处理选项”**更改处理选项。 有关详细信息，请参阅[配置 Analysis Services 项目属性 (SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+ 在部署关系数据挖掘解决方案时，将在新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中创建所需的数据挖掘对象，并且默认情况下会处理这些对象。 可以使用配置属性 **“处理选项”** 更改处理选项。 有关详细信息，请参阅[配置 Analysis Services 项目属性 (SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
  默认情况下，每次只部署增量更改。 换句话说，您可以修改一个挖掘模型，并且在您重新部署项目时，只会更新该挖掘模型。 但是，如果有多个客户端同时在编辑 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，则此操作可能会导致错误。 若要更改默认部署模式，以便在部署解决方案时刷新整个数据库，请更改 **“部署模式”** 属性。  
   

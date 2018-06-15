@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544809"
 ---
 # <a name="backup-and-restore"></a>备份和还原
 描述如何备份和还原可并行数据仓库 (PDW) 数据。 备份和还原操作用于灾难恢复。 备份和还原还可将数据库从一个设备复制到另一个设备。  

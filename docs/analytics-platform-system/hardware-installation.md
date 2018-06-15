@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539087"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>针对分析平台系统设备的硬件安装
 本文介绍如何将移动，请解压缩，并安装 SQL Server PDW 设备的硬件。 这篇文章仅供参考，旨在帮助你了解这一过程。 应打开包装后，安装，以及移交给你的它之前，请验证你的设备。 客户参与是必需的项目例如数据中心访问、 电源和以太网连接。  

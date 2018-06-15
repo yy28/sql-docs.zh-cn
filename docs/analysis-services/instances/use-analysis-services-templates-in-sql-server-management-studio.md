@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019194"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -129,7 +130,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
     > [!WARNING]  
     >  您不能通过更改限制列表或通过在连接对话框中指定数据库来设置 XMLA 查询的上下文。 您必须从要查询的数据库打开 XMLA 查询窗口。  
   
-2.  打开 **“模板资源管理器”**，将模板 **“发现架构行集”**拖入空白查询窗口中。  
+2.  打开 **“模板资源管理器”**，将模板 **“发现架构行集”** 拖入空白查询窗口中。  
   
 3.  在模板中，替换[RequestType 元素&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素与以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   

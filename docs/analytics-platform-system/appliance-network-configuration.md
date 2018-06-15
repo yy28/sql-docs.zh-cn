@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539307"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>分析平台系统的设备的网络配置
 生成和使用修复的一组 IP 地址在所有服务器和合适的设备从 IHV 的工厂配置分析平台系统 (AP) 设备。 在设备的传递，必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。  

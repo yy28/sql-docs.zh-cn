@@ -23,6 +23,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33701795"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志受**sp_pdw_log_user_data_masking**确信[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志。 **sp_pdw_log_user_data_masking**不会影响数据库事务日志，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志。  
   
- **背景信息：**在默认配置[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，并且在某些情况下可以包括如包含在操作中的用户数据**插入**， **更新**，和**选择**语句。 如果设备上的问题，这就允许分析导致了该问题并且无需重现此问题的条件。 为了防止用户数据都将写入到[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，客户可以选择使用此存储的过程启用的用户数据屏蔽。 语句仍将写入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，但所有将屏蔽可能包含用户数据的语句中的文字; 替换为某些预定义的常量值。  
+ **背景信息：** 在默认配置[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，并且在某些情况下可以包括如包含在操作中的用户数据**插入**， **更新**，和**选择**语句。 如果设备上的问题，这就允许分析导致了该问题并且无需重现此问题的条件。 为了防止用户数据都将写入到[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，客户可以选择使用此存储的过程启用的用户数据屏蔽。 语句仍将写入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，但所有将屏蔽可能包含用户数据的语句中的文字; 替换为某些预定义的常量值。  
   
  在设备上启用透明数据加密时中的用户数据屏蔽[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志将自动打开。  
   

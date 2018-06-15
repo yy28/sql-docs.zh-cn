@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539497"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>分析平台系统向 Microsoft 发送遥测反馈
 分析平台系统具有一个可选的遥测功能，将管理控制台数据发送给 Microsoft。 

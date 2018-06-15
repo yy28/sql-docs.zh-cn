@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539487"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>分析平台系统中的证书设置
 **PDW 证书预配**Analytics Platform System 页**Configuration Manager**导入或删除 PDW 所使用的证书。 

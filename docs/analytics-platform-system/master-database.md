@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538537"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 数据库的并行数据仓库
 SQL Server PDW master 数据库存储设备级别登录名信息和数据库目录。 它是控制节点驻留的 SQL Server master 数据库。 在这种情况下，它提供类似的功能到 SQL Server PDW 像 master 提供到 SQL Server。  

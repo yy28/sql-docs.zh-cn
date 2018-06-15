@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544729"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>备份和加载硬件概述-并行数据仓库
 若要部署端到端数据仓库解决方案分析平台系统 (AP) 上并行数据仓库 (PDW)，你需要创建备份数据仓库和加载数据的计划。 使用本指南来获取和配置将根据业务需求的备份和加载服务器。  

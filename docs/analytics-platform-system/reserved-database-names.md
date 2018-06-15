@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539447"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>并行数据仓库中保留的数据库名称
 保留的数据库名称是不能分配给 SQL Server PDW 中的用户数据库的名称。  

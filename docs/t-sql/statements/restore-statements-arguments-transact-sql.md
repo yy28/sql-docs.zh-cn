@@ -25,6 +25,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33702940"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/07/2018
  { database_name | *@***database_name_var}  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- 是将日志或整个数据库还原到的数据库。 如果作为变量 (@**database_name_var) 提供，则可以将此名称指定为字符串常量 (@*database_name_var = database_name*) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量**。  
+ 是将日志或整个数据库还原到的数据库。 如果作为变量 (@**database_name_var) 提供，则可以将此名称指定为字符串常量 (@*database_name_var = database_name*) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量 **。  
   
  \<file_or_filegroup_or_page> [ ,...n ]  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34016614"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>选择用于测试挖掘模型的列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
   
 -   在创建交叉验证报表时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动分析所有具有相同可预测属性的模型。  
   
--   当选择了选项 **“同步预测列和值”**时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动选择具有相同名称和匹配的数据类型的可预测列。 如果您的列不满足这些条件，则可以关闭此选项并手动选择一个可预测列。 如果要使用具有与该模型不同的列的外部数据集测试该模型，则可能需要执行此操作。 但是，如果您选择的列的数据类型有误，则您将收到错误或错误的结果。  
+-   当选择了选项 **“同步预测列和值”** 时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动选择具有相同名称和匹配的数据类型的可预测列。 如果您的列不满足这些条件，则可以关闭此选项并手动选择一个可预测列。 如果要使用具有与该模型不同的列的外部数据集测试该模型，则可能需要执行此操作。 但是，如果您选择的列的数据类型有误，则您将收到错误或错误的结果。  
   
 ### <a name="specify-the-outcome-to-predict"></a>指定要预测的结果  
   
@@ -43,9 +44,9 @@ ms.lasthandoff: 05/10/2018
   
 3.  选择 **“输入选择”** 选项卡。  
   
-4.  在 **“输入选择”** 选项卡的 **“可预测列名称”**下，为要包含在图表中的每个模型选择一个可预测列。  
+4.  在 **“输入选择”** 选项卡的 **“可预测列名称”** 下，为要包含在图表中的每个模型选择一个可预测列。  
   
-     **“可预测列名称”** 框中提供的挖掘模型列只有使用类型设置为 **“预测”** 或 **“仅预测”**的列。  
+     **“可预测列名称”** 框中提供的挖掘模型列只有使用类型设置为 **“预测”** 或 **“仅预测”** 的列。  
   
 5.  如果希望确定模型的提升情况，则必须从 **“预测值”** 列表为该模型选择要度量的特定结果值。  
   

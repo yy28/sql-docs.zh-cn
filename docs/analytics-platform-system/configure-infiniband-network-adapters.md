@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539017"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>为分析平台系统配置无线带宽技术网络适配器
 描述如何在要连接到控制节点上并行数据仓库 (PDW) 的非设备客户端服务器上配置无线带宽技术网络适配器。 基本连接性和高可用性，以便加载、 备份、 和其他进程自动连接到活动的无限带宽网络内容，请使用这些说明。  

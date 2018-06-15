@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020124"
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>检索元数据-使用 ADOMD.NET 对象模型
   ADOMD.NET 提供了一个对象模型，用于查看分析数据源中包含的多维数据集和从属对象。 但通过对象模型并不能获得给定分析数据源中的所有元数据。 通过对象模型只可访问那些对客户端应用程序的显示而言最有用的信息，以允许用户以交互方式构造命令。 由于要显示的元数据的复杂性较低，因而 ADOMD.NET 对象模型的使用较为简单。  

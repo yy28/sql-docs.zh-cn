@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019304"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -191,7 +192,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  单击服务应用程序的名称，默认名称为 **“Excel 服务应用程序”**。  
   
-3.  在 **“管理 Excel Services 应用程序”**页上，单击 **“数据模型设置”**。  
+3.  在 **“管理 Excel Services 应用程序”** 页上，单击 **“数据模型设置”**。  
   
 4.  单击 **“添加服务器”**。  
   
@@ -225,7 +226,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  选择 **“从 SQL Server”**。  
   
-5.  在 **“数据连接向导”**中，输入包含您要使用的数据库的 SQL Server 实例的名称。  
+5.  在 **“数据连接向导”** 中，输入包含您要使用的数据库的 SQL Server 实例的名称。  
   
 6.  在登录凭据下，验证是否选择了“使用 Windows 身份验证”  ，然后选择“下一步” 。  
   

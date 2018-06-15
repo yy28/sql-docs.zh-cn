@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539757"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>了解分析平台系统中的管理控制台警报
 警报显示在设备**管理控制台**并在**System Center Operations Manager** (SCOM)。 使用警报的此列表可帮助确定哪些警报需要进一步研究。  

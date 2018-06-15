@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539527"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>配置远程表副本的并行数据仓库
 描述如何配置 SQL Server PDW，若要使用远程表复制功能将表复制到非设备服务器上的 SMP SQL Server 数据库。  

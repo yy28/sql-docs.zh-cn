@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014874"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>将预测函数应用于模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="add-prediction-functions-to-a-query"></a>向查询添加预测函数  
   
-1.  在 **“预测查询生成器”**中，通过在 **“单独查询输入”** 对话框中提供值或将模型映射到外部数据源来配置用于预测的输入数据。  
+1.  在 **“预测查询生成器”** 中，通过在 **“单独查询输入”** 对话框中提供值或将模型映射到外部数据源来配置用于预测的输入数据。  
   
      有关详细信息，请参阅 [为预测查询选择和映射输入数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/10/2018
 3.  在添加每个函数或表达式后，切换到 DMX 视图可查看该函数在 DMX 语句中的添加方式。  
   
     > [!WARNING]  
-    >  在您单击 **“结果”**之前，预测查询生成器不会验证 DMX。 通常，您会发现查询生成器所生成的表达式不是有效 DMX。 典型的原因是，引用的列与可预测列不相关或尝试预测嵌套表中的列（这需要嵌套 SELECT 语句）。 此时，您可以切换到 DMX 视图并继续编辑该语句。  
+    >  在您单击 **“结果”** 之前，预测查询生成器不会验证 DMX。 通常，您会发现查询生成器所生成的表达式不是有效 DMX。 典型的原因是，引用的列与可预测列不相关或尝试预测嵌套表中的列（这需要嵌套 SELECT 语句）。 此时，您可以切换到 DMX 视图并继续编辑该语句。  
   
 ### <a name="example-create-a-query-on-a-clustering-model"></a>示例：创建对聚类分析模型的查询  
   
@@ -89,13 +90,13 @@ ms.lasthandoff: 05/10/2018
   
 5.  在查询网格中，为“源”选择 TM_Clustering 挖掘模型并添加列 [Bike Buyer]。  
   
-6.  为 **“源”**选择 **“预测函数”**并添加函数 **Cluster**。  
+6.  为 **“源”** 选择 **“预测函数”** 并添加函数 **Cluster**。  
   
 7.  为“源”选择“预测函数”，添加函数 **PredictSupport**，并将模型列 [Bike Buyer] 拖入“条件/参数”框。 在“别名”列中键入 **Support** 。   
   
      从“条件/参数”框复制表示预测函数和列引用的表达式。  
   
-8.  为 **“源”**选择 **“自定义表达式”**，键入别名，然后使用以下语法引用 Excel CEILING 函数：  
+8.  为 **“源”** 选择 **“自定义表达式”**，键入别名，然后使用以下语法引用 Excel CEILING 函数：  
   
     ```  
     Excel![CEILING](<arguments) as <return type>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832534"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>为 SSL 加密配置客户端
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

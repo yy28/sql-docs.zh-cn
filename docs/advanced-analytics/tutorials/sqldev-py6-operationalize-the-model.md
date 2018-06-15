@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203469"
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>步骤 6： 具有可操作性 Python 模型时使用 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +25,8 @@ ms.lasthandoff: 04/16/2018
 
 本课演示如何创建基于 Python 模型的预测的两种方法： 批处理评分，和评分逐行。
 
-- **批量计分：**若要提供输入数据的多个行，SELECT 查询作为参数传递到存储过程。 结果是一个表的输入事例与对应的观察结果。
-- **单个评分：**作为输入传递的单个参数值集。  存储过程将返回单个行或值。
+- **批量计分：** 若要提供输入数据的多个行，SELECT 查询作为参数传递到存储过程。 结果是一个表的输入事例与对应的观察结果。
+- **单个评分：** 作为输入传递的单个参数值集。  存储过程将返回单个行或值。
 
 作为存储过程的一部分提供了所有所需的评分的 Python 代码。
 

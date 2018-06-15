@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203589"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在使用 olapR R 中创建 MDX 查询
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -180,7 +181,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>返回指定维度和层次结构的所有成员
 
-定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，以作为前缀的项**->**表示的上一个成员的子级。
+定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，以作为前缀的项**->** 表示的上一个成员的子级。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

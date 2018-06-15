@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544979"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>监视设备，但有管理员控制台-分析平台系统
 管理员控制台是一个 SQL Server PDW web 应用程序呈现的设备状态、 运行状况和性能信息。 用户连接到 Internet 资源管理器通过管理控制台。  

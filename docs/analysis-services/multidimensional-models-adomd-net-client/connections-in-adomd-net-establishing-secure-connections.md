@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020684"
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET-建立安全连接
   当在 ADOMD.NET 中使用连接时，用于连接的安全方法取决于的值**ProtectionLevel**在调用时使用的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

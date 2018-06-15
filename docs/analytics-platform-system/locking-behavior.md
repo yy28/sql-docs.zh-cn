@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539457"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>并行数据仓库中的锁定行为
 了解如何并行数据仓库使用锁定以确保事务完整性并在多个用户同时访问数据时维护数据库的一致性。  

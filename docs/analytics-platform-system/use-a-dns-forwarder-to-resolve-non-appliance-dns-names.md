@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544939"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 转发器来解析分析平台系统中的非设备 DNS 名称
 可以在 Active Directory 域服务节点上配置 DNS 转发器 (***appliance_domain *-AD01**和 ***appliance_domain *-AD02**) 以允许你分析平台系统设备的脚本和访问外部服务器的软件应用程序。  

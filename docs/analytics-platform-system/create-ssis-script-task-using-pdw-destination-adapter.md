@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538967"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>创建使用 SSIS 并行数据仓库目标适配器的脚本任务
 此 SSIS 包脚本代码是代码示例，用于使用 SSIS PDW 目标适配器。  Integration Services 脚本任务，可在.Net 应用程序的上下文中的 SSIS 控制流中执行，可几乎任何操作。 

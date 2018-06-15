@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539057"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>监视设备，但有系统视图的分析平台系统
 本文列出了可用于监视 SQL Server PDW 的系统视图。  

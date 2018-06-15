@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31545113"
 ---
 # <a name="create-an-aps-domain-administrator"></a>创建一个 AP 域管理员
 某些操作需要 Analytics Platform System 域管理员权限。 本部分说明如何创建其他设备域管理员。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544919"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>并行数据仓库组件的分析平台系统
 本文介绍如何设备软件和分析平台系统的非设备软件组件。  

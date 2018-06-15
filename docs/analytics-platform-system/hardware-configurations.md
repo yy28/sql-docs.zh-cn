@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544719"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>硬件配置的分析平台系统
 分析平台系统 (AP) 硬件的架构使用可缩放单位，以便根据你的业务要求购买合适的处理和存储量。 设备缩放存储的 SQL Server 并行数据仓库 (PDW) 从几兆兆字节到超过 6 的千万亿字节数据。  

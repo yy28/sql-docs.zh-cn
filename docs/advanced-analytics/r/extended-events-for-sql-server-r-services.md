@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202679"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的扩展的事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,7 +92,7 @@ SQL Server 机器学习服务开始在 SQL Server 进程外部运行某些服务
   
 + **BXLServer**是支持与外部脚本语言，如 R 或 Python 的 SQL 可扩展性的附属进程。 为每个外部语言实例启动时 BxlServer 的单独实例。
   
-    若要捕获与 BXLServer 相关的事件，将放置*.config* R 或 Python 安装目录中的文件。  在默认安装中，这将是：
+    若要捕获与 BXLServer 相关的事件，将放置 *.config* R 或 Python 安装目录中的文件。  在默认安装中，这将是：
      
     **:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 

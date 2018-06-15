@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539047"
 ---
 # <a name="monitor-appliance-health-state"></a>监视器设备运行状况状态
 此文章介绍了如何通过使用管理控制台中，或通过直接查询的并行数据仓库动态管理视图监视分析平台系统设备的状态。 
@@ -84,7 +85,7 @@ ORDER BY
   
 若要查看的所有组件的所有属性，请删除`WHERE  p.property_name = 'Status'`子句。  
   
-**[Update_time]**列将显示该组件已轮询的 SQL Server PDW 运行状况代理的最后一个时间。  
+**[Update_time]** 列将显示该组件已轮询的 SQL Server PDW 运行状况代理的最后一个时间。  
   
 > [!CAUTION]  
 > 请务必调查该问题，当组件 5 分钟或更长时间; 不已对轮询可能表明软件检测信号出现问题的警报。  

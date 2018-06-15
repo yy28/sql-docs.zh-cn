@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539137"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>备份服务器容量规划工作表中的并行数据仓库
 此容量规划工作表可帮助你确定执行 SQL Server PDW 数据库备份的备份服务器的要求和还原操作。 用于创建您的计划购买新的或设置现有备份服务器。  

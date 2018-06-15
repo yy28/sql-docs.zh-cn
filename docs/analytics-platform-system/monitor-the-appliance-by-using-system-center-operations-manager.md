@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538977"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>与 System Center Operations Manager-分析平台系统监视器
 使用 System Center Operations Manager (SCOM) 来监视分析平台系统 (AP) 设备。

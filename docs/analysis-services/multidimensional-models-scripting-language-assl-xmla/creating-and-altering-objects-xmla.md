@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020974"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>创建和更改对象 (XMLA)
   可以单独创建、更改和删除主要对象。 主要对象包括以下对象：  

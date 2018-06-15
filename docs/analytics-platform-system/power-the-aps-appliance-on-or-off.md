@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538757"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>用于分析平台系统的电源装置打开或关闭
 本主题介绍如何开启或关闭你分析平台 Systemappliance 运行并行数据仓库，并根据需要运行的 HDInsight 区域。 使用本主题时移动分析平台系统设备，或 power 在设备上灾难性电源发生故障后。  

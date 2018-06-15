@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538397"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system"></a>还原 master 数据库中分析平台系统
 **还原 Master**页的 SQL Server PDW 配置管理器使你可以从备份还原 master 数据库。  

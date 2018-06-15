@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34016544"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定用作回归量的列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/10/2018
   
 8.  从 **“挖掘模型”** 菜单中，选择 **“处理模型”**。  
   
-     在查看器中，该模型将表示为包含递归公式的单个节点。 您可以在 **“挖掘图例”**中查看该公式，或者可以通过使用查询提取公式的系数。  
+     在查看器中，该模型将表示为包含递归公式的单个节点。 您可以在 **“挖掘图例”** 中查看该公式，或者可以通过使用查询提取公式的系数。  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 线性回归算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

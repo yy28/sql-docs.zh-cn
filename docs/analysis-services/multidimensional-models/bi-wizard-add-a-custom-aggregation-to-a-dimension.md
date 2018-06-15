@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020704"
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 向导-向维度中添加自定义聚合
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,6 +34,6 @@ ms.lasthandoff: 05/10/2018
 ## <a name="adding-custom-aggregation-unary-operator"></a>添加自定义聚合（一元运算符）  
  在第二个 **“指定一元运算符”** 页中，为自定义聚合指定所需的父属性，并为一元运算符指定维度表中的源列。 **“父特性”** 会列出 **Usage** 属性设置为 **Parent**的特性。 如果具有多个父属性，则选择对应于要使用的父子关系的父属性。 如果没有列出父属性，则维度不存在有效的父子层次结构。  
   
- 在 **“源列”**中，选择包含一元运算符的字符串列。 （该选择将设置父特性的 **UnaryOperatorColumn** 属性。）维度表还应具有指定一元汇总运算符的字符串列。 该列中的字符串值应包含有效的聚合运算符。 如果某行为空，则通常计算对应的成员。 如果列中的公式无效，则当检索使用成员的单元值时，会出现运行时错误。 有关详细信息，请参阅 [父子维度中的一元运算符](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)。  
+ 在 **“源列”** 中，选择包含一元运算符的字符串列。 （该选择将设置父特性的 **UnaryOperatorColumn** 属性。）维度表还应具有指定一元汇总运算符的字符串列。 该列中的字符串值应包含有效的聚合运算符。 如果某行为空，则通常计算对应的成员。 如果列中的公式无效，则当检索使用成员的单元值时，会出现运行时错误。 有关详细信息，请参阅 [父子维度中的一元运算符](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)。  
   
   
