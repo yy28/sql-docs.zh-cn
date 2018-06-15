@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6268d095bf3a560e30ea0494c7664663a7fd9a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309006"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>返回值  
 如果在计算行数时出错，则返回**false** 。 否则，返回结果集中的行数。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 sqlsrv_num_rows 需要客户端、 静态、 或键集游标，并且将返回**false**如果你使用向前游标或动态游标。 （向前游标是默认值。）有关游标的详细信息，请参阅[sqlsrv_query](../../connect/php/sqlsrv-query.md)和[游标类型&#40;SQLSRV 驱动程序&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
@@ -96,6 +96,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

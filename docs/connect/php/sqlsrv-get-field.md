@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aea71596e1a977839fb7294df7324f48324e0c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1396662cc17d54899eb697694c452e663eaf533
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309266"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 ## <a name="return-value"></a>返回值  
 字段数据。 使用 *$getAsType* 参数可以指定返回数据的 PHP 数据类型。 如果没有指定返回数据类型，将返回默认 PHP 数据类型。 有关默认 PHP 类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 有关指定默认 PHP 数据类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 组合**sqlsrv_fetch**和**sqlsrv_get_field**提供对数据的只进访问权限。  
   
 组合**sqlsrv_fetch**/**sqlsrv_get_field**加载到脚本内存中设置行结果的一个字段，并允许 PHP 返回类型规范。 (有关如何指定 PHP 返回类型的信息，请参阅[How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。)此函数组合还允许流式检索数据。 (有关检索数据的流形式的信息，请参阅[使用 SQLSRV 驱动程序流的形式检索数据](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)。)  
@@ -114,7 +114,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [检索数据](../../connect/php/retrieving-data.md)  

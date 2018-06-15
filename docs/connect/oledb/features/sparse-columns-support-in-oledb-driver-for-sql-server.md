@@ -2,7 +2,7 @@
 title: OLE DB 驱动程序中的 SQL Server 的稀疏列支持 |Microsoft 文档
 description: OLE DB 驱动程序中的 SQL Server 的稀疏列支持
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 616dfb431456099749250c7cc61540f6b36e7926
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8e0139f126760cd62b44d699d8a0eef4fbaee38
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612003"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>OLE DB 驱动程序中的 SQL Server 的稀疏列支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 驱动程序的 SQL Server 支持稀疏列。 有关详细信息中的稀疏列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[使用稀疏列](../../../relational-databases/tables/use-sparse-columns.md)和[使用列集](../../../relational-databases/tables/use-column-sets.md)。  
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
  但是，如果**queryout**使用的导出和你引用稀疏列的稀疏列集按名称的成员，无法执行直接导入同样结构化表。 这是因为 BCP 使用元数据与一致**选择\*** 导入操作并且不能以匹配**column_set**成员与此元数据的列。 若要导入**column_set**成员列单独，必须定义上引用所需的表的视图**column_set**列，并且必须执行导入操作使用视图。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)  
   
   

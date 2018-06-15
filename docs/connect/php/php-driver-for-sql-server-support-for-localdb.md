@@ -5,8 +5,6 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.prod_service: drivers
-ms.component: php
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -15,11 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92be589df4038d152f07445d7cd5fa4ffafc935b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308746"
 ---
 # <a name="support-for-localdb"></a>对 LocalDB 的支持
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 05/03/2018
 
 LocalDB 是轻量版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，这也是可用自[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 本主题介绍如何连接到 LocalDB 实例中的数据库。
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 有关 LocalDB，包括如何安装 LocalDB 和配置 LocalDB 实例，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上的联机丛书主题[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express LocalDB。
 
@@ -82,6 +81,6 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
 
 有关安装 LocalDB 的说明，请参阅[LocalDB 文档](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 如果使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，你将需要[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [连接到服务器](../../connect/php/connecting-to-the-server.md)

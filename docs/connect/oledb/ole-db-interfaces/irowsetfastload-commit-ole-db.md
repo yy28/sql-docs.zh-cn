@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d93c7a83880e81331f6322386fa3ccbc983fc4ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad752273420523a9f8a72db01b8c3053a5b05bfb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306126"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ HRESULT Commit(
  E_UNEXPECTED  
  该方法调用以前失效的大容量复制行集上**IRowsetFastLoad::Commit**方法。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  为 SQL Server 大容量复制行集 OLE DB 驱动程序的行为方式与延迟更新模式行集。 插入的行在用户插入通过行集的行数据，如将被视为以相同的方式为挂起行集支持插入**IRowsetUpdate**。  
   
  使用者必须调用**提交**大容量复制行集写入到插入的行上的方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]方式与相同的表**IRowsetUpdate::Update**方法用于提交挂起的行SQL Server 的实例。  
@@ -62,7 +62,7 @@ HRESULT Commit(
   
  使用者可以通过调用执行批处理插入的行**提交**方法替换*fDone*参数设置为 FALSE。 当*fDone*是设置为 TRUE，行集将变为无效。 无效的大容量复制行集仅支持**ISupportErrorInfo**接口和**IRowsetFastLoad::Release**方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

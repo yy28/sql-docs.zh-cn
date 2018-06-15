@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307656"
 ---
 # <a name="how-to-perform-transactions"></a>如何：执行事务
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 此主题的其余部分介绍并演示了如何使用 SQLSRV 驱动程序执行事务。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 如下概述执行事务的步骤：  
   
 1.  使用 **sqlsrv_begin_transaction**开始事务。  
@@ -156,7 +156,7 @@ function perform_trans_ops($conn, $orderId)
 ### <a name="comments"></a>注释  
 为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，我们建议检查任何调用**sqlsrv**函数是否有错误，并相应地处理它们。
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [事务 （数据库引擎）](https://msdn.microsoft.com/library/ms190612.aspx)

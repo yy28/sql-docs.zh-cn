@@ -2,9 +2,10 @@
 title: 数据类型映射中 ITableDefinition |Microsoft 文档
 description: ITableDefinition 中的数据类型映射
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,15 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 31917fb7724ac9009db2d789ad08db8200944b1b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: d613fc7be394bbf16c86c5e217e3dfe83a4296a1
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305976"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666347"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   通过使用创建表时**ITableDefinition::CreateTable**函数，可指定的 SQL Server 使用者 OLE DB 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的数据类型*pwszTypeName*的成员传递的 DBCOLUMNDESC 数组。 如果使用者按名称指定列的数据类型，OLE DB 数据类型映射，由表示*wType* DBCOLUMNDESC 结构中，成员将被忽略。  
   

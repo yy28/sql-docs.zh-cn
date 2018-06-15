@@ -2,10 +2,10 @@
 title: Blob 和 OLE 对象 |Microsoft 文档
 description: BLOB 和 OLE 对象
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e78fe8db35684bb35e4111a38d3d0ba938891785
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666077"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序公开**ISequentialStream**接口以支持对使用者访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**，**文本**，**映像**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**，和 xml 数据类型作为二进制大型对象 (Blob)。 **读取**方法**ISequentialStream**允许使用者检索的可管理区块中的数据量。  
   
- 有关演示此功能的示例，请参阅[设置大型数据 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
+ 有关演示此功能的示例，请参阅[设置大型数据&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  SQL Server 的 OLE DB 驱动程序可以使用使用者实现**IStorage**接口时使用者提供在访问器中的接口指针绑定针对数据修改。  
   
@@ -59,16 +62,16 @@ ms.lasthandoff: 05/03/2018
   
 -   如果某一行包含多个单个大型数据值和 DBPROP_ACCESSORDER 不 DBPROPVAL_AO_RANDOM，使用者必须使用为 SQL Server 支持光标的行集 OLE DB 驱动程序来检索行数据，或者在检索其他之前处理所有的大数据值行值。 如果 DBPROP_ACCESSORDER DBPROPVAL_AO_RANDOM，SQL Server 的 OLE DB 驱动程序缓存作为二进制大型对象 (Blob) 的 xml 数据类型，以便可以按任意顺序访问。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
--   [获取大数据](../../oledb/ole-db-blobs/getting-large-data.md)  
+-   [获取大型数据](../../oledb/ole-db-blobs/getting-large-data.md)  
   
--   [设置较大的数据](../../oledb/ole-db-blobs/setting-large-data.md)  
+-   [设置大型数据](../../oledb/ole-db-blobs/setting-large-data.md)  
   
--   [用于 BLOB 输出参数的流式处理支持](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [BLOB 输出参数的流支持](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 编程的 OLE DB 驱动程序](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
- [使用较大的值类型](../../oledb/features/using-large-value-types.md)  
+ [使用大值类型](../../oledb/features/using-large-value-types.md)  
   
   

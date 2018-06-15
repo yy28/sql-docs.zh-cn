@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ruby
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8b4cd36a78952e8d783e79388ede49287e5e0f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb14bee9528ad23b212bb0a7ffbbba02e1c39678
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309696"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步骤 1： 配置用于 Ruby 开发的开发环境
 你将需要配置你的开发环境满足先决条件才能开发应用程序使用的 SQL Server Ruby 驱动程序。    
@@ -34,8 +34,8 @@ ms.lasthandoff: 05/03/2018
   
 2.  **安装 Ruby**  
 安装程序在下载之后，执行以下操作：  
-a. 双击文件以启动安装程序。  
-b. 选择你的语言，并同意这些条款。  
+A. 双击文件以启动安装程序。  
+B. 选择你的语言，并同意这些条款。  
 c.  在安装设置屏幕中，选择对路径和将.rb 和.rbw 文件与此 Ruby 安装这两个添加 Ruby 可执行文件旁边的复选框。  
   
 3.  **下载 Ruby DevKit**  
@@ -43,8 +43,8 @@ c.  在安装设置屏幕中，选择对路径和将.rb 和.rbw 文件与此 Rub
   
 4.  **安装 Ruby DevKit**  
 下载完成后，请执行以下操作：  
-a. 双击该文件。 将会要求你提取文件的位置。  
-b. 单击"..."按钮，然后选择"C:\DevKit"。 你可能需要首先创建此文件夹，通过单击"新建文件夹"。  
+A. 双击该文件。 将会要求你提取文件的位置。  
+B. 单击"..."按钮，然后选择"C:\DevKit"。 你可能需要首先创建此文件夹，通过单击"新建文件夹"。  
 c. 单击"确定"，和然后"提取"，提取文件。  
   
 5. **打开 cmd.exe**  

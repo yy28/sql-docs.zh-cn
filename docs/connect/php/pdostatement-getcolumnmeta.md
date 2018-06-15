@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 954bc27f3bfaaf14a9ccb9fd7b97ffee7b9f274c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308526"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ array PDOStatement::getColumnMeta ( $column );
 ## <a name="return-value"></a>返回值  
 包含列的元数据的关联阵列（键和值）。 有关数组中的字段的说明，请参阅“备注”部分。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 下表介绍 getColumnMeta 返回的数组中的字段。  
   
 |NAME|VALUES|  
@@ -48,7 +48,7 @@ array PDOStatement::getColumnMeta ( $column );
 |driver:decl_type|指定用于表示数据库中的列值的 SQL 类型。 如果结果集中的列是函数的结果，则 PDOStatement::getColumnMeta 不会返回此值。|  
 |flags|指定为此列设置的标志。 始终为 0。|  
 |NAME|指定数据库中的列的名称。|  
-|table|指定包含数据库中的列的表格名称。 始终为空白。|  
+|表|指定包含数据库中的列的表格名称。 始终为空白。|  
 |len|指定列长度。|  
 |精度|指定此列的数值精度。|  
 |pdo_type|指定此列的类型，由 PDO::PARAM_* 常量表示。 Always PDO::PARAM_STR (2)。|  
@@ -73,7 +73,7 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

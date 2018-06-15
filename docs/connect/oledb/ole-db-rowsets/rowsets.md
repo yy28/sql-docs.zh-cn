@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d3f187118cd273712ed8145bbfef3af712091028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e03aa5a887f25e9909ff2c755cfbfa598166475
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306696"
 ---
 # <a name="rowsets"></a>行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   行集是一组包含数据列的行。 行集是使所有 OLE DB 数据访问接口能够以表格形式公开结果集数据的中心对象。  
   
- 使用者通过创建一个会话后**IDBCreateSession::CreateSession**方法，使用者可以使用两个**IOpenRowset**或**IDBCreateCommand**会话创建行集上的接口。 SQL Server 的 OLE DB 驱动程序支持这两种接口。 下面描述这两种方法。  
+ 使用者通过创建一个会话后**IDBCreateSession::CreateSession**方法，使用者可以使用两个**IOpenRowset**或**IDBCreateCommand**要创建行集的会话的接口。 SQL Server 的 OLE DB 驱动程序支持这两种接口。 下面描述这两种方法。  
   
 -   通过调用创建行集**IOpenRowset::OpenRowset**方法。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  使用者释放使用的行集**IRowset::Release**方法。 释放行集时，将释放由该行集的使用者持有的任何行控点。 释放行集时，不会释放取值函数。 如果你有**IAccessor**接口，它仍然存在于正式发行。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [使用 IOpenRowset 创建行集](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
@@ -61,13 +61,13 @@ ms.lasthandoff: 05/03/2018
   
 -   [提取行](../../oledb/ole-db-rowsets/fetching-rows.md)  
   
--   [提取具有 IRow 的单个行](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [使用 IRow 提取单行](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [书签](../../oledb/ole-db-rowsets/bookmarks.md)  
   
--   [更新行集合中的数据](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
+-   [更新行集中的数据](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

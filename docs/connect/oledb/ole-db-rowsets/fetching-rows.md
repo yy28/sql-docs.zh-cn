@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 51f88888b2d6387bb406511b1330dba2113752d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f57b4e44fd548a82c441f7882bf3ac22fa51410
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307316"
 ---
 # <a name="fetching-rows"></a>提取行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,11 +64,11 @@ ms.lasthandoff: 05/03/2018
   
  当使用者是完成与行集时，它将调用**IAccessor::ReleaseAccessor**方法来释放任何访问器。 它调用**iunknown:: Release**公开要释放行集的行集的所有接口上的方法。 释放行集时，它将强制释放使用者可能持有的任何剩余的行或取值函数。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [下次提取位置](../../oledb/ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [行集](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

@@ -2,9 +2,10 @@
 title: 执行存储的过程通过 ODBC 调用以及如何处理输出 |Microsoft 文档
 description: 处理返回代码和输出参数使用的 SQL Server OLE DB 驱动程序
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5a7ac8e2f84bf428e743c6a9aaff3e2337835408
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 89e08882d06111e02057a95586c4f38c27b8db76
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305666"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665557"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>执行存储的过程通过 ODBC 调用以及如何处理输出
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果该命令将返回多个结果，输出参数的数据是否可用时**IMultipleResults::GetResult**返回 DB_S_NORESULT 或**IMultipleResults**完全发布接口，先发生者为准。  
   

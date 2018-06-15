@@ -2,7 +2,7 @@
 title: 更新应用程序从 SQL Server 2005 的本机客户端 |Microsoft 文档
 description: 更新应用程序从 SQL Server 2005 Native Client
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: faea11704538aea426d5c1c6fdbe8018893dcdc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60a03e3ec34c29821a6b29d3174b11c5376511e6
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612062"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -47,5 +48,5 @@ ms.lasthandoff: 05/03/2018
 |插入到空字符串**sql_variant**绑定是日期/时间类型生成错误。|在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 9.0，插入到空字符串**sql_variant**绑定日期/时间类型未生成错误。 OLE DB 驱动程序的 SQL Server 将在此情况下正确生成错误。|  
 |当有触发器运行时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能会返回不同的结果。|在中引入的更改[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]可能会导致应用程序具有不同的结果从导致触发器时要运行的语句返回**NOCOUNT OFF**已起作用。 在这种情况下，您的应用程序可能会生成错误。 若要解决此错误，将设置**NOCOUNT ON**触发器中。|  
 
-## <a name="see-also"></a>另请参阅   
+## <a name="see-also"></a>请参阅   
  [适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)

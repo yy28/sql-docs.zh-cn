@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4f1169ac498362d8716f532b08f8928cac507287
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9648462e65ed85b5a9652e193dc63d30059c0753
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306866"
 ---
 # <a name="creating-sql-server-indexes"></a>创建 SQL Server 索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,17 +47,17 @@ ms.lasthandoff: 05/03/2018
   
 |属性 ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_CLUSTERED|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：控制索引聚类分析。<br /><br /> VARIANT_TRUE: SQL Server 的 OLE DB 驱动程序将尝试上创建聚集的索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持对任何表最多创建一个聚集索引。<br /><br /> VARIANT_FALSE: SQL Server 的 OLE DB 驱动程序将尝试上创建非聚集索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。|  
-|DBPROP_INDEX_FILLFACTOR|读/写︰ 读/写<br /><br /> 默认值： 0<br /><br /> 说明：指定用于存储的索引页所占的百分比。 有关详细信息，请参阅[CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md)。<br /><br /> 变量类型为 VT_I4。 该值必须大于或等于 1 且小于或等于 100。|  
-|DBPROP_INDEX_INITIALIZE|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_NULLCOLLATION|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_NULLS|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_PRIMARYKEY|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE 说明：将该索引创建为引用完整性 PRIMARY KEY 约束。<br /><br /> VARIANT_TRUE：创建该索引是为了支持表的 PRIMARY KEY 约束。 列必须不可为 Null。<br /><br /> VARIANT_FALSE：该索引不作为表中行值的 PRIMARY KEY 约束使用。|  
-|DBPROP_INDEX_SORTBOOKMARKS|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_TEMPINDEX|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_TYPE|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_UNIQUE|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：对参与的一个或多个列将该索引创建为 UNIQUE 约束。<br /><br /> VARIANT_TRUE：该索引用于唯一约束表中的行值。<br /><br /> VARIANT_FALSE：该索引不对行值进行唯一约束。|  
+|DBPROP_INDEX_AUTOUPDATE|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_CLUSTERED|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：控制索引聚类分析。<br /><br /> VARIANT_TRUE: SQL Server 的 OLE DB 驱动程序将尝试上创建聚集的索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持对任何表最多创建一个聚集索引。<br /><br /> VARIANT_FALSE: SQL Server 的 OLE DB 驱动程序将尝试上创建非聚集索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。|  
+|DBPROP_INDEX_FILLFACTOR|读/写： 读/写<br /><br /> 默认值： 0<br /><br /> 说明：指定用于存储的索引页所占的百分比。 有关详细信息，请参阅[CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md)。<br /><br /> 变量类型为 VT_I4。 该值必须大于或等于 1 且小于或等于 100。|  
+|DBPROP_INDEX_INITIALIZE|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_NULLCOLLATION|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_NULLS|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_PRIMARYKEY|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE 说明：将该索引创建为引用完整性 PRIMARY KEY 约束。<br /><br /> VARIANT_TRUE：创建该索引是为了支持表的 PRIMARY KEY 约束。 列必须不可为 Null。<br /><br /> VARIANT_FALSE：该索引不作为表中行值的 PRIMARY KEY 约束使用。|  
+|DBPROP_INDEX_SORTBOOKMARKS|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_TEMPINDEX|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_TYPE|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序不支持此属性。 尝试将属性设置**CreateIndex**导致 DB_S_ERRORSOCCURRED 返回值。 *DwStatus*属性结构中的成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_UNIQUE|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：对参与的一个或多个列将该索引创建为 UNIQUE 约束。<br /><br /> VARIANT_TRUE：该索引用于唯一约束表中的行值。<br /><br /> VARIANT_FALSE：该索引不对行值进行唯一约束。|  
   
  在提供程序特定属性集 DBPROPSET_SQLSERVERINDEX 中，SQL Server 的 OLE DB 驱动程序定义的以下数据源信息属性。  
   
@@ -156,7 +156,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

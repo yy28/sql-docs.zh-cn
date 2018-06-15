@@ -2,10 +2,10 @@
 title: 调用存储的过程 (OLE DB) |Microsoft 文档
 description: 调用存储过程 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6f4ee66e9f1eaf37f78e3a0a4a326655554c58f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dae3bfeae19e302d7e6320dcd61695d5d79d1e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612282"
 ---
 # <a name="stored-procedures---calling"></a>存储的过程的调用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   存储过程可以有零个或多个参数。 它还可以返回值。 使用用于 SQL Server 的 OLE DB 驱动程序，可以通过传递给存储过程的参数：  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/03/2018
 {rpc SalesByCategory}  
 ```  
   
- 有关演示 RPC 转义序列的示例应用，请参阅[执行存储过程 & #40;使用 RPC 语法 & #41;和处理返回代码和输出参数 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ 有关演示 RPC 转义序列的示例应用，请参阅[执行存储过程&#40;使用 RPC 语法&#41;过程返回代码和输出参数和&#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 语句  
  ODBC 调用转义序列和 RPC 转义序列是首选的方法调用存储的过程而不是[执行](../../../t-sql/language-elements/execute-transact-sql.md)语句。 SQL Server 的 OLE DB 驱动程序使用的 RPC 机制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
@@ -130,7 +133,7 @@ ms.lasthandoff: 05/03/2018
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [存储的过程](../../oledb/ole-db/stored-procedures.md)  
+## <a name="see-also"></a>请参阅  
+ [存储过程](../../oledb/ole-db/stored-procedures.md)  
   
   

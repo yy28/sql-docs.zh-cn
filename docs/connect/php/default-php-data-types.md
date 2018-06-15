@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8ae48b672aa4817f8451eeee788985b4b90694f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307696"
 ---
 # <a name="default-php-data-types"></a>默认 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,40 +37,40 @@ ms.lasthandoff: 05/03/2018
   
 |SQL Server 类型|默认 PHP 类型|默认编码|  
 |-------------------|--------------------|--------------------|  
-|bigint|字符串|8 位字符<sup>1</sup>|  
+|BIGINT|String|8 位字符<sup>1</sup>|  
 |BINARY|Stream<sup>2</sup>|Binary<sup>3</sup>|  
 |bit|Integer|8 位字符<sup>1</sup>|  
-|char|字符串|8 位字符<sup>1</sup>|  
-|date<sup>4</sup>|日期时间|不适用|  
-|datetime<sup>4</sup>|日期时间|不适用|  
-|datetime2<sup>4</sup>|日期时间|不适用|  
-|datetimeoffset<sup>4</sup>|日期时间|不适用|  
-|decimal|字符串|8 位字符<sup>1</sup>|  
-|float|Float|8 位字符<sup>1</sup>|  
+|char|String|8 位字符<sup>1</sup>|  
+|date<sup>4</sup>|DATETIME|不适用|  
+|datetime<sup>4</sup>|DATETIME|不适用|  
+|datetime2<sup>4</sup>|DATETIME|不适用|  
+|datetimeoffset<sup>4</sup>|DATETIME|不适用|  
+|Decimal|String|8 位字符<sup>1</sup>|  
+|FLOAT|float|8 位字符<sup>1</sup>|  
 |地理|Stream|Binary<sup>3</sup>|  
 |geometry|Stream|Binary<sup>3</sup>|  
 |image<sup>5</sup>|Stream<sup>2</sup>|Binary<sup>3</sup>|  
-|int|Integer|8 位字符<sup>1</sup>|  
-|money|字符串|8 位字符<sup>1</sup>|  
-|NCHAR|字符串|8 位字符<sup>1</sup>|  
-|numeric|字符串|8 位字符<sup>1</sup>|  
-|nvarchar|字符串|8 位字符<sup>1</sup>|  
+|ssNoversion|Integer|8 位字符<sup>1</sup>|  
+|money|String|8 位字符<sup>1</sup>|  
+|NCHAR|String|8 位字符<sup>1</sup>|  
+|NUMERIC|String|8 位字符<sup>1</sup>|  
+|NVARCHAR|String|8 位字符<sup>1</sup>|  
 |nvarchar(MAX)|Stream<sup>2</sup>|8 位字符<sup>1</sup>|  
 |ntext<sup>6</sup>|Stream<sup>2</sup>|8 位字符<sup>1</sup>|  
-|real|Float|8 位字符<sup>1</sup>|  
-|smalldatetime|日期时间|8 位字符<sup>1</sup>|  
-|smallint|Integer|8 位字符<sup>1</sup>|  
-|smallmoney|字符串|8 位字符<sup>1</sup>|  
-|sql_variant<sup>7</sup>|字符串|8 位字符<sup>1</sup>|  
+|REAL|float|8 位字符<sup>1</sup>|  
+|smalldatetime|DATETIME|8 位字符<sup>1</sup>|  
+|SMALLINT|Integer|8 位字符<sup>1</sup>|  
+|SMALLMONEY|String|8 位字符<sup>1</sup>|  
+|sql_variant<sup>7</sup>|String|8 位字符<sup>1</sup>|  
 |文本<sup>8</sup>|Stream<sup>2</sup>|8 位字符<sup>1</sup>|  
-|time<sup>4</sup>|日期时间|不适用|  
-|timestamp|字符串|8 位字符<sup>1</sup>|  
-|tinyint|Integer|8 位字符<sup>1</sup>|  
+|time<sup>4</sup>|DATETIME|不适用|  
+|TIMESTAMP|String|8 位字符<sup>1</sup>|  
+|TINYINT|Integer|8 位字符<sup>1</sup>|  
 |UDT|Stream<sup>2</sup>|Binary<sup>3</sup>|  
-|uniqueidentifier|字符串<sup>9</sup>|8 位字符<sup>1</sup>|  
+|UNIQUEIDENTIFIER|字符串<sup>9</sup>|8 位字符<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|Binary<sup>3</sup>|  
 |varbinary(MAX)|Stream<sup>2</sup>|Binary<sup>3</sup>|  
-|varchar|字符串|8 位字符<sup>1</sup>|  
+|varchar|String|8 位字符<sup>1</sup>|  
 |varchar(MAX)|Stream<sup>2</sup>|8 位字符<sup>1</sup>|
 |xml|Stream<sup>2</sup>|8 位字符<sup>1</sup>|  
   
@@ -101,17 +101,17 @@ ms.lasthandoff: 05/03/2018
   
 |功能|PHP 支持|  
 |-----------|---------------|  
-|表值参数|否|  
+|表值参数|“否”|  
 |稀疏列|Partial|  
 |Null 位压缩|是|  
 |大型 CLR 用户定义的类型 (UDT)|是|  
-|服务主体名称|否|  
+|服务主体名称|“否”|  
 |MERGE|是|  
 |FILESTREAM|Partial|  
   
 部分类型支持意味着你无法以编程方式查询列的类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

@@ -2,7 +2,7 @@
 title: 客户端连接中的服务主体名称 (SPN) 支持 |Microsoft 文档
 description: 客户端连接中的服务主体名称 (SPN) 支持
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c119c14cbd0441d22b8e97f8d168d10d652e86d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802d8593c671ecef58f5a0eea8439e2f16898de1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612322"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   开头[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]，对服务主体名称 (Spn) 的支持已扩展为跨所有协议进行相互身份验证。 在以前版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，Spn 仅的受支持 Kerberos over TCP 时默认 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例已与 Active Directory 注册。  
   
@@ -107,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
  有关演示此功能的示例应用程序的信息，请参阅 [SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 功能的 OLE DB 驱动程序](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

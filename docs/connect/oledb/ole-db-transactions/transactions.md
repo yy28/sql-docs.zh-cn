@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7967610f4dce32fbe00ed777d3ab9a5744221814
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fecf4c91b95cdb140261afe5303520d11d63afe7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308296"
 ---
 # <a name="transactions"></a>中的
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server 的 OLE DB 驱动程序公开**ITransactionLocal**界面，允许使用显式和隐式在单个连接到的实例上启动事务的使用者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 SQL Server 的 OLE DB 驱动程序不支持嵌套的本地事务。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [支持本地事务](../../oledb/ole-db-transactions/supporting-local-transactions.md)  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [隔离级别&#40;OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

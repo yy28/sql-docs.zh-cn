@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611972"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -215,17 +216,18 @@ sudo systemctl start mssql-server
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | 与第三方连接的分布式的查询 |
+| &nbsp; | 到 SQL Server 以外的数据源的链接的服务器 |
 | &nbsp; | 系统扩展的存储过程（XP_CMDSHELL 等） |
 | &nbsp; | Filetable，FILESTREAM |
 | &nbsp; | 带有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集 |
 | &nbsp; | 缓冲池扩展 |
 | **SQL Server 代理** |  子系统： CmdExec、 PowerShell、 队列读取器、 SSIS、 SSAS、 SSRS |
-| &nbsp; | 警报 |
+| &nbsp; | Alerts |
 | &nbsp; | 日志读取器代理 |
 | &nbsp; | 变更数据捕获 |
 | &nbsp; | 托管备份 |
 | **高可用性** | 数据库镜像  |
-| **安全性** | 可扩展的密钥管理 |
+| **Security** | 可扩展的密钥管理 |
 | &nbsp; | 对于链接服务器的 AD 身份验证 | 
 | &nbsp; | 可用性组 （承载个可用性组） 的的 AD 身份验证 | 
 | &nbsp; | 第三方 AD 工具 (Centrify，Vintela，Powerbroker) | 

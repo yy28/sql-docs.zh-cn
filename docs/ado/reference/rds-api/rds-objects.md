@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4425704de152325e65de05bc31cb5976b4a2239c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05c8918e45867c149e27a7d9e3739a04e476f65d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288906"
 ---
 # <a name="rds-objects"></a>RDS 对象
 > [!IMPORTANT]
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 |[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|创建客户端代理将位于中间层上的自定义业务对象。<br /><br /> **DataSpace**对象是可安全执行脚本。|  
 |[IRDSService 接口 (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|公开[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)方法，用于将指针返回到所请求的接口，该对象的功能更强大版本上。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS API 参考](../../../ado/reference/rds-api/rds-api-reference.md)
 
 

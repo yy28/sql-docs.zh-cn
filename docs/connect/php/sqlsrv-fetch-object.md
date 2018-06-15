@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b753000c255d6c07777c94e8fb61c847ab10d0c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309146"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,7 +70,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 返回对象中值的数据类型将是默认 PHP 数据类型。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 如果使用可选 *$className* 参数指定类名，将实例化此类类型的对象。 如果该类所具有的属性名称与结果集字段名称相匹配，则相应的结果集值将应用到该属性。 如果结果集字段名称不匹配类属性，则具有结果集字段名称的属性将添加到该对象，并该结果集值将应用到该属性。  
   
 使用 *$className* 参数指定某个类时，应用以下规则：  
@@ -245,7 +245,7 @@ SELECT SCOPE_IDENTITY()</pre>
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [检索数据](../../connect/php/retrieving-data.md)  
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  

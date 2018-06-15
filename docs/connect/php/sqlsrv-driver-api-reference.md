@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,18 +14,19 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44f0da4f969f145e66eb309f2cc90d7f5981d7f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308996"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驱动程序 API 参考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驱动程序的 API 名称为 **sqlsrv**。 所有**sqlsrv**函数开头**sqlsrv_** 后, 跟谓词或名词。 后跟谓词的函数可执行特定操作，后跟名词的函数可返回特定形式的元数据。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 SQLSRV 驱动程序包含以下函数：  
   
 |函数|Description|  
@@ -58,10 +58,10 @@ SQLSRV 驱动程序包含以下函数：
 |[sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)|每次调用该函数时，都可以将最多 8 个字节 (8 KB) 的数据发送到服务器。|  
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|提供有关服务器的信息。|  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>参考  
 [PHP 手册](http://php.net/manual)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Microsoft Drivers for PHP for SQL Server 的概述](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

@@ -2,10 +2,10 @@
 title: 大型 CLR 用户定义类型 (OLE DB) |Microsoft 文档
 description: 大型 CLR 用户定义类型 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611982"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本主题讨论对 OLE DB OLE DB 驱动程序中的 SQL Server 以支持大型公共语言运行时 (CLR) 用户定义类型 (Udt) 的更改。  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  下表显示了参数和行集中的数据类型映射：  
   
-|SQL Server 数据类型|OLE DB 数据类型|内存布局|“值”|  
+|SQL Server 数据类型|OLE DB 数据类型|内存布局|ReplTest1|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] （字节数组\)|132 (oledb.h)|  
   
@@ -128,14 +131,14 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|支持 (2)、(5)|N/A|支持 (3)，(5)|N/A|  
 |DBTYPE_STR|支持 (2)、(5)|N/A|支持 (3)，(5)|N/A|  
 |DBTYPE_IUNKNOWN|支持 (6)|N/A|支持 (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|N/A|支持 (3)，(5)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|支持 (5)|N/A|支持 (3)，(5)|N/A|  
 |DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|1|如果服务器的类型是其他比以外，dbtype_udt 还指定使用**ICommandWithParameters::SetParameterInfo**和访问器类型是以外，dbtype_udt 还，执行语句时出错。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
+|@shouldalert|如果服务器的类型是其他比以外，dbtype_udt 还指定使用**ICommandWithParameters::SetParameterInfo**和访问器类型是以外，dbtype_udt 还，执行语句时出错。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
 |2|数据从十六进制字符串转换为二进制数据。|  
 |3|数据从二进制数据转换为十六进制字符串。|  
 |4|使用时，可能出现验证**CreateAccessor**或**GetNextRows**。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
@@ -174,7 +177,7 @@ ms.lasthandoff: 05/03/2018
   
  当**DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) 设置为"80"，大型 UDT 类型向客户端显示方式的下层客户端显示完全相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [大型 CLR 用户定义类型](../../oledb/features/large-clr-user-defined-types.md)  
   
   

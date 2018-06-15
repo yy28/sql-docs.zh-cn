@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a902d1768d53940f56f1b2460969c7f0105ba7d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5cbb702a20f0c5b6f28be67e9277ef74620f1f7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305776"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **BCPControl**方法会设置进行大容量复制操作包括在取消大容量复制，要将一个数据文件和批大小从复制的第一个和最后一个行的数字之前允许的错误数的各种控制参数。  
   
  从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制数据时，此方法还可用于指定要使用的 SELECT 语句。 你可以设置**eOption** BCP_OPTION_HINTS 自变量和**iValue**要有一个指针指向包含 SELECT 语句的宽字符字符串自变量。  
@@ -87,7 +87,7 @@ HRESULT BCPControl(
  E_OUTOFMEMORY  
  内存不足错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
   

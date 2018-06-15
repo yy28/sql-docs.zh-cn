@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,18 +14,19 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3a11f37c3e82506f5eea48a02bc1997c5de2c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307476"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主题讨论如何使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性来指定直接语句执行而不是默认情况下，即已准备的语句执行。 如果不止一次使用参数绑定执行语句，则将使用已准备的语句可以导致更好的性能。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 如果你想要发送[!INCLUDE[tsql](../../includes/tsql_md.md)]直接向服务器而无需由驱动程序的语句准备的语句，你可以设置与该 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性[pdo:: setattribute](../../connect/php/pdo-setattribute.md) （或驱动程序选项传递给[:: __Construct](../../connect/php/pdo-construct.md)) 或当调用[pdo:: prepare](../../connect/php/pdo-prepare.md)。 默认情况下，PDO::SQLSRV_ATTR_DIRECT_QUERY 的值为 False （准备的语句执行时使用）。  
   
 如果你使用[pdo:: query](../../connect/php/pdo-query.md)，你可能想直接执行。 之前调用[pdo:: query](../../connect/php/pdo-query.md)，调用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)并且 PDO::SQLSRV_ATTR_DIRECT_QUERY 设置为 True。  每次调用[pdo:: query](../../connect/php/pdo-query.md)为 PDO::SQLSRV_ATTR_DIRECT_QUERY 可以具有不同设置执行。  
@@ -69,6 +69,6 @@ ms.lasthandoff: 05/03/2018
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

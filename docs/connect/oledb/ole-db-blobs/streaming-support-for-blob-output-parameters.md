@@ -2,9 +2,10 @@
 title: 对 BLOB 的流式处理支持输出参数 |Microsoft 文档
 description: 用于 BLOB 输出参数的流式处理支持
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 60e0a907bb82d5772395dc846ce6e0a79a6be951
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305216"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665167"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 输出参数的流支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本文包含显示流式处理支持用于 BLOB 输出参数，可将 BLOB 绑定输出作为 ISequentialStreams 的参数的示例。  
   

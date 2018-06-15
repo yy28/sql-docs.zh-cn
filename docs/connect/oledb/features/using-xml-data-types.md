@@ -2,7 +2,7 @@
 title: 使用 XML 数据类型 |Microsoft 文档
 description: 将 XML 数据类型用于 OLE DB 驱动程序适用于 SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -34,16 +34,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f36165da3be9c540166486059cdc0ee150532657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6ec0009a986e2abd56ac00c1e01826f3ed001f7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612172"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引入**xml**使用户可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 因为与其他内置类型，你可以使用**xml**数据类型用作列类型创建表时; 作为变量类型、 参数类型或函数返回类型; 或 CAST 和 CONVERT 函数中。  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入**xml**使用户可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 因为与其他内置类型，你可以使用**xml**数据类型用作列类型创建表时; 作为变量类型、 参数类型或函数返回类型; 或 CAST 和 CONVERT 函数中。  
   
 ## <a name="programming-considerations"></a>编程时的注意事项  
  XML 可以是自描述的，即可以根据需要包含一个 XML 标头来指定文档的编码，例如：  
@@ -89,13 +92,13 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_XML|将通过<sup>6，7</sup>|错误<sup>1</sup>|确定<sup>11、 6</sup>|错误<sup>8</sup>|  
 |DBTYPE_BYTES|将通过<sup>6，7</sup>|N/A<sup>2</sup>|确定<sup>11、 6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>4、 6、 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|确定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|确定<sup>5、 6、 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|字节流通过**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|字节流通过**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|将通过<sup>6，7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|将通过<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|将通过<sup>6，7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果服务器的类型是其他不是使用指定 DBTYPE_XML **ICommandWithParameters::SetParameterInfo**和访问器类型是 DBTYPE_XML，执行语句时出错 （DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）; 否则将数据发送到服务器，但服务器返回错误，指示是否从 XML 没有隐式转换为参数的数据类型。  
+ <sup>1</sup>如果服务器的类型是其他不是使用指定 DBTYPE_XML **ICommandWithParameters::SetParameterInfo**和访问器类型是 DBTYPE_XML，执行语句时出错 (DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）;否则将数据发送到服务器，但服务器将返回一个错误，指示从 XML 没有隐式转换为参数的数据类型。  
   
  <sup>2</sup>超出本文的范围。  
   
@@ -172,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了支持**xml**数据类型通过 OLE DB，OLE DB 驱动程序的 SQL Server 实现新的 DBPROPSET_SQLSERVERPARAMETER 属性集，其中包含以下值。  
   
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录（数据库）的名称。 SQL 三部分组成的名称标识符的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|架构集合内 XML 架构的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
@@ -181,7 +184,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  若要支持中的表创建**ITableDefinition**接口，OLE DB 驱动程序的 SQL Server 将三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定在其中存储 XML 架构的目录的名称。 对于其他列类型，此属性返回一个空字符串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定定义此列的 XML 架构的名称。|  
@@ -230,8 +233,8 @@ ms.lasthandoff: 05/03/2018
  **IRowsetFind::FindNextRow**方法并不适用于**xml**数据类型。 当**IRowsetFind::FindNextRow**称为和*hAccessor*自变量指定 DBTYPE_XML 一列，返回 DB_E_BADBINDINFO。 此时不考虑正在搜索的列的类型。 对于任何其他绑定类型， **FindNextRow**如果要在其中搜索此列属于失败并 DB_E_BADCOMPAREOP **xml**数据类型。  
  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 功能的 OLE DB 驱动程序](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e97984acf60200e133718f945193bfdcb0b5d754
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d47fe33801ca8a4932b6295a5052e9948bc5ef0f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307766"
 ---
 # <a name="example-application-sqlsrv-driver"></a>示例应用程序（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](..
 3.  将 adventureworks_demo.php 和 photo.php 文件放在 Web 服务器的根目录中。  
 4.  通过启动运行该应用程序http://localhost/adventureworks_demo.php从浏览器。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  
   
 -   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息，请参阅[Microsoft Drivers for PHP for SQL Server 的系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
@@ -559,7 +559,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [连接到服务器](../../connect/php/connecting-to-the-server.md)
 
 [比较执行函数](../../connect/php/comparing-execution-functions.md)

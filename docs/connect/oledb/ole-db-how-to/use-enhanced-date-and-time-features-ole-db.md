@@ -2,9 +2,10 @@
 title: 使用增强的日期和时间功能 (OLE DB) |Microsoft 文档
 description: 使用增强的日期和时间功能 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -13,15 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d5a59baba26434df98ccd1768fdd2b050f43a4b4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 1875ed56ee92fbb02013cfd3df0477453a272be5
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305756"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665837"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增强的日期和时间功能 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此示例显示如何使用 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入的日期/时间功能。 此示例使用的四个新的日期和时间类型 (**日期**，**时间**， **datetime2**，和**datetimeoffset**) 以执行命令参数和检索行集结果。  
   

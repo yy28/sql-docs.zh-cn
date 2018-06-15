@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 433635c8260ca4ae2d3a3132f093f8eb5341fad0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309186"
 ---
 # <a name="retrieving-data"></a>检索数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +71,7 @@ PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
   
 [PDO::prepare](../../connect/php/pdo-prepare.md) 可让你指定游标类型。 然后，你可以使用 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 选择一行。 有关示例和详细信息，请参阅 [PDO::prepare](../../connect/php/pdo-prepare.md) 。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |---------|---------------|  
@@ -83,7 +83,7 @@ PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
 ## <a name="related-sections"></a>相关章节  
 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [检索数据](../../connect/php/retrieving-data.md)  

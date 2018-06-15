@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a84db386be38765d27565f461fadc39badc3ca2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308546"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*名称*： 一个可选的字符串，你可以指定序列名称。
 如果提供的序列名称，则最近添加的序列的标识符的字符串。
 如果方法调用失败，则返回空字符串。
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
 版本 2.0 和 4.3 之间可选参数是一个表名，并返回值是最近添加到所提供的表的行的 ID。
 从 5.0 开始，可选的参数视为序列的名称，并且返回值是最近添加的提供的序列名称的序列。
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [PDO 类](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

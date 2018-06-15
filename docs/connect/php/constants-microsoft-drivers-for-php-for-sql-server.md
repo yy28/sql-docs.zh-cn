@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09ba7744f03fca15bb60db7979d31bb141f75c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307006"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常量 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -78,7 +78,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
 ### <a name="err-constants"></a>ERR 常量  
 下表列出了用于指定如果常量[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)返回错误、 警告，或两者。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|将返回在上次调用 **sqlsrv** 函数时生成的错误和警告。 这是默认值。|  
 |SQLSRV_ERR_ERRORS|将返回上次调用 **sqlsrv** 函数时生成的错误。|  
@@ -140,10 +140,10 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
 |SQLSRV 常量|PHP 数据类型|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Integer|  
-|SQLSRV_PHPTYPE_DATETIME|日期时间|  
-|SQLSRV_PHPTYPE_FLOAT|Float|  
+|SQLSRV_PHPTYPE_DATETIME|DATETIME|  
+|SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|字符串|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM**和**SQLSRV_PHPTYPE_STRING**接受一个参数，指定的流编码。 下表包含作为可接受参数的 SQLSRV 常量以及对相应编码的说明。  
   
@@ -163,38 +163,38 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
   
 |SQLSRV 常量|SQL Server 数据类型|  
 |-------------------|------------------------|  
-|SQLSRV_SQLTYPE_BIGINT|bigint|  
+|SQLSRV_SQLTYPE_BIGINT|BIGINT|  
 |SQLSRV_SQLTYPE_BINARY|BINARY|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DATETIME|datetime|  
+|SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DECIMAL|十进制<sup>5</sup>|
-|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|decimal|  
-|SQLSRV_SQLTYPE_FLOAT|float|  
+|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
+|SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|int|  
+|SQLSRV_SQLTYPE_INT|ssNoversion|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|数值<sup>5</sup>|
-|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
+|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
-|SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
+|SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
 |SQLSRV_SQLTYPE_NVARCHAR('max')|nvarchar(MAX)|  
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
-|SQLSRV_SQLTYPE_REAL|real|  
+|SQLSRV_SQLTYPE_REAL|REAL|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
-|SQLSRV_SQLTYPE_SMALLINT|smallint|  
-|SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
+|SQLSRV_SQLTYPE_SMALLINT|SMALLINT|  
+|SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
-|SQLSRV_SQLTYPE_TIMESTAMP|timestamp|  
-|SQLSRV_SQLTYPE_TINYINT|tinyint|  
-|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|uniqueidentifier|  
+|SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
+|SQLSRV_SQLTYPE_TINYINT|TINYINT|  
+|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|  
 |SQLSRV_SQLTYPE_UDT|UDT|  
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  
@@ -267,6 +267,6 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
   
 有关如何使用这些常量的信息，请参阅 [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
   
