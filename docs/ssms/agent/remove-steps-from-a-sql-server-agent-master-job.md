@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33045485"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“步骤”。  
   
-6.  在 **“作业步骤列表”**下，选择要删除的作业步骤，然后单击 **“删除”**。  
+6.  在 **“作业步骤列表”** 下，选择要删除的作业步骤，然后单击 **“删除”**。  
   
 7.  完成后，单击 **“确定”**。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-remove-steps-from-a-sql-server-agent-master-job"></a>从 SQL Server 代理主作业中删除步骤  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

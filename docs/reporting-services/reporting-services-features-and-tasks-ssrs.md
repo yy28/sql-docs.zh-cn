@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026144"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能和任务 (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基础内容按报表和报表功能、报表服务器功能和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 产品功能进行组织。  

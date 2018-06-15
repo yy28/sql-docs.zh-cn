@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030884"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting 属性 - VirtualDirectoryReportServer
   返回报表服务器应用程序的虚拟目录。 只读。  

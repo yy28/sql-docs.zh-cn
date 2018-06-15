@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035814"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   - 运行以下 MDS 团队博客中介绍的脚本：[在实体级别上应用权限时出错](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services
-- **问题和对客户的影响：**对于 1400 兼容级别的表格模型，适用于以下源的数据连接器尚不可用。
+- **问题和对客户的影响：** 对于 1400 兼容级别的表格模型，适用于以下源的数据连接器尚不可用。
   - Amazon Redshift
   - IBM Netezza
   - Impala
@@ -72,11 +73,11 @@ ms.lasthandoff: 05/03/2018
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候选发布（RC1 - 2017 年 7 月）
 ### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS)（RC1 - 2017 年 7 月）
-- **问题和对客户的影响：**存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。
-- **解决方法：**如果现有脚本在 Scale Out 中运行包，则必须将参数名称从 runincluster 更改为 runinscaleout，使脚本在 RC1 中能够正常运行。
+- **问题和对客户的影响：** 存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。
+- **解决方法：** 如果现有脚本在 Scale Out 中运行包，则必须将参数名称从 runincluster 更改为 runinscaleout，使脚本在 RC1 中能够正常运行。
 
-- **问题和对客户的影响：**SQL Server Management Studio (SSMS) 17.1 及更早版本无法在 RC1 的 Scale Out 中触发包执行。 错误消息为：“@runincluster 不是过程 create_execution 的参数。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 SSMS 的版本 17.2 及更高版本支持 Scale Out 中的新参数名称和包执行。 
-- **解决方法：**在 SSMS 版本 17.2 可用之前：
+- **问题和对客户的影响：** SQL Server Management Studio (SSMS) 17.1 及更早版本无法在 RC1 的 Scale Out 中触发包执行。 错误消息为：“@runincluster 不是过程 create_execution 的参数。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 SSMS 的版本 17.2 及更高版本支持 Scale Out 中的新参数名称和包执行。 
+- **解决方法：** 在 SSMS 版本 17.2 可用之前：
   1. 使用现有版本 SSMS 生成包执行脚本。
   2. 将脚本中 runincluster 参数的名称更改为 runinscaleout。
   3. 运行该脚本。
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
-- **问题和对客户的影响：**如果同一台计算机上同时安装了 SQL Server Reporting Services 和 Power BI 报表服务器，并卸载了其中之一，那么将无法通过报表服务器配置管理器连接到剩余的报表服务器。
+- **问题和对客户的影响：** 如果同一台计算机上同时安装了 SQL Server Reporting Services 和 Power BI 报表服务器，并卸载了其中之一，那么将无法通过报表服务器配置管理器连接到剩余的报表服务器。
 - **解决方法**：若要解决此问题，必须在卸载其中一个服务器后执行以下操作。
 
     1. 在管理员模式下启动命令提示符。
@@ -115,7 +116,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **问题和客户影响：**在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项*。系统找不到指定文件。*
+- **问题和客户影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项 *。系统找不到指定文件。*
 
    此外，尝试重新安装 2016 版 TSqlLanguageService.msi 也会失败，并且会看到以下消息：无法安装 Microsoft SQL Server 2016 T-SQL 语言服务，因为计算机上已安装更高版本。
 
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="always-on-availability-groups"></a>AlwaysOn 可用性组
 
-- **问题和对客户的影响：**如果 SQL Server 主版本低于托管主要副本的实例，托管可用性组次要副本的 SQL Server 实例将崩溃。 如果从托管可用性组且受支持的任意 SQL Server 版本升级到 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0，则这些升级将受到影响。 在下列情况下会发生此问题。 
+- **问题和对客户的影响：** 如果 SQL Server 主版本低于托管主要副本的实例，托管可用性组次要副本的 SQL Server 实例将崩溃。 如果从托管可用性组且受支持的任意 SQL Server 版本升级到 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0，则这些升级将受到影响。 在下列情况下会发生此问题。 
 
 > 1. 用户根据[最佳做法](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)升级托管次要副本的 SQL Server 实例。
 > 2. 升级后，便会发生故障转移，并且在升级完可用性组中的所有次要副本之前，新升级的次要副本就会变成主要副本。 旧的主要副本现在是次要副本，即版本低于主要副本。

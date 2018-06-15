@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030684"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting 方法 - ReserveURL
   为给定的应用程序添加一个 URL 保留项。  

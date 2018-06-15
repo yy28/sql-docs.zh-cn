@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036510"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -54,9 +55,9 @@ ms.lasthandoff: 05/03/2018
     - 支持最大 2TB 的表（之前为最大 256GB）。 
     - 为了实现排序和 AlwaysOn 可用性组支持，增强了列存储索引。
 - 新增安全功能：
-    - **Always Encrypted：**启用后，只有具有加密密钥的应用程序，才能访问 SQL Server 2016 数据库中的加密敏感数据。 密钥绝不会传递给 SQL Server。
-    - **动态数据掩码：**如果在表定义中指定，那么大多数用户都看不到已掩码的数据，只有拥有 UNMASK 权限的用户才能看到完整数据。
-    - **行级别安全性：**可以在数据库引擎一级限制数据访问，这样用户就能只看到与其相关的数据。 
+    - **Always Encrypted：** 启用后，只有具有加密密钥的应用程序，才能访问 SQL Server 2016 数据库中的加密敏感数据。 密钥绝不会传递给 SQL Server。
+    - **动态数据掩码：** 如果在表定义中指定，那么大多数用户都看不到已掩码的数据，只有拥有 UNMASK 权限的用户才能看到完整数据。
+    - **行级别安全性：** 可以在数据库引擎一级限制数据访问，这样用户就能只看到与其相关的数据。 
 
 请参阅[数据库引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)

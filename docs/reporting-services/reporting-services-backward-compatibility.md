@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025444"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services 的向后兼容性
 了解 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的行为更改。 这包括不再可用或计划在将来的版本中删除的功能。

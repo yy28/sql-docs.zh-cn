@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033724"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了对象资源管理器，可用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何服务器，并以图形方式浏览其内容。 对于 Reporting Services，可以使用对象资源管理器执行以下操作：  
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  右键单击 Reporting Services，指向“新建”，再单击“服务器注册”。 此时，将显示 **“新建服务器注册”** 对话框。  
   
-4.  在 **“服务器名称”**中，输入一个值。 您必须指定的值因服务器模式而异：  
+4.  在 **“服务器名称”** 中，输入一个值。 您必须指定的值因服务器模式而异：  
   
     -   对于本机模式的报表服务器，请键入报表服务器实例的名称。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定该服务器：\<servername>[\\<instancename\>]。  
   
