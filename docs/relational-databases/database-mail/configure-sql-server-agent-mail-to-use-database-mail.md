@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924832"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在 **“邮件系统”** 列表中，选择 **“数据库邮件”**。  
   
--   在 **“邮件配置文件列表”**中，为数据库邮件选择一个邮件配置文件。  
+-   在 **“邮件配置文件列表”** 中，为数据库邮件选择一个邮件配置文件。  
   
 -   重新启动 SQL Server 代理。  
   

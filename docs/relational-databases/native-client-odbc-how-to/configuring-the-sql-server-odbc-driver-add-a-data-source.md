@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32945882"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>配置 SQL Server ODBC 驱动程序-添加数据源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理器添加数据源  
   
-1.  从**控制面板**，访问**管理工具**然后**ODBC 数据源 （64 位）**或**ODBC 数据源 （32 位）**. 或者，可以调用 odbcad32.exe。  
+1.  从**控制面板**，访问**管理工具**然后**ODBC 数据源 （64 位）** 或**ODBC 数据源 （32 位）**. 或者，可以调用 odbcad32.exe。  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡上，并依次**添加**。  
   

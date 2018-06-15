@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021374"
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>特性属性-将属性绑定到名称列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  在“属性”窗口中，找到 **NameColumn** 属性，然后选择“(新建)”。  
   
-4.  在 **“对象绑定”** 对话框中，为 **“绑定类型”**选择 **“列绑定”**。  
+4.  在 **“对象绑定”** 对话框中，为 **“绑定类型”** 选择 **“列绑定”**。  
   
 5.  在 **“源列”** 列表中，选择属性将要绑定到的列，然后单击 **“确定”**。  
   

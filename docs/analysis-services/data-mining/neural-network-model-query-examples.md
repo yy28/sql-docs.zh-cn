@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018624"
 ---
 # <a name="neural-network-model-query-examples"></a>神经网络模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -176,7 +177,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> 示例查询 5：创建单独预测  
  对神经网络模型生成预测查询的最简单方法是使用预测查询生成器，在 **和** 的数据挖掘设计器的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “挖掘预测” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡中都提供了该生成器。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络查看器中浏览模型来筛选感兴趣的属性并查看趋势，然后切换到 **“挖掘预测”** 选项卡来创建一个查询并预测那些趋势的新值。  
   
- 例如，您可以浏览呼叫中心模型来查看订单量和其他属性之间的相关性。 若要执行此操作，打开模型查看器中，在中，对于**输入**，选择**\<所有 >**。  接下来，为 **“输出”**选择 **“订单数”**。 对于 **“值 1”**，请选择表示最多订单的范围，对于 **“值 2”**，请选择表示最少订单的范围。 然后您将对模型将其与订单量关联的所有属性一目了然。  
+ 例如，您可以浏览呼叫中心模型来查看订单量和其他属性之间的相关性。 若要执行此操作，打开模型查看器中，在中，对于**输入**，选择**\<所有 >**。  接下来，为 **“输出”** 选择 **“订单数”**。 对于 **“值 1”**，请选择表示最多订单的范围，对于 **“值 2”**，请选择表示最少订单的范围。 然后您将对模型将其与订单量关联的所有属性一目了然。  
   
  通过浏览查看器中的结果，您将发现一周中的某些天订单量较少，而操作员数的增加似乎与较高的销售额相关联。 然后您可以使用针对模型的预测查询来测试假设情况，询问在订单量少的日子增加级别 2 操作员的人数是否能增加订单量。 为此，请创建如下所示的查询：  
   

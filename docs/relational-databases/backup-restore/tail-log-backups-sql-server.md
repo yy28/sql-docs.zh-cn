@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920002"
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 |BACKUP LOG 选项|注释|  
 |-----------------------|--------------|  
-|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **重要提示：**除非数据库受损，否则不建议使用 NO_TRUNCATE。|  
+|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **重要提示：** 除非数据库受损，否则不建议使用 NO_TRUNCATE。|  
 |CONTINUE_AFTER_ERROR|仅当您要备份受损数据库的尾部时，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 对受损数据库备份日志尾部时，日志备份中正常捕获的部分元数据可能不可用。 有关详细信息，请参阅本主题中的 [包含不完整备份元数据的结尾日志备份](#IncompleteMetadata)。|  
   
 ##  <a name="IncompleteMetadata"></a> 包含不完整备份元数据的结尾日志备份  

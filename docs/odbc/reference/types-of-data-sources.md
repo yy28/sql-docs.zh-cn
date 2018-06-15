@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917222"
 ---
 # <a name="types-of-data-sources"></a>类型的数据源
 有两种类型的数据源： 计算机数据源和文件数据源。 尽管它们都包含类似信息有关的数据源，但它们的区别在于存储此信息的方式。 由于这些差异，它们使用稍有不同的方式。  

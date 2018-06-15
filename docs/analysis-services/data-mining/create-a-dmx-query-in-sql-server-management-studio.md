@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014564"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 DMX 查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/10/2018
   
 -   或者，将模板拖入查询编辑器中。  
   
--   也可以使用 **“查询”**菜单中的 **“指定参数的值”** 选项来填写查询的参数。  
+-   也可以使用 **“查询”** 菜单中的 **“指定参数的值”** 选项来填写查询的参数。  
   
  有关如何从模板创建特定类型的查询的示例，请参阅下列主题：  
   

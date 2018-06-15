@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32943582"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>配置 SQL Server ODBC 驱动程序-删除数据源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>通过使用 ODBC 管理器删除数据源  
   
-1.  在**控制面板**，打开**管理工具**，然后双击任一**ODBC 数据源 （64 位）**或**ODBC 数据源 （32 位）**. 或者，也可以从命令提示符处运行 odbcad32.exe。  
+1.  在**控制面板**，打开**管理工具**，然后双击任一**ODBC 数据源 （64 位）** 或**ODBC 数据源 （32 位）**. 或者，也可以从命令提示符处运行 odbcad32.exe。  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。  
   

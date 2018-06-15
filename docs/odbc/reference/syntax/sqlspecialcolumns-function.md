@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923622"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函数
 **一致性**  
@@ -174,7 +175,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|对数据源列的大小。 有关列大小的详细信息，请参阅[列大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Integer|传输上的数据的长度以字节为单位**SQLGetData**或**SQLFetch**如果 SQL_C_DEFAULT 指定的操作。 对于数值数据，此大小可能不同于数据源上存储的数据的大小。 此值是字符或二进制数据的 COLUMN_SIZE 列相同。 有关详细信息，请参阅[列大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|对数据源列的小数位数。 不适用十进制数字数据类型返回 NULL。 有关十进制数字的详细信息，请参阅[列大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指示列是否为伪列中的，例如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**注意：**的最大互操作性，伪列应未用引号引起来与标识符引号字符由**SQLGetInfo**。|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指示列是否为伪列中的，例如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**注意：** 的最大互操作性，伪列应未用引号引起来与标识符引号字符由**SQLGetInfo**。|  
   
  应用程序检索 SQL_BEST_ROWID 值后，应用程序可以使用这些值来重新选择该行中定义的作用域。 **选择**保证语句返回一行或任何行。  
   
