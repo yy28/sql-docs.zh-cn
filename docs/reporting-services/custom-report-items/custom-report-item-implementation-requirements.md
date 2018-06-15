@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015184"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>自定义报表项实现要求
   本主题将讨论开发和部署自定义报表项的先决条件。  

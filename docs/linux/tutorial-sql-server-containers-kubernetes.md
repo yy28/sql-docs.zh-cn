@@ -16,6 +16,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455451"
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>在 Kubernetes 中配置 SQL Server 容器，以实现高可用性
 

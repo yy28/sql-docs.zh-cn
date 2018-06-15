@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028554"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定义 - 预定义角色
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安装了预定义角色，您可以使用它们授予对报表服务器操作的访问权限。 每个预定义角色都描述了一个相关任务的集合。 可以向预定义角色分配组帐户和用户帐户，以提供对报表服务器操作的立即访问。  

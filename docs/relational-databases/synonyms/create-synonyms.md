@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32971752"
 ---
 # <a name="create-synonyms"></a>创建同义词
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-synonym"></a>创建同义词  
   
-1.  在 **“对象资源管理器”**中，展开要创建新视图的数据库。  
+1.  在 **“对象资源管理器”** 中，展开要创建新视图的数据库。  
   
 2.  右键单击“同义词”文件夹，然后单击“新建同义词...”。  
   

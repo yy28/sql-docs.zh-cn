@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33045424"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,11 +79,11 @@ ms.lasthandoff: 05/03/2018
   
 5.  在 **“类型”** 列表中，选择 **“SQL Server 事件警报”**。  
   
-6.  在 **“事件警报定义”**下的 **“数据库名称”** 列表中，选择一个数据库以将警报限制到特定数据库。  
+6.  在 **“事件警报定义”** 下的 **“数据库名称”** 列表中，选择一个数据库以将警报限制到特定数据库。  
   
-7.  在 **“将根据以下条件触发警报”**下，单击 **“严重性”** ，然后选择将引发警报的特定严重性。  
+7.  在 **“将根据以下条件触发警报”** 下，单击 **“严重性”** ，然后选择将引发警报的特定严重性。  
   
-8.  选中与 **“当消息包含以下内容时触发警报”** 复选框以将警报限制到特定的字符序列，然后在 **“消息正文”**中输入关键字或字符串。 最大字符数为 100。  
+8.  选中与 **“当消息包含以下内容时触发警报”** 复选框以将警报限制到特定的字符序列，然后在 **“消息正文”** 中输入关键字或字符串。 最大字符数为 100。  
   
 9. 单击“确定” 。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-an-alert-using-severity-level"></a>使用严重级别创建警报  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

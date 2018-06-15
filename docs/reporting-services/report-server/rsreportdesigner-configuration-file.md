@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026774"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
   RSReportDesigner.config 文件存储有关可用于报表设计器的呈现扩展插件和数据处理扩展插件的设置。 数据处理扩展插件信息存储在 **Data** 元素中。 呈现扩展插件信息存储在 **Render** 元素中。 **Designer** 元素可枚举报表设计器中所用的查询生成器。  

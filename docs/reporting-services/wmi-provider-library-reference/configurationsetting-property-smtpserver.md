@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030334"
 ---
 # <a name="configurationsetting-property---smtpserver"></a>ConfigurationSetting 属性 - SMTPServer
   从报表服务器配置文件中获取 SMTP 服务器属性。 只读。  

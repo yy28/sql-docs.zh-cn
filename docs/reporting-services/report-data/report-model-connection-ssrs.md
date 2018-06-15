@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022964"
 ---
 # <a name="report-model-connection-ssrs"></a>报表模型连接 (SSRS)
   若要包含来自报表模型的数据，必须拥有一个基于作为数据源的报表模型的数据集。 与其他报表数据源不同，报表模型没有数据扩展插件。 在报表生成器中，您可以浏览到该模型或者从报表服务器直接选择该模型。 在报表设计器中，您指定指向报表模型的 URL。  

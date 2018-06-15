@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030444"
 ---
 # <a name="configurationsetting-method---removeunattendedexecutionaccount"></a>ConfigurationSetting 方法 - RemoveUnattendedExecutionAccount
   从报表服务器配置文件中删除无人参与的执行帐户条目。  

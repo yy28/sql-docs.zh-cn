@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67d9b33fd5326a3f0195acf0987215d6689d1fb3
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33071504"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 属性的协议（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/03/2018
  **扩展保护**  
  有三种可能的值：  
   
--   当设置为 **“关闭”**时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 “关闭” 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 只有在您知道客户端操作系统不支持扩展保护的情况下才使用此设置。  
+-   当设置为 **“关闭”** 时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 “关闭” 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 只有在您知道客户端操作系统不支持扩展保护的情况下才使用此设置。  
   
--   当设置为 **“允许”**时，来自支持 **扩展保护** 的操作系统的连接需要 **扩展保护**。 来自运行在受保护客户端操作系统上的不受保护客户端应用程序的连接被拒绝。 对于来自不受保护操作系统的连接，忽略**扩展保护** 。 此设置虽比 **“关闭”**更安全，但仍不是最安全的设置。 在混合环境（即有些操作系统或应用程序支持 **扩展保护** ，有些不支持）中使用此设置。  
+-   当设置为 **“允许”** 时，来自支持 **扩展保护** 的操作系统的连接需要 **扩展保护**。 来自运行在受保护客户端操作系统上的不受保护客户端应用程序的连接被拒绝。 对于来自不受保护操作系统的连接，忽略**扩展保护** 。 此设置虽比 **“关闭”** 更安全，但仍不是最安全的设置。 在混合环境（即有些操作系统或应用程序支持 **扩展保护** ，有些不支持）中使用此设置。  
   
--   当设置为 **“必需”**时，只接受来自受保护操作系统上受保护应用程序的连接。 此设置在三个选项中是最安全的，但来自不支持 **扩展保护** 的操作系统的连接将无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   当设置为 **“必需”** 时，只接受来自受保护操作系统上受保护应用程序的连接。 此设置在三个选项中是最安全的，但来自不支持 **扩展保护** 的操作系统的连接将无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  **接受的 NTLM SPN**  
  当多个 NTLM 服务主体名称 (SPN) 标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在此以字符串系列形式列出 SPN，字符串之间用分号分隔。 例如，值 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**指示允许客户端尝试连接到名为 **MSSQLSvc/HOST1.Contoso.com** 和 **MSSQLSvc/HOST2.Contoso.com** 的 SPN。 变量的最大长度为 2048 个字符。  

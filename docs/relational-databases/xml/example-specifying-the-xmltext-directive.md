@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014304"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +104,7 @@ FOR XML EXPLICIT;
   
  如果使用 `xmltext` 指令指定了 *AttributeName*，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为 *AttributeName* 指定的名称将成为子元素的名称。  
   
- 在此查询中，将 *AttributeName* <`overflow`> 与 `xmltext` 指令一起指定*：*  
+ 在此查询中，将 *AttributeName* <`overflow`> 与 `xmltext` 指令一起指定 *：*  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

@@ -18,9 +18,10 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca10ddba5eb8d566ec97124e4870c0f53e01c4dd
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33074974"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 -   在安装后，控制器服务（即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器）必须首先运行，然后才能在客户端启动 Distributed Replay 客户端服务。  
   
 > [!NOTE]  
->  若要删除或更改 Distributed Replay 功能，请使用 **“控制面板”** 中的 Windows **“程序和功能”**窗口。 在“卸载或更改程序” [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 窗口中选择  ，然后单击 **“删除”** 以便打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 在 **“选择功能”** 页上，选中要删除的 Distributed Replay 功能。  
+>  若要删除或更改 Distributed Replay 功能，请使用 **“控制面板”** 中的 Windows **“程序和功能”** 窗口。 在“卸载或更改程序” [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 窗口中选择  ，然后单击 **“删除”** 以便打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 在 **“选择功能”** 页上，选中要删除的 Distributed Replay 功能。  
   
  **先决条件：**  
   

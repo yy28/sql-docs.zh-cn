@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014594"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>创建带有参数的钻取 (RDLC) 报表 - ReportViewer
 [钻取](http://technet.microsoft.com/library/ff519554.aspx) 报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将带你演练以下在 [本地模式报表](http://msdn.microsoft.com/library/ff487969.aspx)中使用参数和查询创建钻取报表的课程。  

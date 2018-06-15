@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025144"
 ---
 # <a name="report-builder-functions---count-function"></a>报表生成器函数 - Count 函数
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  

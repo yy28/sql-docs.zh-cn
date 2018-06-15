@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2c6c71003694d4b696fc771c6b89a29ffafbff0b
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33071114"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 属性（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  显示发生错误时内存转储的存放位置。  
   
  **错误报告**  
- 当设置为“是”时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。 若要更改此值，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击服务器，再单击“属性”，然后单击“**杂项”。服务器设置”**页。 这些选项将显示在 **“信息报告”** 区域中。  
+ 当设置为“是”时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。 若要更改此值，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击服务器，再单击“属性”，然后单击“**杂项”。服务器设置”** 页。 这些选项将显示在 **“信息报告”** 区域中。  
   
  **文件版本**  
  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的版本。  

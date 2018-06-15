@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014194"
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>SQL Server Reporting Services 的更改日志
 

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32963192"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="enabling-partition-switching"></a>启用分区切换  
  使用事务发布的下列属性，用户可以控制已复制环境中分区切换的行为。  
   
--   **@allow_partition_switch**，设置为 **“复制表分区方案”**时，可以对发布数据库执行 SWITCH PARTITION。  
+-   **@allow_partition_switch**，设置为 **“复制表分区方案”** 时，可以对发布数据库执行 SWITCH PARTITION。  
   
 -   **@replicate_partition_switch** 确定 SWITCH PARTITION DDL 语句是否应复制到订阅服务器。 仅当 **@allow_partition_switch** 设置为 **“复制表分区方案”**。  
   

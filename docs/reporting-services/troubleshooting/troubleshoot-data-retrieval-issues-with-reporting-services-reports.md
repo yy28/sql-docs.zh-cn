@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032324"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 报表的数据检索问题疑难解答
 报表处理的第一步是通过运行数据集查询检索每个数据集的报表数据。 本地预览报表时，数据源连接和凭据必须使用足够的权限才能检索计算机上的数据。 在报表服务器上运行报表时，数据源连接和凭据必须使用足够的权限才能检索报表服务器上的数据。 使用本主题可帮助解决有关报表数据检索的问题。   

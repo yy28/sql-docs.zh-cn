@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015374"
 ---
 # <a name="security-considerations-for-extensions"></a>扩展插件的安全注意事项
   每种以公共语言运行时 (CLR) 为目标的应用程序都必须与 CLR 的安全系统进行交互。 当此类应用程序运行时，CLR 将自动对它进行计算，然后向它提供一组权限。 应用程序可能会继续运行，或者生成安全性异常，具体取决于应用程序所收到的权限。 针对特定报表服务器的安全策略配置文件中的本地安全设置和策略定义程序集接收的代码权限。  

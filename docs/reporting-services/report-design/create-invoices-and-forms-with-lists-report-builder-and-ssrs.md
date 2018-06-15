@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021304"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>创建带列表的发票和表单（报表生成器和 SSRS）
   列表数据区域重复 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表数据集中的每一个组或行。 可以使用列表创建自由格式的报表或表单（如发票），或与其他数据区域结合使用。 可以定义包含任意数量的报表项的列表。 可以使用以下项嵌套列表  

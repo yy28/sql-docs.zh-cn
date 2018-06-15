@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32972915"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  依次展开“数据库” 、过程所属的数据库以及“可编程性” 。  
   
-3.  展开 **“存储过程”**，右键单击该过程，再单击 **“编写存储过程脚本为”**，然后单击下列选项之一： **“CREATE 到”**、 **“ALTER 到”**或 **“DROP 和 CREATE 到”**。  
+3.  展开 **“存储过程”**，右键单击该过程，再单击 **“编写存储过程脚本为”**，然后单击下列选项之一： **“CREATE 到”**、 **“ALTER 到”** 或 **“DROP 和 CREATE 到”**。  
   
 4.  选择 **“新建查询编辑器窗口”**。 这将显示过程定义。  
   

@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e8ba31710865718b18e4797daf4250867ebb799
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33068764"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 -   已禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”**指示状态更改被挂起。  
+ 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Browser 服务](../../tools/configuration-manager/sql-server-browser-service.md)  

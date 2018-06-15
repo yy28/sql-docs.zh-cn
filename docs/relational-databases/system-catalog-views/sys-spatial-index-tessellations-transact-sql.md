@@ -29,6 +29,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33221818"
 ---
 # <a name="sysspatialindextessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 |object_id|**int**|定义了索引的对象的 ID。 每个 object_id (index_id） 对具有对应条目[sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)。|  
 |index_id|**int**|定义了索引列的空间索引的 ID。|  
 |tessellation_scheme|**sysname**|分割方案，其中一个的名称： GEOMETRY_GRID、 GEOGRAPHY_GRID|  
-|bounding_box_xmin|**float(53)**|边框的左下角的 X 坐标中，有一个： NULL = 不适用于给定的分割方案 （如 GEOGRAPHY_GRID) *n* = tessellation_scheme 是否 GEOMETRY_GRID、 最小 x 坐标值。                     **注意：**由边界框参数定义的坐标解释每个对象根据其[Spatial Reference Identifier (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。|  
+|bounding_box_xmin|**float(53)**|边框的左下角的 X 坐标中，有一个： NULL = 不适用于给定的分割方案 （如 GEOGRAPHY_GRID) *n* = tessellation_scheme 是否 GEOMETRY_GRID、 最小 x 坐标值。                     **注意：** 由边界框参数定义的坐标解释每个对象根据其[Spatial Reference Identifier (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。|  
 |bounding_box_ymin|**float(53)**|边框的左下角的 Y 坐标中，有一个： NULL = 不适用于给定的分割方案 （如 GEOGRAPHY_GRID) *n* = tessellation_scheme 是否 GEOMETRY_GRID、 最小的 y 坐标值|  
 |bounding_box_xmax|**float(53)**|边框的右上角的 X 坐标中，有一个： NULL = 不适用于给定的分割方案 （如 GEOGRAPHY_GRID) *n* = tessellation_scheme 是否 GEOMETRY_GRID，最大 x 坐标值|  
 |bounding_box_ymax|**float(53)**|边框的右上角的 Y 坐标中，有一个： NULL = 不适用于给定的分割方案 （如 GEOGRAPHY_GRID) *n* = tessellation_scheme 是否 GEOMETRY_GRID，最大的 y 坐标值|  

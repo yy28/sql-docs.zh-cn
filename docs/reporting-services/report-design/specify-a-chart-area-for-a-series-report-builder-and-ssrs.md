@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026754"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，“图表”为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个“图表区域”。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的多个图表区的概念。  
@@ -42,9 +43,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”。  
   
-3.  在 **“轴和图表区”**中，选择要在其中显示序列的图表区。  
+3.  在 **“轴和图表区”** 中，选择要在其中显示序列的图表区。  
   
-4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”。 在 **“对齐”**中，选择要将选中的图表区与其对齐的另一图表区。  
+4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
   
 ## <a name="see-also"></a>另请参阅  
  [图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   

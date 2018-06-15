@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018684"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>“Reporting Services 登录”对话框（报表生成器）
   使用 **“Reporting Services 登录”** 对话框可以提供向报表服务器发布报表时要使用的凭据。 若要获取有关这些凭据的帮助，请与报表服务器管理员联系。  

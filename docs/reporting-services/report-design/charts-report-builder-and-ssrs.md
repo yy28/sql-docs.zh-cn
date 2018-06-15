@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022794"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
 了解如何使用图表数据区域帮助 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表的读者一目了然地理解大量聚合数据。  

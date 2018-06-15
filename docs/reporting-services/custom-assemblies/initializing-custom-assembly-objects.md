@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015394"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自定义程序集对象
   在某些情况下，您可能需要在实例化自定义程序集类中的属性值和字段值时初始化它们。 您最可能需要使用从报表的全局对象集合中提供给您的值来初始化自定义类。 为此，需要覆盖报表的 Code 对象的 OnInit 方法。 若要访问 OnInit，请使用报表定义的 Code 元素。 有两种方法可用于初始化你计划要在报表中使用的自定义程序集中类的属性值或字段值：可以使用 OnInit 声明和创建类的新实例，或者可以使用 OnInit 调用可以公共使用的方法。  

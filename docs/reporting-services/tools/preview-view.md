@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029644"
 ---
 # <a name="preview-view"></a>“预览”视图
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“预览”视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。

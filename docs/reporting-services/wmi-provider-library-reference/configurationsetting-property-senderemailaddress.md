@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031014"
 ---
 # <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 属性 - SenderEmailAddress
   从报表服务器获取用于发送电子邮件的地址。 只读。  

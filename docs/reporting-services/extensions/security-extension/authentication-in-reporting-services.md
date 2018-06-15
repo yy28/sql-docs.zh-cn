@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017714"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的身份验证
   身份验证是确立用户对某一身份的权限的过程。 您可以使用多种方法来验证某一用户的身份。 最常见的方法是使用密码。 例如，在实现窗体身份验证时，您希望某一实现查询用户的凭据（通常通过请求提供登录名和密码的某些界面），然后根据数据存储区（例如数据库表或配置文件）验证用户。 如果无法验证凭据，该身份验证过程将失败，并且用户将假定匿名身份。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026285"
 ---
 # <a name="publishing-data-sources-and-reports"></a>发布数据源和报表
   在发布报表之前，您应预览报表以查看其运行时的外观。 您可以继续改进设计，直到对结果满意为止。  

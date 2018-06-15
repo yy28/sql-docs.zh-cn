@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026564"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>角色定义 - 创建、删除或修改
   Reporting Services 提供了定义对报表服务器的访问级别的预定义角色。 需要访问报表服务器的每个用户或组都通过说明可以执行的任务的角色来进行访问。 这些角色是对作为整体的报表服务器进行定义的。 不能对报表服务器的特定部分改变角色定义，也不能指定根据不同情况以不同的方式使用角色。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028694"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当你向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  将 ESRI .shp 和 .dbf 文件上载或发布到报表服务器。  
   
-2.  在报表中，在“设计”视图的“地图”窗格中，选择具有嵌入数据的层，然后打开 **“层数据”** 属性。 在 **“使用的空间数据来自”**中，选择 **“链接到 ESRI 形状文件”**，然后浏览到报表服务器上包含 ESRI 形状文件的文件夹，选择该文件夹，然后单击“确定”。  
+2.  在报表中，在“设计”视图的“地图”窗格中，选择具有嵌入数据的层，然后打开 **“层数据”** 属性。 在 **“使用的空间数据来自”** 中，选择 **“链接到 ESRI 形状文件”**，然后浏览到报表服务器上包含 ESRI 形状文件的文件夹，选择该文件夹，然后单击“确定”。  
   
 3.  保存报表。 您更改的层的嵌入数据已从报表定义中删除。  
   

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33011394"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>显示用户定义函数的属性  
   
-1.  在 **“对象资源管理器”**中，单击包含要查看属性的函数的数据库旁边的加号，然后单击加号以展开 **“可编程性”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，单击包含要查看属性的函数的数据库旁边的加号，然后单击加号以展开 **“可编程性”** 文件夹。  
   
 2.  单击加号以便展开 **“函数”** 文件夹。  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>获取函数的定义和属性  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>获取函数的依赖关系  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

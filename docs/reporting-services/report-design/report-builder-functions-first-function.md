@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024724"
 ---
 # <a name="report-builder-functions---first-function"></a>报表生成器函数 - First 函数
   返回指定表达式的给定作用域中的第一个值。  

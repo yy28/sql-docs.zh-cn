@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027744"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
   如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="bkmk_configuraiton_overview"></a> 配置更改概述  
  下面的配置更改对服务器进行配置，以便您可以使用标准用户权限管理报表服务器内容和操作：  
   
--   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 添加到受信任站点。 默认情况下，在上列操作系统上运行的 Internet Explorer 是以 **“保护模式”**运行的，此功能可阻止浏览器请求到达运行在同一计算机上的高级别进程。 通过将报表服务器应用程序添加为受信任站点，可以禁用这些应用程序的保护模式。  
+-   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 添加到受信任站点。 默认情况下，在上列操作系统上运行的 Internet Explorer 是以 **“保护模式”** 运行的，此功能可阻止浏览器请求到达运行在同一计算机上的高级别进程。 通过将报表服务器应用程序添加为受信任站点，可以禁用这些应用程序的保护模式。  
   
 -   创建角色分配，授予您（报表服务器管理员）管理内容和操作的权限而无需使用 Internet Explorer 中的 **“以管理员的身份运行”** 功能。 通过为您的 Windows 用户帐户创建角色分配，并通过显式角色分配替换 Reporting Services 创建的预定义的内置角色分配，您将获得对报表服务器的访问权限（包括内容管理员和系统管理员权限）。  
   
