@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044571"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>表格建模 （1400年兼容性级别）
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 
 -   [Azure SQL 数据仓库](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal)与**示例 AdventureWorksDW 数据库**，或使用本地 SQL Server 数据仓库[AdventureWorksDW 示例数据库](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 在安装到本地 SQL Server 数据仓库时 AdventureWorksDW 数据库，使用您的服务器版本相对应的示例数据库版本。 
 
-    **重要说明：**将示例数据库安装到本地 SQL Server 数据仓库，并将您的模型部署到 Azure Analysis Services 服务器，如果[本地数据网关](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)是必需的。
+    **重要说明：** 将示例数据库安装到本地 SQL Server 数据仓库，并将您的模型部署到 Azure Analysis Services 服务器，如果[本地数据网关](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)是必需的。
 
 -   最新版本[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。 或者，如果你已有 Visual Studio 2017，你可以下载并安装[Microsoft Analysis Services 项目](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)(VSIX) 包。 本教程中，对 SSDT 和 Visual Studio 的引用是同义词。 
 

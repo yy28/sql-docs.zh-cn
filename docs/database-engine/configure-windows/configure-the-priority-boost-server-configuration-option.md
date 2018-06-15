@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32867844"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>配置 priority boost 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“处理器”** 节点。  
   
-3.  在 **“线程”**下，选中 **“提升 SQL Server 的优先级”** 复选框。  
+3.  在 **“线程”** 下，选中 **“提升 SQL Server 的优先级”** 复选框。  
   
 4.  停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

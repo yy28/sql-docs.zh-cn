@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898962"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet： 日期、 时间和时间戳文本
 最大互操作性，应用程序应传递中使用 escape 子句语法的 ODBC 规范格式的日期文本：  

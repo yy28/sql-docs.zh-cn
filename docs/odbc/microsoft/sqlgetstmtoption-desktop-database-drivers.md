@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902432"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption （桌面数据库驱动程序）
 返回在书签*fOption* SQL_GETBOOKMARK 的只有有效查询处于打开状态时，重新颁发查询时都失效。 不支持持久的书签。

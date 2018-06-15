@@ -35,6 +35,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32933342"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="UsingDACUpgradeWizard"></a> 使用“升级数据层应用程序向导”  
  **使用向导升级 DAC**  
   
-1.  在 **“对象资源管理器”**中，展开包含要升级的 DAC 的实例的节点。  
+1.  在 **“对象资源管理器”** 中，展开包含要升级的 DAC 的实例的节点。  
   
 2.  展开“管理”节点，然后展开“数据层应用程序”节点。  
   

@@ -28,6 +28,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258155"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +73,8 @@ sp_dbmmonitorhelpalert database_name
 |列|数据类型|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|下的表列出**alert_id**每个性能度量值和度量值中显示的度量单位值**sp_dbmmonitorresults**结果集：|  
-|**threshold**|**int**|警告的阈值。 如果在更新镜像状态时返回大于此阈值的值，则会在 Windows 事件日志中输入项。 此值表示 KB、分钟或毫秒，具体取决于警告。 如果当前未设置阈值，则该值是 NULL。<br /><br /> **注意：**若要查看的当前值，请运行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)存储过程。|  
-|**enabled**|**bit**|0 = 禁用事件。<br /><br /> 1 = 启用事件。<br /><br /> **注意：**保持期始终处于启用状态。|  
+|**threshold**|**int**|警告的阈值。 如果在更新镜像状态时返回大于此阈值的值，则会在 Windows 事件日志中输入项。 此值表示 KB、分钟或毫秒，具体取决于警告。 如果当前未设置阈值，则该值是 NULL。<br /><br /> **注意：** 若要查看的当前值，请运行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)存储过程。|  
+|**enabled**|**bit**|0 = 禁用事件。<br /><br /> 1 = 启用事件。<br /><br /> **注意：** 保持期始终处于启用状态。|  
   
 |“值”|性能指标|单元|  
 |-----------|------------------------|----------|  

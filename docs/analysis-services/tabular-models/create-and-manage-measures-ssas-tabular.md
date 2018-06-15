@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34040611"
 ---
 # <a name="create-and-manage-measures"></a>创建和管理度量值 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
 ###  <a name="bkmk_rename"></a> 重命名度量值  
   
--   在度量值网格中，单击某一度量值，然后在 **“属性”** 窗口的 **“度量值名称”**中，键入新名称，再单击 ENTER。  
+-   在度量值网格中，单击某一度量值，然后在 **“属性”** 窗口的 **“度量值名称”** 中，键入新名称，再单击 ENTER。  
   
      您也可以在编辑栏中重命名度量值。 度量值名称将位于公式前并且后随一个冒号。  
   

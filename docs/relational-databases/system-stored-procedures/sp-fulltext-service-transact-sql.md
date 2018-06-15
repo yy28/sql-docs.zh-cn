@@ -29,6 +29,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33259487"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_fulltext_service [ [@action=] 'action'
   
 ## <a name="arguments"></a>参数  
  [  **@action=**] *****操作*****  
- 要更改或重置的属性。 *操作*是**nvarchar(100)，**无默认值。 有关的列表*c*的服务和解决方案属性及其说明，可以设置的值，请参阅下的表*值*自变量。 该参数将返回下列属性：数据类型、当前运行值、最小值或最大值以及不推荐使用的状态（如果适用）。  
+ 要更改或重置的属性。 *操作*是**nvarchar(100)，** 无默认值。 有关的列表*c*的服务和解决方案属性及其说明，可以设置的值，请参阅下的表*值*自变量。 该参数将返回下列属性：数据类型、当前运行值、最小值或最大值以及不推荐使用的状态（如果适用）。  
   
  [  **@value=**]*值*  
  指定属性的值。 *值*是**sql_variant**，默认值为 NULL。 如果@value为 null， **sp_fulltext_service**返回当前设置。 此表列出了操作属性及其说明以及可设置的值。  

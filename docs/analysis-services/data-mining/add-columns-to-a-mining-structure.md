@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34016284"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>向挖掘结构中添加列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,9 +31,9 @@ ms.lasthandoff: 05/10/2018
   
      **“选择列”** 对话框将打开。  
   
-3.  在 **“源表”**下，从数据源视图中选择列所在的表。  
+3.  在 **“源表”** 下，从数据源视图中选择列所在的表。  
   
-4.  在 **“源列”**下，选择要添加到挖掘结构中的列。  
+4.  在 **“源列”** 下，选择要添加到挖掘结构中的列。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045211"
 ---
 # <a name="manage-roles-by-using-ssms"></a>使用 SSMS 管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
   
      默认情况下，对于每个新建角色，默认角色的名称将为递增式编号。 建议您键入明确标识成员类型的名称，例如财务经理或人力资源专员。  
   
-4.  在 **“为此角色设置数据库权限”**中，选择以下权限选项之一：  
+4.  在 **“为此角色设置数据库权限”** 中，选择以下权限选项之一：  
   
     |权限|Description|  
     |----------------|-----------------|  

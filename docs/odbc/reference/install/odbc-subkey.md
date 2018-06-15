@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916232"
 ---
 # <a name="odbc-subkey"></a>ODBC 子项
 ODBC 子项下的值指定 ODBC 跟踪选项。 通过 ODBC 数据源管理器中显示的对话框的跟踪选项卡来设置这些选项**SQLManageDataSources**。 ODBC 子项本身是可选的。 下表中所示，将为这些值的格式。  

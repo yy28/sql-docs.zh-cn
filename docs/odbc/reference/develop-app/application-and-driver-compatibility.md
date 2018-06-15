@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906852"
 ---
 # <a name="application-and-driver-compatibility"></a>应用程序和驱动程序兼容性
 ODBC 应用程序和驱动程序都属于的除了其版本的类别数。 一些这些应用程序是与某些驱动程序; 不兼容在其他情况下，此应用程序或驱动程序的类型可能会对它们之间的向后兼容性问题影响。  

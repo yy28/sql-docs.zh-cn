@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916402"
 ---
 # <a name="network-database-access"></a>网络数据库访问权限
 通过网络访问数据库需要的许多组件，其中每个独立的并且位于下方的编程接口。 下图显示了这些组件。  

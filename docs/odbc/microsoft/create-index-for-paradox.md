@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902032"
 ---
 # <a name="create-index-for-paradox"></a>为 Paradox 创建索引
 ODBC Paradox 驱动程序的 CREATE INDEX 语句的语法是：  

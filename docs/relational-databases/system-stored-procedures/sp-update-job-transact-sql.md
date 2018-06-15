@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33262212"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [ **@job_name =**] **'***job_name***'**  
  作业的名称。 *job_name*是**nvarchar （128)**。  
   
-> **注意：**任一*job_id*或*job_name*必须指定但不能同时指定。  
+> **注意：** 任一*job_id*或*job_name*必须指定但不能同时指定。  
   
  [ **@new_name =**] **'***new_name***'**  
  作业的新名称。 *new_name*是**nvarchar （128)**。  

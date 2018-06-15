@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045661"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>补充课-为 Power View 报表配置报表属性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/10/2018
   
 -   **设置数据类型和数据格式** - 默认情况下，Power View 根据列数据类型应用规则，以确定字段是否可用作度量值。 因为 Power View 中的每个数据可视化还具有有关在何处可放置度量值和非度量值的规则，所以，务必在模型中设置此数据类型或覆盖默认值，以实现你希望向最终用户展示的行为。  
   
--   **设置“按列排序”**属性 –“按列排序”属性指定列中的值是否应按其他字段中的值进行排序。 例如，在包含月份名称的 Month Calendar 列中，按列 Month Number 进行排序。  
+-   **设置“按列排序”** 属性 –“按列排序”属性指定列中的值是否应按其他字段中的值进行排序。 例如，在包含月份名称的 Month Calendar 列中，按列 Month Number 进行排序。  
   
 ## <a name="hide-tables-from-client-tools"></a>从客户端工具中隐藏表  
 因为 Product 表中已经有了 Product Category 计算列和 Product Subcategory 计算列，所以没有必要向客户端应用程序显示 Product Category 表和 Product Subcategory 表。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900522"
 ---
 # <a name="read-only-status-excel-driver"></a>只读状态 （Excel 驱动程序）
 当使用 Microsoft Excel 驱动程序时，默认情况下，情况下以只读方式打开数据源表和源一次只能有一个用户可以打开。 即使表具有只读状态，但是，应用程序可以执行插入和更新 Microsoft Excel 表。  

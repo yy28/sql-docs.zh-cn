@@ -27,11 +27,12 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912272"
 ---
 # <a name="driver-specific-connection-information"></a>特定于驱动程序的连接信息
 **SQLConnect**假定数据源名称、 用户 ID 和密码是不足以连接到数据源，并且，可以在系统上存储的所有其他连接信息。 这不经常这种情况。 例如，驱动程序可能需要一个用户 ID 和密码登录到服务器以及其他用户 ID 和密码登录到 DBMS。 因为**SQLConnect**接受单个用户 ID 和密码，这意味着，其他用户 ID 和密码必须存储在系统上的数据源信息如果**SQLConnect**要使用。 这是潜在的安全违规行为，除非密码经过加密应当避免。  
   
- **SQLDriverConnect**允许驱动程序在连接字符串的关键字 / 值对中定义任意数量的连接信息。 例如，假设驱动程序需要数据源名称、 用户 ID 和密码的服务器，以及用户 ID 和密码的 DBMS。 始终使用 XYZ Corp 数据源的自定义程序可能会提示用户 Id 和密码，并生成以下集的关键字 / 值对，或*连接字符串，*要传递给**SQLDriverConnect**:  
+ **SQLDriverConnect**允许驱动程序在连接字符串的关键字 / 值对中定义任意数量的连接信息。 例如，假设驱动程序需要数据源名称、 用户 ID 和密码的服务器，以及用户 ID 和密码的 DBMS。 始终使用 XYZ Corp 数据源的自定义程序可能会提示用户 Id 和密码，并生成以下集的关键字 / 值对，或*连接字符串，* 要传递给**SQLDriverConnect**:  
   
 > [!NOTE]  
 >  如果你要连接到的数据源提供程序支持 Windows 身份验证，你应指定`Trusted_Connection=yes`而不是连接字符串中的用户 ID 和密码信息。  

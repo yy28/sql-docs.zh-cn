@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021514"
 ---
 # <a name="monitoring-traces-xmla"></a>监视跟踪 (XMLA)
   你可以使用[订阅](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML 用于 Analysis (XMLA) 监视的实例上定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **订阅**命令返回的结果作为行集跟踪。  

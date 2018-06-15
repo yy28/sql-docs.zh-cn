@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912502"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>将 C 中的数据转换为 SQL 数据类型
 在应用程序调用**SQLExecute**或**SQLExecDirect**，驱动程序检索数据的任何参数绑定与**SQLBindParameter**从存储位置中应用程序。 在应用程序调用**SQLSetPos**，驱动程序检索更新的数据，或者从与绑定的列添加操作**SQLBindCol**。 对于数据在执行参数，应用程序发送具有的参数数据**SQLPutData**。 如果有必要，该驱动程序将数据从指定的数据类型*ValueType*中的参数**SQLBindParameter**到由指定的数据类型*ParameterType*中的参数**SQLBindParameter**，然后将数据发送到数据源。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900672"
 ---
 # <a name="product-support"></a>产品支持
 适用于 ODBC 的产品支持服务所提供的 Microsoft 产品支持。 由于许多 Microsoft 产品使用 ODBC 作为核心组件，并且还重新分发 ODBC 驱动程序，Microsoft 产品支持服务将考虑 ODBC 要包含 ODBC 作为组件的每个产品的一部分。 支持 ODBC 提供根据该产品的支持协议。 请参阅单独的产品文档以了解更多信息。

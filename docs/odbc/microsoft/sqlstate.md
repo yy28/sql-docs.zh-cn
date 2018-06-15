@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900533"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 对于在数据源中发生的错误，ODBC 驱动程序将返回的本机错误映射到相应的 SQLSTATE。 有错误的检测到由驱动程序或驱动程序管理器，ODBC 驱动程序或驱动程序管理器生成相应的 SQLSTATE。

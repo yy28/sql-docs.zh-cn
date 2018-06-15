@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34040518"
 ---
 # <a name="perspectives"></a>透视
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/10/2018
  透视的用途不是为了作为一种安全机制，而是作为一个可为用户提供更好体验的工具。 特定透视的所有安全性都从基础模型继承。 透视无法让用户访问该用户尚未拥有访问权的模型对象。 必须先解决模型数据库的安全性，然后才能通过透视访问模型中的对象。 安全角色可用于保护模型元数据和数据。 有关详细信息，请参阅[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
 ##  <a name="bkmk_testpersp"></a> Testing perspectives  
- 在创作模型时，可以使用模型设计器中的“在 Excel 中分析”功能来测试已定义的透视的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”**时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户、角色和一个用于连接作为数据源的模型工作区数据库的透视以及视图数据。  
+ 在创作模型时，可以使用模型设计器中的“在 Excel 中分析”功能来测试已定义的透视的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”** 时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户、角色和一个用于连接作为数据源的模型工作区数据库的透视以及视图数据。  
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34037461"
 ---
 # <a name="use-power-pivot-gallery"></a>使用 Power Pivot 库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  保存该文件。  
   
-2.  1.  **Excel 2010：**在“文件”菜单中，单击“保存并发送”。  
+2.  1.  **Excel 2010：** 在“文件”菜单中，单击“保存并发送”。  
   
     2.  单击 **“保存到 SharePoint”**。  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  在“库”功能区中，单击 **“文档”**。  
   
-3.  在 **“上载文档”**中，选择某一上载选项，然后输入要上载的文件的名称和位置。 库设置决定文档的显示位置。 可能需要刷新浏览器窗口以查看最近添加的内容。  
+3.  在 **“上载文档”** 中，选择某一上载选项，然后输入要上载的文件的名称和位置。 库设置决定文档的显示位置。 可能需要刷新浏览器窗口以查看最近添加的内容。  
   
 ##  <a name="newdocs"></a> 基于已发布的 Power Pivot 工作簿创建新报表或工作簿  
  对于发布到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，可以创建更多使用已发布工作簿作为连接数据源的工作簿或 Reporting Services 报表。  

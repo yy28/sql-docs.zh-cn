@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909792"
 ---
 # <a name="connecting-directly-to-drivers"></a>直接连接到驱动程序
 中所述已[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)前面的本部分中，某些应用程序不希望在所有使用数据源。 相反，他们想要直接连接到驱动程序。 **SQLDriverConnect**为应用程序直接连接到驱动程序而无需指定数据源提供的方法。 从概念上讲，在运行时创建临时数据源。  

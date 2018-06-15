@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32940182"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,9 +46,9 @@ ms.lasthandoff: 05/03/2018
 > 在包含非聚集列存储索引数据的行存储表上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终将数据插入到基表。 数据永远不会直接插入到列存储索引。  
 
 大容量加载有以下这些内置的性能优化：
--   **并行加载：**可以有多个并发大容量加载（使用 bcp 或批量插入），每个都加载一个单独的数据文件。 与行存储大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同，不需要指定 `TABLOCK`，因为每个批量导入线程以独占方式将数据载入具有排他锁的独立行组（压缩或增量行组）。 使用 `TABLOCK` 会在表中强制使用排他锁，并且会无法并行导入数据。  
--   **最小日志记录：**大容量加载对直接进入压缩行组的数据使用最小日志记录。 进入增量行组的任何数据都将被完全记录。 这包括任何少于 102400 行的批大小。 但是，使用大容量加载的目标是让大部分数据绕过增量行组。  
--   **锁优化：**载入压缩行组时，在行组上获取 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
+-   **并行加载：** 可以有多个并发大容量加载（使用 bcp 或批量插入），每个都加载一个单独的数据文件。 与行存储大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同，不需要指定 `TABLOCK`，因为每个批量导入线程以独占方式将数据载入具有排他锁的独立行组（压缩或增量行组）。 使用 `TABLOCK` 会在表中强制使用排他锁，并且会无法并行导入数据。  
+-   **最小日志记录：** 大容量加载对直接进入压缩行组的数据使用最小日志记录。 进入增量行组的任何数据都将被完全记录。 这包括任何少于 102400 行的批大小。 但是，使用大容量加载的目标是让大部分数据绕过增量行组。  
+-   **锁优化：** 载入压缩行组时，在行组上获取 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
   
 如果列存储索引上有非聚集 B 树索引，则该索引本身没有锁定优化或日志记录优化，但对聚集列存储索引的上述优化仍然存在。  
   
@@ -91,8 +92,8 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  从临时表加载到聚集列存储索引时，可以使用以下优化：
--   **日志优化：**将数据载入压缩行组时，尽量减少记录的信息。 将数据载入增量行组时，不会进行少量的日志记录。  
--   **锁优化：**载入压缩行组时，在行组上获取 X 锁。 但是，对于增量行组，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
+-   **日志优化：** 将数据载入压缩行组时，尽量减少记录的信息。 将数据载入增量行组时，不会进行少量的日志记录。  
+-   **锁优化：** 载入压缩行组时，在行组上获取 X 锁。 但是，对于增量行组，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
   
  如果你有一个或多个非聚集索引，则索引本身不会经过锁定或日志记录优化，但是，针对聚集列存储索引的上述优化仍然存在  
   

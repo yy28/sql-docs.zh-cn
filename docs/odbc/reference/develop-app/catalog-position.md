@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910002"
 ---
 # <a name="catalog-position"></a>目录位置
 中的位置的目录名称标识符以及它与标识符的其余部分分隔的方式从数据源到数据源而异。 例如，Xbase 数据源中的目录名称目录，并且，在 Microsoft® Windows®，分隔的表名称 （这是文件名称） 从反斜杠 (\\)。 下图演示了这种情况。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910572"
 ---
 # <a name="data-returned-by-catalog-functions"></a>目录函数返回的数据
 每个目录函数返回数据作为结果集。 此结果集是与任何其他结果集中没有什么不同。 它通常生成通过预定义参数化**选择**是硬编码在驱动程序或存储在数据源中的过程的语句。 有关如何从结果集中检索数据的信息，请参阅[已结果设置创建？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  
