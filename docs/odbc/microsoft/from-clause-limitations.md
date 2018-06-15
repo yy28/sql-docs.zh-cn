@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898404"
 ---
 # <a name="from-clause-limitations"></a>从子句限制
 在 FROM 子句中的表的最大数目为 16。

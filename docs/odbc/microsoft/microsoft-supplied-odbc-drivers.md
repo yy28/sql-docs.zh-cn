@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900462"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供的 ODBC 驱动程序
 *驱动程序*ODBC API 中实现的函数的库。 每个驱动程序是特定于特定的数据库管理系统 (DBMS)。 在大多数情况下，驱动程序公开基础 DBMS; 的功能它们不需要实现不支持的 DBMS 的功能。 驱动程序执行特定任务和可以分为以下两类： 基于文件的和基于 DBMS 的。 有关驱动程序和驱动程序体系结构的详细信息，请参阅[驱动程序](../../odbc/reference/drivers.md)。  

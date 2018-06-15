@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899044"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>添加 Visual FoxPro 数据源
 若要访问 Visual FoxPro 数据从你的应用程序，你必须有一个数据源。 可以创建数据源，如下所示：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900939"
 ---
 # <a name="set-unique-command"></a>SET 唯一命令
 指定是否具有重复的索引键值的记录保留在索引文件。  

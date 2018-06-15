@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32868432"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>配置恢复间隔服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“数据库设置”** 节点。  
   
-3.  在 **“恢复”**下的 **“恢复间隔(分钟)”** 框中，键入或选择一个介于 0 到 32767 之间的值，以设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时用于恢复每个数据库花费的最长时间（分钟）。 默认值为 0，指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动配置。 实际上，这表示每个数据库的恢复时间不超过 1 分钟，对于活动的数据库大约每 1 分钟有一个检查点。  
+3.  在 **“恢复”** 下的 **“恢复间隔(分钟)”** 框中，键入或选择一个介于 0 到 32767 之间的值，以设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时用于恢复每个数据库花费的最长时间（分钟）。 默认值为 0，指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动配置。 实际上，这表示每个数据库的恢复时间不超过 1 分钟，对于活动的数据库大约每 1 分钟有一个检查点。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

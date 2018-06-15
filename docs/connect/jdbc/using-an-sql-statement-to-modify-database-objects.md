@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851492"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>使用 SQL 语句修改数据库对象
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

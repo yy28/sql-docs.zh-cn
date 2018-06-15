@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027767"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>计划数据刷新和数据源-无 Windows 身份验证
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/10/2018
   
 -   **(1) PowerPivotDatarefresh：** 此安全存储区目标应用程序 ID 使用 Windows 身份验证进行设置。  
   
--   **(2) OracleAuthentication：**此安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
+-   **(2) OracleAuthentication：** 此安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
   
 -   **(3)** 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**“无人参与的数据刷新帐户”，将**服务应用程序配置为使用目标应用程序“PowerPivotDataRefresh”。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  单击“下一步” 。  
   
-6.  在“凭据”页上，将 **“Windows 用户名”** 和 **“Windows 密码”**这两个字段的名称和类型都保留为默认值。  
+6.  在“凭据”页上，将 **“Windows 用户名”** 和 **“Windows 密码”** 这两个字段的名称和类型都保留为默认值。  
   
 7.  单击“下一步” 。  
   
@@ -145,7 +146,7 @@ ms.lasthandoff: 05/10/2018
   
 8.  在数据源下，选择 **“使用默认计划”**。  
   
-9. 选择**“使用在 Secure Store Service (SSS) 中保存的凭据连接以登录数据源。在 SSS ID 框中输入用于查找凭据的 ID”**。  
+9. 选择 **“使用在 Secure Store Service (SSS) 中保存的凭据连接以登录数据源。在 SSS ID 框中输入用于查找凭据的 ID”**。  
   
 10. 在“ID:”  框中，键入 **OracleAuthentication**。  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 05/10/2018
     -   确认已为该目标应用程序设置凭据。  
   
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>使用新身份验证信息来验证数据刷新  
- 单击 **“确定”**时，将出现 **“刷新历史记录”** 页。 数分钟内，刷新历史记录中应会出现一个新项，因为在上述步骤中选中了 **“也尽快刷新”**。 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新计时器作业** 的计时器作业默认值是 1 分钟。 如果刷新历史记录中未出现新项，请等待数分钟，然后刷新浏览器。 如果仍未出现新项，请确认计时器作业的当前值。  
+ 单击 **“确定”** 时，将出现 **“刷新历史记录”** 页。 数分钟内，刷新历史记录中应会出现一个新项，因为在上述步骤中选中了 **“也尽快刷新”**。 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新计时器作业** 的计时器作业默认值是 1 分钟。 如果刷新历史记录中未出现新项，请等待数分钟，然后刷新浏览器。 如果仍未出现新项，请确认计时器作业的当前值。  
   
 ## <a name="more-information"></a>详细信息  
   

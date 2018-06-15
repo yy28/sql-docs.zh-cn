@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866522"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 版本 2.1 和更高版本，当你安装数据迁移助手，它还将安装在 dmacmd.exe *%programfiles%\\Microsoft 数据迁移助手\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库和输出结果发送到 JSON 或 CSV 文件。 评估多个数据库或大型数据库时，这是特别有用。 

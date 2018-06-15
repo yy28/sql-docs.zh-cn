@@ -14,12 +14,13 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34030058"
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   返回描述可用于跟踪的列的 XML 文档。  
   
- **适用于：**表格模型、 多维模型  
+ **适用于：** 表格模型、 多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_TRACE_COLUMNS**行集包含以下各列。  

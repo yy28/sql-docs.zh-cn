@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866082"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>配置 cursor threshold 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“高级”** 节点。  
   
-3.  在 **“杂项”**下，将 **“游标阈值”** 选项更改为所需的值。  
+3.  在 **“杂项”** 下，将 **“游标阈值”** 选项更改为所需的值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

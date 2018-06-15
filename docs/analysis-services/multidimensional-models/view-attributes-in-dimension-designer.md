@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027094"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>在维度设计器中查看属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,6 +28,6 @@ ms.lasthandoff: 05/10/2018
   
 3.  单击“维度”菜单，或右键单击“属性”窗格。  
   
-4.  指向 **“属性显示方式”**，然后单击 **“树”**、 **“网格”**或 **“列表”**。  
+4.  指向 **“属性显示方式”**，然后单击 **“树”**、 **“网格”** 或 **“列表”**。  
   
   

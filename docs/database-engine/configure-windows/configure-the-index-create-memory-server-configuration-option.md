@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866742"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>配置 index create memory 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“内存”** 节点。  
   
-3.  在 **“创建索引占用的内存”**下，为 index create memory 选项键入或选择所需的值。  
+3.  在 **“创建索引占用的内存”** 下，为 index create memory 选项键入或选择所需的值。  
   
      **index create memory** 选项用于控制索引创建排序时所需的内存量。 **index create memory** 选项是自配置选项，在大多数情况下不需调整即可正常工作。 但如果在创建索引时遇到困难，可以考虑提高此选项的运行值。 查询排序由 **min memory per query** 选项控制。  
   

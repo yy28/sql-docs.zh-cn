@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906792"
 ---
 # <a name="pseudo-type-identifiers"></a>伪类型标识符
 为应用程序编程方便起见，ODBC 定义了多个伪类型标识符。 这些标识符不实际对应于实际数据类型，但相反，具体取决于这种情况，将解析为现有数据类型。  

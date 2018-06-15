@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916544"
 ---
 # <a name="types-of-changes"></a>类型的更改
 三种类型的更改都在 ODBC 3。*x* （和 ODBC 的任何版本）。 其中每个以不同的方式会影响向后兼容性，并且以不同的方式处理。 这些更改以下表所述。  

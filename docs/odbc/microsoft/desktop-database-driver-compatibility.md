@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899762"
 ---
 # <a name="desktop-database-driver-compatibility"></a>桌面数据库驱动程序兼容性
 Unicode 是一种软件字符编码的方法将所有字符视为有固定的宽度的两个字节。 此方法用于替代为 Windows ANSI 字符编码，即，因为它表示为一个字节中的字符限制为 256 个字符。 因为 Unicode 可以代表 65000 字符，它还包含许多语言的字符不表示以 ANSI 编码。  

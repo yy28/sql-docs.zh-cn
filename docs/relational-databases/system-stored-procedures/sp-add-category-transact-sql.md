@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33238907"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ sp_add_category
 |-----------|-----------------|  
 |LOCAL|本地作业类别。|  
 |多服务器|多服务器作业类别。|  
-|无|作业以外的类的类别**。**|  
+|无|作业以外的类的类别 **。**|  
   
  [ **@name =** ] **'***name***'**  
  要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称*是**sysname**，无默认值。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901294"
 ---
 # <a name="index-name-limitations"></a>索引名称限制
 当使用 Paradox 驱动程序时，主索引必须与在其定义的表相同的名称。 其他唯一或非唯一索引必须与在其定义的表相同的名称。

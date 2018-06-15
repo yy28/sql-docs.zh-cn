@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025394"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -115,14 +116,14 @@ ms.lasthandoff: 05/10/2018
   
 2.  单击**合并分区**以打开**合并分区\<分区名称 >** 对话框。  
   
-3.  在 **“源分区”**下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”**。  
+3.  在 **“源分区”** 下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”**。  
   
     > [!NOTE]  
     >  源分区合并到目标分区后，将立即删除源分区。 合并完成后，刷新“分区”文件夹以更新其内容。  
   
 4.  右键单击包含累积数据的分区，然后选择“属性”。  
   
-5.  打开 **“源”** 属性，并修改 WHERE 子句，使之包括您刚合并的分区数据。 请记住， **“源”** 属性不会自动更新。 如果您没有更新 **“源”**就重新处理分区，则可能无法获得预期的所有数据。  
+5.  打开 **“源”** 属性，并修改 WHERE 子句，使之包括您刚合并的分区数据。 请记住， **“源”** 属性不会自动更新。 如果您没有更新 **“源”** 就重新处理分区，则可能无法获得预期的所有数据。  
   
 ##  <a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合并分区  
  有关信息，请参阅此主题[合并分区 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  

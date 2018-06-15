@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901162"
 ---
 # <a name="implementing-desktop-database-drivers"></a>实现桌面数据库驱动程序
 可在 ODBC 数据源管理器联机帮助说明和有关如何实现和设置 Microsoft ODBC 桌面数据库驱动程序的技术说明。 此文件可以访问期间从驱动程序安装例程[Microsoft ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)。  

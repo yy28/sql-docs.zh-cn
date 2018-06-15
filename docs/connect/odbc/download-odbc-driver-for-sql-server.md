@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852442"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下载适用于 SQL Server ODBC 驱动程序
 

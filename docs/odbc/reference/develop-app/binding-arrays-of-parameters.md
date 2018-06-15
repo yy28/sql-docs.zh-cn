@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914142"
 ---
 # <a name="binding-arrays-of-parameters"></a>绑定参数的数组
 应用程序使用的参数数组绑定到 SQL 语句中的参数的数组。 有两种绑定样式：  

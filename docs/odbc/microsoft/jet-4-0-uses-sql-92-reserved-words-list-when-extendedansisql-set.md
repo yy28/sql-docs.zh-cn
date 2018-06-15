@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899402"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Jet 4.0 使用 SQL 92 保留的字列表时 ExtendedAnsiSQL_Set
 启用 ExtendedAnsiSQL 标志后，Jet 4.0 将使用的 SQL 92 保留的字列表。 尝试使用 SQL 92 保留字，因为不带引号的对象名称将导致语法错误。 当关闭 ExtendedAnsiSQL 标志时，新的保留的字可以用作对象名称作为之前。

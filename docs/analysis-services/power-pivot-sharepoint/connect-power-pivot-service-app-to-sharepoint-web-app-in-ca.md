@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024144"
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Power Pivot 服务应用程序连接到 CA 中的 SharePoint Web 应用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
   
  若要将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序添加到该列表中，你既可以在创建应用程序时添加，也可以在之后采用以下步骤添加。  
   
-1.  在“管理中心”的 **“应用程序管理”**中，单击 **“配置服务应用程序关联”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“配置服务应用程序关联”**。  
   
 2.  在“应用程序代理组”中，单击 **“默认值”**。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="custom"></a> 将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序添加到自定义服务关联列表  
  默认组可由自定义列表替换。 自定义列表是专门为单个 SharePoint Web 应用程序创建的。 它覆盖默认组，并且仅使用场管理员或服务管理员指定的服务关联来替换它。 如果你创建了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则必须使用自定义列表指定要使用的应用程序。 自定义列表不能由其他 Web 应用程序重用。 它仅适用于为其创建的 Web 应用程序。  
   
-1.  在“管理中心”的 **“应用程序管理”**中，单击 **“管理 Web 应用程序”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理 Web 应用程序”**。  
   
 2.  选择应用程序（例如 SharePoint -80）。  
   

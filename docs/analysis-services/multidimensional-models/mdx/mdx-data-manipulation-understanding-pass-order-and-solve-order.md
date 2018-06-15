@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025954"
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 数据操作-了解传递顺序和求解次序
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
  强烈建议设置求解次序值时仅使用正整数。 如果赋值小于上表中所示的求解次序值，计算传递可能会变得不可预知。 例如，计算成员的计算接收的求解次序值小于默认自定义汇总公式值 -5119。 这样一个低的求解次序值会导致计算成员在自定义汇总公式之前计算，并产生错误的结果。  
   
 ### <a name="creating-and-changing-solve-order"></a>创建和更改求解次序  
- 在多维数据集设计器的 **“计算”**窗格上，可以通过更改计算顺序来更改计算成员和计算单元的求解次序。  
+ 在多维数据集设计器的 **“计算”** 窗格上，可以通过更改计算顺序来更改计算成员和计算单元的求解次序。  
   
  在 MDX 中，可以使用 **SOLVE_ORDER** 关键字来创建或更改计算成员和计算单元。  
   

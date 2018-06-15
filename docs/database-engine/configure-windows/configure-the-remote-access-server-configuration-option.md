@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32867242"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>配置远程访问服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“连接”** 节点。  
   
-3.  在 **“远程服务器连接”**下，选中或清除 **“允许远程连接到此服务器”** 复选框。  
+3.  在 **“远程服务器连接”** 下，选中或清除 **“允许远程连接到此服务器”** 复选框。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

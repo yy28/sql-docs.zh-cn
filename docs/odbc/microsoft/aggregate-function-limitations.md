@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897292"
 ---
 # <a name="aggregate-function-limitations"></a>聚合函数限制
 聚合函数和非聚合列引用都能将作为单个 SQL 语句的自变量。

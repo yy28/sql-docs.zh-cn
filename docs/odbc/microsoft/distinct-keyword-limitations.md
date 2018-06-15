@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897572"
 ---
 # <a name="distinct-keyword-limitations"></a>DISTINCT 关键字限制
 不支持长文本字段 (Microsoft Access) 或备注字段 (dBASE)。

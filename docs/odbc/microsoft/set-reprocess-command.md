@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903582"
 ---
 # <a name="set-reprocess-command"></a>SET 重新处理命令
 指定多少时间或如何长度后不成功的锁定尝试锁定文件或记录。  

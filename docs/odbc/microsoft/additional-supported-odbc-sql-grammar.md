@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898922"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>其他支持的 ODBC SQL 语法
 ODBC 驱动程序完全支持最小 ODBC 2.5 语法和以下子句中的核心安装选项和扩展 ODBC 2.5 语法。 可以通过跳转到显示其他信息[ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement.md)，[相关名称](../../odbc/microsoft/correlation-names.md)，和[过程调用](../../odbc/microsoft/procedure-invocation.md)主题。  

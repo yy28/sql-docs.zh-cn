@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32867252"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>配置 user connections 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“连接”** 节点。  
   
-3.  在 **“连接”**下面的 **“最大并发连接数”** 框中，键入或选择一个介于 0 到 32767 之间的值，以设置允许与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例同时连接的最大用户数量。  
+3.  在 **“连接”** 下面的 **“最大并发连接数”** 框中，键入或选择一个介于 0 到 32767 之间的值，以设置允许与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例同时连接的最大用户数量。  
   
 4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

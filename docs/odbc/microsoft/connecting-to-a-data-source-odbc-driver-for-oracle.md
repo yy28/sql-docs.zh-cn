@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900940"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>连接到数据源 （适用于 Oracle 的 ODBC 驱动程序）
 > [!IMPORTANT]  

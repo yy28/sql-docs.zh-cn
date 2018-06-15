@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32865992"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM 服务 - 将实例设置为自动启动
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
     > -   **Windows 8**：  
     >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如 SQLServerManager13.msc），然后按“Enter”。  
   
-2.  在 **“SQL Server 配置管理器”**中，展开 **“服务”**，再单击 **SQL Server**。  
+2.  在 **“SQL Server 配置管理器”** 中，展开 **“服务”**，再单击 **SQL Server**。  
   
 3.  在详细信息窗格中，右键单击要自动启动的实例的名称，然后单击“属性”。  
   

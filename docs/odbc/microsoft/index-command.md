@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904412"
 ---
 # <a name="index-command"></a>索引命令
 创建要显示和访问表记录按逻辑顺序排列的索引文件。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32858182"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系统要求、安装和驱动程序文件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -101,7 +102,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 |msodbcsqlr17.rll 或 <br> msodbcsqlr13.rll 或 <br> msodbcsqlr11.rll|驱动程序库的附带资源文件。 此文件安装在 %systemroot%\system32\1033。| 
 |s13ch_msodbcsql.chm 或 <br> s11ch_msodbcsql.chm |介绍如何创建数据源驱动程序数据源向导帮助文件。 此文件安装在 %SYSTEMROOT%\System32\1033 <br /> <br /> **注意：** ODBC 驱动程序 17 没有 chm 文件。 |  
 |msodbcsql.h|包含的所有新的定义使用的驱动程序所需的标头文件。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> ODBC 驱动程序 17 或 13 msodbcsql.h 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK。 <br /> 有关 ODBC Driver 11 msodbcsql.h 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK。| 
-|msodbcsql17.lib or <br> msodbcsql13.lib or <br> msodbcsql11.lib|调用所需的库文件**bcp**属于该驱动程序的实用工具函数。<br /><br /> **注意：**如果你确实在你的程序中引用此库文件，请确保它是系统路径中，在其中使用该应用程序的系统路径。<br /><br /> msodbcsql17.lib 或 msodbcsql13.lib 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK。<br /> msodbcsql11.lib 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。|
+|msodbcsql17.lib or <br> msodbcsql13.lib or <br> msodbcsql11.lib|调用所需的库文件**bcp**属于该驱动程序的实用工具函数。<br /><br /> **注意：** 如果你确实在你的程序中引用此库文件，请确保它是系统路径中，在其中使用该应用程序的系统路径。<br /><br /> msodbcsql17.lib 或 msodbcsql13.lib 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK。<br /> msodbcsql11.lib 安装在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。|
 
   
 ## <a name="see-also"></a>另请参阅  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025084"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO 补充类和方法的编程
   本主题包含以下各节：  
