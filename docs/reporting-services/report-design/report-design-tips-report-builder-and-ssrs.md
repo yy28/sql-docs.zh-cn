@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027414"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>报表设计提示（报表生成器和 SSRS）
   以下提示可帮助你设计 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   为了减少报表中的混乱，可以考虑对特定报表项使用条件可见性功能，并让用户选择是否显示这些项。 可以基于参数或文本框切换来设置可见性。 可以有条件地添加隐藏文本框以显示中间表达式结果。 当报表显示意外数据时，可以显示这些中间结果以帮助调试表达式。  
   
--   处理 Tablix 单元或矩形中的嵌套项时，可以为容器和包含项设置不同的背景色。 默认情况下，背景色为 **“无颜色”**。 具有特定背景色的项可穿透背景色设置为 **“无颜色”**的项显示出来。 这一技术可帮助您选择正确的项以设置显示属性，如 Tablix 单元中的边框可见性。  
+-   处理 Tablix 单元或矩形中的嵌套项时，可以为容器和包含项设置不同的背景色。 默认情况下，背景色为 **“无颜色”**。 具有特定背景色的项可穿透背景色设置为 **“无颜色”** 的项显示出来。 这一技术可帮助您选择正确的项以设置显示属性，如 Tablix 单元中的边框可见性。  
   
  有关设计报表时需考虑的事项的详细信息，请参阅[规划报表（报表生成器）](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
   

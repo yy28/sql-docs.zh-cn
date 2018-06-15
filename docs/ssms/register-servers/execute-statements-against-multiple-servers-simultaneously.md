@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33044664"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>同时对多个服务器执行语句
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”**。  
   
-2.  依次展开 **“查询结果”**和 **“SQL Server”**，然后单击 **“多服务器结果”**。  
+2.  依次展开 **“查询结果”** 和 **“SQL Server”**，然后单击 **“多服务器结果”**。  
   
 3.  在 **“多服务器结果”** 页上，指定所需的选项设置，然后单击 **“确定”**。  
   

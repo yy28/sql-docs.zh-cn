@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030324"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance 类
   MSReportServer_Instance 类为客户端提供连接到已安装的报表服务器所需的基本信息。  
