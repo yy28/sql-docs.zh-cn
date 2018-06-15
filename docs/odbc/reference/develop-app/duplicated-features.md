@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913355"
 ---
 # <a name="duplicated-features"></a>重复的功能
 以下的 ODBC 2。*x*由 ODBC 3 重复的函数。*x*函数。 因此，ODBC 2。*x*函数被弃用 ODBC 3 中。*x*。 ODBC 3。*x*函数称为替换函数。  

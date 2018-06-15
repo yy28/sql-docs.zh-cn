@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32928652"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
  输入或修改文件的名称。  
   
  **文件类型**  
- 从列表中选择文件类型。 文件类型可以为 **“数据”**、 **“日志”**或 **“Filestream 数据”**。 您无法修改现有文件的文件类型。  
+ 从列表中选择文件类型。 文件类型可以为 **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 您无法修改现有文件的文件类型。  
   
  如果要将文件（容器）添加到内存优化文件组，请选择“Filestream 数据”。  
   

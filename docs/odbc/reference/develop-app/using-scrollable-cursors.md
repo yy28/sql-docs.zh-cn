@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915174"
 ---
 # <a name="using-scrollable-cursors"></a>使用可滚动游标
 使用可滚动游标需要以下三个步骤：  

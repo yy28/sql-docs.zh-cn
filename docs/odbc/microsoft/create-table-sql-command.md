@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905082"
 ---
 # <a name="create-table---sql-command"></a>创建表的 SQL 命令
 创建具有指定的字段的表。  
@@ -123,12 +124,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  一个表可以有多个候选索引。  
   
  外键*eExpression4*标记*TagName4*[NODUP]  
- 创建外的 （非主要） 索引，并建立与父表的关系。 *eExpression4*指定外的索引键表达式，和*TagName4*指定的名称创建的外的索引键标记*。* 索引标记名称可以包含最多 10 个字符。 包括 NODUP 创建候选外索引。  
+ 创建外的 （非主要） 索引，并建立与父表的关系。 *eExpression4*指定外的索引键表达式，和*TagName4*指定的名称创建的外的索引键标记 *。* 索引标记名称可以包含最多 10 个字符。 包括 NODUP 创建候选外索引。  
   
  你可以创建多个外的索引对于表，但外索引表达式必须指定表中的不同字段。  
   
  引用*TableName3*[标记*TagName5*]  
- 指定与之建立持久的关系的父表。 包括标记*TagName5*建立基于父表的索引标记的关系。 索引标记名称可以包含最多 10 个字符。 默认情况下，如果省略标记*TagName5，*使用父表的主索引键建立关系。  
+ 指定与之建立持久的关系的父表。 包括标记*TagName5*建立基于父表的索引标记的关系。 索引标记名称可以包含最多 10 个字符。 默认情况下，如果省略标记*TagName5，* 使用父表的主索引键建立关系。  
   
  检查*eExpression2*[错误*cMessageText2*]  
  指定的表验证规则。 错误*cMessageText2*指定 Visual FoxPro 显示表验证规则执行时的错误消息。 仅当数据在一个浏览窗口内已更改，或编辑窗口时，将显示消息。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909882"
 ---
 # <a name="dynamic-tracing"></a>动态跟踪
 可以启用或禁用运行应用程序中的任何时刻跟踪。 这允许应用程序跟踪任意数量的函数调用。  

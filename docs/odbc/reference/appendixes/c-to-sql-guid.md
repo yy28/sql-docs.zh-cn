@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905552"
 ---
 # <a name="c-to-sql-guid"></a>To SQL 的 C: GUID
 GUID ODBC C 数据类型的标识符是：  

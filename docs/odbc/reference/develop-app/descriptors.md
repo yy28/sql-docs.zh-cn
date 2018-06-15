@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908812"
 ---
 # <a name="descriptors"></a>描述符
 描述符句柄是指保存有关列或动态参数的信息的数据结构。  

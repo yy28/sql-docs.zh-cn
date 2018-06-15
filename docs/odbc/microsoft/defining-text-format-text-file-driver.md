@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904872"
 ---
 # <a name="defining-text-format-text-file-driver"></a>定义文本格式 （文本文件驱动程序）
 当使用文本驱动程序时，你可以使用**定义文本格式**对话框可以定义在所选文件中的列的格式。 此对话框中，你可以指定每个数据表的架构。 此信息写入到中的数据源目录的 Schema.ini 文件。 为每个文本数据源目录创建单独的 Schema.ini 文件。  

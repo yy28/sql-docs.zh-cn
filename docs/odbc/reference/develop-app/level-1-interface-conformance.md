@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913082"
 ---
 # <a name="level-1-interface-conformance"></a>级别 1 接口一致性
 级别 1 接口一致性级别包括核心接口一致性级别功能以及其他功能，如通常都存在于 OLTP 关系 DBMS 的事务。 级别 1 接口 – 符合的驱动程序可让应用程序执行以下操作，除了核心接口一致性级别中的功能：  

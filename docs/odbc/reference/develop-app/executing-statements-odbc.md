@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911282"
 ---
 # <a name="executing-statements-odbc"></a>执行语句 ODBC
 ODBC 应用程序可以通过执行 SQL 语句执行几乎所有的数据库访问。 事件的一般顺序是分配语句句柄，设置任何语句特性、 执行语句，检索到任何结果，并释放语句句柄。  

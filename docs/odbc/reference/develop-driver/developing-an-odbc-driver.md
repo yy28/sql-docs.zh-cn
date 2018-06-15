@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915872"
 ---
 # <a name="developing-an-odbc-driver"></a>开发 ODBC 驱动程序
 本部分包含这些主题介绍如何开发具有 ODBC 驱动程序。  

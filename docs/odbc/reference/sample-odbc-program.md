@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914912"
 ---
 # <a name="sample-odbc-program"></a>示例 ODBC 程序
 [ODBC 的代码示例](http://go.microsoft.com/fwlink/?LinkId=244831)将提示你输入 ODBC 数据源名称。  你将然后会提示您输入查询和示例将显示查询的结果。

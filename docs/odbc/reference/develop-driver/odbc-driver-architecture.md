@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917322"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC 驱动程序体系结构
 驱动程序编写器必须注意驱动程序体系结构可能会影响是否应用程序可以使用特定于 DBMS 的 SQL。  

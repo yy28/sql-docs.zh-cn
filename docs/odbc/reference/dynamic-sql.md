@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916892"
 ---
 # <a name="dynamic-sql"></a>动态 SQL
 尽管静态 SQL 适用于许多情况下，但是没有该数据访问无法预先确定的应用程序的类。 例如，假设电子表格，用户可以输入一个查询，后者电子表格随后发送到 DBMS 中检索数据。 此查询的内容显然无法知道向程序员写入电子表格程序时。  

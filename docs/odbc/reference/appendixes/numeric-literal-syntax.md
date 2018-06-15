@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907262"
 ---
 # <a name="numeric-literal-syntax"></a>数字文本语法
 以下语法用于 ODBC 中的数字文本：  

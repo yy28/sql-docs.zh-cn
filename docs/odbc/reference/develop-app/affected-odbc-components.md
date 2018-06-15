@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910132"
 ---
 # <a name="affected-odbc-components"></a>受影响的 ODBC 组件
 向后兼容性介绍的新版本的驱动程序管理器简介如何影响应用程序、 驱动程序管理器和驱动程序。 这会影响应用程序和驱动程序时这两个或其中任何一个保留在旧版本。 有，因此，三种类型的向后兼容性，还需要考虑下表中所示。  

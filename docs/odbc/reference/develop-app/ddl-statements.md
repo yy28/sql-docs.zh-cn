@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909172"
 ---
 # <a name="ddl-statements"></a>DDL 语句
 数据定义语言 (DDL) 语句在 Dbms 之间有很大差异。 ODBC SQL 定义语句的最常见的数据定义操作： 创建和删除表、 索引和视图。更改表;授予，并撤消权限。 所有其他 DDL 语句是数据源 – 特定。 因此，可互操作的应用程序无法执行某些数据定义操作。 一般情况下，这不是问题，因为此类操作往往是高度特定于 DBMS，并且最佳从左到专用的数据库管理软件附带大多数 Dbms 或安装程序附带的驱动程序。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906992"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>To SQL 的 C： 天时间间隔
 一天时间间隔 ODBC C 数据类型的标识符都是：  

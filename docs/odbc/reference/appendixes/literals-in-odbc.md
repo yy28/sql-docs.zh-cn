@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905522"
 ---
 # <a name="literals-in-odbc"></a>ODBC 中的文本
 下列各节中的语法用于间隔和 ODBC 中的数值。 提供此语法此处驱动程序编写器时从字符字符串类型为数值或间隔的类型，或为字符字符串类型的数值或间隔类型不会进行转换的帮助。 有关详细信息，请参阅[间隔文本](../../../odbc/reference/appendixes/interval-literals.md)和[数值](../../../odbc/reference/appendixes/numeric-literals.md)附录 d： 数据类型中。  

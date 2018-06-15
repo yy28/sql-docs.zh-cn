@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908382"
 ---
 # <a name="custom-applications"></a>自定义应用程序
 自定义应用程序通常为几个 Dbms 执行特定任务。 例如，应用程序可能会从单个 DBMS 中检索数据并生成报告，或它可能在几个 Dbms 之间的数据传输。 这些应用程序具有共同点是这些 Dbms 写入应用程序之前已知的而是可能会更改应用程序的生命周期。  

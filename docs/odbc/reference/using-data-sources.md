@@ -3,13 +3,10 @@ title: 使用数据源 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b97a1c2ca369b5d4293b9516f02ee1e237a62a35
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: a74aa59a701d68bf4230db27e2899ce46ea9e715
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917062"
 ---
 # <a name="using-data-sources"></a>使用数据源
 数据源通常由最终用户或与程序的技术调用*ODBC 管理器*。 ODBC 管理器会提示驱动程序要使用的用户，然后调用该驱动程序。 该驱动程序显示一个对话框，请求它需要连接到数据源的信息。 用户输入的信息后，该驱动程序会将其存储在系统上。  

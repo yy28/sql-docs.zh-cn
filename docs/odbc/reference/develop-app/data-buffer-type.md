@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910472"
 ---
 # <a name="data-buffer-type"></a>数据缓冲区类型
 应用程序指定的缓冲区的 C 数据类型。 使用单一变量，这发生在应用程序将该变量分配。 泛型内存-即，内存的指针指向 void 类型的-发生这种情况是当应用程序将强制转换为特定类型的内存。 该驱动程序发现此类型的两种方法：  

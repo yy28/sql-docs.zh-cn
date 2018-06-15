@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908072"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>支持的标量函数 （Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序支持三种类型的标量函数，如 ODBC SQL 语法中所定义： 字符串、 数字和日期和时间函数。  

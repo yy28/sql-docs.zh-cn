@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911112"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>与 SQLBulkOperations 插入行
 插入数据与**SQLBulkOperations**类似于更新数据与**SQLBulkOperations**因为它使用的绑定应用程序缓冲区中的数据。  

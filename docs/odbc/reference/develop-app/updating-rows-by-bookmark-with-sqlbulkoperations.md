@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915474"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新书签的行
 书签，在更新某一行时**SQLBulkOperations**使更新的表的一个或多个行的数据源。 由绑定的书签列中的书签标识行。 使用数据的应用程序缓冲区 （除非列的长度/指示器缓冲区中的值是 SQL_COLUMN_IGNORE） 每个绑定列中的更新行。 未绑定的列将不会更新。  

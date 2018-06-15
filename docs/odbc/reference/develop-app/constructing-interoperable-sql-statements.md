@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909952"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>构造可互操作的 SQL 语句
 如前面的部分中所述，可互操作的应用程序应使用 ODBC SQL 语法。 除了使用此语法，但是，许多其他问题面临的可互操作的应用程序。 例如，应用程序作用是什么如果它想要使用包含的功能，如外部联接中，不支持的所有数据源？  

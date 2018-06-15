@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910842"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>基于 DBMS 的驱动程序诊断示例
 基于 DBMS 的驱动程序将请求发送到 DBMS，并将信息返回给应用程序通过驱动程序管理器。 由于的驱动程序接口与驱动程序管理器中的组件，其格式，并返回自变量**SQLGetDiagRec**。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911852"
 ---
 # <a name="concurrency-types"></a>并发类型
 若要解决的游标中减少并发问题，ODBC 公开四种不同类型的游标并发：  

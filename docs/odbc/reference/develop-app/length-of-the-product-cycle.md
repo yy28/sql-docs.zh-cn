@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910062"
 ---
 # <a name="length-of-the-product-cycle"></a>在产品周期的长度
 关于互操作性最后一个问题是时间。 通常在开发可互操作应用程序时，所用时间长于开发一个 noninteroperable。 原因是应用程序必须检查 DBMS 功能、 为不同 Dbms 以不同的方式执行相同的任务、 解决某些 Dbms 而非任何其他支持的功能和等。  

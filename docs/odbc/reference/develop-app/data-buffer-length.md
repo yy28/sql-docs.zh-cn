@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910202"
 ---
 # <a name="data-buffer-length"></a>数据缓冲区长度
 应用程序传递给自变量，名为中的驱动程序的数据缓冲区的字节长度*BufferLength*或类似的名称。 例如，在下面的示例调用**SQLBindCol**，应用程序将指定的长度*ValuePtr*缓冲区 (**sizeof (***ValuePtr***)**):  

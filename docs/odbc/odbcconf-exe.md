@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914302"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF。EXE
 ODBCCONF.exe 是一个命令行工具，可以配置 ODBC 驱动程序和数据源名称。  

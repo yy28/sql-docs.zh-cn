@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910772"
 ---
 # <a name="executing-procedures"></a>执行过程
 ODBC 定义执行过程的标准转义序列。 此序列和的代码示例，使用它的语法，请参阅[过程调用](../../../odbc/reference/develop-app/procedure-calls.md)。  

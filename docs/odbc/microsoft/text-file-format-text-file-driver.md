@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911072"
 ---
 # <a name="text-file-format-text-file-driver"></a>文本文件格式 （文本文件驱动程序）
 ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 文本文件由可选的标头行和零个或多个文本行组成。  

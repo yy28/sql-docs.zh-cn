@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907782"
 ---
 # <a name="decimal-digits"></a>十进制数字
 *十进制数字*的 decimal 和 numeric 数据类型定义为最多的到数据的小数位数或小数点右边的位数。 对于近似的浮点数字列或参数，刻度是小数点的未定义的这是小数点的因为不固定右侧的位数。 为日期时间或间隔包含秒数部分的数据，十进制数字被指数据的秒部分在小数点右侧的数字个数。  

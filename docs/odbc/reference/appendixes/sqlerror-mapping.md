@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907352"
 ---
 # <a name="sqlerror-mapping"></a>SQLError 映射
 在应用程序调用**SQLError**到 ODBC 3 *.x*驱动程序，将会调用  

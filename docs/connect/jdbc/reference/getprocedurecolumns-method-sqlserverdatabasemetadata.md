@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32843272"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -97,7 +98,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**字符串**|XML 架构集合的名称。 如果找不到名称，则为空字符串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**字符串**|包含用户定义类型 (UDT) 的目录名称。|  
 |SS_XML_SCHEMACOLLECTION_NAME|**字符串**|包含用户定义类型 (UDT) 的架构名称。|  
-|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用的数据类型扩展存储的过程。<br /><br /> <br /><br /> **注意：**有关通过返回的数据类型的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，请参阅"数据类型 (TRANSACT-SQL)"[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。|  
+|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用的数据类型扩展存储的过程。<br /><br /> <br /><br /> **注意：** 有关通过返回的数据类型的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，请参阅"数据类型 (TRANSACT-SQL)"[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。|  
   
 > [!NOTE]  
 >  有关 getProcedureColumns 方法返回的数据的详细信息，请参阅"sp_sproc_columns (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  

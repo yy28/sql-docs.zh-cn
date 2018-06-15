@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908002"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>以二进制格式传输数据
 应用程序可以安全地使用相同的 DBMS 和硬件平台的两个数据源之间传输 （中由指定的 DBMS 的内部形式） 的数据。 给定的一段的数据，SQL 数据类型必须是源和目标数据源中相同。 C 数据类型为 SQL_C_BINARY。  

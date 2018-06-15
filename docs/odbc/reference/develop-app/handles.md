@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912892"
 ---
 # <a name="handles"></a>控点
 句柄都是不透明的 32 位值，标识特定的项;ODBC，在此项可以环境、 连接、 语句或描述符。 在应用程序调用**SQLAllocHandle**、 驱动程序管理器或驱动程序创建指定类型的新项并对应用程序返回的句柄。 应用程序更高版本使用句柄来在调用 ODBC 函数时标识该项。 驱动程序管理器和驱动程序使用该句柄找到项目的信息。  

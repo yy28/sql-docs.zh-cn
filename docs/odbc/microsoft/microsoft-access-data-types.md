@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905122"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 数据类型
 下表显示 Microsoft Access 数据类型、 用于创建表的数据类型和 ODBC SQL 数据类型。  

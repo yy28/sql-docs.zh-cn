@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908132"
 ---
 # <a name="default-data-source"></a>默认数据源
 该驱动程序可能选择名的默认数据源，在某些情况下，其中应用程序未显式指定一个数据源：  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914092"
 ---
 # <a name="what-the-driver-does"></a>该驱动程序的用途
 下表总结了哪些功能和语句属性 ODBC 3 *.x*驱动程序应实现的块和可滚动的光标。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915732"
 ---
 # <a name="default-driver-subkey"></a>默认驱动程序子项
 默认子项包含单个值，该值描述默认数据源使用的驱动程序。 下表中显示此值的格式。  

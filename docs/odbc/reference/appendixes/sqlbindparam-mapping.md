@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907579"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam 映射
 **SQLBindParam**无法真正调用不推荐使用因为它已存在永远不会 ODBC 中; 但是，它仍表示重复的功能-驱动程序管理器需要将其导出，因为 ISO 和打开组 – 符合应用程序将使用它。 因为**SQLBindParameter**包含的所有功能**SQLBindParam**， **SQLBindParam**将映射的顶部**SQLBindParameter**(基础驱动程序时 ODBC 3 *.x*驱动程序)。 ODBC 3 *.x*驱动程序不需要实现**SQLBindParam**。  

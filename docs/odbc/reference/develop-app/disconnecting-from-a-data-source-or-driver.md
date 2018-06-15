@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909842"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>断开数据源或驱动程序
 当应用程序已完成将数据源使用时，它将调用**SQLDisconnect**。 **SQLDisconnect**释放连接分配的所有语句并将驱动程序与数据源断开连接。 如果事务进程中，它会返回错误。  

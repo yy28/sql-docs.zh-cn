@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906174"
 ---
 # <a name="odbc-appendixes"></a>ODBC 附录
 在以下附录中包含的 Microsoft ODBC 接口与相关的技术详细信息：  

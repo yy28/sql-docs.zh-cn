@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907122"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>支持的 SET 命令 （Visual FoxPro ODBC 驱动程序）
 你的应用程序可以发送以下 Visual FoxPro**设置**到数据源中的命令：  

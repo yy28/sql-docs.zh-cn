@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913322"
 ---
 # <a name="binding-parameter-markers"></a>绑定参数标记
 应用程序的调用将参数绑定**SQLBindParameter**。 **SQLBindParameter**将一个参数绑定一次。 通过该对话框，指定以下应用程序：  

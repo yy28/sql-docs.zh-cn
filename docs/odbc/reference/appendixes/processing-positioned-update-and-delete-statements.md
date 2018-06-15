@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908242"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>处理定位 Update 和 Delete 语句
 > [!IMPORTANT]  

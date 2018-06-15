@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910862"
 ---
 # <a name="appendix-c-sql-grammar"></a>附录 c: SQL 语法
 本附录包含以下主题。  

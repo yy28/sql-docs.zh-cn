@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913072"
 ---
 # <a name="sql-server-browsing-example"></a>SQL 服务器浏览示例
 下面的示例演示如何**SQLBrowseConnect**可能用于浏览 SQL Server 提供了驱动程序的连接。 第一次，应用程序请求连接句柄：  

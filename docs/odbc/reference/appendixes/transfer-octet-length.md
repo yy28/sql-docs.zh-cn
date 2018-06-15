@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909753"
 ---
 # <a name="transfer-octet-length"></a>传输八位字节长度
 传输八位字节长度的列是最大数据传输到其默认 C 数据类型时返回到应用程序的字节数。 对于字符数据，传输八位字节长度不包括 null 终止字符的空间。 传输八位字节长度的列可能不同于数据源上存储数据所需的字节数。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905282"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>调用 SQLSetPos 以插入数据
 当一个 ODBC 2。*x*应用程序使用 ODBC 3 *.x*驱动程序调用**SQLSetPos**与*操作*SQL_ADD，驱动程序管理器的自变量未映射到此调用**SQLBulkOperations**。 如果 ODBC 3 *.x*驱动程序应使用的应用程序调用**SQLSetPos** SQL_ADD，驱动程序应支持该操作。  
