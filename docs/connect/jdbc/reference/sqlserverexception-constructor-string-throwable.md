@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32846752"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>SQLServerException 构造函数 （java.lang.String，java.lang.Throwable）
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

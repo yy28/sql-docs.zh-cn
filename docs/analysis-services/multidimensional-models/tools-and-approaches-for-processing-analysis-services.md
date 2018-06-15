@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027314"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
   
      Analysis Services 对象具有层次结构。 如果选择数据库，则可能处理该数据库中包含的所有对象。 是否实际进行处理将根据您选择的处理选项和对象的状态而有所不同。 具体而言，如果某个对象尚未处理，则处理其父级将导致处理该对象。 有关对象依赖关系的详细信息，请参阅 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
-3.  在 **“处理”** 对话框中的 **“处理选项”**中，使用提供的默认值或从列表中选择一个不同的选项。 有关每个选项的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
+3.  在 **“处理”** 对话框中的 **“处理选项”** 中，使用提供的默认值或从列表中选择一个不同的选项。 有关每个选项的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
 4.  如果“处理”对话框中列出的对象已处理，则单击 **“影响分析”** 可以标识受影响的依赖对象，并且根据需要处理这些依赖对象。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  右键单击某个维度，然后单击“处理”。 您可以右键单击多个维度，以便一次处理多个对象。 有关详细信息，请参阅[批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
   
-4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”**列中，验证此列的选项是否为 **“处理全部”**。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”。  
+4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”** 列中，验证此列的选项是否为 **“处理全部”**。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”。  
   
 5.  单击 **“运行”**。  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/10/2018
   
     -   **“错误”** ，捕获任何错误  
   
-    -   **“进度报告开始”**、 **“进度报告当前状态”**和 **“进度报告结束”** ，报告处理状态并显示用于检索数据的 SQL 查询  
+    -   **“进度报告开始”**、 **“进度报告当前状态”** 和 **“进度报告结束”** ，报告处理状态并显示用于检索数据的 SQL 查询  
   
     -   **“开始执行 MDX 脚本”** 和 **“结束执行 MDX 脚本”** ，显示多维数据集的计算  
   

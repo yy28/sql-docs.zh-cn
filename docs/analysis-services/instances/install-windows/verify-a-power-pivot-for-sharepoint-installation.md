@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34017504"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>验证 Power Pivot for SharePoint 安装
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
   
     3.  取消选中“对该区域中的所有站点要求服务器验证(https:)”复选框。  
   
-    4.  在 **“将该网站添加到区域中”**中，键入您的网站的 URL，然后单击 **“添加”**。  
+    4.  在 **“将该网站添加到区域中”** 中，键入您的网站的 URL，然后单击 **“添加”**。  
   
     5.  单击 **“关闭”**，然后单击 **“确定”**。  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027697"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此工作簿包含一个或多个刷新外部数据的查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  单击 **http://** 或者要配置的位置。  
   
-5.  在“外部数据”中，取消选中 **“数据刷新时警告”**复选框。  
+5.  在“外部数据”中，取消选中 **“数据刷新时警告”** 复选框。  
   
 6.  单击 **“确定”**。  
   

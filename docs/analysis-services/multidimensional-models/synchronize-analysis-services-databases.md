@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025364"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  在对象资源管理器中，右键单击“数据库”文件夹，然后单击“同步”。  
   
-3.  指定源服务器和源数据库。 在“选择要同步的数据库”页上，在 **“源服务器”** 和 **“源数据库”**中键入源服务器和源数据库的名称。 例如，如果从测试环境部署到生产服务器，则源是临时服务器上的数据库。  
+3.  指定源服务器和源数据库。 在“选择要同步的数据库”页上，在 **“源服务器”** 和 **“源数据库”** 中键入源服务器和源数据库的名称。 例如，如果从测试环境部署到生产服务器，则源是临时服务器上的数据库。  
   
      **“目标服务器”** 显示同步 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “源数据库” **中所选数据库中的数据和元数据时所使用的** 实例的名称。  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 05/10/2018
      **Size**  
      显示该位置中存储的远程分区的估计大小。  
   
-     **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”**列指定）存储的远程分区进行了说明。 该网格包含以下列：  
+     **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”** 列指定）存储的远程分区进行了说明。 该网格包含以下列：  
   
      **Cube**  
      显示包含该分区的多维数据集的名称。  

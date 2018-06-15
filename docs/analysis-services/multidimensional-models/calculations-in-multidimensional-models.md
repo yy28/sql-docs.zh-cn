@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023714"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多维模型中的计算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/10/2018
 >  有关 MDX 脚本编写的详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](http://go.microsoft.com/fwlink/?LinkId=81892)，并请参阅 Microsoft TechNet 网站的 [SQL Server 2005 – Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) 页上的“其他资源”部分。 有关与多维数据集设计相关的性能问题的详细信息，请参阅 [SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)。  
   
 ## <a name="creating-a-new-calculation"></a>创建新计算  
- 若要创建新计算，请在多维数据集设计器的 **“计算”** 选项卡的 **“多维数据集”** 菜单中，单击 **“新建计算成员”**、 **“新建命名集”**或 **“新建脚本命令”**，具体取决于希望创建的计算的类型。 还可以在工具栏上单击任何相应的按钮，或在“脚本组织程序”窗格中右键单击任何位置，再在快捷菜单中单击一个命令。 此操作会在 **“脚本组织程序”** 窗格中添加新的计算，并在“计算表达式”窗格内的计算窗体中显示它的字段。 如果创建新脚本，则此操作将在“计算表达式”窗格中打开“脚本”视图。 有关生成这三种计算类型的详细信息，请参阅 [创建计算成员](../../analysis-services/multidimensional-models/create-calculated-members.md)、 [创建命名集](../../analysis-services/multidimensional-models/create-named-sets.md)和 [定义赋值和其他脚本命令](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)。  
+ 若要创建新计算，请在多维数据集设计器的 **“计算”** 选项卡的 **“多维数据集”** 菜单中，单击 **“新建计算成员”**、 **“新建命名集”** 或 **“新建脚本命令”**，具体取决于希望创建的计算的类型。 还可以在工具栏上单击任何相应的按钮，或在“脚本组织程序”窗格中右键单击任何位置，再在快捷菜单中单击一个命令。 此操作会在 **“脚本组织程序”** 窗格中添加新的计算，并在“计算表达式”窗格内的计算窗体中显示它的字段。 如果创建新脚本，则此操作将在“计算表达式”窗格中打开“脚本”视图。 有关生成这三种计算类型的详细信息，请参阅 [创建计算成员](../../analysis-services/multidimensional-models/create-calculated-members.md)、 [创建命名集](../../analysis-services/multidimensional-models/create-named-sets.md)和 [定义赋值和其他脚本命令](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)。  
   
 ## <a name="editing-scripts"></a>编辑脚本  
  可以在 **“计算”** 选项卡的“计算表达式”窗格中编辑脚本。“计算表达式”窗格有两个视图：脚本视图和窗体视图。 窗体视图显示单个命令的表达式和属性。 编辑 MDX 脚本时，表达式框将充满整个窗体视图。  

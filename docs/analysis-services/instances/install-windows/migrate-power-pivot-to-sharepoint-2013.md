@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018454"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>将 Power Pivot 迁移到 SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="bkmk_backup_restore"></a>备份、 复制、 还原数据库  
  “SharePoint 数据库附加升级”过程是由多个步骤构成的一个序列，用于将 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 相关内容和服务应用程序数据库备份、复制和还原到 SharePoint 2013 场。  
   
-1.  **将数据库设为只读：**在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，右键单击数据库名称，然后单击“属性”。 在“选项”页中，将“数据库只读”属性设置为 **True**。  
+1.  **将数据库设为只读：** 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，右键单击数据库名称，然后单击“属性”。 在“选项”页中，将“数据库只读”属性设置为 **True**。  
   
 2.  **备份：** 备份您要迁移到 SharePoint 2013 场的每个内容数据库和服务应用程序数据库。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，右键单击数据库名称，再单击“任务”，然后单击“备份”。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  **还原：** 将数据库还原到目标 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]。 可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 完成此步骤。  
   
-5.  **将数据库设为读写：**将“数据库只读”设置为 **False**。  
+5.  **将数据库设为读写：** 将“数据库只读”设置为 **False**。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>准备 Web 应用程序和装入内容数据库  
  以下过程的更多详细说明，请参阅[将数据库从 SharePoint 2010 升级到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/10/2018
   
     3.  单击数据库的名称。  
   
-    4.  在 **“管理内容数据库设置”**上，将 **“数据库状态”** 设置为 **“脱机”**。  
+    4.  在 **“管理内容数据库设置”** 上，将 **“数据库状态”** 设置为 **“脱机”**。  
   
     5.  选择 **“删除内容数据库”**。 请注意显示的警告：在内容数据库中存储的站点将无法继续访问。  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  查找 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序，例如“默认的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”，在 SharePoint 功能区中单击服务应用程序的名称并单击  “属性”。  
   
-3.  更新数据库服务器名称实例和数据库名称。 更新为您备份、复制和还原的数据库的正确名称。 在您单击 **“确定”**后，将升级服务应用程序数据库。 错误将位于 ULS 日志中。  
+3.  更新数据库服务器名称实例和数据库名称。 更新为您备份、复制和还原的数据库的正确名称。 在您单击 **“确定”** 后，将升级服务应用程序数据库。 错误将位于 ULS 日志中。  
   
  **升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 计划**  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/10/2018
   
     1.  另一个用于迁移计划的选项是对每个工作簿都启用计划刷新。 导航到包含工作簿的文档库。  
   
-    2.  打开上下文菜单，然后单击**“管理[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]数据刷新”**。  
+    2.  打开上下文菜单，然后单击 **“管理[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]数据刷新”**。  
   
     3.  在 **“计划刷新”** 部分中，单击 **“启用”**。  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027407"
 ---
 # <a name="connections-in-adomdnet"></a>Connections in ADOMD.NET
   ADOMD.NET，在你使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象打开连接与分析数据源，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 不再需要连接时，应显式关闭该连接。  
