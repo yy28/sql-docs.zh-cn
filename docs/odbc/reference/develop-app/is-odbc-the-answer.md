@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911672"
 ---
 # <a name="is-odbc-the-answer"></a>答案是 ODBC？
 在深入了解的互操作性问题之前, 请考虑以下问题： 应用程序应使用 ODBC 根本？ 这看起来有点奇怪问题到 ODBC，指南中提出，但它实际上是，一个合法。 ODBC 未设计为完全替换本机数据库 Api，也不旨在提供在所有情况下的数据库访问。 它旨在提供到数据库的常见界面，用于释放应用程序程序员无需了解和维护多个数据库的链接。  

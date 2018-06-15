@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911902"
 ---
 # <a name="considering-database-features-to-use"></a>考虑到使用的数据库功能
 基本级别的互操作性知道后，必须考虑应用程序使用的数据库功能。 例如，哪些 SQL 语句将应用程序执行？ 将应用程序使用可滚动游标？ 事务？ 过程？ Long 数据？ 有关哪些功能的建议可能不支持所有的 Dbms，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数描述，以及[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可以消除一些 Dbms 从目标 Dbms 的列表。 它们还可能会显示应用程序可以轻松地针对许多 Dbms。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909285"
 ---
 # <a name="bookmark-types"></a>书签类型
 ODBC 3 中的所有书签 *.x*长度可变的书签。 这允许主键或唯一索引与表用作书签关联。 书签也可以为 32 位值，，ODBC 2 中使用的。*x*。 若要指定书签使用与某个游标，ODBC 3 *.x*应用程序将设置到 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 语句属性。 自动使用长度可变的书签。  

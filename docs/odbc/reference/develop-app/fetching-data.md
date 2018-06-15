@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909102"
 ---
 # <a name="fetching-data"></a>提取数据
 从结果集中检索行并将它们返回到应用程序的过程被称为*提取*。 本部分介绍如何提取数据。  

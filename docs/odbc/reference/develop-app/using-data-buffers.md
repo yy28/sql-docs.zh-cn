@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914862"
 ---
 # <a name="using-data-buffers"></a>使用数据缓冲区
 由以下三部分信息描述数据缓冲区： 它们类型、 地址和字节的长度。 每当函数需要这部分信息之一，并且不能已了解它，它有一个与其应用程序将其传递的参数。  

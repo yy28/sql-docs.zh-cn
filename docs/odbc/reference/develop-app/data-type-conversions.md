@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911932"
 ---
 # <a name="data-type-conversions"></a>数据类型转换
 数据可以转换从一种类型到另一个在四次之一： 时数据从一个应用程序变量时转移到另一个 (C 到 C)，应用程序变量中的数据发送到语句参数 (C to SQL) 中，在返回结果集列中的数据时在应用程序变量 (SQL 到 C)，并且当数据已转让从一个数据源列给另一个 (SQL to SQL)。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906202"
 ---
 # <a name="appendix-d-data-types"></a>附录 d： 数据类型
 ODBC 定义了两个集的数据类型： SQL 数据类型和 C 数据类型。 SQL 数据类型表示存储在数据源的数据的数据类型。 C 数据类型表示存储在应用程序缓冲区中数据的数据类型。  

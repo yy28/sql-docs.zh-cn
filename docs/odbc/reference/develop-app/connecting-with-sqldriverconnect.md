@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909392"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>使用 SQLDriverConnect 连接
 **SQLDriverConnect**用于连接到数据源使用连接字符串。 **SQLDriverConnect**而不是使用**SQLConnect**原因如下：  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911842"
 ---
 # <a name="descriptor-field-conformance"></a>描述符字段一致性
 下表指示每个 ODBC 描述符标头字段，这是定义完善的一致性级别。  

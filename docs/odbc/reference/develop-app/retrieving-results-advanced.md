@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912192"
 ---
 # <a name="retrieving-results-advanced"></a>检索结果 （高级）
 应用程序可以指定添加偏移量，以绑定数据缓冲区的地址和相应的长度/指示器缓冲区地址时**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**调用。 这些添加的结果确定这些操作中使用的地址。  

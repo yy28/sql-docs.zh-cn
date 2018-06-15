@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904902"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos （桌面数据库驱动程序）
 大容量模型语义**SQLSetPos**使用调用*irow*支持参数等于 0。  

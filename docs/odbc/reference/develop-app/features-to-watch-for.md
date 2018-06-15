@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911362"
 ---
 # <a name="features-to-watch-for"></a>监视的功能
 本部分介绍大量的应用程序开发人员通常需要理所当然的功能。 实际上，这些功能差别很大支持和 Dbms; 支持的方式为它们的代码的失败是可能会导致可互操作的应用程序中的问题。  

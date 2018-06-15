@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905753"
 ---
 # <a name="using-operating-system-authentication"></a>使用操作系统身份验证
 > [!IMPORTANT]  

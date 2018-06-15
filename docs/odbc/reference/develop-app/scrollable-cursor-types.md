@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912412"
 ---
 # <a name="scrollable-cursor-types"></a>可滚动游标类型
 可滚动游标的四种类型是静态、 动态、 键集驱动和混合。 静态游标检测弱或根本没有更改，但相对比较便宜实现。 动态游标检测到的所有更改，但难以实现。 游标键集驱动的和混合游标位于之间，检测的大多数更改，但在更少的开销比动态游标。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912302"
 ---
 # <a name="executing-a-statement"></a>执行语句
 有四种方法执行语句，具体取决于时对它们进行编译 （准备） 的数据库引擎和用户定义它们：  

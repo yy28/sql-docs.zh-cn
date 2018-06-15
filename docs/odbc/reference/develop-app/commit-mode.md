@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908412"
 ---
 # <a name="commit-mode"></a>提交模式
 ODBC 中的事务可以采用两种模式之一： 自动提交模式或手动提交模式。  

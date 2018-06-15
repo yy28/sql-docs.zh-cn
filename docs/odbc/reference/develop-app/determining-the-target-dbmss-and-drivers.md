@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911942"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>确定目标 Dbms 和驱动程序
 要考虑的下一步问题是，哪些应用程序的目标 Dbms 和支持这些 Dbms 使用哪些驱动程序都可用？ 通用应用程序往往是高度可互操作，因为目标 Dbms 的问题是最适用于自定义和垂直应用程序。 但是，这一问题目标驱动程序适用于所有应用程序，因为驱动程序差别很大速度、 质量、 支持的功能和可用性。 此外，如果驱动程序与应用程序一起重新分发，成本和可用性的许可计划需要考虑。  

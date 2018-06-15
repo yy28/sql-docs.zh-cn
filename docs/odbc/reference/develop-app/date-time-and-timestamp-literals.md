@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913382"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、 时间和时间戳文本
 日期、 时间和时间戳文本的转义序列是  

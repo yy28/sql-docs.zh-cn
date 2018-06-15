@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910602"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>文本的前缀和后缀
 在 SQL 语句中，*文本*是实际数据值的字符表示。 例如，在下面的语句中，ABC、 FFFF 和 10 是文本：  

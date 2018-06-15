@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907962"
 ---
 # <a name="allocating-and-freeing-buffers"></a>分配和释放缓冲区
 所有缓冲区分配和释放应用程序。 如果不延迟的缓冲区，它需要仅存在于对函数调用的持续时间。 例如， **SQLGetInfo**返回指向的缓冲区中的特定选项与关联的值*InfoValuePtr*自变量。 可以在调用之后立即释放此缓冲区**SQLGetInfo**，下面的代码示例中所示：  

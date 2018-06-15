@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911042"
 ---
 # <a name="mixed-cursors"></a>混合的游标
 混合的光标位于键集驱动游标和动态游标的组合。 如果结果集太大而无法规范的合理保存整个结果集的密钥，则会使用它。 混合的游标实现通过创建小于整个结果集，但大于行集中键集。  

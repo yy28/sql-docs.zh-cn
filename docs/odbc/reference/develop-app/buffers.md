@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911292"
 ---
 # <a name="buffers"></a>缓冲区
 缓冲区是用于应用程序和驱动程序之间传递数据的应用程序任何的内存部分。 例如，应用程序缓冲区可以关联，或*绑定到*结果集具有列**SQLBindCol**。 是提取每个行，在这些缓冲区中的每个列返回数据。 *输入缓冲区*用于将数据传递到该驱动程序; 应用程序从*输出缓冲区*用于将数据从驱动程序返回到应用程序。  

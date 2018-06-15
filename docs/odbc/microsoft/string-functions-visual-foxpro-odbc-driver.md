@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904952"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>字符串函数 （Visual FoxPro ODBC 驱动程序）
 下表列出了 Visual FoxPro ODBC 驱动程序; 支持 ODBC 字符串操作函数当相同的功能的 Visual FoxPro 语法不同于 ODBC 语法，将列等效 Visual FoxPro。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 05/03/2018
 |右 *(string_exp，计数)*||  
 |RTRIM *(string_exp)*||  
 |SOUNDEX *(string_exp)*||  
-|空间*（计数）*||  
+|空间 *（计数）*||  
 |子字符串 *(string_exp，开始，长度)*|SUBSTR *(string_exp，开始，长度)*|  
 |UCASE *(string_exp)*|上部 *(string_exp)*|

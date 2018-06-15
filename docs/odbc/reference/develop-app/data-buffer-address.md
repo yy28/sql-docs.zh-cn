@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908492"
 ---
 # <a name="data-buffer-address"></a>数据缓冲区地址
 应用程序将数据缓冲区的地址传递给自变量，通常名为中的驱动程序*ValuePtr*或类似的名称。 例如，在下面的示例调用**SQLBindCol**，应用程序将指定的地址*日期*变量：  

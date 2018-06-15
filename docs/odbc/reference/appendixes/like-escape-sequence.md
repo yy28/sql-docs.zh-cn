@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906502"
 ---
 # <a name="like-escape-sequence"></a>如转义序列
 ODBC 为 LIKE 子句使用转义序列。 此转义序列的语法如下所示：  

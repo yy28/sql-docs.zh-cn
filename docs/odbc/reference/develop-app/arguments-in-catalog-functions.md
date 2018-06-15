@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911492"
 ---
 # <a name="arguments-in-catalog-functions"></a>目录函数中的参数
 所有目录函数都接受的参数与该应用程序可以将限制返回的数据的作用域。 例如，在第一个和第二个调用到**SQLTables**下面的代码中返回的结果集包含所有表有关的信息，而第三个调用返回有关订单表的信息：  

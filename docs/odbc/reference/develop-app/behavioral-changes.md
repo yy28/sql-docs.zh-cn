@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910912"
 ---
 # <a name="behavioral-changes"></a>行为更改
 行为的更改是，这些更改*语法*接口的保持不变，但*语义*已更改。 有关这些更改后，在 ODBC 2 中使用的功能。*x*不同 ODBC 3 中的相同功能的行为。*x*。  

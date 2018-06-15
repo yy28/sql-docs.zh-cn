@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908562"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>连接到数据源或驱动程序
 应用程序可以连接到任意数量的驱动程序和数据源。 这可能是各种驱动程序和数据源、 相同的驱动程序和不同的数据源或甚至多个连接到相同的驱动程序和数据源。  

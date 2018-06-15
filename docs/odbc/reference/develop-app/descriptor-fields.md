@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912572"
 ---
 # <a name="descriptor-fields"></a>描述符字段
 描述符包含*标头*和*记录*完整地描述列或参数的字段。  

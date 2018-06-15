@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906872"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 转义序列
 ODBC 中使用以下的转义序列。 本部分中的语法使用中定义的某些元素[SQL 语句中使用元素](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)。  
