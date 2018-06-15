@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32972792"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -150,13 +151,13 @@ ms.lasthandoff: 05/03/2018
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
   
      **省略号 (…)**  
-     打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”**浏览和选择可用对象。  
+     打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”** 浏览和选择可用对象。  
   
      **主体名称**  
      对于所审核的对象，要作为审核筛选依据的帐户。  
   
      **省略号 (…)**  
-     打开 **“选择对象”** 对话框以基于指定的 **“对象名称”**浏览和选择可用对象。  
+     打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
 3.  在完成后，单击 **“确定”**。  
   
@@ -164,7 +165,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-server-audit-specification"></a>创建服务器审核规范  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

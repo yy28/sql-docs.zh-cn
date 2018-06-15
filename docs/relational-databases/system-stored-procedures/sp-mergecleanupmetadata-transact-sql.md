@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33002154"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  建议（不是必需）停止对发布和订阅数据库的所有更新。 如果更新继续进行，则重新初始化发布时，上次合并后在订阅服务器上所做的所有更新都将丢失，但会保留数据收敛。  
   
-2.  运行合并代理以执行合并。 我们建议你使用**– 验证**在每个订阅服务器上时运行合并代理的代理命令行选项。 如果你正在运行连续模式合并，请参阅*连续模式下合并的特殊注意事项*本部分中更高版本。  
+2.  运行合并代理以执行合并。 我们建议你使用 **– 验证**在每个订阅服务器上时运行合并代理的代理命令行选项。 如果你正在运行连续模式合并，请参阅*连续模式下合并的特殊注意事项*本部分中更高版本。  
   
 3.  所有合并都完成后，执行**sp_mergecleanupmetadata**。  
   
@@ -87,7 +88,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  停止**所有**发布和订阅数据库的更新。  
   
-2.  运行合并代理以执行合并。 我们建议你使用**– 验证**在每个订阅服务器上时运行合并代理的代理命令行选项。 如果你正在运行连续模式合并，请参阅*连续模式下合并的特殊注意事项*本部分中更高版本。  
+2.  运行合并代理以执行合并。 我们建议你使用 **– 验证**在每个订阅服务器上时运行合并代理的代理命令行选项。 如果你正在运行连续模式合并，请参阅*连续模式下合并的特殊注意事项*本部分中更高版本。  
   
 3.  所有合并都完成后，执行**sp_mergecleanupmetadata**。  
   
@@ -111,7 +112,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  已完成时的步骤 3 中运行**sp_mergecleanupmetadata**，恢复基于停止它们的连续模式合并。 请使用以下两种方法之一：  
   
--   添加**– 连续**回合并代理参数。  
+-   添加 **– 连续**回合并代理参数。  
   
 -   重新激活与发布**sp_changemergepublication。**  
   

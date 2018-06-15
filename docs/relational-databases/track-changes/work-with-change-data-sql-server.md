@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33012654"
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
  有关如何截获这些已知的 TVF 错误并返回有关失败的更有意义的信息的说明，请参阅“使用 TRY CATCH 枚举净更改”模板。  
   
 > [!NOTE]  
->  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”菜单上单击“模板资源管理器”，展开**“SQL Server 模板”**，然后展开**“变更数据捕获”**文件夹。  
+>  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”菜单上单击“模板资源管理器”，展开 **“SQL Server 模板”**，然后展开 **“变更数据捕获”** 文件夹。  
   
 ##  <a name="Functions"></a> 查询函数  
  根据所跟踪的源表的特性以及配置其捕获实例的方式，将生成一个或两个查询更改数据的 TVF。  

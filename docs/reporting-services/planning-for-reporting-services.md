@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018534"
 ---
 # <a name="planning-for-reporting-services"></a>Reporting Services 规划
   通过这些主题可以更好地了解 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 了解如何安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 环境以满足您的需要。  

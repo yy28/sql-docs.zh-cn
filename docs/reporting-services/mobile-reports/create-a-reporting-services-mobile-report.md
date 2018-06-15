@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018364"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>创建 Reporting Services 移动报表
 借助 SQL Server 移动报表发布服务器，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建 SQL Server 2016 Reporting Services 移动报表，这些报表可轻松缩放至任何屏幕大小。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021814"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
 递阶报表是一种  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表，可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
     1.  选择包含要缩进显示的详细信息字段的单元。 该单元的文本框属性显示在“属性”窗格中。  
   
-    2.  在“属性”窗格的 **“对齐”**下，展开 **“填充”**的属性。  
+    2.  在“属性”窗格的 **“对齐”** 下，展开 **“填充”** 的属性。  
   
     3.  对于“左” ，键入一个新的填充值，例如 **.5in**。 填充会在单元中按照您指定的值缩进文本。 默认空白大小为 2 磅。 填充属性的有效值是零或正数，后跟一个大小指示符。  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
     2.  在 **“Tablix 组”** 对话框中，键入一个名称。  
   
-    3.  在 **“组表达式”**中，键入一个表达式或选择要用作分组依据的数据集字段。 要创建表达式，请单击表达式 (fx) 按钮打开“表达式”对话框。  
+    3.  在 **“组表达式”** 中，键入一个表达式或选择要用作分组依据的数据集字段。 要创建表达式，请单击表达式 (fx) 按钮打开“表达式”对话框。  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

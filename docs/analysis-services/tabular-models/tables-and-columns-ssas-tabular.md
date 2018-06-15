@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34043421"
 ---
 # <a name="tables-and-columns"></a>表和列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
   
 -   关系数据和表格 (HTML) 数据的组合复制并粘贴到表中。  
   
- 当您导入数据时，每个表或视图、工作表或数据文件都将作为表添加到模型设计器中。 通常，来自不同数据源的数据添加到单独的选项卡上，但可以使用 **“粘贴”** 和 **“追加粘贴”**将数据合并到一个表中。 有关详细信息，请参阅[复制并粘贴数据](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
+ 当您导入数据时，每个表或视图、工作表或数据文件都将作为表添加到模型设计器中。 通常，来自不同数据源的数据添加到单独的选项卡上，但可以使用 **“粘贴”** 和 **“追加粘贴”** 将数据合并到一个表中。 有关详细信息，请参阅[复制并粘贴数据](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
   
  在添加了所需的数据后，可以创建各表之间的其他关系，查找或引用其他表中的相关值，或者通过添加新的计算列创建派生值。  
   

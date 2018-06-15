@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,11 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 464696823e99e81a763fbbc4a2835c86ef9bea5c
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34332438"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>跟踪自适应联接活动
 自适应联接运算符具有以下计划运算符属性：
 
-| 计划属性 | 描述 |
+| 计划属性 | 说明 |
 |--- |--- |
 | AdaptiveThresholdRows | 显示用于从哈希联接切换到嵌套循环联接的阈值。 |
 | EstimatedJoinType | 可能的联接类型。 |
@@ -260,14 +260,14 @@ MSTVF 中简单的“SELECT*”不会获益于交错执行。
 ### <a name="tracking-interleaved-execution-activity"></a>跟踪交错执行活动
 可在实际查询执行计划中查看使用情况属性：
 
-| 执行计划属性 | 描述 |
+| 执行计划属性 | 说明 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 适用于 QueryPlan 节点。 如果为“true”，表示计划包含交错执行候选项。 |
 | IsInterleavedExecuted | TVF 节点的 RelOp 下的 RuntimeInformation 元素的属性。 如果为“true”，表示该操作已具体化为交错执行操作的一部分。 |
 
 还可以通过以下 xEvent 跟踪交错执行匹配项：
 
-| XEvent | 描述 |
+| XEvent | 说明 |
 | ---- | --- |
 | interleaved_exec_status | 发生交错执行时将引发此事件。 |
 | interleaved_exec_stats_update | 此事件介绍交错执行更新的基数估值。 |

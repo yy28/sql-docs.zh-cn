@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32973842"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="TsqlCreate"></a> 使用 Transact-SQL  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -177,7 +178,7 @@ ms.lasthandoff: 05/03/2018
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“<number_of_active_connections> 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”**断开所有活动连接。  
+    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“<number_of_active_connections> 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
@@ -193,7 +194,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的对象资源管理器中，右键单击 **“数据库”** 文件夹，然后选择 **“分离…”**。  
   
-8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”**下，单击 **“添加”**。  
+8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”** 下，单击 **“添加”**。  
   
 9. 在“定位数据库文件 - server_name”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”。  
   
@@ -254,11 +255,11 @@ ms.lasthandoff: 05/03/2018
      显示所选数据库文件的路径。 可以手动编辑该路径。  
   
      **消息**  
-     显示空消息或**“找不到文件”**超链接。  
+     显示空消息或 **“找不到文件”** 超链接。  
   
 ###  <a name="TsqlMove"></a> 使用 Transact-SQL  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

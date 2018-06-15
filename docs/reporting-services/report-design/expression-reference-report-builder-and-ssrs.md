@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020784"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>表达式引用（报表生成器和 SSRS）
   报表表达式支持对内置函数和内置集合的多种形式的引用。 表达式必须具有有效的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法，然后才能发布或处理报表。  

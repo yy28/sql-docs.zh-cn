@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027454"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>按规则和分析数据更改多边形、线条和点的显示方式
   通过设置层的选项、设置层上地图元素的规则或覆盖层上特定嵌入地图元素的选项来控制地图层上多边形、线条和点的显示选项。  

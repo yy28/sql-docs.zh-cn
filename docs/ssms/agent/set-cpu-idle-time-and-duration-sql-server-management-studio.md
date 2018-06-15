@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33041084"
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>设置 CPU 空闲时间和持续时间 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  右键单击“SQL Server 代理”，再单击“属性”，然后选择“高级”页。  
   
-3.  在 **“空闲 CPU 条件”**下，执行下列操作：  
+3.  在 **“空闲 CPU 条件”** 下，执行下列操作：  
   
     -   选中 **“定义空闲 CPU 条件”**。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323798"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>对表或索引禁用压缩功能
 

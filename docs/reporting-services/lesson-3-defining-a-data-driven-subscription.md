@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016861"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，将使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户数据驱动订阅页来连接到订阅数据源，生成一个检索订阅数据的查询，然后将结果集映射到报表和传递选项。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="schedule"></a>“计划”
 1. 在“计划”部分中，单击“报表特定计划”。
 2. 单击“编辑计划”。
-3.  在 **“计划详细信息”**中，单击 **“一次”**。  
+3.  在 **“计划详细信息”** 中，单击 **“一次”**。  
 4.  将开始时间指定为当前时间的前几分钟。  
 5.  单击 **“应用”**。
 ## <a name="destination"></a>目标  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  ## <a name="credentials"></a>凭据
  1. 选择“使用以下凭据”。
  2. 选择“Windows 用户名和密码”。
- 3.  在 **“用户名”** 和 **“密码”**中，键入您的域用户名和密码。 请在指定 **“用户名”**时同时包括域和用户帐户。
+ 3.  在 **“用户名”** 和 **“密码”** 中，键入您的域用户名和密码。 请在指定 **“用户名”** 时同时包括域和用户帐户。
      > [!NOTE]  
     > 用于连接到订阅服务器数据源的凭据不会传递回 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果以后修改了该订阅，则必须重新键入连接到该数据源所用的密码。
 ## <a name="query"></a>查询      

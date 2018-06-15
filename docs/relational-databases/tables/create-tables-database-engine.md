@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33009024"
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 SSMS 中的“对象资源管理器”中，连接到包含要修改的数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
-2.  在 **“对象资源管理器”**中，展开 **“数据库”** 节点，然后展开将包含新表的数据库。  
+2.  在 **“对象资源管理器”** 中，展开 **“数据库”** 节点，然后展开将包含新表的数据库。  
   
 3.  在对象资源管理器中，右键单击数据库的“表”节点，然后单击“新建表”。  
   
@@ -70,13 +71,13 @@ ms.lasthandoff: 05/03/2018
   
 10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”**。  
   
-11. 若要查看这个新表，请在 **“对象资源管理器”**中展开 **“表”** 节点，然后按 **F5** 刷新对象列表。 该新表将显示在表列表中。  
+11. 若要查看这个新表，请在 **“对象资源管理器”** 中展开 **“表”** 节点，然后按 **F5** 刷新对象列表。 该新表将显示在表列表中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ## <a name="using-query-editor"></a>使用查询编辑器  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

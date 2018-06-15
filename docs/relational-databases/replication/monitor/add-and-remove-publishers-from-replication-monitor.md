@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32962082"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>从复制监视器中添加和删除发布服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  若要为发布服务器指定刷新和连接选项，请在该网格中选择发布服务器，并根据需要修改选项。 有关刷新选项的详细信息，请参阅 [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  
   
-7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”**选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
+7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”** 选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  若要为发布服务器指定刷新和连接选项，请在该网格中选择发布服务器，并根据需要修改选项。 有关刷新选项的详细信息，请参阅 [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  
   
-7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”**选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
+7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”** 选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  若要为发布服务器指定刷新和连接选项，请在该网格中选择发布服务器，并根据需要修改选项。 有关刷新选项的详细信息，请参阅 [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  
   
-7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”**选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
+7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”** 选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

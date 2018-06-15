@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016244"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 访问报表服务器项
   本主题介绍如何使用 rs:Command=Value 访问报表服务器数据库或 SharePoint 站点中不同类型的目录项。 不必实际添加此参数字符串。 如果您省略此字符串，报表服务器将会计算项类型，并且自动选择适当的参数值。 但是，在 URL 中使用 rs:Command=Value 字符串可改进报表服务器的性能。  

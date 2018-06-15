@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34042111"
 ---
 # <a name="create-and-manage-kpis"></a>创建和管理 Kpi 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,15 +29,15 @@ ms.lasthandoff: 05/10/2018
   
 1.  在度量值网格中，右键单击将充当基础度量值（值）的度量值，然后单击“创建 KPI”。  
   
-2.  在 **“关键绩效指标”** 对话框的 **“定义目标值”**中，选择以下选项之一：  
+2.  在 **“关键绩效指标”** 对话框的 **“定义目标值”** 中，选择以下选项之一：  
   
      选择 **“度量值”**，然后从列表框中选择一个目标度量值。  
   
      选择 **“绝对值”**，然后键入一个数值。  
   
-3.  在 **“定义状态阈值”**中，单击并滑动阈值下限和上限。  
+3.  在 **“定义状态阈值”** 中，单击并滑动阈值下限和上限。  
   
-4.  在 **“选择图标样式”**中，单击某一图像类型。  
+4.  在 **“选择图标样式”** 中，单击某一图像类型。  
   
 5.  单击 **“说明”**，然后为“KPI”、“值”、“状态”和“目标”键入说明。  
   

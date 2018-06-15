@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015324"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 中的 URL 访问与 SOAP 之间选择
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322798"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>操作始终在 Linux 上的可用性组
 

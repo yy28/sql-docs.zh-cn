@@ -16,6 +16,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322278"
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>快速入门： 在云中运行 SQL Server 2017
 

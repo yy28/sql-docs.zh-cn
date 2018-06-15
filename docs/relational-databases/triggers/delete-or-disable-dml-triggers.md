@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33012874"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要删除的触发器的表。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要禁用的触发器的表。  
   
