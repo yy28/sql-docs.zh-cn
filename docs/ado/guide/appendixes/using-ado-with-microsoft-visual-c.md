@@ -2,7 +2,6 @@
 title: 使用 ADO 的 Microsoft Visual c + + |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f43804f1df7b7302acfc368c7ea67ebb097c91be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15fcf82b5a1ce0edd3b20d1784bfd8f4f61a5dd1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270416"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>使用 ADO 的 Microsoft Visual c + +
 有关使用 ADO 的 Visual c + + 的信息，请参阅以下各节：  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Visual C++ 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [ADO COM 的 Visual c + + 语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [ADO 的 Visual c + + 语法 #import 索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   

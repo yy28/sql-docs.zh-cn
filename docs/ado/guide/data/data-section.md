@@ -2,7 +2,6 @@
 title: 数据部分 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc7a8e66765d35d4c8a8a7f74f63720dec4d9429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b861ce91ec8b7007e168cbdb7d0dae3f0ce48e9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270096"
 ---
 # <a name="data-section"></a>数据部分
 数据部分定义以及任何挂起的更新、 插入或删除的行集的数据。 数据节可以包含零个或多个行。 它只能包含一个行集，其中行定义的架构中的数据。 此外，如前面提到的那样，可以忽略不包含任何数据的列。 如果某个属性或子元素使用的数据部分中，并且未在架构部分中定义该构造，则以无提示方式忽略它。  
   
-## <a name="string"></a>字符串  
+## <a name="string"></a>String  
  文本数据中的 XML 保留的字符必须替换为相应的字符实体。 例如，在公司名称"Joe 的车库"中单引号必须替换由一个实体。 实际行将如下所示：  
   
 ```  
@@ -88,5 +88,5 @@ ms.lasthandoff: 05/03/2018
   
  更新始终包含已更改的行数据应遵循的整个原始行数据。 已更改的行可能包含的所有列或已实际更改的那些列。 在前面的示例中，发货方 2 的行不会更改，并且只有电话列已发货方 3 更改值，因此已更改的行中包含的唯一列。 货主 12、 13 和 14 插入的行是批处理组合在一起的下一个 rs： 插入标记。 尽管这不会显示在前面的示例，请注意，也可一起成批已删除的行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

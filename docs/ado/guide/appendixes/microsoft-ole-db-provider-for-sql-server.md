@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for SQL Server |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,16 +18,17 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbe50621dc248a3f11368717bbe9423b5a8b59e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca737ed49349cc87e378fbd891ec224155147acc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271636"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概述
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，允许 ADO 来访问 Microsoft SQL Server。
 
-**注意：**不建议新的开发使用该驱动程序。 新的 OLE DB 访问接口称为[Microsoft OLE DB 驱动程序的 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 将更新其与今后的最新的服务器功能。
+**注意：** 不建议新的开发使用该驱动程序。 新的 OLE DB 访问接口称为[Microsoft OLE DB 驱动程序的 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 将更新其与今后的最新的服务器功能。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
  若要连接到此提供程序，设置*提供程序*参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性：
@@ -66,7 +66,7 @@ User ID=MyUserID;Password=MyPassword;"
 
 |参数|Description|
 |---------------|-----------------|
-|Trusted_Connection|指示用户身份验证模式。 此属性可以设置为**是**或**否**。 默认值是 **否**。 如果此属性设置为**是**，SQLOLEDB 使用 Microsoft Windows NT 身份验证模式为授权用户对指定的 SQL Server 数据库的访问**位置**和[数据源](../../../ado/reference/ado-api/datasource-property-ado.md)属性值。 如果此属性设置为**否**，SQLOLEDB 使用混合模式来授予用户对 SQL Server 数据库的访问权限。 中指定的 SQL Server 登录名和密码**用户 Id**和**密码**属性。|
+|Trusted_Connection|指示用户身份验证模式。 此属性可以设置为**是**或**否**。 默认值是**否**。 如果此属性设置为**是**，SQLOLEDB 使用 Microsoft Windows NT 身份验证模式为授权用户对指定的 SQL Server 数据库的访问**位置**和[数据源](../../../ado/reference/ado-api/datasource-property-ado.md)属性值。 如果此属性设置为**否**，SQLOLEDB 使用混合模式来授予用户对 SQL Server 数据库的访问权限。 中指定的 SQL Server 登录名和密码**用户 Id**和**密码**属性。|
 |当前语言|指示 SQL Server 语言名称。 标识用于系统消息选择和格式化的语言。 必须在 SQL Server 上安装的语言否则为打开，则连接将失败。|
 |网络地址|指示由指定的 SQL 服务器的网络地址**位置**属性。|
 |网络库|指示用于与 SQL Server 进行通信的网络库 (DLL) 的名称。 该名称不应当包含路径或 .dll 文件扩展名。 默认值提供的 SQL Server 客户端配置。|
@@ -118,7 +118,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   在 MDAC 2.7、 MDAC 2.8 和 Windows 数据访问组件 (Windows DAC) 6.0，OLE DB Provider for SQL Server 支持**sql_variant**类型。 OLE DB Provider for ODBC 却没有。
 
--   **Sql_variant**类型不完全匹配**DBTYPE_VARIANT**数据类型。  **Sql_variant**类型支持几个新的子类型不受**DBTYPE_VARIANT、**包括**GUID**， **ANSI** (非 UNICODE)字符串和**BIGINT**。 使用子类型不前面列出的那些将正常工作。
+-   **Sql_variant**类型不完全匹配**DBTYPE_VARIANT**数据类型。  **Sql_variant**类型支持几个新的子类型不受**DBTYPE_VARIANT、** 包括**GUID**， **ANSI** (非 UNICODE)字符串和**BIGINT**。 使用子类型不前面列出的那些将正常工作。
 
 -   **Sql_variant**子类型**数值**不符**DBTYPE_DECIMAL**大小。
 
@@ -183,7 +183,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |通过选择列表中的列进行排序|DBPROP_ORDERBYCOLUMNSINSELECT|
 |输出参数可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |通过 Ref 访问器|DBPROP_BYREFACCESSORS|
-|密码|DBPROP_AUTH_PASSWORD|
+|Password|DBPROP_AUTH_PASSWORD|
 |持久性安全信息|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |持久性 ID 类型|DBPROP_PERSISTENTIDTYPE|
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
@@ -360,5 +360,5 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  特定的实现详细信息和有关 Microsoft SQL Server OLE DB 提供程序功能的信息，请参阅[SQL Server 提供程序](http://msdn.microsoft.com/en-us/adf1d6c4-5930-444a-9248-ff1979729635)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [ConnectionString 属性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [提供程序属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

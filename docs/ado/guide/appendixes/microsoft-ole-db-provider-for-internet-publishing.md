@@ -2,7 +2,6 @@
 title: 用于 Internet 发布的 Microsoft OLE DB 提供程序 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3dbcc73d88669a6787151770d97b3921ae43f2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8d3caac3bd857b790372bd6b41fc818090210a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271216"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 发布概述
 Microsoft OLE DB 提供程序用于 Internet 发布允许 ADO 由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的访问资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。
@@ -44,7 +44,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- - 或 -
+ -或-
 
 ```
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -67,5 +67,5 @@ MSDAIPP.DSO
 > [!NOTE]
 >  如果 MSDAIPP。DSO 显式指定的提供程序，使用值为*提供程序*连接字符串关键字或**提供程序**属性，不能使用"URL ="连接字符串中。 如果这样做，将会出错。 本主题中所示相反，只需指定 URL[与 OLE DB 提供程序用于 Internet 发布使用 ADO](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md) [Internet 发布的 OLE DB 访问接口](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

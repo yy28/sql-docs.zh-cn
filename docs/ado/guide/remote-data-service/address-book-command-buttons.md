@@ -2,7 +2,6 @@
 title: 通讯簿命令按钮 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5db9a77104bab65e12b54d860ddcb49ced321f95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eaaa41038b741b71be069fb5db2bb921a2a576f9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273626"
 ---
 # <a name="address-book-command-buttons"></a>通讯簿命令按钮
 通讯簿应用程序包括以下的命令按钮：  
@@ -88,7 +88,7 @@ End Sub
   
  当`DC1.CancelUpdate`执行，则会丢弃自最后一个查询或更新用户对在数据网格上的员工记录所做的任何编辑。 它会还原原始值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通讯簿导航按钮](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 

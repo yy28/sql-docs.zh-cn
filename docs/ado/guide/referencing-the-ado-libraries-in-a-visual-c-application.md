@@ -6,7 +6,6 @@ ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6da3515ceafb7540cbcb2b538c1951a9b4c0bc2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a38e5df65def060668e60ee470dc379b873ab35
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273606"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>引用在 Visual c + + 应用程序中的 ADO 库
 若要使用 ADO 的 Visual c + + 应用程序中的最新版本，请使用以下`#import`指令：  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  若要使用 ADO MD 或 ADOX，必须导入*msadomd.dll*或*msadox.dll*，通过使用上面的语法。  
   
-## <a name="backward-compatibility"></a>向后兼容性  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  若要使用任何早期版本的 ADO，替换*msado15.dll*上面使用的以下类型库之一。  
   
 -   *msado27.tlb*，ADO 2.7 类型库  

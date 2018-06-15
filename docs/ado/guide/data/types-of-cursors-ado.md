@@ -2,7 +2,6 @@
 title: 类型的游标 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a90421cb473d280586ed3c7877e2a188f545eda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ead4e034fde49ac9826e63f091d7234ec0ecff7e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272936"
 ---
 # <a name="types-of-cursors-ado"></a>类型的游标 (ADO)
 作为一般规则，你的应用程序应使用的最简单的光标，提供所需的数据访问。 （只进、 只读的、 静态、 滚动、 未缓冲） 的基础知识以外的每个其他游标特征都有价格-在客户端内存、 网络负载或性能。 在许多情况下，默认游标选项生成的更复杂的游标不是你的应用程序则实际上需要。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [动态游标](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   
  [静态游标](../../../ado/guide/data/static-cursors.md)   
  [键集游标](../../../ado/guide/data/keyset-cursors.md)   

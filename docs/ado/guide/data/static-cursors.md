@@ -2,7 +2,6 @@
 title: 静态游标 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a837ce0d285f24772be5a88e29c0929e398e6582
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfd82f9b97f58e6ab75f3ac394e4ef40a6996415
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272886"
 ---
 # <a name="static-cursors"></a>静态游标
 静态游标总是显示结果集和第一次打开游标时。 具体取决于实现，静态游标是只读或读/写和提供向前和向后滚动。 静态游标通常不会检测到成员资格、 顺序或值的结果集打开光标后所做的更改。 静态游标可能检测其自己的更新、 删除和插入，虽然不需要它们来这样做。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  如果你的应用程序并不需要检测数据改变，而且需要滚动，静态游标是最佳选择。 使用**adOpenStatic CursorTypeEnum**以指示你想要使用在 ADO 静态游标。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   
  [键集游标](../../../ado/guide/data/keyset-cursors.md)   
  [动态游标](../../../ado/guide/data/dynamic-cursors.md)

@@ -2,7 +2,6 @@
 title: 保存数据 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,20 +19,21 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272196"
 ---
 # <a name="persisting-data"></a>保存数据
 （例如，使用便携式计算机） 的可移植计算已生成可以在连接和断开连接状态中运行的应用程序的需求。 ADO 通过让能够保存客户端游标的开发人员添加了对此支持**记录集**到磁盘，然后重新加载它更高版本。  
   
  有几种方案，你无法在其中使用此类型的功能，包括以下：  
   
--   **旅行：**时旅途采用应用程序，则必须提供能够更改和添加新的记录，然后可以重新连接到数据库中更高版本并提交。  
+-   **旅行：** 时旅途采用应用程序，则必须提供能够更改和添加新的记录，然后可以重新连接到数据库中更高版本并提交。  
   
--   **不经常更新查找：**通常在应用程序，表用作查找 — 例如，状态税务表。 它们不经常更新，并且是只读的。 而不是需要重新读取此数据从服务器每次启动应用程序时，应用程序可以只需将数据加载从本地持久化**记录集**。  
+-   **不经常更新查找：** 通常在应用程序，表用作查找 — 例如，状态税务表。 它们不经常更新，并且是只读的。 而不是需要重新读取此数据从服务器每次启动应用程序时，应用程序可以只需将数据加载从本地持久化**记录集**。  
   
  在 ADO 中，保存和加载**记录集**，使用**Recordset.Save**和**Recordset.Open(,,,adCmdFile)** 方法 ADO**记录集**对象。  
   
@@ -116,7 +116,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  本部分包含以下主题。  
   
 -   [更多有关记录集暂留的信息](../../../ado/guide/data/more-about-recordset-persistence.md)  

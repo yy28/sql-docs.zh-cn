@@ -2,7 +2,6 @@
 title: 运行通讯簿示例应用程序 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ae87cba1c56924f841e00ba8fcdd1e66eff5d01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 34611cf13d72d962902bb6e143324d0c2771c1ab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274296"
 ---
 # <a name="running-the-address-book-sample-application"></a>运行通讯簿示例应用程序
 > [!IMPORTANT]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  然后，您可以尝试通讯簿示例应用程序，在各种方案，如搜索某个人基于他或她列出"程序管理器"的标题的所有人员的电子邮件名称或编辑现有的记录。 单击**查找**可以用所有可用的姓名填充数据网格。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通讯簿数据绑定对象](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

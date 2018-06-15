@@ -2,7 +2,6 @@
 title: 步骤 4： 填充详细信息文本框中 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bd4c4026795c72a3a1e4afdaa1e19ad53da2642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da260e3dd3006a56e0be90c2b7e0c33ed0869781
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272876"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>步骤 4： 填充详细信息文本框中
 若要填充详细信息文本框中，创建一个名为的新子例程**recFields**并插入以下代码：  
@@ -50,6 +50,6 @@ End Sub
   
  此代码用来填充`lstDetails`与字段和值传递到的简单记录`recFields`。 如果资源是一个文本文件，文本流被打开从该资源记录。 代码将确定是否为 ASCII 字符集，并将复制到的流内容`txtDetails`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步骤 3：填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

@@ -2,7 +2,6 @@
 title: 使用连接对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24dd06d812a1234fd9a7458600e71f77cccdcf63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07528c4434a7278566ba6a7f3659e64d2638dab9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273096"
 ---
 # <a name="using-a-connection-object"></a>使用连接对象
 在打开之前**连接**对象，你必须定义有关的数据源和连接的类型的某些信息。 大部分此信息由持有*ConnectionString*参数[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**连接**对象，或通过[ConnectionString属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**连接**对象。 连接字符串包含用分号分隔括在单引号内的值的参数/值对的列表。 例如：  

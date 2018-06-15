@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa4791a78f2ec2aa8accb0f85897d24ffe5e5c76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e712ed9938037909f589243bf4d7f7ddd2a638e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270886"
 ---
 # <a name="ado-programming-task-table"></a>ADO 编程任务表
 下表列出了中包含的编程任务*ADO 程序员指南*并为每个任务提供的引用。 这些引用可以是文本的说明或在其中你可以找到有关执行任务的 ADO 功能信息的代码示例。

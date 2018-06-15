@@ -2,7 +2,6 @@
 title: 重新调整 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 010504a6fe07b952f59631769bd288970c7904c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82b2b66d691f94ce79795b7a11002ba88f7ac74a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272466"
 ---
 # <a name="reshaping"></a>重新调整
 A**记录集**创建可能的形状的子句来指定命令*别名*名称 （通常使用 AS 关键字）。 形状的别名**记录集**可以完全不同的命令中引用。 也就是说，你可以重复使用，或*重塑*，以前整形**记录集**新形状命令中。 若要支持此功能，ADO 提供一个属性，[重新调整形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  
@@ -45,5 +45,5 @@ rs2.Open "SHAPE {select * from Employees} " & _
 > [!NOTE]
 >  不能将列追加到现有**记录集**，重新调整形状参数化**记录集**或**记录集**对象在任何干预计算子句中，或执行聚合操作任何**记录集**子代从**记录集**改变了形状的。 **记录集**改变了形状的和新形状命令都必须使用相同[连接](../../../ado/reference/ado-api/connection-object-ado.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据整理示例](../../../ado/guide/data/data-shaping-example.md)

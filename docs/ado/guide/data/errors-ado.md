@@ -2,7 +2,6 @@
 title: 错误 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d34a1e8a51c3843c3df73aefa620bec1d7f43f95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf945b2e206abd2a07b2fd4af2c67170f7742910
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270236"
 ---
 # <a name="errors-ado"></a>错误 (ADO)
 涉及 ADO 对象的任何操作可以生成一个或多个提供程序错误。 每个错误发生时，一个或多个**错误**对象都将置于**错误**集合**连接**对象。 有关处理警告和 ADO 应用程序中的错误的详细信息，请参阅[错误处理](../../../ado/guide/data/error-handling.md)。  

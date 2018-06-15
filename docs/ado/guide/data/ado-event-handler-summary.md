@@ -2,7 +2,6 @@
 title: ADO 事件处理程序摘要 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3e52fe70e497ab8c5b715861e16f3f67266f9f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcb37f418a053abbd67cae435b674e187956a7a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271256"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
 两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**系列与操作上**连接**对象，与**RecordsetEvent**系列与操作上**记录集**对象。
@@ -48,5 +48,5 @@ ms.lasthandoff: 05/03/2018
 |[WillChangeRecord RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**行更改管理**-通知的当前行中的该内容**记录集**会更改，或已更改。|
 |[WillChangeRecordset RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**记录集更改管理**-这是在当前的通知**记录集**会更改，或已更改。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [通过语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO 事件](../../../ado/reference/ado-api/ado-events.md)[事件参数](../../../ado/guide/data/event-parameters.md)[事件处理程序是如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)[的事件类型](../../../ado/guide/data/types-of-events.md)

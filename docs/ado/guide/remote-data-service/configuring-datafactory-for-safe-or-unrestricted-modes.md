@@ -2,7 +2,6 @@
 title: 为安全或不受限制的模式配置 DataFactory |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3af0bf538b8d2fb774b06644e8089cf201b5fc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b1356c61602d1383788263e4031f8059fe81bb2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273751"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>为安全或不受限制的模式配置 DataFactory
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  在运行 handsafe.reg 之后, 你必须停止并通过在命令提示符窗口中键入以下命令重新启动 World Wide Web 发布服务在 Web 服务器上:"NET 停止 W3SVC"和"NET 启动 W3SVC"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataFactory 自定义项](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

@@ -2,7 +2,6 @@
 title: 步骤 2： 初始化主列表框 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45ffd682eaa9213b13aaf3afb1ccc6edf470ca58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0be38956ee55ba42c02cfe8002ef1b3937aff665
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272846"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步骤 2： 初始化主列表框
 若要声明全局记录和记录集对象，请将下面的代码插入 （常规） （声明） form1:  
@@ -53,7 +53,7 @@ End Sub
   
  记录集对象， `grs`，在该记录的子级上打开`grec`。 然后`lstMain`用于发布到 URL 的资源的文件名称填充。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步骤 1： 设置 Visual Basic 项目](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [步骤 3：填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

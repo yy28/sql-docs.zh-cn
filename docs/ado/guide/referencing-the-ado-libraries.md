@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5bd59675d24810ddef02a790cb3464ede168ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4966f9446f87ea25cc5fdab5e658fd5a30c80fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273616"
 ---
 # <a name="referencing-the-ado-libraries"></a>引用 ADO 库
 ADO 的最新版本被打包为*msado15.dll*。 ADO MD 和 ADOX 的最新版本会打包为*msadom.dll*和*msadox.dll*分别。 默认情况下，在安装这些库 *$installDir*，其中 *$installDir*代表您的计算机已在其中安装 ADO 库的目录的路径。 若要使用应用程序中的 ADO 库，你必须显式在中引用它们的应用程序项目。  

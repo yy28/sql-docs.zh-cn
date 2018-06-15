@@ -2,7 +2,6 @@
 title: 名为命令 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,14 +17,15 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 823ee61431555d978fb33aa0f9a58264af1ce2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271996"
 ---
 # <a name="named-commands"></a>命名的命令
-[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法执行命令。 还有一种方法： 你可以使其命名的命令，，然后调用此命名的命令是直接对**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 命名命令意味着分配到名称**名称**属性**命令**对象。 例如：  
+[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法执行命令。 还有一种方法： 你可以使其命名的命令，，然后调用此命名的命令是直接对**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 命名命令意味着分配到名称**名称**属性**命令**对象。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -93,5 +93,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

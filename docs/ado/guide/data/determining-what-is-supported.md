@@ -2,7 +2,6 @@
 title: 确定支持的功能 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd86d96489e59926935567a0f8aa7cb23bf9f3ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6eaf6ed08d6e79f8428e86b983794cb32c6447d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270586"
 ---
 # <a name="determining-what-is-supported"></a>确定支持的功能
 **支持**方法用于确定是否指定**记录集**对象支持特定类型的功能。 它具有以下语法：  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **支持**方法返回一个布尔值，该值指示提供程序是否支持所有由 CursorOptions 参数标识的功能。 你可以使用**支持**方法来确定哪些类型的功能**记录集**对象支持。 如果**记录集**对象支持的功能，其相应常量位于*CursorOptions*、**支持**方法返回**True**. 否则，它将返回**False**。  
   
  使用**支持**方法，你可以检查的能力**记录集**对象添加新记录、 使用书签，请使用**查找**方法，请使用滚动，使用**索引**属性，并执行批处理更新。 常量和它们的含义的完整列表，请参阅[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)。  

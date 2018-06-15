@@ -2,7 +2,6 @@
 title: 控制事务 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69fc2fb748f1c67f8253b2ae7f350da430e7f937
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270976"
 ---
 # <a name="controlling-transactions-ado"></a>控制事务 (ADO)
 ADO 支持事务处理中的帮助的连接**BeginTrans**， **CommitTrans**，和**不**方法**连接**对象。 实现事务处理中 ADO 大致下面的简单代码段所示。  

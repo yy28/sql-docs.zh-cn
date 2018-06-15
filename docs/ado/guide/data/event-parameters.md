@@ -2,7 +2,6 @@
 title: 事件参数 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9946b424f5ed885ad432610c7c053dddc6332954
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cfc652cc0cb59e426d2f2655684705deb20c20f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270426"
 ---
 # <a name="event-parameters"></a>事件参数
 每个事件处理程序有一个控制事件处理程序的状态参数。 对于完整事件，此参数还用于指示成功或失败的生成事件的操作。 最完整事件还具有一个错误参数，以便提供有关可能发生，任何错误以及一个或多个引用用来执行该操作的 ADO 对象的对象参数的信息。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包括对象参数**命令**，**记录集**，和**连接**对象与事件关联。 在以下的 Microsoft® Visual Basic® 示例中，你可以看到 pCommand、 pRecordset 和 pConnection 对象表示**命令**，**记录集**，和**连接**程序使用的对象**执行**方法。  
@@ -47,7 +47,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>状态参数  
  当调用的事件处理程序例程时，*状态*参数设置为下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|传递给将和完成的事件。 此值意味着引起该事件已成功完成该操作。|  
 |**adStatusErrorsOccurred**|传递给完成的事件。 此值表示引起该事件的操作不成功，或将事件取消该操作。 检查*错误*更多详细信息的参数。|  
@@ -57,7 +57,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  如果你不再想要处理的事件，则可以设置*状态*到**adStatusUnwantedEvent**和你的应用程序将不再接收该事件的通知。 但请记住某些事件可以由多个原因。 在这种情况下，必须指定**adStatusUnwantedEvent**对于每个可能的原因。 例如，若要停止接收通知的挂起**RecordChange**事件，必须设置*状态*参数**adStatusUnwantedEvent**为**adRsnAddNew**， **adRsnDelete**， **adRsnUpdate**， **adRsnUndoUpdate**， **adRsnUndoAddNew**，**adRsnUndoDelete**，和**adRsnFirstChange**发生。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|请求此事件处理程序接收任何进一步的通知。|  
 |**adStatusCancel**|请求取消将要发生的操作。|  
@@ -90,7 +90,7 @@ End Sub
   
  与此相反，你需要设置*adStatus*到**adStatusUnwantedEvent**仅一次，以请求的事件处理程序而无需**adReason**参数停止接收事件发送通知。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [通过语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件处理程序是如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)   

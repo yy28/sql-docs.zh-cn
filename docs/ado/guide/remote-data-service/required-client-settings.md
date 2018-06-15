@@ -2,7 +2,6 @@
 title: 所需客户端设置 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb864cb5489cc5cd1a82343995ed7a1e73c3a0b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d24dd3875d921020634ed418b9a7eed5b97178c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274286"
 ---
 # <a name="required-client-settings"></a>必需的客户端设置
 > [!IMPORTANT]
@@ -79,7 +79,7 @@ rs.CursorLocation = adUseClient
 "Remote Server=http://yourServer"  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义文件连接部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自定义文件 UserList 部分](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

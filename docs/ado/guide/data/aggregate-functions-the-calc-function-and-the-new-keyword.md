@@ -2,7 +2,6 @@
 title: 聚合函数、 CALC 函数中和 NEW 关键字 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3af3e37caacae09f4ee57bc251f7ebcabfb04e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271546"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、 CALC 函数中和 NEW 关键字
 数据成型支持以下功能。 分配给包含此列的章节来操作的名称是*章别名*。  
   
- 章别名可以是完全限定，从而导致章包含每个章节列名称包含*列名，*各项之间由句点。 例如，如果父章，chap1，包含子章节，chap2，具有量列中，amt，则的限定的名称将为 chap1.chap2.amt。  
+ 章别名可以是完全限定，从而导致章包含每个章节列名称包含*列名，* 各项之间由句点。 例如，如果父章，chap1，包含子章节，chap2，具有量列中，amt，则的限定的名称将为 chap1.chap2.amt。  
   
 |聚合函数|Description|  
 |-------------------------|-----------------|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
  （OLE DB 中，DBTYPE_DECIMAL，或在 ADO，adDecimal） 十进制类型的新字段时，你必须指定的精度和小数位数的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
  [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

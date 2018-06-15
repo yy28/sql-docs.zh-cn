@@ -2,7 +2,6 @@
 title: 地址簿数据绑定对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8efa72c893f0b2ddd07c834a07976babfbb46233
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7002d3755d213eebd61efab40aa51d8988f311a3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273636"
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)将数据从 SQL Server 数据库绑定到可视对象 （在这种情况下，DHTML 表格中），在应用程序的客户端 HTML 页中的对象。 事件驱动的 VBScript 程序逻辑使用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)到：  
@@ -68,7 +68,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|提供的必要的连接信息**rds.DataControl**以连接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|设置或返回用于检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
 
 

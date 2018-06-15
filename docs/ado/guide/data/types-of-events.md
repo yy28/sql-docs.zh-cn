@@ -2,7 +2,6 @@
 title: 类型的事件 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d093fbea3d4c4c6410f19b842ba8907aaa2229e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2438d332e7276dcd06de0bf15984329d7c34469
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273106"
 ---
 # <a name="types-of-events"></a>类型的事件
 有两种基本类型的事件。 "将事件，"在其调用操作开始之前，通常在其名称中包含"将"— 例如， **WillChangeRecordset**或**WillConnect**。 事件通常完成后调用的事件在其名称中包含"完成"— 例如， **RecordChangeComplete**或**ConnectComplete**。 存在例外-如**InfoMessage** -但这些关联的操作已完成后，执行。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="other-events"></a>其他事件  
  其他事件处理程序 — 也就是说，其名称并不属于该窗体的事件**将 * 事件*** 或 ***事件 * 完成**-仅在操作完成后调用。 这些事件是**断开连接**， **EndOfRecordset**，和**InfoMessage**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [通过语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件参数](../../../ado/guide/data/event-parameters.md)   

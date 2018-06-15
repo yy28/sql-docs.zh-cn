@@ -2,7 +2,6 @@
 title: 只进游标 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca588a5c7efa6f5fe7dc861e292cffa7d15bb1be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a309a34d8b5a897c62de6bdceb1db2eef4d46c2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271476"
 ---
 # <a name="forward-only-cursors"></a>只进游标
 典型的默认游标类型，称为只进 （或非可滚动） 游标，可以仅向前移动结果集。 只进游标不支持滚动 （向前和向后移动结果集中的能力）;它仅支持从一开始的行提取到结果集的末尾。 与某些只进游标 (如与 SQL Server 光标库)，则所有 insert、 update 和 delete 语句所做的当前用户 （或由其他用户提交） 读取行时，在结果集中的影响行是否可见。 因为不能向后滚动光标，但是，提取行之后对数据库中的行所做的更改不会通过游标可见。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  如果你的应用程序不需要滚动浏览结果集，只进游标是开销的使用最小快速检索数据的最佳办法。 使用**adOpenForwardOnly CursorTypeEnum**以指示你想要使用在 ADO 的只进游标。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [静态游标](../../../ado/guide/data/static-cursors.md)   
  [键集游标](../../../ado/guide/data/keyset-cursors.md)   
  [动态游标](../../../ado/guide/data/dynamic-cursors.md)

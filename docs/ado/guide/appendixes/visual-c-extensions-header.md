@@ -2,7 +2,6 @@
 title: Visual c + + 扩展标头 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bc42c7ca15c94a6b1ac9acc9711f9b755610ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d4b5c823cb992d6b3895740d4c227ae82b30c06
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270146"
 ---
 # <a name="visual-c-extensions-header"></a>Visual c + + 扩展标头
 以下标头， **icrsint.h**，详细信息的接口，允许客户端检索字段从**记录集**到派生自的类中定义的变量**CADORecordBinding**. 必须指定你想要访问每个字段的 ADO 绑定宏。  
@@ -211,6 +211,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)
