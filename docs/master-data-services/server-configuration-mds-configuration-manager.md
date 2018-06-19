@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/26/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f1da805d3a40a37501fdcb89f126d148c38df341
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13a9965e7b56bf5bf3aec58f38d3e90fda387bed
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335061"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>服务器配置 (MDS Configuration Manager)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="server-configuration"></a>“服务器配置”  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**Internet Information Services**|显示在本地计算机上安装的 Internet Information Services (IIS) 的版本。 IIS 7.0 版或更高版本是使用主数据服务配置管理器所必需的。|  
 |**MDS 产品版本。**|显示 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的产品版本。|  

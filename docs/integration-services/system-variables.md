@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a154155683bff4521a088552e299d34f72c3632e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331631"
 ---
 # <a name="system-variables"></a>系统变量
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-packages"></a>包的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为包提供的系统变量。  
   
-|系统变量|数据类型|Description|  
+|系统变量|数据类型|描述|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Windows 事件对象的句柄，任务可以向其发送信号以指示任务应停止运行。|  
 |**ContainerStartTime**|DateTime|容器的开始时间。|  
@@ -64,14 +63,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-containers"></a>容器的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为 For 循环、Foreach 循环和序列容器提供的系统变量。  
   
-|系统变量|数据类型|Description|容器|  
+|系统变量|数据类型|描述|容器|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|容器使用的区域设置。|For 循环容器<br /><br /> Foreach 循环容器<br /><br /> 序列容器|  
   
 ## <a name="system-variables-for-tasks"></a>任务的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为任务提供的系统变量。  
   
-|系统变量|数据类型|Description|  
+|系统变量|数据类型|描述|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|任务的名称。|  
 |**LocaleId**|Int32|任务所使用的区域设置。|  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-event-handlers"></a>事件处理程序的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为事件处理程序所提供的系统变量。 并非所有变量对所有事件处理程序都可用。  
   
-|系统变量|数据类型|Description|事件处理程序|  
+|系统变量|数据类型|描述|事件处理程序|  
 |---------------------|---------------|-----------------|-------------------|  
 |**取消**|Boolean|指示在出现错误、警告或查询取消时事件处理程序是否停止运行。|OnError 事件处理程序<br /><br /> OnWarning 事件处理程序<br /><br /> OnQueryCancel 事件处理程序|  
 |**ErrorCode**|Int32|错误标识符。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  

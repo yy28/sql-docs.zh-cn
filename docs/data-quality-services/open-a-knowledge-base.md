@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adcef51bfccf2cf6c977037a0e794904c794ee46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab27ee190d434df87d73dfe77db5e10ecdf288c1
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310966"
 ---
 # <a name="open-a-knowledge-base"></a>打开知识库
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  可以通过在表中右键单击知识库对其执行操作。 您可以打开知识库、用其他名称保存它、对其解除锁定、放弃操作、重命名或显示其属性。  
   
-4.  在 **“选择活动”**中，选择要对知识库执行的活动：  
+4.  在 **“选择活动”** 中，选择要对知识库执行的活动：  
   
     -   选择 **“域管理”** 可进入您用来修改知识库中的域的屏幕。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 05/03/2018
   
 -   \<Empty>：如果已通过在“域管理”活动中单击“发布”并单击“是 - 发布知识库并退出”发布了该知识库，则知识库的“状态”字段为空。  
   
--   **在工作**：已通过在域管理活动中单击 **“发布”** 并单击 **“否 - 保存对知识库所做的工作并退出”**保存了对该知识库所做的工作。  
+-   **在工作**：已通过在域管理活动中单击 **“发布”** 并单击 **“否 - 保存对知识库所做的工作并退出”** 保存了对该知识库所做的工作。  
   
 -   **域管理**：已为知识库中的域输入数据，但尚未发布该知识库，工作仍保留在域管理活动中。 知识发现活动不可用。 在 **“域管理”** 屏幕中单击 **“关闭”** 后出现此状态。  
   

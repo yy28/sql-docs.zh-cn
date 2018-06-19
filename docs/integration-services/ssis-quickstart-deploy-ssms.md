@@ -1,22 +1,21 @@
 ---
 title: 使用 SSMS 部署 SSIS 项目 | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d93e2d18fa2d13106ae0add8c9be5bfe269602e3
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5ba8568b89863edcc5cf246c1ee09efb956d6a4a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332081"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 部署 SSIS 项目
 本快速入门演示如何使用 SQL Server Management Studio (SSMS) 连接到 SSIS 目录数据库，然后运行 Integration Services 部署向导以将 SSIS 项目部署到 SSIS 目录。 
@@ -95,7 +94,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
     -   输入完全限定服务器名称。 如果目标服务器是 Azure SQL 数据库服务器，则名称采用以下格式：`<server_name>.database.windows.net`。
     -   提供身份验证信息，然后选择“连接”。 请参阅本文中的[部署向导中的身份验证方法](#wizard_auth)。
     -   然后选择“浏览”，在 SSISDB 中选择目标文件夹。
-    -   然后选择“下一步”打开“评审”页。 （仅当选择“连接”后，才会启用“下一步”按钮。）
+    -   再选择“下一步”打开“评审”页。 （仅当选择“连接”后，才会启用“下一步”按钮。）
   
 4.  在“查看”页上，查看所选的设置。
     -   可以通过单击 **“上一步”** 或单击左窗格中的任意步骤来更改所做的选择。

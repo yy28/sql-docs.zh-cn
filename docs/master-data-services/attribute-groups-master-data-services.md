@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1f625b1855b3bdfab9f053131bdea18076192719
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28160712fc1574f0f8359fca3ef3fa239117f509
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328111"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性组 (Master Data Services)
 
@@ -34,13 +34,13 @@ ms.lasthandoff: 05/03/2018
 ## <a name="how-attribute-groups-change-the-display"></a>属性组如何更改显示方式  
  属性组显示为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的“资源管理器”功能区域的网格上的选项卡。  
   
- 在某一实体具有大量属性并且您在 **“资源管理器”**的网格中查看该实体时，必须向右滚动以便查看所有属性。 若要禁止这一滚动，您可以创建属性组。  
+ 在某一实体具有大量属性并且您在 **“资源管理器”** 的网格中查看该实体时，必须向右滚动以便查看所有属性。 若要禁止这一滚动，您可以创建属性组。  
   
 -   属性组始终包括 Name 和 Code 属性。  
   
 -   一个实体的每个属性都可以属于一个或多个属性组。  
   
--   所有属性将自动包含在 **“资源管理器”** 的 **“所有属性”**选项卡上。  
+-   所有属性将自动包含在 **“资源管理器”** 的 **“所有属性”** 选项卡上。  
   
 -   没有办法隐藏 **“所有属性”** 选项卡。  
   

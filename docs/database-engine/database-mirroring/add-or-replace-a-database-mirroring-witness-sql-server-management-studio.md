@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 592d34b19b73b9cd32774b848f6e2fac609b14aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00ffb8aea188ed367bf6b746b80ed0ad396abb61
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311576"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果服务器实例全部使用相同的服务帐户，则请将这些字段保留为空白。  
   
-    -   如果见证服务器实例所用的服务帐户不同于两个伙伴所用的服务帐户，则请使用以下帐户名填充 **“主体”**、 **“镜像”**和 **“见证服务器”** 字段：  
+    -   如果见证服务器实例所用的服务帐户不同于两个伙伴所用的服务帐户，则请使用以下帐户名填充 **“主体”**、 **“镜像”** 和 **“见证服务器”** 字段：  
   
          *DOMAINNAME* **\\** *username*  
   

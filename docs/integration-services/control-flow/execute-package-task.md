@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e724071d14199f90877fa02a0471a1e5a0b8574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e989508142069cbee4dc270867360f433af5fbcf
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328241"
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
  有关详细信息，请参阅 [在子包中使用变量和参数的值](../../integration-services/packages/legacy-package-deployment-ssis.md#child)。  
   
 ### <a name="accessing-parent-package-variables"></a>访问父包变量  
- 子包可以通过使用脚本任务访问父包变量。 在 **“脚本任务编辑器”** 的 **“脚本”**页上输入父包变量的名称时，不要在变量名称中包括 **“用户:”** 。 否则，子包在您运行父包时找不到该变量。  
+ 子包可以通过使用脚本任务访问父包变量。 在 **“脚本任务编辑器”** 的 **“脚本”** 页上输入父包变量的名称时，不要在变量名称中包括 **“用户:”** 。 否则，子包在您运行父包时找不到该变量。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
@@ -173,7 +172,7 @@ ms.lasthandoff: 05/03/2018
  **位置**  
  选择子包的位置。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**SQL Server**|将位置设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|  
 |**文件系统**|将位置设置为文件系统。|  

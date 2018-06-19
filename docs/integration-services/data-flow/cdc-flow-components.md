@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
@@ -16,11 +14,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a95bd32614faeb7cade10a701819b3109d72dca4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c453a98b91e001fbb15ec608513a8803981a26e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334911"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -174,7 +173,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="cdc-state"></a>CDC 状态  
  每个 CDC 组都关联有某种状态，该状态表示为具有特定格式的字符串。 有关详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。 下表列出了可能的 CDC 状态值。  
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |0-(INITIAL)|对当前 CDC 组运行任何包之前存在的状态。 这也是 CDC 状态为空时的状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。|  
 |1-ILSTART（初始-加载-已启动）|这是在初始加载包启动时存在的状态。 在 **MarkInitialLoadStart** 操作调用 CDC 控制任务后就会出现该状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。|  

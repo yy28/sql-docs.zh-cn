@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,45 +19,48 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86d1f6f79aebb7cb75a0c8b361f4be8137a282ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72392490f9f462145b033e150577164baa86206a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310026"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  本主题介绍如何将 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 配置为使用引用数据来清理您的数据。 您可以使用来自 Windows Azure Marketplace 或来自直接联机第三方引用数据提供程序的引用数据。  
+  本主题介绍如何将 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 配置为使用引用数据来清理您的数据。 您可以使用来自 Microsoft Azure 市场或来自直接联机第三方引用数据提供程序的引用数据。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
 ###  <a name="Prerequisites"></a> 先决条件  
- 若要使用来自 Marketplace 的引用数据，您必须具有有效的 Marketplace 帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅[创建帐户](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建 Marketplace 帐户密钥。  
+ 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建市场帐户密钥的详细信息，请参阅[创建帐户](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
  您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能在 DQS 中配置引用数据服务设置。  
   
-##  <a name="Marketplace"></a> 将 DQS 配置为使用来自 Marketplace 的引用数据  
+##  
+  <a name="Marketplace">
+  </a> 将 DQS 配置为使用来自市场的引用数据  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”**下，单击 **“配置”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”** 下，单击 **“配置”**。  
   
 3.  如果您的组织使用代理服务器连接到 Internet，则在 **“引用数据”** 选项卡中的 **“网络设置”** 区域下，在 **“代理服务器”** 和 **“端口”** 框中键入适当的值。  
   
-4.  在 **“DataMarket 帐户 ID”** 框中指定 Marketplace 帐户密钥，然后单击 **“验证 DataMarket 帐户 ID”** 图标以验证该帐户密钥。 系统将显示一条消息，以显示指定的 Marketplace 帐户密钥是否有效。  
+4.  在 **“DataMarket 帐户 ID”** 框中指定市场帐户密钥，然后单击 **“验证 DataMarket 帐户 ID”** 图标以验证该帐户密钥。 系统将显示一条消息，以显示指定的市场帐户密钥是否有效。  
   
- 您现在可以在 DQS 中使用为指定的 Marketplace 帐户密钥订阅的来自 Marketplace 的引用数据服务。  
+ 您现在可以在 DQS 中使用为指定的市场帐户密钥订阅的来自市场的引用数据服务。  
   
 ##  <a name="ThirdParty"></a> 将 DQS 配置为使用来自直接联机第三方引用数据提供程序的引用数据  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”**下，单击 **“配置”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”** 下，单击 **“配置”**。  
   
 3.  如果您的组织使用代理服务器连接到 Internet，则在 **“引用数据”** 选项卡中的 **“网络设置”** 区域下，在 **“代理服务器”** 和 **“端口”** 框中键入适当的值。  
   

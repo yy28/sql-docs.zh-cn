@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a8e1f5981bdaf8cec7b263a9894ce3d1c4c7b04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331191"
 ---
 # <a name="aggregate-transformation"></a>聚合转换
   聚合转换将聚合函数（如 Average）应用于列值，并将结果复制到转换输出。 除聚合函数以外，转换还提供 GROUP BY 子句，用于指定所要聚合的组。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="operations"></a>操作  
  聚合转换支持下列运算。  
   
-|运算|Description|  
+|运算|描述|  
 |---------------|-----------------|  
 |Group by|将数据集划分为组。 任何数据类型的列都可用于分组。 有关详细信息，请参阅 [GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
 |SUM|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md)。|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **键范围**  
  在“高级”显示中，根据需要指定聚合可写入的键的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时设置了 **“键范围”** 和 **“键”** 属性，则 **“键”** 的值优先。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |“未指定”|不使用“键范围”属性。|  
 |Low|聚合可以写入大约 500,000 个键。|  
@@ -177,7 +176,7 @@ ms.lasthandoff: 05/03/2018
  **运算**  
  参照下表，从可用操作列表中选择。  
   
-|运算|Description|  
+|运算|描述|  
 |---------------|-----------------|  
 |**GroupBy**|将数据集划分为组。 可以将任何数据类型的列用于分组。 有关详细信息，请参阅 GROUP BY。|  
 |**Sum**|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 SUM。|  
@@ -193,7 +192,7 @@ ms.lasthandoff: 05/03/2018
  **Count Distinct Scale**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定 **CountDistinctScale** 和 **CountDistinctKeys** ，则 **CountDistinctKeys** 优先。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |“未指定”|不使用 **CountDistinctScale** 属性。|  
 |Low|聚合可以写入大约 500,000 个非重复值。|  
@@ -215,7 +214,7 @@ ms.lasthandoff: 05/03/2018
  **“键范围”**  
  根据需要，可以指定聚合所需的键的大致数目。 转换将使用此信息优化其初始缓存大小。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |“未指定”|不使用 **“键范围”** 属性。|  
 |Low|聚合可以写入大约 500,000 个键。|  
@@ -228,7 +227,7 @@ ms.lasthandoff: 05/03/2018
  **“非重复键数范围”**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |“未指定”|不使用 CountDistinctScale 属性。|  
 |Low|聚合可以写入大约 500,000 个非重复值。|  

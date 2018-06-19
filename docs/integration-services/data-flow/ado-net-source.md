@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81566c11122cd67e37e1304f1d56760fcae1ce29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f63cd49b5a78a42bdff0ef25f69ca9f55217c48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328331"
 ---
 # <a name="ado-net-source"></a>ADO NET 源
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
@@ -104,7 +103,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”**中，单击 **“连接管理器”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“连接管理器”**。  
   
 ### <a name="static-options"></a>静态选项  
  **ADO.NET 连接管理器**  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |表或视图|从 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据源中的表或视图中检索数据。|  
 |SQL 命令|使用 SQL 查询从 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据源中检索数据。|  
@@ -154,7 +153,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”**中，单击 **“列”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“列”**。  
   
 ### <a name="options"></a>“常规”  
  **可用外部列**  
@@ -177,7 +176,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”**中，单击 **“错误输出”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“错误输出”**。  
   
 ### <a name="options"></a>“常规”  
  **输入/输出**  

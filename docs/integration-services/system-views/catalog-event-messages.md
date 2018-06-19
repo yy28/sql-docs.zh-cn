@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
@@ -16,18 +14,19 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcc606c489ee5b783eb9fedbde53e33ddba9789a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de53ddb2b38e2a3423ea15acab63169e38b9d4e3
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330431"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   显示有关在操作期间已记入日志的消息的信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|事件消息的唯一 ID。|  
 |Operation_id|BIGINT|操作的类型。<br /><br /> 有关操作类型的列表，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Remarks  
  此视图显示下列消息源类型。  
   
-|**message_source_type**|Description|  
+|**message_source_type**|描述|  
 |-------------------------------|-----------------|  
 |10|入口 API，如 T-SQL 和 CLR 存储过程|  
 |20|用来运行包的外部进程 (ISServerExec.exe)|  

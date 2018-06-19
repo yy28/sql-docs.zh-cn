@@ -1,10 +1,9 @@
 ---
-title: 多实例报表服务器部署的 URL 保留项 | Microsoft Docs
+title: 多实例报表服务器部署的 URL 预留 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,21 +16,22 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: de744c57478dd950bdfecd62ad1ad2564110cd3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8827a773f49a61d79e9d63a1d0dd3c6843c0b98c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322736"
 ---
-# <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多实例报表服务器部署的 URL 保留项
-  如果将多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例安装在同一台计算机上，则必须考虑如何为每个实例定义 URL 保留项。 在每个实例中，报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 都必须至少有一个 URL 保留项。 整组保留项在 HTTP.SYS 中必须保持唯一。  
+# <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多实例报表服务器部署的 URL 预留
+  如果将多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例安装在同一台计算机上，则必须考虑如何为每个实例定义 URL 预留。 在每个实例中，报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 都必须至少有一个 URL 预留。 整组预留在 HTTP.SYS 中必须保持唯一。  
   
- 在 URL 注册（发生在服务启动时）过程中会检测 URL 是否重复。 如果您创建的 URL 保留项不唯一，那么，直到启动服务时，才会检测到名称冲突。 因此，请确保遵循命名约定或规则以确保所有的值保持唯一。  
+ 在 URL 注册（发生在服务启动时）过程中会检测 URL 是否重复。 如果你创建的 URL 预留不唯一，那么，直到启动服务时，才会检测到名称冲突。 因此，请确保遵循命名约定或规则以确保所有的值保持唯一。  
   
 ## <a name="default-naming-conventions"></a>默认的命名约定  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例中。 当您在命名实例中安装或配置报表服务器时，实例名称会自动包括在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的默认 URL 保留项中的虚拟目录中。 下表显示了默认实例和命名实例的 URL 保留项。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例中。 当你在命名实例中安装或配置报表服务器时，实例名称会自动包括在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的默认 URL 预留中的虚拟目录中。 下表显示了默认实例和命名实例的 URL 预留。  
   
-|SQL Server 实例|默认 URL 保留项|  
+|SQL Server 实例|默认 URL 预留|  
 |-------------------------|-----------------------------|  
 |默认实例 (MSSQLServer)|`http://+:80/reportserver`|  
 |命名实例 (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  建议的最佳实践是使用虚拟目录名称来区分报表服务器实例， 这样可在 URL 和目标实例之间提供清楚的对应关系，并确保应用程序名称在整个系统中保持唯一。  
   
 ## <a name="custom-naming-conventions"></a>自定义命名约定  
- 尽管建议使用实例名称，但是您可以使用 URL 语法和自己的命名约定来满足 URL 保留项的唯一名称约束。 下面的示例说明了用来为每个实例创建唯一 URL 的不同方法。  
+ 尽管建议使用实例名称，但是你可以使用 URL 语法和自己的命名约定来满足 URL 预留的唯一名称约束。 下面的示例说明了用来为每个实例创建唯一 URL 的不同方法。  
   
 |报表服务器的默认实例 (MSSQLSERVER)|ReportServer_MyNamedInstance|唯一性|  
 |----------------------------------------------------|-----------------------------------|----------------|  

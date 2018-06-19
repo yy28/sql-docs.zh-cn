@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a36b2b509108234f985e9fa3534094e54d6c194c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 394edd627a8cb3c62134cf4bec97adc0fe5ecbf5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331091"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
   渐变维度向导所起作用相当于渐变维度转换的编辑器。 为渐变维度数据生成和配置数据流可能是一项复杂的任务。 渐变维度向导提供了为渐变维度转换输出生成数据流的最简便方法，指导您逐步完成映射列、选择业务键列、设置列更改属性以及配置对推断维度成员的支持。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  设置历史属性选项。  
   
-     如果将列配置为使用 **“历史属性”** 更改类型，则必须选择如何区分当前记录和过期记录。 可以使用一个当前行指示器列或两个日期列来标识当前行和过期行。 如果使用当前行指示器列，则可以将其设置成当行是当前行时为 **“当前”**或 **True** ，而当行是过期行时为 **“过期”** 或 **False** 。 也可以输入自定义值。 如果使用两个日期列（开始日期和结束日期），则可以输入日期或选择系统变量然后使用其值，从而指定设置日期列值时要使用的日期。  
+     如果将列配置为使用 **“历史属性”** 更改类型，则必须选择如何区分当前记录和过期记录。 可以使用一个当前行指示器列或两个日期列来标识当前行和过期行。 如果使用当前行指示器列，则可以将其设置成当行是当前行时为 **“当前”** 或 **True** ，而当行是过期行时为 **“过期”** 或 **False** 。 也可以输入自定义值。 如果使用两个日期列（开始日期和结束日期），则可以输入日期或选择系统变量然后使用其值，从而指定设置日期列值时要使用的日期。  
   
 7.  指定对推断成员的支持，并选择推断成员记录所包含的列。  
   

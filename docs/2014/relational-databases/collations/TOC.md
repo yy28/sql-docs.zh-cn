@@ -1,0 +1,7 @@
+# [排序规则和 Unicode 支持](collation-and-unicode-support.md)
+## [设置或更改服务器排序规则](set-or-change-the-server-collation.md)
+## [设置或更改数据库排序规则](set-or-change-the-database-collation.md)
+## [设置或更改列排序规则](set-or-change-the-column-collation.md)
+## [查看排序规则信息](view-collation-information.md)
+## [编写国际化 Transact-SQL 语句](write-international-transact-sql-statements.md)
+## [设置会话语言](set-a-session-language.md)

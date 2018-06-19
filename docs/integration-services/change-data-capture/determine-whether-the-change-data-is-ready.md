@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 325bd3ad9e274db6263d75e05e8f3117ea259e35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 860f0f1d6dc774c7a009db193c2c84e940c6cc47
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332491"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  将用于计算间隔端点的执行 SQL 任务连接到 For 循环容器。  
   
-3.  在 **“For 循环编辑器”**中，选择以下选项：  
+3.  在 **“For 循环编辑器”** 中，选择以下选项：  
   
     1.  对于 **InitExpression**，输入 `@DataReady = 0`。  
   
@@ -103,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 For 循环容器内，添加一个执行 SQL 任务。  
   
-2.  在 **“执行 SQL 任务编辑器”**中的 **“常规”** 页上，选择以下选项：  
+2.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
     1.  对于 **ResultSet**，选择 **“单行”**。  
   
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
         ```  
   
-3.  在 **“执行 SQL 任务编辑器”** 的 **“参数映射”**页上，进行以下映射：  
+3.  在 **“执行 SQL 任务编辑器”** 的 **“参数映射”** 页上，进行以下映射：  
   
     1.  将 ExtractEndTime 变量映射到参数 0。  
   
@@ -154,7 +153,7 @@ ms.lasthandoff: 05/03/2018
   
     5.  将 TimeoutCeiling 变量映射到参数 4。  
   
-4.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”**页上，将 DataReady 结果映射到 DataReady 变量，并将 TimeoutCount 结果映射到 TimeoutCount 变量。  
+4.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”** 页上，将 DataReady 结果映射到 DataReady 变量，并将 TimeoutCount 结果映射到 TimeoutCount 变量。  
   
 ## <a name="waiting-until-the-change-data-is-ready"></a>等到变更数据准备就绪  
  当变更数据未准备就绪时，您可以使用多种方法中的一种来实现延迟。 下面的两个过程演示如何使用脚本任务或执行 SQL 任务来实现延迟。  
@@ -178,11 +177,11 @@ ms.lasthandoff: 05/03/2018
   
     3.  对于 **“表达式”**，输入 `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`。  
   
-    4.  选择**“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
+    4.  选择 **“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
   
-4.  在 **“脚本任务编辑器”**的 **“脚本”** 页上，对于 **ReadOnlyVariables**，从列表中选择 **User::DelaySeconds** 整数变量。  
+4.  在 **“脚本任务编辑器”** 的 **“脚本”** 页上，对于 **ReadOnlyVariables**，从列表中选择 **User::DelaySeconds** 整数变量。  
   
-5.  在 **“脚本任务编辑器”**的 **“脚本”** 页上，单击 **“编辑脚本”** 以打开脚本开发环境。  
+5.  在 **“脚本任务编辑器”** 的 **“脚本”** 页上，单击 **“编辑脚本”** 以打开脚本开发环境。  
   
 6.  在 Main 过程中，输入下面的代码行之一：  
   
@@ -224,11 +223,11 @@ ms.lasthandoff: 05/03/2018
   
     3.  对于 **“表达式”**，输入 `@DataReady == 0`。  
   
-    4.  选择**“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
+    4.  选择 **“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
   
          此选项要求条件、约束和表达式都必须为 true。  
   
-4.  在 **“执行 SQL 任务编辑器”**中的 **“常规”** 页上，选择以下选项：  
+4.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
     1.  对于 **ResultSet**，选择 **“单行”**。  
   
@@ -270,15 +269,15 @@ ms.lasthandoff: 05/03/2018
   
     3.  对于 **“表达式”**，输入 `@DataReady == 1 || @DataReady == 5`。  
   
-    4.  选择**“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
+    4.  选择 **“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
   
          此选项要求条件、约束和表达式都必须为 true。  
   
-5.  在 **“脚本任务编辑器”**的 **“脚本”** 页上，对于 **ReadOnlyVariables**，从列表中选择 **User::DataReady** 和 **User::ExtractStartTime** 以便脚本可以使用它们的值。  
+5.  在 **“脚本任务编辑器”** 的 **“脚本”** 页上，对于 **ReadOnlyVariables**，从列表中选择 **User::DataReady** 和 **User::ExtractStartTime** 以便脚本可以使用它们的值。  
   
      如果要在写入日志记录的信息中包含特定的系统变量信息（例如 System::PackageName），还可选择这些变量。  
   
-6.  在 **“脚本任务编辑器”**的 **“脚本”** 页上，单击 **“编辑脚本”** 以打开脚本开发环境。  
+6.  在 **“脚本任务编辑器”** 的 **“脚本”** 页上，单击 **“编辑脚本”** 以打开脚本开发环境。  
   
 7.  在 Main 过程中，输入代码以通过调用 **Dts.Log** 方法来记录错误，或者通过调用 **Dts.Events** 接口的方法之一来引发事件。 通过返回 `Dts.TaskResult = Dts.Results.Failure`向包发出错误通知。  
   

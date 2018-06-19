@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 63322ff276ed8c9209deeebcc012991e3dfab12e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6252dcba79a182adb424908563a5f9589dc6d01
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404309"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>创建属性组 (Master Data Services)
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
      如果是集合的属性组，请从“成员类型”下拉列表中选择“集合”。  
   
-6.  单击 **“叶组”**、 **“合并组”**或 **“集合组”** ，以便为叶成员、合并成员或集合相应创建属性组。  
+6.  单击 **“叶组”**、 **“合并组”** 或 **“集合组”** ，以便为叶成员、合并成员或集合相应创建属性组。  
   
 7.  在  “名称”框中，键入属性组的名称。 此名称显示在 “资源管理器”中的选项卡上。  
   

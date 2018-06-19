@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333271"
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中为包提供结构和为任务提供服务的对象。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="container-types"></a>容器类型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供四种用于生成包的容器。 下表列出了容器类型。  
   
-|容器|Description|  
+|容器|描述|  
 |---------------|-----------------|  
 |[Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)|通过使用枚举器重复运行控制流。|  
 |[For 循环容器](../../integration-services/control-flow/for-loop-container.md)|通过测试某个条件重复运行控制流。|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="summary-of-container-properties"></a>容器属性摘要  
  通常，所有容量类型都有一组属性。 如果使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的图形工具创建包，“属性”窗口将列出 Foreach 循环容器、For 循环容器和序列容器的以下属性。 配置任务宿主容器属性是配置任务宿主容器所封装的任务的一部分。 配置任务时需要设置任务宿主属性。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**DelayValidation**|指示是否将容器的验证推迟到运行时进行的布尔值。 此属性的默认值为 **False**。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>为止。|  
 |**Description**|容器说明。 该属性包含一个字符串，但可以为空。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>为止。|  
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
  在容器中使用的变量包括由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的容器级别系统变量和容器使用的用户定义变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)。  
   
 ## <a name="break-points"></a>断点  
- 对容器设置断点且中断条件为 **“当容器收到 OnVariableValueChanged 事件时断开”**时，请在容器范围内定义变量。  
+ 对容器设置断点且中断条件为 **“当容器收到 OnVariableValueChanged 事件时断开”** 时，请在容器范围内定义变量。  
   
 ## <a name="see-also"></a>另请参阅  
  [控制流](../../integration-services/control-flow/control-flow.md)  

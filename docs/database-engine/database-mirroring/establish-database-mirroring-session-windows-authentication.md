@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 676250b166ea109432e1c4328039b9ce31940b03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61fe97f28fc399ac261c06a962bd19bfe9efcd25
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312046"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立数据库镜像会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  在数据库镜像会话期间，仅可使用此向导添加或更改见证服务器实例。  
   
-5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（**“主体”**、 **“镜像服务器”**或 **“见证服务器”**）相对应的字段中输入服务器网络地址。  
+5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（**“主体”**、 **“镜像服务器”** 或 **“见证服务器”**）相对应的字段中输入服务器网络地址。  
   
     > [!IMPORTANT]  
     >  创建端点时，配置数据库镜像安全向导始终使用 Windows 身份验证。 在将此向导与基于证书的身份验证配合使用之前，必须已在每个服务器实例上始终将镜像端点配置为使用证书。 此外，此向导的 **“服务帐户”** 对话框中的所有字段必须保持为空。 有关创建数据库镜像终结点以使用证书的信息，请参阅[ CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果运行模式设置为 **“带自动故障转移功能的高安全(同步)”**，则还需指定见证服务器实例的完全限定的 TCP 地址。  
   
-8.  在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”**来保存更改。 注意，仅当先指定了见证服务器地址时，才能利用自动故障转移切换到高安全模式。  
+8.  在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”** 来保存更改。 注意，仅当先指定了见证服务器地址时，才能利用自动故障转移切换到高安全模式。  
   
     > [!NOTE]  
     >  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”字段。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86a4674fff0795918fe89a26b62b5b15524d543e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333471"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务可负责处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，如表格模型、多维数据集、维度和挖掘模型。  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **相关主题：**[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
- |“属性”|Description|  
+ |“属性”|描述|  
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
 |**类型**|列出指定对象的类型。|  
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
  **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **批设置摘要**  
- |“属性”|Description|  
+ |“属性”|描述|  
 |--------------|-----------------|  
 |**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
 |**事务模式**|指定按顺序处理时的事务模式。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
@@ -16,11 +14,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c62c28da819aa4293258784648b1af88a333e156
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 769ce099fc299900c93e11222f58389b2c43249b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332531"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服务
   本节介绍 Oracle CDC 服务的一些重要概念。 本节中包含的概念是：  
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  下面介绍在 **dbo.xdbcdc_trace** 表中包括的项。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |TIMESTAMP|写入跟踪日志时的准确 UTC 时间戳。|  
 |type|包含以下值之一。<br /><br /> error<br /><br /> INFO<br /><br /> 跟踪|  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍在 **dbo.xdbcdc_databases** 表中包括的项。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中 Oracle 数据库的名称。|  
 |config_version|相应 CDC 数据库 **xdbcdc_config** 表中上次更改的时间戳 (UTC) 或者此表中当前行的时间戳 (UTC)。<br /><br /> UPDATE 触发器将此项的值强制为 GETUTCDATE()。 **config_version** 使 CDC 服务可以标识需要检查是否有配置更改或启用/禁用的 CDC 实例。|  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍在 **dbo.xdbcdc_databases** 表中包括的捕获状态项。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |cdc_service_name|Oracle CDC 服务的名称（Windows 服务名称）。|  
 |cdc_service_sql_login|Oracle CDC 服务用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 将创建一个名为 cdc_service 的新的 SQL 用户并且与该登录名相关联，然后将其作为 db_ddladmin、db_datareader 和 db_datawriter 固定数据库角色的成员为该服务处理的每个 CDC 数据库添加。|  

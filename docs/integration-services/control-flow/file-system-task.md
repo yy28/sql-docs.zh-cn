@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63b354be996722779bc44f27115eb8ed6f0f79a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2913492a72dc0c384fa6885664db1038a178e64e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331371"
 ---
 # <a name="file-system-task"></a>文件系统任务
   文件系统任务对文件系统中的文件和目录执行操作。 例如，通过使用文件系统任务，包可以创建、移动或删除目录和文件。 您还可以使用文件系统任务设置文件和目录的属性。 例如，文件系统任务可以让文件隐藏或只读。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-file-system-operations"></a>预定义的文件系统操作  
  文件系统任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|运算|Description|  
+|运算|描述|  
 |---------------|-----------------|  
 |复制目录|将文件夹从一个位置复制到另一个位置。|  
 |复制文件|将文件从一个位置复制到另一个位置。|  
@@ -52,14 +51,14 @@ ms.lasthandoff: 05/03/2018
   
  文件系统任务对单个文件或目录进行操作。 因此，该任务不支持使用通配符对多个文件执行相同的操作。 若要使此文件系统任务对多个文件或目录重复执行某个操作，请将此文件系统任务放置于一个 Foreach 循环容器中，如下面的步骤所述：  
   
--   **配置 Foreach 循环容器** 在 Foreach 循环编辑器的 **“集合”** 页上，将枚举器设置为 **“Foreach 文件枚举器”** ，然后输入通配符表达式作为 **“文件”**的枚举器配置。 在 Foreach 循环编辑器的 **“变量映射”** 页上，将要用来传递文件名称的变量按照一次一个的方式映射至文件系统任务。  
+-   **配置 Foreach 循环容器** 在 Foreach 循环编辑器的 **“集合”** 页上，将枚举器设置为 **“Foreach 文件枚举器”** ，然后输入通配符表达式作为 **“文件”** 的枚举器配置。 在 Foreach 循环编辑器的 **“变量映射”** 页上，将要用来传递文件名称的变量按照一次一个的方式映射至文件系统任务。  
   
 -   **添加和配置文件系统任务** 将文件系统任务添加到 Foreach 循环容器。 在文件系统任务编辑器的 **“常规”** 页上，将 **“SourceVariable”** 或 **“DestinationVariable”** 属性设置为您在 Foreach 循环容器中定义的变量。  
   
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>文件系统任务可用的自定义日志项  
  下表介绍了文件系统任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**FileSystemOperation**|报告任务所执行的操作。 在文件系统操作开始时写入日志项，日志项包括有关源和目标的信息。|  
   
@@ -89,7 +88,7 @@ ms.lasthandoff: 05/03/2018
  必须通过设置 SourceConnection 和 DestinationConnection 属性来指定源和目标连接管理器。 您可以提供指向任务将其用作源或目标的文件的文件连接管理器的名称，如果文件路径存储在变量中，则可以提供变量的名称。 若要使用变量来存储文件路径，必须先将源连接的 IsSourcePathVariable 选项和目标连接的 IsDestinationPatheVariable 选项设置为 **True**。 然后，您可以选择使用现有的系统或用户定义变量，也可以创建新变量。 在 **“添加变量”** 对话框中，可以配置和指定变量的作用域。 该作用域必须是文件系统任务或父容器。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 > [!NOTE]  
->  若要覆盖为 **SourceConnection** 和 **DestinationConnection** 属性选择的变量，请为 **“源”** 和 **“目标”** 属性输入表达式。 在 **“文件系统任务编辑器”** 的 **“表达式”**页上输入表达式。 例如，若要设置任务作为目标的文件路径，您可能要在某些情况下使用变量 A 并在另一些情况下使用变量 B。  
+>  若要覆盖为 **SourceConnection** 和 **DestinationConnection** 属性选择的变量，请为 **“源”** 和 **“目标”** 属性输入表达式。 在 **“文件系统任务编辑器”** 的 **“表达式”** 页上输入表达式。 例如，若要设置任务作为目标的文件路径，您可能要在某些情况下使用变量 A 并在另一些情况下使用变量 B。  
   
 > [!NOTE]  
 >  文件系统任务对单个文件或目录进行操作。 因此，该任务不支持使用通配符对多个文件或目录执行同一操作。 若要使此文件系统任务对多个文件或目录重复执行某个操作，请将此文件系统任务放置于一个 Foreach 循环容器中。 有关详细信息，请参阅 [File System Task](../../integration-services/control-flow/file-system-task.md)。  
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
  **IsDestinationPathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **DestinationVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationConnection**。|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **运算**  
  选择要执行的文件系统操作。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**复制目录**|复制目录。 选择此值将显示源和目标的动态选项。|  
 |**复制文件**|复制文件。 选择此值将显示源和目标的动态选项。|  

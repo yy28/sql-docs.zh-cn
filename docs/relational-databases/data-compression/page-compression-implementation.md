@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323130"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999893"
 ---
 # <a name="page-compression-implementation"></a>页压缩的实现
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ ms.locfileid: "34323130"
   
  下图显示了前缀压缩之前表的一个示例页。  
   
- ![前缀压缩之前的页](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "前缀压缩之前的页")  
+ ![前缀压缩之前的页](media/skt-tblcompression1c.gif "前缀压缩之前的页")  
   
  下图显示的是同一页在前缀压缩之后的样子。 前缀移至页头，列值更改为指向前缀的引用。  
   
- ![前缀压缩之后的页](../../relational-databases/data-compression/media/tblcompression2.gif "前缀压缩之后的页")  
+ ![前缀压缩之后的页](media/tblcompression2.gif "前缀压缩之后的页")  
   
  在第一行的第一列，值 4b 指示为该行显示前缀的前四个字符 (aaab) 和字符 b。 这样的话，结果值就是 aaabb，这是原始值。  
   
 ## <a name="dictionary-compression"></a>字典压缩  
  前缀压缩完成后，将应用字典压缩。 字典压缩搜索页面上任意位置的重复值，然后将它们存储在 CI 区域中。 与前缀压缩不同，字典压缩不局限于一列。 字典压缩可以替换页面上任意位置出现的重复值。 下图显示的是同一页在字典压缩之后的样子。  
   
- ![字典压缩之后的页](../../relational-databases/data-compression/media/tblcompression3.gif "字典压缩之后的页")  
+ ![字典压缩之后的页](media/tblcompression3.gif "字典压缩之后的页")  
   
  请注意，值 4b 已由页的其他列引用。  
   

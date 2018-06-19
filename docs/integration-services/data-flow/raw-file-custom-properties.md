@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66bcdd48830e2cf5b5311c34d4a8dc72b4f07ce2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebc381b7698340f1fa91e01d9b8520c01f9d3128
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329171"
 ---
 # <a name="raw-file-custom-properties"></a>原始文件自定义属性
   **源自定义属性**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍原始文件源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|用来访问原始数据的模式。 可能的值为“文件名”(0) 和“来自变量的文件名”(1)。 默认值为“文件名”(0)。|  
 |FileName|String|源文件的路径和文件名。|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了原始文件目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为“文件名”(0) 和“来自变量的文件名”(1)。|  
 |FileName|String|原始文件目标要写入的文件的名称。|  

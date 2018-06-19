@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e1a419588ce2ef98d1cc76c8ea4505f9e93d8e6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6c61b007f24cf78e182358d864789012c13015a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335121"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升级数据库向导（Master Data Services 配置管理器）
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="upgrade-review"></a>升级检查  
  检查此页上指定的信息。 如果该信息正确，则单击 **“下一步”** 升级指定数据库。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**SQL Server 实例**|当前选择的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。|  
 |**Master Data Services 数据库**|当前选择的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。|  

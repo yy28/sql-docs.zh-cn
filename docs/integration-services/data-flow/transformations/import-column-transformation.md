@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1bbb2a442e3ecd046d5e5aa17fcb7c73624b57e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba2cd41fecf7b646313d2c619b1dd2a3e276c0f9
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333191"
 ---
 # <a name="import-column-transformation"></a>导入列转换
   导入列转换从文件中读取数据并将数据添加到数据流中的列中。 通过此转换，包可将存储于各个单独文件中的文本和图像添加到数据流中。 例如，如果某个数据流将数据加载到存储产品信息的表中，则它可包含导入列转换以便从文件中导入每个产品的客户评论并将评论添加到数据流中。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  仅当数据为 DT_NTEXT 数据类型时才需要 BOM。  
   
- 转换输入中的列包含存储数据的文件的名称。 数据集中的每一行均可指定一个不同的文件。 导入列转换处理行时，将读取文件名，打开文件系统中的相应文件，并将文件内容加载到输出列中。 输出列的数据类型必须是 DT_TEXT、DT_NTEXT 或 DT_IMAGE。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 转换输入中的列包含存储数据的文件的名称。 数据集中的每一行均可指定一个不同的文件。 导入列转换处理行时，将读取文件名，打开文件系统中的相应文件，并将文件内容加载到输出列中。 输出列的数据类型必须是 DT_TEXT、DT_NTEXT 或 DT_IMAGE。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  此转换有一个输入、一个输出和一个错误输出。  
   

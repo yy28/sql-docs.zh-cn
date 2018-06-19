@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d60d99a6bbe09da6f05d77675606e8478e004a13
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 483991212cd56bf587d562426357e1c940e61c1a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333331"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
   在可以查看源数据的配置文件之前，第一步是设置和运行数据事件探查任务。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内创建此任务。 若要配置数据事件探查任务，可以使用数据事件探查任务编辑器。 使用此编辑器，可以选择输出配置文件的位置以及要计算哪些配置文件。 设置此任务后，可以运行包来计算数据配置文件。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
  有关详细信息，请参阅 [合并包工作流中的数据分析任务](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
   
 ## <a name="setup-of-the-task-output"></a>设置任务输出  
- 在将数据事件探查任务放置到包中之后，必须设置任务将计算的配置文件的输出。 若要设置配置文件的输出，可以使用数据事件探查任务编辑器的 **“常规”** 页。 除了指定输出的目标外， **“常规”** 页还提供了用于执行数据快速配置文件的功能。 选择 **“快速配置文件”**时，数据事件探查任务使用某些或所有具有默认设置的默认配置文件对表或视图进行事件探查。  
+ 在将数据事件探查任务放置到包中之后，必须设置任务将计算的配置文件的输出。 若要设置配置文件的输出，可以使用数据事件探查任务编辑器的 **“常规”** 页。 除了指定输出的目标外， **“常规”** 页还提供了用于执行数据快速配置文件的功能。 选择 **“快速配置文件”** 时，数据事件探查任务使用某些或所有具有默认设置的默认配置文件对表或视图进行事件探查。  
   
  有关详细信息，请参阅[数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)和[单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
@@ -58,14 +57,14 @@ ms.lasthandoff: 05/03/2018
   
 |计算对象|帮助标识|使用此配置文件|  
 |----------------|-------------------------|----------------------|  
-|所选列中字符串值的所有不同长度和每个长度表示的行在表中的百分比。|**无效的字符串值—**例如，如果对某列进行事件探查，假定该列使用两个字符来表示美国的州代码，但发现它的值长于两个字符。|**列长度分布—**对具有下列其中一种字符数据类型的列有效：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|一组正则表达式，涵盖字符串列中指定的百分比值。<br /><br /> 还可以查找将来可用于验证新值的正则表达式|**无效或格式不正确的字符串值** - 例如，邮政编码列的模式配置文件可能会生成正则表达式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果输出中包含其他正则表达式，则数据包含的值可能无效或者格式不正确。|**列模式配置文件—**对具有下列其中一种字符数据类型的列有效：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|所选列中 null 值的百分比。|**列中 null 值所占比率意外地高—**例如，对某个应包含美国邮政编码的列进行事件探查时发现，该列中缺少邮政编码的行所占的比例超出允许的范围。|**列 Null 比率—**对具有下列其中一种数据类型的列有效：<br /><br /> **图像**<br /><br /> **text**<br /><br /> **xml**<br /><br /> 用户定义类型<br /><br /> 变量类型|  
-|数值列的最小值、最大值、平均值和标准偏差等统计信息，以及 **datetime** 列的最小值和最大值。|**无效的数值和日期—**例如，在对包含历史日期的列进行事件探查时发现，最大日期是一个将来的日期。|**列统计信息配置文件—**对具有下列其中一种数据类型的列有效。<br /><br /> 数字数据类型：<br /><br /> 整数类型（除了 **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 请注意：对于具有日期和时间数据类型的列，配置文件仅计算最小值和最大值。|  
-|所选列中的所有非重复值以及每个值表示的行在表中的百分比。 或者表示大于表中指定百分比的值。|**列中非重复值的个数不正确**—例如，如果对包含美国各州的列进行事件探查，但发现非重复值大于 50 个。|**列值分布—**对具有下列其中一种的列有效。<br /><br /> 数字数据类型：<br /><br /> 整数类型（除了 **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
-|一列或者一组列是所选表的键或者近似键。|**在可能的键列中存在重复值—**例如，在对 Customers 表中的 Name 和 Address 列进行事件探查时发现，应为唯一值的名称和地址组合中包含重复值。|**候选键—**多列配置文件，它报告列或者一组列是否适合用作所选表的键。 对具有下列其中一种数据类型的列有效。<br /><br /> 整数数据类型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
-|一个区，对于该区来说，一列（依赖列）中的值取决于其他列或另一组列（决定列）中的值。|**在依赖列中无效的值—**例如，对包含美国邮政编码的列与包含美国各州的列之间的依赖关系进行事件探查。 相同的邮政编码对应的州应该总是相同的。 但是，在配置文件中发现依赖关系冲突。|**函数依赖关系—**对具有下列其中一种数据类型的列有效：<br /><br /> 整数数据类型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
-|列或者一组列适合用作所选表间的外键。<br /><br /> 即，此配置文件报告两列或两组列之间的重叠值。|**无效值—**例如，对 Sales 表的 ProductID 列进行事件探查时， 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。|**值包含—**对具有以下数据类型的列有效：<br /><br /> 整数数据类型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
+|所选列中字符串值的所有不同长度和每个长度表示的行在表中的百分比。|**无效的字符串值—** 例如，如果对某列进行事件探查，假定该列使用两个字符来表示美国的州代码，但发现它的值长于两个字符。|**列长度分布—** 对具有下列其中一种字符数据类型的列有效：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
+|一组正则表达式，涵盖字符串列中指定的百分比值。<br /><br /> 还可以查找将来可用于验证新值的正则表达式|**无效或格式不正确的字符串值** - 例如，邮政编码列的模式配置文件可能会生成正则表达式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果输出中包含其他正则表达式，则数据包含的值可能无效或者格式不正确。|**列模式配置文件—** 对具有下列其中一种字符数据类型的列有效：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
+|所选列中 null 值的百分比。|**列中 null 值所占比率意外地高—** 例如，对某个应包含美国邮政编码的列进行事件探查时发现，该列中缺少邮政编码的行所占的比例超出允许的范围。|**列 Null 比率—** 对具有下列其中一种数据类型的列有效：<br /><br /> **图像**<br /><br /> **text**<br /><br /> **xml**<br /><br /> 用户定义类型<br /><br /> 变量类型|  
+|数值列的最小值、最大值、平均值和标准偏差等统计信息，以及 **datetime** 列的最小值和最大值。|**无效的数值和日期—** 例如，在对包含历史日期的列进行事件探查时发现，最大日期是一个将来的日期。|**列统计信息配置文件—** 对具有下列其中一种数据类型的列有效。<br /><br /> 数字数据类型：<br /><br /> 整数类型（除了 **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 请注意：对于具有日期和时间数据类型的列，配置文件仅计算最小值和最大值。|  
+|所选列中的所有非重复值以及每个值表示的行在表中的百分比。 或者表示大于表中指定百分比的值。|**列中非重复值的个数不正确**—例如，如果对包含美国各州的列进行事件探查，但发现非重复值大于 50 个。|**列值分布—** 对具有下列其中一种的列有效。<br /><br /> 数字数据类型：<br /><br /> 整数类型（除了 **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
+|一列或者一组列是所选表的键或者近似键。|**在可能的键列中存在重复值—** 例如，在对 Customers 表中的 Name 和 Address 列进行事件探查时发现，应为唯一值的名称和地址组合中包含重复值。|**候选键—** 多列配置文件，它报告列或者一组列是否适合用作所选表的键。 对具有下列其中一种数据类型的列有效。<br /><br /> 整数数据类型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
+|一个区，对于该区来说，一列（依赖列）中的值取决于其他列或另一组列（决定列）中的值。|**在依赖列中无效的值—** 例如，对包含美国邮政编码的列与包含美国各州的列之间的依赖关系进行事件探查。 相同的邮政编码对应的州应该总是相同的。 但是，在配置文件中发现依赖关系冲突。|**函数依赖关系—** 对具有下列其中一种数据类型的列有效：<br /><br /> 整数数据类型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
+|列或者一组列适合用作所选表间的外键。<br /><br /> 即，此配置文件报告两列或两组列之间的重叠值。|**无效值—** 例如，对 Sales 表的 ProductID 列进行事件探查时， 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。|**值包含—** 对具有以下数据类型的列有效：<br /><br /> 整数数据类型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字符数据类型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和时间数据类型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
   
  若要选择要计算的配置文件，可使用数据事件探查任务编辑器的 **“配置文件请求”** 页。 有关详细信息，请参阅[数据分析任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   

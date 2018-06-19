@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b8bb7adbc79619f26e9de5d79dd8d460672d0e4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 031c4e058731b02ba93f73c46e8cdeb052d56945
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322296"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为单个服务实现，其中包含报表服务器 Web 服务、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]以及用于计划的报告处理和订阅传递的后台处理应用程序。 本主题说明最初如何配置服务帐户以及如何使用 Reporting Services 配置工具修改帐户或密码。  
@@ -103,13 +103,13 @@ ms.lasthandoff: 05/03/2018
  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的服务帐户密码已过期，则尝试连接到报表服务器时，将出现 **rsReportServerDatabaseUnavailable** 错误。 重置密码可以解决此错误。  
   
 ## <a name="troubleshooting-service-identity-update-errors"></a>服务标识更新错误故障排除  
- 更改服务标识将启动一系列事件，其中包括重新启动服务、更新受密码保护的加密密钥、更新 URL 保留项以及更新报表服务器数据库连接信息（如果使用该服务帐户来连接报表服务器数据库）。 您可以通过查看页面底部“结果”窗格中的通知来监视这些事件的状态。 如果在此过程中出现错误，可以尝试使用以下方法进行解决：  
+ 更改服务标识将启动一系列事件，其中包括重新启动服务、更新受密码保护的加密密钥、更新 URL 预留以及更新报表服务器数据库连接信息（如果使用该服务帐户来连接报表服务器数据库）。 您可以通过查看页面底部“结果”窗格中的通知来监视这些事件的状态。 如果在此过程中出现错误，可以尝试使用以下方法进行解决：  
   
 -   如果无法还原对称密钥，可以尝试使用“加密密钥”页中的 **“还原”** 手动还原它。 如果这不起作用，可以考虑删除加密的内容。 您必须重新创建数据源连接信息和订阅，但其余内容仍然可用。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
 -   如果服务未启动，请使用管理工具中的“服务”控制台应用程序手动重新启动它。  
   
--   更新服务帐户时可能会发生 URL 保留项错误。 每个 URL 保留项都包含一个安全描述符，其中包含授权该服务帐户接受该 URL 上的请求的自由访问控制列表 (DACL)。 更新帐户时，必须重新创建该 URL，以便用新帐户信息更新 DACL。 如果无法重新创建 URL 保留项，并且您知道该帐户是有效的，请尝试重新启动计算机。 如果错误仍然存在，请尝试使用不同的帐户。  
+-   更新服务帐户时可能会发生 URL 预留错误。 每个 URL 预留都包含一个安全描述符，其中包含授权该服务帐户接受该 URL 上的请求的自由访问控制列表 (DACL)。 更新帐户时，必须重新创建该 URL，以便用新帐户信息更新 DACL。 如果无法重新创建 URL 预留，并且你知道该帐户是有效的，请尝试重新启动计算机。 如果错误仍然存在，请尝试使用不同的帐户。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   

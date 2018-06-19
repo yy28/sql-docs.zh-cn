@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a9e470347f20649c3ef42a93e862e32cb046171a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 345d104ce52a89e7ddcfdca24c93283ddfabb0d0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322586"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
 
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="bkmk_configmanager_notstart"></a> Reporting Services 配置管理器无法启动
 
- **说明：**此问题是 SQL Server 2012 和更高版本中的设计问题。 Reporting Services 是为 SharePoint 服务体系结构而设计的。 在 SharePoint 模式下配置和管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不再需要配置管理器。  
+ **说明：** 此问题是 SQL Server 2012 和更高版本中的设计问题。 Reporting Services 是为 SharePoint 服务体系结构而设计的。 在 SharePoint 模式下配置和管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不再需要配置管理器。  
   
  **解决方法：** 使用 SharePoint 管理中心在 SharePoint 模式中配置报表服务器。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   

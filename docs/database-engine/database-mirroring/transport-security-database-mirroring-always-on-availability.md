@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -24,11 +23,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88bbb9d536694df7e33ea0190c91319e4c2bbe37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29f7f6b3e0537c1c13f11389adf95c3d35736d8e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312606"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>传输安全性 - 数据库镜像 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  或者，您可以通过在 CREATE ENDPOINT 语句或 ALTER ENDPOINT 语句中为 ALGORITHM 选项指定下列值之一，控制端点所使用的加密算法：  
   
-|ALGORITHM 值|Description|  
+|ALGORITHM 值|描述|  
 |---------------------|-----------------|  
 |RC4|指定端点必须使用 RC4 算法。 这是默认设置。<br /><br /> **\*\* 警告 \*\*** 不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。|  
 |AES|指定端点必须使用 AES 算法。|  

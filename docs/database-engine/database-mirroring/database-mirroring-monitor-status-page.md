@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d2881d0c23d378dcc9da0ffaf122adbadc0e22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b929d81b37523eebbea7a63f8c066b9bd923890f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311896"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>数据库镜像监视器（状态页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  这些列如下所示：  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**服务器实例**|在 **“状态”** 行显示状态的服务器实例的名称。|  
 |**当前角色**|服务器实例的当前角色，即 **“主体”** 或 **“镜像”**。|  

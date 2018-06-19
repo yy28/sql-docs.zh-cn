@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -25,11 +24,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 183a0008909921bc7346201270546c1e58ce3b7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 34d6242fc07c064adf98e3cc5d579312fe593a79
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312880"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>以编程方式添加数据流任务
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含了一个称为数据流任务的任务，由对象模型中的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> 命名空间表示。 数据流任务是一个专门用于在包执行期间转换和移动数据的专用高性能任务。 与其他任务相似，数据流任务由 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 对象包装，从运行时引擎的角度出发，此任务只是该包中的另一个任务。 但是，数据流包含称为数据流组件的其他对象。 这些组件将数据从源移到目标，有时候还会经过转换。 这些组件定义数据的移动方向和转换数据的方式。 配置数据流任务涉及向任务添加组件，然后连接这些组件以便建立数据流并完成所需的转换。  
