@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b1103a3528674c8541aa04569e0d63a17ddcefc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a90d530044eb24193f899f0926b392bec8dfe92
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310126"
 ---
 # <a name="create-a-domain-rule"></a>创建域规则
 
@@ -96,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Apply"></a> 应用域规则  
   
-1.  单击 **“应用所有规则”** 可将规则应用于域中的值。 在您单击 **“应用所有规则”**后，将显示一个弹出窗口，指示该规则在某些状态下会影响多少个值。 如果您仍想要应用该规则，则单击 **“是”** ；否则单击 **“否”** 。 如果您单击 **“是”**，则单击 **确定** 可关闭结果弹出窗口。  
+1.  单击 **“应用所有规则”** 可将规则应用于域中的值。 在您单击 **“应用所有规则”** 后，将显示一个弹出窗口，指示该规则在某些状态下会影响多少个值。 如果您仍想要应用该规则，则单击 **“是”** ；否则单击 **“否”** 。 如果您单击 **“是”**，则单击 **确定** 可关闭结果弹出窗口。  
   
     > [!NOTE]  
     >  在您创建或更改某一规则时，无需保存更改。 但是，您必须应用规则，更改才能生效。  
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  您还可以选择创建一个域值。 例如，若要验证值是否以字母 A、B 或 C 开头，则您可以创建一个具有复杂条件的简单规则（例如，具有竖线字符的正则表达式），或者可以创建包含若干简单条件的复杂规则。 第一个规则的一个例子是“Value contains regular expression (^A|^B|^C)”。 第二个规则的一个例子是“’Value begins with A’ OR ‘Value begins with B’ OR ‘Value begins with C’”。  
   
-|条件|Description|示例|  
+|条件|描述|示例|  
 |---------------|-----------------|-------------|  
 |长度等于|只有包含由操作数指定的字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1<br /><br /> 无效值：AA|  
 |长度大于或等于|只有包含由操作数指定的字符数或更多字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 无效值：AA|  

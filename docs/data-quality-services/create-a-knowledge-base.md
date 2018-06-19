@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1902c963b939987e10729b20a4d41d77e4574f48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9a322164e4a5451a6e9f9ed5c31dcb6defcba9c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310346"
 ---
 # <a name="create-a-knowledge-base"></a>创建知识库
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  输入新知识库的名称和说明。  
   
-4.  在 **“创建知识库自”**中，选择要基于其创建知识库的内容：  
+4.  在 **“创建知识库自”** 中，选择要基于其创建知识库的内容：  
   
     -   如果您不想基于现有知识库或数据文件来创建新知识库，则选择 **“无”** 。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
     -   选择 **“自 DQS 文件导入”** 将基于 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS 文件创建新的知识库。 单击 **“浏览”**，选择扩展名为 .dqs 的 DQS 数据文件，然后单击 **“确定”**。  
   
-5.  在 **“选择活动”**中，选择要对新知识库执行的活动：  
+5.  在 **“选择活动”** 中，选择要对新知识库执行的活动：  
   
     -   选择 **“域管理”** 可创建知识库并进入您用来修改知识库中的域的屏幕。  
   

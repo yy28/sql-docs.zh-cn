@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,17 +18,18 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d3a0e0e800fde25fcb2c7bc982e9d1a0490bd81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d45174da7a0d8792229051a9f6cdb486b64e8343
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309816"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  本主题介绍如何将数据质量知识库中的域/复合域附加到 Windows Azure Marketplace 中的引用数据服务，以便针对高质量引用数据生成知识。 每个引用数据服务包含一个架构（数据列）。 在将域或复合域附加到引用数据服务后，必须将此附加域或所附加的复合域内的各个域映射到引用数据服务架构中的相应列。 通过将复合域附加到引用数据服务，您可以只将一个域附加到引用数据服务，然后将复合域内的各域映射到引用数据服务架构中的相应列。  
+  本主题介绍如何将数据质量知识库中的域/复合域附加到 Microsoft Azure 市场中的引用数据服务，以便针对高质量引用数据生成知识。 每个引用数据服务包含一个架构（数据列）。 在将域或复合域附加到引用数据服务后，必须将此附加域或所附加的复合域内的各个域映射到引用数据服务架构中的相应列。 通过将复合域附加到引用数据服务，您可以只将一个域附加到引用数据服务，然后将复合域内的各域映射到引用数据服务架构中的相应列。  
   
 > [!WARNING]  
 >  当将域映射到引用数据服务架构中的列时，附加到引用数据服务的复合域会出现在域下拉列表中。 不要将复合域映射到引用数据服务中的列；只需将复合域内的各个域映射到引用数据服务架构中的相应列。 否则，将导致错误。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在 **“知识库管理”**下，单击 **“新建知识库”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在 **“知识库管理”** 下，单击 **“新建知识库”**。  
   
 3.  在 **“新建知识库”** 屏幕上，为新的知识库键入名称，单击 **“域管理”** 活动，然后单击 **“创建”**。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
          ![“联机引用数据提供程序目录”对话框](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Online Reference Data Providers Catalog dialog box")  
   
         > [!NOTE]  
-        >  -   在 **“联机引用数据提供程序目录”** 对话框中， **DataMarket Data Quality Services** 节点将显示已在 Windows Azure Marketplace 中订阅的所有引用数据服务提供程序。 如果您已在 DQS 中配置了直接联机第三方引用数据服务提供程序，则它们将显示在称作 **“第三方直接联机提供程序”** 的另一个节点下（现在未提供，因为没有在 DQS 中配置直接联机第三方引用数据服务提供程序）。  
+        >  -   在 **“联机引用数据提供程序目录”** 对话框中， **DataMarket Data Quality Services** 节点将显示已在 Microsoft Azure 市场中订阅的所有引用数据服务提供程序。 如果您已在 DQS 中配置了直接联机第三方引用数据服务提供程序，则它们将显示在称作 **“第三方直接联机提供程序”** 的另一个节点下（现在未提供，因为没有在 DQS 中配置直接联机第三方引用数据服务提供程序）。  
   
 9. 您将返回到 **“引用数据”** 选项卡。在“提供程序设置”区域中，根据需要更改下面框中的值：  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 05/03/2018
   
 10. 单击 **“完成”** 将发布知识库。 在知识库成功发布后，将会出现一条确认消息。  
   
- 您可以将此知识库用于数据质量项目中的清理活动，以便基于 Melissa Data 通过 Windows Azure Marketplace 提供的知识标准化和清理您的源数据中的美国地址。  
+ 您可以将此知识库用于数据质量项目中的清理活动，以便基于 Melissa Data 通过 Microsoft Azure 市场提供的知识标准化和清理您的源数据中的美国地址。  
   
 ##  <a name="FollowUp"></a> 跟进：在将域映射到引用数据后  
  创建一个数据质量项目，然后通过将其与本主题中创建的知识库进行比较，对包含美国地址的源数据运行清理活动。 请参阅[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  

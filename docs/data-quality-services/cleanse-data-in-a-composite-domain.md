@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85f0648904e9df6024ef4080c39dc1b8af0cccb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 04eab9984ab7ebd33a45aff3ce14c7522aa04b37
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310106"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
  有关如何将复合域映射到源数据的示例，请参阅[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
 ##  <a name="CDCorrection"></a> 使用明确的跨域规则更正数据  
- 通过复合域中的跨域规则，您可以创建指示一个复合域中各域之间的关系的规则。 在您对涉及复合域的源数据运行清理活动时将考虑跨域规则。 除了让您知道跨域规则的有效性之外，明确的 *Then* 跨域规则 **“值等于”**还在数据清理活动过程中更正数据。  
+ 通过复合域中的跨域规则，您可以创建指示一个复合域中各域之间的关系的规则。 在您对涉及复合域的源数据运行清理活动时将考虑跨域规则。 除了让您知道跨域规则的有效性之外，明确的 *Then* 跨域规则 **“值等于”** 还在数据清理活动过程中更正数据。  
   
  请考虑下面的示例：有一个复合域 Product，该复合域有三个单独的域：ProductName、CompanyName 和 ProductVersion。 创建以下明确的跨域规则：  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 在您测试明确的 *Then* 跨域规则 **“值等于”**时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，此明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已由规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
+ 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，此明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已由规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
   
 > [!NOTE]  
 >  明确的跨域规则将不适用于附加到引用数据服务的复合域。  

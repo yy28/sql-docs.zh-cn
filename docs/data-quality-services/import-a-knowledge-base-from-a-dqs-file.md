@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e1c3c9856aa67672b9bb586cf67ca05a5494220
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346360714dba617461b19d80996ea6b001f71e2c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310916"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  输入该知识库的名称。  
   
-4.  单击 **“知识库创建自”**的向下箭头，然后选择 **“自 DQS 文件导入”**。  
+4.  单击 **“知识库创建自”** 的向下箭头，然后选择 **“自 DQS 文件导入”**。  
   
 5.  对于 **“选择数据文件”**，单击 **“浏览”**。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 12. 如果您发布知识库，则单击 **“确定”**。  
   
-13. 在 Data Quality Services 主页中，验证该知识库是否列在 **“最近的知识库”**下。  
+13. 在 Data Quality Services 主页中，验证该知识库是否列在 **“最近的知识库”** 下。  
   
 ##  <a name="FollowUp"></a> 跟进：从 .dqs 文件导入知识库后  
  在从 .dqs 文件导入知识库之后，您可以将知识添加到知识库，或在清理或匹配项目中使用此知识库，具体取决于知识库的内容。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)、[管理复合域](../data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../data-quality-services/create-a-matching-policy.md)、[数据清理](../data-quality-services/data-cleansing.md)或[数据匹配](../data-quality-services/data-matching.md)。  

@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db844700627b7eb1cbc9266a667d1dadad47d3e2
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249560"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ p（精度）
 >  Informatica 仅支持 16 位有效位数，无论指定精度和小数位数如何。  
   
 s（小数位数）  
-小数点右边可以存储的十进制数字的位数。 从 p 中减去此数字可确定小数点左边的最大位数。 小数点右边可以存储的十进制数字的最大位数。 小数位数的取值范围必须为 0 到 p*p*。 仅在指定精度后才可以指定小数位数。 默认小数位数为 0；因此，0 <= s \<=  p。 最大存储大小基于精度而变化。
+小数点右边可以存储的十进制数字的位数。 从 p 中减去此数字可确定小数点左边的最大位数。 小数位数的取值范围必须为 0 到 p*p*。 仅在指定精度后才可以指定小数位数。 默认小数位数为 0；因此，0 <= s \<=  p。 最大存储大小基于精度而变化。
   
 |精度|存储字节数|  
 |---|---|
