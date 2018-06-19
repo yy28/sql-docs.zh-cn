@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d1e0be14ede33fe4867d2d554572cb56d2d8f7fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31088f6c1a3e4730bce206d8cbc196db382c0223
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408149"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“系统”** ，然后单击 **“部署”**。  
   
-3.  在 **“模型部署向导”**上，单击 **“部署”**。  
+3.  在 **“模型部署向导”** 上，单击 **“部署”**。  
   
 4.  单击 **“浏览”**。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  在加载包后，单击 **“下一步”**。  
   
-8.  如果该模型已存在，则可以通过选择 **“更新现有模型”**更新该模型。 若要创建新模型，请选择 **“创建新模型”** ，并且在单击 **“下一步”** 后，可为该新模型键入名称。  
+8.  如果该模型已存在，则可以通过选择 **“更新现有模型”** 更新该模型。 若要创建新模型，请选择 **“创建新模型”** ，并且在单击 **“下一步”** 后，可为该新模型键入名称。  
   
 9. 单击 **“完成”** 退出向导。  
   

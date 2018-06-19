@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 940d6c966eb92ab9070f654298e7471fad2af791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a18d54250582490506bfe5222f8b4fab17563c5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410029"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>“创建网站”对话框（Master Data Services 配置管理器）
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="web-site"></a>网站  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**网站名称**|为网站键入名称，或使用默认名称。 此名称是仅用来在 IIS 中标识站点的友好名称。 它不用于从 Web 浏览器访问网站。<br /><br /> 在本地计算机上 IIS 的所有网站中，该名称必须唯一。|  
 |**协议**|显示 **“http”**。 在您不需要通过加密通道进行客户端和服务器通信时，使用超文本传输协议 (HTTP)。<br /><br /> **注意**：不能在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中创建 HTTPS 站点。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 协议；在交换机密数据或个人数据时，或者用户希望在传输个人信息前确认服务器的标识时，HTTPS 将很有用。 如果需要通过加密通道在服务器和客户端之间传输信息，则必须使用 IIS 工具（如 IIS 管理器）来配置该站点绑定到 HTTPS，并使该网站绑定与服务器证书关联起来；只有这样做才能在 Web 浏览器中成功打开该网站。 有关服务器证书的详细信息，请参阅 [TechNet 上的](http://go.microsoft.com/fwlink/?LinkId=163220) 在 IIS 7 中配置服务器证书 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="application-pool"></a>应用程序池  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**名称**|为新的应用程序池键入唯一的友好名称，或者使用提供的默认名称。 此网站的根 Web 应用程序在此应用程序池中运行。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
 |**User name**|键入来自 Active Directory 的域名和用户名。 此帐户是 Web 应用程序运行所在的应用程序池的标识。<br /><br /> 此帐户添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色，以便访问数据库。 有关详细信息，请参阅[数据库登录、用户和角色 (Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md)。 它还会被添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md)。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe6bec5a59242ab8bfa6d37741691f89d4e63bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5573f001e063cba0900015517ad65b65531d0e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406589"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目标大容量加载数据
   若要添加并配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，则包必须已包含至少一个数据流任务和一个数据源。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  双击此目标。  
   
-6.  在 **“SQL Server 目标编辑器”**中的 **“连接管理器”** 页上，选择一个现有的 OLE DB 连接管理器或单击 **“新建”** 创建新的连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+6.  在 **“SQL Server 目标编辑器”** 中的 **“连接管理器”** 页上，选择一个现有的 OLE DB 连接管理器或单击 **“新建”** 创建新的连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 7.  若要指定把数据加载到其中的表或视图，请执行下列操作之一：  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  目标自动映射名称相同的列。  
   
-9. 单击 **“高级”** ，并设置大容量加载选项： **“保留标识”**、 **“保留空值”**、 **“表锁”**、 **“检查约束”**和 **“激发触发器”**。  
+9. 单击 **“高级”** ，并设置大容量加载选项： **“保留标识”**、 **“保留空值”**、 **“表锁”**、 **“检查约束”** 和 **“激发触发器”**。  
   
      也可以指定要插入的第一个和最后一个输入行、在插入操作停止前可以出现的最大错误数以及插入据以排序的列。  
   

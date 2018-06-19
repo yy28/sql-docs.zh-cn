@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbf758b1e5c13013b85dd7b3b55daaf411e00c6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b668cb557860ab765bff0ba6d64f2f408483f4d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407609"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>渐变维度向导的 F1 帮助
   可以使用 **渐变维度向导** 配置在各种类型的渐变维度中加载数据的过程。 本部分提供 **渐变维度向导**各页的 F1 帮助。 下表对本部分的主题进行了说明：  

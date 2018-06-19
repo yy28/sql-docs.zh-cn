@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b46cf88708ea82b468a5d20f31b944e39665b189
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edb489423b701d665c9c3b845c342dec6131a16d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335711"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些端点是 **datetime** 值，将存储在包变量中以供以后在包中使用。  
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
   
         ```  
   
-3.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”**页上，将 ExtractStartTime 结果映射到 ExtractStartTime 包变量，并将 ExtractEndTime 结果映射到 ExtractEndTime 包变量。  
+3.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”** 页上，将 ExtractStartTime 结果映射到 ExtractStartTime 包变量，并将 ExtractEndTime 结果映射到 ExtractEndTime 包变量。  
   
     > [!NOTE]  
     >  如果使用表达式设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 变量的值，则每次访问该变量的值时都会计算表达式。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48c90af75a51d0b849f1ce7b0a714bd403e9018d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404749"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -141,7 +140,7 @@ ms.lasthandoff: 05/03/2018
  将此属性设置为 **Allowed**时，“执行 SQL 任务”会尝试将输出参数和查询结果转换为结果赋值给的变量的数据类型。 这适用于 **单行** 结果集类型。  
   
  **ResultSet**  
- 指定运行 SQL 语句预期的结果类型。 从 **“单行”**、 **“完整结果集”**、 **XML**或 **“无”**中选择。  
+ 指定运行 SQL 语句预期的结果类型。 从 **“单行”**、 **“完整结果集”**、 **XML**或 **“无”** 中选择。  
   
  **ConnectionType**  
  选择连接数据源要使用的连接管理器的类型。 可用的连接类型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
@@ -158,7 +157,7 @@ ms.lasthandoff: 05/03/2018
   
  此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为某个 Transact-SQL 语句。 选择此值将显示动态选项 **SQLStatement**。|  
 |**文件连接**|选择包含 Transact-SQL 语句的文件。 设置此选项将显示动态选项 **FileConnection**。|  
@@ -176,7 +175,7 @@ ms.lasthandoff: 05/03/2018
  使用“打开”对话框定位包含 SQL 语句的文件。 选择一个文件，将文件内容作为 SQL 语句复制到 **SQLStatement** 属性中。  
   
  **生成查询**  
- 使用“查询生成器”对话框创建 SQL 语句，查询生成器是一种用于创建查询的图形工具。 此选项在 **SQLSourceType** 选项设置为 **“直接输入”**时可用。  
+ 使用“查询生成器”对话框创建 SQL 语句，查询生成器是一种用于创建查询的图形工具。 此选项在 **SQLSourceType** 选项设置为 **“直接输入”** 时可用。  
   
  **分析查询**  
  验证 SQL 语句的语法。  
@@ -552,7 +551,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 5.  双击执行 SQL 任务。  
   
-6.  在 **“执行 SQL 任务编辑器”** 对话框中的 **“常规”** 页上，选择 **“单行”**、 **“完整结果集”**或 **XML** 结果集类型。  
+6.  在 **“执行 SQL 任务编辑器”** 对话框中的 **“常规”** 页上，选择 **“单行”**、 **“完整结果集”** 或 **XML** 结果集类型。  
 
 7.  单击 **“结果集”**。  
   
@@ -578,7 +577,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 ### <a name="custom-log-entries"></a>自定义日志项  
  下表介绍了执行 SQL 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|提供有关 SQL 语句的执行阶段的信息。 在任务获得与数据库的连接时、任务开始准备 SQL 语句时以及执行完 SQL 语句之后写入日志项。 准备阶段的日志条目包括任务所使用的 SQL 语句。|  
 

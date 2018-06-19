@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7a33e3b2a6963ffeb84d0cda842e3ad784fd416e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f16887f4ed7c5df24f331fbec71d978da1c2647c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403869"
 ---
 # <a name="business-rules-master-data-services"></a>业务规则 (Master Data Services)
 
@@ -63,11 +63,11 @@ ms.lasthandoff: 05/03/2018
   
  其他有关应用规则的重要说明：  
   
--   如果某一业务规则被排除或者未以 **“活动”**状态发布，该规则仍可用，但在应用业务规则时不包括它。  
+-   如果某一业务规则被排除或者未以 **“活动”** 状态发布，该规则仍可用，但在应用业务规则时不包括它。  
   
 -   业务规则适用于所有叶成员或所有合并成员的属性值，但不能同时适用于这两者。  
   
--   业务规则可以应用于模型的所有 **“打开”** 或 **“已锁定”**版本。  
+-   业务规则可以应用于模型的所有 **“打开”** 或 **“已锁定”** 版本。  
   
 -   应用业务规则时对数据所做的更改不记录为事务。  
   

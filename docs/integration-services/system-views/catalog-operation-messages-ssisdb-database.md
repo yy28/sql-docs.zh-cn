@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
@@ -19,18 +17,19 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 920d2b8ab5eb2d0635fbdac7170fbe5d2ecfe8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8de728484d1c0e00eb4ad1bc4dd7ad4137b618c8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401949"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   显示在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中执行操作期间记录的消息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|消息的唯一标识符 (ID)。|  
 |operation_id|**bigint**|操作的唯一 ID。|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  此视图显示下列消息类型：  
   
-|**message_type** Value|Description|  
+|**message_type** Value|描述|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|错误|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
  此视图显示下列消息源类型。  
   
-|**message_source_type**|Description|  
+|**message_source_type**|描述|  
 |-------------------------------|-----------------|  
 |10|入口 API，如 T-SQL 和 CLR 存储过程|  
 |20|用来运行包的外部进程 (ISServerExec.exe)|  

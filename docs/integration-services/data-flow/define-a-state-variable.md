@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9ff7319403a724dcd1c2778a516114d6aef3e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 786d9b2e0d3a3f00d3f9e00496d8a11e9d2c18c1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402989"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
   本过程介绍如何定义用于存储 CDC 状态的包变量。  
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  下表提供了 CDC 状态变量值的组分的详细说明。  
   
-|组件|Description|  
+|组件|描述|  
 |---------------|-----------------|  
 |**\<state-name>**|这是当前 CDC 状态的名称。|  
 |**CS**|这标记当前处理范围开始点（当前开始）。|  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  下表对可能的CDC 状态值进行了说明：  
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |(INITIAL)|这是在当前 CDC 组上运行任何包之前的初始状态。 这也是 CDC 状态为空时的状态。|  
 |ILSTART（初始加载已开始）|这是初始加载包已开始、 **MarkInitialLoadStart** 操作调用 CDC 控制任务后时的状态。|  

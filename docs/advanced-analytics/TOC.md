@@ -69,13 +69,13 @@
 #### [在本地计算上下文中分析数据](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [在 SQL Server 和 XDF 文件之间移动数据](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [创建简单模拟](tutorials/deepdive-create-a-simple-simulation.md)
-### [存储的过程或函数中的嵌入的 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [1-获取数据和脚本](tutorials/sqldev-download-the-sample-data.md)
-#### [2-设置环境](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [3-实现数据的存储过程中使用 R 可视化效果](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [4-创建 T-SQL 的函数中使用 R 数据功能](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [5-训练，并将保存到 SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [6 个预测结果](tutorials/sqldev-operationalize-the-model.md)
+### [在存储 过程和函数中嵌入的 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1 - 获取数据和脚本](tutorials/sqldev-download-the-sample-data.md)
+#### [2 - 设置环境](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3 - 在存储过程中使用 R 来实现数据的可视化效果](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4 - 在 T-SQL 函数中使用 R 来创建数据特征](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5 - 定型并保存到 SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6 - 预测结果](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python：使用 T-SQL 运行 Python](tutorials/run-python-using-t-sql.md)
@@ -94,7 +94,7 @@
 
 # [操作指南](r/sql-server-machine-learning-tasks.md)
 
-## 管理包
+## 包管理
 ### [默认包](r/installing-and-managing-r-packages.md)
 ### [获取包信息](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
@@ -105,7 +105,7 @@
 ##### [启用远程 R 包管理](r/r-package-how-to-enable-or-disable.md)
 ##### [同步 R 包](r/package-install-uninstall-and-sync.md)
 #### [创建 miniCRAN 存储库](r/create-a-local-package-repository-using-minicran.md)
-#### [使用 R 包的技巧](r/packages-installed-in-user-libraries.md)
+#### [使用 R 包的提示](r/packages-installed-in-user-libraries.md)
 
 ## 数据探索和建模
 ### [R 库和数据类型](r/r-libraries-and-data-types.md)
@@ -134,7 +134,7 @@
 ### [修改 SQL Server 机器学习服务的用户帐户池](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [将 SQLRUserGroup 添加为数据库用户](r/add-sqlrusergroup-to-database.md)
 ### [通过 Web 服务部署和使用模型](operationalization-with-mrsdeploy.md)
-### [管理和监视解决方案](r/managing-and-monitoring-r-solutions.md
+### [管理和监控解决方案](r/managing-and-monitoring-r-solutions.md)
 ### [机器学习服务的资源调控](r/resource-governance-for-r-services.md)
 ### [为机器学习创建资源池](r/how-to-create-a-resource-pool-for-r.md)
 ### [机器学习服务的扩展事件](r/extended-events-for-sql-server-r-services.md)
@@ -159,8 +159,8 @@
 ## [设置虚拟机](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ## [故障排除](machine-learning-troubleshooting-faq.md)
 ### [数据收集](data-collection-ml-troubleshooting-process.md)
-### [安装和升级的错误](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [快速启动板和外部脚本执行错误](common-issues-external-script-execution.md)
+### [安装和升级错误](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [启动板和外部脚本执行错误](common-issues-external-script-execution.md)
 ### [R 脚本错误](r-script-execution-errors.md)
 
 ## 博客
@@ -170,4 +170,4 @@
 
 ## 论坛
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [机器学习服务器](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

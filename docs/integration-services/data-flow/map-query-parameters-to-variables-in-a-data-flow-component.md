@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 399c701cdf5326ad2a2ff589642ae8dcb95cc1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d33b3123c683ebeae45283c7b69058b7037ab18d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334171"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>将查询参数映射到数据流组件中的变量
   当配置 OLE DB 源以使用参数化查询时，可以将参数映射到变量。  
@@ -38,11 +37,11 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”**中将 OLE DB 源拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”** 中将 OLE DB 源拖动到设计图面。  
   
 4.  右键单击 OLE DB 源，再单击“编辑”。  
   
-5.  在 **“OLE DB 源编辑器”**中，选择用于连接到数据源的 OLE DB 连接管理器，或单击 **“新建”** 以创建一个新的 OLE DB 连接管理器。  
+5.  在 **“OLE DB 源编辑器”** 中，选择用于连接到数据源的 OLE DB 连接管理器，或单击 **“新建”** 以创建一个新的 OLE DB 连接管理器。  
   
 6.  对于数据访问模式，请选择 **“SQL 命令”** 选项，然后在 **“SQL 命令文本”** 窗格中键入参数化查询。  
   

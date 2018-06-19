@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9987da3e1fc745a5ba823fe56e93f2185a30ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c592f50ab6f58af87089c28fdfb48e65bf885a11
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408359"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 表达式
   表达式是生成单个数据值的符号（标识符、文字、函数和运算符）的组合。 简单的表达式可以是单个常量、变量或函数。 更多情况下，表达式较为复杂，会使用多个运算符和函数，并且引用多个列和变量。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，表达式可以用于定义 CASE 语句的条件，创建和更新数据列中的值，为变量赋值，在运行时更新或填充属性，定义优先约束中的约束，以及提供 For 循环容器所使用的表达式。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，设置有表达式的连接管理器、变量和任务旁边会显示特殊的图标标记。 **HasExpressions** 属性在支持表达式（变量除外）的所有 SSIS 对象上均可用。 通过该属性，您可以轻松识别出哪些对象具有表达式。  
   
 ## <a name="expression-builder"></a>表达式生成器  
- 表达式生成器是一种用于生成表达式的图形工具。 **“有条件拆分转换编辑器”**对话框、 **“派生列转换编辑器”** 对话框和 **“表达式生成器”** 对话框中提供的表达式生成器是用于生成表达式的图形工具。  
+ 表达式生成器是一种用于生成表达式的图形工具。 **“有条件拆分转换编辑器”** 对话框、 **“派生列转换编辑器”** 对话框和 **“表达式生成器”** 对话框中提供的表达式生成器是用于生成表达式的图形工具。  
   
  表达式生成器提供包含包特定元素的文件夹，还提供包含表达式语言所提供的函数、类型转换和运算符的文件夹。 包特定元素包括系统变量和用户定义的变量。 在 **“有条件拆分转换编辑器”** 对话框和 **“派生列转换编辑器”** 对话框中，您还可以查看数据列。 若要为转换生成表达式，可以将项从文件夹中拖到 **“条件”** 或 **“表达式”** 列中，也可以直接在列中键入表达式。 表达式生成器会自动添加所需的语法元素，如变量名的 @ 前缀。  
   

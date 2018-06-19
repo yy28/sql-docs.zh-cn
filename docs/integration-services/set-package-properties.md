@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 841f4d7bf5b77ccc91731276510b1b3186c1bb90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f3b42dd7df892f2e6c281ae5fec651823e99d4c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405999"
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Checkpoints"></a> 检查点  
  使用此类别中的属性可以从包控制流中的某一故障点重新启动包，而不是从包控制流的开始处重新运行包。 有关详细信息，请参阅 [通过使用检查点重新启动包](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**CheckpointFileName**|用于捕获使包重新启动的检查点信息的文件的名称。 当包成功完成时，该文件便会被删除。|  
 |**CheckpointUsage**|指定何时可以重新启动包。 具体的值为 **Never**、 **IfExists**和 **Always**。 此属性的默认值为 **Never**，指示包不能重新启动。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>。|  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Execution"></a> 执行  
  此类别中的属性可配置包对象的运行时行为。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**DelayValidation**|指示是否将包验证推迟至包运行之时进行。 此属性的默认值为 **False**。|  
 |**Disable**|指示包是否已禁用。 此属性的默认值为 **False**。|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ForcedExecutionValue"></a> 强制执行值  
  此类别中的属性用于配置包的可选执行值。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**ForcedExecutionValue**|如果 ForceExecutionValue 设置为 **True**，则为用于指定包返回的可选执行值的值。 此属性的默认值为 **0**。|  
 |**ForcedExecutionValueType**|ForcedExecutionValue 的数据类型。 此属性的默认值为 **Int32**。|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Identification"></a> 标识  
  此类别中的属性提供诸如包的唯一标识符和名称等信息。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**CreationDate**|包的创建日期。|  
 |**CreatorComputerName**|创建包的计算机的名称。|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Misc"></a> 杂项  
  此类别中的属性用于访问包所使用的配置和表达式，以及提供有关包的区域设置和日志记录模式的信息。 有关详细信息，请参阅 [在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**配置**|包使用的配置集合。 单击浏览按钮 **(…)** 可以查看和配置包配置。|  
 |**表达式**|单击浏览按钮 **(…)** 可以为包属性创建表达式。<br /><br /> 请注意，你可以为对象模型包含的所有包属性（而不仅仅是“属性”窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅[在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 **Expressions**。 单击表达式文本框中的浏览按钮 **(…)** 可以修改和计算表达式。|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Security"></a> 安全性  
  此类别中的属性用于设置包的保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**PackagePassword**|需要密码的包保护级别 (**EncryptSensitiveWithPassword** 和 **EncryptAllWithPassword**) 的密码。|  
 |**ProtectionLevel**|包的保护级别。 其值为： **DontSaveSensitive**、 **EncryptSensitiveWithUserKey**、 **EncryptSensitiveWithPassword**、 **EncryptAllWithPassword**和 **ServerStorage**。 此属性的默认值为 **EncryptSensitiveWithUserKey**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>。|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Transactions"></a> 中的  
  此类别中的属性用于配置包的隔离级别和事务选项。 有关详细信息，请参阅 [Integration Services 事务](../integration-services/integration-services-transactions.md)。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**IsolationLevel**|包事务的隔离级别。 其值为： **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此属性的默认值为 **Serializable**。<br /><br /> 注意： **IsolationLevel** 属性的 **Snapshot** 值与包事务不兼容。 因此，您无法使用 **IsolationLevel** 属性将包事务的隔离级别设为 **Shapshot**。 而是使用 SQL 查询将包事务设为 **Snapshot**。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 仅当 **IsolationLevel** 属性的值设为 **TransactionOption** 时，系统才将 **Required**属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 **IsolationLevel** 属性的值：<br />子容器的 **TransactionOption** 属性的值为 **Supported**。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 **IsolationLevel** 属性的值。 在以下条件成立时，容器将开始新的事务：<br />容器的 **TransactionOption** 属性的值为 **Required**。<br />父级已开始一个事务。<br /><br /> <br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |**TransactionOption**|包的事务参与情况。 其值为： **NotSupported**、 **Supported**、 **Required**。 此属性的默认值为 **Supported**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
@@ -150,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Version"></a> 版本  
  此类别中的属性用于提供包对象的版本信息。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**VersionBuild**|包的内部版本号。|  
 |**VersionComments**|包的版本注释。|  

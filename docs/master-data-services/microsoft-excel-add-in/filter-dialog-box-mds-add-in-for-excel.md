@@ -1,14 +1,12 @@
 ---
 title: “筛选器”对话框 (MDS Add-in for Excel) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e775f606b81fd849f7089f15116d4bd0f4c514d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a9914b45153ccd8912d8009bc0baf7971eacce2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408559"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
 
@@ -28,12 +27,12 @@ ms.lasthandoff: 05/03/2018
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用“筛选器”  对话框可以先筛选 MDS 管理的数据列表，然后再将其加载到 Excel 中。  
   
- 此对话框包含三个部分： **“列”**、 **“行”**和 **“摘要”**。  
+ 此对话框包含三个部分： **“列”**、 **“行”** 和 **“摘要”**。  
   
 ## <a name="columns"></a>“列”  
  使用“列”  部分可以确定要在 Excel 中显示的属性（列）。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |属性类型|属性类型描述您想要使用的成员的类型。 在大多数情况下，类型为 **“叶”**。 有关成员类型的详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。|  
 |显式层次结构|如果您选择 **“已合并”** 属性类型，请选择已合并成员所属的层次结构。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../../master-data-services/explicit-hierarchies-master-data-services.md)。|  
@@ -45,20 +44,20 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rows"></a>“行”  
  使用“行”  部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |Attribute|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：你可以依据你不准备在工作表中显示的属性进行筛选。|  
 |运算符|显示对应于所选属性的类型的运算符。 有关详细信息，请参阅 [Filter 运算符 (Master Data Services)](../../master-data-services/filter-operators-master-data-services.md)。|  
 |条件|筛选要依据的条件。|  
 |更新摘要|处理大型数据集时，单击该选项可使用要加载的数据的详细信息来更新 **“摘要”** 部分。|  
-|添加|在您单击 **“列”** 部分中的属性，然后单击 **“添加”**后，将向筛选器列表添加属性。|  
+|添加|在您单击 **“列”** 部分中的属性，然后单击 **“添加”** 后，将向筛选器列表添加属性。|  
 |全部删除|从列表中删除所有筛选器。|  
 |删除|从列表中删除所选的筛选器。|  
   
 ## <a name="summary"></a>“摘要”  
  使用 **“摘要”** 部分可以在加载数据之前先查看有关要加载的数据的详细信息。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |“模型”|模型的名称。|  
 |版本|版本的名称。|  

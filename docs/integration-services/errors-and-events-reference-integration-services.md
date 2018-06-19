@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6135e7e65c10d375d6a59529bd1beb3369a8d084
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2a5e265f00931bd06609f288d3c30f733548f39
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408869"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
   本节包含与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]有关的多个错误和事件的相关信息。 其中包括错误消息的原因和解决方法信息。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="error-messages"></a>错误消息  
   
-|错误的符号名称|Description|  
+|错误的符号名称|描述|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|指示由于“缓存转换”转换正在尝试将数据写入内存中的缓存中而导致包无法运行。 但是，缓存连接管理器已将一个缓存文件加载到内存中的缓存中。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指示由于指定的连接失败而导致包无法运行。|  
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  有关详细信息，请参阅 [由 Integration Services 包记录的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
   
-|事件|Description|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指示包已启动。|  
 |SQLISPackage_12289|指示包已成功完成运行。|  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  有关详细信息，请参阅 [由 Integration Services 服务记录的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
   
-|事件|Description|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISService_256|指示服务正要启动。|  
 |SQLISService_257|指示服务已经启动。|  

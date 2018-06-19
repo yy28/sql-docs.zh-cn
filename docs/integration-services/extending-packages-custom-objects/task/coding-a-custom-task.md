@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -25,11 +24,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6856c4bece1275ae91f3bfd57ae10408e29177e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241b2b8b24422edcd5b67e8a18012805286f3002
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410579"
 ---
 # <a name="coding-a-custom-task"></a>编写自定义任务代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
@@ -169,7 +169,7 @@ End Class
   
  下表列出了提供给任务的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的参数。  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|包含任务可用的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的集合。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|包含任务可用的变量。 任务通过 VariableDispenser 使用变量，而不直接使用变量。 变量分配器可锁定变量和解除变量锁定，并防止死锁或覆盖。|  

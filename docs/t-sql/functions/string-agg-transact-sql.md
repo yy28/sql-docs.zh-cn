@@ -21,12 +21,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c270729aa66c05f835cba507884e8d5cda102d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca31c161bbfa87eb87bb99222389c6a7d92109a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063554"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700998"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,16 +45,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## <a name="arguments"></a>参数 
+*expression*  
+是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 串联期间，表达式被转换为 `NVARCHAR` 或 `VARCHAR` 类型。 非字符串类型被转换为 `NVARCHAR` 类型。
 
 separator  
 是 `NVARCHAR` 或 `VARCHAR` 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联字符串的分隔符。 可以是文本或变量。 
 
-*expression*  
-是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 串联期间，表达式被转换为 `NVARCHAR` 或 `VARCHAR` 类型。 非字符串类型被转换为 `NVARCHAR` 类型。
-
-
 <order_clause>   
 使用 `WITHIN GROUP` 子句有选择性地指定串联结果的顺序：
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -77,7 +76,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 
 ## <a name="remarks"></a>Remarks  
- 
 `STRING_AGG` 是一个聚合函数，用于提取行中的所有表达式，并将这些表达式串联成一个字符串。 表达式值隐式转换为字符串类型，然后串联在一起。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
 如果输入表达式的类型为 `VARCHAR`，则分隔符的类型不能是 `NVARCHAR`。 
@@ -85,7 +83,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 null 值会被忽略，且不会添加相应的分隔符。 若要为 null 值返回占位符，请使用 `ISNULL` 函数，如示例 B 中所示。
 
 `STRING_AGG` 适用于任何兼容级别。
-
 
 ## <a name="examples"></a>示例 
 
@@ -105,7 +102,6 @@ FROM Person.Person;
 > [!NOTE]  
 >  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集。   
 
-
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成使用逗号分隔且不带 NULL 值的姓名列表   
 下面的示例在一个结果单元格中返回以逗号分隔的姓名，并使用“N/A”替换 null 值。  
 ```sql
@@ -114,15 +110,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### <a name="c-generate-comma-separated-values"></a>C. 生成采用逗号分隔的值 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -137,10 +130,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集。   
- 
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 返回带有相关标记的新闻文章 
-
 文章及其标记被分隔到不同的表中。 开发人员想在返回时将每篇文章及其所有相关标记作为一行。 请使用以下查询： 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -159,7 +150,6 @@ GROUP BY a.articleId, title;
 |177 |狗继续比猫更受人喜爱 |民意调查,动物| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 生成按城市分类的电子邮件列表
-
 下面的查询用于查找员工的电子邮件地址，并将结果按城市分类： 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -177,7 +167,6 @@ GROUP BY town;
 可以直接使用在电子邮件列中返回的电子邮件向在某些特定城市工作的人们发送电子邮件。 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 生成按城市分类并经过排序的电子邮件列表   
-   
 与上一个示例类似，下面的查询用于查找员工的电子邮件地址，将结果按城市分类，并按字母顺序对电子邮件排序：   
 ```sql
 SELECT town, 
@@ -192,7 +181,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## <a name="see-also"></a>另请参阅  
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e0811b894e96c4ac7b11ef377765aa6b56cdbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3697fc9f7af68d681dbbc1295e520dd8d7f08f16
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403609"
 ---
 # <a name="connect-to-an-access-database"></a>连接到 Access 数据库
   若要将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包连接到 Microsoft Office Access 数据源，需要使用 OLE DB 连接管理器和数据访问接口。 所使用的数据访问接口取决于创建该数据源的 Access 版本：  
@@ -61,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
      有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-4.  在 **“连接管理器”** 对话框中，选择 **“Microsoft Jet 4.0 OLE DB 访问接口”**作为 **“访问接口”**，然后根据需要配置该连接管理器。  
+4.  在 **“连接管理器”** 对话框中，选择 **“Microsoft Jet 4.0 OLE DB 访问接口”** 作为 **“访问接口”**，然后根据需要配置该连接管理器。  
   
 ### <a name="to-create-an-access-connection-from-the-sql-server-import-and-export-wizard"></a>从 SQL Server 导入和导出向导创建 Access 连接  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在 **“选择数据源”** 页上，选择 **Microsoft Access**作为 **“数据源”**，然后配置该 Access 连接。  
   
-     当选择 **Microsoft Access** 作为 **“数据源”**时，向导会使用正确的数据访问接口自动创建必要的 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+     当选择 **Microsoft Access** 作为 **“数据源”** 时，向导会使用正确的数据访问接口自动创建必要的 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 ## <a name="connecting-to-a-data-source-in-access-2007-format"></a>连接到 Access 2007 格式的数据源  
  若要访问 Access 2007 数据源，OLE DB 连接管理器需要 Microsoft Office 12.0 Access 数据库引擎的 OLE DB 访问接口。 此访问接口是随 2007 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office system 自动安装的。 如果在运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的计算机上未安装 2007 Office system，则需要单独安装该访问接口。 若要安装 Microsoft Office 12.0 Access 数据库引擎的 OLE DB 访问接口，请从 [2007 Office System Driver: Data Connectivity Components](http://go.microsoft.com/fwlink/?LinkId=98155)（2007 Office system 驱动程序：数据连接组件）下载并安装这些组件。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
      有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-4.  在 **“连接管理器”** 对话框中，选择 **“Microsoft Office 12.0 Access 数据库引擎 OLE DB”**作为 **“访问接口”**，然后根据需要配置该连接管理器。  
+4.  在 **“连接管理器”** 对话框中，选择 **“Microsoft Office 12.0 Access 数据库引擎 OLE DB”** 作为 **“访问接口”**，然后根据需要配置该连接管理器。  
   
     > [!NOTE]  
     >  若要连接到使用 Access 2007 的数据源，则不能选择“Microsoft Jet 4.0 OLE DB 访问接口”作为“数据源”。  
@@ -93,12 +92,12 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。  
   
-2.  在 **“选择数据源”** 页上，选择 **“Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口”**作为 **“数据源”**，然后根据需要配置该连接。  
+2.  在 **“选择数据源”** 页上，选择 **“Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口”** 作为 **“数据源”**，然后根据需要配置该连接。  
   
     > [!NOTE]  
     >  若要连接到使用 Access 2007 的数据源，则不能选择“Microsoft Jet 4.0 OLE DB 访问接口”作为“数据源”。  
   
-     当选择 **“Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口”** 作为 **“数据源”**时，向导会使用正确的数据访问接口自动创建必要的 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+     当选择 **“Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口”** 作为 **“数据源”** 时，向导会使用正确的数据访问接口自动创建必要的 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  

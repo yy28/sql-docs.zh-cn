@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73241b60f4ad826e0492372e83f83eb58a52c321
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a2ce50a3c40d6c9d9b1a0ff83901fc47ad087c7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411789"
 ---
 # <a name="flat-file-destination"></a>平面文件目标
   平面文件目标将数据写入文本文件。 文本文件可以为带分隔符格式、固定宽度格式、固定宽度并使用行分隔符格式或右边未对齐格式。  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
  **“平面文件格式”** 对话框中除了提供带分隔符、固定宽度和右边未对齐这三种标准的平面文件格式外，还提供了第四个选项： **“固定宽度并使用行分隔符”**。 此选项表示右边未对齐格式的一种特殊情况，在这种格式下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将添加一个虚列作为最后一个数据列。 此虚列可确保最后一列具有固定宽度。  
   
- **“固定宽度并使用行分隔符”** 选项在 **“平面文件连接管理器编辑器”**中不可用。 如果需要，可以在该编辑器中模拟此选项。 若要模拟此选项，请在 **“平面文件连接管理器编辑器”** 的 **“常规”**页上，为 **“格式”**选择 **“右边未对齐”**。 然后在该编辑器的 **“高级”** 页上，添加一个新的虚列作为最后一个数据列。  
+ **“固定宽度并使用行分隔符”** 选项在 **“平面文件连接管理器编辑器”** 中不可用。 如果需要，可以在该编辑器中模拟此选项。 若要模拟此选项，请在 **“平面文件连接管理器编辑器”** 的 **“常规”** 页上，为 **“格式”** 选择 **“右边未对齐”**。 然后在该编辑器的 **“高级”** 页上，添加一个新的虚列作为最后一个数据列。  
   
  **覆盖文件中的数据**  
  指示是覆盖现有文件还是向现有文件中追加数据。  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
  查看可用目标列的列表。 使用拖放操作将可用目标列映射到输入列。  
   
  **输入列**  
- 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外。  
+ 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外。  
   
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  

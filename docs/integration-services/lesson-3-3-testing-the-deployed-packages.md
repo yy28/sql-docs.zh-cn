@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: conceptual
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da1b64fb6debe69ee67e6cd32ca3d9f470fc035d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b69d211355699e62e1fea47d2b7a4a68070834bc
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407469"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>第 3-3 课 — 测试已部署的包
 在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例的包。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-connect-to-integration-services-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中连接到 Integration Services  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”**和 **Microsoft SQL Server**，然后单击 **SQL Server Management Studio**。  
+1.  单击 **“开始”**，依次指向 **“所有程序”** 和 **Microsoft SQL Server**，然后单击 **SQL Server Management Studio**。  
   
 2.  在“连接到服务器”对话框中，选择“服务器类型”列表中的“Integration Services”，在“服务器名称”框中提供服务器名称，再单击“连接”。  
   

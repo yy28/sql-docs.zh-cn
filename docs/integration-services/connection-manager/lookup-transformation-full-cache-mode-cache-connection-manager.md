@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f6133332f2d6e47900c03db4e4ec8a68318d573
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54802ce4096caf85d2d5a33eb1e122b7e82057bc
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406639"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查找转换完全缓存模式 - 缓存连接管理器
   可以将查找转换配置为使用完全缓存模式和缓存连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
@@ -87,7 +86,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。 有关详细信息，请参阅 [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
   
-6.  若要将缓存保存到文件，请在 **“缓存连接管理器编辑器”**中的 **“常规”** 选项卡上，设置以下选项来配置缓存连接管理器：  
+6.  若要将缓存保存到文件，请在 **“缓存连接管理器编辑器”** 中的 **“常规”** 选项卡上，设置以下选项来配置缓存连接管理器：  
   
     -   选择 **“使用文件缓存”**。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
     1.  将连接线从源或前一转换拖到查找转换，从而将查找转换连接到数据流。  
   
         > [!NOTE]  
-        >  如果查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”**页上的 **“平面文件源编辑器”**中选择 **“在数据流中保留源中的 Null 值”** 选项。  
+        >  如果查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”** 页上的 **“平面文件源编辑器”** 中选择 **“在数据流中保留源中的 Null 值”** 选项。  
   
     2.  双击源或前一转换以配置组件。  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
         >  查找转换自动映射具有相同名称和相同数据类型的列。  
   
         > [!NOTE]  
-        >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+        >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 **“可用查找列”** 列表中，选择列。 在 **“查找操作”** 列表中，指定查找列中的值是替换输入列中的值还是写入到新列。  
   
@@ -145,7 +144,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  双击缓存转换，在“缓存转换编辑器”中的“连接管理器”页上单击“新建”，创建一个新的缓存连接管理器。  
   
-5.  在 **“缓存连接管理器编辑器”**中的 **“常规”** 选项卡上，设置以下选项来配置缓存连接管理器：  
+5.  在 **“缓存连接管理器编辑器”** 中的 **“常规”** 选项卡上，设置以下选项来配置缓存连接管理器：  
   
     -   选择 **“使用文件缓存”**。  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 05/03/2018
   
      **“连接管理器”** 区域显示在 **设计器的**“控制流” **、**“数据流” **和** “事件处理程序” [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 选项卡的底部。  
   
-10. 在 **“缓存连接管理器编辑器”**中的 **“常规”** 选项卡上，设置以下选项对缓存连接管理器进行配置，以便从所选的缓存文件中读取数据：  
+10. 在 **“缓存连接管理器编辑器”** 中的 **“常规”** 选项卡上，设置以下选项对缓存连接管理器进行配置，以便从所选的缓存文件中读取数据：  
   
     -   选择 **“使用文件缓存”**。  
   
@@ -191,7 +190,7 @@ ms.lasthandoff: 05/03/2018
     1.  将连接线从源或前一转换拖到查找转换，从而将查找转换连接到数据流。  
   
         > [!NOTE]  
-        >  如果查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”**页上的 **“平面文件源编辑器”**中选择 **“在数据流中保留源中的 Null 值”** 选项。  
+        >  如果查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”** 页上的 **“平面文件源编辑器”** 中选择 **“在数据流中保留源中的 Null 值”** 选项。  
   
     2.  双击源或前一转换以配置组件。  
   
@@ -209,7 +208,7 @@ ms.lasthandoff: 05/03/2018
         >  查找转换自动映射具有相同名称和相同数据类型的列。  
   
         > [!NOTE]  
-        >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+        >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 **“可用查找列”** 列表中，选择列。 在 **“查找操作”** 列表中，指定查找列中的值是替换输入列中的值还是写入到新列。  
   
@@ -233,7 +232,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  双击缓存连接管理器以打开“缓存连接管理器编辑器”。  
   
-5.  在 **“缓存连接管理器编辑器”**中的 **“常规”** 选项卡上，设置以下选项来配置缓存连接管理器：  
+5.  在 **“缓存连接管理器编辑器”** 中的 **“常规”** 选项卡上，设置以下选项来配置缓存连接管理器：  
   
     -   选择 **“使用文件缓存”**。  
   
@@ -256,7 +255,7 @@ ms.lasthandoff: 05/03/2018
     1.  将连接线从源或前一转换拖到查找转换，从而将查找转换连接到数据流。  
   
         > [!NOTE]  
-        >  如果查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”**页上的 **“平面文件源编辑器”**中选择 **“在数据流中保留源中的 Null 值”** 选项。  
+        >  如果查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”** 页上的 **“平面文件源编辑器”** 中选择 **“在数据流中保留源中的 Null 值”** 选项。  
   
     2.  双击源或前一转换以配置组件。  
   
@@ -274,7 +273,7 @@ ms.lasthandoff: 05/03/2018
         >  查找转换自动映射具有相同名称和相同数据类型的列。  
   
         > [!NOTE]  
-        >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+        >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 **“可用查找列”** 列表中，选择列。 在 **“查找操作”** 列表中，指定查找列中的值是替换输入列中的值还是写入到新列。  
   

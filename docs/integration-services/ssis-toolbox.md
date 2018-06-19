@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c689bc362d704bd4c8ea8ea997afebc4035fb4ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61f0e432361e56a2e0a6456a1abad3330f8ce40f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404029"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   本地计算机上安装的所有组件都自动显示在“SSIS 工具箱”中。 当安装其他组件时，在此工具箱内右键单击，然后单击“刷新工具箱”即会添加组件。  
@@ -34,15 +33,15 @@ ms.lasthandoff: 05/03/2018
  > [!NOTE]
 > 如果看不到该工具箱，转到“查看”->“其他窗口”->“SSIS 工具箱”。
  
-单击组件在工具箱底部查看其说明，了解有关工具箱中组件的详细信息。 对于某些组件，还可访问演示如何配置和使用这些组件的示例。 在 [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189)上提供这些示例。 若要从 **“SSIS 工具箱”**访问示例，请单击在说明的下方出现的 **“查找示例”** 链接。  
+单击组件在工具箱底部查看其说明，了解有关工具箱中组件的详细信息。 对于某些组件，还可访问演示如何配置和使用这些组件的示例。 在 [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189)上提供这些示例。 若要从 **“SSIS 工具箱”** 访问示例，请单击在说明的下方出现的 **“查找示例”** 链接。  
   
 > [!NOTE]
 > 不能从工具箱中删除已安装的组件。  
 
 ## <a name="toolbox-categories"></a>工具箱类别
- 在 **“SSIS 工具箱”**中，控制流组件和数据流组件组织为不同的类别。  可以展开和折叠类别，并重新排列组件。  通过在此工具箱内右键单击，然后单击“还原工具箱默认值”，可以还原默认组织方式。  
+ 在 **“SSIS 工具箱”** 中，控制流组件和数据流组件组织为不同的类别。  可以展开和折叠类别，并重新排列组件。  通过在此工具箱内右键单击，然后单击“还原工具箱默认值”，可以还原默认组织方式。  
   
- 选定 **“控制流”** 、 **“数据流”** 和 **“事件处理程序”**选项卡时， **“收藏夹”**和 **“公共”** 类别会显示在此工具箱中。 选定 **“控制流”** 选项卡或 **“事件处理程序”** 选项卡时， **“其他任务”** 类别会显示在此工具箱中。选定 **“数据流”**选项卡时， **“其他转换”**、 **“其他源”** 和 **“其他目标”** 类别会显示在此工具箱中。  
+ 选定 **“控制流”** 、 **“数据流”** 和 **“事件处理程序”** 选项卡时， **“收藏夹”** 和 **“公共”** 类别会显示在此工具箱中。 选定 **“控制流”** 选项卡或 **“事件处理程序”** 选项卡时， **“其他任务”** 类别会显示在此工具箱中。选定 **“数据流”** 选项卡时， **“其他转换”**、 **“其他源”** 和 **“其他目标”** 类别会显示在此工具箱中。  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>将 Azure 组件添加到工具箱  
  用于 Integration Services 的 Azure 功能包包含连接到 Azure 数据源的连接管理器，以及用于执行常用 Azure 操作的任务。 安装该功能包，可将这些项添加到工具箱。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
