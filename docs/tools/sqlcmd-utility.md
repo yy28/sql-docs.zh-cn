@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582129"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ sqlcmd
  连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
  **-M** *multisubnet_failover*  
- 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息 [！包括[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 Alwayson 可用性组 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx，和 [活动辅助副本： 可读辅助副本 (Always On 可用性组）] (https://msdn.microsoft.com/library/ff878253.aspx。  
+ 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息 [！包括[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 Alwayson 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，和[活动辅助副本： 可读辅助副本 (Always On 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)。  
   
  **-N**  
  此开关供客户端用于请求加密连接。  

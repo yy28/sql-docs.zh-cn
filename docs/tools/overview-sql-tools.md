@@ -18,10 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709025"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和实用程序可用于 SQL Server、 Azure SQL Database 和 Azure SQL 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>工具来运行查询和管理数据库  
 
-| 工具 | Description |
+| 工具 | 描述 |
 |:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一个免费的轻量的工具，用于管理数据库，只要它们正在运行。 此预览版中提供数据库管理功能，包括扩展的 TRANSACT-SQL 编辑器和可自定义深入了解你的数据库的操作状态。 **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 使用 SQL Server Management Studio (SSMS) 来查询、 设计和管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。 **在 Windows 上运行 SSMS**。|
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="additional-tools"></a>其他工具
 
-| 工具 | Description |
+| 工具 | 描述 |
 |:--|:--|
 | [配置管理器](../tools/configuration-manager/sql-server-configuration-manager-help.md) | 使用 SQL Server 配置管理器来配置 SQL Server 服务和配置网络连接。 在 Windows 上运行 configuration Manager|
 |[mssql-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql conf 用于配置运行在 Linux 上的 SQL Server。|
