@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2d4a77889ad5042349fc4fd9e1e6ff20379a5384
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e8419a8d5f696edcce0e0a54085061c25db2e5d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333921"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   如果您正在更新包含数据的模型，则不能 **“锁定”** 或 **“提交”**正在部署到的版本。  
+-   如果您正在更新包含数据的模型，则不能 **“锁定”** 或 **“提交”** 正在部署到的版本。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>部署模型部署包  
   

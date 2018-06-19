@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fd7ff134e77d9260ff402c48087945af5fc1a86d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4ac3f71827d48a42953f5d1fc65ed1ec05c5a31
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334881"
 ---
 # <a name="tracing-master-data-services"></a>跟踪 (Master Data Services)
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 -   日志格式为 CSV。 下表介绍了日志格式。  
   
-    |元素|Description|  
+    |元素|描述|  
     |-------------|-----------------|  
     |Time|跟踪条目出现的时间。|  
     |CorrelationID|每个请求都分配有一个相关 ID。 此请求触发的所有跟踪都使用同一个相关 ID。<br /><br /> 当 UI 出错时，错误消息中会显示相关 ID。|  

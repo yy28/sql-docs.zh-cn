@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75d3d5b746da8d880152dec8b6bcfcf2c4ef8dbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82ff13c0dfdea2563ec1bf8227d942f956813de9
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404769"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“常规”** 页配置以下选项：  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“控制流”选项卡上，双击数据事件探查任务。  
   
-3.  在 **“数据事件探查任务编辑器”**中，单击 **“常规”**。  
+3.  在 **“数据事件探查任务编辑器”** 中，单击 **“常规”**。  
   
 ## <a name="data-profiling-options"></a>数据事件探查选项  
  **超时**  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  **目标类型**  
  指定将数据配置文件输出保存到文件，还是保存到变量：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：请在“目标”选项中指定要使用的文件连接管理器。 |  
 |**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：请在“目标”选项中指定要使用的包变量。 |  

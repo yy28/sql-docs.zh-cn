@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4cfb1b67c43227d8fd27c2536fd762a601651786
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5d7f54e4f13e33ead0d281c940259c48ab0208f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332901"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
   可以将查找转换配置为使用部分缓存模式或不缓存模式：  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 3.  将连接线从源或前一转换拖到查找转换，从而将查找转换连接到数据流。  
   
     > [!NOTE]  
-    >  如果配置为使用无缓存模式的查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”**页上的 **“平面文件源编辑器”**中选择 **“在数据流中保留源中的 Null 值”** 选项。  
+    >  如果配置为使用无缓存模式的查找转换连接到包含空白日期字段的平面文件，该转换可能无效。 转换是否有效取决于平面文件的连接管理器是否配置为保留 Null 值。 若要确保查找转换有效，请在 **“连接管理器”** 页上的 **“平面文件源编辑器”** 中选择 **“在数据流中保留源中的 Null 值”** 选项。  
   
 4.  双击源或前一转换以配置组件。  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/03/2018
     >  查找转换自动映射具有相同名称和相同数据类型的列。  
   
     > [!NOTE]  
-    >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+    >  列必须含有要映射的匹配数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
 10. 执行以下步骤在输出中包括查找列：  
   
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
      如果语句中包含参数，请单击 **“参数”** 以将这些参数映射到输入列。  
   
     > [!NOTE]  
-    >  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”**页上指定的表名。  
+    >  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”** 页上指定的表名。  
   
 13. 若要配置错误输出，请单击 **“错误输出”** 页，并设置错误处理选项。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -47,11 +45,12 @@ caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64627ae61041de97eba4101cf149e5d073aa0d55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96c1a70d341160c4916fcfe2a067b4da79df2021
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332201"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍聚合转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|一个介于 1 和 100 之间的值，用于指定在聚合过程中内存可扩展的百分比。 此属性的默认值为 **25**。|  
 |CountDistinctKeys|Integer|该值用于指定聚合可以写入的非重复值的精确数目。 如果指定了 CountDistinctScale 值，则 CountDistinctKeys 中的值优先。|  
@@ -92,14 +91,14 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍聚合转换的输出的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |键|Integer|该值用于指定聚合可以写入的分组依据键的精确数目。 如果指定了 KeyScale 值，则 Keys 中的值优先。|  
 |KeyScale|Integer（枚举）|该值用于说明聚合可以写入的分组依据键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) — 指示最多 500,000 个键值，<br /><br /> **中** (2) — 指示最多 500 万个键值，<br /><br /> **高** (3) — 指示超过 2500 万个键值。<br /><br /> **未指定** (0) — 指示未使用 KeyScale 值。|  
   
  下表介绍聚合转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |AggregationColumnId|Integer|参与 GROUP BY 或聚合函数的列的 **LineageID** 。|  
 |AggregationComparisonFlags|Integer|该值用于指定聚合转换如何比较列中的字符串数据。 有关详细信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。|  
@@ -117,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍审核转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |LineageItemSelected|Integer（枚举）|针对输出选定的审核项。 此属性可以具有下列值之一：<br /><br /> **执行实例 GUID** (0)<br /><br /> **执行开始时间** (4)<br /><br /> **计算机名称** (5)<br /><br /> **包 ID** (1)<br /><br /> **包名称** (2)<br /><br /> **任务 ID** (8)<br /><br /> **任务名称** (7)<br /><br /> **用户名** (6)<br /><br /> **版本 ID** (3)|  
   
@@ -130,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍“缓存转换”转换的属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |Connectionmanager|String|指定连接管理器的名称。|  
 |ValidateExternalMetadata|Boolean|指示在设计时是否已使用外部数据源对缓存转换进行了验证。 如果将该属性设置为 **False**，则会在运行时针对外部数据源进行验证。<br /><br /> 默认值为 **True**。|  
@@ -143,7 +142,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍字符映射转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|该值用于指定作为输出列的源的输入列的 **LineageID** 。|  
 |MapFlags|Integer（枚举）|该值用于指定字符映射转换对列执行的字符串操作。 此属性可以具有下列值之一：<br /><br /> **字节反转** (2)<br /><br /> **全角** (6)<br /><br /> **半角** (5)<br /><br /> **平假名** (3)<br /><br /> **片假名** (4)<br /><br /> **语言中的大小写** (7)<br /><br /> **小写** (0)<br /><br /> **简体中文** (8)<br /><br /> **繁体中文**(9)<br /><br /> **大写** (1)|  
@@ -157,7 +156,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍有条件拆分转换的输出的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |EvaluationOrder|Integer|该值用于指定有条件拆分转换所计算的条件列表中与某个输出关联的条件的位置。 条件按值从低到高的顺序进行计算。|  
 |表达式|String|表示有条件拆分转换所计算的条件的表达式。 列由沿袭标识符表示。|  
@@ -173,7 +172,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍复制列转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |copyColumnId|Integer|从中复制输出列的输入列的 **LineageID** 。|  
   
@@ -186,7 +185,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍数据转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 **False**。 有关详细信息，请参阅 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 实例时都提供 SQL Server 登录名。<br /><br /> 注意：此属性在“数据转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |SourceInputColumnLineageId|Integer|作为输出列的源的输入列的 **LineageID** 。|  
@@ -200,7 +199,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍数据挖掘查询转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|连接对象的唯一标识符。|  
 |ASConnectionString|String|某个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库的连接字符串。|  
@@ -219,7 +218,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍派生列转换的输入列和输出列的自定义属性。 如果选择将派生列添加为新列，则这些自定义属性将应用到新的输出列；如果选择将现有输入列的内容替换为派生结果，则这些自定义属性将应用到现有输入列。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |表达式|String|表示有条件拆分转换所计算的条件的表达式。 列由列的 **LineageID** 属性表示。|  
 |FriendlyExpression|String|表示有条件拆分转换所计算的条件的表达式。 列由列名称表示。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
@@ -233,7 +232,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍导出列转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|该值用于指定转换是否向现有文件追加数据。 此属性的默认值为 **False**。|  
 |ForceTruncate|Boolean|该值用于指定转换是否在写入数据之前截断现有文件。 此属性的默认值为 **False**。|  
@@ -249,7 +248,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍导入列转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Boolean|该值用于指定导入列转换是否需要使用字节顺序标记 (BOM)。 仅当数据为 DT_NTEXT 数据类型时才需要 BOM。|  
 |FileDataColumnID|Integer|该值用于标识包含转换插入到数据流中的数据的列。 在要插入的数据列上，此属性的值为 0；在包含源文件路径的列上，此属性包含要插入的数据列的 **LineageID** 。|  
@@ -263,7 +262,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍模糊分组转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |Delimiters|String|转换所使用的标记分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左括号 (()、右括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)、数字符号 (#)、星号 (*)、脱字号 (^) 和百分号 (%)。|  
 |Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 **True** 主要用于调试目的。 此属性的默认值为 **False**。<br /><br /> 注意：此属性在“模糊分组转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
@@ -272,7 +271,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍模糊分组转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Integer（枚举）|该值用于指定转换是执行模糊匹配还是完全匹配。 有效值是 **Exact** 和 **Fuzzy**。 此属性的默认值为 **Fuzzy**。|  
 |FuzzyComparisonFlags|Integer（枚举）|该值用于指定转换如何比较列中的字符串数据。 此属性可以具有下列值之一：<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> 有关详细信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。|  
@@ -282,7 +281,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍模糊分组转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |ColumnType|Integer（枚举）|该值用于标识输出列的类型。 此属性可以具有下列值之一：<br /><br /> **未定义** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonica**l (6)|  
 |InputID|Integer|对应输入列的 **LineageID** 。|  
@@ -296,7 +295,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍模糊查找转换的自定义属性。 除 **ReferenceMetadataXML** 以外的所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|指定是否应为模糊查找索引结构和后续查找生成引用表副本。 此属性的默认值为 **True**。|  
 |Delimiters|String|转换用来标记列值的分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左小括号 (()、右小括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)。 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
@@ -313,7 +312,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍模糊查找转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Integer|该值用于指定转换如何比较列中的字符串数据。 有关详细信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。|  
 |FuzzyComparisonFlagsEx|Integer（枚举）|该值用于指定转换所使用的扩展比较标志。 其值包括 **MapExpandLigatures、MapFoldCZone**、 **MapFoldDigits**、 **MapPrecomposed**和 **NoMapping**。 **NoMapping** 不能与其他标志一起使用。|  
@@ -326,7 +325,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  对于包含来自对应输入列的传递值的输出列，CopyFromReferenceColumn 为空，SourceInputColumnLineageID 包含对应输入列的 **LineageID** 。 对于包含查找结果的输出列，CopyFromReferenceColumn 包含查找列的名称，SourceInputColumnLineageID 为空。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ColumnType|整数（枚举）|该值用于标识转换添加到输出的列的输出列的类型。 此属性可以具有下列值之一：<br /><br /> **未定义** (0)<br /><br /> **Similarity** (1)<br /><br /> **Confidence** (2)<br /><br /> **ColumnSimilarity** (3)|  
 |CopyFromReferenceColumn|String|该值用于指定引用表中提供输出列中的值的列名称。|  
@@ -341,7 +340,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍查找转换的自定义属性。 除 **ReferenceMetadataXML** 以外的所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |CacheType|Integer（枚举）|查找表的缓存类型。 其值包括：“完全”(0)、“部分”(1) 和“无”(2)。 此属性的默认值为 **Full**。|  
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的默认代码页。|  
@@ -355,14 +354,14 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍查找转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |CopyFromReferenceColumn|String|从中复制列的引用表中的列的名称。|  
 |JoinToReferenceColumns|String|源列所联接的引用表中的列的名称。|  
   
  下表介绍查找转换输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |CopyFromReferenceColumn|String|从中复制列的引用表中的列的名称。|  
   
@@ -375,7 +374,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍合并联接转换的自定义属性。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |JoinType|Integer（枚举）|指定联接是内部联接 (2)、左外部联接 (1) 还是完整联接 (0)。|  
 |MaxBuffersPerInput|Integer|您不再必须配置 **MaxBuffersPerInput** 属性的值，因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。|  
@@ -384,7 +383,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍合并联接转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |InputColumnID|Integer|从中将数据复制到此输出列的输入列的 **LineageID** 。|  
   
@@ -397,7 +396,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍 OLE DB 命令转换的自定义属性。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |CommandTimeout|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。|  
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的代码页。|  
@@ -405,7 +404,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍 OLE DB 命令转换的外部列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |DBParamInfoFlag|Integer（位掩码）|一组描述参数特征的标志。 有关详细信息，请参阅 MSDN 库的 OLE DB 文档中的 DBPARAMFLAGSENUM。|  
   
@@ -418,14 +417,14 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍百分比抽样转换的自定义属性。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|Integer|随机数生成器所使用的种子。 此属性的默认值为 **0**，指示转换使用时钟周期数。|  
 |SamplingValue|Integer|以与源的百分比表示的样本大小。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
  下表介绍百分比抽样转换的输出的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |所选|Boolean|指定已抽样的行定向到的输出。 在选定的输出中，Selected 设置为 **True**；在未选定的输出中，Selected 设置为 **False**。|  
   
@@ -436,19 +435,19 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="pivot"></a> 透视转换自定义属性  
  下表介绍透视转换的自定义组件属性。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |**PassThroughUnmatchedPivotKeyts**|Boolean|设置为 **True** ，以将透视转换配置为在运行包时忽略包含“透视键”列中无法识别的值的行并将所有透视键值输出到日志消息。|  
   
  下表介绍透视转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |PivotUsage|Integer（枚举）|该值用于指定透视数据集时列的角色。<br /><br /> **0**：<br />                      此列未经透视，列值将传递到转换输出。<br /><br /> **1**：<br />                      此列为设置键的一部分，该设置键将一行或多行标识为一个集的组成部分。 将所有具有同一设置键的输入行组合到一个输出行。<br /><br /> **2**：<br />                      列为透视列。 从每个列值至少创建一列。<br /><br /> **3**：<br />                      将此列的值放入作为透视结果创建的列中。|  
   
  下表介绍透视转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|列中由其 PivotUsage 属性的值标记为透视键的可能值之一。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
 |SourceColumn|Integer|包含透视值或 -1 的输入列的 **LineageID** 。 值 -1 表示透视操作中未使用该列。|  
@@ -460,7 +459,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍行计数转换的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|保存行计数的变量的名称。|  
   
@@ -473,20 +472,20 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍行抽样转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|Integer|随机数生成器所使用的种子。 此属性的默认值为 **0**，指示转换使用时钟周期数。|  
 |SamplingValue|Integer|样本的行计数。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
  下表介绍行抽样转换的输出的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |所选|Boolean|指定已抽样的行定向到的输出。 在选定的输出中，Selected 设置为 **True**；在未选定的输出中，Selected 设置为 **False**。|  
   
  下表介绍行抽样转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|该值用于指定作为输出列的源的输入列的 **LineageID** 。|  
   
@@ -499,7 +498,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍脚本组件的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |ReadOnlyVariables|String|以逗号分隔的、可供脚本组件进行只读访问的变量列表。|  
 |ReadWriteVariables|String|以逗号分隔的、可供脚本组件进行读/写访问的变量列表。|  
@@ -513,7 +512,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍渐变维度转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|SELECT 语句中的 WHERE 子句，用于在具有相同业务键的行中选择当前行。|  
 |EnableInferredMember|Boolean|该值用于指定是否检测推断成员更新。 此属性的默认值为 **True**。|  
@@ -526,7 +525,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍渐变维度转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ColumnType|Integer（枚举）|列的更新类型。 其值包括：“变化的属性”(2)、“固定的属性”(4)、“历史属性”(3)、“键”(1) 和“其他”(0)。|  
   
@@ -539,21 +538,21 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍排序转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |EliminateDuplicates|Boolean|指定转换是否删除转换输出中的重复行。 此属性的默认值为 **False**。|  
 |MaximumThreads|Integer|包含转换可用于排序的最大线程数。 如果值为 **0** ，则表示不限制线程数。 此属性的默认值为 **0**。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
  下表介绍排序转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |NewComparisonFlags|Integer（位掩码）|该值用于指定转换如何比较列中的字符串数据。 有关详细信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。|  
 |NewSortKeyPosition|Integer|该值用于指定列的排序顺序。 如果值为 0，则表示不对该列上的数据进行排序。|  
   
  下表介绍排序转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |SortColumnID|Integer|排序列的 **LineageID** 。|  
   
@@ -566,7 +565,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍字词提取转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|Integer|该数值指示提取某个字词之前，该字词必须出现的次数。 此属性的默认值为 **2**。|  
 |IsCaseSensitive|Boolean|该值指定提取名词和名词短语时是否区分大小写。 此属性的默认值为 **False**。|  
@@ -586,7 +585,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍字词查找转换的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Boolean|该值用于指定是否将大小写区分比较应用于输入列文本与查找字词的匹配。 此属性的默认值为 **False**。|  
 |RefTermColumn|String|包含查找字词的列的名称。|  
@@ -594,13 +593,13 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍字词查找转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |InputColumnType|Integer|该值用于指定列的使用。 有效值包括 0、1 和 2：0 表示传递列；1 表示查找列；2 表示既是传递列又是查找列的列。|  
   
  下表介绍字词查找转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |CustomLineageID|Integer|当该列的 **LineageID** 为 0 或 2 时，对应的输入列的 **InputColumnType** 。|  
   
@@ -616,14 +615,14 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍逆透视转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|输入列映射到的输出列的 **LineageID** 。 如果值为 -1，则表示输入列未映射到输出列。|  
 |PivotKeyValue|String|复制到转换输出列的值。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 在 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)中所述的逆透视应用场景中，透视值为以下文本值：Ham、Coke、Milk、Beer 和 Chips。 这些值在由 **“透视键值列名”** 选项指定的新 Product 列中显示为文本值。|  
   
  下表介绍逆透视转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |PivotKey|Boolean|指示是否将输入列的 **PivotKeyValue** 属性中的值写入此输出列。<br /><br /> 在 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)中所述的逆透视应用场景中，透视值列名称为 **Product** ，并指定了将 Ham、Coke、Milk、Beer 和 Chips 列逆透视到其中的新的 **Product** 列。|  
   

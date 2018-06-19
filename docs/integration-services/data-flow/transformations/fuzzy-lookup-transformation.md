@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -39,11 +37,12 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4d43876a38188ce181c80bd625c50128bbc608c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406059"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了匹配索引选项：  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|创建一个新的索引，保存它，然后对其进行维护。 该转换在引用表上安装触发器，使引用表和索引表同步。|  
 |**GenerateAndPersistNewIndex**|创建一个新的索引，保存它，但不对其进行维护。|  
@@ -148,7 +147,7 @@ ms.lasthandoff: 05/03/2018
 >  模糊查找转换将创建引用表的工作副本。 下面描述的索引是通过使用特殊的表对此工作表创建的，它们不是普通的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 索引。 除非选择了 **“维护存储的索引”**，否则转换不会修改现有的源表。 在这种情况下，转换将对引用表创建一个触发器，此触发器将基于对引用表所做的更改来更新工作表和查找索引表。  
   
 > [!NOTE]  
->  模糊查找转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊查找转换编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 此外，大于 100 的 **MaxOutputMatchesPerInput** 值只能在 **“高级编辑器”**中指定。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊查找转换”部分。  
+>  模糊查找转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊查找转换编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 此外，大于 100 的 **MaxOutputMatchesPerInput** 值只能在 **“高级编辑器”** 中指定。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊查找转换”部分。  
   
 ### <a name="options"></a>“常规”  
  **“无缓存”**  

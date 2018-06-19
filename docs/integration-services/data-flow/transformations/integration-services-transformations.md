@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10f340ee0cc9d8184c612e80de7b872356b0e962
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5c14308dfe28c103e60d136a1aa7c137bf73cd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404269"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 转换
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换是包的数据流中对数据进行聚合、合并、分发和修改的组件。 转换还可以执行查找操作并生成样本数据集。 本节介绍 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包括的转换并说明它们是如何工作的。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="business-intelligence-transformations"></a>商业智能转换  
  下列转换执行商业智能操作，例如清除数据、挖掘文本以及运行数据挖掘预测查询。  
   
-|转换|Description|  
+|转换|描述|  
 |--------------------|-----------------|  
 |[渐变维度转换](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|配置渐变维度更新的转换。|  
 |[模糊分组转换](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|对列数据中的值进行标准化的转换。|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="row-transformations"></a>行转换  
  下列转换更新列值并创建新列。 转换应用于转换输入中的每个行。  
   
-|转换|Description|  
+|转换|描述|  
 |--------------------|-----------------|  
 |[字符映射表转换](../../../integration-services/data-flow/transformations/character-map-transformation.md)|将字符串函数应用于字符数据的转换。|  
 |[复制列转换](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|将输入列的副本添加到转换输出的转换。|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rowset-transformations"></a>行集转换  
  下列转换将创建新行集。 行集可以包括聚合值和已排序值、样本行集或者透视行集和逆透视行集。  
   
-|转换|Description|  
+|转换|描述|  
 |--------------------|-----------------|  
 |[聚合转换](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|执行聚合（如 AVERAGE、SUM 和 COUNT）的转换。|  
 |[排序转换](../../../integration-services/data-flow/transformations/sort-transformation.md)|对数据进行排序的转换。|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="split-and-join-transformations"></a>拆分和联接转换  
  以下转换将行分发到不同的输出，创建转换输入的副本，将多个输入联接成一个输出，并执行查找操作。  
   
-|转换|Description|  
+|转换|描述|  
 |--------------------|-----------------|  
 |[有条件拆分转换](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|将数据行路由到不同输出的转换。|  
 |[多播转换](../../../integration-services/data-flow/transformations/multicast-transformation.md)|将数据集分发到多个输出的转换。|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="auditing-transformations"></a>审核转换  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括以下转换，用于添加审核信息和对行进行计数。  
   
-|转换|Description|  
+|转换|描述|  
 |--------------------|-----------------|  
 |[审核转换](../../../integration-services/data-flow/transformations/audit-transformation.md)|使环境信息可用于包中数据流的转换。|  
 |[行计数转换](../../../integration-services/data-flow/transformations/row-count-transformation.md)|对通过转换的行进行计数并将最终计数存储到变量中的转换。|  

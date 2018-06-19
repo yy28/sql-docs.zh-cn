@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 035775f1d8fdb146e1334ff73de38800de3c1d6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02785d03d4ca31881b76af7badd97b693dcd2b48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334601"
 ---
 # <a name="data-flow"></a>数据流
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="sources-available-for-download"></a>可供下载的源  
  下表列出了可从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 网站下载的其他源。  
   
-|数据源|Description|  
+|数据源|描述|  
 |------------|-----------------|  
 |Oracle 源|Oracle 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle 和 Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)。|  
 |SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](http://go.microsoft.com/fwlink/?LinkID=746297)。|  
@@ -163,7 +162,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="destinations-available-for-download"></a>可供下载的目标  
  下表列出了可从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 网站下载的其他目标。  
   
-|数据源|Description|  
+|数据源|描述|  
 |------------|-----------------|  
 |Oracle 目标|Oracle 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle 和 Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)。|  
 |SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](http://go.microsoft.com/fwlink/?LinkID=746297)。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 688dd10c3aa1ad8b985aa3b140bc81115310cb5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403229"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
   字符映射表转换将字符串函数（如从小写到大写的转换）应用于字符数据。 此转换操作只对字符串数据类型的列数据执行。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="mapping-operations"></a>映射操作  
  下表说明了字符映射表转换支持的映射操作。  
   
-|运算|Description|  
+|运算|描述|  
 |---------------|-----------------|  
 |Byte reversal|反转字节顺序。|  
 |Full width|将半角字符映射到全角字符。|  
@@ -101,15 +100,15 @@ ms.lasthandoff: 05/03/2018
  **目标**  
  指定是否就地保存字符串运算结果、使用现有列或将已修改的数据作为新列保存。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|新列|将数据保存在新列中。 在 **“输出别名”**下分配列名。|  
+|新列|将数据保存在新列中。 在 **“输出别名”** 下分配列名。|  
 |就地更改|将已修改的数据保存在现有的列中。|  
   
  **运算**  
  从列表中选择要应用于列数据的字符串函数。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |Lowercase|转换为小写字母。|  
 |大写|转换为大写字母。|  

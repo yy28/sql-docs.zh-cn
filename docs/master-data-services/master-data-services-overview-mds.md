@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a329416c51580e32fef969a48c96dfa6a68b1cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 638027d75f14f93b19085700a20360d30b7df402
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333751"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 帮助管理组织的主数据集。 可以将数据整理到模型中，创建更新数据的规则，并控制由谁更新数据。 通过使用 Excel 可以和组织中的其他用户共享主数据集。 
   
- >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新增功能的信息，请参阅 [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)。  
+ >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。 有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新增功能的信息，请参阅 [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)。  
    **有关如何安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、设置数据库和网站以及部署示例模型的说明，请参阅** [Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型是你的主数据结构中的最高级别的容器。 创建一个模型来管理类似数据的组，例如管理联机产品数据。 模型包含一个或多个实体，而实体包含属于数据记录的成员。 实体类似于表。  

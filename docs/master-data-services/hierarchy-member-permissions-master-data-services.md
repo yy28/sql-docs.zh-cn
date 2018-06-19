@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e14a87d5398f3d47274708e5c411b5259314d883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 122409bc6f4f03dff871a72f7a70aca83e557308
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402019"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
 
@@ -38,11 +38,11 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  如果向层次结构中的节点分配权限，则处于同一级别或更高级别的其他节点中的所有成员都将被隐式拒绝。  
   
- 在 **“资源管理器”**中，将成员权限应用到显示成员的任何位置。 例如，具有“读取”  权限的成员可以读取它所属的任何实体、层次结构和集合。  
+ 在 **“资源管理器”** 中，将成员权限应用到显示成员的任何位置。 例如，具有“读取”  权限的成员可以读取它所属的任何实体、层次结构和集合。  
   
  层次结构权限应用于您向其分配权限的模型版本，并应用于版本的任何将来副本。 它们不应用于比您向其分配权限的版本更早的版本。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|显示成员。<br /><br /> <br /><br /> 注意：如果仅将“读取”权限分配给“根”，则“根”下的成员为只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。|  
 |**创建**|层次结构成员权限中不提供创建权限。|  

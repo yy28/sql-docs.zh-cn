@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1200157ec8321fd721b3a1b7f158eaa2b38fcaf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d37603d73bd50626f348017437f97ab210c310d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401849"
 ---
 # <a name="connect-components-in-a-data-flow"></a>连接数据流中的组件
   本过程介绍如何将数据流中的组件输出连接到同一数据流中的其他组件。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
   
- 连接两个组件后，即可在 **“数据流路径编辑器”**中查看通过路径移动的数据的元数据以及路径的属性。 有关详细信息，请参阅 [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)。  
+ 连接两个组件后，即可在 **“数据流路径编辑器”** 中查看通过路径移动的数据的元数据以及路径的属性。 有关详细信息，请参阅 [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)。  
   
  还可以将数据查看器添加到路径。 数据查看器使您可以在包运行时查看在数据流组件间移动的数据。  
   

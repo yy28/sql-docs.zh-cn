@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -34,11 +32,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94fd84ce9a46537fb90caa47e869f96167493bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401619"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  模糊分组转换要求与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例建立连接，以创建该转换算法完成工作所需的临时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 该连接必须解析为有权在数据库中创建表的用户。  
   
- 若要配置该转换，您必须选择要在确定重复项时使用的输入列，而且必须为每列选择匹配类型（模糊匹配或完全匹配）。 完全匹配保证只对该列中具有相同值的行进行分组。 完全匹配可以应用到除 DT_TEXT、DT_NTEXT 和 DT_IMAGE 之外的任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的列。 模糊匹配对具有相似值的行进行分组。 近似匹配数据的方法基于用户指定的相似性得分。 在模糊匹配中，只能使用具有 DT_WSTR 和 DT_STR 数据类型的列。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 若要配置该转换，您必须选择要在确定重复项时使用的输入列，而且必须为每列选择匹配类型（模糊匹配或完全匹配）。 完全匹配保证只对该列中具有相同值的行进行分组。 完全匹配可以应用到除 DT_TEXT、DT_NTEXT 和 DT_IMAGE 之外的任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的列。 模糊匹配对具有相似值的行进行分组。 近似匹配数据的方法基于用户指定的相似性得分。 在模糊匹配中，只能使用具有 DT_WSTR 和 DT_STR 数据类型的列。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  该转换输出包括所有输入列、一个或多个具有标准化数据的列以及一个包含相似性得分的列。 该得分是一个介于 0 和 1 之间的小数值。 规范行的得分为 1。 模糊组中其他行具有的得分指明该行与规范行的匹配程度。 得分越接近 1，行与规范行的匹配程度越高。 如果模糊组包括与规范行完全匹配的行，则这些行的得分也为 1。 该转换不删除这些重复的行；它通过创建一个将规范行与相似行关联的键对重复行进行分组。  
   
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **数字**  
  指定比较列数据时前导数字和尾随数字的重要性。 例如，如果前导数字重要，则“123 Main Street”将不会与“456 Main Street”分组在一起。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Neither**|前导数字和尾随数字都不重要。|  
 |**Leading**|只有前导数字重要。|  
@@ -163,7 +162,7 @@ ms.lasthandoff: 05/03/2018
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  
   
 > [!NOTE]  
->  模糊分组转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊分组转换编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
+>  模糊分组转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊分组转换编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
   
 ### <a name="options"></a>“常规”  
  **输入键列名**  

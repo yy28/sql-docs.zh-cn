@@ -12,15 +12,16 @@ ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: e627fdad03bf3159a0ed9c730381fde53c86ee9f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e5b34e72447d74875e67a0f1a71fb749a8c3d416
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402529"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据从 SQL Server 加载到 Azure SQL 数据仓库
 
-创建 SQL Server Integration Services (SSIS) 包，以将数据从 SQL Server 加载到 [Azure SQL 数据仓库](/azure/sql-data-warehouse/index.md)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
+创建 SQL Server Integration Services (SSIS) 包，以将数据从 SQL Server 加载到 [Azure SQL 数据仓库](/azure/sql-data-warehouse/index)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
 
 在本教程中，你将学习：
 

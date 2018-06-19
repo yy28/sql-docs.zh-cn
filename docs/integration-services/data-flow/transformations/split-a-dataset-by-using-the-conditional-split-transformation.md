@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 098b88a0953799454063e09b0983811936864716
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ccc00c5c0565584557b167cc38622e802005a98
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407319"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用有条件拆分转换拆分数据集
   若要添加和配置有条件拆分转换，包必须已包含至少一个数据流任务和一个源。  
@@ -35,13 +34,13 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，并将有条件拆分转换从 **“工具箱”**拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，并将有条件拆分转换从 **“工具箱”** 拖动到设计图面。  
   
 4.  将连接器从数据源或前一个转换拖到有条件拆分转换，从而将有条件拆分转换连接到数据流。  
   
 5.  双击有条件拆分转换。  
   
-6.  在 **“有条件拆分转换编辑器”**中，将变量、列、函数和运算符拖动到网格中的 **“条件”** 列，从而生成用作条件的表达式。 或者，也可以在 **“条件”** 列中键入表达式。  
+6.  在 **“有条件拆分转换编辑器”** 中，将变量、列、函数和运算符拖动到网格中的 **“条件”** 列，从而生成用作条件的表达式。 或者，也可以在 **“条件”** 列中键入表达式。  
   
     > [!NOTE]  
     >  变量或列可在多个表达式中使用。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73e11ad9c4da2f1a87eb7c148b9a37688273c8ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ffe74a41067f146ed94289f04f81fe5681933b87
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404419"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>连接到平面文件数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到平面文件（文本文件）数据源。 对于平面文件，向导的这两页显示的选项集不同，所以本主题会分别介绍平面文件源和平面文件目标。
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  **格式**  
  选择文件是使用带分隔符、固定宽度还是右边不对齐的格式。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |带分隔符|列由分隔符分隔。 在“列”页上指定分隔符。|  
 |固定宽度|列的宽度固定。|  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|标题行由回车符和换行符的组合分隔。|  
 |**{CR}**|标题行由回车符分隔。|  
@@ -108,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行由回车符和换行符的组合分隔。|  
 |**{CR}**|行由回车符分隔。|  
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|列由回车符和换行符的组合分隔。|  
 |**{CR}**|列由回车符分隔。|  
@@ -180,7 +179,7 @@ ms.lasthandoff: 05/03/2018
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行由回车符和换行符的组合分隔。|  
 |**{CR}**|行由回车符分隔。|  
@@ -206,7 +205,7 @@ ms.lasthandoff: 05/03/2018
  **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表，获取有关列属性的说明。 所列出的某些属性仅可针对特定平面文件格式和特定数据类型的列进行配置。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**名称**|提供说明性列名。 如果不输入名称，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动创建名称，格式为列 0、列 1，依此类推。|
 |**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {|}**。 列由竖线分隔。|
@@ -214,14 +213,14 @@ ms.lasthandoff: 05/03/2018
 |**InputColumnWidth**|指定值存储为字节数；对于 Unicode 文件，此值为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。|
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。|
-|**DataType**|从可用数据类型的列表中进行选择。<br/>有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|
+|**DataType**|从可用数据类型的列表中进行选择。<br/>有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|
 |**OutputColumnWidth**|指定值存储为字节数；对于 Unicode 文件，此值对应于字符数。 在数据流任务中，此值用于设置平面文件源的输出列宽。 在对象模型中，此属性的名称为 MaximumWidth。|  
 |**TextQualified**|指示文本数据周围是否有文本限定符（例如引号字符）。<br /><br /> True：平面文件中的文本数据是受限定的。 False：平面文件中的文本数据是不受限定的。|  
   
 **新建**  
  单击“新建”添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**添加列**|在列表末尾添加新列。|  
 |**在其前插入**|在所选列前面插入新列。|  
@@ -289,7 +288,7 @@ ms.lasthandoff: 05/03/2018
  **格式**  
  选择文件是使用带分隔符、固定宽度还是右边不对齐的格式。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |带分隔符|列由分隔符分隔。 在“列”页上指定分隔符。|  
 |固定宽度|列的宽度固定。|  

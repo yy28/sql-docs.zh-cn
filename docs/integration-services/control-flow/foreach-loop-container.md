@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -36,11 +34,12 @@ caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e7a04bc86317e2ceb04a4b2ae1e7fcff40470e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aebf427b093a860122ace5c21f1a887dac331525
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331451"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -203,7 +202,7 @@ ms.lasthandoff: 05/03/2018
  **枚举器**  
  从列表中选择枚举器类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Foreach 文件枚举器**|枚举文件。 选择此值将显示 **“Foreach 文件枚举器”** 部分中的动态选项。|  
 |**Foreach 项枚举器**|枚举项中的值。 选择此值将显示 **“Foreach Item 枚举器”** 部分中的动态选项。|  
@@ -344,7 +343,7 @@ ms.lasthandoff: 05/03/2018
  **DocumentSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 05/03/2018
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Navigator**|使用 XPathNavigator 进行枚举。|  
 |**Node**|枚举 XPath 运算返回的节点。|  
@@ -374,7 +373,7 @@ ms.lasthandoff: 05/03/2018
  **OuterXPathStringSourceType**  
  选择 XPath 字符串的源类型。 此属性具有下表所列的选项： 
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -397,7 +396,7 @@ ms.lasthandoff: 05/03/2018
  **InnerXPathStringSourceType**  
  选择内部 XPath 字符串的源类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  

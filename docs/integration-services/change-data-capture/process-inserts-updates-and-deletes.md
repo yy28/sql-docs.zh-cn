@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebb06339c623d918a55dd4aee04957a60b09b572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20a8e6b8a2850d135c10ebf487c8f8e37114dc12
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400469"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>处理插入、更新和删除
   在用于执行变更数据的增量加载的 Integration Services 包的数据流中，第二个任务是分隔插入、更新和删除操作。 然后，可以使用相应的命令将它们应用到目标。  
@@ -61,7 +60,7 @@ select
   
 2.  将 OLE DB 源的输出连接到有条件拆分转换。  
   
-3.  在 **“有条件拆分转换编辑器”**的下部窗格中，输入下面三行以指定三个输出  
+3.  在 **“有条件拆分转换编辑器”** 的下部窗格中，输入下面三行以指定三个输出  
   
     1.  输入条件为 `CDC_OPERATION == "I"` 的行，以将已插入的行定向到插入操作的输出。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98d2a8dea6122eb049ab76da7d17cf477f1aaea1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 881cd45e4c3b6e3a8840a4e363add0d3790a4699
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400219"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
   若要添加和配置 XML 源，包中必须已经包含至少一个数据流任务。  
@@ -35,11 +34,11 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”**把 XML 源拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”** 把 XML 源拖动到设计图面。  
   
 4.  双击此 XML 源。  
   
-5.  在 **“XML 源编辑器”**的 **“连接管理器”** 页上，选择数据访问模式：  
+5.  在 **“XML 源编辑器”** 的 **“连接管理器”** 页上，选择数据访问模式：  
   
     -   对于 **“XML 文件位置”** 访问模式，单击 **“浏览”** 找到包含该 XML 文件的文件夹。  
   

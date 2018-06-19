@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -28,11 +26,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eec0f2ffa0a36940cf00e54c3ccdb0a4c1194d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 805cb6c613375f0aee126a264f8894b9c09d92a6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401409"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
   数据流组件将转换应用到列数据、从源提取数据或将数据加载到目标中时，可能会发生错误。 错误常因意外数据值而发生。 例如，如果列包含字符串而不是数字，数据转换将失败；在数据库列中执行插入操作时，如果数据是日期而列的数据类型为数值，此操作将失败；如果因列值为零而导致数学运算无效，表达式将无法计算。  
@@ -99,7 +98,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="select-an-error-handling-option"></a>选择一个错误处理选项  
  可以配置源、转换和目标处理错误和截断的方式。 下表对这些选项进行说明：  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |组件失败|发生错误或截断时数据流任务失败。 失败是错误或截断的默认选项。|  
 |忽略失败|忽略错误或截断，并且将数据行定向到转换或源的输出。|  

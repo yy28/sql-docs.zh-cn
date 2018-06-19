@@ -1,14 +1,12 @@
 ---
 title: Integration Services (SSIS) 日志 | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -35,16 +33,17 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d24a5685db73a91be95a3a82b93e752877c8ad7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407639"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
   
- 您可以配置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行包的过程中出现的日志记录范围。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](#server_logging)。  
+ 您可以配置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行包的过程中出现的日志记录范围。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](#server_logging)。  
   
  在使用 **dtexec** 命令提示实用工具运行包时，还可以包括日志记录。 有关支持日志记录的命令提示参数的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="log-schema"></a>日志架构  
  下表介绍了日志架构中的元素：  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |Computer|发生日志事件的计算机的名称。|  
 |运算符|启动包的用户的标识。|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍日志架构中三个附加元素，这些元素在 **“配置 SSIS 日志”** 对话框的 **“详细信息”** 选项卡中不可用。  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |StartTime|容器或任务开始运行的时间。|  
 |EndTime|容器或任务停止运行的时间。|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
   
  下表描述了可以在发生运行时事件时启用日志项写入功能的预定义事件。 这些日志项将应用到可执行文件、包以及包中的任务和容器。 日志项的名称与引发并导致写入日志项的运行时事件的名称相同。  
   
-|事件|Description|  
+|事件|描述|  
 |------------|-----------------|  
 |**OnError**|出现错误时写入日志项。|  
 |**OnExecStatusChanged**|在提示期间挂起或恢复任务（而非容器时），写入日志项。|  
@@ -181,7 +180,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="use-the-pipelinecomponenttime-event"></a>使用 PipelineComponentTime 事件  
  最有用的自定义日志项可能是 PipelineComponentTime 事件。 该日志项报告数据流中的每个组件执行五个主要处理步骤中的每个步骤所用的毫秒数。 下表说明了这些处理步骤。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 开发人员会将这些步骤标识为 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>。  
   
-|步骤|Description|  
+|步骤|描述|  
 |----------|-----------------|  
 |验证|该组件查看有效的属性值和配置设置。|  
 |PreExecute|该组件在开始处理数据行之前执行一次性处理。|  
@@ -333,7 +332,7 @@ ms.lasthandoff: 05/03/2018
  **高级**  
  选中或清除要记录的事件，以及选中或清除要为每个事件记录的信息。 单击 **“基本”** 可以隐藏除事件列表之外的所有日志记录详细信息。 日志记录可以包含以下信息：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Computer**|发生所记录事件的计算机的名称。|  
 |**“运算符”**|启动包的人员的用户名。|  
@@ -411,7 +410,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="select-a-logging-level"></a>选择日志记录级别  
  以下内置日志记录级别可用。 还可以选择现有的自定义日志记录级别。 本主题包含自定义日志记录级别的说明。  
   
-|“日志记录级别”|Description|  
+|“日志记录级别”|描述|  
 |-------------------|-----------------|  
 |InclusionThresholdSetting|关闭日志记录。 仅记录包执行状态。|  
 |“基本”|除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
@@ -495,7 +494,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="Package"></a> 包  
  下表列出了包的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**PackageStart**|指示包开始运行。 此日志项自动写入日志。 无法排除它。|  
 |**PackageEnd**|指示包已完成。 此日志项自动写入日志。 无法排除它。|  
@@ -504,7 +503,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="BulkInsert"></a> 大容量插入任务  
  下表列出了大容量插入任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**DTSBulkInsertTaskBegin**|指示大容量插入开始。|  
 |**DTSBulkInsertTaskEnd**|指示大容量插入完成。|  
@@ -513,7 +512,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="DataFlow"></a> 数据流任务  
  下表列出了数据流任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|指示数据流任务更改了缓冲区的大小。 日志条目描述了大小更改的原因，并列出了临时的新缓冲区大小。|  
 |**OnPipelinePostEndOfRowset**|表示组件已经给出它的行集结束信号，该信号由对 **ProcessInput** 方法的最后一次调用设置。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
@@ -529,7 +528,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="ExecuteDTS200"></a> 执行 DTS 2000 任务  
  下表列出了执行 DTS 2000 任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|指示任务开始运行 DTS 2000 包。|  
 |**ExecuteDTS80PackageTaskEnd**|指示任务已完成。<br /><br /> 注意：任务结束之后，DTS 2000 包可能继续运行。|  
@@ -539,7 +538,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="ExecuteProcess"></a> 执行进程任务  
  下表列出了执行进程任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|提供有关进程的信息，该进程运行此任务按配置要求要运行的可执行文件。<br /><br /> 写入两个日志条目。 一个日志项包含有关任务所运行的可执行文件的名称和位置的信息，另一个则记录从可执行文件退出的信息。|  
 |**ExecuteProcessVariableRouting**|提供有关哪些变量被路由到可执行文件的输入和输出的信息。 将为 stdin（输入）、stdout（输出）和 stderr（错误输出）写入日志条目。|  
@@ -547,21 +546,21 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="ExecuteSQL"></a> 执行 SQL 任务  
  下表介绍了执行 SQL 任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|提供有关 SQL 语句的执行阶段的信息。 在任务获得与数据库的连接时、任务开始准备 SQL 语句时以及执行完 SQL 语句之后写入日志项。 准备阶段的日志条目包括任务所使用的 SQL 语句。|  
   
 ####  <a name="FileSystem"></a> 文件系统任务  
  下表介绍了文件系统任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**FileSystemOperation**|报告任务所执行的操作。 在文件系统操作开始时写入日志项，日志项包括有关源和目标的信息。|  
   
 ####  <a name="FTP"></a> FTP 任务  
  下表列出了 FTP 任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指示任务已启动与 FTP 服务器的连接。|  
 |**FTPOperation**|报告任务所执行的 FTP 操作的开始及其类型。|  
@@ -569,7 +568,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="MessageQueue"></a> 消息队列任务  
  下表列出了消息队列任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|指示任务已完成打开消息队列的操作。|  
 |**MSMQBeforeOpen**|指示任务开始打开消息队列。|  
@@ -583,14 +582,14 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="Script"></a> 脚本任务  
  下表介绍了脚本任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|报告在脚本中实现日志记录的结果。 在每次调用 **Log** 对象的 **Dts** 方法时将写入日志项。 代码运行时将写入日志项。 有关详细信息，请参阅 [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
 ####  <a name="SendMail"></a> 发送邮件任务  
  下表列出了发送邮件任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|指示任务开始发送电子邮件。|  
 |**SendMailTaskEnd**|指示任务已发送完电子邮件。|  
@@ -599,7 +598,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="TransferDatabase"></a> 传输数据库任务  
  下表列出了传输数据库任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**SourceDB**|指定任务所复制的数据库。|  
 |**SourceSQLServer**|指定从中复制数据库的计算机。|  
@@ -607,7 +606,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="TransferErrorMessages"></a> 传输错误消息任务  
  下表列出了传输错误消息任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|指示任务已完成传输错误消息的操作。|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|指示任务已开始传输错误消息。|  
@@ -615,7 +614,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="TransferJobs"></a> 传输作业任务  
  下表列出传输作业任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**TransferJobsTaskFinishedTransferringObjects**|指示任务已完成传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|  
 |**TransferJobsTaskStartTransferringObjects**|指示任务已开始传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|  
@@ -623,7 +622,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="TransferLogins"></a> 传输登录名任务  
  下表列出了传输登录名任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**TransferLoginsTaskFinishedTransferringObjects**|指示任务已传输完登录名。|  
 |**TransferLoginsTaskStartTransferringObjects**|指示任务已开始传输登录名。|  
@@ -631,7 +630,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="TransferMasterStoredProcedures"></a> 传输主存储过程任务  
  下表列出可传输主存储过程任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|指示任务已传输完在 **master** 数据库中存储的用户定义的存储过程。|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|指示任务已开始传输 **master** 数据库中存储的用户定义的存储过程。|  
@@ -639,7 +638,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="TransferSQLServerObjects"></a> 传输 SQL Server 对象任务  
  下表列出了传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|指示任务已完成传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|指示任务已开始传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。|  
@@ -647,7 +646,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="WebServices"></a> Web 服务任务  
  下表列出了可以为 Web 服务任务启用的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**WSTaskBegin**|任务已开始访问 Web 服务。|  
 |**WSTaskEnd**|任务已完成 Web 服务方法。|  
@@ -656,7 +655,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="WMIDataReader"></a> WMI 数据读取器任务  
  下表列出了 WMI 数据读取器任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|指示任务已开始读取 WMI 数据。|  
 |**WMIDataReaderOperation**|报告任务所运行的 WQL 查询。|  
@@ -664,7 +663,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="WMIEventWatcher"></a> WMI 事件观察器任务  
  下表列出了 WMI 事件观察器任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**WMIEventWatcherEventOccurred**|表示发生了任务正在监视的事件。|  
 |**WMIEventWatcherTimedout**|指示任务已超时。|  
@@ -673,7 +672,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 ####  <a name="XML"></a> XML 任务  
  下表介绍了 XML 任务的自定义日志项。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**XMLOperation**|提供任务所执行的操作的相关信息|  
 

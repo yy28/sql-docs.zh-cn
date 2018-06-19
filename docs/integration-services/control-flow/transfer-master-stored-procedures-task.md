@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87639875b3ae15a514cb44ac5fd8d5fe8997188c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c537b18e067dc52e3c764a8f79ae4c77db5639ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333441"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务
   传输主存储过程任务在 **的实例上的** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库之间传输一个或多个用户定义的存储过程。 若要从 **master** 数据库传输存储过程，该过程的所有者必须是 dbo。  
@@ -118,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上的 **master** 数据库中已存在同名的存储过程，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上的 **master** 数据库中的同名存储过程。|  
@@ -127,7 +126,7 @@ ms.lasthandoff: 05/03/2018
  **TransferAllStoredProcedures**  
  选择是否应将源服务器上 **master** 数据库中的所有用户定义存储过程复制到目标服务器。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|复制 **master** 数据库中的所有用户定义存储过程。|  
 |**False**|仅复制指定的存储过程。|  
