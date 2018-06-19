@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1d0416df2dfd8b1decc0065744e222d40038751
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 587426a37a812f281e59c6e2d213fa984c304eab
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409179"
 ---
 # <a name="copy-package-objects"></a>复制包对象
   此主题介绍如何在包内或包之间复制控制流项、数据流项和连接管理器。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击希望在其间复制的包。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击包含要复制的项的包对应的选项卡，并单击 **“控制流”**、 **“数据流”**或 **“事件处理程序”** 选项卡。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击包含要复制的项的包对应的选项卡，并单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
 4.  选择要复制的控制流或数据流项。 可以通过按 Shift 键并单击项以一次一个的方式来选择多项，也可以通过拖动指针扫过希望选择的项来按组选择多项。  
   
@@ -58,11 +57,11 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击包。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”**或 **“事件处理程序”** 选项卡。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
 4.  在“连接管理器”区域中，右键单击连接管理器，然后单击“复制”。 每次只能复制一个连接管理器。  
   
-5.  如果要将项复制到其他包，请单击希望复制到其中的包，然后单击 **“控制流”**、 **“数据流”**或 **“事件处理程序”** 选项卡。  
+5.  如果要将项复制到其他包，请单击希望复制到其中的包，然后单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
 6.  右键单击“连接管理器”区域，并单击“粘贴”。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
@@ -16,11 +14,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7095024d2b7636b600fe1e905b335b866b1f30ba
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411539"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
@@ -99,7 +98,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了 **cdc.xdbcdc_config** 表的各列。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |version|它跟踪 CDC 实例配置的版本。 在每次更新表时，以及在每次添加新的捕获实例或删除现有捕获实例时，将更新该项。|  
 |connect_string|Oracle 连接字符串。 下面是一个基本示例：<br /><br /> `<server>:<port>/<instance>` （例如 `erp.contoso.com:1521/orcl`）。<br /><br /> 连接字符串还可以指定 Oracle Net 连接描述符，例如 `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目录服务器或 tnsnames，则连接字符串可以是连接的名称。<br /><br /> 有关 Oracle 连接字符串的详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153)，其中介绍了针对 Oracle CDC 服务使用的 Oracle Instant Client 的 Oracle 数据库连接字符串的详细信息。|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了可用的选项。  
   
-|“属性”|，则“默认”|Min|Max|静态|Description|  
+|“属性”|，则“默认”|Min|Max|静态|描述|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |跟踪|False|-|-|False|可用值有：<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|@shouldalert|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) 表中的 memory_limit 列。|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了 **cdc.xdbcdc_state** 表的各列。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |status|用于当前 Oracle CDC 实例的当前状态代码。 该状态描述 CDC 的当前状态。|  
 |sub_status|提供有关当前状态的其他信息的第二级状态。|  
@@ -167,7 +166,7 @@ ms.lasthandoff: 05/03/2018
   
  下表描述 cdc.xdbcdc_trace 表的各列。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |TIMESTAMP|写入跟踪日志时的准确 UTC 时间戳。|  
 |type|包含以下值之一。<br /><br /> error<br /><br /> INFO<br /><br /> 跟踪|  
@@ -182,7 +181,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了 **cdc.xdbcdc_staged_transactions** 表的各列。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |transaction_id|要暂存的事务的唯一事务标识符。|  
 |seq_num|当前事务的 **xcbcdc_staged_transactions** 行的编号（从 0 开始）。|  

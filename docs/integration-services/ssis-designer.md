@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -30,11 +28,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 277d3e5155e4d43c448b3d2e4295b8ac8fdae84d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c93d87a0645d6b3ee9b57879580684a177a4e459
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411309"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器是用于创建和维护 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的图形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器作为 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目的一部分，位于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中。  
@@ -103,7 +102,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="progressexecution-result-tab"></a>“进度/执行结果”选项卡  
  在包运行过程中， **“进度”** 选项卡显示包的执行进度。 在包运行完毕后， **“执行结果”** 选项卡上就一直显示执行结果。  
   
-> **注意：**若要允许或禁止在“进度”选项卡上显示消息，请在“SSIS”菜单上切换“调试进度报告”选项。  
+> **注意：** 若要允许或禁止在“进度”选项卡上显示消息，请在“SSIS”菜单上切换“调试进度报告”选项。  
   
 #### <a name="connection-managers-area"></a>连接管理器区域  
  **“连接管理器”** 区域用于添加和修改包使用的连接管理器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括连接到多种数据源（如文本文件、OLE DB 数据库和 .Net 提供程序）的连接管理器。  
@@ -154,7 +153,7 @@ ms.lasthandoff: 05/03/2018
  选择要为其生成事件处理程序的可执行文件。 可执行文件可以是包、包中的任务或容器。  
   
  **事件处理程序**  
- 选择事件处理程序的类型。 通过从 **“工具箱”**中拖动相应项即可创建事件处理程序。  
+ 选择事件处理程序的类型。 通过从 **“工具箱”** 中拖动相应项即可创建事件处理程序。  
   
  **删除**  
  选择一个事件处理程序，再通过单击“删除”将其从包中删除。  

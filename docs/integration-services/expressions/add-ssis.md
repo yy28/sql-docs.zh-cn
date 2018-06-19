@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aeb18618563eb24e9e44d2f92ec13e7eb1a12db2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 127f311e284cec40bf1fda3e38398a1959e0226b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411769"
 ---
 # <a name="-add-ssis"></a>+（加）(SSIS)
   将两个数值表达式相加。  
@@ -42,7 +41,7 @@ numeric_expression1 + numeric_expression2
  是数值数据类型的任意有效表达式。  
   
 ## <a name="result-types"></a>结果类型  
- 由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="remarks"></a>Remarks  
  如果任意一个操作数为 Null，则结果为 Null。  
