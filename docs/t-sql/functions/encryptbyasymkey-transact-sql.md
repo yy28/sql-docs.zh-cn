@@ -63,7 +63,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
  根据算法，如果输入超出一定字节数，**EncryptByAsymKey** 将返回 **NULL**。 限制为：512 位 RSA 密钥可加密达 53 个字节，1024 位密钥可加密达 117 个字节，而 2048 密钥可加密达 245 个字节。 （注意，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，证书和异步密钥都是 RSA 密钥的包装。）  
   
 ## <a name="examples"></a>示例  
- 以下示例将用非对称密钥 `@cleartext` 加密在 `JanainaAsymKey02` 中存储的文本。 加密的数据插入表 `ProtectedData04` 中。  
+ 以下示例将用非对称密钥 `JanainaAsymKey02` 加密在 `@cleartext` 中存储的文本。 加密的数据插入表 `ProtectedData04` 中。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
