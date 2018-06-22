@@ -3,11 +3,9 @@ title: 排序规则和 CLR 集成数据类型 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +17,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff9f8b52d2b6b9856562a99db288a461a71e0f6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c7d9f8cfe55a12237e2a2bf30b35ed1a57c5ec2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918832"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694338"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>排序规则和 CLR 集成数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ ms.locfileid: "32918832"
 ## <a name="parameter-collation"></a>参数排序规则  
  当你创建的公共语言运行时 (CLR) 例程，并将 CLR 方法的参数绑定到的类型是例程**SQLString**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建具有数据库的默认排序规则的参数实例包含调用的例程。 如果参数不是**SqlType** (例如，**字符串**而非**SQLString**)，从数据库的排序规则信息不与参数相关联。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的 SQL Server 数据类型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

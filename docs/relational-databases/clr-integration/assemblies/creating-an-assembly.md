@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - creating assemblies
@@ -22,12 +20,12 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b22443461b5bb11d4e4ca1933d4f1d1f931fda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dda63f58c6229da4af2653d68d6bc7db37043e62
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923602"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694328"
 ---
 # <a name="creating-an-assembly"></a>创建程序集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,12 +133,12 @@ WITH PERMISSION_SET = UNSAFE;
   
  有关每个设置的权限的详细信息，请参阅[CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理 CLR 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [更改程序集](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [删除程序集](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md)   
- [允许部分受信任调用方](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [允许部分可信任的调用方](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

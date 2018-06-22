@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-communication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -29,12 +28,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4daa642cbd60846cc4211de5e33cdad8e7a6d8db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6934876b3772ba8124ca4adfc87a4bad89346e64
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946342"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698698"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>连接数据源 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -120,7 +119,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
   
  错误处理的应用程序的函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接应调用**SQLGetDiagRec**直到它返回 SQL_NO_DATA。 它然后应处理与以外的任何消息*pfNative* 5701 或 5703 的代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [与 SQL Server 通信&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

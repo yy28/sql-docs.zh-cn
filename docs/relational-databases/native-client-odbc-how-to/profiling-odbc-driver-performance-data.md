@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fd0b9ffce6667a1023cf3faa317a488ade577a99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cace9bb5008c035711e7d16b2c27bd678b9c111
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948132"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694698"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驱动程序的性能数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32948132"
   
 3.  单击要记录其性能的数据源。  
   
-4.  单击 **配置**。  
+4.  单击**配置**。  
   
 5.  在 Microsoft SQL Server 配置 DSN 向导中，导航到包含的页面**日志 ODBC 驱动程序统计信息写入日志文件**。  
   
@@ -246,7 +245,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析 ODBC 驱动程序性能操作指南主题&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [分析 ODBC 驱动程序性能](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   

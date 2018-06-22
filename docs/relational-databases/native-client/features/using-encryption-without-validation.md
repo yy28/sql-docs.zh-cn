@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -22,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ae3205cf4a530b958582f9efdd4644930950a76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8be993a5f06a5d76021755e6dca8b2544616d4b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951522"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696768"
 ---
 # <a name="using-encryption-without-validation"></a>使用不带验证的加密
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,13 +46,13 @@ ms.locfileid: "32951522"
   
 |“强制协议加密”客户端设置|“信任服务器证书”客户端设置|连接字符串/连接属性加密/对数据使用加密|连接字符串/连接属性信任服务器证书|结果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|否|N/A|否（默认值）|忽略|无加密。|  
-|否|N/A|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|否|N/A|是|是|始终加密，但可能使用自签名的服务器证书。|  
-|是|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|“否”|N/A|否（默认值）|忽略|无加密。|  
+|“否”|N/A|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|“否”|N/A|是|是|始终加密，但可能使用自签名的服务器证书。|  
+|是|“否”|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
 |是|是|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
-|是|用户帐户控制|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|是|用户帐户控制|用户帐户控制|是|加密始终发生，但可能使用的自签名的服务器证书。|  
+|是|是|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|是|是|是|是|加密始终发生，但可能使用的自签名的服务器证书。|  
 ||||||
 
 > [!CAUTION]
@@ -67,7 +66,7 @@ ms.locfileid: "32951522"
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持且无需通过添加验证的加密[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数。 添加了 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 以接受 SQL_TRUST_SERVER_CERTIFICATE_YES 或 SQL_TRUST_SERVER_CERTIFICATE_NO，默认值为 SQL_TRUST_SERVER_CERTIFICATE_NO。 此外，还添加了新的连接字符串关键字 "TrustServerCertificate"。 它接受值 yes 或 no；默认值为 no。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

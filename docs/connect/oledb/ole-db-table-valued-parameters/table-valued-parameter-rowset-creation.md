@@ -2,9 +2,10 @@
 title: 表值参数行集创建 |Microsoft 文档
 description: 静态和动态表值参数行集创建
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b756e3573af050f1fd998c0861308855e456bd10
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8879c56eae2f5691a27a6261cc12ca3ad9c4cebc
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307426"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690250"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   尽管使用者可以为表值参数提供任意行集对象，但是典型的行集对象要针对后端数据存储来实现，因此提供有限的性能。 因此，SQL Server 的 OLE DB 驱动程序允许使用者创建基于内存中数据的专用化的行集对象。 这种特殊的内存中的行集对象是一种新的 COM 对象，称为表值参数行集。 它提供与参数集相似的功能。  
   

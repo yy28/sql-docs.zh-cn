@@ -3,11 +3,9 @@ title: 事务升级 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +18,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 742ff5f5785fea2c3652fc88e78d5cefc2090281
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b995753073a371b3eb6c27a4c50f3a5351b9dc73
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918262"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703198"
 ---
 # <a name="transaction-promotion"></a>事务升级
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ ms.locfileid: "32918262"
   
  使用事务升级的好处是，如果通过使用活动打开某个连接**TransactionScope**事务和任何其他连接打开时，事务作为轻型事务提交而非引发完全分布式事务的其他系统开销。 有关详细信息**TransactionScope**，请参阅[使用 System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR 集成和事务](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

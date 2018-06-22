@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0d537e3762c9eb295cdd4d7dccf508beed8e59e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 402730cba419ad49c5be791fefd7a5b2a7971e98
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949852"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700298"
 ---
 # <a name="metadata-discovery"></a>元数据发现
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "32949852"
   
  如果您开发应用程序中使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中本机客户端[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]但连接到服务器的版本早于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，元数据发现功能将对应于服务器的版本。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  
   
 -   [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
@@ -76,7 +75,7 @@ ms.locfileid: "32949852"
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

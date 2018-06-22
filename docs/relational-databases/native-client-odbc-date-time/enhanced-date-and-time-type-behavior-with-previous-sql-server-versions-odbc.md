@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e63cefdf59a3198ff1f71b96ce36ebc11dae592b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f65388880319ade0eb7bbfead37224afce98c134
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948082"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699768"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,25 +40,25 @@ ms.locfileid: "32948082"
   
 |SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|日期时间|日期|SQL_C_TYPE_DATE|确定|确定 (1)|  
+|DATETIME|date|SQL_C_TYPE_DATE|“确定”|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|确定|确定 (1)|  
+||Time(0)|SQL_C_TYPE_TIME|“确定”|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分都为非零，则将失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(7)|SQL_C_TIME|失败 – 无效的时间文字。|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|失败 – 无效的时间文字。|确定 (1)|  
-||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|确定|确定 (1)|  
-||Datetime2 （7)|SQL_C_TYPE_TIMESTAMP|确定|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|日期|SQL_C_TYPE_DATE|确定|确定|  
+||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|“确定”|确定 (1)|  
+||Datetime2 （7)|SQL_C_TYPE_TIMESTAMP|“确定”|由客户端转换将值舍入到 1/300 秒。|  
+|Smalldatetime|date|SQL_C_TYPE_DATE|“确定”|“确定”|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|确定|确定|  
+||Time(0)|SQL_C_TYPE_TIME|“确定”|“确定”|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|确定|确定|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|“确定”|“确定”|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|1|如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本。|  
+|@shouldalert|如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本。|  
 |2|已与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 一起使用的应用程序在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本一起使用时，可能失败。|  
   
  请注意只考虑了常见的架构更改。 以下是常见的更改：  
@@ -74,10 +72,10 @@ ms.locfileid: "32948082"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>SQLColumns、SQLProcedureColumns 和 SQLSpecialColumns 返回的列元数据  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|列类型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -91,9 +89,9 @@ ms.locfileid: "32948082"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>SQLGetTypeInfo 返回的数据类型元数据  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|列类型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -105,7 +103,7 @@ ms.locfileid: "32948082"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
@@ -117,7 +115,7 @@ ms.locfileid: "32948082"
 ## <a name="down-level-server-behavior"></a>下级服务器行为  
  连接到版本早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，只要试图使用新的服务器类型或相关的元数据代码和描述符字段，都将导致返回 SQL_ERROR。 将生成以下诊断记录：具有 SQLSTATE HY004 和消息“SQL 数据类型对于连接的服务器版本无效”，或具有 07006 和消息“受限制的数据类型属性冲突”。  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

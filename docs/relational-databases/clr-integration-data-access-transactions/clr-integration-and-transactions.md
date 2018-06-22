@@ -3,11 +3,9 @@ title: CLR 集成和事务 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +20,12 @@ caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9cab6c061f8baac232563b4afe41952da1b4892e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc733e8514647c639d8d7e82b80ce59ba157809a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921552"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695008"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 集成和事务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "32921552"
   
  有关事务和 .NET Framework 的详细信息，请参阅 .NET Framework SDK 中的“执行事务”和“利用事务”。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [事务升级](../../relational-databases/clr-integration-data-access-transactions/transaction-promotion.md)  
  介绍提升事务的功能以及如何使用此功能。  
   
@@ -51,7 +49,7 @@ ms.locfileid: "32921552"
  [事务生存期](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  介绍分别在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和 CLR 应用程序中启动的事务生存期的差异。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从 CLR 数据库对象进行数据访问](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

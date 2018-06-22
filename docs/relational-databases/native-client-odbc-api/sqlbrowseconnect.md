@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 400097362ec6364d7a7b0d6f13cd3e62bb4d6b87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a61a74fc85bd13e442694dde91f279704d9a12d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948122"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701288"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,18 +35,18 @@ ms.locfileid: "32948122"
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/A|否|返回的数据源名称**SQLDataSources**。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
-|DRIVER|N/A|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序名称是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
+|DSN|N/A|“否”|返回的数据源名称**SQLDataSources**。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
+|DRIVER|N/A|“否”|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序名称是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
   
 ## <a name="level-2"></a>级别 2  
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|是|否|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
-|UID|否|是|用户登录 id。|  
-|PWD|否|是（取决于用户）|用户指定密码。|  
-|APP|否|是|名称的应用程序调用**SQLBrowseConnect**。|  
-|WSID|否|是|工作站 id。 通常，这是运行应用程序的计算机的网络名称。|  
+|SERVER|是|“否”|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
+|UID|“否”|是|用户登录 id。|  
+|PWD|“否”|是（取决于用户）|用户指定密码。|  
+|APP|“否”|是|名称的应用程序调用**SQLBrowseConnect**。|  
+|WSID|“否”|是|工作站 id。 通常，这是运行应用程序的计算机的网络名称。|  
   
 ## <a name="level-3"></a>级别 3  
   
@@ -72,16 +71,16 @@ ms.locfileid: "32948122"
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>对服务主体名称 (SPN) 的 SQLBrowseConnect 支持  
  当打开连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 设置为用于打开此连接的身份验证方法。  
   
- 有关 Spn 的详细信息，请参阅[服务主体名称 & #40;Spn & #41;在客户端连接 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ 有关 Spn 的详细信息，请参阅[服务主体名称&#40;Spn&#41;客户端连接中&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
   
 ## <a name="change-history"></a>更改历史记录  
   
-|更新内容|  
+|更新的内容|  
 |---------------------|  
 |介绍了 SQL_COPT_SS_BROWSE_CACHE_DATA。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQLBrowseConnect 函数](http://go.microsoft.com/fwlink/?LinkId=59329)   
- [ODBC API 实现详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

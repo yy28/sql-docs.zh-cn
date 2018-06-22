@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b516f66963b0c3a6d72614c9218d01313d9e6f7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2872454d8ee32514b3efd46b30b7b96c53b1e7a9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948782"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700250"
 ---
 # <a name="persisted-data-source-objects"></a>持久的数据源对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -236,7 +234,7 @@ HRESULT InitFromPersistedDS
   
  **IPersistFile::Save**方法可以调用之前或之后调用**idbinitialize:: Initialize**。 在成功的返回后调用方法**idbinitialize:: Initialize**确保有效的数据源规范持续不断。  
   
-## <a name="see-also"></a>另请参阅  
- [数据源对象 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据源对象&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

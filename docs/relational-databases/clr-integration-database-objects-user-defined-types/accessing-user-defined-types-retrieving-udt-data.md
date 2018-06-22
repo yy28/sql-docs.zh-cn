@@ -3,11 +3,9 @@ title: 检索 UDT 数据 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,12 +25,12 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61e40a31c7a4ef0b7e00e5af235d033e6fe9d7a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15f0fb18dfccccbb8321366bb155e03a352fcad9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921452"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700578"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>访问用户定义的类型-检索 UDT 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -458,7 +456,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [在 ADO.NET 中访问的用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+## <a name="see-also"></a>请参阅  
+ [在 ADO.NET 中访问用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

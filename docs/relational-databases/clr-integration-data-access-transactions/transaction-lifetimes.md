@@ -3,11 +3,9 @@ title: 事务生命周期 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +16,12 @@ caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2c78887d28fdc202da63f58167b4fb414e905f58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee3f55fea7f08aa38257558e673adbf090ea1d0a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917892"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695238"
 ---
 # <a name="transaction-lifetimes"></a>事务生存期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.locfileid: "32917892"
   
 -   尝试回滚不在同一过程中启动的事务将导致挂起事务（防止执行任何其他带副作用的操作）。 事务将断开连接，直到 CLR 代码离开作用域。 请注意当您在过程内检测到错误并想确保终止整个事务时，这可能很有用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR 集成和事务](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

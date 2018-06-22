@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b7b40840f1258dfaaf1900aae4e4b891d1bf7322
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dedf0f7ff3e8f89700e35544c94232a9c49656cf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954482"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698568"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,11 +81,11 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 属性集  
  若要支持通过 OLE DB 的查询通知[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将以下新属性添加到 DBPROPSET_SQLSERVERROWSET 属性集。  
   
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认为 432000 秒（5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 消息正文是用户定义的，没有预定义格式。<br /><br /> 默认情况下，该字符串为空。 您可以使用 1 至 2000 个字符指定消息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 在字符串中以指定了这些*名称*=*值*语法。 用户负责创建服务并从队列中读取通知。<br /><br /> 預設為空字串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 在字符串中以指定了这些*名称*=*值*语法。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
   
  无论语句是在用户事务中运行还是以自动提交模式运行，或者无论是提交还是回滚运行语句的事务，将始终提交通知订阅。 根据以下任一无效通知条件激发服务器通知：更改基础数据或架构，或者当达到超时期限时（以先发生者为准）。 激发通知后将立即删除通知注册。 因此，在接收通知时，应用程序必须再次订阅通知，以备进一步更新之用。  
   
@@ -142,7 +141,7 @@ RECEIVE * FROM MyQueue
   
  对于与现有活动订阅具有相同模板、相同参数值、相同通知 ID 和相同传递位置的通知查询，同一用户在相同数据库上下文中再次提交这样的通知查询将续订现有订阅，并重置新指定的超时值。这表示如果针对相同的查询请求通知，则仅发送一个通知。 这将适用于批处理中的重复查询，也适用于存储过程中调用多次的查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

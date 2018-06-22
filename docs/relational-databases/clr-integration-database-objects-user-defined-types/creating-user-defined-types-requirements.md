@@ -3,11 +3,9 @@ title: 用户定义的类型要求 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +23,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d4bccc8ae83d25f848011421d057ad8cb0a7016
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9029a944bc45acf2b0fb121b4a295f74d5534210
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922392"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695378"
 ---
 # <a name="creating-user-defined-types---requirements"></a>创建用户定义的类型的要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +169,7 @@ ms.locfileid: "32922392"
   
  UDT 在 FOR XML 查询中不序列化。 若要执行显示的 XML 序列化 Udt 的 FOR XML 查询，显式转换到每个 UDT 列**xml** SELECT 语句中的数据类型。 你可以将还显式转换到的列**varbinary**， **varchar**，或**nvarchar**。  
   
-## <a name="see-also"></a>另请参阅  
- [创建的用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
+## <a name="see-also"></a>请参阅  
+ [创建用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

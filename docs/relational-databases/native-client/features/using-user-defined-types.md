@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 902180da98af11feeccc65295d0f4c1dbdd28727
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9274c4cb2b6f4381a0d4fe89ec518a9f73dcd768
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332528"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695938"
 ---
 # <a name="using-user-defined-types"></a>使用用户定义类型
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "34332528"
 |DBTYPE_BSTR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_STR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支持|N/A<sup>2</sup>|不支持|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
   
  <sup>1</sup>如果服务器的类型是其他比以外，dbtype_udt 还指定使用**ICommandWithParameters::SetParameterInfo**和访问器类型是以外，dbtype_udt 还，执行语句时出错 (DB_E_ERRORSOCCURRED;参数状态是 DBSTATUS_E_BADACCESSOR）。 如果不是这样，数据将发送到服务器，但服务器会返回错误，指示不存在从 UDT 到参数的数据类型的隐式转换。  
@@ -86,7 +85,7 @@ ms.locfileid: "34332528"
  OLE DB 核心服务提供的数据转换 (**IDataConvert**) 不适用于以外，dbtype_udt 还。 不支持其他绑定。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行集的添加和更改内容  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端添加新值，或更改到多个核心 OLE DB 架构行集。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端添加新值，或更改到多个核心 OLE DB 架构行集。  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS 架构行集  
  在 PROCEDURE_PARAMETERS 架构行集中添加了以下内容。  
@@ -141,12 +140,12 @@ ms.locfileid: "34332528"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|完整类型名称 (AQN) 包括带有命名空间前缀（如果适用）的类型名称。|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 属性集的添加和更改内容  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端添加新值，或更改到多个核心 OLE DB 属性集。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端添加新值，或更改到多个核心 OLE DB 属性集。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了支持通过 OLE DB，Udt[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现新 DBPROPSET_SQLSERVERPARAMETER 属性集，其中包含以下值。  
   
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|由三部分组成的名称标识符。<br /><br /> 对于 UDT 参数，此属性是一个字符串，它指定定义用户定义类型的目录的名称。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|由三部分组成的名称标识符。<br /><br /> 对于 UDT 参数，此属性是一个字符串，它指定定义用户定义类型的架构的名称。|  
@@ -157,7 +156,7 @@ ms.locfileid: "34332528"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  若要支持中的表创建**ITableDefinition**接口，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将以下三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|名称|Description|类型|Description|  
+|“属性”|Description|类型|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  
@@ -177,10 +176,10 @@ ms.locfileid: "34332528"
  如果 UDT 定义位于不同的数据库中，则必须指定 SSPROP_COL_UDT_CATALOGNAME 和 SSPROP_COL_UDT_SCHEMANAME。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 接口的添加和更改内容  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端添加新值，或到多个 OLE DB 接口的核心更改。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端添加新值，或到多个 OLE DB 接口的核心更改。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
- 若要支持通过 OLE DB，Udt[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现的大量更改，包括添加**ISSCommandWithParameters**接口。 此新接口继承自核心 OLE DB 接口**ICommandWithParameters**。 除了从继承的三个方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，和**SetParameterInfo**;**ISSCommandWithParameters**提供**GetParameterProperties**和**SetParameterProperties**用于处理服务器特定的数据类型的方法。  
+ 若要支持通过 OLE DB，Udt[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现的大量更改，包括添加**ISSCommandWithParameters**接口。 此新接口继承自核心 OLE DB 接口**ICommandWithParameters**。 除了从继承的三个方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，和**SetParameterInfo**;**ISSCommandWithParameters**提供**GetParameterProperties**和**SetParameterProperties**用于处理特定于服务器的方法数据类型。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters**接口还可以使用新 SSPARAMPROPS 的结构。  
@@ -213,8 +212,8 @@ ms.locfileid: "34332528"
   
  从 C 转换为 SQL 数据类型时，SQL_C_WCHAR、SQL_C_BINARY 和 SQL_C_CHAR 可全部转换为 SQL_SS_UDT。 但是请注意，二进制数据转换为十六进制字符串中，从 SQL_C_WCHAR 和 SQL_C_CHAR SQL 数据类型转换时。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2909c4472a4ab8dee56c37da3cdf23db1ee3e512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cb4046f669a3d35de7c99b0d1d754bd85f067f6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946812"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695869"
 ---
 # <a name="fetching-result-data"></a>提取结果数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,11 +64,11 @@ ms.locfileid: "32946812"
   
  在使用 SQL_C_DEFAULT 指定 C 变量的类型时必须小心。 SQL_C_DEFAULT 指定 C 变量的类型与列或参数的 SQL 数据类型匹配。 如果为指定 SQL_C_DEFAULT **ntext**， **nchar**，或**nvarchar**列中，Unicode 数据返回到应用程序。 如果尚未对应用程序进行编码以处理 Unicode 数据，则上述操作可能导致不同的问题。 相同类型的问题可能会出现**uniqueidentifier** (SQL_GUID) 数据类型。  
   
- **文本**， **ntext**，和**映像**数据通常是太大而无法放到单个程序变量中，并且通常与处理**SQLGetData**而不是**SQLBindCol**。 使用服务器游标时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序进行了优化以不传输数据的未绑定**文本**， **ntext**，或**映像**上的列提取行的时间。 **文本**， **ntext**，或**映像**数据不实际从服务器检索之前应用程序问题**SQLGetData**的列。  
+ **文本**， **ntext**，和**映像**数据通常是太大而无法放到单个程序变量中，并且通常与处理**SQLGetData**而不是**SQLBindCol**。 使用服务器游标时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序进行了优化以不传输数据的未绑定**文本**， **ntext**，或**映像**上的列提取行的时间。 **文本**， **ntext**，或**映像**数据不实际从服务器检索之前应用程序问题**SQLGetData**为列。  
   
  此优化可以应用于应用程序，以便不**文本**， **ntext**，或**映像**用户滚动向上和向下游标时，将显示数据。 用户选择一行后，应用程序可以调用**SQLGetData**检索**文本**， **ntext**，或**映像**数据。 这将保存传输**文本**， **ntext**，或**映像**数据的任何行用户不会选择，并可以保存的数据量非常大的传输。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理结果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

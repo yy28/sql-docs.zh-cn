@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], .NET Framework libraries
@@ -18,12 +16,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24cd0f69a0167b5e742381b0e2e88f2cc84d1a2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ffc396006959ad9b498a1b90a65fb0fe82eac7c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924032"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702218"
 ---
 # <a name="supported-net-framework-libraries"></a>支持的 .NET Framework 库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ ms.locfileid: "32924032"
   
  例如， **System.DirectoryServices**不支持命名空间。 你必须注册为 System.DirectoryServices.dll 程序集**UNSAFE**之前可以在代码中调用它的权限。 **UNSAFE**权限是必需的因为中的类**System.DirectoryServices**命名空间不满足的要求**安全**或**EXTERNAL_ACCESS**。 有关详细信息，请参阅[CLR 集成编程模型限制](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)和[CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建程序集](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR 集成编程模型限制](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  

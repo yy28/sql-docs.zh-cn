@@ -2,9 +2,10 @@
 title: 将数据插入到表值参数 |Microsoft 文档
 description: 使用 OLE DB 驱动程序的 SQL Server 将数据插入表值参数
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8806d301eeaa25f00b8e3a3fe3553fb08e7005a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: e3d0e0fedb2c64c4c5ac9e5e9515016f256e44a1
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306456"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689320"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序支持的使用者，以指定表值参数行数据的两个模型： 推送模型和请求模型。 一个示例，演示拉取模型是可用;请参阅[SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
   

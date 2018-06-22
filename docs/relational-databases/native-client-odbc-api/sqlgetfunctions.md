@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d659bc7d599ed4109246c574985594a0b139692
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6677da59cfbae1cde64267d3b7dedcdcf702576e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943442"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700598"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,8 +31,8 @@ ms.locfileid: "32943442"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]符合适用于 ODBC （ISO，Open Group 和 ODBC 等级 2） 的三个定义的符合性级别 Native Client ODBC 驱动程序接口。 **SQLGetFunctions**支持所有 ODBC 函数的报表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQLGetFunctions 函数](http://go.microsoft.com/fwlink/?LinkId=59353)   
- [ODBC API 实现详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

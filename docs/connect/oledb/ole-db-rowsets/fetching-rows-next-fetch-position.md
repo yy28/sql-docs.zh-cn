@@ -2,9 +2,10 @@
 title: 接下来提取位置 |Microsoft 文档
 description: 提取行-下次提取位置
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,15 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e5fb2612c10ceb82458888c01adbfc7e156beebb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 46e6e3b9898d6c1adbe4df4bdc2b33444b623df9
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306406"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690110"
 ---
 # <a name="fetching-rows---next-fetch-position"></a>提取行-下次提取位置
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 驱动程序的 SQL 服务器将保留对其进行跟踪的将下次提取位置因此对的调用序列**GetNextRows**方法 (而跳过，无需更改的方向，或中间调用**FindNextRow****Seek**，或**RestartPosition**方法) 读取整个行集，而不跳过或重复任何行。 将下次提取位置更改通过调用**irowset:: Getnextrows**， **irowset:: Restartposition**，或**IRowsetIndex::Seek**，或通过调用**FindNextRow**带 null *pBookmark*值。 调用**FindNextRow**与非空*pBookmark*值不会影响将下次提取位置。  
   

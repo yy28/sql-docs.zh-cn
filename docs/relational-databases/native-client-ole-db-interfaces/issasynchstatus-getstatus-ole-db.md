@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 455707070a8ee20fd767a510a255db2bfc87d502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ccb9d40572b24322264ffc826e79d18faade8d8a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951462"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695898"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +113,7 @@ HRESULT GetStatus(
  E_FAIL  
  发生了特定于访问接口的错误。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::GetStatus**方法的行为完全相同**IDBAsynchStatus::GetStatus**方法处在于如果初始化的数据源对象被中止，E_UNEXPECTED 返回而不是比 DB_E_CANCELED (尽管[ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)将返回 DB_E_CANCELED)。 这是因为在中止后，数据源对象不会照常处于僵停状态，以便进一步尝试初始化操作。  
   
  如果异步初始化或填充行集，则必须支持此方法。  
@@ -130,8 +128,8 @@ HRESULT GetStatus(
   
  调用**ISSAsynchStatus::GetStatus**上初始化的数据源对象或填充的行集，或将值传递*eOperation*以外 DBASYNCHOP_OPEN，返回与，则为 S_OK *pulProgress*和*pulProgressMax*设置为相同的值。 如果**ISSAsynchStatus::GetStatus**的命令的更新、 删除或插入行，在执行创建的对象上调用同时*pulProgress*和*pulProgressMax*指示命令受影响的行总数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行异步操作](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

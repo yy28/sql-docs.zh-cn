@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -22,12 +20,12 @@ caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 597645c52f37034ba4f294784cbde2a7489516d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be82adf07487e66bed43a16af289e30d751a414
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923932"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699618"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,13 +60,13 @@ ms.locfileid: "32923932"
  [.NET Framework 中的 SQL Server 数据类型](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型及其 .NET Framework 等效项的概览。  
   
- [CLR 集成自定义属性的概述](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [CLR 集成自定义属性的概览](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  提供有关 CLR 集成自定义属性的信息。  
   
  [CLR 用户定义函数](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  说明如何实现和使用各种类型的 CLR 函数：表值、标量和用户定义的聚合函数。  
   
- [CLR 用户定义的类型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [CLR 用户定义类型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  说明如何实现和使用 CLR 用户定义类型。  
   
  [CLR 存储过程](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
@@ -77,7 +75,7 @@ ms.locfileid: "32923932"
  [CLR 触发器](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  说明如何实现和使用 CLR 触发器。  
   
-## <a name="see-also"></a>另请参阅  
- [公共语言运行时 & #40;CLR & #41;集成概述](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+## <a name="see-also"></a>请参阅  
+ [公共语言运行时&#40;CLR&#41;集成概述](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

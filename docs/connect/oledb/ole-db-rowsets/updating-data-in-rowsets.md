@@ -2,9 +2,10 @@
 title: 更新行集合中的数据 |Microsoft 文档
 description: 更新行集使用的 SQL Server OLE DB 驱动程序中的数据
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6ae4adba438d1465a572971021c82dd004eca211
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306356"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689900"
 ---
 # <a name="updating-data-in-rowsets"></a>更新行集中的数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 更新 OLE DB 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据时使用者更新可修改的行集包含的数据。 当使用者请求支持时创建的可修改的行集**IRowsetChange**或**IRowsetUpdate**接口。  
   
@@ -43,7 +46,7 @@ ms.locfileid: "35306356"
   
 -   [更新 SQL Server 游标中的数据](../../oledb/ole-db-rowsets/updating-data-in-sql-server-cursors.md)  
   
--   [重新同步的行](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
+-   [重新同步行](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
 ## <a name="see-also"></a>请参阅  
  [行集](../../oledb/ole-db-rowsets/rowsets.md)  
