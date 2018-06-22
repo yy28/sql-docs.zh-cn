@@ -1,0 +1,12 @@
+# [事务复制](transactional-replication.md)
+## [事务复制的发布类型](publication-types-for-transactional-replication.md)
+## [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)
+## [Queued Updating Conflict Detection and Resolution](updatable-subscriptions-queued-updating-conflict-resolution.md)
+## [@loopback_detection](peer-to-peer-transactional-replication.md)
+## [对等复制中的冲突检测](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
+## [双向事务复制](bidirectional-transactional-replication.md)
+## [Article Options for Transactional Replication](article-options-for-transactional-replication.md)
+## [指定如何传播事务项目的更改](transactional-articles-specify-how-changes-are-propagated.md)
+## [重新生成自定义事务过程以反映架构更改](transactional-articles-regenerate-to-reflect-schema-changes.md)
+## [在事务复制中发布存储过程执行](publishing-stored-procedure-execution-in-transactional-replication.md)
+

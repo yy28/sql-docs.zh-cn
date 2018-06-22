@@ -53,6 +53,7 @@
 ### [服务器属性（“历史记录”页）](server-properties-history-page.md)
 ### [服务器属性（“日志记录”页）](server-properties-logging-page.md)
 ### [服务器属性（“安全性”页）](server-properties-security-page-reporting-services.md)
+### [服务器属性（“高级”页）](server-properties-advanced-page-reporting-services.md)
 ### [系统角色属性](system-role-properties-management-studio.md)
 ### [用户角色属性](user-role-properties-management-studio.md)
 # [报表生成器](report-builder-authoring-environment-ssrs.md)
