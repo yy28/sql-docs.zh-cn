@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -23,12 +21,12 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 62d006d244a8fb46316f24931560378727a6f109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e1be655f6f1da49e9c432243e46d34e4d0412ec
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921142"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696778"
 ---
 # <a name="clr-integration---overview"></a>CLR 集成的概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ ms.locfileid: "32921142"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>选择扩展存储过程还是托管代码  
  可以生成扩展存储过程来执行使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程无法实现的功能。 但是，扩展存储过程可能有损于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的完整性，而经过验证确定为类型安全的托管代码则不会。 进一步来说，在 CLR 的托管代码与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间更深入地集成了内存管理、线程及纤程的调度以及同步服务。 如果所编写的存储过程需要执行在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中不可能完成的任务，则 CLR 集成有比扩展存储过程更安全的方式来实现它。 有关 CLR 集成和扩展存储的过程的详细信息，请参阅[性能的 CLR 集成](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 集成的体系结构](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [从 CLR 数据库对象的数据访问](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   

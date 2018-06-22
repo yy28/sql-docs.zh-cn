@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -36,18 +35,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3d2cf487958f09af1825456f605a9f73a44e27e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59beafe13efd6d4dc9064d73e4ff9924fa571815
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957492"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695968"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引入**xml**使用户可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 因为与其他内置类型，你可以使用**xml**数据类型用作列类型创建表时; 作为变量类型、 参数类型或函数返回类型; 或 CAST 和 CONVERT 函数中。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入**xml**使用户可以存储 XML 文档和片段中的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。 **Xml**数据类型是中的内置数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并在某些方面类似于其他内置类型，如是**int**和**varchar**。 因为与其他内置类型，你可以使用**xml**数据类型用作列类型创建表时; 作为变量类型、 参数类型或函数返回类型; 或 CAST 和 CONVERT 函数中。  
   
 ## <a name="programming-considerations"></a>编程时的注意事项  
  XML 可以是自描述的，即可以根据需要包含一个 XML 标头来指定文档的编码，例如：  
@@ -93,13 +92,13 @@ ms.locfileid: "32957492"
 |DBTYPE_XML|将通过<sup>6，7</sup>|错误<sup>1</sup>|确定<sup>11、 6</sup>|错误<sup>8</sup>|  
 |DBTYPE_BYTES|将通过<sup>6，7</sup>|N/A<sup>2</sup>|确定<sup>11、 6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>4、 6、 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|确定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|确定<sup>5、 6、 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|字节流通过**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|字节流通过**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|将通过<sup>6，7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|将通过<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|将通过<sup>6，7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果服务器的类型是其他不是使用指定 DBTYPE_XML **ICommandWithParameters::SetParameterInfo**和访问器类型是 DBTYPE_XML，执行语句时出错 （DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）; 否则将数据发送到服务器，但服务器返回错误，指示是否从 XML 没有隐式转换为参数的数据类型。  
+ <sup>1</sup>如果服务器的类型是其他不是使用指定 DBTYPE_XML **ICommandWithParameters::SetParameterInfo**和访问器类型是 DBTYPE_XML，执行语句时出错 (DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）;否则将数据发送到服务器，但服务器将返回一个错误，指示从 XML 没有隐式转换为参数的数据类型。  
   
  <sup>2</sup>超出了本主题的范围。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "32957492"
  DBTYPE_IUNKNOWN 是支持的绑定（如上表中所示），但在 DBTYPE_XML 与 DBTYPE_IUNKNOWN 之间不存在转换。 DBTYPE_IUNKNOWN 不能与 DBTYPE_BYREF 一起使用。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行集的添加和更改内容  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端添加新值，或更改到多个核心 OLE DB 架构行集。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端添加新值，或更改到多个核心 OLE DB 架构行集。  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 架构行集  
  COLUMNS 和 PROCEDURE_PARAMETERS 架构行集添加了以下列。  
@@ -171,12 +170,12 @@ ms.locfileid: "32957492"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 属性集的添加和更改内容  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端添加新值，或更改到多个核心 OLE DB 属性集。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端添加新值，或更改到多个核心 OLE DB 属性集。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了支持**xml**通过 OLE DB 的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现新的 DBPROPSET_SQLSERVERPARAMETER 属性集，其中包含以下值。  
   
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录（数据库）的名称。 SQL 三部分组成的名称标识符的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|架构集合内 XML 架构的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
@@ -185,7 +184,7 @@ ms.locfileid: "32957492"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  若要支持中的表创建**ITableDefinition**接口，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定在其中存储 XML 架构的目录的名称。 对于其他列类型，此属性返回空字符串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定定义此列的 XML 架构的名称。|  
@@ -194,16 +193,16 @@ ms.locfileid: "32957492"
  与 SSPROP_PARAM 值类似，所有这些属性都是可选的且默认值为空。 仅当指定 SSPROP_COL_XML_SCHEMACOLLECTIONNAME 时，才能指定 SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME 和 SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME。 在将 XML 传递到服务器时，如果包含这些值，则将针对当前数据库检查它们是否存在（有效性），并且针对架构检查实例数据。 在所有情况下，要使这些值有效，它们必须全部为空或全部添入这些值。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 接口的添加和更改内容  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端添加新值，或到多个 OLE DB 接口的核心更改。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端添加新值，或到多个 OLE DB 接口的核心更改。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
- 为了支持**xml**通过 OLE DB 的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现的大量更改，包括添加[ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)接口。 此新接口继承自核心 OLE DB 接口**ICommandWithParameters**。 除了从继承的三个方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，和**SetParameterInfo**;**ISSCommandWithParameters**提供[GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)和[SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)用于处理服务器特定的数据类型的方法。  
+ 为了支持**xml**通过 OLE DB 的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现的大量更改，包括添加[ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)接口。 此新接口继承自核心 OLE DB 接口**ICommandWithParameters**。 除了从继承的三个方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，和**SetParameterInfo**;**ISSCommandWithParameters**提供[GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)和[SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)用于处理特定于服务器的方法数据类型。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters**接口还可以使用新 SSPARAMPROPS 的结构。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将添加以下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-到返回的行集的特定列**IColumnRowset::GetColumnsRowset**方法。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端将添加以下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-到返回的行集的特定列**IColumnRowset::GetColumnsRowset**方法。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
@@ -225,7 +224,7 @@ ms.locfileid: "32957492"
   
  对于 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，访问接口将位于使用者缓冲区中的 XML 实例存储到适当的列中。  
   
- 对于 DBTYPE_IUNKNOWN/ISequentialStream，如果使用者未指定任何存储的对象，使用者必须创建**ISequentialStream**提前对象，将绑定对象的 XML 文档并将该对象传递给提供程序通过**IRowsetChange::SetData**方法。 使用者还可以创建一个存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建**ISequentialStream**对象，然后将传递**ISequentialStream**对象传递给**IRowsetChange::SetData**方法。 在这两种情况下，提供程序可以检索 XML 对象，通过**ISequentialStream**对象，并将其插入到正确的列。  
+ 对于 DBTYPE_IUNKNOWN/ISequentialStream，如果使用者未指定任何存储的对象，使用者必须创建**ISequentialStream**提前对象，将绑定对象的 XML 文档，然后将对象传递通过提供到**IRowsetChange::SetData**方法。 使用者还可以创建一个存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建**ISequentialStream**对象，然后将传递**ISequentialStream**对象**IRowsetChange::SetData**方法。 在这两种情况下，提供程序可以检索 XML 对象，通过**ISequentialStream**对象，并将其插入到正确的列。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 接口  
  **IRowsetUpdate**接口提供了用于延迟的更新功能。 提供给行集的数据也不会提供其他事务之前使用者调用**IRowsetUpdate:Update**方法。  
@@ -276,8 +275,8 @@ ms.locfileid: "32957492"
   
  XML 标准要求 UTF-16 编码的 XML，以便以字节顺序标记 (BOM) UTF-16 字符代码 0xFEFF 开头。 当使用 SQL_C_BINARY 绑定，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端不需要或添加 BOM，如的编码会进行隐式绑定。 其目的是为了在处理其他 XML 处理器和存储系统时提供简便性。 在此情况下，应向 UTF-16 编码的 XML 提供 BOM，并且应用程序无需关心实际编码，因为绝大多数的 XML 处理器（包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）会通过检查该值的前几个字节推导出编码。 从收到的 XML 数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端使用 SQL_C_BINARY 绑定始终编码为 utf-16 BOM 使用和不使用嵌入的编码声明。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

@@ -2,9 +2,10 @@
 title: 支持本地事务 |Microsoft 文档
 description: OLE DB 驱动程序中的 SQL Server 的本地事务
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2c3d85ce4a26c5840b393336e878bda4fa20b142
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307996"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689360"
 ---
 # <a name="supporting-local-transactions"></a>支持本地事务
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   会话分隔 SQL Server 本地事务 OLE DB 驱动程序的事务的范围。 SQL Server 的 OLE DB 驱动程序提交到连接的实例的请求时，在使用者的方向， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请求构成的 SQL Server 的 OLE DB 驱动程序的工作单元。 本地事务始终环绕一个或多个工作单元单个 OLE DB 驱动程序为 SQL Server 会话。  
   

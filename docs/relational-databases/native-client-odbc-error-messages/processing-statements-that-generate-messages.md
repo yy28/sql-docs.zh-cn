@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-error-messages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9475afda740b4c2b2d6b279c0ea0a454fd397bf0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ff2141bb8b84fa27d9aefe00f3a48281d5c017e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946702"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703738"
 ---
 # <a name="processing-statements-that-generate-messages"></a>处理生成消息的语句
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +152,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  如果打印或 RAISERROR 语句之后的 SQL 语句 （如 SELECT 语句），则时返回的打印或 RAISERROR 信息[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)结果的位置设置包含错误。 **SQLMoreResults**返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，具体取决于消息的严重性。 通过调用中检索消息时**SQLGetDiagRec**直到它返回 SQL_NO_DATA。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理错误和消息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

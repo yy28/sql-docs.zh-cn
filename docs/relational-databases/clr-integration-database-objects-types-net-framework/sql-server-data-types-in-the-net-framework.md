@@ -3,11 +3,9 @@ title: .NET Framework 中的 SQL Server 数据类型 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 58efbce895ad0e06521c59941dc49826629343b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917843"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702048"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 中的 SQL Server 数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +35,13 @@ ms.locfileid: "32917843"
   
  下表列出了本节的主题。  
   
- [为 null 性和三值逻辑比较](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
+ [为 Null 性和三值逻辑比较](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  介绍如何使用公共语义运行时 (CLR) 集成数据类型处理 NULL 值。  
   
  [排序规则和 CLR 集成数据类型](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  介绍如何使用 CLR 集成处理排序规则。  
   
- [处理大型对象 & #40;LOB & #41;在 CLR 中的参数](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [处理大型对象&#40;LOB&#41; CLR 中的参数](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之间传递 LOB 类型。  
   
  [映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

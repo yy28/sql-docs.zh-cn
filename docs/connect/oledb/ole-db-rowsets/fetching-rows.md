@@ -2,9 +2,10 @@
 title: 提取行 |Microsoft 文档
 description: 提取行使用 IRowset 接口
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0f57b4e44fd548a82c441f7882bf3ac22fa51410
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9f003e6c6b0257556ac6b561d25b5987e29eaf40
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307316"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690280"
 ---
 # <a name="fetching-rows"></a>提取行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRowset**接口是基行集接口。 **IRowset**接口可提供用于按顺序读取行、 从这些行，获取数据和管理行的方法。 使用者使用中的方法**IRowset**所有基本行集操作。 这包括提取和释放行以及获得列值。  
   

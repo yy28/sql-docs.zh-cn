@@ -2,9 +2,10 @@
 title: ISSAbort::Abort (OLE DB) |Microsoft 文档
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0c7d30e8132d245958e7ef6f7f09e642a2da960c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 39f56dd6c058c82783c8cff786e210884cd3bf0c
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305376"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690260"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   取消当前行集以及与当前命令关联的任何批处理命令。  
   
@@ -45,7 +48,7 @@ HRESULT Abort(void);
 ## <a name="remarks"></a>Remarks  
  如果正在中止该命令是在存储过程中，存储的过程 （以及任何已调用该过程的过程） 的执行将终止以及包含存储的过程调用的命令批处理。 如果服务器正在传输到客户端设置的结果是，将停止传输。 如果客户端不希望使用结果集，则调用**ISSAbort::Abort**释放行集将加快行集版本中，但如果没有打开的事务，且 XACT_ABORT 为 ON，将回滚事务之前当**ISSAbort::Abort**称为  
   
- 后**ISSAbort::Abort**返回 S_OK，关联**IMultipleResults**接口进入不可用状态，并为所有方法调用返回 DB_E_CANCELED (除所定义的方法之外**IUnknown**接口) 之前它将被释放。 如果**IRowset**必须通过**IMultipleResults**之前调用**中止**，它还进入不可用状态，并为所有方法调用返回 DB_E_CANCELED (除由定义的方法之外**IUnknown**接口和**irowset:: Releaserows**) 之前它将被释放后成功调用**ISSAbort::Abort**。  
+ 后**ISSAbort::Abort**返回 S_OK，关联**IMultipleResults**接口进入不可用状态，并为所有方法调用返回 DB_E_CANCELED (除所定义的方法之外**IUnknown**接口) 之前它将被释放。 如果**IRowset**必须从获取**IMultipleResults**之前调用**中止**，它还进入不可用状态，并且返回 DB_E_CANCELED 到所有方法调用 （除由定义的方法之外**IUnknown**接口和**irowset:: Releaserows**) 之前它将被释放后成功调用**ISSAbort::Abort**.  
   
 > [!NOTE]  
 >  开头[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，如果服务器 XACT_ABORT 状态处于打开状态，执行**ISSAbort::Abort**将终止并回滚任何当前的隐式或显式事务，以连接到时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的较早版本不中止当前事务。  

@@ -2,9 +2,10 @@
 title: ISSAsynchStatus (OLE DB) |Microsoft 文档
 description: ISSAsynchStatus (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 420568e3da65d145851ca8b9e2ffdfb7d8c6d3dc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 73ee8ab77cab188cf4a3d0d98c5dc1f238c8e3f0
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305906"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689090"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **ISSAsynchStatus**接口公开支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]异步操作。 它是一个可选接口继承自核心 OLE DB 接口**IDBAsynchStatus**。 除了**中止**和**GetStatus**方法继承自**IDBAsynchStatus**， **ISSAsynchStatus**提供了一个新方法用于等待异步操作已完成或发生超时。  
   

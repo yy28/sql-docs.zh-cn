@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - batches [ODBC]
 - ODBC CALL escape sequence
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dbb2279b3a32fd2929a7e9e626a0481ea38fefd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 785a6d4bde75f9195733590b739a7dfb75d4b846
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943502"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695428"
 ---
 # <a name="batching-stored-procedure-calls"></a>批处理存储过程调用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +35,7 @@ ms.locfileid: "32943502"
   
  在执行包含多个 ODBC CALL 转义序列的批处理时，驱动程序批处理对服务器的过程调用。 它还在绑定参数数组用于 ODBC CALL 转义序列时批处理过程调用。 例如，如果你使用任一按行或列的参数绑定来绑定到 ODBC 调用 SQL 语句中的参数的带有五个元素的数组时**SQLExecute**或**SQLExecDirect**调用时，该驱动程序将发送到服务器的五个过程调用带有的单个批次。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行存储过程](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

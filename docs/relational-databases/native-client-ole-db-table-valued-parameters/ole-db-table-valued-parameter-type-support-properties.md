@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a00448cf4f805230c7738857b3cce71007cc4a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c487e6d3853eeb430b686896af279283ecdad2c6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952482"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695468"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 表值参数类型支持（属性）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "32952482"
   
  在此处未列出在表值参数行集对象中未实现的属性。 有关属性的完整列表，请参阅 Windows 数据访问组件中的 OLE DB 文档。  
   
-|属性 ID|“值”|  
+|属性 ID|ReplTest1|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -102,8 +101,8 @@ ms.locfileid: "32952482"
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型： VT_UI2 &#124; VT_ARRAY<br /><br /> 说明：使用者使用此属性指定行集中哪些列集要视作默认值。 将不为这些列发送值。 在从使用者行集对象提取数据时，提供程序不要求对此类列的绑定。<br /><br /> 数组中的每个元素都应是行集对象中某一列的序号。 无效的序号将导致在执行命令时发生错误。|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型： VT_UI2 &#124; VT_ARRAY<br /><br /> 说明：使用者使用此属性向服务器提供提示，以便指出列数据的排序顺序。 提供程序不执行任何验证，并且假定使用者符合已提供的规范。 服务器使用此属性执行优化。<br /><br /> 每一列的列顺序信息均由数组中的一对元素表示。 该元素对中的第一个元素是列的编号。 该元素对中的第二个元素将是 1 或 2，分别表示升序或降序。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 表值参数类型支持](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [使用表值参数 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [使用表值参数&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 24d8b01218b506e5041ad453a07a501ec615e894
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc940296181c4a40ea0e8e2ec0f3118cf452f580
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950142"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697888"
 ---
 # <a name="fetching-rows"></a>提取行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,11 +67,11 @@ ms.locfileid: "32950142"
   
  当使用者是完成与行集时，它将调用**IAccessor::ReleaseAccessor**方法来释放任何访问器。 它调用**iunknown:: Release**公开要释放行集的行集的所有接口上的方法。 释放行集时，它将强制释放使用者可能持有的任何剩余的行或取值函数。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [下次提取位置](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

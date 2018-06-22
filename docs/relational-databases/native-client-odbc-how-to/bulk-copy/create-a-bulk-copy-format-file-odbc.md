@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], file formats
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b498c658bee05b9d55eeb8d037136df2633de64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f251a04118e1c21e55dc4cf11afb133675c1bd9e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946712"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699428"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>创建大容量复制格式化文件 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -220,8 +218,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [大容量复制使用 SQL Server ODBC 驱动程序操作指南主题 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
- [使用数据文件和格式文件](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
+## <a name="see-also"></a>请参阅  
+ [大容量复制使用 SQL Server ODBC 驱动程序操作指南主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [使用数据文件和格式化文件](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

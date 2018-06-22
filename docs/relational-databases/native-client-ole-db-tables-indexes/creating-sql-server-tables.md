@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - adding tables
 - CreateTable function
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aaa1f66f1f860752056c44617046ae00eff6167a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 955444b94d4d30ef247c40a21fe8cb017f84f400
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956912"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695978"
 ---
 # <a name="creating-sql-server-tables"></a>创建 SQL Server 表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +37,7 @@ ms.locfileid: "32956912"
   
  当使用者指定中的表名称*pwszName*的成员*uName*联合中*pTableID*参数， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有该名称的表。 将应用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表命名约束，并且表名可以指示永久表或者指示本地或全局临时表。 有关详细信息，请参阅[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)。 *PpTableID*参数可以为 NULL。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序可以生成永久或临时表的名称。 当使用者设置*pTableID*参数为 NULL，且集*ppTableID*以指向有效的 DBID\*、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回的表中的生成的名称*pwszName*的成员*uName* DBID 联合指向的值*ppTableID*。 若要创建一个临时的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序名为表中，使用者包含 OLE DB 表属性 DBPROP_TBL_TEMPTABLE 中设置中引用的表属性*rgPropertySets*参数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序名为临时表是本地的。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序可以生成永久或临时表的名称。 当使用者设置*pTableID*参数为 NULL，且集*ppTableID*以指向有效的 DBID\*、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回的生成的名称表中*pwszName*的成员*uName* DBID 联合指向的值*ppTableID*。 若要创建一个临时的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序名为表中，使用者包含 OLE DB 表属性 DBPROP_TBL_TEMPTABLE 中设置中引用的表属性*rgPropertySets*参数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序名为临时表是本地的。  
   
  **CreateTable**如果返回 DB_E_BADTABLEID *eKind*的成员*pTableID*参数不表示 DBKIND_NAME。  
   
@@ -61,19 +59,19 @@ ms.locfileid: "32956912"
   
 |属性 ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_COL_AUTOINCREMENT|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE。说明：对于所创建的列设置标识属性。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，标识属性对表中的单一列有效。 有关详细信息比单个列所生成错误将属性设置为 VARIANT_TRUE 时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试在服务器上创建表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性才是有效的**整数**，**数值**，和**十进制**类型小数位数为 0 时。 对任何其他数据类型的列将属性设置为 VARIANT_TRUE 生成一个错误时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试在服务器上创建表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_AUTOINCREMENT 和 DBPROP_COL_NULLABLE 均为这两个 VARIANT_TRUE 时与*dwOption* DBPROP_COL_NULLABLE 不 DBPROPOPTIONS_REQUIRED。 当 DBPROP_COL_AUTOINCREMENT 和 DBPROP_COL_NULLABLE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*的 DBPROP_COL_NULLABLE 等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_NULLABLE *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。|  
-|DBPROP_COL_DEFAULT|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 说明：为该列创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DEFAULT 约束。<br /><br /> *VValue*需要的 DBPROP 成员可以是任何类型的数字。 *VValue.vt*成员应指定与列的数据类型兼容的类型。 例如，对于定义为 DBTYPE_WSTR 的某列将 BSTR N/A 定义为默认值就是一个兼容的匹配。 在定义为 DBTYPE_R8 生成错误的列上定义了相同的默认值时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试在服务器上创建表。|  
-|DBPROP_COL_DESCRIPTION|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： 未实现通过 DBPROP_COL_DESCRIPTION 列属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。<br /><br /> *DwStatus*需要的 DBPROP 结构中的成员返回 DBPROPSTATUS_NOTSUPPORTED 时使用者都尝试写入属性值。<br /><br /> 设置属性，不会导致严重错误以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。 如果所有其他参数值有效，则创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。|  
-|DBPROP_COL_FIXEDLENGTH|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用 DBPROP_COL_FIXEDLENGTH 以确定何时使用者通过使用来定义列的数据类型的数据类型映射*wType* DBCOLUMNDESC 的成员。 有关详细信息，请参阅[Data Type Mapping 中 ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md)。|  
-|DBPROP_COL_NULLABLE|读/写︰ 读/写<br /><br /> 默认值︰ 无<br /><br /> 描述： 在创建表， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序指示是否在设置该属性列是否应接受 null 值。 如果未设置此属性，则该列能否接受 NULL 作为值将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS 默认数据库选项确定。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序是符合 ISO 标准的提供程序。 所连接的会话展现 ISO 行为。 如果使用者未设置 DBPROP_COL_NULLABLE，则列接受 NULL 值。|  
-|DBPROP_COL_PRIMARYKEY|读/写︰ 读/写<br /><br /> 默认值： VARIANT_FALSE 说明： 当 VARIANT_TRUE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将列创建 PRIMARY KEY 约束。<br /><br /> 当定义为列属性时，仅单一列能够确定约束。 VARIANT_TRUE 将属性设置的时间超过单个列返回一个错误时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。<br /><br /> 注意： 使用者可以使用**IIndexDefinition::CreateIndex**创建两个或多个列的主键约束。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时与*dwOption* DBPROP_COL_UNIQUE 不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*的 DBPROP_COL_UNIQUE 等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_PRIMARYKEY *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回错误，当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_NULLABLE 为这两个 VARIANT_TRUE。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回了一个来自错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时使用者都尝试创建 PRIMARY KEY 约束的无效列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 无法创建与列上定义 PRIMARY KEY 约束[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型**位**，**文本**， **ntext**，和**映像**。|  
-|DBPROP_COL_UNIQUE|读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE。说明：将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UNIQUE 约束应用于列。<br /><br /> 当定义为列属性时，此约束仅应用于单一列。 使用者可以使用**IIndexDefinition::CreateIndex**将两个或多个列的组合值的唯一约束。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时和*dwOption*不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_PRIMARYKEY *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时和*dwOption*不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_NULLABLE *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回了一个来自错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时使用者都尝试创建唯一约束的无效列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 无法创建与列上定义唯一约束[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**位**数据类型。|  
+|DBPROP_COL_AUTOINCREMENT|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE。说明：对于所创建的列设置标识属性。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，标识属性对表中的单一列有效。 有关详细信息比单个列所生成错误将属性设置为 VARIANT_TRUE 时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试在服务器上创建表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性才是有效的**整数**，**数值**，和**十进制**类型小数位数为 0 时。 对任何其他数据类型的列将属性设置为 VARIANT_TRUE 生成一个错误时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试在服务器上创建表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_AUTOINCREMENT 和 DBPROP_COL_NULLABLE 均为这两个 VARIANT_TRUE 时与*dwOption* DBPROP_COL_NULLABLE 不 DBPROPOPTIONS_必填。 当 DBPROP_COL_AUTOINCREMENT 和 DBPROP_COL_NULLABLE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*的 DBPROP_COL_NULLABLE 等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_NULLABLE *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。|  
+|DBPROP_COL_DEFAULT|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 说明：为该列创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DEFAULT 约束。<br /><br /> *VValue*需要的 DBPROP 成员可以是任何类型的数字。 *VValue.vt*成员应指定与列的数据类型兼容的类型。 例如，对于定义为 DBTYPE_WSTR 的某列将 BSTR N/A 定义为默认值就是一个兼容的匹配。 在定义为 DBTYPE_R8 生成错误的列上定义了相同的默认值时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试在服务器上创建表。|  
+|DBPROP_COL_DESCRIPTION|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： 未实现通过 DBPROP_COL_DESCRIPTION 列属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。<br /><br /> *DwStatus*需要的 DBPROP 结构中的成员返回 DBPROPSTATUS_NOTSUPPORTED 时使用者都尝试写入属性值。<br /><br /> 设置属性，不会导致严重错误以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。 如果所有其他参数值有效，则创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。|  
+|DBPROP_COL_FIXEDLENGTH|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用 DBPROP_COL_FIXEDLENGTH 以确定何时使用者通过使用来定义列的数据类型的数据类型映射*wType* DBCOLUMNDESC 的成员。 有关详细信息，请参阅[Data Type Mapping 中 ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md)。|  
+|DBPROP_COL_NULLABLE|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： 在创建表， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序指示是否在设置该属性列是否应接受 null 值。 如果未设置此属性，则该列能否接受 NULL 作为值将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS 默认数据库选项确定。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序是符合 ISO 标准的提供程序。 所连接的会话展现 ISO 行为。 如果使用者未设置 DBPROP_COL_NULLABLE，则列接受 NULL 值。|  
+|DBPROP_COL_PRIMARYKEY|读/写： 读/写<br /><br /> 默认值： VARIANT_FALSE 说明： 当 VARIANT_TRUE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将列创建 PRIMARY KEY 约束。<br /><br /> 当定义为列属性时，仅单一列能够确定约束。 VARIANT_TRUE 将属性设置的时间超过单个列返回一个错误时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序尝试创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。<br /><br /> 注意： 使用者可以使用**IIndexDefinition::CreateIndex**创建两个或多个列的主键约束。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时与*dwOption* DBPROP_COL_UNIQUE 不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*的 DBPROP_COL_UNIQUE 等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_PRIMARYKEY *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回错误，当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_NULLABLE 为这两个 VARIANT_TRUE。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回了一个来自错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时使用者都尝试创建 PRIMARY KEY 约束的无效列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 无法创建与列上定义 PRIMARY KEY 约束[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型**位**，**文本**， **ntext**，和**映像**.|  
+|DBPROP_COL_UNIQUE|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE。说明：将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UNIQUE 约束应用于列。<br /><br /> 当定义为列属性时，此约束仅应用于单一列。 使用者可以使用**IIndexDefinition::CreateIndex**将两个或多个列的组合值的唯一约束。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时和*dwOption*不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_PRIMARYKEY *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时和*dwOption*不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_NULLABLE *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回了一个来自错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时使用者都尝试创建唯一约束的无效列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 无法创建与列上定义唯一约束[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**位**数据类型。|  
   
  当使用者调用**ITableDefinition::CreateTable**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，如下所示解释表属性。  
   
 |属性 ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_TBL_TEMPTABLE|读/写︰ 读/写<br /><br /> 默认值： VARIANT_FALSE 说明： 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序创建的使用者名称的表。 当 VARIANT_TRUE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序生成使用者的临时表名称。 使用者集*pTableID*参数**CreateTable**为 NULL。 *PpTableID*参数必须包含有效的指针。|  
+|DBPROP_TBL_TEMPTABLE|读/写： 读/写<br /><br /> 默认值： VARIANT_FALSE 说明： 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序创建的使用者名称的表。 当 VARIANT_TRUE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序生成使用者的临时表名称。 使用者集*pTableID*参数**CreateTable**为 NULL。 *PpTableID*参数必须包含有效的指针。|  
   
  如果使用者请求已成功创建表，打开行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序打开游标支持行集。 可以在所传递的属性集中指示任何行集属性。  
   
@@ -224,7 +222,7 @@ SAFE_EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表和索引](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

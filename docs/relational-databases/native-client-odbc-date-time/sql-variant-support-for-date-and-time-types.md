@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 66727e962bc0887b78ea177c6faed05c5cc2a8c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4738fc4bfa536d66137578b697778d62c1a8c016
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945852"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702448"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>sql_variant 对日期和时间类型的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,30 +41,30 @@ ms.locfileid: "32945852"
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_WCHAR|nvarcar|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_TINYINT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_STINYINT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SHORT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SSHORT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_USHORT|int|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_LONG|int|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SLONG|int|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_ULONG|bigint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SBIGINT|bigint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_FLOAT|real|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_DOUBLE|float|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_TINYINT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_STINYINT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SHORT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SSHORT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_USHORT|ssNoversion|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_LONG|ssNoversion|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SLONG|ssNoversion|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_ULONG|BIGINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SBIGINT|BIGINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_FLOAT|REAL|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_DOUBLE|FLOAT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BIT|bit|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_UTINYINT|tinyint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_UTINYINT|TINYINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE 未设置。|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> 小数位数设置为 SQL_DESC_PRECISION ( *DecimalDigits*参数**SQLBindParameter**)。|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> 小数位数设置为 SQL_DESC_PRECISION ( *DecimalDigits*参数**SQLBindParameter**)。|  
-|SQL_C_TYPE_DATE|date|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_TYPE_DATE|日期|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_TYPE_TIME|time(0)|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|小数位数设置为 SQL_DESC_PRECISION ( *DecimalDigits*参数**SQLBindParameter**)。|  
-|SQL_C_NUMERIC|decimal|精度设置为 SQL_DESC_PRECISION ( *columnsize 类型*参数**SQLBindParameter**)。<br /><br /> 小数位数设置为 SQL_DESC_SCALE ( *DecimalDigits* SQLBindParameter 参数)。|  
+|SQL_C_NUMERIC|Decimal|精度设置为 SQL_DESC_PRECISION ( *columnsize 类型*参数**SQLBindParameter**)。<br /><br /> 小数位数设置为 SQL_DESC_SCALE ( *DecimalDigits* SQLBindParameter 参数)。|  
 |SQL_C_SS_TIME2|time|忽略 SQL_CA_SS_VARIANT_SQL_TYPE|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|忽略 SQL_CA_SS_VARIANT_SQL_TYPE|  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

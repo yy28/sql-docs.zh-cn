@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6207d51509b4eed3ebb3ec0db5c40174b7b7ac9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a8e1465528a72ee8a6cbacccc6d5186ff3d7af9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945132"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696328"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>为游标构造 SQL 语句
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +34,13 @@ ms.locfileid: "32945132"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用服务器游标实现 ODBC 规范中定义的游标功能。 ODBC 应用程序通过使用来控制游标行为[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置不同的语句特性。 以下为属性及其默认值。  
   
-|Attribute|默认|  
+|Attribute|，则“默认”|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|1|  
+|SQL_ATTR_ROW_ARRAY_SIZE|@shouldalert|  
   
  这些选项被设置为各自的默认值在执行 SQL 语句时的时间时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序不使用服务器游标来实现结果集，相反，它将使用默认结果集。 如果这些选项更改了任何从其默认设置执行 SQL 语句，次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序尝试使用服务器游标来实现结果集。  
   
@@ -108,7 +106,7 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
   
  ODBC 应用程序收到这些错误后，在尝试执行该语句前必须将所有游标语句属性重置为其默认值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行查询&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

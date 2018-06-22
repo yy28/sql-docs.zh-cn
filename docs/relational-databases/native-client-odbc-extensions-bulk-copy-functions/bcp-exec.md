@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca5a14408a64c595ddbb32b8d57a636c2d8255e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 245c795097125574b56b7c70bd883db66ae24c29
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946452"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695568"
 ---
 # <a name="bcpexec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +54,7 @@ RETCODE bcp_exec (
 ## <a name="returns"></a>返回  
  SUCCEED、SUCCEED_ASYNC 或 FAIL。 **Bcp_exec**如果复制的所有行，函数将返回成功。 **bcp_exec**仍未完成异步大容量复制操作是否返回 SUCCEED_ASYNC。 **bcp_exec**返回，如果发生完整的故障，或者如果生成错误的行数达到为 BCPMAXERRS 使用指定的值失败[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)。 BCPMAXERRS 默认为 10。 BCPMAXERRS 选项只影响从数据文件读取行（并且不是已发送到服务器的行）时提供程序检测到的语法错误。 服务器在检测到某一行有错误时将中止批处理。 检查*pnRowsProcessed*成功复制的行数参数。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数将用户文件到数据库表或者反之亦然中的数据复制的值根据*eDirection*中的参数[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
  之前调用**bcp_exec**，调用**bcp_init**具有有效的用户文件名称。 如果没有这样做，会导致错误。  
@@ -117,7 +115,7 @@ printf_s("%ld rows processed.\n", nRowsProcessed);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

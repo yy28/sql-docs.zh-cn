@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -18,12 +16,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47b65436fe95ad28494b8334eaa4656aad6b2bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8758f1e7c680af9d546ba2b9894304388a01e46d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919792"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696914"
 ---
 # <a name="context-connections-vs-regular-connections"></a>上下文连接 vs。常规连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.locfileid: "32919792"
   
  在某些情况下，您可能需要与同一台服务器之间建立单独的常规连接。 例如，有一些上使用上下文连接中, 所述的限制[对常规和上下文连接限制](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [上下文连接](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

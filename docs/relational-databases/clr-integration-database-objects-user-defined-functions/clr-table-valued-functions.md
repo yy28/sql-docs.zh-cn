@@ -3,11 +3,9 @@ title: CLR 表值函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -23,12 +21,12 @@ caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f1881b43a716c8c6d6573338a27d7e93d919ada
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f6d19c3647cb38c7174f87c685fb3abb1d4f709
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921612"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696098"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ ms.locfileid: "32921612"
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集中将表值函数作为类的方法实现。 表值函数代码必须实现**IEnumerable**接口。 **IEnumerable**接口在.NET Framework 中定义。 类型表示数组和.NET Framework 中的集合已实现**IEnumerable**接口。 这样，就可以轻松地编写将集合或数组转换为结果集的表值函数。  
   
 ## <a name="table-valued-parameters"></a>表值参数  
- 表值参数即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 表值参数提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 表值参数还有助于减少到服务器的往返次数。 可以将数据作为表值参数发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关表值参数的详细信息，请参阅[使用表值参数 & #40; 数据库引擎 & #41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 表值参数即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 表值参数提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 表值参数还有助于减少到服务器的往返次数。 可以将数据作为表值参数发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关表值参数的详细信息，请参阅[使用表值参数（数据引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>输出参数和表值函数  
  通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 你必须指定参数的引用并将应用\<out （) > 属性以表示输出参数，如以下所示：  

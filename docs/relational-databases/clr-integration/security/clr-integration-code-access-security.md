@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -22,12 +20,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b71c017161b2f696872c6d2dd2ba7843a474bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc9d9c90e260fe3da8640189a8a16af15b984769
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931242"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702928"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,14 +112,14 @@ ms.locfileid: "32931242"
 ||**安全**|**EXTERNAL_ACCESS**|**不安全**|  
 |**代码访问安全性权限**|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
 |**编程模型限制**|是|是|无限制|  
-|**可验证性要求**|是|用户帐户控制|否|  
-|**本地数据访问**|是|用户帐户控制|是|  
-|**调用本机代码的能力**|否|“否”|是|  
+|**可验证性要求**|是|是|“否”|  
+|**本地数据访问**|是|是|是|  
+|**调用本机代码的能力**|“否”|否|是|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR 集成安全性](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [宿主保护特性和 CLR 集成编程](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [CLR 集成编程模型限制](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [CLR 托管的环境](../../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)  
+ [CLR 托管环境](../../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)  
   
   

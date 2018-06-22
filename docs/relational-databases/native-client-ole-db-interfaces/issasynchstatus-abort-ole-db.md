@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf05d99617114059dac55794b68ca7bf2222ca4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0262e1ffee1998fe661e7f6f950c05159fc695dd
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948952"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698210"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,12 +76,12 @@ HRESULT Abort(
   
  **ISSAsynchStatus::Abort**已以异步方式取消其初始化阶段中的行集调用的。 该行集处于僵停状态。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  正在中止行集或数据源对象的初始化可能导致行集或数据源对象处于僵停状态，以便以外的其他所有方法**IUnknown**方法返回 E_UNEXPECTED。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
   
  调用**ISSAsynchStatus::Abort**和传递一个值*eOperation*之外 DBASYNCHOP_OPEN 返回，则为 S_OK。 这并不意味着操作已完成或取消。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行异步操作](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

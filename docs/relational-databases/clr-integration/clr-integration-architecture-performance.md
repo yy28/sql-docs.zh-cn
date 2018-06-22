@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,12 +17,12 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 937a8ad81b3c2b03291c8032ece6af71cb82f360
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921954"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702998"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 集成体系结构的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +81,7 @@ ms.locfileid: "32921954"
 ### <a name="scalable-memory-usage"></a>可扩展内存使用量  
  为了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中很好地执行和调整托管垃圾回收，请避免使用大型单一分配。 大小大于 88 千字节 (KB) 的分配将被放置到大对象堆，这将导致垃圾回收的性能和调整结果远不如多个较小分配的性能和调整结果。 例如，如果需要分配一个大型多维数组，最好分配一个交错（分散）数组。  
   
-## <a name="see-also"></a>另请参阅  
- [CLR 用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>请参阅  
+ [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

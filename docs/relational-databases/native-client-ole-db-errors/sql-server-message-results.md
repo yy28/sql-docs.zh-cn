@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c4c89ed33c18e18fe445ee831881539ec8baf9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1331a8493b258027eb477f838d3ccbdca8dd940
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944292"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699908"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 消息结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,9 +45,9 @@ ms.locfileid: "32944292"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回，则为 S_OK 并具有一个或多个信息性消息之后执行的许多提供[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或使用者执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序成员函数。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用者允许的查询文本的动态指定应返回代码，是否存在返回的每个成员函数执行无论值后检查错误接口**IRowset**或**IMultipleResults**接口引用或受影响的行的计数。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用者允许的查询文本的动态规范应在每个成员函数执行无论值的返回代码，是否存在返回之后检查错误接口**IRowset**或**IMultipleResults**接口引用或受影响的行的计数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   
