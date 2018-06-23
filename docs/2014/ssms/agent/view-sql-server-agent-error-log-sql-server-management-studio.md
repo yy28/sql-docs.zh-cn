@@ -1,0 +1,123 @@
+---
+title: 查看 SQL Server 代理错误日志 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], SQL Server Agent
+- viewing SQL Server Agent error logs
+- displaying SQL Server Agent error logs
+- SQL Server Agent, errors
+- errors [SQL Server Agent]
+ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
+caps.latest.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: dd4c08c58ca005563aaeea764a044026b8062508
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36127216"
+---
+# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+  本主题介绍如何使用  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代理错误日志。  
+  
+ 日志文件查看器显示来自许多不同组件的日志信息。 打开日志文件查看器后，请使用 **“选择日志”** 窗格选择要显示的日志。 每个日志显示适合于该类别日志的列。 日志是否可用取决于日志文件查看器的打开方式。  
+  
+ **本主题内容**  
+  
+-   **开始之前：**  
+  
+     [限制和局限](#Restrictions)  
+  
+     [Security](#Security)  
+  
+-   [使用 SQL Server Management Studio 查看 SQL Server 代理错误日志](#SSMSProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> 开始之前  
+  
+###  <a name="Restrictions"></a> 限制和局限  
+ “对象资源管理器”仅在您拥有使用权限时才显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理节点。  
+  
+###  <a name="Security"></a> 安全性  
+  
+####  <a name="Permissions"></a> Permissions  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  
+  
+-   以服务身份登录 (SeServiceLogonRight)  
+  
+-   替换进程级别标记 (SeAssignPrimaryTokenPrivilege)  
+  
+-   跳过遍历检查 (SeChangeNotifyPrivilege)  
+  
+-   调整进程的内存配额 (SeIncreaseQuotaPrivilege)  
+  
+ 有关所需的 Windows 权限的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户，请参阅[为 SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  
+#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志  
+  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要查看的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
+  
+2.  单击加号以展开 **“SQL Server 代理”**。  
+  
+3.  单击加号以展开 **“错误日志”** 文件夹。  
+  
+4.  右键单击要查看的错误日志，并选择“查看代理日志”。  
+  
+     “日志文件查看器 - server_name”对话框中提供以下选项：  
+  
+     **加载日志**  
+     打开一个对话框，您可以在其中指定要加载的日志文件。  
+  
+     **导出**  
+     打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
+  
+     **“刷新”**  
+     刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
+  
+     **筛选**  
+     打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接” 、“日期” 或其他“常规”  筛选条件。  
+  
+     **搜索**  
+     在日志文件中搜索特定文本。 不支持在搜索中使用通配符。  
+  
+     **停止**  
+     停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
+  
+     **日志文件摘要**  
+     此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”**。 如果对日志应用了筛选器，你将看到以下文本：**“基于以下条件筛选日志条目:**  \<筛选条件>”。  
+  
+     **所选行详细信息**  
+     选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
+  
+     **实例**  
+     发生事件的实例的名称。 这显示为：计算机名称\\实例名称。  
+  
+     **Date**  
+     显示事件的日期。  
+  
+     **数据源**  
+     显示从其创建事件的源功能，例如服务的名称（如 MSSQLSERVER）。 并非对所有日志类型都显示此项。  
+  
+     **Message**  
+     显示与事件相关联的任何消息。  
+  
+     **日志类型**  
+     显示事件所属的日志类型。 所有选定的日志都显示在日志文件摘要窗口中。  
+  
+     **日志源**  
+     显示在其中捕获事件的源日志的说明。  
+  
+5.  完成后，单击“关闭”。  
+  
+  

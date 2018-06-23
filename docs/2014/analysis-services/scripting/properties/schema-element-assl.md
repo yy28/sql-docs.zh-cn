@@ -1,0 +1,72 @@
+---
+title: 架构元素 (ASSL) |Microsoft 文档
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- Schema Element
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+f1_keywords:
+- Schema
+helpviewer_keywords:
+- Schema element
+ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
+caps.latest.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 130d1363a007fb51db3bc7b39efcae4d9140c368
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36029123"
+---
+# <a name="schema-element-assl"></a>Schema 元素 (ASSL)
+  包含数据源视图的架构。  
+  
+## <a name="syntax"></a>语法  
+  
+```xml  
+  
+<DataSourceView>  
+   ...  
+   <Schema>...</Schema>  
+   ...  
+</DataSourceView>  
+```  
+  
+## <a name="element-characteristics"></a>元素特征  
+  
+|特征|Description|  
+|--------------------|-----------------|  
+|数据类型和长度|架构|  
+|默认值|InclusionThresholdSetting|  
+|基数|1-1：出现一次且仅出现一次的必需元素。|  
+  
+## <a name="element-relationships"></a>元素关系  
+  
+|关系|元素|  
+|------------------|-------------|  
+|父元素|[DataSourceView](../objects/datasourceview-element-assl.md)|  
+|子元素|InclusionThresholdSetting|  
+  
+## <a name="remarks"></a>Remarks  
+ `Schema` 是通过使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 中 DataSet 的 XML 架构定义 (XSD) 语言格式、以及 DataSet 的某些扩展和数据定义语言 (DDL) 中的特定于此用法的其他扩展来表示的。 DataSet 可定义从 XSD 到关系架构的灵活映射，然后以更为规范化的格式返回 XSD。 只有此规范化的格式在数据源中才有效。  
+  
+ 对应于的父元素`Schema`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DataSourceView>。  
+  
+## <a name="see-also"></a>请参阅  
+ [属性&#40;ASSL&#41;](properties-assl.md)  
+  
+  
