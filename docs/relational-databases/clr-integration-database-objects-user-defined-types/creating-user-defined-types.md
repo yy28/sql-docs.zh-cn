@@ -3,11 +3,9 @@ title: 创建用户定义类型 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,12 +18,12 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 86a719023090aecee9a92fea8b772ed092a2111e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920792"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702608"
 ---
 # <a name="creating-user-defined-types"></a>创建用户定义的类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +36,11 @@ sp_configure 'clr enabled', 1
 Reconfigure  
 ```  
   
-## <a name="in-this-section"></a>本節內容  
- [用户定义的类型要求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
+## <a name="in-this-section"></a>本节内容  
+ [用户定义类型要求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  说明编写用户定义类型代码的要求。  
   
- [编写用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
+ [用户定义类型编码](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
  演示在创建用户定义类型的过程中涉及的编码方法。  
   
 ## <a name="example"></a>示例  
@@ -336,7 +334,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [CLR 用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>请参阅  
+ [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

@@ -1,0 +1,68 @@
+---
+title: 撤消签出 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- VisualStudio.SourcControl.UndoCheckDialog
+helpviewer_keywords:
+- checking out files
+- checkout source controls [SQL Server]
+- undoing checkouts
+ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
+caps.latest.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 84fe5f531edfa8f122dea1b021aa4534b7c2a1f6
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36015093"
+---
+# <a name="undo-checkouts"></a>撤消签出
+  你可以使用**撤消签出**命令以取消现有签出。 如果您修改并保存了文件，但事后需要回滚所做的更改，此命令尤其有用。  
+  
+ 你在根据的选项中设置**撤消签出高级选项**对话框中，Studio 环境是在您的本地磁盘上离开工作中的项的副本或替换受源代码管理的最新版本。 如果有人在源代码管理系统环境以外更改了项，那么检索到的版本就可能不是最新版本。  
+  
+### <a name="to-undo-a-checkout"></a>若要撤消签出  
+  
+1.  在解决方案资源管理器中，选择项目。  
+  
+2.  上**文件**菜单上，指向**源代码管理**，然后单击**撤消签出**。  
+  
+3.  在**撤消签出**对话框中，选择相应的选项，，然后单击**撤消签出**按钮。  
+  
+     **“列”**  
+     标识要显示的列及其显示顺序。  
+  
+     **平面视图**  
+     将项在其源代码管理连接下显示为平面列表。  
+  
+     **名称**  
+     显示要撤消签出的项的名称。 所显示项旁边的复选框处于选中状态。 如果不想撤消对某项的签出，请清除其复选框。  
+  
+     **选项**  
+     单击按钮右侧的箭头时，显示源代码管理插件特定的撤消签出选项。  
+  
+     **Sort**  
+     对显示列进行排序。  
+  
+     **树视图**  
+     显示要撤消签出的项的文件夹和项层次结构。  
+  
+     **撤消签出**  
+     撤消签出，放弃对已签出文件所做的任何更改。  
+  
+## <a name="see-also"></a>请参阅  
+ [签出文件](../../2014/database-engine/check-out-files.md)   
+ [管理签出](../../2014/database-engine/manage-checkouts.md)  
+  
+  

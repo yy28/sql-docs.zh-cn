@@ -1,0 +1,285 @@
+---
+title: 设置 SQL Server Managed Backup to Windows Azure |Microsoft 文档
+ms.custom: ''
+ms.date: 08/04/2016
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
+caps.latest.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 43a7ffba55ccae49ae83360b833184fe0908a41f
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36014098"
+---
+# <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>设置 SQL Server 托管备份到 Windows Azure
+  本主题包括两个教程：  
+  
+ 在数据库级别设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]、启用电子邮件通知和监视备份活动。  
+  
+ 在实例级别设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]、启用电子邮件通知和监视备份活动。  
+  
+ 有关设置的教程[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可用性组，请参阅[为可用性组设置 SQL Server Managed Backup to Microsoft Azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)。  
+  
+## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+  
+### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-a-database"></a>启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]数据库  
+ 本教程首先介绍为数据库 (TestDB) 启用和配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所需的步骤，然后介绍允许监视 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]运行状况的步骤。  
+  
+ **权限：**  
+  
+-   要求的成员身份**db_backupoperator**与数据库角色， **ALTER ANY CREDENTIAL**权限，和`EXECUTE`权限**sp_delete_backuphistory**存储过程。  
+  
+-   需要**选择**权限**smart_admin.fn_get_current_xevent_settings**函数。  
+  
+-   需要`EXECUTE`权限**smart_admin.sp_get_backup_diagnostics**存储过程。 此外，它还需要 `VIEW SERVER STATE` 权限，因为它在内部调用其他需要此权限的系统对象。  
+  
+-   需要`EXECUTE`权限`smart_admin.sp_set_instance_backup`和`smart_admin.sp_backup_master_switch`存储过程。  
+
+
+1.  **创建 Microsoft Azure 存储帐户：** 备份存储在 Microsoft Azure 存储服务。 如果你还没有帐户，首先必须创建 Microsoft Azure 存储帐户。
+    - SQL Server 2014 使用页 blob，也不能不同于块追加 blob。 因此你必须创建一个通用帐户，而非 blob 帐户。 有关详细信息，请参阅[关于 Azure 存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。
+    - 请记录存储帐户名称和访问密钥。 存储帐户名称和访问密钥用于创建 SQL 凭据。 SQL 凭据用于对存储帐户进行身份验证。  
+ 
+2.  **创建 SQL 凭据：** 创建 SQL 凭据使用的存储帐户的名称作为标识和存储访问密钥作为密码。  
+  
+3.  **确保 SQL Server 代理服务是否已启动并运行：** 如果当前未运行 SQL Server 代理。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
+  
+4.  **确定保持期：** 确定备份文件的保持期。 以天为单位指定保持期，范围可为 1 到 30。  
+  
+5.  **启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** 启动 SQL Server Management Studio 并连接到安装了数据库的实例。 在根据要求修改数据库名称、SQL 凭据、保持期和加密选项的值后，从查询窗口中运行以下语句：  
+  
+     有关创建加密证书的详细信息，请参阅**创建备份证书**中步骤[Create an Encrypted Backup](create-an-encrypted-backup.md)。  
+  
+    ```  
+    Use msdb;  
+    GO  
+    EXEC smart_admin.sp_set_db_backup   
+                    @database_name='TestDB'   
+                    ,@retention_days=30   
+                    ,@credential_name='MyCredential'  
+                    ,@encryption_algorithm ='AES_128'  
+                    ,@encryptor_type= 'Certificate'  
+                    ,@encryptor_name='MyBackupCert'  
+                    ,@enable_backup=1;  
+    GO  
+  
+    ```  
+  
+     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 数据库上的备份操作最多可能需要 15 分钟才能运行。  
+  
+6.  **检查扩展事件默认配置：** 通过运行以下 transact-SQL 语句，检查扩展事件配置。  
+  
+    ```  
+    SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
+    ```  
+  
+     应看到默认情况下启用管理、操作和分析通道事件，且无法禁用这些事件。 这对于需要手动干预的事件来说应当已经足够。  您可以启用调试事件，但是调试通道包含 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 用来检测问题和解决问题的信息性事件和调试事件。 有关详细信息，请参阅[监视器 SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
+  
+7.  **启用和配置运行状况的通知：**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 有一个存储过程，它创建代理作业以发出可能需要注意的错误或警告的电子邮件通知。 以下步骤说明了启用和配置电子邮件通知的过程：  
+  
+    1.  如果尚未在此实例上启用数据库邮件，请进行设置。 有关详细信息，请参阅 [Configure Database Mail](../database-mail/configure-database-mail.md)。  
+  
+    2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
+  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 Transact-SQL 语句：  
+  
+        ```  
+        EXEC msdb.smart_admin.sp_set_parameter  
+        @parameter_name = 'SSMBackup2WANotificationEmailIds',  
+        @parameter_value = '<email1;email2>'  
+  
+        ```  
+  
+         有关完整示例脚本和详细信息，请参阅[监视器 SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
+  
+8.  **在 Microsoft Azure 存储帐户中查看备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户中连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库。 您也会在为数据库启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 15 分钟内，看到数据库和日志备份。  
+  
+9. **监视运行状态：**  你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+  
+    ```  
+    --  view all admin events  
+    Use msdb;  
+    Go  
+    DECLARE @startofweek datetime  
+    DECLARE @endofweek datetime  
+    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
+    SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
+  
+    DECLARE @eventresult TABLE  
+    (event_type nvarchar(512),  
+    event nvarchar (512),  
+    timestamp datetime  
+    )  
+  
+    INSERT INTO @eventresult  
+  
+    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek  
+  
+    SELECT * from @eventresult  
+    WHERE event_type LIKE '%admin%'  
+  
+    ```  
+  
+    ```  
+    -- to enable debug events  
+    Use msdb;  
+    Go  
+             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
+  
+    ```  
+  
+    ```  
+    --  View all events in the current week  
+    Use msdb;  
+    Go  
+    DECLARE @startofweek datetime  
+    DECLARE @endofweek datetime  
+    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
+    SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
+  
+    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
+  
+    ```  
+  
+ 本节中描述的步骤是专门用于在数据库上首次配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 你可以修改使用相同的系统存储过程的现有配置**smart_admin.sp_set_db_backup** ，提供新值。 有关详细信息，请参阅[SQL Server Managed Backup to Microsoft Azure-保持和存储设置](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  
+  
+### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>使用默认设置为实例启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+ 本教程介绍的步骤来启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]对于实例，MyInstance\\。 其中包括允许监视 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 运行状况的步骤。  
+  
+ **权限：**  
+  
+-   要求的成员身份**db_backupoperator**与数据库角色， **ALTER ANY CREDENTIAL**权限，和`EXECUTE`权限**sp_delete_backuphistory**存储过程。  
+  
+-   需要**选择**权限**smart_admin.fn_get_current_xevent_settings**函数。  
+  
+-   需要`EXECUTE`权限**smart_admin.sp_get_backup_diagnostics**存储过程。 此外，它还需要 `VIEW SERVER STATE` 权限，因为它在内部调用其他需要此权限的系统对象。  
+
+
+1.  **创建 Microsoft Azure 存储帐户：** 备份存储在 Microsoft Azure 存储服务。 如果你还没有帐户，首先必须创建 Microsoft Azure 存储帐户。
+    - SQL Server 2014 使用页 blob，也不能不同于块追加 blob。 因此你必须创建一个通用帐户，而非 blob 帐户。 有关详细信息，请参阅[关于 Azure 存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。
+    - 请记录存储帐户名称和访问密钥。 存储帐户名称和访问密钥用于创建 SQL 凭据。 SQL 凭据用于对存储帐户进行身份验证。  
+  
+2.  **创建 SQL 凭据：** 创建 SQL 凭据使用的存储帐户的名称作为标识和存储访问密钥作为密码。  
+  
+3.  **确保 SQL Server 代理服务启动且正在运行：** 如果当前未运行 SQL Server 代理，则启动它。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
+  
+4.  **确定保持期：** 确定备份文件的保持期。 以天为单位指定保持期，范围可为 1 到 30。 在实例级别使用默认值启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 后，此后创建的所有新数据库将继承这些设置。 只会支持和自动配置设置为完整或大容量日志恢复模式的数据库。 如果您不想配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，您可以随时为特定数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 还可通过在数据库级别配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，更改特定数据库的配置。  
+  
+5.  **启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** 启动 SQL Server Management Studio 并连接到 SQL Server 的实例。 在根据要求修改数据库名称、 SQL 凭据、 保持期和加密选项的值后，请从查询窗口运行以下语句：  
+  
+     有关创建加密证书的详细信息，请参阅**创建备份证书**中步骤[Create an Encrypted Backup](create-an-encrypted-backup.md)。  
+  
+    ```  
+    Use msdb;  
+    Go  
+       EXEC smart_admin.sp_set_instance_backup  
+                     @enable_backup=1  
+                    ,@retention_days=30   
+                    ,@credential_name='sqlbackuptoURL'  
+                    ,@encryption_algorithm ='AES_128'  
+                    ,@encryptor_type= 'Certificate'  
+                    ,@encryptor_name='MyBackupCert';  
+    GO  
+  
+    ```  
+  
+     现在，已对实例启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+  
+6.  通过运行以下 Transact-SQL 语句验证配置设置：  
+  
+    ```  
+    Use msdb;  
+    GO  
+    SELECT * FROM smart_admin.fn_backup_instance_config ();  
+  
+    ```  
+  
+7.  在实例上创建新数据库。 运行以下 Transact-SQL 语句，查看数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置：  
+  
+    ```  
+    Use msdb  
+    GO  
+    SELECT * FROM smart_admin.fn_backup_db_config('NewDB')  
+    ```  
+  
+     最多可能需要 15 分钟才能显示设置，并开始运行数据库的备份操作。  
+  
+8.  **启用和配置运行状况的通知：**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 有一个存储过程，它创建代理作业以发出可能需要注意的错误或警告的电子邮件通知。  若要接收此类通知，必须允许运行这个创建 SQL Server 代理作业的存储过程。 以下步骤说明了启用和配置电子邮件通知的过程：  
+  
+    1.  如果尚未在此实例上启用数据库邮件，请进行设置。 有关详细信息，请参阅 [Configure Database Mail](../database-mail/configure-database-mail.md)。  
+  
+    2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
+  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 Transact-SQL 语句：  
+  
+        ```  
+        EXEC msdb.smart_admin.sp_set_parameter  
+        @parameter_name = 'SSMBackup2WANotificationEmailIds',  
+        @parameter_value = '<email address>'  
+  
+        ```  
+  
+         有关如何监视，以及完整的示例脚本的详细信息请参阅[监视器 SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
+  
+9. **在 Microsoft Azure 存储帐户中查看备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户中连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库。 您也会在创建新数据库 15 分钟内，看到数据库和日志备份。  
+  
+10. **监视运行状态：**  你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+  
+    ```  
+    --  view all admin events  
+    Use msdb;  
+    Go  
+    DECLARE @startofweek datetime  
+    DECLARE @endofweek datetime  
+    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
+    SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
+  
+    DECLARE @eventresult TABLE  
+    (event_type nvarchar(512),  
+    event nvarchar (512),  
+    timestamp datetime  
+    )  
+  
+    INSERT INTO @eventresult  
+  
+    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek  
+  
+    SELECT * from @eventresult  
+    WHERE event_type LIKE '%admin%'  
+  
+    ```  
+  
+    ```  
+    --  to enable debug events  
+    Use msdb;  
+    Go  
+             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
+  
+    ```  
+  
+    ```  
+    --  View all events in the current week  
+    Use msdb;  
+    Go  
+    DECLARE @startofweek datetime  
+    DECLARE @endofweek datetime  
+    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
+    SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
+  
+    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
+  
+    ```  
+  
+ 可通过专门在数据库级别配置设置，在特定数据库中取代 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认设置。 您还可以临时暂停和继续运行 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服务。 有关详细信息，请参阅[SQL Server Managed Backup to Microsoft Azure-保持和存储设置](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
+  
+  
