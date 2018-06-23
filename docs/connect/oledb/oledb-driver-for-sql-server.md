@@ -1,11 +1,11 @@
 ---
-title: 用于 SQL Server 的 OLE DB 驱动程序 |Microsoft 文档
-description: 用于 SQL Server 的 OLE DB 驱动程序
+title: SQL Server 的 Microsoft OLE DB 驱动程序 |Microsoft 文档
+description: 适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: OLE DB Driver
+ms.component: oledb
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,15 +22,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7aef3dc362cfd83d1767f759b30cddde263d319f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fba5146cd663c2d7c312bb6a5c689162c1489ac
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859452"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36240819"
 ---
-# <a name="ole-db-driver-for-sql-server"></a>用于 SQL Server 的 OLE DB 驱动程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -67,7 +67,7 @@ OLE DB 已[undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/1
 > [!NOTE]
 > 若要使用适用于 SQL Server 的新 Microsoft OLE DB 驱动程序，在现有应用程序中，你应计划将你的连接字符串从 SQLOLEDB 或 SQLNCLI，转换为 MSOLEDBSQL。
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 [何时使用适用于 SQL Server 的 OLE DB 驱动程序](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  讨论如何 OLE DB 驱动程序的 SQL Server 适应 Microsoft 数据访问技术，如何它将与 Windows DAC 和 ADO.NET，进行比较并提供数据访问技术，可使用指针来确定。  
   
@@ -89,7 +89,7 @@ OLE DB 已[undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/1
  对于 SQL Server，包括外部资源的链接和获取进一步帮助提供有关 OLE DB 驱动程序的其他资源。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [更新应用程序从 SQL Server 2005 的本机客户端](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
  [OLE DB 操作指南主题](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

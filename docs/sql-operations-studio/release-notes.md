@@ -2,7 +2,7 @@
 title: Microsoft SQL 操作 Studio （预览版） 发行说明 |Microsoft 文档
 description: Microsoft SQL 操作 Studio （预览版） 发行说明
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34473821"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271008"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio （预览版） 发行说明
 
-**[下载可能公共预览版](download.md)**
+**[下载年 6 月公共预览版](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>年 6 月 2018 （年 6 月公共预览版）
+
+发布日期： 2018 年 6 月 20，  
+版本： 0.30.6
+
+*年 6 月公共预览版*包含如下要点：  
+
+- **SQL Server 事件探查器 SQL 操作 studio*预览*** 扩展初始版本。
+- 新**SQL 数据仓库**扩展包含丰富的可自定义仪表板小组件到数据仓库提供见解。 这将解锁围绕管理和优化您的数据仓库以确保它非常适合一致性能的关键方案。
+- **编辑数据"筛选和排序"** 支持。
+- **SQL 操作 Studio 的 SQL Server 代理*预览*** 扩展增强功能的作业和作业历史记录视图。
+- 改进了**向导和对话框的 UI 生成器框架**扩展性 Api。
+- 更新 VS 代码平台源代码集成[年 3 月 2018 (1.22)](https://code.visualstudio.com/updates/v1_22)和[年 4 月 2018 (1.23)](https://code.visualstudio.com/updates/v1_23)释放。
+- 修复 GitHub 问题：
+  - 功能请求 ([发出 1204年](https://github.com/Microsoft/sqlopsstudio/issues/1204)): 请到数据，使结果网格中自动调整列宽和/或重新运行相同的查询是否记住手动更改。
+  - 修复[发出 1398年](https://github.com/Microsoft/sqlopsstudio/issues/1398)： 应显示添加消息和空链接的帐户时添加帐户帐户按钮。
+  - 修复[发出 1399年](https://github.com/Microsoft/sqlopsstudio/issues/1399)： 折叠视图时，链接的帐户选项卡已中断。
+  - 修复[发出 1374年](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL 工具服务崩溃时从磁盘中打开.sql 文件。
+  - 修复[发出 1372年](https://github.com/Microsoft/sqlopsstudio/issues/1372)： 缺少 SQL 关键字"BETWEEN"。
+  - 修复[发出 1395年](https://github.com/Microsoft/sqlopsstudio/issues/1395): 匹配关键字崩溃 SQL 工具服务。
+  - 修复[发出 1496年](https://github.com/Microsoft/sqlopsstudio/issues/1496)： 在对象资源管理器的"新探查器"上下文菜单选项不执行任何操作。
+  - 修复[发出 1495年](https://github.com/Microsoft/sqlopsstudio/issues/1495)： 查询编辑器"说明"查询计划已中断。
+
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
 
 
 ## <a name="may-2018-may-public-preview"></a>5 月 2018年 （可能公共预览版）
@@ -47,8 +74,6 @@ ms.locfileid: "34473821"
    - 修复[发出 1215年](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL 代理扩展和状态栏
    - 修复[发出 1316年](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL 代理不再调整大小后更改 windows 大小
 
-
-有关详细信息，请参阅[更改日志](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
 
 
 
