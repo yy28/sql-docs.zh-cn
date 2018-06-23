@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ab8eec0f1eabc796a4acac57abd0af86d8c1982
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 510e3fdfe1922016e7491f34b23f1f7d67f0d311
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949032"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697828"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "32949032"
 
   一直等待，直到异步执行的操作完成或发生超时。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -61,9 +59,9 @@ HRESULT WaitForAsynchCompletion(
  此操作尚未完成，即使已达到指定的超时值。  
   
 > [!NOTE]  
->  除了上面列出的返回代码值**ISSAsynchStatus::WaitForAsynchCompletion**方法还支持核心 OLEDB 返回的返回代码值**ICommand::Execute**和**idbinitialize:: Initialize**方法。  
+>  除了上面列出的返回代码值**ISSAsynchStatus::WaitForAsynchCompletion**方法还支持核心 OLEDB 返回的返回代码值**ICommand::Execute**和**Idbinitialize:: Initialize**方法。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::WaitForAsynchCompletion**方法不会返回之前经过的超时值 （以毫秒为单位） 或完成挂起的操作。 **命令**对象具有**CommandTimeout**属性，用于控制的秒数在超时前将运行查询。**CommandTimeout**属性将被忽略，如果与结合使用**ISSAsynchStatus::WaitForAsynchCompletion**方法。  
   
  对于异步操作，将忽略超时属性。 超时参数**ISSAsynchStatus::WaitForAsynchCompletion**指定的最大控制权返回给调用方之前将等待的时间量。 如果此超时值已到期，将返回 DB_S_ASYNCHRONOUS。 超时从不会取消异步操作。 如果应用程序需要取消在超时期限内未完成的异步操作，则它必须等待发生超时，然后，如果返回 DB_S_ASYNCHRONOUS，则显式取消此操作。  
@@ -77,8 +75,8 @@ HRESULT WaitForAsynchCompletion(
   
  此外，SSPROP_ISSAsynchStatus 属性已添加到 DBPROPSET_SQLSERVERROWSET 属性集。 支持的提供程序[ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)接口必须实现此属性与值为 VARIANT_TRUE。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行异步操作](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

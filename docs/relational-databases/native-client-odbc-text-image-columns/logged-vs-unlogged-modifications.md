@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-text-image-columns
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 010eebfd8c47ad288586f27a8f161164b2ac6b60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 318a2a82d76cf427973e3ba5f1ca467960089328
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945202"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701618"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>记录的 vs。Unlogged 的修改
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "32945202"
   
  日志记录**文本**， **ntext**，和**映像**修改控制通过调用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)与*属性*参数设置为 SQL_SOPT_SS_ TEXTPTR_LOGGING 和*ValuePtr*设置为 SQL_TL_ON 或 SQL_TL_OFF。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理 Text 和 Image 列](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
   

@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b86145c43b072361b20d1e7e8869091689fb831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdc3bbde51b9655f2eac3d050d6b3ad0368e69bf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946572"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694828"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>表值参数构成列的描述符字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.locfileid: "32946572"
 
   在本部分中所述的表值参数描述符字段操作使用[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)和[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)与实现参数描述符 （的句柄IPD)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SQL_DESC_AUTO_UNIQUE_VALUE 用于表值参数以及其他功能。  
   
 |属性名称|类型|Description|  
@@ -52,7 +50,7 @@ ms.locfileid: "32946572"
   
  如果为表值参数列设置了 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，则该列的 SQL_DESC_DATA_PTR 必须为 Null 指针。 否则，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE 生成诊断记录 = 07S01 和消息"参数不允许使用默认参数\<p >，列\<c >"，其中\<p > 是的参数序号和\<c > 是列序号。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

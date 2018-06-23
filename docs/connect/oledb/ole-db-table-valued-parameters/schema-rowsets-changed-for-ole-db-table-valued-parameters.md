@@ -2,9 +2,10 @@
 title: 架构行集更改为 OLE DB 表值参数 |Microsoft 文档
 description: 更改 OLE DB Table-Valued 参数的架构行集
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e58475477bea2a62980bdf9dd0561a2d012a9e62
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 6eb387969549f0ed72e3635a80fcd6db34852c10
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306636"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689830"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>为 OLE DB 表值参数更改的架构行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   以下为已更改或添加以支持表值参数的架构行集。  
   

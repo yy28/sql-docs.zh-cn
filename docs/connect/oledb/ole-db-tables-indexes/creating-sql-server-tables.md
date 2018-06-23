@@ -2,9 +2,10 @@
 title: 创建 SQL Server 表 |Microsoft 文档
 description: 创建使用 SQL Server 的 OLE DB 驱动程序的 SQL Server 表
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d9c2e60b177a38e684eb92c1b406e091b575d675
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306776"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689590"
 ---
 # <a name="creating-sql-server-tables"></a>创建 SQL Server 表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序公开**ITableDefinition::CreateTable**函数，允许使用者创建[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。 使用者使用**CreateTable**若要创建具有用于 SQL Server 生成的 OLE DB 驱动程序的唯一名称的使用者名称永久表和永久或临时表。  
   
@@ -62,7 +65,7 @@ ms.locfileid: "35306776"
 |DBPROP_COL_DESCRIPTION|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： DBPROP_COL_DESCRIPTION 列属性不通过 OLE DB 驱动程序会为实现 SQL Server。<br /><br /> *DwStatus*需要的 DBPROP 结构中的成员返回 DBPROPSTATUS_NOTSUPPORTED 时使用者都尝试写入属性值。<br /><br /> 设置属性，不会导致错误的 OLE DB 驱动程序的 SQL Server。 如果所有其他参数值有效，则创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。|  
 |DBPROP_COL_FIXEDLENGTH|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 描述： SQL Server 的 OLE DB 驱动程序使用 DBPROP_COL_FIXEDLENGTH 以确定何时使用者通过使用来定义列的数据类型的数据类型映射*wType* DBCOLUMNDESC 的成员。 有关详细信息，请参阅[Data Type Mapping 中 ITableDefinition](../../oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md)。|  
 |DBPROP_COL_NULLABLE|读/写： 读/写<br /><br /> 默认值： 无<br /><br /> 描述： 在创建表时，SQL Server 的 OLE DB 驱动程序指示是否在设置该属性列是否应接受 null 值。 如果未设置此属性，则该列能否接受 NULL 作为值将由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ANSI_NULLS 默认数据库选项确定。<br /><br /> SQL Server 的 OLE DB 驱动程序是符合 ISO 标准的提供程序。 所连接的会话展现 ISO 行为。 如果使用者未设置 DBPROP_COL_NULLABLE，则列接受 NULL 值。|  
-|DBPROP_COL_PRIMARYKEY|读/写： 读/写<br /><br /> 默认值： VARIANT_FALSE 说明： 当 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序将在列创建 PRIMARY KEY 约束。<br /><br /> 当定义为列属性时，仅单一列能够确定约束。 VARIANT_TRUE 将属性设置的时间超过单个列返回错误，当 SQL Server 的 OLE DB 驱动程序尝试创建[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。<br /><br /> 注意： 使用者可以使用**IIndexDefinition::CreateIndex**创建两个或多个列的主键约束。<br /><br /> SQL Server 的 OLE DB 驱动程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时与*dwOption* DBPROP_COL_UNIQUE 不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*的 DBPROP_COL_UNIQUE 等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_PRIMARYKEY *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_NULLABLE 这两个 VARIANT_TRUE 时，SQL Server 的 OLE DB 驱动程序将返回错误。<br /><br /> SQL Server 的 OLE DB 驱动程序返回了一个来自错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用者都尝试创建 PRIMARY KEY 约束的无效列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。 无法创建与列上定义 PRIMARY KEY 约束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型**位**，**文本**， **ntext**，和**映像**。|  
+|DBPROP_COL_PRIMARYKEY|读/写： 读/写<br /><br /> 默认值： VARIANT_FALSE 说明： 当 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序将在列创建 PRIMARY KEY 约束。<br /><br /> 当定义为列属性时，仅单一列能够确定约束。 VARIANT_TRUE 将属性设置的时间超过单个列返回错误，当 SQL Server 的 OLE DB 驱动程序尝试创建[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。<br /><br /> 注意： 使用者可以使用**IIndexDefinition::CreateIndex**创建两个或多个列的主键约束。<br /><br /> SQL Server 的 OLE DB 驱动程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时与*dwOption* DBPROP_COL_UNIQUE 不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*的 DBPROP_COL_UNIQUE 等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_PRIMARYKEY *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_NULLABLE 这两个 VARIANT_TRUE 时，SQL Server 的 OLE DB 驱动程序将返回错误。<br /><br /> SQL Server 的 OLE DB 驱动程序返回了一个来自错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用者都尝试创建 PRIMARY KEY 约束的无效列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。 无法创建与列上定义 PRIMARY KEY 约束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型**位**，**文本**， **ntext**，和**映像**.|  
 |DBPROP_COL_UNIQUE|读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE。说明：将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UNIQUE 约束应用于列。<br /><br /> 当定义为列属性时，此约束仅应用于单一列。 使用者可以使用**IIndexDefinition::CreateIndex**将两个或多个列的组合值的唯一约束。<br /><br /> SQL Server 的 OLE DB 驱动程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时和*dwOption*不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_PRIMARYKEY *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> SQL Server 的 OLE DB 驱动程序返回 DB_S_ERRORSOCCURRED DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 均为这两个 VARIANT_TRUE 时和*dwOption*不 DBPROPOPTIONS_REQUIRED。<br /><br /> 当 DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 为这两个 VARIANT_TRUE 返回 DB_E_ERRORSOCCURRED 和*dwOption*等于 DBPROPOPTIONS_REQUIRED。 列定义与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识属性和 DBPROP_COL_NULLABLE *dwStatus*成员设置为 DBPROPSTATUS_CONFLICTING。<br /><br /> SQL Server 的 OLE DB 驱动程序返回了一个来自错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用者都尝试创建唯一约束的无效列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。 无法创建与列上定义唯一约束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**位**数据类型。|  
   
  当使用者调用**ITableDefinition::CreateTable**，SQL Server 的 OLE DB 驱动程序，如下所示解释表属性。  

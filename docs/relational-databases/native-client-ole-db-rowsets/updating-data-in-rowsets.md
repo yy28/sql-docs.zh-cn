@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dc3af8eade42088296a5d5c3a418fc840e0e93ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7aaed0484ff6e89496e344a6cb49d3dfa815324
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949332"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701978"
 ---
 # <a name="updating-data-in-rowsets"></a>更新行集中的数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,13 +42,13 @@ ms.locfileid: "32949332"
 > [!NOTE]  
 >  可使用 IRowChange::SetColumns 设置行对象的一个或多个指定列的值。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [更新 SQL Server 游标中的数据](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md)  
   
--   [重新同步的行](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
+-   [重新同步行](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   
