@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-error-messages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +19,16 @@ helpviewer_keywords:
 - errors [ODBC], diagnostic records
 - fields [ODBC]
 - status information [ODBC]
-ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9dfbebe695b3c85631ba8e3c44d9a8fe404da37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0571217617017eaf370f70a490274f9c89613d46
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946982"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698588"
 ---
 # <a name="diagnostic-records-and-fields"></a>诊断记录和字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +52,7 @@ ms.locfileid: "32946982"
   
  报告的大多数错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序可以有效地使用诊断仅返回的信息**SQLGetDiagRec**。 不过，在有些情况下，特定于驱动程序的诊断字段返回的信息对于诊断错误非常重要。 编码的 ODBC 错误处理程序使用的应用程序时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序，它是一个好办法还使用**SQLGetDiagField**检索至少 SQL_DIAG_SS_MSGSTATE 和 SQL_DIAG_SS_SEVERITY特定于驱动程序的字段。 如果特定错误可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码的多个位置引发，SQL_DIAG_SS_MSGSTATE 会为 Microsoft 支持工程师专门指示错误的引发位置，有时，这有助于诊断问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理错误和消息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

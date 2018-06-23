@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e0b8bdab13a6a937c6e97cec3ece700a685deb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5e54ef357214a3121c1a7ed964c9ee9bf5955b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946062"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703578"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
- *属性*  
+ property  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
@@ -68,14 +66,14 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  bcp_setbulkmode 可以用于大容量复制完查询或表。 当 bcp_setbulkmode 用于大容量复制出的查询语句时，则必须调用与 BCP_HINT bcp_control 之前调用它。  
   
  bcp_setbulkmode 是另一种[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)和[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)，其仅可让您指定的每个函数调用的一个列格式。  
   
  下表列出的常量*属性*参数。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于在 BCP – c 的选项。EXE，以及与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为**SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于在 BCP-w 选项。EXE 和与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为**SQLNCHAR**。|  
@@ -291,7 +289,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

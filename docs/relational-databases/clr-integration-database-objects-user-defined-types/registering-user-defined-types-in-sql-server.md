@@ -3,11 +3,9 @@ title: 在 SQL Server 中注册用户定义的类型 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -38,12 +36,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c008844b49d907eb03e2358327f0f71959495675
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 942f6c1fa0b6888aa936bfd4b557c570529e9894
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922839"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697818"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中注册用户定义类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.locfileid: "32922839"
 5.  从**生成**菜单上，选择**部署**。 这样即可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中注册该程序集并创建该类型。  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>使用 Transact-SQL 部署 UDT  
- 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 语法可以在您希望使用 UDT 的数据库中注册程序集。 该程序集存储在内部的数据库系统表中，而不是存储在外部的文件系统中。 如果 UDT 依赖于外部程序集，则必须将这些程序集也加载到数据库中。 使用 CREATE TYPE 语句可以在要使用 UDT 的数据库中创建该 UDT。 有关详细信息，请参阅[CREATE ASSEMBLY & #40;Transact SQL & #41;](../../t-sql/statements/create-assembly-transact-sql.md)和[创建类型 & #40;Transact SQL & #41;](../../t-sql/statements/create-type-transact-sql.md).  
+ 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 语法可以在您希望使用 UDT 的数据库中注册程序集。 该程序集存储在内部的数据库系统表中，而不是存储在外部的文件系统中。 如果 UDT 依赖于外部程序集，则必须将这些程序集也加载到数据库中。 使用 CREATE TYPE 语句可以在要使用 UDT 的数据库中创建该 UDT。 有关详细信息，请参阅[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md)和[CREATE TYPE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
 ### <a name="using-create-assembly"></a>使用 ASSEMBLY  
  使用 CREATE ASSEMBLY 语法可以在要使用 UDT 的数据库中注册程序集。 经过注册的程序集不具有任何依赖关系。  
@@ -98,7 +96,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  CREATE TYPE 语法也可以用来创建本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]别名数据类型，并且，用于替换**sp_addtype**作为一种创建别名数据类型。 CREATE TYPE 语法中的某些可选参数与创建 UDT 有关，不适用于创建别名数据类型（如基类型）。  
   
- 有关详细信息，请参阅[CREATE TYPE & #40;Transact SQL & #41;](../../t-sql/statements/create-type-transact-sql.md).  
+ 有关详细信息，请参阅[CREATE TYPE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
 #### <a name="example"></a>示例  
  以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**类型。 使用的两部分命名语法指定外部名称*AssemblyName*。*UDTName*。  
@@ -153,7 +151,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  尽管可以更改 UDT 所基于的程序集，但是一旦在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中创建了该 UDT 就无法再修改它。 多数情况下，必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE 语句从数据库中删除 UDT、更改基础程序集，然后使用 ALTER ASSEMBLY 语句重新加载它。 随后还需要重新创建该 UDT 和所有依赖对象。  
   
 ### <a name="example"></a>示例  
- 在更改 UDT 程序集中的源代码并且重新编译该程序集后，可以使用 ALTER ASSEMBLY 语句。 该语句将 .dll 文件复制到服务器，并且重新绑定到新程序集。 有关完整语法，请参阅[ALTER ASSEMBLY & #40;Transact SQL & #41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ 在更改 UDT 程序集中的源代码并且重新编译该程序集后，可以使用 ALTER ASSEMBLY 语句。 该语句将 .dll 文件复制到服务器，并且重新绑定到新程序集。 有关完整语法，请参阅[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 语句从指定的磁盘位置重新加载 Point.dll 程序集。  
   
@@ -221,7 +219,7 @@ SELECT CAST(content AS varchar(8000))
   
  请注意，不需要对其采取任何措施使用 Udt 时[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]创建中的工作表**tempdb**系统数据库。 这包括游标，表变量的处理和用户定义表值函数以透明方式包括 Udt，请使用**tempdb**。 但是，如果你显式创建中的临时表**tempdb**定义 UDT 列，然后必须在注册 UDT **tempdb**用于用户数据库的相同方式。  
   
-## <a name="see-also"></a>另请参阅  
- [CLR 用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>请参阅  
+ [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

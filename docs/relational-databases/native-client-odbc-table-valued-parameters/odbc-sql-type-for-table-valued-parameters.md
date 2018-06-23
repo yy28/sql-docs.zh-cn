@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbf2b434d29033961608494478bc775946226ced
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e24b0995071b81b6ad8ca6a3c627449a22c1a9ca
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944162"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694488"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.locfileid: "32944162"
 
   对表值参数的支持是通过新的 ODBC SQL 类型 SQL_SS_TABLE 提供的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  不能将 SQL_SS_TABLE 转换为任何其他 ODBC 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
  如果作为 C 数据类型中使用 SQL_SS_TABLE *ValueType* SQLBindParameter 或尝试参数对其进行设置 SQL_DESC_TYPE SQL_SS_TABLE 到应用程序参数描述符 (APD) 记录中，返回 SQL_ERROR 和诊断记录将生成带有 SQLSTATE = HY003，"应用程序缓冲区类型无效"。  
@@ -48,7 +46,7 @@ ms.locfileid: "32944162"
   
  表值参数列不能使用在 SQL_DEFAULT_PARAM *StrLen_or_IndPtr*，这是因为使用表值参数不支持每个行的默认值。 应用程序可以改为将 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 列属性设置为 1。 这表示该列的所有行均具有默认值。 如果*StrLen_or_IndPtr*设置到 SQL_DEFAULT_PARAM，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并且诊断记录将添加到与 SQLSTATE 语句 = HY090 和消息"字符串或缓冲区长度无效"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

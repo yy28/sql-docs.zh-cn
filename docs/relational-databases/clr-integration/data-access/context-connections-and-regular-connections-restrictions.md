@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -18,12 +16,12 @@ caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93a08bc27c73db40f1ee388455ce7ffbc7c38557
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 290110b735765da45bca5f5f67bfd764f4abc6dc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920982"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694378"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>上下文连接和正则连接的限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.locfileid: "32920982"
   
 -   **SqlDependency**不支持对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [上下文连接](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

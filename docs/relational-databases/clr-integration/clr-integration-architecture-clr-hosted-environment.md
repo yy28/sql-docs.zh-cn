@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -32,12 +30,12 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922472"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697508"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 集成体系结构-CLR 托管环境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "32922472"
 ###### <a name="security"></a>Security  
  在数据库中运行的用户代码在访问诸如表和列的数据库对象时，必须遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证和授权规则。 此外，数据库管理员应能从在数据库中运行的用户代码控制对操作系统资源的访问，如文件和网络访问。 这对于托管编程语言很重要，因为与诸如 Transact-SQL 之类的非托管语言不同，托管编程语言提供访问这类资源的 API。 系统必须为用户代码提供安全的方法来访问[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程之外的计算机资源。 有关详细信息，请参阅 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
-###### <a name="performance"></a>性能  
+###### <a name="performance"></a>“性能”  
  在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中运行的托管用户代码与在服务器外运行的同一代码相比，应具有同等的计算性能。 从托管用户代码进行数据库访问没有本机 [!INCLUDE[tsql](../../includes/tsql-md.md)] 快。 有关详细信息，请参阅[性能的 CLR 集成](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)。  
   
 ## <a name="clr-services"></a>CLR Services  
@@ -132,8 +130,8 @@ ms.locfileid: "32922472"
 |权限集|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |代码访问安全性|仅执行|执行和访问外部资源|“无限制”|  
 |编程模型限制|是|是|无限制|  
-|可验证性要求|是|用户帐户控制|否|  
-|调用本机代码的能力|否|“否”|是|  
+|可验证性要求|是|是|“否”|  
+|调用本机代码的能力|“否”|否|是|  
   
  SAFE 是最可靠和安全的模式，并且在允许的编程模型方面也具有相关的限制。 给 SAFE 程序集授予了足够的权限，以便运行、执行计算以及访问本地数据库。 SAFE 程序集需要具有可验证的类型安全性，并且不允许调用非托管代码。  
   
@@ -150,7 +148,7 @@ ms.locfileid: "32922472"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以禁止对使用批注的.NET Framework Api 的调用**SharedState**，**同步**和**ExternalProcessMgmt**宿主保护特性。 这将防止 SAFE 和 EXTERNAL_ACCESS 程序集调用能够启用共享状态、执行同步和影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的完整性的任何 API。 有关详细信息，请参阅[CLR 集成编程模型限制](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR 集成安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [CLR 集成的性能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

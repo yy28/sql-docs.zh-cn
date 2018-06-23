@@ -2,9 +2,10 @@
 title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) |Microsoft 文档
 description: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,18 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e8d862ab9bde6a57a7f63deb46af7688d94b2586
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 7279c4ca68ddf57824a68cb803cbc5d566ad14b4
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305816"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689200"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   一直等待，直到异步执行的操作完成或发生超时。  
   
 ## <a name="syntax"></a>语法  
@@ -56,7 +60,7 @@ HRESULT WaitForAsynchCompletion(
  此操作尚未完成，即使已达到指定的超时值。  
   
 > [!NOTE]  
->  除了上面列出的返回代码值**ISSAsynchStatus::WaitForAsynchCompletion**方法还支持核心 OLEDB 返回的返回代码值**ICommand::Execute**和**idbinitialize:: Initialize**方法。  
+>  除了上面列出的返回代码值**ISSAsynchStatus::WaitForAsynchCompletion**方法还支持核心 OLEDB 返回的返回代码值**ICommand::Execute**和**Idbinitialize:: Initialize**方法。  
   
 ## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::WaitForAsynchCompletion**方法不会返回之前经过的超时值 （以毫秒为单位） 或完成挂起的操作。 **命令**对象具有**CommandTimeout**属性，用于控制的秒数在超时前将运行查询。**CommandTimeout**属性将被忽略，如果与结合使用**ISSAsynchStatus::WaitForAsynchCompletion**方法。  

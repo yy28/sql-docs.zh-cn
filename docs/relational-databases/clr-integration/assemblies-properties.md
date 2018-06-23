@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 f1_keywords:
 - sql13.swb.assemblies.general.f1
@@ -17,18 +15,18 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 174e823ab1ffa0dcca61d20a875b2fbc7b8c679b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2eaea8f9b417a11134fb59108c83d452f1954fcd
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918732"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701188"
 ---
 # <a name="assemblies---properties"></a>程序集的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用此页可以查看或修改程序集的属性。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **程序集名称**  
  显示程序集的名称，该名称始终与 CLR 程序集的名称相匹配。  
   
@@ -41,7 +39,7 @@ ms.locfileid: "32918732"
  **对程序集的路径**  
  键入程序集文件的路径。  
   
- **浏览**  
+ **“浏览”**  
  导航到要添加的程序集。 单击**浏览**如果你不想要键入的程序集文件的路径。  
   
 ## <a name="additional-properties-grid"></a>附加属性网格  
@@ -51,10 +49,10 @@ ms.locfileid: "32918732"
  **强名称**  
  显示**True**如果已进行数字签名程序集， **False**如果它尚未进行数字签名。  
   
- **版本**  
+ **版本(Version)**  
  显示程序集的版本号。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

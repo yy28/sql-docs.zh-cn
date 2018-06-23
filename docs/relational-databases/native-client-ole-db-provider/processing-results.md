@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db-provider
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], results processing
 - results [SQL Server Native Client]
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8261fed484c457a1245fbce3a0659e495d689fd2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18dddb9c3244a50a81d64b25fa200ca16e634284
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949092"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699948"
 ---
 # <a name="processing-results"></a>处理结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "32949092"
 
   如果行集对象是由执行命令或直接从访问接口生成的，则使用者需要检索和访问行集中的数据。  
   
- 行集是使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口能够以表格格式提供数据的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象公开的接口，如**IRowset** （包含用于按顺序在行集中提取行的方法）， **IAccessor** （允许的一组描述表格数据绑定到使用者程序变量的方法的列绑定的定义）， **IColumnsInfo** （提供在行集中的列的信息），和**IRowsetInfo** （提供有关行集的信息）。  
+ 行集是使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口能够以表格格式提供数据的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象公开的接口，如**IRowset** （包含用于按顺序在行集中提取行的方法）， **IAccessor** (允许的一组列绑定描述的定义方式表格数据绑定到使用者程序变量）， **IColumnsInfo** （提供在行集中的列的信息），和**IRowsetInfo** （提供有关行集的信息）。  
   
  使用者可以调用**irowset:: Getdata**方法来从行集中的数据行检索到的缓冲区。 之前**GetData**是调用，使用者描述使用一组 DBBINDING 结构的缓冲区。 每个绑定都说明了行集中的列在使用者缓冲区中的存储方式并包含以下内容：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "32949092"
   
  指定 DBBINDING 结构后，创建取值函数 (**IAccessor::CreateAccessor**)。 取值函数是一个绑定集合，可用于获取或设置使用者缓冲区中的数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 SQL Server Native Client OLE DB 提供程序应用程序](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [OLE DB 操作指南主题](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
