@@ -1,0 +1,55 @@
+---
+title: 添加或删除表或视图中数据源视图 (Analysis Services) |Microsoft 文档
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.asvs.dsvdesigner.tablespane.f1
+helpviewer_keywords:
+- deleting tables
+- tables [Analysis Services]
+- removing tables
+- adding tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
+ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
+caps.latest.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: f5bd0cf48e266149a0666b5e8d21d4d44efe41e3
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36017840"
+---
+# <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在数据源视图中添加或删除表或视图 (Analysis Services)
+  在您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建了数据源视图 (DSV) 后，可以通过添加或删除表和列，包括来自其他数据源的表和列，在数据源视图设计器中修改数据源视图。  
+  
+ 若要在数据源视图设计器中打开该 DSV，请在解决方案资源管理器中双击该 DSV。 一旦打开该 DSV 后，可使用按钮栏或菜单上的“添加/删除表”命令来修改或扩展该 DSV。 您还可以在关系图中使用这些对象。 例如，您可以选择某一对象，然后使用键盘上的 Delete 键删除对象。  
+  
+> [!WARNING]  
+>  删除表时要格外小心。 删除表将从 DSV 中删除所有关联列和关系，并且将使绑定到该表的所有对象失效。  
+  
+## <a name="selecting-tables-or-views-to-add-or-remove"></a>选择要添加或删除的表或视图  
+ 使用“添加/删除表”对话框，可以在“可用对象”和“包含的对象”列表之间移动表或视图。 **“可用对象”** 列表最初包含主数据源中还没有位于数据源视图中的所有表或视图。 如果主数据源支持`OPENROWSET`函数，你还可以添加表或视图从其他数据源中的项目或数据库。  
+  
+ 在将表添加到 DSV 中或者从 DSV 中删除表时，还会将该表添加到 DSV 的当前选定关系图中或从中删除。 在关系图上的详细信息，请参阅[处理数据源视图设计器中的关系图&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)。  
+  
+ 在“添加/删除表”对话框中将表移至“包含的对象”列表后，可以添加所有相关表。 如果数据源中存在外键约束，此操作将根据该外键约束添加表。 如果不存在外键约束，则可以使用`NameMatchingCriteria`要通过指定用于匹配要生成可能的关系的表中的列名称的条件确定关系的数据源视图的属性。 如果`NameMatchingCriteria`属性指定为数据源视图中，单击**添加相关表**若要从具有与列名相匹配的数据源添加表。 有关设置的详细信息`NameMatchingCriteria`属性，请参阅[多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)。  
+  
+> [!NOTE]  
+>  向数据源视图中添加对象或从中删除对象不会影响基础数据源。  
+  
+## <a name="see-also"></a>请参阅  
+ [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
+ [使用数据源视图设计器中的关系图&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+  
+  

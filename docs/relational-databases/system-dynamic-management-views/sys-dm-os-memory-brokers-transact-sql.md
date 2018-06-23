@@ -22,12 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d32ef0b368c0e3c5a0de1cbb9c0a2f60110050
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9799cc3ed5f33e1260c6d4b1907329a9a01b3ffc
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466323"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262331"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34466323"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|在资源池与资源调控器池相关联的情况下的资源池 ID。|  
-|**memory_broker_type**|**nvarchar(60)**|内存中介器的类型。 目前，有三种类型的内存中的代理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 与及其说明下面所列。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 分配并供其使用的内存缓存对象。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 被盗时从缓冲池的内存。 这种内存在当前所有者释放它之前，不能供其他组件重新使用。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供将来使用的当前正在执行请求的内存。|  
+|**memory_broker_type**|**nvarchar(60)**|内存中介器的类型。 目前，有三种类型的内存中的代理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 与及其说明下面所列。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 分配并供其使用的内存缓存对象 （不缓冲池缓存）。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 被盗时从缓冲池的内存。 这种内存在当前所有者释放它之前，不能供其他组件重新使用。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供将来使用的当前正在执行请求的内存。|  
 |**allocations_kb**|**bigint**|已分配给这种类型的中介器的内存量（以 KB 为单位）。|  
 |**allocations_kb_per_sec**|**bigint**|每秒钟的内存分配速率（以 KB 为单位）。 对于内存释放，该值可以为负值。|  
 |**predicted_allocations_kb**|**bigint**|由中介器预测的已分配的内存量。 这基于内存使用模式。|  
@@ -59,7 +59,7 @@ ms.locfileid: "34466323"
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
   [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
