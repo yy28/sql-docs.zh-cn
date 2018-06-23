@@ -3,11 +3,9 @@ title: 将 CLR 参数数据映射 |Microsoft 文档
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,12 +29,12 @@ caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23e4350f5bc8f639ccb529bc28927ca93261ce09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b1965107b1215a1a03817c7fc048ddc50ab8346
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923502"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696568"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "32923502"
 |**date**|**SqlDateTime**|**日期/时间，可以为 Null\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**日期/时间，可以为 Null\<DateTime >**|  
 |**datetime2**|InclusionThresholdSetting|**日期/时间，可以为 Null\<DateTime >**|  
-|DATETIMEOFFSET|**InclusionThresholdSetting**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
+|DATETIMEOFFSET|**无**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal、 可以为 Null\<十进制 >**|  
 |**float**|**SqlDouble**|**双精度，可以为 Null\<Double >**|  
 |**地理**|**SqlGeography**<br /><br /> **SqlGeography**中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|InclusionThresholdSetting|  
@@ -116,19 +114,19 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 数据类型 (SQL Server)**|**SQL Server 数据类型**|  
-|**十进制**|smallmoney|  
-|**SqlMoney**|smallmoney|  
+|**十进制**|SMALLMONEY|  
+|**SqlMoney**|SMALLMONEY|  
 |**十进制**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
 ## <a name="change-history"></a>更改历史记录  
   
-|更新内容|  
+|更新的内容|  
 |---------------------|  
 |添加**SqlGeography**， **SqlGeometry**，和**SqlHierarchyId**到映射表的类型。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的 SQL Server 数据类型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

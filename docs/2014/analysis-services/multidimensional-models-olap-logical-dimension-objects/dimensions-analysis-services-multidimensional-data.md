@@ -1,0 +1,46 @@
+---
+title: 维度 (Analysis Services-多维数据) |Microsoft 文档
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- OLAP objects [Analysis Services], dimensions
+- dimensions [Analysis Services]
+- Analysis Services objects, dimensions
+ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
+caps.latest.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: bfe683915d9cacfa21bdd5f32533024da7a7ee34
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36025343"
+---
+# <a name="dimensions-analysis-services---multidimensional-data"></a>维度（Analysis Services - 多维数据）
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度为多维数据集的一个基本组件。 维度可将和相关领域（如客户、商店或雇员）关联的数据与用户组织起来。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度包含与维度表中的列相对应的属性。 这些属性显示为属性结构，并且可以组织成用户定义层次结构，或者可以基于基础维度表中的列定义为父子层次结构。 层次结构用于组织多维数据集中包含的度量值。 下列主题概述了维度、属性和层次结构。  
+  
+## <a name="in-this-section"></a>本节内容  
+  
+|主题|Description|  
+|-----------|-----------------|  
+|[维度简介&#40;Analysis Services-多维数据&#41;](dimensions-analysis-services-multidimensional-data.md)|概述维度概念。|  
+|[属性和属性层次结构](attributes-and-attribute-hierarchies.md)|说明属性和属性层次结构。|  
+|[用户层次结构](user-hierarchies.md)|说明用户定义的属性层次结构。|  
+|[启用写操作的维度](write-enabled-dimensions.md)|说明已启用写操作的维度。|  
+|[维度转换](dimension-translations.md)|说明维度元数据的翻译。|  
+  
+## <a name="see-also"></a>请参阅  
+ [多维模型中的维度](../multidimensional-models/dimensions-in-multidimensional-models.md)   
+ [多维数据集对象&#40;Analysis Services-多维数据&#41;](../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+  
+  
