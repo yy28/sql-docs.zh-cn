@@ -4,7 +4,7 @@ description: 本文介绍如何使用 mssql conf 工具在 Linux 上配置 SQL S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 6369c3144a9ce641765358621027729ce235f69d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9506096746c0f93b147f8040bbd7066e99d69bad
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324048"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329482"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -98,7 +98,10 @@ ms.locfileid: "34324048"
 
 ## <a id="customerfeedback"></a> 配置客户反馈
 
-**Telemetry.customerfeedback**是否 SQL Server 向 Microsoft 发送反馈，或不设置更改。 默认情况下，此值设置为**true**。 若要更改的值，请运行以下命令：
+**Telemetry.customerfeedback**是否 SQL Server 向 Microsoft 发送反馈，或不设置更改。 默认情况下，此值设置为**true**对于所有版本。 若要更改的值，请运行以下命令：
+
+> [!IMPORTANT]
+> 你可以关闭客户反馈免费版本的 SQL Server、 快速和开发人员。
 
 1. Mssql conf 脚本作为根与运行**设置**命令**telemetry.customerfeedback**。 下面的示例通过指定关闭客户反馈**false**。
 
@@ -112,7 +115,7 @@ ms.locfileid: "34324048"
    sudo systemctl restart mssql-server
    ```
 
-有关详细信息，请参阅[在 Linux 上的 SQL Server 的客户反馈](sql-server-linux-customer-feedback.md)。
+有关详细信息，请参阅[在 Linux 上的 SQL Server 的客户反馈](sql-server-linux-customer-feedback.md)和[SQL Server 隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a id="datadir"></a> 默认数据或日志目录位置更改
 

@@ -4,18 +4,18 @@ description: 描述如何收集和 Linux 上配置 SQL Server 客户反馈。
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 66275b164e1d6514d04e0c8a6f1a666de0a02425
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074290"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329502"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的客户反馈
 
@@ -23,7 +23,7 @@ ms.locfileid: "34074290"
 
 默认情况下，Microsoft SQL Server 收集有关其客户如何使用应用程序的信息。 具体来说，SQL Server 收集有关安装体验、使用情况和性能的信息。 此信息有助于 Microsoft 改进产品以更好地满足客户需求。 例如，Microsoft 收集有关客户遇到的错误代码类型信息，这样我们就可以修复相关 bug，改进关于如何使用 SQL Server 的文档，并确定是否应将功能添加到产品中以更好地为客户服务。
 
-本文档提供有关收集哪些类型的信息以及如何在发送，它收集的 linux 操作系统上配置 Microsoft SQL Server 的详细信息向 Microsoft 的信息。 SQL Server 2017 包括说明我们执行操作并不会从用户收集哪些信息的隐私声明。 请阅读隐私声明 》。
+本文档提供有关收集哪些类型的信息以及如何在发送，它收集的 linux 操作系统上配置 Microsoft SQL Server 的详细信息向 Microsoft 的信息。 SQL Server 2017 包括说明我们执行操作并不会从用户收集哪些信息的隐私声明。 有关详细信息，请参阅[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。
 
 具体而言，Microsoft 不会通过这种机制发送以下任何类型的信息：
 
@@ -40,6 +40,9 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
 
 此选项允许你根据 SQL Server 向 Microsoft 发送反馈，或未更改。 默认情况下，此值设置为 true。 若要更改的值，请运行以下命令：
 
+> [!IMPORTANT]
+> 你可以关闭客户反馈免费版本的 SQL Server、 快速和开发人员。
+
 ### <a name="on-red-hat-suse-and-ubuntu"></a>在 Red Hat、 SUSE 和 Ubuntu
 
 1. Mssql conf 脚本作为根与运行**设置**命令**telemetry.customerfeedback**。 下面的示例通过指定关闭客户反馈**false**。
@@ -55,7 +58,7 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
    ```
    
 ### <a name="on-docker"></a>在 Docker 上
-若要在 docker 上禁用客户反馈必须 Docker[保存数据](sql-server-linux-configure-docker.md)。 
+若要在 docker 上禁用客户反馈，你必须 Docker[保存数据](sql-server-linux-configure-docker.md)。 
 
 1. 添加`mssql.conf`文件替换为行`[telemetry]`和`customerfeedback = false`主机目录中：
  
@@ -111,7 +114,7 @@ Microsoft SQL Server 2017 包含 Internet 启用的功能，可以收集并向 M
    ```
    
 ### <a name="on-docker"></a>在 Docker 上
-若要在 docker 上启用本地审核必须 Docker[保存数据](sql-server-linux-configure-docker.md)。 
+若要在 docker 上启用本地审核，您必须 Docker[保存数据](sql-server-linux-configure-docker.md)。 
 
 1. 新的本地审核日志的目标目录将容器中。 在您的计算机上的主机目录中创建新的本地审核日志的目标目录。 下面的示例创建一个新 **/审核**目录：
 
