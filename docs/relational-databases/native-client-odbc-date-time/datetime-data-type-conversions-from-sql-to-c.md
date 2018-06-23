@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe025209a14da132e6f6e3e1efd55d2263bdf997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a97f77780d9c376a121373ea5890949eb48091c4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948042"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696828"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime 数据类型转换从 SQL C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,19 +35,19 @@ ms.locfileid: "32948042"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|确定|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|确定|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|确定|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|确定|21|16|16|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
+|SQL_TYPE_DATE|“确定”|12|13|12|13,23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|“确定”|10,23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7,8|“确定”|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|“确定”|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|确定|无转换问题。|  
-|1|应用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的规则。|  
+|“确定”|无转换问题。|  
+|@shouldalert|应用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的规则。|  
 |2|忽略前导空格和尾随空格。|  
 |3|字符串解析为日期、时间、时区或时区偏移量，且秒的小数部分允许多达 9 位。 如果解析时区偏移量，则时间将转换为客户端时区。 如果此转换过程中发生错误，使用 SQLSTATE 22018 和消息"Datetime 字段溢出"生成的诊断记录。|  
 |4|如果该值不是有效的日期、时间戳或时间戳偏移量值，则生成具有 SQLSTATE 22018 和消息“为转换指定的字符值无效”的诊断记录。|  
@@ -73,7 +72,7 @@ ms.locfileid: "32948042"
   
  本主题中的表格列出了返回客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在指定的服务器类型 SQLBindParameter 与服务器上的实际类型不匹配、 隐式转换将由服务器执行和返回到客户端的类型将与通过 SQLBindParameter 指定的类型匹配。 如果服务器的转换规则与上表中列出的规则不同，这可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是当前日期。  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

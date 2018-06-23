@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bd7d14e180a44f974e4d6ba89421caa8cbba3535
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 477b3253a744564845e70ec10185b845293366d7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954702"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697438"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -124,7 +123,7 @@ ms.locfileid: "32954702"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序，对此功能的四个情况下均返回 SQL_ERROR： 密码过期、 密码策略冲突、 帐户锁定，并且旧的密码属性时使用 Windows 身份验证的设置时。 该驱动程序向用户返回相应的错误消息时[SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

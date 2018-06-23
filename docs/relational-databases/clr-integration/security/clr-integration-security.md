@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -20,12 +18,12 @@ caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7df2bb8e3620b374fa534326b9195b7b2887f91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a8fbad7022a68f74d2c25c21bc9867c9953083
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923882"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700028"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +55,13 @@ ms.locfileid: "32923882"
  [模拟和 CLR 集成安全性](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  讨论托管代码是如何使用模拟来访问外部资源的。  
   
- [允许部分受信任调用方](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [允许部分可信任的调用方](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  讨论当托管方法调用其他程序集中所包含类的方法时所产生的问题。  
   
  [应用程序域和 CLR 集成安全性](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  描述如何将程序集加载到应用程序域。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理 CLR 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

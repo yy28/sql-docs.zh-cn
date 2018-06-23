@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6205ed15e0771cc1900a458343defbbcb0e1384f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a63908b5a63ebf8501e0c0887d841c8e2619dff9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946512"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698228"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>表值参数描述符字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +29,9 @@ ms.locfileid: "32946512"
 
   作为对表值参数的支持，ODBC 应用程序参数描述符 (APD) 和实现参数描述符 (IPD) 中新增了特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的字段。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
-|名称|位置|类型|Description|  
+|“属性”|位置|类型|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|表值参数的服务器类型名称。<br /><br /> 当在 SQLBindParameter 调用指定的表值参数类型名称时，它必须始终指定为 Unicode 值，即使在应用程序生成为 ANSI 应用程序。 用于参数的值*StrLen_or_IndPtr*应 sql_nts 以或乘以 sizeof(WCHAR) 的名称的字符串长度。<br /><br /> 指定时，表值参数类型名称 SQLSetDescField，通过它可以指定通过使用生成的方式符合应用程序的文本。 ODBC 驱动程序管理器将执行任何所需的 Unicode 转换。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME（只读）|IPD|SQLTCHAR*|定义该类型的目录。|  
@@ -43,7 +41,7 @@ ms.locfileid: "32946512"
   
  如果将参数焦点设置为表值参数，则以下语句属性和描述符标头字段将应用于表值参数：  
   
-|名称|位置|类型|Description|  
+|“属性”|位置|类型|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> （这等同于 APD 中的 SQL_DESC_ARRAY_SIZE。）|APD|SQLUINTEGER|用于表值参数的缓冲区数组的数组大小。 这是缓冲区将容纳的最大行数或缓冲区的行数大小；表值参数值本身所具有的行数可能大于或小于缓冲区可以容纳的行数。 默认值为 1。<br /><br /> 注意： 如果： SQL_SOPT_SS_PARAM_FOCUS 设置为其默认值为 0，SQL_ATTR_PARAMSET_SIZE 指语句和指定的参数集数量。 如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号，则它引用该表值参数，并为该表值参数指定每个参数集具有的行数。|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|默认值是 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要选择按行绑定，则该字段将设置为将要绑定到一组表值参数行的结构或缓冲区实例的长度。 此长度必须包括所有绑定列的空间以及结构或缓冲区的任何填充大小。 这将确保当绑定列的地址按指定长度递增时，结果将指向下一行中相同列的开头。 使用时**sizeof** ANSI C 中的运算符，此行为保证。|  
@@ -59,7 +57,7 @@ ms.locfileid: "32946512"
   
  SQL_CA_SS_TYPE_CATALOG_NAME 和 SQL_CA_SS_TYPE_SCHEMA_NAME 还可以用于检索与 CLR 用户定义类型参数关联的目录和架构。 对于这些类型，它们是特定于类型的现有目录架构属性的替代项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

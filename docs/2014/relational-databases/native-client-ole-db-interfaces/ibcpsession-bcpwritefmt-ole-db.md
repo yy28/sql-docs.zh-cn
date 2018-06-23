@@ -1,0 +1,70 @@
+---
+title: IBCPSession::BCPWriteFmt (OLE DB) |Microsoft 文档
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- IBCPSession::BCPWriteFmt (OLE DB)
+topic_type:
+- apiref
+helpviewer_keywords:
+- BCPWriteFmt method
+ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
+caps.latest.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3f7b2437a8a1a46b84f011eb631887d39f7c96eb
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36017727"
+---
+# <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
+  将每一列的格式信息写入格式化文件。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+HRESULT BCPWriteFmt(   
+const wchar_t *pwszFormatFile);  
+```  
+  
+## <a name="remarks"></a>Remarks  
+ 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用[IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md)和[IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md)方法定义的数据文件的格式。 **BCPWriteFmt**方法将此定义保存在 pwszFormatFile 参数引用的文件。  
+  
+ **BCPWriteFmt**方法可以将保存 xml 或文本格式的格式文件。 此值必须表示为使用与该 BCP_OPTION_XML 控制选项[IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md)方法。  
+  
+ 若要加载保存的格式文件，使用[IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md)方法。  
+  
+## <a name="arguments"></a>参数  
+ *pwszFormatFile*[in]  
+ 包含数据文件格式值的文件的路径和文件名。  
+  
+## <a name="return-code-values"></a>返回代码值  
+ S_OK  
+ 方法成功。  
+  
+ E_FAIL  
+ 提供程序特定出错;详细信息，请使用[ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)接口。  
+  
+ E_OUTOFMEMORY  
+ 内存不足错误。  
+  
+ E_UNEXPECTED  
+ 意外调用了该方法。 例如， [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)方法未调用此方法之前调用。  
+  
+## <a name="see-also"></a>请参阅  
+ [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
+ [执行大容量复制操作](../native-client/features/performing-bulk-copy-operations.md)  
+  
+  

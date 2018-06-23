@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,23 +15,22 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1c63f2b2cfd5ee348cfcb9d21ed64abefbe9dcd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8574a80c29e0e4333edb78abd433648c51f940df
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707865"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703638"
 ---
 # <a name="data-types-ole-db"></a>数据类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  为了执行[!INCLUDE[tsql](../../includes/tsql-md.md)]语句以及如何处理使用结果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，你必须知道如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序地图[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时绑定参数或列在行集中，并在使用时，数据类型为 OLE DB 数据类型**ITableDefinition**接口可创建的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  为了执行[!INCLUDE[tsql](../../includes/tsql-md.md)]语句以及如何处理使用结果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，你必须知道如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序地图[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型与 OLE DB 数据类型时，绑定参数或列在行集中，并且它使用**ITableDefinition**接口可创建的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
   
