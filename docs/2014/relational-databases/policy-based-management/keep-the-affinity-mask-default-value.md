@@ -1,0 +1,35 @@
+---
+title: 保留关联掩码默认值 | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Best Practices [Database Engine]
+ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
+caps.latest.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 50f59cf0b5410a1f89f13e386d8f70c47765285e
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36125089"
+---
+# <a name="keep-the-affinity-mask-default-value"></a>保留关联掩码默认值
+  此规则检查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的关联掩码设置是否已设置为 0（默认值）。 affinity mask 选项动态控制 CPU 关联。  
+  
+## <a name="for-more-information"></a>有关详细信息  
+ [affinity mask 服务器配置选项](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)  
+  
+## <a name="see-also"></a>请参阅  
+ [使用基于策略的管理来监视和强制执行最佳实践](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+  
+  

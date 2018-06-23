@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dbaa5d805b8b1102e07b0e63bf269129077e539
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4b70a652ace8f7ccaf89ed23434ebed15410102
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945138"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701988"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "32945138"
   
  有两种方法来访问**ISQLServerErrorInfo**接口。  
   
- 使用者都可以调用**IErrorRecords::GetCustomerErrorObject**获取**ISQLServerErrorInfo**指针，如下面的代码示例中所示。 (无需获取**ISQLErrorInfo。**)同时**ISQLErrorInfo**和**ISQLServerErrorInfo**是自定义 OLE DB 错误对象，而与**ISQLServerErrorInfo**正在使用来获取的服务器错误，包括此类详细信息，作为过程名称和行号信息的接口。  
+ 使用者都可以调用**IErrorRecords::GetCustomerErrorObject**获取**ISQLServerErrorInfo**指针，如下面的代码示例中所示。 (无需获取**ISQLErrorInfo。**)同时**ISQLErrorInfo**和**ISQLServerErrorInfo**是自定义 OLE DB 错误对象，而与**ISQLServerErrorInfo**正在使用来获取的信息的接口服务器错误，包括过程名称和行号等详细信息。  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -63,8 +61,8 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*b 级 a*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息的严重性。|  
 |*wLineNumber*|如果适用，则为发生错误的存储过程的行号。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [RAISERROR & #40;Transact SQL & #41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

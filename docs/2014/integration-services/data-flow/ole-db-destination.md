@@ -24,18 +24,15 @@ caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 5ead833d28c31a1c34da1ce6e2182cbaa418f156
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017577"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324701"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
-  
-> [!NOTE]  
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../connection-manager/connect-to-an-excel-workbook.md)。  
   
  OLE DB 目标为数据加载提供了五种数据访问模式：  
   
