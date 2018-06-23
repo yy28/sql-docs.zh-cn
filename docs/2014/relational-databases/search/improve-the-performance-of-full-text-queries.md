@@ -1,0 +1,61 @@
+---
+title: 改进全文查询的性能 | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
+caps.latest.revision: 17
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 070a39e8ef8d4010ac423fefa39baa39fc3a8304
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36024533"
+---
+# <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
+  下面列出了有助于提高全文查询性能的建议。  
+  
+ 硬件资源（例如内存、磁盘速度、CPU 速度和计算机体系结构）也会影响全文查询的性能。  
+  
+-   使用 [ALTER INDEX REORGANIZE](/sql/t-sql/statements/alter-index-transact-sql)对基表的索引进行碎片整理。  
+  
+-   使用 [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)重新组织全文目录。 请务必在性能测试之前执行此操作，因为它会导致该目录中全文索引的主合并。  
+  
+-   仅选择较小的列作为全文键列。 尽管支持 900 个字节的列，但我们建议在全文索引中使用更小的键列。 `int` 和`bigint`提供最佳性能。  
+  
+-   使用整数型全文键可以避免与 **docid** 映射表联接。 因此，整数型全文键可以使查询性能获得数量级的提升，并改进爬网性能。 如果全文键也是聚集索引键，可能会进一步提高性能。  
+  
+-   将多个 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词合并为一个 CONTAINS 谓词。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可以在 CONTAINS 查询中指定一个包含若干列的列表。  
+  
+-   如果只需要全文键或排名的信息，请使用 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) ，而不要使用分别与之对应的 CONTAINS 或 FREETEXT。  
+  
+-   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用 *top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”）时，才应使用此参数。  
+  
+    > [!NOTE]  
+    >  法律应用场景通常需要返回全部项，不过对于诸如电子商务等商业应用场景，性能可能更为重要。  
+  
+-   检查全文查询计划以确保选择了适当的联接计划。 若有必要，可使用一个联接提示或查询提示。 如果全文查询中使用了参数，则该参数的第一时间值决定查询计划。 可以使用 OPTIMIZE FOR [查询提示](/sql/t-sql/queries/hints-transact-sql-query) 强制用您指定的值编译查询。 这有助于实现确定性查询计划和更好的性能。  
+  
+-   如果全文索引中的全文索引碎片太多，会导致查询性能大幅下降。 若要减少碎片数，请使用 [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 REORGANIZE 选项重新组织全文目录。 实际上，该语句会将所有碎片合并成单个更大的碎片，并从全文索引中删除所有过时的条目。  
+  
+-   在  全文搜索中，在 CONTAINSTABLE (AND, OR) 中指定的逻辑运算符可以作为 SQL 联接实现或在全文执行流式表值函数 (STVF) 中实现。 通常，仅包含一种逻辑运算符的查询完全由全文执行实现，而混合多种逻辑运算符的查询还拥有 SQL 联接。 全文执行 STVF 内的逻辑运算符在实现时使用了一些特殊索引属性，使它比 SQL 联接速度快得多。 由于这个原因，我们建议在可能的情况下仅使用一种逻辑运算符来构建查询框架。  
+  
+-   对于包含选择性关系谓词的应用程序，如果将使用选择性关系谓词和非选择性全文谓词的查询编写成使用查询优化器，则这样的查询可能会有最佳性能。 这将允许查询优化器决定它是否可以利用谓词或范围下推来生成有效的查询计划。 与将关系数据作为全文数据建立索引相比，此方法更简单，通常也更有效。  
+  
+## <a name="related-resources"></a>相关资源  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements（SQL Server 2008 全文搜索：内在变化与增强功能）](http://go.microsoft.com/fwlink/?LinkId=129544)  
+  
+## <a name="see-also"></a>请参阅  
+ [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
+ [sys.dm_fts_memory_pools (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
+  
+  
