@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947012"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701458"
 ---
 # <a name="setting-large-data"></a>设置大型数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32947012"
   
 5.  调用**GetNextRows**到行集提取下一步的行。 调用**GetData**从行集读取数据。  
   
-6.  创建一个包含数据 （并且还长度指示器） 的存储对象，然后调用**IRowsetChange::SetData** (或**IRowsetChange::InsertRow**) 使用绑定来设置数据的 BLOB 列访问器。  
+6.  创建一个包含数据 （并且还长度指示器） 的存储对象，然后调用**IRowsetChange::SetData** (或**IRowsetChange::InsertRow**) 使用将绑定设置 BLOB 列访问器数据。  
   
 ## <a name="example"></a>示例  
  本示例说明如何设置 BLOB 数据。 本示例创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值：  
@@ -726,8 +724,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Blob 和 OLE 对象](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [使用较大的值类型](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [使用大值类型](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   
