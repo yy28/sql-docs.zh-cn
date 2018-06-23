@@ -1,0 +1,76 @@
+---
+title: 修改唯一约束 | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- modifying constraints
+- UNIQUE constraints [SQL Server], modifying
+- constraints [SQL Server], modifying
+- constraints [SQL Server], unique
+ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
+caps.latest.revision: 16
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 2f0898fdbc52d964834f39f6365f0a74efd97728
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36026970"
+---
+# <a name="modify-unique-constraints"></a>修改唯一约束
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改唯一约束。  
+  
+ **本主题内容**  
+  
+-   **开始之前：**  
+  
+     [Security](#Security)  
+  
+-   **使用以下工具修改唯一约束：**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> 开始之前  
+  
+###  <a name="Security"></a> 安全性  
+  
+####  <a name="Permissions"></a> Permissions  
+ 需要对表的 ALTER 权限。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  
+#### <a name="to-modify-a-unique-constraint"></a>修改唯一约束  
+  
+1.  在“对象资源管理器”中，右键单击包含唯一约束的表，然后选择“设计”。  
+  
+2.  在“表设计器”菜单上，单击“索引/键”。  
+  
+3.  在“索引/键”对话框中的“选定的主/唯一键或索引”下，选择要编辑的约束。  
+  
+4.  完成下表中的相应操作：  
+  
+    |若要|需要遵循的步骤|  
+    |--------|------------------------|  
+    |更改与约束关联的列|1) 在“(常规)”下的网格中，单击“列”，再单击属性右侧的省略号 (…)。<br /><br /> 2) 在“索引列”对话框中，为索引指定新列和/或排序顺序。|  
+    |重命名约束|在 **“标识”** 下的网格中，在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”列表中的名称重复。|  
+    |设置聚集选项|在“表设计器”下的网格中，选择“创建为群集索引”，再从下拉列表中选择“是”创建群集索引，或选择“否”创建非群集索引。 对于每个表，只允许存在一个聚集索引。 如果此表中已经存在聚集索引，则您必须首先对原始索引清除此设置。|  
+    |定义填充因子|在 **“表设计器”** 下的网格中，展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。|  
+  
+5.  在“文件”菜单上，单击“保存table name”。  
+  
+##  <a name="TsqlProcedure"></a> **修改唯一约束**  
+  
+ 若要使用 Transact-SQL 修改 UNIQUE 约束，必须首先删除现有的 UNIQUE 约束，然后用新定义重新创建。 有关详细信息，请参阅 [Delete Unique Constraints](delete-unique-constraints.md) 和 [Create Unique Constraints](create-unique-constraints.md)。  
+  
+###  <a name="TsqlExample"></a>  
