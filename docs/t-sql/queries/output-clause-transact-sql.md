@@ -89,7 +89,7 @@ ms.locfileid: "33065134"
  有关 table 变量的详细信息，请参阅 [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)。  
   
  output_table  
- 指定一个表，返回的行将被插入该表中而不是返回到调用方。 output_table 可以为临时表。  
+ 指定一个表，返回的行将插入该表中而不是返回到调用方。 output_table 可以为临时表。  
   
  如果未指定 column_list，则 table 必须与 OUTPUT 结果集具有相同的列数。 标识列和计算列例外， 必须跳过这两种列。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值。  
   
