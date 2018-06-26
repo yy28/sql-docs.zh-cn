@@ -128,7 +128,7 @@ ENCRYPTION BY \<key_name_in_provider> 指定密钥的加密方式。 可以为�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-an-asymmetric-key"></a>A. 创建非对称密钥  
- 下面的示例使用 `PacificSales09` 算法创建名为 `RSA_2048` 的非对称密钥，并使用密码保护私钥。  
+ 下面的示例使用 `RSA_2048` 算法创建名为 `PacificSales09` 的非对称密钥，并使用密码保护私钥。  
   
 ```  
 CREATE ASYMMETRIC KEY PacificSales09   
