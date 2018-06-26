@@ -19,7 +19,7 @@ ms.author: douglasl
 manager: mblythe
 ms.openlocfilehash: f403ef13892ed913c00d2f7042ab8d127fffd09e
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36138803"
@@ -38,7 +38,7 @@ ms.locfileid: "36138803"
 |**MarginLeft**|要为报表设置的左边距值，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `1in`)。 此值将覆盖报表的原始设置。|  
 |**MarginRight**|要为报表设置的右边距值，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `1in`)。 此值将覆盖报表的原始设置。|  
 |**MarginTop**|要为报表设置的上边距值，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `1in`)。 此值将覆盖报表的原始设置。|  
-|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
+|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
 |**PageHeight**|要为报表设置的页高，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `11in`)。 此值将覆盖报表的原始设置。|  
 |**PageWidth**|要为报表设置的页宽，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `8.5in`)。 此值将覆盖报表的原始设置。|  
 |**PrintDpiX**|输出图像的水平分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
