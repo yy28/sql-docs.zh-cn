@@ -31,7 +31,7 @@ AdventureWorks 产品评论示例应用程序是使用 PDO_SQLSRV 驱动程序�
 1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅[Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  将文本档后面列出的代码复制到两个文件中：adventureworks_demo.php 和 photo.php。  
 3.  将 adventureworks_demo.php 和 photo.php 文件放在 Web 服务器的根目录中。  
-4.  通过启动运行该应用程序http://localhost/adventureworks_demo.php从浏览器。  
+4.  通过启动运行该应用程序 http://localhost/adventureworks_demo.php 从浏览器。  
   
 ## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  
