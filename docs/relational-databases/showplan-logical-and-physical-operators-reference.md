@@ -142,11 +142,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 75aeadbf83ba580545ed97e9c7d5f13ea24ecda5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e58c4d90d88f37ebcf34969693cc8f19b67f080f
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812121"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -186,7 +187,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="operator-descriptions"></a>操作说明  
  本节介绍了各个逻辑运算符和物理运算符。  
   
-|图形执行计划图标|Showplan 运算符|Description|  
+|图形执行计划图标|Showplan 运算符|描述|  
 |-----------------------------------|-----------------------|-----------------|  
 |![自适应联接运算符图标](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join operator icon")|**自适应联接**|通过自适应联接运算符，在扫描第一个输入后可延迟选择哈希联接或嵌套循环联接方法。 | 
 |InclusionThresholdSetting|**Aggregate**|**Aggregate** 运算符计算包含 MIN、MAX、SUM、COUNT 或 AVG 的表达式。 **Aggregate** 既是一个逻辑运算符，也是一个物理运算符。|  
@@ -254,7 +255,7 @@ ms.lasthandoff: 05/03/2018
 |![Nonclustered Index Spool 运算符图标](../relational-databases/media/index-spool-32x.gif "Nonclustered Index Spool 运算符图标")|**Index Spool**|**Index Spool** 物理运算符在 **Argument** 列中包含 SEEK:() 谓词。 **Index Spool** 运算符扫描其输入行，将每行的副本放置在隐藏的假脱机文件（存储在 **tempdb** 数据库中且只在查询的生存期内存在）中，并在这些行上生成非聚集索引。 这样可以使用索引的查找功能来仅输出那些满足 SEEK:() 谓词的行。 如果重绕该运算符（例如通过 **Nested Loops** 运算符重绕），但不需要任何重新绑定，则将使用假脱机数据，而不用重新扫描输入。|  
 |![Nonclustered Index Update 运算符图标](../relational-databases/media/nonclust-index-update-32x.gif "Nonclustered Index Update 运算符图标")|**Nonclustered Index Update**|**Nonclustered Index Update** 物理运算符用于更新 **Argument** 列内指定的非聚集索引中的输入行。 如果存在 SET:() 谓词，则将每个更新的列设置为该值。 **Nonclustered Index Update** 是一个物理运算符。|  
 |![Online Index Insert 运算符图标](../relational-databases/media/online-index-32x.gif "Online Index Insert 运算符图标")|**Online Index Insert**|**Online Index Insert** 物理运算符指示索引创建、更改或删除操作是在线执行的。 也就是说，基础表数据在索引操作期间仍然对用户可用。|  
-|InclusionThresholdSetting|**Parallelism**|Parallelism 运算符（或交换迭代器）执行分发流、收集流和对流重新分区逻辑操作。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。 有关 Parallelism 运算符的详细信息，请参阅 [Craig Freedman 的博客系列](http://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)。<br /><br />**注意：**如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 Parallelism 运算符的 RunTimeInformation 元素。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。|  
+|InclusionThresholdSetting|**Parallelism**|<a name="exchange"></a> Parallelism 运算符（或交换迭代器）执行分发流、收集流和对流重新分区逻辑操作。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。 有关 Parallelism 运算符的详细信息，请参阅 [Craig Freedman 的博客系列](http://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)。<br /><br />**注意：** 如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 Parallelism 运算符的 RunTimeInformation 元素。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。|  
 |![Parameter Table Scan 运算符图标](../relational-databases/media/parameter-table-scan-32x.gif "Parameter Table Scan 运算符图标")|**Parameter Table Scan**|**Parameter Table Scan** 运算符扫描在当前查询中用作参数的表。 该运算符一般用于存储过程内的 INSERT 查询。 **Parameter Table Scan** 既是一个逻辑运算符，也是一个物理运算符。|  
 |InclusionThresholdSetting|**Partial Aggregate**|**Partial Aggregate** 用于并行计划中。 它将聚合功能应用到尽可能多的输入行中，以便不必执行向磁盘写入数据的操作（称为“溢出”）。 **Hash Match** 是实现分区聚合的唯一一个物理运算符（迭代器）。 **Partial Aggregate** 是一个逻辑运算符。|  
 |![Population Query 游标运算符图标](../relational-databases/media/poulation-query-32x.gif "Population Query 游标运算符图标")|**Population Query**|**Population Query** 运算符在打开游标时填充游标的工作表。|  
