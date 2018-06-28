@@ -58,6 +58,7 @@
 ## [访问当前事务](../clr-integration-data-access-transactions/accessing-the-current-transaction.md)
 ## [使用 System.Transactions](../clr-integration-data-access-transactions/using-system-transactions.md)
 ## [事务生存期](../clr-integration-data-access-transactions/transaction-lifetimes.md)
+# [从 CLR 数据库对象进行 XML 序列化](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)
 # [CLR 集成安全性](security/clr-integration-security.md)
 ## [CLR 集成代码访问安全性](security/clr-integration-code-access-security.md)
 ## [CLR 集成安全性中的链接](../../database-engine/dev-guide/links-in-clr-integration-security.md)

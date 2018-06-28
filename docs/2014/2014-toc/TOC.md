@@ -16,6 +16,8 @@
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server 2014 教程 +](../tutorials/tutorials-for-sql-server-2014.md)
 
+# [SQL Server 2014 中的新增功能 +](../sql-server/what-s-new-in-sql-server-2016.md)
+
 # [SQL Server 2014 开发人员参考](developer-reference-for-sql-server-2014.md)
 ## [开发人员指南 (Analysis Services) +](../analysis-services/dev-guide/analysis-services-dev-guide.md)
 ## [开发人员指南 (Integration Services) +](../integration-services/integration-services-developer-documentation.md)
@@ -25,6 +27,7 @@
 ## [开发人员指南 (Reporting Services) +](../reporting-services/reporting-services-developer-documentation.md)
 
 # [安装 SQL Server 2014 +](../database-engine/install-windows/installation-for-sql-server.md)
-# [安装程序和安装服务](../sql-server/install/setup-and-servicing-installation.md)
-# [升级顾问](../sql-server/install/sql-server-2014-upgrade-advisor.md)
+## [升级顾问 +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
+## [设置和维护安装 +](../sql-server/install/setup-and-servicing-installation.md)
 # [配置管理器帮助 +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+

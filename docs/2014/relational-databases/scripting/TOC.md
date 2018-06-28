@@ -37,6 +37,7 @@
 ### [选项（“查询结果”/“SQL Server”/“以网格显示结果”页）](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)
 ### [选项（“查询结果”/“SQL Server”/“以文本格式显示结果”页）](../../database-engine/options-query-results-sql-server-results-to-text-page.md)
 ### [选项（“查询结果”-“SQL Server”-“多服务器”）](../../database-engine/options-query-results-sql-server-multi-server.md)
+### [选项（“查询执行”/“分析服务器”/“常规”页）](../../database-engine/options-query-execution-analysis-server-general-page.md)
 ### [选项（“查询结果”/“分析服务器”/“常规”页）](../../database-engine/options-query-results-analysis-server-general-page.md)
 ### [选项（“查询结果”和“依赖关系服务”页）](../../database-engine/options-query-results-and-dependency-services-page.md)
 ## [打开编辑器 (SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)

@@ -6,6 +6,7 @@
 ## [创建、修改和删除数据驱动订阅](create-modify-and-delete-data-driven-subscriptions.md)
 ## [使用外部数据源提供订阅方数据](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [创建和管理本机模式报表服务器的订阅](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [创建、修改和删除标准订阅](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [使用我的订阅](use-my-subscriptions-native-mode-report-server.md)
 ## [暂停报表和订阅处理](disable-or-pause-report-and-subscription-processing.md)
 ## [控制报表分发](../control-report-distribution.md)
