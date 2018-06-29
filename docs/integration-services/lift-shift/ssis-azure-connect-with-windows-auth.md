@@ -1,25 +1,26 @@
 ---
-title: 使用 Windows 身份验证连接到数据源和文件共享 | Microsoft Docs
+title: 使用 Windows 身份验证连接到数据和文件共享 | Microsoft Docs
+description: 了解如何配置 Azure SQL 数据库上的 SSIS 目录以运行使用 Windows 身份验证连接到数据源和文件共享的包。
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: cca5deecf90fbbe28399d33ac2038bc2264b1ae6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332681"
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>在 SSIS 中使用 Windows 身份验证连接到本地数据源和 Azure 文件共享
-本文介绍如何将 Azure SQL 数据库上的 SSIS 目录配置为运行以下包：使用 Windows 身份验证连接到本地数据源和 Azure 文件共享的包。 可以使用 Windows 身份验证连接到本地和 Azure 虚拟机以及 Azure 文件中与 Azure SSIS Integration Runtime 位于同一虚拟网络的数据源。
+# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-in-ssis-packages-in-azure"></a>在 Azure 的 SSIS 包中使用 Windows 身份验证连接到数据源和文件共享
+
+本文介绍如何配置 Azure SQL 数据库上的 SSIS 目录以运行使用 Windows 身份验证连接到数据源和文件共享的包。 可使用 Windows 身份验证连接到本地和 Azure 虚拟机以及 Azure 文件中与 Azure SSIS Integration Runtime 位于同一虚拟网络的数据源。
 
 > [!WARNING]
 > 如果不按照本文所述的步骤，通过运行 `catalog`.`set_execution_credential` 为 Windows 身份验证提供有效域凭证， 则依赖于 Windows 身份验证的包将无法连接到数据源，在运行时会失败。
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/15/2018
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>提供 Windows 身份验证的域凭据
 若要提供域凭据，让包使用 Windows 身份验证连接到本地数据源，请执行以下操作：
 
-1.  使用 SQL Server Management Studio (SSMS) 或其他工具连接到托管 SSIS 目录数据库 (SSISDB) 的 SQL 数据库。 有关详细信息，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。
+1.  使用 SQL Server Management Studio (SSMS) 或其他工具连接到托管 SSIS 目录数据库 (SSISDB) 的 SQL 数据库。 有关详细信息，请参阅[连接到 Azure 中的 SSIS 目录 (SSISDB)](ssis-azure-connect-to-catalog-database.md)。
 
 2.  将 SSISDB 设置为当前数据库后，打开一个查询窗口。
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/15/2018
 
 1.  在 SQL Server 配置管理器中，启用 TCP/IP 协议。
 2.  允许通过 Windows 防火墙进行访问。 有关详细信息，请参阅[配置 Windows 防火墙以允许 SQL Server 访问](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access)。
-3.  若要与 Windows 身份验证连接，请确保 Azure-SSIS Integration Runtime 属于还包含本地 SQL Server 的虚拟网络 (VNet)。  有关详细信息，请参阅[将 Azure-SSIS 集成运行时联接到虚拟网络](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)。 然后使用 `catalog.set_execution_credential` 提供凭据，如本文中所述。
+3.  若要与 Windows 身份验证连接，请确保 Azure-SSIS Integration Runtime 属于还包含本地 SQL Server 的虚拟网络。  有关详细信息，请参阅[将 Azure-SSIS 集成运行时联接到虚拟网络](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)。 然后使用 `catalog.set_execution_credential` 提供凭据，如本文中所述。
 
 ## <a name="connect-to-an-on-premises-file-share"></a>连接到本地文件共享
 若要检查能否连接到本地文件共享，请执行以下操作：
@@ -138,4 +139,4 @@ ms.lasthandoff: 05/15/2018
 ## <a name="next-steps"></a>后续步骤
 - 部署包。 有关详细信息，请参阅[使用 SQL Server Management Studio (SSMS) 部署 SSIS 项目](../ssis-quickstart-deploy-ssms.md)。
 - 运行包。 有关详细信息，请参阅[使用 SQL Server Management Studio (SSMS) 运行 SSIS 包](../ssis-quickstart-run-ssms.md)。
-- 计划包执行。 有关详细信息，请参阅[计划 Azure 上的 SSIS 包执行](ssis-azure-schedule-packages.md)。
+- 计划包执行。 有关详细信息，请参阅[计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages.md)。

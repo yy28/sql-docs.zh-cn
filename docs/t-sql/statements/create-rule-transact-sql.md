@@ -34,11 +34,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e22d324c4b5bc0c0f315ccf553e0b4bcd2991eea
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619484"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  不能在单个批处理中将 CREATE RULE 语句与其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组合在一起。 规则不适用于在创建规则时已存在于数据库中的数据，而且规则不能绑定到系统数据类型。  
   
- 规则只能在当前的数据库中创建。 创建规则后，执行 sp_bindrule 可将规则绑定到列或别名数据类型。 规则必须与列数据类型兼容。 例如，不能将“@value LIKE A%”用作数值列的规则。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
+ 规则只能在当前的数据库中创建。 创建规则后，执行 sp_bindrule 可将规则绑定到列或别名数据类型。 规则必须与列数据类型兼容。 例如，不能将 "\@value LIKE A%" 用作数值列的规则。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
   
  用单引号 (') 将字符和日期常量括起来，并在二进制常量前加 0x。 如果规则与其绑定到的列不兼容，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]在插入值时（但不是在绑定规则时）会返回一个错误消息。  
   

@@ -27,16 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c2a2e92fdef5cae1b2404d18c2c5fb18b3de1ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5701576503c09275408389ae1f5259bcf7d06ce6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239297"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回数据库名称。
+此函数返回指定数据库的名称。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,21 +49,23 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>参数  
 database_id  
-要返回的数据库的标识号 (ID)。 database_id 的数据类型为 int，无默认值。 如果未指定 ID，则返回当前数据库名称。
+
+将返回其名称 `DB_NAME` 的数据库的标识号 (ID)。 如果对 `DB_NAME` 的调用省略 database_id，则 `DB_NAME` 返回当前数据库的名称。
   
 ## <a name="return-types"></a>返回类型
 **nvarchar(128)**
   
 ## <a name="permissions"></a>权限  
-如果 DB_NAME 的调用方并非数据库的所有者，并且数据库不是 master 或 tempdb，则查看对应行所需的最低权限为 ALTER ANY DATABASE 或 VIEW ANY DATABASE 服务器级权限，或者为 master 数据库中的 CREATE DATABASE 权限。 始终可以在 **sys.databases**中查看调用方连接的数据库。
+
+如果 `DB_NAME` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限。 调用方连接的数据库将始终出现在 sys.databases 中。
   
 > [!IMPORTANT]  
->  默认情况下，公共角色具有 VIEW ANY DATABASE 权限，允许所有登录名查看数据库信息。 要阻止登录名检测数据库，请撤销公共 VIEW ANY DATABASE 权限或拒绝单个登录名的 VIEW ANY DATABASE 权限。  
+>  默认情况下，公共角色具有 `VIEW ANY DATABASE` 权限，允许所有登录名查看数据库信息。 若要防止登录名检测数据库，则需 `REVOKE` 公共登录名的 `VIEW ANY DATABASE` 权限或 `DENY` 个人登录名的 `VIEW ANY DATABASE` 权限。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-the-current-database-name"></a>A. 返回当前数据库名称  
-以下示例返回当前数据库的名称。
+此示例返回当前数据库的名称。
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
@@ -70,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>B. 返回指定数据库 ID 的数据库名称  
-以下示例返回数据库 ID `3` 的数据库名称。
+此示例返回数据库 ID `3` 对应的数据库名称。
   
 ```sql
 USE master;  
@@ -88,7 +91,7 @@ SELECT DB_NAME() AS [Current Database];
 ```  
   
 ### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. 使用数据库 ID 返回数据库名称  
-以下示例返回每个数据库的数据库名称和 database_id。
+此示例返回每个数据库的数据库名称和 database_id。
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  

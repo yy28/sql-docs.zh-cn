@@ -13,11 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8965d870164a146156031232d050bbee0a35e9ad
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812151"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,15 +26,15 @@ ms.lasthandoff: 05/03/2018
   列存储功能摘要可用于各个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、最新版 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
 
  > [!NOTE]
- > 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，列存储索引可用于 SQL 数据库高级层、标准层（S3 及更高）以及所有 vCore 层。 对于 SQL Server（2016 SP1 及更高版本），列存储索引可用于所有版本。 对于 SQL Server（2016 及更早版本），列存储索引仅可用于企业版。
+ > 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，列存储索引可用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 高级层、标准层（S3 及更高）以及所有 vCore 层。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本，列存储索引可用于所有版本。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（早于 SP1）及更早版本，列存储索引仅可用于企业版。
  
 ## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
  此表概述了列存储索引的主要功能以及提供这些功能的产品。  
 
 |列存储索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|多线程查询的批处理执行|是|是|是|是|是|是| 
-|单线程查询的批处理执行|||是|是|是|是|  
+|多线程查询的批模式执行|是|是|是|是|是|是| 
+|单线程查询的批模式执行|||是|是|是|是|  
 |存档压缩选项||是|是|是|是|是|  
 |快照隔离和读提交快照隔离|||是|是|是|是| 
 |创建表时，请指定列存储索引|||是|是|是|是|  

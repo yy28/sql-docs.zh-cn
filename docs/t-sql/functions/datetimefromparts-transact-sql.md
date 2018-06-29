@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239047"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-为指定的日期和时间返回 datetime 值。
+此函数对指定日期和时间参数返回 datetime 值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,33 +45,33 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
   
 ## <a name="arguments"></a>参数  
 year  
-用于指定年度的整数表达式。
+指定年份的整数表达式。
   
 month  
-用于指定月份的整数表达式。
+指定月份的整数表达式。
   
 day  
-用于指定日期的整数表达式。
+指定日期的整数表达式。
   
 hour  
-用于指定小时的整数表达式。
+指定小时的整数表达式。
   
 minute  
-用于指定分钟的整数表达式。
+指定分钟的整数表达式。
   
 *seconds*  
-用于指定秒的整数表达式。
+指定秒数的整数表达式。
   
 milliseconds  
-用于指定毫秒的整数表达式。
+指定毫秒数的整数表达式。
   
 ## <a name="return-types"></a>返回类型
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-DATETIMEFROMPARTS 返回完全初始化的 datetime 值。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。
+`DATETIMEFROMPARTS` 返回完全初始化的 datetime 值。 如果至少有一个必需参数具有无效值，`DATETIMEFROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIMEFROMPARTS` 返回 NULL。
   
-此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 但在低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器版本中无法远程执行。
+此函数支持在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及更高版本的服务器上远程执行。 但不支持在版本低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器上远程执行。
   
 ## <a name="examples"></a>示例  
   

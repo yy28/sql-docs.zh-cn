@@ -23,17 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5549f258e758cc91a228d5fee707120b57963d46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09e705fd426963018eadae7351df1046d3d1ef0c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053124"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698268"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-对指定的日期和时间返回 datetimeoffset 值，即具有指定的偏移量和精度。
+此函数返回指定日期和时间参数的 datetimeoffset 值。 返回值包含精度参数指定的精度，小时和分钟偏移参数确定的偏移量。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## <a name="arguments"></a>参数  
 year  
-用于指定年度的整数表达式。
+指定年份的整数表达式。
   
 month  
-用于指定月份的整数表达式。
+指定月份的整数表达式。
   
 day  
-用于指定日期的整数表达式。
+指定日期的整数表达式。
   
 hour  
-用于指定小时的整数表达式。
+指定小时的整数表达式。
   
 minute  
-用于指定分钟的整数表达式。
+指定分钟的整数表达式。
   
 *seconds*  
-用于指定秒的整数表达式。
+指定秒数的整数表达式。
   
 fractions  
-用于指定小数部分的整数表达式。
+指定小数值的整数表达式。
   
 hour_offset  
 整数表达式，用于指定时区偏移量的小时部分。
@@ -72,21 +72,21 @@ minute_offset
 整数表达式，用于指定时区偏移量的分钟部分。
   
 *精度*  
-整数文字，用于指定要返回的 datetimeoffset 值的精度。
+整数文本，用于指定 `DATETIMEOFFSETFROMPARTS` 要返回的 datetimeoffset 值的精度。
   
 ## <a name="return-types"></a>返回类型
 **datetimeoffset(** precision **)**
   
 ## <a name="remarks"></a>Remarks  
-DATETIMEOFFSETFROMPARTS 返回完全初始化的 datetimeoffset 数据类型。 偏移量参数用来表示时区偏移量。 如果忽略偏移量参数，则认为时区偏移量是 00:00，也即没有时区偏移量。 如果指定了偏移量参数，则必须存在这两个参数，且两者必须为正数或负数。 如果指定了 minute_offset，但没有 hour_offset，则会引发错误。 如果其他参数无效，则引发错误。 如果所需的参数为 null，则返回 null。 但是，如果 precision 参数为 Null，则会引发错误。
+`DATETIMEOFFSETFROMPARTS` 返回已完全初始化的 datetimeoffset 数据类型。 `DATETIMEOFFSETFROMPARTS` 使用偏移参数来表示时区偏移量。 如果省略偏移参数，`DATETIMEOFFSETFROMPARTS` 假定时区偏移量为 00:00，换言之，即根本没有时区偏移量。 对于指定的偏移参数，`DATETIMEOFFSETFROMPARTS` 需要这两个参数的值，这些参数要么都是正值，要么都是负值。 对于没有指定 hour_offset 值的指定 minute_offset，`DATETIMEOFFSETFROMPARTS` 将引发错误。 如果其他参数具有无效值，`DATETIMEOFFSETFROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIMEOFFSETFROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值，`DATETIMEOFFSETFROMPARTS` 将引发错误。
   
-fractions 参数取决于 precision 参数。 例如，如果 precision 为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒。 如果 precision 的值为零，则 fractions 的值也必须为零；否则将引发错误。
-  
-此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 但在低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器版本中无法远程执行。
+fractions 参数取决于 precision 参数。 例如，如果 precision 值为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒。 如果 precision 的值为零，则 fractions 的值也必须为零；否则 `DATETIMEOFFSETFROMPARTS` 将引发错误。
+
+此函数支持在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及更高版本的服务器上远程执行。 但不支持在版本低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器上远程执行。
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. 不包含秒的小数部分的简单示例  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. 不包含秒的小数部分的示例  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
@@ -103,7 +103,7 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 包含秒的小数部分的示例  
-以下示例演示了 fractions 和 precision 参数的用法：
+此示例演示了 fractions 和 precision 参数的用法：
 1.   如果 fractions 的值为 5、precision 的值为 1，则 fractions 的值表示 5/10 秒。  
 1.   如果 fractions 的值为 50、precision 的值为 2，则 fractions 的值表示 50/100 秒。  
 1.   如果 fractions 的值为 500、precision 的值为 3，则 fractions 的值表示 500/1000 秒。  

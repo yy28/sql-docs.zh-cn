@@ -1,32 +1,32 @@
 ---
-title: 连接到 Azure 中的 SSIS 目录数据库 (SSISDB) | Microsoft Docs
+title: 连接到 Azure 中的 SSIS 目录 (SSISDB) | Microsoft Docs
+description: 查找连接到 Azure SQL 数据库服务器上托管的 SSIS 目录 (SSISDB) 所需的连接信息。
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405669"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>连接到 Azure 中的 SSIS 目录数据库 (SSISDB)
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>连接到 Azure 中的 SSIS 目录 (SSISDB)
 
-获取连接到 Azure SQL 数据库服务器上托管的 SSISDB 目录数据库所需的连接信息。 连接时需要以下项：
+查找连接到 Azure SQL 数据库服务器上托管的 SSIS 目录 (SSISDB) 所需的连接信息。 连接时需要以下项：
 - 完全限定服务器名称
 - 数据库名称
 - 登录信息 
 
 > [!IMPORTANT]
-> 如果尚未在 Azure 数据工厂版本 2 中创建 Azure-SSIS Integration Runtime，则无法在 Azure SQL 数据库中创建 SSISDB 目录数据库。 这是因为，在 Azure 上运行 SSIS 包的是 Azure-SSIS IR。 有关详细信息，请参阅[将 SSIS 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
+> 如果尚未在 Azure 数据工厂版本 2 中创建 Azure-SSIS Integration Runtime，则无法在 Azure SQL 数据库中创建 SSISDB 目录数据库。 Azure-SSIS IR 是在 Azure 上运行 SSIS 包的运行时环境。 有关过程的演练，请参阅[在 Azure 中部署和运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
 
 ## <a name="prerequisites"></a>必备条件
 开始之前，请确保具有 SQL Server Management Studio (SSMS) 版本 17.2 或更高版本。 如果 SSISDB 目录数据库托管在 SQL 数据库托管实例（预览版）中，请确保安装了 17.6 版或更高版本的 SSMS。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/15/2018
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
    | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 |
-   | **身份验证** | SQL Server 身份验证 | 本快速入门使用 SQL 身份验证。 |
+   | **身份验证** | SQL Server 身份验证 | |
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
 
@@ -71,4 +71,4 @@ ms.lasthandoff: 05/15/2018
 ## <a name="next-steps"></a>后续步骤
 - 部署包。 有关详细信息，请参阅[使用 SQL Server Management Studio (SSMS) 部署 SSIS 项目](../ssis-quickstart-deploy-ssms.md)。
 - 运行包。 有关详细信息，请参阅[使用 SQL Server Management Studio (SSMS) 运行 SSIS 包](../ssis-quickstart-run-ssms.md)。
-- 计划包执行。 有关详细信息，请参阅[计划 Azure 上的 SSIS 包执行](ssis-azure-schedule-packages.md)
+- 计划包执行。 有关详细信息，请参阅[计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages.md)

@@ -1,7 +1,7 @@
 ---
 title: 内存管理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -20,11 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239367"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +76,7 @@ ms.lasthandoff: 05/03/2018
 > 旧版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可在 32 位操作系统上运行。 在 32 位操作系统上访问超过 4 GB 的内存需要地址窗口化扩展插件 (AWE) 对内存进行管理。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位操作系统上运行，则不需要。 有关 AWE 的详细信息，请参阅 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文档中的[进程地址空间](http://msdn.microsoft.com/library/ms189334.aspx)和[管理大型数据库的内存](http://msdn.microsoft.com/library/ms191481.aspx)。   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对内存管理的更改
-
-在 SQL Server 的早期版本 （[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，使用五种不同的机制分配内存：
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，使用五种不同的机制分配内存：
 -  **单页分配器 (SPA)** 它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
 -  **多页分配器 (MPA)**，用于需要 8 KB 以上的内存分配。
 -  **CLR 分配器**，包含 CLR 初始化期间创建的 SQL CLR 堆及其全局分配。
@@ -109,7 +109,6 @@ ms.lasthandoff: 05/03/2018
 -  需要存储较大输入参数的跟踪操作。
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对“memory_to_reserve”的更改
-
 在早期版本的 SQL Server（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器保留了一部分进程虚拟地址空间 (VAS)，供多页分配器 (MPA)、CLR 分配器、用于 SQL Server 进程中的线程堆栈的内存分配以及直接 Windows 分配 (DWA) 使用。 这一部分虚拟地址空间也称为“Mem-To-Leave”或“非缓冲池”区域。
 
 为这些分配保留的虚拟地址空间是由 memory_to_reserve 配置选项确定的。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的默认值是 256 MB。 若要替代该默认值，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -g 启动参数。 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页。
@@ -127,12 +126,11 @@ ms.lasthandoff: 05/03/2018
 |从 Windows 直接分配|是|是|
 
 ## <a name="dynamic-memory-management"></a> 动态内存管理
-
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的默认内存管理行为是获取尽可能多的内存而不会造成系统内存短缺。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通过使用 Microsoft Windows 中的内存通知 API 来实现这一点。
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的默认内存管理行为是获取尽可能多的内存而不会造成系统内存短缺。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通过使用 Microsoft Windows 中的内存通知 API 来实现这一点。
 
 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 动态使用内存时，它会定期查询系统以确定可用内存量。 保持此可用内存可避免操作系统 (OS) 进行分页。 如果可用内存较少， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将会释放内存以供操作系统使用。 如果有更多的内存可用， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能会分配更多的内存。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仅在其工作负荷需要更多内存时才增加内存；空闲的服务器不会增加其虚拟地址空间的大小。  
   
-[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md) 控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存分配、编译内存、所有缓存（包括缓冲池）、查询执行内存授予、锁管理器内存和 CLR <sup>1</sup> 内存（实质上是 [s](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) 中存在的所有内存分配器）。 
+[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md) 控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存分配、编译内存、所有缓存（包括缓冲池）、[查询执行内存授予](#effects-of-min-memory-per-query)、[锁管理器内存](#memory-used-by-sql-server-objects-specifications)和 CLR<sup>1</sup> 内存（实质上是 [sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) 中存在的所有内存分配器）。 
 
 <sup>1</sup> 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，在 max_server_memory 分配下管理 CLR 内存。
 
@@ -170,13 +168,12 @@ FROM sys.dm_os_process_memory;
 
 启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时，它将基于多个参数（例如系统的物理内存量、服务器线程数和各个引导参数）计算缓冲池的虚拟地址空间的大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为缓冲池保留计算得到的进程虚拟地址空间量，但它仅为当前负荷获取（提交）所需的物理内存量。
 
-然后实例将继续获取支持工作负荷所需的内存。 随着用户连接和运行查询的逐步增多， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将按需获取更多的物理内存。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例将继续获取物理内存直到达到自己的最大服务器内存分配目标或 Windows 指示不再有可用剩余内存；如果该实例获取的内存超过最小服务器内存设置并且 Windows 指示可用内存短缺，将释放内存。
+然后实例将继续获取支持工作负荷所需的内存。 随着用户连接和运行查询的逐步增多， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将按需获取更多的物理内存。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例将继续获取物理内存，直到达到自己的最大服务器内存分配目标或操作系统指示不再有可用剩余内存；如果该实例获取的内存超过最小服务器内存设置，并且操作系统指示可用内存短缺，将释放内存。 
 
 随着在运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的计算机上启动其他应用程序，这些应用程序将会占用内存，从而使可用物理内存量降到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目标以下。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例将调整其内存使用量。 如果另一个应用程序已停止，并且可用内存增多， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例会增加其内存分配的大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 每秒可释放和获取几 MB 的内存，从而根据内存分配变化快速做出调整。
 
 ## <a name="effects-of-min-and-max-server-memory"></a>min server memory 和 max server memory 的影响
-
-“min server memory”和“max server memory”配置选项建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎缓冲池和其他缓存使用的内存量的上限和下限。 缓冲池并不立即获取最小服务器内存中指定的内存量。 缓冲池启动时只使用初始化所需的内存。 随着[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]工作负荷的增加，它将继续获取支持工作负荷所需的内存。 在达到最小服务器内存中指定的内存量之前，缓冲池不会释放它获取的任何内存。 达到最小服务器内存后，缓冲池将使用标准算法，根据需要来获取和释放内存。 唯一的区别是缓冲池从不将内存分配降到最小服务器内存所指定的水平下，也从不获取超过最大服务器内存所指定水平的内存。
+“min server memory”和“max server memory”配置选项建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎的缓冲池和其他缓存使用的内存量的上限和下限。 缓冲池并不立即获取最小服务器内存中指定的内存量。 缓冲池启动时只使用初始化所需的内存。 随着[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]工作负荷的增加，它将继续获取支持工作负荷所需的内存。 在达到最小服务器内存中指定的内存量之前，缓冲池不会释放它获取的任何内存。 达到最小服务器内存后，缓冲池将使用标准算法，根据需要来获取和释放内存。 唯一的区别是缓冲池从不将内存分配降到最小服务器内存所指定的水平下，也从不获取超过最大服务器内存所指定水平的内存。
 
 > [!NOTE]
 > 作为进程的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将获取超过最大服务器内存选项所指定的内存。 内部和外部组件都可以分配缓冲池以外的内存，这将占用额外内存，但是分配给缓冲池的内存通常仍表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 占用的内存的最大部分。
@@ -187,8 +184,7 @@ FROM sys.dm_os_process_memory;
 
 如果在运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的计算机上频繁启动或停止其他应用程序，启动这些应用程序所需的时间可能会因 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分配和释放内存而延长。 另外，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是几个在一台计算机上运行的服务器应用程序中的一个，系统管理员可能需要控制分配给 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的内存量。 在这些情况下，可以使用最小服务器内存和最大服务器内存选项控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可使用的内存量。 “min server memory”和“max server memory”选项均以 MB 为单位指定。 有关详细信息，请参阅 [服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md)。
 
-## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象规范使用的内存
-
+## <a name="memory-used-by-sql-server-objects-specifications"></a>SQL Server 对象规范使用的内存
 以下列表介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中不同对象所用内存量的近似值。 列出的数值为估计值，根据环境以及创建对象的方式可能有所不同：
 
 * 锁（由锁管理器维护）：64 字节 + 每个所有者 32 字节   
@@ -198,12 +194,33 @@ FROM sys.dm_os_process_memory;
 
 启用多个活动的结果集 (MARS) 时，用户连接约为 (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB
 
-## <a name="buffer-management"></a>缓冲区管理
+## <a name="effects-of-min-memory-per-query"></a>min memory per query 的影响
+min memory per query 配置选项设定将为执行查询分配的最小内存量 (KB)。 这也称为最小内存授予。 所有查询必须等待，直到：可确保提供请求的最小内存，可以启动执行，或者已超过查询等待服务器配置选项中指定的值。 此方案中累积的等待类型是 RESOURCE_SEMAPHORE。
 
+> [!IMPORTANT]
+> 不要将 min memory per query 服务器配置选项设置过高，尤其是在非常繁忙的系统上，因为这样做可能导致：         
+> - 内存资源竞争加剧。         
+> - 即使所需的内存在运行时低于此配置，也会通过增加每次单个查询的内存量来降低并发。    
+>    
+> 有关使用此配置的建议，请参阅[配置 min memory per query 服务器配置选项](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)。
+
+### <a name="memory-grant-considerations"></a>内存授予注意事项
+对于“行模式执行”，任何情况下都不得超过初始内存授予。 如果执行哈希或排序操作需要的内存多于初始授予，这些内存将溢出到磁盘。 溢出的哈希操作由 TempDB 中的 Workfile 支持，而溢出的排序操作由[工作表](../relational-databases/query-processing-architecture-guide.md#worktables)支持。   
+
+排序操作期间发生的溢出称为 [Sort Warning](../relational-databases/event-classes/sort-warnings-event-class.md)。 Sort Warning 指示排序操作的内存不足。 这不包括涉及创建索引的排序操作，只包括查询内的排序操作（例如 `SELECT` 语句中使用的 `ORDER BY` 子句）。
+
+哈希操作期间发生的溢出称为 [Hash Warning](../relational-databases/event-classes/hash-warning-event-class.md)。 在哈希操作过程中发生哈希递归或哈希终止（哈希释放）时，会出现此情况。
+-  当生成输入无法装入可用内存时，会发生哈希递归，这将导致输入分割成单独处理的多个分区。 如果这些分区中任何一个仍然大于可用内存，则该分区再拆分成子分区分别进行处理。 此拆分过程将一直持续到每个分区都小于可用内存，或达到最大递归级数。
+-  当哈希操作达到其最大递归级数并转换到替换计划以处理剩余的分区数据时发生哈希释放。 这些事件可导致服务器性能降低。
+
+对于“批模式执行”，默认情况下，初始内存授予可以动态增加到特定内部阈值。 此动态内存授予机制旨在允许在批模式下运行哈希或排序操作的内存驻留执行。 如果这些操作仍然内存不足，则将溢出到磁盘。
+
+有关执行模式的详细信息，请参阅[查询处理体系结构指南](../relational-databases/query-processing-architecture-guide.md#execution-modes)。
+
+## <a name="buffer-management"></a>缓冲区管理
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的主要用途是存储和检索数据，因此，大量磁盘 I/O 是该数据库引擎的一个核心特点。 此外，完成磁盘 I/O 操作要消耗许多资源并且耗时较长，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 侧重于提高 I/O 效率。 缓冲区管理是实现高效 I/O 操作的关键环节。 缓冲区管理组件由下列两种机制组成：用于访问及更新数据库页的缓冲区管理器和用于减少数据库文件 I/O 的缓冲区高速缓存（又称为“缓冲池”）。 
 
 ### <a name="how-buffer-management-works"></a>缓冲区管理的工作原理
-
 一个缓冲区就是一个 8 KB 大小的内存页，其大小与一个数据页或索引页相当。 因此，缓冲区缓存被划分为多个 8 KB 页。 缓冲区管理器负责将数据页或索引页从数据库磁盘文件读入缓冲区高速缓存中，并将修改后的页写回磁盘。 缓冲区缓存中会保留一页，直到缓冲区管理器需要该缓冲区读入更多数据。 数据只有在被修改后才重新写入磁盘。 在将缓冲区缓存中的数据写回磁盘之前，可对其进行多次修改。 有关详细信息，请参阅 [读取页](../relational-databases/reading-pages.md) 和 [写入页](../relational-databases/writing-pages.md)。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 启动时，它将基于大量参数（例如系统的物理内存量、配置的最大服务器线程数和各个启动参数）计算缓冲区缓存的虚拟地址空间的大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为缓冲区缓存保留此计算得到的进程虚拟地址空间量（称为“内存目标”），但它仅为当前负荷获取（提交）所需的物理内存量。 可查询 **sys.dm_os_sys_info** 目录视图中的 **bpool_commit_target** 和 [bpool_committed columns](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 列，分别返回保留为内存目标的页数以及缓冲区缓存中当前提交的页数。
@@ -217,7 +234,6 @@ FROM sys.dm_os_process_memory;
 * 日志管理器。此交互用于预写日志记录。  
 
 ### <a name="supported-features"></a>支持的功能
-
 缓冲区管理器支持以下功能：
 
 * 缓冲区管理器可识别非一致性内存访问 (NUMA)。 缓冲区高速缓存页将跨硬件 NUMA 节点进行分布，它允许线程访问分配到本地 NUMA 节点上的缓冲区页，而不是从外部内存访问。 
@@ -257,6 +273,30 @@ FROM sys.dm_os_process_memory;
 
 单独出现的长时 I/O 如果与上述情况无关，则可能是由硬件或驱动程序问题所致。 系统事件日志可能会包含有助于进行问题诊断的相关事件。
 
+### <a name="memory-pressure-detection"></a>内存压力检测
+内存压力是由内存不足造成的一种情况，可导致：
+- 额外的 I/O（如非常活跃的 lazy writer 后台线程）
+- 重新编译比升高
+- 运行查询延长（如果存在内存授予等待）
+- 额外的 CPU 周期
+
+这种情况可能由外部或内部原因引发。 外部原因包括：
+- 可用物理内存 (RAM) 不足。 这会导致系统调整当前正在运行的进程的工作集，并可能导致整体速度下降。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能减少缓冲池的提交目标，并更频繁地开始调整内部缓存。 
+- 总体可用系统内存（包括系统页面文件）不足。 这可能导致系统无法分配内存，因为无法对当前已分配的内存进行页面换出。
+内部原因包括：
+- 在 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 设置较低内存使用情况上限时响应外部内存压力。
+- 通过减少 max server memory 配置手动降低内存设置。 
+- 多个缓存之间的内部组件的内存分配发生变化。
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 实现了一个专门用于检测和处理内存压力的框架，包含在动态内存管理中。 此框架包含名为“资源监视器”的后台任务。 “资源监视器”任务可监视外部和内部内存指示器的状态。 一旦某个指示器改变状态，它会计算相应的通知并进行广播。 这些通知是每个引擎组件中的内部消息，存储在环形缓冲区中。 
+
+两个环形缓冲区保留与动态内存管理相关的信息： 
+- “资源监视器”环形缓冲区，用于跟踪“资源监视器”活动，例如是否有内存压力信号。 此环形缓冲区包含关于 RESOURCE_MEMPHYSICAL_HIGH、RESOURCE_MEMPHYSICAL_LOW、RESOURCE_MEMPHYSICAL_STEADY 或 RESOURCE_MEMVIRTUAL_LOW 的当前状况的状态信息。
+- “内存代理”环形缓冲区，其中包含每个 Resource Governor 资源池的内存通知记录。 检测到内部内存压力时，将为分配内存的组件启用内存不足通知，以触发用于平衡缓存之间的内存的操作。 
+
+内存代理监视每个组件对内存的需求消耗，然后根据收集的信息计算所有这些组件的最佳内存值。 每个 Resource Governor 资源池都有一组代理。 它们随后可将此信息广播给每个组件，使组件根据需要增加或减少用量。
+有关内存代理的详细信息，请参阅 [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md)。 
+
 ### <a name="error-detection"></a>错误检测  
 数据库页可使用下面两种可选机制之一来保证页在从写入磁盘到再次读取期间的完整性：残缺页保护和校验和保护。 这些机制允许采用独立方法验证数据存储以及诸如控制器、驱动程序、电缆等硬件组件甚至操作系统的正确性。 在即将把页写入磁盘之前将向页添加保护，并在从磁盘读取页后对它进行验证。
 
@@ -278,7 +318,6 @@ FROM sys.dm_os_process_memory;
 > TORN_PAGE_DETECTION 可能使用较少资源，但提供的 CHECKSUM 保护最少。
 
 ## <a name="understanding-non-uniform-memory-access"></a>了解非一致性内存访问
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  能识别非一致性内存访问 (NUMA)，无需特殊配置便可在 NUMA 硬件上顺利地执行。 随着处理器时钟速度的提高和处理器数量的增加，使用这种额外处理能力所需的内存滞后时间越来越难以减少。 为了避开这一问题，硬件供应商提供了大型的 L3 缓存，但这只是一种有限的解决方案。 NUMA 体系结构为此问题提供了可缩放的解决方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已设计为利用基于 NUMA 的计算机而无需更改任何应用程序。 有关详细信息，请参阅 [如何：将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
 
 ## <a name="see-also"></a>另请参阅

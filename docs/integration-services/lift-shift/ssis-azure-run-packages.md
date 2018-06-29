@@ -1,28 +1,26 @@
 ---
 title: 在 Azure 中运行 SSIS 包 | Microsoft Docs
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: 概述了用于运行部署到 Azure SQL 数据库的 SSIS 包的可用方法。
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586080"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330151"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>在 Azure 中运行 SSIS 包
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>运行部署在 Azure 中的 SQL Server Integration Services (SSIS) 包
 
-可以通过选择本文介绍的选项之一，运行部署到 Azure SQL 数据库服务器上 SSISDB 目录数据库中的 SSIS 包。 可以直接运行包，或将包作为 Azure 数据工厂管道的一部分运行。 有关 Azure 上 SSIS 的概述，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](ssis-azure-lift-shift-ssis-packages-overview.md)。
+可以通过选择本文介绍的某个方法，运行部署到 Azure SQL 数据库服务器上 SSISDB 目录中的 SSIS 包。 可以直接运行包，或将包作为 Azure 数据工厂管道的一部分运行。 有关 Azure 上 SSIS 的概述，请参阅[在 Azure 中部署和运行 SSIS 包](ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 - 直接运行包
 
@@ -81,4 +79,4 @@ ms.locfileid: "34586080"
 
 ## <a name="next-steps"></a>后续步骤
 
-了解用于计划部署到 Azure 的 SSIS 包的选项。 有关详细信息，请参阅[计划 Azure 中的 SSIS 包执行](ssis-azure-schedule-packages.md)。
+了解用于计划部署到 Azure 的 SSIS 包的选项。 有关详细信息，请参阅[计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages.md)。

@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6c42d3aea3b73f5afae90e5f7612e9c3d65bfc22
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779543"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238957"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  akey_password  
 保护非对称密钥的密码。 如果数据库主密钥保护非对称私钥，则 akey_password 可具有 NULL 值。 akey_password 具有 nvarchar 数据类型。  
   
- 'ciphertext'  
-使用密钥进行加密的数据。 ciphertext 具有 varbinary 数据类型。  
+ ciphertext - 使用密钥进行加密的数据。 ciphertext 具有 varbinary 数据类型。  
   
  @ciphertext  
 varbinary 类型的变量，包含使用对称密钥进行加密的数据。  
@@ -71,18 +70,27 @@ varbinary 类型的变量，包含使用对称密钥进行加密的数据。
  @authenticator  
 包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型。  
   
+@add_authenticator  
+变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @add_authenticator 具有 int 数据类型。  
+
+authenticator  
+用作验证器生成基础的数据。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 authenticator 具有 sysname 数据类型。
+
+@authenticator  
+包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型。  
+
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>Remarks  
-`DECRYPTBYKEYAUTOASYMKEY` 组合了 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 在单个操作中，它可以解密对称密钥，然后使用该密钥解密已加密文本。  
+`DECRYPTBYKEYAUTOASYMKEY` 合并了 `OPEN SYMMETRIC KEY` 和 `DECRYPTBYKEY` 的功能。 在单个操作中，它首先解密对称密钥，然后使用该密钥解密已加密的 ciphertext。  
   
 ## <a name="permissions"></a>权限  
 需要对对称密钥拥有 `VIEW DEFINITION` 权限以及对非对称密钥拥有 `CONTROL` 权限。  
   
-## <a name="examples"></a>示例  
-此示例演示如何使用 `DECRYPTBYKEYAUTOASYMKEY` 简化解密代码。 应在还没有数据库主密钥的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库上运行此代码。  
-  
+## <a name="examples"></a>示例
+此示例演示 `DECRYPTBYKEYAUTOASYMKEY` 如何简化解密代码。 应在还没有数据库主密钥的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库上运行此代码。  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a96e71ae1222951914743ad88d229d5a1ee9b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3504238274c2aac2e9fd043068b822150f91ca
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239317"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>排序规则函数 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-为使用 SQL 第三排序规则定义的非 Unicode 字符串表达式中的每个字符，返回一个表示权重的二进制字符串。
+对于非 Unicode 字符串表达式中的每个字符（使用 SQL 第三排序规则定义），此函数返回一个表示权重的二进制字符串。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,10 +50,10 @@ non_Unicode_character_string_expression
 根据 SQL 第三排序规则定义的 char、varchar 或 varchar(max) 类型的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 有关上述排序规则的列表，请参阅注释。
   
 ## <a name="return-types"></a>返回类型
-non_Unicode_character_string_expression 是 char 或 varchar 时，TERTIARY_WEIGHTS 返回 varbinary；non_Unicode_character_string_expression 是 varchar(max) 时，返回 varbinary(max)。
+non_Unicode_character_string_expression 是 char 或 varchar 时，`TERTIARY_WEIGHTS` 返回 varbinary；non_Unicode_character_string_expression 具有 varchar(max) 数据类型时，返回 varbinary(max)。
   
 ## <a name="remarks"></a>Remarks  
-未使用 SQL 第三排序规则定义 non_Unicode_character_string_expression 时，TERTIARY_WEIGHTS 返回 NULL。 下表显示了 SQL 第三排序规则。
+SQL 第三排序规则未定义 non_Unicode_character_string_expression 时，`TERTIARY_WEIGHTS` 返回 NULL。 下表显示了 SQL 第三排序规则：
   
 |排序次序 ID|SQL 排序规则|  
 |---|---|
@@ -89,10 +90,10 @@ non_Unicode_character_string_expression 是 char 或 varchar 时，TERTIARY_WEIG
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS 用于定义根据 char、varchar 或 varchar(max) 列的值定义的计算列。 在查询的 ORDER BY 子句中指定 char、varchar 或 varchar(max) 列时，同时在计算列和 char、varchar 或 varchar(max) 列上定义索引可以提升性能。
+使用 `TERTIARY_WEIGHTS` 来定义根据 char、varchar 或 varchar(max) 列的值定义的计算列。 当查询的 ORDER BY 子句指定 char、varchar 或 varchar(max) 列时，计算列和 char、varchar 或 varchar(max) 列上的索引定义可以提升性能。
   
 ## <a name="examples"></a>示例  
-以下示例将在对 `TERTIARY_WEIGHTS` 列的值应用了 `char` 函数的表中创建计算列。
+本示例在将 `TERTIARY_WEIGHTS` 函数应用于 `char` 列的值的表中创建计算列：
   
 ```sql
 CREATE TABLE TertColTable  

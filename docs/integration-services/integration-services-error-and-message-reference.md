@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619554"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgError"></a> 错误消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 **DTS_E_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|Description|  
+|十六进制代码|十进制代码|符号名称|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|正在覆盖目标中的存储过程“%1”。|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|对于 %3，不支持找到的列“%2”的数据类型“%1”。 此列将被转换为 DT_NTEXT。|  
@@ -1047,7 +1046,7 @@ ms.lasthandoff: 05/03/2018
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|此缓冲区已被孤立。 缓冲区管理器已关闭，但还有一个未完成的缓冲区，而且不会对该缓冲区执行清除操作。 这可能会引起内存泄漏和其他问题。|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|尝试查找名为“%1”的输入列失败，错误代码为 0x%2!8.8X!。 在输入列集合中找不到指定的输入列。|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|尝试查找沿袭 ID 为 %1!d! 的输入列失败， 错误代码为 0x%2!8.8X!。 在输入列集合中找不到此输入列。|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|表达式包含无法识别的标记“%1”。 如果“%1”是变量，则应将其表示为“@%1”。 此指定标记无效。 如果将此标记用作变量名称，则应将 @ 符号作为其前缀。|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|表达式包含无法识别的标记“%1”。 如果“%1”是变量，则应将其表示为“\@%1”。 此指定标记无效。 如果将此标记用作变量名称，则应将 @ 符号作为其前缀。|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|表达式包含无法识别的标记“#%1!d!”。|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|在 Variables 集合中找不到变量“%1”。 此变量可能不在正确的作用域内。|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|尝试分析表达式“%1”失败。 此表达式可能包含无效标记、不完整标记或无效元素， 可能格式不正确，也可能缺少某个必需元素的一部分(例如圆括号不成对)。|  
@@ -2025,7 +2024,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgWarning"></a> 警告消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告消息的符号名称以 **DTS_W_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|Description|  
+|十六进制代码|十进制代码|符号名称|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|评估期还剩下 %1!lu! 天。 过期后，将无法执行包。|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|出现了警告。 在此说明警告细节的警告之前，应该还有更多特定警告。|  
@@ -2081,8 +2080,8 @@ ms.lasthandoff: 05/03/2018
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|任务无法执行操作“%1”。|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|文件/进程“%1”不在路径中。|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|主题为空。|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|“收件人”行中的地址格式不正确。 地址中缺少“@”符号或地址无效。|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|“发件人”行中的地址格式不正确。 地址中缺少“@”符号或地址无效。|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|“收件人”行中的地址格式不正确。 地址中缺少“\@”符号或地址无效。|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|“发件人”行中的地址格式不正确。 地址中缺少“\@”符号或地址无效。|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|这两个 XML 文档不相同。|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD 验证将使用 XML 文档中 DOCTYPE 行定义的 DTD 文件。 它将不使用赋予属性“%1”的值。|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|任务无法验证“%1”。|  
@@ -2171,7 +2170,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgInfo"></a> 信息性消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 信息性消息的符号名称以 **DTS_I_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|Description|  
+|十六进制代码|十进制代码|符号名称|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|正在启动此容器的分布式事务处理。|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|正在提交此容器启动的分布式事务处理。|  
@@ -2270,7 +2269,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgGeneral"></a> 常规消息和事件消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 **DTS_MSG_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|Description|  
+|十六进制代码|十进制代码|符号名称|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系统找不到指定的文件。|  
@@ -2309,7 +2308,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgSuccess"></a> 成功消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功消息的符号名称以 **DTS_S_** 开头。  
   
-|十六进制代码|十进制代码|符号名称|Description|  
+|十六进制代码|十进制代码|符号名称|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|该值为 NULL。|  
 |0x40005|262149|DTS_S_TRUNCATED|该字符串值被截断。 缓冲区接收到的字符串对该列而言太长，因而已被缓冲区截断。|  
@@ -2318,7 +2317,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgPipeline"></a> 数据流组件错误消息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 **DTSBC_E_** 开头，其中“BC”指的是大多数 Microsoft 数据流组件都从中派生的本机基类。  
   
-|十六进制代码|十进制代码|符号名称|Description|  
+|十六进制代码|十进制代码|符号名称|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|输出和错误输出的总数 %1!lu! 不正确。 该值必须正好等于 %2!lu!。|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|无法检索索引为 %1!lu! 的输出。|  

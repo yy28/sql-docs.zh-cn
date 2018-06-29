@@ -1,26 +1,26 @@
 ---
 title: 计划安排 Azure 上的 SSIS 包 | Microsoft Docs
+description: 概述了用于计划已部署到 Azure SQL 数据库的 SSIS 包执行的可用方法。
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585839"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411579"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>计划安排 Azure 上的 SSIS 包执行
-可以通过选择本文介绍的选项之一，计划部署到 Azure SQL 数据库服务器上 SSISDB 目录数据库中的 SSIS 包的执行。 可以直接计划包，或作为 Azure 数据工厂管道的一部分间接地计划包。 有关 Azure 上 SSIS 的概述，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](ssis-azure-lift-shift-ssis-packages-overview.md)。
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>计划 Azure 中部署的 SQL Server Integration Services (SSIS) 包的执行
+
+可以通过选择本文介绍的方法之一，计划已部署到 Azure SQL 数据库服务器上 SSISDB 目录中的 SSIS 包的执行。 可以直接计划包，或作为 Azure 数据工厂管道的一部分间接地计划包。 有关 Azure 上 SSIS 的概述，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 - 直接计划包
 
@@ -35,7 +35,7 @@ ms.locfileid: "34585839"
 
 ## <a name="ssms"></a>使用 SSMS 计划包
 
-在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框。 有关详细信息，请参阅[使用 SSMS 计划安排 Azure 上的 SSIS 包执行](ssis-azure-schedule-packages-ssms.md)。
+在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框。 有关详细信息，请参阅[使用 SSMS 计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages-ssms.md)。
 
 此功能要求 SQL Server Management Studio 17.7 或更高版本。 若要获取 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 

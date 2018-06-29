@@ -27,16 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68439f7a9ea22078660d6e0465961c052002e8be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a49d8e24a71b43ba2f400abfbb71f26fe51386a8
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239217"
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回导致 TRY…CATCH 构造的 CATCH 块运行的错误的消息文本。  
+此函数返回错误的消息文本，该错误导致执行了 TRY…CATCH 构造的 CATCH 块。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,21 +51,21 @@ ERROR_MESSAGE ( )
  **nvarchar(4000)**  
   
 ## <a name="return-value"></a>返回值  
- 在 CATCH 块中调用时，返回导致 CATCH 块运行的错误消息的完整文本。 该文本包括为所有可替换参数提供的值，如长度、对象名或时间。  
+在 CATCH 块中调用时，`ERROR_MESSAGE` 返回导致 `CATCH` 块运行的错误消息的完整文本。 该文本包括为所有可替换参数提供的值，例如长度、对象名或时间。  
   
- 如果在 CATCH 块作用域以外调用，则返回 NULL。  
+在 CATCH 块作用域外调用时，`ERROR_MESSAGE` 返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_MESSAGE 可以在 CATCH 块作用域内的任意位置调用。  
+`ERROR_MESSAGE` 支持在 CATCH 块作用域内的任意位置调用。  
   
- ERROR_MESSAGE 无论运行多少次，无论在 CATCH 块作用域内的什么位置运行，它都返回错误消息。 这与 @@ERROR 之类的函数形成鲜明对比，后者这样的函数只能在紧接导致错误的语句后面的下一个语句中返回错误号，或者在 CATCH 块的第一个语句中返回错误号。  
+无论 `ERROR_MESSAGE` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回相关的错误消息。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
   
- 在嵌套 CATCH 块中，ERROR_MESSAGE 返回特定于它被引用 CATCH 块作用域的错误消息。 例如，外部 TRY...CATCH 构造的 CATCH 块可能具有嵌套 TRY...CATCH 构造。 在嵌套 CATCH 块中，ERROR_MESSAGE 返回调用该嵌套 CATCH 块的错误消息。 如果 ERROR_MESSAGE 在外部 CATCH 块中运行，它将返回调用该外部 CATCH 块的错误消息。  
+在嵌套 `CATCH` 块中，`ERROR_MESSAGE` 返回特定于引用该 `CATCH` 块的 `CATCH` 块的作用域的错误消息。 例如，外部 TRY...CATCH 构造的 `CATCH` 块可能具有内部 `TRY...CATCH` 构造。 在该内部 `CATCH` 块内，`ERROR_MESSAGE` 将返回调用内部 `CATCH` 块的错误消息。 如果 `ERROR_MESSAGE` 在外部 `CATCH` 块中运行，它将返回调用该外部 `CATCH` 块的错误消息。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-errormessage-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_MESSAGE  
- 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 将返回错误消息。  
+此示例显示生成被零除错误的 `SELECT` 语句。 `CATCH` 块返回错误消息。  
   
 ```  
   
@@ -76,13 +77,23 @@ BEGIN CATCH
     SELECT ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorMessage
+----------------------------------
+Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>B. 在 CATCH 块中将 ERROR_MESSAGE 与其他错误处理工具一起使用  
- 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 同时返回错误消息和有关错误的信息。  
+此示例显示生成被零除错误的 `SELECT` 语句。 `CATCH` 块将返回错误消息和有关此错误的信息。  
   
 ```  
-  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ,ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. 在 CATCH 块中将 ERROR_MESSAGE 与其他错误处理工具一起使用  
- 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 同时返回错误消息和有关错误的信息。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_SEVERITY() AS ErrorSeverity  
-        ,ERROR_STATE() AS ErrorState  
-        ,ERROR_PROCEDURE() AS ErrorProcedure  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine  ErrorMessage
+----------- ------------- ----------- --------------- ---------- ----------------------------------
+8134        16            1           NULL            4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
+```
   
 

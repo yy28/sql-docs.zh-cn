@@ -2,7 +2,7 @@
 title: 什么是 SQL Server Reporting Services (SSRS) | Microsoft Docs
 description: 了解用于本地移动和分页 Reporting Services 报表的工具和服务。
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,12 +22,12 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c594502d7a63ce437e680a4b9b6accd095a102d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cfeadac5c872c75075cc40e1f2dc07e7a592aa6d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550328"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404909"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
 
@@ -100,7 +100,7 @@ Reporting Services 与“传统”分页文档样式报表相关联，这种报�
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 集成模式下的 Reporting Services
 
-在 SharePoint 集成模式下将报表发布到 Repoorting Services。 可以计划报表处理，按需访问报表，订阅已发布的报表并将报表导出到其他应用程序，例如 Microsoft Excel。 可以在发布到 SharePoint 站点的报表上创建数据警报，并在报表数据更改时接收电子邮件。  
+在 SharePoint 集成模式下将报表发布到 Reporting Services。 可以计划报表处理，按需访问报表，订阅已发布的报表并将报表导出到其他应用程序，例如 Microsoft Excel。 可以在发布到 SharePoint 站点的报表上创建数据警报，并在报表数据更改时接收电子邮件。  
 
 了解有关 [SharePoint 集成模式下的 Reporting Services 报表服务器](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)的详细信息。
 

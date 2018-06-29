@@ -26,18 +26,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f63145f4a828507660b4401c3c52e79f9e49153
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239277"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回结果集分区中行的排名，在排名中没有任何间断。 行的排名等于所讨论行之前的所有排名数加一。  
+此函数返回结果集分区中每行的排名，排名值没有间断。 特定行的排名等于该特定行之前不同排名值的数量加一。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,25 +48,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>参数  
  \<partition_by_clause>  
- 将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为数个应用 DENSE_RANK 函数的分区。 有关 PARTITION BY 语法的信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+首先将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分到分区，然后将 `DENSE_RANK` 函数应用到每个分区。 有关 `PARTITION BY` 语法，请参阅 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  \<order_by_clause>  
- 确定将 DENSE_RANK 函数应用于分区中各行的顺序。  
+确定将 `DENSE_RANK` 函数应用于分区中的行时所基于的顺序。  
   
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- 如果有两个或多个行受同一个分区中排名的约束，则每个约束行将接收相同的排名。 例如，如果两位顶尖销售员具有相同的 SalesYTD 值，则他们将并列第一。 接下来 SalesYTD 最高的销售人员排名第二。 该排名等于该行之前的所有行数加一。 因此，DENSE_RANK 函数返回的数字没有间断，并且始终具有连续的排名。  
+如果两个或更多行在同一分区中具有相同的排名值，那么每个行将获得相同的排名。 例如，如果两位顶尖销售员具有相同的 SalesYTD 值，则他们的排名值都为一。 接下来 SalesYTD 最高的销售人员排名值为二。 这比所讨论的行之前的不同行的数量多了一。 因此，`DENSE_RANK` 函数返回的数字没有间断，并且始终具有连续的排名值。  
   
- 整个查询所用的排序顺序确定了各行在结果中的显示顺序。 这说明排名第一的行可以不是分区中的第一行。  
+整个查询所用的排序顺序确定了各行在结果集中的顺序。 这说明排名第一的行可以不是分区中的第一行。  
   
- DENSE_RANK 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+`DENSE_RANK` 具有不确定性。 请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)获取详细信息。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. 对分区中的行进行排名  
- 以下示例按照数量对指定清单位置的清单中的产品进行了排名。 结果集按 `LocationID` 分区并在逻辑上按 `Quantity` 排序。 注意，产品 494 和 495 具有相同的数量。 因为它们是关联的，所以两者均排名第一。  
+此示例根据数量按指定库存位置对清单中的产品进行了排名。 `DENSE_RANK` 按 `LocationID` 对结果集进行分区，并按 `Quantity` 对其进行逻辑排序。 注意，产品 494 和 495 具有相同的数量。 因为它们都具有相同的数量值，所以排名值都为一。  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 对结果集中的所有行排名  
- 下面的示例返回按薪金排名的前十名员工。 因为未指定 PARTITION BY 子句，所以，DENSE_RANK 函数应用于结果集中的所有行。  
+此示例返回按薪资排前十名的员工。 由于 `SELECT` 语句未指定 `PARTITION BY` 子句，因此 `DENSE_RANK` 函数应用于所有结果集行。  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +131,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 用在同一查询中的四个排名函数  
- 以下示例显示了用在同一查询中的四个排名函数。 有关函数特定的示例，请参阅每个排名函数。  
+此示例显示四个排名函数
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+用于相同查询中。 有关每个函数的具体示例，请参阅每个排名函数。  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D. 对分区中的行进行排名  
- 下面的示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
+此示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 `DENSE_RANK` 按 `SalesTerritoryGroup` 对行集进行分区，并按 `SalesAmountQuota` 对结果集进行排序。  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +191,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
