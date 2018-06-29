@@ -80,7 +80,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="remarks"></a>Remarks  
 **Sqlsrv_query**函数非常适合一次性查询，并应为执行查询，除非特殊情况下应用的默认选项。 此函数提供了一个简化的方法，以便使用最少的代码来执行查询。 **Sqlsrv_query**函数不会语句准备和语句执行，并可用于执行参数化的查询。  
   
-有关详细信息，请参阅 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
 在下面的示例中，向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入单个行。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  

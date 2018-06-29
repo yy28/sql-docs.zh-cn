@@ -33,7 +33,7 @@ ms.locfileid: "35307236"
 |ApplicationIntent|String|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite。<br /><br />有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持高可用性、 灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|ReadWrite|  
 |AttachDBFileName|String|指定服务器应附加的数据库文件。|未设置任何值。|  
 |身份验证|以下字符串之一：<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|指定的身份验证模式。|未设置。|  
-|CharacterSet<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|String|指定用于将数据发送到服务器的字符集。<br /><br />可能的值为 SQLSRV_ENC_CHAR 和 UTF-8。 有关详细信息，请参阅 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|String|指定用于将数据发送到服务器的字符集。<br /><br />可能的值为 SQLSRV_ENC_CHAR 和 UTF-8。 有关详细信息，请参阅 [如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption<br /><br />（仅支持在 Windows 中）|**启用**或**已禁用**|指定是否已启用始终加密功能。 |禁用|  
 |ConnectionPooling|1 或 **true** ，表示启用连接池。<br /><br />0 或 **false** ，表示禁用连接池。|指定是否从连接池分配连接 (1 或**true**) 或不 (0 或**false**)。<sup>1</sup>|**true** (1)|  
 |ConnectRetryCount|介于 0 和 255 （含） 之间的整数|尝试重新建立放弃之前断开的连接的最大次数。 默认情况下，进行一次尝试以重新建立连接时中断。 值为 0 表示将尝试没有重新连接。|@shouldalert|  
@@ -66,7 +66,7 @@ ms.locfileid: "35307236"
 
 4. 要连接到的 *UID* 身份验证进行连接时，必须同时设置 *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 属性。  
 
-许多支持的键都是 ODBC 连接字符串属性。 有关 ODBC 连接字符串的信息，请参阅[Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+许多支持的键都是 ODBC 连接字符串属性。 有关 ODBC 连接字符串的信息，请参阅 [将连接字符串关键字用于 SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
 
 ## <a name="see-also"></a>请参阅  
 [连接到服务器](../../connect/php/connecting-to-the-server.md)  
