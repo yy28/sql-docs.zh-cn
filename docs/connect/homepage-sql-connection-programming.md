@@ -120,7 +120,7 @@ EF 有直接或间接关系具有以下技术：
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft 在 2008 年 8 月首次发布 EF。 在 2015 年 3 月 Microsoft 宣布，EF 6.x 是开发将 Microsoft 的最终版本。 Microsoft 发布到的公共域的源代码。<br /><br />最初 EF 是.NET Framework 的一部分。 但 EF 6.x 已从.NET Framework 中删除。<br /><br />[在 Github 上，在存储库中的 EF 6.x 源代码*aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF 核心](http://docs.microsoft.com/ef/core/) | Microsoft 于 2016 年 6 月发布新开发的 EF 核心。 EF 核心旨在更好的灵活性和可移植性。 EF 核心可以在 Microsoft Windows 之外的操作系统上运行。 和 EF 核心可以与超出只是 Microsoft SQL Server 数据库和其他关系数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[开始使用实体框架核心](https://docs.microsoft.com/ef/core/get-started/index)<br />[EF 核心上使用现有的数据库的.NET Framework 入门](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft 于 2016 年 6 月发布新开发的 EF Core。 EF Core 旨在更好的灵活性和可移植性。 EF Core 可以在 Microsoft Windows 之外的操作系统上运行。 和 EF Core 可以与超出只是 Microsoft SQL Server 数据库和其他关系数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[开始使用实体框架核心](https://docs.microsoft.com/ef/core/get-started/index)<br />[EF Core 上使用现有的数据库的.NET Framework 入门](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 和相关的技术是功能强大，并且有许多值得了解的开发人员想要掌握整个区域。

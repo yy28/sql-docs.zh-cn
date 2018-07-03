@@ -51,7 +51,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | 语言 | 下载 SQL 驱动程序 |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET 核心，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET 核心，有关 MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET 核心，适用于 Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core，有关 MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core，适用于 Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 驱动程序，安装说明](./node-js/step-1-configure-development-environment-for-node-js-development.md) |

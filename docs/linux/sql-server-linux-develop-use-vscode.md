@@ -49,7 +49,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > 对于 macOS，则必须安装 OpenSSL。 这是 mssql 扩展使用 .Net Core 的先决条件。 请按照**安装必备**中的步骤[.Net 核心说明]。 也可在 macOS 终端运行以下命令。
+   > 对于 macOS，则必须安装 OpenSSL。 这是 mssql 扩展使用 .Net Core 的先决条件。 请按照**安装必备**中的步骤[.NET Core 说明]。 也可在 macOS 终端运行以下命令。
    >
    >   ```bash
    >   brew update
@@ -259,7 +259,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
 
 [**mssql** VS Code 的扩展]:https://aka.ms/mssql-marketplace
 [下载并安装 VS Code]:https://code.visualstudio.com/Download
-[.Net 核心说明]:https://www.microsoft.com/net/core
+[.NET Core 说明]:https://www.microsoft.com/net/core
 [管理连接配置文件]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [连接故障排除建议]:./sql-server-linux-troubleshooting-guide.md#connection
 [自定义快捷键]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts

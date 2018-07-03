@@ -27,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="download-a-net-sql-driver"></a>下载.NET SQL 驱动程序
 
-我们当前的代码示例使用适用于 Windows 的.NET Framework 中，ADO.NET。 .NET 核心是适用于 Linux 和 MacOS （除了 Windows)。
+我们当前的代码示例使用适用于 Windows 的.NET Framework 中，ADO.NET。 .NET Core 是适用于 Linux 和 MacOS （除了 Windows)。
 
 ### <a name="adonet-for-windows"></a>ADO.NET 中，适用于 Windows
 
@@ -38,8 +38,8 @@ ms.lasthandoff: 05/03/2018
     - [Visual Studio 的免费更多选项](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET 核心，有关 Linux Ubuntu 和 MacOS
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core，有关 Linux Ubuntu 和 MacOS
 
-在可用的链接来下载.NET 核心，各种不同的操作系统，如下：
+在可用的链接来下载.NET Core，各种不同的操作系统，如下：
 
-- ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载并安装.NET 核心](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载并安装.NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

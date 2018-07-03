@@ -70,7 +70,7 @@ SQL Server 自 2017 年 1 CTP 2.0 及更高版本包括此功能，因此只能�
 
 1. 安装 DotNetCore 1.1
 
-    如果.NET 核心未作为 SQL 服务器的一部分进行安装，则必须在开始 R Server 安装程序之前安装它。
+    如果.NET Core 未作为 SQL 服务器的一部分进行安装，则必须在开始 R Server 安装程序之前安装它。
 
 2. 安装 Microsoft 机器学习服务器。
 
