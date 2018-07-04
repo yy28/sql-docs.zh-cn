@@ -45,7 +45,7 @@ ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 System.Data.S
 ## <a name="more-samples"></a>更多示例  
 * [ADO.NET 代码示例](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [在 Windows 上的.NET Framework 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [在 macOS 上入门.NET 核心](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [在 macOS 上入门.NET Core](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [在 Ubuntu 上的.NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL) 上的.NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

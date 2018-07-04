@@ -72,7 +72,7 @@ ms.locfileid: "34235681"
 
 ## <a name="i-understand-includename-sosincludesname-sos-shortmd-and-the-mssql-extension-for-vs-code-are-powered-by-a-new-tools-service-that-uses-smo-apis-under-the-covers-is-smo-available-on-linux-and-macos"></a>我了解[!INCLUDE[name-sos](../includes/name-sos-short.md)]和由一个新的电源都已 VS Code 的 mssql 扩展*工具服务*，实际上使用 SMO Api。 在 Linux 和 macOS 上提供了 SMO。
 
-SMO Api 尚不可用在 Linux 或 macOS 上可使用的方式。 我们移植到我们所需的.NET 核心 SMO Api 的子集通过[!INCLUDE[name-sos](../includes/name-sos-short.md)]，并且我们打算展开路线图的一部分。
+SMO Api 尚不可用在 Linux 或 macOS 上可使用的方式。 我们移植到我们所需的.NET Core SMO Api 的子集通过[!INCLUDE[name-sos](../includes/name-sos-short.md)]，并且我们打算展开路线图的一部分。
 在 GitHub 上的 SQL 工具服务是： [ https://github.com/Microsoft/sqltoolsservice ](https://github.com/Microsoft/sqltoolsservice)。
 
 
