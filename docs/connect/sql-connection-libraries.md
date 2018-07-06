@@ -12,7 +12,7 @@ ms.date: 06/18/2018
 ms.author: genemi
 ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
 ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
-ms.translationtype: MT
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36246839"

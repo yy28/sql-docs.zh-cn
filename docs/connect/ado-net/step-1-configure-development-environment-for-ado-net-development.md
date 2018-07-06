@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9a7163a7cd0062313d1e0dbdf23cd96c7b61d5f
 ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/11/2018
 ms.locfileid: "35288896"
@@ -27,7 +27,7 @@ ms.locfileid: "35288896"
 
 ## <a name="download-a-net-sql-driver"></a>下载.NET SQL 驱动程序
 
-我们当前的代码示例使用适用于 Windows 的.NET Framework 中，ADO.NET。 .NET Core是适用于 Linux 和 MacOS （除了 Windows)。
+我们当前的代码示例使用适用于 Windows 的.NET Framework 中，ADO.NET。 .NET Core 是适用于 Linux 和 MacOS （除了 Windows)。
 
 ### <a name="adonet-for-windows"></a>ADO.NET 中，适用于 Windows
 

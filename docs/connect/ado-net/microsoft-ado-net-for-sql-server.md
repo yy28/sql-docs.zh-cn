@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
 ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/11/2018
 ms.locfileid: "35288876"
