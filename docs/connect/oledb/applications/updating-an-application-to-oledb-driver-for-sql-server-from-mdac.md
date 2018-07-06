@@ -22,7 +22,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612102"
@@ -62,7 +62,7 @@ ms.locfileid: "35612102"
 
 -   警告和错误已发生小的改动。 警告和错误由服务器现在返回保留相同的严重性时传递给 OLE DB 驱动程序的 SQL Server。 如果要依赖于捕获特定的警告和错误，则应当确保已经全面测试了应用程序。  
 
--   OLE DB 驱动程序的 SQL Server 具有更严格的错误检查比 MDAC，这意味着，某些应用程序不符合严格的 OLE DB 规范行为可能有所不同。 例如，SQLOLEDB 访问接口未强制执行规则的参数名称必须以开头 @ 的结果未参数，但是 SQL Server 的 OLE DB 驱动程序。  
+-   OLE DB 驱动程序的 SQL Server 具有更严格的错误检查比 MDAC，这意味着，某些应用程序不符合严格的 OLE DB 规范行为可能有所不同。 例如，SQLOLEDB 访问接口未强制执行规则的参数名称必须以开头 \@ 的结果未参数，但是 SQL Server 的 OLE DB 驱动程序。  
 
 -   OLE DB 驱动程序的 SQL Server 的行为有所不同，从 MDAC 有关失败的连接。 例如，MDAC 返回缓存的属性值以连接出现故障，而 OLE DB 驱动程序的 SQL Server 将向调用应用程序报告错误。  
 
