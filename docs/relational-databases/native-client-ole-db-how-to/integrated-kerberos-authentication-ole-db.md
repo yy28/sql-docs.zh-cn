@@ -1,12 +1,12 @@
 ---
-title: 集成的 Kerberos 身份验证 (OLE DB) |Microsoft 文档
+title: 集成 Kerberos 身份验证 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 425850106e421e3fb763e3285a44f2894f39ef91
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d0c722646c43b6b7016412540b00dbecdf667db8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694568"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409826"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "35694568"
 
   此示例显示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 获得 Kerberos 相互身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
   
- 有关 Spn 和 Kerberos 身份验证的详细信息，请参阅[服务主体名称&#40;SPN&#41;中客户端连接支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关 Spn 和 Kerberos 身份验证的详细信息，请参阅[服务主体名称&#40;SPN&#41;中的客户端连接支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  必须指定一个服务器。 在 .cpp 文件中，将“MyServer”更改为具有 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）实例的计算机名称。  
   
  此外，还必须指定一个客户提供的 SPN。 在 .cpp 文件 中，将“CPSPN”更改为客户提供的 SPN。  
   
- 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
+ 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

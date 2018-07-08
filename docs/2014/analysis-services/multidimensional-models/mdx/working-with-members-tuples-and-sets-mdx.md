@@ -1,5 +1,5 @@
 ---
-title: 使用成员、 元组和集 (MDX) |Microsoft 文档
+title: 使用成员、 元组和集 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], tuples
 - member keys [MDX]
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59e01b56cee5d9e35b066514c2d24129b38b2fd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd4fa53eb870bc8422dcb80fe019083e773e638
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153258"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成员、元组和集 (MDX)
   MDX 提供多个可返回一个或多个成员、元组或集的函数，或对成员、元组或集进行操作的函数。  
@@ -52,7 +52,7 @@ FROM [Adventure Works]
   
 ```  
   
- 你还可以使用`FirstChild`函数以返回相同的成员，如以下示例所示。  
+ 此外可以使用`FirstChild`函数以返回成员，如以下示例所示。  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  

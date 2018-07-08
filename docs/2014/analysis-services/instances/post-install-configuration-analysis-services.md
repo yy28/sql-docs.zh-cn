@@ -1,5 +1,5 @@
 ---
-title: 安装后配置 (Analysis Services) |Microsoft 文档
+title: 安装后配置 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df6b8362ed63e5b3ec2b339478b9398fd8a65db8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4f7dea428950957d267c929e36627f40e0b7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151648"
 ---
 # <a name="post-install-configuration-analysis-services"></a>安装后配置 (Analysis Services)
   安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](connect-to-analysis-services.md)）。  
@@ -44,7 +44,7 @@ ms.locfileid: "36015588"
  了解如何使用客户端库从 Microsoft 应用程序或自定义应用程序连接到 Analysis Services。 根据您的解决方案要求，您还可能需要为 Kerberos 身份验证配置服务。 必须跨域边界的连接将需要进行 HTTP 访问。 有关后续步骤的说明，请参阅 [Connect to Analysis Services](connect-to-analysis-services.md) 。  
   
 ## <a name="see-also"></a>请参阅  
- [安装 SQL Server 2014](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
+ [SQL Server 2014 安装](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
  [在多维和数据挖掘模式下安装 Analysis Services](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [在表格模式下安装 Analysis Services](install-windows/install-analysis-services.md)   
  [PowerPivot for SharePoint 2013 安装](install-windows/install-analysis-services-in-power-pivot-mode.md)  

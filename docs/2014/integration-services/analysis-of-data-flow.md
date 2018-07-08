@@ -1,5 +1,5 @@
 ---
-title: 数据流分析 |Microsoft 文档
+title: 数据流分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cb8a2a6df2e3b43486329c023a1aaf948064b425
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa09e2c86581214a1ae001c90dba640276920aba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209837"
 ---
 # <a name="analysis-of-data-flow"></a>数据流分析
-  你可以使用[catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`数据库视图，以分析包的数据流。 此视图在每当数据流组件将数据发送到下游组件时显示一行。 这些信息可用来进一步了解发送到每个组件的行。  
+  可以使用[catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`数据库视图分析包的数据流。 此视图在每当数据流组件将数据发送到下游组件时显示一行。 这些信息可用来进一步了解发送到每个组件的行。  
   
 > [!NOTE]  
 >  日志记录级别必须设置为“详细”，才能通过 catalog.execution_data_statistics 视图捕获信息。  
@@ -46,7 +46,7 @@ order by source_component_name, destination_component_name
   
 -   **num_rows_per_millisecond** – 每个组件每毫秒发送的行数  
   
- `HAVING`子句用于防止出现被零除错误的计算中。  
+ `HAVING`子句用于防止在计算中的被零除错误。  
   
 ```  
 use SSISDB  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,22 +23,22 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154528"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
   您可使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的现有实例。 该部署过程通过在 **msdb** 系统数据库（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
   
 -   **开始之前：**  [SQL Server 实用工具](#SQLUtility)、 [数据库选项和设置](#DBOptSettings)、 [限制和局限](#LimitationsRestrictions)、 [先决条件](#Prerequisites)、 [安全性](#Security)、 [权限](#Permissions)  
   
--   **部署 DAC，使用：**[部署数据层应用程序向导](#UsingDeployDACWizard)， [PowerShell  ](#DeployDACPowerShell)  
+-   **若要部署 DAC，使用：**[部署数据层应用程序向导](#UsingDeployDACWizard)， [PowerShell  ](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> 开始之前  
  同一 DAC 包可以多次部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的单个实例上，但必须一次一个执行这些部署。 为每个部署指定的 DAC 实例名称在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中必须唯一。  
@@ -122,7 +122,7 @@ ms.locfileid: "36015057"
   
  “正在验证 DAC 的内容”- 报告验证过程的当前状态的进度栏。  
   
- **\< 以前**-返回到初始状态的**选择包**页。  
+ **\< 以前**-返回到初始状态**选择包**页。  
   
  “下一步 >”- 继续到“选择包”页的最终版本。  
   

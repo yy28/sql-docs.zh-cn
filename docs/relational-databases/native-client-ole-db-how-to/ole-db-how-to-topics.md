@@ -1,12 +1,12 @@
 ---
-title: OLE DB 操作指南主题 |Microsoft 文档
+title: OLE DB 操作指南主题 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ac517bac269064fbb1f52e8651227278a0d231a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 60a4113f849a150ed0e639559fb93ae5d22fb1f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697468"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407716"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 操作指南主题
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，必须了解如何与服务器建立连接、 执行命令，以及如何处理结果。  
+  若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，您必须了解如何建立到服务器的连接、 执行命令，并处理结果。  
   
 ## <a name="in-this-section"></a>本节内容  
   
 -   [处理结果操作指南主题&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [设置较大的数据&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
+-   [设置大型数据&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [枚举 OLE DB 数据源&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -44,9 +44,9 @@ ms.locfileid: "35697468"
   
 -   [使用书签检索行&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [提取列使用 IRow::GetColumns&#40;或 IRow::Open&#41;和 ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [使用 irow:: Getcolumns 提取列&#40;或 irow:: Open&#41;和 ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [提取列使用 IRow::GetColumns &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [使用 irow:: Getcolumns 提取列&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
 -   [更改 SQL Server 身份验证用户密码&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
@@ -58,9 +58,9 @@ ms.locfileid: "35697468"
   
 -   [使用大型 CLR Udt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
--   [显示列和稀疏列的目录元数据&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [显示列和目录元数据对稀疏列&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [集成的 Kerberos 身份验证&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
+-   [集成 Kerberos 身份验证&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
 -   [使用表值参数&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

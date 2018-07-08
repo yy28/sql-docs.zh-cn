@@ -1,12 +1,12 @@
 ---
-title: ISSCommandWithParameters::GetParameterProperties (OLE DB) |Microsoft 文档
+title: 'Isscommandwithparameters:: Getparameterproperties (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c96abfb3a15580222a94bd490793cd17b7d13e14
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 97b9a3a89693271e6dc062359114a7d7bd321bce
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703648"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409136"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,16 +44,16 @@ HRESULT GetParameterProperties(
   
 ## <a name="arguments"></a>参数  
  *pcParams*[out] [in]  
- 在中返回指向包含的 SSPARAMPROPS 结构的数目的内存的指针*prgParamProperties*。  
+ 在返回指向包含数量的 SSPARAMPROPS 结构的内存的指针*prgParamProperties*。  
   
- *prgParamProperties*[out 一个]  
- 指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存和的地址返回到此内存;使用者释放此内存， **IMalloc::Free**当不再需要两个结构。 之前调用**IMalloc::Free**为*prgParamProperties*，使用者还必须调用**VariantClear**为*vValue*属性为了防止内存泄漏，在其中将该变量包含的引用的情况下每个需要的 DBPROP 结构类型 （如 BSTR。)如果*pcParams*是零上的输出或发生 DB_E_ERRORSOCCURRED 其他错误，该提供程序不会分配任何内存，并确保*prgParamProperties*是输出的 null 指针。  
+ *prgParamProperties*[out]  
+ 指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存，并返回此内存; 地址使用者释放此内存以及**imalloc:: Free**它不再需要这些结构。 然后再调用**imalloc:: Free**有关*prgParamProperties*，使用者还必须调用**VariantClear**有关*vValue*属性为了防止内存泄漏情况下，该变量包含引用的每个 DBPROP 结构的类型 （例如 BSTR。)如果*pcParams*是零个在输出或发生错误 DB_E_ERRORSOCCURRED 之外，该提供程序不会分配任何内存并且可确保*prgParamProperties*是输出的 null 指针。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **GetParameterProperties**方法返回作为核心 OLE DB 相同的错误代码**ICommandProperties::GetProperties**方法，除非该 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 不能为引发。  
+ **GetParameterProperties**方法将返回相同的错误代码与核心 OLE DB **icommandproperties:: Getproperties**方法中的，除 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外不能为引发。  
   
 ## <a name="remarks"></a>Remarks  
- **ISSCommandWithParameters::GetParameterProperties**行为保持一致相对于**GetParameterInfo**。 如果[ISSCommandWithParameters::SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未调用或与 cParams 等于零，调用了**GetParameterInfo**派生参数信息，并返回此。 如果**ISSCommandWithParameters::SetParameterProperties**或**SetParameterInfo**已调用至少一个参数， **ISSCommandWithParameters::GetParameterProperties**为其返回仅为这些参数的属性**ISSCommandWithParameters::SetParameterProperties**已调用。 如果**ISSCommandWithParameters::SetParameterProperties**后，会调用**ISSCommandWithParameters::GetParameterProperties**或**GetParameterInfo**，后续调用**ISSCommandWithParameters::GetParameterProperties**为其返回的这些参数的重写的值**ISSCommandWithParameters::SetParameterProperties**已调用。  
+ **Isscommandwithparameters:: Getparameterproperties**相对于一致的行为**GetParameterInfo**。 如果[isscommandwithparameters:: Setparameterproperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未调用或使用等于零的 cParams 调用了**GetParameterInfo**中派生参数信息并返回此信息。 如果**isscommandwithparameters:: Setparameterproperties**或**SetParameterInfo**已为至少一个参数调用**isscommandwithparameters:: Getparameterproperties**为其返回仅为这些参数的属性**isscommandwithparameters:: Setparameterproperties**已调用。 如果**isscommandwithparameters:: Setparameterproperties**后，会调用**isscommandwithparameters:: Getparameterproperties**或**GetParameterInfo**，对后续调用**isscommandwithparameters:: Getparameterproperties**重写这些参数的值返回为其**isscommandwithparameters:: Setparameterproperties**已调用。  
   
  SSPARAMPROPS 结构的定义如下所示：  
   
@@ -70,7 +70,7 @@ HRESULT GetParameterProperties(
 |成员|Description|  
 |------------|-----------------|  
 |*iOrdinal*|所传递参数的序号。|  
-|*cPropertySets*|DBPROPSET 数结构中*rgPropertySets*。|  
+|*cPropertySets*|结构中的数量 DBPROPSET *rgPropertySets*。|  
 |*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>请参阅  

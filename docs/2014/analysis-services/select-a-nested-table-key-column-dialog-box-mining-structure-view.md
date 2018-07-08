@@ -1,5 +1,5 @@
 ---
-title: 选择嵌套的表键列对话框 （挖掘结构视图） |Microsoft 文档
+title: 选择嵌套的表键列对话框 （挖掘结构视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
 helpviewer_keywords:
 - Select a Nested Table Key Column dialog box
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d197434bbff97fa3fab1f1e2031c0b37b69d9ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae03a58af3dd2781ca670137a77baccae3951482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161108"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>“选择嵌套表键列”对话框（“挖掘结构”视图）
   可以使用 **“选择嵌套表键列”** 对话框，指定将用作新嵌套表的键的列。 在您退出此对话框后，挖掘结构中将添加一个包含指定键列的新表。 通过右键单击结构，再选择“添加列”，可以向嵌套表中添加其他列。 根据使用的是 OLAP 挖掘模型还是关系挖掘模型，该对话框将包含不同的选项。  

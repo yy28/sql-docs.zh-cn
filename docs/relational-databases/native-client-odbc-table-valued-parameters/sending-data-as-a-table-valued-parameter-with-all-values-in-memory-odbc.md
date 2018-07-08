@@ -1,12 +1,12 @@
 ---
-title: 内存 (ODBC) 中的所有值的表值参数将其作为发送数据 |Microsoft 文档
+title: 将数据作为具有内存 (ODBC) 中的所有值的表值参数发送 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56b23a290944994fba861f02e78cddbb3488cbab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 038a507b3a5fc67c80903fce3691755ad4aac1e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703278"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411046"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ from @Items
     SQLLEN cbCustCode, cbTVP, cbProdCode[ITEM_ARRAY_SIZE], cbQty[ITEM_ARRAY_SIZE], cbOrdNo, cbOrdDate;  
     ```  
   
-2.  将参数绑定。 使用表值参数时，绑定参数是两阶段进程。 在第一阶段，以正常方式绑定存储过程的步骤参数，如下所示。  
+2.  绑定参数。 使用表值参数时，绑定参数是两阶段进程。 在第一阶段，以正常方式绑定存储过程的步骤参数，如下所示。  
   
     ```  
     // Bind parameters for call to TVPOrderEntryDirect.  
@@ -93,7 +93,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后会将他们是否参数的存储过程，但与 ParameterNumber 的列序号相同的方式使用 SQLBindParameter 绑定的表值的列。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
+3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后将它们是参数的存储过程，但以列序号作为 ParameterNumber 相同的方式使用 SQLBindParameter 绑定表值的列。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

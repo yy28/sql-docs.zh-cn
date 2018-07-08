@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - default field lengths
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e566678b849bc8a837ad2eb411b85b989bd1417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158568"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
-  字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如，`int` 数据类型占 4 个字节。 如果指示前缀长度为 0 **bcp**命令提示您输入字段长度、 默认字段长度和字段长度对包含的数据文件中的数据存储的影响`char`数据。  
+  字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如，`int` 数据类型占 4 个字节。 如果指示前缀长度为 0 **bcp**命令将提示你输入字段长度、 默认字段长度以及字段长度对包含的数据文件中的数据存储的影响`char`数据。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示输入字段长度  
  如果某个交互式 **bcp** 命令包含不带格式化文件开关 (**-f**) 或数据格式开关（**-n**、**-c**、**-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
@@ -51,10 +50,10 @@ ms.locfileid: "36015682"
 ## <a name="using-default-field-lengths"></a>使用默认字段长度  
  通常， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 会建议你接受 **bcp**建议的默认字段长度值。 如果已创建了字符模式数据文件，则使用默认字段长度可确保数据不会被截断，并且不会发生数字溢出错误。  
   
- 如果指定的字段长度不正确，可能会发生问题。 例如，当复制数字数据并且为该数据指定的字段长度过短时， **bcp** 实用工具将显示一条溢出消息而不复制数据。 此外，如果导出`datetime`数据和指定的字段长度少于 26 个字节字符字符串， **bcp**实用工具将截断数据而无需一条错误消息。  
+ 如果指定的字段长度不正确，可能会发生问题。 例如，当复制数字数据并且为该数据指定的字段长度过短时， **bcp** 实用工具将显示一条溢出消息而不复制数据。 此外，如果您导出`datetime`数据，并指定字段长度少于 26 个字节字符字符串中，为**bcp**实用工具将截断数据而不显示一条错误消息。  
   
 > [!IMPORTANT]  
->  使用默认大小选项时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要读取整个字符串。 在某些情况下，使用默认字段长度可能导致“意外的文件结尾”错误。 通常情况下，发生此错误`money`和`datetime`数据类型时的预期字段只有一部分发生在数据文件中; 例如，当`datetime`值*mm*/*dd* / *yy*指定不带时间部分和，因此是短于的预期 24 字符长度的`datetime`中的值`char`格式。 若要避免此类错误，请使用字段终止符或具有固定长度的数据字段，或者通过指定其他值来更改默认字段长度。  
+>  使用默认大小选项时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要读取整个字符串。 在某些情况下，使用默认字段长度可能导致“意外的文件结尾”错误。 通常，此错误出现在`money`并`datetime`数据类型时所需字段的唯一部分出现在数据文件中; 例如，当`datetime`的值*mm*/*dd* / *yy*时间组件而未指定，因此，比预期 24 字符长度更短`datetime`中的值`char`格式。 若要避免此类错误，请使用字段终止符或具有固定长度的数据字段，或者通过指定其他值来更改默认字段长度。  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>字符文件存储的默认字段长度  
  下表列出了要存储为字符文件存储类型的数据的默认字段长度。 可为空值的数据与非空数据的长度相同。  
@@ -91,7 +90,7 @@ ms.locfileid: "36015682"
 |UDT|用户定义的字词 (UDT) 列长度|  
 |XML|0|  
   
- \*有关详细信息`decimal`和`numeric`数据类型，请参阅[decimal 和 numeric &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
+ \*有关详细信息`decimal`并`numeric`数据类型，请参阅[decimal 和 numeric &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
 > [!NOTE]  
 >  `tinyint` 类型的列的值介于 0 到 255 之间；表示该范围内的任意数值所需的最大字符数是三（用于表示 100 到 255 之间的值）。  
@@ -120,7 +119,7 @@ ms.locfileid: "36015682"
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup>有关详细信息`decimal`和`numeric`数据类型，请参阅[decimal 和 numeric &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
+ <sup>1</sup>有关详细信息`decimal`并`numeric`数据类型，请参阅[decimal 和 numeric &#40;-&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
  在上述所有情况中，若要创建日后要重新加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据文件并使存储空间保持最小，请使用长度前缀，以及默认文件存储类型和默认字段长度。  
   

@@ -1,5 +1,5 @@
 ---
-title: Resultset 数据类型 (XMLA) |Microsoft 文档
+title: Resultset 数据类型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Resultset data type
 ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8a571012c82c9e4d26d9f586cf67344f19258a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d4e95d3e2b85971271cff4b1365b44e5a30ba0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155068"
 ---
 # <a name="resultset-data-type-xmla"></a>Resultset 数据类型 (XMLA)
-  定义表示从返回的数据的抽象基元数据类型[发现](../xml-elements-methods-discover.md)或[执行](../xml-elements-methods-execute.md)方法调用。  
+  定义表示从返回的数据的抽象的基元数据类型[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法调用。  
   
- **Namespace** urn： 架构-microsoft-com:xml 的结果集分析：  
+ **Namespace** urn： 架构-microsoft-com:xml-分析： 结果集  
   
 ## <a name="syntax"></a>语法  
   

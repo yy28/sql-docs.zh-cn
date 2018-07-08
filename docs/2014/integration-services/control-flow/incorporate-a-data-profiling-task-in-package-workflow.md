@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164998"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
   数据事件探查和清除在其早期阶段不适合作为自动过程。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，通常需要对数据事件探查任务的输出进行直观的分析和人为判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  
@@ -106,9 +106,9 @@ ms.locfileid: "36015082"
   
 -   在 **“变量”** 窗口中，添加并配置以下两个包变量：  
   
-    -   输入名称， `ProfileConnectionName`，为一个变量并将此变量的类型设置**字符串**。  
+    -   输入名称， `ProfileConnectionName`，为一个变量并设置到此变量的类型**字符串**。  
   
-    -   输入名称， `AddressLine2NullRatio`、 其他变量并设置到此变量的类型**Double**。  
+    -   输入名称， `AddressLine2NullRatio`、 其他变量并将设置到此变量的类型**Double**。  
   
 ### <a name="configure-the-data-profiling-task"></a>配置数据事件探查任务  
  在以下情况下，必须对数据事件探查任务进行配置：  
@@ -272,9 +272,9 @@ ms.locfileid: "36015082"
   
 -   调用`LoadXml`方法`XmlDocument`类而不是`Load`方法。  
   
--   在脚本任务编辑器中，将包含配置文件输出到该任务的包变量的名称添加`ReadOnlyVariables`列表。  
+-   在脚本任务编辑器中，将包含到任务的配置文件输出的包变量的名称添加`ReadOnlyVariables`列表。  
   
--   将变量的字符串值传递`LoadXML`方法，如下面的代码示例中所示。 （本示例使用“ProfileOutput”作为包含配置文件输出的包变量的名称。）  
+-   传递到该变量的字符串值`LoadXML`方法，如下面的代码示例中所示。 （本示例使用“ProfileOutput”作为包含配置文件输出的包变量的名称。）  
   
     ```vb  
     Dim outputString As String  
@@ -332,7 +332,7 @@ ms.locfileid: "36015082"
 7.  在将脚本任务连接到工作流下游分支的优先约束中，写入使用变量值定位工作流的表达式。  
   
 ## <a name="see-also"></a>请参阅  
- [安装程序的数据事件探查任务](data-profiling-task.md)   
+ [设置数据事件探查任务](data-profiling-task.md)   
  [数据配置文件查看器](data-profile-viewer.md)  
   
   

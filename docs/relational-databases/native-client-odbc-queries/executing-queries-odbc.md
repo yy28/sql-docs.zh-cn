@@ -1,12 +1,12 @@
 ---
-title: 执行查询 (ODBC) |Microsoft 文档
+title: 执行查询 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2263557055cef5039364e7510f70006dc5c3efa
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3042b9db6526af479664001c9e7eaeeb8832f0fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696188"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407040"
 ---
 # <a name="executing-queries-odbc"></a>执行查询 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  在 ODBC 应用程序初始化连接句柄并与数据源连接后，它为连接句柄分配一个或多个语句句柄。 然后执行应用程序可以[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句句柄上的语句。 执行 SQL 语句时的一般事件顺序为：  
+  在 ODBC 应用程序初始化连接句柄并与数据源连接后，它为连接句柄分配一个或多个语句句柄。 应用程序然后执行[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句句柄上的语句。 执行 SQL 语句时的一般事件顺序为：  
   
 1.  设置所有所需的语句属性。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "35696188"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- 每个参数标记可以然后绑定到程序变量通过调用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)。  
+ 每个参数标记然后到程序变量通过调用绑定[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)。  
   
  执行所有 SQL 语句并处理它们的结果集之后，应用程序释放语句句柄。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序还支持每个连接句柄的多个语句句柄。 在连接级别管理事务，以便将针对单个连接句柄上的所有语句句柄执行的所有工作视为同一事务的一部分来管理。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持每个连接句柄的多个语句句柄。 在连接级别管理事务，以便将针对单个连接句柄上的所有语句句柄执行的所有工作视为同一事务的一部分来管理。  
   
 ## <a name="in-this-section"></a>本节内容  
   

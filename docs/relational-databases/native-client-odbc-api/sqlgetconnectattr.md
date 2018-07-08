@@ -1,12 +1,12 @@
 ---
-title: SQLGetConnectAttr |Microsoft 文档
+title: SQLGetConnectAttr |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d71d73a5abe3b36764df7e973add335a42978a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a84862d200db9014a494593f0facd052a3160ccc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698978"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412856"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序定义了特定于驱动程序的连接属性。 某些特性可供**SQLGetConnectAttr**，，该函数用于报告它们的当前设置。 值为建立连接，或使用已设置该属性后，直到但不保证这些特性报告[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序定义了特定于驱动程序的连接属性。 某些特性可供**SQLGetConnectAttr**，，该函数用于报告其当前设置。 有关建立连接，或使用设置该属性后，这些属性不保证之前报告的值[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   
  本主题列出只读属性。 有关其他信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的连接属性，请参阅[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35698978"
   
 -   数据访问跟踪日志中的诊断信息（如果启用）。  
   
- 有关详细信息，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 有关详细信息，请参阅[扩展事件日志中访问诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "35698978"
 |SQL_SUCCESS|连接成功。 将在输出缓冲区中找到客户端连接 ID。|  
   
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
- SQL_COPT_SS_PERF_DATA 属性返回包含当前驱动程序性能统计信息的 SQLPERF 结构的指针。 **SQLGetConnectAttr**如果性能日志记录未启用，将返回 NULL。 驱动程序不会动态更新 SQLPERF 结构中的统计信息。 调用**SQLGetConnectAttr**性能统计信息需要刷新每次。  
+ SQL_COPT_SS_PERF_DATA 属性返回包含当前驱动程序性能统计信息的 SQLPERF 结构的指针。 **SQLGetConnectAttr**将返回 NULL，如果未启用性能日志记录。 驱动程序不会动态更新 SQLPERF 结构中的统计信息。 调用**SQLGetConnectAttr**每次需要刷新性能统计信息。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -80,20 +80,20 @@ ms.locfileid: "35698978"
 |任何其他值|用户数据的指针。|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>对服务主体名称 (SPN) 的 SQLGetConnectAttr 支持  
- SQLGetConnectAttr 可用来查询 SQL_COPT_SS_SERVER_SPN、 SQL_COPT_SS_FAILOVER_PARTNER_SPN、 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 的新连接属性的值。 （SQLGetConnectOption 也可用来查询这些值。）  
+ SQLGetConnectAttr 可以用于查询新的连接属性 SQL_COPT_SS_SERVER_SPN、 SQL_COPT_SS_FAILOVER_PARTNER_SPN、 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 的值。 （SQLGetConnectOption 还可查询这些值。）  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 仅对使用 Windows 身份验证的打开的连接可用。  
   
  如果尚未设置 SQL_COPT_SS_SERVER_SPN 或 SQL_COPT_SS_FAILOVER_PARTNER，则返回默认值（空字符串）。  
   
- 有关 Spn 的详细信息，请参阅[服务主体名称&#40;Spn&#41;客户端连接中&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
+ 有关 Spn 的详细信息，请参阅[服务主体名称&#40;的 Spn&#41;客户端连接中&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQLGetConnectAttr 函数](http://go.microsoft.com/fwlink/?LinkId=59347)   
- [ODBC API 实现详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [ODBC API 实现的详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [集 ANSI_WARNINGS &#40;Transact SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   
