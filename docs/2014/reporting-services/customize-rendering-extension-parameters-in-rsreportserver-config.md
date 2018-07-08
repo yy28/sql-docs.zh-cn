@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150238"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自定义呈现扩展插件参数
   可以在 RSReportServer 配置文件中指定呈现扩展插件参数，以覆盖在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行的报表的默认报表呈现行为。 可通过修改呈现扩展插件参数来实现以下目标：  
@@ -44,16 +44,16 @@ ms.locfileid: "36018817"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>查找并修改 RSReportServer.config  
  报表输出格式的配置设置被指定为 RSReportServer.config 文件中的呈现扩展插件参数。 若要在配置文件中指定呈现扩展插件参数，必须知道如何定义用于设置呈现参数的 XML 结构。 有两种 XML 结构可以修改：  
   
--   `OverrideNames`元素定义的显示名称和呈现扩展插件的语言。  
+-   `OverrideNames`元素定义的显示名称和语言的呈现扩展插件。  
   
 -   `DeviceInfo` XML 结构定义呈现扩展插件使用的设备信息设置。 大多数呈现扩展插件参数作为设备信息设置进行指定。  
   
  可以使用文本编辑器修改该文件。 可在 \Reporting Services\Report Server\Bin 文件夹中找到 RSReportServer.config 文件。 有关修改配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 ## <a name="changing-the-display-name"></a>更改显示名称  
- 呈现扩展插件的显示名称显示在报表工具栏的“导出”列表中。 默认显示名称的示例包括 Web 存档、TIFF 文件和 Acrobat (PDF) 文件。 你可以通过指定默认的显示名称将替换为自定义值`OverrideNames`在配置文件中的元素。 此外，如果您要定义单个呈现扩展插件的两个实例，则可在“导出”列表中使用 `OverrideNames` 元素来区分每个实例。  
+ 呈现扩展插件的显示名称显示在报表工具栏的“导出”列表中。 默认显示名称的示例包括 Web 存档、TIFF 文件和 Acrobat (PDF) 文件。 您可以将默认的显示名称的自定义值替换为通过指定`OverrideNames`配置文件中的元素。 此外，如果您要定义单个呈现扩展插件的两个实例，则可在“导出”列表中使用 `OverrideNames` 元素来区分每个实例。  
   
- 显示名称已本地化，因为你必须设置`Language`属性如果要使用自定义值来替换默认的显示名称。 否则，将忽略您指定的任何名称。 设置的语言值必须对报表服务器计算机有效。 例如，如果报表服务器在法语操作系统中运行，则应该指定“fr-FR”作为属性值。  
+ 由于显示名称已本地化，您必须设置`Language`属性如果用自定义值来替换默认的显示名称。 否则，将忽略您指定的任何名称。 设置的语言值必须对报表服务器计算机有效。 例如，如果报表服务器在法语操作系统中运行，则应该指定“fr-FR”作为属性值。  
   
  下面的示例说明了如何在英文报表服务器上提供自定义名称：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36018817"
 ```  
   
 ## <a name="changing-device-information-settings"></a>更改设备信息设置  
- 若要修改已在报表服务器上部署的呈现扩展插件所使用的默认设备信息设置，必须在配置文件中键入 `DeviceInfo` XML 结构。 每个呈现扩展插件都支持对该扩展插件唯一的设备信息设置。 若要查看设备信息设置的完整列表，请参阅[传递设备信息设置应用于呈现扩展](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
+ 若要修改已在报表服务器上部署的呈现扩展插件所使用的默认设备信息设置，必须在配置文件中键入 `DeviceInfo` XML 结构。 每个呈现扩展插件都支持对该扩展插件唯一的设备信息设置。 若要查看设备信息设置的完整列表，请参阅[设备信息设置传递给呈现扩展插件](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   
  以下示例对用于修改图像呈现扩展插件的默认设置的 XML 结构和语法进行了说明：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36018817"
   
 -   指定唯一的显示名称，以便用户了解输出格式之间的差异。  
   
-     如果你要配置同一扩展的多个版本，你可以为每个版本的唯一名称通过提供的值`OverrideNames`。 否则，该扩展插件的所有版本在报表工具栏上的“导出”选项列表中都具有相同的名称。  
+     如果要配置同一扩展插件的多个版本，您可以为每个版本的唯一名称的值，从而`OverrideNames`。 否则，该扩展插件的所有版本在报表工具栏上的“导出”选项列表中都具有相同的名称。  
   
  以下示例阐释了当存在采用横向模式以 EMF 格式输出报表的第二个实例时，如何使用默认的图像呈现扩展插件（该插件生成 TIFF 输出）在纵向模式下输出 EMF。 注意，每个扩展插件名称都是唯一的。 测试此示例时，请记住选择不包含交互式功能的报表，如显示/隐藏选项、矩阵或钻取链接（交互式功能在图像呈现扩展插件中不起作用）：  
   

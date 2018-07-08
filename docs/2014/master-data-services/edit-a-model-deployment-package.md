@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef6d05975ae639f467f793f61a3e367da44efd8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 690897612e73c1f1a9d9cfc8f4a2ed7d8ee84bd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229267"
 ---
 # <a name="edit-a-model-deployment-package"></a>编辑模型部署包
   本主题介绍如何在 MDS 中部署模型的所选部分，而不是部署整个模型。 为此，您需使用模型包编辑器来编辑 MDS 模型包。  
@@ -37,7 +37,7 @@ ms.locfileid: "36016872"
   
 ### <a name="to-edit-a-model-deployment-package"></a>编辑模型部署包  
   
-1.  在 Windows 资源管理器 MDS 服务器上，移动到*驱动器*: files\microsoft SQL Server\120\Master 数据 Services\Configuration。  
+1.  在 Windows 资源管理器在 MDS 服务器上，转至*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration。  
   
 2.  执行 ModelPackageEditor.exe。  
   

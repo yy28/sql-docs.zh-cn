@@ -1,12 +1,12 @@
 ---
-title: 检索结果集信息 (ODBC) |Microsoft 文档
+title: 检索结果集信息 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a87f490742bc3dad279d0aeed99bf61e7b14dcef
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2211e77ed927c9c2bb5fd9cc3e5df89bc20a5245
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700528"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430246"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>处理结果-检索结果集信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "35700528"
   
      或  
   
-    -   调用[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)若要获取特定的描述符信息结果列。  
+    -   调用[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)来获取有关结果列的特定描述符信息。  
   
 ## <a name="see-also"></a>请参阅  
 [处理结果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)

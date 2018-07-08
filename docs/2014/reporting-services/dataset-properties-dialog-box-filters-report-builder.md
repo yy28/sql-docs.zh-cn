@@ -1,5 +1,5 @@
 ---
-title: 数据集属性对话框中，筛选器 （报表生成器） |Microsoft 文档
+title: 数据集属性对话框中，筛选器 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: beb0703212eb639483bbaa015b6fa89bba3a3068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe6bee60f4cee2ce99f5aadd1dc3cea14e85b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258163"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>“数据集属性”对话框 ->“筛选器”（报表生成器）
   在 **“数据集属性”** 对话框中选择 **“筛选器”** 可创建数据集的筛选器。  

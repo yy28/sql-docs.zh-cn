@@ -1,5 +1,5 @@
 ---
-title: 重命名登录名与固定的服务器角色名称匹配 |Microsoft 文档
+title: 重命名与固定的服务器角色名称匹配的登录名 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined login names [SQL Server]
 - fixed server roles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logins [SQL Server], names
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54223b28e681115df1b4ecf11f4fb96d13c68fd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0064e08000454f485846b45fb0cc3d37c0afd031
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155608"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重命名与固定服务器角色名称匹配的登录名
   升级顾问检测到有一个或多个用户定义的登录名与固定服务器角色的名称匹配。 固定服务器角色名称是保留名称。 请在升级前重命名相应登录名。  
@@ -64,7 +64,7 @@ ms.locfileid: "36025370"
   
 2.  删除登录名。  
   
-3.  使用**sp_addlogin**系统过程以创建新的登录名。 指定在步骤 1 中返回 SID **@sid**每个相应的登录名的参数。  
+3.  使用**sp_addlogin**系统过程来创建新的登录名。 指定在步骤 1 中返回的 SID **@sid**参数为每个相应登录名。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - deleting indexes
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aeb1c0f282e0cb46bcb1e35af933a67b84eb4e0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152078"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   可以在创建 XML 索引`xml`数据类型列。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
@@ -76,12 +76,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  为了选择满足 `WHERE` 子句中条件的 XML 实例，表 `Production.ProductModel` 的每行中的 XML 二进制大型对象 (BLOB) 将在运行时拆分。 然后，计算 `(/PD:ProductDescription/@ProductModelID[.="19"]`方法中的表达式 `exist()` )。 此运行时拆分有可能开销较大，这取决于存储在列中的实例的大小和数目。  
   
- 如果查询 XML 二进制大型对象 (Blob) 是在你的应用程序环境中常见的则帮助索引`xml`类型列。 但是，在数据修改过程中维护索引会带来开销。  
+ 如果应用程序环境中经常查询 XML 二进制大型对象 (Blob)，则它会帮助到索引`xml`类型列。 但是，在数据修改过程中维护索引会带来开销。  
   
 ## <a name="primary-xml-index"></a>主 XML 索引  
  主 XML 索引对 XML 列中 XML 实例内的所有标记、值和路径进行索引。 若要创建主 XML 索引，相应 XML 列所在的表必须对该表的主键创建了聚集索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此主键将主 XML 索引中的行与包含此 XML 列的表中的行关联起来。  
   
- 主 XML 索引是中的 XML Blob 的拆分和持久表示`xml`数据类型列。 对于列中的每个 XML 二进制大型对象 (BLOB)，索引将创建数个数据行。 该索引中的行数大约等于 XML 二进制大型对象中的节点数。 当查询检索完整的 XML 实例时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会提供此 XML 列中的实例。 XML 实例中的查询使用主 XML 索引，并可以通过使用索引本身返回标量值或 XML 子树。  
+ 主 XML 索引是中的 XML Blob 的已拆分和持久的表示形式`xml`数据类型列。 对于列中的每个 XML 二进制大型对象 (BLOB)，索引将创建数个数据行。 该索引中的行数大约等于 XML 二进制大型对象中的节点数。 当查询检索完整的 XML 实例时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会提供此 XML 列中的实例。 XML 实例中的查询使用主 XML 索引，并可以通过使用索引本身返回标量值或 XML 子树。  
   
  每行存储以下节点信息：  
   
@@ -107,7 +107,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  对于涉及 [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) 的查询，查询处理器使用主 XML 索引，并返回主索引自身中的标量值或 XML 子树。 （此索引存储重新构造 XML 实例所需的所有信息。）  
   
- 例如，以下查询将返回存储的摘要信息`CatalogDescription``xml`中的 type column`ProductModel`表。 只有当产品型号的目录说明中还存储 <`Features`> 说明时，该查询才会返回 <`Summary`> 信息。  
+ 例如，以下查询将返回存储的摘要信息`CatalogDescription``xml`类型列中的`ProductModel`表。 只有当产品型号的目录说明中还存储 <`Features`> 说明时，该查询才会返回 <`Summary`> 信息。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -172,7 +172,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`，其中查询将查找包含值为 `"someValue"` 的属性的 <`book`> 元素。  
   
- 以下查询从 `ContactID` 表中返回 `Contact` 。 `WHERE`子句指定查找中的值的筛选器`AdditionalContactInfo``xml`类型列。 只有当相应的其他联系信息 XML 二进制大型对象包含具体的电话号码时，才会返回联系 ID。 由于 <`telephoneNumber`> 元素可以显示在 XML 中的任意位置，因而路径表达式指定 descendent-or-self 轴。  
+ 以下查询从 `ContactID` 表中返回 `Contact` 。 `WHERE`子句中指定筛选器中的值看起来`AdditionalContactInfo``xml`类型列。 只有当相应的其他联系信息 XML 二进制大型对象包含具体的电话号码时，才会返回联系 ID。 由于 <`telephoneNumber`> 元素可以显示在 XML 中的任意位置，因而路径表达式指定 descendent-or-self 轴。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -187,7 +187,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  在这种情况下，<`number`> 的搜索值是已知的，但是它可以作为 <`telephoneNumber`> 元素的子级在 XML 实例中的任意位置出现。 这种查询可能受益于基于特定值的索引查找。  
   
 ### <a name="property-secondary-index"></a>PROPERTY 辅助索引  
- 从单个 XML 实例检索一个或多个值的查询适用 PROPERTY 索引。 当你通过使用检索对象属性时，将出现这种情况**value （)** 方法`xml`类型和当已知对象的主键值。  
+ 从单个 XML 实例检索一个或多个值的查询适用 PROPERTY 索引。 通过检索对象属性时，会发生这种**value （)** 方法的`xml`类型并且知道对象的主键值。  
   
  PROPERTY 索引是对主 XML 索引的列（PK、Path 和节点值）创建的，其中 PK 是基表的主键。  
   
@@ -202,7 +202,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 除本主题稍后所述的不同外, 创建 XML 索引上`xml`类型列是类似于在非上创建索引`xml`类型列。 可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句创建和管理 XML 索引：  
+ 本主题后面介绍的区别，除了创建 XML 索引上`xml`类型列是类似于创建索引对非`xml`类型列。 可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句创建和管理 XML 索引：  
   
 -   [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)  
   

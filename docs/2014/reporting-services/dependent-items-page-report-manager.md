@@ -1,5 +1,5 @@
 ---
-title: 依赖项页 （报表管理器） |Microsoft 文档
+title: 依赖项页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0496334695c72a78afe3fedb87763cfaacd66e35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164108"
 ---
 # <a name="dependent-items-page-report-manager"></a>“依赖项”页（报表管理器）
   使用“依赖项”页可以查看引用共享数据源的报表和模型的列表。 每个项类型的图标指明该项是报表还是模型。 在列表视图或详细信息视图中可以查看此页。 使用详细信息视图可以显示每个项的详细信息。 详细信息视图中还有其他页选项。 为了帮助您管理共享数据源，此页提供了一些指向使用该数据源的报表和模型的链接、有关报表或模型的上次运行或修改时间的指标，以及“删除”和“移动”按钮，以便您可以方便地删除不再使用的报表和模型，或者将其移至另一个位置以待您确定是否仍然需要它们。  

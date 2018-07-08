@@ -1,5 +1,5 @@
 ---
-title: Claims to Windows Token Service (C2WTS) 和 Reporting Services |Microsoft 文档
+title: Claims to Windows Token Service (C2WTS) 和 Reporting Services |Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
 - SharePoint mode
@@ -18,22 +18,22 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 479be89681f7c34558c5a7e89d54023feb110d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278183"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
-  SharePoint Claims to Windows Token Service (c2WTS)，则需要与[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式下，如果你想要对 SharePoint 场之外的数据源使用 windows 身份验证。 这是 true，即使用户访问使用 Windows 身份验证的数据源，因为 web 前端 (WFE) 之间的通信和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]共享的服务将始终为声明的身份验证。  
+  SharePoint Claims to Windows Token Service (c2WTS) 时，需要以及[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式下，如果你想要对 SharePoint 场外的数据源使用 windows 身份验证。 这是 true，即使用户访问数据源使用 Windows 身份验证，因为 web 前端 (WFE) 之间的通信和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]共享的服务将始终是声明身份验证。  
   
  即使你的数据源与共享服务位于相同的计算机上，也需要 c2WTS。 但在此方案中，不需要约束委派。  
   
  c2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以及配置选项“使用任何身份验证协议”。 如前所述，如果您的数据源与共享服务位于同一台计算机上，则不需要约束委派。  
   
- 如果您的环境将使用 Kerberos 约束委派，则 SharePoint 服务器服务和外部数据源需要位于同一 Windows 域中。 依赖于 Claims to Windows Token Service (c2WTS) 的所有服务都必须使用 Kerberos **约束** 委派，以便允许 c2WTS 使用 Kerberos 协议转换将声明转换为 Windows 凭据。 这些规定适用于所有 SharePoint 共享服务。 有关详细信息，请参阅[用于 Microsoft SharePoint 2010 产品的概述的 Kerberos 身份验证 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)。  
+ 如果您的环境将使用 Kerberos 约束委派，则 SharePoint 服务器服务和外部数据源需要位于同一 Windows 域中。 依赖于 Claims to Windows Token Service (c2WTS) 的所有服务都必须使用 Kerberos **约束** 委派，以便允许 c2WTS 使用 Kerberos 协议转换将声明转换为 Windows 凭据。 这些规定适用于所有 SharePoint 共享服务。 有关详细信息，请参阅[概述的 Kerberos 身份验证用于 Microsoft SharePoint 2010 产品 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)。  
   
  本主题将概述此过程。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36017024"
   
     -   作为服务登录  
   
-     为 c2WTS 使用的帐户还需要为具有协议转换的约束委派配置，并且需要将委托给它的所需进行通信 （即 SQL Server 引擎、 SQL Server Analysis Services） 的服务的权限。若要配置委派可以使用 Active Directory 用户和计算机管理单元中。  
+     您用于 c2WTS 的帐户还需要为其配置为具有协议转换的约束委派，并且需要权限以便委派给需要与 （即 SQL Server 引擎、 SQL Server Analysis Services） 进行通信的服务。若要配置委派可以使用 Active Directory 用户和计算机管理单元中。  
   
     1.  右键单击各服务帐户并且打开“属性”对话框。 在该对话框中，单击 **“委派”** 选项卡。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36017024"
   
 2.  配置 c2WTS“AllowedCallers”  
   
-     c2WTS 需要调用方标识显式配置文件中列出**c2wtshost.exe.config**。 除非它已配置为这样做 c2WTS 不在系统中接受来自所有已经过身份验证的用户的请求。 在此情况下，“调用方”是 WSS_WPG Windows 组。 该 c2wtshost.exe.confi 文件保存在以下位置：  
+     c2WTS 需要调用方标识显式配置文件中列出**c2wtshost.exe.config**。 除非它已配置为执行此操作 c2WTS 不在系统中接受来自所有已经过身份验证的用户的请求。 在此情况下，“调用方”是 WSS_WPG Windows 组。 该 c2wtshost.exe.confi 文件保存在以下位置：  
   
      **Files\windows 标识 Foundation\v3.5\c2wtshost.exe.config**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36017024"
 4.  启动 SharePoint“Claims to Windows Token Service”：通过 SharePoint 管理中心上的 **“管理服务器上的服务”** 页启动 Claims to Windows Token Service。 应在将执行操作的服务器上启动该服务。 例如，如果你有一个作为 WFE 的服务器，并且有另一个作为应用程序服务器的服务器（该服务器具有正在运行的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务），则只需启动该应用程序服务器上的 c2WTS。 在 WFE 上不需要 c2WTS。  
   
 ## <a name="see-also"></a>请参阅  
- [声明 to Windows Token Service (c2WTS) 概述 （http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
- [Microsoft SharePoint 2010 产品 （Kerberos 身份验证概述http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
+ [声明为 Windows 令牌服务 (c2WTS) 概述 （http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
+ [用于 Microsoft SharePoint 2010 产品 （Kerberos 身份验证的概述http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

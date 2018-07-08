@@ -1,5 +1,5 @@
 ---
-title: 互操作性和共存 (Integration Services) |Microsoft 文档
+title: 互操作性和共存 (Integration Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
@@ -16,16 +16,16 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d0db34c7b894dc7b92ad6061d4f3c53c1cd2dbe9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f7face1f41fdf02f772c05427db9d45d1bd6050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277583"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>互操作性和共存 (Integration Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 可以共存与并行[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Integration Services 和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Integration Services。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 可同时存在与并行[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Integration Services 和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Integration Services。  
   
 ## <a name="features-and-differences"></a>功能和区别  
  下表列出了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 当前版本与早期版本之间的一些区别。  
@@ -44,28 +44,28 @@ ms.locfileid: "36015924"
   
 -   **在 SQL Server Data Tools 中设计包**。 您使用以下工具基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相应版本开发和维护包。  
   
-    -   使用[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的 Business Intelligence Development Studio 开发和维护基于的包的版本 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
+    -   使用[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Business Intelligence Development Studio 来开发和维护基于包的版本 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
   
-    -   使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]开发和维护包在基于[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
+    -   使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]新版[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]开发和维护包基于[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
   
-    -   使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]开发和维护包在基于[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
+    -   使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新版[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]开发和维护包基于[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
   
--   **加载和运行包**。 你可以加载和运行在开发的包[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 将包添加到一个现有项目时，该包将永久升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 使用的格式。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开包文件时，该包将暂时升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 使用的格式。 如果您保存对该包的更改，该包将永久升级。 一次的保存格式的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services 使用，无法再时包可以打开在相应[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本的 Business Intelligence Development Studio，也不由相应运行[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Integration Services 或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Integration Services 工具。  
+-   **加载和运行包**。 您可以加载和运行中开发的包[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]并[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 将包添加到一个现有项目时，该包将永久升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 使用的格式。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开包文件时，该包将暂时升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 使用的格式。 如果您保存对该包的更改，该包将永久升级。 一次保存格式的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services 使用，包可以不再打开中的相应[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本的 Business Intelligence Development Studio，也不由相应的运行[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Integration Services 或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Integration Services 工具。  
   
--   **在 SQL Server Management Studio 中管理包**。 无法连接到的实例[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务，从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 无法连接到的实例[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务中，从[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 管理在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的实例中存储的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包。 您需要修改服务配置文件，以便将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实例添加到由服务管理的位置列表中。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](../service/integration-services-service-ssis-service.md)。  
+-   **在 SQL Server Management Studio 中管理包**。 无法连接到的实例[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新版[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务，从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 无法连接到的实例[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]新版[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 管理在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的实例中存储的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包。 您需要修改服务配置文件，以便将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实例添加到由服务管理的位置列表中。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](../service/integration-services-service-ssis-service.md)。  
   
 -   **在 SQL Server 中存储包**。 您可以在以下数据库中存储包。  
   
     |包格式|“数据库”|  
     |--------------------|--------------|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services|实例的 msdb 数据库 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services|实例的 msdb 数据库 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services|实例的 msdb 数据库 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 集成服务|实例的 msdb 数据库 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 集成服务|实例的 msdb 数据库 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 集成服务|实例的 msdb 数据库 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
-     实例上[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，可以从实例导入包[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或从实例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，但不能将包导出到的实例[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或实例的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+     实例上[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，可以将导入包的实例[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的实例或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，但不能将包导出到的实例[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或实例的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
      对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实例，不能从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例导入包，也不能将包导出到该实例。  
   
--   **运行包**。 你可以运行[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Integration Services 和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]使用 Integration Services 包[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本**dtexec**实用程序或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 每当[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services 工具加载了开发中的包[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，该工具暂时将转换，在内存中，包的程序包格式[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]使用。 如果[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]包具有问题，要成功转换， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 工具将这些问题解决之前无法运行包。 有关详细信息，请参阅 [Upgrade Integration Services Packages](upgrade-integration-services-packages.md)。  
+-   **运行包**。 可以运行[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Integration Services 和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过使用 Integration Services 包[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新版**dtexec**实用程序或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 每当[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services 工具加载了开发中的包[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，该工具暂时转换，在内存中时，对包的包格式[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]使用。 如果[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]包存在问题，无法成功转换， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 工具将这些问题解决之前无法运行包。 有关详细信息，请参阅 [Upgrade Integration Services Packages](upgrade-integration-services-packages.md)。  
   
   

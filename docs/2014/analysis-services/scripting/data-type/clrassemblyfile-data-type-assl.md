@@ -1,5 +1,5 @@
 ---
-title: ClrAssemblyFile 数据类型 (ASSL) |Microsoft 文档
+title: ClrAssemblyFile 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClrAssemblyFile data type
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b542c4193d80fa80cc9aed6663f41e102266000b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebfcf0080184294cbbda05e671776972be18f9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277863"
 ---
 # <a name="clrassemblyfile-data-type-assl"></a>ClrAssemblyFile 数据类型 (ASSL)
   定义一个基元数据类型，表示组成的文件之一[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md)元素)。  
@@ -59,19 +59,19 @@ ms.locfileid: "36017205"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[数据](../objects/data-element-assl.md)，[名称](../properties/name-element-assl.md)，[类型](../properties/type-element-clrassemblyfile-assl.md)|  
-|派生元素|[文件](../objects/file-element-assl.md)([文件](../collections/files-element-assl.md)集合[ClrAssembly](assembly-data-type-assl.md))|  
+|派生元素|[文件](../objects/file-element-assl.md)([文件](../collections/files-element-assl.md)的集合[ClrAssembly](assembly-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>请参阅  
  [服务器元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [数据库元素&#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Assemblies 元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
+ [程序集元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Assembly 元素&#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [DataBlock 数据类型&#40;ASSL&#41;](datablock-data-type-assl.md)   
  [阻止元素&#40;ASSL&#41;](../collections/blocks-element-assl.md)   
- [阻止元素&#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [Block 元素&#40;ASSL&#41;](../objects/block-element-assl.md)   
  [ComAssembly 数据类型&#40;ASSL&#41;](comassembly-data-type-assl.md)   
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: 使用 SQL Server Native Client 标头和库文件 |Microsoft 文档
+title: 使用 SQL Server Native Client 头文件和库文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,23 +21,22 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7fcb33012d766c2585e11468e23a3591a4b2650
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42a657a4524a09ea8d6643d6b37e193c5c6b227f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952432"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416866"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 头文件和库文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端，请参阅[安装 SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，请参阅[安装 SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件安装在以下位置：  
   
@@ -56,7 +53,7 @@ ms.locfileid: "32952432"
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的 OLE DB 应用程序只需引用 sqlncli.h。 如果应用程序使用 MDAC (SQLOLEDB) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口，则可以同时引用 sqloledb.h 和 sqlncli.h，但必须先引用 sqloledb.h。  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>使用 SQL Server Native Client 头文件  
- 若要使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端标头文件，你必须使用**包括**中你 C/c + + 编程代码语句。 以下部分说明如何在 OLE DB 和 ODBC 应用程序中使用该头文件。  
+ 若要使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 头文件，则必须使用**包括**在 C/c + + 编程代码内的语句。 以下部分说明如何在 OLE DB 和 ODBC 应用程序中使用该头文件。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件只能使用 Visual Studio C++ 2002 或更高版本编译。  
@@ -83,13 +80,13 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  如果应用程序使用 OLE DB 和 ODBC Api，则应省略上面所示的代码的第一行。 此外，如果应用程序的 odbcss.h 具有 `#include` 语句，则应删除该语句。  
+>  如果应用程序使用 OLE DB 和 ODBC Api，应省略上面所示代码的第一行。 此外，如果应用程序的 odbcss.h 具有 `#include` 语句，则应删除该语句。  
   
  当通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 创建与数据源的连接时，请将“SQL Server Native Client 11.0”用作驱动程序名称字符串。  
   
 ## <a name="component-names-and-properties-by-version"></a>基于版本的组件名称和属性  
   
-|属性|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|“属性”|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
 |ODBC 驱动程序名称|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
 |ODBC 头文件名|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
@@ -109,7 +106,7 @@ include "sqlncli.h";
   
  有关详细信息，请参阅执行[执行大容量复制操作](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

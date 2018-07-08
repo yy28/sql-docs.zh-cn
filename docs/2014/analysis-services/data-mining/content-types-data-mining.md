@@ -1,5 +1,5 @@
 ---
-title: 内容类型 （数据挖掘） |Microsoft 文档
+title: 内容类型 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163508"
 ---
 # <a name="content-types-data-mining"></a>内容类型（数据挖掘）
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，在模型中使用挖掘结构中的列时，可以定义该列的物理数据类型和逻辑内容类型。  
@@ -53,14 +53,14 @@ ms.locfileid: "36018316"
   
  离散属性列中的值不能意味着排序，即使这些值为数值也是如此。 此外，即使用于离散列的值为数值，也无法计算小数值。 电话区号即为数值离散数据的典型示例。  
   
- `Discrete`支持所有数据挖掘数据类型的内容类型。  
+ `Discrete`的所有数据挖掘数据类型支持内容类型。  
   
 ## <a name="continuous"></a>连续  
  “ ”意味着列包含的值表示某一允许中间值的范围中的数值数据。 与表示有限、可数数据的离散列不同，连续列表示可缩放度量，且数据可能包含无限数目的小数值。 温度列即为连续属性列的示例。  
   
  当一列中包含连续数值数据并且您知道这些数据应如何分布时，则有可能通过指定期望的值分布来提高分析的精确性。 您将在挖掘结构级别指定列分布。 因此，该设置将应用到基于该结构的所有模型。有关详细信息，请参阅[列分布（数据挖掘）](column-distributions-data-mining.md)。  
   
- `Continuous`内容类型支持以下数据类型： `Date`， `Double`，和`Long`。  
+ `Continuous`以下数据类型支持内容类型： `Date`， `Double`，和`Long`。  
   
 ## <a name="discretized"></a>离散化  
  “离散化” 是将一组连续数据的值放入存储桶以便得到有限数量的可能值的过程。 只能离散数值数据。  
@@ -72,21 +72,21 @@ ms.locfileid: "36018316"
  以下数据类型支持 `Discretized` 内容类型：`Date`、`Double`、`Long` 和 `Text`。  
   
 ## <a name="key"></a>Key  
- “key  ”内容类型意味着该列唯一标识一行。 在事例表中，键列通常为数值或文本标识符。 内容类型设置为`key`，指示列不应使用以进行分析，仅应用于跟踪记录。  
+ “key  ”内容类型意味着该列唯一标识一行。 在事例表中，键列通常为数值或文本标识符。 内容类型设置为`key`以指示列不应使用以进行分析，仅应用于跟踪记录。  
   
- 嵌套表也有键，但嵌套表键的用法稍有不同。 内容类型设置为`key`嵌套的表，如果列是你想要分析的属性中。 嵌套表键的值对于每个事例来说都必须唯一，但在整个事例集中可以重复。  
+ 嵌套表也有键，但嵌套表键的用法稍有不同。 内容类型设置为`key`如果列是你想要分析的属性的嵌套表中。 嵌套表键的值对于每个事例来说都必须唯一，但在整个事例集中可以重复。  
   
  例如，如果分析的是客户购买的产品，则可以对于事例表中 **CustomerID** 列将内容类型设置为键，然后对于嵌套表中 **PurchasedProducts** 列再次将内容类型设置为键。  
   
 > [!NOTE]  
 >  只有在使用已被定义为 Analysis Services 数据源视图的外部数据源中的数据时，嵌套表才可用。  
   
- 此内容类型支持以下数据类型： `Date`， `Double`， `Long`，和`Text`。  
+ 以下数据类型支持此内容类型： `Date`， `Double`， `Long`，和`Text`。  
   
 ## <a name="key-sequence"></a>键序列  
  “key sequence  ”内容类型只能在顺序分析和聚类分析模型中使用。 将内容类型设置为 `key sequence` 时，它指示列包含表示一个事件序列的值。 这些值是有序值，但不必按等差排列。  
   
- 此内容类型支持以下数据类型： `Double`， `Long`， `Text`，和`Date`。  
+ 以下数据类型支持此内容类型： `Double`， `Long`， `Text`，和`Date`。  
   
 ## <a name="key-time"></a>键时间  
  “key time  ”内容类型只能在时序模型中使用。 将内容类型设置为 `key time` 时，它指示值是有序值并表示时间刻度。  

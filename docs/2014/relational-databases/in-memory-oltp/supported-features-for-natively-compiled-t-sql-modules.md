@@ -1,5 +1,5 @@
 ---
-title: 在本机编译存储过程中受支持构造 |Microsoft 文档
+title: 在本机编译存储过程中受支持的构造 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240845"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>本机编译的存储过程中支持的构造
-  本主题包含的本机编译存储过程支持的功能的列表 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
+  本主题列出了本机编译存储过程的支持的功能 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
   
 -   [本机编译存储过程中的可编程性](#pncsp)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "36013862"
   
 -   [本机编译存储过程中的内置函数](#bfncsp)  
   
--   [本机编译存储过程中的查询外围应用](#qsancsp)  
+-   [在本机编译存储过程的查询外围应用](#qsancsp)  
   
 -   [审核](#auditing)  
   
@@ -38,9 +38,9 @@ ms.locfileid: "36013862"
   
 -   [排序限制](#los)  
   
- 有关本机支持中的数据类型的信息编译的存储的过程，请参阅[支持的数据类型](supported-data-types-for-in-memory-oltp.md)。  
+ 有关编译存储的过程中以本机方式支持的数据类型的信息，请参阅[支持的数据类型](supported-data-types-for-in-memory-oltp.md)。  
   
- 有关不支持构造的完整信息以及有关如何解决某些本机编译存储过程中不支持的功能的信息，请参阅[Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
+ 不支持的构造的完整信息以及有关如何解决本机编译存储过程中不支持的功能的一些信息，请参阅[Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
 ##  <a name="pncsp"></a> 本机编译存储过程中的可编程性  
  支持以下各项：  
@@ -70,7 +70,7 @@ ms.locfileid: "36013862"
 ##  <a name="so"></a> 支持的运算符  
  支持下列运算符。  
   
--   [比较运算符&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (例如，>， \<，> =、 和 < =) 支持在条件语句 (如果时)。  
+-   [比较运算符&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (例如，>， \<，> =、 和 < =) 在条件语句中支持 (如果时)。  
   
 -   一元运算符（+、-）。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36013862"
   
 -   系统函数：@@rowcount。 本机编译存储过程中的语句会更新 @@rowcount，因此，可使用本机编译存储过程中的 @@rowcount 来确定受在该本机编译存储过程中执行的上条语句影响的行数。 但是，@@rowcount 在本机编译存储过程执行开始和结束时会重置为 0。  
   
-##  <a name="qsancsp"></a> 本机编译存储过程中的查询外围应用  
+##  <a name="qsancsp"></a> 在本机编译存储过程的查询外围应用  
  支持以下各项：  
   
 -   BETWEEN  
@@ -112,13 +112,13 @@ ms.locfileid: "36013862"
   
 -   CROSS JOIN 和 INNER JOIN 仅支持与 SELECT 查询连用。  
   
--   选择列表中支持表达式和[其中&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)子句如果它们使用一个受支持的运算符。 有关当前支持的运算符的列表，请参阅 [Supported Operators](#so) 。  
+-   选择列表中支持表达式和[其中&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)子句，如果他们使用支持的运算符。 有关当前支持的运算符的列表，请参阅 [Supported Operators](#so) 。  
   
 -   筛选器谓词 IS [NOT] NULL  
   
 -   从\<内存优化表 >  
   
--   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)支持，以及 AVG、 计数、 COUNT_BIG、 MIN、 MAX 和 SUM 聚合函数。 类型 nvarchar、char、varchar、varchar、varbinary 和 Binary 不支持 MIN 和 MAX。 [ORDER BY 子句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)支持[GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)如果 ORDER BY 列表中的表达式逐字出现在 GROUP BY 列表。 例如，支持 GROUP BY a + b ORDER BY a + b，但不支持 GROUP BY a、b ORDER BY a + b。  
+-   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)支持，以及聚合函数 AVG、 COUNT、 COUNT_BIG、 最小值、 最大值和之和。 类型 nvarchar、char、varchar、varchar、varbinary 和 Binary 不支持 MIN 和 MAX。 [ORDER BY 子句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)支持与[GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)如果 ORDER BY 列表中的表达式逐字出现在 GROUP BY 列表。 例如，支持 GROUP BY a + b ORDER BY a + b，但不支持 GROUP BY a、b ORDER BY a + b。  
   
 -   HAVING 具有与 WHERE 子句相同的表达式限制。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36013862"
   
  <sup>1</sup> ORDER BY 和 TOP 支持在本机编译存储过程中，有一些限制：  
   
--   有关不支持`DISTINCT`中`SELECT`或`ORDER BY`子句。  
+-   对于不支持`DISTINCT`中`SELECT`或`ORDER BY`子句。  
   
 -   在 `WITH TIES` 子句中不支持 `PERCENT` 或 `TOP`。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36013862"
   
  不过，与使用变量相比，在 `TOP` 子句中使用常量将提供更好的性能。  
   
- 这些限制不适用于解释[!INCLUDE[tsql](../../includes/tsql-md.md)]上内存优化表的访问权限。  
+ 这些限制不适用于解释[!INCLUDE[tsql](../../includes/tsql-md.md)]上内存优化表的访问。  
   
 ##  <a name="auditing"></a> 审核  
  在本机编译存储过程中支持过程级审核。 不支持语句级审核。  

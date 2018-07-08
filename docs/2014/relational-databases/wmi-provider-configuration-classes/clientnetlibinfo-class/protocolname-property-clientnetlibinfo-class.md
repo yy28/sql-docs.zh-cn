@@ -1,5 +1,5 @@
 ---
-title: ProtocolName 属性 （ClientNetLibInfo 类） |Microsoft 文档
+title: ProtocolName 属性 （ClientNetLibInfo 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9108cb6318bec2e939a8a1518ac302062286874f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f1d206d00df773cbce4b2d5a49430e0d4eb98bec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148938"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 属性（ClientNetLibInfo 类）
   获取与客户端网络库关联的协议的名称。  

@@ -1,5 +1,5 @@
 ---
-title: HoldoutMaxPercent 元素 |Microsoft 文档
+title: HoldoutMaxPercent 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 089ed35d7c900e48da2ba283f8bcf9ee4a29fa7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53689f28351a4a5505f1c1bc1d4c8a9586074704
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278143"
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 元素
-  指定数据源中将用于维持部分包含的测试组的事例的最大百分比[MiningStructure](../objects/miningstructure-element-assl.md)元素。 其余事例用于定型。 值为 0 指示对可作为测试集来维持的事例数没有限制。  
+  指定将用于的测试集所在维持分区在数据源中的事例的最大百分比[MiningStructure](../objects/miningstructure-element-assl.md)元素。 其余事例用于定型。 值为 0 指示对可作为测试集来维持的事例数没有限制。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,14 +60,14 @@ ms.locfileid: "36016933"
 ## <a name="remarks"></a>Remarks  
  如果 `HoldoutMaxPercent` 和 `HoldoutMaxCases` 的值都指定，则算法会将测试集限制为这两个值中的较小值。  
   
- 如果`HoldoutMaxCases`设置为默认值 0，并且尚未为设置一个值`HoldoutMaxPercent`，该算法使用完整的数据集以进行训练。  
+ 如果`HoldoutMaxCases`设置为默认值为 0，并且尚未为设置一个值`HoldoutMaxPercent`，该算法使用完整数据集用于定型。  
   
- 新属性`HoldoutMaxCases`， `HoldoutMaxPercent`， `HoldoutSeed`，或`HoldoutActualSize`仅在可用[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]及更高版本。 因此，必须在这些属性前加上新的命名空间前缀，如语法说明中所示，否则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将返回错误。  
+ 新属性`HoldoutMaxCases`， `HoldoutMaxPercent`， `HoldoutSeed`，或`HoldoutActualSize`仅适用于[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]及更高版本。 因此，必须在这些属性前加上新的命名空间前缀，如语法说明中所示，否则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将返回错误。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 不支持对挖掘结构使用维持分区。 因此，包含 `HoldoutMaxCases`、`HoldoutMaxPercent`、`HoldoutSeed` 或 `HoldoutActualSize` 维持参数之一的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 语句不能在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中使用。 如果在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中将这些维持参数之一用于 ASSL 语句，则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将返回错误。  
   
- 对应于的父元素`HoldoutMaxPercent`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MiningStructure>。  
+ 父级对应的元素`HoldoutMaxPercent`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MiningStructure>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)   

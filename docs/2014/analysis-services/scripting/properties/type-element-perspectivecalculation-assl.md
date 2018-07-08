@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (PerspectiveCalculation) (ASSL) |Microsoft 文档
+title: Type 元素 (PerspectiveCalculation) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229567"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Type 元素 (PerspectiveCalculation) (ASSL)
-  指示的一种[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)元素。  
+  指示的类型[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36024419"
 |*成员*|“计算成员”|  
 |*设置*|命名集|  
   
- 对应于的允许值为枚举`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.PerspectiveCalculationType>。  
+ 与允许的值相对应的枚举`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.PerspectiveCalculationType>。  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.PerspectiveCalculation>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.PerspectiveCalculation>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

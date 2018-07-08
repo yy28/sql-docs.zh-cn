@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 41368 (Database Engine error)
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96d33fc176330efe93077c02c6abfed3c137e33c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8619e3cfb8766caab9d9afbe5ed166761eeeb04f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016369"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409716"
 ---
 # <a name="mssqlserver41368"></a>MSSQLSERVER_41368
     
@@ -42,7 +41,7 @@ ms.locfileid: "36016369"
  当从使用 BEGIN TRANSACTION 启动的显式事务或从隐式事务访问内存优化表时，如果将 IMPLICIT_TRANSACTIONS 设置为 ON，则不支持 READ COMMITTED 隔离级别。  
   
 ## <a name="user-action"></a>用户操作  
- 从显式或隐式 READ COMMITTED 事务访问内存优化表时，使用 SNAPSHOT 来访问该表。 这可以通过使用表提示 WITH (SNAPSHOT) 来实现 (有关详细信息，请参阅[具有内存优化表的事务隔离级别的准则](../in-memory-oltp/memory-optimized-tables.md)) 或通过将数据库设置选项 MEMORY_OPTIMIZED_ELEVATE_TO_快照为 ON (有关详细信息，请参阅[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options))。  
+ 从显式或隐式 READ COMMITTED 事务访问内存优化表时，使用 SNAPSHOT 来访问该表。 这可以通过使用表提示 WITH (SNAPSHOT) (有关详细信息，请参阅[具有内存优化表的事务隔离级别准则](../in-memory-oltp/memory-optimized-tables.md)) 或通过将数据库设置选项 MEMORY_OPTIMIZED_ELEVATE_TO_快照为 ON (有关详细信息，请参阅[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options))。  
   
 ## <a name="see-also"></a>请参阅  
  [内存中 OLTP（内存中优化）](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

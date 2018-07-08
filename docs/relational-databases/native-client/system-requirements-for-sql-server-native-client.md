@@ -1,10 +1,8 @@
 ---
-title: SQL Server Native Client 的系统要求 |Microsoft 文档
+title: SQL Server Native Client 的系统要求 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3480390a74154abb3414070ac1afe6d77ababbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18d13f5d539d00818111d5854dc29a6785b13af1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953672"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413916"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,13 +35,13 @@ ms.locfileid: "32953672"
   
 -   服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 要求使用 Windows Installer 3.0。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上已经安装了 Windows Installer 3.0。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅[Windows 安装程序 3.0 可再发行组件](http://go.microsoft.com/fwlink/?LinkId=46459)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 要求使用 Windows Installer 3.0。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上已经安装了 Windows Installer 3.0。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅[Windows Installer 3.0 Redistributable](http://go.microsoft.com/fwlink/?LinkId=46459)。  
   
 > [!NOTE]  
 >  确保以管理员权限进行登录，然后再安装此软件。  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
- 有关支持的操作系统的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端，请参阅[支持 SQL Server Native Client 的策略](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)。  
+ 有关支持的操作系统的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client，请参阅[SQL Server Native client 支持策略](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)。  
   
 ## <a name="sql-server-requirements"></a>SQL Server 要求  
  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，必须安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -67,26 +64,26 @@ ms.locfileid: "32953672"
 ## <a name="data-type-compatibility-for-client-versions"></a>客户端版本的数据类型兼容性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将新数据类型映射到与下级客户端相兼容的较旧的数据类型，如下表所示。  
   
- OLE DB 和 ADO 的应用程序可以使用**DataTypeCompatibility**与连接字符串关键字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端以使用旧的数据类型。 当**DataTypeCompatibility = 80**，OLE DB 客户端将连接使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的表格格式数据流 (TDS) 版本，而不是 TDS 版本。 也就是说，对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和较新的数据类型，将由服务器而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 执行下级转换。 此外，这还意味着，连接中的可用功能将被限制为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 尽可能早地对 API 调用中使用新数据类型或功能的尝试进行检测，将错误返回给调用应用程序，而不是尝试将无效的请求传递给服务器。  
+ OLE DB 和 ADO 应用程序可以使用**DataTypeCompatibility**连接字符串关键字用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端的较旧的数据类型。 当**DataTypeCompatibility = 80**，OLE DB 客户端都将使用连接[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]表格格式数据流 (TDS) 版本，而不是 TDS 版本。 也就是说，对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和较新的数据类型，将由服务器而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 执行下级转换。 此外，这还意味着，连接中的可用功能将被限制为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 尽可能早地对 API 调用中使用新数据类型或功能的尝试进行检测，将错误返回给调用应用程序，而不是尝试将无效的请求传递给服务器。  
   
- 没有任何**DataTypeCompatibility**适用于 ODBC 的控件。  
+ 没有任何**DataTypeCompatibility**用于 ODBC 的控件。  
   
- IDBInfo::GetKeywords 将始终返回关键字列表，对应于连接上的服务器版本不受**DataTypeCompatibility**。  
+ IDBInfo::GetKeywords 将始终返回的关键字列表，在连接上的服务器版本相对应，不受**DataTypeCompatibility**。  
   
 |数据类型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows 数据访问组件、MDAC 及<br /><br /> SQL Server Native Client OLE DB 应用程序（其中 DataTypeCompatibility=80）|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|图像|  
-|varchar(max)|varchar|varchar|Text|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|varchar(max)|varchar|varchar|文本|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|udt|varbinary|图像|  
-|date|date|varchar|Varchar|  
+|日期|日期|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 编程](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   

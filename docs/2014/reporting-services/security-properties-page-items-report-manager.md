@@ -1,5 +1,5 @@
 ---
-title: 安全属性页中，项 （报表管理器） |Microsoft 文档
+title: 安全属性页，项 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c072df6e055cbf0bc0fc0dc503b6dfd55a4c8a29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b44a164b321c0d5d82fce7016427ad7d639f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230217"
 ---
 # <a name="security-properties-page-items-report-manager"></a>项的“安全性”属性页（报表管理器）
   使用“安全属性”页可以查看或修改安全设置，以确定对文件夹、报表、模型、资源和共享数据源的访问。 此页可用于您有权保护的项。  
@@ -54,9 +54,9 @@ ms.locfileid: "36017026"
  选中要删除的组名或用户名旁边的复选框，再单击 **“删除”**。 如果角色分配是剩余的唯一角色分配，或者如果它是定义报表服务器的安全基线的内置角色分配（如“Built-in\Administrators”），则不能删除该角色分配。 删除角色分配不会删除组或用户帐户或角色定义。  
   
  **新建角色分配**  
- 单击此选项可打开“新建角色分配”页，该页用于为当前项创建其他角色分配。 有关详细信息，请参阅[新建角色分配： 编辑角色分配页&#40;报表管理器&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
+ 单击此选项可打开“新建角色分配”页，该页用于为当前项创建其他角色分配。 有关详细信息，请参阅[新的角色分配： 编辑角色分配页&#40;报表管理器&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
   
- **恢复到父级安全**  
+ **恢复到父级安全设置**  
  单击此选项可将安全设置重置到其直接父文件夹的安全设置。 如果贯穿报表服务器文件夹层次结构的继承是完整的，则使用顶层文件夹（即主文件夹）的安全设置。  
   
  **组或用户**  

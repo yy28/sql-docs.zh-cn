@@ -1,13 +1,11 @@
 ---
-title: 支持分布式的事务 |Microsoft 文档
+title: 支持分布式的事务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,31 +18,31 @@ helpviewer_keywords:
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bae96ffb9b49aead4282193c510a50098d0e0d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: be4fa798483927e89f7154d371caaa1f59d73ee7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016830"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409586"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序使用者可以使用**ITransactionJoin::JoinTransaction**方法可以参与分布式事务协调由 Microsoft 分布式事务处理协调器 (MS DTC)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者可以使用**itransactionjoin:: Jointransaction**方法可以参与分布式事务协调由 Microsoft 分布式事务处理协调器 (MS DTC)。  
   
- MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用者使用 MS DTC **ITransactionDispenser**接口。 **BeginTransaction**的成员**ITransactionDispenser**分布式的事务对象上返回的引用。 此引用传递给[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序使用**JoinTransaction**。  
+ MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者使用 MS DTC **ITransactionDispenser**接口。 **BeginTransaction**的成员**ITransactionDispenser**分布式的事务对象上返回的引用。 此引用传递给[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口使用**JoinTransaction**。  
   
- MS DTC 支持对分布式事务的异步提交和中止。 对于异步事务状态的通知，使用者实现**ITransactionOutcomeEvents**接口，并连接到的 MS DTC 事务对象的接口。  
+ MS DTC 支持对分布式事务的异步提交和中止。 使用者实现异步事务状态的通知，请**ITransactionOutcomeEvents**接口，并连接到 MS DTC 事务对象的接口。  
   
- 对于分布式事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransactionJoin::JoinTransaction** ，如下所示的参数。  
+ 对于分布式事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口实现**itransactionjoin:: Jointransaction**参数，如下所示。  
   
 |参数|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|指向 MS DTC 事务对象的指针。|  
 |*IsoLevel*|忽略[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
-|*IsoFlags*|必须为 0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 XACT_E_NOISORETAIN，如果由使用者指定任何其他值。|  
-|*POtherOptions*|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口从接口请求选项对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 XACT_E_NOTIMEOUT 如果选项对象的*ulTimeout*成员不为零。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将忽略的值*szDescription*成员。|  
+|*IsoFlags*|必须为 0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口将返回 XACT_E_NOISORETAIN 如果使用者指定任何其他值。|  
+|*POtherOptions*|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口从接口请求选项对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口返回 XACT_E_NOTIMEOUT 如果选项对象*ulTimeout*成员不为零。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口将忽略的值*szDescription*成员。|  
   
  下面的示例通过使用 MS DTC 来协调事务：  
   

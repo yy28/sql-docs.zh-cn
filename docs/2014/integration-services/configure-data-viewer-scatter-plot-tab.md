@@ -1,5 +1,5 @@
 ---
-title: 配置数据查看器 （散点图绘图选项卡） |Microsoft 文档
+title: 配置数据查看器 （散点图选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.scatterplot.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6eeee165ebc37809a60366dd7a7b98efeb9aac14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1015e87db60ba8d7aaac41292f0253cfe7cc3b25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150968"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>配置数据查看器（“散点图”选项卡）
   可以使用“配置数据查看器”对话框的“散点图 (x,y)”选项卡指定要进行正交绘图的两个列。 散点图可以对两个数值列中的数据值进行正交绘图。 每条数据记录都成为绘图区中的一个点。 该图表只反应一个缓冲区的内容。  

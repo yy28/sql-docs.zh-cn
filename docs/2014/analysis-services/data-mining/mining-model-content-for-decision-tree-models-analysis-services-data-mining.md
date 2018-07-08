@@ -1,5 +1,5 @@
 ---
-title: 决策树模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 决策树模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161658"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 所有模型类型挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
+  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
   
 ##  <a name="bkmk_Top"></a> 了解决策树模型的结构  
  决策树模型具有表示该模型及其元数据的单一父节点。 父节点下是表示选择的可预测属性的独立树。 例如，如果设置决策树模型以预测客户是否将购买产品，并为性别和收入提供输入，该模型将为购买属性创建一个树，该树具有大量根据性别和收入相关条件进行划分的分支。  
@@ -36,7 +36,7 @@ ms.locfileid: "36024706"
 > [!NOTE]  
 >  如果模型包含多个树，则在 **Microsoft 树查看器**中一次只能查看一个树。 但是，在 **一般内容树查看器** 中，可同时显示相同模型中的所有树。  
   
- ![结构的决策树模型内容](../media/modelcontentstructure-dt.gif "的决策树模型内容的结构")  
+ ![结构的决策树模型内容](../media/modelcontentstructure-dt.gif "的决策树模型内容结构")  
   
  每个可预测属性的树所包含的信息描述选择的输入列如何影响该特定可预测属性的结果。 每个树以包含可预测属性的节点 (NODE_TYPE = 9) 作为开头，后跟一系列表示输入属性的节点 (NODE_TYPE = 10)。 属性对应于事例级列或嵌套表列的值，后者通常是嵌套表的 `Key` 列中的值。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "36024706"
 |Age >= 30|Age >= 30 且 Gender = Male|  
 ||Age >= 30 且 Gender = Female|  
 |Age < 30|Age < 30 且 Gender = Male|  
-||年龄\<30 和性别 = Female|  
+||年龄\<30 且 Gender = Female|  
   
  当使用决策树模型进行预测时，该模型将为其提供的属性用作参数，并沿着属性的路径向下通过整个树。 通常，所有预测都转到叶，而内部节点仅用于分类。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36024706"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|显示区分相对于父节点的特定节点的属性。 节点标题基于拆分条件定义总体的子段。 例如，如果拆分上 [Age] 和它是三向拆分、 节点可能是三个子节点标题"[Age] < 40"，"40 < = [Age] \< 50"，"[Age] > = 50"。|  
+|**NODE_CAPTION**|显示区分相对于父节点的特定节点的属性。 节点标题基于拆分条件定义总体的子段。 例如，如果拆分基于 [Age] 和它是三向拆分，这三个子节点可能的节点标题"[Age] < 40"，"40 < = [Age] \< 50" 和"[Age] > = 50"。|  
 |**NODE_DESCRIPTION**|包含将该节点与其他节点（从模型父节点开始）区分开来的属性的完整列表。 例如，Product name = Apple 且 Color = Red。|  
   
 ###  <a name="NodeRule"></a> 节点规则和边际规则  
@@ -229,7 +229,7 @@ ms.locfileid: "36024706"
 |Age < 30|40|Age < 30 且 Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 且 Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 在所有模型中进行小幅调整，以便将可能的 Missing 值的情况考虑在内。 对于连续属性，每个值范围表示为一种状态 (例如，时间\<月 30 日，年龄 = 30，和保留时间 > 30) 和概率的计算方式如下： 状态存在 (值 = 1)，存在一些其他状态 (值 = 0)，状态是`Missing`. 有关如何调整概率以表示 Missing 值的详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
+ 在所有模型中进行小幅调整，以便将可能的 Missing 值的情况考虑在内。 对于连续属性，每个值的范围表示为一种状态 (例如，Age\<月 30 日，Age = 30，和 Age > 30) 和概率的计算方法，如下所示： 状态存在 (值 = 1)，存在某些其他状态 (值 = 0)，状态是`Missing`. 有关如何调整概率以表示 Missing 值的详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
   
  每个节点的概率几乎是通过分布情况直接计算出的，如下所示：  
   

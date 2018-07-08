@@ -1,12 +1,12 @@
 ---
-title: SQLColAttribute |Microsoft 文档
+title: SQLColAttribute |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1228481d34256568947f9bc85ea2251f31f07db8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9f00392098f45068d1ee0f19c31f7d1b0fdbe2b2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696788"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429936"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  你可以使用**SQLColAttribute**检索已准备或执行 ODBC 语句的结果集列的属性。 调用**SQLColAttribute**上准备语句原因到往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序作为语句执行，因此调用的一部分接收结果集列数据**SQLColAttribute**完成后的**SQLExecute**或**SQLExecDirect**不涉及服务器往返。  
+  可以使用**SQLColAttribute**检索已准备或执行 ODBC 语句的结果集列的属性。 调用**SQLColAttribute**上准备语句会导致往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序接收结果集列数据作为语句执行，因此调用的一部分**SQLColAttribute**在完成**SQLExecute**或**SQLExecDirect**不涉及服务器往返。  
   
 > [!NOTE]  
 >  ODBC 列标识符属性并非可用于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结果集。  
@@ -46,9 +46,9 @@ ms.locfileid: "35696788"
 |SQL_DESC_TABLE_NAME|可用于从生成服务器游标的语句检索的结果集，或从包含 FOR BROWSE 子句的已执行 SELECT 语句检索的结果集。|  
 |SQL_DESC_UNNAMED|对于结果集中的所有列均为 SQL_NAMED，除非某列是不包含标签分配作为表达式一部分的表达式的结果。 当 SQL_DESC_UNNAMED 返回 SQL_UNNAMED 时，所有 ODBC 列标识符属性对于该列都包含零长度字符串。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用的 SET FMTONLY 语句来减少服务器开销时**SQLColAttribute**调用的已准备好但未执行的语句。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用 SET FMTONLY 语句以减少服务器开销时**SQLColAttribute**为已准备好但未执行的语句调用。  
   
- 对于较大的值类型， **SQLColAttribute**将返回以下值：  
+ 对于大值类型**SQLColAttribute**将返回以下值：  
   
 |字段标识符|更改说明|  
 |----------------------|---------------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "35696788"
   
  对于所有版本，当已准备的一批 SQL 语句生成多个结果集时，只为第一个结果集报告列属性。  
   
- 下面的列属性是公开的扩展[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序返回中的所有值*NumericAttrPtr*参数。 这些值作为 SDWORD（signed long，有符号长值）返回，但 SQL_CA_SS_COMPUTE_BYLIST 除外，它是指向 WORD 数组的指针。  
+ 下列属性是公开的扩展[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将返回中的所有值*NumericAttrPtr*参数。 这些值作为 SDWORD（signed long，有符号长值）返回，但 SQL_CA_SS_COMPUTE_BYLIST 除外，它是指向 WORD 数组的指针。  
   
 |字段标识符|返回的值|  
 |----------------------|--------------------|  
@@ -75,13 +75,13 @@ ms.locfileid: "35696788"
 |SQL_CA_SS_COLUMN_UTYPE|SQL Server 列的用户定义数据类型的基本数据类型。 类型值的定义位于 sqlncli.h 中。|  
 |SQL_CA_SS_COLUMN_VARYLEN|如果列的数据在长度方面可能变化，则为 TRUE，否则为 FALSE。|  
 |SQL_CA_SS_COMPUTE_BYLIST|指向一个 WORD（unsigned short，无符号短值）数组的指针，该数组指定在 COMPUTE 子句的 BY 短语中使用的列。 如果 COMPUTE 子句未指定 BY 短语，则返回 NULL 指针。<br /><br /> 数组的第一个元素包含 BY 列表列的计数。 其他元素为列序号。|  
-|SQL_CA_SS_COMPUTE_ID|*计算 id 号*是当前的 TRANSACT-SQL SELECT 语句中的计算子句的结果的行。|  
+|SQL_CA_SS_COMPUTE_ID|*computeid*是当前 TRANSACT-SQL SELECT 语句中 COMPUTE 子句的结果的行。|  
 |SQL_CA_SS_NUM_COMPUTES|在当前 Transact-SQL SELECT 语句中指定的 COMPUTE 子句的数量。|  
 |SQL_CA_SS_NUM_ORDERS|在 ODBC 或 Transact-SQL SELECT 语句的 ORDER BY 子句中指定的列数。|  
   
- \*   语句属性 SQL_SOPT_SS_HIDDEN_COLUMNS 设置为 SQL_HC_ON 时可用。  
+ \*   如果语句属性 SQL_SOPT_SS_HIDDEN_COLUMNS 设置为 sql_hc_on，则，可用。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了特定于驱动程序描述符字段来提供其他信息，以分别表示 XML 架构集合名称、 架构名称和目录名称。 如果这些属性包含非字母数字字符，则它们不需要引号或转义符。 下表列出这些新的描述符字段：  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了特定于驱动程序的描述符字段，以提供附加信息来分别表示 XML 架构集合名称、 架构名称和目录名称。 如果这些属性包含非字母数字字符，则它们不需要引号或转义符。 下表列出这些新的描述符字段：  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
@@ -94,14 +94,14 @@ ms.locfileid: "35696788"
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|包含 UDT 的目录的名称。|  
-|SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|包含用户定义的类型的架构的名称。|  
+|SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|包含 UDT 的架构的名称。|  
 |SQL_CA_SS_UDT_TYPE_NAME|CharacterAttributePtr|UDT 的名称。|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|CharacterAttributePtr|UDT 的程序集完全限定名称。|  
   
  现有的描述符字段标识符 SQL_DESC_TYPE_NAME 用于指示 UDT 的名称。 UDT 类型列的 SQL_DESC_TYPE 字段为 SQL_SS_UDT。  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>SQLColAttribute 对日期和时间增强功能的支持  
- 为日期/时间类型返回的值，请参阅中的"信息返回在 IRD 字段"一节[参数和结果元数据](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)。  
+ 有关为日期/时间类型返回的值，请参阅中的"信息 IRD 字段中返回"一节[参数和结果元数据](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)。  
   
  有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
@@ -109,13 +109,13 @@ ms.locfileid: "35696788"
  **SQLColAttribute**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute 对于稀疏列的支持  
- SQLColAttribute 查询的新实现行描述符 (IRD) 字段，SQL_CA_SS_IS_COLUMN_SET，若要确定列是否为**column_set**列。  
+ SQLColAttribute 查询新实现行描述符 (IRD) 字段 SQL_CA_SS_IS_COLUMN_SET，以确定列是否**column_set**列。  
   
  有关详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQLColAttribute 函数](http://go.microsoft.com/fwlink/?LinkId=59334)   
- [ODBC API 实现详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [ODBC API 实现的详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
   

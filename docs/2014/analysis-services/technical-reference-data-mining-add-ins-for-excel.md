@@ -1,5 +1,5 @@
 ---
-title: 技术参考 （数据挖掘外接程序 excel） |Microsoft 文档
+title: 技术参考 （Excel 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08b615b3566a7144e25615bc1fbeb6b57857e439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa3b2b235e654178e5d374f4fa427141478850bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165308"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>技术参考（Excel 数据挖掘外接程序）
   Office 数据挖掘外接程序包含对程序员和高级数据挖掘者有用的功能。  
@@ -40,12 +40,12 @@ ms.locfileid: "36024658"
   
  首次打开外接程序时，运行配置向导来帮助您连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器。 如果您对任何这些步骤有疑问，请参阅本主题以获取其他帮助。  
   
--   [服务器配置实用程序&#40;数据挖掘的 Excel 外接程序&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [服务器配置实用程序&#40;Excel 数据挖掘外接程序&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据挖掘算法&#40;SQL Server 数据挖掘外接程序&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
- [服务器配置实用程序&#40;数据挖掘的 Excel 外接程序&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [服务器配置实用程序&#40;Excel 数据挖掘外接程序&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="related-sections"></a>相关章节  
   

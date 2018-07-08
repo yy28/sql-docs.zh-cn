@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152098"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件通过 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 的本机格式呈现报表。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -36,7 +36,7 @@ ms.locfileid: "36025455"
 >  若要获取的最新 service pack [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，请参阅[如何获取 SQL Server 2012 的最新 service pack](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
->  在定义类型的参数`String`，则用户会看到文本框中，可以使用任何值。 如果报表参数未与查询参数关联，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法、脚本或 URL，并将报表呈现为 Excel 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
+>  定义类型的参数时`String`，则用户会看到与可以使用任何值的文本框。 如果报表参数未与查询参数关联，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法、脚本或 URL，并将报表呈现为 Excel 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
 >   
 >  若要降低无意中运行恶意脚本的风险，请仅从可信来源打开呈现的报表。 有关保护报表的详细信息，请参阅 [保护报表和资源](../security/secure-reports-and-resources.md)。  
   
@@ -132,14 +132,14 @@ ms.locfileid: "36025455"
 ## <a name="excel-renderer"></a>Excel 呈现器  
   
 ### <a name="excel-2007-2010-renderer"></a>Excel 2007-2010 呈现器  
- 在[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，默认 Excel 呈现器是与兼容的版本[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]2007年-2010年。 这是报表管理器和 SharePoint 列表中 **“导出”** 菜单中的 **Excel** 选项。  
+ 在中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，默认 Excel 呈现器是与兼容的版本[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]2007年-2010年。 这是报表管理器和 SharePoint 列表中 **“导出”** 菜单中的 **Excel** 选项。  
   
  当你使用默认 Excel 呈现器而不是更早版本的 Excel 2003 呈现器时，请安装针对 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包，以便更早版本的 Excel 可打开导出的文件。  
   
 ### <a name="excel-2003-renderer"></a>Excel 2003 呈现器  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003年呈现扩展插件已弃用。 有关详细信息，请参阅[Deprecated Features in SQL Server 2014 中的 SQL Server Reporting Services](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
+>  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003年呈现扩展插件不推荐使用。 有关详细信息，请参阅[SQL Server 2014 中的 SQL Server Reporting Services 中不推荐使用功能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
  与 Excel 2003 兼容的更早版本的 Excel 呈现器现在名为 Excel 2003，并在使用该名称的菜单中列出。 此呈现器生成的文件的内容类型为 **application/vnd.ms-excel** ，并且文件的文件扩展名为 .xlsx。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "36025455"
   
 -   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。  
   
-     此错误出现在同时[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]和报表生成器的独立版本。  
+     在这种将发生这种情况[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]和报表生成器的独立版本。  
   
--   在本地模式和 SharePoint 场中的报表查看器 Web 部件不与集成[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]报表服务器。 有关详细信息，请参阅[报表查看器中的本地模式报表和报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   在本地模式和 SharePoint 场中的报表查看器 Web 部件未与集成[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]报表服务器。 有关详细信息，请参阅[报表查看器中的本地模式报表和报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  如果将 **Excel 2003** 菜单选项呈现器配置为可见，则 Excel 和 Excel 2003 选项可用于以下方案中：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36025455"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和预览报表。  
   
--   连接到报表服务器的报表生成器。 这可以是[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]或报表生成器的独立版本。  
+-   连接到报表服务器的报表生成器。 这可以是[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]或报表生成器独立版本。  
   
 -   远程模式下的报表查看器 Web 部件。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36025455"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 扩展插件定义 Excel 2007-2010 的 Excel 呈现器。 EXCEL 扩展插件定义 Excel 2003 版本。 `Visible = “false”` 指示 Excel 2003 呈现器处于隐藏状态。 有关详细信息，请参阅[RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)和[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
+ EXCELOPENXML 扩展插件定义 Excel 2007-2010 的 Excel 呈现器。 EXCEL 扩展插件定义 Excel 2003 版本。 `Visible = “false”` 指示 Excel 2003 呈现器处于隐藏状态。 有关详细信息，请参阅[RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)并[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Excel 2007-2010 呈现器和 Excel 2003 呈现器之间的差异  
  通过使用 Excel 呈现器或 Excel 2003 呈现器呈现的报表通常是完全相同的，只在极少数的情况下，您会注意到这两种格式之间的差异。 下表对 Excel 呈现器和 Excel 2003 呈现器进行了比较。  
@@ -229,7 +229,7 @@ ms.locfileid: "36025455"
  Excel 表头和表尾部分最多支持 256 个字符，其中包括标记。 如果超出此限制，则 Excel 呈现器将删除自表头和/或表尾字符串末尾开始的标记字符，以便减少总字符数。 如果在删除所有标记字符后，字符串长度仍然超出最大限制，则系统会自右侧开始截断字符串。  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader 设置  
- 默认情况下，设备信息 SimplePageHeaders 设置设置为`False`; 因此，页眉呈现为 Excel 工作表图面上报告中的行。 而包含页眉的工作表行将变成锁定的行。 您可以冻结或解冻 Excel 中的窗格。  
+ 默认情况下，设备信息 SimplePageHeaders 设置设置为`False`; 因此，页眉呈现为 Excel 工作表图面上的报表中的行。 而包含页眉的工作表行将变成锁定的行。 您可以冻结或解冻 Excel 中的窗格。  
   
 > [!NOTE]  
 >  如果在 Excel 中选择“打印标题”  选项，则这些页眉将自动设置为打印在每个工作表页上。  

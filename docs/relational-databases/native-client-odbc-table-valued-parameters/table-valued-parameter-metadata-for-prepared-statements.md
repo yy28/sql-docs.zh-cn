@@ -1,12 +1,12 @@
 ---
-title: 已准备的语句的表值参数元数据 |Microsoft 文档
+title: 预定义语句的表值参数元数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 47938373c0f40f00926d537842afeee000f36870
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b25c1b075b731d909545abe5f67fa6472477f7f6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703768"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427296"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>准备的语句的表值参数元数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  应用程序可以获得通过 SQLNumParams 和 SQLDescribeParam 已准备的过程调用的元数据。 对于表值参数， *DataTypePtr*设置为 SQL_SS_TABLE。 通过 SQL_CA_SS_TYPE_NAME、 SQL_CA_SS_CATALOG_NAME，和 SQL_CA_SS_SCHEMA_NAME SQLGetDescField 提供了其他元数据。  
+  应用程序可以获得通过 SQLNumParams 和 SQLDescribeParam 准备的过程调用的元数据。 对于表值参数， *DataTypePtr*设置为 SQL_SS_TABLE。 可通过为 SQL_CA_SS_TYPE_NAME、 SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME SQLGetDescField 其他元数据。  
   
- SQL_CA_SS_TYPE_NAME、 SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 可与 SQLColumns 获取表值参数与关联的表类型的列元数据。 在这种情况下，SQL_SOPT_SS_NAME_SCOPE 必须设置为 SQL_SS_NAME_SCOPE_TABLE_TYPE 调用 SQLColumns 之前。 在应用程序检索完表值参数列元数据之后，应将 SQL_SOPT_SS_NAME_SCOPE 设置回原来的默认值 SQL_SS_NAME_SCOPE_TABLE。  
+ SQL_CA_SS_TYPE_NAME、 SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 可以在 SQLColumns 来获取与表值参数关联的表类型的列元数据。 在这种情况下，SQL_SOPT_SS_NAME_SCOPE 必须设置为 SQL_SS_NAME_SCOPE_TABLE_TYPE 调用 SQLColumns 之前。 在应用程序检索完表值参数列元数据之后，应将 SQL_SOPT_SS_NAME_SCOPE 设置回原来的默认值 SQL_SS_NAME_SCOPE_TABLE。  
   
  也可以将 SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 用于 CLR 用户定义类型参数。  
   

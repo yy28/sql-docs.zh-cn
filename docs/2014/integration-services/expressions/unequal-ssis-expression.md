@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
@@ -16,13 +16,13 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6046dcd370769518d6465a48b048e4beb639fc09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbf78899779f87837ec6df2db46549563454d398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259043"
 ---
 # <a name="-unequal-ssis-expression"></a>!=（不等于）（SSIS 表达式）
   执行比较操作以确定具有兼容数据类型的两个表达式是否不相等。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -109,7 +109,7 @@ ListPrice != 500
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [= =&#40;相等&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)   
+ [= =&#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
   

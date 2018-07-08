@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
 - packages [Integration Services], security
@@ -21,13 +21,13 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8cf68cbe7e1599bc34d891dfd010ba2d81c7a965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277263"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
   为了保护 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据，可以设置保护级别，以帮助仅保护包中的敏感数据或包中的所有数据。 另外，可以采用密码或用户密钥对数据加密，或依靠数据库对数据进行加密。 另外，您对包所采用的保护级别不一定是静态的，而是在包的整个生命周期内可能变化。 通常，您可以在包开发阶段设置一个保护级别，在包部署阶段设置另一个保护级别。  
@@ -59,8 +59,8 @@ ms.locfileid: "36016669"
 |保护级别|Description|  
 |----------------------|-----------------|  
 |不保存敏感数据 (`DontSaveSensitive`)|保存包时不保存包中敏感属性的值。 这种保护级别不进行加密，但它防止标记为敏感的属性随包一起保存，因此其他用户将无法使用这些敏感数据。 如果其他用户打开该包，敏感信息将被替换为空白，用户必须提供这些敏感信息。<br /><br /> 当与 **dtutil** 实用工具 (dtutil.exe) 一起使用时，此保护级别对应的值为 0。|  
-|所有使用密码加密 (`EncryptAllWithPassword`)|使用密码加密整个包。 使用用户在创建包或导出包时提供的密码加密包。 用户必须提供包密码，才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。 如果没有密码，用户将无法访问或运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 3。|  
-|所有使用用户密钥加密 (`EncryptAllWithUserKey`)|使用基于当前用户配置文件的密钥加密整个包。 只有创建或导出了包的用户才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 4。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408)。|  
+|使用密码加密所有 (`EncryptAllWithPassword`)|使用密码加密整个包。 使用用户在创建包或导出包时提供的密码加密包。 用户必须提供包密码，才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。 如果没有密码，用户将无法访问或运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 3。|  
+|使用用户密钥加密所有 (`EncryptAllWithUserKey`)|使用基于当前用户配置文件的密钥加密整个包。 只有创建或导出了包的用户才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 4。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408)。|  
 |使用密码加密敏感数据 (`EncryptSensitiveWithPassword`)|使用密码只加密包中敏感属性的值。 DPAPI 用于此加密。 敏感数据作为包的一部分保存，但数据是使用当前用户在创建包或导出包时提供的密码加密的。 若要在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，用户必须提供包密码。 如果不提供该密码，则包虽然可以打开但其中不包含敏感数据，当前用户必须为敏感数据提供新值。 如果用户试图在不提供密码的情况下执行包，则包执行将会失败。 有关密码和命令行执行的详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 2。|  
 |使用用户密钥加密敏感数据 (`EncryptSensitiveWithUserKey`)|使用基于当前用户配置文件的密钥只加密包中敏感属性的值。 只有使用同一配置文件的同一个用户才能加载此包。 如果其他用户打开该包，敏感信息将被替换为空白，当前用户必须为敏感数据提供新值。 如果用户试图执行该包，则包执行将会失败。 DPAPI 用于此加密。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 1。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408)。|  
 |依靠服务器存储进行加密 (`ServerStorage`)|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色保护整个包。 将包保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库后，支持此选项。 此外，SSISDB 目录使用`ServerStorage`保护级别<br /><br /> 在将包从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]保存到文件系统时，不支持此选项。|  
@@ -68,14 +68,14 @@ ms.locfileid: "36016669"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保护级别设置和 SSISDB 目录  
  SSISDB 目录使用`ServerStorage`保护级别。 在向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目时，该目录会自动对包数据和敏感值加密。 该目录还会在检索数据时自动解密数据。  
   
- 如果将项目 （.ispac 文件） 导出从[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]到文件系统的服务器，系统会自动更改保护级别与`EncryptSensitiveWithUserKey`。 如果通过使用导入项目**Integration Services 导入项目向导**中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、 **ProtectionLevel**中的属性**属性**窗口显示值`EncryptSensitiveWithUserKey`。  
+ 如果在导出项目 （.ispac 文件） 从[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]到文件系统的服务器，系统会自动将保护级别更改为`EncryptSensitiveWithUserKey`。 如果使用导入项目**Integration Services 导入项目向导**中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，则**ProtectionLevel**中的属性**属性**窗口显示的值的`EncryptSensitiveWithUserKey`。  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>基于包的生命周期设置保护级别  
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中初次开发 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，可以设置该包的保护级别。 以后当部署包时，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中将包导入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或从中导出包时，或者在将包从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区或文件系统时，都可以更新包的保护级别。 例如，如果在计算机上使用某个用户密钥保护级别选项创建并保存包，则在将包提供给其他用户时，很可能需要更改保护级别，否则，他们将无法打开该包。  
   
  通常，您可以按下面列出的步骤更改保护级别：  
   
-1.  在开发期间，将保留设置为默认值，包的保护级别`EncryptSensitiveWithUserKey`。 此设置可以保证只有开发人员可以看到包中的敏感值。 或者，您可以考虑使用 `EncryptAllWithUserKey` 或 `DontSaveSensitive`。  
+1.  在开发期间，将设置为默认值，包的保护级别保留`EncryptSensitiveWithUserKey`。 此设置可以保证只有开发人员可以看到包中的敏感值。 或者，您可以考虑使用 `EncryptAllWithUserKey` 或 `DontSaveSensitive`。  
   
 2.  部署包时，您需要将保护级别更改为不依靠开发人员用户密钥的保护级别。 因此，通常需要选择 `EncryptSensitiveWithPassword` 或 `EncryptAllWithPassword`。 通过分配一个生产环境中运营团队也知道的临时强密码来加密包。  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36016669"
 ## <a name="see-also"></a>请参阅  
  [导入和导出包&#40;SSIS 服务&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services &#40;SSIS&#41;包](../integration-services-ssis-packages.md)   
- [安全概述&#40;Integration Services&#41;](security-overview-integration-services.md)  
+ [安全概述&#40;集成服务&#41;](security-overview-integration-services.md)  
   
   
