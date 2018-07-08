@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.schemas.general.f1
 helpviewer_keywords:
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d71b2e4408801a46a14bf825484cef648421f05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 7fe8831be56c8b91d35ecc3001f4f9c91cf38246
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211107"
 ---
 # <a name="create-a-database-schema"></a>创建数据库架构
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建架构。  
@@ -78,7 +77,8 @@ ms.locfileid: "36015863"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“架构– 新建”** 对话框还在两个其他页上提供了选项： **“权限”** 和 **“扩展属性”**。  
+ 
+  **“架构– 新建”** 对话框还在两个其他页上提供了选项： **“权限”** 和 **“扩展属性”**。  
   
 -   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   

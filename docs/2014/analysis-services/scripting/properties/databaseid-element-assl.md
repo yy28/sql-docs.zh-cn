@@ -1,5 +1,5 @@
 ---
-title: DatabaseID 元素 (ASSL) |Microsoft 文档
+title: DatabaseID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c74e39a1a5696576b77ff9a2eb74e062cb2f3475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161128"
 ---
 # <a name="databaseid-element-assl"></a>DatabaseID 元素 (ASSL)
-  标识[数据库](../objects/database-element-assl.md)超的行与关联的元素[绑定](../data-type/binding-data-type-assl.md)元素。  
+  标识[数据库](../objects/database-element-assl.md)掉的行与相关联的元素[绑定](../data-type/binding-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36014397"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关扩展的行绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关的外部绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

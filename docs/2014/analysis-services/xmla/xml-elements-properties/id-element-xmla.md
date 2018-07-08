@@ -1,5 +1,5 @@
 ---
-title: ID 元素 (XMLA) |Microsoft 文档
+title: ID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ID element
 ms.assetid: f7d67599-6a70-4455-bfdb-1d127e5eff4e
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 78cfec49d1af81336d8cfadcb9f502294f1326da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 42dc60e24d29399426eabc5d0bb76166c31d1423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151338"
 ---
 # <a name="id-element-xmla"></a>ID 元素 (XMLA)
-  标识对其执行父锁[锁](../xml-elements-commands/lock-element-xmla.md)或[解锁](../xml-elements-commands/unlock-element-xmla.md)元素。  
+  标识要对其执行父锁[锁](../xml-elements-commands/lock-element-xmla.md)或[解锁](../xml-elements-commands/unlock-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36015959"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[锁定](../xml-elements-commands/lock-element-xmla.md)，[解锁](../xml-elements-commands/unlock-element-xmla.md)|  
+|父元素|[锁](../xml-elements-commands/lock-element-xmla.md)，[解锁](../xml-elements-commands/unlock-element-xmla.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,7 +68,7 @@ ms.locfileid: "36015959"
   
 ## <a name="see-also"></a>请参阅  
  [对象元素&#40;XMLA&#41;](object-element-xmla.md)   
- [模式元素&#40;XMLA&#41;](mode-element-xmla.md)   
+ [Mode 元素&#40;XMLA&#41;](mode-element-xmla.md)   
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

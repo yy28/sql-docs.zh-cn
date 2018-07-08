@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a513f196b0dc099f890225048e4e96adab51d285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277353"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
   记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 `Object` 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
@@ -41,7 +41,7 @@ ms.locfileid: "36015722"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，创建或打开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  创建一个变量，将包含记录集保存到内存中由记录集目标，并将变量的类型设置为`Object`。  
+2.  创建一个变量，将包含记录集保存到内存中的记录集目标，并将该变量的类型设置为`Object`。  
   
 3.  创建适当类型的其他变量，用来包含您要使用的记录集的每列的值。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36015722"
   
 5.  打开 **“记录集目标编辑器”**，并使用以下设置来配置目标：  
   
-    1.  上**组件属性**选项卡上，为`VariableName`属性中，选择`User::BonusRecordset`。  
+    1.  上**组件属性**选项卡上，对于`VariableName`属性中，选择`User::BonusRecordset`。  
   
     2.  在 **“输入列”** 选项卡上，选择所有三个可用列。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36015722"
   
 2.  打开 **“Foreach 循环编辑器”**，并使用以下设置来配置容器：  
   
-    1.  上**集合**页上，为**枚举器**，选择**Foreach ADO 枚举器**，和**ADO 对象源变量**，选择`User::BonusRecordset`.  
+    1.  上**集合**页上，对于**枚举器**，选择**Foreach ADO 枚举器**，并为**ADO 对象源变量**，选择`User::BonusRecordset`.  
   
     2.  上**变量映射**页上，映射`User::EmailAddress`索引 0，`User::FirstName`索引 1，和`User::Bonus`到索引 2。  
   

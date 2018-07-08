@@ -1,5 +1,5 @@
 ---
-title: sql:limit-字段和 sql:limit-值 (SQLXML 4.0) |Microsoft 文档
+title: sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89c38e430605d578051cd5d8d3cba587c6d05311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 085c466276ec15a29616472f439aee35a46ef28e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150328"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field 和 sql:limit-value (SQLXML 4.0)
-  XML 大容量加载按照定义处理 `sql:limit-field` 和 `sql:limit-value` 批注。 有关详细信息，请参阅[筛选值使用 sql:limit-字段和 sql:limit-值&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。  
+  XML 大容量加载按照定义处理 `sql:limit-field` 和 `sql:limit-value` 批注。 有关详细信息，请参阅[筛选值使用 sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。  
   
  例如，假定一个数据库包含以下各表：  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36016106"
     set objBL=Nothing  
     ```  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  

@@ -1,27 +1,26 @@
 ---
-title: 全文本索引属性 （常规页） |Microsoft 文档
+title: 全文本索引属性 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67fd5637e190d58cdcab186643d5233bb89b1b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149928"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文索引属性（“常规”页）
   **若要查看或更改全文索引的可修改属性**  
@@ -38,10 +37,10 @@ ms.locfileid: "36018290"
  **表**  
  显示定义全文索引的表的名称。  
   
- **全文本索引键**  
+ **全文索引键**  
  显示全文索引关键的名称，此键是表的单个列上的唯一索引。  
   
- **表的全文填充状态**  
+ **表全文填充状态**  
  显示全文索引表的填充状态。  
   
  可能的值如下：  
@@ -58,7 +57,7 @@ ms.locfileid: "36018290"
   
  5 = 全文索引已中止或暂停。  
   
- **活动的全文索引**  
+ **活动全文索引**  
  指示表是否有活动的全文索引。  
   
  1 = True  
@@ -69,7 +68,7 @@ ms.locfileid: "36018290"
  全文索引所属的文件组。  
   
  **全文索引非索引字表**  
- 当前与全文索引关联的非索引字表。 非索引字是一份[非索引字](../relational-databases/search/full-text-search.md)。 与全文索引关联的非索引字表（如果有）适用于该索引的全文查询。 可以通过选择从索引中删除非索引字表 **\<OFF >** 从列表中，或者可以选择不同的非索引字;**\<系统 >** 指示系统非索引字表。  
+ 当前与全文索引关联的非索引字表。 非索引字表是一系列[非索引字](../relational-databases/search/full-text-search.md)。 与全文索引关联的非索引字表（如果有）适用于该索引的全文查询。 可以通过选择从索引中删除非索引字表 **\<OFF >** 从列表中，也可以选择不同非索引字表;**\<系统 >** 指示系统非索引字表。  
   
  **若要创建非索引字表**  
   
@@ -78,7 +77,7 @@ ms.locfileid: "36018290"
  **搜索属性列表**  
  当前与全文索引关联的搜索属性列表（如果有）。 搜索属性列表指定一组文档属性，在填充关联的全文索引时这些文档属性包括在其中。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
- **\<关闭 >** 指示是当前没有与该索引关联的搜索属性列表。 可以通过选择从索引中删除当前的搜索属性列表**\<关闭 >** 从列表中，或从列表中选择不同的搜索属性列表。 在此处只列出当前数据库中的搜索属性列表。  
+ **\<关闭 >** 指示是当前没有与索引关联的搜索属性列表。 可以通过选择从索引中删除当前搜索属性列表**\<关闭 >** 从列表中，或从列表中选择不同的搜索属性列表。 在此处只列出当前数据库中的搜索属性列表。  
   
 > [!NOTE]  
 >  您可以将给定的搜索属性列表与同一数据库中的多个全文索引相关联。  
@@ -90,9 +89,9 @@ ms.locfileid: "36018290"
  **表全文项计数**  
  指示成功执行了全文索引的行数。  
   
- 此属性对应于`TableFulltextItemCount`属性返回 OBJECTPROPERTYEX[!INCLUDE[tsql](../includes/tsql-md.md)]函数。  
+ 此属性对应于`TableFulltextItemCount`属性返回由 OBJECTPROPERTYEX[!INCLUDE[tsql](../includes/tsql-md.md)]函数。  
   
- **处理的表的全文文档**  
+ **处理的表全文文档**  
  显示自从全文索引开始以来已处理的行数。 在为进行全文搜索而正在编制索引的表中，将一个行的所有列视为要编制索引的文档的一部分。 已删除的行不被计数。  
   
 |||  

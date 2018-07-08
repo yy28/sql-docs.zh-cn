@@ -1,12 +1,12 @@
 ---
-title: 处理结果操作指南主题 (OLE DB) |Microsoft 文档
+title: 处理结果操作指南主题 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e8ce16af2129b8555b56a8e0b79da2c9bb826c6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2f34853f4074eb8436200d6ce13f5666a2ee3434
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699548"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420566"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "35699548"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [执行存储的过程&#40;使用 ODBC 调用语法&#41;过程返回代码和输出参数和&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [执行存储的过程&#40;使用 ODBC CALL 语法&#41;以及处理返回代码和输出参数&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [执行存储的过程&#40;使用 RPC 语法&#41;过程返回代码和输出参数和&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [执行存储的过程&#40;使用 RPC 语法&#41;以及处理返回代码和输出参数&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [执行用户定义函数和过程的返回代码&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [执行用户定义函数并处理返回代码&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
 -   [从结果集中提取行&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 其他数据库引擎升级问题 |Microsoft 文档
+title: 其他数据库引擎升级问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1c74bf4ffd8cf0eba5cb853cccda80cc0b5d662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fda230ed04ddcac6d4c7c8bb52b73762c23b90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149998"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他数据库引擎升级问题
   升级顾问的当前版本无法检测到以下升级问题。 请检查以下列出的问题来评估它们对系统的潜在影响。  
@@ -76,7 +76,7 @@ ms.locfileid: "36014463"
  MERGE 现在是完全保留的关键字。 应用程序不能再包含名为 MERGE 的对象（表、列等）。  
   
 ## <a name="rename-cdc-schema"></a>重命名 CDC 架构  
- 存在名为 CDC 的架构。 此架构名称不能在如果**变更数据捕获**为数据库启用。  
+ 存在名为 CDC 的架构。 如果此架构名称不能是**变更数据捕获**为数据库启用。  
   
  在启用之前，必须删除 CDC 架构**变更数据捕获**数据库。 此步骤可以在升级之前或之后完成。 若要删除该架构，请使用以下步骤：  
   

@@ -1,5 +1,6 @@
 ---
-title: 从命令行 (SQL Server 数据 Migration Assistant) 运行 |Microsoft 文档
+title: 从命令行 (SQL Server) 中运行数据迁移助手 |Microsoft Docs
+description: 了解如何从命令行来评估要迁移的 SQL Server 数据库运行数据迁移助手
 ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
@@ -17,21 +18,21 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: df58c273c67868e894b7cba38344dc43628962ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866522"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785458"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
-版本 2.1 和更高版本，当你安装数据迁移助手，它还将安装在 dmacmd.exe *%programfiles%\\Microsoft 数据迁移助手\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库和输出结果发送到 JSON 或 CSV 文件。 评估多个数据库或大型数据库时，这是特别有用。 
+版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
 
 > [!NOTE]
-> Dmacmd.exe 支持运行仅评估。 这次不支持迁移。
+> Dmacmd.exe 支持仅运行评估。 目前不支持迁移。
 
 
-## <a name="command-line-arguments"></a>命令行自变量
+## <a name="command-line-arguments"></a>命令行参数
 
 ```
 DmaCmd.exe /AssessmentName="string"
@@ -43,17 +44,17 @@ DmaCmd.exe /AssessmentName="string"
 ```
 
 
-|参数  |Description  | 必需 (Y/N)
+|参数  |Description  | 必需 （是/否）
 |---------|---------|---------------|
 | `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | 否
 |`/AssessmentName`     |   评估项目的名称   | 是
-|`/AssessmentDatabases`     | 用空格分隔的连接字符串的列表。 数据库名称 （初始目录） 是区分大小写。 | 是
-|`/AssessmentTargetPlatform`     | 目标平台，用于评估，支持的值： SqlServer2012、 SqlServer2014、 SqlServer2016 和 AzureSqlDatabaseV12。 默认值是 SqlServer2016   | 否
-|`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶校验规则  | 否
-|`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | 是 <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。）
-|`/AssessmentEvaluateRecommendations`     | 运行功能建议        | 是 <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
+|`/AssessmentDatabases`     | 连接字符串的以空格分隔列表。 数据库名称 （初始目录） 是区分大小写。 | 是
+|`/AssessmentTargetPlatform`     | 用于评估，支持的值的目标平台： SqlServer2012、 SqlServer2014、 SqlServer2016 和 AzureSqlDatabaseV12。 默认值是 SqlServer2016   | 否
+|`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则  | 否
+|`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | 是 <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。
+|`/AssessmentEvaluateRecommendations`     | 运行功能推荐        | 是 <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
 |`/AssessmentOverwriteResult`     | 覆盖结果文件    | 否
-|`/AssessmentResultJson`     | 为 JSON 结果文件的完整路径     | 是 <br> （AssessmentResultJson 或 AssessmentResultCsv 是必需的）
+|`/AssessmentResultJson`     | JSON 结果文件的完整路径     | 是 <br> （AssessmentResultJson 或 AssessmentResultCsv 是必需的）
 |`/AssessmentResultCsv`    | CSV 结果文件的完整路径   | 是 <br>（AssessmentResultJson 或 AssessmentResultCsv 是必需的）
 
 
@@ -77,7 +78,7 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 
 
 
-**使用 SQL Server 身份验证和运行功能建议的单一数据库评估**
+**单一数据库评估，请参阅 SQL Server 身份验证和运行功能建议**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -88,7 +89,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**单一数据库评估为 SQL Server 2012 的目标平台并保存结果保存到.json 和.csv 文件**
+**目标平台 SQL Server 2012 的单个数据库评估将结果保存到.json 和.csv 文件**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -101,7 +102,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**针对目标平台 SQL Azure 数据库的单一数据库评估将结果保存到.json 和.csv 文件**
+**目标平台 SQL Azure 数据库的单一数据库评估将结果保存到.json 和.csv 文件**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 

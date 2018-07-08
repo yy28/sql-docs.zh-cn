@@ -1,5 +1,5 @@
 ---
-title: GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文档
+title: GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 05560854358e95ce4beae1727e8c1aeb7be131d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 42898aba8f621688ba229fcf01d367b4da1a4f71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149028"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)
   生成可用于创建报表服务器数据库的 SQL 脚本。  
@@ -56,7 +56,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  指示是以本机模式还是以 SharePoint 模式创建数据库。  
   
 > [!IMPORTANT]  
->  从[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode* = `True`不支持，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是 SharePoint 共享服务，不控制的 WMI 提供程序。 你应始终将此参数设置为`False`。  
+>  从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode* = `True`不支持，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]为 SharePoint 共享服务，且不受 WMI 提供程序。 应始终将此参数设置为`False`。  
   
  *脚本*  
  [out] 包含所生成的 SQL 脚本的字符串。  

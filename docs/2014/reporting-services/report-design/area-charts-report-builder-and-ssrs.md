@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7e202fca2b7fbbf982ad1a28241f1ad4d6f985cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 84262598ecb49d69eae360b6de3b4e78369e7fc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260533"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面积图（报表生成器和 SSRS）
-  面积图将序列显示为一组由线连接的点，并填充线下方的所有区域。 有关如何将数据添加到的面积图的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  面积图将序列显示为一组由线连接的点，并填充线下方的所有区域。 有关如何将数据添加到面积图的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  下图显示了一个堆积面积图的例子。 这里的数据非常适合用堆积面积图显示，因为这种图表可以显示所有序列的总计以及每个序列在总计中所占的比例。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "36015632"
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [折线图（报表生成器和 SSRS）](line-charts-report-builder-and-ssrs.md)   
  [更改图表类型（报表生成器和 SSRS）](change-a-chart-type-report-builder-and-ssrs.md)   
- [空和 Null 图表中的数据点&#40;报表生成器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [空和 Null 数据点在图表中的&#40;报表生成器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540c16fa077178cc3c72a963c4cc4f167e9be384
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d341f0b04b73c3edfa636e1e059a375965f7481d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258723"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建 **Audit Broker Login** 事件以报告与 Service Broker 传输安全相关的审核消息。  

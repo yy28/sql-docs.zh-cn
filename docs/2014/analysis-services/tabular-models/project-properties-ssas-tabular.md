@@ -1,5 +1,5 @@
 ---
-title: 项目属性 (SSAS 表格) |Microsoft 文档
+title: 项目属性 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
 - sql12.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d1e60f7a649b15fbcfd91300b05465d314a6fba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8d8371d2dedf54b82475c2cc6ed5adcfd9b1891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278013"
 ---
 # <a name="project-properties-ssas-tabular"></a>项目属性（SSAS 表格）
   本主题介绍模型项目属性。 每个表格模型项目都具有一些指定如何部署项目和模型的部署选项和部署服务器属性。 例如，模型将要部署到的服务器和已部署的模型数据库名称。 这些设置与影响模型工作区数据库的模型属性不同。 此处所述的项目属性位于模式属性对话框中，不同于用于显示其他属性类型的属性窗口。 若要显示模式项目属性，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”中右键单击该项目，然后单击“属性”。  
@@ -31,7 +31,7 @@ ms.locfileid: "36015556"
   
 -   [项目属性](#bkmk_proj_properties)  
   
--   [配置部署选项和部署服务器属性设置](#bkmk_conf_proj_settings)  
+-   [若要配置的部署选项和部署服务器属性设置](#bkmk_conf_proj_settings)  
   
 ##  <a name="bkmk_proj_properties"></a> 项目属性  
  **部署选项**  
@@ -48,7 +48,7 @@ ms.locfileid: "36015556"
 |--------------|---------------------|-----------------|  
 |**Server**|**localhost**|指定一个 Analysis Services 实例。 默认情况下，将模型部署到本地计算机上 Analysis Services 的默认实例。 您可以更改此设置以便指定本地计算机上的命名实例，或指定您有权创建 Analysis Services 对象的任何远程计算机上的任何实例。 通常需要管理员权限。<br /><br /> 可以通过使用“默认部署服务器”属性（位于“工具\选项”对话框的“分析服务器”设置中的“部署”页）更改此属性的默认设置。 有关详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)。|  
 |**版本**|**开发人员**|指定模型将部署到的 Analysis Services 服务器的版本。 该服务器版本定义可纳入项目中的不同功能。|  
-|**“数据库”**|**Model**|指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称将在数据连接或 .rsds 数据连接文件中指定。 建议该名称应反映将使用该模型执行的分析类型，例如 AdventureWorksSalesModel。<br /><br /> **\*\* 重要\* \*** 若要防止已部署的模型名称重复，则应更改**数据库**属性名称设置以反映模型的用途。 当用户连接到作为数据源的模型时，他们将看到此名称。|  
+|**“数据库”**|**Model**|指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称将在数据连接或 .rsds 数据连接文件中指定。 建议该名称应反映将使用该模型执行的分析类型，例如 AdventureWorksSalesModel。<br /><br /> **\*\* 重要\* \*** 若要防止已部署的模型名称重复，应更改**数据库**属性名称设置以反映模型的用途。 当用户连接到作为数据源的模型时，他们将看到此名称。|  
 |**多维数据集名称**|**Model**|指定报告客户端数据连接中显示的数据库多维数据集名称。|  
 |**版本(Version)**|**11.0**|项目将部署到的 Analysis Services 实例的版本。|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36015556"
 |--------------|---------------------|-----------------|  
 |**模拟设置**|**Default**|为在 DirectQuery 模式下运行的模型指定用于连接到数据源的凭据。 这些凭据不同于在默认的内存中模式下使用的模拟凭据。 有关详细信息，请参阅[模拟（SSAS 表格）](impersonation-ssas-tabular.md)。|  
   
-###  <a name="bkmk_conf_proj_settings"></a> 配置部署选项和部署服务器属性设置  
+###  <a name="bkmk_conf_proj_settings"></a> 若要配置的部署选项和部署服务器属性设置  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”中右键单击项目，再单击“属性”。  
   

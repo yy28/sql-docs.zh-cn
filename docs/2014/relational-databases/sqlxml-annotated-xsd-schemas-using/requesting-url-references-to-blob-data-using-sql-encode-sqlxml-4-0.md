@@ -1,5 +1,5 @@
 ---
-title: 请求对 BLOB 数据使用 sql 的 URL 引用： 编码 (SQLXML 4.0) |Microsoft 文档
+title: 请求 URL 引用 BLOB 数据使用 sql： 进行编码 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f18f3fb5676270bf01f0598aa29536259f7250f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d9bbcd45a0984a0c34a5759d5ec9774c211354b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258253"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 请求 BLOB 数据的 URL 引用 (SQLXML 4.0)
   在带批注的 XSD 架构中，将属性（或元素）映射为 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 BLOB 列时，将在 XML 中以 Base 64 编码格式返回数据。  
@@ -40,16 +40,16 @@ ms.locfileid: "36015653"
   
  可以为 `sql:encode` 批注分配“url”或“default”值。 值为“default”将返回 Base 64 编码格式的数据。  
   
- `sql:encode` 批注不能与 `sql:use-cdata` 一起使用，也不能用于 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 属性类型。 它还不能使用与 XSD**固定**属性。  
+ `sql:encode` 批注不能与 `sql:use-cdata` 一起使用，也不能用于 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 属性类型。 它还不能使用与 XSD**修复**属性。  
   
 > [!NOTE]  
 >  BLOB 类型的列不能用作键或外键的一部分。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. 指定 sql:encode 以获取对 BLOB 数据的 URL 引用  
- 在此示例中，该映射架构指定`sql:encode`上**LargePhoto**要检索特定产品照片 （而不是检索 Base 64 编码格式的二进制数据） 的 URI 引用属性。  
+ 在此示例中，指定映射架构`sql:encode`上**LargePhoto**属性来检索 （而不是检索 Base 64 编码格式的二进制数据） 的特定产品照片的 URI 引用。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -87,7 +87,7 @@ ms.locfileid: "36015653"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  结果如下：  
   

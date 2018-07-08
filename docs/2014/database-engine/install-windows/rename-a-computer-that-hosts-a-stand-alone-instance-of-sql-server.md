@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote login errors [SQL Server]
 - standalone computer names [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be2e580931a7932e560240aefae659e01f3015d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 66c8ddd5a5ab207f9e9f29367ace2c73b8d2811b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209657"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重命名承载 SQL Server 独立实例的计算机
   如果更改了运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称，则会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动期间识别新名称。 不必再次运行安装程序以重置计算机名称。 只需使用以下步骤对存储在 sys.servers 中并由系统函数 @@SERVERNAME 报告的系统元数据进行更新。 更新系统元数据，以反映出使用 @@SERVERNAME 或从 sys.servers 中查询服务器名称的远程连接或应用程序的计算机名称的变化。  

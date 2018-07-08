@@ -1,12 +1,12 @@
 ---
-title: 大容量复制数据使用 IRowsetFastLoad (OLE DB) |Microsoft 文档
+title: 大容量复制数据使用 IRowsetFastLoad (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a93b97df3b7c20898f1a923c26f3965dbf91ff0d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 684ef570f471e4e580ac1c720e30022da3e1293f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697838"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408626"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "35697838"
 
   此示例说明如何使用 IRowsetFastLoad 将记录大容量复制到表中。  
   
- 通过将特定于 SQLOLEDB 提供程序的属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，使用者将其对大容量复制的需要通知 SQLOLEDB。 通过在数据源上设置该属性，使用者创建 SQLOLEDB 会话。 在新的会话允许使用者访问**IRowsetFastLoad**。  
+ 通过将特定于 SQLOLEDB 提供程序的属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，使用者将其对大容量复制的需要通知 SQLOLEDB。 通过在数据源上设置该属性，使用者创建 SQLOLEDB 会话。 新会话允许的使用者访问权限**IRowsetFastLoad**。  
   
- 完整示例，演示如何使用**IRowsetFastLoad**用于大容量复制的记录到表中。 在此示例中，10 条记录添加到表**IRFLTable**。 你需要创建表**IRFLTable**数据库中。  
+ 提供了完整的示例，演示如何使用**IRowsetFastLoad**大容量复制的记录到表。 在此示例中，将 10 条记录添加到表**IRFLTable**。 您需要创建表**IRFLTable**数据库中。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例需要 AdventureWorks 示例数据库中，您可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -46,24 +46,24 @@ ms.locfileid: "35697838"
   
 1.  建立与数据源的连接。  
   
-2.  将特定于 SQLOLEDB 提供程序的数据源属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE。 此属性设置为 VARIANT_TRUE 的情况下，新创建的会话允许使用者访问**IRowsetFastLoad**。  
+2.  将特定于 SQLOLEDB 提供程序的数据源属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE。 此属性设置为 VARIANT_TRUE，新创建的会话将允许的使用者访问权限**IRowsetFastLoad**。  
   
 3.  创建会话请求**IOpenRowset**接口。  
   
-4.  调用**IOpenRowset::OpenRowset**来打开行集，其中包含从表 （在其中数据将被复制使用大容量复制操作） 的所有行。  
+4.  调用**iopenrowset:: Openrowset**打开包括的表 （在其中的数据将被复制使用大容量复制操作） 中的所有行的行集。  
   
-5.  进行必要的绑定，然后创建使用访问器**IAccessor::CreateAccessor**。  
+5.  执行需要的绑定和创建取值函数使用**iaccessor:: Createaccessor**。  
   
 6.  设置内存缓冲区，用于将数据从其复制到表中。  
   
-7.  调用**IRowsetFastLoad::InsertRow**到大容量复制到表中的数据。  
+7.  调用**irowsetfastload:: Insertrow**到大容量复制到表中的数据。  
   
 ## <a name="example"></a>示例  
  在此示例中，将 10 条记录添加到表 IRFLTable 中。 您需要在数据库中创建表 IRFLTable。 IA64 平台不支持此示例。  
   
  执行第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的表。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请更改连接字符串从"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
  执行第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的表。  
   

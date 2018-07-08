@@ -1,12 +1,12 @@
 ---
-title: 设置较大的数据 |Microsoft 文档
+title: 设置大型数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701458"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421966"
 ---
 # <a name="setting-large-data"></a>设置大型数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，你可以通过将指针传递给使用者存储对象设置 BLOB 数据。  
+  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，您可以通过将指针传递给使用者存储对象设置 BLOB 数据。  
   
  使用者创建包含数据的存储对象，并将指向此存储对象的指针传递给访问接口。 然后，访问接口从使用者存储对象读取数据，并将其写入 BLOB 列中。  
   
- 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者调用**IRowsetChange::SetData**或**IRowsetChange::InsertRow**使用绑定 BLOB 列访问器方法。 它将指针传递给使用者的存储对象中的某个存储接口。  
+ 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者调用**irowsetchange:: Setdata**或**irowsetchange:: Insertrow**绑定 BLOB 列的取值函数方法。 它将指针传递给使用者的存储对象中的某个存储接口。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -46,19 +46,19 @@ ms.locfileid: "35701458"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>如何设置大型数据  
- 若要将指针传递到其自己的存储对象，使用者创建的 BLOB 列，然后调用值绑定的访问器**IRowsetChange::SetData**或**IRowsetChange::InsertRow**方法。 若要设置 BLOB 数据，请：  
+ 若要将指针传递给它自己的存储对象，使用者创建取值函数绑定 BLOB 列，然后调用的值**irowsetchange:: Setdata**或**irowsetchange:: Insertrow**方法。 若要设置 BLOB 数据，请：  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 设置*dwFlag*到 STGM_READ 和集 DBOBJECT 结构元素*iid* IID_ISequentialStream （要公开的接口） 的元素。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 设置*dwFlag*为 STGM_READ，并且组 DBOBJECT 结构的元素*iid*为 IID_ISequentialStream （要公开的接口） 的元素。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 设置*wType* DBTYPE_IUNKNOWN，DBBINDING 结构中的元素和*pObject*元素以指向您创建的 DBOBJECT 结构。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 设置*wType*为 DBTYPE_IUNKNOWN，DBBINDING 结构中的元素和*pObject*元素以指向您创建的 DBOBJECT 结构。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
-5.  调用**GetNextRows**到行集提取下一步的行。 调用**GetData**从行集读取数据。  
+5.  调用**GetNextRows**提取到行集中的下一步的行。 调用**GetData**以读取行集中的数据。  
   
-6.  创建一个包含数据 （并且还长度指示器） 的存储对象，然后调用**IRowsetChange::SetData** (或**IRowsetChange::InsertRow**) 使用将绑定设置 BLOB 列访问器数据。  
+6.  创建一个包含数据 （以及长度指示器），存储对象，然后调用**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 的取值函数绑定 BLOB 列设置数据。  
   
 ## <a name="example"></a>示例  
  本示例说明如何设置 BLOB 数据。 本示例创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值：  

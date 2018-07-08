@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 267bbd228565337594039162d7f01ec90a38d303
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26b6d45a190a188f9091360583cf3f73c3097455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156718"
 ---
 # <a name="script-task"></a>脚本任务
   脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
@@ -68,11 +68,11 @@ ms.locfileid: "36015933"
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置这些属性。  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>在设计器中配置脚本任务  
- 下表描述可以为脚本任务进行记录的 `ScriptTaskLogEntry` 事件。 `ScriptTaskLogEntry`来登录选择事件**详细信息**选项卡**配置 SSIS 日志**对话框。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
+ 下表描述可以为脚本任务进行记录的 `ScriptTaskLogEntry` 事件。 `ScriptTaskLogEntry`为日志记录选择事件**详细信息**选项卡**配置 SSIS 日志**对话框。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|报告在脚本中实现日志记录的结果。 任务写入日志项每次调用`Log`方法`Dts`对象。 然后，在运行代码时编写这些条目。 有关详细信息，请参阅 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)。|  
+|`ScriptTaskLogEntry`|报告在脚本中实现日志记录的结果。 任务写入日志项每次调用`Log`方法的`Dts`对象。 然后，在运行代码时编写这些条目。 有关详细信息，请参阅 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
   

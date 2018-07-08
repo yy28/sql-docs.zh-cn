@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11bdac71a79b345d6f1c922d79092d357302ae84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 283b8406a4ee5b962e015c66c7b87569db755401
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149308"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向 SQL Server 代理主作业添加步骤。  
@@ -60,7 +60,7 @@ ms.locfileid: "36018521"
   
 4.  右键单击要向其添加步骤的作业，然后选择“属性”。  
   
-5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“步骤”。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新的作业&#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
+5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“步骤”。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
   
 6.  完成后，单击 **“确定”**。  
   

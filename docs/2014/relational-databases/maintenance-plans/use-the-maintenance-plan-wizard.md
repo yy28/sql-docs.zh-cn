@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
 - sql12.ag.maintwiz.task.f1
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11706f4fb3761e20fea4c70feb431144efed0fc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6ee9a3c08fc00b5e7c6b340d3963e2003cfb0343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154488"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用维护计划向导创建单个服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
@@ -371,7 +371,7 @@ ms.locfileid: "36018660"
      选择用于对 Windows Azure 存储进行身份验证的 SQL 凭据。 如果没有可使用的现有 SQL 凭据，则单击 **“创建”** 按钮可创建新的 SQL 凭据。  
   
     > [!IMPORTANT]  
-    >  单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅中的示例代码[创建凭据](../security/authentication-access/create-a-credential.md#Credential)主题，以使用 TRANSACT-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”** 和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
+    >  单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅中的示例代码[若要创建凭据](../security/authentication-access/create-a-credential.md#Credential)主题，以使用 TRANSACT-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”** 和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
   
      **Azure 存储容器**  
      指定 Windows Azure 存储容器的名称  

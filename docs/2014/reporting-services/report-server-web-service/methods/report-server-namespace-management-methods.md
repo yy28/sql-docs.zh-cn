@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b88c3693de9a0d2318094cd01d3e27044a697eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 982dabf5a880459e785033411ead754f81dbce4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155618"
 ---
 # <a name="report-server-namespace-management-methods"></a>报表服务器命名空间管理方法
   报表服务器管理 Web 服务包含可用于管理报表服务器数据库中的报表、文件夹和资源的方法。  
@@ -34,7 +34,7 @@ ms.locfileid: "36014717"
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|取消某一作业的执行。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|将文件夹添加到报表服务器数据库或 SharePoint 库。|  
-|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|将新项添加到报表服务器数据库或 SharePoint 库。 此方法适用于`Report`， `Model`， `Dataset`， `Component`， `Resource`，和`DataSource`项类型。|  
+|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|将新项添加到报表服务器数据库或 SharePoint 库。 此方法适用于`Report`， `Model`， `Dataset`， `Component`， `Resource`，并`DataSource`项类型。|  
 |M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|创建新的报表编辑会话。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|从报表服务器数据库或 SharePoint 库删除项。|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|返回报表服务器数据库或 SharePoint 库中与指定的搜索条件匹配的项。|  
@@ -42,7 +42,7 @@ ms.locfileid: "36014717"
 |<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>|返回针对给定扩展插件的设置列表。|  
 |<xref:ReportService2010.ReportingService2010.GetItemType%2A>|检索报表服务器数据库或 SharePoint 库中某一项的类型（如果该项存在）。|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|对于报表服务器数据库或 SharePoint 库中的项返回一个或多个属性的值。|  
-|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|检索项的定义或内容。 此方法适用于`Report`， `Model`， `Dataset`， `Component`， `Resource`，和`DataSource`项类型。|  
+|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|检索项的定义或内容。 此方法适用于`Report`， `Model`， `Dataset`， `Component`， `Resource`，并`DataSource`项类型。|  
 |<xref:ReportService2010.ReportingService2010.GetItemReferences%2A>|返回与项关联的目录项引用的列表。|  
 |<xref:ReportService2010.ReportingService2010.GetReportServerConfigInfo%2A>|返回有关连接的报表服务器实例或扩展部署中所有报表服务器实例的信息。|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|返回一个或多个系统属性。|  
@@ -63,7 +63,7 @@ ms.locfileid: "36014717"
 |<xref:ReportService2010.ReportingService2010.SetItemReferences%2A>|设置与项关联的目录项。|  
 |<xref:ReportService2010.ReportingService2010.MoveItem%2A>|移动和/或重命名某项。|  
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|设置项的一个或多个属性。|  
-|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|设置指定项的定义或内容。 此方法适用于`Report`， `Model`， `Dataset`， `Component`， `Resource`，和`DataSource`项类型。|  
+|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|设置指定项的定义或内容。 此方法适用于`Report`， `Model`， `Dataset`， `Component`， `Resource`，并`DataSource`项类型。|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|在报表服务器或 SharePoint 场中设置一个或多个系统属性。|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|验证 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展插件设置。|  
   

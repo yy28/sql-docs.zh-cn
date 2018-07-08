@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10157"
 - sql12.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b604e8a3378285553542e4b03f6ba7c419315941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 53bf187b7a41ffdcb3dfc474daa4ce8dcf2bd4aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153708"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
   图表为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个默认图表区。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的图表区的概念。  
@@ -47,8 +47,8 @@ ms.locfileid: "36017956"
 4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
   
 ## <a name="see-also"></a>请参阅  
- [在图表上的多个序列&#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [格式设置图表上的数据点&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [图表上的多个序列&#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [极坐标图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [形状图（报表生成器和 SSRS）](shape-charts-report-builder-and-ssrs.md)   

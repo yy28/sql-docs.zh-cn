@@ -1,5 +1,5 @@
 ---
-title: 第 12 课： 创建角色 |Microsoft 文档
+title: 第 12 课： 创建角色 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278503"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 课：创建角色
   在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色都使用单个权限进行定义：“无”、“读取”、“读取和处理”、“处理”或“管理员”。 通过使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的“角色管理器”对话框，可在模型创作期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 若要了解详细信息，请参阅[角色（SSAS 表格）](tabular-models/roles-ssas-tabular.md)。  
@@ -52,7 +52,7 @@ ms.locfileid: "36015806"
   
      一个具有“无”权限的新角色将添加到列表中。  
   
-3.  单击该新角色，然后在**名称**列中，重命名该角色向`Internet Sales Manager`。  
+3.  单击新角色，然后在**名称**列中，重命名为`Internet Sales Manager`。  
   
 4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36015806"
   
      一个具有“无”权限的新角色将添加到列表中。  
   
-3.  单击该新角色，然后在**名称**列中，重命名该角色向`Internet Sales US`。  
+3.  单击新角色，然后在**名称**列中，重命名为`Internet Sales US`。  
   
 4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36015806"
   
 1.  在 **“角色管理器”** 对话框中，单击 **“新建”**。  
   
-2.  单击该新角色，然后在**名称**列中，重命名该角色向`Internet Sales Administrator`。  
+2.  单击新角色，然后在**名称**列中，重命名为`Internet Sales Administrator`。  
   
 3.  在“权限”列中，单击下拉列表，然后选择“管理员”权限。  
   

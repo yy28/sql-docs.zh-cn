@@ -1,5 +1,5 @@
 ---
-title: 应用筛选器以测试数据创建模型 |Microsoft 文档
+title: 应用筛选器来测试数据建模 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153278"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>将筛选器应用于模型测试数据
   在指定测试模型时使用的外部数据源时，可以选择应用筛选器以限制输入数据。 例如，您可能想要专门针对有关某一收入范围的客户的预测来测试模型。  
   
- 例如，在 AdventureWorks 目标邮递方案中，可以创建筛选器表达式类似以下上 ProspectiveBuyer，这是包含测试数据的表，并按收入范围限制测试用例：  
+ 例如，在 AdventureWorks 目标邮件方案，可以创建对 ProspectiveBuyer，这是包含测试数据的表，如下一个筛选表达式并按收入范围来限制测试事例：  
   
  `[YearlyIncome] = '50000'`  
   

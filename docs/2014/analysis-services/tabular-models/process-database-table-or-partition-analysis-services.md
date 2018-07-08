@@ -1,5 +1,5 @@
 ---
-title: 处理数据库、 表或分区 |Microsoft 文档
+title: 处理数据库、 表或分区 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d0300249983334f0510fe94807f1dcfcb62865f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e6bb8c09154c7136d53dbf948c0baa199077f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229707"
 ---
 # <a name="process-database-table-or-partition"></a>处理数据库、表或分区
-  本主题中的任务说明如何通过使用手动处理表格模型数据库、 表或分区**过程\<对象 >** 中的对话框[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+  本主题中的任务说明如何通过使用手动处理表格模型数据库、 表或分区**进程\<对象 >** 中的对话框[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  有关表格模型处理的详细信息，请参阅[处理数据（SSAS 表格）](../process-data-ssas-tabular.md)。  
   

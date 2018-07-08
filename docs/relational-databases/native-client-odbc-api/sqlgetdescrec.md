@@ -1,12 +1,12 @@
 ---
-title: SQLGetDescRec |Microsoft 文档
+title: SQLGetDescRec |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,23 +17,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ab5c1cbc3265c5184d481f1e17c923b4d02fd6a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ad1c10503b96ab4229be5d1cbc9552b1e6de000d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697368"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430286"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  本主题讨论 SQLGetDescRec 功能特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。  
+  本主题讨论特定于 SQLGetDescRec 功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec 和表值参数  
- SQLGetDescRec 可用来获取的表值参数和表值参数列的属性的值。 *RecNumber* SQLGetDescRec 参数对应于*ParameterNumber* SQLBindParameter 参数。  
+ SQLGetDescRec 可以用于获取表值参数和表值参数列的属性的值。 *RecNumber* SQLGetDescRec 参数对应于*ParameterNumber* SQLBindParameter 的参数。  
   
- 表值参数列仅在将描述符标头字段 SQL_SOPT_SS_PARAM_FOCUS 设置为特定记录（其 SQL_DESC_TYPE 设置为 SQL_SS_TABLE）的序数时可用。 有关： SQL_SOPT_SS_PARAM_FOCUS 有关的详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
+ 表值参数列仅在将描述符标头字段 SQL_SOPT_SS_PARAM_FOCUS 设置为特定记录（其 SQL_DESC_TYPE 设置为 SQL_SS_TABLE）的序数时可用。 有关 SQL_SOPT_SS_PARAM_FOCUS 的详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
  SQLGetDescRec 返回以下数据：  
   

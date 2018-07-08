@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,24 +17,24 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229007"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文查询使用全文谓词（CONTAINS 和 FREETEXT）以及全文函数（CONTAINSTABLE 和 FREETEXTTABLE）来定义全文搜索。 它们支持复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，这种语法支持各种形式的查询词。 若要编写全文查询，必须了解何时以及如何使用这些谓词和函数。  
   
-##  <a name="OV_ft_predicates"></a> 概述的全文谓词 （CONTAINS 和 FREETEXT）  
+##  <a name="OV_ft_predicates"></a> 概述全文谓词 （CONTAINS 和 FREETEXT）  
  CONTAINS 和 FREETEXT 谓词返回 TRUE 或 FALSE 值。 它们只能用于指定选择条件，以确定给定的行是否与全文查询相匹配。 匹配的行在结果集中返回。 CONTAINS 和 FREETEXT 在 SELECT 语句的 WHERE 或 HAVING 子句中指定。 它们可以与任何其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词（例如 LIKE 和 BETWEEN）结合使用。  
   
 > [!NOTE]  
->  有关语法和参数的这些谓词的信息，请参阅[CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)和[FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)。  
+>  有关语法和参数的这些谓词的信息，请参阅[包含&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)并[FREETEXT &#40;-&#41;](/sql/t-sql/queries/freetext-transact-sql)。  
   
  当使用 CONTAINS 或 FREETEXT 时，可以指定搜索表中的单个列、一组列或所有列。 此外，还可以指定语言，以便给定的全文查询使用此语言的资源进行断字和词干分析、同义词库查找以及干扰词删除。  
   
@@ -89,7 +88,7 @@ GO
  像一般的表名一样，CONTAINSTABLE 和 FREETEXTTABLE 函数也可以在 SELECT 语句的 FROM 子句中进行引用。 它们返回与全文查询匹配的、包含零行、一行或多行的表。 返回的表只包含与该函数的全文搜索条件中指定的选择条件相匹配的基表的行。  
   
 > [!NOTE]  
->  有关语法和参数的这些函数的信息，请参阅[CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)和[FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)。  
+>  有关语法和参数的这些函数的信息，请参阅[CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)并[FREETEXTTABLE &#40;-&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)。  
   
  使用这些函数之一的查询返回每一行的相关性排名值 (RANK) 和全文键 (KEY)，如下所示：  
   
@@ -134,7 +133,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. 使用 FREETEXTTABLE  
- 以下示例扩展了 FREETEXTTABLE 查询，以便首先返回排名最高的行，然后将每一行的排名添加到选择列表中。 若要指定该查询，你必须知道**ProductDescriptionID**是唯一键列`ProductDescription`表。  
+ 以下示例扩展了 FREETEXTTABLE 查询，以便首先返回排名最高的行，然后将每一行的排名添加到选择列表中。 若要指定该查询，您必须知道**ProductDescriptionID**是唯一键列`ProductDescription`表。  
   
 ```  
 USE AdventureWorks2012  
@@ -169,7 +168,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> 使用布尔运算符 – AND、 OR 和 NOT – 在 CONTAINS 和 CONTAINSTABLE  
+##  <a name="Using_Boolean_Operators"></a> 使用布尔运算符 – AND、 OR 和 NOT – 在 CONTAINS 和 CONTAINSTABLE 中  
  CONTAINS 谓词和 CONTAINSTABLE 函数使用相同的搜索条件。 它们都支持使用布尔运算符（AND、OR、AND NOT）将多个搜索词组合起来，以执行逻辑运算。 例如，可以使用 AND 查找既包含“latte”又包含“New York-style bagel”的行。 例如，可以使用 AND NOT 查找包含“bagel”但不包含“cream cheese”的行。  
   
 > [!NOTE]  
@@ -221,7 +220,7 @@ GO
 >  全文搜索还可以用于图像列。 但是，`image`的未来版本中将删除数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用此数据类型，并计划修改当前使用此数据类型的应用程序。 使用`varbinary(max)`数据类型。  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>varbinary(max) 或 varbinary 数据  
- 单个`varbinary(max)`或`varbinary`列可以存储多种类型的文档。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持安装了相应筛选器并且在操作系统中可用的任何文档类型。 每个文档的文档类型由该文档的文件扩展名标识。 例如，对于 .doc 文件扩展名，全文搜索将使用支持 Microsoft Word 文档的筛选器。 有关可用文档类型的列表，请查询 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目录视图。  
+ 将单个`varbinary(max)`或`varbinary`列可以存储多种类型的文档。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持安装了相应筛选器并且在操作系统中可用的任何文档类型。 每个文档的文档类型由该文档的文件扩展名标识。 例如，对于 .doc 文件扩展名，全文搜索将使用支持 Microsoft Word 文档的筛选器。 有关可用文档类型的列表，请查询 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目录视图。  
   
  请注意，全文引擎可以利用操作系统中安装的现有筛选器。 在您可以使用操作系统筛选器、断字符和词干分析器之前，您必须将它们加载到服务器实例中，如下所示：  
   
@@ -234,9 +233,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml 数据  
- `xml`数据类型列仅存储 XML 文档和片段，并且只有 XML 筛选器使用的文档。 因此，无需类型列。 上`xml`列，全文索引的 XML 元素，对内容进行索引，但忽略 XML 标记。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。  
+ `xml`数据类型列仅存储 XML 文档和片段，并且只有 XML 筛选器用于文档。 因此，无需类型列。 在`xml`列，全文索引的 XML 元素中，内容创建索引，但忽略 XML 标记。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。  
   
- 有关对查询的详细信息`xml`列，请参阅[使用全文搜索和 XML 列](../xml/use-full-text-search-with-xml-columns.md)。  
+ 有关查询的详细信息`xml`列中，请参阅[使用全文搜索和 XML 列](../xml/use-full-text-search-with-xml-columns.md)。  
   
  
   
@@ -258,7 +257,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 
   
 ###  <a name="Simple_Term"></a> 搜索特定单词或短语 （简单词）  
- 可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 在表中搜索特定短语。 例如，如果你想要搜索`ProductReview`表中[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]数据库，查找所有注释有关产品使用短语"learning curve"，你可以使用 CONTAINS 谓词，如下所示：  
+ 可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 在表中搜索特定短语。 例如，如果你想要搜索`ProductReview`表中[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]数据库，以查找所有注释关于产品的包含"learning curve"短语，您可以使用 CONTAINS 谓词，如下所示：  
   
 ```  
 USE AdventureWorks2012  
@@ -293,7 +292,7 @@ GO
   
  
   
-###  <a name="Inflectional_Generation_Term"></a> 搜索特定词 （派生词） 的变形窗体  
+###  <a name="Inflectional_Generation_Term"></a> 变形 （派生词） 中的特定词的搜索  
  可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 搜索动词的所有不同时态和语态形式或搜索名词的单数和复数形式（变形搜索）或者搜索特定词的同义词形式（同义词库搜索）。  
   
  以下示例在 `Comments` 数据库的 `ProductReview` 表的 `AdventureWorks` 列搜索“foot”的任意变形（“foot”、“feet”等）：  

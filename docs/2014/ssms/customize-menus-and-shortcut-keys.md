@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
 - keyboard shortcuts [SQL Server Management Studio]
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e9331425dc13c81c2304cf43dc8639eee25d861
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b96c4e3bc6f0b9d1da82d373d4b8c0374331fb2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149908"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
-  键盘快捷键允许你通过按 ALT + 选择菜单命令或按钮*\<单个字母 >*。 例如，若要打开“编辑”菜单，请按 Alt+E。 使用“自定义”对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
+  借助于键盘快捷键，您可以通过按 ALT + 选择菜单命令或按钮*\<单个字母 >*。 例如，若要打开“编辑”菜单，请按 Alt+E。 使用“自定义”对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
   
  用于存储过程的键盘快捷键（使用 Ctrl 键）可以从“工具”/“选项”对话框的“键盘”页中创建。  
   

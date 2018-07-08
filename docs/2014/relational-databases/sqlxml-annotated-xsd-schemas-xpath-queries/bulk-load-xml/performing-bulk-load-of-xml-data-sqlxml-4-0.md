@@ -1,5 +1,5 @@
 ---
-title: 执行大容量加载的 XML 数据 (SQLXML 4.0) |Microsoft 文档
+title: 执行大容量加载的 XML 数据 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4c4c6980c32028858b70d9fd59d80448a692206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7669d5342ecfff26a81808b9a1969e1b367e60e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230628"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>对 XML 数据执行大容量加载 (SQLXML 4.0)
   XML 大容量加载是使您可以将半结构化 XML 数据加载到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表的独立 COM 对象。  
@@ -44,7 +44,7 @@ ms.locfileid: "36015426"
  介绍 XML 大容量加载如何解释 XSD 和 XDR 架构中的批注。  
   
  [SQL Server XML 大容量加载对象模型&#40;SQLXML 4.0&#41;](sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  
- 描述 SQLXMLBulkLoad 对象和其方法和属性。  
+ 介绍 SQLXMLBulkLoad 对象及其方法和属性。  
   
  [XML 大容量加载示例&#40;SQLXML 4.0&#41;](xml-bulk-load-examples-sqlxml-4-0.md)  
  提供使用 XML 大容量加载的示例代码。  

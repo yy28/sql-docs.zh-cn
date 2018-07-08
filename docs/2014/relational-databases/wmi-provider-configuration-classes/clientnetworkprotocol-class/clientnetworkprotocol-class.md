@@ -1,5 +1,5 @@
 ---
-title: ClientNetworkProtocol 类 |Microsoft 文档
+title: ClientNetworkProtocol 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ClientNetworkProtocol class
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9916c17c2dece15e6a938bc4a0dccbfbf7ae8e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1452673041397a5af7d3274964e1221f448dbc1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164171"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 类
-  [ClientNetworkProtocol 类](clientnetworkprotocol-class.md)表示网络协议允许使用的实例通信的客户端实例上安装[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络。  
+  [ClientNetworkProtocol 类](clientnetworkprotocol-class.md)表示网络协议允许使用的实例进行通信的客户端实例上安装[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络。  
   
- 与[ClientNetworkProtocol 类](clientnetworkprotocol-class.md)，你可以执行以下任务：  
+ 与[ClientNetworkProtocol 类](clientnetworkprotocol-class.md)，可以执行以下任务：  
   
 -   设置一个用于从协议列表选择客户端网络协议的索引值。  
   

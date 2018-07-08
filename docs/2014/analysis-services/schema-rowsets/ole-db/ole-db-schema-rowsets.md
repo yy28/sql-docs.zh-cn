@@ -1,5 +1,5 @@
 ---
-title: OLE DB 架构行集 |Microsoft 文档
+title: OLE DB 架构行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161188"
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 架构行集
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口支持下列 OLE DB 架构行集。 使用`DISCOVER_ENUMERATORS`行集[发现](../../xmla/xml-elements-methods-discover.md)方法来检查特定数据源提供程序是否支持行集。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口支持下列 OLE DB 架构行集。 使用`DISCOVER_ENUMERATORS`行集与[发现](../../xmla/xml-elements-methods-discover.md)方法来检查特定数据源提供程序是否支持某个行集。  
   
  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 网站的 MSDN® Library 的“OLE DB Programmer's Reference”部分搜索“Schema Rowsets”主题，还可以找到有关这些行集的详细信息。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36018302"
 |`DBSCHEMA_VIEW_TABLE_USAGE`|标识查看的表所依赖的、在目录中定义并由给定用户拥有的表。|  
 |`DBSCHEMA_VIEWS`|标识在目录中定义的、给定用户可以访问的视图。|  
   
- <sup>1</sup>指示 MSOLAP 数据源提供程序支持的架构行集[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供程序。  
+ <sup>1</sup>指示的 MSOLAP 数据源提供程序支持架构行集[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 访问接口。  
   
 ## <a name="see-also"></a>请参阅  
  [DISCOVER_ENUMERATORS 行集](../xml/discover-enumerators-rowset.md)   

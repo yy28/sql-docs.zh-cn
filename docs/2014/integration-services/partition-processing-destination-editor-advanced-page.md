@@ -1,5 +1,5 @@
 ---
-title: 分区处理目标编辑器 （高级页） |Microsoft 文档
+title: 分区处理目标编辑器 （高级页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7f81cc34213d2288512a8d063b1e11e4dfd49d53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 996373337fe9c54218350cb23ca4f12f8d5869c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164958"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>分区处理目标编辑器（“高级”页）
   可以使用 **“分区处理目标编辑器”** 对话框的 **“高级”** 页配置错误处理方式。  

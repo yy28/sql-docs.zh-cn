@@ -1,12 +1,12 @@
 ---
-title: 大容量复制选择的结果集 (ODBC) |Microsoft 文档
+title: 大容量复制 SELECT 结果集 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6cc6782023af6bb1916d153e172fe7c8c2dfc53
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7be06db485057a16961d76ff3965ce862c104cdd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702437"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427286"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大容量复制 SELECT 结果集 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "35702437"
   
 4.  调用[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)可设置的以下信息：  
   
-    -   指定 NULL 为*szTable*参数。  
+    -   指定为空， *szTable*参数。  
   
     -   接收结果集数据的数据文件的名称。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "35702437"
   
     -   复制方向：DB_OUT。  
   
-5.  调用[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)、 eOption 设 BCPHINTS 和置于 iValue 指向包含 SELECT 语句的 SQLTCHAR 数组的指针。  
+5.  调用[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)，将 eOption 设置为 BCPHINTS，并在 iValue 中将指向包含该 SELECT 语句的 SQLTCHAR 数组的指针。  
   
-6.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行批量复制操作。  
+6.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以执行大容量复制操作。  
   
- 按以上步骤操作时文件是以本机格式创建的。 你可以通过使用转换为其他数据类型的数据值[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 有关详细信息，请参阅[创建大容量复制格式化文件&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)。  
+ 按以上步骤操作时文件是以本机格式创建的。 您可以通过使用数据值转换为其他数据类型[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 有关详细信息，请参阅[创建大容量复制格式化文件&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)。  
   
 ## <a name="example"></a>示例  
  需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  

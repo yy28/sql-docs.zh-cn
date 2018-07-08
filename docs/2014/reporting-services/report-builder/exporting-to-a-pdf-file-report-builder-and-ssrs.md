@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f769ede65a47bbe3500b67ec02247ac5e3dc6f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183834"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>导出到 PDF 文件（报表生成器和 SSRS）
   PDF 呈现扩展插件可将报表呈现为特定格式的文件，以便在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 6 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。  
@@ -71,7 +71,7 @@ ms.locfileid: "36018118"
 |`Subject`|`Description` RDL 元素。|  
 |`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 产品的名称和版本。|  
 |`Producer`|呈现扩展插件的名称和版本。|  
-|`CreationDate`|报表执行时间，在 PDF 中`datetime`格式。|  
+|`CreationDate`|报表执行时间，以 PDF`datetime`格式。|  
   
   
   

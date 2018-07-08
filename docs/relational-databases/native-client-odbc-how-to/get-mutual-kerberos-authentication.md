@@ -1,12 +1,12 @@
 ---
-title: 获取相互 Kerberos 身份验证 |Microsoft 文档
+title: 获取 Kerberos 相互身份验证 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49ea78e9824e0d1ee05f4f6a29e05f0482f0953c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e7e74821d3981c5015e0d17d5019a40c4cc5b7a1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701048"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416036"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>获取 Kerberos 相互身份验证
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "35701048"
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 有关详细信息，请参阅[服务主体名称&#40;SPN&#41;中客户端连接支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关详细信息，请参阅[服务主体名称&#40;SPN&#41;中的客户端连接支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
@@ -41,7 +41,7 @@ ms.locfileid: "35701048"
   
  此外，还必须指定一个客户提供的 SPN。 将“CP_SPN”更改为客户提供的 SPN。  
   
- 使用 /EHsc、/D "_UNICODE"、/D "UNICODE" 和 odbc32.lib 进行编译。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 /EHsc、/D "_UNICODE"、/D "UNICODE" 和 odbc32.lib 进行编译。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
 ```  
 // compile with: /EHsc /D "_UNICODE" /D "UNICODE" odbc32.lib  

@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 添加包部署模型的包配置 |Microsoft 文档
+title: 第 5 课： 添加包部署模型的包配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 caps.latest.revision: 28
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21be0ea0bde6d625ff28fdc5d5f6ea898c41074f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eb0defb5b0e2321932424ef7bf5396a213b1f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209737"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>第 5 课： 添加包部署模型的包配置
-  包配置允许您从开发环境的外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
+  包配置允许您从开发环境的外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)]
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
   
 -   XML 配置文件  
   
@@ -34,7 +36,7 @@ ms.locfileid: "36015480"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表  
   
- 在本课中，将修改在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建的简单 [ssISnoversion](lesson-4-add-error-flow-redirection-with-ssis.md) 包，以便使用包部署模型并利用包配置。 还可以复制本教程中附带的已完成的 Lesson 4 包。 使用包配置向导，将创建一个 XML 配置，以便通过使用映射到 Directory 属性的包级别变量来更新 Foreach 循环容器的 `Directory` 属性。 在创建配置文件之后，将从开发环境的外部修改该变量的值，并将修改后的属性指向新的示例数据文件夹。 当你再次运行包、 配置文件将填充变量的值和变量将更新`Directory`属性。 结果，包将迭代遍历新数据文件夹中的文件，而不是迭代遍历在该包中硬编码的原始文件夹中的文件。  
+ 在本课中，将修改在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建的简单 [ssISnoversion](lesson-4-add-error-flow-redirection-with-ssis.md) 包，以便使用包部署模型并利用包配置。 还可以复制本教程中附带的已完成的 Lesson 4 包。 使用包配置向导，将创建一个 XML 配置，以便通过使用映射到 Directory 属性的包级别变量来更新 Foreach 循环容器的 `Directory` 属性。 在创建配置文件之后，将从开发环境的外部修改该变量的值，并将修改后的属性指向新的示例数据文件夹。 当再次运行包、 配置文件将填充变量的值和变量又会更新`Directory`属性。 结果，包将迭代遍历新数据文件夹中的文件，而不是迭代遍历在该包中硬编码的原始文件夹中的文件。  
   
 > [!IMPORTANT]  
 >  本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=526910)。  

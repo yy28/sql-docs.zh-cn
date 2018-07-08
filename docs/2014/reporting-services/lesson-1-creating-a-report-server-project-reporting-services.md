@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 417c2a44536a4f7a1c9ed9ade7d789e20e024874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148718"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中创建报表，必须先创建报表服务器项目以用于保存报表定义 (.rdl) 文件和报表所需的其他所有资源文件。 然后，您将创建实际的报表定义文件、定义报表的数据源、定义数据集并定义报表布局。 运行报表时，将检索实际数据并将其与布局相结合，然后呈现在屏幕上，以便执行导出、打印或保存操作。  
@@ -28,7 +28,7 @@ ms.locfileid: "36016092"
   
 ### <a name="to-create-a-report-server-project"></a>创建报表服务器项目  
   
-1.  单击**启动**，指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击**SQL Server Data Tools**。 如果这是首次打开[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，单击**业务智能设置**默认环境设置。  
+1.  单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击**SQL Server Data Tools**。 如果这是首次打开[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，单击**商业智能设置**的默认环境设置。  
   
 2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36016092"
   
 ### <a name="to-create-a-new-report-definition-file"></a>创建新的报表定义文件  
   
-1.  在解决方案资源管理器，右键单击**报表**，指向**添加**，然后单击**新项**。  
+1.  在解决方案资源管理器中右键单击**报表**，依次指向**添加**，然后单击**新项**。  
   
     > [!NOTE]  
     >  如果“解决方案资源管理器”窗口不可见，请单击“视图”菜单中的“解决方案资源管理器”。  
   
-2.  在**添加新项**对话框中，在**模板**，单击**报表**。  
+2.  在中**添加新项**对话框中的**模板**，单击**报表**。  
   
 3.  在“名称” 中，键入 **Sales Orders.rdl** ，再单击“添加” 。  
   

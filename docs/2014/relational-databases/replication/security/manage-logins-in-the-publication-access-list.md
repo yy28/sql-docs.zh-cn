@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
 - publications [SQL Server replication], publication access lists
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logins [SQL Server replication], managing
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5020d9d01df5798e533a55a4bfb161363367d5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dca50043353ff003b1179777a2da119edf8fa2bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150428"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理发布访问列表中的登录名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理发布访问列表中的登录名。 对发布的访问是由发布访问列表 (PAL) 控制的。 可以在 PAL 中添加和删除登录名和组。  

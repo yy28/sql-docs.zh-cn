@@ -1,5 +1,5 @@
 ---
-title: 横向扩展部署 （本机模式报表服务器） |Microsoft 文档
+title: 横向扩展部署 （本机模式报表服务器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151798"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>扩展部署（本机模式报表服务器）
-  使用**横向扩展部署**页面[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]若要查看扩展部署初始化状态或将报表服务器联接到扩展部署的配置管理器。 “扩展部署”  是指共享单个报表服务器数据库的两个或多个报表服务器实例。  
+  使用**横向扩展部署**页中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器查看扩展部署的初始化状态或将报表服务器联接到扩展部署。 “扩展部署”  是指共享单个报表服务器数据库的两个或多个报表服务器实例。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36013659"
   
  若要配置扩展部署，则首先应有两个或多个与同一报表服务器数据库连接的报表服务器实例。 安装所有实例后，连接到第一个报表服务器，然后使用“扩展部署”页联接每个附加实例。 只有已初始化为使用数据库的报表服务器才能初始化其他节点。  
   
- 若要打开此页，请启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器并选择**横向扩展部署**在导航窗格中。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开此页上，启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器，然后选择**横向扩展部署**在导航窗格中。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ## <a name="options"></a>“常规”  
  **SQL Server 名称**  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158278"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
   本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
@@ -58,7 +58,7 @@ ms.locfileid: "36018166"
   
 4.  注册 replisapi.dll：  
   
-    1.  单击 **“启动”**，再单击 **“运行”**。 在**打开**框中，输入`cmd`，然后单击**确定**。  
+    1.  单击 **“启动”**，再单击 **“运行”**。 在中**开放**框中，输入`cmd`，然后单击**确定**。  
   
     2.  在步骤 1 所创建的目录中，执行以下命令：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36018166"
   
     3.  在 **“操作”** 窗格中，单击 **“添加模块映射”**。  
   
-    4.  有关**请求**路径，输入`replisapi.dll`。  
+    4.  有关**请求**路径中，输入`replisapi.dll`。  
   
     5.  从 **“模块”** 下拉列表中，选择 **“IsapiModule”**。  
   

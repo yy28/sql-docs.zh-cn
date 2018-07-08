@@ -1,5 +1,5 @@
 ---
-title: 高可用性 (Reporting Services) |Microsoft 文档
+title: 高可用性 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1d11b2b53499b12a6a8a7dca262bc26ae777825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150218"
 ---
 # <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器是一种无状态服务器，它在两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系数据库中存储应用程序数据、内容、属性和会话信息。 因此，确保的可用性的最佳方式[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能是执行以下操作：  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器是一种无状态服务器，它在两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系数据库中存储应用程序数据、内容、属性和会话信息。 因此，若要确保的可用性的最佳方式[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能是执行以下操作：  
   
--   使用的高可用性功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]以最大化报表服务器数据库的正常运行时间。 如果你配置[!INCLUDE[ssDE](../includes/ssde-md.md)]实例在故障转移群集中运行，则在创建报表服务器数据库时，可以选择该实例。  
+-   使用的高可用性功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]以最大化报表服务器数据库的正常运行时间。 如果配置[!INCLUDE[ssDE](../includes/ssde-md.md)]实例故障转移群集中运行，则可以创建报表服务器数据库时选择该实例。  
   
 -   将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据库并且在可能的情况下用于数据源。 有关详细信息，请参阅 [Reporting Services 与 AlwaysOn 可用性组 (SQL Server)](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)。  
   

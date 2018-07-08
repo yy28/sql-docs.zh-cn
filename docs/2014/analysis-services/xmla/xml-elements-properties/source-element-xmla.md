@@ -1,5 +1,5 @@
 ---
-title: 源元素 (XMLA) |Microsoft 文档
+title: Source 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481b5c755b24c6bb8ae03e58b43759b4dce4e39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182954"
 ---
 # <a name="source-element-xmla"></a>Source 元素 (XMLA)
-  表示一个源分区合并期间[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
+  表示一个源分区期间合并[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36018288"
  `Source` 元素是对单个分区的对象引用，该单个分区为要合并到父级 `Target` 元素的 `MergePartitions` 元素所指定的目标分区的单个分区。  
   
 ## <a name="example"></a>示例  
- 下面的示例将 `Internet Sales` 度量值组的全部四个分区合并到了 `Internet_Sales_2004` 目标分区中。 此示例指**Adventure Works**多维数据集的[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
+ 下面的示例将 `Internet Sales` 度量值组的全部四个分区合并到了 `Internet_Sales_2004` 目标分区中。 此示例引用**Adventure Works**多维数据集[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -87,7 +87,7 @@ ms.locfileid: "36018288"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [目标元素&#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
+ [Target 元素&#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

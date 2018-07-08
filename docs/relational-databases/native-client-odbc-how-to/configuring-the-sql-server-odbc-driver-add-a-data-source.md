@@ -1,12 +1,12 @@
 ---
-title: 添加数据源 (ODBC) |Microsoft 文档
+title: 添加数据源 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4bfc1030cba65196858d05e3c57230b4930b2b21
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: be2aceb1f0b4d868e45219e4705eb12d7aee37c1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694468"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421506"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>配置 SQL Server ODBC 驱动程序-添加数据源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,25 +29,25 @@ ms.locfileid: "35694468"
 
   将 ODBC 应用程序用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本之前，必须了解如何升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本上的目录存储过程的版本，以及如何添加、删除和测试数据源。  
   
-  你可以以编程方式使用 ODBC 管理器中，添加数据源 (通过使用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))，或通过创建的文件。  
+  可以通过使用 ODBC 管理器，以编程方式添加数据源 (通过使用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))，或通过创建的文件。  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理器添加数据源  
   
-1.  从**控制面板**，访问**管理工具**然后**ODBC 数据源 （64 位）** 或**ODBC 数据源 （32 位）**. 或者，可以调用 odbcad32.exe。  
+1.  从**Control Panel**，访问**管理工具**然后**ODBC 数据源 （64 位）** 或**ODBC 数据源 （32 位）**. 或者，可以调用 odbcad32.exe。  
   
-2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡上，并依次**添加**。  
+2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡，然后依次**添加**。  
   
 3.  单击**SQL Server**，然后单击**完成**。  
   
-4.  完成中的步骤**创建新的数据源到 SQL Server**向导。  
+4.  完成中的步骤**创建到 SQL Server 的新数据源**向导。  
   
 ### <a name="to-add-a-data-source-programmatically"></a>以编程方式添加数据源  
   
-1.  调用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)与设置为 ODBC_ADD_DSN 或 ODBC_ADD_SYS_DSN 第二个参数。  
+1.  调用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)第二个参数设置为 ODBC_ADD_DSN 或 ODBC_ADD_SYS_DSN。  
   
 ### <a name="to-add-a-file-data-source"></a>添加文件数据源  
   
-1.  调用[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) SAVEFILE 为连接字符串中的文件名参数。 如果连接成功，则 ODBC 驱动程序将使用 SAVEFILE 参数指向的位置中的连接参数创建一个文件数据源。  
+1.  调用[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)的 savefile = file_name 参数中的连接字符串。 如果连接成功，则 ODBC 驱动程序将使用 SAVEFILE 参数指向的位置中的连接参数创建一个文件数据源。  
   
 ## <a name="see-also"></a>请参阅  
 [删除数据源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    

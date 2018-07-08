@@ -1,5 +1,5 @@
 ---
-title: 表格模型数据库 (SSAS 表格) |Microsoft 文档
+title: 表格模型数据库 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0952d613290da279c5e044085ed79f415181bb9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259413"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>表格模型数据库（SSAS 表格）
   表格模型数据库是您使用 Analysis Services 表格模型项目模板在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建的 Analysis Services 数据库，其中，表和关系是用于表示数据的主要结构。  

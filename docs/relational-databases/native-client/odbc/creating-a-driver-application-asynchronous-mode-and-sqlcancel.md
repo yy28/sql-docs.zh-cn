@@ -1,5 +1,5 @@
 ---
-title: 异步模式和 SQLCancel |Microsoft 文档
+title: 异步模式和 SQLCancel |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +24,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f6f0e96ff0344a084b84098339687374ba18335
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b81d9c0716a0bda54bdeab3c7d2b347a505e0ce2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949902"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409146"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>创建驱动程序应用程序的异步模式和 SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,9 +54,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  当应用程序测试命令是否完成时，它会向驱动程序发出带有相同参数的相同函数调用。 如果驱动程序尚未从服务器接收到回复，它将再次返回 SQL_STILL_EXECUTING。 应用程序必须定期测试该命令，直到返回 SQL_STILL_EXECUTING 之外的代码。 当应用程序收到其他任何返回代码（甚至是 SQL_ERROR）后，它可以确定命令是否已完成。  
   
- 有时某个命令长时间未完成。 如果应用程序需要取消命令而无需等待答复，则可采用通过调用**SQLCancel**使用相同的语句作为未完成命令的处理。 这是唯一一次**SQLCancel**应使用。 某些程序员使用**SQLCancel**时处理这些情况下方式通过结果设置并且想要取消的结果集的其余部分。 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)应该用于不取消未完成的结果集的其余部分**SQLCancel**。  
+ 有时某个命令长时间未完成。 如果应用程序需要取消该命令而无需等待回复，它可以这样通过调用**SQLCancel**与同一个语句处理未完成命令。 这是唯一一次**SQLCancel**应使用。 某些编程人员使用**SQLCancel**处理期间通过结果集，并且想要取消结果集的其余部分。 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)应该用于未取消未完成的结果集的其余部分**SQLCancel**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 SQL Server Native Client ODBC 驱动程序应用程序](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
   

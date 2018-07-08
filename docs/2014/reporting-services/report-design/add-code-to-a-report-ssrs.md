@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom code [Reporting Services]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3b4861234af092f5acd9dc500e52737a446d5dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 75f7f2490adbf85d9d4796a8492d00b9685de423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183944"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>向报表添加代码 (SSRS)
   您可以在任何表达式中调用自己的自定义代码。 可以通过下列两种方式提供代码：  
   
 -   直接在报表中使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写的嵌入代码。 如果代码引用非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 或 <xref:System.Math> 的 <xref:System.Convert>，必须向报表中添加引用。 有关详细信息，请参阅[向报表添加程序集引用 (SSRS)](add-an-assembly-reference-to-a-report-ssrs.md)。 有关可从代码中使用的其他引用的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
--   使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供自定义代码程序集。 如果提供自定义程序集，则必须同时在创作报表的计算机上和查看报表的报表服务器上安装该自定义程序集。 有关详细信息，请参阅[使用 Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)。  
+-   使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供自定义代码程序集。 如果提供自定义程序集，则必须同时在创作报表的计算机上和查看报表的报表服务器上安装该自定义程序集。 有关详细信息，请参阅[使用报表的自定义程序集](../custom-assemblies/using-custom-assemblies-with-reports.md)。  
   
 ### <a name="to-add-embedded-code-to-a-report"></a>向报表添加嵌入代码  
   
@@ -62,8 +62,8 @@ ms.locfileid: "36018104"
      如果将此表达式添加到显示类别值的表单元，则只要该行的数据集字段中出现词语“Bike”，表单元值就会显示词语“Bicycle”。  
   
 ## <a name="see-also"></a>请参阅  
- [报表属性对话框中代码](../report-properties-dialog-box-code.md)   
+ [代码-报表属性对话框](../report-properties-dialog-box-code.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
- [参数的集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Parameters 集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

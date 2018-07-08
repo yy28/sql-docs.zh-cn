@@ -1,5 +1,5 @@
 ---
-title: 管理大容量复制批大小 |Microsoft 文档
+title: 管理大容量复制批次大小 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 816f5ec577e65b84e23ba538008d06542348f02c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c944d5b43e70060baf7eb34cfcb2fc17e4ef666
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945632"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422816"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>管理大容量复制的批大小
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,18 +44,18 @@ ms.locfileid: "32945632"
   
 -   如果不指定 TABLOCK，请将批大小限制为小于 1,000 行。  
   
- 当大容量复制从数据文件中时，通过调用指定批次大小**bcp_control**使用之前调用 BCPBATCH 选项[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)。 当大容量复制从程序变量使用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，批大小控制通过调用[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)之后调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x*时间 where *x*是批处理中的行数。  
+ 大容量复制将数据文件中，通过调用指定的批处理大小**bcp_control**带有 BCPBATCH 选项之前，调用[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)。 大容量复制中使用的程序变量[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)并[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，通过调用来控制批大小[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)后调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x*次，其中*x*是批处理中的行数。  
   
- 除了指定事务大小之外，批还会影响将行通过网络发送到服务器的时间。 大容量复制函数通常缓存中的行**bcp_sendrow**网络数据包填满，然后将完整的数据包发送到服务器之前。 在应用程序调用**bcp_batch**，但是，当前的数据包发送到无论是否具有已填充的服务器。 使用很小的批大小可能导致向服务器发送许多部分填满的数据包，从而降低性能。 例如，调用**bcp_batch**后每个**bcp_sendrow**导致每个要在单独的数据包中发送的行，并且，除非的行是非常大，浪费了每个数据包中的空间。 SQL Server 的网络数据包的默认大小为 4 KB，尽管应用程序可以通过调用来更改大小[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)指定 SQL_ATTR_PACKET_SIZE 特性。  
+ 除了指定事务大小之外，批还会影响将行通过网络发送到服务器的时间。 大容量复制函数通常缓存中的行**bcp_sendrow**直到网络数据包被填满，，然后将整个数据包发送到服务器。 当应用程序调用**bcp_batch**，但是，当前的数据包发送到服务器，无论是否具有已填充。 使用很小的批大小可能导致向服务器发送许多部分填满的数据包，从而降低性能。 例如，调用**bcp_batch**后每个**bcp_sendrow**导致要在一个单独的数据包中发送每个行，除非行是非常大，否则会浪费每个数据包中的空间。 适用于 SQL Server 网络数据包的默认大小为 4 KB，尽管应用程序可以通过调用更改大小[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)指定 SQL_ATTR_PACKET_SIZE 属性。  
   
- 批处理的另一个副作用是每个批处理被视为未完成的结果集之前已完成并且**bcp_batch**。 如果未完成，一批时，任何其他操作会尝试连接句柄上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序问题 SQLState 错误 ="HY000"和错误消息字符串的：  
+ 批处理的另一个副作用是每个批都被视为一个未完成的结果集之前它已完成，但**bcp_batch**。 如果批处理是未完成，而连接句柄上尝试任何其他操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将发出错误具有 SQLState ="HY000"和错误消息字符串的：  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  
 results for another hstmt."  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行大容量复制操作&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   

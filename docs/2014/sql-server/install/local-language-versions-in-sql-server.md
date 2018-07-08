@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 822f4e97f8cfce9e5b5ab63fd091b89f2e545cc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bfa451cd670ffd126a1b658c7c96aafe12f1cb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159908"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的本地语言版本
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 操作系统所支持的所有语言。  

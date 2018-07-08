@@ -1,12 +1,12 @@
 ---
-title: 调用存储的过程 |Microsoft 文档
+title: 调用存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,21 +22,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dcea38ca73e6626ae70c1de1e56b3787028ba396
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cc050918e8c1b18bf366be2ab5bdb5ecf53a19ad
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700538"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419286"
 ---
 # <a name="calling-a-stored-procedure"></a>调用存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持这两个 ODBC 调用转义序列和[!INCLUDE[tsql](../../includes/tsql-md.md)][执行](../../t-sql/language-elements/execute-transact-sql.md)语句用于执行存储过程; ODBC 调用转义序列是首选的方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持这两个 ODBC CALL 转义序列和[!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)语句用于执行存储过程; ODBC CALL 转义序列是首选的方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
   
 > [!NOTE]  
->  在调用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程通过 ODBC 使用命名的参数 (有关详细信息，请参阅[按名称 （名为参数） 的绑定参数](http://go.microsoft.com/fwlink/?LinkID=209721))，参数名称必须以开头 @ 字符。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的限制。 与 Microsoft 数据访问组件 (MDAC) 相比，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序更加严格地遵守此限制。  
+>  调用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程使用命名的参数以及 ODBC (有关详细信息，请参阅[按名称 （命名参数） 绑定参数](http://go.microsoft.com/fwlink/?LinkID=209721))，参数名称必须以与 @ 字符。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的限制。 与 Microsoft 数据访问组件 (MDAC) 相比，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序更加严格地遵守此限制。  
   
  调用过程的 ODBC CALL 转义序列是：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "35700538"
   
  其中*procedure_name*指定过程的名称和*参数*指定过程参数。 只有使用 ODBC CALL 转义序列的语句中才支持命名参数。  
   
- 一个过程可以有零个或多个参数。 它还可以返回值（如语法开头的可选参数标记 ?= 所示）。 如果参数是输入或输入/输出参数，它可以是文字或参数标记。 如果参数是输出参数，它必须是参数标记，因为输出是未知的。 必须通过绑定参数标记[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)之前过程调用执行语句。  
+ 一个过程可以有零个或多个参数。 它还可以返回值（如语法开头的可选参数标记 ?= 所示）。 如果参数是输入或输入/输出参数，它可以是文字或参数标记。 如果参数是输出参数，它必须是参数标记，因为输出是未知的。 必须通过绑定参数标记[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)语句执行之前在过程调用。  
   
  过程调用的输入和输入/输出参数可以省略。 如果使用括号但不带任何参数调用过程，驱动程序将指示数据源使用第一个参数的默认值。 例如：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "35700538"
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- 不过，使用默认设置运行时，如果标识符包含不遵循 ISO 标准的字符，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持上述任何一种带引号的标识符形式。 例如，该驱动程序无法访问名为的存储的过程 **"My.Proc"** 使用 CALL 语句使用带引号的标识符：  
+ 不过，使用默认设置运行时，如果标识符包含不遵循 ISO 标准的字符，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持上述任何一种带引号的标识符形式。 例如，驱动程序无法访问名为存储的过程 **"My.Proc"** 使用与调用语句带引号的标识符：  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  
@@ -89,7 +89,7 @@ ms.locfileid: "35700538"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- 服务器将引发错误，链接的服务器名为**MyDB**不存在。  
+ 服务器将显示错误，链接的服务器名为**MyDB**不存在。  
   
  使用带方括号的标识符时则不存在此问题，此语句可以正确地进行解释：  
   

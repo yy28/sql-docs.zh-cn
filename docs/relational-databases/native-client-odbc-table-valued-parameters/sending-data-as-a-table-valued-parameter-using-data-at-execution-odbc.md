@@ -1,12 +1,12 @@
 ---
-title: 发送数据作为表值参数使用数据在执行 (ODBC) |Microsoft 文档
+title: 将数据发送作为表值参数使用在执行数据 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,26 +16,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1252eaabf879ca1c0685ac6ec4334ce15a98fe27
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c939772d5e8e9e8a5ef9aa7bcf2a817acefe5b96
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698594"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413049"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  它类似于[都在内存](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)过程中，但使用表值参数执行中的数据。  
+  它类似于[都在内存](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)过程中，但使用表值参数执行时数据。  
   
  有关演示表值参数的另一个示例，请参阅[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
- 在此示例中，当调用 SQLExecute 或 SQLExecDirect 时，该驱动程序将返回 SQL_NEED_DATA。 然后，应用程序重复调用 SQLParamData，直到该驱动程序返回 SQL_NEED_DATA 以外的值。 驱动程序返回*ParameterValuePtr*以通知应用程序正在请求数据的参数。 在应用程序调用 SQLPutData 提供之前 SQLParamData 的后续调用的参数数据。 表值参数，对 SQLPutData 的调用指示它已准备好 （在此示例中，始终为 1） 驱动程序的行数。 表值的所有行都具有已传递到该驱动程序，SQLPutData 被调用以指示 0 行均不可用。  
+ 在此示例中，当调用 SQLExecute 或 SQLExecDirect 时，驱动程序将返回 SQL_NEED_DATA。 然后，应用程序反复调用 SQLParamData，直到驱动程序将返回 SQL_NEED_DATA 以外的值。 驱动程序将返回*ParameterValuePtr*来通知哪些参数请求的数据的应用程序。 在应用程序调用 SQLPutData 提供之前 SQLParamData 的后续调用的参数数据。 对于表值参数，对 SQLPutData 的调用指示它已准备好驱动程序 （在此示例中，始终为 1） 的行数。 表值的所有行已被传递给驱动程序，被调用 SQLPutData 以指示没有可用的行。  
   
- 可以在表值行内使用执行时数据值。 SQLParamData 返回的值会通知应用程序驱动程序需要使用的值。 与正则参数值，SQLPutData 可以调用一个或三次以上的字符或二进制的表值列的值。 这样，应用程序可以分块传递较大值。  
+ 可以在表值行内使用执行时数据值。 SQLParamData 返回的值通知应用程序驱动程序需要使用哪个值。 与常规参数值，如 SQLPutData 可以调用一个或三次以上的字符或二进制表值列的值。 这样，应用程序可以分块传递较大值。  
   
- 为表值调用 SQLPutData 时*DataPtr*用于可用 （在此示例中，始终为 1） 的行数。 *StrLen_or_IndPtr*必须始终为 0。 使用表值的所有行都已都通过时, 调用 SQLPutData *DataPtr*值为 0。  
+ 当针对表值调用 SQLPutData *DataPtr*用于 （在此示例中，始终为 1） 可用的行数。 *StrLen_or_IndPtr*必须始终为 0。 当传递了表值的所有行时，使用调用 SQLPutData *DataPtr*值为 0。  
   
 ## <a name="prerequisite"></a>先决条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -55,7 +55,7 @@ from @Items
   
 ## <a name="to-send-the-data"></a>发送数据  
   
-1.  声明的 SQL 参数的变量。 在本示例中，表值参数的缓冲区不必为数组；本示例每次传递一行数据。  
+1.  声明 SQL 参数的变量。 在本示例中，表值参数的缓冲区不必为数组；本示例每次传递一行数据。  
   
     ```  
     SQLRETURN r;  
@@ -74,7 +74,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  将参数绑定。 *Columnsize 类型*为 1，这意味着一次传递最多行。  
+2.  绑定参数。 *ColumnSize*为 1，这意味着每次传递最多一行。  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -129,14 +129,14 @@ from @Items
     strcpy_s((char *) CustCode ,sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
     ```  
   
-5.  调用该过程。 表值参数是数据在执行参数，因此，SQLExecDirect 将返回 SQL_NEED_DATA。  
+5.  调用该过程。 SQLExecDirect 将返回 SQL_NEED_DATA，因为表值参数是执行时数据参数。  
   
     ```  
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  提供执行时数据参数的数据。 当 SQLParamData 返回*ParameterValuePtr*表值参数，应用程序必须准备列的下一步的行或表值的行。 然后在应用程序调用与 SQLPutData *DataPtr*设置为可用 （在此示例中，1） 的行数和*StrLen_or_IndPtr*设置为 0。  
+6.  提供执行时数据参数的数据。 当返回 SQLParamData *ParameterValuePtr*对于表值参数，该应用程序必须做好列下一步的行或表值的行。 然后在应用程序调用使用 SQLPutData *DataPtr*设置为可用 （在此示例中，1） 的行数和*StrLen_or_IndPtr*设置为 0。  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -191,7 +191,7 @@ from @Items
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>Description  
- 此示例演示您可以使用流模式时，在每次调用 SQLPutData，与 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的一个行的行。  
+ 此示例演示您可以使用行流式处理，每次调用 SQLPutData 对 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的一个行。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
   
@@ -379,7 +379,7 @@ EXIT:
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>Description  
- 此示例演示您可以使用流模式时，在每次调用 SQLPutData，与 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的多个行的行。  
+ 此示例演示您可以使用行流式处理，每次调用 SQLPutData 对 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的多个行。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
   

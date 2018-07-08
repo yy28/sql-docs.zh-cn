@@ -1,12 +1,12 @@
 ---
-title: 设置光标选项 (ODBC) |Microsoft 文档
+title: 设置游标选项 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbcfb5e85b2f0b344c1c0ab0d5cf4bfcceaf78f0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cef6ecf23924ef5391cb4d3569082d5b635e24fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697658"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411007"
 ---
 # <a name="set-cursor-options-odbc"></a>设置游标选项 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  若要设置游标选项，调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置或[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)来获取控制游标行为的语句选项。  
+  若要设置游标选项，请调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)若要设置或[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)获取控制游标行为的语句选项。  
   
 |*Attribute*|指定|  
 |-----------------|---------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "35697658"
   
  这些属性（只进、只读、行集大小为 1）的默认值不使用服务器游标。 若要使用服务器游标，必须将这些属性中的至少一个属性设置为非默认值，并且所执行的语句必须是包含单个 SELECT 语句的单个 SELECT 语句或存储过程。 使用服务器游标时，SELECT 语句无法使用服务器游标不支持的子句：COMPUTE、COMPUTE BY、FOR BROWSE 和 INTO。  
   
- 你可以控制使用通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE 的游标的类型。 不应将指定游标行为的两种方法混用。  
+ 您可以控制使用通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE 的游标类型。 不应将指定游标行为的两种方法混用。  
   
 ## <a name="example"></a>示例  
  以下示例分配一个语句句柄，之后以行版本控制乐观并发方式设置动态游标类型，然后执行 SELECT。  

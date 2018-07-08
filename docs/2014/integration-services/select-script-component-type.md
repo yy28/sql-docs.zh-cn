@@ -1,5 +1,5 @@
 ---
-title: 选择脚本组件类型 |Microsoft 文档
+title: 选择脚本组件类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.f1
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8db6b8e31c29045668ddbf4e52be8698d2a96817
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 438d8da5512394241656d6c03185192cc6161eac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148248"
 ---
 # <a name="select-script-component-type"></a>选择脚本组件类型
   可以使用 **“选择脚本组件类型”** 对话框，指定是否创建预配置为源、转换或目标的脚本转换。  

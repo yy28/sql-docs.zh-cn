@@ -1,5 +1,5 @@
 ---
-title: 路径元素 (ASSL) |Microsoft 文档
+title: Path 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Path element
 ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ba53c4ee4399a39ebd8e4a1b14c9c062b3abaa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc537a04723bb94dae76ab4bcb86e4d3d3e210f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161258"
 ---
 # <a name="path-element-assl"></a>Path 元素 (ASSL)
-  包含路径，则提供由的实例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，报表使用的[ReportAction](../data-type/action-data-type-assl.md)元素。  
+  包含路径，则由的实例提供[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，通过使用的报告[ReportAction](../data-type/action-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36018297"
 |--------------------|-----------------|  
 |数据类型和长度|String|  
 |默认值|InclusionThresholdSetting|  
-|基数|0-1： 发生一次，并且一次的可选元素|  
+|基数|0-1： 出现一次且仅一次出现的可选元素|  
   
 ## <a name="element-relationships"></a>元素关系  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36018297"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`Path`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ReportAction>。  
+ 父级对应的元素`Path`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ReportAction>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

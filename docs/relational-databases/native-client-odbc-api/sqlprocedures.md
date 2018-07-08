@@ -1,12 +1,12 @@
 ---
-title: SQLProcedures |Microsoft 文档
+title: SQLProcedures |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,24 +18,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 95eced372cab2e6eb0807958f4fa871feaa4bf19
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: f55960bd47f57e34c65234e7513fb5c2f5e30243
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697488"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412176"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程都返回值。 **SQLProcedures**的结果集列 PROCEDURE_TYPE 报表 SQL_PT_FUNCTION。  
+  所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程都返回值。 **SQLProcedures**为结果集列 PROCEDURE_TYPE 报告。  
   
- **SQLProcedures**是否值已存在，则返回 SQL_SUCCESS *CatalogName、 SchemaName、* 或*ProcName*参数。 **SQLFetch**返回 SQL_NO_DATA，在这些参数中使用了无效值。  
+ **SQLProcedures**是否存在值都返回 SQL_SUCCESS *CatalogName、 SchemaName*或*ProcName*参数。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  
   
- **SQLProcedures**可以执行对静态服务器游标。 尝试执行**SQLProcedures**上的可更新的 （动态或键集） 游标，则将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
+ **SQLProcedures**可以对静态服务器游标执行。 尝试执行**SQLProcedures**对可更新的 （动态或键集） 游标将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- **SQLProcedures**返回有关任何名称匹配的过程的信息*ProcName*并可执行当前用户，或为其当前用户已被授予 VIEW DEFINITION 权限。  
+ **SQLProcedures**返回其名称匹配的任何过程有关的信息*ProcName*和可由当前用户，或为其当前用户拥有 VIEW DEFINITION 权限。  
   
 ## <a name="see-also"></a>请参阅  
  [SQLProcedures 函数](http://go.microsoft.com/fwlink/?LinkId=59364)   

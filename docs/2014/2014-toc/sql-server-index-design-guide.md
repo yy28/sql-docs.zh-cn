@@ -5,26 +5,25 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fefc4c7df12855615cba104bfb63d8547608c7f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155418"
 ---
 # SQL Server 索引设计指南
   索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 SQL Server 索引设计指南包含帮助您设计高效索引以满足应用程序需要的信息和最佳实践。  
   
-**适用于**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]通过[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另外说明。  
+**适用于**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]通过[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有说明。  
   
  本指南假定读者对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引类型有一般了解。 有关索引类型的一般说明，请参阅 [索引类型](http://msdn.microsoft.com/library/ms175049.aspx)。  
   
@@ -172,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  此查询的下列执行计划显示了查询优化器使用 SORT 运算符按 ORDER BY 子句指定的顺序返回结果集。  
   
- ![执行计划显示排序运算符使用。](media/indexsort1.gif "执行计划显示排序运算符使用。")  
+ ![执行计划显示了一种使用运算符。](media/indexsort1.gif "执行计划显示了一种使用运算符。")  
   
  如果使用与查询的 ORDER BY 子句中的键列匹配的键列创建索引，则无需在查询计划中使用 SORT 运算符，从而使查询计划更有效。  
   
@@ -184,13 +183,13 @@ ON Purchasing.PurchaseOrderDetail
   
  再次执行查询后，下列执行计划显示未使用 SORT 运算符，而使用了新创建的非聚集索引。  
   
- ![执行计划显示排序运算符不使用](media/insertsort2.gif "执行计划显示排序运算符不使用")  
+ ![执行计划显示了一种不使用运算符](media/insertsort2.gif "执行计划显示了一种不使用运算符")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以在两个方向上同样有效地移动。 对于一个在 ORDER BY 子句中列的排序方向倒排的查询，仍然可以使用定义为 `(RejectedQty DESC, ProductID ASC)` 的索引。 例如，包含 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查询可以使用该索引。  
   
  只可以为键列指定排序顺序。 [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 目录视图和 INDEXKEY_PROPERTY 函数报告索引列是按升序还是降序存储。  
   
- ![用于回顶部链接的箭头图标](media/uparrow16x16.gif "用于回顶部链接的箭头图标")[中此指南](#Top)  
+ ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
 ##  <a name="Clustered"></a> 聚集索引设计指南  
  聚集索引基于数据行的键值在表内排序和存储这些数据行。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序存储。 每个表几乎都对列定义聚集索引来实现下列功能：  
@@ -261,7 +260,7 @@ ON Purchasing.PurchaseOrderDetail
   
      宽键是若干列或若干大型列的组合。 所有非聚集索引将聚集索引中的键值用作查找键。 为同一表定义的任何非聚集索引都将增大许多，这是因为非聚集索引项包含聚集键，同时也包含为此非聚集索引定义的键列。  
   
- ![用于回顶部链接的箭头图标](media/uparrow16x16.gif "用于回顶部链接的箭头图标")[中此指南](#Top)  
+ ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
 ##  <a name="Nonclustered"></a> 非聚集索引设计指南  
  非聚集索引包含索引键值和指向表数据存储位置的行定位器。 可以对表或索引视图创建多个非聚集索引。 通常，设计非聚集索引是为改善经常使用的、没有建立聚集索引的查询的性能。  
@@ -287,7 +286,7 @@ ON Purchasing.PurchaseOrderDetail
   
  下图说明了单个分区中的非聚集索引结构。  
   
- ![非聚集索引的级别](media/bokind1.gif "级别的非聚集索引")  
+ ![非聚集索引的级别](media/bokind1.gif "非聚集索引的级别")  
   
 ### 数据库注意事项  
  设计非聚集索引时需要注意数据库的特征。  
@@ -430,7 +429,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您应该确定修改数据时在查询性能上的提升是否超过了对性能的影响，以及是否需要额外的磁盘空间要求。  
   
- ![用于回顶部链接的箭头图标](media/uparrow16x16.gif "用于回顶部链接的箭头图标")[中此指南](#Top)  
+ ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
 ##  <a name="Unique"></a> 唯一索引设计指南  
  唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 只有当唯一性是数据本身的特征时，指定唯一索引才有意义。 例如，如果要确保 `NationalIDNumber` 表中 `HumanResources.Employee` 列的值是唯一的，当主键为 `EmployeeID`时，对 `NationalIDNumber` 列创建 UNIQUE 约束。 如果用户尝试在该列中为多个雇员输入相同的值，将显示错误消息并且不能输入重复的值。  
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   唯一非聚集索引可以包括包含性非键列。 有关详细信息，请参阅 [具有包含列的索引](#Included_Columns)。  
   
- ![用于回顶部链接的箭头图标](media/uparrow16x16.gif "用于回顶部链接的箭头图标")[中此指南](#Top)  
+ ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
 ##  <a name="Filtered"></a> 筛选索引设计指南  
  筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
@@ -596,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  将数据转换从比较运算符的左边移动到右边可能会改变转换的含义。 在上例中，将 CONVERT 运算符添加到右边时，相应的比较从整数比较更改为 `varbinary` 比较。  
   
- ![用于回顶部链接的箭头图标](media/uparrow16x16.gif "用于回顶部链接的箭头图标")[中此指南](#Top)  
+ ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
 ##  <a name="Additional_Reading"></a> 其他阅读主题  
  [使用 SQL Server 2008 索引视图提高性能](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

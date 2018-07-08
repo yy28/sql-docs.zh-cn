@@ -1,5 +1,5 @@
 ---
-title: 度量值数据类型 (ASSL) |Microsoft 文档
+title: PerspectiveMeasure 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc66a5fd1e0e8b553bc0b27a384f97a8c0c483e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210007"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>PerspectiveMeasure 数据类型 (ASSL)
-  定义一个基元数据类型，表示有关中的度量值信息[PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md)元素。  
+  定义一个基元数据类型，表示有关中的度量值的信息[PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,10 +58,10 @@ ms.locfileid: "36015982"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[批注](../collections/annotations-element-assl.md)， [MeasureID](../properties/id-element-assl.md)|  
-|派生元素|[度量值](../objects/measure-element-assl.md)([度量值](../collections/measures-element-assl.md)集合[PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
+|派生元素|[度量值](../objects/measure-element-assl.md)([度量值](../collections/measures-element-assl.md)的集合[PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveMeasure>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveMeasure>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 处理挖掘模型 |Microsoft 文档
+title: 处理挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a7d57376025425946998410e5966ffa382cef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 649aa722e67e8cfaf9986c003a965c5aaf564684
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163468"
 ---
 # <a name="process-a-mining-model"></a>处理挖掘模型
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器的“挖掘模型”选项卡中，您可以处理与挖掘结构关联的特定挖掘模型，也可以处理与结构关联的所有模型。  
@@ -42,13 +42,13 @@ ms.locfileid: "36017858"
   
      如果更改了挖掘结构，系统将提示您在处理模型之前重新部署结构。 单击 **“是”**。  
   
-3.  在**处理挖掘模型的\<模型 >** 对话框中，单击**运行**。  
+3.  在中**处理挖掘模型-\<模型 >** 对话框中，单击**运行**。  
   
      此时，将打开 **“处理进度”** 对话框，以显示模型处理的详细信息。  
   
 4.  成功处理完模型之后，在 **“处理进度”** 对话框中，单击 **“关闭”** 。  
   
-5.  单击**关闭**中**处理挖掘模型的\<模型 >** 对话框。  
+5.  单击**关闭**中**处理挖掘模型-\<模型 >** 对话框。  
   
  只有挖掘结构和所选挖掘模型被处理。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36017858"
   
 2.  如果更改了挖掘结构，系统将提示您在处理模型之前重新部署结构。 单击 **“是”**。  
   
-3.  在**处理挖掘结构\<结构 >** 对话框中，单击**运行**。  
+3.  在中**处理挖掘结构-\<结构 >** 对话框中，单击**运行**。  
   
 4.  此时，将打开 **“处理进度”** 对话框，以显示模型处理的详细信息。  
   

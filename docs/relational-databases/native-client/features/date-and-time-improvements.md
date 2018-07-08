@@ -1,34 +1,31 @@
 ---
-title: 日期和时间改进 |Microsoft 文档
+title: 日期和时间改进 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fd19f6b9fa8c9718b08ab90aff1406996e38e41
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d45397ff72705a7ac2e9bb04a95a4e86c53d371c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695658"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407291"
 ---
-# <a name="date-and-time-improvements"></a>日期和时间的改进
+# <a name="date-and-time-improvements"></a>日期和时间改进
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   本主题介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中已添加的日期和时间数据类型的支持。  
   
- 有关日期/时间的改进的详细信息，请参阅[日期和时间改进&#40;OLE DB&#41; ](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)和[日期和时间改进&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关日期/时间改进的详细信息，请参阅[日期和时间改进&#40;OLE DB&#41; ](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)并[日期和时间改进&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
  有关演示此功能的示例应用程序的信息，请参阅[SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
   
@@ -47,9 +44,9 @@ ms.locfileid: "35695658"
  某些应用程序（如过程控制和生产应用程序）要求能够处理精度高达 100 纳秒的时间数据。 可满足这一用途的新类型为 DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>使用具有扩展的秒的小数部分精度的日期时间  
- OLE DB 已定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 1/300 秒精度。 新**datetime2(3)** 类型不是直接与现有的 datetime 类型兼容。 如果这一点将影响应用程序行为而导致风险，则应用程序必须使用新的 DBCOLUMN 标志以确定实际的服务器类型。  
+ OLE DB 已定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 1/300 秒精度。 新**datetime2(3)** 类型不是直接与现有 datetime 类型兼容。 如果这一点将影响应用程序行为而导致风险，则应用程序必须使用新的 DBCOLUMN 标志以确定实际的服务器类型。  
   
- ODBC 还定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 3 毫秒的精度。 新**datetime2(3)** 类型不是直接与现有兼容**datetime**类型。 **datetime2(3)** 精度为 1 毫秒，和**datetime**精度为 1/300 秒。 在 ODBC 中，应用程序可以确定哪一个服务器类型用于描述符字段 SQL_DESC_TYPE_NAME。 因此，现有类型 SQL_TYPE_TIMESTAMP（对于 ODBC 2.0 应用程序为 SQL_TIMESTAMP）可用于这两个类型。  
+ ODBC 还定义了一个精度高达 1 纳秒的类型。 但是，此类型已由现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序使用，并且此类应用程序预计只需 3 毫秒的精度。 新**datetime2(3)** 类型不是直接与现有兼容**datetime**类型。 **datetime2(3)** 的精度为一毫秒，并**datetime**的精度为 1/300 秒。 在 ODBC 中，应用程序可以确定哪一个服务器类型用于描述符字段 SQL_DESC_TYPE_NAME。 因此，现有类型 SQL_TYPE_TIMESTAMP（对于 ODBC 2.0 应用程序为 SQL_TIMESTAMP）可用于这两个类型。  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision-and-timezone"></a>使用具有扩展的秒的小数部分精度和时区的日期时间  
  一些应用程序要求带有时区信息的日期时间值。 新的 DBTYPE_DBTIMESTAMPOFFSET (OLE DB) 和 SQL_SS_TIMESTAMPOFFSET (ODBC) 类型支持这一要求。  

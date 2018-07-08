@@ -1,12 +1,12 @@
 ---
-title: SQLProcedureColumns |Microsoft 文档
+title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,24 +18,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75acfcf2d519db920b7fa7f9b4b3115ea4f8c981
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b30247476b357c94bfdf2d672214fc3a730bcfc4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700698"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407486"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLProcedureColumns**返回一行报告的所有返回值特性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
+  **SQLProcedureColumns**返回一个行报告返回值属性的所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
   
- **SQLProcedureColumns**是否值已存在，则返回 SQL_SUCCESS *CatalogName*， *SchemaName*， *ProcName*，或*ColumnName*参数。 **SQLFetch**返回 SQL_NO_DATA，在这些参数中使用了无效值。  
+ **SQLProcedureColumns**是否存在值都返回 SQL_SUCCESS *CatalogName*， *SchemaName*， *ProcName*，或*ColumnName*参数。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  
   
- **SQLProcedureColumns**可以执行对静态服务器游标。 尝试执行**SQLProcedureColumns**上的可更新的 （动态或键集） 游标，则将返回 SQL_SUCCESS_WITH_INFO 指示游标类型已更改。  
+ **SQLProcedureColumns**可以对静态服务器游标执行。 尝试执行**SQLProcedureColumns**对可更新的 （动态或键集） 游标将返回 sql_success_with_info 以指示游标类型已更改。  
   
- 下表列出了返回的结果集和如何它们已扩展为处理的列**udt**和**xml**数据类型通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序：  
+ 下表列出了结果集和如何它们进行扩展以处理返回的列**udt**并**xml**数据类型通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序：  
   
 |列名|Description|  
 |-----------------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "35700698"
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 对日期和时间增强功能的支持  
- 为日期/时间类型返回的值，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
+ 有关为日期/时间类型返回的值，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
  有关更多常规信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

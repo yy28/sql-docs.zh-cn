@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
 - transactions [Integration Services], about transactions in packages
@@ -18,13 +18,13 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880fd7d655b572f264f5120849cb5a927cdaaa59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165008"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 事务
   包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了三个用于配置事务的选项： **NotSupported**、 **Supported**和 **Required**。  
@@ -38,7 +38,7 @@ ms.locfileid: "36017978"
  通过设置容器的 TransactionOption 属性，你可以配置事务。 您可以使用 **中的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口设置此属性，也可以通过编程方式设置此属性。  
   
 > [!NOTE]  
->  `TransactionOption` 属性影响是否应用由容器请求的 `IsolationLevel` 属性的值。 有关详细信息，请参阅说明`IsolationLevel`在主题中，属性[设置包属性](set-package-properties.md)。  
+>  `TransactionOption` 属性影响是否应用由容器请求的 `IsolationLevel` 属性的值。 有关详细信息，请参阅的说明`IsolationLevel`主题中的属性[设置包属性](set-package-properties.md)。  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>将包配置为使用事务  
   

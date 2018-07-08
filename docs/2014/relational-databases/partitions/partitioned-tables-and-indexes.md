@@ -5,29 +5,27 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
 - partitioned indexes [SQL Server], architecture
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d3c7b474881c87f38211832eb5eb1e68f3b415b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85627a122c87c3065fe0bbcd5bfc5cd246a77c9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154258"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在默认情况下支持多达 15,000 个分区。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的版本中，分区数默认限制为 1000。在基于 x86 的系统上，可以创建分区数超过 1000 的表或索引，但不受支持。  
@@ -49,13 +47,13 @@ ms.locfileid: "36014511"
  以下术语适用于表和索引分区。  
   
  分区函数  
- 一种数据库对象，它定义如何根据某个列（称为分区列）的值将表或索引的行映射到一组分区。 也就是说，分区函数定义表将具有的分区数和分区边界的定义方式。 例如，假设有一个包含销售订单数据的表，你可能想要表划分为 12 个 （按月） 分区基于`datetime`如销售日期的列。  
+ 一种数据库对象，它定义如何根据某个列（称为分区列）的值将表或索引的行映射到一组分区。 也就是说，分区函数定义表将具有的分区数和分区边界的定义方式。 例如，假设有一个包含销售订单数据的表，你可能想要表分割成 12 个 （每月） 分区基于`datetime`如销售日期的列。  
   
  分区方案  
  将分区函数的分区映射到一组文件组的数据库对象。 在各个文件组上放置分区的主要原因是为了确保可以在分区上独立执行备份操作。 这是因为您可以在各个文件组上执行备份。  
   
  分区列  
- 分区函数对表或索引进行分区时所使用的表或索引列。 参与分区函数的计算列必须显式标记为 PERSISTED。 对有效的所有数据类型都用作索引列可以用作除分区依据列中， `timestamp`。 无法指定 `ntext`、`text`、`image`、`xml`、`varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 此外，无法指定 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型和别名数据类型列。  
+ 分区函数对表或索引进行分区时所使用的表或索引列。 参与分区函数的计算列必须显式标记为 PERSISTED。 有效的所有数据类型都用作索引列可以用作除分区依据列`timestamp`。 无法指定 `ntext`、`text`、`image`、`xml`、`varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 此外，无法指定 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型和别名数据类型列。  
   
  对齐的索引  
  与其对应的表建立在同一个分区方案之上的一种索引。 如果表与其索引对齐，SQL Server 则可以快速高效地切换分区，同时又能维护表及其索引的分区结构。 索引要与其基表对齐，并不需要与基表参与相同的命名分区函数。 但是，索引和基表的分区函数在实质上必须相同，即：1) 分区函数的参数具有相同的数据类型；2) 分区函数定义了相同数目的分区；3) 分区函数为分区定义了相同的边界值。  
@@ -85,7 +83,7 @@ ms.locfileid: "36014511"
   
  随着分区数目的增加，创建和重新生成对齐索引的执行时间可能会更长。 我们建议您不要同时运行多个创建和重新生成索引命令，因为可能会遇到性能和内存问题。  
   
- 当 SQL Server 执行排序以生成已分区索引时，它首先为每个分区生成一个排序表。 然后，它构建排序表在各自的文件组的每个分区或`tempdb`，如果指定了 SORT_IN_TEMPDB 索引选项。 每个排序表都需要一个最小内存量才能生成。 在生成与其基表对齐的已分区索引时，将一次生成一个排序表，因此使用的内存较少。 但是，在生成非对齐的已分区索引时，将同时生成排序表。 因此，必须有足够的内存来处理这些并发的排序。 分区数越多，所需的内存越多。 每个分区的每个排序表的最小大小为 40 页，每页 8 KB。 例如，具有 100 个分区的非对齐已分区索引需要足够的内存才能同时连续地对 4,000 (40 * 100) 页进行排序。 如果有这么多的可用内存，生成操作将成功，但性能可能会降低。 如果没有这么多可用内存，生成操作将失败。 而具有 100 个分区的对齐已分区索引只需要具有对 40 页进行排序的内存就足够了，因为不会同时执行排序。  
+ 当 SQL Server 执行排序以生成已分区索引时，它首先为每个分区生成一个排序表。 它然后生成排序表中的每个分区中或在各自的文件组`tempdb`，如果指定了 SORT_IN_TEMPDB 索引选项。 每个排序表都需要一个最小内存量才能生成。 在生成与其基表对齐的已分区索引时，将一次生成一个排序表，因此使用的内存较少。 但是，在生成非对齐的已分区索引时，将同时生成排序表。 因此，必须有足够的内存来处理这些并发的排序。 分区数越多，所需的内存越多。 每个分区的每个排序表的最小大小为 40 页，每页 8 KB。 例如，具有 100 个分区的非对齐已分区索引需要足够的内存才能同时连续地对 4,000 (40 * 100) 页进行排序。 如果有这么多的可用内存，生成操作将成功，但性能可能会降低。 如果没有这么多可用内存，生成操作将失败。 而具有 100 个分区的对齐已分区索引只需要具有对 40 页进行排序的内存就足够了，因为不会同时执行排序。  
   
  无论是对齐索引还是非对齐索引，如果 SQL Server 对多处理器计算机上的生成操作应用了并行度，需要的内存可能会更多。 这是因为并行度越高，需要的内存就越多。 例如，如果 SQL Server 将并行度设置为 4，那么具有 100 个分区的非对齐已分区索引将需要使四个处理器同时分别对 4,000 页（即，共 16,000 页）进行排序的足够内存。 如果已分区索引是对齐的，需要的内存将减少，只要够四个处理器分别对 40 页（共 160 页，即 4 * 40）进行排序就行了。 您可以使用 MAXDOP 索引选项手动降低并行度。  
   

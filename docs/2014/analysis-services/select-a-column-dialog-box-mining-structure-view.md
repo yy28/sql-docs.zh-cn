@@ -1,5 +1,5 @@
 ---
-title: 选择列对话框 （挖掘结构视图） |Microsoft 文档
+title: 选择列对话框 （挖掘结构视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addacolumn.f1
 helpviewer_keywords:
 - Select a Column dialog box
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ccbdf038a3d371e5c633f0c3ad5673d9823d29c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf8c7b80e1eb97d66c1fd4a73b0b1124f62b4223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159368"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>“选择列”对话框（“挖掘结构”视图）
   可以使用 **“选择列”** 对话框在挖掘结构中添加列。 根据您使用的是 OLAP 挖掘模型还是关系挖掘模型，该对话框会包含不同的选项。  

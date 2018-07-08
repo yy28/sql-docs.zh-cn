@@ -1,5 +1,5 @@
 ---
-title: 到 SMO SQL-DMO 映射 |Microsoft 文档
+title: 到 SMO 的 SQL-DMO 映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99a665366fc9b5df9ff975d47cfa60dccaf4b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182814"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SQL-DMO 到 SMO 的映射
   SQL 分布式管理对象 (SQL-DMO) 不再包含在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，应转换 SQL-DMO 应用程序以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)。 SMO 对象模型类似于 SQL-DMO，所以多数 SQL-DMO 对象映射到 SMO 中同名的对象。 但是，在转换到 SMO 的过程中，更改或删除了一些 SQL-DMO 对象。 下表列出建议对未直接转换为 SMO 的 SQL-DMO 对象采取的操作。  

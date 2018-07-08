@@ -1,5 +1,5 @@
 ---
-title: 内存优化表中的事务 |Microsoft 文档
+title: 内存优化表中的事务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7a1674d843f9701cf9eb2b2c41dad3dd4cbf7a0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158868"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>内存优化表中的事务
   基于磁盘的表的行版本控制（使用 SNAPSHOT 隔离或 READ_COMMITTED_SNAPSHOT）提供了一种乐观并发控制形式。 读取器和编写器不会相互阻止。 对于内存优化表，编写器不会阻止编写器。 使用基于磁盘的表的行版本控制时，一个事务会锁定行，而尝试更新行的并发事务会被阻塞。 对于内存优化表则没有锁定。 如果两个事务尝试更新同一行，则会发生写/写冲突（错误 41302）。  
   
- 与基于磁盘的表不同内存优化表允许使用较高的隔离级别，REPEATABLE READ 和 SERIALIZABLE 乐观并发控制。 不会使用锁来强制实现隔离级别。 而是在事务验证结束时使用锁，以确保可重复读或可序列化假定。 如果违反了假定，则事务将会终止。 有关详细信息，请参阅 [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)。  
+ 与基于磁盘的表不同内存优化表允许使用更高隔离级别，REPEATABLE READ 和 SERIALIZABLE 乐观并发控制。 不会使用锁来强制实现隔离级别。 而是在事务验证结束时使用锁，以确保可重复读或可序列化假定。 如果违反了假定，则事务将会终止。 有关详细信息，请参阅 [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)。  
   
- 内存优化表的重要事务语义是：  
+ 内存优化表的重要事务语义包括：  
   
 -   多版本控制  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36018695"
  此外，如果某一事务 (TxA) 读取处于提交过程中的其他事务 (TxB) 已插入或修改的行，则该事务会乐观地假设其他事务将提交而不等待提交发生。 在此情况下，事务 TxA 将对事务 TxB 具有提交依赖关系。  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>冲突检测、验证和提交依赖关系检查  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检测并发事务之间的冲突以及隔离级别冲突，并终止冲突事务中的一个事务。 此事务将需要重试。 (有关详细信息，请参阅[内存优化表上的事务的重试逻辑的准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检测并发事务之间的冲突以及隔离级别冲突，并终止冲突事务中的一个事务。 此事务将需要重试。 (有关详细信息，请参阅[内存优化表上的事务的重试逻辑准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)  
   
  系统乐观地假定不存在冲突并且未违反事务隔离。 如果发生可能在数据库中导致不一致或可能违反事务隔离的任何冲突，则会检测到这些冲突，并且事务终止。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36018695"
 ### <a name="transaction-lifetime"></a>事务生存期  
  上表中提及的失败可能会在事务的不同时间点发生。 下图说明了访问内存优化表的事务的各个阶段。  
   
- ![事务的生存期。](../../2014/database-engine/media/hekaton-transactions.gif "事务的生存期。")  
+ ![事务的生存期。](../../2014/database-engine/media/hekaton-transactions.gif "的事务的生存期。")  
 访问内存优化表的事务的生存期。  
   
 #### <a name="regular-processing"></a>常规处理  
@@ -103,7 +103,7 @@ ms.locfileid: "36018695"
  在验证阶段开始时，将向事务分配逻辑结束时间。 写入数据库的行版本会在此逻辑结束时对其他事务可见。 有关详细信息，请参阅[提交依赖关系](#cd)。  
   
 ##### <a name="repeatable-read-validation"></a>可重复读验证  
- 如果事务的隔离级别是 REPEATABLE READ 或 SERIALIZABLE，或在 REPEATABLE READ 或 SERIALIZABLE 隔离下访问表 (有关详细信息，请参阅部分隔离的中的单个操作[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md))，系统将会验证读取是可重复。 这意味着它会验证由事务读取的行的版本在事务逻辑结束时是否仍是有效行版本。  
+ 如果该事务的隔离级别为 REPEATABLE READ 或 SERIALIZABLE，或者在 REPEATABLE READ 或 SERIALIZABLE 隔离下访问表 (详细信息，请参阅部分中的单个操作的隔离中[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md))，则系统会验证读取是否可重复。 这意味着它会验证由事务读取的行的版本在事务逻辑结束时是否仍是有效行版本。  
   
  如果任何行已更新或更改，则事务无法提交，并显示错误 41305（“由于可重复读验证失败，当前事务无法提交。”）。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36018695"
  如果检测到虚拟行，则事务无法提交，并显示错误 41325（“由于可序列化验证失败，当前事务无法提交。”）。  
   
 #### <a name="commit-processing"></a>提交处理  
- 如果验证成功且所有事务依赖关系都已清除，则该事务会进入提交处理阶段。 在此阶段中，对持久表的更改会写入日志，随后日志会写入磁盘以确保持续性。 一旦事务的日志记录已写入到磁盘，控件返回到客户端。  
+ 如果验证成功且所有事务依赖关系都已清除，则该事务会进入提交处理阶段。 在此阶段中，对持久表的更改会写入日志，随后日志会写入磁盘以确保持续性。 事务的日志记录写入磁盘，控件后返回到客户端。  
   
  将清除此事务的所有提交依赖关系，并且等待此事务提交的所有事务都可以继续。  
   

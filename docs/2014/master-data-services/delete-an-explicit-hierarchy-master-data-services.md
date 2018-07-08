@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, deleting
 - deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08770818215b1055f2f5a015a696979bcea74f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2080fedb589f5155dd6885949b5980c04b7c288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155118"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>删除显式层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要显式层次结构时可将其删除。  
@@ -49,7 +49,7 @@ ms.locfileid: "36014089"
   
 5.  单击 **“编辑所选实体”**。  
   
-6.  上**编辑实体**页上，在**显式层次结构**窗格中，单击你想要删除此显式层次结构。  
+6.  上**编辑实体**页上，在**显式层次结构**窗格中，单击你想要删除的显式层次结构。  
   
 7.  单击**删除所选层次结构**。  
   

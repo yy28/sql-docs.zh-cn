@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db6b0933af52271698622b86b848de16ecbd7cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7c5e1a05ce2007c4c99a1336c997e69bbdf047dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158418"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 事件类
   SP:CacheRemove 事件类指明存储过程已从计划缓存中删除。  
@@ -38,7 +38,7 @@ ms.locfileid: "36018175"
 |DatabaseName|`nvarchar`|正在运行存储过程的数据库的名称。|35|是|  
 |EventClass|`int`|事件类型 = 36。|27|“否”|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|“否”|  
-|EventSubClass|`int`|事件子类的类型：<br /><br /> 1 = Compplan Remove。 一个经过编译的查询计划已从缓存中删除。<br /><br /> 2 = Proc 缓存刷新。 所有项都已从过程缓存中删除。|21|是|  
+|EventSubClass|`int`|事件子类的类型：<br /><br /> 1 = 计算计划删除。 一个经过编译的查询计划已从缓存中删除。<br /><br /> 2 = 进程缓存刷新。 所有项都已从过程缓存中删除。|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  

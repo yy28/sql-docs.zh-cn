@@ -1,12 +1,12 @@
 ---
-title: 配置文件驱动程序的性能数据 (ODBC) |Microsoft 文档
+title: 配置文件驱动程序性能数据 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,25 +17,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9cace9bb5008c035711e7d16b2c27bd678b9c111
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e8b547a83dd33f9b0bf555eb296bee76d0f6d988
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694698"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409806"
 ---
-# <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驱动程序的性能数据
+# <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驱动程序性能数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此示例显示用于记录性能统计信息的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项； 此示例创建一个文件： odbcperf.log.This 示例演示如何创建性能数据日志文件和直接从 （SQLPERF 结构定义中 Odbcss.h 中）。 SQLPERF 数据结构的显示性能数据。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
+  此示例显示用于记录性能统计信息的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项； 此示例将创建一个文件： odbcperf.log.This 示例演示如何创建性能数据日志文件和显示性能数据直接从 SQLPERF 数据结构 （SQLPERF 结构在 Odbcss.h 中定义。）。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理器记录驱动程序性能数据  
   
-1.  在**控制面板**，双击**管理工具**然后双击**数据源 (ODBC)**。 或者，可以调用 odbcad32.exe。  
+1.  在中**Control Panel**，双击**管理工具**，然后双击**数据源 (ODBC)**。 或者，可以调用 odbcad32.exe。  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。  
   
@@ -43,31 +43,31 @@ ms.locfileid: "35694698"
   
 4.  单击**配置**。  
   
-5.  在 Microsoft SQL Server 配置 DSN 向导中，导航到包含的页面**日志 ODBC 驱动程序统计信息写入日志文件**。  
+5.  在 Microsoft SQL Server 配置 DSN 向导中，导航到包含的页**ODBC 驱动程序统计记录到日志文件**。  
   
-6.  选择**日志 ODBC 驱动程序统计信息写入日志文件**。 在该框中，放置应记录统计信息的文件的名称。 （可选） 单击**浏览**若要浏览的统计信息日志文件系统。  
+6.  选择**ODBC 驱动程序统计记录到日志文件**。 在该框中，放置应记录统计信息的文件的名称。 （可选） 单击**浏览**浏览文件系统有关的统计信息日志。  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>通过编程方式记录驱动程序性能数据  
   
-1.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG 和性能数据日志文件的完整路径和文件名称。 例如：  
+1.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_DATA_LOG 以及性能数据日志文件的完整路径和文件名称。 例如：  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA 和 sql_perf_start 语句以启动日志记录的性能数据。  
+2.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_START 以便开始记录性能数据。  
   
-3.  （可选） 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_LOG_NOW 和 NULL，以制表符分隔的性能数据的记录写入性能数据日志文件。 此操作可以在应用程序运行时执行多次。  
+3.  （可选） 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_LOG_NOW 和 NULL 以制表符分隔的性能数据的记录写入性能数据日志文件。 此操作可以在应用程序运行时执行多次。  
   
-4.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 若要停止记录的性能数据。  
+4.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 若要停止记录性能数据。  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>将驱动程序性能数据拖到某一应用程序中  
   
-1.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA 和 sql_perf_start 语句以开始分析性能数据。  
+1.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_START 启动分析性能数据。  
   
-2.  调用[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_PERF_DATA 与 SQLPERF 结构的指针的地址。 第一个此类调用将设置一个指针，该指针指向包含当前性能数据的有效 SQLPERF 结构的地址。 驱动程序并不连续刷新该性能结构中的数据。 应用程序必须重复调用[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)随时它需要刷新与较新的性能数据的结构。  
+2.  调用[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)使用 SQL_COPT_SS_PERF_DATA 以及指向 SQLPERF 结构的指针的地址。 第一个此类调用将设置一个指针，该指针指向包含当前性能数据的有效 SQLPERF 结构的地址。 驱动程序并不连续刷新该性能结构中的数据。 应用程序必须多次调用[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)需要刷新与较新的性能数据的结构。  
   
-3.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 若要停止记录的性能数据。  
+3.  调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 若要停止记录性能数据。  
   
 ## <a name="example"></a>示例  
  需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  

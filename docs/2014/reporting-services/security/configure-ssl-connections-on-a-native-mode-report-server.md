@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150518"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留，以支持通过加密通道建立报表服务器连接。  
@@ -81,7 +81,7 @@ ms.locfileid: "36016086"
 5.  单击该 URL，验证其是否有效。  
   
 ## <a name="how-certificate-bindings-are-stored"></a>证书绑定的存储方式  
- 证书绑定将存储在 HTTP.SYS 中。 表示形式定义的绑定还将存储在`URLReservations`RSReportServer.config 文件的部分。 配置文件中的设置只是在其他地方指定的实际值的表示形式。 请不要直接在该配置文件中修改这些值。 仅当您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或报表服务器 Windows Management Instrumentation (WMI) 提供程序绑定证书后，才会在文件中显示配置设置。  
+ 证书绑定将存储在 HTTP.SYS 中。 定义的绑定的表示形式还将存储在`URLReservations`RSReportServer.config 文件的部分。 配置文件中的设置只是在其他地方指定的实际值的表示形式。 请不要直接在该配置文件中修改这些值。 仅当您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或报表服务器 Windows Management Instrumentation (WMI) 提供程序绑定证书后，才会在文件中显示配置设置。  
   
 > [!NOTE]  
 >  如果在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 SSL 证书配置绑定，后来又想从计算机中删除该证书，请确保先从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中删除绑定，然后才能从计算机中删除该证书。 否则，将无法使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 WMI 删除绑定，您将收到“参数无效”错误。 如果已从计算机删除了证书，则可以使用 Httpcfg.exe 工具从 HTTP.SYS 删除绑定。 有关 Httpcfg.exe 的详细信息，请参阅 Windows 产品文档。  

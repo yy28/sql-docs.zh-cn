@@ -1,12 +1,12 @@
 ---
-title: 本机错误数字 |Microsoft 文档
+title: 本机错误号 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0c31b429da3c8e3923e36e65d9d28b3139937e0d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7b69031278c26fcc06463195d41bcd12a71ce84d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694618"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409896"
 ---
 # <a name="native-error-numbers"></a>本机错误号
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  为数据源中发生的错误 (由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序返回到它返回的本机错误号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关驱动程序，检测到的错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序返回本机错误号 0。 有关的本机错误数字列表的详细信息，请参阅的错误列**sysmessages**系统表位于**master**数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  对于数据源中发生的错误 (由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序返回本机错误号由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于由驱动程序检测到错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序返回本机错误号 0。 本机错误号列表的详细信息，请参阅的错误列**sysmessages**系统表位于**主**数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  有关状态错误代码的信息，请参阅[SQLSTATE &#40;ODBC 错误代码&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)。 对于网络库返回的错误，本机错误号来自于基础网络软件。  
   

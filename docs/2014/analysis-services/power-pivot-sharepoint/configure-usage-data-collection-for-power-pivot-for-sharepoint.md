@@ -1,5 +1,5 @@
 ---
-title: 配置为使用情况数据收集 (PowerPivot for SharePoint |Microsoft 文档
+title: 配置使用情况数据收集 (PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149748"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>配置使用情况数据收集 (PowerPivot for SharePoint)
   使用情况数据收集是场级 SharePoint 功能。 PowerPivot for SharePoint 使用并扩展此系统以便在 PowerPivot 管理面板中提供显示 PowerPivot 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 PowerPivot 管理面板中的使用情况数据。  
   
- 在 PowerPivot 管理面板中的使用情况数据的信息，请参阅[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+ 有关 PowerPivot 管理面板中的使用情况数据的信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)。  
   
  **本主题内容：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36015994"
   
  [打开 PowerPivot 服务应用程序页以访问配置设置](#openconfig)  
   
- [默认配置 PowerPivot 使用情况数据收集](#defaultconfig)  
+ [PowerPivot 使用情况数据收集默认配置](#defaultconfig)  
   
 > [!IMPORTANT]  
 >  使用情况数据帮助您深入了解用户访问数据和资源的方式，但它不保证提供有关服务器操作和用户访问的可靠的永久数据。 例如，如果存在服务器重新启动，则事件使用情况数据将丢失，并且将无法恢复。 同样，如果临时日志文件达到最大大小，则在清除文件前将不会添加任何新数据。 如果您需要审核功能，请考虑使用 SharePoint 提供的工作流和内容类型功能来为您的场构建审核子系统。 有关详细信息，请查找网站上的产品和社区文档。  
@@ -108,7 +108,7 @@ ms.locfileid: "36015994"
   
 6.  单击 **“立即运行”**。  
   
-7.  检查报告以查看刷新数据。 有关详细信息，请参阅[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+7.  检查报告以查看刷新数据。 有关详细信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)。  
   
 ##  <a name="confighist"></a> 限制存储使用情况数据历史记录的时间长度  
  为事件（连接、加载、卸载和按需查询处理）和数据刷新（计划的数据处理）存储使用情况数据历史记录。 尽管使用情况数据是通过 SharePoint 使用情况数据收集系统收集的，但报告的数据将移到 PowerPivot 应用程序数据库和报表数据库以便更长期地存储。 使用情况数据历史设置控制使用情况数据在 PowerPivot 应用程序数据库中应保留多长的时间。 相同的限制同样适用于同一 PowerPivot 服务应用程序数据库中存储的所有类型的使用情况数据。  
@@ -178,7 +178,7 @@ ms.locfileid: "36015994"
   
 4.  在 **“操作”** 中，单击 **“配置服务应用程序设置”**。 将打开“PowerPivot 服务应用程序设置”页。  
   
-##  <a name="defaultconfig"></a> 默认配置 PowerPivot 使用情况数据收集  
+##  <a name="defaultconfig"></a> PowerPivot 使用情况数据收集默认配置  
  可以使用默认设置启用针对 PowerPivot 服务操作的使用情况数据收集，以使其立即可用于支持 Analysis Services 集成功能的应用程序。 默认设置包括触发使用情况数据收集的事件、对存储多长时间的使用情况数据的限制以及用于对查询响应时间进行分类的阈值。  
   
  下表显示了使用情况数据收集配置的默认值。  
@@ -194,7 +194,7 @@ ms.locfileid: "36015994"
 |长时间运行响应上限|10000（以毫秒为单位）|Integer|设置定义长时间运行的请求-响应交换的上限。 超出此上限的任何请求都属于“超出”类别，因此没有上限。|  
   
 ## <a name="see-also"></a>请参阅  
- [配置设置引用&#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [配置设置参考&#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [PowerPivot 使用情况数据集合](power-pivot-usage-data-collection.md)  
   
   

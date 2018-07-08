@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询接口 |Microsoft 文档
+title: 数据挖掘查询接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159648"
 ---
 # <a name="data-mining-query-interfaces"></a>数据挖掘查询接口
   数据挖掘基于数据挖掘扩展插件 (DMX) 语言。 您可以为所有预测和建模任务使用 DMX，这些任务包括分类、风险分析、生成建议和线性回归。 您还可以检索在处理模型时生成的模式和统计信息。  
@@ -98,7 +98,7 @@ ms.locfileid: "36014434"
  [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)   
  [数据挖掘解决方案](data-mining-solutions.md)   
  [了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)   
- [结构和使用情况的 DMX 预测查询](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [DMX 预测查询的结构和用法](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
  [创建预测查询使用预测查询生成器](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [在 SQL Server Management Studio 中创建 DMX 查询](create-a-dmx-query-in-sql-server-management-studio.md)  
   

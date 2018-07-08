@@ -1,5 +1,5 @@
 ---
-title: Collations and Code Pages |Microsoft 文档
+title: 排序规则和代码页 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182882"
 ---
 # <a name="collations-and-code-pages"></a>排序规则和代码页
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 对于内存优化表中的 (var)char 列的支持代码页，以及在索引和本机编译存储过程中使用的支持的排序规则方面存在限制。  
@@ -86,7 +86,7 @@ GO
   
 -   本机编译存储过程中的所有表达式和排序操作都必须使用 BIN2 排序规则。 也就是说，所有比较和排序操作都基于字符（二进制表）的 Unicode 码位。 例如，所有排序操作均区分大小写（“Z”位于“a”之前）。 如有必要，可使用解释的 [!INCLUDE[tsql](../includes/tsql-md.md)] 进行不区分大小写的排序和比较。  
   
--   本机编译的存储过程内部不支持 UTF-16 数据截断。 这意味着该 n (var) char (*n*) 值无法转换为类型 n (var) char (*我*)，如果*我* < *n*，如果排序规则具有 _SC 属性。 例如，不支持以下操作：  
+-   本机编译的存储过程内部不支持 UTF-16 数据截断。 这意味着该 n (var) char (*n*) 的值无法转换为类型 n (var) char (*我*)，如果*我* < *n*，如果排序规则具有 _SC 属性。 例如，不支持以下操作：  
   
     ```tsql  
     -- column definition using an _SC collation  
@@ -100,7 +100,7 @@ GO
   
      使用足够大的类型声明变量以避免截断。  
   
- 下面的示例演示了内存中 OLTP 中排序规则限制的一些影响和解决方法。 该示例使用上面指定的 Employees 表。 此示例列出所有员工。 注意，对于 LastName，出于二进制排序规则的原因，大写名称将排在小写名称之前。 因此，'Thomas' 排在 'nolan' 之前（因为大写字符的码位在前）。 FirstName 拥有不区分大小写的排序规则。 因此，字符以其在字母表中的位置而非该字符的码位进行排序。  
+ 下面的示例演示了内存中 OLTP 中排序规则限制的一些影响和解决方法。 该示例使用上面指定的 Employees 表。 此示例列出所有雇员。 注意，对于 LastName，出于二进制排序规则的原因，大写名称将排在小写名称之前。 因此，'Thomas' 排在 'nolan' 之前（因为大写字符的码位在前）。 FirstName 拥有不区分大小写的排序规则。 因此，字符以其在字母表中的位置而非该字符的码位进行排序。  
   
 ```tsql  
 -- insert a number of values  

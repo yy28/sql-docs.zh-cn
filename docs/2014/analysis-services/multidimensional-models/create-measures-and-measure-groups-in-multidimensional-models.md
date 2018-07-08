@@ -1,5 +1,5 @@
 ---
-title: 在多维模型中创建度量值和度量值组 |Microsoft 文档
+title: 在多维模型中创建度量值和度量值组 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 767f85b5fb777dbb7c64301b79041cda3654f000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a60cfaaf58e3ea3815955caefd33475803abf637
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153488"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多维模型中创建度量值和度量值组
   *度量值* 是数字数据值的聚合，如求和、计数、最小值、最大值、平均值或你创建的自定义 MDX 表达式。 *度量值组* 是一个或多个度量值的容器。 所有度量值存在于一个度量值组中，即使只有一个度量值。 一个多维数据集必须至少有一个度量值和度量值组。  
@@ -64,7 +64,7 @@ ms.locfileid: "36018500"
   
  下面的关系图表示 **FactSalesQuota** 事实数据表和两个与其关联的维度表： **DimTime** 和 **DimEmployee**。 在 Adventure Works 示例多维数据集中，这些表用作 Sales Quotas 量值组以及 Time 和 Employee 维度的基础。  
   
- ![有两个维度表的 FactSalesQuota 表](../media/factsalesquota.gif "FactSalesQuota 表有两个维度表")  
+ ![具有两个维度表的 FactSalesQuota 表](../media/factsalesquota.gif "具有两个维度表的 FactSalesQuota 表")  
   
  事实数据表包含两种基本类型的列：属性列和度量值列。  
   
