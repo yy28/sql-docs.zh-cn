@@ -1,5 +1,5 @@
 ---
-title: 监视 Analysis Services 使用 SQL Server Profiler 简介 |Microsoft 文档
+title: 通过 SQL Server Profiler 监视 Analysis Services 简介 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17aafb1d81085cd01159b5ac85a588d733dc0fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1097e4558e336dd10bbd5750f9e1331a8a1016d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161498"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>通过 SQL Server Profiler 监视 Analysis Services 简介
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例生成的事件。 通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以执行以下操作：  
@@ -64,6 +64,6 @@ ms.locfileid: "36024226"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 跟踪事件](../trace-events/analysis-services-trace-events.md)   
- [为重播创建事件探查器跟踪&#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
+ [为重播创建 Profiler 跟踪&#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: 大容量复制而无需格式化文件 (ODBC) |Microsoft 文档
+title: 大容量复制不使用格式化文件 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35bbdd3905166d3814e418149de7cc7c43237721
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d718ca9e4bdc8e7ba9b04dc72653325985d9841b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697638"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424306"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>在不使用格式化文件的情况下进行大容量复制 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "35697638"
   
     -   复制的方向：如果是从文件到视图或表则为 DB_IN，如果是从表或视图到文件则为 DB_OUT。  
   
-5.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行批量复制操作。  
+5.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以执行大容量复制操作。  
   
  用这些步骤设置 DB_OUT 时，将以本机格式创建该文件。 然后，可以通过执行上述相同步骤（不过设置的是 DB_OUT 而不是 DB_IN），将该文件大容量复制到服务器中。 只有在源表和目标表都具有完全相同的结构时，这一功能才适用。  
   

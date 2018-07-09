@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing report history
 - report history [Reporting Services], viewing history
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 91bb20ac70caf7d7d3e863c975415205badbc063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3e0f1978079b63499c39120fb47173cb603e657
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153748"
 ---
 # <a name="limit-report-history-report-manager"></a>限制报表历史记录（报表管理器）
   报表历史记录是随着时间变化而创建的报表快照的集合。 您可以按需创建报表历史记录，也可以安排快照的创建频率以及将快照添加到报表历史记录中的频率。  
@@ -51,7 +51,7 @@ ms.locfileid: "36024502"
 4.  为您的报表选择相应选项，再单击 **“应用”**。 有关每个选项的详细信息，请参阅[“快照选项”属性页（报表管理器）](../snapshot-options-properties-page-report-manager.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [向报表历史记录添加快照&#40;报表管理器&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [将快照添加到报表历史记录&#40;报表管理器&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  
   
   

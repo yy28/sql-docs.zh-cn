@@ -1,5 +1,5 @@
 ---
-title: CrossProduct 元素 (XMLA) |Microsoft 文档
+title: CrossProduct 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278207"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 元素 (XMLA)
-  包含有关每个层次结构中的成员列表的有序集之间的叉积[轴](axis-element-xmla.md)用元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[执行](../xml-elements-methods-execute.md)方法。  
+  包含来自每个层次结构的成员的有序集之间的叉积[轴](axis-element-xmla.md)使用的元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,10 +72,10 @@ ms.locfileid: "36016473"
 |Size|所需`Integer`属性。 指示 `CrossProduct` 元素表示的叉积中包含的元组数。|  
   
 ## <a name="remarks"></a>Remarks  
- 当客户端应用程序设置`AxisFormat`属性*ClusterFormat*，每个轴上的成员被划分到其中的每个群集都表示之间的每个层次结构中的成员的有序集的叉积的群集。 每个分类都由 `CrossProduct` 元素表示。 每个 `CrossProduct` 元素都包含轴上每个层次结构中的 `Members` 元素。 `CrossProduct` 元素可包含单一层次结构的成员。  
+ 当客户端应用程序设置`AxisFormat`属性设置为*ClusterFormat*，每个轴上的成员被划分到其中的每个群集表示之间的每个层次结构中成员的有序集的叉积的群集。 每个分类都由 `CrossProduct` 元素表示。 每个 `CrossProduct` 元素都包含轴上每个层次结构中的 `Members` 元素。 `CrossProduct` 元素可包含单一层次结构的成员。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的结构`CrossProduct`元素时客户端指定*ClusterFormat*为`AxisFormat`XMLA 属性，为轴提供的以下成员：  
+ 下面的示例演示了结构`CrossProduct`时客户端指定的元素*ClusterFormat*为`AxisFormat`XMLA 属性的以下成员的轴：  
   
 ||||||  
 |-|-|-|-|-|  

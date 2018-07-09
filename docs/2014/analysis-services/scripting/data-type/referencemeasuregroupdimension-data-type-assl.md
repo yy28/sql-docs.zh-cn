@@ -1,5 +1,5 @@
 ---
-title: ReferenceMeasureGroupDimension 数据类型 (ASSL) |Microsoft 文档
+title: ReferenceMeasureGroupDimension 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca3299aa36df705a107fac63bc5ae726b606e15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159301"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>ReferenceMeasureGroupDimension 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示通过中间维度与事实数据表间接相关的维度。 （例如，“销售”度量值组可引用“地域”维度，它们之间通过“客户”维度相关联。）  
@@ -63,7 +63,7 @@ ms.locfileid: "36018487"
 |派生元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7d1719e8f1f8e9c8ff5c61fe1c561299b09213e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c825f11187fceb63373cb053ffd2f650b25834f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152938"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -61,7 +61,7 @@ ms.locfileid: "36025755"
 -   Windows Server 2008 R2 64 位 (x64)  
   
 ### <a name="running-the-installation-program"></a>运行安装程序  
- 在运行安装向导之前，请确保[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]已关闭。 然后按照安装向导中的说明进行操作。  
+ 在运行安装向导前，务必[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]已关闭。 然后按照安装向导中的说明进行操作。  
   
 ### <a name="restart-ssis"></a>重新启动 SSIS  
  安装 CDC 组件之后，必须重新启动 SSIS 服务，以确保在 SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中开发包时这些组件能够正常运行。  
@@ -71,10 +71,10 @@ ms.locfileid: "36025755"
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>卸载 Microsoft CDC 组件  
  可以使用卸载向导卸载 CDC 源、CDC 拆分器或 CDC 控制任务。 卸载组件之前必须确保以下事项：  
   
- 如果你使用[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]进行包开发，请确保[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]运行卸载向导前关闭。  
+ 如果使用的[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]进行包开发，请确保[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]运行卸载向导前关闭。  
   
 ## <a name="benefits"></a>优势  
- 有关 CDC 组件[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]组件允许 SSIS 开发人员能够轻松生成 SSIS 包来处理变更数据。 这些组件增强了 SSIS 开发人员处理 CDC 的能力并降低了 CDC 包的复杂性。  
+ 用于 CDC 组件[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]组件，SSIS 开发者可以轻松生成 SSIS 包来处理变更数据。 这些组件增强了 SSIS 开发人员处理 CDC 的能力并降低了 CDC 包的复杂性。  
   
  使用 SSIS CDC 提供的更改数据更易于进一步处理，从而便于复制、加载数据仓库、更新 OLAP 的渐变维度、审核更改，或方便应用于其他可能的用途。 所使用的进一步处理的类型由 SSIS 开发人员确定。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36025755"
   
  ![滴送处理包控制流](../media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
   
- 这[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]控制流包含两个 CDC 控制任务和数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。 基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
+ 这[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]控制流包含两个 CDC 控制任务以及数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。 基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
   
  有关使用 CDC 控制任务的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md) 和 [CDC Control Task Editor](../cdc-control-task-editor.md)。  
   

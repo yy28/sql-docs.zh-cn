@@ -1,5 +1,5 @@
 ---
-title: 类型元素 （绑定） (ASSL) |Microsoft 文档
+title: Type 元素 （绑定） (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b07c1d781bfdade9228b6c5991b2eb56585cbe85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bcf3e96c38dd4c2941d2d6256a62559ab3491eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148168"
 ---
 # <a name="type-element-binding-assl"></a>Type 元素 (Binding) (ASSL)
   包含属性绑定的类型。  
@@ -70,16 +70,16 @@ ms.locfileid: "36017613"
 |*Key*|成员键|  
 |*名称*|成员名称|  
 |*ReplTest1*|成员值|  
-|*转换*|成员翻译|  
+|*翻译*|成员翻译|  
 |*UnaryOperator*|一元运算符|  
 |*SkippedLevels*|跳过的级别|  
 |*CustomRollup*|自定义汇总公式|  
 |*CustomRollupProperties*|自定义汇总属性|  
   
- 对应的父级的元素`Type`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
- [绑定数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
+ [Binding 数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

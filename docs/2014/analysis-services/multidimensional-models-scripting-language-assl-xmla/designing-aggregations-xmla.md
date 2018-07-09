@@ -1,5 +1,5 @@
 ---
-title: 设计聚合 (XMLA) |Microsoft 文档
+title: 设计聚合 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,50 +20,50 @@ helpviewer_keywords:
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2e2d5be45ba679cfa0c0ea39928e5b43d30c3a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 773187385538a70ed145e330eb60c648cf8f0511
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161328"
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
-  聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 为分区使用相同的存储结构可让你轻松地定义可以使用更高版本合并的分区[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+  聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 对分区使用相同的存储结构可让你可以轻松地定义可使用更高版本合并的分区[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
- 若要定义的聚合设计的聚合，可以使用[DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) XML Analysis (XMLA) 命令。 `DesignAggregations` 命令拥有一些属性，这些属性可标识要用作引用的聚合设计以及如何基于该引用控制设计过程。 使用 `DesignAggregations` 命令及其属性，可以采用迭代方式设计聚合或成批设计聚合，并可查看生成的设计统计信息，以评估设计过程。  
+ 若要定义的聚合设计的聚合，可以使用[DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md)命令 XML for Analysis (XMLA) 中。 `DesignAggregations` 命令拥有一些属性，这些属性可标识要用作引用的聚合设计以及如何基于该引用控制设计过程。 使用 `DesignAggregations` 命令及其属性，可以采用迭代方式设计聚合或成批设计聚合，并可查看生成的设计统计信息，以评估设计过程。  
   
 ## <a name="specifying-an-aggregation-design"></a>指定聚合设计  
- [对象](../xmla/xml-elements-properties/object-element-xmla.md)属性`DesignAggregations`命令必须包含对的现有聚合设计的对象引用。 该对象引用包含数据库标识符、多维数据集标识符、度量值组标识符和聚合设计标识符。 如果该聚合设计不存在，则会出现错误。  
+ [对象](../xmla/xml-elements-properties/object-element-xmla.md)属性的`DesignAggregations`命令必须包含对现有聚合设计的对象引用。 该对象引用包含数据库标识符、多维数据集标识符、度量值组标识符和聚合设计标识符。 如果该聚合设计不存在，则会出现错误。  
   
 ## <a name="controlling-the-design-process"></a>控制设计过程  
  您可以使用 `DesignAggregations` 命令的下列属性控制用于为聚合设计定义聚合的算法：  
   
--   [步骤](../xmla/xml-elements-properties/steps-element-xmla.md)属性确定的迭代数`DesignAggregations`之前它将控制权返回到客户端应用程序，应该执行命令。  
+-   [步骤](../xmla/xml-elements-properties/steps-element-xmla.md)属性确定多少次迭代`DesignAggregations`控制权返还给客户端应用程序之前，应该执行命令。  
   
--   [时间](../xmla/xml-elements-properties/time-element-xmla.md)属性确定的毫秒数`DesignAggregations`之前它将控制权返回到客户端应用程序，应该执行命令。  
+-   [时间](../xmla/xml-elements-properties/time-element-xmla.md)属性确定的毫秒数`DesignAggregations`控制权返还给客户端应用程序之前，应该执行命令。  
   
--   [优化](../xmla/xml-elements-properties/optimization-element-xmla.md)属性确定的性能改善的估计的百分比`DesignAggregations`命令应尝试实现。 如果要以迭代方式设计聚合，只需在第一条命令中发送此属性。  
+-   [优化](../xmla/xml-elements-properties/optimization-element-xmla.md)属性确定的性能提高百分比估计的值`DesignAggregations`命令应尝试获得。 如果要以迭代方式设计聚合，只需在第一条命令中发送此属性。  
   
--   [存储](../xmla/xml-elements-properties/storage-element-xmla.md)属性确定磁盘存储，以字节为单位，使用的估计的量`DesignAggregations`命令。 如果要以迭代方式设计聚合，只需在第一条命令中发送此属性。  
+-   [存储](../xmla/xml-elements-properties/storage-element-xmla.md)属性确定估计的磁盘存储，以字节为单位，由`DesignAggregations`命令。 如果要以迭代方式设计聚合，只需在第一条命令中发送此属性。  
   
--   [Materialize](../xmla/xml-elements-properties/materialize-element-xmla.md)属性确定是否`DesignAggregations`命令应创建设计过程中定义的聚合。 如果要以迭代方式设计聚合，则应在准备好保存所设计的聚合之前，将此属性设置为 false。 如果设置为 true，则当前设计过程将会终止，并会将所定义的聚合添加到指定的聚合设计中。  
+-   [具体化](../xmla/xml-elements-properties/materialize-element-xmla.md)属性确定是否`DesignAggregations`命令应创建在设计过程中定义的聚合。 如果要以迭代方式设计聚合，则应在准备好保存所设计的聚合之前，将此属性设置为 false。 如果设置为 true，则当前设计过程将会终止，并会将所定义的聚合添加到指定的聚合设计中。  
   
-## <a name="specifying-queries"></a>指定的查询  
- DesignAggregations 命令通过包括一个或多个支持基于使用情况的优化命令`Query`中的元素[查询](../xmla/xml-elements-properties/queries-element-xmla.md)属性。 `Queries`属性可以包含一个或多个[查询](../xmla/xml-elements-properties/query-element-xmla.md)元素。 如果 `Queries` 属性不包含任何 `Query` 元素，则 `Object` 元素中指定的聚合设计将使用包含一组常规聚合的默认结构。 设计此组常规聚合的目的是为了满足 `Optimization` 命令的 `Storage` 和 `DesignAggregations` 属性中指定的条件。  
+## <a name="specifying-queries"></a>指定查询  
+ DesignAggregations 命令通过包含一个或多个支持基于使用情况的优化命令`Query`中的元素[查询](../xmla/xml-elements-properties/queries-element-xmla.md)属性。 `Queries`属性可以包含一个或多个[查询](../xmla/xml-elements-properties/query-element-xmla.md)元素。 如果 `Queries` 属性不包含任何 `Query` 元素，则 `Object` 元素中指定的聚合设计将使用包含一组常规聚合的默认结构。 设计此组常规聚合的目的是为了满足 `Optimization` 命令的 `Storage` 和 `DesignAggregations` 属性中指定的条件。  
   
- 每个`Query`元素表示一个目标查询，用于定义目标的最常用的查询的聚合设计过程。 你可以指定您自己的目标查询，也可以使用存储的实例的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在要检索信息是最常用的查询日志中使用查询。 基于使用情况的优化向导会在发送 `DesignAggregations` 命令时，基于时间、使用情况或指定的用户，使用查询日志来检索目标查询。 有关详细信息，请参阅[基于使用情况的优化向导的 F1 帮助](../usage-based-optimization-wizard-f1-help.md)。  
+ 每个`Query`元素表示设计进程使用最常用的查询为目标的聚合定义一个目标查询。 您可以指定您自己的目标查询，也可以使用的实例存储的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]查询日志来检索有关的最大频率的信息中使用的查询。 基于使用情况的优化向导会在发送 `DesignAggregations` 命令时，基于时间、使用情况或指定的用户，使用查询日志来检索目标查询。 有关详细信息，请参阅[基于使用情况的优化向导的 F1 帮助](../usage-based-optimization-wizard-f1-help.md)。  
   
- 以迭代方式设计聚合，如果你只需在第一个传递目标查询`DesignAggregations`命令因为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例存储这些目标查询，并在后续过程中使用这些查询`DesignAggregations`命令。 在迭代进程的第一个`DesignAggregations` 命令中传递目标查询后，任何在 `DesignAggregations` 属性中包含目标查询的后续 `Queries` 命令都会生成错误。  
+ 如果您以迭代方式设计聚合，只需在第一个传递目标查询`DesignAggregations`命令因为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例存储这些目标查询，并在后续过程中使用这些查询`DesignAggregations`命令。 在迭代进程的第一个`DesignAggregations` 命令中传递目标查询后，任何在 `DesignAggregations` 属性中包含目标查询的后续 `Queries` 命令都会生成错误。  
   
  `Query` 元素包含一个以逗号分隔的值，该值包含以下参数：  
   
  *Frequency*,*Dataset*[,*Dataset*...]  
   
  *频率*  
- 与该查询此前执行的次数对应的加权系数。 如果`Query`元素表示一个新的查询，*频率*值表示设计进程用于评估该查询加权系数。 在设计进程中，随着频率值变大，该查询的权重也会增加。  
+ 与该查询此前执行的次数对应的加权系数。 如果`Query`元素表示一个新查询，*频率*值表示设计进程用于评估该查询的加权系数。 在设计进程中，随着频率值变大，该查询的权重也会增加。  
   
  *数据集*  
  一个数字字符串，该字符串指定维度中的哪些属性要包括在该查询中。 此字符串的字符个数必须与维度中的属性个数相同。 零 (0) 指示指定序号位置的属性不包括在指定维度的查询中，而 1 指示指定序号位置的属性包括在指定维度的查询中。  
@@ -71,7 +71,7 @@ ms.locfileid: "36016267"
  例如，字符串“011”所指的查询涉及具有三个属性的维度，其中第二个和第三个属性包括在该查询中。  
   
 > [!NOTE]  
->  某些属性与数据集无关。 有关排除特性的详细信息，请参阅[查询元素&#40;XMLA&#41;](../xmla/xml-elements-properties/query-element-xmla.md)。  
+>  某些属性与数据集无关。 有关排除的属性的详细信息，请参阅[查询元素&#40;XMLA&#41;](../xmla/xml-elements-properties/query-element-xmla.md)。  
   
  包含聚合设计的度量值组中每个维度都由*数据集*中的值`Query`元素。 *Dataset* 值的顺序必须与包括在度量值组中的维度的顺序一致。  
   

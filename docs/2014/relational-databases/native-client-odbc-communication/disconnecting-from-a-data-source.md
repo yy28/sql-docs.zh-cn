@@ -1,13 +1,11 @@
 ---
-title: 从数据源断开连接 |Microsoft 文档
+title: 断开与数据源的连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +23,18 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93afdf5c897525d0b3e925736e763f3da066941e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 611a9052f9a974608226757d26420948c7bbe420
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017318"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409687"
 ---
 # <a name="disconnecting-from-a-data-source"></a>与数据源断开连接
-  当应用程序已完成将数据源使用时，它将调用**SQLDisconnect**。 **SQLDisconnect**释放连接分配的所有语句并将驱动程序与数据源断开连接。 断开连接之后，应用程序可以调用[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)释放连接句柄。 在退出之前, 应用程序还调用**SQLFreeHandle**释放环境句柄。  
+  当应用程序使用完数据源时，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接分配任何语句，并与数据源断开连接，驱动程序。 断开连接后，应用程序可以调用[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)以释放连接句柄。 退出之前，应用程序还调用**SQLFreeHandle**以释放环境句柄。  
   
  断开连接后，应用程序可以重用分配的连接句柄，以连接到其他数据源或重新连接到同一个数据源。 如果决定保持连接，而不是断开连接后重新连接，则要求应用程序编写人员考虑每种选择的相对成本。 连接到数据源并保持连接状态的开销可能相对较大，具体取决于连接介质。 权衡利弊时，应用程序还必须就同一数据源上存在其他操作的可能性以及这些操作的时间安排情况做出假设。 应用程序可能还必须使用多个连接。  
   

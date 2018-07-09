@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 从报表服务器加载报表定义 |Microsoft 文档
+title: 第 3 课： 从报表服务器加载报表定义 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149428"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>第 3 课：从报表服务器加载报表定义
   创建项目并从 RDL 架构生成类之后，您就可以从报表服务器加载报表定义了。  
   
 ### <a name="to-load-a-report-definition"></a>加载报表定义  
   
-1.  在顶部添加一个私有字段`ReportUpdater`类 (如果你使用的模块[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 为`Report`类。 此字段将用于在应用程序的生存期内维护对从报表服务器加载的报表的引用。  
+1.  在顶部添加私有字段`ReportUpdater`类 (如果使用的模块[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 的`Report`类。 此字段将用于在应用程序的生存期内维护对从报表服务器加载的报表的引用。  
   
     ```csharp  
     private Report _report;  
@@ -104,7 +104,7 @@ ms.locfileid: "36024463"
  在下一课中，您将学习如何编写用于更新从报表服务器加载的报表定义的代码。 请参阅[第 4 课： 以编程方式更新报表定义](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [更新报表使用生成的 RDL 架构类&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

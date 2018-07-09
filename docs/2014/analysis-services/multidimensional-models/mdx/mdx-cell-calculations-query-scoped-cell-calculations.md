@@ -1,5 +1,5 @@
 ---
-title: 创建查询作用域的单元计算 (MDX) |Microsoft 文档
+title: 创建查询作用域的单元计算 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34a26daaf3e1fc55eef72e9382cfe5586a00fb7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5431862cd1a446a045d910841adc4d78d62d42be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159388"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>创建查询作用域的单元计算 (MDX)
-  在多维表达式 (MDX) 中，可以使用 `WITH` 关键字描述查询上下文中的计算单元。 `WITH`关键字具有以下语法：  
+  在多维表达式 (MDX) 中，可以使用 `WITH` 关键字描述查询上下文中的计算单元。 `WITH`关键字的语法如下：  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -37,8 +37,8 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
-|级别成员集|解析为单个级别的成员的 MDX 集表达式。 此类是集表达式的一个示例是*Level_Expression*。`Members` MDX 函数。 若要包含计算的成员，使用*Level_Expression*。`AllMembers` MDX 函数。 有关详细信息，请参阅 [AllMembers (MDX)](/sql/mdx/allmembers-mdx)。|  
-|后代集|解析为指定成员的后代的 MDX 集表达式。 此类是集表达式的一个示例是`Descendants`(*Member_Expression*， *Level_Expresion*， *Desc_Flag*) MDX 函数。 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
+|级别成员集|解析为单个级别的成员的 MDX 集表达式。 此类集表达式的一个示例是*Level_Expression*。`Members` MDX 函数。 若要包括计算的成员，请使用*Level_Expression*。`AllMembers` MDX 函数。 有关详细信息，请参阅 [AllMembers (MDX)](/sql/mdx/allmembers-mdx)。|  
+|后代集|解析为指定成员的后代的 MDX 集表达式。 此类集表达式的一个示例是`Descendants`(*Member_Expression*， *Level_Expresion*， *Desc_Flag*) MDX 函数。 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
   
  如果 `String_Expression` 参数不描述维度，出于构造计算子多维数据集的目的，MDX 将假设包含所有成员。 因此，如果 `String_Expression` 参数为 NULL，计算单元的定义将应用于整个多维数据集。  
   
@@ -58,6 +58,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  另一方面，只要对多维数据集发出的 MDX 查询涉及计算单元定义中包含的单元，MDX 将就会处理计算公式。 此处理的发生不受创建作用域的限制。  
   
 ## <a name="see-also"></a>请参阅  
- [创建单元格计算语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

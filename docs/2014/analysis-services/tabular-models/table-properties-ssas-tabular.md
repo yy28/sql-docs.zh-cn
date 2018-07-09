@@ -1,5 +1,5 @@
 ---
-title: 表属性 (SSAS 表格) |Microsoft 文档
+title: 表属性 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85a29563b6e0e0b78c63c771547a57473e3c9f52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c94cb6ed1092944fd19683e57d3f7b9265f495c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183354"
 ---
 # <a name="table-properties-ssas-tabular"></a>表属性（SSAS 表格）
   本主题介绍表格模型表属性。 此处所述的属性不同于“编辑表属性”对话框中的那些属性，后者可以定义从源导入哪些列。  
@@ -30,7 +30,7 @@ ms.locfileid: "36016204"
   
 -   [表属性](#bkmk_properties)  
   
--   [配置表属性设置](#bkmk_config_prop)  
+-   [若要配置表属性设置](#bkmk_config_prop)  
   
 ##  <a name="bkmk_properties"></a> 表的属性  
  **基本**  
@@ -53,7 +53,7 @@ ms.locfileid: "36016204"
 |**默认字段集**|||  
 |表行为|||  
   
-###  <a name="bkmk_config_prop"></a> 配置表属性设置  
+###  <a name="bkmk_config_prop"></a> 若要配置表属性设置  
   
 1.  在模型设计器中的数据视图中，单击某个表（选项卡）；或在关系图视图中，单击某个表头。  
   

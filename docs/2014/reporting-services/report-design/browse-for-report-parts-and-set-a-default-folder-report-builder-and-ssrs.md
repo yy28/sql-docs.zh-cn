@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e16f84d38d32dc5e55ce3244f09b2e9c5a28f967
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 25c367550ca7efb08bb33e99318ceda2e62b9b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240017"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
   创建报表的最简单方式是从报表部件库将现有报表部件（如表和图表）添加到您的报表。 将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何报表部件都依赖于数据集，即对某数据源的查询和连接。 将报表部件添加到报表后，可以根据需要进行修改。  
@@ -68,9 +68,9 @@ ms.locfileid: "36014244"
   
 ## <a name="see-also"></a>请参阅  
  [检查更新或关闭更新&#40;报表生成器和 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [报表部件&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [报表部件的&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [报表部件和报表生成器中的数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [解决报表部件&#40;报表生成器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [发布和重新发布报表部件&#40;报表生成器和 SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

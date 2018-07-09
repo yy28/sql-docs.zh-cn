@@ -1,5 +1,5 @@
 ---
-title: 汇总或聚合的表 (Visual Database Tools) 中的所有行值 |Microsoft 文档
+title: 汇总或聚合值的所有行中的表 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 886713b16425a7d5cba68ba72810aeae51793c10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3cba9e4bc7728e90c74f444b77d3e348c03286de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259953"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>汇总或聚合表中所有行的值 (Visual Database Tools)
   使用聚合函数，可为表中所有值创建汇总。 例如，可创建如下所示的查询，以显示 `titles` 表中所有书籍的总价：  
@@ -82,7 +82,7 @@ FROM titles
 >  查询和视图设计器将聚合函数一直作为 SQL 窗格中 SQL 语句的一部分进行维护，直到您显式关闭“分组依据”模式为止。 因此，如果您通过更改查询类型或更改“关系图”窗格中显示的表或表值对象来修改查询，那么所生成的查询可能包含无效的聚合函数。  
   
 ## <a name="see-also"></a>请参阅  
- [排序和分组查询结果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [汇总查询结果 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

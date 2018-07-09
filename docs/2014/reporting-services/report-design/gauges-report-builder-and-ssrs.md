@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150278"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   仪表数据区域是显示数据集中的单个值的一维数据区域。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 可以使用仪表面板在单个仪表面板内创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  
@@ -244,10 +244,10 @@ ms.locfileid: "36024512"
     > [!NOTE]  
     >  如果仪表上没有任何指针或报表包含多个数据集，并且仪表面板不与数据集关联，则该方法不适用。  
   
--   右键单击仪表指针，然后选择 **“指针属性”**。 有关`Value`、 从下拉列表选择一个字段，或通过单击来定义为字段表达式**表达式**(*fx*) 按钮。  
+-   右键单击仪表指针，然后选择 **“指针属性”**。 有关`Value`、 从下拉列表中选择一个字段，或通过单击来定义字段表达式**表达式**(*fx*) 按钮。  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>将字段聚合为单个值  
- 当字段添加到仪表，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]默认情况下计算字段的聚合。 数字数据类型是使用 SUM 函数聚合的。 非数字数据类型是使用 COUNT 函数聚合的，该函数可对数据集或组中特定值或字段的实例数进行计数。 如果值字段的数据类型是字符串，则仪表将无法显示数值，即使这些字段中包含数字也是如此。 仪表将改用 COUNT 函数来聚合字符串字段。 若要避免此行为，请确保使用的字段是数字数据类型，而不是包含格式化数字的字符串。 可以使用 Visual Basic 表达式以将字符串值转换为使用 CDbl 或 CInt 常量的数值数据类型。 例如，以下表达式将名为 MyField 的字符串字段转换为数值。  
+ 向仪表添加字段[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]默认情况下计算该字段的聚合。 数字数据类型是使用 SUM 函数聚合的。 非数字数据类型是使用 COUNT 函数聚合的，该函数可对数据集或组中特定值或字段的实例数进行计数。 如果值字段的数据类型是字符串，则仪表将无法显示数值，即使这些字段中包含数字也是如此。 仪表将改用 COUNT 函数来聚合字符串字段。 若要避免此行为，请确保使用的字段是数字数据类型，而不是包含格式化数字的字符串。 可以使用 Visual Basic 表达式以将字符串值转换为使用 CDbl 或 CInt 常量的数值数据类型。 例如，以下表达式将名为 MyField 的字符串字段转换为数值。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -292,11 +292,11 @@ ms.locfileid: "36024512"
   
 -   [向报表添加仪表&#40;报表生成器和 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [在仪表上设置最小值或最大&#40;报表生成器和 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [在仪表上设置最小值或最大值&#40;报表生成器和 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [在仪表上设置对齐间隔&#40;报表生成器和 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [为仪表上指针指定图像&#40;报表生成器和 SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [指定一个图像作为仪表的指针&#40;报表生成器和 SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> 本节内容  
@@ -305,8 +305,8 @@ ms.locfileid: "36024512"
 |||  
 |-|-|  
 |术语|定义|  
-|[格式设置仪表上的刻度&#40;报表生成器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上刻度的格式有关的一般信息，并且提供与径向仪表和线性仪表上刻度的格式设置选项有关的详细信息。|  
-|[格式设置仪表上的指针&#40;报表生成器和 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上指针的格式有关的一般信息，并且提供与可用于径向仪表和线性仪表的指针样式的格式设置选项有关的详细信息。|  
+|[设置仪表上的刻度的格式&#40;报表生成器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上刻度的格式有关的一般信息，并且提供与径向仪表和线性仪表上刻度的格式设置选项有关的详细信息。|  
+|[设置仪表上的指针的格式&#40;报表生成器和 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上指针的格式有关的一般信息，并且提供与可用于径向仪表和线性仪表的指针样式的格式设置选项有关的详细信息。|  
 |[设置仪表上的范围的格式&#40;报表生成器和 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上范围的格式以便指示仪表上一段重要的值或者以直观方式指示指针值何时进入某一值范围有关的信息。|  
   
   

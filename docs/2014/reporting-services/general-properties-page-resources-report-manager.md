@@ -1,5 +1,5 @@
 ---
-title: 常规属性页中，资源 （报表管理器） |Microsoft 文档
+title: 常规属性页上，资源 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: aff68336e0ca68a315d8b2cdab6bd783c87c5f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164170"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>资源的“常规”属性页（报表管理器）
   使用资源的“常规”属性页可以重命名、删除、移动或替换资源。 页面顶部显示有关添加资源或修改属性的用户的信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "36016305"
   
 ## <a name="options"></a>“常规”  
  **名称**  
- 指定资源的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : @ & = +，$ / * \< > |"或 / 指定一个名称。  
+ 指定资源的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : @ & = +，$ / * \< > |"或 / 指定名称时。  
   
  **Description**  
  键入资源的说明。 有权访问该资源的用户可以在“内容”页中看到此说明。  
@@ -64,7 +64,7 @@ ms.locfileid: "36016305"
   
 ## <a name="see-also"></a>请参阅  
  [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [查看页上，资源&#40;报表管理器&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
+ [查看资源的页&#40;报表管理器&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [项的“安全性”属性页（报表管理器）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   

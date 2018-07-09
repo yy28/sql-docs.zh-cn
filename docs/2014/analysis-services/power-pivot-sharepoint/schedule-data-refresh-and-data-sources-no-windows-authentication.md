@@ -1,5 +1,5 @@
 ---
-title: 计划数据刷新和不支持 Windows 身份验证 (PowerPivot for SharePoint) 的数据源 |Microsoft 文档
+title: 计划数据刷新和不支持 Windows 身份验证 (PowerPivot for SharePoint) 的数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230093"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>计划数据刷新和不支持 Windows 身份验证的数据源 (PowerPivot for SharePoint)
   本主题介绍当数据源**不**支持 Windows 身份验证时，让 PowerPivot for SharePoint 计划数据刷新能够使用该数据源的工作流。 例如 Oracle 或 IDM DB2 数据源。 本主题中的图示和步骤引用 Oracle 数据源，但此工作流也适用于其他数据源。  
@@ -104,9 +104,9 @@ ms.locfileid: "36017627"
   
 5.  单击“下一步” 。  
   
-6.  上**凭据**页上，第一个字段名称更改为`Oracle User ID`和更改**字段类型**到`User Name`。  
+6.  上**凭据**页上，将第一个字段名称更改为`Oracle User ID`并将更改**字段类型**到`User Name`。  
   
-     第二个字段名称更改为`Oracle Password`和**字段类型**到`Password`。  
+     将第二个字段名称更改为`Oracle Password`并**字段类型**到`Password`。  
   
 7.  单击“下一步” 。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36017627"
   
 11. 键入 Oracle 用户 ID 和 Oracle 密码，然后单击 **“确定”**。  
   
- 详细信息，请参阅"若要为 SQL Server 身份验证创建目标应用程序"一节中[与 SQL Server 身份验证 (SharePoint Server 2013) 使用 Secure Store](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
+ 有关详细信息，请参阅"为 SQL Server 身份验证创建目标应用程序中[使用安全存储区与 SQL Server 身份验证 (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>若要配置 PowerPivot 服务应用程序  
   
@@ -128,13 +128,13 @@ ms.locfileid: "36017627"
   
 3.  在“操作”节中，单击 **“配置服务应用程序设置”** 。  
   
-4.  在**数据刷新**部分中，设置**PowerPivot 无人参与数据刷新帐户**到`PowerPivotDataRefresh`，然后单击**确定**。  
+4.  在中**数据刷新**部分中，设置**PowerPivot 无人参与数据刷新帐户**到`PowerPivotDataRefresh`，然后单击**确定**。  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
 ## <a name="to-configure-the-workbook"></a>配置工作簿  
   
-1.  浏览到 PowerPivot 库中的工作簿并单击**管理数据刷新**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")。  
+1.  浏览到 PowerPivot 库中的工作簿，然后单击**管理数据刷新**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")。  
   
 2.  如果出现 **“数据刷新历史记录”** 页，单击 **“配置计划”**。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36017627"
   
 9. 选择 **“使用在 Secure Store Service (SSS) 中保存的凭据连接以登录数据源。在 SSS ID 框中输入用于查找凭据的 ID”**。  
   
-10. 在**ID:** 框中，键入`OracleAuthentication`。  
+10. 在中**ID:** 框中，键入`OracleAuthentication`。  
   
 11. 单击“确定” 。  
   

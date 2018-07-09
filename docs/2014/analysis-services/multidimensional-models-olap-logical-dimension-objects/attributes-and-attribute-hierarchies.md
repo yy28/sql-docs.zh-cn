@@ -1,5 +1,5 @@
 ---
-title: 属性和属性层次结构 |Microsoft 文档
+title: 属性和属性层次结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 792174e9d5da395d2a385b3dde73de9a167f0643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb6653895a360f95bbca3bdc31fd320e2f1d2dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149368"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>属性和属性层次结构
   维度是属性的集合，这些属性绑定到数据源视图的表或视图中的一列或多列。  
@@ -46,7 +46,7 @@ ms.locfileid: "36016488"
 ## <a name="attribute-hierarchies"></a>属性层次结构  
  默认情况下，会将属性成员组织到两个级别的层次结构中，其中包含一个叶级别和一个“全部”级别。 “全部”级别包含每个与属性相关的度量值组（其维度是一个成员）中所有度量值的属性成员的聚合值。 但是，如果将 `IsAggregatable` 属性设置为 False，则无法创建“全部”级别。 有关详细信息，请参阅[维度特性属性参考](../multidimensional-models/dimension-attribute-properties-reference.md)。  
   
- 可以并且通常将属性排列到用户定义的层次结构中，通过这些层次结构提供的下钻路径，用户可以浏览与属性相关的度量值组中的数据。 在客户端应用程序中，属性可用于提供分组和约束信息。 属性排列到用户定义的层次结构中，你定义时，在多对一组中相关级别的层次结构级别之间的关系或一对一关系 (称为*自然*关系)。 例如，在“日历时间”层次结构中，“日”级别应与“月”级别相关，“月”级别应与“季度”级别相关等等。 通过定义用户定义层次结构中级别之间的关系，Analysis Services 可以定义更有用的聚合来提高查询性能，并且还可以在处理性能过程中节省内存，这对于大型或复杂多维数据集非常重要。 有关详细信息，请参阅[用户层次结构](user-hierarchies.md)， [Create User-Defined 层次结构](../multidimensional-models/user-defined-hierarchies-create.md)，和[定义属性关系](../multidimensional-models/attribute-relationships-define.md)。  
+ 可以并且通常将属性排列到用户定义的层次结构中，通过这些层次结构提供的下钻路径，用户可以浏览与属性相关的度量值组中的数据。 在客户端应用程序中，属性可用于提供分组和约束信息。 属性排列到用户定义层次结构中，定义时，级别之间的关系在多对一的层次结构级别之间的关系或一对一关系 (称为*自然*关系)。 例如，在“日历时间”层次结构中，“日”级别应与“月”级别相关，“月”级别应与“季度”级别相关等等。 通过定义用户定义层次结构中级别之间的关系，Analysis Services 可以定义更有用的聚合来提高查询性能，并且还可以在处理性能过程中节省内存，这对于大型或复杂多维数据集非常重要。 有关详细信息，请参阅[用户层次结构](user-hierarchies.md)，[创建用户定义层次结构](../multidimensional-models/user-defined-hierarchies-create.md)，并[定义属性关系](../multidimensional-models/attribute-relationships-define.md)。  
   
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>属性关系、星型架构和雪花型架构  
  默认情况下，在星型架构中，所有属性都直接与键属性相关，这使得用户可根据维度中的任意属性层次结构浏览多维数据集中的事实数据。 在雪花型架构中，如果属性的基础表直接链接到事实数据表，则属性会直接链接到键属性；另外，属性还可以使用绑定到基础表（将雪花状表链接到直接链接的表）中键的属性间接地进行链接。  

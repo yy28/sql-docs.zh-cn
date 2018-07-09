@@ -1,5 +1,5 @@
 ---
-title: UnknownMember 元素 (ASSL) |Microsoft 文档
+title: UnknownMember 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMember element
 ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85bc7a517642ccc5b4386f65e7b4a9c89d757ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdfbaa296a7c83c96a7a41d759d582833d2ed8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151168"
 ---
 # <a name="unknownmember-element-assl"></a>UnknownMember 元素 (ASSL)
   指示未知成员是否可见。  
@@ -70,7 +70,7 @@ ms.locfileid: "36017411"
 |*隐藏*|未知成员存在，但不显示。|  
 |*无*|未知成员未使用。|  
   
- 对应于的允许值为枚举`UnknownMember`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.UnknownMemberBehavior>。  
+ 与允许的值相对应的枚举`UnknownMember`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.UnknownMemberBehavior>。  
   
 ## <a name="see-also"></a>请参阅  
  [UnknownMemberName 元素&#40;ASSL&#41;](name-element-assl.md)   

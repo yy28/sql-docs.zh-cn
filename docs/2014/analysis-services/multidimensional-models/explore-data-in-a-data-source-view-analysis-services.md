@@ -1,5 +1,5 @@
 ---
-title: 浏览数据源视图 (Analysis Services) 中的数据 |Microsoft 文档
+title: 在数据源视图 (Analysis Services) 中浏览数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exploring data [Analysis Services]
 - data source views [Analysis Services], exploring data
 - viewing source data
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e4fcb284eeb85b820ce0a194787337fa51e9e345
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d8f26a22f2cda64a6a9999ce4a2a730e4e5c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183450"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>在数据源视图中浏览数据 (Analysis Services)
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据源视图设计器中的“浏览数据”对话框，在数据源视图 (DSV) 中浏览表、视图或命名查询的数据。 在数据源视图设计器中浏览数据时，可以查看所选表、视图或命名查询中每个数据列的内容。 查看实际内容将帮助您确定是否需要所有列，是否需要命名计算来提高用户友好性和可用性，以及现有命名计算或命名查询是否返回预期值。  
@@ -42,7 +42,7 @@ ms.locfileid: "36024219"
   
 3.  右键单击包含要查看的数据的表、视图或命名查询，再单击“浏览数据”。  
   
-     数据源基础表、 视图或命名查询中的数据源视图是查询，并且结果将显示在**浏览\<对象名称 > 表**选项卡。  
+     数据源基础表、 视图或命名查询数据源视图中的进行查询，并且结果将显示在**浏览\<对象名称 > 表**选项卡。  
   
 4.  上**浏览\<对象名称 > 表**工具栏上，单击**抽样选项**图标。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36024219"
   
 5.  根据需要单击 **“确定”** 或 **“取消”** 。  
   
-6.  若要对数据重新取样，请单击**重新取样数据**上**浏览\<对象名称 > 表**工具栏。  
+6.  若要对数据重新抽样，请单击**对数据重新抽样**上**浏览\<对象名称 > 表**工具栏。  
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)  

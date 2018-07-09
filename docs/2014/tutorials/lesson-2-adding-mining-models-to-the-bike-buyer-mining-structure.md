@@ -1,5 +1,5 @@
 ---
-title: 第 2 课： 将挖掘模型添加到 Bike Buyer 挖掘结构 |Microsoft 文档
+title: 第 2 课： 向自行车购买者挖掘结构添加挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: f6d66faaa2a62d753ad865dd249078045960dc97
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 055450b7461accaa62b1c9bafe4273f6fc3f9dd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149548"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 课：向自行车购买者挖掘结构添加挖掘模型
-  在本课程中，你将向你创建的 Bike Buyer 挖掘结构中添加两个挖掘模型[第 1 课： 创建 Bike Buyer 挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 可以使用其中的一个模型浏览数据，使用另一个模型创建预测。  
+  在本课中，将两个挖掘模型添加到你创建的自行车购买者挖掘结构[第 1 课： 创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 可以使用其中的一个模型浏览数据，使用另一个模型创建预测。  
   
- 若要了解如何潜在客户可以通过其特征进行分类，将创建基于的挖掘模型[Microsoft 聚类分析算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。 在下一课中，您将研究该算法如何查找具有类似特征的客户群。 例如，您可能发现某些客户住得比较近，骑自行车上下班，并且具有类似的教育背景。 可以使用这些客户群更好地了解不同客户之间的关系，并使用此信息创建面向特定客户的营销策略。  
+ 若要了解如何潜在客户可以按其特征分类，您将创建基于的挖掘模型[Microsoft 聚类分析算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。 在下一课中，您将研究该算法如何查找具有类似特征的客户群。 例如，您可能发现某些客户住得比较近，骑自行车上下班，并且具有类似的教育背景。 可以使用这些客户群更好地了解不同客户之间的关系，并使用此信息创建面向特定客户的营销策略。  
   
- 若要预测的潜在客户是否有可能购买了自行车，将创建基于的挖掘模型[Microsoft 决策树算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。 该算法会通查与每位潜在客户关联的信息，并查找有助于预测客户是否会购买自行车的特征。 然后将先前的自行车购买者的特征值与潜在的新客户的特征值进行比较，确定潜在的新客户是否可能购买自行车。  
+ 若要预测潜在客户是否可能购买自行车，将创建基于的挖掘模型[Microsoft 决策树算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。 该算法会通查与每位潜在客户关联的信息，并查找有助于预测客户是否会购买自行车的特征。 然后将先前的自行车购买者的特征值与潜在的新客户的特征值进行比较，确定潜在的新客户是否可能购买自行车。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 语句  
- 若要添加到挖掘结构的挖掘模型，你使用 [ALTER 挖掘结构&#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 语句。 可以将语句中的代码分为下列几部分：  
+ 为了向挖掘结构添加挖掘模型，可以使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 语句。 可以将语句中的代码分为下列几部分：  
   
 -   标识挖掘结构  
   
@@ -65,7 +65,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- 有关命名在 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 有关命名 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
   
  代码的接下来的各行定义挖掘结构中将由挖掘模型使用的各列：  
   
@@ -82,7 +82,7 @@ ADD MINING MODEL [<mining model name>]
 ) USING <algorithm name>( <algorithm parameters> )  
 ```  
   
- 你可以调整的算法参数的详细信息，请参阅[Microsoft 决策树算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)和[Microsoft 聚类分析算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。  
+ 您可以调整的算法参数的详细信息，请参阅[Microsoft 决策树算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)并[Microsoft 聚类分析算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。  
   
  您可以使用以下语法指定将挖掘模型中的一列用于预测：  
   
@@ -90,7 +90,7 @@ ADD MINING MODEL [<mining model name>]
 <mining model column> PREDICT  
 ```  
   
- 代码的最后一行是可选的，用于定义在定型和测试模型时应用的筛选器。 有关如何将筛选器应用于挖掘模型的详细信息，请参阅[挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
+ 代码的最后一行是可选的，用于定义在定型和测试模型时应用的筛选器。 有关如何向挖掘模型应用筛选器的详细信息，请参阅[挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
  在本课程中，将执行以下任务：  
@@ -106,7 +106,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>添加决策树挖掘模型  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**以打开查询编辑器和一个新的空白的查询。  
+1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**若要打开查询编辑器和一个新的空白查询。  
   
 2.  将 ALTER MINING STRUCTURE 语句的一般示例复制到空白查询中。  
   
@@ -201,18 +201,18 @@ ADD MINING MODEL [<mining model name>]
     WITH DRILLTHROUGH  
     ```  
   
-7.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+7.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-8.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`DT_Model.dmx`。  
+8.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`DT_Model.dmx`。  
   
-9. 在工具栏上，单击**执行**按钮。  
+9. 在工具栏上，单击**Execute**按钮。  
   
 ## <a name="adding-a-clustering-mining-model-to-the-structure"></a>向结构中添加聚类分析挖掘模型  
  现在可以基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析算法向自行车购买者挖掘结构添加挖掘模型。 由于聚类分析挖掘模型将使用挖掘结构中定义的所有列，因此，可以省略定义挖掘列，使用快捷方式向结构中添加模型。  
   
 #### <a name="to-add-a-clustering-mining-model"></a>添加聚类分析挖掘模型  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**以打开查询编辑器随即打开和一个新的空白的查询。  
+1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**以打开查询编辑器和一个新的空白查询。  
   
 2.  将 ALTER MINING STRUCTURE 语句的一般示例复制到空白查询中。  
   
@@ -269,11 +269,11 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Clustering   
     ```  
   
-7.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+7.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-8.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`Clustering_Model.dmx`。  
+8.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Clustering_Model.dmx`。  
   
-9. 在工具栏上，单击**执行**按钮。  
+9. 在工具栏上，单击**Execute**按钮。  
   
  在下一课中，您将处理模型和挖掘结构。  
   

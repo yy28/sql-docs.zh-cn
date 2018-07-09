@@ -1,12 +1,12 @@
 ---
-title: bcp_gettypename |Microsoft 文档
+title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703488"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426219"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ RETCODE bcp_gettypename (
 |**SQLINT4**|之前或之后|**int**|  
 |**SQLMONEY**|之前或之后|**money**|  
 |**SQLFLT8**|之前或之后|**float**|  
-|**SQLDATETIME**|之前或之后|**datetime**|  
+|**SQLDATETIME 转换**|之前或之后|**datetime**|  
 |**SQLBITN**|之前或之后|**位 null**|  
 |**SQLBIT**|之前或之后|**bit**|  
 |**SQLBIGCHAR**|“否”|**char**|  
@@ -82,8 +82,8 @@ RETCODE bcp_gettypename (
 |**SQLVARBINARY**|“否”|**Varbinary**|  
 |**SQLIMAGE**|之前或之后|**图像**|  
 |**SQLINTN**|之前或之后|**int-null**|  
-|**SQLDATETIMN**|之前或之后|**datetime null**|  
-|**SQLMONEYN**|之前或之后|**money null**|  
+|**SQLDATETIMN**|之前或之后|**日期时间为 null**|  
+|**SQLMONEYN**|之前或之后|**资金 null**|  
 |**SQLFLTN**|之前或之后|**float-null**|  
 |**SQLAOPSUM**|之前或之后|**Sum**|  
 |**SQLAOPAVG**|之前或之后|**Avg**|  
@@ -91,8 +91,8 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|之前或之后|**Min**|  
 |**SQLAOPMAX**|之前或之后|**Max**|  
 |**SQLDATETIM4**|之前或之后|**smalldatetime**|  
-|**SQLMONEY4**|之前或之后|**smallmoney**|  
-|**SQLFLT4**|之前或之后|**实际**|  
+|**SQLMONEY4**|之前或之后|**Smallmoney**|  
+|**SQLFLT4**|之前或之后|**真正**|  
 |**SQLUNIQUEID**|之前或之后|**uniqueidentifier**|  
 |**SQLNCHAR**|“否”|**Nchar**|  
 |**SQLNVARCHAR**|“否”|**Nvarchar**|  
@@ -110,10 +110,10 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|是|**nvarchar(max)**|  
 |**SQLNVARCHAR**|是|**nvarchar(max)**|  
 |**SQLXML**|是|**Xml**|  
-|**SQLUDT**|之前或之后|**udt**|  
+|**SQLUDT**|之前或之后|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 对日期和时间增强功能的支持  
- 日期/时间类型的令牌的参数值所述的表中的"中的类型"列[增强日期和时间类型的大容量复制更改&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 返回值位于“文件存储类型”列的对应行中。  
+ 日期/时间类型的标记参数值在表中的"sqlncli.h 中的类型"列中所述[大容量复制更改的增强的日期和时间类型&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 返回值位于“文件存储类型”列的对应行中。  
   
  有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

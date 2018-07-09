@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_TRACE_COLUMNS 行集 |Microsoft 文档
+title: DISCOVER_TRACE_COLUMNS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 362f85921bdc41ebf14b84419116f073856de348
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f07c4d548022ae12ab44e9c2772c13a0ffff574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210017"
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS 行集
   返回描述可用于跟踪的列的 XML 文档。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_TRACE_COLUMNS`行集包含以下各列。  
+ `DISCOVER_TRACE_COLUMNS`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

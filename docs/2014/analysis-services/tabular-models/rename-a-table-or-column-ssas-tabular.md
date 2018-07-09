@@ -1,5 +1,5 @@
 ---
-title: 重命名表或列 (SSAS 表格) |Microsoft 文档
+title: 重命名表或列 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5edfa6b7fc59ed1a417abe22a34ae22e317538d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e58496d1a1fc4bc712ba2d5157f004def162c94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211517"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重命名表或列（SSAS 表格）
   在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”**，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”** 页上指定查询来导入数据，也可以更改表和列名。  
@@ -50,7 +50,7 @@ ms.locfileid: "36016451"
   
 -   控制字符  
   
--   以下字符 （这不是有效的 Analysis Services 对象的名称中的）:。，;': /\\*|?& %$！ + = （) []{}<>  
+-   （这不是有效的 Analysis Services 对象名称中的） 的以下字符:。，;': /\\*|?& %$！ + = （) []{}<>  
   
 -   Analysis Services 保留关键字，包括多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 函数名称和运算符。  
   

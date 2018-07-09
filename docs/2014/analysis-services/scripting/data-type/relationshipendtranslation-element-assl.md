@@ -1,5 +1,5 @@
 ---
-title: RelationshipEndTranslation 元素 (ASSL) |Microsoft 文档
+title: RelationshipEndTranslation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb93b3cdaf3eda1b8be15679b0736e626a802cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c779e29ce721289b364599063e1a1de747eb1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153018"
 ---
 # <a name="relationshipendtranslation-element-assl"></a>RelationshipEndTranslation 元素 (ASSL)
   定义一个基元数据类型，表示的本地化的翻译[RelationshipEnd](relationshipend-data-type-assl.md)元素。  
@@ -54,7 +54,7 @@ ms.locfileid: "36017432"
 |子元素|[批注](../collections/annotations-element-assl.md)，[标题](../properties/caption-element-assl.md)， [CollectionCaption](../properties/caption-element-assl.md)，[说明](../properties/description-element-assl.md)， [DisplayFolder](../properties/displayfolder-element-assl.md)， [语言](../properties/language-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Translation>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Translation>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

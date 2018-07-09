@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPColumns (OLE DB) |Microsoft 文档
+title: 'Ibcpsession:: Bcpcolumns (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb68a61f5aca057eea4ec16334745e6e2e6e427b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e81e12fd880bdde5cbc28b932e340e9dbe1e6d33
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700728"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423886"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,28 +42,28 @@ HRESULT BCPColumns(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 它在内部调用[IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)设置字段数据的默认值。 这些默认值从 SQL Server 列检索的信息与提供程序内部通过指定表名称时获得的[IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)。  
+ 在内部调用[ibcpsession:: Bcpcolfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)设置字段数据的默认值。 从访问接口内部检索时通过指定表名的 SQL Server 列信息获取这些默认值[ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)。  
   
 > [!NOTE]  
 >  可以调用此方法后，才**BCPInit**已调用具有有效的文件名称。  
   
- 只有在您要使用不同于默认设置的用户文件格式时，才应调用此方法。 有关默认的用户文件格式的说明的详细信息，请参阅**BCPInit**方法。  
+ 只有在您要使用不同于默认设置的用户文件格式时，才应调用此方法。 有关默认用户文件格式的说明的详细信息，请参阅**BCPInit**方法。  
   
- 在调用**BCPColumns**方法时，必须调用**BCPColFmt**要完整地定义自定义文件格式的用户文件中的每列的方法。  
+ 在调用**BCPColumns**方法时，必须调用**BCPColFmt**完整地定义自定义文件格式的用户文件中的每列的方法。  
   
 ## <a name="arguments"></a>参数  
  *nColumns*[in]  
- 用户文件中字段的总数。 即使你准备大容量复制数据从用户文件复制到 SQL Server 表，并不打算将所有字段中的用户文件的都复制，则仍必须设置*nColumns*给总数量的用户文件字段的自变量。 然后可通过指定已跳过的字段**BCPColFmt**。  
+ 用户文件中字段的总数。 即使你准备从用户文件的大容量复制数据到 SQL Server 表并不打算将所有字段都复制用户文件中，仍必须设置*nColumns*参数对用户文件字段的总数。 然后可以通过指定跳过的字段**BCPColFmt**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_FAIL  
- 提供程序特定出错;详细信息，请使用[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 特定于访问接口时出错;详细信息，请使用[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， **BCPInit**方法未调用此方法之前调用。 在为某一大容量复制操作多次调用此方法时，也会发生这一意外调用。  
+ 意外调用了该方法。 例如， **BCPInit**调用此方法之前，未调用方法。 在为某一大容量复制操作多次调用此方法时，也会发生这一意外调用。  
   
  E_OUTOFMEMORY  
  内存不足错误。  

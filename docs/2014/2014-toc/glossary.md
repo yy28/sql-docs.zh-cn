@@ -1,5 +1,5 @@
 ---
-title: 术语表 |Microsoft 文档
+title: 术语表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 34fce852a5a3a06342bf5e8f16f4e1cd379e6d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164328"
 ---
 # 词汇表
   
@@ -109,7 +109,7 @@ ms.locfileid: "36017150"
 |块 (block)|位于 BEGIN 和 END 之间的一种 Transact-SQL 语句。|  
 |块状游标 (block cursor)|行集大小大于 1 的游标。|  
 |阻塞事务 (blocking transaction)|导致另一个事务的失败的事务。|  
-|布尔表达式 (Boolean expression)|生成布尔值（true 或 false）的表达式。 此类表达式可能涉及比较 (测试的值是否相等，或者，对于非布尔值， \< [小于] 或 > [大于] 关系) 和布尔表达式的值 （使用布尔运算符，如 AND、 OR 和 XOR） 的逻辑组合。|  
+|布尔表达式 (Boolean expression)|生成布尔值（true 或 false）的表达式。 此类表达式可以涉及比较 (测试值是否相等，或对于非布尔值， \< [小于] 或 > [大于] 关系) 和布尔表达式的值 （使用 AND、 OR 和 XOR 之类的布尔运算符） 的逻辑组合。|  
 |布尔运算符 (Boolean operator)|设计为与布尔值协同使用的运算符。 在编程中最常用的四个公用布尔运算符是 AND（逻辑与）、OR（逻辑或）、XOR（异或）或 NOT（逻辑反）。|  
 |绑定流 (bound stream)|包含生成事件所需的所有信息的事件流。 信息或者是已经实例化的数据源，或者非常充分足以让 StreamInsight 服务器启动该数据源。|  
 |边界框 (bounding box)|将容纳对象的路径、形状或组的最小矩形区域。|  
@@ -294,7 +294,7 @@ ms.locfileid: "36017150"
 |并发冲突 (concurrency conflict)|当同一项或变更单位在以后将进行同步的两个不同副本上发生变更时发生的冲突。|  
 |并发模型 (concurrency model)|应用程序可设计为负责使用相同缓存数据的并发操作的一种方式。 Windows Server AppFabric 支持乐观和悲观并发模型。|  
 |并发操作 (concurrent operation)|一种计算机操作，在此操作中，两个或以上的进程（程序）有权访问微处理器的时间，并因此接近于同时执行。 因为微处理器可以使用比人们所能觉察出的小得多的时间单位，所以并发进程好像是同时发生，但实际上并非这样。|  
-|条件表达式 (conditional expression)|生成布尔值（true 或 false）的表达式。 此类表达式可能涉及比较 (测试的值是否相等，或者，对于非布尔值， \< [小于] 或 > [大于] 关系) 和布尔表达式的值 （使用布尔运算符，如 AND、 OR 和 XOR） 的逻辑组合。|  
+|条件表达式 (conditional expression)|生成布尔值（true 或 false）的表达式。 此类表达式可以涉及比较 (测试值是否相等，或对于非布尔值， \< [小于] 或 > [大于] 关系) 和布尔表达式的值 （使用 AND、 OR 和 XOR 之类的布尔运算符） 的逻辑组合。|  
 |有条件拆分 (conditional split)|对数据库完整备份以及自数据库完整备份以来所做的最近数据库差异备份（如果存在）和日志备份（如果存在）的还原。|  
 |配置文件 (config file)|一个文件，其中包含可由计算机读取的软硬件操作规范，或包含有关另一个文件或特定用户的信息，例如用户的登录 ID。|  
 |配置|对于一台微机，是指系统的所有内外部组件，包括内存、磁盘驱动器、键盘、显卡和一般不太重要的附加硬件，如鼠标、调制解调器或打印机。 软件（操作系统和各种设备驱动程序）、用户通过配置文件（例如 IBM PC 和兼容机上的 AUTOEXEC.BAT 和 CONFIG.SYS 文件）进行的选择并且有时候是硬件（开关和跳线）都需要“对配置进行配置”才能正常工作。 尽管可以通过添加更多内存或磁盘容量等更改系统配置，但系统的基本结构（其体系结构）保持不变。|  
@@ -1338,7 +1338,7 @@ ms.locfileid: "36017150"
 |存储库 SQL 架构 (Repository SQL schema)|存储库引擎用来管理所有存储库对象、关系和集合的一组标准表。|  
 |存储库类型信息模型 (Repository Type Information Model)|一种表示 Metadata Services 的存储库类型定义的核心对象模型。|  
 |重新发布服务器 (republisher)|发布从发布服务器接收的数据的订阅服务器。|  
-|保留字符 (reserved character)|对程序而言具有特殊意义，因此，正常情况下无法用于为文件、文档和其他用户生成的工具（如宏）指定名称的键盘字符。 字符通常保留供特殊用途包括星号 （*），正斜杠 （/），反斜杠 (\\)，问号 （？） 和垂直条 (&#124;)。|  
+|保留字符 (reserved character)|对程序而言具有特殊意义，因此，正常情况下无法用于为文件、文档和其他用户生成的工具（如宏）指定名称的键盘字符。 字符通常保留用于特殊用途包括星号 （*），正斜杠 （/）、 反斜杠 (\\)、 问号 （？） 和垂直条 (&#124;)。|  
 |解决策略 (resolution strategy)|存储库引擎在选择对象（存在多个版本，并且在调用程序中未指定版本信息）时按顺序评估的一组条件。|  
 |resource|一个特殊变量，它保留着对数据库连接或语句的引用。|  
 |resource|报表服务器数据库中除报表项、文件夹项和共享数据源项以外的任何项。|  

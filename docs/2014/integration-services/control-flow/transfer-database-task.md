@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cb5a9f08218a2533b4d1bcbcec2572b0b929dc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 931978bdad7e2e82d232af85ee253ca8cae7de91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239257"
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
   传输数据库任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两个实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 与只通过复制方式传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的其他任务相比，传输数据库任务既可以复制也可以移动数据库。 此任务还可以用来复制同一个服务器上的数据库。  
@@ -42,7 +42,7 @@ ms.locfileid: "36014349"
 ## <a name="execution-value"></a>执行值  
  在该任务的 `ExecutionValue` 属性中定义的执行值返回值 1，因为与其他传输任务相比，传输数据库任务只能传输一个数据库。  
   
- 通过分配的用户定义变量`ExecValueVariable`传输数据库任务，有关错误消息传输的信息的属性可提供对其他对象的包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 通过将用户定义的变量分配`ExecValueVariable`传输数据库任务，有关错误消息传输的信息的属性可提供给其他对象在包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输数据库任务包括下列自定义日志项：  
@@ -53,7 +53,7 @@ ms.locfileid: "36014349"
   
 -   SourceDB   此日志项列出已传输的数据库的名称。  
   
- 此外的日志项`OnInformation`覆盖目标数据库时，将写入事件。  
+ 此外，一个日志条目`OnInformation`覆盖目标数据库时会写入事件。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  若要使用脱机模式传输数据库，运行包的用户必须是 sysadmin 服务器角色的成员。  

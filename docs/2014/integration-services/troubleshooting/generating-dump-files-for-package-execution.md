@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158968"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>生成包执行的转储文件
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 这些文件中的信息有助于解决包执行问题。  
@@ -37,7 +37,7 @@ ms.locfileid: "36017776"
   
      调用此存储过程以暂停正在运行的包并创建转储文件。  
   
- 如果你正在使用包部署模型部署包，则可以使用 **dtexec** 实用工具或 **dtutil** 实用工具在命令行下指定调试转储选项，来创建调试转储文件。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md) 和 [dtutil Utility](../dtutil-utility.md)。 有关包部署模型的详细信息，请参阅[部署的项目和包](../packages/deploy-integration-services-ssis-projects-and-packages.md)和[包部署&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)。  
+ 如果你正在使用包部署模型部署包，则可以使用 **dtexec** 实用工具或 **dtutil** 实用工具在命令行下指定调试转储选项，来创建调试转储文件。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md) 和 [dtutil Utility](../dtutil-utility.md)。 有关包部署模型的详细信息，请参阅[部署的项目和包](../packages/deploy-integration-services-ssis-projects-and-packages.md)并[包部署&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)。  
   
 ## <a name="debug-dump-file-format"></a>调试转储文件格式  
  指定调试转储选项时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建下列调试转储文件：  

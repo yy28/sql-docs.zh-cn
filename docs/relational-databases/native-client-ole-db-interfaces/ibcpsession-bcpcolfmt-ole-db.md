@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) |Microsoft 文档
+title: 'Ibcpsession:: Bcpcolfmt (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78d7776291a3043c18d30b694839a09f96915e33
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e11dc5983421ce89cf29131212c2d193fda20326
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703658"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432536"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ HRESULT BCPColFmt(
   
  在非交互模式中，对每列只调用它一次，以便将每个列的类型设置为字符或本机类型，并设置列和行终止符。  
   
- **BCPColFmt**方法允许你指定大容量复制的用户文件格式。 对于大容量复制，格式包含以下部分：  
+ **BCPColFmt**方法，可指定大容量复制的用户文件格式。 对于大容量复制，格式包含以下部分：  
   
 -   从用户文件字段到数据库列的映射。  
   
@@ -68,21 +68,21 @@ HRESULT BCPColFmt(
   
 -   可选终止字节序列的长度。  
   
- 每次调用**BCPColFmt**指定一个用户文件字段的格式。 例如，若要更改在五个字段用户数据文件中的三个字段的默认设置，请先调用`BCPColumns(5)`，然后调用**BCPColFmt**五次，有三个设置自定义格式那些调用。 对于剩余的两个调用，设置*eUserDataType*到 BCP_TYPE_DEFAULT 和集*cbIndicator*， *cbUserData*，和*cbUserDataTerm*为 0，BCP_VARIABLE_LENGTH，和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 每次调用**BCPColFmt**指定一个用户文件字段的格式。 例如，若要更改在五个字段的用户数据文件中的三个字段的默认设置，请先调用`BCPColumns(5)`，然后调用**BCPColFmt**五次，其中三次调用设置您的自定义格式。 对于剩余的两个调用，设置*eUserDataType*为 BCP_TYPE_DEFAULT，并将*cbIndicator*， *cbUserData*，和*cbUserDataTerm*为 0、bcp_variable_length 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
 > [!NOTE]  
->  [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)必须任何调用之前调用方法**BCPColFmt**。 必须调用**BCPColFmt**一次针对每个列中的用户文件。 调用**BCPColFmt**不止一次的任何用户文件列会导致错误。  
+>  [Ibcpsession:: Bcpcolumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)到进行任何调用之前，必须在调用方法**BCPColFmt**。 必须调用**BCPColFmt**一次针对每个用户文件中的列。 调用**BCPColFmt**不止一次对任何用户文件列会导致错误。  
   
  不必将用户文件中的所有数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 若要跳过某一列，请指定该列的数据格式，并且将 idxServerCol 参数设置为 0。 若要跳过某一字段，仍然需要所有信息才能让该方法正常工作。  
   
- **请注意** [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)函数可以用于持久保存通过提供的格式规范**BCPColFmt**。  
+ **请注意** [ibcpsession:: Bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)函数可用于维持格式规范通过提供**BCPColFmt**。  
   
 ## <a name="arguments"></a>参数  
  *idxUserDataCol*[in]  
  用户的数据文件中字段的索引。  
   
  *eUserDataType*[in]  
- 用户的数据文件中字段的数据类型。 中列出了可用的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]BCP_TYPE_XXX 的本机客户端标头文件 (sqlncli.h) 格式，例如，BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 大容量复制操作外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和到文件时**eUserDataType**自变量是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC:  
+ 用户的数据文件中字段的数据类型。 中列出可用的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 头文件 (sqlncli.h) 以 BCP_TYPE_XXX 格式，例如，BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 大容量复制操作，共[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到一个文件时**eUserDataType**参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC:  
   
 -   如果源列的数据类型不是 decimal 或 numeric，则使用默认的精度和小数位数。  
   
@@ -94,13 +94,13 @@ HRESULT BCPColFmt(
  *cbUserData*[in]  
  用户文件中该字段的数据的最大长度（单位为字节），不包括任何长度指示器或终止符的长度。  
   
- 设置**cbUserData**于 BCP_LENGTH_NULL 会指示文件字段在数据中的所有值，或是否应设置为 NULL。 设置**cbUserData**于 BCP_LENGTH_VARIABLE 会指示系统将确定每个字段的数据的长度。 对于某些字段，这可能意味着将生成长度/Null 指示器，并将该指示器放在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的数据的前面，或者应当将该指示器放在复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据中。  
+ 设置**cbUserData**为 BCP_LENGTH_NULL 指示文件字段的数据中的所有值，或是否应设置为 NULL。 设置**cbUserData**为 bcp_length_variable，则指示系统应当确定每个字段的数据的长度。 对于某些字段，这可能意味着将生成长度/Null 指示器，并将该指示器放在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的数据的前面，或者应当将该指示器放在复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据中。  
   
- 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符和二进制数据类型， **cbUserData**可以 BCP_LENGTH_VARIABLE、 BCP_LENGTH_NULL，0，或某些正值。 如果**cbUserData**是 BCP_LENGTH_VARIABLE，系统使用长度指示器，如果存在或终止符序列以确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果**cbUserData**是 BCP_LENGTH_VARIABLE，数据类型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符或二进制类型，然后如果一个长度指示符和终止符序列均未指定，系统将返回一条错误消息。  
+ 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符和二进制数据类型**cbUserData**可以是 BCP_LENGTH_VARIABLE，BCP_LENGTH_NULL，0，或某个正值。 如果**cbUserData**是 BCP_LENGTH_VARIABLE，则系统使用长度指示符，如果存在或终止符序列来确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果**cbUserData**是 bcp_length_variable，而且数据类型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符或二进制类型，然后如果长度指示器和终止符序列均未指定，系统将返回一条错误消息。  
   
- 如果**cbUserData**为 0 或正值，系统使用**cbUserData**作为最大数据长度。 但是，如果是，除了一个正**cbUserData**、 提供长度指示器或终止符序列、 系统确定使用最少要复制的数据量会导致方法的数据长度。  
+ 如果**cbUserData**为 0 或正值，则系统使用**cbUserData**作为最大数据长度。 但是，如果除了正**cbUserData**、 提供长度指示器或终止符序列，系统使用导致数据复制量最少的方法来确定数据长度。  
   
- **CbUserData**值表示的数据的字节数。 如果字符数据表示通过 Unicode 宽字符，则一个值为正**cbUserData**参数值表示乘以大小，以字节为单位，每个字符的字符数。  
+ **CbUserData**值表示数据的字节计数。 如果字符数据由 Unicode 宽字符，则正**cbUserData**参数值表示乘以大小，以字节为单位，每个字符的字符数。  
   
  *pbUserDataTerm*[size_is][in]  
  用于字段的终止符序列。 此参数主要用于字符数据类型，因为所有其他类型均属于固定长度，或者在二进制数据的情况下，要求长度指示器以精确记录提供的字节数目。  
@@ -115,23 +115,23 @@ HRESULT BCPColFmt(
  要用于列的终止符序列的长度（单位为字节）。 如果终止符不存在或不希望其出现在数据中，请将该值设置为 0。  
   
  *idxServerCol*[in]  
- 数据库表中列的序号位置。 第一个列编号为 1。 列的序号位置报告的**IColumnsInfo::GetColumnInfo**或类似的方法。 如果该值是 0，则大容量复制将忽略数据文件中的相应字段。  
+ 数据库表中列的序号位置。 第一个列编号为 1。 报告列的序号位置**icolumnsinfo:: Getcolumninfo**或类似的方法。 如果该值是 0，则大容量复制将忽略数据文件中的相应字段。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_FAIL  
- 提供程序特定错误的发生，有关详细的信息的使用[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 有关详细的信息可使用提供程序特定错误发生[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法未调用此方法之前调用。  
+ 意外调用了该方法。 例如， [ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)调用此方法之前，未调用方法。  
   
  E_INVALIDARG  
- 自变量无效。  
+ 参数无效。  
   
  E_OUTOFMEMORY  
- 内存不足的错误。  
+ 内存不足错误。  
   
 ## <a name="see-also"></a>请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
