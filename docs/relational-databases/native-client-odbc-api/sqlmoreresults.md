@@ -1,12 +1,12 @@
 ---
-title: SQLMoreResults |Microsoft 文档
+title: SQLMoreResults |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 604fb375725f195219287155962428fcd413f18b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ae51c2a29a2fc4337d414262c6796156e0091f9c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694788"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413106"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "35694788"
 > [!NOTE]  
 >  在连接到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之前的服务器版本时，仅支持包含 COMPUTE 子句的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SELECT 语句。  
   
- 开发人员可以确定由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 COMPUTE 子句生成的结果集行列的属性。 有关详细信息，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
+ 开发人员可以确定由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 COMPUTE 子句生成的结果集行列的属性。 有关更多详细信息，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
   
- 当**SQLMoreResults**称为 unfetched 的数据在结果集中的行，这些行都将丢失，并且将可从下一个结果行集的行数据。  
+ 当**SQLMoreResults**调用的结果集中存在的数据行，这些行都将丢失，并可从下一步的结果行集中的行数据。  
   
 ## <a name="examples"></a>示例  
   
