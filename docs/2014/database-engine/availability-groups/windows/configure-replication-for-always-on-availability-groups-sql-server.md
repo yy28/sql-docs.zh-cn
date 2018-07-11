@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 80edfc2a5a5d480b6d7acbc88d030881fb0e2e82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a57ba4393c23920b98a407176de51034715a54c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229597"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
   配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制和 AlwaysOn 可用性组涉及七个步骤。 在下面的各节中将详细说明每个步骤。  
@@ -74,7 +73,7 @@ ms.locfileid: "36016666"
   
  **在原始发布服务器上配置发布服务器**  
   
-1.  配置远程分发。 如果正在使用存储的过程来配置发布服务器，运行`sp_adddistributor`。 指定的相同值*@password*所使用`sp_adddistrbutor`运行在分发服务器，以设置分发。  
+1.  配置远程分发。 如果正在使用存储的过程来配置发布服务器，运行`sp_adddistributor`。 指定的相同值*@password*时所使用`sp_adddistrbutor`在分发服务器来设置分发运行。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -137,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用相同的密码，所使用`sp_adddistributor`最初在分发服务器上运行。 如果正在使用存储的过程来配置分发， *@password*参数`sp_adddistributor`用于指定的密码。  
+ 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用相同的密码时所使用`sp_adddistributor`最初在分发服务器上运行。 如果要使用存储的过程来配置分发， *@password*参数的`sp_adddistributor`用于指定的密码。  
   
 ```  
 EXEC sp_adddistributor   
@@ -145,7 +144,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- 在每个辅助副本主机上，确保数据库发布的推送订阅服务器显示为链接服务器。 如果正在使用存储的过程来配置远程发布服务器，使用`sp_addlinkedserver`若要添加的订阅 （如果尚不存在） 作为链接服务器到发布服务器。  
+ 在每个辅助副本主机上，确保数据库发布的推送订阅服务器显示为链接服务器。 如果正在使用存储的过程来配置远程发布服务器，使用`sp_addlinkedserver`以添加订阅服务器 （如果尚不存在） 作为链接服务器到发布服务器。  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -177,14 +176,14 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 `sp_validate_replica_hosts_as_publishers`，以查询有关可用性组的信息。 与不同`sp_validate_redirected_publisher`，它使用调用方的凭据，并且不使用保留在 msdb.dbo.MSdistpublishers 中的登录名连接到可用性组副本。  
+ 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 `sp_validate_replica_hosts_as_publishers`，以查询有关可用性组的信息。 与不同`sp_validate_redirected_publisher`，它使用调用方的凭据，且不使用保留在 msdb.dbo.MSdistpublishers 中的登录名来连接到可用性组副本。  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` 验证辅助副本主机不允许进行读取访问，或需要读取意向指定时，将失败并出现以下错误。  
+>  `sp_validate_replica_hosts_as_publishers` 验证不允许读取访问权限，或要求的次要副本主机读取意图指定时，将失败并出现以下错误。  
 >   
 >  消息 21899，级别 11，状态 1，过程 `sp_hadr_verify_subscribers_at_publisher`，第 109 行  
 >   
->  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅`ALTER AVAILABILITY GROUP`中的语句[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]联机丛书。  
+>  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅`ALTER AVAILABILITY GROUP`中的语句[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]联机丛书。 '。  
 >   
 >  副本主机“MyReplicaHostName”遇到了一个或多个发布服务器验证错误。  
   
@@ -225,7 +224,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>请参阅  
- [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组： 互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  

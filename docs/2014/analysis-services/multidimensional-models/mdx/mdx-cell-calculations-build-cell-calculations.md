@@ -1,5 +1,5 @@
 ---
-title: 构建在 MDX (MDX) 中的单元格计算 |Microsoft 文档
+title: 构建在 MDX (MDX) 中的单元格计算 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated cells [MDX]
 - queries [MDX], cell calculations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d9d00541e51cb25c939f881a8b531892c1bf64d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b0a689858d4012f360e7f3893cfa844f3ecbdcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161348"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>在 MDX 中生成单元计算 (MDX)
   多维表达式 (MDX) 提供许多用于生成计算值（如计算成员、自定义汇总以及自定义成员）的工具。 然而，使用这些功能很难影响一组特定的单元或单个单元。  
@@ -48,7 +48,7 @@ ms.locfileid: "36016949"
   
 ## <a name="see-also"></a>请参阅  
  [ALTER CUBE 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
- [创建单元格计算语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
+ [CREATE CELL CALCULATION 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [创建查询作用域的单元计算&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   

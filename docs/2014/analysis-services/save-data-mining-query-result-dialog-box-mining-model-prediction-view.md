@@ -1,5 +1,5 @@
 ---
-title: 保存数据挖掘查询结果对话框 （挖掘模型预测视图） |Microsoft 文档
+title: 保存数据挖掘查询结果对话框 （挖掘模型预测视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dm.savedataminingqueryresult.f1
 helpviewer_keywords:
 - Save Data Mining Query Result dialog box
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 709c3364ac5b4d6bc159af4ec6db40663d21fcbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ab445225182566db8e4733904a3e66340549a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151618"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>“保存数据挖掘查询结果”对话框（“挖掘模型预测”视图）
   使用 **“保存数据挖掘查询结果”** 对话框，可将数据挖掘查询的结果保存到新表中。  
@@ -53,7 +53,7 @@ ms.locfileid: "36016944"
   
  如果多个列具有相同的名称（例如多个派生列可能具有默认的列名 **Expression**），你必须为具有重复名称的每个列创建一个别名。 如果这些列没有唯一名称，则当设计器尝试将结果保存到 SQL Server 时将出错，因为表中的列必须要有唯一名称。  
   
- **将添加到 DSV**  
+ **添加到数据源视图**  
  （可选）如果希望将表添加到现有数据源中，请选择项目中包含的数据源视图。  
   
  如果您想在同一数据源中保留模型的所有相关表（如定型数据、预测源数据和查询结果），此选项很有用。  

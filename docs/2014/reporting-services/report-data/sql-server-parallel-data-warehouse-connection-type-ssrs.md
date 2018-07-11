@@ -8,40 +8,40 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7a8ce540cb3ecf555e5abc22a1927482409bc582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b1b12938e2043ee126c81313fc955454742bcde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149408"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 是一种可扩展的数据仓库装置，提供了性能和可伸缩性通过大规模并行处理。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]进行分布式处理和数据存储的数据库。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 是一种可缩放的数据仓库工具，可提供性能和可伸缩性通过大规模并行处理。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]数据库进行分布式处理和数据存储。  
   
  该工具可跨多个物理节点对大型数据库表进行分区，每个节点运行自己的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]实例。 当报表连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 以检索报表数据时，它将连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 工具中的控制节点，该节点负责管理查询处理。 建立连接后，无论是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 环境内部还是外部的 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 实例，都没有任何区别。  
   
- 若要包含来自[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]您的报表，您必须拥有一个基于的报表数据源的类型的数据集[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并行数据仓库。 此内置的数据源类型取决于[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并行数据仓库数据扩展插件。 使用此数据源类型可连接到并从中检索数据[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]。  
+ 若要包含来自[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]在报表中必须具有基于的报表数据源的类型的数据集[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并行数据仓库。 此内置数据源类型基于[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并行数据仓库数据扩展插件。 使用此数据源类型可连接到并从中检索数据[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]。  
   
  此数据扩展插件支持多值参数、服务器聚合以及与连接字符串分开管理的凭据。  
   
  有关详细信息，请参阅网站 [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ##  <a name="Connection"></a> 连接字符串  
- 连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]时，也会连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 工具中的数据库对象。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。 请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定示例数据库中， **CustomerSales**中[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]设备：  
+ 连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]时，也会连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 工具中的数据库对象。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。 请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定示例数据库**CustomerSales**，请在[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]设备：  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
 ```  
   
- 此外，可以使用 **“数据源属性”** 对话框提供用户名和密码等凭据。系统会自动将 `User Id` 和 `Password` 选项追加到连接字符串中，您无需将它们作为连接字符串的一部分键入。 用户界面还提供了选项，以指定中的控件节点的 IP 地址[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]设备和端口号。 默认情况下，该端口为 17000。 该端口可由管理员配置，您的连接字符串可能会使用不同的端口号。  
+ 此外，可以使用 **“数据源属性”** 对话框提供用户名和密码等凭据。系统会自动将 `User Id` 和 `Password` 选项追加到连接字符串中，您无需将它们作为连接字符串的一部分键入。 用户界面还提供了选项来指定中的控制节点的 IP 地址[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]设备和端口号。 默认情况下，该端口为 17000。 该端口可由管理员配置，您的连接字符串可能会使用不同的端口号。  
   
  有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
@@ -67,7 +67,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   以交互方式生成查询。 使用关系查询设计器，此设计器显示表、视图及其他数据库项按数据库架构组织的层次结构视图。 选择表或视图中的列。 通过指定筛选条件、分组和聚合，限制要检索的数据行数。 通过设置参数选项自定义报表运行时的筛选器。  
   
--   键入或粘贴查询。 使用基于文本的查询设计器来输入[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]文本直接，粘贴来自另一个源，输入不能使用关系查询设计器中，生成的复杂查询，或输入基于查询的表达式的查询文本。  
+-   键入或粘贴查询。 使用基于文本的查询设计器输入[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]文本直接，粘贴来自其他源，可以输入不能通过使用关系查询设计器中，生成的复杂查询或输入基于查询的表达式的查询文本。  
   
 -   从文件或报表中导入现有的查询。 使用任一查询设计器中的 **“导入查询”** 按钮浏览到 .sql 文件或 .rdl 文件，然后导入查询。  
   
@@ -81,14 +81,14 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  如果不对数据进行聚合和汇总以减少查询返回的行数，从大型数据库（包括 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 等数据仓库）检索报表数据的查询所生成的结果集就可能会包含大量的行。 您可以使用图形查询设计器或基于文本的查询设计器，编写包括聚合和分组的查询。  
   
- [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 支持的查询设计器提供的用于汇总数据子句、 关键字和聚合。  
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 支持的查询设计器提供的用于汇总数据的子句、 关键字和聚合。  
   
- [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，有助于编写仅检索摘要数据的查询。 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)]语言功能包括： GROUP BY 子句、 DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供完全支持[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]语言，包括分组和聚合。  
+ [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，有助于编写仅检索摘要数据的查询。 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)]语言功能包括： GROUP BY 子句、 DISTINCT 关键字和 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对完全支持[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]语言，包括分组和聚合。  
   
  有关 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
   
 ###  <a name="QueryText"></a> 使用 Text 查询类型  
- 在基于文本的查询设计器中，可以键入 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 命令来定义数据集中的数据。 使用要从中检索数据的查询[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]与你使用的实例从检索数据的相同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中不运行[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]应用程序。 例如，以下[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]查询选择职位为销售助理的所有员工的名称：  
+ 在基于文本的查询设计器中，可以键入 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 命令来定义数据集中的数据。 使用要从中检索数据的查询[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]使用的实例从检索数据的相同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]内未运行[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]应用程序。 例如，以下[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]查询选择职位为销售助理的所有雇员的姓名：  
   
 ```  
 SELECT  
@@ -138,7 +138,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
- [添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   

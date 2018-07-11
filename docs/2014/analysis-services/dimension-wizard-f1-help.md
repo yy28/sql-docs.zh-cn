@@ -1,5 +1,5 @@
 ---
-title: 维度向导的 F1 帮助 |Microsoft 文档
+title: 维度向导的 F1 帮助 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ec7bcbe9ab41d78b701ee792169f3363105e6f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee5540e7421893a5e4639025704b0a636dc791cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153388"
 ---
 # <a name="dimension-wizard-f1-help"></a>维度向导的 F1 帮助
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的维度向导，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中创建数据库维度。 创建数据库维度后，可以使用维度设计器修改其属性。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
