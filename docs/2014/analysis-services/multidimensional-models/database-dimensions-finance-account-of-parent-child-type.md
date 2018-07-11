@@ -1,5 +1,5 @@
 ---
-title: 创建父-子类型维度的财务帐户 |Microsoft 文档
+title: 创建父子类型维度的财务帐户 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259593"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>创建父子类型的财务帐户维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，帐户类型的维度是指其属性表示用于财务报表用途的会计科目表的维度。  
   
  使用帐户维度，您可以有选择地管理一段时间内帐户间的聚合行为。 帐户维度还允许您使用标准机制来解决通常在处理财务数据的商业智能解决方案中遇到的大多非标准聚合问题。 如果不具有此标准机制，那么，解决这些非标准聚合问题就需要自定义汇总公式、计算成员或多维表达式 (MDX) 脚本。  
   
- 若要标识为帐户维度的维度，设置`Type`到维度属性`Accounts`。  
+ 若要标识为帐户维度的维度，请设置`Type`属性的维度与`Accounts`。  
   
 ## <a name="dimension-structure"></a>维度结构  
  帐户维度至少包含两种属性：  
@@ -40,7 +40,7 @@ ms.locfileid: "36013921"
   
 -   帐户属性 - 说明如何在帐户维度按层次结构排列帐户的父属性。  
   
-     若要标识为帐户特性的特性，将设置`Type`属性的特性的`Account`和`Usage`属性`Parent`。  
+     若要标识为帐户特性的属性，请设置`Type`将属性的属性`Account`并`Usage`属性设置为`Parent`。  
   
  帐户维度也可以包含以下属性：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36013921"
   
 -   帐户名称属性 - 用于报表用途的属性。 您可以通过将特性的 `Type` 属性设置为 `AccountName` 以标识帐户名称特性。  
   
--   帐号属性 - 用于报表用途的属性。 通过设置标识帐号属性`Type`属性的特性的`AccountNumber`。  
+-   帐号属性 - 用于报表用途的属性。 通过设置标识帐号特性`Type`将属性的属性`AccountNumber`。  
   
  有关属性类型的详细信息，请参阅 [配置属性类型](attribute-properties-configure-attribute-types.md)。  
   
