@@ -1,12 +1,12 @@
 ---
-title: SQLSpecialColumns |Microsoft 文档
+title: SQLSpecialColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,22 +18,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83800ef5c07d73413c236a890e2aea59d00d9437
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b818c8efc35d4dde76cecc153e09748619e42d61
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701088"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424806"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  当请求行标识符 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**任何请求之外 SQL_SCOPE_CURROW 范围，则返回空结果集 （没有任何数据行）。 生成的结果集指示仅在此作用域内这些列有效。  
+  请求行标识符 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**返回空结果集 （没有任何数据行） 的任何请求的除 sql_scope_currow 之外的作用域。 生成的结果集指示仅在此作用域内这些列有效。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将作为 SQL_PC_NOT_PSEUDO 标识的所有列。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将所有列都标识为 SQL_PC_NOT_PSEUDO。  
   
- **SQLSpecialColumns**可以执行对静态游标。 尝试执行**SQLSpecialColumns**上 SQL_SUCCESS_WITH_INFO，该值指示游标类型已更改可更新 （键集驱动或动态） 返回。  
+ **SQLSpecialColumns**可以对静态游标执行。 尝试执行**SQLSpecialColumns**上可更新 （由键集驱动或动态） 返回 sql_success_with_info 以指示游标类型已更改。  
   
 ## <a name="sqlspecialcolumns-support-for-enhanced-date-and-time-features"></a>SQLSpecialColumns 对日期和时间增强功能的支持  
  有关值的信息的列 DATA_TYPE、 TYPE_NAME、 COLUMN_SIZE、 BUFFER_LENGTH 和 DECIMAL_DIGTS 为日期/时间类型返回，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  

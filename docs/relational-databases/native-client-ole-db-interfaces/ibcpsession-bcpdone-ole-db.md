@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft 文档
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694544"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421496"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,14 +41,14 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 可以在调用任何其他操作[IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)之后调用的接口**BCPDone**方法。 唯一方法就是调用[IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法可开始新的大容量复制操作。 这是类似于调用[IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
+ 可以调用任何其他操作[IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)界面后调用**BCPDone**方法。 唯一方法就是调用[ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法以启动新的大容量复制操作。 这是类似于调用[irowsetfastload:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， **BCPInit**方法未调用此方法之前调用。  
+ 意外调用了该方法。 例如， **BCPInit**调用此方法之前，未调用方法。  
   
 ## <a name="example"></a>示例  
  此示例演示如何使用**IBCPSession**接口。  
