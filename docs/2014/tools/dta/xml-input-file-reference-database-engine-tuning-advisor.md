@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183484"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 输入文件引用（数据库引擎优化顾问）
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可以使用 XML 输入文件来优化数据库。 此 XML 文件指定要用于优化会话的数据库、表、工作负荷文件或表以及优化选项。 您还可以使用此文件指定一个用户指定的配置来执行“假设”分析。  
@@ -58,7 +58,7 @@ ms.locfileid: "36017232"
   
 ## <a name="server-elements"></a>服务器元素  
   
--   [服务器的名称元素&#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [服务器名称元素&#40;DTA&#41;](name-element-for-server-dta.md)  
   
 -   [服务器的数据库元素&#40;DTA&#41;](database-element-for-server-dta.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36017232"
   
 -   [文件元素&#40;DTA&#41;](file-element-dta.md)  
   
--   [为工作负荷的数据库元素&#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [工作负荷的数据库元素&#40;DTA&#41;](database-element-for-workload-dta.md)  
   
 -   [EventString 元素&#40;DTA&#41;](eventstring-element-dta.md)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "36017232"
   
 ## <a name="configuration-elements"></a>配置元素  
   
--   [配置的服务器元素&#40;DTA&#41;](server-element-for-configuration-dta.md)  
+-   [用于配置的服务器元素&#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
--   [有关配置的数据库元素&#40;DTA&#41;](database-element-for-configuration-dta.md)  
+-   [配置的数据库元素&#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
 -   [建议元素&#40;DTA&#41;](recommendation-element-dta.md)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36017232"
   
 -   [架构的名称元素&#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [架构的表元素&#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [表的架构元素&#40;DTA&#41;](table-element-for-schema-dta.md)  
   
 -   [表的名称元素&#40;DTA&#41;](name-element-for-table-dta.md)  
   

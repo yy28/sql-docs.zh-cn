@@ -1,5 +1,5 @@
 ---
-title: 指定处理选项 |Microsoft 文档
+title: 指定处理选项 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, processing options
 - input files [Analysis Services]
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Analysis Services Deployment Wizard, processing options
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7035045d1d55e9158431dd4245b9d5112b2df0a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5f20e9061aae762eda6b773c7bdb345273fd1b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149098"
 ---
 # <a name="specifying-processing-options"></a>指定处理选项
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取中的处理选项\<*项目名称*>.deploymentoptions 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用上指定的处理选项**部署**页*\<项目名称 >* **属性页**对话框创建\<*项目名称*>.deploymentoptions 文件。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取处理选项从\<*项目名称*>.deploymentoptions 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用上指定的处理选项**部署**页*\<项目名称 >* **属性页**对话框中，若要创建\<*项目名称*>.deploymentoptions 文件。  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>检查部署的处理选项  
- 存储中的配置设置\<*项目名称*>.deploymentoptions 文件如下所示：  
+ 中存储的配置设置\<*项目名称*>.deploymentoptions 文件如下所示：  
   
 -   **处理方法** 此设置将控制在部署后是否处理部署的对象以及将执行的处理的类型。 有以下三个处理选项：  
   
@@ -51,12 +51,12 @@ ms.locfileid: "36017439"
   
 -   **事务性部署** 此设置控制元数据更改和进程命令的部署是在单个事务中进行还是在多个单独的事务中进行。  
   
-    -   如果此选项，则`True`（默认值）、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署所有元数据更改和单个事务中的所有处理命令。  
+    -   如果此选项为`True`（默认值），[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署所有元数据更改和单个事务中的所有进程命令。  
   
-    -   如果此选项，则`False`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署在单个事务中，将元数据更改，并将部署在其自己的事务中每个处理命令。  
+    -   如果此选项为`False`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署在单个事务中，将元数据更改并部署在其自己的事务中每个处理命令。  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>修改部署的处理选项  
- 但是，你可能需要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目使用比存储在不同的处理选项\<*项目名称*>.deploymentoptions 文件。 例如，您也可能要完全处理所有对象，使用默认处理选项进行处理，也可不进行任何处理。 如果多维数据集或维度启用了写操作，则可以指定是使用新的写回表还是现有的写回表。  
+ 但是，您可能需要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的处理选项的选项存储在项目\<*项目名称*>.deploymentoptions 文件。 例如，您也可能要完全处理所有对象，使用默认处理选项进行处理，也可不进行任何处理。 如果多维数据集或维度启用了写操作，则可以指定是使用新的写回表还是现有的写回表。  
   
  若要修改部署过程中使用的处理选项，可以编辑和重新生成项目，也可以通过使用下列步骤中介绍的方法之一来更改输入文件中的处理选项。  
   

@@ -1,5 +1,5 @@
 ---
-title: IpAddresses 属性 （ServerNetworkProtocol 类） |Microsoft 文档
+title: IpAddresses 属性 （ServerNetworkProtocol 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IpAddresses property
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9f1d047004ae92ca587f48ad7ccf6319b420e01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 20979e9647d2d80f7498a5ec517d7403cd0ccf83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150618"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses 属性（ServerNetworkProtocol 类）
   获取与服务器网络协议关联的 IP 地址。  
@@ -43,10 +43,10 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A`ServerNetworkProtocol`对象，表示的实例所使用的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个`ServerNetworkProtocol`对象，表示使用的实例的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 数组[ServerNetworkProtocolIPAdress 类](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)表示支持的服务器网络协议的 IP 地址的对象。  
+ 一个数组[ServerNetworkProtocolIPAdress 类](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)对象表示服务器网络协议支持的 IP 地址。  
   
 ## <a name="remarks"></a>Remarks  
   

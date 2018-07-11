@@ -1,5 +1,5 @@
 ---
-title: CaptionIsMdx 元素 (ASSL) |Microsoft 文档
+title: CaptionIsMdx 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaptionIsMdx element
 ms.assetid: 7569a75e-b3e0-4332-97d3-585abc546ada
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 624998a5bc65b1cfa9e0f61f93ef5e860210d697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e99bc43634d27526ed6d18012b904818f43cf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165188"
 ---
 # <a name="captionismdx-element-assl"></a>CaptionIsMdx 元素 (ASSL)
   定义是否为标题[操作](../objects/action-element-assl.md)元素是一个多维表达式 (MDX) 表达式。  
@@ -62,7 +62,7 @@ ms.locfileid: "36016466"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`CaptionIsMdx`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
+ 父级对应的元素`CaptionIsMdx`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

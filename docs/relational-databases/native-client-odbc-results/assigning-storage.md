@@ -1,12 +1,12 @@
 ---
-title: 分配存储 |Microsoft 文档
+title: 将存储分配 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1c9a317e57367b43a59219b830acfd8f0276e8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: da602e1613a6fafa86f1f6a701731c232aadfceb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695778"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417836"
 ---
 # <a name="assigning-storage"></a>分配存储区
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "35695778"
   
 -   当每个列绑定到自身的变量数组时，将完成按列绑定。  
   
-     按列绑定指定通过调用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)与*属性*设置为 SQL_ATTR_ROW_BIND_TYPE 和*ValuePtr*设置为 SQL_BIND_BY_COLUMN。 所有数组的元素个数必须相同。  
+     指定按列绑定通过调用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)与*特性*设置为 SQL_ATTR_ROW_BIND_TYPE 和*ValuePtr*设置为 SQL_BIND_BY_COLUMN。 所有数组的元素个数必须相同。  
   
 -   当 SQL 语句中的所有参数作为一个单元绑定到包含这些参数中各个变量的结构数组时，将完成按行绑定。  
   
-     按行绑定指定通过调用**SQLSetStmtAttr**与*属性*设置为 SQL_ATTR_ROW_BIND_TYPE 和*ValuePtr*设置为结构控股的大小设置将接收的结果的变量的列。  
+     指定按行绑定通过调用**SQLSetStmtAttr**与*特性*设置为 SQL_ATTR_ROW_BIND_TYPE 和*ValuePtr*设置为结构持有锁的大小变量将接收结果集列。  
   
  应用程序还将 SQL_ATTR_ROW_ARRAY_SIZE 设置为列或行数组中的元素个数，并设置 SQL_ATTR_ROW_STATUS_PTR 和 SQL_ATTR_ROWS_FETCHED_PTR。  
   

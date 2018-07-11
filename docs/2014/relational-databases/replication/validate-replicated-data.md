@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
 - administering replication, validating data
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 678d5865b379ac1151f4cf85f63b77720ef4005a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0fad815b99f6daf9ba14e765f394cfe1e416aaa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211217"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
   通过事务复制和合并复制，您可以验证订阅服务器中的数据与发布服务器中的数据是否匹配。 可以对特定订阅或某一发布的所有订阅执行验证。 指定下列验证类型之一，分发代理或合并代理便会在下次运行时验证数据：  
@@ -48,7 +48,7 @@ ms.locfileid: "36017060"
   
  若要处理验证失败，请考虑以下事项：  
   
--   配置名为 **“复制: 订阅服务器未通过数据验证”** 的复制警报，以便您在验证失败时得到通知。 有关详细信息，请参阅 [配置预定义的复制警报&#40;SQL Server Management Studio 和 #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。  
+-   配置名为 **“复制: 订阅服务器未通过数据验证”** 的复制警报，以便您在验证失败时得到通知。 有关详细信息，请参阅 [配置预定义的复制警报&#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。  
   
 -   验证失败是否已对您的应用程序带来问题？ 如果验证失败带来了问题，请手动更新数据以进行同步，或者重新初始化订阅：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36017060"
   
 -   可以对任何发布的表使用二进制校验和。 校验和无法验证带有列筛选器的表或列偏移量不一致的逻辑表结构（由于存在用于删除或添加列的 ALTER TABLE 语句）。  
   
--   复制验证将使用`checksum`和**binary_checksum**函数。 有关其行为的信息，请参阅[校验和 (Transact-SQL)](/sql/t-sql/functions/checksum-transact-sql) 和 [BINARY_CHECKSUM (Transact-SQL)](/sql/t-sql/functions/binary-checksum-transact-sql)。  
+-   复制验证使用`checksum`并**binary_checksum**函数。 有关其行为的信息，请参阅[校验和 (Transact-SQL)](/sql/t-sql/functions/checksum-transact-sql) 和 [BINARY_CHECKSUM (Transact-SQL)](/sql/t-sql/functions/binary-checksum-transact-sql)。  
   
 -   如果订阅服务器与发布服务器上的数据类型不同，则使用二进制校验和或校验和进行的验证可能会错误地报告失败。 如果执行以下操作之一，则可能出现上述情况：  
   

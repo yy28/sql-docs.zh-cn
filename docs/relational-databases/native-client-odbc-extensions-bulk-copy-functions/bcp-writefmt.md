@@ -1,12 +1,12 @@
 ---
-title: bcp_writefmt |Microsoft 文档
+title: bcp_writefmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6486dcf5d77ae1543c85947e2f62efed625979fc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 79061d9b12fa21e015c74fd35804efbf097f4db3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697758"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412116"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ RETCODE bcp_writefmt (
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 为大容量复制启用 ODBC 连接句柄。  
+ 是大容量复制启用 ODBC 连接句柄。  
   
  *szFormatFile*  
  接收数据文件格式值的用户文件的路径和文件名。  
@@ -55,14 +55,14 @@ RETCODE bcp_writefmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>Remarks  
- 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)定义数据文件的格式。 **bcp_writefmt**在引用的文件中保存此定义*szFormatFile*。 有关详细信息，请参阅[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
+ 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)并[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)定义数据文件的格式。 **bcp_writefmt**引用的文件中保存此定义*szFormatFile*。 有关详细信息，请参阅[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
- 有关详细信息的结构有关**bcp**数据格式文件，请参阅[导入和导出大容量数据使用 bcp 实用工具&#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
+ 有关结构的详细信息**bcp**数据格式文件，请参阅[导入和导出大容量数据使用 bcp 实用工具&#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
   
- 若要加载保存的格式文件，使用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)。  
+ 若要加载已保存的格式化文件，请使用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)。  
   
 > [!NOTE]  
->  格式化文件由**bcp_writefmt**仅受版本的**bcp**实用程序随[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 及更高版本。  
+>  生成格式化文件**bcp_writefmt**仅受新版**bcp**实用程序一起分发[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 和更高版本。  
   
 ## <a name="example"></a>示例  
   

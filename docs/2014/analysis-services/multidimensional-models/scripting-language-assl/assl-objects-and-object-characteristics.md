@@ -1,5 +1,5 @@
 ---
-title: ASSL 对象和对象特征 |Microsoft 文档
+title: ASSL 对象和对象特征 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e5f98511df4b952f6598909d1cea2c373ff7476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e2277f9d618dfc13c4fe93ea6a565550ec1e87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277893"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 对象和对象特征
   Analysis Services 脚本语言 (ASSL) 中的对象遵循关于对象组、继承、命名、扩展和处理的特定准则。  
   
 ## <a name="object-groups"></a>对象组  
- 所有[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象具有 XML 表示形式。 这些对象分为以下两组：  
+ 所有[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象都有 XML 表示形式。 这些对象分为以下两组：  
   
  **主要对象**  
  可以单独创建、更改和删除主要对象。 主要对象包括：  
@@ -91,14 +91,14 @@ ms.locfileid: "36013931"
 ## <a name="object-expansion"></a>对象扩展  
  `ObjectExpansion` 限制可用于控制服务器返回的 ASSL XML 扩展的程度。 此限制具有下表所列的选项。  
   
-|枚举值|允许\<Alter >|Description|  
+|枚举值|允许\<更改 >|Description|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|否|只返回请求对象以及以递归方式包含的所有主要对象的名称、ID 和时间戳。|  
 |*ObjectProperties*|是|展开请求的对象和次要包含对象，但不返回主要包含对象。|  
-|*ExpandObject*|否|与相同*ObjectProperties*，但也会返回名称、 ID 以及包含主要对象的时间戳。|  
+|*ExpandObject*|否|与相同*ObjectProperties*，但也会返回名称、 ID 和所包含主要对象的时间戳。|  
 |*ExpandFull*|是|完全展开请求的对象以及所有以递归方式包含的对象。|  
   
- 此 ASSL 参考部分描述*ExpandFull*表示形式。 所有其他 `ObjectExpansion` 级别都派生自此级别。  
+ 本 ASSL 参考部分介绍*ExpandFull*表示形式。 所有其他 `ObjectExpansion` 级别都派生自此级别。  
   
 ## <a name="object-processing"></a>对象处理  
  ASSL 包含只读元素或属性（例如 `LastProcessed`），这些元素或属性可从 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例读取，但在向该实例提交命令脚本时将被忽略。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 忽略只读元素的已修改值，并且不发出警告或错误。  
