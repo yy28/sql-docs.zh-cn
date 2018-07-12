@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7f33036175d395359efbdb5708a422b27bf711db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153868"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 在 SharePoint 管理中心内管理服务应用程序。 “管理”和“属性”页允许您更新服务应用程序的配置及常见管理任务。  
@@ -94,7 +94,7 @@ ms.locfileid: "36124282"
   
 |设置|注释|  
 |-------------|--------------|  
-|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 实例时都提供 SQL Server 登录名。 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅[Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
+|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 实例时都提供 SQL Server 登录名。 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅[报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)|  
 |保留执行日志的天数|默认值为 60 天。|  
   
  所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 都支持 SharePoint ULS 日志记录。  有关详细信息，请参阅[为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -131,7 +131,7 @@ ms.locfileid: "36124282"
   
 |第|Description|  
 |----------|-----------------|  
-|备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 您应考虑将存储正在运行的一个不同的计算机上的密钥文件[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 默认文件名称与服务应用程序名称相同。|  
+|备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 您应考虑将存储正在运行的另一台计算机上的密钥文件[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 默认文件名称与服务应用程序名称相同。|  
 |还原加密密钥|1) 在“文件位置”框中键入或浏览密钥文件<br /><br /> 2) 在“密码”框中，键入用于备份加密文件的密码。<br /><br /> 3) 单击“确定”|  
 |更改加密密钥|此操作将创建一个新密钥，并且重新加密您已加密的内容。 如果有很多内容，此操作可能需要几个小时。<br /><br /> 完成更改加密密钥操作后，建议您备份新密钥。|  
 |删除加密的内容|删除的内容无法恢复。<br /><br /> **\*\* 重要提示 \*\*** 删除和重新创建对称密钥的操作不能逆转或撤消。 删除或重新创建该密钥可能对您当前的安装产生重要影响。 如果删除对称密钥，则使用此密钥加密的所有现有数据也将被删除。 删除的数据包括指向外部报表数据源的连接字符串、存储的连接字符串和某些订阅信息。|  
@@ -195,7 +195,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  在“服务应用程序关联”页中，将视图更改为 **“服务应用程序”**。  
   
-3.  找到然后单击的新名称[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
+3.  找到并单击将新的名称[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
   
 4.  在 **“编辑以下连接组”** 选择框中，选择 **自定义**。  
   

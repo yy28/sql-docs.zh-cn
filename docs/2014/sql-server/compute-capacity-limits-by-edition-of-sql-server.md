@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157538"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   本主题讨论不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的计算能力限制，以及在具有超线程处理器的物理和虚拟化环境中计算能力限制有何不同。  
@@ -96,7 +96,7 @@ ms.locfileid: "36123777"
 |Express with Tools|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |Express with Advanced Services|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
   
- <sup>1</sup> Enterprise Edition 服务器 + 客户端访问许可证 (CAL) 基于授权 （不可用于新协议） 仅限于最多 20 个内核，每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 基于内核的服务器许可模型没有限制。  
+ <sup>1</sup> Enterprise Edition 配合服务器 + 客户端访问许可证 (CAL) 基于许可 （对新协议不可用），限制为最多 20 个内核，每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 基于内核的服务器许可模型没有限制。  
   
  在虚拟化环境中，计算能力限制基于逻辑处理器的数目，而不是内核数目，这是因为处理器体系结构对来宾应用程序不可见。  例如，如果服务器的四个插槽中插入了四核处理器，同时该服务器每个内核可支持两个超线程，这样在启用超线程时就有 32 个逻辑处理器，在禁用超线程时只有 16 个逻辑处理器。 这些逻辑处理器可映射到服务器上的虚拟机，而这些虚拟机在该逻辑处理器上的计算负载映射到主机服务器中物理处理器上的执行线程。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36123777"
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 的版本和组件](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 的版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 的最大容量规范](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [SQL Server 2014 安装快速入门](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   

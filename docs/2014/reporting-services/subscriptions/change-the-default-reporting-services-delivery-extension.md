@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b2fa8916d222694c26e4a3bef50cb447eeafbeec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b232859f61efbfb6de2a0c27fb34af8cb99252c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183854"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>更改默认 Reporting Services 传递扩展插件
   你可以通过修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置设置，来更改显示在订阅定义页的“传递方式”  列表中的默认传递扩展插件。 例如，你可以修改该配置，以便在用户创建新订阅时，文件共享传递（而非电子邮件传递）默认处于选中状态。 你还可以更改传递扩展插件在用户界面中的排列顺序。  
@@ -55,7 +55,7 @@ ms.locfileid: "36028939"
   
 1.  此过程中的步骤可用于修改该配置，以便“文件共享传递”可作为第一个选项列在 UI 中，并默认处于选中状态。  
   
-     在文本编辑器中打开 RSReportServer.config 文件。 有关配置文件的详细信息，请参阅[RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。 更改该配置后，UI 的外观将类似于下图：  
+     在文本编辑器中打开 RSReportServer.config 文件。 有关配置文件的详细信息，请参阅[RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)。 更改该配置后，UI 的外观将类似于下图：  
   
      ![修改后的传递扩展插件的列表](../media/ssrs-modified-delivery.png "modified list of delivery extensions")  
   
@@ -96,13 +96,13 @@ ms.locfileid: "36028939"
      已修改 RSReportServer.config 文件  
   
 ## <a name="sharepoint-mode-report-servers"></a>SharePoint 模式报表服务器  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在 SharePoint 服务应用程序数据库和不非 RsrReportServer.config 文件中，SharePoint 模式下存储扩展信息。 在 SharePoint 模式下，传递扩展插件配置将使用 PowerShell 进行修改。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式下在 SharePoint 服务应用程序数据库并不是非 RsrReportServer.config 文件中存储扩展信息。 在 SharePoint 模式下，传递扩展插件配置将使用 PowerShell 进行修改。  
   
 #### <a name="configure-the-default-delivery-extension"></a>配置默认传递扩展插件  
   
 1.  打开“SharePoint Management Shell” 。  
   
-2.  如果你已经知道的名称，则可以跳过此步骤你[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]服务应用程序。 使用以下 PowerShell 到列表[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]服务在你的 SharePoint 场中的应用程序。  
+2.  如果您已经知道的名称，可以跳过此步骤中你[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]服务应用程序。 使用以下列表对 PowerShell[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]服务在 SharePoint 场中的应用程序。  
   
     ```  
     get-sprsserviceapplication | format-list *  
@@ -118,8 +118,8 @@ ms.locfileid: "36028939"
 ## <a name="see-also"></a>请参阅  
  [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
  [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
- [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Reporting Services 中的文件共享传递](file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的电子邮件传递](e-mail-delivery-in-reporting-services.md)   
- [针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

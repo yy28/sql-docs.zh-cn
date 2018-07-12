@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec3a9c752a3ba03f61b21e6280afe47361435784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258213"
 ---
 # <a name="use-column-sets"></a>使用列集
   使用稀疏列的表可以指定一个列集以返回表中的所有稀疏列。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列组合成为一种结构化的输出。 列集与计算列的相似之处在于，列集并不是物理地存储在表中。 列集与计算列的不同之处在于，列集可直接更新。  
@@ -97,7 +97,7 @@ ms.locfileid: "36028319"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>在列集中插入或修改数据  
  可以通过以下方法来执行稀疏列的数据操作：使用单个列的名称，或者引用列集的名称并使用列集的 XML 格式来指定列集的值。 稀疏列可以按任何顺序出现在 XML 列中。  
   
- 当插入或使用 XML 列集更新稀疏列值时，插入基础稀疏列的值隐式转换从`xml`数据类型。 对于数值列，数值列的 XML 中的空白值将转换为空字符串。 这会导致在数值列中插入零，如下面的示例所示。  
+ 当插入或使用 XML 列集更新稀疏列值时，插入基础稀疏列的值被隐式转换从`xml`数据类型。 对于数值列，数值列的 XML 中的空白值将转换为空字符串。 这会导致在数值列中插入零，如下面的示例所示。  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -111,7 +111,7 @@ GO
  在本示例中，没有为 `i`列指定值，但插入了 `0` 值。  
   
 ## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 数据类型  
- `sql_variant`日期类型可以存储多个不同的数据类型，例如`int`， `char`，和`date`。 列集会输出数据类型信息（例如与 `sql_variant` 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
+ `sql_variant`日期类型可以存储多个不同的数据类型，如`int`， `char`，和`date`。 列集会输出数据类型信息（例如与 `sql_variant` 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
   
 |数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|精度|小数位数|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

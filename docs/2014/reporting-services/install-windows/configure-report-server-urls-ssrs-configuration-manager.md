@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
@@ -18,13 +18,13 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e16c0149e7d0a590d3bf89ce6632a654bcb233c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 085eaf6b8b21462f675d2eca2033cbf8cfa4efa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230597"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
   在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，Url 用于访问报表服务器 Web 服务和报表管理器。 在可以使用任一应用程序之前，必须分别为 Web 服务和报表管理器至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
@@ -71,16 +71,16 @@ ms.locfileid: "36028516"
  [配置 URL &#40;SSRS 配置管理器&#41;](configure-a-url-ssrs-configuration-manager.md)  
  本主题提供了在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中设置和修改 URL 预留的说明。  
   
- [有关 URL 保留和注册&#40;SSRS 配置管理器&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [关于 URL 保留和注册&#40;SSRS 配置管理器&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  URL 用于访问应用程序和报表。 本主题说明了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的应用程序 URL、默认 URL 以及 URL 预留和注册的工作方式。  
   
  [URL 预留语法（SSRS 配置管理器）](url-reservation-syntax-ssrs-configuration-manager.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的默认 URL 预留对于大多数情况都是有效的。 但是，如果要限制访问权限或扩展部署以启用 Internet 或 Extranet 访问，则可能要自定义设置以适合您的要求。 本主题说明了 URL 预留的语法并为如何创建针对特定部署的自定义预留提供了建议。  
   
- [在配置文件中的 Url &#40;SSRS 配置管理器&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [配置文件中的 Url &#40;SSRS 配置管理器&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  RSReportServer.config 文件包含了 URL 预留的多个条目以及由报表管理器和报表服务器电子邮件传递使用的 URL。 本主题概述了 URL 配置设置以便您可以了解它们之间如何进行比较。  
   
- [多实例的 URL 保留项报告服务器部署&#40;SSRS 配置管理器&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [URL 保留项的多实例报表服务器部署&#40;SSRS 配置管理器&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  当在一台计算机中安装多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例时，如果已注册某个 URL，便会增加 URL 重复的可能性。 若要避免这些错误，请遵循本主题中针对创建特定于实例的 URL 预留的建议。  
   
 ## <a name="see-also"></a>请参阅  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258423"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 课：创建合并发布订阅
   在本课中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建订阅。 然后，为订阅数据库设置权限，并手动生成新订阅的筛选数据快照。 本课程要求已完成上一课， [第 1 课：使用合并复制发布数据](lesson-1-publishing-data-using-merge-replication.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "36027648"
   
 5.  在“合并代理位置”页上，单击“在其订阅服务器上运行每个代理”，然后单击“下一步”。  
   
-6.  在订阅服务器页上，选择实例名称的订阅服务器，并在**订阅数据库**，选择**\<新数据库 >** 从列表中。  
+6.  在订阅服务器页上，选择的实例名称的订阅服务器，并在**订阅数据库**，选择**\<新数据库 >** 从列表中。  
   
 7.  在“新建数据库”对话框的“数据库名称”框中输入 **SalesOrdersReplica**，然后依次单击“确定”和“下一步”。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36027648"
   
 9. 在“初始化订阅”页上，从“初始化时间”列表中选择“首次同步时”，单击“下一步”，然后再次单击“下一步”。  
   
-10. 在 HOST_NAME 值页上，输入的值`adventure-works\pamela0`中**HOST_NAME 值**框中，并依次**完成**。  
+10. 在 HOST_NAME 值页上，输入值`adventure-works\pamela0`中**HOST_NAME 值**框中，然后依次**完成**。  
   
 11. 再次单击“完成”，创建订阅后，单击“关闭”。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36027648"
   
 3.  选择“数据分区”页，然后单击“添加”。  
   
-4.  在**添加数据分区**对话框中，键入`adventure-works\pamela0`中**HOST_NAME 值**框中，并依次**确定**。  
+4.  在中**添加数据分区**对话框中，键入`adventure-works\pamela0`中**HOST_NAME 值**框中，然后依次**确定**。  
   
 5.  选择新添加的分区，单击“立即生成所选快照”，然后单击“确定”。  
   

@@ -1,5 +1,5 @@
 ---
-title: 筛选元素 （跟踪） (ASSL) |Microsoft 文档
+title: Filter 元素 (Trace) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8997c652883a70572fa83351be51b3381a6fdb7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17f062bf17436a1f177c29deef8654402ffd7d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159348"
 ---
 # <a name="filter-element-trace-assl"></a>Filter 元素 (Trace) (ASSL)
-  包含 XML 文档片段描述[跟踪](../objects/trace-element-assl.md)筛选器。  
+  包含描述的 XML 文档片断[跟踪](../objects/trace-element-assl.md)筛选器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36123489"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`Filter`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Trace>。  
+ 父级对应的元素`Filter`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)   

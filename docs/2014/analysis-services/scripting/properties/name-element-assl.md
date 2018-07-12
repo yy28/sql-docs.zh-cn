@@ -1,5 +1,5 @@
 ---
-title: 名称元素 (ASSL) |Microsoft 文档
+title: 命名元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Name element
 ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb2185d9d2a87a2abc3ebb96ad8186fe288e6190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7dde1de33d7ff2219bf2f73696c8a83236b46eb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211587"
 ---
 # <a name="name-element-assl"></a>Name 元素 (ASSL)
   包含父元素的名称。  
@@ -52,17 +52,17 @@ ms.locfileid: "36028880"
 |--------------------|-----------------|  
 |数据类型和长度|String（最多 100 个字符）|  
 |默认值|不定|  
-|基数|1-1： 发生一次，并且一次的必需的元素|  
+|基数|1-1： 出现一次且仅一次出现的必需的元素|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [Annotation](../objects/annotation-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md), [Cube](../objects/cube-element-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Group](../objects/group-element-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/measuregroup-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md), [Trace](../objects/trace-element-assl.md)|  
+|父元素|[操作](../objects/action-element-assl.md)，[聚合](../objects/aggregation-element-assl.md)， [AggregationDesign](../objects/aggregationdesign-element-assl.md)， [AlgorithmParameter](../objects/algorithmparameter-element-assl.md)，[批注](../objects/annotation-element-assl.md)， [程序集](../objects/assembly-element-assl.md)， [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)，[多维数据集](../objects/cube-element-assl.md)， [CubeDimension](../data-type/dimension-data-type-assl.md)， [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)， [数据库](../objects/database-element-assl.md)，[数据源](../objects/datasource-element-assl.md)， [DataSourceView](../objects/datasourceview-element-assl.md)，[维度](../objects/dimension-element-assl.md)， [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)，[组](../objects/group-element-assl.md)，[层次结构](../objects/hierarchy-element-assl.md)， [Kpi](../objects/kpi-element-assl.md)，[级别](../objects/level-element-assl.md)， [MdxScript](../objects/mdxscript-element-assl.md)， [度量值](../objects/measure-element-assl.md)， [MeasureGroup](../objects/measuregroup-element-assl.md)， [MemberProperty](../objects/attributerelationship-element-assl.md)， [MiningModel](../objects/miningmodel-element-assl.md)， [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)， [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)，[分区](../objects/partition-element-assl.md)，[权限](../data-type/permission-data-type-assl.md)， [角度来看](../objects/perspective-element-assl.md)， [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)， [ReportFormatParameter](../objects/reportformatparameter-element-asl.md)， [ReportParameter](../objects/reportparameter-element-assl.md)， [角色](../objects/role-element-assl.md)，[服务器](../objects/server-element-assl.md)， [ServerProperty](../objects/serverproperty-element-assl.md)，[跟踪](../objects/trace-element-assl.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 每个元素，用于定义对象 (实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，层次结构和属性，等) 具有`Name`作为属性的元素。 `Name` 元素的值具有下列限制：  
+ 用于定义对象的每个元素 (实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，层次结构、 属性中，依次类推) 具有`Name`作为属性的元素。 `Name` 元素的值具有下列限制：  
   
 -   该值不可包含前导空格或尾随空格。 如果 `Name` 元素的值中包含前导空格或尾随空格，则这些空格将会被 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 隐式删除。  
   

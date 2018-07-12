@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
 - cryptography [SQL Server], hierarchies
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46134edd740959b445d853d4390485b0c0f36a4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 292ac985db70fc280185b6f240565857055a8b83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164128"
 ---
 # <a name="encryption-hierarchy"></a>加密层次结构
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用分层加密和密钥管理基础结构来加密数据。 每一层都使用证书、非对称密钥和对称密钥的组合对它下面的一层进行加密。 非对称密钥和对称密钥可以存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的可扩展密钥管理 (EKM) 模块中。  

@@ -1,5 +1,5 @@
 ---
-title: 刷新数据源视图 (Analysis Services) 中的架构 |Microsoft 文档
+title: 刷新数据源视图 (Analysis Services) 中的架构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 517c3e9c0c608a0e38d79fd6aff8147a68403671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06859536c3f63e35bca7ab43593eac44b3bba22a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239767"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>刷新数据源视图中的架构 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 项目或数据库中定义数据源视图 (DSV) 后，基础数据源中的架构可能会更改。 无法在开发项目中自动检测或更新这些更改。 此外，如果您已将项目部署到服务器，当 Analysis Services 不再连接到外部数据源时，现在会遇到处理错误。  
@@ -52,7 +52,7 @@ ms.locfileid: "36027782"
   
  在刷新过程中，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将查询所有基础关系数据源以确定 DSV 中包含的表/视图是否发生了更改。 如果建立了到所有基础数据源的连接，并且发生了更改，则您会在 **“刷新数据源视图”** 对话框中看到这些更改。  
   
- ![刷新数据源视图对话框中](../media/ssas-olapdsv-refresh.gif "刷新数据源视图对话框中")  
+ ![刷新数据源视图对话框](../media/ssas-olapdsv-refresh.gif "刷新数据源视图对话框")  
   
  该对话框将列出要在 DSV 中删除或添加的表、列、约束和关系。 该报表还将列出无法准备好的任意命名查询或计算。 受影响的对象将列在树视图中，其中的列和关系嵌套在表下面，并且指示出每个对象的更改类型（删除或添加）。 标准数据源视图对象图标指示受影响的对象类型。  
   

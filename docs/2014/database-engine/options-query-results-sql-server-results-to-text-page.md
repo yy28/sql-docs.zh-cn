@@ -1,5 +1,5 @@
 ---
-title: 选项 （查询结果的 SQL Server 的结果为文本页） |Microsoft 文档
+title: 选项 （查询结果-SQL Server 的结果到文本页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 190d508cc4e1e637d95516a8c9daf148692aa2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72bcaf98c2a7089aa101379001559ee12b8f9b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165328"
 ---
-# <a name="options-query-results-sql-server-results-to-text-page"></a>选项 （查询结果的 SQL Server 的结果为文本页）
+# <a name="options-query-results-sql-server-results-to-text-page"></a>选项 （查询结果-SQL Server 的结果到文本页）
   使用此页可以指定以文本格式显示查询结果集的选项。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”菜单上单击“查询选项”，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”。 在 **“查询选项”** 对话框中的 **“结果”** 下，单击 **“文本”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -48,7 +48,7 @@ ms.locfileid: "36028862"
  **执行查询后放弃结果**  
  当查询结果在查询窗口的结果窗格中显示之后，若要放弃查询结果，请选中此复选框。  
   
- **在单独选项卡中显示结果**  
+ **在单独的选项卡中显示结果**  
  选中此复选框可在新文档窗口中显示结果集，而不是在查询文档窗口的底部显示。  
   
  **执行查询后切换到结果选项卡**  

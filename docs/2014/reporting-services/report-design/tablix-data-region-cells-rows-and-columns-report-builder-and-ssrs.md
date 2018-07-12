@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a15db177426dc39d10363abbfb2b160ef82d7ab5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163803"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
-  若要控制 tablix 数据区域的行和列如何在报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表&#40;报表生成器和 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩阵&#40;报表生成器和 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或[列出&#40;报表生成器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+  若要控制 tablix 数据区域的行和列如何在报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表&#40;报表生成器和 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩阵&#40;报表生成器和 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或者[列出&#40;报表生成器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
  tablix 数据区域在详细信息行和详细信息列中显示详细信息数据，在组行和组列中显示分组数据。 向 tablix 数据区域添加行组和列组时，将自动添加显示数据的行和列。 可以手动添加和删除行和列，以便自定义 tablix 数据区域，并控制数据在报表中的显示方式。  
   

@@ -1,5 +1,5 @@
 ---
-title: 向 Integration Services 服务授予权限 |Microsoft 文档
+title: 向 Integration Services 服务授予权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0c2caa68-7834-4ea0-bd77-4f3a7c86d634
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 32b8ee36951ec828340de5c6d581f0b8d8bc919a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4de544925778a159fd16deb54833b1d94cf5d232
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158608"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>授予 Integration Services 服务权限
   在以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，在您安装了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 后，默认情况下 Users 组中的所有用户都已对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务具有访问权限。 在您安装当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]时，用户无权访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务。 该服务默认是安全的。 在安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 后，管理员必须授予对服务的访问权限。  

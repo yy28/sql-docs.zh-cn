@@ -1,5 +1,5 @@
 ---
-title: 级别元素 (CSDLBI) |Microsoft 文档
+title: Level 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b63309bec7a37ef7953eb1a358ed317b366c4bee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211477"
 ---
 # <a name="level-element-csdlbi"></a>Level 元素 (CSDLBI)
   Level 元素是定义层次结构中的单个级别的复杂类型  
@@ -87,7 +87,7 @@ ms.locfileid: "36028441"
   
 ## <a name="see-also"></a>请参阅  
  [了解表格对象模型](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [了解 DAX 中的父-子层次结构函数](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
- [配置&#40;所有&#41;属性层次结构级别](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [了解 DAX 中父子层次结构的函数](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
+ [配置&#40;所有&#41;属性层次结构的级别](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

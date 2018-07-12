@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e623374290e9620d048d651683a58bfcd3ddf573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152168"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  
@@ -36,10 +36,10 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Variant`或`Binary`) 在其上执行的聚合，例如，表达式`=Fields!FieldName.Value`。  
+ (`Variant`或`Binary`) 要对其执行聚合，例如，表达式`=Fields!FieldName.Value`。  
   
  *作用域*  
- (`String`) 包含报表的数据集、 组或数据区域的名称项要向其应用聚合函数。 如果未指定 *scope* ，则使用当前作用域。  
+ (`String`) 要对其应用聚合函数项包含该报表的数据集、 组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
  *递归*  
  (**Enumerated Type**) 可选。 `Simple` （默认值） 或`RdlRecursive`。 指定是否以递归方式执行聚合。  

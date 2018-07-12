@@ -1,29 +1,28 @@
 ---
-title: 选择初始数据同步页 （AlwaysOn 可用性组向导） |Microsoft 文档
+title: 选择初始数据同步页 （AlwaysOn 可用性组向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2c949bd5ec421ac41d602b28af2d087153b0358c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211767"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>“选择初始数据同步”页（AlwaysOn 可用性组向导）
   使用 AlwaysOn **“选择初始数据同步”** 页可为新的辅助数据库的初始数据同步指示您的首选项。 此页为三个向导所共有： [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
@@ -102,7 +101,7 @@ ms.locfileid: "36028867"
   
      **详细信息：**  
   
-     [从迁移的先决条件到 AlwaysOn 可用性组日志传送&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [从迁移的先决条件日志传送到 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -120,7 +119,7 @@ ms.locfileid: "36028867"
   
 -   [使用故障转移可用性组向导 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [启动 AlwaysOn 辅助数据库上的数据移动&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
+-   [启动 AlwaysOn 辅助数据库的数据移动&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
 -   [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   

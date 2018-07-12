@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccafb0bccab01286534a0c5499fe474da1262d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b19f9141df65be952551dbb899b6cb30544e9a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278923"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>配置和管理搜索筛选器
-  索引中的文档`varbinary`， `varbinary(max)`， `image`，或`xml`数据类型列需要额外的处理。 该处理必须由筛选器执行。 筛选器从文档中提取文本信息（去除格式）。 然后，筛选器将这些文本发送至与表列相关联的语言的断字器组件。  
+  中的文档编制索引`varbinary`， `varbinary(max)`， `image`，或`xml`数据类型列需要额外的处理。 该处理必须由筛选器执行。 筛选器从文档中提取文本信息（去除格式）。 然后，筛选器将这些文本发送至与表列相关联的语言的断字器组件。  
   
  给定筛选器特定于给定文档类型（.doc、.pdf、.xls、.xml 等等）。 这些筛选器实现 IFilter 接口。 有关这些文档类型的详细信息，请查询 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目录视图。  
   
- 二进制文档可以存储在单个 `varbinary(max)` 或 `image` 列中。 对于每个文档， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 根据文件扩展名来选择正确的筛选器。 因为文件扩展名不可见时的文件存储在`varbinary(max)`或`image`必须存储在一个单独的列在表中，称为类型列的列，文件扩展名 （.doc、.xls、.pdf 等）。 此类型列可以是任意基于字符的数据类型，并且包含文档文件扩展名，例如 .doc 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文档。 在**文档**表中[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]、**文档**列的类型是`varbinary(max)`，而类型列中， **FileExtension**，属于类型`nvarchar(8)`。  
+ 二进制文档可以存储在单个 `varbinary(max)` 或 `image` 列中。 对于每个文档， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 根据文件扩展名来选择正确的筛选器。 因为文件扩展名不可见时，文件存储在`varbinary(max)`或`image`必须存储在表，称为类型列中的单独列中的列，文件扩展名 （.doc、.xls、.pdf 等）。 此类型列可以是任意基于字符的数据类型，并且包含文档文件扩展名，例如 .doc 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文档。 在**文档**表中[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]，则**文档**列的类型是`varbinary(max)`，而类型列**FileExtension**，属于类型`nvarchar(8)`。  
   
 > [!NOTE]  
 >  筛选器有可能能够处理嵌入到父对象中的对象，具体取决于筛选器的实现方式。 不过， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会将筛选器配置为跟踪指向其他对象的链接。  

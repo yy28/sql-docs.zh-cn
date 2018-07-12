@@ -1,5 +1,5 @@
 ---
-title: 自动重新启动元素 (ASSL) |Microsoft 文档
+title: AutoRestart 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AutoRestart element
 ms.assetid: 4c6a0e40-8e13-4d63-bf98-9470ffe95d02
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b8b7a7eb4540b327e96d8730f12f87e077b241a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecb6893c7c3e87c9e96890a917bbe8aad540433d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159098"
 ---
 # <a name="autorestart-element-assl"></a>AutoRestart 元素 (ASSL)
-  确定是否[跟踪](../objects/trace-element-assl.md)元素应自动重启[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务会停止并重启。  
+  确定是否[跟踪](../objects/trace-element-assl.md)时，应自动重启元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务停止并重新启动。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36124631"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`AutoRestart`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Trace>。  
+ 父级对应的元素`AutoRestart`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>请参阅  
  [跟踪元素&#40;ASSL&#41;](../collections/traces-element-assl.md)   

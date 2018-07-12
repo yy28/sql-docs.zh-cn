@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164888"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过还原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的用户数据库备份来创建新数据库。 但是， **无法还原使用**早期版本创建的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份。 此外，任何早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都无法还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份。  
@@ -42,7 +42,7 @@ ms.locfileid: "36029037"
   
 1.  备份可能位于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的实例上的源数据库。 运行此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机为“源计算机”。  
   
-2.  你想要将数据库复制的计算机上 (*目标计算机*)，连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上你打算还原数据库。 如果需要，在目标服务器实例上创建与源数据库备份设备相同的设备。  
+2.  你想要将数据库复制的计算机上 (*目标计算机*)，连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上要还原数据库。 如果需要，在目标服务器实例上创建与源数据库备份设备相同的设备。  
   
 3.  在目标计算机上还原源数据库的备份。 还原数据库操作将自动创建所有数据库文件。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36029037"
   
     -   如果无法覆盖现有文件，则会出现还原错误。  
   
- 若要避免错误和意外的后果，还原操作之前可以使用[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)历史记录表，若要了解你打算还原备份中的数据库和日志文件。  
+ 若要避免错误和意外的结果，则还原操作前，可以使用[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)历史记录表的数据库文件和日志文件中您计划还原的备份。  
   
 ## <a name="moving-the-database-files"></a>移动数据库文件  
  如果由于前面提到的原因，无法将数据库备份中的文件还原到目标计算机上，则必须在还原这些文件时将它们移到新的位置。 例如：  
@@ -108,15 +108,15 @@ ms.locfileid: "36029037"
   
 -   [还原数据库备份&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **现有文件上还原文件和文件组**  
+ **若要在现有文件上还原文件和文件组**  
   
 -   [在现有文件上还原文件和文件组 (SQL Server)](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
- **若要使用新名称还原数据库**  
+ **若要用新名称还原数据库**  
   
 -   [还原数据库备份&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **重新启动中断的还原操作**  
+ **若要重新启动中断的还原操作**  
   
 -   [重新启动中断的还原操作 (Transact-SQL)](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36029037"
   
 -   [sp_changedbowner (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **通过使用 SQL Server 管理对象 (SMO) 复制数据库**  
+ **若要使用 SQL Server 管理对象 (SMO) 复制数据库**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

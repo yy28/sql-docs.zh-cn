@@ -1,5 +1,5 @@
 ---
-title: 在报表 (Reporting Services SharePoint 集成模式下) 中查找文本、 数字或日期 |Microsoft 文档
+title: 报表 (Reporting Services SharePoint 集成模式下) 中查找文本、 数字或日期 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6fe713a9ef49efdf6cb1a04da094f877fc614582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e1f744568bcce20528df364ca2faf638eb677784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278274"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>在报表中查找文本、数字或日期（SharePoint 集成模式下的 Reporting Services）
   通过键入要查找的词或短语（搜索项的最大长度为 256 个字符），可以在报表中搜索内容。 搜索一种导航技术，它在报表中查找匹配值并将焦点放在报表中包含该值的部分。  
@@ -47,6 +47,6 @@ ms.locfileid: "36027877"
 4.  若要搜索随后出现的相同值，请单击 **“下一个”**。  
   
 ## <a name="see-also"></a>请参阅  
- [将报表查看器 Web 部件添加到 Web 页&#40;的 Reporting Services SharePoint 集成模式&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [将报表查看器 Web 部件添加到 Web 页&#40;Reporting Services SharePoint 集成模式下&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

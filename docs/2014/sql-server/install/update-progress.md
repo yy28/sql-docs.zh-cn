@@ -1,5 +1,5 @@
 ---
-title: 更新进度 |Microsoft 文档
+title: 更新进度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbc4270e-6045-45b2-b429-2aec841ef758
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c308d29b93465c8266d1c75ce89e7e198b63dfb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e458ccc2cfa5996f61c6a7a46b1d7e0abf63e45e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155668"
 ---
 # <a name="update-progress"></a>更新进度
   使用“安装进度”页可以在安装程序将更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例及其组件时对安装程序进行监视。  
