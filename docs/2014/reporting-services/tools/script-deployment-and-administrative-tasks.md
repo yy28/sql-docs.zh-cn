@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - moving reports
@@ -25,13 +25,13 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8cec5b29e78115e606951e0bd58516a029840580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bd4072925cf5cd48785b0c476aa4ea637f096c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159858"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>为部署和管理任务编写脚本
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持使用脚本来自动执行日常安装、部署任务和管理任务。 部署报表服务器的过程包括多个步骤。 必须使用多个工具和过程来配置部署；没有任何单个程序或方法可用于自动执行所有任务。  
@@ -56,7 +56,7 @@ ms.locfileid: "36124041"
 |配置报表服务器数据库连接。|如果要更改连接字符串、帐户、密码或身份验证类型，请通过运行 **rsconfig** 实用工具来配置连接。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)和 [rsconfig 实用工具 (SSRS)](rsconfig-utility-ssrs.md)。<br /><br /> 不能使用 rsconfig.exe 来创建或升级数据库。 数据库和 RSExecRole 必须已经存在。|  
 |配置扩展部署。|从以下用于自动执行扩展部署的方法中进行选择：<br /><br /> 运行 rskeymgmt.exe 实用工具以将报表服务器实例联接到现有安装。 有关详细信息，请参阅[添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。<br /><br /> 编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
 |备份加密密钥。|从以下用于自动备份加密密钥的方法中进行选择：<br /><br /> 运行 rskeymgmt.exe 实用工具以备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。<br /><br /> 编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
-|配置报表服务器电子邮件。|编写针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序运行的自定义代码。 该提供程序支持部分电子邮件配置设置。<br /><br /> 虽然 RSReportServer.config 文件包含所有设置，但是不要以自动执行的方式使用该文件。 具体来说，不要使用批处理文件将该文件复制到另一个报表服务器。 每个配置文件都包含特定于当前实例的值。 这些值对于其他报表服务器实例将是无效的。<br /><br /> 有关设置的详细信息，请参阅[针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
+|配置报表服务器电子邮件。|编写针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序运行的自定义代码。 该提供程序支持部分电子邮件配置设置。<br /><br /> 虽然 RSReportServer.config 文件包含所有设置，但是不要以自动执行的方式使用该文件。 具体来说，不要使用批处理文件将该文件复制到另一个报表服务器。 每个配置文件都包含特定于当前实例的值。 这些值对于其他报表服务器实例将是无效的。<br /><br /> 有关设置的详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
 |配置无人参与的执行帐户。|从以下用于自动配置无人参与处理帐户的方法中进行选择：<br /><br /> 运行 rsconfig.exe 实用工具以配置帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。|  
 |将现有的内容（包括文件夹层次结构、角色分配、报表、订阅、计划、数据源和资源）部署到另一台报表服务器上。|重新创建现有报表服务器环境的最佳方式是将报表服务器数据库复制到新的报表服务器实例中。<br /><br /> 替代方法是编写自定义代码，以编程方式重新创建现有的报表服务器内容。 但应注意，订阅、报表快照和报表历史记录无法以编程方式重新创建。<br /><br /> 某些部署受益于以上两项技术的结合使用（也就是说，还原报表服务器数据库，然后运行自定义代码以便为特定安装修改报表服务器数据库）。<br /><br /> 有关详细示例，请参阅 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。<br /><br /> 有关重新定位报表服务器数据库的详细信息，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 有关以编程方式创建报表服务器环境的详细信息，请参阅本主题中的“使用脚本迁移报表服务器内容和文件夹”一节。|  
   
@@ -97,10 +97,10 @@ ms.locfileid: "36124041"
 > [!NOTE]  
 >  除非已显示设置凭据，否则脚本将使用运行脚本的用户的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据运行。  
   
- 有关如何设置格式和运行脚本文件的详细信息，请参阅[脚本使用 rs.exe 实用工具和 Web 服务](script-with-the-rs-exe-utility-and-the-web-service.md)。  
+ 有关如何设置格式并运行脚本文件的详细信息，请参阅[使用 rs.exe 实用工具和 Web 服务编写脚本](script-with-the-rs-exe-utility-and-the-web-service.md)。  
   
 ## <a name="using-scripts-to-set-server-properties"></a>使用脚本设置服务器属性  
- 可以编写脚本以针对报表服务器设置系统属性。 下面的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本显示了一种设置属性的方法。 此示例将禁用 RSClientPrint ActiveX 控件，但你可以替换`EnableClientPrinting`和`False`具有任何有效的属性名称和值。 若要查看服务器属性的完整列表，请参阅[报表服务器系统属性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。  
+ 可以编写脚本以针对报表服务器设置系统属性。 下面的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本显示了一种设置属性的方法。 该示例禁用了 RSClientPrint ActiveX 控件，但可以替换`EnableClientPrinting`和`False`用任意有效的属性名称和值。 若要查看服务器属性的完整列表，请参阅[报表服务器系统属性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。  
   
  若要使用该脚本，则将其保存至扩展名为 .rss 的文件，然后使用 rs.exe 命令提示实用工具在报表服务器上运行该文件。 由于没有编译该脚本，因此不需要安装 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 该示例假定您对承载报表服务器的本地计算机拥有权限。 如果未使用拥有权限的帐户进行登录，则必须通过其他命令行参数来指定帐户信息。 有关详细信息，请参阅 [RS.exe 实用工具 (SSRS)](rs-exe-utility-ssrs.md)。  
   
@@ -132,7 +132,7 @@ End Sub
  [安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)   
  [报表服务器命令提示实用工具&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Planning for Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services 工具](reporting-services-tools.md)  
   
   

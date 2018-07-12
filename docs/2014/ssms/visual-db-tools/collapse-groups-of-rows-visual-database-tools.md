@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - group collapsing [SQL Server]
 - collapsing rows
 - row collapsing [SQL Server]
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20c267524869cd530a2a63a29abc9d149eb5b10c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 39e85fdf4d46136ef64b2c081d3dcd2e729bd109
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259933"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>折叠行组 (Visual Database Tools)
   您可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。 在拆叠行时应谨记以下几点：  
@@ -77,7 +77,7 @@ ms.locfileid: "36123531"
      有关将选择条件用于多组行的详细信息，请参阅[为组指定条件 (Visual Database Tools)](specify-conditions-for-groups-visual-database-tools.md) 和[在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [指定搜索条件&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+ [指定搜索条件&#40;可视化数据库工具&#41;](specify-search-criteria-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

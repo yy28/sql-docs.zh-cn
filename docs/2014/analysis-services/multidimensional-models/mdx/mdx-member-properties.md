@@ -1,5 +1,5 @@
 ---
-title: 使用成员属性 (MDX) |Microsoft 文档
+title: 使用成员属性 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DIMENSION PROPERTIES keyword
 - Properties function
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - members [MDX], properties
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a7328de0b6711acdc89ca708aab5c7af5f1cf54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2918188146fd84761bd23340ec5b76b48685eab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259533"
 ---
 # <a name="using-member-properties-mdx"></a>使用成员属性 (MDX)
   成员属性提供有关各个元组中的每个成员的基本信息。 此基本信息包括成员名、父级别、子成员数目等等。 成员属性适用于给定级别的所有成员。 就组织结构而言，成员属性可视为存储在单个维度上按维度组织的数据。  
@@ -44,7 +44,7 @@ ms.locfileid: "36124881"
   
  有关详细信息，请参阅[用户定义的成员属性 (MDX)](mdx-member-properties-user-defined-member-properties.md)。  
   
- 可以使用检索这两个内部函数和用户定义的成员属性`PROPERTIES`关键字或[属性](/sql/mdx/properties-mdx)函数。  
+ 这两个内部函数和用户定义成员属性可以检索使用`PROPERTIES`关键字或[属性](/sql/mdx/properties-mdx)函数。  
   
 ## <a name="using-the-properties-keyword"></a>使用 PROPERTIES 关键字  
  `PROPERTIES`关键字指定要用于给定的轴维度的成员属性。 `PROPERTIES`关键字隐藏内`<axis specification>`子句的 MDX[选择](/sql/mdx/mdx-data-manipulation-select)语句：  
@@ -65,7 +65,7 @@ SELECT [<axis_specification>
 > [!NOTE]  
 >  有关 `<set>` 和 `<axis_name>` 值的详细信息，请参阅[指定查询轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)。  
   
- `<dim_props>`子句允许你查询维度、 级别和成员属性使用`PROPERTIES`关键字。 下列语法显示了 `<dim_props>` 子句的格式：  
+ `<dim_props>`子句允许您查询维度、 级别和成员属性使用`PROPERTIES`关键字。 下列语法显示了 `<dim_props>` 子句的格式：  
   
 ```  
 <dim_props> ::= [DIMENSION] PROPERTIES <property> [,<property>...]  
@@ -73,9 +73,9 @@ SELECT [<axis_specification>
   
  `<property>` 语法的细分因要查询的属性而异：  
   
--   上下文相关的内部成员属性前必须是维度或级别的名称。 但是，非上下文相关的内部成员属性不能由维度或级别的名称限定。 有关如何使用`PROPERTIES`关键字具有内部成员属性，请参阅[内部成员属性&#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md)。  
+-   上下文相关的内部成员属性前必须是维度或级别的名称。 但是，非上下文相关的内部成员属性不能由维度或级别的名称限定。 有关如何使用详细信息`PROPERTIES`关键字与内部成员属性，请参阅[内部成员属性&#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md)。  
   
--   用户定义成员属性前应是其所在级别的名称。 有关如何使用`PROPERTIES`关键字具有用户定义的成员属性，请参阅[用户定义成员属性&#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md)。  
+-   用户定义成员属性前应是其所在级别的名称。 有关如何使用详细信息`PROPERTIES`关键字与用户定义的成员属性，请参阅[用户定义成员属性&#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建和使用属性值&#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  

@@ -1,5 +1,5 @@
 ---
-title: 查看优化建议 |Microsoft 文档
+title: 查看优化建议 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157708"
 ---
 # <a name="viewing-tuning-recommendations"></a>查看优化建议
   此任务将用到[优化工作负荷](lesson-1-1-tuning-a-workload.md)中创建的优化会话。 使用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本优化了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库后，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将在“建议”选项卡中显示优化结果。以下任务介绍了[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问图形用户界面 (GUI) 中的“建议”选项卡，并指导你浏览该选项卡中提供的有关优化会话结果的信息。  
@@ -38,7 +38,7 @@ ms.locfileid: "36126429"
   
 4.  在“索引建议”窗格中右键单击网格。 在右键单击后出现的菜单中，您可以选择或取消选择建议。 您还可以使用此菜单更改网格文本的字体。  
   
-5.  单击“操作”菜单中的“保存建议”，将所有建议保存到一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中。 命名该脚本`MySessionRecommendations.sql`。  
+5.  单击“操作”菜单中的“保存建议”，将所有建议保存到一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中。 脚本命名为`MySessionRecommendations.sql`。  
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中打开 MySessionRecommendations.sql 脚本进行查看。 通过在查询编辑器中执行脚本，可将建议应用于 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库。但现在不要执行该操作。 不运行该脚本，直接在查询编辑器中将其关闭。  
   

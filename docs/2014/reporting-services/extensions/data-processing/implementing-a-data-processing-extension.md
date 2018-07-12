@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], data processing
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ebfc2d9704a1153f29fc8e97b4564d907e04938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7d247becb7a50aa11ba1f42574938d441a627502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230768"
 ---
 # <a name="implementing-a-data-processing-extension"></a>实现数据处理扩展插件
   借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  

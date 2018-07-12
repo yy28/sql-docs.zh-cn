@@ -1,5 +1,5 @@
 ---
-title: 配置磁盘空间使用情况 (PowerPivot for SharePoint) |Microsoft 文档
+title: 配置磁盘空间使用情况 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76f4688acd348f8ee2bcbe87d8832f5f770ba4b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151488"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>配置磁盘空间使用情况 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署使用主机上的磁盘空间来缓存 PowerPivot 数据库以便更快地重新加载。 在内存中加载的每个 PowerPivot 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下，PowerPivot for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
@@ -54,11 +54,11 @@ ms.locfileid: "36125470"
   
  在系统级别，您可以创建电子邮件警报，在磁盘空间不足时通知您。 Microsoft 系统中心包括电子邮件警报功能。 您还可以使用文件服务器资源管理器、任务计划程序或 PowerShell 脚本来设置警报。 以下链接提供一些有用的信息，可帮助您设置在磁盘空间不足时发出的通知：  
   
--   [在文件服务器资源管理器中的新增](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
+-   [什么是文件服务器资源管理器的新增](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
   
--   [文件服务器资源管理器的 Windows Server 2008 R2 分步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [适用于 Windows Server 2008 R2 文件服务器资源管理器分步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
   
--   [Windows Server 2008 上设置低磁盘空间警报](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 上设置磁盘空间不足警报](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制用于存储缓存文件的磁盘空间量  
   

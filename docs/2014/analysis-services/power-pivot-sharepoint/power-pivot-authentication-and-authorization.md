@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 身份验证和授权 |Microsoft 文档
+title: PowerPivot 身份验证和授权 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e24a764afb7aae49194847354800e580da88a9a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210217"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 身份验证和授权
   在 SharePoint 2010 场中运行的 PowerPivot for SharePoint 部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 PowerPivot 内容和操作，因为所有与 PowerPivot 相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 PowerPivot 共享服务执行所有与 PowerPivot 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 PowerPivot 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
@@ -28,13 +28,13 @@ ms.locfileid: "36124437"
   
  单击下面的链接可阅读本主题中的特定部分：  
   
- [使用经典模式登录签入要求 Windows 身份验证](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [使用经典模式登录要求 Windows 身份验证](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [PowerPivot 操作要求用户授权](#UserConnections)  
   
- [PowerPivot 数据访问的 SharePoint 权限](#Permissions)  
+ [用于 PowerPivot 数据访问的 SharePoint 权限](#Permissions)  
   
- [有关 PowerPivot 工作簿的 Excel Services 安全注意事项](#excel)  
+ [PowerPivot 工作簿的 Excel Services 安全注意事项](#excel)  
   
 ##  <a name="bkmk_auth"></a> Windows 身份验证（使用经典模式登录）要求  
  PowerPivot for SharePoint 支持 SharePoint 中可用的一组简化的身份验证选项。 在这些可用的身份验证选项中，PowerPivot for SharePoint 部署只支持 Windows 身份验证。 此外，通过登录访问的 Web 应用程序必须配置为经典模式。  
@@ -75,9 +75,9 @@ ms.locfileid: "36124437"
   
 -   在数据无法以其他方式可用的情况下从缓存或库加载 PowerPivot 数据。 如果对尚未加载到系统中的 PowerPivot 数据发出数据连接请求，[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]实例将使用 SharePoint 用户的标识来从内容库中检索数据源并将其加载到内存中。  
   
--   数据刷新操作，用于将数据源的已更新副本保存到内容库中的工作簿。 在此情况下，将使用从安全存储区服务中的目标应用程序检索的用户名和密码执行实际登录操作。 凭据可以是 PowerPivot 无人参与的数据刷新帐户，也可以是在创建数据刷新计划时随其存储的凭据。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)和[配置 PowerPivot 无人参与数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
+-   数据刷新操作，用于将数据源的已更新副本保存到内容库中的工作簿。 在此情况下，将使用从安全存储区服务中的目标应用程序检索的用户名和密码执行实际登录操作。 凭据可以是 PowerPivot 无人参与的数据刷新帐户，也可以是在创建数据刷新计划时随其存储的凭据。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)并[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
-##  <a name="Permissions"></a> PowerPivot 数据访问的 SharePoint 权限  
+##  <a name="Permissions"></a> 用于 PowerPivot 数据访问的 SharePoint 权限  
  只有通过 SharePoint 集成，才能支持发布、管理和保护 PowerPivot 工作簿。 SharePoint 服务器提供身份验证和授权子系统，以确保合法访问数据。 没有支持的方案可用于安全地在 SharePoint 场之外部署 PowerPivot 工作簿。  
   
  用户通过“查看”权限或更高权限对 PowerPivot 数据的访问在服务器上是只读的。 “参与讨论”权限允许添加和编辑文件。 更改 PowerPivot 数据要求您将工作簿下载到安装了 PowerPivot for Excel 的 Excel 桌面应用程序。 对文件的“参与讨论”权限将确定用户是否可在本地下载文件然后将更改保存回 SharePoint。  
@@ -94,12 +94,12 @@ ms.locfileid: "36124437"
 |读取|将 PowerPivot 工作簿作为外部数据源访问，其中，工作簿 URL 是在某一连接对话框（例如，在 Excel 的数据连接向导）中显式输入的。|  
 |仅查看|查看 PowerPivot 工作簿。<br /><br /> 查看数据刷新历史记录。<br /><br /> 将本地工作簿连接到 SharePoint 站点上的 PowerPivot 工作簿，以其他方法重新设定其数据的作用。<br /><br /> 下载该工作簿的一个快照。 该快照是数据的静态副本，没有切片器、筛选器、公式或数据连接。 该快照的内容类似于从浏览器窗口复制单元值。|  
   
-##  <a name="excel"></a> 有关 PowerPivot 工作簿的 Excel Services 安全注意事项  
+##  <a name="excel"></a> PowerPivot 工作簿的 Excel Services 安全注意事项  
  PowerPivot 服务器端查询处理与 Excel Services 紧密耦合。 在文档级别开始产品集成，因为 PowerPivot 工作簿是包含或引用 PowerPivot 数据的 Excel 工作簿 (.xlsx) 文件。 PowerPivot 工作簿没有单独的文件扩展名。  
   
  当在 SharePoint 站点中打开 PowerPivot 工作簿时，Excel Services 读取嵌入的 PowerPivot 数据连接字符串，并将请求转发到本地 SQL Server Analysis Services OLE DB 访问接口。 然后，此访问接口将连接信息传递给场中的 PowerPivot 服务器。 为了使请求在两个服务器之间无缝传递，必须将 Excel Services 配置为使用 PowerPivot for SharePoint 要求的设置。  
   
- 在 Excel Services 中，与安全性相关的配置设置在受信任位置、受信任的数据访问接口和受信任的数据连接库中指定。 下表介绍可实现或增强 PowerPivot 数据访问的设置。 如果某个设置未在此处列出，则它对于 PowerPivot 服务器连接没有影响。 有关如何指定这些设置，分步说明，请参阅在部分"启用 Excel Services"[初始配置&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)。  
+ 在 Excel Services 中，与安全性相关的配置设置在受信任位置、受信任的数据访问接口和受信任的数据连接库中指定。 下表介绍可实现或增强 PowerPivot 数据访问的设置。 如果某个设置未在此处列出，则它对于 PowerPivot 服务器连接没有影响。 说明如何指定这些设置，请参阅中的"启用 Excel Services"一节[初始配置&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)。  
   
 > [!NOTE]  
 >  与安全性相关的大多数设置适用于受信任位置。 如果您希望保留默认值或为不同站点使用不同值，则可以为包含 PowerPivot 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
@@ -117,7 +117,7 @@ ms.locfileid: "36124437"
 ## <a name="see-also"></a>请参阅  
  [配置 PowerPivot 服务帐户](configure-power-pivot-service-accounts.md)   
  [配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
- [在管理中心中创建 PowerPivot 站点的受信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot Securtiy 体系结构](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [PowerPivot 安全体系结构](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

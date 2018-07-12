@@ -1,5 +1,5 @@
 ---
-title: 定义货币换算 （商业智能向导） |Microsoft 文档
+title: 定义货币换算 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.existingscriptpage.f1
 ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec54aa4e66cbcd9872dbce03bdb3e7c601c84980
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce1916bd988d23dfd33f689f189436a50408a207
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159508"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>定义货币换算（商业智能向导）
   可以使用“定义货币换算”页，查看商业智能向导生成的包含货币换算功能的多维表达式 (MDX) 脚本。 然后可以使用此向导生成的 MDX 脚本覆盖或追加到多维数据集的 MDX 脚本中以前定义的货币换算功能。  
@@ -51,7 +51,7 @@ ms.locfileid: "36125477"
  **此项后追加**  
  选择此项将把“新建货币换算脚本”中显示的 MDX 脚本追加到“现有货币换算脚本”中显示的 MDX 脚本的末尾。 所追加的脚本将显示为新部分。  
   
- **现有的货币换算脚本**  
+ **现有货币换算脚本**  
  选择现有 MDX 脚本的一部分，其中包含要覆盖或追加到以前定义的货币换算功能。  
   
 ## <a name="see-also"></a>请参阅  

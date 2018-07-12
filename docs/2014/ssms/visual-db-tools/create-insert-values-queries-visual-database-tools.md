@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting values
 - queries [SQL Server], types
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdca52b519f60fddbd1f42a9e44e08f85a5879b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9501d3d35f35195112c328af22daf4948d115966
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157608"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>创建“插入值”查询 (Visual Database Tools)
   可以使用“插入值”查询在当前表中创建新行。 在创建“插入值”查询时，需要指定：  
@@ -71,8 +71,8 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
  在执行“插入值”查询时，不会在 [“结果”窗格](results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指示已更改的行数。  
   
 ## <a name="see-also"></a>请参阅  
- [支持的查询类型&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [支持的查询类型&#40;可视化数据库工具&#41;](supported-query-types-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

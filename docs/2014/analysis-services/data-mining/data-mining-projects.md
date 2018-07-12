@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘项目 |Microsoft 文档
+title: 数据挖掘项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259713"
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
   数据挖掘项目是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案的一部分。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
@@ -33,7 +33,7 @@ ms.locfileid: "36125047"
  如果在现有解决方案中创建数据挖掘项目，则默认情况下，数据挖掘对象将部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，并具有与解决方案文件相同的名称。 您可以使用 **“项目属性”** 对话框更改此名称和目标服务器。 有关详细信息，请参阅[配置 Analysis Services 项目属性 (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
 > [!WARNING]  
->  若要成功生成和部署您的项目，您必须对运行在 OLAP/数据挖掘模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例具有访问权限。 你不能开发或部署的实例上的数据挖掘解决方案[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持表格模型中，也可以使用数据直接从 PowerPivot 工作簿或从表格模型使用内存中数据存储区。 若要确定你具有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例是否可支持数据挖掘，请参阅 [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+>  若要成功生成和部署您的项目，您必须对运行在 OLAP/数据挖掘模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例具有访问权限。 不能开发或部署的实例上的数据挖掘解决方案[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持表格模型，也不能使用直接从 PowerPivot 工作簿或来自使用内存中数据存储区的表格模型的数据。 若要确定你具有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例是否可支持数据挖掘，请参阅 [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  在每个创建的数据挖掘项目中，您将执行以下步骤：  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36125047"
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘设计器](data-mining-designer.md)   
- [创建多维模型使用 SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [创建多维模型使用的 SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [工作区数据库&#40;SSAS 表格&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

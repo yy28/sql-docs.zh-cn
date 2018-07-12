@@ -1,5 +1,5 @@
 ---
-title: 源元素 (ComAssembly) (ASSL) |Microsoft 文档
+title: Source 元素 (ComAssembly) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae014f12e15dd27957ab77eb03720457f3c99b28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81076927595714ae4e0c98847d99f2d246660cf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152968"
 ---
 # <a name="source-element-comassembly-assl"></a>Source 元素 (ComAssembly) (ASSL)
   包含组件对象模型 (COM) 组件的文件名或编程标识符 (ProgID)。  
@@ -62,12 +62,12 @@ ms.locfileid: "36125228"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`Source`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ComAssembly>。  
+ 父级对应的元素`Source`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ComAssembly>。  
   
 ## <a name="see-also"></a>请参阅  
  [Assembly 元素&#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [ClrAssembly 数据类型&#40;ASSL&#41;](../data-type/clrassembly-data-type-assl.md)   
- [Assemblies 元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
+ [程序集元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [数据库元素&#40;ASSL&#41;](../objects/database-element-assl.md)   
  [服务器元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  

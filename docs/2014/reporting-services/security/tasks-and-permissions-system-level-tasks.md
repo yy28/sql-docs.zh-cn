@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: de33e7370e141e07ac61b6e62d6d1d0cc44ffdc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 284349672feca872e8f9b704314ae070ec687df7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228997"
 ---
 # <a name="system-level-tasks"></a>系统级任务
-  系统级任务是与应用于整个报表服务器站点的操作相关的权限的集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于特定项的项级任务。 有关详细信息，请参阅 [项级任务](tasks-and-permissions-item-level-tasks.md)。 有关任务和权限总体的详细信息，请参阅[任务和权限](tasks-and-permissions.md)。  
+  系统级任务是与应用于整个报表服务器站点的操作相关的权限的集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于特定项的项级任务。 有关详细信息，请参阅 [项级任务](tasks-and-permissions-item-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅[任务和权限](tasks-and-permissions.md)。  
   
 > [!NOTE]  
 >  如果以编程方式使用这些任务，则必须使用支持系统级任务的方法。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 和 <xref:ReportService2010.ReportingService2010.ListRoles%2A>。  

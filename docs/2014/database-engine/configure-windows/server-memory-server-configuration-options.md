@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160958"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
   使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
@@ -56,9 +56,9 @@ ms.locfileid: "36124848"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
   
-|操作系统类型|最小内存量允许的**最大服务器内存**|  
+|操作系统类型|最小内存量允许**最大服务器内存**|  
 |-------------|----------------------------------------------------------------|  
-|32 位|以 64 MB|  
+|32 位|64 MB|  
 |64 位|128 MB|  
   
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>如何使用 SQL Server Management Studio 配置内存选项  
@@ -87,14 +87,14 @@ ms.locfileid: "36124848"
 3.  如果选中了 **“最大化网络应用程序数据吞吐量”** ，请任选一个相应的其他选项，单击 **“确定”**，再关闭其余对话框。  
   
 ## <a name="lock-pages-in-memory"></a>锁定内存页  
- 此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 SQL Server**锁定内存页**选项设置为 ON 的 32 位和 64 位实例中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]标准版和更高版本在有权运行 sqlservr.exe 的帐户已被授予 Windows"中的已锁定页内存"(LPIM) 用户权限。 在 SQL Server 的早期版本中，为 32 位的 SQL Server 实例设置“锁定页”选项时，需要有权运行 sqlservr.exe 的帐户具有 LPIM 用户权限并且将“awe_enabled”配置选项设置为 ON。  
+ 此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 SQL Server**锁定内存页**在 32 位和 64 位的实例选项设置为 ON [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition 和更高版本时，有权运行 sqlservr.exe 的帐户授予 Windows"已锁定页中内存"(LPIM) 用户权限。 在 SQL Server 的早期版本中，为 32 位的 SQL Server 实例设置“锁定页”选项时，需要有权运行 sqlservr.exe 的帐户具有 LPIM 用户权限并且将“awe_enabled”配置选项设置为 ON。  
   
  若要对 **禁用** “锁定内存页” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项，请删除 SQL Server 启动帐户的“锁定内存页”用户权限。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>禁用“锁定内存页”  
- **若要禁用内存选项锁定页：**  
+ **若要禁用锁定页中内存选项：**  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。 在**打开**框中，键入`gpedit.msc`。  
+1.  在 **“开始”** 菜单上，单击 **“运行”**。 在中**开放**框中，键入`gpedit.msc`。  
   
      将打开 **“组策略”** 对话框。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36124848"
   
 ||32 位|64 位|  
 |-|-------------|-------------|  
-|常规内存|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 2 GB<br /><br /> 使用 3 GB **3 gb**启动参数 *<br /><br /> 在 WOW64 上的 4 GB\*\*|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 8 TB，在 x64 体系结构上|  
+|常规内存|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 2 GB<br /><br /> 3 GB，带有**3gb**启动参数 *<br /><br /> Wow64 的 4 GB\*\*|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 8 TB，在 x64 体系结构上|  
   
  ***/3gb** 是一个操作系统的启动参数。 有关详细信息，请访问 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   

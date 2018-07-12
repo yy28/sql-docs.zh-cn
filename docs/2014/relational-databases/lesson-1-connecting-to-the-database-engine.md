@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02942c1f5e223cdf996cb691a4e7d42cc95c1b81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184237"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
   安装 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]时，安装哪些工具取决于版本和您的安装选择。 本课将介绍主要的工具以及如何连接并执行一项基本功能（授权多个用户）。  
   
   
   
-##  <a name="tools"></a> 工具入门  
+##  <a name="tools"></a> 入门工具  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
   
 ### <a name="basic-tools"></a>基本工具  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理[!INCLUDE[ssDE](../includes/ssde-md.md)]和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 它不包括在[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]但仍可以作为从的单独下载[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理[!INCLUDE[ssDE](../includes/ssde-md.md)]和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 它不包含在[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，但可作为从单独的下载[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346)。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和客户端工具一起安装。 使用它，您可以启用服务器协议，配置协议选项（例如 TCP 端口），将服务器服务配置为自动启动，以及将客户端计算机配置为以所需的方式连接。 此工具会配置更高级的连接元素，但不会启用功能。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36124589"
   
 ##### <a name="to-start-sql-server-management-studio"></a>启动 SQL Server Management Studio  
   
--   上**启动**菜单上，指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击**SQL Server Management Studio**。  
+-   上**启动**菜单，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击**SQL Server Management Studio**。  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>启动 SQL Server 配置管理器  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36124589"
 1.  以 Administrators 组成员身份登录到 Windows，然后打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
     > [!IMPORTANT]  
-    >  如果要连接到[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]上[!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]或[!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)]（或较新），你可能需要右键单击[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然后单击**以管理员身份运行**以便使用您的管理员进行连接凭据。 从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 开始，安装程序将所选登录名添加到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，这样就不再需要管理员凭据了。  
+    >  如果要连接到[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]上[!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]或[!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)]（或较新），您可能需要右键单击[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然后单击**以管理员身份运行**以便使用您的管理员进行连接凭据。 从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 开始，安装程序将所选登录名添加到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，这样就不再需要管理员凭据了。  
   
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”**。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36124589"
   
      将显示“登录名 - 新建”对话框。  
   
-2.  上**常规**页上，在**登录名**框中，键入 Windows 登录名格式*\<域 >\\< 登录名\>*。  
+2.  上**常规**页上，在**登录名**框中，键入格式的 Windows 登录名*\<域 >\\< 登录名\>*。  
   
 3.  在“默认数据库”框中，选择 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]（如果有）。 否则选择“master”。  
   

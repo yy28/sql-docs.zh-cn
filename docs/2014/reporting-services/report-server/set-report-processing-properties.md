@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
 - report processing [Reporting Services], execution properties
@@ -20,13 +20,13 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 375b691b1e0e1202bfa16f6b4919ff454fe65da3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d3ffb241dd28b0abff718f742ba9020df98195f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153588"
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
@@ -60,8 +60,8 @@ ms.locfileid: "36126246"
  如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [设置处理选项&#40;的 Reporting Services SharePoint 集成模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [配置报表执行属性&#40;报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [设置处理选项&#40;Reporting Services SharePoint 集成模式下&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [配置报表的执行属性&#40;报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
  [如何：向报表历史记录添加快照](add-a-snapshot-to-report-history-report-manager.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

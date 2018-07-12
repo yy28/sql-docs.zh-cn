@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
 - Reporting Services, getting assistance
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: 27
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c23e964eaee08730416daa0d52350eb72138d5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c1a0b1b5105c5dc5be5edcd9c43028d4bca8ae2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258243"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括可用于创建、管理和查看报表的若干工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
@@ -38,7 +38,7 @@ ms.locfileid: "36124722"
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
  提供报表管理器（它是用于管理单个报表服务器实例的 Web 应用程序）的帮助  
   
- [Reporting Services 配置管理器的 F1 帮助主题&#40;SSRS 本机模式&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  提供用于部署和管理报表服务器实例的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置工具的帮助。  
   
  [Management Studio 中报表服务器的 F1 帮助](tools/report-server-in-management-studio-f1-help.md)  

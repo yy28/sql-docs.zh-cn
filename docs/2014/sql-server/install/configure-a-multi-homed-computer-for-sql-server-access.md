@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183894"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
   当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
@@ -59,9 +59,9 @@ ms.locfileid: "36123543"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>确定计算机上可用的 IP 地址  
   
-1.  计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是安装，请单击**启动**，单击**运行**，类型`cmd`然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+1.  在其上的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是安装，请单击**启动**，单击**运行**，类型`cmd`，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-2.  在命令提示符窗口中，键入`ipconfig,`然后按 ENTER 列出此计算机上可用的 IP 地址。  
+2.  在命令提示符窗口中，键入`ipconfig,`，然后按 ENTER 列出此计算机上可用的 IP 地址。  
   
     > [!NOTE]  
     >  **ipconfig** 命令有时会列出许多可能的连接，包括已断开的连接。 **ipconfig** 命令可同时列出 IPv4 和 IPv6 地址。  
@@ -103,7 +103,7 @@ ms.locfileid: "36123543"
   
 8.  在 **“协议和端口”** 页上，选择 **TCP**。  
   
-9. 选择 **“指定的本地端口”**。 键入端口号（由逗号分隔），然后单击 **“下一步”**。 在此示例中，您将配置默认端口，则为因此，输入`1433`。  
+9. 选择 **“指定的本地端口”**。 键入端口号（由逗号分隔），然后单击 **“下一步”**。 在此示例中，您将配置默认端口;因此，如果输入`1433`。  
   
 10. 在 **“操作”** 页上，查看各选项。 在本示例中，不使用防火墙强制进行安全连接。 因此，请单击 **“允许连接”**，然后单击 **“下一步”**。  
   

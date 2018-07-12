@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c0c38e2aa12991ead24a0ba162462504d28e60d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f1a262a52bdc610da81c5b42785fa555967e8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239347"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
-  OData 连接管理器允许包连接到 OData 源。 OData 源组件使用 OData 连接管理器连接到 OData 源并使用来自服务的数据。 请参阅[OData 源](../data-flow/odata-source.md)部分以了解详细信息，包括这些组件的安装说明。  
+  OData 连接管理器允许包连接到 OData 源。 OData 源组件使用 OData 连接管理器连接到 OData 源并使用来自服务的数据。 请参阅[OData 源](../data-flow/odata-source.md)部分，了解详细信息，包括这些组件的安装说明。  
   
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>向 SSIS 包添加连接管理器  
  可以通过三种方式向 SSIS 包添加新 OData 连接管理器：  
   
 -   单击 **“OData 源编辑器”** 中的 **“新建…”**  
   
--   右键单击**连接管理器**文件夹中的**解决方案资源管理器**单击**新连接管理器**。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
+-   右键单击**连接管理器**中的文件夹**解决方案资源管理器**然后单击**新连接管理器**。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
--   在中右击**连接管理器**在包设计器，然后选择底部窗格中**新的连接...**. 为 **“连接管理器类型”** 选择 **“ODATA”**。  
+-   在中右击**连接管理器**包设计器中，然后选择底部窗格**新建连接...**. 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
 ## <a name="connection-manager-authentication"></a>连接管理器身份验证  
  OData 连接管理器支持两种身份验证模式。  
@@ -43,7 +43,7 @@ ms.locfileid: "36123685"
  对于匿名访问，请选择“Windows 身份验证”选项  
   
 ### <a name="specifying-and-securing-credentials"></a>指定和保护凭据  
- 如果你的 OData 服务需要基本身份验证，则可以指定用户名和密码中的[OData 连接管理器编辑器](../odata-connection-manager-editor.md)。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
+ 如果 OData 服务需要基本身份验证，则可以指定用户名和密码[OData 连接管理器编辑器](../odata-connection-manager-editor.md)。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
   
  可通过多种方式外部化/参数化用户名和密码值。 要在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] 中实现此目的，有两种主要方式，使用参数或在使用 SQL Server Management Studio 运行包时直接设置连接管理器属性。  
   

@@ -1,5 +1,5 @@
 ---
-title: 表绑定详细信息 （分区源对话框） (Analysis Services-多维数据) |Microsoft 文档
+title: 表绑定详细信息 （源分区对话框) (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitiontableselection.f1
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4ad9d58e0fb2e1ccc7dc6a51e4c4e47d2cfb289
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 434d89e19bceae3011f7ff365b81fd799c58e2a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239687"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>表绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）
   可以使用 **“分区源”** 对话框中的 **“表绑定”** 选项，指定为分区提供数据的事实数据表。 通过从 **“分区源”** 对话框中的 **“绑定类型”** 选项中选择 **“表绑定”** ，可以显示此窗格。  
@@ -39,7 +39,7 @@ ms.locfileid: "36124415"
  **查找表**  
  选择此项可以刷新“可用表”中表的列表，如果在“筛选表”中指定了字符串，则可以进一步限制该列表。  
   
- **可用的表**  
+ **可用表**  
  单击此项可选择要用作分区的源表的表。  
   
  如果 **“筛选表”** 中未指定任何筛选器，则对于 **“查找范围”** 中指定的数据源或数据源视图中的表，只要在结构上与 **“度量值组”** 中指定的度量值组所使用的事实数据表相似，就会在列表中列出。  
@@ -47,6 +47,6 @@ ms.locfileid: "36124415"
  如果 **“筛选表”** 中指定了筛选器，通过将筛选器与符合上述条件的表名进行对比，可以进一步限制列表。 只有那些包含 **“筛选表”** 中指定字符串的表才会显示。  
   
 ## <a name="see-also"></a>请参阅  
- [分区源对话框中&#40;Analysis Services-多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+ [分区源对话框&#40;Analysis Services-多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

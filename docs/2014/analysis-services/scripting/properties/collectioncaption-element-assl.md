@@ -1,5 +1,5 @@
 ---
-title: CollectionCaption 元素 (ASSL) |Microsoft 文档
+title: CollectionCaption 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba7c2ab2cffb2287b1eff84c5e9fc9f385119cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 336c87e48d2e65e7aa9bfd858ff07e2fc2436f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209957"
 ---
 # <a name="collectioncaption-element-assl"></a>CollectionCaption 元素 (ASSL)
   包含父元素的复数名称。  
@@ -50,6 +50,6 @@ ms.locfileid: "36125705"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`CollectionCaption`在分析管理对象 (AMO) 对象模型并 T:Microsoft.AnalysisServices.RelationshipEndTranslation。  
+ 父级对应的元素`CollectionCaption`在 Analysis Management Objects (AMO) 对象模型是 T:Microsoft.AnalysisServices.RelationshipEndTranslation。  
   
   

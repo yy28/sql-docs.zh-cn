@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
@@ -17,13 +17,13 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f241a4df7cdf90fa1fb05f99ba932877bdce7d05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149938"
 ---
 # <a name="predefined-roles"></a>预定义角色
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安装了预定义角色，您可以使用它们授予对报表服务器操作的访问权限。 每个预定义角色都描述了一个相关任务的集合。 可以向预定义角色分配组帐户和用户帐户，以提供对报表服务器操作的立即访问。  
@@ -73,7 +73,7 @@ ms.locfileid: "36124720"
 |管理报表历史记录|创建、查看和删除报表历史记录，查看报表历史记录的属性，以及查看和修改确定快照历史记录限值以及缓存工作方式的设置。|  
 |管理报表|添加和删除报表，修改报表参数，查看和修改报表属性，查看和修改为报表提供内容的数据源，查看和修改报表定义，以及设置报表级安全策略。|  
 |管理资源|创建、修改和删除资源，以及查看和修改资源属性。|  
-|设置项的安全策略|定义报表、链接报表、文件夹、资源和数据源的安全策略。 有关详细信息，请参阅[安全对象](securable-items.md)。|  
+|设置项的安全策略|定义报表、链接报表、文件夹、资源和数据源的安全策略。 有关详细信息，请参阅[安全对象项](securable-items.md)。|  
 |查看数据源|查看文件夹层次结构中的共享数据源项。|  
 |查看报表|运行报表和查看报表属性。|  
 |查看模型|在文件夹层次结构中查看模型，将模型用作报表的数据源，以及对模型运行查询以检索数据。|  
@@ -192,7 +192,7 @@ ms.locfileid: "36124720"
 |任务|Description|  
 |----------|-----------------|  
 |执行报表定义|开始执行报表定义，而不将定义发布到报表服务器。|  
-|管理作业|查看和取消正在运行的作业。 有关详细信息，请参阅[管理正在运行的进程](../subscriptions/manage-a-running-process.md)。|  
+|管理作业|查看和取消正在运行的作业。 有关详细信息，请参阅[管理运行中的进程](../subscriptions/manage-a-running-process.md)。|  
 |管理报表服务器属性|查看和修改应用于报表服务器及其所管理的项的属性。<br /><br /> 该任务支持重命名报表管理器、启用“我的报表”以及设置报表历史默认值。|  
 |管理角色|创建、查看、修改和删除角色定义。<br /><br /> “系统管理员”角色的成员可以使用“站点设置”页来管理角色。 |  
 |管理共享计划|创建、查看、修改和删除用于运行或刷新报表的共享计划。|  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
 - restoring pages [SQL Server]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a404c6e4a7ace75d1d17f8ca6dfda0eaf603ea92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 27dc4236fa3455ce9993451bf105cc1a2bcbb80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164768"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
   本主题介绍如何使用 **或** 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 表位于 [msdb 数据库](../databases/msdb-database.md)中。  
@@ -170,7 +169,7 @@ GO
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [还原页 (SQL Server)](restore-pages-sql-server.md)   
- [suspect_pages &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

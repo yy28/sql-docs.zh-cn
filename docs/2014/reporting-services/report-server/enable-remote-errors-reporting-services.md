@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
@@ -16,13 +16,13 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 14586062cadbdf08646ff7a6080b2849d2900d7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a1d77440242eb96ca3ced08518829b2913a3a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159868"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
   可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 `EnableRemoteErrors` 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅[报表服务器系统属性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
@@ -68,13 +68,13 @@ ms.locfileid: "36125527"
   
 ##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
-1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅[连接到报表服务器在 Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅[连接到 Management Studio 中的报表服务器](../tools/connect-to-a-report-server-in-management-studio.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 2.  右键单击报表服务器节点，然后选择“属性”。  
   
 3.  单击 **“高级”** 以打开属性页。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[服务器属性（“高级”页）- Reporting Services](../tools/server-properties-advanced-page-reporting-services.md)。  
   
-4.  在`EnableRemoteErrors`，选择`True`。  
+4.  在中`EnableRemoteErrors`，选择`True`。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -115,6 +115,6 @@ ms.locfileid: "36125527"
 ##  <a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 表（本机模式）  
   
 1.  > [!NOTE]  
-    >  你可以编辑**ConfigurationInfo**设置报表服务器数据库中的表`EnableRemoteErrors`到`True`，但报表服务器正在使用中，应使用 SQL Server Management Studio 或脚本来修改设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
+    >  您可以编辑**ConfigurationInfo**若要设置报表服务器数据库中的表`EnableRemoteErrors`到`True`，但报表服务器正在使用中，应使用 SQL Server Management Studio 或脚本来修改设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
   
   

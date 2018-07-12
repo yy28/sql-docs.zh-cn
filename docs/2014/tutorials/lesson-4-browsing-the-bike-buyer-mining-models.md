@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 浏览 Bike Buyer 挖掘模型 |Microsoft 文档
+title: 第 4 课： 浏览自行车购买者挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a4144b7613b1af93f17a50381ec7b3b68507824c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5866ebce4673033bf9be78b81bb65ad705dd331a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278173"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 课：浏览自行车购买者挖掘模型
-  在本课程中，你将使用[选择 (DMX)](/sql/dmx/select-dmx)语句浏览决策树和聚类分析挖掘中的内容模型中创建[第 2 课： 添加要预测的挖掘结构的挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  在本课程中，您将使用[SELECT (DMX)](/sql/dmx/select-dmx)语句浏览决策树和聚类分析挖掘中的内容模型中创建的[第 2 课： 添加挖掘模型预测的挖掘结构](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- 挖掘模型中包含的列不是由挖掘结构定义的列，而是用于说明通过算法获得的趋势和模式的特定列集。 描述了这些挖掘模型列[DMSCHEMA_MINING_MODEL_CONTENT 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)架构行集。 例如，内容架构行集中的 MODEL_NAME 列包含挖掘模型的名称。 对于聚类分析挖掘模型，NODE_CAPTION 列包含每个分类的名称，NODE_DESCRIPTION 列包含每个分类的特征说明。 你可以通过使用 SELECT FROM 浏览这些列\<模型 >。在 DMX 中的内容语句。 也可以使用该语句浏览用于创建挖掘模型的数据。 为了使用该语句，必须对挖掘结构启用钻取功能。 有关语句的详细信息，请参阅[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
+ 挖掘模型中包含的列不是由挖掘结构定义的列，而是用于说明通过算法获得的趋势和模式的特定列集。 描述了这些挖掘模型列[DMSCHEMA_MINING_MODEL_CONTENT 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)架构行集。 例如，内容架构行集中的 MODEL_NAME 列包含挖掘模型的名称。 对于聚类分析挖掘模型，NODE_CAPTION 列包含每个分类的名称，NODE_DESCRIPTION 列包含每个分类的特征说明。 您可以通过使用 SELECT FROM 浏览这些列\<模型 >。在 DMX 中的内容语句。 也可以使用该语句浏览用于创建挖掘模型的数据。 为了使用该语句，必须对挖掘结构启用钻取功能。 有关语句的详细信息，请参阅[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
   
  也可以使用 SELECT DISTINCT 语句返回离散列的所有状态。 例如，如果对 gender 列执行此操作，则查询将返回 `male` 和 `female`。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "36312575"
 -   浏览其他可用于特定离散列的状态  
   
 ## <a name="returning-the-content-of-a-mining-model"></a>返回挖掘模型的内容  
- 在本课程中，你使用[SELECT FROM&#60;模型&#62;。内容&#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx)语句以返回聚类分析模型的内容。  
+ 在本课程中，您使用[SELECT FROM&#60;模型&#62;。内容&#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx)语句返回聚类分析模型的内容。  
   
- 以下是选择从程序的泛型示例\<模型 >。内容的语句：  
+ 下面是 SELECT FROM 的一般示例\<模型 >。内容的语句：  
   
 ```  
 SELECT <select list> FROM [<mining model>].CONTENT  
@@ -71,11 +71,11 @@ WHERE NODE_SUPPORT > 100
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>返回聚类分析挖掘模型的内容  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**。  
+1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
-2.  复制的 SELECT FROM 的泛型示例\<模型 >。空白查询到的内容语句。  
+2.  SELECT from 的一般示例复制\<模型 >。内容到空白查询语句。  
   
 3.  将  
   
@@ -89,7 +89,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     也可以替换 * 任一种情况中包含的列的列表[DMSCHEMA_MINING_MODEL_CONTENT 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
+     也可以替换 * 与任意中包含的列的列表[DMSCHEMA_MINING_MODEL_CONTENT 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
   
 4.  将  
   
@@ -109,18 +109,18 @@ WHERE NODE_SUPPORT > 100
     SELECT * FROM [Clustering].CONTENT  
     ```  
   
-5.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+5.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-6.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`SELECT_CONTENT.dmx`。  
+6.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`SELECT_CONTENT.dmx`。  
   
-7.  在工具栏上，单击**执行**按钮。  
+7.  在工具栏上，单击**Execute**按钮。  
   
      查询返回挖掘模型的内容。  
   
 ## <a name="use-drillthrough"></a>使用钻取功能  
- 下一步将使用钻取语句返回用于为决策树挖掘模型定型的事例抽样。 在本课程中，你使用[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx)语句返回的决策树模型内容。  
+ 下一步将使用钻取语句返回用于为决策树挖掘模型定型的事例抽样。 在本课程中，您使用[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx)语句返回决策树模型的内容。  
   
- 以下是选择从程序的泛型示例\<模型 >。CASES 语句：  
+ 下面是 SELECT FROM 的一般示例\<模型 >。用例语句：  
   
 ```  
 SELECT <select list>   
@@ -142,15 +142,15 @@ SELECT <select list> FROM [<mining model>].CASES
 WHERE IsInNode('<node id>')  
 ```  
   
- 有关使用 IsInNode WHERE 语句的信息的详细信息，请参阅[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
+ 有关使用带有 IsInNode 的 WHERE 语句的详细信息，请参阅[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>返回用于为挖掘模型定型的事例  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**。  
+1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
-2.  复制的 SELECT FROM 的泛型示例\<模型 >。到空白的查询的情况下语句。  
+2.  SELECT from 的一般示例复制\<模型 >。到空白查询的情况下语句。  
   
 3.  将  
   
@@ -185,11 +185,11 @@ WHERE IsInNode('<node id>')
     FROM [Decision Tree].CASES  
     ```  
   
-5.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+5.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-6.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`SELECT_DRILLTHROUGH.dmx`。  
+6.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`SELECT_DRILLTHROUGH.dmx`。  
   
-7.  在工具栏上，单击**执行**按钮。  
+7.  在工具栏上，单击**Execute**按钮。  
   
      查询返回用于为决策树挖掘模型定型的源数据。  
   
@@ -213,7 +213,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>返回离散列的状态  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**。  
+1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -250,11 +250,11 @@ SELECT DISTINCT [<column>]
     FROM [Decision Tree]  
     ```  
   
-5.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+5.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-6.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`SELECT_DISCRETE.dmx`。  
+6.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`SELECT_DISCRETE.dmx`。  
   
-7.  在工具栏上，单击**执行**按钮。  
+7.  在工具栏上，单击**Execute**按钮。  
   
      查询返回 Bike Buyer 列的可能状态。  
   

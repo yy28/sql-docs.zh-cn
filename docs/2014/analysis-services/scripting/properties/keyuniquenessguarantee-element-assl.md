@@ -1,5 +1,5 @@
 ---
-title: KeyUniquenessGuarantee 元素 (ASSL) |Microsoft 文档
+title: KeyUniquenessGuarantee 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyUniquenessGuarantee element
 ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d95c6c4479a0ce6b496dec934206ad893df6ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3038ab6fe49f3791d62ae171171783e46207365
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153268"
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>KeyUniquenessGuarantee 元素 (ASSL)
   指示属性键和其名称之间的关系以及属性键和相关属性之间的关系是否保证有效。  
@@ -62,9 +62,9 @@ ms.locfileid: "36126928"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用`KeyUniquenessGuarantee`要优化的查询构造，此属性的基础数据源中检索成员时元素。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用`KeyUniquenessGuarantee`元素优化查询构造，此属性的基础数据源检索成员时。  
   
- 对应于的父元素`KeyUniquenessGuarantee`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 父级对应的元素`KeyUniquenessGuarantee`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

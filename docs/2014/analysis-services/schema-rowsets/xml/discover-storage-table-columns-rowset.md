@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_STORAGE_TABLE_COLUMNS 行集 |Microsoft 文档
+title: DISCOVER_STORAGE_TABLE_COLUMNS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b3fed7add23dda2242000dbad63bb6cc2def0fb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153148"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 行集
   在列级提供有关在 SharePoint 或表格模式下运行的 Analysis Services 数据库使用的存储表的信息。  
@@ -28,20 +28,20 @@ ms.locfileid: "36126720"
  **适用于：** 表格模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_STORAGE_TABLE_COLUMNS`行集包含以下各列。  
+ `DISCOVER_STORAGE_TABLE_COLUMNS`行集包含以下列。  
   
 |**列名**|**类型指示符**|**限制**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含表的数据库名称。 如果省略，则使用当前数据库。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS`行集可通过使用此列来限制。|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|是|指定包含表的多维数据集或模型。<br /><br /> `DISCOVER_STORAGE_TABLES`行集可通过使用此列来限制。|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含表的数据库名称。 如果省略，则使用当前数据库。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS`行集，可通过使用此列进行限制。|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|是|指定包含表的多维数据集或模型。<br /><br /> `DISCOVER_STORAGE_TABLES`行集，可通过使用此列进行限制。|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|是|度量值组的名称。|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||维度的名称。|  
-|`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||属性的名称。|  
+|`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||该属性的名称。|  
 |`TABLE_ID`|`DBTYPE_WSTR`||表的 ID。|  
 |`COLUMN_ID`|`DBTYPE_ WSTR`||列的 ID。 该列 ID 在 xVelocity 内存中分析引擎 (VertiPaq) 的内部使用并且仅供参考。|  
 |`COLUMN_TYPE`|`DBTYPE_WSTR`||列的类型。 该列类型在 xVelocity 内存中分析引擎 (VertiPaq) 的内部使用并且仅供参考。<br /><br /> -BASIC_DATA<br />-HIERARCHY_DATAID_TO_POSITION<br />-HIERARCHY_POSITION_TO_DATAID<br />-关系|  
-|`COLUMN_ENCODING`|`DBTYPE_UI8`||表示用于列数据的编码类型的整数。<br /><br /> -   **0**、 用于`COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION，HIERARCHY_POSITION_TO_DATAID，关系<br />-   **1**、 用于`COLUMN_TYPE`: BASIC_DATA<br />-   **2**、 用于`COLUMN_TYPE`: BASIC_DATA|  
-|`DATATYPE`|`DBTYPE_WSTR`||列的数据类型。 具有以下可能值：<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-是 DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-N/A|  
+|`COLUMN_ENCODING`|`DBTYPE_UI8`||表示用于列数据的编码类型的整数。<br /><br /> -   **0**，用于`COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION、 HIERARCHY_POSITION_TO_DATAID、 关系<br />-   **1**，用于`COLUMN_TYPE`: BASIC_DATA<br />-   **2**，用于`COLUMN_TYPE`: BASIC_DATA|  
+|`DATATYPE`|`DBTYPE_WSTR`||列的数据类型。 具有以下可能值：<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-不适用|  
 |`ISKEY`|`DBTYPE_BOOL`||如果列用作主键或外键，则为 `True`；否则为 `false`。|  
 |`ISUNIQUE`|`DBTYPE_BOOL`||`True` 如果列中的值是唯一的;否则为`false`。|  
 |`ISNULLABLE`|`DBTYPE_BOOL`||如果列是可为 Null 的，则为 `True`；否则为 `false`。|  

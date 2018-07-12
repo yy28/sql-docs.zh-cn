@@ -1,5 +1,5 @@
 ---
-title: 选项 （表设计器和数据库设计器页） |Microsoft 文档
+title: 选项 （设计人员表和数据库设计器页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e82d8f644fbec9c5801d24fb3d9dbcd525760918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a324f7e0bd9ca0d71b727dd109f8d7dd0a8aec7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240277"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>选项 （表设计器和数据库设计器页）
+# <a name="options-designers-table-and-database-designers-page"></a>选项 （设计人员表和数据库设计器页）
   使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”菜单上，单击“选项”，展开“设计器”文件夹，再单击“表设计器”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  

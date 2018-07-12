@@ -1,5 +1,5 @@
 ---
-title: 浏览数据源视图 （数据挖掘向导） |Microsoft 文档
+title: 浏览数据源视图 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14f4bcdb5fea062320138ea90036bbc824f875e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24348462faa76777b279576c105c312b333b83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155648"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>浏览数据源视图（数据挖掘向导）
   可以使用 **“浏览数据源视图”** 对话框查看在向导的 **“选择数据源视图”** 页中选择的数据源视图。  

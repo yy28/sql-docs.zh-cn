@@ -1,5 +1,5 @@
 ---
-title: 添加或删除用户定义的层次结构 |Microsoft 文档
+title: 添加或删除用户定义层次结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
 - removing hierarchies
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57e1f74d612add88c6a2c47497f0d6a55c64c665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157118"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>添加或删除用户定义层次结构
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”选项卡上的维度中添加或删除用户定义的层次结构。  
   
- 在添加用户定义的层次结构后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中实例化此层次结构并且处理维度之前，用户无法使用此层次结构。 有关详细信息，请参阅[多维模型数据库&#40;SSAS&#41; ](multidimensional-model-databases-ssas.md)和[多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)。  
+ 在添加用户定义的层次结构后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中实例化此层次结构并且处理维度之前，用户无法使用此层次结构。 有关详细信息，请参阅[多维模型数据库&#40;SSAS&#41; ](multidimensional-model-databases-ssas.md)并[多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)。  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>向维度添加用户定义层次结构  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36126737"
   
 5.  （可选）修改用户定义层次结构或其级别的属性。  
   
-     例如，您可能想为用户定义的层次结构指定名称，重命名它的一个或多个级别，以及为“全部”级别定义自定义名称。 有关详细信息，请参阅[用户层次结构属性](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)，和[级别的属性&#91;已替换通过&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)。  
+     例如，您可能想为用户定义的层次结构指定名称，重命名它的一个或多个级别，以及为“全部”级别定义自定义名称。 有关详细信息，请参阅[用户层次结构属性](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)，并[级别的属性&#91;Paved 通过&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)。  
   
     > [!NOTE]  
     >  默认情况下，用户定义的层次结构仅仅是用户用于深化信息的路径。 但是，如果级别之间存在关系，则可以通过配置级别间的属性关系来提高查询性能。 有关详细信息，请参阅 [属性关系](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) 和 [定义属性关系](attribute-relationships-define.md)。  

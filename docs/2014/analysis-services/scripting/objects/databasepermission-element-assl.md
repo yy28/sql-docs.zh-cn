@@ -1,5 +1,5 @@
 ---
-title: DatabasePermission 元素 (ASSL) |Microsoft 文档
+title: DatabasePermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e47203616cc76fa09c0fd0658e7dad8a89c90a9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259523"
 ---
 # <a name="databasepermission-element-assl"></a>DatabasePermission 元素 (ASSL)
-  定义中的默认权限[数据库](database-element-assl.md)的特定元素[角色](role-element-assl.md)元素。  
+  定义中的默认权限[数据库](database-element-assl.md)元素的特定[角色](role-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36029319"
   
  此元素在 DeploymentMode 值 2（表格模型）下具有以下验证。  
   
--   *管理*属性默认值设置为`False`，除了当用户具有管理权限。 对于具有管理权限的用户，属性值设置为 `True`。  
+-   *管理*属性默认值设置为`False`，除非用户具有管理权限。 对于具有管理权限的用户，属性值设置为 `True`。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DatabasePermission>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DatabasePermission>。  
   
 ## <a name="see-also"></a>请参阅  
  [Role 元素&#40;ASSL&#41;](role-element-assl.md)   

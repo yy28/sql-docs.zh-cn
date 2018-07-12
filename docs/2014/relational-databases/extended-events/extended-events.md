@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c95d2988eb0e1415355fdd86f37f9a580a5c81ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9fe49812e889cf360bce9d853b9bc9160da0c4ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151108"
 ---
 # <a name="extended-events"></a>扩展事件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件具有高度可伸缩且高度可配置的体系结构，使用户能够按需收集解决性能问题或确定性能问题所需的信息。  

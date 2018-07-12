@@ -1,5 +1,5 @@
 ---
-title: 查询数据挖掘架构行集 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 查询数据挖掘架构行集 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - data mining [Analysis Services], queries
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f794266fa1a4658199e617333ae7c6ae280bb79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 410c9a657bfd639650d1b2deee3253356ea62060
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148638"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>查询数据挖掘架构行集（Analysis Services - 数据挖掘）
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，许多现有 OLE DB 数据挖掘架构行集已作为可以使用数据挖掘扩展插件 (DMX) 语句轻松查询的一组系统表公开。 通过针对数据挖掘架构行集创建查询，可以标识可用的服务，获取您的模型和结构的状态更新，并查找有关模型内容或参数的详细信息。 有关数据挖掘架构行集的说明，请参阅 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)。  

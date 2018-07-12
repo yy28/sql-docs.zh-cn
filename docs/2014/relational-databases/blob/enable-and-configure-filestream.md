@@ -3,25 +3,23 @@ title: 启用和配置 FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb7929585ca40c0a419d0e655c2c4cc3f298ddf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028361"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413146"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
   在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
@@ -95,7 +93,7 @@ ms.locfileid: "36028361"
 ###  <a name="database"></a> 物理数据库设计  
  设计 FILESTREAM 数据库时，应考虑下列准则：  
   
--   FILESTREAM 列必须附带有相应`uniqueidentifier`ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  
+-   FILESTREAM 列必须附带相应的`uniqueidentifier`ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  
   
 -   出于性能方面的考虑，FILESTREAM 文件组和容器应驻留在操作系统、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志、tempdb 或分页文件以外的卷上。  
   

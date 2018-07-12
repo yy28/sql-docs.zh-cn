@@ -19,13 +19,13 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eea490a49525493bd35767c7b93dc9de13080b7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd7f28c40a98d06de9d4caaf0a09beea6ee0bcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164920"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用脚本组件创建 ODBC 目标
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标和用于 ODBC 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序将数据保存到 ODBC 目标。 当然，还可以创建供单个包使用的即席 ODBC 目标。 若要创建此即席 ODBC 目标，可使用脚本组件，如下面的示例中所示。  
@@ -65,7 +65,7 @@ ms.locfileid: "36125412"
   
 7.  在“连接管理器”页中，添加或创建一个具有说明性名称（如 **MyODBCConnectionManager**）的 ODBC 连接管理器。  
   
-8.  上**脚本**页上，单击**编辑脚本**，然后输入下面中所示的脚本`ScriptMain`类。  
+8.  上**脚本**页上，单击**编辑脚本**，然后输入下面所示的脚本`ScriptMain`类。  
   
 9. 关闭脚本开发环境和“脚本转换编辑器”，然后运行该示例。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36125412"
     }  
     ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  

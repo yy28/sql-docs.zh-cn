@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f54e95b0b9bee1e989d9d9ccf85f513210302367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f201b93b3469278d0335cbc60bcc00aa679e6b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228747"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
   条形图以水平方式显示类别数据。 这有助于：  
@@ -34,10 +34,10 @@ ms.locfileid: "36125065"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将学习如何执行下列操作：  
   
-1.  [从图表向导创建图表](#Chart)  
+1.  [使用图表向导创建图表](#Chart)  
   
 2.  [选择图表类型](#ChartType)  
   
@@ -45,11 +45,11 @@ ms.locfileid: "36125065"
   
 4.  [修改垂直轴上的名称的显示](#Sort)  
   
-5.  [将图例移动](#Legend)  
+5.  [移动图例](#Legend)  
   
 6.  [移动图表标题](#ChartTitle)  
   
-7.  [格式化并水平轴标签](#Horizontal)  
+7.  [格式和标签的水平轴](#Horizontal)  
   
 8.  [添加筛选器以显示前五个值](#Filter)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36125065"
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
 ##  <a name="Chart"></a> 1.使用图表向导创建图表报表  
- 从**入门**对话框中，创建嵌入数据集、 选择共享的数据源，并通过使用图表向导创建一个条形图。  
+ 从**Getting Started**对话框中，创建嵌入数据集、 选择共享的数据源，并使用图表向导创建条形图。  
   
 > [!NOTE]  
 >  在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
@@ -78,7 +78,7 @@ ms.locfileid: "36125065"
      此时将显示 **“入门”** 对话框。  
   
     > [!NOTE]  
-    >  如果**入门**对话框不会不显示，单击报表生成器按钮，然后单击**新建**。  
+    >  如果**Getting Started**对话框不会不会显示，单击报表生成器按钮，然后单击**新建**。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36125065"
   
 2.  单击“条形图”，然后单击“下一步”。  
   
-     上**排列图表字段**页上，有四个字段**可用字段**窗格： FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
+     上**排列图表字段**页上，有四个字段中的**可用字段**窗格： FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
   
 3.  将 LastName 拖动到“类别”窗格。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36125065"
   
 6.  单击“下一步” 。  
   
-7.  上**选择样式**页上，在样式窗格中，选择一种样式。  
+7.  上**选择一种样式**页上，在样式窗格中，选择一种样式。  
   
      样式指定字形、颜色集和边框样式。 选择样式时，“预览”窗格将显示具有该样式的图表的示例。  
   
@@ -156,20 +156,20 @@ ms.locfileid: "36125065"
   
 1.  切换到报表设计视图。  
   
-2.  右键单击垂直轴，，然后单击**垂直轴属性**。  
+2.  右键单击垂直轴，然后依次**垂直轴属性**。  
   
 3.  在“轴范围和间隔”下的“间隔”框中，键入 1。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  右键单击垂直**轴标题**和清除**显示轴标题**复选框。  
+5.  右键单击垂直**轴标题**并清除**显示轴标题**复选框。  
   
 6.  单击 **“运行”** 以预览报表。  
   
 > [!NOTE]  
 >  如果无法阅读垂直轴上的销售人员姓名，则可以增加图表的高度，或更改轴标签的格式选项。  
   
-###  <a name="CategoryExpression"></a> 在垂直轴上显示姓氏和名字  
+###  <a name="CategoryExpression"></a> 垂直轴上显示姓氏和名字  
  可以更改类别表达式以将每个销售人员的姓氏包含在名字之后。  
   
 ##### <a name="to-change-the-category-expression"></a>更改类别表达式  
@@ -216,13 +216,13 @@ ms.locfileid: "36125065"
   
 7.  单击“确定” 。  
   
-8.  重新打开**类别组属性**页上，在**顺序**下拉列表中，选择**Z 到 A**。此时将选择反向字母顺序，以便按从上到下的顺序显示姓名。  
+8.  重新**类别组属性**页上，在**顺序**下拉列表中，选择**Z 到 A**。此时将选择反向字母顺序，以便按从上到下的顺序显示姓名。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. 单击 **“运行”** 以预览报表。  
   
- 在水平轴上的名称在相反的顺序中的排序与**Alerca**顶部和**Zeng**底部。  
+ 水平轴上的姓名按相反顺序与**Alerca**顶部并**Zeng**底部。  
   
 ##  <a name="Legend"></a> 5.移动图例  
  为了提高图表值的可读性，可能需要移动图表图例。 例如，在水平显示图条的条形图中，可以更改图例的位置，将其放置在图表区的上方或下方。 这可为图条提供更大的水平空间。  
@@ -249,7 +249,7 @@ ms.locfileid: "36125065"
   
 1.  切换到报表设计视图。  
   
-2.  选择的单词**图表标题**在顶部的图表，然后键入以下文本： **Sales for 2008 和 2009年**。  
+2.  选择词语**图表标题**顶部的图表，然后键入以下文本： **Sales for 2008 and 2009**。  
   
 3.  单击该文本的外部。  
   
@@ -264,19 +264,19 @@ ms.locfileid: "36125065"
   
 2.  沿图表底部单击水平轴，以选择它。  
   
-     在功能区中，在**主页**选项卡上，在**数**组中，单击**货币**按钮。 水平轴标签将更改为货币。  
+     在功能区中，在**主页**选项卡上，在**数量**组中，单击**货币**按钮。 水平轴标签将更改为货币。  
   
 3.  （可选）删除小数位数。 在“货币”按钮附近，单击两次“减少小数位数”按钮。  
   
 4.  右键单击水平轴，然后单击“水平轴属性”。  
   
-5.  上**数**选项卡上，选择**以千为单位显示值。**  
+5.  上**数量**选项卡上，选择**以千为单位显示值。**  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  右键单击**轴标题**单击**轴标题属性**。  
+7.  右键单击**轴标题**然后单击**轴标题属性**。  
   
-8.  在**标题文本**框中，键入**以千为单位销售**单击**确定**。  
+8.  在中**标题文本**框中，键入**以千为单位销售**然后单击**确定**。  
   
 9. 单击 **“运行”** 以预览报表。  
   
@@ -297,7 +297,7 @@ ms.locfileid: "36125065"
   
 5.  单击 **“添加”**。 此时将显示一个新的空白筛选器。  
   
-6.  在**表达式**，类型 **[Sum(SalesYear2009)]**。 此时将创建基础表达式 `=Sum(Fields!SalesYear2009.Value)`，可以查看是否单击了“fx”按钮。  
+6.  在中**表达式**，类型 **[Sum(SalesYear2009)]**。 此时将创建基础表达式 `=Sum(Fields!SalesYear2009.Value)`，可以查看是否单击了“fx”按钮。  
   
 7.  验证确保数据类型是“文本”。  
   
@@ -319,15 +319,15 @@ ms.locfileid: "36125065"
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  类型**销售条形图**，按 ENTER，，然后键入**2009年的前五个卖方**，因此它如下所示：  
+2.  类型**Sales Bar Chart**，再按 ENTER，，然后键入**Top Five Sellers for 2009**，使其如下所示：  
   
      **Sales Bar Chart**  
   
-     **销量五个为 2009 的**  
+     **Top Five Sellers for 2009**  
   
 3.  选择 **Sales Bar Chart**，并单击“加粗”按钮。  
   
-4.  选择**2009年的前五个卖方**，然后在**字体**节**主页**选项卡上，将字体大小设置为**10**。  
+4.  选择**Top Five Sellers for 2009**，然后在**字体**部分**主页**选项卡上，将字号设置为**10**。  
   
 5.  （可选）您可能需要使“标题”文本框更高一些，以容纳两行文本。  
   

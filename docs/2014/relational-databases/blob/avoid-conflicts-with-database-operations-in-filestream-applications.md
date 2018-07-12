@@ -3,25 +3,23 @@ title: 避免与 FILESTREAM 应用程序中的数据库操作冲突 | Microsoft 
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fd98b384136d58a001671c0dab3a496f483cea1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1aac180e6616ffb9d4f6c8e4eb2ef51e6998c186
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123649"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410116"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免与 FILESTREAM 应用程序中的数据库操作冲突
   使用 SqlOpenFilestream() 打开 Win32 文件句柄以读取或写入 FILESTREAM BLOB 数据的应用程序可能会遇到与在通用事务中管理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的冲突错误。 这包括花很长时间才能完成执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 MARS 查询。 为了有助于避免这些类型的冲突，必须精心设计应用程序。  

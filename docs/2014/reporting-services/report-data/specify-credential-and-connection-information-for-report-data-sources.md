@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3e3dc577cf7b0db69fbcc8140996ce33a4802040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210737"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  
@@ -114,7 +114,7 @@ ms.locfileid: "36125066"
     2.  如果列出了该帐户，则将其选中，然后单击 **“删除”**。  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>对已存储凭据使用模拟功能  
- 您还可以使用凭据来模拟其他用户的身份。 对于 SQL Server 数据库，使用模拟选项集[SETUSER](/sql/t-sql/statements/setuser-transact-sql)函数。  
+ 您还可以使用凭据来模拟其他用户的身份。 对于 SQL Server 数据库，使用模拟选项可以设置[SETUSER](/sql/t-sql/statements/setuser-transact-sql)函数。  
   
 > [!IMPORTANT]  
 >  对于支持订阅的报表，或按计划生成报表历史记录或刷新报表执行快照的报表，请勿使用模拟功能。  

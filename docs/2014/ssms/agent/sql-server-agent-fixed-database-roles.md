@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, roles
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7890daf6c0ff4b77bbb8bb44e29d7921a58dd612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 488132684547dcfbfc69a7c6479cc6ec7e42359e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151868"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 代理固定数据库角色
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有下列 **msdb** 数据库固定数据库角色，使管理员可以更好地控制对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的访问。 下面按从低到高的访问权限列出了角色：  
@@ -65,11 +65,11 @@ ms.locfileid: "36125764"
   
  <sup>1</sup>无法更改作业所有权。  
   
- <sup>2</sup>可以获得在中使用的可用运算符列表**sp_notify_operator**和**作业属性**的 Management Studio 对话框。  
+ <sup>2</sup>可以获取有关在中使用的可用运算符列表**sp_notify_operator**并且**作业属性**的 Management Studio 对话框。  
   
- <sup>3</sup>的代理只能在列表**作业步骤属性**的 Management Studio 对话框。  
+ <sup>3</sup>仅在中可用的代理列表**作业步骤属性**的 Management Studio 对话框。  
   
- <sup>4</sup>的成员**SQLAgentUserRole**必须显式授予 EXECUTE 权限上**sp_purge_jobhistory**若要删除的他们所拥有的作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。  
+ <sup>4</sup>的成员**SQLAgentUserRole**必须显式授予 EXECUTE 权限上**sp_purge_jobhistory**才能删除其所拥有作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。  
   
 ### <a name="sqlagentreaderrole-permissions"></a>SQLAgentReaderRole 权限  
  **SQLAgentReaderRole** 包括所有的 **SQLAgentUserRole** 权限，以及查看可用的多服务器作业及其属性和历史记录的列表的权限。 此角色的成员还可以查看所有可用作业和作业计划以及它们的属性的列表，而不只是它们所拥有的那些作业和作业计划。 **SQLAgentReaderRole** 成员不能通过更改作业所有权来获得对它们还没有拥有的作业的访问权限。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，**SQLAgentReaderRole** 的成员只能看到“作业”节点。  
@@ -81,7 +81,7 @@ ms.locfileid: "36125764"
   
 |操作|运算符|本地作业|多服务器作业|作业计划|代理|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|创建/修改/删除|“否”|是<sup>1</sup> （拥有作业仅）|“否”|是（仅拥有的计划）|“否”|  
+|创建/修改/删除|“否”|是<sup>1</sup> （仅拥有的作业）|“否”|是（仅拥有的计划）|“否”|  
 |视图列表（枚举）|是 <sup>2</sup>|是|是|是|是 <sup>3</sup>|  
 |启用/禁用|“否”|是（仅拥有的作业）|“否”|是（仅拥有的计划）|不适用|  
 |视图属性|“否”|是|是|是|“否”|  
@@ -93,11 +93,11 @@ ms.locfileid: "36125764"
   
  <sup>1</sup>无法更改作业所有权。  
   
- <sup>2</sup>可以获得在中使用的可用运算符列表**sp_notify_operator**和**作业属性**的 Management Studio 对话框。  
+ <sup>2</sup>可以获取有关在中使用的可用运算符列表**sp_notify_operator**并且**作业属性**的 Management Studio 对话框。  
   
- <sup>3</sup>的代理只能在列表**作业步骤属性**的 Management Studio 对话框。  
+ <sup>3</sup>仅在中可用的代理列表**作业步骤属性**的 Management Studio 对话框。  
   
- <sup>4</sup>的成员**SQLAgentReaderRole**必须显式授予 EXECUTE 权限上**sp_purge_jobhistory**若要删除的他们所拥有的作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。  
+ <sup>4</sup>的成员**SQLAgentReaderRole**必须显式授予 EXECUTE 权限上**sp_purge_jobhistory**才能删除其所拥有作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole 权限  
  **SQLAgentOperatorRole** 是具有最高特权的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色。 它的权限包括 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的所有权限。 此角色的成员还可以查看运算符和代理的属性，并且可以枚举服务器上的可用代理和警报。  
@@ -113,7 +113,7 @@ ms.locfileid: "36125764"
   
 |操作|Alerts|运算符|本地作业|多服务器作业|作业计划|代理|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|创建/修改/删除|“否”|“否”|是<sup>2</sup> （拥有作业仅）|“否”|是（仅拥有的计划）|“否”|  
+|创建/修改/删除|“否”|“否”|是<sup>2</sup> （仅拥有的作业）|“否”|是（仅拥有的计划）|“否”|  
 |视图列表（枚举）|是|是 <sup>1</sup>|是|是|是|是|  
 |启用/禁用|“否”|“否”|是 <sup>3</sup>|“否”|是<sup>4</sup>|不适用|  
 |视图属性|是|是|是|是|是|是|  
@@ -123,22 +123,22 @@ ms.locfileid: "36125764"
 |删除作业历史记录|不适用|不适用|是|“否”|不适用|不适用|  
 |附加/分离|不适用|不适用|不适用|不适用|是（仅拥有的计划）|不适用|  
   
- <sup>1</sup>可以获得在中使用的可用运算符列表**sp_notify_operator**和**作业属性**的 Management Studio 对话框。  
+ <sup>1</sup>可以获取有关在中使用的可用运算符列表**sp_notify_operator**并且**作业属性**的 Management Studio 对话框。  
   
  <sup>2</sup>无法更改作业所有权。  
   
- <sup>3</sup> **SQLAgentOperatorRole**成员可以启用或禁用本地作业通过使用存储的过程不拥有**sp_update_job**和为指定值 **@enabled**和**@job_id** (或**@job_name**) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
+ <sup>3</sup> **SQLAgentOperatorRole**成员可以启用或禁用它们尚未拥有使用存储的过程的本地作业**sp_update_job**为指定值和 **@enabled**并**@job_id** (或**@job_name**) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
   
- <sup>4</sup> **SQLAgentOperatorRole**成员可以启用或禁用的计划通过使用存储的过程不拥有**sp_update_schedule**和为指定值**@enabled** 和**@schedule_id** (或**@name**) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
+ <sup>4</sup> **SQLAgentOperatorRole**成员可以启用或禁用它们尚未拥有使用存储的过程的计划**sp_update_schedule**为指定值和**@enabled** 并**@schedule_id** (或**@name**) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
   
 ## <a name="assigning-users-multiple-roles"></a>为用户分配多个角色  
  **sysadmin** 固定服务器角色的成员可以访问所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理功能。 如果用户不是 **sysadmin** 角色的成员，但却是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的成员，那么记住这些角色具有相互包含的权限模型很重要。 因为较高特权的角色总是包含较低特权角色的所有权限，所以作为多个角色的成员的用户将自动将权限与其所属的最高特权的角色相关联。  
   
 ## <a name="see-also"></a>请参阅  
  [实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)   
- [sp_update_job &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
- [sp_update_schedule &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
- [sp_notify_operator &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
- [sp_purge_jobhistory &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
+ [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
+ [sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
+ [sp_notify_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
+ [sp_purge_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
   
   

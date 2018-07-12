@@ -1,26 +1,24 @@
 ---
-title: 如何： 将行插入到 Geography 列 (ODBC) |Microsoft 文档
+title: 如何： 将行插入到 Geography 列 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa77e06f2856d737ea12ba345f78704499a31e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 85757e4defac8689f062143dcd53fba3e4ebc31e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028572"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409776"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何在 Geography 列中插入行 (ODBC)
   此示例使用两个不同的绑定（SQLCCHAR 和 SQLCBINARY）从 WellKnownBinary (WKB) 中向具有地理位置列的表中插入两行。 然后从该表中选择一行并使用 ::STAsText() 显示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，应用程序将以下内容显示到控制台：POINT(56.4595 -2.9842)。  
@@ -29,12 +27,12 @@ ms.locfileid: "36028572"
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 空间存储有关的详细信息，请参阅[空间数据&#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)。  
+ 有关空间存储的详细信息，请参阅[空间数据&#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>示例  
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的表。  
   
- 使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
  如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   

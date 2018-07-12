@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b5019b40dd6897094a1dbb8e0549659a6aa5308
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e627b0cec731afa34d12397c90d13fe0ddabdd33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210997"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
   使用复制冲突查看器，可以查看在复制同步过程中发生的所有冲突。 在两个不同的服务器上（例如，在发布服务器和订阅服务器上，或在两个不同的订阅服务器上）同时修改相同的数据时会发生冲突。 使用在创建时选择的冲突解决程序，复制可以自动解决冲突。 不过，使用复制冲突查看器可以在必要时选择不同的冲突解决方法。 可能会发生下列冲突：  

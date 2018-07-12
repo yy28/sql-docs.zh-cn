@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154328"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
   **tempdb** 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有用户使用，并可用于保存下列各项：  
@@ -47,7 +47,7 @@ ms.locfileid: "36125103"
 |主数据|tempdev|tempdb.mdf|按 10% 自动增长，直到磁盘已满|  
 |日志|templog|templog.ldf|以 10% 的速度自动增长到最大 2 TB|  
   
- 大小**tempdb**可能会影响系统的性能。 例如，如果**tempdb**太小，系统处理可能会太与 autogrowing 占用数据库，以支持你的工作负荷要求每次启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 你可以通过增加大小来避免此开销**tempdb**。  
+ 大小**tempdb**可能会影响系统的性能。 例如，如果**tempdb**大小太小，可能是系统处理，而不使用自动增长的数据库以支持工作负荷要求每次启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以通过增加的大小来避免此开销**tempdb**。  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb 的性能提高  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **tempdb** 性能以下列方式进行提高：  
@@ -58,7 +58,7 @@ ms.locfileid: "36125103"
   
 -   减少了 **tempdb** 的日志开销。 从而减少了 **tempdb** 日志文件上的磁盘 I/O 带宽消耗。  
   
--   用于分配中的混合的页算法**tempdb**得到了改进。  
+-   分配混合的页中的算法**tempdb**得到了改进。  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>移动 tempdb 数据和日志文件  
  若要移动 **tempdb** 数据和日志文件，请参阅 [移动系统数据库](system-databases.md)。  

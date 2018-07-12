@@ -1,5 +1,5 @@
 ---
-title: 配置 PowerPivot 服务帐户 |Microsoft 文档
+title: 配置 PowerPivot 服务帐户 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8e4bd2d01fb5745e3e9c67c94561789cfbc8759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719a001aa4c15a36f33dbb44ff51e442d179e51b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149948"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>配置 PowerPivot 服务帐户
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装包括支持服务器操作的两个服务。 **SQL Server Analysis Services (PowerPivot)** 服务是一种 Windows 服务，提供应用程序服务器上支持的 PowerPivot 数据处理和查询。 当您在 SharePoint 集成模式下安装 Analysis Services 时，在 SQL Server 安装期间始终为此服务指定登录帐户。  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装包括支持服务器操作的两个服务。 **SQL Server Analysis Services (PowerPivot)** 服务是一种 Windows 服务，提供应用程序服务器上的 PowerPivot 数据处理和查询支持。 当您在 SharePoint 集成模式下安装 Analysis Services 时，在 SQL Server 安装期间始终为此服务指定登录帐户。  
   
  必须为 PowerPivot 服务应用程序指定第二个帐户，这是在 SharePoint 场中基于应用程序池标识运行的共享 Web 服务。 在您使用 PowerPivot 配置工具或 PowerShell 配置 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装时指定此帐户。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "36125238"
   
  本主题包含以下各节：  
   
- [更新过期的密码的 SQL Server Analysis Services (PowerPivot) 实例](#bkmk_passwordssas)  
+ [更新 SQL Server Analysis Services (PowerPivot) 实例的过期的密码](#bkmk_passwordssas)  
   
- [PowerPivot 服务应用程序更新过期密码](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
+ [PowerPivot 服务应用程序更新的过期的密码](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
  [更改运行每个服务所基于的帐户](#bkmk_newacct)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36125238"
   
  [故障排除：解决由于管理中心或 SharePoint Foundation Web 应用程序服务密码过期而导致的 HTTP 503 错误](#expired)  
   
-##  <a name="bkmk_passwordssas"></a> 更新过期的密码的 SQL Server Analysis Services (PowerPivot) 实例  
+##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (PowerPivot) 实例的过期的密码  
   
 1.  指向“开始”，单击 **“管理工具”**，再单击 **“服务”**。 双击**SQL Server Analysis Services (PowerPivot)**。 单击 **“登录”**，然后为该帐户输入新密码。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36125238"
   
 5.  选择 **“将帐户密码设置为新值”**。 在该托管帐户下运行的所有服务都将使用更新后的凭据。  
   
-##  <a name="bkmk_passwordapp"></a> PowerPivot 服务应用程序更新过期密码  
+##  <a name="bkmk_passwordapp"></a> PowerPivot 服务应用程序更新的过期的密码  
   
 1.  在“管理中心”的“安全性”部分中，单击 **“配置托管帐户”**。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36125238"
   
 3.  在 **“为此服务选择帐户”** 中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
   
-4.  选择**服务应用程序池-SharePoint Web 服务系统**若要更改默认 PowerPivot 服务应用程序的应用程序池标识。 根据配置您的安装的方式，可基于为 SharePoint 服务创建的现有服务应用程序池运行服务。 默认情况下，PowerPivot 配置工具注册为服务**默认 PowerPivot 服务应用程序 （PowerPivot 服务应用程序）**。  
+4.  选择**服务应用程序池-SharePoint Web 服务系统**若要更改默认 PowerPivot 服务应用程序的应用程序池标识。 根据配置您的安装的方式，可基于为 SharePoint 服务创建的现有服务应用程序池运行服务。 默认情况下，PowerPivot 配置工具将注册为服务**默认 PowerPivot 服务应用程序 （PowerPivot 服务应用程序）**。  
   
      如果 SharePoint 管理员已手动配置该服务，则该服务最有可能具有自己的服务应用程序池。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "36125238"
   
 |要求|Description|  
 |-----------------|-----------------|  
-|设置要求|此帐户必须指定 SQL Server 安装期间使用**Analysis Services-配置页**在安装向导 (或`ASSVCACCOUNT`中的命令行安装程序的安装参数)。<br /><br /> 您可以使用管理中心、PowerShell 或 PowerPivot 配置工具修改用户名或密码。 不支持使用其他工具更改帐户和密码。|  
+|设置要求|在 SQL Server 安装期间，必须指定此帐户使用**Analysis Services-配置页**安装向导中 (或`ASSVCACCOUNT`安装命令行安装参数)。<br /><br /> 您可以使用管理中心、PowerShell 或 PowerPivot 配置工具修改用户名或密码。 不支持使用其他工具更改帐户和密码。|  
 |域用户帐户要求|此帐户必须是 Windows 域用户帐户。 禁止使用内置计算机帐户（如 Network Service 或 Local Service）。 SQL Server 安装程序通过在指定计算机帐户时就阻止安装来强制执行域用户帐户要求。|  
-|权限要求|此帐户必须属于 SQLServerMSASUser$\<服务器 > $PowerPivot 安全组和本地计算机上的 WSS_WPG 安全组。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅[PowerPivot 服务帐户管理权限手动授予](#updatemanually)本主题中和[初始配置&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
+|权限要求|此帐户必须隶属 SQLServerMSASUser$\<服务器 > $PowerPivot 安全组和本地计算机上的 WSS_WPG 安全组。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅[PowerPivot 服务帐户管理权限手动授予](#updatemanually)本主题中以及[初始配置&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
 |扩展要求|如果您在场中安装多个 PowerPivot for SharePoint 服务器实例，则所有 Analysis Services 服务器实例都必须在同一域用户帐户下运行。 例如，如果你将第一个 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例配置为以 Contoso\ssas-srv01 身份运行，则随后在同一场中部署的所有其他 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例也必须以 Contoso\ssas-srv01（或碰巧为当前帐户）身份运行。<br /><br /> 如果将所有服务实例配置为在同一帐户下运行，则 PowerPivot 系统服务可以将查询处理或数据刷新作业分配到场中的任何 Analysis Services 服务实例。 此外，它还可将管理中心的“托管帐户”功能用于 Analysis Services 服务器实例。 通过对所有 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例使用同一帐户，您可以只更改帐户或密码一次，而所有使用这些凭据的服务实例都会自动更新。<br /><br /> SQL Server 安装程序强制执行使用同一帐户的要求。 在 SharePoint 场已安装 PowerPivot for SharePoint 实例的扩展部署中，如果您指定的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]帐户与场中已使用的帐户不同，安装程序将阻止执行新的安装。|  
   
 #### <a name="powerpivot-service-application-pool"></a>PowerPivot 服务应用程序池  
@@ -128,7 +128,7 @@ ms.locfileid: "36125238"
   
 3.  单击 **“立即运行”**。  
   
- 作为最后一招，您可以通过授予 Analysis Services 系统管理权限到 PowerPivot 服务应用程序，请确保正确的权限，然后针对 SQLServerMSASUser$ 专门添加服务应用程序标识\<服务器名 > $PowerPivot Windows 安全组。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
+ 作为最后的手段，可以通过授予 Analysis Services 系统管理权限对 PowerPivot 服务应用程序，确保正确的权限，然后明确将服务应用程序标识添加到 SQLServerMSASUser$\<服务器名 > $PowerPivot Windows 安全组。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
   
  您必须是本地管理员才能更新 Windows 安全组。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36125238"
   
 4.  单击 **“添加”**。  
   
-5.  键入用于 PowerPivot 服务应用程序池，帐户的名称，然后单击**确定**。  
+5.  键入用于 PowerPivot 服务应用程序池的帐户的名称，然后单击**确定**。  
   
 6.  在“管理工具”中，单击 **“计算机管理”**。  
   
@@ -148,11 +148,11 @@ ms.locfileid: "36125238"
   
 8.  打开 **“组”**。  
   
-9. 双击 SQLServerMSASUser$\<servername > $PowerPivot。  
+9. 双击 SQLServerMSASUser$\<服务器名 > $PowerPivot。  
   
 10. 单击 **“添加”**。  
   
-11. 键入用于 PowerPivot 服务应用程序池，帐户的名称，然后单击**确定**。  
+11. 键入用于 PowerPivot 服务应用程序池的帐户的名称，然后单击**确定**。  
   
 ##  <a name="expired"></a> 故障排除：解决由于管理中心或 SharePoint Foundation Web 应用程序服务密码过期而导致的 HTTP 503 错误  
  如果管理中心服务或 SharePoint Foundation Web 应用程序服务由于帐户重置或密码过期而停止工作，您在尝试打开 SharePoint 管理中心或 SharePoint 站点时将遇到 HTTP 503“服务不可用”错误消息。 按以下步骤操作可将服务器恢复联机状态。 一旦管理中心可用，您就可以继续更新过期帐户信息。  

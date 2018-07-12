@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services]
 - hierarchies [Master Data Services], about hierarchies
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c199e198e326103b569b862da69b8742f2977d97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 45dcd47ff6804bc83e4f1c97c5aefa72ea5e8da8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259023"
 ---
 # <a name="hierarchies-master-data-services"></a>层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，层次结构是一种树结构，您可以使用它：  

@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器的 Transact SQL-选项卡页） |Microsoft 文档
+title: 选项 （文本编辑器-Transact-SQL-选项卡页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c070024769f59516f57d89a4c76b97ceb9b775f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c97c95ec2dff4d96f37eb274ee6ec98af117f89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152638"
 ---
-# <a name="options-text-editor---transact-sql---tabs-page"></a>选项 （文本编辑器的 Transact SQL-选项卡页）
+# <a name="options-text-editor---transact-sql---tabs-page"></a>选项 （文本编辑器-Transact-SQL-选项卡页）
   使用此对话框可以更改用于对 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本进行编程的[!INCLUDE[tsql](../includes/tsql-md.md)]查询编辑器的跳格行为。 若要显示这些设置，请在“工具”菜单上单击“选项”，依次展开“文本编辑器”文件夹和“Transact-SQL”子文件夹，然后单击“制表符”。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多个位置设置选项  

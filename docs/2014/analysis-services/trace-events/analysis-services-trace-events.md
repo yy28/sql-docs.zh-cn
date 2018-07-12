@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 跟踪事件 |Microsoft 文档
+title: Analysis Services 跟踪事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163438"
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 跟踪事件
   您可以通过捕获然后分析实例生成的跟踪事件，执行 Microsoft SQL Server Analysis Services (SSAS) 实例的活动。  跟踪事件将会划分为若干组，以便您可以更轻松地找到相关跟踪事件。  每个跟踪事件都包含与该事件相关的一组数据；并不是所有数据片段都与所有事件相关。  
   
- 跟踪事件可以启动和使用捕获**[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**，请参阅[使用 SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)，或可以从作为 XMLA 命令启动**SQL Server扩展事件**和更高版本进行分析，请参阅[使用 SQL Server 扩展事件&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
+ 跟踪事件可以启动，并且使用捕获**[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**，请参阅[使用 SQL Server Profiler 监视 Analysis services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)，或者可以通过 XMLA 命令作为启动**SQL Server扩展事件**和更高版本进行分析，请参阅[使用 SQL Server 扩展事件&#40;XEvents&#41;监视 Analysis services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
     
  下表描述各事件类别以及该类别中的事件。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36125447"
 |96|PageIn 开始|PageIn 开始。|  
 |97|PageIn 结束|PageIn 结束|  
   
- **[锁事件类别](lock-events-category.md)**  
+ **[锁定事件类别](lock-events-category.md)**  
   
  与锁相关的事件的集合。  
   
@@ -191,4 +191,4 @@ ms.locfileid: "36125447"
 |43|会话初始化|会话初始化。|  
   
 ## <a name="see-also"></a>请参阅  
-[使用 SQL Server Profiler 监视 Analysis Service](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)
+[使用 SQL Server Profiler 来监视分析服务](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)

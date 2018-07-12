@@ -1,13 +1,11 @@
 ---
-title: 架构行集支持 (OLE DB) |Microsoft 文档
+title: 架构行集支持 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,29 +16,29 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d556174bdd307c09861a2e86a1df5bee9ea9ec45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f37a7e25bf720ffa20e29b005e6022115583ac7f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028336"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413308"
 ---
 # <a name="schema-rowset-support-ole-db"></a>架构行集支持 (OLE DB)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序还支持从链接服务器返回的架构信息时处理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分布式查询。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口还支持从链接服务器返回架构信息时处理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分布式查询。  
   
 > [!NOTE]  
 >  尽管 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持同义词，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不返回同义词的元数据。  
   
- 下表列表架构行集以及支持的限制列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
+ 下面的表列表架构行集和支持的限制列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
   
 |架构行集|限制列|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 以下附加列专用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：<br /><br /> -COLUMN_LCID，这是排序规则的区域设置 ID。 COLUMN_LCID 是与 Windows LCID 相同的值。<br />-COLUMN_COMPFLAGS 定义排序规则支持的比较。 数据格式与 DBPROB_FINDCOMPAREOPS 相同。<br />-COLUMN_SORTID，即[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]排序排序规则的样式。<br />-COLUMN_TDSCOLLATION，即[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]列排序规则。<br />-IS_COMPUTED，这是 VARIANT_TRUE 如果列是计算的列和 VARIANT_FALSE 否则。|  
+|DBSCHEMA_COLUMNS|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 以下附加列专用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：<br /><br /> -COLUMN_LCID，这是排序规则的区域设置 ID。 COLUMN_LCID 是与 Windows LCID 相同的值。<br />-COLUMN_COMPFLAGS 定义对于排序规则支持哪些比较。 数据格式与 DBPROB_FINDCOMPAREOPS 相同。<br />-COLUMN_SORTID，这是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]排序的排序规则的样式。<br />-COLUMN_TDSCOLLATION，这是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]列排序规则。<br />-IS_COMPUTED，如果列是计算的列，VARIANT_FALSE 否则为 VARIANT_TRUE。|  
 |DBSCHEMA_FOREIGN_KEYS|支持所有限制。<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|支持限制 1、2、3 和 5。<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -60,7 +58,7 @@ ms.locfileid: "36028336"
  [LINKEDSERVERS 行集&#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   
+ [SQL Server 本机客户端&#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   
  [使用用户定义类型](../features/using-user-defined-types.md)  
   
   

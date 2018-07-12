@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
 - data profiling
@@ -17,13 +17,13 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b145b34330237efee46276af331787f195051899
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc1acfc6e3eaece880f4ce3242f746a2a15a5c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277053"
 ---
 # <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  

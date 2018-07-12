@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158508"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
   使用“将 SQL Server 数据库部署到 Microsoft Azure VM”向导，可将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例部署到 Microsoft Azure 虚拟机 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此向导利用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
@@ -88,7 +88,7 @@ ms.locfileid: "36126552"
   
 -   对要部署的数据库具有备份操作员权限的凭据，它们来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的源实例。  
   
- 有关在 Windows Azure 虚拟机中运行 SQL Server 的详细信息，请参阅[准备迁移到 Windows Azure 虚拟机中 SQL Server](http://msdn.microsoft.com/library/dn133142.aspx)。  
+ 在 Windows Azure 虚拟机中运行 SQL Server 的详细信息，请参阅[准备迁移到 Windows Azure 虚拟机中 SQL Server](http://msdn.microsoft.com/library/dn133142.aspx)。  
   
  在运行 Windows Server 操作系统的计算机上，您必须使用以下配置设置来运行此向导：  
   

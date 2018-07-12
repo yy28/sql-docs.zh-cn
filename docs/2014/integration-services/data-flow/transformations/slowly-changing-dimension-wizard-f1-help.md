@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f00ebc72e1091ebeed72e55d1d771c1c9bfb610
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6c05f7bbdfa47ab1d7e60fee879a90754a19a39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158780"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>渐变维度向导的 F1 帮助
   可以使用 **渐变维度向导** 配置在各种类型的渐变维度中加载数据的过程。 本部分提供 **渐变维度向导**各页的 F1 帮助。 下表对本部分的主题进行了说明：  
@@ -43,7 +43,7 @@ ms.locfileid: "36125211"
  [历史属性选项&#40;渐变维度向导&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
  指定历史属性维度列的选项。  
   
- [推断维度成员&#40;渐变维度向导&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
+ [推断维度成员的&#40;渐变维度向导&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  指定推断维度成员的选项。  
   
  [完成渐变维度向导](finish-the-slowly-changing-dimension-wizard.md)  

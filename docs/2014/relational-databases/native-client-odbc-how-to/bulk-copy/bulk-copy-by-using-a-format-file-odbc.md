@@ -1,13 +1,11 @@
 ---
-title: 通过使用格式化文件 (ODBC) 进行大容量复制 |Microsoft 文档
+title: 通过使用格式化文件 (ODBC) 大容量复制 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e84914caf6b86b12db3f58beadd05ed3b75593e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5994c0904e688817fdbdcb58cd4d03e9a3338e16
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028794"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417576"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>使用格式化文件执行大容量复制 (ODBC)
   此示例显示如何将 ODBC bcp_init 函数用于格式化文件。  
@@ -46,9 +44,9 @@ ms.locfileid: "36028794"
   
     -   复制方向：DB_IN 表示从文件复制到表或视图。  
   
-5.  调用[bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)读取描述通过批量复制操作使用的数据文件的格式文件。  
+5.  调用[bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)读取描述通过大容量复制操作使用的数据文件的格式文件。  
   
-6.  调用[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行批量复制操作。  
+6.  调用[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以执行大容量复制操作。  
   
 ## <a name="example"></a>示例  
  IA64 平台不支持此示例。  
@@ -57,7 +55,7 @@ ms.locfileid: "36028794"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码段以创建该示例将使用的表。  
+ 执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以创建该示例将使用的表。  
   
  复制第二个代码列表，并将其粘贴到名为 Bcpfmt.fmt 的文件中。 表中的每一列均由制表符分隔。  
   

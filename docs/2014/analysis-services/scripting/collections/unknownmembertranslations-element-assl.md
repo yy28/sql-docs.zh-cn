@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberTranslations 元素 (ASSL) |Microsoft 文档
+title: UnknownMemberTranslations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownMemberTranslations element
 ms.assetid: 72920843-2d43-4ff4-b38e-19c9a7451cb2
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acd95365eef8c2655748dffac5f75ce71e40258f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 331f61e1e0cea88ee8dfb58b5d69333f99961be4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159338"
 ---
 # <a name="unknownmembertranslations-element-assl"></a>UnknownMemberTranslations 元素 (ASSL)
-  包含的翻译的标题的集合[UnknownMember](../objects/member-element-assl.md)维度元素。  
+  包含的标题的翻译的集合[UnknownMember](../objects/member-element-assl.md)维度的元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,13 +61,13 @@ ms.locfileid: "36124888"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[Dimension](../objects/dimension-element-assl.md)|  
-|子元素|[UnknownMemberTranslation](../objects/translation-element-assl.md)类型的[转换](../data-type/translation-data-type-assl.md)|  
+|子元素|[UnknownMemberTranslation](../objects/translation-element-assl.md)类型的[翻译](../data-type/translation-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`UnknownMemberTranslations`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素`UnknownMemberTranslations`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
- [转换数据类型&#40;ASSL&#41;](../data-type/translation-data-type-assl.md)   
+ [Translation 数据类型&#40;ASSL&#41;](../data-type/translation-data-type-assl.md)   
  [集合&#40;ASSL&#41;](collections-assl.md)  
   
   

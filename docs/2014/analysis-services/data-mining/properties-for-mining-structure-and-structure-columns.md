@@ -1,5 +1,5 @@
 ---
-title: 挖掘结构和结构列的属性 |Microsoft 文档
+title: 挖掘结构和结构列的属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 167e04eb8623e6d2f7f11c3bfd43e3d6427c5886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71ce92444042b820f877290478bae067b3474b41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149508"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>挖掘结构和结构列的属性
   可以使用数据挖掘设计器的 **“挖掘结构”** 选项卡，为挖掘结构及其关联的列和嵌套表设置或更改属性。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
@@ -43,7 +43,7 @@ ms.locfileid: "36126192"
   
 |“属性”|Description|  
 |--------------|-----------------|  
-|**CacheMode**|指定在定型中使用的事例在定型完成之后应缓存还是放弃。<br /><br /> 注意： 此属性必须设置为`KeepTrainingCases`启用钻取和维持。|  
+|**CacheMode**|指定在定型中使用的事例在定型完成之后应缓存还是放弃。<br /><br /> 注意： 此属性必须设置为`KeepTrainingCases`以启用钻取和维持。|  
 |**排序规则**|指定列的默认排序规则。 如果没有指定排序规则，则将使用服务器的排序规则。|  
 |**Description**|描述挖掘结构。 该描述应陈述结构中数据的目的和构成，这是最佳的做法。|  
 |**ErrorConfiguration（默认值）**|指定错误的特殊处理（如果有）选项。|  
