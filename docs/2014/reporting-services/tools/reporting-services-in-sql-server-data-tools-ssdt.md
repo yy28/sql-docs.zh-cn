@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 71
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6d46d44f2071d473fbe62a6f15cce3a250751576
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9b2ab20a31fb36c7ca648a2363861e75e25c9179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153806"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]环境的特定于商业智能解决方案的增强功能。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]包含特定于商业智能解决方案的增强功能的环境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供。  
   
  使用 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表和报表相关项创建和管理解决方案和项目。 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 提供报表设计器创作环境。 在报表设计器中，您可以打开、修改、预览、保存和部署报表定义、共享数据源、共享数据集和报表部件。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36127253"
 ##  <a name="bkmk_ReportServerProjects"></a> 报表服务器项目  
  安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]后，在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中可以使用下列项目模板：  
   
--   **报表服务器项目。** 选择“报表服务器项目”时，将打开报表设计器。 报表服务器项目是由安装的商业智能项目模板[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]从可用**新项目**对话框。 有关详细信息，请参阅[向报表项目添加新报表或现有报表 (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)。报表服务器项目属性适用于 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 项目中的所有报表和共享数据源。 这些属性包括报表服务器的 URL 以及报表和共享数据源的文件夹名称。 使用 **“项目属性页”** 对话框可查看当前属性值。 若要打开此对话框中，在**项目**菜单上，单击*\<项目名称 >* **属性**。  
+-   **报表服务器项目。** 选择“报表服务器项目”时，将打开报表设计器。 报表服务器项目是安装的商业智能项目模板[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]从可用**新建项目**对话框。 有关详细信息，请参阅[向报表项目添加新报表或现有报表 (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)。报表服务器项目属性适用于 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 项目中的所有报表和共享数据源。 这些属性包括报表服务器的 URL 以及报表和共享数据源的文件夹名称。 使用 **“项目属性页”** 对话框可查看当前属性值。 若要打开此对话框，请在**项目**菜单上，单击*\<项目名称 >* **属性**。  
   
 -   **报表服务器项目向导。** 选择报表服务器向导项目时，将自动创建一个报表服务器项目并打开报表向导。 在该向导中，您可以根据每个页面上的说明来创建报表：创建到数据源的连接字符串，设置数据源凭据，设计查询，添加表或矩阵数据区域，指定报表数据和组，选取字体和颜色样式，将报表发布到报表服务器，在本地预览报表。 使用该向导创建报表之后，您可以通过使用报表服务器项目中的报表设计器来更改报表数据和报表设计器。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36127253"
   
 -   **图像** 可作为报表中的图像报表项包括的图像的列表。  
   
- “报表数据”窗格中的数据源和数据集表示报表定义中的元素。 “报表数据”窗格是多个报表创作环境支持的功能。 在报表生成器中，它是唯一可用于管理数据源和数据集的窗格。 在报表设计器中，“报表数据”窗格使用解决方案资源管理器，该解决方案资源管理器将共享数据源和共享数据集作为文件列出。 “报表数据”窗格中的共享数据源和共享数据集必须指向解决方案资源管理器中的相应共享数据源和共享数据集。 然后，“报表数据”窗格元素将包含对解决方案资源管理器中的数据文件的引用。 项目属性确定共享数据源和共享数据集是否部署到报表服务器或 SharePoint 站点。 有关详细信息，请参阅[从嵌入的数据源转换为共享&#40;报表生成器和 SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)。  
+ “报表数据”窗格中的数据源和数据集表示报表定义中的元素。 “报表数据”窗格是多个报表创作环境支持的功能。 在报表生成器中，它是唯一可用于管理数据源和数据集的窗格。 在报表设计器中，“报表数据”窗格使用解决方案资源管理器，该解决方案资源管理器将共享数据源和共享数据集作为文件列出。 “报表数据”窗格中的共享数据源和共享数据集必须指向解决方案资源管理器中的相应共享数据源和共享数据集。 然后，“报表数据”窗格元素将包含对解决方案资源管理器中的数据文件的引用。 项目属性确定共享数据源和共享数据集是否部署到报表服务器或 SharePoint 站点。 有关详细信息，请参阅[将从嵌入的数据源转换为共享&#40;报表生成器和 SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  如果未显示报表数据窗格中，在**视图**菜单上，单击**报表数据**。 如果“报表数据”窗格是浮动的，您可以对它进行定位。 有关详细信息，请参阅[在报表设计器中停靠“报表数据”窗格 (SSRS)](dock-the-report-data-pane-in-report-designer-ssrs.md)。  
@@ -258,7 +258,7 @@ ms.locfileid: "36127253"
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自定义报表模板  
- 若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于\<驱动器 >: files\microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
+ 若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于\<驱动器 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
   
  还可以向报表向导添加自定义样式。  
   

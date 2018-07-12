@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Object Management event class
 ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de378d08dd993cd2ef25aec090aa2db9d70985ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5c7ffcdf23bac1272bf88024d521a0db20a5fbff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156078"
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management 事件类
   当对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时，会发生 **Audit Database Object Management** 事件类。  

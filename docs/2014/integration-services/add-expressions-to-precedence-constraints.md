@@ -1,5 +1,5 @@
 ---
-title: 将表达式添加到优先约束 |Microsoft 文档
+title: 将表达式添加到优先约束 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161038"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>将表达式添加到优先约束
   优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 `Success`、`Failure` 或 `Completion`。 `Success` 要求优先可执行文件成功；`Failure` 要求优先可执行文件失败；而 `Completion` 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [Precedence Constraints](control-flow/precedence-constraints.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "36123686"
   
  ![两个任务之间的优先约束](media/mw-dts-03.gif "Precedence constraint between two tasks")  
   
- 也可以用包含不同表达式的多个优先约束来链接可执行文件。 例如，在下图中，使用执行结果和表达式的优先约束将任务 B 和任务 C 链接到任务 A。 两个约束值设置为`Success.`一个优先约束包含表达式`@X >== @Z`，和其他优先约束包含表达式`@X < @Z`。 变量 `X` 和变量 `Z` 的值决定是任务 C 运行还是任务 B 运行。  
+ 也可以用包含不同表达式的多个优先约束来链接可执行文件。 例如，在下图中，使用执行结果和表达式的优先约束将任务 B 和任务 C 链接到任务 A。 这两个约束的值设置为`Success.`一个优先约束包含表达式`@X >== @Z`，和另一个优先约束包含表达式`@X < @Z`。 变量 `X` 和变量 `Z` 的值决定是任务 C 运行还是任务 B 运行。  
   
  ![优先约束表达式](media/mw-dts-04.gif "Expressions on precedence constraints")  
   

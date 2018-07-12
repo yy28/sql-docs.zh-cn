@@ -1,5 +1,5 @@
 ---
-title: 更改多边形、 线条和点的显示方式由规则和分析数据 （报表生成器和 SSRS） |Microsoft 文档
+title: 更改多边形、 线条和点的显示方式的规则和分析数据 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
 - sql12.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
@@ -21,15 +21,15 @@ f1_keywords:
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ffe78fc097b8c51f490642d5dc857f0257c806b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5ee62f82416bcac56211bd29548070926abff1bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149768"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）
   通过设置层的选项、设置层上地图元素的规则或覆盖层上特定嵌入地图元素的选项来控制地图层上多边形、线条和点的显示选项。  
@@ -133,7 +133,7 @@ ms.locfileid: "36127655"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|显示范围开始和范围结束的实际数值。|10 - 790|  
   
 ## <a name="see-also"></a>请参阅  
- [更改地图图例、 色阶，和关联规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
  [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

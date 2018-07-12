@@ -1,5 +1,5 @@
 ---
-title: 升级到其他版本的 SQL Server 2014 （安装程序） |Microsoft 文档
+title: 升级到另一版本的 SQL Server 2014 （安装程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f2b3739bf23e2e7405d95e856df7e776e498709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182854"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升级到 SQL Server 2014 的另一版本（安装）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持在各种版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 间进行版本升级。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](supported-version-and-edition-upgrades.md)。 在开始对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例执行版本升级前，请查看以下主题：  
@@ -53,7 +53,7 @@ ms.locfileid: "36126690"
   
 4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。  
   
-5.  在“产品密钥”页上，选择相应的单选按钮，这些按钮指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
+5.  在“产品密钥”页上，选择相应的单选按钮，这些按钮指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)并[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
   
 6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 若要继续，请单击 **“下一步”**。 若要结束安装程序，请单击 **“取消”**。  
   

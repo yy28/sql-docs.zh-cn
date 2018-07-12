@@ -1,5 +1,5 @@
 ---
-title: 内存优化表变量 |Microsoft 文档
+title: 内存优化表变量 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f8b24a1ea77e579fcde558e4f58e3448efc4aed1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157068"
 ---
 # <a name="memory-optimized-table-variables"></a>内存优化表变量
-  此外，对内存优化表 （的高效的数据访问） 和本机编译的 （对于高效的查询处理和业务逻辑执行） 的存储的过程[!INCLUDE[hek_2](../includes/hek-2-md.md)]引入了第三个类型的对象： 内存优化表类型。 使用内存优化表类型创建的表变量是内存优化表变量。  
+  此外，内存优化表 （用于高效的数据访问） 和本机编译存储的过程 （用于高效的查询处理和业务逻辑执行）[!INCLUDE[hek_2](../includes/hek-2-md.md)]引入了第三种对象： 内存优化表类型。 使用内存优化表类型创建的表变量是内存优化表变量。  
   
  与基于磁盘的表变量相比，内存优化表变量提供以下好处：  
   
@@ -40,9 +40,9 @@ ms.locfileid: "36127774"
   
 -   表变量可以用于模拟本机编译的存储过程中的游标，从而可帮助您解决本机编译的存储过程中的外围应用限制。  
   
- 内存优化表、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的 DLL 时，每个内存优化表类型。 （在创建内存优化表类型时调用编译，而不是在用于创建内存优化表变量时调用。）此 DLL 包括用于访问索引的函数以及用于从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
+ 与内存优化表相似[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成对每个内存优化表类型的 DLL。 （在创建内存优化表类型时调用编译，而不是在用于创建内存优化表变量时调用。）此 DLL 包括用于访问索引的函数以及用于从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
   
- 下面的示例演示基于 AdventureWorks 的内存中 OLTP 示例中的内存优化表类型 ([SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
+ 下面的示例显示了基于 AdventureWorks 的内存中 OLTP 示例中的内存优化表类型 ([SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
   
 ```tsql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -68,7 +68,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   该类型必须有至少一个索引。 与内存优化表一样，可以使用哈希索引和非聚集索引。  
   
-     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅[确定正确的存储桶计数的哈希索引](../relational-databases/indexes/indexes.md)。  
+     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅[哈希索引确定正确的存储桶计数](../relational-databases/indexes/indexes.md)。  
   
 -   针对内存优化表的数据类型和约束限制也适用于内存优化表类型。 例如，在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中支持默认约束，但不支持 CHECK 约束。  
   

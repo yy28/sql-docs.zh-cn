@@ -1,5 +1,5 @@
 ---
-title: 限制查询中的使用查询轴和切片器轴 (MDX) |Microsoft 文档
+title: 限制用查询轴和切片器轴 (MDX) 查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], axes
 - queries [MDX], axes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], axes
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e727b432afec1f42a6a111442c2263d6c48784de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b5b06d8449c778e9f50751120c42133189d6f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157588"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>用查询轴和切片器轴限定查询 (MDX)
   在设计多维表达式 (MDX) SELECT 语句时，应用程序通常检查多维数据集并将层次结构集分为两个子集：  

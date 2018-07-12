@@ -1,5 +1,5 @@
 ---
-title: MeasureQualificaton 元素 (ASSL) |Microsoft 文档
+title: MeasureQualificaton 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149498"
 ---
 # <a name="measurequalificaton-element-assl"></a>MeasureQualification 元素 (ASSL)
-  确定是否对中的度量值应用前缀[MeasureGroup](../objects/group-element-assl.md)。  
+  确定前缀是否应用于中的度量值[MeasureGroup](../objects/group-element-assl.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36124645"
 |*PrefixMeasureGroup*|此度量值组中每个度量值的唯一名称和标题都以度量值组的名称加上一个空格为前缀。|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`MeasureQualification`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroup>。  
+ 父级对应的元素`MeasureQualification`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

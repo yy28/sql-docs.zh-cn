@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], managing
 - network protocols [SQL Server], managing
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99f80c2839f5ee68aaf361c4b2b6355aedff73b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 511eb0109e82d7b3a11692893ee61d38fe966d04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154068"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (mmc.exe) 使用 Windows System32 文件夹中 SQLServerManager10.msc 文件以打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Configuration Manager。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (mmc.exe) 使用 Windows System32 文件夹中的 SQLServerManager10.msc 文件打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置管理器。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器和 SQL Server Management Studio 使用 Window Management Instrumentation (WMI) 来查看和更改某些服务器设置。 WMI 提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所请求注册表操作的 API 调用进行连接，并可对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器管理单元组件选定的 SQL 服务提供增强的控制和操作。 有关配置与 WMI 相关的权限的信息，请参阅 [在 SQL Server 工具中将 WMI 配置为显示服务器状态](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "36127051"
 >  因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
 >   
 >  -   **Windows 10**：  
->          若要打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Configuration Manager，请在**起始页**，键入 SQLServerManager12.msc (有关[!INCLUDE[ssSQL14](../includes/sssql14-md.md)])。 对于早期版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]将 12 替换为较小的数字。 单击 SQLServerManager12.msc 打开配置管理器。 要固定配置管理器起始页或任务栏中，右键单击 SQLServerManager12.msc，，然后单击**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**固定到任务栏**。  
+>          若要打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置管理器，然后在**起始页**，键入 SQLServerManager12.msc (对于[!INCLUDE[ssSQL14](../includes/sssql14-md.md)])。 对于早期版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]12 替换为较小的数字。 单击 SQLServerManager12.msc 会打开配置管理器。 若要固定到起始页或任务栏配置管理器，右键单击 SQLServerManager12.msc，然后依次**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**锁定到任务栏**。  
 > -   **Windows 8**：  
->          若要打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Configuration Manager，请在**搜索**超级按钮下**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
+>          若要打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置管理器，请在**搜索**超级按钮**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
   
  若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在另一台计算机上启动、停止、暂停、恢复或配置服务，请参阅[连接到另一台计算机（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)。  
   

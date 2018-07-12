@@ -1,5 +1,5 @@
 ---
-title: 更改设置对话框 (Analysis Services-多维数据) |Microsoft 文档
+title: 更改设置对话框 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.batchsettingsdialog.f1
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57dd66ac41586aa1732d7a3a5aeb915450b7c9f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c9a70f95f552ee5a614f8f44e1f8436c0aa35e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151738"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>“更改设置”对话框（Analysis Services - 多维数据）
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “更改设置” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，可以更改对 **“处理”** 对话框中所列对象的处理进行控制的设置。 单击 **“处理”** 对话框中的 **“更改设置”** ，将显示 **“更改设置”** 对话框。  
@@ -143,6 +143,6 @@ ms.locfileid: "36128002"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [处理对话框&#40;Analysis Services-多维数据&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [进程对话框&#40;Analysis Services-多维数据&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

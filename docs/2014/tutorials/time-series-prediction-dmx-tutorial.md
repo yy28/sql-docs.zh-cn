@@ -1,5 +1,5 @@
 ---
-title: 时间序列预测 DMX 教程 |Microsoft 文档
+title: 时间时序预测 DMX 教程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2a9e3e5db1e0f21bfe3822d73fd0e3c0b456e250
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 550d038f917af8d191c078716161a8fdb0a99868
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230108"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>时序预测 DMX 教程
   在本教程中，将学习如何创建时序挖掘结构，创建三个自定义时序挖掘模型，然后使用这些模型进行预测。  
@@ -27,9 +27,9 @@ ms.locfileid: "36312184"
  挖掘模型基于 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 示例数据库（存储虚构公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的数据）中所包含的数据。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨国制造公司。  
   
 ## <a name="tutorial-scenario"></a>教程方案  
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 已经决定使用数据挖掘功能来生成销售预测。 它们已生成了某些区域的预测模型;有关详细信息，请参阅[第 2 课： 生成预测方案&#40;中间 Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。 但是，销售部门需要能够定期用新的销售数据更新数据挖掘模型。 它们还希望自定义模型来提供不同的预测。  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 已经决定使用数据挖掘功能来生成销售预测。 他们已构建的某些地区的预测模型;有关详细信息，请参阅[第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。 但是，销售部门需要能够定期用新的销售数据更新数据挖掘模型。 它们还希望自定义模型来提供不同的预测。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了一些可以用来完成此任务的工具：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了可用于完成此任务的几个工具：  
   
 -   数据挖掘扩展插件 (DMX) 查询语言  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36312184"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法创建可用于预测时间相关数据的模型。 数据挖掘扩展插件 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一种查询语言，可用来创建挖掘模型和预测查询。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
- 本教程假定您已经熟悉 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的对象。 如果你以前没有创建挖掘结构或挖掘模型使用 DMX，请参阅[Bike Buyer DMX 教程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)。  
+ 本教程假定您已经熟悉 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的对象。 如果您不之前已创建挖掘结构或挖掘模型使用 DMX，请参阅[自行车购买者 DMX 教程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)。  
   
  本教程分为以下几课：  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36312184"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库  
   
- 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的官方示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请转到[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server 示例和社区项目主页上，以在 Microsoft SQL Server 产品示例部分。 单击**数据库**，然后单击**版本**选项卡并选择所需的数据库。  
+ 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的正式示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请转到[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server 示例和社区项目主页上，以在 Microsoft SQL Server 产品示例部分。 单击**数据库**，然后单击**版本**选项卡上，选择所需的数据库。  
   
 > [!NOTE]  
->  当你查看教程时，我们建议你添加**下一主题**和**上一步主题**到文档查看器工具栏按钮。  
+>  在阅读教程时，我们建议您将添加**下一主题**并**上一个主题**到文档查看器工具栏按钮。  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [中间数据挖掘教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+ [数据挖掘中级教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

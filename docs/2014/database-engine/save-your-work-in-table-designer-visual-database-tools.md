@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], saving
 - Table Designer, saving work
 - saving tables
 ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6abded31c6effcf12c9c3f4aeb3295c67d43506
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f663776ebfee8d03b9659ba21d607fca7b8a63a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182876"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>在表设计器中保存您的工作 (Visual Database Tools)
   可以保存对表设计器中打开的表所做的更改。  
@@ -32,7 +32,7 @@ ms.locfileid: "36126365"
   
 1.  单击表设计器中的任意位置。  
   
-2.  从**文件**菜单上，选择 **保存 * * * tablename*。  
+2.  从**文件**菜单中，选择 **保存 * * * tablename*。  
   
 3.  在“保存”对话框中，单击“是”以更新数据库。  
   

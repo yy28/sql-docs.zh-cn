@@ -1,5 +1,5 @@
 ---
-title: 平面文件连接管理器编辑器 （预览页） |Microsoft 文档
+title: 平面文件连接管理器编辑器 （预览页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.preview.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1e5853aa5d63967597ce54d56e43864f4e57c312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4e257676ff8a20cbc29e80cde49998c67a07aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182772"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>平面文件连接管理器编辑器（“预览”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“预览”** 节点，按表格格式查看源文件的内容。  

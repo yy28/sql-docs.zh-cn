@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
-caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: be4bf5f5887a4cd955513f5e5d717235c96270c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ab13696e7449f4f7b257aa2af6a76ef40492a921
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210427"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>选择键盘快捷键方案
   如果不使用标准 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 键盘方案，您可以配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以使用与 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]兼容的键盘方案。  

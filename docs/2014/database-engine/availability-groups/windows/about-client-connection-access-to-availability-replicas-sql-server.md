@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ec36639f591beaa3094855d8f42d2bcca3d3073e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228507"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
   在 AlwaysOn 可用性组中，您可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为辅助副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
@@ -73,7 +72,7 @@ ms.locfileid: "36126935"
  主数据库同时允许读写连接和只读连接。 这是主角色的默认行为。  
   
  仅允许读/写连接  
- 当`Application Intent`连接属性设置为**ReadWrite**或未设置，将允许连接。 连接为其`Application Intent`连接字符串关键字设置为`ReadOnly`不允许。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
+ 当`Application Intent`连接属性设置为**ReadWrite**或未设置，允许的连接。 连接为其`Application Intent`连接字符串关键字设置为`ReadOnly`不允许。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
   
  有关此连接属性的信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -122,9 +121,9 @@ ms.locfileid: "36126935"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

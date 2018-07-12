@@ -1,5 +1,5 @@
 ---
-title: SecurityCertificate 类 |Microsoft 文档
+title: SecurityCertificate 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7415e610eddb5b16f827a9f430e214936e8cd69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0954783d3f9a7d7e3b97ce4faf9f82f4fa381d49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258483"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 类
-  [SecurityCertificate 类] securitycertificate-class.md) 表示一个安全证书。 证书是将公共键的值绑定到的实例的数字签名的语句[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，其中包含相应的私钥。 证书是由证书颁发机构颁发的。  
+  [SecurityCertificate 类] securitycertificate class.md) 表示安全证书。 证书是一个数字签名的语句，将公钥的值绑定到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，用于保存相应的私钥。 证书是由证书颁发机构颁发的。  
   
- 使用方法是 [SecurityCertificate 类] securitycertificate-class.md)，你可以执行以下任务：  
+ 使用方法是 [SecurityCertificate 类] securitycertificate-class.md)，可以执行以下任务：  
   
 -   查看安全证书的属性。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a48d3a18632f54367d1cac4983939735a5c73dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156348"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>用户和组权限功能区域（主数据管理器）
   在“用户和组权限”功能区域中，管理员可以向功能区域、属性（在“模型”选项卡上）和成员（在“层次结构成员”选项卡上）授予权限。 解决重叠的权限来确定用户对每个单独属性值的权限。  

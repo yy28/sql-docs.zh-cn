@@ -1,5 +1,5 @@
 ---
-title: 建模标志 （数据挖掘） |Microsoft 文档
+title: 建模标志 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7d8ee5cc87c6d5a197240f59641095f8bc1c693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155408"
 ---
 # <a name="modeling-flags-data-mining"></a>建模标志（数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用建模标志为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
@@ -48,11 +48,11 @@ ms.locfileid: "36126963"
  指示属性列的值不应包含 Null 值。 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在模型定型过程中发现该属性列的值为 Null 值，则将出现错误。  
   
  **MODEL_EXISTENCE_ONLY**  
- 指示该列将被视为具有两种状态：`Missing` 和 `Existing`。 如果值为`NULL`，它将被视为 Missing。 MODEL_EXISTENCE_ONLY 标志将应用于可预测属性，并且大多数算法都支持该标志。  
+ 指示该列将被视为具有两种状态：`Missing` 和 `Existing`。 如果值为`NULL`，它被视为 Missing。 MODEL_EXISTENCE_ONLY 标志将应用于可预测属性，并且大多数算法都支持该标志。  
   
- 实际上，将使用 MODEL_EXISTENCE_ONLY 标志设置为`True`更改值的表示形式，以便只有两种状态：`Missing`和`Existing`。 所有非缺失的状态合并成一个单一`Existing`值。  
+ 实际上，将 MODEL_EXISTENCE_ONLY 标志设置为`True`发生更改的值的表示形式，因此有只有两种状态：`Missing`和`Existing`。 所有非 missing 状态合并为一个`Existing`值。  
   
- 此建模标志的典型用法是指示以下情况中的属性：`NULL` 状态具有隐含意义；`NOT NULL` 状态的显式值可能不与列中有任意值时一样重要。 例如，[DateContractSigned] 列可能`NULL`如果永远不会注册一个协定和`NOT NULL`如果协定进行签名。 因此，如果模型的用途是预测协定将进行签名，你可以使用 MODEL_EXISTENCE_ONLY 标志忽略中的准确日期值`NOT NULL`情况下，并且仅区分的情况下，协定`Missing`或`Existing`.  
+ 此建模标志的典型用法是指示以下情况中的属性：`NULL` 状态具有隐含意义；`NOT NULL` 状态的显式值可能不与列中有任意值时一样重要。 例如，[DateContractSigned] 列可能`NULL`如果某个合同永远不会签署和`NOT NULL`如果该合同已签署。 因此，如果模型的目的是用于预测合同是否会签署，则可以使用 MODEL_EXISTENCE_ONLY 标志忽略中的准确日期值`NOT NULL`情况下，而只区分合同的情况下`Missing`或`Existing`.  
   
 > [!NOTE]  
 >  Missing 是算法所使用的一种特殊状态，不同于列中文本值 “Missing”。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
@@ -114,7 +114,7 @@ WHERE MODEL_NAME = '<model name>'
 |了解有关挖掘结构列以及可对其设置的属性的更多信息|[挖掘结构列](mining-structure-columns.md)|  
 |了解可在模型级别应用的挖掘模型列和建模标志|[挖掘模型列](mining-model-columns.md)|  
 |请参阅用于在 DMX 语句中使用建模标志的语法|[建模标志&#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
-|了解缺失值以及如何处理它们|[缺少值&#40;Analysis Services-数据挖掘&#41;](missing-values-analysis-services-data-mining.md)|  
+|了解缺失值以及如何处理它们|[缺失值&#40;Analysis Services-数据挖掘&#41;](missing-values-analysis-services-data-mining.md)|  
 |了解如何管理模型和结构以及设置用法属性|[移动数据挖掘对象](moving-data-mining-objects.md)|  
   
   

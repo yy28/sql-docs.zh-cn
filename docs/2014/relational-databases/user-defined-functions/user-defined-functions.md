@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124051"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427466"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
   与编程语言中的函数类似，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的例程。 返回值可以是单个标量值或结果集。  
@@ -35,9 +33,9 @@ ms.locfileid: "36124051"
   
  [指导原则](#Guidelines)  
   
- [函数中的有效语句](#ValidStatements)  
+ [在函数中的有效语句](#ValidStatements)  
   
- [架构绑定函数](#SchemaBound)  
+ [绑定到架构的函数](#SchemaBound)  
   
  [指定参数](#Parameters)  
   
@@ -65,7 +63,7 @@ ms.locfileid: "36124051"
   
 ##  <a name="FunctionTypes"></a> 类型的函数  
  标量函数  
- 用户定义标量函数返回在 RETURNS 子句中定义的类型的单个数据值。 对于内联标量函数，没有函数体；标量值是单个语句的结果。 对于多语句标量函数，定义在 BEGIN...END 块中的函数体包含一系列返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 返回类型可以是除之外的任何数据类型`text`， `ntext`， `image`， `cursor`，和`timestamp`。  
+ 用户定义标量函数返回在 RETURNS 子句中定义的类型的单个数据值。 对于内联标量函数，没有函数体；标量值是单个语句的结果。 对于多语句标量函数，定义在 BEGIN...END 块中的函数体包含一系列返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 返回类型可以是任何数据类型除外`text`， `ntext`， `image`， `cursor`，和`timestamp`。  
   
  表值函数  
  用户定义表值函数返回`table`数据类型。 对于内联表值函数，没有函数主体；表是单个 SELECT 语句的结果集。  
@@ -83,7 +81,7 @@ ms.locfileid: "36124051"
   
  在查询中指定的函数的实际执行次数在优化器生成的执行计划间可能不同。 示例为 WHERE 子句中的子查询调用的函数。 子查询及其函数执行的次数会因优化器选择的访问路径的不同而异。  
   
-##  <a name="ValidStatements"></a> 函数中的有效语句  
+##  <a name="ValidStatements"></a> 在函数中的有效语句  
  函数中的有效语句的类型包括：  
   
 -   DECLARE 语句，该语句可用于定义函数局部的数据变量和游标。  

@@ -1,26 +1,24 @@
 ---
-title: 支持大型 Udt |Microsoft 文档
+title: 对大型 Udt 的支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 672da57ed995d872bf952bc7126b56282ad12312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2626ba94c971f3d31b592e692da3d9fef7227f05
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125610"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409986"
 ---
 # <a name="support-for-large-udts"></a>支持大型 UDT
   此示例解决方案包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 该表中的一个列将属于该程序集中定义的一个类型。默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  
@@ -34,7 +32,7 @@ ms.locfileid: "36125610"
   
  第二个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表在 master 数据库中创建该程序集。  
   
- 使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
  如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   

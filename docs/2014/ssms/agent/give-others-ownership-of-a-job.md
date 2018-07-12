@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
 - owners [SQL Server], jobs
 - SQL Server Agent jobs, owners
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e2190d04d8a03a2f6c46ca8fbd193555cee221f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3115950e8218809f23fb123bc92e6ad56d7ad2a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157598"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   本主题介绍如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的所有权重新指派给另一用户。  
@@ -74,7 +74,7 @@ ms.locfileid: "36127442"
   
 2.  在工具栏上，单击 **“新建查询”**。  
   
-3.  在查询窗口中，输入使用以下语句[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系统存储过程。 以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  
+3.  在查询窗口中，输入下面的语句，使用[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系统存储过程。 以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  
   
     ```  
     USE msdb ;  
@@ -90,7 +90,7 @@ ms.locfileid: "36127442"
 ##  <a name="SMOProc2"></a> 使用 SQL Server 管理对象  
  **将作业所有权授予其他人**  
   
-1.  调用`Job`通过使用一种选择，如 Visual Basic、 Visual C# 或 PowerShell 编程语言的类。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  
+1.  调用`Job`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [执行作业](implement-jobs.md)   

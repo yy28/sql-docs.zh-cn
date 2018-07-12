@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
 - schedules [Reporting Services], about schedules
@@ -20,30 +20,30 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800dce34cebf45e3962b5226929267afe1fc727f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278397"
 ---
 # <a name="schedules"></a>“计划”
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了共享的计划和报表特定计划，以帮助你控制处理和分发报表。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供共享的计划和报表特定计划，可帮助你控制处理和分发报表。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
   
  本主题内容：  
   
--   [你可以使用日程安排做什么](#bkmk_whatyoucando)  
+-   [可以对计划执行哪些操作](#bkmk_whatyoucando)  
   
--   [比较共享和报表特定计划](#bkmk_compare)  
+-   [比较计划共享和报表特定计划](#bkmk_compare)  
   
 -   [配置数据源](#bkmk_configuredatasources)  
   
--   [将凭据存储和处理帐户](#bkmk_credentials)  
+-   [存储凭据和处理帐户](#bkmk_credentials)  
   
--   [如何计划和传递处理的工作方式](#bkmk_how_scheduling_works)  
+-   [如何计划和传递处理的工作原理](#bkmk_how_scheduling_works)  
   
--   [服务器依赖项](#bkmk_serverdependencies)  
+-   [服务器依赖关系](#bkmk_serverdependencies)  
   
 -   [停止 SQL Server 代理的影响](#bkmk_stoppingagent)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36125064"
 |在用户定义的订阅中创建、修改或删除报表特定计划|管理单独的订阅|浏览者、报表生成器、我的报表、内容管理员|访问者，成员|  
 |创建、修改或删除所有其他计划操作的报表特定计划|管理报表历史记录，管理所有订阅，管理报表|内容管理员|所有者|  
   
- 有关在纯模式下的安全性的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[预定义角色](../security/role-definitions-predefined-roles.md)，[授予对本机模式报表服务器的权限](../security/granting-permissions-on-a-native-mode-report-server.md)和[任务和权限](../security/tasks-and-permissions.md). 对于 SharePoint 模式，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ 有关在纯模式下的安全详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[预定义角色](../security/role-definitions-predefined-roles.md)，[授予对本机模式报表服务器的权限](../security/granting-permissions-on-a-native-mode-report-server.md)和[任务和权限](../security/tasks-and-permissions.md). 对于 SharePoint 模式，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 计划和传递处理的工作方式  
  计划和传递处理器提供以下功能：  
@@ -129,10 +129,10 @@ ms.locfileid: "36125064"
   
      在处理事件之前，计划和传递处理器会执行身份验证步骤以验证订阅的所有者有权查看该报表。  
   
- Reporting Services 维护一个针对所有计划操作的事件队列。 它定期轮询队列，检查是否有新事件。 默认情况下，每隔 10 秒扫描一次队列。 您可以通过修改更改间隔`PollingInterval`， `IsNotificationService`，和`IsEventService`RSReportServer.config 文件中的配置设置。 SharePoint 模式还将 RSreporserver.config 用于这些设置，并且值应用于所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
+ Reporting Services 维护一个针对所有计划操作的事件队列。 它定期轮询队列，检查是否有新事件。 默认情况下，每隔 10 秒扫描一次队列。 可以通过修改更改的间隔`PollingInterval`， `IsNotificationService`，和`IsEventService`RSReportServer.config 文件中的配置设置。 SharePoint 模式还将 RSreporserver.config 用于这些设置，并且值应用于所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="bkmk_serverdependencies"></a> 服务器依赖关系  
- 计划和传递处理器需要启动报表服务器服务和 SQL Server 代理。 计划和传递处理的功能必须启用通过`ScheduleEventsAndReportDeliveryEnabled`属性**Reporting Services 的外围应用配置**中基于策略的管理方面。 SQL Server 代理和报表服务器服务必须都在运行，才能执行计划的操作。  
+ 计划和传递处理器需要启动报表服务器服务和 SQL Server 代理。 计划和传递处理功能必须通过启用`ScheduleEventsAndReportDeliveryEnabled`的属性**Reporting Services 的外围应用配置**中基于策略的管理方面。 SQL Server 代理和报表服务器服务必须都在运行，才能执行计划的操作。  
   
 > [!NOTE]  
 >  可以使用 **Reporting Services 的外围应用配置器** 方面临时或永久停止计划操作。 虽然可以创建并部署自定义传递扩展插件，但是计划和传递处理器本身不是可扩展的。 该工具管理事件和通知的方式是不可更改的。 关于关闭功能的详细信息，请参阅 **Turn Reporting Services Features On or Off** 中的 [“预定的事件和传递”](../report-server/turn-reporting-services-features-on-or-off.md)一节。  

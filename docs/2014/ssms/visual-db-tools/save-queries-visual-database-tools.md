@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6c6194c1b4ac931428c3573bcca1811d1faf32d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a786d6abb774a461739268d2a0484007f8453bda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210397"
 ---
 # <a name="save-queries-visual-database-tools"></a>保存查询 (Visual Database Tools)
   可以保存查询以备将来使用。 请注意，运行查询并不能保存所做的更改。  
@@ -39,11 +39,11 @@ ms.locfileid: "36125757"
 3.  查询将保存到解决方案资源管理器中项目的“查询”文件夹中。  
   
 ## <a name="see-also"></a>请参阅  
- [创建查询&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [运行查询&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [放弃对查询所做的更改&#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [类型的查询&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [创建查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [运行查询&#40;可视化数据库工具&#41;](run-queries-visual-database-tools.md)   
+ [放弃对查询所做的更改&#40;可视化数据库工具&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [类型的查询&#40;可视化数据库工具&#41;](types-of-queries-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

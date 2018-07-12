@@ -1,5 +1,5 @@
 ---
-title: UDT 实用程序 |Microsoft 文档
+title: UDT 实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655bfd340dd7ad45c4e4266461058e7a4908cf22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211527"
 ---
 # <a name="udt-utilities"></a>UDT 实用工具
   UDT 实用工具示例包括很多实用工具函数。 其中包括向 Transact-SQL 公开程序集元数据的函数、以表的形式返回程序集中的类型的示例流式表值函数，以及返回用户定义数据类型的字段、方法和属性的函数。 演示的技术包括流式表值函数、.NET Framework 反射 API 以及从 Transact-SQL 中调用表值函数。  
@@ -30,7 +30,7 @@ ms.locfileid: "36126698"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]可从 Codeplex 获取的数据库[网站](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库，可在 Codeplex[网站](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36126698"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，你必须`ALTER SETTINGS`服务器级别权限，该权限的成员隐式具有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
   
 -   必须在您使用的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 实例上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36126698"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]测试到文件的命令脚本并将其保存为`test.sql`示例目录中。  
+7.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
   
 8.  使用以下命令执行测试脚本：  
   

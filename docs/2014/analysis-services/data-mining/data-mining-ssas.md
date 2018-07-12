@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘 (SSAS) |Microsoft 文档
+title: 数据挖掘 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b118f03580aeb0053203cd2535bafecd1649ccb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff1d223cee1ce86851b3021bad15582db156639
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163428"
 ---
 # <a name="data-mining-ssas"></a>数据挖掘 (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为合并数据挖掘的解决方案提供一个集成的平台。 您可以使用关系数据或多维数据集数据创建具有预测分析功能的商业智能解决方案。  

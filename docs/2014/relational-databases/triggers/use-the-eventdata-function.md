@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123360"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427596"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
   使用 EVENTDATA 函数，可以捕获有关激发 DDL 触发器的事件的信息。 此函数返回 `xml` 值。 XML 架构包括下列信息：  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 这通过使用 XQuery 语句`xml`EVENTDATA 和检索由生成的数据\<CommandText > 元素。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)。  
+ DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 这通过使用 XQuery 语句来实现`xml`生成的 EVENTDATA 和检索的数据\<CommandText > 元素。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)。  
   
 > [!CAUTION]  
 >  EVENTDATA 将捕获 CREATE_SCHEMA 事件的数据以及相应 CREATE SCHEMA 定义的 <schema_element>（如果存在）。 此外，EVENTDATA 将 <schema_element> 定义识别为单独的事件。 因此，针对 CREATE_SCHEMA 事件和由 CREATE_SCHEMA 定义的 <schema_element> 表示的事件创建的 DDL 触发器可能两次返回相同的事件数据，如 `TSQLCommand` 数据。 例如，针对 CREATE_SCHEMA 事件和 CREATE_TABLE 事件创建的 DDL 触发器，将运行下列批处理：  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   包括事件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
- 同样，使用 XQuery 来捕获最后两个项`xml`通过对 EVENTDATA 生成的数据。  
+ 同样，使用 XQuery 来捕获最后两项`xml`EVENTDATA 生成的数据。  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  若要返回事件数据，建议您使用 XQuery `value()` 方法来替代 `query()` 方法。 `query()`方法返回的 XML 以及 and 符转义的回车和换行符 (CRLF) 实例在输出中，虽然`value()`方法呈现 CRLF 实例在输出中不可见。  
+>  若要返回事件数据，建议您使用 XQuery `value()` 方法来替代 `query()` 方法。 `query()`方法将返回 XML 和以 and 符转义的回车和换行符 (CRLF) 实例在输出中，虽然`value()`方法将呈现 CRLF 实例在输出中不可见。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击 **ddlDatabseTriggerLog** 并选择“编写数据库触发器脚本为”。 默认情况下，DDL 触发器 **ddlDatabseTriggerLog** 处于禁用状态。  
   

@@ -1,5 +1,5 @@
 ---
-title: UnaryOperatorColumn 元素 (ASSL) |Microsoft 文档
+title: UnaryOperatorColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnaryOperatorColumn element
 ms.assetid: 10889e51-69e5-4f50-9749-ecbc66c247d3
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d52b742916c6e5876d76fbeb1ba112672ea5b225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e4bd33bc95b1322e5a3125e6222dc9cdfb1b05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161158"
 ---
 # <a name="unaryoperatorcolumn-element-assl"></a>UnaryOperatorColumn 元素 (ASSL)
   定义提供一元运算符的列的详细信息。  
@@ -64,7 +64,7 @@ ms.locfileid: "36125924"
 ## <a name="remarks"></a>Remarks  
  有关详细信息`DataItem`类型，包括 Analysis Services 脚本语言 (ASSL) 对象和属性表`DataItem`类型，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 对应于的父元素`UnaryOperatorColumn`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 父级对应的元素`UnaryOperatorColumn`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [对象&#40;ASSL&#41;](objects-assl.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10245"
 - "10252"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f3760096e00a6c418af3a0d8203f822b65c00508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 22be979236bd7c42ba231cea42d98c7a47c15ab8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278513"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>设置图表上序列颜色的格式（报表生成器和 SSRS）
-  Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置**BrightPastel**填充每个系列的调色板。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  
+  Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置**BrightPastel**颜色调色板填充每个序列。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  
   
  如果序列中的颜色数多于调色板中的颜色，图表将开始重用颜色，因此两个序列可能具有相同的颜色。 如果使用的是形状图，形状图中的每个数据点都分配有调色板中的颜色，因此可能经常发生这种情况。 为避免混淆，请将自定义调色板的颜色数至少定义为图表上的相同序列数。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36125560"
 ## <a name="using-a-color-fill-on-each-series"></a>对每个序列使用颜色填充  
  通过为图表中的每个序列各指定一种颜色，还可以在图表上定义您自己的颜色。 为此，请打开 **“序列属性”** 对话框，并设置 **“填充”** 的 **“颜色”** 属性。 该方法将覆盖定义的所有调色板。 通常，最好使用自定义调色板定义您自己的颜色，因为在报表处理之前，您可能不知道数据集中的序列数。  
   
- 该方法最适合希望根据表达式按条件设置序列颜色的情况。  有关详细信息，请参阅[图表上的格式设置数据点&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 该方法最适合希望根据表达式按条件设置序列颜色的情况。  有关详细信息，请参阅[图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [对多个形状图指定一致的颜色（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
 - OPENXML statement, about OPENXML statement
@@ -24,25 +24,25 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 166680207dba3a8cb0172d5af59e462d6ac4ab24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a41c723b75d2170c0e991536bda48157c9915425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228847"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  
   
  无论行集提供程序（视图或 OPENROWSET）可以在何处作为源出现，都可以在 SELECT 和 SELECT INTO 语句中使用 OPENXML。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。  
   
- 若要使用 OPENXML 编写对 XML 文档的查询，必须先调用`sp_xml_preparedocument`。 它将分析 XML 文档并向准备使用的已分析文档返回一个句柄。 已分析文档以文档对象模型 (DOM) 树的形式说明 XML 文档中的各种节点。 该文档句柄传递给 OPENXML。 然后 OPENXML 根据传递给它的参数提供一个该文档的行集视图。  
+ 若要使用 OPENXML 编写对 XML 文档的查询，必须首先调用`sp_xml_preparedocument`。 它将分析 XML 文档并向准备使用的已分析文档返回一个句柄。 已分析文档以文档对象模型 (DOM) 树的形式说明 XML 文档中的各种节点。 该文档句柄传递给 OPENXML。 然后 OPENXML 根据传递给它的参数提供一个该文档的行集视图。  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` 使用 SQL 更新版本的 MSXML 分析器，Msxmlsql.dll。 此版本的 MSXML 分析器设计为支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并保持与 MSXML 2.6 版的向后兼容性。  
+>  `sp_xml_preparedocument` 使用 MSXML 分析器，Msxmlsql.dll 的 SQL 更新版本。 此版本的 MSXML 分析器设计为支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并保持与 MSXML 2.6 版的向后兼容性。  
   
  必须通过调用 **sp_xml_removedocument** 系统存储过程从内存中删除以内部形式表示的 XML 文档来释放内存。  
   
@@ -114,7 +114,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   行集列和 XML 节点之间的映射  
   
 ### <a name="xml-document-handle-idoc"></a>XML 文档句柄 (idoc)  
- 返回该文档句柄`sp_xml_preparedocument`存储过程。  
+ 返回的文档句柄`sp_xml_preparedocument`存储过程。  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>标识要处理的节点的 XPath 表达式 (rowpattern)  
   指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。  

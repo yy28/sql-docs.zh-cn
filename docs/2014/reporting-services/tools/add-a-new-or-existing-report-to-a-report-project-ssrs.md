@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af7fe1fceeacc7b49daff9514f5ba1e10fc20518
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230177"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
-  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，你可以通过使用报表向导或通过将新的空白报表添加到你的项目添加新报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  
+  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以通过使用报表向导或通过将新的空白报表添加到你的项目添加新报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  
   
 > [!NOTE]  
 >  若要使用现有数据源预览报表，您必须有权从报表创作客户端访问此数据源。 有关详细信息，请参阅[创建嵌入或共享数据源&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "36125269"
     -   **选择样式。** 接下来是使用样式模板将样式应用于报表。 选择一个模板以将样式（如字体、颜色和边框样式）应用于报表。 报表设计器提供了六个样式模板：石板、森林、公司、粗体、海洋和一般。 您还可以添加其他样式模板。  
   
         > [!NOTE]  
-        >  您可以更改现有模板或添加新测试通过编辑中 files\microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business 智能 Wizards\Reports\Styles StyleTemplates.xml 文件\\< lang\>文件夹，其中\<lang > 是正在使用的语言 (例如，如果你使用的英语版的[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，文件夹名称是"EN")。 该文件夹位于安装报表设计器的计算机上。 StyleTemplates.xml 文件有两个副本。 若要修改通过报表向导所应用的样式，请编辑针对您所用语言创建的上述文件夹中的文件。  
+        >  您可以修改现有模板或添加新的通过编辑 \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles 中的 StyleTemplates.xml 文件\\< lang\>文件夹，其中\<lang > 是所使用的语言 (例如，如果您使用英文版的[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，文件夹名称为"EN")。 该文件夹位于安装报表设计器的计算机上。 StyleTemplates.xml 文件有两个副本。 若要修改通过报表向导所应用的样式，请编辑针对您所用语言创建的上述文件夹中的文件。  
   
     -   **为报表命名。**  最后一步是为报表命名并验证报表中将要包含的各个字段。 完成所有步骤之后，报表设计器将创建报表，并将其添加到报表服务器项目。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36125269"
   
 ### <a name="to-add-an-existing-report"></a>添加现有报表  
   
-1.  从**项目**菜单上，单击**添加**，，然后**现有项**。  
+1.  从**项目**菜单上，单击**添加**，然后**现有项**。  
   
 2.  浏览到 .rdl 文件所在的位置并选择它，然后单击 **“添加”**。  
   

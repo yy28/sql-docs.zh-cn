@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b0d852a4a0d104c815a76076661a3e3c56355d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fe4388cff478cf3d8f8fd773c8b0926793b0cc0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258853"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
   内存优化的表和本机编译的存储过程不支持基于磁盘的表和解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程所支持的完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外围应用。 尝试使用某个不支持的功能时，服务器返回错误。  
@@ -59,9 +59,9 @@ ms.locfileid: "36125626"
 |功能|FILESTREAM|内存优化的表列不支持 FILESTREAM 存储。 删除`FILESTREAM`从列定义的关键字。|  
 |功能|SPARSE|内存优化的表列不能定义为 SPARSE。 删除`SPARSE`从列定义的关键字。|  
 |功能|ROWGUIDCOL|内存优化的表列不支持选项 ROWGUIDCOL。 删除`ROWGUIDCOL`从列定义的关键字。|  
-|功能|FOREIGN KEY|内存优化的表不支持 FOREIGN KEY 约束。 从表定义中删除该约束。<br /><br /> 有关如何缓解缺少对约束的支持的信息，请参阅[迁移检查 and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
-|功能|CHECK|内存优化的表不支持 CHECK 约束。 从表定义中删除该约束。<br /><br /> 有关如何缓解缺少对约束的支持的信息，请参阅[迁移检查 and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
-|功能|UNIQUE|内存优化的表不支持 UNIQUE 约束。 从表定义中删除该约束。<br /><br /> 有关如何缓解缺少对约束的支持的信息，请参阅[迁移检查 and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
+|功能|FOREIGN KEY|内存优化的表不支持 FOREIGN KEY 约束。 从表定义中删除该约束。<br /><br /> 有关如何缓解缺乏约束支持的信息，请参阅[迁移检查和外键约束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
+|功能|CHECK|内存优化的表不支持 CHECK 约束。 从表定义中删除该约束。<br /><br /> 有关如何缓解缺乏约束支持的信息，请参阅[迁移检查和外键约束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
+|功能|UNIQUE|内存优化的表不支持 UNIQUE 约束。 从表定义中删除该约束。<br /><br /> 有关如何缓解缺乏约束支持的信息，请参阅[迁移检查和外键约束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
 |功能|COLUMNSTORE|内存优化的表不支持 COLUMNSTORE 索引。 改为指定 NONCLUSTERED 或 NONCLUSTERED HASH 索引。|  
 |功能|聚集索引|指定非聚集索引。 在主键索引的情况下，务必指定 `PRIMARY KEY NONCLUSTERED [HASH]`。|  
 |功能|非 1252 代码页|具有数据类型 `char` 和 `varchar` 的内存优化表中的列必须使用代码页 1252。 请使用 n(var)char 替代 (var)char，或使用具有代码页 1252 的排序规则（例如 Latin1_General_BIN2）。 有关详细信息，请参阅 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。|  
@@ -75,7 +75,7 @@ ms.locfileid: "36125626"
 |运算|CREATE FULLTEXT INDEX|内存优化的表不支持全文检索。|  
 |运算|架构更改|内存优化的表和本机编译的存储过程不支持架构更改，例如 `sp_rename`。<br /><br /> 尝试作出架构更改（如重命名表）将产生错误 12320。内存优化的表不支持需要更改架构版本的操作（例如，重命名）。<br /><br /> 要更改架构，请删除表或过程并使用更新的定义重新创建它。|  
 |运算|CREATE TRIGGER|不支持内存优化的表的触发器。|  
-|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，删除使用的所有行`DELETE FROM`*表*或删除并重新创建表。|  
+|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，删除使用的所有行`DELETE FROM`*表*或删除并重新创建该表。|  
 |运算|ALTER AUTHORIZATION|不支持更改现有内存优化的表或本机编译的存储过程的所有者。 请删除并重新创建该表或过程来更改所有权。|  
 |运算|ALTER SCHEMA|不支持更改现有内存优化的表或本机编译的存储过程的架构。 若要更改架构，请删除再重新创建表或过程。|  
 |运算|DBCC CHECKTABLE|内存优化的表不支持 DBCC CHECKTABLE。|  
@@ -112,7 +112,7 @@ ms.locfileid: "36125626"
 |类型|功能|解决方法|  
 |----------|-------------|----------------|  
 |功能|内联表变量|不能使用变量声明内联声明表类型。 必须使用显式声明表类型`CREATE TYPE`语句。|  
-|功能|游标|本机编译的存储过程不支持游标。<br /><br /> -当从客户端在执行过程，使用 RPC 而非游标 API。 对于 ODBC，避免 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句 `EXECUTE`，直接指定过程的名称。<br /><br /> -当从执行过程[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或另一个存储的过程，避免将游标用于本机编译的存储过程。<br /><br /> -当创建本机编译的存储的过程，而不是使用游标，使用基于集的逻辑或`WHILE`循环。|  
+|功能|游标|本机编译的存储过程不支持游标。<br /><br /> -当从客户端执行该过程，使用 RPC 而不是非游标 API。 对于 ODBC，避免 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句 `EXECUTE`，直接指定过程的名称。<br /><br /> -当从执行过程[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或另一个存储的过程，避免将游标与本机编译存储过程。<br /><br /> -当创建本机编译的存储的过程，而不使用游标，使用基于集的逻辑或`WHILE`循环。|  
 |功能|非常量参数默认值|将默认值与本机编译的存储过程参数一起使用时，这些值必须为常量。 从参数声明中删除所有通配符。|  
 |功能|EXTERNAL|无法本机编译 CLR 存储过程。 从 CREATE PROCEDURE 语句中删除 AS EXTERNAL 子句或 NATIVE_COMPILATION 选项。|  
 |功能|带编号的存储过程|不能对本机编译的存储过程编号。 删除`;`*数*从`CREATE PROCEDURE`语句。|  
@@ -120,15 +120,15 @@ ms.locfileid: "36125626"
 |功能|公用表表达式 (CTE)|本机编译的存储过程中不支持公用表表达式 (CTE)。 重写查询。|  
 |功能|子查询|不支持子查询（查询嵌套在另一个查询中）。 重写查询。|  
 |功能|COMPUTE|不支持 `COMPUTE` 子句。 从查询中删除它。|  
-|功能|SELECT INTO|`INTO` 语句不支持 `SELECT` 子句。 重写形式的查询`INSERT INTO`*表*`SELECT`。|  
+|功能|SELECT INTO|`INTO` 语句不支持 `SELECT` 子句。 作为查询重写`INSERT INTO`*表*`SELECT`。|  
 |功能|OUTPUT|不支持 `OUTPUT` 子句。 从查询中删除它。|  
 |功能|不完整的插入列列表|在 `INSERT` 语句中，必须为表中的所有列指定值。|  
 |函数|*函数*|本机编译的存储过程中不支持内置函数。 从存储过程中删除该函数。 有关支持的内置函数的详细信息，请参阅[Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)。|  
-|功能|CASE|本机编译的存储过程内的查询中不支持 `CASE` 语句。 创建每个情况的查询。 有关详细信息，请参阅[实现一个 CASE 语句](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。|  
-|功能|用户定义函数|不能在本机编译的存储过程中使用用户定义函数。 从过程定义中删除对该函数的引用。|  
+|功能|CASE|本机编译的存储过程内的查询中不支持 `CASE` 语句。 创建每个情况的查询。 有关详细信息，请参阅[实现在 CASE 语句](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。|  
+|功能|用户定义的函数|不能在本机编译的存储过程中使用用户定义函数。 从过程定义中删除对该函数的引用。|  
 |功能|用户定义聚合|不能在本机编译的存储过程中使用用户定义的聚合函数。 从过程中删除对该函数的引用。|  
 |功能|浏览模式元数据|本机编译的存储过程不支持浏览模式元数据。 确保将会话选项 `NO_BROWSETABLE` 设置为 OFF。|  
-|功能|带 FROM 子句的 DELETE|表源在本机编译存储过程中的 `FROM` 语句不支持 `DELETE` 子句。<br /><br /> `DELETE` 与`FROM`子句，则支持它用于指示要删除的表。|  
+|功能|带 FROM 子句的 DELETE|表源在本机编译存储过程中的 `FROM` 语句不支持 `DELETE` 子句。<br /><br /> `DELETE` 使用`FROM`时它用于指示要从删除的表支持子句。|  
 |功能|带 FROM 子句的 UPDATE|本机编译的存储过程中的 `FROM` 语句不支持 `UPDATE` 子句。|  
 |功能|临时程序|临时存储过程无法进行本机编译。 请创建永久的本机编译存储过程或临时的解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。|  
 |隔离级别|READ UNCOMMITTED|本机编译的存储过程不支持隔离级别 READ UNCOMMITTED。 请使用支持的隔离级别，如 SNAPSHOT。|  
@@ -179,8 +179,8 @@ ms.locfileid: "36125626"
 |联接提示|HASH、MERGE|本机编译的存储过程仅支持嵌套的循环联接。 不支持哈希和合并联接。 删除联接提示。|  
 |查询提示|*查询提示*|此查询提示不位于本机编译的存储过程内。 有关支持的查询提示，请参阅[查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)。|  
 |选项|DISTINCT|不支持此选项。 从本机编译的存储过程中的查询删除 `DISTINCT`。|  
-|选项|PERCENT|此选项不支持与`TOP`子句。 从本机编译的存储过程中的查询删除 `PERCENT`。|  
-|选项|WITH TIES|此选项不支持与`TOP`子句。 从本机编译的存储过程中的查询删除 `WITH TIES`。|  
+|选项|PERCENT|此选项不支持使用`TOP`子句。 从本机编译的存储过程中的查询删除 `PERCENT`。|  
+|选项|WITH TIES|此选项不支持使用`TOP`子句。 从本机编译的存储过程中的查询删除 `WITH TIES`。|  
 |聚合函数|*聚合函数*|不支持此子句。 有关本机编译的存储过程中聚合函数的详细信息，请参阅 [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)。|  
 |排名函数|*排名函数*|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
 |函数|*函数*|不支持此函数。 从本机编译的存储过程中删除它。|  

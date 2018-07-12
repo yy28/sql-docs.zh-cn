@@ -1,5 +1,5 @@
 ---
-title: ScalarMiningStructureColumn 数据类型 (ASSL) |Microsoft 文档
+title: ScalarMiningStructureColumn 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211687"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>ScalarMiningStructureColumn 数据类型 (ASSL)
-  定义一个派生的数据类型，表示[MiningStructureColumn](miningstructurecolumn-data-type-assl.md)包含标量值，而不是与关联的嵌套表的元素[TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md)元素包含嵌套的表。  
+  定义一个派生的数据类型，表示[MiningStructureColumn](miningstructurecolumn-data-type-assl.md)元素，其中包含标量值，而不是嵌套表与相关联[TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md)元素包含嵌套的表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36126619"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[ClassifiedColumnID](../properties/id-element-assl.md)，[内容](../properties/content-element-assl.md)， [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md)， [DiscretizationMethod](../properties/discretizationmethod-element-assl.md)，[分发](../properties/distribution-element-assl.md)，[IsKey](../properties/iskey-element-assl.md)， [KeyColumns](../collections/columns-element-assl.md)， [ModelingFlags](../collections/modelingflags-element-assl.md)， [NameColumn](../objects/column-element-assl.md)，[源](../properties/source-element-binding-assl.md)， [翻译](../collections/translations-element-assl.md)|  
-|派生元素|[列](../objects/column-element-assl.md)([列](../collections/columns-element-assl.md)集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
+|派生元素|[列](../objects/column-element-assl.md)([列](../collections/columns-element-assl.md)的集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

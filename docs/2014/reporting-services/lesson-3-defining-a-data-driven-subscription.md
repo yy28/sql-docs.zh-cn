@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152128"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   在本课程中，您将使用数据驱动订阅页来连接订阅数据源，生成一个检索订阅数据的查询，然后将结果集映射到报表和传递选项。  
@@ -35,13 +35,13 @@ ms.locfileid: "36128036"
   
 -   [步骤 1-定义说明](#bkmk_definesubscription)  
   
--   [步骤 2-定义了一个连接到订阅服务器数据源](#bkmk_defineconnectiontosubscriber)  
+-   [步骤 2-定义订阅服务器数据源的连接](#bkmk_defineconnectiontosubscriber)  
   
 -   [步骤 3-定义检索订阅服务器数据的查询](#bkmk_definequery)  
   
 -   [步骤 4-设置传递选项](#bkmk_set_deliveryoptions)  
   
--   [第 5 步-配置参数值以改变报表输出](#bkmk_configure_parameter)  
+-   [步骤 5-配置参数值以改变报表输出](#bkmk_configure_parameter)  
   
 -   [步骤 6-计划订阅](#bkmk_schedule_subscription)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36128036"
   
 2.  在该报表的上下文菜单中，单击 **“管理”**，然后单击 **“订阅”** 选项卡。  
   
-3.  单击**新数据驱动订阅**。 如果看不到此按钮，则说明您不具备“内容管理员”权限。  
+3.  单击**新建数据驱动订阅**。 如果看不到此按钮，则说明您不具备“内容管理员”权限。  
   
 ##  <a name="bkmk_definesubscription"></a> 步骤 1-定义说明  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36128036"
   
 3.  选中 **“仅为此订阅指定”**，然后单击 **“下一步”**。  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> 步骤 2-定义了一个连接到订阅服务器数据源  
+##  <a name="bkmk_defineconnectiontosubscriber"></a> 步骤 2-定义订阅服务器数据源的连接  
   
 1.  选择 **“Microsoft SQL Server”** 作为数据源类型。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36128036"
     ```  
   
     > [!NOTE]  
-    >  订阅服务器是你在第 1 课中创建的数据库。  
+    >  订阅服务器是在第 1 课中创建的数据库。  
   
 3.  单击 **“安全存储在报表服务器中的凭据”**。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36128036"
   
 1.  对于 **“文件名”**，请选择 **“从数据库获取该值”**。 选择字段 **Order**。  
   
-2.  对于 **“路径”**，请选择 **“指定静态值”**。 在设置值中，键入为其具有写入权限的公共文件共享的名称 (例如， `\\mycomputer\public\myreports`)。  
+2.  对于 **“路径”**，请选择 **“指定静态值”**。 在设置值，键入您拥有写入权限的公共文件共享的名称 (例如， `\\mycomputer\public\myreports`)。  
   
 3.  对于 **“呈现格式”**，请选择 **“从数据库获取该值”**。 选择 **“格式”**。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36128036"
   
 8.  单击 **“下一步”**。  
   
-##  <a name="bkmk_configure_parameter"></a> 第 5 步-配置参数值以改变报表输出  
+##  <a name="bkmk_configure_parameter"></a> 步骤 5-配置参数值以改变报表输出  
   
 1.  对于 **OrderNumber**，请选择 **“从数据库获取该值”**。 在“值”中，选择 **Order**。 单击 **“下一步”**。  
   
