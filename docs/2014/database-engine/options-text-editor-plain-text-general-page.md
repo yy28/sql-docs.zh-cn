@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器的纯文本的常规页） |Microsoft 文档
+title: 选项 （文本编辑器的纯文本-常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150988"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>选项（“文本编辑器”-“纯文本”-“常规”页）
   使用此对话框可以更改文本编辑器的常规编辑行为，该编辑器用于编辑未与特定开发语言关联的文档。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，依次展开 **“文本编辑器”** 和 **“纯文本”** ，然后单击 **“常规”**。  
@@ -40,7 +40,7 @@ ms.locfileid: "36025983"
  纯文本编辑器不支持此功能。  
   
 ## <a name="settings"></a>“设置”  
- **启用虚拟空间**  
+ **启用虚空格**  
  在每行文本的结尾处插入空格。 如果选中此复选框，则注释在文本旁的位置将保持不变。  
   
  **自动换行**  

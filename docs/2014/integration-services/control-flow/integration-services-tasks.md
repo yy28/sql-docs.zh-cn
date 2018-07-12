@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
 - files [Integration Services], task options
@@ -29,13 +29,13 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c2a073a222ad9400e7df5f6d4ee0f8c00765cc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53bfe70f668309e4d8a8f6651f3dcafe0d810a8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259304"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 任务
   任务是一些控制流元素，它定义包控制流中执行的工作单元。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包由一个或多个任务组成。 如果包中包含多个任务，则它们将按照优先约束在控制流中进行连接和排序。  

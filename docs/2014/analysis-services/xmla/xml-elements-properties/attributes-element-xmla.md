@@ -1,5 +1,5 @@
 ---
-title: 属性元素 (XMLA) |Microsoft 文档
+title: Attributes 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bad3c0949f4c6c241a81bf4a8b90834aadfdfdf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f064935032298e037938734fa5d3d1ac9fcbae84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161078"
 ---
 # <a name="attributes-element-xmla"></a>Attributes 元素 (XMLA)
-  包含一套[属性](attribute-element-xmla.md)所使用的父元素[插入](../xml-elements-commands/insert-element-xmla.md)或[更新](../xml-elements-commands/update-element-xmla.md)命令，或通过父[其中](where-element-xmla.md)元素。  
+  包含一系列[特性](attribute-element-xmla.md)所使用的父元素[插入](../xml-elements-commands/insert-element-xmla.md)或[更新](../xml-elements-commands/update-element-xmla.md)命令，或通过父[其中](where-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

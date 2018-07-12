@@ -1,5 +1,5 @@
 ---
-title: 异常消息框中编程 |Microsoft 文档
+title: 异常消息框编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - messages [SQL Server], exception message box
 ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adef635d88a05925da924c4bab396f1da58e530
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 21882b1f6bb6233723a0ee7b60c7c7682abd5fa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148368"
 ---
 # <a name="exception-message-box-programming"></a>异常消息框编程
-  异常消息框是一个编程接口，与安装并且使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]图形的组件。 异常消息框是支持的托管程序集，您可以将其用于应用程序中，以显著提高对消息传送的控制，并使用户可以选择保存错误消息内容，以供将来参考和从中获取有关消息的帮助。 由于异常消息框可由除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的所有 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 版本安装，因此在安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端组件的任何计算机上，无需额外配置即可使用该接口。  
+  异常消息框是一种编程接口，随一起安装并使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]图形组件。 异常消息框是支持的托管程序集，您可以将其用于应用程序中，以显著提高对消息传送的控制，并使用户可以选择保存错误消息内容，以供将来参考和从中获取有关消息的帮助。 由于异常消息框可由除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的所有 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 版本安装，因此在安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端组件的任何计算机上，无需额外配置即可使用该接口。  
   
  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 命名空间中的 <xref:Microsoft.SqlServer.MessageBox> 类除具有 <xref:System.Windows.Forms.MessageBox> 类的所有功能外，还具有一些其他功能。 对于可能使用 <xref:System.Windows.Forms.MessageBox> 的任何任务，<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 均为理想之选，专用于很好地处理托管代码异常。 通过异常消息框，您可以执行以下操作：  
   

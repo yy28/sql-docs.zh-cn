@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - modifying operators
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aa1fbe6495aa7fc4ee81d6a8f93775f311b9e87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6ec4ffcad8d88a14ee9fdaeed9fd286195a16a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149808"
 ---
 # <a name="edit-an-operator"></a>编辑运算符
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对操作员能否接收通知进行编辑，并编辑他们的电子邮件地址、寻呼地址和 net send 地址。  
@@ -72,9 +72,9 @@ ms.locfileid: "36026927"
   
      若要深入了解“operator_name属性”对话框包含的可用选项，请参阅：  
   
-    -   [操作员属性和 New 运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [操作员属性和新运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [操作员属性： New 运算符&#40;通知页&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [运算符属性： 新建操作员&#40;通知页&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [操作员属性（“历史记录”页）](operator-properties-history-page.md)  
   

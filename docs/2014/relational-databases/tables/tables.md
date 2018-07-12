@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b28a195a396d59db32a8c443d008395e462b4a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7374db46a57d3f214d3f40edd885c59902437ace
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184144"
 ---
 # <a name="tables"></a>表
   表是包含数据库中所有数据的数据库对象。 数据在表中的逻辑组织方式与在电子表格中相似，都是按行和列的格式组织的。 每一行代表一条唯一的记录，每一列代表记录中的一个字段。 例如，在包含公司雇员数据的表中，每一行代表一名雇员，各列分别代表该雇员的信息，如雇员编号、姓名、地址、职位以及家庭电话号码等。  
@@ -40,7 +40,7 @@ ms.locfileid: "36025660"
  已分区表是将数据水平划分为多个单元的表，这些单元可以分布到数据库中的多个文件组中。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 默认情况下， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持多达 15,000 个分区。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
  临时表  
- 临时表都存储在`tempdb`。 临时表有两种类型：本地表和全局表。 它们在名称、可见性以及可用性上有区别。 本地临时表的名称以单个数字符号 (#) 打头；它们仅对当前的用户连接是可见的；当用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时被删除。 全局临时表的名称以两个数字符号 (##) 打头，创建后对任何用户都是可见的，当所有引用该表的用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时将被删除。  
+ 临时表存储在`tempdb`。 临时表有两种类型：本地表和全局表。 它们在名称、可见性以及可用性上有区别。 本地临时表的名称以单个数字符号 (#) 打头；它们仅对当前的用户连接是可见的；当用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时被删除。 全局临时表的名称以两个数字符号 (##) 打头，创建后对任何用户都是可见的，当所有引用该表的用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时将被删除。  
   
  系统表  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将定义服务器配置及其所有表的数据存储在一组特殊的表中，这组表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](/sql/t-sql/language-reference)。  

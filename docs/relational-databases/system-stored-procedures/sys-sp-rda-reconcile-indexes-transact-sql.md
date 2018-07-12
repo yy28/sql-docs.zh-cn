@@ -1,14 +1,11 @@
 ---
-title: sys.sp_rda_reconcile_indexes (Transact SQL) |Microsoft 文档
+title: sys.sp_rda_reconcile_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f020a11a0fa41d7cbd939279058e9292c5d488c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff2352fde5124f1f0db140914799f2a6d75f88d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997844"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431916"
 ---
-# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (TRANSACT-SQL)
+# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  若要对帐远程表上的索引架构任务排入队列。 此任务成功完成后，远程表将具有相同的本地已启用延伸的表存在的索引。  
+  若要对帐远程表的索引的架构任务进行排队。 此任务成功完成后，远程表已存在于本地的已启用延伸的表的索引。  
   
- 如果没有另一个任务排队进行对帐索引，当您调用**sp_rda_reconcile_indexes**，此存储的过程不会不任务排入队列重复。  
+ 如果没有另一个任务排入队列以在调用时对索引进行协调**sp_rda_reconcile_indexes**，此存储的过程不会排队重复任务。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +45,12 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
   
 ## <a name="arguments"></a>参数  
  [@objname = ] *'objname'*  
- 是你想要对帐索引已启用延伸的限定或非限定名称。 引号是必需的仅当你指定一个限定的对象。  
+ 是你想要对索引进行对帐的已启用延伸的限定或非限定名称。 指定限定的对象时，才需要引号。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

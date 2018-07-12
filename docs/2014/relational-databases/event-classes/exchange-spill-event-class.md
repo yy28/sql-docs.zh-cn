@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a7ffd71c2d54d22156bb5af1d4bfbe14640349f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 839d6ca721129dc94c51b998ecbf2fec02ee6fcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277723"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件类
   **Exchange Spill** 事件类指示并行查询计划中的通信缓冲区已暂时写入 **tempdb** 数据库。 这种情况发生的几率很小，仅当查询计划具有多次范围扫描时才会发生。  
   
- 一般情况下，生成此类范围扫描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询包含许多 BETWEEN 运算符，其中每个运算符会从表或索引中选择某一范围的行。 或者，你可以获取多个范围，如使用表达式 (t.a 应用 > 10 AND T.a \< 20) 或者 (t.a 应用 > 100 AND T.a \< 120)。 此外，查询计划必须要求按顺序扫描这些范围，原因是对 T.a 应用了 ORDER BY 子句，或者计划中的迭代器要求它按排序顺序处理元组。  
+ 一般情况下，生成此类范围扫描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询包含许多 BETWEEN 运算符，其中每个运算符会从表或索引中选择某一范围的行。 或者，可以获取多个范围使用表达式，例如 (T.a > 10 AND T.a \< 20) 或者 (T.a > 100 AND T.a \< 120)。 此外，查询计划必须要求按顺序扫描这些范围，原因是对 T.a 应用了 ORDER BY 子句，或者计划中的迭代器要求它按排序顺序处理元组。  
   
  如果此类查询的计划中有多个 **Parallelism** 运算符，则 **Parallelism** 运算符所使用的内存通信缓冲区将变满，这可能使查询的执行进度由此停止。 在此情况下，其中一个 **Parallelism** 运算符会将其输出缓冲区写入 **tempdb**（此操作称为“交换溢出”），以便它可以处理某些输出缓冲区中的行。 最终，当使用者准备使用溢出行时，溢出行将返回给使用者。  
   

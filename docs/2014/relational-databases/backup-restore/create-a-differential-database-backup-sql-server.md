@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full differential backups [SQL Server]
 - database backups [SQL Server], full differential backups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59dc50f9d3e72e7591d512ab98c5731e2cc6d5c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 595470b98b16cf955d2456891dac2284a94508c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160928"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建差异数据库备份。  
@@ -85,7 +84,7 @@ ms.locfileid: "36026787"
 5.  在 **“备份类型”** 列表框中，选择 **“差异”**。  
   
     > [!IMPORTANT]  
-    >  当**差异**是选择，验证**仅复制备份**清除复选框。  
+    >  当**差异**是选择，确保**仅复制备份**清除复选框。  
   
 6.  对于 **“备份组件”**，请单击 **“数据库”**。  
   

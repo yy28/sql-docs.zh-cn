@@ -1,13 +1,11 @@
 ---
-title: 执行查询 (ODBC) |Microsoft 文档
+title: 执行查询 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ac76e677ba7afba9cff2523286a14c6b754dc48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 552a9d37d06ba145e371650dd56027ca38eb7c20
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017319"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416276"
 ---
 # <a name="executing-queries-odbc"></a>执行查询 (ODBC)
-  在 ODBC 应用程序初始化连接句柄并与数据源连接后，它为连接句柄分配一个或多个语句句柄。 然后执行应用程序可以[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句句柄上的语句。 执行 SQL 语句时的一般事件顺序为：  
+  在 ODBC 应用程序初始化连接句柄并与数据源连接后，它为连接句柄分配一个或多个语句句柄。 应用程序然后执行[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句句柄上的语句。 执行 SQL 语句时的一般事件顺序为：  
   
 1.  设置所有所需的语句属性。  
   
@@ -47,11 +45,11 @@ ms.locfileid: "36017319"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- 每个参数标记可以然后绑定到程序变量通过调用[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)。  
+ 每个参数标记然后到程序变量通过调用绑定[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)。  
   
  执行所有 SQL 语句并处理它们的结果集之后，应用程序释放语句句柄。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序还支持每个连接句柄的多个语句句柄。 在连接级别管理事务，以便将针对单个连接句柄上的所有语句句柄执行的所有工作视为同一事务的一部分来管理。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持每个连接句柄的多个语句句柄。 在连接级别管理事务，以便将针对单个连接句柄上的所有语句句柄执行的所有工作视为同一事务的一部分来管理。  
   
 ## <a name="in-this-section"></a>本节内容  
   

@@ -1,35 +1,33 @@
 ---
-title: 设置较大的数据 (OLE DB) |Microsoft 文档
+title: 设置大型数据 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82e4a722f3abec281af12785a0b381f189ef4740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7eca258cc315a839f9f46185bcded8d8fc99aae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016356"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424336"
 ---
 # <a name="set-large-data-ole-db"></a>设置大型数据 (OLE DB)
   此示例显示如何设置 BLOB 数据、创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值。 IA64 平台不支持此示例。  
   
  为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 `IRowsetChange::SetData` 或 `IRowsetChange::InsertRow` 方法。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例需要 AdventureWorks 示例数据库中，您可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -38,11 +36,11 @@ ms.locfileid: "36016356"
   
 #### <a name="to-set-blob-data"></a>设置 BLOB 数据  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 设置**dwFlag** DBOBJECT 元素到 STGM_READ 结构并将 iid 元素设置为`IID_ISequentialStream`（要公开的接口）。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 设置**dwFlag**元素的 DBOBJECT 结构为 STGM_READ，并且将 iid 元素设置为`IID_ISequentialStream`（要公开的接口）。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 设置**wType** DBTYPE_IUNKNOWN，DBBINDING 结构中的元素和**pObject**元素以指向您创建的 DBOBJECT 结构。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 设置**wType**为 DBTYPE_IUNKNOWN，DBBINDING 结构中的元素和**pObject**元素以指向您创建的 DBOBJECT 结构。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
@@ -53,7 +51,7 @@ ms.locfileid: "36016356"
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>Description  
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请更改连接字符串从"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
 ### <a name="code"></a>代码  
   

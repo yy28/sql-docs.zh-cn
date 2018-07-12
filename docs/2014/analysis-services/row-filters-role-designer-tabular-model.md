@@ -1,5 +1,5 @@
 ---
-title: 行筛选器 (角色设计器)(Tabular Model) |Microsoft 文档
+title: 行筛选器 (角色设计器)(Tabular Model) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.roledesignerdialog.rowfilters.imbi.f1
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3535382298512d9feca59af13518838188abad59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269ad2f2983db72aa49d5617466ae54884ec26b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155309"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行筛选器（角色设计器）（表模型）
   使用角色设计器的 **“行筛选器”** 页可以定义关联角色的行级别筛选器。 只能为具有“读取”和“读取和处理”权限的角色定义行筛选器。  
@@ -36,7 +36,7 @@ ms.locfileid: "36027537"
  **DAX 筛选器**  
  计算结果为布尔条件的 DAX 公式。  
   
- **DAX 筛选器- \<tablename >**  
+ **DAX 筛选器-\<表名称 >**  
  键入计算结果为布尔条件的 DAX 公式。  
   
 ## <a name="see-also"></a>请参阅  

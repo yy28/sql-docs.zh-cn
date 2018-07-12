@@ -1,5 +1,5 @@
 ---
-title: Excel 源编辑器 （连接管理器页） |Microsoft 文档
+title: Excel 源编辑器 （连接管理器页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeb3af2f65be818c41dd88dc89028cb0f27cb36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74698304e70e1125003e5b15cef991f8511ed4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161028"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 源编辑器（“连接管理器”页）
   使用 **“Excel 源编辑器”** 对话框的 **“连接管理器”** 节点可以为源选择要使用的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿。 Excel 源从现有工作簿中的工作表或指定范围中读取数据。  
   
 > [!NOTE]  
->  `CommandTimeout` Excel 源的属性不是位于**Excel 源编辑器**，但可以通过使用设置**高级编辑器**。 有关此属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 源”部分。  
+>  `CommandTimeout` Excel 源的属性不是在可用**Excel 源编辑器**，但可以通过使用设置**高级编辑器**。 有关此属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 源”部分。  
   
  若要了解有关 Excel 源的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。  
   

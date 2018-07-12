@@ -1,5 +1,5 @@
 ---
-title: 完成向导 （数据挖掘向导） |Microsoft 文档
+title: 完成向导 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d013993f9a8e99898b78cfa520c474c788ac294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278423"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>完成向导（数据挖掘向导）
   可以使用 **“完成向导”** 页查看在完成向导后创建的挖掘结构。 您还可以设置挖掘结构的名称。  

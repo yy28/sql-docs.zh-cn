@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1dce716a55830afa2d7e3bc38d87d9ea407ce95c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdd6160bb68497ae250057213cba31d195655adc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148698"
 ---
 # <a name="system-role-properties-management-studio"></a>系统角色属性 (Management Studio)
   使用“系统角色”页可以查看当前为报表服务器定义的系统角色定义。 系统角色定义包含一组任务的命名集合，这些任务相对于整个站点（而不是单项）执行。 角色定义将分配给用户或组，以据此创建角色分配。 角色定义中的任务指定用户或组可以执行的任务。  

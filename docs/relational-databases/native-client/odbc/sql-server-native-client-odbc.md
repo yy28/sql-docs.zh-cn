@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client (ODBC) |Microsoft 文档
+title: SQL Server Native Client (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +24,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 82a923e22e3954529685eb35832fe7e211ca18b3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 34fbc6f2849dc222ae5931d61eff5c575e50f1b6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708365"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432256"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34708365"
   
 -   [处理结果&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
--   [使用游标， &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [使用游标&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
 -   [执行事务&#40;ODBC&#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34708365"
   
 -   [稀疏列支持&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41;引用](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [SQL Server 本机客户端&#40;ODBC&#41;引用](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [ODBC 操作指南主题](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   

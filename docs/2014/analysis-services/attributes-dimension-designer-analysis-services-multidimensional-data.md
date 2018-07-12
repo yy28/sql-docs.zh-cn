@@ -1,5 +1,5 @@
 ---
-title: 属性 （维度结构选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 属性 （维度结构选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 289127d0d4bb155045c530cc49b336048a80034c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161618"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用此窗格管理与所选维度关联的属性。 可以将属性从此窗格拖到 **“层次结构”** 窗格，以创建层次结构和级别。 有关详细信息，请参阅[层次结构&#40;维度结构选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)。  

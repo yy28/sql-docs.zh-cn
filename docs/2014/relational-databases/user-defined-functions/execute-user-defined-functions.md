@@ -5,27 +5,25 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - invoking user-defined functions
 - user-defined functions [SQL Server], executing
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6961d8306ff4b5a5f5280d25e3657952d0890063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 2b478d8ca2912d2afbf5dc399dfd465c0aab1c3f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017707"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408806"
 ---
 # <a name="execute-user-defined-functions"></a>执行用户定义函数
-  你可以执行中的用户定义函数[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+  您可以执行中的用户定义函数[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
  **本主题内容**  
   
@@ -51,7 +49,7 @@ ms.locfileid: "36017707"
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-execute-a-user-defined-function"></a>若要执行用户定义函数  
+#### <a name="to-execute-a-user-defined-function"></a>若要执行的用户定义函数  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   

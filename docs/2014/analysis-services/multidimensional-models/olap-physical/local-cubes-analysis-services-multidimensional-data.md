@@ -1,5 +1,5 @@
 ---
-title: 本地多维数据集 (Analysis Services-多维数据) |Microsoft 文档
+title: 本地多维数据集 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], local
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfb1b14d4dc540f13a98314d8cf299b78adf1550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cc1e27115d898cc2ba839fb14d2f7edfa8c560f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149278"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本地多维数据集（Analysis Services - 多维数据）
   若要创建、更新或删除本地多维数据集，必须编写并执行 ASSL 脚本或 AMO 程序。  
@@ -43,7 +43,7 @@ ms.locfileid: "36028232"
   
 |本地多维数据集的数据源|创建方法|  
 |------------------------------------|---------------------|  
-|基于服务器的多维数据集|你可以使用 CREATE GLOBAL CUBE 语句或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]脚本语言 (ASSL) 脚本，创建并填充多维数据集的基于服务器的多维数据集。 有关详细信息，请参阅[创建全局多维数据集语句&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)或[Analysis Services 脚本语言&#40;ASSL&#41;引用](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
+|基于服务器的多维数据集|可以使用 CREATE GLOBAL CUBE 语句或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]脚本语言 (ASSL) 脚本来创建和填充从基于服务器的多维数据集的多维数据集。 有关详细信息，请参阅[创建全局多维数据集语句&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)或[Analysis Services 脚本语言&#40;ASSL&#41;参考](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
 |关系数据源|可以使用 ASSL 脚本从 OLE DB 关系数据库创建和填充多维数据集。 若要使用 ASSL 创建本地多维数据集，只需连接到本地多维数据集文件 (*.cub)，并以与针对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例执行 ASSL 脚本创建服务器多维数据集的相同方式执行 ASSL 脚本。 有关详细信息，请参阅[Analysis Services 脚本语言&#40;ASSL&#41;引用](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
   
  使用 REFRESH CUBE 语句可重新生成本地多维数据集并更新其数据。 有关详细信息，请参阅[刷新多维数据集语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)。  
@@ -74,12 +74,12 @@ ms.locfileid: "36028232"
 -   只有那些依赖于添加到本地多维数据集中的度量值和维度的计算成员、命名集和分配会显示在本地多维数据集中。 将自动排除无效计算成员、命名集和分配。  
   
 ### <a name="security"></a>Security  
- 为了使用户从服务器多维数据集创建本地多维数据集，用户必须被授予**钻取和本地多维数据集**对服务器多维数据集的权限。 有关详细信息，请参阅[授予多维数据集或模型权限&#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
+ 为了使用户能够从服务器多维数据集创建本地多维数据集，用户必须被授予**钻取和本地多维数据集**对服务器多维数据集的权限。 有关详细信息，请参阅[授予多维数据集或模型权限&#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
  使用诸如服务器多维数据集之类的角色无法确保本地多维数据集的安全。 拥有对本地多维数据集文件的文件级访问权限的任何用户均可在此文件中查询多维数据集。 可以使用本地多维数据集文件的 `Encryption Password` 连接属性为本地多维数据集文件设置密码。 如果为本地多维数据集文件设置密码，则与该本地多维数据集文件的所有连接都需要使用此密码才能查询该文件。  
   
 ## <a name="see-also"></a>请参阅  
- [创建全局多维数据集语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
+ [CREATE GLOBAL CUBE 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
  [开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [刷新多维数据集语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
   

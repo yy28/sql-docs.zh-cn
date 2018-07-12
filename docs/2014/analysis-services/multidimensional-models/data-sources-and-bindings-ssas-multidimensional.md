@@ -1,5 +1,5 @@
 ---
-title: 数据源和绑定 (SSAS 多维) |Microsoft 文档
+title: 数据源和绑定 (SSAS 多维) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
 - DSO, bindings
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5386a2a09928f8a7dbc04248df74e8112749f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230197"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
   可将多维数据集、维度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象绑定到数据源。 数据源可为以下对象之一：  
@@ -92,7 +92,7 @@ ms.locfileid: "36018309"
   
  对于每个分区，都可以有选择地重写这些默认绑定。 每个分区都可以指定不同的数据源、表、查询名称或筛选表达式。 最常见的分区策略是使用相同的数据源，逐个分区重写表。 其他的方法包括对每个分区应用不同的筛选器或更改数据源。  
   
- 必须在 DSV 中定义默认数据源，以便提供包括关系的详细信息在内的架构信息。 在分区级别上指定的所有其他表或查询均无需在 DSV 中列出，但它们的架构必须与为该度量值组定义的默认表的架构相同，或者至少必须包含度量值或粒度属性所使用的所有列。 度量值和粒度属性无法在分区级别上重写，它们被假定为与度量值组定义的列相同。 因此，如果分区使用的数据源中的事实具有不同的架构，`TableDefinition`为分区必须导致度量值组使用的架构相同的架构定义的查询。  
+ 必须在 DSV 中定义默认数据源，以便提供包括关系的详细信息在内的架构信息。 在分区级别上指定的所有其他表或查询均无需在 DSV 中列出，但它们的架构必须与为该度量值组定义的默认表的架构相同，或者至少必须包含度量值或粒度属性所使用的所有列。 度量值和粒度属性无法在分区级别上重写，它们被假定为与度量值组定义的列相同。 因此，如果分区使用数据源实际上具有不同的架构，`TableDefinition`为分区必须使用度量值组的架构相同的架构中定义的查询。  
   
 ### <a name="measuregroup-granularity-attributes"></a>MeasureGroup 粒度属性  
  如果度量值组的粒度与数据库中的已知粒度匹配，并且事实数据表与维度表之间具有直接关系，则只需将粒度属性绑定到相应的外键列或事实数据表中的列。 例如，请看下面的事实数据表和维度表：  
@@ -111,7 +111,7 @@ ms.locfileid: "36018309"
   
  如果通过订购的产品进行分析，则对于销售维度角色的订购产品，应将产品粒度属性绑定到 Sales.OrderedProductID。  
   
- 但有时，`GranularityAttributes` 可能不作为事实数据表中的列而存在。 例如，`GranularityAttributes`可能不存在为下列情况中的列：  
+ 但有时，`GranularityAttributes` 可能不作为事实数据表中的列而存在。 例如，`GranularityAttributes`可能不作为列在以下情况下存在：  
   
 -   OLAP 粒度比数据源中的粒度更粗。  
   
@@ -159,18 +159,18 @@ ms.locfileid: "36018309"
   
  在 OLAP 挖掘模型中，数据绑定遵循以下规则：  
   
--   每个非嵌套表列绑定的度量值的多维数据集，该多维数据集的维度属性 (指定`CubeDimension`来消除歧义对于维度角色)，或对维度属性。  
+-   每个非嵌套表列绑定到一个度量值对多维数据集，到该多维数据集维度的属性 (指定`CubeDimension`以消除维度角色的多义性)，或到某个维度的属性。  
   
 -   每个嵌套表列绑定到 `CubeDimension`。 也就是说，它定义如何从维度导航到相关多维数据集，或如何从多维数据集导航到该多维数据集的一个维度（在出现嵌套表的少数情况下）。  
   
 ## <a name="out-of-line-bindings"></a>外部绑定  
  外部绑定使您可以临时更改命令持续时间的现有数据绑定。 外部绑定指命令中包含的但不会持久化的绑定。 外部绑定只可在执行特定命令时才能应用。 相比之下，内联绑定包含在 ASSL 对象定义中，会随对象定义在服务器元数据内持久保留。  
   
- ASSL 允许的外部绑定对任一指定`Process`命令时，如果不到批处理中，或在`Batch`命令。 如果在 `Batch` 命令中指定外部绑定，则 `Batch` 命令中指定的所有绑定将创建新的绑定上下文，批处理中的所有 `Process` 命令都将在该上下文中运行。 由于有 `Process` 命令，所以此新绑定上下文会包含间接处理的对象。  
+ ASSL 允许在指定的外部绑定`Process`命令时，如果不是批处理中或在`Batch`命令。 如果在 `Batch` 命令中指定外部绑定，则 `Batch` 命令中指定的所有绑定将创建新的绑定上下文，批处理中的所有 `Process` 命令都将在该上下文中运行。 由于有 `Process` 命令，所以此新绑定上下文会包含间接处理的对象。  
   
- 如果在命令中指定外部绑定，则这些绑定将覆盖指定对象的持久化 DDL 中包含的内联绑定。 这些已处理的对象可能包含对象中直接命名`Process`命令，也可能包含其他对象，其处理操作自动启动处理的一部分。  
+ 如果在命令中指定外部绑定，则这些绑定将覆盖指定对象的持久化 DDL 中包含的内联绑定。 这些已处理的对象可能包含的对象中直接命名`Process`命令，也可能包含其他对象处理操作自动启动的处理的一部分。  
   
- 外部绑定是通过将可选 `Bindings` 集合对象与处理命令包含在一起而指定的。 可选`Bindings`集合包含下列元素。  
+ 外部绑定是通过将可选 `Bindings` 集合对象与处理命令包含在一起而指定的。 可选`Bindings`集合包含以下元素。  
   
 |“属性”|基数|类型|Description|  
 |--------------|-----------------|----------|-----------------|  
@@ -181,14 +181,14 @@ ms.locfileid: "36018309"
  与外部绑定相关的所有元素都是可选的。 对于所有未指定的元素，ASSL 将应用持久化对象的 DDL 中包含的规范。 `DataSource` 命令中的 `DataSourceView` 或 `Process` 的规范是可选的。 如果指定 `DataSource` 或 `DataSourceView`，则将不对它们进行实例化，并且在 `Process` 命令完成后，不会保留它们。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>外部绑定类型的定义  
- 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象的形式平面的典型`Object`中的元素`Process`命令，除非\<*对象*>\<*/对象*>标记不存在。  
+ 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象采用的典型平面格式`Object`中的元素`Process`命令，只不过\<*对象*>\<*/对象*>标记不存在。  
   
- 绑定指定为其每个对象由 XML 元素的窗体\<*对象*> ID (例如， `DimensionID`)。 确定该对象后尽可能具体处理该窗体\<*对象*> ID，则标识为其所指定的绑定，这通常是此元素`Source`。 常见的情况，需要注意是，在其中`Source`位于属性`DataItem`，这属于属性中的列绑定。 在这种情况下，您不需要指定 `DataItem` 标记，而只需要简单地指定 `Source` 属性，就如同该属性直接位于要绑定的列上一样。  
+ 为其指定绑定每个对象由 XML 元素的窗体\<*对象*> ID (例如， `DimensionID`)。 标识完对象后尽可能明确地处理该窗体\<*对象*> ID，就可以标识的元素为其为其指定绑定，这通常是`Source`。 常见的情况，需要注意，即`Source`一个属性`DataItem`，这是这种情况中属性的列绑定。 在这种情况下，您不需要指定 `DataItem` 标记，而只需要简单地指定 `Source` 属性，就如同该属性直接位于要绑定的列上一样。  
   
  `KeyColumns` 由它们在 `KeyColumns` 集合内的顺序标识。 无法只指定属性的第一个键列和第三个键列，因为没有办法指示跳过第二个键列。 所有键列都必须存在于维度属性的外部绑定中。  
   
  虽然 `Translations` 没有 ID，但仍可以通过其语言对其进行语义标识。 因此，`Translations` 内的 `Binding` 需要包含其语言标识符。  
   
- 另一个元素内允许`Binding`不存在直接的 DDL 中是`ParentColumnID`，这用于嵌套表的数据挖掘。 在这种情况下，需要标识要为其提供绑定的嵌套表中的父列。  
+ 另一个元素中允许`Binding`不存在直接在 DDL 中是`ParentColumnID`，可用于嵌套表的数据挖掘。 在这种情况下，需要标识要为其提供绑定的嵌套表中的父列。  
   
   

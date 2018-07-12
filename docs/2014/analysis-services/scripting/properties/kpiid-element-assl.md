@@ -1,5 +1,5 @@
 ---
-title: KpiID 元素 (ASSL) |Microsoft 文档
+title: KpiID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KpiID element
 ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 03bbebbf255b5f42934d4fe1e28c78cc1bb54caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1f363564a74e9f64ed126ceda98ca387561c852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151268"
 ---
 # <a name="kpiid-element-assl"></a>KpiID 元素 (ASSL)
-  包含将相关联的标识符 (ID) [Kpi](../objects/kpi-element-assl.md)具有元素[透视](../objects/perspective-element-assl.md)元素。  
+  包含相关联的标识符 (ID) [Kpi](../objects/kpi-element-assl.md)具有元素[角度来看](../objects/perspective-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36026212"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`KpiID`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.PerspectiveKpi>。  
+ 父级对应的元素`KpiID`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.PerspectiveKpi>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性 (ASSL)](properties-assl.md)  

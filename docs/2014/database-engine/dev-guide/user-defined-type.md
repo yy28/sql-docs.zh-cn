@@ -1,5 +1,5 @@
 ---
-title: 用户定义类型 |Microsoft 文档
+title: 用户定义类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55627b179f472c5501fb2a64bec9cc57f097d007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3a0bcae3a44553fdc6d2d337e9e54993bd7e769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209947"
 ---
 # <a name="user-defined-type"></a>用户定义的类型
   用户定义数据类型示例介绍如何在 Transact-SQL 和使用 `System.Data.SqlClient` 的客户端应用程序中创建和使用简单的用户定义数据类型。  
@@ -53,7 +53,7 @@ ms.locfileid: "36027071"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，你必须`ALTER SETTINGS`服务器级别权限，该权限的成员隐式具有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36027071"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-9. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]测试到文件的命令脚本并将其保存为`test.sql`示例目录中。  
+9. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
   
 10. 使用以下命令执行测试脚本：  
   

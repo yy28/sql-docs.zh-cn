@@ -1,13 +1,11 @@
 ---
-title: ODBC API 实现详细信息 |Microsoft 文档
+title: ODBC API 实现的详细信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +15,20 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1daffe7b45f162b3fcfda99405d85dbb96493607
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d5d4850fd9a3bb51cf306bea6e960ed6bc4d9bc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015015"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430456"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 实现细节
   本节介绍了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时呈现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定行为的 ODBC 函数。 此处只介绍部分 ODBC 函数。 各个单独的主题只讨论 ODBC 函数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定问题， 它们不提供 ODBC 函数的完整参考资料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范，如果您使用 Windows 7 SDK，则符合 ODBC 3.8 规范。 有关完整的 ODBC 参考，查看[ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkId=45250)联机。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范，如果您使用 Windows 7 SDK，则符合 ODBC 3.8 规范。 有关 ODBC 的全面参考，查看[ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkId=45250)联机。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -137,7 +135,7 @@ ms.locfileid: "36015015"
 -   [SQLTables](sqltables.md)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server Native Client &#40;ODBC&#41;引用](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
+ [SQL Server 本机客户端&#40;ODBC&#41;引用](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [使用 SQL Server Native Client 生成应用程序](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

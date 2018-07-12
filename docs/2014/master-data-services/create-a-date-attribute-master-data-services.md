@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17ce5274f0342b15806252adb519b2fb0a3f09f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 87dba370e2bce35a1e1995269070821a424aae07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164898"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您希望用户输入日期作为属性值时创建日期属性。  
@@ -94,7 +94,7 @@ ms.locfileid: "36026157"
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [更改的属性名称&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [更改属性名称&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [创建基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [创建文件属性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   

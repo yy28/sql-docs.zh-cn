@@ -1,5 +1,5 @@
 ---
-title: 访问中的查询上下文存储过程 |Microsoft 文档
+title: 访问中的查询上下文的存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query context [Analysis Services]
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef60683eb410f0db5ba9e8d38ac227ca22dd9159
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28aafacda2e9880a79201fd07ca41fb15959e87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239837"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>访问存储过程中的查询上下文
   存储过程的执行上下文可以作为 ADOMD.NET 服务器对象模型的 `Context` 对象出现在存储过程代码中。 这是只读上下文，存储过程不能修改它。 此对象的以下属性可用。  

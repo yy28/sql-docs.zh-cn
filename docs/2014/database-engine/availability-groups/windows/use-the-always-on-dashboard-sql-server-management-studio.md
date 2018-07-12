@@ -1,14 +1,13 @@
 ---
-title: 使用 AlwaysOn 面板 (SQL Server Management Studio) |Microsoft 文档
+title: 使用 AlwaysOn 面板 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 60d75f53c84d652b0d719ba73980cfbff6d08424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 207f67602fd55e5186a64ba9b30df7230a35d1b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163518"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 面板 (SQL Server Management Studio)
   数据库管理员使用 AlwaysOn 面板大致了解 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 AlwaysOn 可用性组及其可用性副本和数据库的运行状况。 AlwaysOn 面板的一些典型用法如下：  
@@ -97,7 +96,7 @@ ms.locfileid: "36024969"
 -   **手动**。 指示没有副本处于自动故障转移模式。  
   
  **问题**  
- 单击“问题”链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[运行问题的 AlwaysOn 可用性组 (SQL Server) 的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 单击“问题”链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  单击列标题可按可用性组的名称、主实例、故障转移模式或问题对可用性组信息进行排序。  
@@ -152,7 +151,7 @@ ms.locfileid: "36024969"
 -   **NULL**。 未知状态。 当本地服务器实例无法与 WSFC 故障转移群集通信（即本地节点不是 WSFC 仲裁的一部分）时，出现此值。  
   
  **问题**  
- 列出问题名称。 默认情况下显示此值。 有关所有 AlwaysOn 策略问题的列表，请参阅[运行问题的 AlwaysOn 可用性组 (SQL Server) 的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 列出问题名称。 默认情况下显示此值。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
  指示您为每个可用性副本分别设置的副本属性。 默认情况下隐藏此值。 可能的值有：  
@@ -281,7 +280,7 @@ ms.locfileid: "36024969"
   
 -   **严重**。 单击此选项可显示严重问题。  
   
- 有关所有 AlwaysOn 策略问题的列表，请参阅[运行问题的 AlwaysOn 可用性组 (SQL Server) 的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已挂起**  
  指示数据库“已挂起”还是“已恢复”。 默认情况下隐藏此值。  

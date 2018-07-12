@@ -1,26 +1,24 @@
 ---
-title: 分析 ODBC 驱动程序性能操作指南主题 (ODBC) |Microsoft 文档
+title: 分析 ODBC 驱动程序性能操作指南主题 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fcd58b3c21b113a41c1e869fb1d22ed6c456c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 951ffdf09a7ba8c048aef40b07a27127f51dacb8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015215"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420956"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>对 ODBC 驱动程序性能进行事件探查的操作指南主题 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序有两个特定于驱动程序的选项，用于对驱动程序的性能进行事件探查。  
@@ -31,7 +29,7 @@ ms.locfileid: "36015215"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [配置文件驱动程序的性能数据&#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [配置文件驱动程序性能数据&#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
   
 -   [记录长时间运行的查询&#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   

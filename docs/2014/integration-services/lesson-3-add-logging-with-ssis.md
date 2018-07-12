@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 添加日志记录 |Microsoft 文档
+title: 第 3 课： 添加日志记录 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 caps.latest.revision: 24
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be6cb6bb8edfa30ee33ed0431dbf33f11470cd0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4ad03f67a8a386b3c42697d1060910c277580c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164870"
 ---
 # <a name="lesson-3-adding-logging"></a>第 3 课：添加日志记录
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含日志记录功能，可通过提供任务和容器事件跟踪监控包执行情况以及进行故障排除。 日志记录功能非常灵活，可以在包级别或在包中的各个任务和容器上启用。 可以选择要记录的事件，也可以对单个包创建多个日志。  

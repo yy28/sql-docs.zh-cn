@@ -1,5 +1,5 @@
 ---
-title: 定义链接的维度 |Microsoft 文档
+title: 定义链接的维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4ddd7a9c833346956e3c5ccdde93873028f663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155358"
 ---
 # <a name="define-linked-dimensions"></a>定义链接维度
   链接维度基于在具有相同版本和兼容性级别的另一个 Analysis Services 数据库中创建和存储的维度。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
@@ -66,7 +66,7 @@ ms.locfileid: "36027783"
   
 2.  在连接管理器中，确保提供程序设置为“本机 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0”。  
   
-3.  输入服务器的名称 (使用*servername*\\*instancename*对于命名实例)<sup>1</sup>或类型**localhost**到连接到同一台计算机运行的 Analysis Services 服务器。  
+3.  输入的服务器的名称 (使用*servername*\\*instancename*对于命名实例)<sup>1</sup>或类型**localhost**到连接到同一台计算机运行的 Analysis Services 服务器。  
   
 4.  使用 Windows 身份验证进行连接。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36027783"
  您不能更改链接维度的结构，因此无法使用维度设计器的 **“维度结构”** 选项卡来进行查看。 处理链接维度后，可以使用 **“浏览器”** 选项卡进行查看。还可以更改维度的名称，并为该名称创建一个转换。  
   
 ## <a name="see-also"></a>请参阅  
- [设置兼容性级别的多维数据库&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [设置的兼容级别多维数据库的&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [链接度量值组](linked-measure-groups.md)   
  [维度关系](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   

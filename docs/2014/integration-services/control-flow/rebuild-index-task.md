@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rebuildindextask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f5a97597fe88aabfef3d0c62ad4c21cfd7be9c76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 528be12077056a250277f3497798d5f1f09fc3f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149638"
 ---
 # <a name="rebuild-index-task"></a>“重新生成索引”任务
   “重新生成索引”任务重新生成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库表和视图中的索引。 有关管理索引的详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "36027498"
 -   设置 ONLINE = ON 以便不保持表锁，这样，将可以在重建索引期间对基础表进行查询或更新。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  有关 ALTER INDEX 语句和索引重新生成选项的详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
   

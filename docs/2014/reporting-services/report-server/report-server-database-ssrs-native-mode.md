@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
 - report servers [Reporting Services], databases
@@ -20,13 +20,13 @@ ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d7dd8dd25195465aaff15bcf58ca5c4898f58274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13781ef7b1854026acf1a237deb56f4fbaf6fa98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157648"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>报表服务器数据库（SSRS 本机模式）
   报表服务器是一种无状态服务器，它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 来存储元数据和对象定义。 为了将永久数据存储与临时存储要求分开，本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装使用两个数据库。 这两个数据库一起创建，并按名称绑定。 默认情况下，数据库名称分别为 **reportserver** 和 **reportservertempdb**。  
@@ -47,7 +47,7 @@ ms.locfileid: "36027147"
 ## <a name="report-server-database"></a>报表服务器数据库  
  报表服务器数据库是存储下列内容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：  
   
--   报表服务器管理的项 (.../ 报表和链接的报表，共享的数据源，报表模型、 文件夹、 资源) 以及所有的属性和与这些项关联的安全设置。  
+-   报表服务器管理的项 (.../ 报表和链接的报表、 共享的数据源、 报表模型、 文件夹、 资源) 及其所有属性和与这些项相关联的安全设置。  
   
 -   订阅和计划定义。  
   

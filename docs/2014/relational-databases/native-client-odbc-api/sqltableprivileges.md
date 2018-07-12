@@ -1,13 +1,11 @@
 ---
-title: SQLTablePrivileges |Microsoft 文档
+title: SQLTablePrivileges |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SQLTablePrivileges function
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b0459196645627dddcde96442742e2b6f02fd4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 21261f64ff1161952fab881034069809b0ed62ed
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014290"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411336"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
-  **SQLTablePrivileges**可以执行对静态游标。 尝试执行**SQLTablePrivileges**上 SQL_SUCCESS_WITH_INFO，该值指示游标类型已更改可更新 （键集驱动或动态） 返回。  
+  **SQLTablePrivileges**可以对静态游标执行。 尝试执行**SQLTablePrivileges**上可更新 （由键集驱动或动态） 返回 sql_success_with_info 以指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持为链接服务器上的表报表信息由接受的两部分名称*CatalogName*参数： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数： *Linked_Server_Name.Catalog_Name*.  
   
 ## <a name="see-also"></a>请参阅  
  [SQLTablePrivileges 函数](http://go.microsoft.com/fwlink/?LinkId=59373\)   

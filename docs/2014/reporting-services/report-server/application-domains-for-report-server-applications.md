@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
@@ -16,13 +16,13 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2be1ce358f1fade63586d24fa9761758f641f225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68b99702f3b3832db9c3912626deb9442862f74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153758"
 ---
 # <a name="application-domains-for-report-server-applications"></a>报表服务器应用程序的应用程序域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表服务器作为一个包含报表服务器 Web 服务、报表管理器和后台处理应用程序的服务来实现。 每个应用程序都在单个报表服务器进程中其各自的应用程序域中运行。 在大多数情况下，应用程序域是在内部创建、配置和管理的。 但是，如果要研究性能或内存问题并排除服务中断故障，则了解如何针对报表服务器应用程序域执行回收操作会非常有帮助。  
@@ -44,7 +44,7 @@ ms.locfileid: "36025869"
   
 |事件|事件说明|适用于|可配置|回收操作说明|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|以预定义的时间间隔执行的计划回收操作|默认情况下，应用程序域每 12 个小时回收一次。<br /><br /> 对于提升了总体进程运行状况的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序来说，计划的回收操作是通常的做法。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|是。 `RecycleTime` RSReportServer.config 文件中的配置设置确定回收时间间隔。<br /><br /> `MaxAppDomainUnloadTime` 设置期间的后台处理可以完成的等待时间。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 管理 Web 服务和报表管理器的回收操作。<br /><br /> 对于后台处理应用程序，报表服务器为那些从计划中启动的新作业创建一个新的应用程序域。 已在进行中的作业将能够在当前的应用程序域中完成，直到等待时间过期。|  
+|以预定义的时间间隔执行的计划回收操作|默认情况下，应用程序域每 12 个小时回收一次。<br /><br /> 对于提升了总体进程运行状况的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序来说，计划的回收操作是通常的做法。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|是。 `RecycleTime` 在 RSReportServer.config 文件中的配置设置确定回收时间间隔。<br /><br /> `MaxAppDomainUnloadTime` 设置在后台处理其间完成的等待时间。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 管理 Web 服务和报表管理器的回收操作。<br /><br /> 对于后台处理应用程序，报表服务器为那些从计划中启动的新作业创建一个新的应用程序域。 已在进行中的作业将能够在当前的应用程序域中完成，直到等待时间过期。|  
 |报表服务器上的配置更改|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将为了响应 RSReportServer.config 文件中的更改而回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|否。|您不能禁止执行回收操作。 但是，为了响应配置更改而执行的回收操作将按照与计划的回收操作相同的方式进行处理。 将为新请求创建新的应用程序域，而当前的请求和作业将在当前的应用程序域中完成。|  
 |[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 配置更改|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 会回收应用程序域，前提是对其所监视的文件（例如，machine.config 文件、Web.config 文件和 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 程序文件）进行了更改。|报表服务器 Web 服务<br /><br /> 报表管理器|否。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 对该操作进行管理。<br /><br /> 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作不会影响后台处理应用程序域。|  
 |内存不足和内存分配失败|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 将立即回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|否。|在内存严重不足时，报表服务器将不接受当前应用程序域中的新请求。 在此期间，服务器将拒绝新请求，并且会出现 HTTP 503 错误。 除非卸载旧应用程序域，否则将不创建新应用程序域。 这意味着，如果您在服务器内存严重不足时对配置文件进行更改，则正在进行的请求和作业可能无法启动或完成。<br /><br /> 如果内存分配失败，则所有的应用程序域将立即重新启动。 正在进行的作业和请求将被放弃。 您必须手动重新启动这些作业和请求。|  
@@ -67,7 +67,7 @@ ms.locfileid: "36025869"
 -   由报表服务器执行的回收操作通常会影响报表服务器 Web 服务、报表管理器和后台处理应用程序。 回收操作是为了响应配置设置更改和服务重新启动而执行的。  
   
 ## <a name="rsreportserver-configuration-settings-for-application-domains"></a>应用程序域的 RSReportServer 配置设置  
- 中指定了配置设置中[RSReportServer.config 文件](rsreportserver-config-configuration-file.md)。 下面的示例演示了计划内应用程序域回收行为的默认配置设置。  
+ 中指定配置设置中[RSReportServer.config 文件](rsreportserver-config-configuration-file.md)。 下面的示例演示了计划内应用程序域回收行为的默认配置设置。  
   
  `<RecycleTime>720</RecycleTime>`  
   

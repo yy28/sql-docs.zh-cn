@@ -1,5 +1,5 @@
 ---
-title: 重播要求 |Microsoft 文档
+title: 重播要求 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], replaying traces
 - traces [SQL Server], replaying
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e443da89d54aabfa34a8e99963c3f92a64397bc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 46737b986eae8c630788aa3628029d550cb8314d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157458"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
   若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或分布式重播实用工具重播跟踪数据，则必须在跟踪中捕获一组特定的事件类和列。 如果使用 **TSQL_Replay** 跟踪模板配置稍后用于重播的跟踪，则会默认启用这些设置。 本主题介绍这些设置以及其他重播要求。  
@@ -127,7 +127,7 @@ ms.locfileid: "36028474"
  有关重播跟踪需要哪些权限的信息，请参阅 [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [重播跟踪表&#40;SQL Server 事件探查器&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [重播跟踪表&#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [重播跟踪文件 (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: 聚类分析模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 聚类分析模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
 - clustering [Data Mining]
@@ -16,23 +16,23 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b4b4192fd38fe4e3bab142c6a327e4c2510d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153308"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
-  本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 所有模型类型挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>了解聚类分析模型的结构  
  聚类分析模型的结构很简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有分类的平面列表 (NODE_TYPE = 5)。 下图显示了此组织。  
   
- ![结构的聚类分析模型内容](../media/modelcontentstructure-clust.gif "的聚类分析模型内容的结构")  
+ ![聚类分析模型内容结构](../media/modelcontentstructure-clust.gif "的聚类分析模型内容结构")  
   
  每个子节点均表示一个分类，并包含有关该分类中事例属性的详细统计信息。 这包含该分类中事例数的计数以及将该分类与其他分类区分开来的值的分布。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36027567"
 > [!NOTE]  
 >  该方差表示分类的总方差。 如果方差的值较小，则表示列中的大多数值与均值很接近。 若要获取标准偏差，请计算该方差的平方根。  
   
- 请注意，对于每个属性，没有`Missing`值告诉你如何很多情况下具有该属性没有数据的类型。 缺少的数据可能会很重要，影响计算的方式也会不同，具体取决于数据类型。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
+ 请注意，对于每个属性有`Missing`值类型，可告诉您有多少事例具有该属性的任何数据。 缺少的数据可能会很重要，影响计算的方式也会不同，具体取决于数据类型。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
   
 ## <a name="model-content-for-a-clustering-model"></a>聚类分析模型的模型内容  
  本节仅针对与聚类分析模型有关的挖掘模型内容中的这些列给出详细信息和示例。  

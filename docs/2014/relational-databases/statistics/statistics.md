@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 67
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: da931b48b7571cd7d109980ef6deb0a7e4bb5246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015435"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428336"
 ---
 # <a name="statistics"></a>统计信息
   查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
@@ -191,7 +189,7 @@ GO
   
 -   通过使用 CREATE STATISTICS 语句创建缺少的统计信息。  
   
- 当有关只读数据库或只读快照统计信息丢失或变得陈旧，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]创建和维护中的临时统计信息`tempdb`。 当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
+ 当有关只读数据库或只读快照的统计信息丢失或变得陈旧，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]创建和维护中的临时统计信息`tempdb`。 当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以使用用于永久统计信息的相同工具来删除临时统计信息和监视统计信息属性：  
   

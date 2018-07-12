@@ -1,5 +1,5 @@
 ---
-title: 有条件拆分转换编辑器 |Microsoft 文档
+title: 有条件拆分转换编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittransformation.f1
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be0e756eaaf0a97dd041d94f254fd7bf80854b23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2d37db0ef10e8bae5e6fded476ca43e50c61bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164778"
 ---
 # <a name="conditional-split-transformation-editor"></a>有条件拆分转换编辑器
   可以使用 **“有条件拆分转换编辑器”** 对话框创建表达式，设置表达式计算顺序，以及对有条件拆分输出进行命名。 此对话框包含可以用于生成表达式的数学、字符串和日期/时间函数及运算符。 计算结果为 True 的第一个条件确定了行定向到的输出。  

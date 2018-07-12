@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4921f0f9d80fe32c517297cf0288c3ff96c4de38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7299af1da6bd0a1e77a52163d514d8fc48a44f90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184224"
 ---
 # <a name="view-facets-dialog-box"></a>“查看方面”对话框
   此对话框用于查看基于策略的管理方面的属性。 方面属性是在创建方面时定义的，不能使用此对话框来更改这些属性。  

@@ -1,35 +1,33 @@
 ---
-title: 删除数据源 (ODBC) |Microsoft 文档
+title: 删除数据源 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3b18bfe882147e0c60033dac9efd9dc4e3a6057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017728"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415186"
 ---
 # <a name="delete-a-data-source-odbc"></a>删除数据源 (ODBC)
-  你可以通过使用 ODBC 管理器，以编程方式删除数据源 (通过使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或通过删除文件 （如果文件数据源名称）。  
+  可以通过以编程方式使用 ODBC 管理器删除数据源 (通过使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或通过删除文件 （如果文件数据源名称）。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>通过使用 ODBC 管理器删除数据源  
   
-1.  在**控制面板**，打开**管理工具**，然后双击**数据源 (ODBC)**。 或者，也可以从命令提示符处运行 odbcad32.exe。  
+1.  在中**Control Panel**，打开**管理工具**，然后双击**数据源 (ODBC)**。 或者，也可以从命令提示符处运行 odbcad32.exe。  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。  
   

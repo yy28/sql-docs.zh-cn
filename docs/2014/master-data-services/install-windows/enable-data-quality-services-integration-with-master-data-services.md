@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7248c23349ae8ab5c307a4b33c02bd2301c0b572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 276b17d6e62f9ba45a02d1e3e325a457ff6ee77c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164818"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>实现 Data Quality Services 与 Master Data Services 的集成
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，匹配功能由 Data Quality Services (DQS) 提供。 此功能必须启用后才能使用。  
@@ -43,7 +43,7 @@ ms.locfileid: "36025715"
 5.  在确认对话框中，单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [数据质量匹配中的 MDS 外接 for Excel](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [数据质量匹配中的 MDS 外接程序 excel](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [用于 Microsoft Excel 的 Master Data Services 外接程序](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [安装 Master Data Services](install-master-data-services.md)  
   

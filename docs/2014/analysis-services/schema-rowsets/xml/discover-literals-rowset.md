@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_LITERALS 行集 |Microsoft 文档
+title: DISCOVER_LITERALS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - DISCOVER_LITERALS rowset
 ms.assetid: 1bf0a2e2-a419-4c25-b271-37dfa44de2ea
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4643ab803f3e6a7d63c4172423e909b6badd64b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bd59dfdc385775f0846a1a0f9de41f7d3bf2750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259960"
 ---
 # <a name="discoverliterals-rowset"></a>DISCOVER_LITERALS 行集
   返回有关 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口支持的文字的信息，包括数据类型和值。  
   
- 如果调用[发现](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_LITERALS`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法返回`DISCOVER_LITERALS`行集。  
+ 如果您调用[Discover](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_LITERALS`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法将返回`DISCOVER_LITERALS`行集。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_LITERALS`行集包含以下各列。  
+ `DISCOVER_LITERALS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  

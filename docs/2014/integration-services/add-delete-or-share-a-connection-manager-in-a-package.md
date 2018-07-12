@@ -1,5 +1,5 @@
 ---
-title: 添加、 删除或共享连接管理器在包中 |Microsoft 文档
+title: 添加、 删除或共享连接管理器在包中 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 caps.latest.revision: 56
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a056d52c52951a4f96901e00abbecc0fb78c6b01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f726306b53f896176de23726fc17cdc3a6b2d53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277403"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>在包中添加、删除或共享连接管理器
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括多种连接管理器用于连接到不同的数据源，例如关系数据库、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库和采用 CSV 和 XML 格式的文件。 可以在包级别或项目级别创建连接管理器。 在项目级别创建的连接管理器对项目中的所有包可用。 而在包级别创建的连接管理器对该特定包可用。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括多种连接管理器用于连接到不同的数据源，例如关系数据库、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库以及 CSV 和 XML 格式的文件。 可以在包级别或项目级别创建连接管理器。 在项目级别创建的连接管理器对项目中的所有包可用。 而在包级别创建的连接管理器对该特定包可用。  
   
  您使用在项目级别创建的连接管理器来替代数据源将连接共享到源。 要添加项目级别的连接管理器， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目必须使用项目部署模型。 将一个项目配置为使用此模型时， **“连接管理器”** 文件夹显示在 **“解决方案资源管理器”** 中，而 **“数据源”** 文件夹则从 **“解决方案资源管理器”** 中删除。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36025263"
   
 -   [若要从包中删除连接管理器](#DeletePackageLevel)  
   
--   [若要删除的共享的连接管理器 （项目级别连接管理器）](#DeleteProjectLevel)  
+-   [若要删除共享的连接管理器 （项目级别连接管理器）](#DeleteProjectLevel)  
   
 ##  <a name="wizard"></a> 若要创建包时添加连接管理器  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36025263"
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-##  <a name="DeleteProjectLevel"></a> 若要删除的共享的连接管理器 （项目级别连接管理器）  
+##  <a name="DeleteProjectLevel"></a> 若要删除共享的连接管理器 （项目级别连接管理器）  
   
 1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”窗口的“连接管理器”节点下，右键单击连接管理器，然后单击“删除”。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 显示下面的警告消息：  
   

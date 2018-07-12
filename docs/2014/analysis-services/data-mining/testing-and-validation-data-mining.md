@@ -1,5 +1,5 @@
 ---
-title: 测试和验证 （数据挖掘） |Microsoft 文档
+title: 测试和验证 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e83f8e0ad6227444f4dbc0962a83e1aedd8a5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3fb68f21136da8236c653aaae71c9a9e461b432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230143"
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
   验证是评估挖掘模型对实际数据执行情况的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  

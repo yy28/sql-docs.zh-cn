@@ -1,5 +1,5 @@
 ---
-title: 指导原则和限制 SQLXML 4.0 |Microsoft 文档
+title: SQLXML 4.0 的准则和限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 10aa9e6c97afbd62e9608f394b38717a677edf0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7d77565df3e3d7493a2394ccdab47763b9c69324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164198"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 的准则和限制
   使用 SQLXML 4.0 时请记住以下事项：  
@@ -33,6 +33,6 @@ ms.locfileid: "36026095"
   
      正在运行使用 SQLXML 4.0 和与版本无关的 PROGID 的应用程序，而且您决定安装其他某种软件程序。 此程序可能安装较早版本的 SQLXML。 由于您的应用程序中的与版本无关的 PROGID 现在指向较早版本的 SQLXML（其中可能具有或不具有您的应用程序正在使用的 SQLXML 功能），您的应用程序可能失败。  
   
--   如果出于任何原因你不想使用 SQLXMLOLEDB 提供程序，并改为想要使用 SQLOLEDB SQLXML 功能的提供程序设置**SQLXML 版本**"SQLXML.4.0"的属性。  
+-   如果出于任何原因不想要使用 sqlxmloledb 访问接口，并改为想要使用 SQLOLEDB 的 SQLXML 功能的提供程序设置**SQLXML Version**属性设置为"SQLXML.4.0"。  
   
   

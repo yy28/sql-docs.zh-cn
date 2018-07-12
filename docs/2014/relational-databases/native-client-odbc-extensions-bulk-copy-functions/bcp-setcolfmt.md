@@ -1,13 +1,11 @@
 ---
-title: bcp_setcolfmt |Microsoft 文档
+title: bcp_setcolfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,22 +18,22 @@ helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87c86d900f8923bfbed16fc890298d49be036909
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 87ded93fbd666155c36c0bb88a0be80c99c59ff8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025200"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410676"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
-  **Bcp_setcolfmt**函数取代[bcp_colfmt](bcp-colfmt.md)。 在指定列的排序规则， **bcp_setcolfmt**必须使用函数。 [bcp_setbulkmode](bcp-setbulkmode.md)可用来指定多个列格式。  
+  **Bcp_setcolfmt**函数取代[bcp_colfmt](bcp-colfmt.md)。 在指定列排序规则， **bcp_setcolfmt**必须使用函数。 [bcp_setbulkmode](bcp-setbulkmode.md)可用于指定多个列格式。  
   
  该函数提供在大容量复制操作中指定列格式的灵活方法。 它用于设置单独的列格式属性。 每次调用**bcp_setcolfmt**设置一个列格式属性。  
   
- **Bcp_setcolfmt**函数指定用户文件中的数据源或目标的格式。 当使用作为源格式， **bcp_setcolfmt**指定用作数据源中大容量复制到的表中的数据的现有数据文件的格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 当用作目标格式，将创建数据文件，使用使用指定的列格式**bcp_setcolfmt**。  
+ **Bcp_setcolfmt**函数用户文件中指定的数据源或目标格式。 用作源格式时**bcp_setcolfmt**指定的现有数据文件用作数据源中的大容量复制到一个表中的数据格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 作为目标格式使用时，使用指定的列格式创建数据文件**bcp_setcolfmt**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +60,7 @@ cbValue
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 为大容量复制启用 ODBC 连接句柄。  
+ 是大容量复制启用 ODBC 连接句柄。  
   
  field  
  要设置其属性的按一定顺序的列号。  
@@ -89,7 +87,7 @@ cbValue
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>Remarks  
- 此函数将取代**bcp_colfmt**函数。 所有功能**bcp_colfmt**中提供**bcp_setcolfmt**函数。 此外，还提供对列排序规则的支持。 建议按照下面给出的顺序设置以下列格式属性：  
+ 此函数取代**bcp_colfmt**函数。 所有功能**bcp_colfmt**中提供**bcp_setcolfmt**函数。 此外，还提供对列排序规则的支持。 建议按照下面给出的顺序设置以下列格式属性：  
   
  BCP_FMT_SERVER_COL  
   
@@ -97,7 +95,7 @@ cbValue
   
  BCP_FMT_TYPE  
   
- **Bcp_setcolfmt**函数允许你指定大容量复制的用户文件格式。 对于大容量复制，格式包含以下部分：  
+ **Bcp_setcolfmt**函数，可指定大容量复制的用户文件格式。 对于大容量复制，格式包含以下部分：  
   
 -   从用户文件列到数据库列的映射。  
   
@@ -111,18 +109,18 @@ cbValue
   
 -   可选终止字节序列的长度。  
   
- 每次调用**bcp_setcolfmt**指定某一用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](bcp-columns.md)**(5)**，然后调用**bcp_setcolfmt**五次，有三个设置自定义格式这些调用。 对于剩余的两个调用，BCP_FMT_TYPE 设置为 0，并设置 BCP_FMT_INDICATOR_LENGTH，BCP_FMT_DATA_LEN，和*cbValue*为 0，SQL_VARLEN_DATA，和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 每次调用**bcp_setcolfmt**指定一个用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](bcp-columns.md)**(5)**，然后调用**bcp_setcolfmt**五次，有三个调用设置您的自定义格式。 对于剩余的两个调用，将 BCP_FMT_TYPE 设置为 0，并设置 BCP_FMT_INDICATOR_LENGTH、 BCP_FMT_DATA_LEN 和*cbValue*为 0、sql_varlen_data 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
  **Bcp_columns**必须在调用之前调用函数**bcp_setcolfmt**。  
   
- 必须调用**bcp_setcolfmt**一次针对每个列中的用户文件的每个属性。  
+ 必须调用**bcp_setcolfmt**用户文件中每个列的每个属性一次。  
   
  您不需要将用户文件中的所有数据都复制到 SQL Server 表中。 若要跳过某一列，请指定该列的数据格式，并且将 BCP_FMT_SERVER_COL 参数设置为 0。 如果您要跳过某一列，则必须指定其类型。  
   
- [Bcp_writefmt](bcp-writefmt.md)函数可以用于持久保存的格式规范。  
+ [Bcp_writefmt](bcp-writefmt.md)函数可用于维持格式规范。  
   
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>针对增强的日期和时间功能的 bcp_setcolfmt 支持  
- 与 BCP_FMT_TYPE 属性用于日期/时间类型的类型是作为中指定[增强日期和时间类型的大容量复制更改&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+ 用于日期/时间类型的 BCP_FMT_TYPE 属性的类型是作为中的指定[大容量复制更改的增强的日期和时间类型&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
  有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

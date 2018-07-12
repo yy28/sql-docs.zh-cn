@@ -1,13 +1,11 @@
 ---
-title: 调用存储的过程 |Microsoft 文档
+title: 调用存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,21 +18,21 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 352d447329a76318f362e958094ee835d36b9d87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 11c8c691cf605942ef226927c9f0c2e940b28d63
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016602"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411536"
 ---
 # <a name="calling-a-stored-procedure"></a>调用存储过程
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持这两个 ODBC 调用转义序列和[!INCLUDE[tsql](../../includes/tsql-md.md)][执行](/sql/t-sql/language-elements/execute-transact-sql)语句用于执行存储过程; ODBC 调用转义序列是首选的方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持这两个 ODBC CALL 转义序列和[!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)语句用于执行存储过程; ODBC CALL 转义序列是首选的方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
   
 > [!NOTE]  
->  在调用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程通过 ODBC 使用命名的参数 (有关详细信息，请参阅[按名称 （名为参数） 的绑定参数](http://go.microsoft.com/fwlink/?LinkID=209721))，参数名称必须以开头 @ 字符。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的限制。 与 Microsoft 数据访问组件 (MDAC) 相比，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序更加严格地遵守此限制。  
+>  调用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程使用命名的参数以及 ODBC (有关详细信息，请参阅[按名称 （命名参数） 绑定参数](http://go.microsoft.com/fwlink/?LinkID=209721))，参数名称必须以与 @ 字符。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的限制。 与 Microsoft 数据访问组件 (MDAC) 相比，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序更加严格地遵守此限制。  
   
  调用过程的 ODBC CALL 转义序列是：  
   
@@ -42,7 +40,7 @@ ms.locfileid: "36016602"
   
  其中*procedure_name*指定过程的名称和*参数*指定过程参数。 只有使用 ODBC CALL 转义序列的语句中才支持命名参数。  
   
- 一个过程可以有零个或多个参数。 它还可以返回值（如语法开头的可选参数标记 ?= 所示）。 如果参数是输入或输入/输出参数，它可以是文字或参数标记。 如果参数是输出参数，它必须是参数标记，因为输出是未知的。 必须通过绑定参数标记[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)之前过程调用执行语句。  
+ 一个过程可以有零个或多个参数。 它还可以返回值（如语法开头的可选参数标记 ?= 所示）。 如果参数是输入或输入/输出参数，它可以是文字或参数标记。 如果参数是输出参数，它必须是参数标记，因为输出是未知的。 必须通过绑定参数标记[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)语句执行之前在过程调用。  
   
  过程调用的输入和输入/输出参数可以省略。 如果使用括号但不带任何参数调用过程，驱动程序将指示数据源使用第一个参数的默认值。 例如：  
   
@@ -75,7 +73,7 @@ ms.locfileid: "36016602"
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- 不过，使用默认设置运行时，如果标识符包含不遵循 ISO 标准的字符，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持上述任何一种带引号的标识符形式。 例如，该驱动程序无法访问名为的存储的过程 **"My.Proc"** 使用 CALL 语句使用带引号的标识符：  
+ 不过，使用默认设置运行时，如果标识符包含不遵循 ISO 标准的字符，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持上述任何一种带引号的标识符形式。 例如，驱动程序无法访问名为存储的过程 **"My.Proc"** 使用与调用语句带引号的标识符：  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  
@@ -87,7 +85,7 @@ ms.locfileid: "36016602"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- 服务器将引发错误，链接的服务器名为**MyDB**不存在。  
+ 服务器将显示错误，链接的服务器名为**MyDB**不存在。  
   
  使用带方括号的标识符时则不存在此问题，此语句可以正确地进行解释：  
   

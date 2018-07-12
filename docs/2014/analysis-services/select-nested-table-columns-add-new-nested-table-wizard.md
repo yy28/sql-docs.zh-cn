@@ -1,5 +1,5 @@
 ---
-title: 选择嵌套的表列 （添加新的嵌套的表向导） |Microsoft 文档
+title: 选择嵌套的表列 （添加新的嵌套的表向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectnestedtablecolumns.f1
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34c7311d6f297e59d96dbe73888aeacbf1b284e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efcf3c3b0b628cfb7aac93b24a1fc4c874ceb57e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278293"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>选择嵌套表列（添加新的嵌套表向导）
   可以使用 **“选择嵌套表列”** 页选择要在嵌套表中包含的属性和度量值，以及定义挖掘模型使用属性和度量值的方式。  
@@ -40,7 +40,7 @@ ms.locfileid: "36018705"
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘向导的 F1 帮助&#40;Analysis Services-数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [选择嵌套的表键&#40;添加新嵌套的表向导&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [选择嵌套的表键&#40;添加新的嵌套的表向导&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [指定挖掘模型列用法&#40;数据挖掘向导&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

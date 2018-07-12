@@ -1,5 +1,5 @@
 ---
-title: 发布数据 （MDS 外接程序 excel） |Microsoft 文档
+title: 发布数据 (MDS add-in for Excel) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155058"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>发布数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，要想与其他用户共享数据，可将数据发布到 MDS 存储库。 数据一经发布，即可供该外接程序的其他用户下载。  
@@ -39,7 +39,7 @@ ms.locfileid: "36028152"
   
 -   您不能为删除操作添加批注，尽管删除操作可另存为管理员可以撤消的事务。  
   
--   如果你更改**代码**值对于成员，它不会记录为事务，并为成员以前的所有事务都都不可用。  
+-   如果您更改**代码**值对于成员，它不会记录为事务，并为该成员以前所有的事务都不可用。  
   
 -   您可以查看其他用户对成员执行的事务。 您还可以查看您对成员执行的所有事务，即便您不再对特定属性拥有权限。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36028152"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|将数据从活动工作表发布回 MDS 存储库。|[发布到 MDS 数据从 Excel &#40;MDS add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|将数据从活动工作表发布回 MDS 存储库。|[数据从 Excel 发布到 MDS &#40;MDS add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |同时从 MDS 存储库和工作表中删除行。|[删除行&#40;MDS add-in for Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 -   [刷新数据（用于 Excel 的 MDS 外接程序）](refreshing-data-mds-add-in-for-excel.md)  
   
--   [Master Data Services 外接程序 Microsoft excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

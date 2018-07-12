@@ -1,5 +1,5 @@
 ---
-title: SMO 连接管理器编辑器 |Microsoft 文档
+title: SMO 连接管理器编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f8a8c5c4fd72f3eccd598e8fb0780dc604be7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a28a6acdba46037ed0a453f9adc3c2e1e6e81ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211577"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 连接管理器编辑器
   可以使用 **“SMO 连接管理器编辑器”** 配置各种传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的任务使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 连接。  

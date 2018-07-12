@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], reports in SharePoint integrated mode
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d19618eaa7997444e661ca9213a72f75bf1b3910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7689da40d81d716b9564c11f230f22ea4638bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150008"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>将报表发布到 SharePoint 库
   若要将报表发布到配置为 SharePoint 集成模式的 SharePoint 站点，必须在报表设计器中设置项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。 在报表定义中，对子报表、钻取报表以及资源（如基于 Web 的图像）的所有引用都必须为完全限定的 URL。  
@@ -46,7 +46,7 @@ ms.locfileid: "36025865"
   
 6.  有关**TargetReportFolder**，键入指向库或库文件夹的 URL (例如， *http://TestServer/TestSite/Documents/Reports)*。  
   
-7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果未指定站点，则使用默认的顶层站点 (例如， *http://servername*， *http://servername/site*，或*http://servername/site/subsite*)。  
+7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，则使用默认顶级站点 (例如， *http://servername*， *http://servername/site*，或者*http://servername/site/subsite*)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -57,6 +57,6 @@ ms.locfileid: "36025865"
  [设置部署属性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)   
  [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [将 Office 数据连接&#40;.odc&#41;与报表&#40;的 Reporting Services SharePoint 集成模式&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [将 Office 数据连接&#40;.odc&#41;报表&#40;的 Reporting Services SharePoint 集成模式下&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

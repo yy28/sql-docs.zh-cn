@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3cec56ae420215d2c6a835f8d1a047a164d9d577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 00617456fef69e0c5cfc413f0ade8849aea34232
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154108"
 ---
 # <a name="xml-data-sql-server"></a>XML 数据 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一个强大的平台，以针对半结构化数据管理开发功能丰富的应用程序。 对 XML 的支持已集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有组件中，包括下面几项：  

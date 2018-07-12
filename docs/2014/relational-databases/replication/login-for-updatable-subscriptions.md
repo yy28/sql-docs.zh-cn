@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2379b7b58cdfd6ee55abf848bbac314f2180931e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e06d1b519043cd2eb21d0e9337bd7f3a457381e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184174"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
   如果在此向导的 **“可更新订阅”** 页上选择 **“复制”** ，则必须在与发布服务器建立连接的订阅服务器上指定一个帐户以立即更新订阅。 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 即使在 **“可更新订阅”** 页上选择 **“对更改进行排队并在可能时提交”** ，也需要使用此帐户，因为默认情况下，新建订阅向导将排队更新配置为在必要时可切换到立即更新。  

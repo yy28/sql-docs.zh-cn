@@ -3,26 +3,24 @@ title: 远程 Blob 存储 (RBS) (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46c2117c40ceed9cedb5cf99b22f675d230058a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fd459f9c8e1fa2a36a6eb8f3fadb3581cee87325
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013865"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425236"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 远程 BLOB 存储区 (RBS) 是一个可选的附加组件，它允许数据库管理员在商用存储解决方案中存储二进制大型对象，而不是直接存储在主数据库服务器上。  

@@ -1,5 +1,5 @@
 ---
-title: 结果元素 (XMLA) |Microsoft 文档
+title: 结果元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 203ad5a79938c80e2bfccc798ff5f9551ac66d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165228"
 ---
 # <a name="results-element-xmla"></a>results 元素 (XMLA)
-  包含一套[根](root-element-xmla.md)返回的元素[执行](../xml-elements-methods-execute.md)方法使用[批处理](../xml-elements-commands/batch-element-xmla.md)命令。  
+  包含一系列[根](root-element-xmla.md)返回的元素[Execute](../xml-elements-methods-execute.md)方法使用[批处理](../xml-elements-commands/batch-element-xmla.md)命令。  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults  
   

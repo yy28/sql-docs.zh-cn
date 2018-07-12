@@ -1,26 +1,24 @@
 ---
-title: 发送和接收数据以增量方式与 FILESTREAM (ODBC) |Microsoft 文档
+title: 发送和接收数据以增量方式与 FILESTREAM (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dd8da5f08825d9914e0018ffaa72b8f61eae95f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2dbe4128fb05732af795ff689c56c78a5066e862
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017525"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412256"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
   此示例显示如何通过 FILESTREAM 功能使用 SQLPutData 和 SQLGetData 以增量方式发送和接收数据。  
@@ -28,11 +26,11 @@ ms.locfileid: "36017525"
  有关 FILESTREAM 功能的详细信息，请参阅[FILESTREAM 支持&#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>示例  
- 编译并运行此示例之前，启用 FILESTREAM 的支持 ([启用和配置 FILESTREAM](../blob/enable-and-configure-filestream.md))。  
+ 编译并运行此示例之前，启用 FILESTREAM 支持 ([启用和配置 FILESTREAM](../blob/enable-and-configure-filestream.md))。  
   
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
   
- 第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
+ 第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
   
  第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用的数据库。  
   

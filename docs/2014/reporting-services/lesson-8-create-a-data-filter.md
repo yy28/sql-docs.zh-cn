@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e3a0f9aac098f7bc9998cc657e937c04b438359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cdc62c2e2fa4b4a6bfd662c1b20de6287fc8ff86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278833"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
   在父报表上添加钻取操作后，接下来将创建一个数据筛选器，用于为子报表定义的数据表。  
@@ -39,17 +39,17 @@ ms.locfileid: "36024511"
   
 1.  打开子报表。  
   
-2.  Tablix 中选择一个列标题，右键单击列标题，上面显示的灰色单元，然后单击**Tablix 属性**。  
+2.  选择 tablix 中的列标题，右键单击列标题上方显示的灰色单元格，然后单击**Tablix 属性**。  
   
-3.  单击**筛选器**页，，然后单击**添加**。  
+3.  单击**筛选器**页上，然后依次**添加**。  
   
-4.  在**表达式**字段，请单击`ProductID`从下拉列表。 筛选器即应用于此列。  
+4.  在中**表达式**字段中，单击`ProductID`从下拉列表。 筛选器即应用于此列。  
   
-5.  单击相等 (**=**) 中的运算符**运算符**下拉列表。  
+5.  单击等号 (**=**) 中的运算符**运算符**下拉列表。  
   
-6.  单击表达式按钮旁边**值**字段中，单击**参数**中**类别**区域中，，然后双击`productid`中**值**区域。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式。  
+6.  单击表达式按钮旁边**值**字段中，单击**参数**中**类别**区域中，然后再双击`productid`中**值**区域。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式。  
   
-7.  单击**确定，** 和**确定**再次在**Tablix 属性**对话框。  
+7.  单击**确定，** 并**确定**中再次**Tablix 属性**对话框。  
   
 8.  保存 .rdlc 文件。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36024511"
   
 1.  在解决方案资源管理器中，展开 Default.aspx，然后双击 Default.aspx.cs。  
   
-2.  创建一个新函数接受参数， `productid`，整数类型，并返回`datatable`对象，并执行下列任务。  
+2.  创建新的函数接受的参数`productid`，类型为 Integer，并返回`datatable`对象，并执行以下操作。  
   
-    1.  创建的数据集，实例`DataSet2`，其中的步骤 2 中创建[第 4 课： 定义子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课： 定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
     2.  创建一个到 SqlServer 数据库的连接，以执行在 **第 4 课：定义用于子报表的数据连接和 DataTable**中定义的查询。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36024511"
   
 2.  创建一个新函数，该函数接受类型为 Integer 的参数 `productid` 并返回 `datatable` 对象，然后执行以下操作。  
   
-    1.  创建的数据集，实例`DataSet2`，其中的步骤 2 中创建[第 4 课： 定义子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课： 定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
     2.  创建一个到 SqlServer 数据库的连接，以执行在 **第 4 课：定义用于子报表的数据连接和 DataTable**中定义的查询。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36024511"
   
 1.  打开 Default.aspx。  
   
-2.  右键单击 ReportViewer 控件，并依次**属性**。  
+2.  右键单击 ReportViewer 控件，然后依次**属性**。  
   
 3.  上**属性**窗格中，单击**事件**图标。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "36024511"
   
     4.  调用函数 `GetPurchaseOrderDetail` 并传递参数 `ProductID` 的值。  
   
-    5.  将绑定`PurchaseOrderDetail`与报表的 DataTable 的相应数据源。  
+    5.  将绑定`PurchaseOrderDetail`DataTable 与报表的相应数据源。  
   
          填写完整的事件处理程序代码将类似于以下内容。  
   

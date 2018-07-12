@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 - replication agent profiles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: deb2e3e2ea03429e2d37288e85592d54e1512af3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ccbb2f6a8912a68573b9e3d67d677e7a92c7e1f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152458"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中处理复制代理配置文件。 每个复制代理的行为都受一组参数控制，这些参数是通过代理配置文件设置的。 每个代理都有一个默认配置文件，有些代理还有一些其他的预定义配置文件；每个代理每次只能使用一个配置文件。  
@@ -221,9 +221,9 @@ ms.locfileid: "36027014"
   
      这将返回指定类型的代理的所有配置文件。 记下的值`profile_name`结果集中要使用的配置文件。  
   
-2.  从代理作业启动代理时，如果编辑启动代理以指定的值的作业步骤`profile_name`在之后的第 1 步中获得 **-ProfileName**命令行参数。 有关详细信息，请参阅[查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)。  
+2.  如果从代理作业启动代理，则编辑用于启动代理以指定的值的作业步骤`profile_name`后的第 1 步中获得 **-ProfileName**命令行参数。 有关详细信息，请参阅[查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)。  
   
-3.  当从命令提示符启动代理，指定的值`profile_name`在之后的第 1 步中获得 **-ProfileName**命令行参数。  
+3.  如果是从命令提示符处启动代理，指定的值`profile_name`后的第 1 步中获得 **-ProfileName**命令行参数。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例将为名为 **custom_merge**的合并代理创建自定义配置文件，更改 **-UploadReadChangesPerBatch** 参数的值，添加新的 **-ExchangeType** 参数，并返回有关创建的配置文件的信息。  
@@ -248,7 +248,7 @@ ms.locfileid: "36027014"
   
     -   （可选） <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 配置文件的说明。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -将此属性设置为`true`如果所有新的代理作业，此<xref:Microsoft.SqlServer.Replication.AgentType>将默认使用此配置文件。  
+    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -将此属性设置为`true`如果对此的所有新代理作业<xref:Microsoft.SqlServer.Replication.AgentType>将默认使用此配置文件。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法以在服务器上创建配置文件。  
   
@@ -282,7 +282,7 @@ ms.locfileid: "36027014"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为从步骤 1 中获得的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，指定的名称不正确或服务器上不存在配置文件。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，则指定的名称不正确或服务器上不存在该配置文件。  
   
 4.  验证 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 属性是否设置为指示某个客户配置文件的 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>。 您不应该删除 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的值为 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>的配置文件。  
   

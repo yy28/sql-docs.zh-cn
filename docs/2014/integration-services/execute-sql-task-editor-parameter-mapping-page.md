@@ -1,5 +1,5 @@
 ---
-title: 执行 SQL 任务编辑器 （参数映射页） |Microsoft 文档
+title: 执行 SQL 任务编辑器 （参数映射页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 863ae3b186cc60c4d2d2e04308dd81023f653f12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152778"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>执行 SQL 任务编辑器（“参数映射”页）
   可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
@@ -63,7 +63,7 @@ ms.locfileid: "36028165"
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [执行 SQL 任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [执行 SQL 任务编辑器&#40;结果设置页&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
+ [执行 SQL 任务编辑器&#40;结果集页&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)  
   
   

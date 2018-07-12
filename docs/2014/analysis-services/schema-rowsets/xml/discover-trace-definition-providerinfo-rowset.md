@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行集 |Microsoft 文档
+title: DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f8775ea445a06659fa31f1fee14105525c1414d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdf975299c4a96d4052c3397fe9578d8f6df4690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165198"
 ---
 # <a name="discovertracedefinitionproviderinfo-rowset"></a>DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行集
   返回有关跟踪提供程序的基本信息，如其名称和说明。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_TRACE_DEFINITION_PROVIDERINFO`行集包含以下各列。  
+ `DISCOVER_TRACE_DEFINITION_PROVIDERINFO`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

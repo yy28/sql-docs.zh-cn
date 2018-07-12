@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8541a0f60746393719a5afba5f439cbb1ac16f9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e7bd0228b5eaf02b51313414cbd8ebab48f14522
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278703"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>实现 IRenderingExtension 接口
   呈现扩展插件从与实际数据相结合的报表定义中获取结果，并将得到的数据呈现为某种可用的格式。 组合的数据和格式的转换是通过一个实现 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的公共语言运行时 (CLR) 类完成的。 该类将对象模型转换为可由查看器、打印机或其他输出目标使用的输出格式。  

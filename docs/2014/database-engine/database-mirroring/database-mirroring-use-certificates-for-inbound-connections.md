@@ -1,29 +1,28 @@
 ---
-title: 允许数据库镜像终结点使用证书进行入站连接 (Transact SQL) |Microsoft 文档
+title: 允许数据库镜像终结点使用证书进行入站连接 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - inbound connections
 - database mirroring [SQL Server], security
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 42288b0f58a2d021c846625fc7c1ec43133ec7ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 54f0e50786d500b22c7fba7cd52c5bee116147ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229657"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>允许数据库镜像端点将证书用于入站连接 (Transact-SQL)
   本主题说明配置服务器实例以使用证书对数据库镜像的入站连接进行身份验证的步骤。 在可以建立入站连接之前，必须在每个服务器实例上配置出站连接。 有关详细信息，请参阅[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)。  
@@ -167,7 +166,7 @@ GO
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  
   
 ## <a name="see-also"></a>请参阅  
- [针对数据库镜像和 AlwaysOn 可用性组传输安全&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT 终结点权限 (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [设置加密的镜像数据库](set-up-an-encrypted-mirror-database.md)   
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   

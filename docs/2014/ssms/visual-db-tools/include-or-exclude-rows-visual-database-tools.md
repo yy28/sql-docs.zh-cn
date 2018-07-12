@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa82306f17c84c9751169339c8500272e2789997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e58848432a2bd1973eee5f2a941a3fbe3ec9980f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278303"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除行 (Visual Database Tools)
   若要限制 SELECT 查询应返回的行数，请创建搜索条件或筛选条件。 在 SQL 中，搜索条件出现在语句的 WHERE 子句中，或者如果创建的是聚合查询，则搜索条件将出现在 HAVING 子句中。  
@@ -108,8 +108,8 @@ region = 'UK' OR region = 'US'
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [指定搜索条件&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [指定搜索条件&#40;可视化数据库工具&#41;](specify-search-criteria-visual-database-tools.md)   
  [使用参数进行查询 (Visual Database Tools)](query-with-parameters-visual-database-tools.md)  
   
   

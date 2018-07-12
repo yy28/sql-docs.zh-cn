@@ -1,5 +1,5 @@
 ---
-title: ParentObject 元素 (XMLA) |Microsoft 文档
+title: ParentObject 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1fae76d5f4c4dc1e3fbd64ca456af60719de4aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259163"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 元素 (XMLA)
   包含要在其中创建定义的父对象的父对象的标识符[创建](../xml-elements-commands/create-element-xmla.md)元素。  
@@ -69,7 +69,7 @@ ms.locfileid: "36024418"
  标识符的显示顺序并不重要。  
   
 ## <a name="example"></a>示例  
- 下面的示例创建`Market Basket`挖掘结构，包括在[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
+ 下面的示例创建`Market Basket`挖掘结构，包含在[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

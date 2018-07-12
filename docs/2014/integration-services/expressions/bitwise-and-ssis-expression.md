@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
@@ -17,13 +17,13 @@ ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c17df738a3b8a97639a0c4097e01643c2e571119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a0c0557b4a0bbb1c0735476413e91af7645102e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156520"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp;（位算符 AND）（SSIS 表达式）
   对两个整数值执行“位与”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果两位都是 1，则相应的结果位设置为 1。 否则，相应的结果位设置为 0。  
@@ -98,7 +98,7 @@ ReorderPoint & SafetyStockLevel
  00000001  
   
 ## <a name="see-also"></a>请参阅  
- [& &&#40;逻辑 AND&#41; &#40;SSIS 表达式&#41;](logical-and-ssis-expression.md)   
+ [& &&#40;逻辑与&#41; &#40;SSIS 表达式&#41;](logical-and-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
   

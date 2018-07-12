@@ -1,5 +1,5 @@
 ---
-title: 升级顾问进度 |Microsoft 文档
+title: 升级顾问进度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], analysis progress status
 - analyzing system [Upgrade Advisor], progress information
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - status information [Upgrade Advisor]
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1b867360b773253ae22d24a76ce00b35c589d96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 96ba7fd92927d5d18d7b1dc966829f3ff02911cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148598"
 ---
 # <a name="upgrade-advisor-progress"></a>升级顾问进度
-  升级顾问分析从对选定的各个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件执行分析的专用分析器开始。 分析完毕组件，如在报告进度**进度**对话框。  
+  升级顾问分析从对选定的各个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件执行分析的专用分析器开始。 分析组件时，在报告进度**进度**对话框。  
   
 ## <a name="options"></a>“常规”  
  **操作**  
@@ -44,7 +44,7 @@ ms.locfileid: "36028491"
 > [!NOTE]  
 >  如果分析时间过长，则可以停止分析，退出升级顾问分析向导，然后重新运行该向导。 若要缩短分析时间，请少选择一些组件来扫描。  
   
- 分析完成后，报表将写入文件。 你可以通过单击查看报表**启动报表**以启动从该页报表查看器。 如果你想要在以后查看报表，则可以打开**升级顾问报表查看器**从升级顾问起始页。  
+ 分析完成后，报表将写入文件。 可以通过单击查看报表**启动报表**以启动此页中的报表查看器。 如果你想要稍后查看报表，则可以打开**升级顾问报表查看器**从升级顾问起始页。  
   
 > [!NOTE]  
 >  每次分析服务器后，都会保存先前的报表。 这些报表使用时间戳作为文件名进行保存。 报表查看器显示最近保存的五个报表。  

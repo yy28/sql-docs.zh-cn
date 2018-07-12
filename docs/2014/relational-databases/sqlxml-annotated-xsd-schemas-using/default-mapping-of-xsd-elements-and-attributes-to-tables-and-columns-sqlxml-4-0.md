@@ -1,5 +1,5 @@
 ---
-title: XSD 元素和属性表和列 (SQLXML 4.0) 的默认映射 |Microsoft 文档
+title: XSD 元素和属性到表和列 (SQLXML 4.0) 的默认映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,24 +28,24 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbed4eee82d0bd7d57b7e4073d1f78f9150f9e6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 515cd325572904339bcb58d5fb5758cae70b0b75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240607"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的默认映射 (SQLXML 4.0)
   默认情况下，XSD 带批注的架构中复杂类型的元素映射到指定数据库中具有相同名称的表（视图），而简单类型的元素或属性映射到表中具有相同名称的列。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定默认映射  
- 在本示例中，不在 XSD 架构中指定任何批注。 **\<Person.Contact >** 元素的复杂类型，并因此，默认情况下，向 AdventureWorks 数据库中 Person.Contact 表将映射。 所有属性 (ContactID，FirstName LastName)  **\<Person.Contact >** 元素属于简单类型，并将映射到具有相同名称 Person.Contact 表中列的默认情况下。  
+ 在本示例中，不在 XSD 架构中指定任何批注。 **\<Person.Contact >** 元素属于复杂类型，并因此，将默认映射到 AdventureWorks 数据库中的 Person.Contact 表。 所有属性 (ContactID、 FirstName 和 LastName)  **\<Person.Contact >** 元素均属于简单类型，并将映射到 Person.Contact 表中的相同名称的列的默认情况下。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -82,7 +82,7 @@ ms.locfileid: "36018359"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果集：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36018359"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 将 XML 元素映射到数据库列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Person.Contact >** 元素的复杂类型，并将映射到数据库中相同名称的表。 元素 **\<FirstName >** 和 **\<LastName >** 和**EmployeeID**属性的简单类型，并因此，将映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Person.Contact >** 元素属于复杂类型，映射到具有相同名称在数据库中表。 元素 **\<FirstName >** 并 **\<LastName >** 并**EmployeeID**属性均属于简单类型，并因此，将映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -135,7 +135,7 @@ ms.locfileid: "36018359"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果集：  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36018359"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 将 XML 元素映射到 XML 数据类型列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Production.ProductModel >** 元素的复杂类型，并将映射到数据库中相同名称的表。 **ProductModelID**属性的简单类型，并因此，将映射到具有相同名称的列。 此示例和上一示例的唯一区别在于**\<说明 >** 元素映射到某一列使用`xml`使用的数据类型`xsd:anyType`类型。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Production.ProductModel >** 元素属于复杂类型，映射到具有相同名称在数据库中表。 **ProductModelID**属性属于简单类型，并因此，将映射到具有相同名称的列。 此示例和上一示例的唯一区别在于**\<说明 >** 元素映射到使用的列`xml`数据类型使用`xsd:anyType`类型。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -190,7 +190,7 @@ ms.locfileid: "36018359"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果集：  
   
@@ -209,7 +209,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [批注架构安全注意事项&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [带批注的架构的安全注意事项&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [XML 数据 (SQL Server)](../xml/xml-data-sql-server.md)   
  [SQLXML 4.0 中的 xml 数据类型支持](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

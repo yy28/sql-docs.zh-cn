@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client (ODBC) |Microsoft 文档
+title: SQL Server Native Client (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a70dbbdb338673288ee6f3cb51c9df02e01a0f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: da24388b12c83931ea2a4af9b525e5e2030f6940
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015211"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426293"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
   ODBC 是应用程序编程接口 (API) 的标准定义，可用于访问关系型数据库或索引的顺序访问方法 (ISAM) 数据库中的数据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持 ODBC，并将其作为可用于编写与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通信的 C 和 C++ 应用程序的本机 API 之一。  
@@ -49,7 +47,7 @@ ms.locfileid: "36015211"
   
 -   [处理结果&#40;ODBC&#41;](../../native-client-odbc-results/processing-results-odbc.md)  
   
--   [使用游标， &#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [使用游标&#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
   
 -   [执行事务&#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
@@ -77,7 +75,7 @@ ms.locfileid: "36015211"
   
 -   [稀疏列支持&#40;ODBC&#41;](sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41;引用](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+-   [SQL Server 本机客户端&#40;ODBC&#41;引用](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
 -   [ODBC 操作指南主题](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   

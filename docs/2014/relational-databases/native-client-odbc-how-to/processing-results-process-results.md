@@ -1,28 +1,26 @@
 ---
-title: 处理的结果 (ODBC) |Microsoft 文档
+title: 处理结果 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa20ed943be8195eb7719265d3bd2ef0aa26a38c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e3c929008c4be8a14bf5233d8d41b3349ba735b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015454"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412950"
 ---
 # <a name="process-results-odbc"></a>处理结果 (ODBC)
     
@@ -38,7 +36,7 @@ ms.locfileid: "36015454"
   
     -   如果使用绑定列，则在绑定列缓冲区使用现在可用的数据。  
   
-    -   如果使用绑定列，在最后一个绑定列后一次或多次调用 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 以获取未绑定列的数据。 调用`SQLGetData`应该是升序排列的列号。  
+    -   如果使用绑定列，在最后一个绑定列后一次或多次调用 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 以获取未绑定列的数据。 调用`SQLGetData`应该以递增顺序的列号。  
   
     -   多次调用 `SQLGetData` 以从 text 或 image 列获取数据。  
   

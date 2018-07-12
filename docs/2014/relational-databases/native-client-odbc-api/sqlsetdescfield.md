@@ -1,36 +1,34 @@
 ---
-title: SQLSetDescField |Microsoft 文档
+title: SQLSetDescField |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescField function
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf61530ccfd142b473da8a5443cc63b16a435d32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5810760fc0cbc8aba9a1ea743f1dab33df501964
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015887"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414306"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
-  SQLSetDescField 可以用于设置表值参数和表值参数列的描述符字段。 有关可用字段的信息，请参阅[表值参数描述符字段](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)和[表值参数构成列的描述符字段](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)。  
+  SQLSetDescField 可以用于设置表值参数和表值参数列的描述符字段。 有关可用字段的信息，请参阅[表值参数描述符字段](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)并[表值参数构成列的描述符字段](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)。  
   
 ## <a name="remarks"></a>Remarks  
- 表值参数列仅在将描述符标头字段 SQL_SOPT_SS_PARAM_FOCUS 设置为特定记录（其 SQL_DESC_TYPE 设置为 SQL_SS_TABLE）的序数时可用。 : SQL_SOPT_SS_PARAM_FOCUS 有关的详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  
+ 表值参数列仅在将描述符标头字段 SQL_SOPT_SS_PARAM_FOCUS 设置为特定记录（其 SQL_DESC_TYPE 设置为 SQL_SS_TABLE）的序数时可用。 有关 SQL_SOPT_SS_PARAM_FOCUS 的详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  
   
- 如果尝试将： SQL_SOPT_SS_PARAM_FOCUS 设置为不是表值参数的参数的序号，SQLSetStmtAttr 返回 SQL_ERROR，并诊断记录会创建与 SQLSTATE = HY024 和消息"无效属性值"。 返回 SQL_ERROR 时，不更改 SQL_SOPT_SS_PARAM_FOCUS。  
+ 如果尝试将 SQL_SOPT_SS_PARAM_FOCUS 设置为不是表值参数的参数的序号，SQLSetStmtAttr 返回 SQL_ERROR，并且诊断记录创建具有 SQLSTATE = HY024 和消息"属性值无效"。 返回 SQL_ERROR 时，不更改 SQL_SOPT_SS_PARAM_FOCUS。  
   
  将 SQL_SOPT_SS_PARAM_FOCUS 设置为 0 可以恢复对参数的描述符记录的访问权限。  
   
@@ -45,7 +43,7 @@ ms.locfileid: "36015887"
  SQLSetDescField 支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlsetdescfield-support-for-sparse-columns"></a>SQLSetDescField 对稀疏列的支持  
- SQLSetDecField 可以用于在应用程序参数描述符 (APD) 与值 SQL_SS_NAME_SCOPE_EXTENDED 和 SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET 设置 SQL_SOPT_SS_NAME_SCOPE。  
+ SQLSetDecField 可以用于将 SQL_SOPT_SS_NAME_SCOPE 设置为值 SQL_SS_NAME_SCOPE_EXTENDED 和 SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET 应用程序参数描述符 (APD) 中。  
   
  有关详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   

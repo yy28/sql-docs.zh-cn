@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08f3119fd18322720812ada91e37d5c4f95282f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b65cc412f2e9cb1ea2058a52ae8336c7827b9ca3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014062"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412736"
 ---
 # <a name="ddl-triggers"></a>DDL 触发器
   DDL 触发器将激发，以响应各种数据定义语言 (DDL) 事件。 这些事件主要与以关键字 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 开头的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对应。 执行 DDL 式操作的系统存储过程也可以激发 DDL 触发器。  

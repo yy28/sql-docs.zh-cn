@@ -1,5 +1,5 @@
 ---
-title: 连接到源数据 （数据挖掘客户端 for Excel） |Microsoft 文档
+title: 连接到源数据 （数据挖掘客户端 Excel） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dacc0416cc7f86dbfb90adc8b74268ca8cb18857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e750ec50aff2d4d69b90a974b28ddb77c54b068
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163598"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>连接到源数据（Excel 数据挖掘客户端）
   本主题介绍如何创建和使用连接来存储数据挖掘模型以及访问 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中存储的外部数据。  
@@ -38,7 +38,7 @@ ms.locfileid: "36027111"
  要连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，您必须具有访问数据库服务器的权限。 而且，还必须启用数据挖掘会话，您还必须具有服务器上存储的数据库对象的读或读/写权限。  
   
 ##  <a name="bkmk_connect"></a> 创建数据挖掘服务器连接  
- **连接**组合中数据挖掘客户端以及 Excel 表分析工具为 Excel 提供了用于管理连接到的实例的工具[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ **连接**组中数据挖掘客户端以及 Excel 表分析工具为 Excel 提供了用于管理连接到的实例的工具[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 -   您可以在安装外接程序时创建连接，也可以在以后添加连接。  
   
@@ -49,22 +49,22 @@ ms.locfileid: "36027111"
 -   任意特定时间只能有一个连接处于活动状态。  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Excel 外接程序中的连接  
- **连接**组合中数据挖掘客户端以及 Excel 表分析工具 Excel 是您在其中管理连接到的实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ **连接**组中数据挖掘客户端以及 Excel 表分析工具 for Excel 是你在其中管理连接到的实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>在 Excel 外接程序中创建新的服务器连接  
   
-1.  单击**连接**按钮上**分析**或**数据挖掘**功能区。  
+1.  单击**连接**按钮**分析**或**数据挖掘**功能区。  
   
     > [!NOTE]  
-    >  按钮的文字可指示连接是否存在。 当在工作表中不建立任何连接时，按钮包含文本"\<未连接 >。" 如果以前在工作簿中创建过连接，则该连接的名称将出现在按钮上。  
+    >  按钮的文字可指示连接是否存在。 当在工作表中不建立任何连接时，按钮包含文本"\<无连接 >。" 如果以前在工作簿中创建过连接，则该连接的名称将出现在按钮上。  
   
-2.  在**Analysis Services 连接**对话框中，单击**新建**。  
+2.  在中**Analysis Services 连接**对话框中，单击**新建**。  
   
-3.  在**新的 Analysis Services 连接**对话框框中，键入服务器的名称。  
+3.  在中**新的 Analysis Services 连接**对话框框中，键入服务器的名称。  
   
 4.  指定身份验证方法。  
   
-5.  选择将数据库从**目录名称**下拉列表。 如果不存在数据库的实例上，选择 **（默认值）**。  
+5.  选择将数据库从**目录名称**下拉列表。 如果在实例上不存在任何数据库，请选择 **（默认值）**。  
   
 6.  键入该连接的友好名称。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36027111"
 ### <a name="connections-in-the-visio-add-in"></a>Visio 外接程序中的连接  
  与 Excel 不同，Visio 不提供工具功能区，而且也没有专用于创建或监视连接的按钮。 数据连接是在您首次选择数据挖掘形状并将其放置到 Visio 页中时创建的。 向导会提示您为形状选择模型并设置其他选项。  
   
- 如果你以前使用过的连接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]在 Excel 中的数据源，这些连接被列为从中选择的可能的数据源。  
+ 如果你之前使用过的连接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源在 Excel 中，这些连接被列为可能的数据源可供选择。  
   
 ##### <a name="create-a-connection-for-a-visio-shape"></a>为 Visio 形状创建连接  
   
@@ -96,22 +96,22 @@ ms.locfileid: "36027111"
   
 2.  将该形状拖放到空白页上。  
   
-3.  在**选择数据源**对话框中，选择数据源从列表中，或单击**新建**。  
+3.  在中**选择数据源**对话框中，选择数据源从列表中，或单击**新建**。  
   
-4.  如果你选择**新建**，按照的过程，前面所述来指定服务器和目录名称，或通过 Web 服务连接。  
+4.  如果选择**新建**，执行过程前面所述，指定服务器和目录名称，或通过 Web 服务进行连接。  
   
 ##  <a name="bkmk_change"></a> 更改连接  
  可以在同一个工作表中创建多个连接，但一次只能有一个连接处于活动状态。 当前连接的名称显示在**连接**按钮。  
   
- 在数据挖掘客户端 for Excel，你还可以验证的连接字符串和当前连接的状态通过单击**跟踪**，然后单击**当前连接**。  
+ 数据挖掘 Excel 客户端中，您还可以验证的连接字符串和当前连接的状态通过单击**跟踪**，然后单击**当前连接**。  
   
 #### <a name="use-a-different-server-connection"></a>使用其他服务器连接  
   
 1.  单击**连接**。  
   
-2.  在**Analysis Services 连接**窗格中，选择从连接**其他连接**列表，然后单击**激活**。  
+2.  在中**Analysis Services 连接**窗格中，选择一个连接从**其他连接**列表，然后单击**使当前**。  
   
-3.  单击**测试连接**以验证连接是否可用。  
+3.  单击**测试连接**验证连接是否可用。  
   
  挖掘模型完成处理之后，结果将存储在本地；您关闭与一个服务器的连接，然后连接到另一个服务器，这对数据没有任何影响。 不过，在处理数据挖掘模型的过程中，您应避免更改连接或中断连接，因为这可能会损坏数据。  
   
@@ -124,19 +124,19 @@ ms.locfileid: "36027111"
      \<驱动器： > \Users\\< myusername\>\AppData\Local\Microsoft\Data 挖掘外接程序  
   
 ##  <a name="bkmk_extconnections"></a> 连接到外部数据源  
- 而中的工具**分析**功能区上以独占方式使用数据在 Excel 中中的工具**数据挖掘**功能区，可以直接连接到外部数据源为您的模型，或使用作为输入采样。  
+ 而中的工具**分析**功能区以独占方式使用 Excel 中的工具中的数据**数据挖掘**功能区允许您直接连接到外部数据源，以用作输入，为您的模型，或采样。  
   
  这些外接程序中的以下工具支持使用外部数据进行数据挖掘：  
   
 -   [示例数据&#40;SQL Server 数据挖掘外接程序&#41;](sample-data-sql-server-data-mining-add-ins.md)  
   
--   [分类向导&#40;数据挖掘的 Excel 外接程序&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
+-   [分类向导&#40;Excel 数据挖掘外接程序&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
   
--   [估计向导&#40;数据挖掘的 Excel 外接程序&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
+-   [估计向导&#40;Excel 数据挖掘外接程序&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
   
--   [群集向导&#40;数据挖掘的 Excel 外接程序&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
+-   [群集向导&#40;Excel 数据挖掘外接程序&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   
--   [预测向导&#40;数据挖掘的 Excel 外接程序&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
+-   [预测向导&#40;Excel 数据挖掘外接程序&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
   
 -   [创建挖掘结构&#40;SQL Server 数据挖掘外接程序&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)  
   
@@ -167,6 +167,6 @@ ms.locfileid: "36027111"
 -   BINARY  
   
 ## <a name="see-also"></a>请参阅  
- [跟踪&#40;for Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)  
+ [跟踪&#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)  
   
   

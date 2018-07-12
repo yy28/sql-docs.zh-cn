@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
 - precedence [SQL Server], Criteria pane
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 580b0331e59aef1b4c33d75084490e0a8be65147
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7d5b7e62e3bfc42870fb5c6a6c853dd43a04778
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183514"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 优先时组合条件 (Visual Database Tools)
   若要用 OR 链接条件，并使其优先级高于用 AND 链接的条件，则必须为每个 OR 条件重复 AND 条件。  
@@ -75,7 +75,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 >  如果以上面显示的格式在 [SQL 窗格](sql-pane-visual-database-tools.md)中输入搜索条件，然后在“关系图”或“条件”窗格中对该查询进行更改，则查询和视图设计器将重新创建 SQL 语句，以使其形式与显式分配到两个 OR 条件的 AND 条件相匹配。  
   
 ## <a name="see-also"></a>请参阅  
- [组合的约定条件窗格中的搜索条件&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [组合的约定条件窗格中的搜索条件&#40;可视化数据库工具&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

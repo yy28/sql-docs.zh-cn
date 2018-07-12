@@ -1,5 +1,5 @@
 ---
-title: 阻止元素 (ASSL) |Microsoft 文档
+title: 阻止元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161318"
 ---
 # <a name="blocks-element-assl"></a>Blocks 元素 (ASSL)
-  包含表示的二进制内容组成的二进制数据块的集合[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)元素。  
+  包含表示的二进制内容的二进制数据块的集合[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36024910"
 |子元素|[块](../objects/block-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`Blocks`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 父级对应的元素`Blocks`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>请参阅  
  [Assembly 元素&#40;ASSL&#41;](../objects/assembly-element-assl.md)   
@@ -74,8 +74,8 @@ ms.locfileid: "36024910"
  [ClrAssemblyFile 数据类型&#40;ASSL&#41;](../data-type/clrassemblyfile-data-type-assl.md)   
  [数据元素&#40;ASSL&#41;](../objects/data-element-assl.md)   
  [DataBlock 数据类型&#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
- [块元素](blocks-element-assl.md)   
- [阻止元素&#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [Blocks 元素](blocks-element-assl.md)   
+ [Block 元素&#40;ASSL&#41;](../objects/block-element-assl.md)   
  [集合&#40;ASSL&#41;](collections-assl.md)  
   
   

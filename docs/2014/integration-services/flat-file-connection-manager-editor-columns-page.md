@@ -1,5 +1,5 @@
 ---
-title: 平面文件连接管理器编辑器 （列页） |Microsoft 文档
+title: 平面文件连接管理器编辑器 （列页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columns.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5592f71b5373c6bfab1f59e797b19363a344e929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 166393522090c1d5c0455104c0d046319741f2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240943"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>平面文件连接管理器编辑器（“列”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“列”** 页，指定行和列的信息以及预览相应的文件。  

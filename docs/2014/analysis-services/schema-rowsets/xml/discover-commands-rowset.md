@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_COMMANDS 行集 |Microsoft 文档
+title: DISCOVER_COMMANDS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14c4eb9ac8fe63422ee29f5880a8a5f1eb6329bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157318"
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 行集
-  在服务器上提供有关中打开的连接的当前正在执行或最后一个的执行命令的资源使用情况和活动信息。  
+  在服务器上提供有关当前正在执行或最后一个执行的命令打开的连接中的资源使用情况和活动信息。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_COMMANDS`行集包含以下各列。  
+ `DISCOVER_COMMANDS`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

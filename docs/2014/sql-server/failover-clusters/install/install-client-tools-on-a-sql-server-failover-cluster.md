@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 575f800e30587bb91bc0390379205ae905d99f33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d3acc601d3681efbf18f4f40a63bf7694bda8be9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259983"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
   诸如 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的客户端工具是在同一台计算机上的所有实例间公用的共享功能。 它们与支持的、可并行安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本兼容。 在某一时刻，节点上只能存在客户端工具的一个版本。  

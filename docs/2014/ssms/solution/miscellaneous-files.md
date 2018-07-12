@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio], miscellaneous
 - projects [SQL Server Management Studio], files
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - miscellaneous files folder [SQL Server]
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e939419a42231a7885a2d957bca218725e19ae80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b225697095e7a59f237527d4598d8fb3dfa5d99d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157328"
 ---
 # <a name="miscellaneous-files"></a>杂项文件
-  不属于任何项目的文件称为杂项文件。 当您打开解决方案时，可以打开并修改与该项目相关的杂项文件。 如果文件扩展名与项目代码编辑器不关联，则将此文件归类为杂项文件。 例如，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目中，扩展名为 .txt 或 .mdx 的文件被视为杂项文件。 在 MDX 项目中，扩展名为 .txt 或 .sql 的文件被视为杂项文件。 若要将文件扩展名与代码编辑器相关联，请参阅[关联文件扩展名与代码编辑器](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+  不属于任何项目的文件称为杂项文件。 当您打开解决方案时，可以打开并修改与该项目相关的杂项文件。 如果文件扩展名与项目代码编辑器不关联，则将此文件归类为杂项文件。 例如，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目中，扩展名为 .txt 或 .mdx 的文件被视为杂项文件。 在 MDX 项目中，扩展名为 .txt 或 .sql 的文件被视为杂项文件。 若要将文件扩展名与代码编辑器相关联，请参阅[将文件扩展名与代码编辑器](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
   
  为项目添加杂项文件的功能非常有用，许多理由都可以说明这一点。 您的某个文件可能是无需识别的脚本，但却是解决方案开发中不可缺少的一部分。 常见示例包括开发注释或说明、数据文件和代码片段。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36025854"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 菜单和工具栏会随打开的文件的格式而改变。 例如，打开文本文件时，会显示文本编辑器工具栏。 如果打开 XML 架构文件，则显示 XML 架构工具栏。 编辑 XML 架构时，文本编辑器工具栏将不可用。 在项目文件和杂项文件之间切换时，与项目相关的所有命令和工具栏均被与杂项文件相关的命令和工具栏取代。  
   
 ## <a name="see-also"></a>请参阅  
- [管理解决方案和项目的文件](files-that-manage-solutions-and-projects.md)   
+ [用于管理解决方案和项目的文件](files-that-manage-solutions-and-projects.md)   
  [解决方案&#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [项目 (SQL Server Management Studio)](projects-sql-server-management-studio.md)  
   

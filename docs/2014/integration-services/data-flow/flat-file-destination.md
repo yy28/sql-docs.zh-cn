@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 624815a71ccd642cda1ee11db39ca08994cb6dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60337914cab72631b4a6c647af15ce21bbbcfdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239197"
 ---
 # <a name="flat-file-destination"></a>平面文件目标
   平面文件目标将数据写入文本文件。 文本文件可以为带分隔符格式、固定宽度格式、固定宽度并使用行分隔符格式或右边未对齐格式。  

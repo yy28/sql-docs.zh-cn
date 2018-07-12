@@ -3,28 +3,26 @@ title: FileTable (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/06/2016
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], overview
 - FileTables [SQL Server]
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f97885083c2a386b6c62b5afa836a59263a214f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3045c125db70625a6c706f14a53cb30333633f24
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015272"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423500"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
   FileTable 功能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件数据提供对 Windows 文件命名空间的支持以及与 Windows 应用程序的兼容性支持。 FileTable 使得应用程序可以集成其存储和数据管理组件，可对非结构化数据和元数据提供集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括全文搜索和语义搜索）。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server], international considerations
 - globalization [SQL Server], sessions
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - server-side session language
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 17df915dc44251d32f27e3693d58baf4ddfebaf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 68ab6bbe394d2c2cb9b7b1ed1f42285818e4d79a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182656"
 ---
 # <a name="set-a-session-language"></a>设置会话语言
   根据语言和区域性首选项，可用会话语言设置下列元素在服务器上显示的方式：  

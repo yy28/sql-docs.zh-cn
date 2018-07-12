@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 830df1dd0f44b237e1571700f81919abeca826ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a57623bc05b443de086835374b5f409f630b9de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184274"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
-  查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可以通过使用配置查询存储[ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)选项。  
+  查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可以使用配置查询存储[ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)选项。  
   
 ||  
 |-|  
@@ -36,7 +36,7 @@ ms.locfileid: "36027467"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>通过使用 Management Studio 中的查询存储页  
   
-1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。 (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2016年版本[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。)  
+1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。 (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2016年版[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。)  
   
 2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36027467"
   
 -   分析特定数据库的资源（CPU、I/O 和内存）使用模式。  
   
- 查询存储包含两个存储；用于永久保存执行计划信息的 **计划存储** ，以及用于永久保存执行统计信息的 **运行时统计信息存储** 。 可存储的受限制了计划存储中的查询的唯一计划数`max_plans_per_query`配置选项。 为增强性能，通过异步方式向这两个存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
+ 查询存储包含两个存储；用于永久保存执行计划信息的 **计划存储** ，以及用于永久保存执行统计信息的 **运行时统计信息存储** 。 可存储的受限制的查询计划应用商店中的唯一计划数`max_plans_per_query`配置选项。 为增强性能，通过异步方式向这两个存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
   
  以下查询返回查询存储中查询和计划的相关信息。  
   
@@ -118,7 +118,7 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口通过 INTERVAL_LENGTH_MINUTES 进行配置。  
   
- 查询`sys.database_query_store_options`视图来确定查询存储的当前选项。  
+ 查询`sys.database_query_store_options`视图，以确定查询存储的当前选项。  
   
  若要深入了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来设置选项，请参阅 [选项管理](#OptionMgmt)。  
   
@@ -279,7 +279,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  你可以使用其他逻辑来定义自己的过程，以清理对你而言不再重要的数据。  
   
- 上面的示例将`sp_query_store_remove_query`扩展存储的过程来删除不必要的数据。 你还可以使用其他两个过程。  
+ 上面的示例使用`sp_query_store_remove_query`扩展存储的过程来删除不必要的数据。 你还可以使用其他两个过程。  
   
 -   `sp_query_store_reset_exec_stats` – 清除给定计划的运行时统计信息。  
   
@@ -290,7 +290,7 @@ DEALLOCATE adhoc_queries_cursor;
 ###  <a name="Peformance"></a> 性能审核和疑难解答  
  因为查询存储保存了整个查询执行过程中的编译历史记录和运行时度量，因此你可以轻松回答很多与你的工作负荷相关的不同问题。  
   
- **最后一个*n*数据库上执行的查询。**  
+ **最后一个*n*在数据库上执行的查询。**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -305,7 +305,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **对于每个查询的执行数。**  
+ **每个查询的次数。**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -321,7 +321,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **具有过去一小时内最长平均执行时间的查询数。**  
+ **与过去一小时内最长平均执行时间的查询数。**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -338,7 +338,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **过去 24 小时，相应的平均行计数和执行计数内读取的具有最大平均物理 IO 的查询数。**  
+ **在过去 24 小时，在相应的平均行计数和执行计数中读取的具有最大平均物理 IO 的查询数。**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -386,7 +386,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **最近性能回归的查询 （对比时间的不同点）。** 以下查询示例返回了其执行时间因计划选择更改而在过去 48 小时内翻倍的所有查询。 并排查询所有的运行时统计信息时间间隔。  
+ **最近性能回归的查询 （对比不同点的时间）。** 以下查询示例返回了其执行时间因计划选择更改而在过去 48 小时内翻倍的所有查询。 并排查询所有的运行时统计信息时间间隔。  
   
 ```  
 SELECT   
@@ -503,7 +503,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> 维护查询性能稳定性  
- 有关执行查询的多次你可能注意到，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用不同的计划，这将导致中不同资源利用率和持续时间。 借助查询存储，你可以轻松检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来查询执行强制执行此最优计划。  
+ 执行的查询的多个时间你可能会注意到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用不同的计划，导致不同资源利用率和持续时间。 借助查询存储，你可以轻松检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来查询执行强制执行此最优计划。  
   
  你还可以使用参数（自动参数化或手动参数化）来标识某一查询内不一致的查询性能。 你可以在不同计划中标识出对所有或大多数参数值而言足够快和最佳的计划，并强制执行此计划；为更大范围的用户方案保留可预测的性能。  
   
@@ -513,9 +513,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- 使用时`sp_query_store_force_plan`只可以强制执行由查询存储记录为该查询计划的计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已使用执行 Q1 的哪些计划。  
+ 当使用`sp_query_store_force_plan`只可以强制执行了查询存储记录为该查询的计划的计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已使用执行 Q1 的哪些计划。  
   
- **删除强制执行查询的计划。** 若要再次依靠[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查询优化器来计算最佳查询计划，请使用`sp_query_store_unforce_plan`来取消强制执行所选计划的查询。  
+ **删除强制执行查询的计划。** 若要再次依靠[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查询优化器来计算最佳查询计划，请使用`sp_query_store_unforce_plan`来取消强制执行为查询选择的计划。  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

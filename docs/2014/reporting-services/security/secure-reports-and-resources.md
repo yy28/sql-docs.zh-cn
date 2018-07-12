@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -19,13 +19,13 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dfb47953b60ef2a37b5a2bc3ffd9c8fc16300526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95d8ca8474c23d2ef8ffac6baa4ed822700fca81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240367"
 ---
 # <a name="secure-reports-and-resources"></a>保护报表和资源
   您可以设置各个报表和资源的安全性，以控制用户对这些项的访问权限。 默认情况下，只有是“管理员”内置组的成员的用户，才能运行报表、查看资源、修改属性以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问报表或资源。  
@@ -65,7 +65,7 @@ ms.locfileid: "36025646"
  若要降低报表中包含无意中运行恶意脚本的链接的风险，请仅将超链接绑定到来自可信来源的数据。 验证查询结果中的数据和将数据绑定到超链接的表达式没有创建可被用来进行攻击的链接。 例如，不要将超链接基于连接多个数据集字段中的数据的表达式。 如有必要，浏览到此报表，然后使用“查看源”以检查可疑脚本和 URL。  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>减少参数化报表中的 SQL 注入攻击  
- 包含类型的参数的任何报表中`String`，请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户具有仅在报表中查看的数据所需的权限。 在定义类型的参数`String`，则用户会看到文本框中，可以使用任何值。 可用值列表限制可以输入的值。 如果报表参数与查询参数关联，但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
+ 包含类型参数的任何报表中`String`请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户具有只需在报告中查看数据的权限。 定义类型的参数时`String`，则用户会看到与可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与查询参数关联，但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
   
  如果报表参数与查询参数无关，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法或 URL，并将报表呈现为 Excel 或 HTML 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
   
@@ -78,8 +78,8 @@ ms.locfileid: "36025646"
  对于包含机密信息的报表，应通过要求用户在访问敏感数据时提供凭据，在数据访问级别上保护这些报表。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) 您也可以对文件夹进行保护，以便只有授权用户才能访问文件夹。 有关详细信息，请参阅 [保护文件](secure-folders.md)。  
   
 ## <a name="see-also"></a>请参阅  
- (创建-和-管理的角色-assignments.md)   
- [配置报表生成器访问权](../report-server/configure-report-builder-access.md)   
+ (创建-和-管理-角色-assignments.md)   
+ [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
  [保护共享数据源项](secure-shared-data-source-items.md)   
  [在 Reporting Services 数据源中存储凭据](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

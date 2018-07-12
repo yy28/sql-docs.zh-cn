@@ -1,5 +1,5 @@
 ---
-title: 从模板创建多维数据集，而不使用数据源视图 |Microsoft 文档
+title: 从模板创建多维数据集，而无需使用数据源视图 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c834ce714cd4ad0de92f3638288146674d4bc1e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161378"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>从模板创建多维数据集而无需使用数据源视图
   在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)。  
@@ -47,15 +47,15 @@ ms.locfileid: "36026033"
 |------------|-----------------|  
 |**“度量值名称”**|此列中的值定义多维数据集中度量值的名称。 单击此列中的值可键入名称。 单击此列中的 **“添加新度量值”** 可创建新的度量值。 此列设置`Name`度量值对象的属性。|  
 |**度量值组**|包含该度量值的度量值组的名称。 单击此值可选择或键入名称。 如果删除属于某个度量值组的所有度量值，则该度量值组也随之删除。 此列设置`Name`度量值组对象的属性。|  
-|**数据类型**|度量值的数据类型。 单击此值可更改数据类型。 创建度量值时的默认行为是`Single`。 此列设置`DataType`度量值对象的属性。|  
-|**聚合**|度量值的标准聚合。 单击此单元可为度量值指定标准聚合之一（或“无”）。 创建度量值时的默认行为是`Sum`。 此列设置`AggregationFunction`度量值对象的属性。|  
+|**数据类型**|度量值的数据类型。 单击此值可更改数据类型。 创建一个度量值时的默认行为是`Single`。 此列设置`DataType`度量值对象的属性。|  
+|**聚合**|度量值的标准聚合。 单击此单元可为度量值指定标准聚合之一（或“无”）。 创建一个度量值时的默认行为是`Sum`。 此列设置`AggregationFunction`度量值对象的属性。|  
   
 ## <a name="defining-new-dimensions"></a>定义新维度  
  使用向导的 **“定义新维度”** 页可指定新多维数据集中的维度。  
   
  如果使用模板创建多维数据集， **“从模板中选择维度”** 之下的网格将显示该模板中的维度。 您可以通过清除任何维度旁边的复选框，将该维度从多维数据集中删除。 清除网格标题栏上的复选框可以删除所有列出的维度。 如果您不使用模板，此网格则只列出“时间”维度。  
   
- 您可以在 **“添加新维度”** 之下的网格中向多维数据集添加维度。 若要添加维度，请单击中的单元格`Name`包含文本的列**添加新维度**，然后键入维度的名称。 若要从该列表中删除行，请单击删除图标 (**X**)。  
+ 您可以在 **“添加新维度”** 之下的网格中向多维数据集添加维度。 若要添加维度，请单击的单元格`Name`列包含文本**添加新维度**，然后键入该维度的名称。 若要从该列表中删除行，请单击删除图标 (**X**)。  
   
  **“从模板中选择维度”** 网格和 **“添加新维度”** 网格均将值显示在下表所说明的列中。 您可以单击任一列表中的值对其进行更改。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36026033"
 |**属性**|显示要为该维度创建的属性。 列表中每个属性名称前都附有维度名称。 此列表是只读的。 完成向导操作后，可以使用维度设计器来编辑这些属性。|  
   
 ## <a name="defining-time-periods"></a>定义时间段  
- 使用向导的 **“定义时间段”** 页可以指定要包含在维度中的日期范围。 例如，您可以选择这样一个时间段：从您数据中最早年份的 1 月 1 日开始，并一直延伸到最新事务发生时间之后。 事务范围外的请勿显示，或者显示为未知的成员在维度中，具体取决于`UnknownMemberVisible`维度的属性设置。 `UnknownMemberName`属性指定未知成员的标题。 您也可以更改数据所使用的周的第一天（默认值为星期日）。  
+ 使用向导的 **“定义时间段”** 页可以指定要包含在维度中的日期范围。 例如，您可以选择这样一个时间段：从您数据中最早年份的 1 月 1 日开始，并一直延伸到最新事务发生时间之后。 不在范围内的事务不是显示还是显示为未知的成员在维度中，具体取决于`UnknownMemberVisible`维度的属性设置。 `UnknownMemberName`属性指定未知成员的标题。 您也可以更改数据所使用的周的第一天（默认值为星期日）。  
   
 > [!NOTE]  
 >  仅当你在向导的“定义新维度”页上将时间维度包括在多维数据集中的情况下，“定义时间段”页才会显示。  

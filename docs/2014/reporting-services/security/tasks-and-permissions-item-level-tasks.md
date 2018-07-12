@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c3c0c93550707cbe30377aed44e4ce9a05a0c7fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43da85b3e7435bb3685090ae1f2e80830793b3f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150138"
 ---
 # <a name="item-level-tasks"></a>项级任务
-  项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体的详细信息，请参阅[任务和权限](tasks-and-permissions.md)。  
+  项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅[任务和权限](tasks-and-permissions.md)。  
   
 > [!NOTE]  
 >  如果要通过编程的方式使用这些任务，则必须使用支持项级任务的方法。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 和 <xref:ReportService2010.ReportingService2010.ListRoles%2A>。  

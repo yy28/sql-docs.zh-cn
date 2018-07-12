@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client ODBC 数据源 |Microsoft 文档
+title: SQL Server Native Client ODBC 数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,22 +18,22 @@ helpviewer_keywords:
 - ODBC data sources
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b74f989db617c2fcd86e0d823b9bb563c7dcda1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ee13a0180896316e10b20148b2a22a5b0cf4c149
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018383"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408466"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 数据源
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源名称 (DSN) 标识 ODBC 数据源，此数据源包含 ODBC 应用程序连接到特定服务器上的某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库所需要的所有信息。 您可以通过两种方法定义 ODBC 数据源名称：  
   
--   在客户端计算机上，在控制面板中打开管理工具和双击**数据源 (ODBC)**。 此时将打开 ODBC 数据源管理器，您可以用它来创建 DSN。  
+-   在客户端计算机上管理工具中打开控制面板，然后双击**数据源 (ODBC)**。 此时将打开 ODBC 数据源管理器，您可以用它来创建 DSN。  
   
--   ODBC 应用程序，在调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
+-   在 ODBC 应用程序，调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源包含：  
   

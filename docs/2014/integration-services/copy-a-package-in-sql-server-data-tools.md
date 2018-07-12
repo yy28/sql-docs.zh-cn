@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], copying
 - copying packages
@@ -18,13 +18,13 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a49f678866fca7cbf5836ba240025e6022d5ba12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e315d008ec7e17672c831172add10e5c32a6152b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229377"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中复制包
   此主题介绍如何通过复制现有包来创建新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包，以及如何更新新包的 `Name` 和 `GUID` 属性。  
@@ -48,7 +48,7 @@ ms.locfileid: "36026384"
   
 7.  单击 **“保存”**。  
   
-8.  在出现提示时，选择是否更新包对象的名称，使其与文件名匹配。 如果你单击**是**、`Name`更新的包的属性。 新的包将添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，并在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开。  
+8.  在出现提示时，选择是否更新包对象的名称，使其与文件名匹配。 如果单击**是**，则`Name`更新包的属性。 新的包将添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，并在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开。  
   
 9. （可选）单击 **“控制流”** 选项卡的背景，并单击 **“属性”**。  
   

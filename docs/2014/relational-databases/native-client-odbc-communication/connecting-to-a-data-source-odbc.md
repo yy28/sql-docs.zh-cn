@@ -1,13 +1,11 @@
 ---
-title: 连接到数据源 (ODBC) |Microsoft 文档
+title: 连接到数据源 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b4972792bf40c5569a3529c583209bfd4f53407
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 129d0cbe880000bddb42d5089d743e65ce60cb0e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017543"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416316"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>连接数据源 (ODBC)
   在分配环境和连接句柄并设置连接属性后，应用程序将连接到数据源或驱动程序。 有三种可用于连接的函数：  
@@ -44,15 +42,15 @@ ms.locfileid: "36017543"
   
 -   **SQLBrowseConnect**  
   
- 有关与数据源，包括不同的连接字符串选项可用，建立的连接的详细信息请参阅[Using Connection String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 有关建立连接到数据源，包括可用的各种连接字符串选项的详细信息请参阅[将连接字符串关键字用于 SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
- **SQLConnect**是最简单的连接函数。 它接受三个参数：数据源名称、用户 ID 和密码。 使用**SQLConnect**当这三个参数包含连接到数据库所需的所有信息。 若要执行此操作，生成使用的数据源的列表**SQLDataSources**; 提示用户输入数据源、 用户 ID 和密码;，然后调用**SQLConnect**。  
+ **SQLConnect**是最简单的连接函数。 它接受三个参数：数据源名称、用户 ID 和密码。 使用**SQLConnect**当这三个参数包含连接到数据库所需的所有信息。 若要执行此操作，生成的数据源使用列表**SQLDataSources**; 提示用户输入数据源、 用户 ID 和密码;，然后调用**SQLConnect**。  
   
- **SQLConnect**假定数据源名称、 用户 ID 和密码是不足以连接到数据源，ODBC 数据源包含的 ODBC 驱动程序需要建立连接的所有其他信息。 与不同[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)和[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)， **SQLConnect**不使用连接字符串。  
+ **SQLConnect**假定数据源名称、 用户 ID 和密码都不足以连接到数据源和 ODBC 数据源包含 ODBC 驱动程序建立连接所需的所有其他信息。 与不同[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)并[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)， **SQLConnect**不使用连接字符串。  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
- **SQLDriverConnect**需要比数据源名称、 用户 ID 和密码的详细信息时使用。 参数之一**SQLDriverConnect**是一个包含特定于驱动程序信息的连接字符串。 你可以使用**SQLDriverConnect**而不是**SQLConnect**原因如下：  
+ **SQLDriverConnect**需要比数据源名称、 用户 ID 和密码的详细信息时使用。 参数之一**SQLDriverConnect**是一个包含特定于驱动程序的信息的连接字符串。 可以使用**SQLDriverConnect**而不是**SQLConnect**原因如下：  
   
 -   在连接时指定特定于驱动程序的信息。  
   
@@ -60,20 +58,20 @@ ms.locfileid: "36017543"
   
 -   不使用 ODBC 数据源进行连接。  
   
- **SQLDriverConnect**连接字符串包含一系列指定 ODBC 驱动程序支持的所有连接信息的关键字 / 值对。 每个驱动程序都支持标准 ODBC 关键字（DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE），以及用于驱动程序支持的所有连接信息的特定于驱动程序的关键字。 **SQLDriverConnect**可以用于不使用数据源连接。 例如，应用程序，旨在使"dsn"连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以调用**SQLDriverConnect**与定义的登录 ID、 密码、 网络库和服务器名称到一个连接字符串连接和默认数据库以使用。  
+ **SQLDriverConnect**连接字符串包含一系列指定 ODBC 驱动程序支持的所有连接信息的关键字值对。 每个驱动程序都支持标准 ODBC 关键字（DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE），以及用于驱动程序支持的所有连接信息的特定于驱动程序的关键字。 **SQLDriverConnect**可用于不使用数据源连接。 例如，应用程序专为"无 DSN"连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以调用**SQLDriverConnect**定义登录 ID、 密码、 网络库、 服务器名称的连接字符串连接和默认数据库使用。  
   
- 使用时**SQLDriverConnect**，用于提示用户为任何所需的连接信息的两个选项：  
+ 使用时**SQLDriverConnect**，有两个选项可用于提示用户输入所需的连接信息：  
   
 -   应用程序对话框  
   
-     你可以创建一个应用程序对话框，提示输入连接信息，然后呼叫**SQLDriverConnect**带有 NULL 窗口句柄和*DriverCompletion*设置为 SQL_DRIVER_NOPROMPT。 这些参数设置将禁止 ODBC 驱动程序打开自己的对话框。 在对应用程序的用户界面进行控制非常重要时，使用此方法。  
+     可以创建一个应用程序对话框，提示输入连接信息，然后调用**SQLDriverConnect**提供了 NULL 窗口句柄并*DriverCompletion*设置为 SQL_DRIVER_NOPROMPT。 这些参数设置将禁止 ODBC 驱动程序打开自己的对话框。 在对应用程序的用户界面进行控制非常重要时，使用此方法。  
   
 -   驱动程序对话框  
   
-     你可以编写代码，应用程序传递的有效的窗口句柄**SQLDriverConnect**并设置*DriverCompletion* SQL_DRIVER_COMPLETE、 SQL_DRIVER_PROMPT 或 SQL_DRIVER_COMPLETE_ 参数必填。 驱动程序然后生成一个对话框，以便提示用户输入连接信息。 此方法可以简化应用程序代码。  
+     您可以编写代码传递有效的窗口句柄的应用程序**SQLDriverConnect**并设置*DriverCompletion*为 SQL_DRIVER_COMPLETE、 SQL_DRIVER_PROMPT 或 SQL_DRIVER_COMPLETE_ 参数必填。 驱动程序然后生成一个对话框，以便提示用户输入连接信息。 此方法可以简化应用程序代码。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
- **SQLBrowseConnect**、 like **SQLDriverConnect**，使用的连接字符串。 但是，通过使用**SQLBrowseConnect**，应用程序可以在运行时构造完整连接字符串以迭代方式与数据源。 这允许应用程序执行以下两种操作：  
+ **SQLBrowseConnect**，例如**SQLDriverConnect**，使用连接字符串。 但是，通过使用**SQLBrowseConnect**，应用程序可以在运行时构造完整连接字符串以迭代方式与数据源。 这允许应用程序执行以下两种操作：  
   
 -   生成自己的对话框以提示输入此信息，因此保留对其用户界面的控制。  
   
@@ -81,9 +79,9 @@ ms.locfileid: "36017543"
   
      例如，用户可能要首先浏览网络以找到服务器，然后在选择某一服务器后，浏览该服务器以找到驱动程序可访问的数据库。  
   
- 当**SQLBrowseConnect**完成成功连接时，它将返回的连接字符串，可在后续调用**SQLDriverConnect**。  
+ 当**SQLBrowseConnect**完成成功连接后，它返回可在后续调用使用的连接字符串**SQLDriverConnect**。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序始终在成功返回 SQL_SUCCESS_WITH_INFO **SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**。 当 ODBC 应用程序调用**SQLGetDiagRec**获取后 SQL_SUCCESS_WITH_INFO，它可以收到以下消息：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序始终对成功返回 SQL_SUCCESS_WITH_INFO **SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**。 当 ODBC 应用程序调用**SQLGetDiagRec**后获取 SQL_SUCCESS_WITH_INFO，它可以接收下列消息：  
   
  5701  
  指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将用户的上下文置于在数据源中定义的默认数据库中，或者置于为在连接中使用的登录 ID 定义的默认数据库中（如果数据源没有默认数据库）。  
@@ -102,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- 您可以忽略消息 5701 和 5703；它们仅供参考。 但是，不应忽视 SQL_SUCCESS_WITH_INFO 返回代码，因为可能返回并非 5701 或 5703 的其他消息。 例如，如果驱动程序连接到运行的实例的服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对于过时的目录存储过程，其中一个错误返回通过**SQLGetDiagRec** SQL_SUCCESS_WITH_INFO 后：  
+ 您可以忽略消息 5701 和 5703；它们仅供参考。 但是，不应忽视 SQL_SUCCESS_WITH_INFO 返回代码，因为可能返回并非 5701 或 5703 的其他消息。 例如，如果驱动程序连接到运行的实例的服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]过时的目录存储过程的一个错误返回通过**SQLGetDiagRec** SQL_SUCCESS_WITH_INFO 后：  
   
 ```  
 SqlState:   01000  
@@ -114,7 +112,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- 错误处理的应用程序的函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接应调用**SQLGetDiagRec**直到它返回 SQL_NO_DATA。 它然后应处理与以外的任何消息*pfNative* 5701 或 5703 的代码。  
+ 错误处理的应用程序的函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接应调用**SQLGetDiagRec**直到它返回 sql_no_data 为止。 它然后应作用于与以外的任何消息*pfNative* 5701 或 5703 的代码。  
   
 ## <a name="see-also"></a>请参阅  
  [与 SQL Server 通信&#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228887"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
-  表达式帮助您创建功能强大、灵活的报表。 本教程指导您创建和实现使用常用函数和运算符的表达式。 你将使用**表达式**对话框可以编写名称值串联，查找单独的数据集中的值的表达式显示其他图片基于字段值中，依次类推。  
+  表达式帮助您创建功能强大、灵活的报表。 本教程指导您创建和实现使用常用函数和运算符的表达式。 将使用**表达式**对话框可以编写表达式的连接名称值、 查找中单独的数据集中的值显示不同的图片基于字段值，等等。  
   
  报表是一个条纹形式的报表，用白色和彩色交替显示行颜色。 报表包括用于选择非白色行的颜色的参数。  
   
@@ -30,28 +30,28 @@ ms.locfileid: "36026162"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将学习如何执行下列操作：  
   
-1.  [从表或矩阵向导创建的表报表和数据集](#Setup)  
+1.  [从表或矩阵向导创建表报表和数据集](#Setup)  
   
-2.  [更新默认名称的数据源和数据集](#UpdateNames)  
+2.  [更新默认名称分别为数据源和数据集](#UpdateNames)  
   
-3.  [显示第一个名称，初始，和最后一个名称](#Concatenate)  
+3.  [显示名字首字母和姓氏](#Concatenate)  
   
-4.  [使用映像来显示性别](#Gender)  
+4.  [使用图像显示性别](#Gender)  
   
-5.  [查找国家/地区名称](#Lookup)  
+5.  [查找 CountryRegion 名称](#Lookup)  
   
-6.  [自上次操作后的计数天数购买](#Count)  
+6.  [计算自上次采购后的天数](#Count)  
   
-7.  [使用指示器来显示销售比较](#Indicator)  
+7.  [使用指示器显示销售情况对比](#Indicator)  
   
-8.  [使的报表"绿色条"报告](#GreenBar)  
+8.  [使"绿色图条"报表的报表](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>其他可选步骤  
   
--   [格式日期列](#DateFormat)  
+-   [日期列的格式](#DateFormat)  
   
 -   [添加报表标题](#Title)  
   
@@ -73,15 +73,15 @@ ms.locfileid: "36026162"
   
 #### <a name="to-create-a-new-table-report"></a>创建新的表报表  
   
-1.  单击**启动**，指向**程序**，单击[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
+1.  单击**启动**，依次指向**程序**，单击[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
   
      此时将显示 **“入门”** 对话框。  
   
     > [!NOTE]  
-    >  如果**入门**未显示对话框中，从**报表生成器**菜单上，单击**新建**。  
+    >  如果**Getting Started**对话框不会出现，从**报表生成器**按钮，再单击**新建**。  
   
     > [!NOTE]  
-    >  如果你愿意使用报表生成器的 ClickOnce 版本，打开报表管理器，然后单击**报表生成器**，或转到 SharePoint 站点的 Reporting Services 内容类型启用报表，以及单击**报表生成器报表**上**新文档**上的菜单**文档**选项卡上的共享的文档库。  
+    >  如果想要使用报表生成器的 ClickOnce 版本，打开报表管理器，然后单击**报表生成器**，或转到 SharePoint 站点的 Reporting Services 内容类型如启用了报表，并单击**报表生成器报表**上**新的文档**菜单上的**文档**选项卡上的共享的文档库。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36026162"
     > [!NOTE]  
     >  FirstName 和 LastName 字段不包括在内。 您将在后面的步骤中添加这两个字段。  
   
-13. 在**值**列表中，右键单击`CountryRegionID`单击**总和**选项。  
+13. 在中**值**列表中，右键单击`CountryRegionID`然后单击**总和**选项。  
   
      Sum 不再应用于 CountryRegionID。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36026162"
   
 16. 在“选择布局”页上，单击“下一步”。  
   
-17. 上**选择样式**页上，单击**盖板**，然后单击**完成**。  
+17. 上**选择一种样式**页上，单击**盖板**，然后单击**完成**。  
   
 ##  <a name="UpdateNames"></a> 2.更新数据源和数据集的默认名称  
   
@@ -360,7 +360,7 @@ ms.locfileid: "36026162"
   
 6.  在“类别”列表中，单击“字段(表达式)”。  
   
-7.  在**值**列表中，双击`CountryRegionID`。  
+7.  在中**值**列表中，双击`CountryRegionID`。  
   
 8.  如果鼠标光标不是紧接 `CountryRegionID.Value` 之后，请将光标置于其后。  
   
@@ -517,7 +517,7 @@ ms.locfileid: "36026162"
   
 34. 单击“结束”值的文本框右侧的 **fx** 按钮。  
   
-35. 在**表达式**对话框框中，创建表达式： `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在中**表达式**对话框框中，创建表达式： `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -642,7 +642,7 @@ ms.locfileid: "36026162"
   
      该报表呈现，报表行交替呈现您所选的背景。  
   
-##  <a name="DateFormat"></a> （可选）格式日期列  
+##  <a name="DateFormat"></a> （可选）日期列的格式  
  设置包含日期的“Last Purchase”列的格式。  
   
 #### <a name="to-format-date-column"></a>若要设置日期列的格式  
@@ -701,7 +701,7 @@ ms.locfileid: "36026162"
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
-2.  单击**桌面`, `我的文档**，或**我的计算机**，然后浏览到你想要保存报表的文件夹。  
+2.  单击**桌面`, `My Documents**，或**我的计算机**，然后浏览到要保存报表的文件夹。  
   
 3.  在“名称”中，用“Sales Comparison Summary”替换默认名称。  
   
@@ -710,8 +710,8 @@ ms.locfileid: "36026162"
 ## <a name="see-also"></a>请参阅  
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
- [指示器&#40;报表生成器和 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [图像、 文本框、 矩形和行&#40;报表生成器和 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [指标&#40;报表生成器和 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [图像、 文本框、 矩形和线条&#40;报表生成器和 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](report-design/tables-report-builder-and-ssrs.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

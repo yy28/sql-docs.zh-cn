@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 55279e8fd0f69fa93131f47ccf7ceb106ae2c689
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0b7dd333cdbe730380c91e032bd92859d2afc78d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164758"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>启用 FileTable 的先决条件
   介绍如何启用创建和使用 FileTable 的先决条件。  
@@ -47,7 +46,7 @@ ms.locfileid: "36027022"
 ###  <a name="HowToFilestream"></a> 如何在实例级别启用 FILESTREAM  
  有关如何启用 FILESTREAM 的信息，请参阅 [启用和配置 FILESTREAM](enable-and-configure-filestream.md)。  
   
- 当调用`sp_configure`若要启用在实例级别 FILESTREAM，必须将 filestream_access_level 选项设置为 2。 有关详细信息，请参阅 [文件流访问级别服务器配置选项](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
+ 当您调用`sp_configure`若要启用在实例级别 FILESTREAM，必须将 filestream_access_level 选项设置为 2。 有关详细信息，请参阅 [文件流访问级别服务器配置选项](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
   
 ###  <a name="firewall"></a> 如何允许 FILESTREAM 通过防火墙  
  有关如何允许 FILESTREAM 通过防火墙的信息，请参阅 [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md)。  

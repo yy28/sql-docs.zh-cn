@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 管理面板和使用情况数据 |Microsoft 文档
+title: PowerPivot 管理面板和使用情况数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28d410f99884aa1d01a2a97201bd4da9fc2cd6c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97bb7addcbbdf9a4e5a2b8b1151e081f48d0fea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278342"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理面板和使用情况数据
   PowerPivot 管理面板是 SharePoint 管理中心中预定义报表和 Web 部件的集合，可以帮助您管理 SQL Server PowerPivot for SharePoint 部署。 管理面板提供了与服务器运行状况、工作簿活动以及数据刷新相关的信息。 该面板使用的数据来自于 SharePoint 使用情况数据集合。  
   
  [先决条件](#prereq)  
   
- [节的仪表板概述](#items)  
+ [仪表板的各个部分概述](#items)  
   
  [打开 PowerPivot 管理面板](#open)  
   
- [仪表板中的源数据](#sourcedata)  
+ [在仪表板中的源数据](#sourcedata)  
   
  [编辑 PowerPivot 面板](#edit)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36018306"
   
 -   [PowerPivot 使用情况数据集合](power-pivot-usage-data-collection.md)  
   
--   [配置为使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+-   [配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
  为了捕获有关 PowerPivot 服务器系统的数据，请验证为每个 PowerPivot 服务应用程序启用了事件消息传递、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果您关闭事件或使用情况历史记录，则组合报表将会不完整或出错。  
   
@@ -154,6 +154,6 @@ ms.locfileid: "36018306"
   
 ## <a name="see-also"></a>请参阅  
  [使用 SharePoint 2010 的 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)   
- [配置为使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

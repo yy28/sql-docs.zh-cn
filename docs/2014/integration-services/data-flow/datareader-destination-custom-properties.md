@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7fb15f3dda170c866bb95840a7a3cde4c19ffa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bda3a31cf3d498d59d4ec86c6c7b32bd2134385
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158628"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目标自定义属性
   DataReader 目标具有自定义属性和所有数据流组件通用的属性。  
   
- 下表介绍了 DataReader 目标的自定义属性。 以外的所有属性`DataReader`读/写。  
+ 下表介绍了 DataReader 目标的自定义属性。 除之外的所有属性`DataReader`读/写。  
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  

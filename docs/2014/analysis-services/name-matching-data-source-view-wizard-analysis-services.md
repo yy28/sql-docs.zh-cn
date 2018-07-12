@@ -1,5 +1,5 @@
 ---
-title: 名称匹配 （数据源视图向导） (Analysis Services) |Microsoft 文档
+title: 名称匹配 （数据源视图向导） (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d01f55b450326efdea81d48135088d57fc3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155378"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名称匹配（数据源视图向导）(Analysis Services)
   可以使用 **“名称匹配”** 页，针对为数据源视图选择的表以及架构中的其他表，选择用于检测它们之间可能存在的关系的条件。 如果这些表之间不存在物理外键关系，则可以使用所选的条件帮助标识相关的表并将这些表添加到数据源视图中。 通过名称匹配标识的逻辑关系也可以添加到数据源视图中。  

@@ -1,30 +1,28 @@
 ---
-title: 使用非聚集列存储索引 |Microsoft 文档
+title: 使用非聚集列存储索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
-caps.latest.revision: 7
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: fd711b644c551da7a658eff7ede74007d69a2286
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157018"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非聚集列存储索引
   描述用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表上使用非聚集列存储索引的主要任务。  
   
- 列存储索引的概述，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)。  
+ 有关列存储索引的概述，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
  有关聚集列存储索引的信息，请参阅[使用聚集列存储索引](../relational-databases/indexes/indexes.md)。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "36026831"
 -   [更改非聚集列存储索引中的数据](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
 ##  <a name="load"></a> 创建非聚集列存储索引  
- 数据加载到聚集列存储索引，第一个加载数据到传统行存储表中存储为堆或聚集索引，以及如何将[创建列存储索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建列存储索引。  
+ 将数据加载到聚集列存储索引，第一个将数据加载到传统行存储表存储为堆或聚集索引，以及如何将[创建列存储索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)若要创建列存储索引。  
   
  ![数据加载到列存储索引](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "数据加载到列存储索引")  
   
@@ -50,7 +48,7 @@ ms.locfileid: "36026831"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   删除列存储索引，更新该表，然后重新创建具有创建列存储索引的列存储索引。 例如：  
+-   删除列存储索引，更新表，然后重新创建列存储索引，创建列存储索引。 例如：  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4246a4ae586ad6fc526ef618e0a249706d0baa3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ee2567823ff401df3d1b0b9c64af88d8d5435da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240917"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>步骤 3：添加并配置 OLE DB 连接管理器
   添加了用于连接到数据源的平面文件连接管理器以后，下一个任务是添加用于连接到目标的 OLE DB 连接管理器。 通过 OLE DB 连接管理器，包可以在任何 OLE DB 兼容的数据源中提取数据或加载数据。 使用 OLE DB 连接管理器，可以为连接指定服务器、身份验证方法和默认数据库。  
@@ -38,7 +38,7 @@ ms.locfileid: "36017566"
   
 4.  在“登录到服务器”组中，确认选择了“使用 Windows 身份验证”。  
   
-5.  在**连接到数据库**组中，在**选择或输入数据库名称**框中，键入或选择`AdventureWorksDW2012`。  
+5.  在中**连接到数据库**组中，在**选择或输入数据库名称**框中，键入或选择`AdventureWorksDW2012`。  
   
 6.  单击“测试连接”，验证指定的连接设置是否有效。  
   

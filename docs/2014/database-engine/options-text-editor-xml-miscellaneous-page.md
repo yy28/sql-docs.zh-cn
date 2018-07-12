@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器的 XML 的其他页） |Microsoft 文档
+title: 选项 （文本编辑器-XML-杂项页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c11ecb4c3a46aa008600eee89ffb528fd66dcc68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259153"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>选项（“文本编辑器”-“XML”-“杂项”页）
   使用“选项”对话框，可以更改 XML 编辑器的自动完成设置和架构设置。 若要使用这些设置，请在“工具”菜单上单击“选项”，展开“文本编辑器”文件夹，单击“XML”，再单击“杂项”。  
   
 ## <a name="auto-insert"></a>自动插入  
- **结束标记**  
+ **关闭标记**  
  文本编辑器在创建 XML 元素时将添加关闭标记。 如果选择了元素开始标记，该编辑器将插入匹配的关闭标记，包括匹配的命名空间前缀。 默认情况下，此复选框为选中状态。  
   
  **属性引号**  
@@ -36,7 +36,7 @@ ms.locfileid: "36018003"
  **Namespace 声明**  
  文本编辑器将在需要的位置自动插入命名空间声明。 默认情况下，此复选框为选中状态。  
   
- **其他标记 （注释、 CDATA）**  
+ **其他标记 （注释，CDATA）**  
  注释、CDATA、DOCTYPE、处理指令和其他标记是自动完成的。 默认情况下，此复选框为选中状态。  
   
 ## <a name="network"></a>网络  

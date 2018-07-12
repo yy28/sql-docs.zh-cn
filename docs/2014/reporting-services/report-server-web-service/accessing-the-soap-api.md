@@ -23,15 +23,15 @@ helpviewer_keywords:
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 631247c0d9c12e3ed4caeb6f29c0408d2a5e9815
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: afce018e4e177d9ac7283b488b3222cbc3dae1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230227"
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
   报表服务器 Web 服务使用通过 HTTP 的简单对象访问协议 (SOAP)，并充当客户端程序和报表服务器之间的通信接口。 该 Web 服务提供两个端点（一个用于报表执行，一个用于报表管理），并且由您可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的完整功能的方法和一组复杂类型对象构成。 若要调用该服务，必须引用 Reporting Services Web 服务描述语言 (WSDL)。  
