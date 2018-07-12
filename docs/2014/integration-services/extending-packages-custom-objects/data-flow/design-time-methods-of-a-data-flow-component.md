@@ -23,13 +23,13 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f2347e035bf6dd0cf78ebccfd61b19d9a6f2901e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ff3fcc3a158b06305d61893bc0b43f7c4458b16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229337"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>数据流组件的设计时方法
   在执行前，称数据流任务处于设计时状态，因为它将接受增量更改。 这些更改可以包括添加或删除组件、添加或删除连接组件的路径对象以及更改组件的元数据。 出现元数据更改时，组件可监视这些更改并对这些更改作出响应。 例如，组件可以禁止某些更改或为响应某一更改而进行其他更改。 在设计时，设计器通过设计时 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 接口与组件进行交互。  
@@ -85,7 +85,7 @@ Dim myCustomProperty As IDTSCustomProperty100
 myCustomProperty.ExpressionType = DTSCustomPropertyExpressionType.CPET_NOTIFY  
 ```  
   
- 您可以将用户限制到通过使用枚举中定义自定义属性值<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>属性，如下面的示例，假设你已经定义了名为公共枚举中所示`MyValidValues`。  
+ 您可以将用户限制到从枚举选择一个自定义属性值，通过使用<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>属性，如下面的示例，假定您已经定义了名为的公共枚举中所示`MyValidValues`。  
   
 ```csharp  
 IDTSCustomProperty100 customProperty = outputColumn.CustomPropertyCollection.New();  
@@ -141,7 +141,7 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
   
  有关详细信息，请参阅 [MSDN 库](http://go.microsoft.com/fwlink/?LinkId=7022)中的“实现 UI 类型编辑器”。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [数据流组件的运行时方法](run-time-methods-of-a-data-flow-component.md)  

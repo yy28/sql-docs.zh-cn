@@ -1,5 +1,5 @@
 ---
-title: 维度处理目标编辑器 （映射页） |Microsoft 文档
+title: 维度处理目标编辑器 （映射页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f8286c541da858a64097a3536b65bdf9f7c9373
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 208a63412351e0f3e9ab6b7a5b5d79c6ef51aca3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154618"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>维度处理目标编辑器（“映射”页）
   可以使用 **“维度处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到维度列。  

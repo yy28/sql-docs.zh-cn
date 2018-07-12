@@ -1,5 +1,5 @@
 ---
-title: AttributePermission 元素 (ASSL) |Microsoft 文档
+title: AttributePermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee5d846cdf849959bc1a916dd82fd95de60e6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c39047b1f63f0abbab109e2d1e8f82ca2a4c863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277873"
 ---
 # <a name="attributepermission-element-assl"></a>AttributePermission 元素 (ASSL)
-  定义的权限的成员[角色](role-element-assl.md)元素对中的各个维度的特性[多维数据集](cube-element-assl.md)元素。  
+  定义的成员的权限[角色](role-element-assl.md)中的单个维度的属性元素具有[多维数据集](cube-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36026876"
 |子元素|[AllowedSet](../properties/allowedset-element-assl.md)，[批注](../collections/annotations-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [DefaultMember](member-element-assl.md)， [DeniedSet](../properties/deniedset-element-assl.md)，[说明](../properties/description-element-assl.md)， [VisualTotals](../properties/visualtotals-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AttributePermission>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AttributePermission>。  
   
 ## <a name="see-also"></a>请参阅  
  [CubeDimensionPermission 数据类型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

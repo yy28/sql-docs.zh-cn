@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7f217126c83e1bc4f81971df3c3e7b5044f08171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce2da77e51370960d433981e28c32c5e7c4e55cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151318"
 ---
 # <a name="look-up-infopackage"></a>查找 InfoPackage
   使用 **“查找 InfoPackage”** 对话框查找在 SAP Netweaver BW 系统中定义的 InfoPackage。 当 InfoPackage 列表显示时，选择您需要的 InfoPackage，然后目标将使用需要的值填充关联的选项。  

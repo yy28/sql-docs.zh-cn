@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22f525a1eed94e3125dab5cdc3930dc6bc20ec91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763a1eb2db612eff3e1d6a895e91fb0878d465e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159128"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>分离数据库和附加 DQS 数据库
   本主题介绍如何分离和附加 DQS 数据库。  
@@ -31,7 +31,7 @@ ms.locfileid: "36026856"
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
--   确保 DQS 中没有正在运行的活动或过程。 这可以使用 **“活动监视”** 屏幕进行验证。 有关在此屏幕中使用的详细信息，请参阅[Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
+-   确保 DQS 中没有正在运行的活动或过程。 这可以使用 **“活动监视”** 屏幕进行验证。 有关使用此屏幕的详细信息，请参阅[Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
   
 -   确保没有用户已登录 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36026856"
 -   您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能终止 DQS 中任何正在运行的活动或停止任何正在运行的过程。  
   
 ##  <a name="Detach"></a> 分离 DQS 数据库  
- 在您使用 SQL Server Management Studio 分离 DQS 数据库时，分离后的文件将保留在您的计算机上，并且可以重新附加到同一个 SQL Server 实例上，也可以移到其他服务器上并附加其上。 DQS 数据库有的文件通常在 Data Quality Services 计算机上的以下位置： C:\Program Files\Microsoft SQL Server\MSSQL12。*< 实例名称 >* \MSSQL\DATA。  
+ 在您使用 SQL Server Management Studio 分离 DQS 数据库时，分离后的文件将保留在您的计算机上，并且可以重新附加到同一个 SQL Server 实例上，也可以移到其他服务器上并附加其上。 DQS 数据库文件有通常位于 Data Quality Services 计算机上的以下位置： C:\Program Files\Microsoft SQL Server\MSSQL12。*< 实例名称 >* \MSSQL\DATA。  
   
 1.  启动 Microsoft SQL Server Management Studio 并连接到适当的 SQL Server 实例。  
   

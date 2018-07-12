@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc290b7be9c9b97d06432d677b2337cc855389a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8898d3932b809596bbbc0aa415c34bfdb4200c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239277"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   原始文件目标将原始数据写入文件。 因为数据的格式是目标的本机格式，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件目标可以比其他目标（如平面文件和 OLE DB 目标）更快地写入数据。  
@@ -117,7 +117,7 @@ ms.locfileid: "36026385"
   
 1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
-2.  重置将 WriteOption 属性设为**追加**并将 ValidateExternalMetadata 属性设置为`False`。  
+2.  到 WriteOption 属性重置**追加**并将 ValidateExternalMetadata 属性设置为`False`。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   

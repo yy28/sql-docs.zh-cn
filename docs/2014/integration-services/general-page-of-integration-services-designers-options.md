@@ -1,5 +1,5 @@
 ---
-title: 常规页 |Microsoft 文档
+title: 常规页 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4026e9f9cf6f246f126b9d60d2fe6940cbe27700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bc23fd22ec07f78e71713e1cce93d9845c35ccc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229277"
 ---
 # <a name="general-page"></a>“常规”页
   使用 **“选项”** 对话框中 **“Integration Services 设计器”** 页的 **“常规”** 页，可以指定用于加载、显示和升级包的选项。  
@@ -58,7 +58,7 @@ ms.locfileid: "36028620"
  升级 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 包时，为包的升级版本创建新的包 ID。  
   
 ## <a name="see-also"></a>请参阅  
- [安全概述&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)   
  [用脚本扩展包](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

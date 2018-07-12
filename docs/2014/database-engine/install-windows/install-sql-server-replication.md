@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server replication]
 - command line installations [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f63d8eee7708b70eedf9b9e00b85e646132dd986
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 70978d835a5c63589de69ad48fbeeef690dfef2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278209"
 ---
 # <a name="install-sql-server-replication"></a>安装 SQL Server 复制
   可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导或通过命令提示符安装复制组件。 请在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或修改现有实例时安装复制组件。  

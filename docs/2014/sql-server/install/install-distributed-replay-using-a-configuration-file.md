@@ -1,5 +1,5 @@
 ---
-title: 使用配置文件安装 Distributed 的 Replay |Microsoft 文档
+title: 使用配置文件安装 Distributed 的 Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 357e4a9fd289d4c90f19456c7828e6941d00d6f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4167456a5d1b59dd44451dda26f3ccb56e417a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155688"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>使用配置文件安装 Distributed Replay
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供基于用户输入和系统默认值生成配置文件的功能。 如果您指定要安装管理工具，则可以使用配置文件来部署三个 Distributed Replay 组件（管理工具、Distributed Replay 控制器和 Distributed Replay 客户端）。 它支持安装、修复和卸载 Distributed Replay 组件。  
@@ -30,7 +30,7 @@ ms.locfileid: "36027369"
   
 -   命令行的值覆盖配置文件中的值  
   
- 有关如何使用配置文件的详细信息，请参阅[安装使用 SQL Server 2014 配置文件](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
+ 有关如何使用配置文件的详细信息，请参阅[使用安装 SQL Server 2014 配置文件](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
   
 > [!IMPORTANT]  
 >  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  

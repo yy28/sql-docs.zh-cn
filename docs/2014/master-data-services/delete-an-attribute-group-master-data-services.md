@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152468"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>删除属性组 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您不再需要在 **的** “资源管理器” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中显示属性组选项卡时，可以删除属性组。  
@@ -40,13 +40,13 @@ ms.locfileid: "36123427"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  上**模型视图**页上，从菜单栏中，指向**管理**单击**属性组**。  
+2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**属性组**。  
   
 3.  从 **“模型”** 列表中，选择某一模型。  
   
 4.  从 **“实体”** 列表中，选择某一实体。  
   
-5.  单击加号以便展开**叶组**，**合并组**，或**集合组**，具体取决于你想要删除的组的类型。  
+5.  单击加号以展开**叶组**，**合并组**，或**集合组**，具体取决于你想要删除的组的类型。  
   
 6.  单击您要删除的属性组。  
   

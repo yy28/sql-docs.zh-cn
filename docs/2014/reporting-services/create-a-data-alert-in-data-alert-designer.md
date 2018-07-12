@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d2829c12a38b75b5b50eb21c44b18252658b6a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5671d2223c2518972f8947e9e715b6ffc4b7b55d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278793"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
   您在数据警报设计器中创建数据警报定义。 在您保存警报定义后，可以在数据警报设计器中重新打开、编辑和重新保存它们。 有关编辑警报定义的信息，请参阅 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md) 和 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。  

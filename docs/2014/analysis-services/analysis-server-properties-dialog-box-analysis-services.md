@@ -1,5 +1,5 @@
 ---
-title: 分析服务器属性对话框 (Analysis Services) |Microsoft 文档
+title: 分析服务器属性对话框 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259998"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>“分析服务器属性”对话框 (Analysis Services)
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“分析服务器属性”对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”对话框。 **“分析服务器属性”** 对话框包含下列属性。  
@@ -81,7 +81,7 @@ ms.locfileid: "36018752"
   
 -   “区分大小写”用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分大小写字母。  
   
-     如果未选择此选项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将认为大写字母和小写字母是一样的。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不会定义是否更低时排序时小写字母或更高版本与大写的字母时**区分大小写**未选中。  
+     如果未选择此选项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将认为大写字母和小写字母是一样的。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不会定义是否排序或字母与大写字母**区分大小写**未选中。  
   
 -   “区分重音”用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分重音和非重音字符。 例如，“a”和“á”将被视为不同的字符。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36018752"
   
 ## <a name="see-also"></a>请参阅  
  [确定 Analysis Services 实例的服务器模式](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)   
+ [在 Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [角色和权限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [语言和排序规则&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  

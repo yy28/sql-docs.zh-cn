@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5498cda83c3b33d0f6b3c6898954e1442e6e21cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150418"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建索引视图。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。  
@@ -49,7 +48,7 @@ ms.locfileid: "36123369"
 ###  <a name="Restrictions"></a> 索引视图所需的 SET 选项  
  如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 CONCAT_NULL_YIELDS_NULL 设置为 ON 后，表达式 **'** abc **'** + NULL 会返回值 NULL。 但将 CONCAT_NULL_YIEDS_NULL 设置为 OFF 后，同一表达式会生成 **'** abc **'**。  
   
- 为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 下表中的 SET 选项必须设置中显示的值为**RequiredValue**列只要发生下列情况：  
+ 为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 下表中的 SET 选项必须设置中显示的值为**RequiredValue**列出现以下情况时：  
   
 -   创建视图和视图上的后续索引。  
   
@@ -128,14 +127,14 @@ ms.locfileid: "36123369"
     |稀疏列集|内联或多语句表值函数|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*索引的视图可以包含`float`列; 但是，这类列不能包含在聚集的索引键。  
+     \*索引的视图可以包含`float`列; 但是，不能在聚集的索引键中包含此类列。  
   
 -   如果存在 GROUP BY，则 VIEW 定义必须包含 COUNT_BIG(*)，并且不得包含 HAVING。 这些 GROUP BY 限制仅适用于索引视图定义。 即使一个索引视图不满足这些 GROUP BY 限制，查询也可以在其执行计划中使用该视图。  
   
 -   如果视图定义包含 GROUP BY 子句，则唯一聚集索引的键只能引用 GROUP BY 子句中指定的列。  
   
 ###  <a name="Recommendations"></a> 建议  
- 引用索引视图中的 `datetime` 和 `smalldatetime` 字符串文字时，建议使用确定性日期格式样式将文字显式转换为所需日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST 与 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。 所涉及的字符字符串转换为的隐式转换的表达式`datetime`或`smalldatetime`被视为具有不确定性。 这是因为结果取决于服务器会话的 LANGUAGE 和 DATEFORMAT 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`listopad`在不同语言中表示不同的月份。 同样，在 `DATEADD(mm,3,'2000-12-01')`表达式中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于 DATEFORMAT 设置解释 `'2000-12-01'` 字符串。  
+ 引用索引视图中的 `datetime` 和 `smalldatetime` 字符串文字时，建议使用确定性日期格式样式将文字显式转换为所需日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST 与 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。 所涉及的字符字符串转换为隐式转换的表达式`datetime`或`smalldatetime`被视为具有不确定性。 这是因为结果取决于服务器会话的 LANGUAGE 和 DATEFORMAT 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`listopad`在不同语言中表示不同的月份。 同样，在 `DATEADD(mm,3,'2000-12-01')`表达式中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于 DATEFORMAT 设置解释 `'2000-12-01'` 字符串。  
   
  非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性。  
   

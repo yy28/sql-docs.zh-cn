@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21898 (Database Engine error)
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a33000c20c7c8c1399f8f6db653d60841bb7de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 551b199b6c4c97b58eca822e1372d3b51af31585
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016852"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423456"
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
     
@@ -37,7 +36,7 @@ ms.locfileid: "36016852"
 |消息正文|发布服务器“%s”使用的是分发数据库“%s”，而不是“%s”（后者是承载发布数据库“%s”所需的）。 请在分发服务器“%s”上运行 `sp_changedistpublisher`，以将发布服务器使用的分发数据库更改为“%s”。|  
   
 ## <a name="explanation"></a>解释  
- `sp_validate_redirected_publisher` 在本地分发服务器，以验证新的发布服务器使用的分发数据库与原始发布服务器使用的分发数据库相同的查询 msdb.dbo.MSdistpublishers。 当这些数据库不同时将返回此错误，同时使发布服务器不适合作为发布服务器数据库的主机。  
+ `sp_validate_redirected_publisher` 验证已使用新的发布服务器的分发数据库使用与原始发布服务器的分发数据库相同的本地分发服务器上查询 msdb.dbo.MSdistpublishers。 当这些数据库不同时将返回此错误，同时使发布服务器不适合作为发布服务器数据库的主机。  
   
 ## <a name="user-action"></a>用户操作  
  执行存储过程 `sp_changedistpublisher`，以将新发布服务器的分发数据库更改为由原始发布服务器使用的分发数据库。  

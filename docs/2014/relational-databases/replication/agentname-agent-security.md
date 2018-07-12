@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.agentnameagentsecurity.f1
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e0d562e0fee10e4533153dfe4fcf4e4be780dcd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f1f2cf0d93d00cf062566fdc7d8dea433cc1c8df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240587"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;代理名称&gt; 代理安全性
   使用“\<代理名称> 代理安全性”页，你可以指定用来运行分发代理（对于事务复制和快照复制）或合并代理（对于合并复制）的帐户，并与复制拓扑中的计算机建立连接。 有关代理要求的权限及复制安全的最佳实践的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全性最佳做法](security/replication-security-best-practices.md)。  

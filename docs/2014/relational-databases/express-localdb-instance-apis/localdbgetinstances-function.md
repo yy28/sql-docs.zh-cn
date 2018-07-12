@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetInstances 函数 |Microsoft 文档
+title: LocalDBGetInstances 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 054a5da018b0702da0851c0bc29eda6297876724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 94dba6bd5c8900d1010b4d9e7f78402c3c9b2e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258693"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函数
   返回具有给定版本的所有 SQL Server Express LocalDB 实例。  
@@ -76,7 +76,7 @@ HRESULT LocalDBGetInstances(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>Remarks  
- 使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  

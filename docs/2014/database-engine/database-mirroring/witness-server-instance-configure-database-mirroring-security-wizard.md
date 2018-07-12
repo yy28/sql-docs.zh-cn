@@ -5,29 +5,28 @@ ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configdbmsecurwiz.witnsrvr.f1
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e067aae5e0fd22cd2c7ffc55cab4f9e50791927
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5e6def053b7480c3c35c8cdc81710ff4cfc1d196
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151010"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>见证服务器实例（配置数据库镜像安全向导）
   对于作为会话的见证服务器的服务器实例，使用此页可以指定有关该服务器实例的信息。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均未提供见证服务器实例。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均未提供见证服务器实例。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  **使用 SQL Server Management Studio 配置数据库镜像**  
   

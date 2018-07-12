@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5c3ace1e9e4cb25fde4d836bc15ad9f30eee3e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e534aea75ef51802db343765ad0ab00b98007336
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210677"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
   初始化指定的报表服务实例。  
@@ -64,7 +64,7 @@ public void InitializeReportServer(string InstallationID,
   
  必须对已能访问安全信息的报表服务器调用 *InitializeReportServer* 方法，以便此方法可以解密加密密钥。 然后，所产生的已加密的加密密钥将存储在报表服务器数据库中。  
   
- 如果报表服务器的[IsInitialized](configurationsetting-property-isinitialized.md)属性设置为`true`当调用 InitializeReportServer 方法时，方法会成功返回而不会尝试加密密钥进行加密。  
+ 如果报表服务器[IsInitialized](configurationsetting-property-isinitialized.md)属性设置为`true`调用 InitializeReportServer 方法时，成功返回，而无需尝试加密密钥进行加密。  
   
 ## <a name="requirements"></a>要求  
  **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

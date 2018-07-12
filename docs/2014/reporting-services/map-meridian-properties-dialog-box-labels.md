@@ -1,5 +1,5 @@
 ---
-title: 地图经线属性对话框，标签 |Microsoft 文档
+title: 地图经线属性对话框，标签 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aba651eed623304f977a548a18537c6fdd5c14cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163878"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>“地图经线属性”对话框 ->“标签”
-  使用**MapMeridian 属性**对话框可更改垂直网格在地图视区中的标签选项。 根据视区的指定坐标系统，经线表示以下值之一：  
+  使用**MapMeridian 属性**对话框可以更改垂直网格在地图视区中的标签选项。 根据视区的指定坐标系统，经线表示以下值之一：  
   
 -   **平面数据**： Y 坐标。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36027876"
  单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
   
 ## <a name="options"></a>“常规”  
- **间隔**  
+ **时间间隔**  
  键入以度为单位的整数值，指定经线之间的间隔。 默认情况下，选择 **“自动”** 。 **“自动”** 表示值由空间数据自动决定。  
   
  **显示标签**  

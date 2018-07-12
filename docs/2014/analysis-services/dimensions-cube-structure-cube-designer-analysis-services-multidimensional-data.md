@@ -1,5 +1,5 @@
 ---
-title: 维度 （多维数据集结构选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 维度 （多维数据集结构选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: baa3754ed3fe72c19324ae830edf5c2e46a218a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149158"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>维度（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“维度”** 窗格，在多维数据集设计器的 **“多维数据集结构”** 选项卡上查看和编辑多维数据集维度（包括层次结构和属性）。  
@@ -30,12 +30,12 @@ ms.locfileid: "36028684"
  **层次结构**  
  单击此项可以显示可用的多维数据集维度及其相关联的多维数据集层次结构。  
   
- 展开多维数据集维度，然后选择**编辑\<维度 >** 来显示维度设计器和编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展开一个多维数据集维度，选择**编辑\<维度 >** 显示维度设计器和编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
   
  **属性**  
  单击此项可以显示可用的多维数据集维度及其相关联的多维数据集属性。  
   
- 展开多维数据集维度，然后选择**编辑\<维度 >** 来显示维度设计器和编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展开一个多维数据集维度，选择**编辑\<维度 >** 显示维度设计器和编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="context-menu"></a>上下文菜单  
  右键单击“维度”窗格，可以从所显示的上下文菜单中访问以下选项：  

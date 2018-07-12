@@ -1,35 +1,34 @@
 ---
-title: Reporting Services 与 AlwaysOn 可用性组 (SQL Server) |Microsoft 文档
+title: Reporting Services 与 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ec7c724049ad6ab85b72f2dee44ebcad0bf5ed07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153118"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
   本主题包含有关配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以便用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](AG) 的信息。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三种方案为用于报表数据源的数据库、报表服务器数据库和报表设计。 这三种方案支持的功能和所需的配置各不相同。  
   
  将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源的一个重要好处是利用可读的辅助副本作为报表数据源，同时辅助副本为主数据库提供故障转移功能。  
   
- 有关一般信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[适用的 SQL Server 2012 的 AlwaysOn 常见问题 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
+ 有关一般信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[SQL Server 2012 的 AlwaysOn 常见问题 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
   
    
   
@@ -58,7 +57,7 @@ ms.locfileid: "36028652"
   
  连接字符串还可以包含新的 AlwaysOn 连接属性，这些属性配置报表查询请求以将辅助副本用于只读报表。 将辅助副本用于报表请求将减少读-写主副本上的负载。 下图显示包含三个副本 AG 配置的示例，其中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源连接字符串已使用 ApplicationIntent=ReadOnly 配置。 在此示例中，将报表查询请求发送到辅助副本而非主副本。  
   
- ![SSRS 数据源使用可用性组组](../../media/rs-alwayson-basic.gif "SSRS 数据源使用可用性组的组")  
+ ![使用 AG 组的 SSRS 数据源](../../media/rs-alwayson-basic.gif "使用 AG 组的 SSRS 数据源")  
   
  以下是示例连接字符串，其中 [AvailabilityGroupListenerName] 为创建副本时配置的 **侦听器 DNS 名称** ：  
   

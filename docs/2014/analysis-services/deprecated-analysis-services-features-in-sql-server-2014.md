@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 中不推荐使用的 Analysis Services 功能 |Microsoft 文档
+title: SQL Server 2014 中不推荐使用的 Analysis Services 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
 - SSAS, backward compatibility
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deprecated features [Analysis Services]
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49a65a9ca1684a7bcec7b5f7f1d19d38b01f13d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e49169f4fd0264302feb35a7315fc527999c568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259583"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 Analysis Services 功能
   本主题介绍 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -47,7 +47,7 @@ ms.locfileid: "36018741"
 |--------------|------------------------|-----------------|  
 |多维模型|远程分区|无。 改用本地分区。 请参阅[创建和管理本地分区&#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)有关详细信息。|  
 |多维模型|远程链接的度量值组|远程链接的度量值组是使用远程服务器上的数据源的链接度量值组。 将远程数据源用于链接的度量值组计划未来不再使用。<br /><br /> 此功能没有替代功能。 我们建议改用本地链接的度量值组。 请参阅[链接度量值组](multidimensional-models/linked-measure-groups.md)有关详细信息。|  
-|多维模型|维度写回|无。 如果您需要写回功能，请使用分区写回。 请参阅[Set Partition Writeback](multidimensional-models/set-partition-writeback.md)有关详细信息。|  
+|多维模型|维度写回|无。 如果您需要写回功能，请使用分区写回。 请参阅[设置分区写回](multidimensional-models/set-partition-writeback.md)有关详细信息。|  
 |多维模型|链接的维度|无。 请考虑将维度复制到其他模型而非链接到另一模型中的某个维度。|  
 |MDX|Non_Empty_Behavior 属性|无。 创建计算成员时，错误设置此属性会增加返回无效结果的可能性。 OLAP 引擎的近期优化改善了对稀疏数据集的操作，使得此属性的相关性更小。|  
   

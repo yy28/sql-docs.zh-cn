@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
 - administrator connections [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8b73b7a7c097285d242def37e9b77c87c2723f57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209817"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为管理员提供了一种特殊的诊断连接，以供在无法与服务器建立标准连接时使用。 即使在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不响应标准连接请求时，管理员也可以使用此诊断连接访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便执行诊断查询并解决问题。  
@@ -47,7 +47,7 @@ ms.locfileid: "36028200"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 角色的成员可以使用 DAC 进行连接。  
   
- 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 你还可以连接前缀`admin:`格式中的实例名称到**sqlcmd-Sadmin: * * * < 实例名称 >。* 你还可以启动从 DAC[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]通过连接到的查询编辑器`admin:` \<* instance_name * >。  
+ 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 你还可以连接前缀`admin:`格式的实例名**sqlcmd-Sadmin: * * * < 实例名称 >。* 此外可以启动从 DAC[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]通过连接到查询编辑器`admin:` \<* instance_name * >。  
   
 ## <a name="restrictions"></a>限制  
  由于 DAC 仅用于在极少数情况下诊断服务器问题，因此对连接有一些限制：  

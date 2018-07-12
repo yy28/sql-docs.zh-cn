@@ -1,5 +1,5 @@
 ---
-title: XML for Analysis 架构行集 |Microsoft 文档
+title: XML for Analysis 架构行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391f3ab14aef3680b9590e73c5bc94cc2e13b3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c8125b3543e6f3c088ad8b7ae7dd5952d52df26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159268"
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 架构行集
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口包括返回有关服务器状态、活动和对象的元数据的多个架构行集。 如果要开发的客户端应用程序连接到结构和特征可变的 Analysis Services 模型，则需要检索元数据。  
@@ -75,11 +75,11 @@ ms.locfileid: "36026878"
 |[DISCOVER_TRANSACTIONS 行集](discover-transactions-rowset.md)|返回系统上当前挂起的一组事务。|  
 |[DISCOVER_XML_METADATA 行集](discover-xml-metadata-rowset.md)|返回描述请求的对象的 XML 文档。|  
   
- <sup>1</sup>此处列出的所有架构行集都支持的 MSOLAP 数据源提供程序为[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供程序。  
+ <sup>1</sup> MSOLAP 数据源提供程序支持此处列出的所有架构行集[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 访问接口。  
   
 ## <a name="see-also"></a>请参阅  
- [使用 Analysis Services 中的 XMLA 进行开发](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [使用动态管理视图&#40;Dmv&#41;监视 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [在 Analysis Services 中使用 XMLA 开发](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
+ [使用动态管理视图&#40;Dmv&#41;若要监视 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [从分析数据源检索元数据](../../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

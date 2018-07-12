@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 58837a63969baff47ff79bcebb78b6dd24deb31e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ff2df6e300c3c422215f459cf258225632bd87eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182736"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server 代理中运行 Windows PowerShell 步骤
   使用 SQL Server 代理可以在计划时间运行 SQL Server PowerShell 脚本。  
@@ -33,7 +33,7 @@ ms.locfileid: "36026781"
   
 1.  使用 PowerShell 作业步骤以便让 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理子系统运行 `sqlps` 实用工具，该实用工具将启动 PowerShell 2.0 并导入 `sqlps` 模块。  
   
-2.  使用命令提示符作业步骤以便运行 PowerShell.exe，并且指定导入的脚本`sqlps`模块。  
+2.  使用命令提示作业步骤以便运行 PowerShell.exe，并且指定导入的脚本`sqlps`模块。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
   

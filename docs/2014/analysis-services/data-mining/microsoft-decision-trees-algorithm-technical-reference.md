@@ -1,5 +1,5 @@
 ---
-title: Microsoft 决策树算法技术参考 |Microsoft 文档
+title: Microsoft 决策树算法技术参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183404"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
@@ -187,7 +187,7 @@ ms.locfileid: "36027844"
   
  您无需指定连续数值数据列表示回归量。 即使不对列设置 REGRESSOR 标志， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法也会自动将列用作潜在回归量，并会将数据集分区成具有一定意义的模式的区域。  
   
- 您可以使用 FORCE_REGRESSOR 参数来确保算法将使用某一特定回归量。 此参数只可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法。 当你设置建模标志时，该算法将尝试查找窗体的回归等式 * C1 + b\*C2 +...以适合的树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
+ 您可以使用 FORCE_REGRESSOR 参数来确保算法将使用某一特定回归量。 此参数只可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法。 如果设置建模标志，该算法将尝试查找窗体的回归等式 * C1 + b\*C2 +...以适合树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
   
  例如，如果要将 **Income** 用作属性来预测客户的购买行为，并对列设置 REGRESSOR 建模标志，则算法将会先通过使用标准回归公式来尝试拟合 **Income** 值。 如果偏差过大，则会放弃回归公式，并根据其他属性对树进行拆分。 拆分完毕后，决策树算法将尝试拟合每个分支中的 Income 的回归量。  
   

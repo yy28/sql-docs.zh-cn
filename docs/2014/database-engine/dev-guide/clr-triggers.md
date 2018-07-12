@@ -1,5 +1,5 @@
 ---
-title: CLR 触发器 |Microsoft 文档
+title: CLR 触发器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2f0d4d3c7dbe6ed46e169645de057492d55c42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160988"
 ---
 # <a name="clr-triggers"></a>CLR 触发器
   由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 集成，因此，您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 语言来创建 CLR 触发器。 本部分包含通过 CLR 集成实现的触发器的特定信息。 有关触发器的完整讨论，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "36027777"
   
 -   访问有关执行 DDL 语句所影响的数据库对象的信息。  
   
- 这些功能采用查询语言在内部提供，或者由 `SqlTriggerContext` 类提供。 有关 CLR 集成和托管代码之间进行选择的优势的信息和[!INCLUDE[tsql](../../includes/tsql-md.md)]，请参阅[CLR 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+ 这些功能采用查询语言在内部提供，或者由 `SqlTriggerContext` 类提供。 有关优点的 CLR 集成和托管代码之间进行选择并[!INCLUDE[tsql](../../includes/tsql-md.md)]，请参阅[CLR 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="using-the-sqltriggercontext-class"></a>使用 SqlTriggerContext 类  
  `SqlTriggerContext` 类不能公开构造，只能通过访问 CLR 触发器主体中的 `SqlContext.TriggerContext` 属性获取。 通过调用 `SqlTriggerContext` 属性可以从活动的 `SqlContext` 中获取 `SqlContext.TriggerContext` 类：  
@@ -76,10 +76,10 @@ ms.locfileid: "36027777"
   
 -   对于 DDL 触发器，可能的 TriggerAction 值的列表要长得多。 有关详细信息，请参阅 .NET Framework SDK 中的“TriggerAction 枚举”。  
   
-### <a name="using-the-inserted-and-deleted-tables"></a>使用插入的和删除表  
- DML 触发器语句中使用两个特殊的表：**插入**表和**删除**表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件；但是，不能直接更改表中的数据。  
+### <a name="using-the-inserted-and-deleted-tables"></a>使用插入和删除表  
+ DML 触发器语句使用两个特殊的表：**插入**表和**删除**表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件；但是，不能直接更改表中的数据。  
   
- CLR 触发器可以访问**插入**和**删除**通过 CLR 进程内提供程序的表。 这是通过从 SqlContext 对象获取 `SqlCommand` 对象来完成的。 例如：  
+ CLR 触发器可以访问**插入**并**删除**通过 CLR 进程内提供程序的表。 这是通过从 SqlContext 对象获取 `SqlCommand` 对象来完成的。 例如：  
   
  C#  
   
@@ -485,7 +485,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]创建中的触发器的语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如下，并假定程序集**SQLCLRTest**在当前已注册[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建触发器的语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如下所示，并且假定程序集**SQLCLRTest**在当前已注册[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
   
 ```  
 CREATE TRIGGER EmailAudit  

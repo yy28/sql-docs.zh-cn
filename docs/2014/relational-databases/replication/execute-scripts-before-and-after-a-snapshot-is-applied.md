@@ -1,5 +1,5 @@
 ---
-title: 应用快照之前和之后执行脚本 (SQL Server Management Studio) |Microsoft 文档
+title: 应用快照之前和之后执行脚本 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], scripts
 - scripts [SQL Server replication], snapshots
 - snapshot replication [SQL Server], scripts
 ms.assetid: b7bb1e4c-5b48-4bb1-9dc8-47c911f2cc82
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1e22987419706c6449ca7dd501d1ee26f43aa14a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46591477bfa12e7439dd5802f94ee15b14dc7f1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156128"
 ---
 # <a name="execute-scripts-before-and-after-a-snapshot-is-applied-sql-server-management-studio"></a>在应用快照之前和之后执行脚本 (SQL Server Management Studio)
   在“发布属性 - \<发布>”对话框的“快照”页上，指定在应用快照前后执行的可选脚本。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)。  

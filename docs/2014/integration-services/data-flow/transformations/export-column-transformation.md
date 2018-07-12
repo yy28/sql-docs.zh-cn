@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exportcolumntrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 713679211439ba9c91aa83c84f21a17cc4e77e0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c96b38988bdeeb47c22deed62d54d5bf0922963e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149018"
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  

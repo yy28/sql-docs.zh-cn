@@ -1,5 +1,5 @@
 ---
-title: 指定带批注的映射架构中属的 Updategram (SQLXML 4.0) |Microsoft 文档
+title: 在 Updategram (SQLXML 4.0) 中指定带批注的映射架构 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,36 +22,36 @@ helpviewer_keywords:
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bba718cbb6fd94fc6e50fda3fa423736aeb7a03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8a0b51a249b42dccd2ba6b3838720ed9fd68badc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240487"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
-  本主题说明如何使用在 updategram 中指定的映射架构（XSD 或 XDR）来处理更新。 在属的 updategram，您可以提供用于将元素和属的 updategram 中的属性映射到表和列中的带批注的映射架构的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定映射架构时，updategram 中指定的元素和属性名称必须映射为该映射架构的元素和属性。  
+  本主题说明如何使用在 updategram 中指定的映射架构（XSD 或 XDR）来处理更新。 在 updategram 中，您可以使用映射到表和列中的元素和属性在 updategram 中的带批注的映射架构的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定映射架构时，updategram 中指定的元素和属性名称必须映射为该映射架构的元素和属性。  
   
- 若要指定的映射架构，你可以使用`mapping-schema`属性**\<同步 >** 元素。 以下示例显示两个 updategram：其中一个使用简单映射架构，而另一个使用较复杂的架构。  
+ 若要指定映射架构，请使用`mapping-schema`的属性**\<同步 >** 元素。 以下示例显示两个 updategram：其中一个使用简单映射架构，而另一个使用较复杂的架构。  
   
 > [!NOTE]  
->  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[简介批注 XSD 架构&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 有关使用 XDR 的旧版应用程序，请参阅[批注 XDR 架构&#40;SQLXML 4.0 中弃用&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[带批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 有关使用 XDR 的旧版应用程序，请参阅[带批注的 XDR 架构&#40;在 SQLXML 4.0 中不推荐使用&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="dealing-with-data-types"></a>处理数据类型  
- 如果架构指定`image`， `binary`，或`varbinary`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型 (通过使用`sql:datatype`)，且未指定 XML 数据类型，含 updategram 假定 XML 数据类型是`binary base 64`。 如果数据类型为 `bin.base`，则必须显式指定类型（`dt:type=bin.base` 或 `type="xsd:hexBinary"`）。  
+ 如果架构指定了`image`， `binary`，或`varbinary`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型 (通过使用`sql:datatype`)，且未指定 XML 数据类型，updategram 则假定 XML 数据类型是`binary base 64`。 如果数据类型为 `bin.base`，则必须显式指定类型（`dt:type=bin.base` 或 `type="xsd:hexBinary"`）。  
   
  如果架构指定了 `dateTime`、`date` 或 `time` XSD 数据类型，则还必须使用 `sql:datatype="dateTime"` 指定对应的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。  
   
- 处理的参数时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`money`类型，则必须显式指定`sql:datatype="money"`映射架构中的相应节点。  
+ 处理的参数时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`money`类型，则必须显式指定`sql:datatype="money"`映射架构中的相应节点上。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足中指定的要求[要求运行 SQLXML 示例](../../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足中指定的要求[运行 SQLXML 示例的要求](../../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 创建采用简单映射架构的 Updategram  
- 下面的 XSD 架构 (SampleSchema.xml) 是映射的映射架构**\<客户 >** 到 Sales.Customer 表的元素：  
+ 以下 XSD 架构 (SampleSchema.xml) 是映射的映射架构**\<客户 >** 到 Sales.Customer 表的元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -69,7 +69,7 @@ ms.locfileid: "36025882"
 </xsd:schema>  
 ```  
   
- 以下 updategram 在 Sales.Customer 表中插入一条记录，并使用前面的映射架构将此数据正确映射到表。 请注意属的 updategram 使用相同的元素名， **\<客户 >**，如架构中定义。 这是强制性的，因为 updategram 会指定特定的架构。  
+ 以下 updategram 在 Sales.Customer 表中插入一条记录，并使用前面的映射架构将此数据正确映射到表。 请注意，updategram 使用相同的元素名称， **\<客户 >**，如在架构中定义。 这是强制性的，因为 updategram 会指定特定的架构。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
@@ -98,9 +98,9 @@ ms.locfileid: "36025882"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -118,9 +118,9 @@ ms.locfileid: "36025882"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用在映射架构中指定的父子关系插入记录  
- 架构元素可以相互关联。 **\<Sql:relationship >** 元素指定的架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
+ 架构元素可以相互关联。 **\<Sql: relationship >** 元素指定架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
   
- 下面的映射架构 (SampleSchema.xml) 包含两个元素， **\<顺序 >** 和 **\<OD >**:  
+ 以下映射架构 (SampleSchema.xml) 由两个元素组成**\<顺序 >** 并 **\<OD >**:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -159,7 +159,7 @@ ms.locfileid: "36025882"
 </xsd:schema>  
 ```  
   
- 以下属的 updategram 使用此 XSD 架构来添加新的订单详细信息记录 (  **\<OD >** 中的元素**\<后 >** 块) 的顺序 43860。 `mapping-schema` 属性用于指定 updategram 中的映射架构。  
+ 以下 updategram 使用此 XSD 架构添加新的订单详细记录 (  **\<OD >** 中的元素**\<后 >** 块) 为订单 43860。 `mapping-schema` 属性用于指定 updategram 中的映射架构。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -191,9 +191,9 @@ ms.locfileid: "36025882"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -235,9 +235,9 @@ ms.locfileid: "36025882"
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. 使用在 XSD 架构中指定的父子关系和反转批注插入记录  
- 此示例说明 updategram 逻辑如何使用在 XSD 中指定的父子关系来处理更新以及如何使用 `inverse` 批注。 有关详细信息`inverse`批注，请参阅[sql:relationship 上指定 sql:inverse 属性&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
+ 此示例说明 updategram 逻辑如何使用在 XSD 中指定的父子关系来处理更新以及如何使用 `inverse` 批注。 有关详细信息`inverse`批注，请参阅[relationship 上指定 sql: inverse 属性&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
- 此示例假定以下表位于中**tempdb**数据库：  
+ 下表是在此示例假定**tempdb**数据库：  
   
 -   `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 为主键。  
   
@@ -278,11 +278,11 @@ ms.locfileid: "36025882"
 </xsd:schema>  
 ```  
   
- 在此示例中的 XSD 架构存在**\<客户 >** 和**\<顺序 >** 元素，并指定之间的两个元素的父-子关系。 它标识**\<顺序 >** 与父元素和**\<客户 >** 为子元素。  
+ 在此示例中，XSD 架构包含**\<客户 >** 并**\<顺序 >** 元素，并指定两个元素之间的父-子关系。 它标识**\<顺序 >** 与父元素和**\<客户 >** 作为子元素。  
   
- updategram 处理逻辑使用父子关系相关信息来确定将记录插入到表中的顺序。 在此示例中，属的 updategram 逻辑首先尝试将一个记录插入 Ord 表 (因为**\<顺序 >** 是父级)，然后尝试将一个记录插入 Cust 表 (因为 **\<客户 >** 的子级)。 但是，鉴于数据库表架构中包含的主键/外键信息，此插入操作将导致在数据库中的外键冲突，继而导致插入失败。  
+ updategram 处理逻辑使用父子关系相关信息来确定将记录插入到表中的顺序。 在此示例中，updategram 逻辑首先尝试向 Ord 表插入记录 (因为**\<顺序 >** 父级)，然后尝试向 Cust 表插入记录 (因为 **\<客户 >** 的子级)。 但是，鉴于数据库表架构中包含的主键/外键信息，此插入操作将导致在数据库中的外键冲突，继而导致插入失败。  
   
- 若要指示要在更新操作时，反转的父-子关系的属的 updategram 逻辑`inverse`上指定批注**\<关系 >** 元素。 这会导致首先向 Cust 表添加记录，然后再向 Ord 表添加记录，并且该操作将成功。  
+ 若要指示 updategram 逻辑在更新操作期间反转父子关系`inverse`指定批注**\<关系 >** 元素。 这会导致首先向 Cust 表添加记录，然后再向 Ord 表添加记录，并且该操作将成功。  
   
  以下 updategram 使用指定的 XSD 架构向 Ord 表插入订单 (OrderID=2)，并向 Cust 表插入客户 (CustomerID='AAAAA')：  
   
@@ -301,7 +301,7 @@ ms.locfileid: "36025882"
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
-1.  创建这些表**tempdb**数据库：  
+1.  创建这些表中的**tempdb**数据库：  
   
     ```  
     USE tempdb  
@@ -325,9 +325,9 @@ ms.locfileid: "36025882"
   
 4.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

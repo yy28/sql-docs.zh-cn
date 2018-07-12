@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_PERFORMANCE_COUNTERS 行集 |Microsoft 文档
+title: DISCOVER_PERFORMANCE_COUNTERS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e3731ae505a755bd68410ee3228a1bd13579bc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a17c8f404d99d4b701eafb536aaa595a4039bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151208"
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 行集
   返回一个或多个性能计数器的值。 不支持返回有关一段时间内的使用情况的信息（如每秒的磁盘读取数和 CPU 使用率的百分比）的计数器。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_PERFORMANCE_COUNTERS`行集包含以下各列。  
+ `DISCOVER_PERFORMANCE_COUNTERS`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

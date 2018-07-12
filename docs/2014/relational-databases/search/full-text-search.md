@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158018"
 ---
 # <a name="full-text-search"></a>全文搜索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。 在可以对某一表运行全文查询之前，数据库管理员必须对该表创建全文索引。 全文索引包括表中一个或多个基于字符的列。 这些列可以具有任何以下数据类型： `char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`，或`varbinary(max)`和 FILESTREAM。 每个全文索引都对表中的一个或多个列创建索引，并且每个列都可以使用特定语言。  
@@ -83,7 +82,7 @@ ms.locfileid: "36028547"
   
  [本主题内容](#top)  
   
-##  <a name="architecture"></a> 组件和全文搜索体系结构  
+##  <a name="architecture"></a> 组件和体系结构的全文搜索  
  全文搜索体系结构包括以下进程：  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程 (sqlservr.exe)。  
@@ -135,10 +134,10 @@ ms.locfileid: "36028547"
 ##  <a name="processing"></a> 全文搜索处理  
  全文搜索由全文引擎提供支持。 全文引擎有两个角色：索引支持和查询支持。  
   
-###  <a name="indexing"></a> 全文索引进程  
+###  <a name="indexing"></a> 全文索引过程  
  全文填充（也称为爬网）开始后，全文引擎会将大批数据存入内存并通知筛选器后台程序宿主。 宿主对数据进行筛选和断字，并将转换的数据转换为倒排词列表。 然后，全文搜索从词列表中提取转换的数据，对其进行处理以删除非索引字，然后将某一批次的词列表永久保存到一个或多个倒排索引中。  
   
- 在编制索引中存储的数据时`varbinary(max)`或`image`列中，筛选器，用于实现**IFilter**接口，基于该数据的指定的文件格式的提取文本 (例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)。 在某些情况下，筛选器组件要求`varbinary(max)`，或`image`数据写出到 filterdata 文件夹中，而不是其存入内存。  
+ 索引中存储的数据时`varbinary(max)`或`image`列中，筛选器，实现**IFilter**接口，该数据的指定的文件格式提取文本 (例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)。 在某些情况下，筛选器组件要求`varbinary(max)`，或`image`数据写入 filterdata 文件夹中，而不是其存入内存。  
   
  在处理过程中，通过断字符将收集到的文本数据分隔成各个单独的标记或关键字。 用于词汇切分的语言将在列级指定，或者也可以通过筛选器组件在 `varbinary(max)`、`image` 或 `xml` 数据内标识。  
   

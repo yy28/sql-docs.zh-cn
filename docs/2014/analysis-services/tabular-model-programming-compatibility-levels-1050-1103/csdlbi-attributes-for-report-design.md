@@ -1,5 +1,5 @@
 ---
-title: 报表设计的 CSDLBI 属性 |Microsoft 文档
+title: 用于报表设计的 CSDLBI 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259383"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>用于报表设计的 CSDLBI 属性
   本节介绍用于表格建模的 CSDL 扩展插件中将会影响 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查询设计的属性。  
   
 ## <a name="model-attributes"></a>模型属性  
- 子元素的 CSDL 定义了这些属性[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)元素。  
+ 这些属性定义的子元素的 CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)元素。  
   
 |属性名称|数据类型|Description|  
 |--------------------|---------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "36026422"
 |`DefaultLocation`|MemberRef|对其值表示与实体实例相关联的默认位置的字段的引用。 如果省略，则使用实体中的第一个位置字段（如果有）。|  
   
 ## <a name="field-attributes"></a>字段属性  
- 这些属性定义的 CSDL 属性的子元素上或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)元素。  
+ CSDL 属性的子元素定义了这些属性或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)元素。  
   
 |属性名称|数据类型|Description|  
 |--------------------|---------------|-----------------|  
@@ -62,7 +62,7 @@ ms.locfileid: "36026422"
 |`DisplayFolder`|文本|在其中显示此字段的文件夹的名称（完整路径）。 如果省略，则字段显示在模型根中。|  
 |`ContextualNameRule`|Enum|一个值，该值指示是否以及如何基于使用其属性的上下文来修改属性名称。 可能的值为： `None`， `Role`， `Merge`。|  
 |`Alignment`|Enum|一个值，该值指示在表格显示中应该如何对齐字段值。 可能的值有：`Default`、`Center`、`Left`、`Right`。 如果省略，则默认值将基于字段的数据类型确定对齐方式。|  
-|`FormatString`|文本|一个 .NET 格式字符串，指示默认应该如何设置字段值的格式。 如果省略，则假定采用以下格式：<br /><br /> -Datetime 字段： 区域的短日期或"d"<br />的浮点字段和整数字段的默认聚合函数： 区域数或"n"<br />的无默认值为整数聚合函数： 区域的十进制数或"d"<br /><br /> 对于所有其他类型的字段，没有任何格式字符串适用。|  
+|`FormatString`|文本|一个 .NET 格式字符串，指示默认应该如何设置字段值的格式。 如果省略，则假定采用以下格式：<br /><br /> -Datetime 字段： 区域短日期或"d"<br />的浮点字段和整型字段默认值聚合函数： 区域数字或"n"<br />-无默认值整数聚合函数： 区域小数或"d"<br /><br /> 对于所有其他类型的字段，没有任何格式字符串适用。|  
 |`Units`|文本|适用于字段值以便表示单位的符号。 如果省略，则假定单位未知。|  
 |`Width`|Integer|应为在表格显示中显示字段值而保留的字符的首选宽度。 如果省略，则默认宽度将基于字段的数据类型。|  
 |`SortDirection`|Enum|指示通常如何对字段值进行排序的一个值。 可能的值有：`Default`、`Ascending`、`Descending`。 如果省略，则分配排序方向的默认值将基于字段的数据类型。|  

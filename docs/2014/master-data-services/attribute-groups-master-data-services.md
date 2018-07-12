@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c158f4ac41d4d30cf1d53adc2ad07d10d55900fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c9fc5570be58590622d2638d23a8cfa0c9288205
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277363"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性组 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，属性组帮助组织实体中的属性。 如果实体具有很多属性，属性组可以改进实体在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中显示的方式。  

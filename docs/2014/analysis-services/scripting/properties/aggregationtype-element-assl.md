@@ -1,5 +1,5 @@
 ---
-title: AggregationType 元素 (ASSL) |Microsoft 文档
+title: AggregationType 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationType element
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2241c85d9cc83e4cf48affacef10021eec7bc94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7c95f9566f483ec7a047ceedd074237f9ff5f7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183214"
 ---
 # <a name="aggregationtype-element-assl"></a>AggregationType 元素 (ASSL)
-  定义的由存储的聚合类型[分区](../objects/partition-element-assl.md)元素。  
+  定义存储的聚合类型[分区](../objects/partition-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36026641"
 |-----------|-----------------|  
 |*IndexedView*|聚合存储在索引视图中。|  
 |*表*|聚合存储在表中。|  
-|*用户定义*|聚合是用户定义的。|  
+|*UserDefined*|聚合是用户定义的。|  
   
- 对应于的允许值为枚举`AggregationType`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AggregationInstance>。  
+ 与允许的值相对应的枚举`AggregationType`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AggregationInstance>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

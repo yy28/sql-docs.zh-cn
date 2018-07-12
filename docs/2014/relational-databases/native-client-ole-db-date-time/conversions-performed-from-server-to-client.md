@@ -1,34 +1,32 @@
 ---
-title: 转换执行从服务器到客户端 |Microsoft 文档
+title: 转换执行从服务器到客户端 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9898b4d4bfd811076ca8eb93aba1679ed3c96140
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017534"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430856"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
   本主题说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="conversions"></a>转换  
- 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果已调用 ICommandWithParameters::SetParameterInfo 和中指定的类型*pwszDataSourceType*不在服务器上，隐式转换的实际类型将由服务器执行的匹配并返回到客户端的类型将与通过 ICommandWithParameters::SetParameterInfo 指定的类型匹配。 如果服务器的转换规则与本主题中介绍的规则不同，则可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
+ 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在调用 icommandwithparameters:: Setparameterinfo 和中指定的类型*pwszDataSourceType*不的匹配将由服务器执行在服务器上，隐式转换的实际类型并返回到客户端的类型将匹配 icommandwithparameters:: Setparameterinfo 通过指定的类型。 如果服务器的转换规则与本主题中介绍的规则不同，则可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
   
 |目标 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -51,7 +49,7 @@ ms.locfileid: "36017534"
 |符号|含义|  
 |------------|-------------|  
 |“确定”|不需要任何转换。|  
-|-|不支持任何转换。 如果调用 IAccessor::CreateAccessor 时验证绑定，以返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
+|-|不支持任何转换。 如果调用 iaccessor:: Createaccessor 时验证绑定，在中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
 |@shouldalert|时间字段设置为零。|  
 |2|设置 DBSTATUS_E_CANTCONVERTVALUE。|  
 |3|时区设置为零。|  

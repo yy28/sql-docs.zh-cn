@@ -1,5 +1,5 @@
 ---
-title: 在表格模式下安装 Analysis Services |Microsoft 文档
+title: 在表格模式下安装 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f6fabd9129e3f3e1e07e813935f36e7c70c48072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b6ee555e975e89da584c0efab3fab8bb9f9429a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183444"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>在表格模式下安装 Analysis Services
   如果您要安装 Analysis Services 以便使用新增的表格建模功能，则必须在支持这种模型的服务器模式下安装 Analysis Services。 服务器是表格模式，在安装过程中配置。  
@@ -33,11 +33,11 @@ ms.locfileid: "36028246"
   
 1.  从安装程序的功能树中选择 **“Analysis Services”** 。  
   
-     ![安装程序功能树显示 Analsyis 服务](../../../sql-server/install/media/ssas-setupas.gif "显示 Analsyis 服务的安装程序功能树")  
+     ![显示 Analsyis Services 的安装程序功能树](../../../sql-server/install/media/ssas-setupas.gif "显示 Analsyis Services 的安装程序功能树")  
   
 2.  在 Analysis Services 配置页上，请务必选择**表格模式下**。  
   
-     ![使用 Analysis Services 配置选项的设置页](../../../sql-server/install/media/ssas-setupasconfig.gif "使用 Analysis Services 配置选项的设置页")  
+     ![使用 Analysis Services 配置选项的设置页面](../../../sql-server/install/media/ssas-setupasconfig.gif "与 Analysis Services 配置选项的安装程序页")  
   
  表格模式使用 xVelocity 内存中分析引擎 (VertiPaq)，该引擎是部署到 Analysis Services 的表格模型的默认存储器。 将表格模型解决方案部署到服务器之后，可以有选择性地配置表格解决方案，以便将 DirectQuery 磁盘存储作为受内存限制的存储的替代项。  
   
@@ -59,7 +59,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|这是默认值。 如果你未设置`ASSERVERMODE`，在多维服务器模式下安装了服务器。|  
+|MULTIDIMENSIONAL|这是默认值。 如果未设置`ASSERVERMODE`，在多维服务器模式下安装了服务器。|  
 |POWERPIVOT|该值是可选的。 实际上，如果设置 `ROLE` 参数，服务器模式就会自动设置为 1，从而使得 `ASSERVERMODE` 成为 PowerPivot for SharePoint 安装的可选项。 有关详细信息，请参阅[从命令提示符安装 PowerPivot](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)。|  
 |TABULAR|如果是在使用命令行安装程序在表格模式下安装 Analysis Services，则此值是必需的。|  
   

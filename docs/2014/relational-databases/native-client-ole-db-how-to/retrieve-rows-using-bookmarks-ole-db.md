@@ -1,13 +1,11 @@
 ---
-title: 使用书签 (OLE DB) 检索行 |Microsoft 文档
+title: 使用书签 (OLE DB) 检索行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - rows [OLE DB]
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 188ef2c9d9567bf188bff672736f7fea29b83a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f66ee5a77a93d51bc11f3c0cb77f6785598a94c5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024555"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411246"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
   使用者将绑定结构的 `dwFlag` 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 `IRowsetLocate::GetRowsAt` 方法提取行（起始行的位置为书签加上一个偏移量得到的位置）。  
@@ -48,9 +46,9 @@ ms.locfileid: "36024555"
   
  在该示例中，将从执行 SELECT 语句产生的结果集中检索第五行。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例需要 AdventureWorks 示例数据库中，您可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请更改连接字符串从"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.windows
 helpviewer_keywords:
 - Windows dialog box
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a5ca9a5b9c78289982bf80a5928127c648015670
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9bffc5cfc513ca5273df4ff0cc00fa52526d66ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210457"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Windows 对话框（Microsoft 文档资源管理器的帮助）
   使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”菜单上的 **Windows** 可以显示此对话框。  

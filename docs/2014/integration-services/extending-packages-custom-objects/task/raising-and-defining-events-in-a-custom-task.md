@@ -28,13 +28,13 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a657c8d88f93355e50e69dbcffa1edda33fcfddf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8424a0c38144dd26fadf0c0437064d541a3b5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155098"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>在自定义任务中引发和定义事件
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎提供了一组事件，这些事件提供验证和执行任务时任务进度的状态。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口用于定义这些事件，并且该接口可作为 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的参数提供给任务。  
@@ -48,7 +48,7 @@ ms.locfileid: "36123450"
   
  下面的代码示例演示自定义任务的 `InitializeTask` 方法，在该自定义任务中，创建了两个自定义事件并设置了其属性。 然后，将新事件添加到 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合。  
   
- 第一个自定义事件的事件名为 “**OnBeforeIncrement**”，说明为“**更新初始值后触发**”。 下一个参数为 `true` 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当*此*参数是`true`，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>对象创建的事件。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
+ 第一个自定义事件的事件名为 “**OnBeforeIncrement**”，说明为“**更新初始值后触发**”。 下一个参数为 `true` 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当*allowEventHandlers*参数是`true`，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>对象创建的事件。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -194,7 +194,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 事件处理程序](../../integration-services-ssis-event-handlers.md)   

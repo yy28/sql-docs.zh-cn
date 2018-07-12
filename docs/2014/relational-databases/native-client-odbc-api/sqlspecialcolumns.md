@@ -1,13 +1,11 @@
 ---
-title: SQLSpecialColumns |Microsoft 文档
+title: SQLSpecialColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,22 +14,22 @@ helpviewer_keywords:
 - SQLSpecialColumns function
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a324381f44a19866ebdeba6dac1c319c0d10224
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f1bc1cb10816f407bed89e65ccc5e8927c82442b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026766"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408022"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
-  当请求行标识符 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**任何请求之外 SQL_SCOPE_CURROW 范围，则返回空结果集 （没有任何数据行）。 生成的结果集指示仅在此作用域内这些列有效。  
+  请求行标识符 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**返回空结果集 （没有任何数据行） 的任何请求的除 sql_scope_currow 之外的作用域。 生成的结果集指示仅在此作用域内这些列有效。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将作为 SQL_PC_NOT_PSEUDO 标识的所有列。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将所有列都标识为 SQL_PC_NOT_PSEUDO。  
   
- **SQLSpecialColumns**可以执行对静态游标。 尝试执行**SQLSpecialColumns**上 SQL_SUCCESS_WITH_INFO，该值指示游标类型已更改可更新 （键集驱动或动态） 返回。  
+ **SQLSpecialColumns**可以对静态游标执行。 尝试执行**SQLSpecialColumns**上可更新 （由键集驱动或动态） 返回 sql_success_with_info 以指示游标类型已更改。  
   
 ## <a name="sqlspecialcolumns-support-for-enhanced-date-and-time-features"></a>SQLSpecialColumns 对日期和时间增强功能的支持  
  有关值的信息的列 DATA_TYPE、 TYPE_NAME、 COLUMN_SIZE、 BUFFER_LENGTH 和 DECIMAL_DIGTS 为日期/时间类型返回，请参阅[目录元数据](../native-client-odbc-date-time/metadata-catalog.md)。  

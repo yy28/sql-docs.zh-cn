@@ -1,13 +1,11 @@
 ---
-title: 检索结果集信息 (ODBC) |Microsoft 文档
+title: 检索结果集信息 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae6d8f1c5640ee0dc8f63b54a2117057b8f334e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a814a65419026dfb6e7901f2b49db2096c5da423
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025905"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409637"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>检索结果集信息 (ODBC)
     
@@ -37,7 +35,7 @@ ms.locfileid: "36025905"
   
      或  
   
-    -   调用[SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)若要获取特定的描述符信息结果列。  
+    -   调用[SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)来获取有关结果列的特定描述符信息。  
   
 ## <a name="see-also"></a>请参阅  
  [处理结果操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   

@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - logon triggers
 - login triggers
 helpviewer_keywords:
 - triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4467b8146a3842daaef11c5c9a67040b881c9f79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b42fdfa556a2e7a26a04dd85fd7740ca23d36967
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016561"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427196"
 ---
 # <a name="logon-triggers"></a>登录触发器
   登录触发器将为响应 LOGON 事件而激发存储过程。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例建立用户会话时将引发此事件。 登录触发器将在登录的身份验证阶段完成之后且用户会话实际建立之前激发。 因此，来自触发器内部且通常将到达用户的所有消息（例如错误消息和来自 PRINT 语句的消息）会传送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 如果身份验证失败，将不激发登录触发器。  

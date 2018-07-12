@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344fd0a9b2d3c21e6b046c128a5eae765f84d69f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e54e07700b7b3ec5ffe43943c6d25b76515fb3ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277473"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新建实例向导
   “新建实例”向导用于为 CDC 服务创建新实例。 您从 CDC 设计器控制台打开“创建 Oracle CDC 实例”向导。 您可以在“新建实例”向导中执行以下操作。  

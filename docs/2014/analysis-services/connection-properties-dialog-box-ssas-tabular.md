@@ -1,5 +1,5 @@
 ---
-title: 连接属性对话框 (SSAS-表格) |Microsoft 文档
+title: 连接属性对话框 (SSAS-表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.ConnectionProperties.F1
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5eee3a4fd0e915a875bcbac1d0215e435c10e04a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29871222a68b9babfb2abd5b2d477316c1d6ac34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157238"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>“连接属性”对话框（SSAS - 表格）
   使用此页可在 SQL Server Management Studio 中查看或修改表格模型数据库使用的数据源的连接属性。  

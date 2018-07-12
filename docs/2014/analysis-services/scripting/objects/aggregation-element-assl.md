@@ -1,5 +1,5 @@
 ---
-title: 聚合元素 (ASSL) |Microsoft 文档
+title: Aggregation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aggregation element
 ms.assetid: f37af388-b2b3-4234-a1d6-936ee9b7f2ae
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59f33b45653f614702b1472e57fe4464cf172b73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51e28a8435b2891cf623ea851824809606d83620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157188"
 ---
 # <a name="aggregation-element-assl"></a>Aggregation 元素 (ASSL)
-  定义为单个聚合[分区](partition-element-assl.md)元素。  
+  定义的单个聚合[分区](partition-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36123488"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[聚合](../collections/aggregations-element-assl.md)|  
-|子元素|[批注](../collections/annotations-element-assl.md)，[说明](../properties/description-element-assl.md)，[维度](../collections/dimensions-element-assl.md)， [ID](../properties/id-element-assl.md)，[名称](../properties/name-element-assl.md)|  
+|子元素|[批注](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)，[维度](../collections/dimensions-element-assl.md)， [ID](../properties/id-element-assl.md)，[名称](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Aggregation>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Aggregation>。  
   
 ## <a name="see-also"></a>请参阅  
  [分区元素&#40;ASSL&#41;](partition-element-assl.md)   

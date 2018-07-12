@@ -1,5 +1,5 @@
 ---
-title: Parameters 元素 (XMLA) |Microsoft 文档
+title: Parameters 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Parameters element
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63d50c1b57691a9b4cdb76adb9edaa202388d15e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 87836c6ca9f33c100b3ba10ba91379370e787773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158858"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 元素 (XMLA)
-  包含一套[参数](parameter-element-xmla.md)所使用的元素[执行](../xml-elements-methods-execute.md)方法。  
+  包含一系列[参数](parameter-element-xmla.md)所使用的元素[Execute](../xml-elements-methods-execute.md)方法。  
   
  **Namespace**：`urn:schemas-microsoft-com:xml-analysis`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36029310"
 |子元素|[参数](parameter-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 一些 XML Analysis (XMLA) 命令，如[过程](../xml-elements-commands/process-element-xmla.md)命令，也可以要求的其他信息。 `Parameters` 元素可提供一种机制，从而为 XMLA 命令提供附加信息，包括成块信息。  
+ 某些 XML for Analysis (XMLA) 命令，如[进程](../xml-elements-commands/process-element-xmla.md)命令，可能需要其他信息。 `Parameters` 元素可提供一种机制，从而为 XMLA 命令提供附加信息，包括成块信息。  
   
  如果 XMLA 命令不使用 `Parameters` 元素，则该元素可以在调用 `Execute` 方法时省略。  
   

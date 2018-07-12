@@ -1,5 +1,5 @@
 ---
-title: IMDEmbedded 接口 |Microsoft 文档
+title: IMDEmbedded 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157138"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 接口
   IMDEmbedded 接口是用于管理嵌入的 PowerPivot 数据库或表格模型数据库的公共接口。 此接口继承自 `IPersistStream` 接口。 此接口允许以下操作：  
@@ -37,14 +37,14 @@ ms.locfileid: "36123708"
   
 -   获取要保存嵌入的对象的流的估计的大小 （以字节为单位）。 从 `IPersistStream` 继承。  
   
--   验证自上次保存后是否已更改了嵌入式的数据库。 从 `IPersistStream` 继承。  
+-   验证嵌入的数据库上次保存以来是否发生更改。 从 `IPersistStream` 继承。  
   
 -   加载到本地或进程内引擎嵌入的数据库。 从 `IPersistStream` 继承。  
   
 -   将本地或进程内数据库保存到容器文档中的嵌入流。 从 `IPersistStream` 继承。  
   
 ## <a name="reference"></a>参考  
- 以下引用文档`IMDEmbedded`接口，如中提供**msmd.h**标头文件。  
+ 以下参考文档`IMDEmbedded`接口所述**msmd.h**标头文件。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>源文件：PXOEmbeddedData.idl  
   
@@ -320,7 +320,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>Description  
- 将本地或进程内数据库保存到容器文档中嵌入的流。 从 `IPersistStream` 继承。  
+ 将本地或进程内数据库保存到容器文档中嵌入流。 从 `IPersistStream` 继承。  
   
 #### <a name="parameters"></a>Parameters  
  *in_pStm*  

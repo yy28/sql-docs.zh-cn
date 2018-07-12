@@ -1,5 +1,5 @@
 ---
-title: 分类列 （数据挖掘） |Microsoft 文档
+title: 已分类列 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - STDEV column
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c00a3e1e85beebba351340a9cacad5100e96dff6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403ab773012d9e9370959bd7094db51f9785e8d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210337"
 ---
 # <a name="classified-columns-data-mining"></a>已分类列（数据挖掘）
   定义已分类列时，在挖掘结构中创建当前列和另一个列之间的关系。 指定为已分类列的挖掘结构列中的数据包含描述挖掘结构中另一个列的值的分类信息。  

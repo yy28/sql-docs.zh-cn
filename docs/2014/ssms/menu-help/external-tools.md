@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157488"
 ---
 # <a name="external-tools"></a>外部工具
   使用此对话框可以将外部工具（如 SQL Server 配置管理器或记事本）添加到“工具”菜单。 通过添加外部工具，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作的同时，便捷地启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，可以在“输出”窗口中显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
@@ -76,9 +76,9 @@ ms.locfileid: "36123337"
   
 2.  在“标题”框中，键入“SQL Server 配置管理器”。  
   
-3.  在**命令**框中，键入的路径[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台可执行文件，如 `C:\WINNT\system32\mmc.exe`  
+3.  在中**命令**框中，键入的路径[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台可执行文件，例如 `C:\WINNT\system32\mmc.exe`  
   
-4.  在**参数**框中，如键入.msc 文件的路径 `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  在中**自变量**框中，键入.msc 文件的路径类似于 `"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  查看“开始”菜单上 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 快捷方式的属性，即可确认相应文件在计算机上的位置。  

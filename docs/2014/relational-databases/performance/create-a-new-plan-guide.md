@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.designer.newplanguide.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 29d7fb37e59b0440051f7115745d5dabc084567a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d43e9e75b58123b1009c247d1435c71e94698fae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014280"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429876"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建计划指南。 计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，您需要指定要优化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
@@ -47,7 +46,7 @@ ms.locfileid: "36014280"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   sp_create_plan_guide 的参数必须以显示的顺序提供。 提供的参数的值时`sp_create_plan_guide`，必须显式指定名称的所有参数或全部都不。 例如，如果指定了 `@name =`，则也必须指定 `@stmt =`、`@type =` 等。 同样，如果`@name =`省略，并且只提供参数值，也必须省略其余的参数名称，并提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
+-   sp_create_plan_guide 的参数必须以显示的顺序提供。 提供的参数的值时`sp_create_plan_guide`，必须显式指定名称的所有参数或根本未。 例如，如果指定了 `@name =`，则也必须指定 `@stmt =`、`@type =` 等。 同样，如果`@name =`省略并仅提供参数值，也必须省略其余的参数名称，并提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
 -   您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
   

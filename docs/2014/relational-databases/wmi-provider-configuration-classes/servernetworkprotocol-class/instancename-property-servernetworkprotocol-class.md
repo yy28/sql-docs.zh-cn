@@ -1,5 +1,5 @@
 ---
-title: InstanceName 属性 （ServerNetworkProtocol 类） |Microsoft 文档
+title: InstanceName 属性 （ServerNetworkProtocol 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 932eeb4d4545a6a89580d4f3f9ef24481c37bd04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 074030b46cefbdd550702fc76789eb5acf83c121
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183904"
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>InstanceName 属性（ServerNetworkProtocol 类）
   获取的实例的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所引用的服务器网络协议。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ServerNetworkProtocol 类](servernetworkprotocol-class.md)对象，表示的实例所使用的网络协议[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个[ServerNetworkProtocol 类](servernetworkprotocol-class.md)对象，表示使用的实例的网络协议[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器网络协议引用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称的字符串值。  

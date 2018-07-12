@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c80d7ab755580bece61606c658c8603cd76c3b55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3a906560699ed6ebcd91c3e9561d0f2368a4f74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155368"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，您必须安装完 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后运行 DQSInstaller.exe 文件。 本主题介绍如何从 **“开始”** 屏幕、 **“开始”** 菜单、Windows 资源管理器或命令提示符运行 DQSInstaller.exe，您可以选择上述任何方法来运行 DQSInstaller.exe 文件。  
@@ -38,7 +38,7 @@ ms.locfileid: "36123702"
   
     -   **“开始”屏幕**：在 **“开始”** 屏幕上，单击 **“数据质量服务器安装程序”**  
   
-    -   **开始菜单**： 在任务栏上，单击**启动**，指向**所有程序**，单击**Microsoft SQL Server 2014**。 下**Microsoft SQL Server 2014**，单击**Data Quality Services**，然后单击**数据质量服务器安装程序。**  
+    -   **开始菜单**： 在任务栏上，单击**启动**，依次指向**所有程序**，单击**Microsoft SQL Server 2014**。 下**Microsoft SQL Server 2014**，单击**Data Quality Services**，然后单击**数据质量服务器安装程序。**  
   
     -   **Windows 资源管理器**：查找 DQSInstaller.exe 文件。 如果您安装了 SQL Server 的默认实例，则 DQSInstaller.exe 文件将出现在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn 下。 双击 DQSInstaller.exe 文件。  
   
