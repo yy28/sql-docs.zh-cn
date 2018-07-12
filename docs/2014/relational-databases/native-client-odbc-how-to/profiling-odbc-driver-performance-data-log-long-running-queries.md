@@ -1,28 +1,26 @@
 ---
-title: 记录长时间运行的查询 (ODBC) |Microsoft 文档
+title: 记录长时间运行的查询 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4a4867a657773f93c746ccf89a03089cb27ee69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027900"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431136"
 ---
 # <a name="log-long-running-queries-odbc"></a>记录长时间运行的查询 (ODBC)
   此示例显示用于记录长时间运行查询的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项。 此示例在运行时将创建 Odbcqry.log，其中包含执行时间超过应用程序所设定间隔的查询的列表。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
@@ -32,7 +30,7 @@ ms.locfileid: "36027900"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理器记录长时间运行的查询  
   
-1.  在**控制面板**，双击**管理工具**然后双击**数据源 (ODBC)**。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
+1.  在中**Control Panel**，双击**管理工具**，然后双击**数据源 (ODBC)**。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。  
   
@@ -40,25 +38,25 @@ ms.locfileid: "36027900"
   
 4.  单击**配置**。  
   
-5.  在 Microsoft SQL Server 配置 DSN 向导中，导航到包含的页面**将长时间运行查询保存到日志文件**。  
+5.  在 Microsoft SQL Server 配置 DSN 向导中，导航到包含的页**将长时间运行的查询保存到日志文件**。  
   
-6.  选择**将长时间运行查询保存到日志文件**。 在该框中，放置应记录长时间运行的查询的文件的名称。 （可选） 单击**浏览**浏览文件系统对查询日志。  
+6.  选择**将长时间运行的查询保存到日志文件**。 在该框中，放置应记录长时间运行的查询的文件的名称。 （可选） 单击**浏览**浏览查询日志的文件系统。  
   
 7.  设置查询超时间隔，以毫秒为单位，在**长查询时间 （毫秒）** 框。  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以编程方式记录长时间运行的查询数据  
   
-1.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 和长时间运行的查询日志文件的完整路径和文件名称。 例如：  
+1.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_QUERY_LOG 以及长时间运行的查询日志文件的完整路径和文件名称。 例如：  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_INTERVAL 与设置为的超时间隔，以毫秒为单位。  
+2.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_QUERY_INTERVAL 和超时间隔，以毫秒为单位的组。  
   
-3.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY 和 sql_perf_start 语句以启动日志记录长时间运行查询。  
+3.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 以便开始记录长时间运行的查询。  
   
-4.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 若要停止记录长时间运行查询。  
+4.  调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)使用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 若要停止记录长时间运行的查询。  
   
 ## <a name="example"></a>示例  
  需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  

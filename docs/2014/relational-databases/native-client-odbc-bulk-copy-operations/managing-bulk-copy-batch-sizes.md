@@ -1,13 +1,11 @@
 ---
-title: 管理大容量复制批大小 |Microsoft 文档
+title: 管理大容量复制批次大小 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], batch sizes
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02f03c1d7c050044e77b9f1946d974c264b5cac0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c8920de490e855789ea82c2b0df8b31633c8d293
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027670"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422886"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>管理大容量复制的批大小
   在大容量复制操作中，批的主要目的在于定义事务的范围。 如果没有设置批大小，则大容量复制函数会将整个大容量复制视为一个事务。 如果设置了批大小，则每个批构成一个事务，当批运行完成时，该事务也就被提交。  
@@ -40,11 +38,11 @@ ms.locfileid: "36027670"
   
 -   如果不指定 TABLOCK，请将批大小限制为小于 1,000 行。  
   
- 当大容量复制从数据文件中时，通过调用指定批次大小**bcp_control**使用之前调用 BCPBATCH 选项[bcp_exec](../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)。 当大容量复制从程序变量使用[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，批大小控制通过调用[bcp_batch](../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)之后调用[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x*时间 where *x*是批处理中的行数。  
+ 大容量复制将数据文件中，通过调用指定的批处理大小**bcp_control**带有 BCPBATCH 选项之前，调用[bcp_exec](../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)。 大容量复制中使用的程序变量[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)并[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，通过调用来控制批大小[bcp_batch](../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)后调用[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x*次，其中*x*是批处理中的行数。  
   
- 除了指定事务大小之外，批还会影响将行通过网络发送到服务器的时间。 大容量复制函数通常缓存中的行**bcp_sendrow**网络数据包填满，然后将完整的数据包发送到服务器之前。 在应用程序调用**bcp_batch**，但是，当前的数据包发送到无论是否具有已填充的服务器。 使用很小的批大小可能导致向服务器发送许多部分填满的数据包，从而降低性能。 例如，调用**bcp_batch**后每个**bcp_sendrow**导致每个要在单独的数据包中发送的行，并且，除非的行是非常大，浪费了每个数据包中的空间。 SQL Server 的网络数据包的默认大小为 4 KB，尽管应用程序可以通过调用来更改大小[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)指定 SQL_ATTR_PACKET_SIZE 特性。  
+ 除了指定事务大小之外，批还会影响将行通过网络发送到服务器的时间。 大容量复制函数通常缓存中的行**bcp_sendrow**直到网络数据包被填满，，然后将整个数据包发送到服务器。 当应用程序调用**bcp_batch**，但是，当前的数据包发送到服务器，无论是否具有已填充。 使用很小的批大小可能导致向服务器发送许多部分填满的数据包，从而降低性能。 例如，调用**bcp_batch**后每个**bcp_sendrow**导致要在一个单独的数据包中发送每个行，除非行是非常大，否则会浪费每个数据包中的空间。 适用于 SQL Server 网络数据包的默认大小为 4 KB，尽管应用程序可以通过调用更改大小[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)指定 SQL_ATTR_PACKET_SIZE 属性。  
   
- 批处理的另一个副作用是每个批处理被视为未完成的结果集之前已完成并且**bcp_batch**。 如果未完成，一批时，任何其他操作会尝试连接句柄上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序问题 SQLState 错误 ="HY000"和错误消息字符串的：  
+ 批处理的另一个副作用是每个批都被视为一个未完成的结果集之前它已完成，但**bcp_batch**。 如果批处理是未完成，而连接句柄上尝试任何其他操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将发出错误具有 SQLState ="HY000"和错误消息字符串的：  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  

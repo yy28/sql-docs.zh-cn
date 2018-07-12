@@ -1,13 +1,11 @@
 ---
-title: SQLColumns |Microsoft 文档
+title: SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,53 +14,53 @@ helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1210d905af3d300367d054d471b45959dda5835c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fe12091ae639be7a2fd1c3a430d866b14d522693
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028330"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419796"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-  `SQLColumns` 返回 SQL_SUCCESS，无论是否值已存在*CatalogName*， *TableName*，或*ColumnName*参数。 **SQLFetch**返回 SQL_NO_DATA，在这些参数中使用了无效值。  
+  `SQLColumns` 指示是否存在值都返回 SQL_SUCCESS *CatalogName*， *TableName*，或*ColumnName*参数。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  
   
 > [!NOTE]  
 >  对于大值类型，将返回值为 SQL_SS_LENGTH_UNLIMITED 的所有长度参数。  
   
  可以对静态服务器游标执行 `SQLColumns`。 尝试对可更新的（动态或键集）游标执行 `SQLColumns` 时，将返回 SQL_SUCCESS_WITH_INFO 以指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持为链接服务器上的表报表信息由接受的两部分名称*CatalogName*参数： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数： *Linked_Server_Name.Catalog_Name*.  
   
- 适用于 ODBC 2。*x*应用程序不使用中的通配符*TableName*，`SQLColumns`返回有关任何信息表的名称匹配*TableName*且归当前用户。 如果当前用户拥有其名称与匹配任何表*TableName*参数，`SQLColumns`返回有关其他用户拥有的任何表的信息的表名称与匹配之处*TableName*参数。 适用于 ODBC 2。*x*应用程序使用通配符，`SQLColumns`返回所有表的名称匹配*TableName*。 适用于 ODBC 3。*x*应用程序`SQLColumns`返回所有表的名称匹配*TableName*而不考虑所有者或是否使用通配符。  
+ 适用于 ODBC 2。*x*应用程序不使用中的通配符*TableName*，`SQLColumns`返回任何信息的表的名称匹配*TableName*且归当前用户。 如果当前用户拥有其名称与匹配任何表*TableName*参数，`SQLColumns`返回有关其他用户拥有的任何表的信息的表名称与相匹配*TableName*参数。 适用于 ODBC 2。*x*使用通配符，应用程序`SQLColumns`返回其名称匹配的所有表*TableName*。 适用于 ODBC 3。*x*应用程序`SQLColumns`返回其名称匹配的所有表*TableName*而不考虑所有者或是否使用了通配符。  
   
  下表列出了结果集返回的列：  
   
 |列名|Description|  
 |-----------------|-----------------|  
-|DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或为 SQL_WVARCHAR **varchar （max)** 数据类型。|  
-|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，和**nvarchar (max)** 数据类型。|  
-|COLUMN_SIZE|返回有关 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示列的大小不受限制。|  
-|BUFFER_LENGTH|返回有关 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示缓冲区的大小不受限制。|  
-|SQL_DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或为 SQL_WVARCHAR **varchar （max)** 数据类型。|  
+|DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 有关**varchar （max)** 数据类型。|  
+|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，并**nvarchar （max)** 数据类型。|  
+|COLUMN_SIZE|返回为 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示列的大小没有限制。|  
+|BUFFER_LENGTH|返回为 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示缓冲区的大小没有限制。|  
+|SQL_DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 有关**varchar （max)** 数据类型。|  
 |CHAR_OCTET_LENGTH|返回字符或二进制列的最大长度。 返回 0 表示大小不受限制。|  
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|返回在其中定义 XML 架构集合名称的目录的名称。 如果找不到目录名称，则此变量包含空字符串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|返回在其中定义 XML 架构集合名称的架构的名称。 如果找不到架构名称，则此变量包含空字符串。|  
 |SS_XML_SCHEMACOLLECTION_NAME|返回 XML 架构集合的名称。 如果找不到此名称，则此变量包含空字符串。|  
 |SS_UDT_CATALOG_NAME|包含 UDT（用户定义类型）的目录的名称。|  
-|SS_UDT_SCHEMA_NAME|包含用户定义的类型的架构的名称。|  
+|SS_UDT_SCHEMA_NAME|包含 UDT 的架构的名称。|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的程序集限定名称。|  
   
- 对于 Udt，现有的 TYPE_NAME 列用于指示 UDT; 的名称因此应将为其任何其他列添加到结果集的`SQLColumns`或[SQLProcedureColumns](sqlprocedurecolumns.md)。 UDT 列或参数的 DATA_TYPE 为 SQL_SS_UDT。  
+ 对于 Udt，现有的 TYPE_NAME 列用于指示 UDT; 的名称因此应将它没有其他列添加到的结果集`SQLColumns`或[SQLProcedureColumns](sqlprocedurecolumns.md)。 UDT 列或参数的 DATA_TYPE 为 SQL_SS_UDT。  
   
  对于 UDT 参数，您可以使用上面定义的特定于驱动程序的新描述符来获取或设置 UDT 的额外元数据数据，条件是服务器返回或需要此信息。  
   
- 当客户端连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和调用 SQLColumns、 对目录输入的参数不会从其他编录返回信息使用 NULL 或通配符值。 而只返回有关当前目录的信息。 首先，客户端可以调用 SQLTables 以确定所需的表所在的目录中。 客户端可以然后使用目录该值目录 SQLColumns 对其调用中的输入参数来检索有关此表中列的信息。  
+ 当客户端连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并调用 SQLColumns，使用 NULL 或通配符值，为目录输入的参数不会从其他目录返回的信息。 而只返回有关当前目录的信息。 客户端可以首先调用 SQLTables 来确定所需的表所在的目录中。 客户端可以然后使用该目录值 SQLColumns 对其调用中的目录输入参数来检索有关该表中列的信息。  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 和表值参数  
- SQLColumns 所返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。 已针对表值参数添加以下列：  
+ SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。 已针对表值参数添加以下列：  
   
 |列名|数据类型|目录|  
 |-----------------|---------------|--------------|  
@@ -80,18 +78,18 @@ ms.locfileid: "36028330"
  `SQLColumns` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
- 两个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定列已添加到结果集中为 SQLColumns:  
+ 两个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定列已添加到针对 SQLColumns 的结果集：  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|`Smallint`|如果该列为 `column_set` 列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
   
- 符合 ODBC 规范，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 出现在之前已添加到的所有驱动程序的特定列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，和之后由 ODBC 本身规定的所有列。  
+ 为了符合 ODBC 规范，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 显示已添加到的所有驱动程序特定列之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，和通过 ODBC 自身委托的所有列之后。  
   
- SQLColumns 所返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  
+ SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  
   
- 有关 ODBC 中的稀疏列的详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
+ 有关在 ODBC 中的稀疏列的详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQLColumns 函数](http://go.microsoft.com/fwlink/?LinkId=59336)   

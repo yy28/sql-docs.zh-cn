@@ -1,13 +1,11 @@
 ---
-title: SQLGetDiagField |Microsoft 文档
+title: SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d10a9383294f02b26bd15113d17f6d6bd0e182c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026985"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421886"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序指定以下其他诊断字段用于`SQLGetDiagField`。 这些字段支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的大量错误报告功能，并且可以在连接的 ODBC 连接句柄和 ODBC 语句句柄上生成的所有诊断记录中使用。 这些字段在 sqlncli.h 中定义。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序指定的以下额外的诊断字段`SQLGetDiagField`。 这些字段支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的大量错误报告功能，并且可以在连接的 ODBC 连接句柄和 ODBC 语句句柄上生成的所有诊断记录中使用。 这些字段在 sqlncli.h 中定义。  
   
 |诊断记录字段|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|报告生成错误的存储过程的行号。 只有 SQL_DIAG_SS_PROCNAME 返回值时，SQL_DIAG_SS_LINE 的值才有意义。 该值作为无符号 16 位整数返回。|  
-|SQL_DIAG_SS_MSGSTATE|错误消息的状态。 错误消息状态有关的信息，请参阅[RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)。 该值作为有符号 32 位整数返回。|  
-|SQL_DIAG_SS_PROCNAME|根据需要生成错误的存储过程的名称。 该值作为字符串返回。 字符串的长度（以字符为单位）取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。 可以通过调用确定[SQLGetInfo](sqlgetinfo.md) SQL_MAX_PROCEDURE_NAME_LEN 请求值。|  
+|SQL_DIAG_SS_MSGSTATE|错误消息的状态。 有关错误消息状态的信息，请参阅[RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)。 该值作为有符号 32 位整数返回。|  
+|SQL_DIAG_SS_PROCNAME|根据需要生成错误的存储过程的名称。 该值作为字符串返回。 字符串的长度（以字符为单位）取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。 可通过调用来确定[SQLGetInfo](sqlgetinfo.md)请求 SQL_MAX_PROCEDURE_NAME_LEN 值。|  
 |SQL_DIAG_SS_SEVERITY|关联错误消息的严重级别。 该值作为有符号 32 位整数返回。|  
 |SQL_DIAG_SS_SRVNAME|发生错误的服务器的名称。 该值作为字符串返回。 字符串的长度（以字符为单位）由 sqlncli.h 中的 SQL_MAX_SQLSERVERNAME 宏定义。|  
   
@@ -52,7 +50,7 @@ ms.locfileid: "36026985"
 |SQL_DIAG_DFC_SS_CREATE_RULE|CREATE RULE 语句|  
 |SQL_DIAG_DFC_SS_CREATE_TRIGGER|CREATE TRIGGER 语句|  
 |SQL_DIAG_DFC_SS_CURSOR_DECLARE|DECLARE CURSOR 语句|  
-|SQL_DIAG_DFC_SS_CURSOR_OPEN|打开语句|  
+|SQL_DIAG_DFC_SS_CURSOR_OPEN|OPEN 语句|  
 |SQL_DIAG_DFC_SS_CURSOR_FETCH|FETCH 语句|  
 |SQL_DIAG_DFC_SS_CURSOR_CLOSE|CLOSE 语句|  
 |SQL_DIAG_DFC_SS_DEALLOCATE_CURSOR|DEALLOCATE 语句|  
@@ -65,7 +63,7 @@ ms.locfileid: "36026985"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER 语句|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP 或 DUMP DATABASE 语句|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE 语句|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 语句。 如果还返回 CHECKPOINT 语句**trunc。 chkpt 登录。** 数据库选项已打开。|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 语句。 如果还返回针对 CHECKPOINT 语句**trunc.log chkpt 上的。** 数据库选项，则。|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 控制流语句|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK 语句|  
 |SQL_DIAG_DFC_SS_KILL|KILL 语句|  
