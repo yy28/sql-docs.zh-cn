@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - built-in functions [SQL Server]
 - nondeterministic functions
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11780f633b64f7eaa2cfe495bbe90f7c6ba2a832
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f7b60f44d1ee8cf4224fd4b4bd24a0cba5862e4c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024759"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423496"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
   只要使用特定的输入值集并且数据库具有相同的状态，那么不管何时调用，确定性函数始终都会返回相同的结果。 即使访问的数据库的状态不变，每次使用特定的输入值集调用非确定性函数都可能会返回不同的结果。 例如，函数 AVG 对上述给定的限定条件始终返回相同的值，但返回当前 datetime 值的 GETDATE 函数始终会返回不同的结果。  
@@ -61,7 +59,7 @@ ms.locfileid: "36024759"
 |--------------|--------------|  
 |所有聚合函数|除非用 OVER 和 ORDER BY 子句指定聚合函数，否则所有聚合函数都具有确定性。 有关这些函数的列表，请参阅[聚合函数 (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)。|  
 |CAST|除非与 `datetime`、`smalldatetime` 或 `sql_variant` 一起使用，否则为确定性函数。|  
-|CONVERT|除非存在下列条件，否则为确定性函数：<br /><br /> 源类型是 `sql_variant`。<br /><br /> 目标类型是`sql_variant`、 源类型为具有不确定性。<br /><br /> 源类型或目标类型是 `datetime` 或 `smalldatetime`，其他源类型或目标类型是字符串，并且指定了不确定的样式。 若要为确定样式，则样式参数必须是常量。 此外，除了样式 20 和 21，小于或等于 100 的样式都具有不确定性。 大于 100 的样式具有确定性，但样式 106、107、109 和 113 除外。|  
+|CONVERT|除非存在下列条件，否则为确定性函数：<br /><br /> 源类型是 `sql_variant`。<br /><br /> 目标类型是`sql_variant`和其源类型具有不确定性。<br /><br /> 源类型或目标类型是 `datetime` 或 `smalldatetime`，其他源类型或目标类型是字符串，并且指定了不确定的样式。 若要为确定样式，则样式参数必须是常量。 此外，除了样式 20 和 21，小于或等于 100 的样式都具有不确定性。 大于 100 的样式具有确定性，但样式 106、107、109 和 113 除外。|  
 |CHECKSUM|确定性函数，CHECKSUM(*) 除外。|  
 |ISDATE|只有与 CONVERT 函数一起使用、指定 CONVERT 样式参数并且样式不等于 0、100、9 或 109 时，才是确定性函数。|  
 |RAND|仅当指定 *seed* 参数时，RAND 才是确定性函数。|  

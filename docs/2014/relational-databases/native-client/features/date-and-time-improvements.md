@@ -1,31 +1,29 @@
 ---
-title: 日期和时间改进 |Microsoft 文档
+title: 日期和时间改进 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a30f330bf4d7e5976d3873bec5e6042f498c9c95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0a6b3b37f1265601ab63f1db370a3aa95a3420d2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018158"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428846"
 ---
-# <a name="date-and-time-improvements"></a>日期和时间的改进
+# <a name="date-and-time-improvements"></a>日期和时间改进
   本主题介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中已添加的日期和时间数据类型的支持。  
   
- 有关日期/时间的改进的详细信息，请参阅[日期和时间改进&#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)和[日期和时间改进&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关日期/时间改进的详细信息，请参阅[日期和时间改进&#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)并[日期和时间改进&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
  有关演示此功能的示例应用程序的信息，请参阅[SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
   

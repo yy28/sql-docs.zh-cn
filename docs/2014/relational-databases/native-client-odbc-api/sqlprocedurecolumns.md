@@ -1,13 +1,11 @@
 ---
-title: SQLProcedureColumns |Microsoft 文档
+title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de18cc3a646e9aefa8ffaf5d07a8379be0588c3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5b693d06e42f0fc5d2815b188826b21f5d89cae7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017743"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428386"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns` 返回一个行报表的所有返回值特性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
+  `SQLProcedureColumns` 返回一个行报告返回值属性的所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
   
- `SQLProcedureColumns` 返回 SQL_SUCCESS，无论是否值已存在*CatalogName*， *SchemaName*， *ProcName*，或*ColumnName*参数。 **SQLFetch**返回 SQL_NO_DATA，在这些参数中使用了无效值。  
+ `SQLProcedureColumns` 指示是否存在值都返回 SQL_SUCCESS *CatalogName*， *SchemaName*， *ProcName*，或者*ColumnName*参数。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  
   
  可以对静态服务器游标执行 `SQLProcedureColumns`。 尝试对可更新的（动态或键集）游标执行 `SQLProcedureColumns` 时，将返回 SQL_SUCCESS_WITH_INFO 以指示游标类型已更改。  
   
- 下表列出了返回的结果集和如何它们已扩展为处理的列**udt**和**xml**数据类型通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序：  
+ 下表列出了结果集和如何它们进行扩展以处理返回的列**udt**并**xml**数据类型通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序：  
   
 |列名|Description|  
 |-----------------|-----------------|  
@@ -72,7 +70,7 @@ ms.locfileid: "36017743"
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 对日期和时间增强功能的支持  
- 为日期/时间类型返回的值，请参阅[目录元数据](../native-client-odbc-date-time/metadata-catalog.md)。  
+ 有关为日期/时间类型返回的值，请参阅[目录元数据](../native-client-odbc-date-time/metadata-catalog.md)。  
   
  有关更多常规信息，请参阅[日期和时间改进&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

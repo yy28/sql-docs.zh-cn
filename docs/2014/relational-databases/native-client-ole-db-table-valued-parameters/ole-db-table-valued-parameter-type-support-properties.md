@@ -1,34 +1,32 @@
 ---
-title: OLE DB 表值参数类型支持 （属性） |Microsoft 文档
+title: OLE DB 表值参数类型支持 （属性） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01384c9827d9a204b3eeb94ae9443940548fa2ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8bc75c4ebdbbbe4d38f18692ae8c9588957e32e3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027267"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408416"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 表值参数类型支持（属性）
   本主题提供有关与表值参数行集对象相关联的 OLE DB 属性和属性集的信息。  
   
 ## <a name="properties"></a>属性  
- 下面是通过表值参数行集对象上的 IRowsetInfo::GetPropeties 方法公开的属性的列表。 请注意，所有表值参数行集属性都是只读的。 因此，尝试设置任何通过 IOpenRowset::OpenRowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 属性的方法为其非默认值将导致错误，并且将创建任何对象。  
+ 以下是通过表值参数行集对象上的 IRowsetInfo::GetPropeties 方法公开的属性的列表。 请注意，所有表值参数行集属性都是只读的。 因此，尝试设置任何通过 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 属性的方法为非默认值将导致错误，并且会创建任何对象。  
   
  在此处未列出在表值参数行集对象中未实现的属性。 有关属性的完整列表，请参阅 Windows 数据访问组件中的 OLE DB 文档。  
   
@@ -37,7 +35,7 @@ ms.locfileid: "36027267"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|读/写： 只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在表值参数行集对象上不允许书签。|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w： 只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在表值参数行集对象上不允许书签。|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -49,7 +47,7 @@ ms.locfileid: "36027267"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo,<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注意： 表值参数行集对象支持 IRowsetChange 接口。<br /><br /> 通过使用 DBPROP_IRowsetChange 等于 VARIANT_TRUE 而创建的行集将展现立即更新模式行为。<br /><br /> 但是，如果 BLOB 列被绑定为 ISequentialStream 对象，使用者应以使其保持为表值参数行集对象的生存期。|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注意： 表值参数行集对象支持 IRowsetChange 接口。<br /><br /> 通过使用 DBPROP_IRowsetChange 等于 VARIANT_TRUE 而创建的行集将展现立即更新模式行为。<br /><br /> 但是，如果 BLOB 列绑定为的 ISequentialStream 对象，使用者应将它们保留表值参数行集对象的生存期。|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -79,14 +77,14 @@ ms.locfileid: "36027267"
  以下属性集支持表值参数。  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- 如果需要为每一列，DBCOLUMNDESC 结构通过使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 创建表值参数行集对象的过程中使用者使用此属性。  
+ 如果需要通过 ITableDefinitionWithConstraints::CreateTableWithConstraints 用于通过 DBCOLUMNDESC 结构的每个列创建表值参数行集对象的过程中使用者使用此属性。  
   
 |属性 ID|属性值|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 类型：VT_BOOL<br /><br /> 说明：在设置为 VARIANT_TRUE 时，指示该列是计算列。 VARIANT_FALSE 指示它不是计算列。|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 这些属性是由使用者读取发现 ISSCommandWithParamters::GetParameterProperties 对的调用中的表值参数类型信息时，并设置有关表值参数的特定属性时设置的使用者通过 ISSCommandWithParameters::SetParameterProperties。  
+ 这些属性是由使用者读取发现对 ISSCommandWithParamters::GetParameterProperties 的调用中的表值参数类型信息时，由使用者设置有关表值参数的特定属性时设置通过 isscommandwithparameters:: Setparameterproperties。  
   
  下表详细说明了这些属性。  
   

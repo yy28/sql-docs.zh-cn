@@ -1,13 +1,11 @@
 ---
-title: 大型 CLR 用户定义类型 (ODBC) |Microsoft 文档
+title: 大型 CLR 用户定义类型 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98cb3dadf5b0009d4c1ce8cddb3a6cb21d1c4c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024809"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422356"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 用户定义类型 (ODBC)
   本主题讨论 SQL Server Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 ODBC 进行的更改。  
   
- 显示针对大型 CLR Udt 的 ODBC 支持的示例，请参阅[支持大型 udt](../../native-client-odbc-how-to/support-for-large-udts.md)。  
+ 显示 ODBC 支持大型 CLR Udt 的示例，请参阅[支持大型 Udt](../../native-client-odbc-how-to/support-for-large-udts.md)。  
   
- 有关 SQL Server 本机客户端中的大型 CLR Udt 支持的详细信息，请参阅[Large CLR User-Defined 类型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
+ 有关对 SQL Server Native Client 中的大型 CLR Udt 的支持的详细信息，请参阅[Large CLR User-Defined 类型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 ## <a name="data-format"></a>数据格式  
  SQL Server Native Client 使用 SQL_SS_LENGTH_UNLIMITED 来指示大型对象 (LOB) 类型的列大小大于 8,000 个字节。 从 SQL Server 2008 开始，在其大小大于 8,000 个字节时将相同的值用于 CLR UDT。  
@@ -67,7 +65,7 @@ ms.locfileid: "36024809"
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|  
-|SQL_CA_SS_UDT_CATALOG_NAME|包含用户定义的类型的目录的名称。|包含用户定义的类型的目录的名称。|  
+|SQL_CA_SS_UDT_CATALOG_NAME|包含 UDT 的目录的名称。|包含 UDT 的目录的名称。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|包含 UDT 的架构的名称。|架构的名称包含用户定义的类型。|  
 |SQL_CA_SS_UDT_TYPE_NAME|UDT 的名称。|UDT 的名称。|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完全限定名称。|UDT 的完全限定名称。|  
@@ -103,7 +101,7 @@ ms.locfileid: "36024809"
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|  
-|SQL_CA_SS_UDT_CATALOG_NAME|包含用户定义的类型的目录的名称。|包含用户定义的类型的目录的名称。|  
+|SQL_CA_SS_UDT_CATALOG_NAME|包含 UDT 的目录的名称。|包含 UDT 的目录的名称。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|包含 UDT 的架构的名称。|包含 UDT 的架构的名称。|  
 |SQL_CA_SS_UDT_TYPE_NAME|UDT 的名称。|UDT 的名称。|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完全限定名称。|UDT 的完全限定名称。|  
@@ -121,13 +119,13 @@ ms.locfileid: "36024809"
 |SQL_DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DATETIME_SUB|NULL|NULL|  
 |CHAR_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SS_UDT_CATALOG_NAME|包含用户定义的类型的目录的名称。|包含用户定义的类型的目录的名称。|  
+|SS_UDT_CATALOG_NAME|包含 UDT 的目录的名称。|包含 UDT 的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|包含 UDT 的架构的名称。|包含 UDT 的架构的名称。|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完全限定名称。|UDT 的完全限定名称。|  
   
- 最后三列是驱动程序特定的列。 它们将添加之后任何 ODBC 定义的列，但之前 SQLColumns 或 SQLProcedureColumns 的结果集的任何现有驱动程序的特定列。  
+ 最后三列是驱动程序特定的列。 它们将添加在任何 ODBC 定义的列，但在 SQLColumns 或 SQLProcedureColumns 的结果集的任何现有驱动程序特定列之前。  
   
- 为单个 Udt 或泛型类型"udt"，SQLGetTypeInfo，会不返回任何行。  
+ SQLGetTypeInfo，对于各个 Udt 或为泛型类型"udt"不返回任何行。  
   
 ## <a name="bindings-and-conversions"></a>绑定和转换  
  支持的从 SQL 到 C 数据类型的转换如下所示：  
@@ -148,7 +146,7 @@ ms.locfileid: "36024809"
 |SQL_C_BINARY|是否支持|  
 |SQL_C_CHAR|支持 *|  
   
- \* 二进制数据转换为十六进制字符串时发生。  
+ \* 十六进制字符串转换为二进制数据时发生。  
   
 ## <a name="sqlvariant-support-for-udts"></a>对 UDT 的 SQL_VARIANT 支持  
  在 SQL_VARIANT 列中不支持 UDT。  
@@ -182,7 +180,7 @@ ms.locfileid: "36024809"
  为 UDT 返回的值如本主题前面的章节“结果的描述符字段”中所述。  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
- Udt 返回的值是在"列按 SQLColumns 和 SQLProcedureColumns （目录元数据） 返回元数据"部分中，本主题中前面所述。  
+ 为 Udt 返回的值是在"SQLColumns 和 SQLProcedureColumns （目录元数据） 的列元数据返回"部分中，本主题中前面所述。  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  为 UDT 返回的值如下所示：  
@@ -230,7 +228,7 @@ ms.locfileid: "36024809"
  按本主题前面的章节“绑定和转换”中所述，将 UDT 参数值从 C 数据类型转换为 SQL 数据类型。  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
- 中的"第字段的 Parameters 描述符"和"的字段的结果描述符"部分中，本主题前面的描述了适用于新类型描述符字段。  
+ "参数的描述符字段"和"结果的描述符字段"部分中，本主题中前面部分中描述了适用于新类型的描述符字段。  
   
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允许的值如下所示：  

@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client 功能 |Microsoft 文档
+title: SQL Server Native Client 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc73fcc6a4ecd188053e3ae8ac1064ecc84192e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024553"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411306"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
   除公开 Windows（以前为 Microsoft）数据访问组件 (WDAC) 的功能以外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还实现诸多其他功能以公开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
@@ -35,7 +33,7 @@ ms.locfileid: "36024553"
  介绍从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client 开始的行为变化。  
   
  [使用数据库镜像](using-database-mirroring.md)  
- 讨论如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端支持是一种功能要保留的副本，或者镜像，镜像数据库，使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]备用服务器上的数据库。  
+ 讨论如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支持是一种功能的保留的副本，即镜像，镜像数据库，使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在备用服务器上的数据库。  
   
  [执行异步操作](performing-asynchronous-operations.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持异步操作，即在不阻塞调用线程的情况下立即返回的功能。  
@@ -47,7 +45,7 @@ ms.locfileid: "36024553"
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持 XML 数据类型，此基于 XML 的数据类型可用作列类型、变量类型、参数类型或函数返回类型。  
   
  [使用用户定义类型](using-user-defined-types.md)  
- 讨论如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端支持用户定义类型 (UDT)，它扩展，它允许你存储对象和自定义数据结构中的 SQL 类型系统[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。  
+ 讨论如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支持用户定义类型 (UDT)，这允许您存储对象和自定义数据结构中的，从而扩展了 SQL 类型系统[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。  
   
  [使用大值类型](using-large-value-types.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持大值数据类型，该类型是大型对象数据类型 (LOB)。  
@@ -62,21 +60,21 @@ ms.locfileid: "36024553"
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持基于行集修改的使用者通知。  
   
  [执行大容量复制操作](performing-bulk-copy-operations.md)  
- 讨论如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端支持允许的大量数据传输到或外的大容量复制操作[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表或视图。  
+ 讨论如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支持允许传入或传出大量数据传输的大容量复制操作[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表或视图。  
   
  [使用不带验证的加密](using-encryption-without-validation.md)  
  讨论如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对发送到服务器的数据加密，而无需验证证书。  
   
- [表值参数&#40;SQL Server Native Client&#41;](table-valued-parameters-sql-server-native-client.md)  
+ [表值参数&#40;SQL Server 本机客户端&#41;](table-valued-parameters-sql-server-native-client.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对表值参数的支持。  
   
  [大型 CLR 用户定义类型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  讨论对大型公共语言运行时 (CLR) 用户定义类型 (UDT) 的支持。  
   
  [FILESTREAM 支持](filestream-support.md)  
- 讨论[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]增强的 FILESTREAM 功能的本机客户端支持。  
+ 讨论[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 对 FILESTREAM 增强功能支持。  
   
- [服务主体名称&#40;SPN&#41;中客户端连接的支持](service-principal-name-spn-support-in-client-connections.md)  
+ [服务主体名称&#40;SPN&#41;中的客户端连接的支持](service-principal-name-spn-support-in-client-connections.md)  
  讨论如何扩展对服务主体名称 (SPN) 的支持，以便能够跨所有协议进行相互身份验证。  
   
  [SQL Server Native Client 中的稀疏列支持](sparse-columns-support-in-sql-server-native-client.md)  
@@ -92,7 +90,7 @@ ms.locfileid: "36024553"
  讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果出现以下情况，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将不会向缓冲区添加高代理项码位：在绑定列结果或输出参数时提供了一个固定长度缓冲区；写入到缓冲区中终止符之前的 `wchar` 字符是代理项对的高代理项码位；并且下一个 `wchar` 字符是一个低代理项码位。  
   
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- 讨论如何配置你的应用程序以充分利用添加功能的高可用性、 灾难恢复[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+ 讨论如何配置你的应用程序以充分利用高可用性、 灾难恢复中添加功能[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
  [访问扩展事件日志中的诊断信息](accessing-diagnostic-information-in-the-extended-events-log.md)  
  讨论对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和跟踪数据的增强功能，它们使您可以访问环形缓冲区和 XEvents 日志中的诊断信息。  

@@ -1,13 +1,11 @@
 ---
-title: bcp_gettypename |Microsoft 文档
+title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afea684549765bac4c24679cc65d74bb4dfa47df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026768"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411726"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   返回指定 BCP 类型标记的 SQL 类型名称。  
@@ -85,8 +83,8 @@ fIsMaxType
 |`SQLVARBINARY`|“否”|**Varbinary**|  
 |`SQLIMAGE`|之前或之后|**图像**|  
 |`SQLINTN`|之前或之后|**int-null**|  
-|`SQLDATETIMN`|之前或之后|**datetime null**|  
-|`SQLMONEYN`|之前或之后|**money null**|  
+|`SQLDATETIMN`|之前或之后|**日期时间为 null**|  
+|`SQLMONEYN`|之前或之后|**资金 null**|  
 |`SQLFLTN`|之前或之后|**float-null**|  
 |`SQLAOPSUM`|之前或之后|**Sum**|  
 |`SQLAOPAVG`|之前或之后|**Avg**|  
@@ -94,8 +92,8 @@ fIsMaxType
 |`SQLAOPMIN`|之前或之后|**Min**|  
 |`SQLAOPMAX`|之前或之后|**Max**|  
 |`SQLDATETIM4`|之前或之后|**smalldatetime**|  
-|`SQLMONEY4`|之前或之后|**smallmoney**|  
-|`SQLFLT4`|之前或之后|**实际**|  
+|`SQLMONEY4`|之前或之后|**Smallmoney**|  
+|`SQLFLT4`|之前或之后|**真正**|  
 |`SQLUNIQUEID`|之前或之后|**uniqueidentifier**|  
 |`SQLNCHAR`|“否”|**Nchar**|  
 |`SQLNVARCHAR`|“否”|**Nvarchar**|  
@@ -113,10 +111,10 @@ fIsMaxType
 |`SQLNCHAR`|是|**nvarchar(max)**|  
 |`SQLNVARCHAR`|是|**nvarchar(max)**|  
 |`SQLXML`|是|**Xml**|  
-|`SQLUDT`|之前或之后|**udt**|  
+|`SQLUDT`|之前或之后|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 对日期和时间增强功能的支持  
- 日期/时间类型的令牌的参数值所述的表中的"中的类型"列[增强日期和时间类型的大容量复制更改&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 返回值位于“文件存储类型”列的对应行中。  
+ 日期/时间类型的标记参数值在表中的"sqlncli.h 中的类型"列中所述[大容量复制更改的增强的日期和时间类型&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 返回值位于“文件存储类型”列的对应行中。  
   
  有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

@@ -1,31 +1,29 @@
 ---
-title: 设置光标选项 (ODBC) |Microsoft 文档
+title: 设置游标选项 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4694337517f51c08273a988e105ae49fa9bb15a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a37b09f88f9156f6363ed99a9fea56b2f9a5932b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025684"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419766"
 ---
 # <a name="set-cursor-options-odbc"></a>设置游标选项 (ODBC)
-  若要设置游标选项，调用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)设置或[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)来获取控制游标行为的语句选项。  
+  若要设置游标选项，请调用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)若要设置或[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)获取控制游标行为的语句选项。  
   
 |*Attribute*|指定|  
 |-----------------|---------------|  
@@ -37,7 +35,7 @@ ms.locfileid: "36025684"
   
  这些属性（只进、只读、行集大小为 1）的默认值不使用服务器游标。 若要使用服务器游标，必须将这些属性中的至少一个属性设置为非默认值，并且所执行的语句必须是包含单个 SELECT 语句的单个 SELECT 语句或存储过程。 使用服务器游标时，SELECT 语句无法使用服务器游标不支持的子句：COMPUTE、COMPUTE BY、FOR BROWSE 和 INTO。  
   
- 你可以控制使用通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE 的游标的类型。 不应将指定游标行为的两种方法混用。  
+ 您可以控制使用通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE 的游标类型。 不应将指定游标行为的两种方法混用。  
   
 ## <a name="example"></a>示例  
  以下示例分配一个语句句柄，之后以行版本控制乐观并发方式设置动态游标类型，然后执行 SELECT。  

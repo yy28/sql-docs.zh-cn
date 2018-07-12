@@ -1,13 +1,11 @@
 ---
-title: 使用查询通知 |Microsoft 文档
+title: 使用查询通知 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a82f441540faa72129807563445b5759179bfcf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a0f71aec8196f4815d8bc39ec9dd9dc0be443a01
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026183"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417926"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中引入了查询通知。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。  
@@ -50,7 +48,7 @@ ms.locfileid: "36026183"
   
  只发送一次通知。 对于数据更改的持续通知，必须在处理每个通知之后重新执行查询来创建新的订阅。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端应用程序通常使用收到通知[!INCLUDE[tsql](../../../includes/tsql-md.md)][接收](/sql/t-sql/statements/receive-transact-sql)命令从与通知选项中指定的服务关联的队列读取通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端应用程序通常通过使用接收通知[!INCLUDE[tsql](../../../includes/tsql-md.md)][接收](/sql/t-sql/statements/receive-transact-sql)命令以从与通知选项中指定的服务关联的队列中读取通知。  
   
 > [!NOTE]  
 >  对于需要通知的查询，必须限定其中的表名，例如 `dbo.myTable`。 表名必须用包含两个部分的名称进行限定。 如果使用的名称由三个或四个部分组成，则订阅无效。  
@@ -70,19 +68,19 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  服务必须使用预定义约定 `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`，如上所示。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持使用者通知对行集修改。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持基于行集修改的使用者通知。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。  
   
 > [!NOTE]  
->  传递到与服务器的通知查询**ICommand::Execute**是使用查询通知订阅的唯一有效办法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
+>  向服务器传递通知查询**icommand:: Execute**是唯一有效的方法来订阅查询通知的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
   
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 属性集  
- 若要支持通过 OLE DB 的查询通知[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将以下新属性添加到 DBPROPSET_SQLSERVERROWSET 属性集。  
+ 若要支持通过 OLE DB 的查询通知[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 向 DBPROPSET_SQLSERVERROWSET 属性集添加以下新属性。  
   
 |“属性”|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认为 432000 秒（5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 消息正文是用户定义的，没有预定义格式。<br /><br /> 默认情况下，该字符串为空。 您可以使用 1 至 2000 个字符指定消息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 在字符串中以指定了这些*名称*=*值*语法。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 使用字符串中指定了这些*名称*=*值*语法。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
   
  无论语句是在用户事务中运行还是以自动提交模式运行，或者无论是提交还是回滚运行语句的事务，将始终提交通知订阅。 根据以下任一无效通知条件激发服务器通知：更改基础数据或架构，或者当达到超时期限时（以先发生者为准）。 激发通知后将立即删除通知注册。 因此，在接收通知时，应用程序必须再次订阅通知，以备进一步更新之用。  
   
@@ -92,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- 请注意，选择 * 不从队列中删除该条目，但是接收\*从执行。 如果队列为空，该语句将停止服务器线程。 如果调用时存在队列项，则会立即返回这些队列项；否则调用将一直等待，直到生成队列项为止。  
+ 请注意，SELECT * 不从队列中删除该条目，但是收到\*FROM。 如果队列为空，该语句将停止服务器线程。 如果调用时存在队列项，则会立即返回这些队列项；否则调用将一直等待，直到生成队列项为止。  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -100,7 +98,7 @@ RECEIVE * FROM MyQueue
   
  如果队列为空，该语句将立即返回空的结果集；否则会返回所有队列通知。  
   
- 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 为非 NULL 和非空，当执行其中的每个命令时，将向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果其中任一属性为 Null（或空），则不会发送头，并引发 DB_E_ERRORSOCCURRED（或者如果两个属性均标记为可选，则引发 DB_S_ERRORSOCCURRED），同时将状态值设置为 DBPROPSTATUS_BADVALUE。 在执行/准备期间进行验证。 同样，DB_S_ERRORSOCCURED 时引发的查询通知属性进行设置以便连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之前的版本[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 在这种情况下，状态值为 DBPROPSTATUS_NOTSUPPORTED。  
+ 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 为非 NULL 和非空，当执行其中的每个命令时，将向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果其中任一属性为 Null（或空），则不会发送头，并引发 DB_E_ERRORSOCCURRED（或者如果两个属性均标记为可选，则引发 DB_S_ERRORSOCCURRED），同时将状态值设置为 DBPROPSTATUS_BADVALUE。 在执行/准备期间进行验证。 当查询通知属性设置为连接到与此类似，将引发 DB_S_ERRORSOCCURED[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之前的版本[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 在这种情况下，状态值为 DBPROPSTATUS_NOTSUPPORTED。  
   
  启动订阅不能保证将成功传递后续消息。 此外，不会检查指定服务名称的有效性。  
   
@@ -110,7 +108,7 @@ RECEIVE * FROM MyQueue
  有关 DBPROPSET_SQLSERVERROWSET 属性集的详细信息，请参阅[行集属性和行为](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序还支持通过三个新属性指定给添加的查询通知[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)和[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)函数：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持通过添加到三个新属性的查询通知[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)并[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)函数：  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -118,7 +116,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 不为 NULL，每次执行命令时，则不会向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果上述两个属性中的任一属性为 Null，则不会发送标头，并返回 SQL_SUCCESS_WITH_INFO。 在时执行验证[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)， **SqlExecDirect**，和**SqlExecute**，所有的如果属性不是有效的失败。 类似地，当针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本设置这些查询通知属性时，执行将失败，并返回 SQL_SUCCESS_WITH_INFO。  
+ 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 不为 NULL，每次执行命令时，则不会向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果上述两个属性中的任一属性为 Null，则不会发送标头，并返回 SQL_SUCCESS_WITH_INFO。 上进行的验证[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)， **SqlExecDirect**，并**SqlExecute**，则所有的失败，如果属性不是有效。 类似地，当针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本设置这些查询通知属性时，执行将失败，并返回 SQL_SUCCESS_WITH_INFO。  
   
 > [!NOTE]  
 >  准备语句永远不会启动订阅；可以通过执行语句启动订阅。  

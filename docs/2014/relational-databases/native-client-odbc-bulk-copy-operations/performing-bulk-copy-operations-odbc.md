@@ -1,13 +1,11 @@
 ---
-title: 执行大容量复制操作 (ODBC) |Microsoft 文档
+title: 执行大容量复制操作 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 445085c69f0fd98eff70be60575de5d2dcb002b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ef27718464b59f29d28c61a1fb9fb97566e32d74
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026345"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421796"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>执行大容量复制操作 (ODBC)
   ODBC 标准不直接支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制操作。 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 7.0 或更高版本的实例时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制操作的 DB-Library 函数。 这个特定于驱动程序的扩展为使用大容量复制函数的现有 DB-Library 应用程序提供了容易实现的升级路径。 专用的大容量复制支持包含在以下文件中：  
@@ -44,7 +42,7 @@ ms.locfileid: "36026345"
      在执行时必须存在。 sqlncli11.dll 随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起分发。  
   
 > [!NOTE]  
->  ODBC **SQLBulkOperations**函数具有与任何关系[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制函数。 应用程序必须使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制函数，才能执行大容量复制操作。  
+>  ODBC **SQLBulkOperations**函数与没有任何关系[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制函数。 应用程序必须使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制函数，才能执行大容量复制操作。  
   
 ## <a name="minimally-logging-bulk-copies"></a>按最小方式记录大容量复制  
  使用完整恢复模式，将在事务日志中完整记录大容量加载所执行的所有行插入操作。 对于大型数据加载，这会导致事务日志被迅速填充。 在某些情况下，按最小方式记录是可能的。 按最小方式记录将减少大容量加载操作填充日志空间的可能性，并且比完整记录更有效。  
@@ -67,7 +65,7 @@ ms.locfileid: "36026345"
 -   [从 DB-Library 转换到 ODBC 大容量复制](converting-from-db-library-to-odbc-bulk-copy.md)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server 本机客户端&#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [批量导入和导出数据 (SQL Server)](../import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

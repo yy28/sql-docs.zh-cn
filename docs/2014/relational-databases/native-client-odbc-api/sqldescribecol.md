@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,26 +14,26 @@ helpviewer_keywords:
 - SQLDescribeCol function
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c9c7a2471662efb547d8572ebb78a0a99646c20a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cb0ae64b7a34dc06814d94bbdeafd90f3b4af4cc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028145"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410446"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-  对于执行语句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不需要查询服务器，以描述在结果集中的列。 在这种情况下，`SQLDescribeCol`不会导致服务器往返。 如[SQLColAttribute](sqlnumresultcols.md)，则调用`SQLDescribeCol`在准备好但是未执行的语句会生成服务器往返。  
+  对于执行的语句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不需要查询服务器来描述结果集中的列。 在这种情况下，`SQLDescribeCol`不会导致服务器往返。 像[SQLColAttribute](sqlnumresultcols.md)，则调用`SQLDescribeCol`对准备但不是执行的语句产生服务器往返。  
   
- 当某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句批处理返回多个结果行集时，由序号引用的某一列可能来自单独的表或引用结果集中完全不同的列。 `SQLDescribeCol` 应为每个组调用。 如果结果集有变化，应用程序应该在提取行结果之前重新绑定数据值。 有关处理多个结果集返回，请参阅[SQLMoreResults](sqlmoreresults.md)。  
+ 当某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句批处理返回多个结果行集时，由序号引用的某一列可能来自单独的表或引用结果集中完全不同的列。 `SQLDescribeCol` 应该为每个集都调用。 如果结果集有变化，应用程序应该在提取行结果之前重新绑定数据值。 有关详细信息，了解如何处理多个结果集返回，请参阅[SQLMoreResults](sqlmoreresults.md)。  
   
  当已准备的一批 SQL 语句生成多个结果集时，只为第一个结果集报告列属性。  
   
- 对于大型值数据类型值将返回在*DataTypePtr*是 SQL_VARCHAR、 SQL_VARBINARY，还是 SQL_NVARCHAR。 值为在 SQL_SS_LENGTH_UNLIMITED *ColumnSizePtr*指示的大小是"无限制"。  
+ 中返回的值对于大值数据类型*DataTypePtr*为 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_NVARCHAR。 中的值 SQL_SS_LENGTH_UNLIMITED *ColumnSizePtr*指示大小为"无限制"。  
   
- 从数据库引擎中的改进[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 SQLDescribeCol 以获取更准确的预期结果的说明。 这些更准确的结果可能与在以前版本的 SQLDescribeCol 返回的值不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
+ 从数据库引擎中的改进[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 SQLDescribeCol 若要获取的预期的结果更准确描述。 这些更准确的结果可能不同于 SQLDescribeCol 的早期版本中返回的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>SQLDescribeCol 对日期和时间增强功能的支持  
  日期/时间类型返回以下值：  
