@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.extractdacwizard.buildandsave.f1
 - sql12.swb.extractdacwizard.setdacproperties.f1
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da72e16f77d6f3c850a41f85caa453123afc802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eb33630708143700d7f5ce6749cf720c71a65fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211497"
 ---
 # <a name="extract-a-dac-from-a-database"></a>从数据库中提取 DAC
   使用“提取数据层应用程序向导”或 Windows PowerShell 脚本可以从现有 SQL Server 数据库提取数据层应用程序 (DAC) 包。 提取过程将创建一个 DAC 包文件，其中包含数据库对象及其相关实例级别元素的定义。 例如，一个 DAC 包文件包含数据库表、存储过程、视图、用户以及映射到数据库用户的登录名。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **提取 DAC，使用：**[提取数据层应用程序向导](#UsingDACExtractWizard)， [PowerShell  ](#ExtractDACPowerShell)  
+-   **若要提取 DAC，使用：**[提取数据层应用程序向导](#UsingDACExtractWizard)， [PowerShell  ](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
- 您可以从驻留在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更高版本的实例上的数据库中提取 DAC。 如果对已从 DAC 部署的数据库运行提取进程，则仅提取数据库中对象的定义。 该进程不引用在中注册 DAC `msdb` (**master**中[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 该提取进程不注册当前数据库引擎实例中的 DAC 定义。 有关注册 DAC 的详细信息，请参阅 [Register a Database As a DAC](register-a-database-as-a-dac.md)。  
+ 您可以从驻留在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更高版本的实例上的数据库中提取 DAC。 如果对已从 DAC 部署的数据库运行提取进程，则仅提取数据库中对象的定义。 该进程不会引用中注册的 DAC `msdb` (**主**中[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 该提取进程不注册当前数据库引擎实例中的 DAC 定义。 有关注册 DAC 的详细信息，请参阅 [Register a Database As a DAC](register-a-database-as-a-dac.md)。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库中提取 DAC。 如果数据库有 DAC 中不支持的对象或包含的用户，则不能提取 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)。  
@@ -90,9 +90,9 @@ ms.locfileid: "36127579"
   
  **名称** - 此名称标识 DAC。 它可以不同于 DAC 包文件的名称，并且应描述您的应用程序。 例如，如果数据库用于财务应用程序，则可能要命名为“DAC Finance”。  
   
- **版本（使用 xx.xx.xx.xx，其中 x 是数字）** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 在部署 DAC 时，版本存储于`msdb`数据库和更高版本下查看**数据层应用程序**中的节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ **版本（使用 xx.xx.xx.xx，其中 x 是数字）** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 在部署 DAC 时，该版本存储中`msdb`数据库和更高版本可以在查看**数据层应用程序**中的节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- **说明：** - 可选。 说明该 DAC。 在部署 DAC 时，存储在说明`msdb`数据库和更高版本下查看**数据层应用程序**中的节点[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+ **说明：** - 可选。 说明该 DAC。 在部署 DAC 时，该描述存储在`msdb`数据库和更高版本可以在查看**数据层应用程序**中的节点[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
  **保存到 DAC 包文件(文件名中包括 .dacpac 扩展名)：** - 将 DAC 保存到某一 DAC 包文件，并且具有 .dacpac 扩展名。 单击 **“浏览”** 按钮可以指定文件的名称和位置。  
   

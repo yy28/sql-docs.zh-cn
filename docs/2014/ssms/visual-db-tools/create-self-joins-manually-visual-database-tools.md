@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
 - manual joins [SQL Server]
 - joins [SQL Server], self
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b74122903e1372c219d925d9ff871bdba91d49d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0d414857a05107bed224e732d488e5043b11ecf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159768"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手动创建自联接 (Visual Database Tools)
   即使表在数据库中没有自反关系，您也可将它与自身联接。 例如，可使用自联接查找生活在同一市县的作者对。  
@@ -129,7 +129,7 @@ Cheryl Carson       Abraham Bennet
 7.  为查询指定其他选项，如输出列、搜索条件和排序顺序等。  
   
 ## <a name="see-also"></a>请参阅  
- [创建自联接自动&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+ [创建自联接自动&#40;可视化数据库工具&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [使用联接进行查询 (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

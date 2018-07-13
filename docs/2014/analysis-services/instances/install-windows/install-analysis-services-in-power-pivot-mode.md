@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint 2013 安装 |Microsoft 文档
+title: PowerPivot for SharePoint 2013 安装 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 28
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ef3e20cee4efd786e111a3c5a3e0f4864875e861
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d5eafcfacf8aa39cd100ed767232becd474bacd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210247"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 安装
-  本主题中的过程将指导你通过单台服务器上安装的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在 SharePoint 部署模式下的服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 2013 管理中心的配置任务。  
+  本主题中的过程将指导您完成在单一服务器安装[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 部署模式下的服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 2013 管理中心的配置任务。  
   
  **[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 |SharePoint 201  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36129091"
   
  [升级工作簿和计划的数据刷新](#bkmk_upgrade_workbook)  
   
- [超出单一服务器安装-PowerPivot for Microsoft SharePoint](#bkmk_multiple_servers)  
+ [除了单服务器安装-PowerPivot for Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> 背景  
  PowerPivot for SharePoint 是在 SharePoint 2013 场中提供 PowerPivot 数据访问的中间层和后端服务的集合。  
@@ -67,14 +67,14 @@ ms.locfileid: "36129091"
   
 4.  必须提供 PowerPivot 实例名称。 在您要在其上以 SharePoint 模式安装 Analysis Services 的计算机上，您无法拥有现有的 PowerPivot 命名实例。  
   
-5.  查看[硬件和软件要求的在 SharePoint 模式下的 Analysis Services 服务器&#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)。  
+5.  审阅[的硬件和软件要求在 SharePoint 模式下的 Analysis Services 服务器&#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)。  
   
-6.  查看发行说明在[SQL Server 2012 Service Pack 1 发行说明](http://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)。  
+6.  查看在发行说明[SQL Server 2012 Service Pack 1 发行说明](http://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server 版本要求  
- 并不是所有的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅[支持 SQL Server 2012 各个版本的功能 (http://go.microsoft.com/fwlink/?linkid=232473) ](http://go.microsoft.com/fwlink/?linkid=232473)和[版本和 SQL Server 2014 的组件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+ 并不是所有的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅[SQL Server 2012 各个版本支持的功能 (http://go.microsoft.com/fwlink/?linkid=232473) ](http://go.microsoft.com/fwlink/?linkid=232473)并[版本和 SQL Server 2014 的组件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
- 处找不到当前的发行说明[SQL Server 2012 SP1 发行说明](ttp://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)。  
+ 可以在找到当前的发行说明[SQL Server 2012 SP1 发行说明](ttp://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)。  
   
  [Microsoft SQL Server 2012 发行说明 (http://go.microsoft.com/fwlink/?LinkId=236893)](http://go.microsoft.com/fwlink/?LinkId=236893)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36129091"
   
 3.  单击 **“全新 SQL Server 独立安装或向现有安装添加功能”**。  
   
-4.  如果看到 **“产品密钥”** 页，请指定 Evaluation Edition 或者为 Enterprise Edition 的许可副本输入产品密钥。 单击“下一步” 。 有关版本的详细信息，请参阅[版本和 SQL Server 2014 的组件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+4.  如果看到 **“产品密钥”** 页，请指定 Evaluation Edition 或者为 Enterprise Edition 的许可副本输入产品密钥。 单击“下一步” 。 有关版本的详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 5.  查看并接受 Microsoft 软件许可协议条款，然后单击 **“下一步”**。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36129091"
   
      单击“下一步” 。  
   
-     ![设置角色](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "设置角色")  
+     ![安装程序角色](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "设置角色")  
   
 11. “功能选择”中会显示功能的只读列表以便供您参考。 不能添加或删除为此角色预先选择的项。 单击“下一步” 。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36129091"
   
      ![SSAS 服务器配置](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS 服务器配置")  
   
-14. 如果安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，则将显示 **“数据库引擎配置”** 页。 在[!INCLUDE[ssDE](../../../includes/ssde-md.md)]配置中，单击**添加当前用户**以授予你的用户帐户对数据库引擎实例的管理员权限。  
+14. 如果安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，则将显示 **“数据库引擎配置”** 页。 在中[!INCLUDE[ssDE](../../../includes/ssde-md.md)]配置中，单击**添加当前用户**以授予您的用户帐户数据库引擎实例上的管理员权限。  
   
      单击“下一步” 。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36129091"
   
 2.  在对象资源管理器中，右键单击实例名称，再单击 **“属性”**。  
   
-     ![查看 SSAS 服务器的属性](../../../sql-server/install/media/as-ssms-proeprties.gif "SSAS 服务器的视图属性")  
+     ![查看 SSAS 服务器的属性](../../../sql-server/install/media/as-ssms-proeprties.gif "查看 SSAS 服务器的属性")  
   
 3.  在左窗格中，单击 **“安全性”**。 添加您在步骤 1 中为 Excel Services 应用程序配置的域登录名。  
   
@@ -247,13 +247,13 @@ ms.locfileid: "36129091"
 18. 单击工作簿的名称以在 SharePoint 中查看它，单击切片器或更改之前添加的筛选器。 如果出现数据更新，则您将知道 Analysis Services 已安装并且可用于 Excel Services。 如果在 Excel 中打开工作簿，您将使用缓存副本，而不使用 Analysis Services 服务器。  
   
 ##  <a name="bkmk_firewall"></a> 将 Windows 防火墙配置为允许 Analysis Services 访问  
- 使用本主题中的信息[Configure Windows Firewall to Allow Analysis Services Access](../configure-the-windows-firewall-to-allow-analysis-services-access.md)以确定是否需要取消阻止在防火墙以允许访问 Analysis Services 或 PowerPivot for SharePoint 中的端口。 您可以采用本主题中提供的步骤来配置端口和防火墙设置。 实际上，您应该一起执行这些步骤以便能够访问您的 Analysis Services 服务器。  
+ 使用本主题中的信息[配置 Windows 防火墙以允许 Analysis Services 访问](../configure-the-windows-firewall-to-allow-analysis-services-access.md)以确定是否需要取消阻止防火墙以便允许访问 Analysis Services 或 PowerPivot for SharePoint 中的端口。 您可以采用本主题中提供的步骤来配置端口和防火墙设置。 实际上，您应该一起执行这些步骤以便能够访问您的 Analysis Services 服务器。  
   
 ##  <a name="bkmk_upgrade_workbook"></a> 升级工作簿和计划的数据刷新  
  升级在以前版本的 PowerPivot 中创建的工作簿所需的步骤取决于创建了该工作簿的 PowerPivot 的版本。 有关详细信息，请参阅 [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
-##  <a name="bkmk_multiple_servers"></a> 超出单一服务器安装-PowerPivot for Microsoft SharePoint  
- **Web 前端 (WFE)** 或**中间层：**： 若要使用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在 SharePoint 模式下更大的 SharePoint 场中并进入该场中安装其他 PowerPivot 功能的服务器运行该安装程序包**spPowerPivot.msi**每台 SharePoint 服务器上。 spPowerPivot.msi 安装所需的数据访问接口以及 PowerPivot for SharePoint 2013 配置工具。  
+##  <a name="bkmk_multiple_servers"></a> 除了单服务器安装-PowerPivot for Microsoft SharePoint  
+ **Web 前端 (WFE)** 或**中间层：**： 若要使用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器在 SharePoint 模式下在更大的 SharePoint 场，以其他 PowerPivot 功能安装到场中，运行安装程序包**spPowerPivot.msi**每台 SharePoint 服务器上。 spPowerPivot.msi 安装所需的数据访问接口以及 PowerPivot for SharePoint 2013 配置工具。  
   
  有关安装和配置中间层的详细信息，请参阅下面的内容：  
   
@@ -263,7 +263,7 @@ ms.locfileid: "36129091"
   
 -   [配置 PowerPivot 和部署解决方案&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **冗余性和服务器负荷：** 安装第二个，或更多[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在 SharePoint 模式下的服务器将提供的冗余性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器功能。 附加的服务器还将在各服务器上分散负荷。 有关详细信息，请参见以下内容：  
+ **冗余性和服务器负荷：** 安装第二个或更多[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式下的服务器将提供的冗余[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器功能。 附加的服务器还将在各服务器上分散负荷。 有关详细信息，请参见以下内容：  
   
 -   [配置用于处理 Excel Services 中的数据模型的 Analysis Services](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15))。  
   

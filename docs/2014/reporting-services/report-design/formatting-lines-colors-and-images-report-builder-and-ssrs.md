@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
 - "10502"
@@ -24,15 +24,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b40615a063e9dfe24fa7a3373867047f0583485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4ea6769c88498b15b3145992c3f7024aaf240b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258203"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>设置线条、颜色和图像的格式（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以设置线条、颜色、数据区域、图像和其他报表项的格式。  
@@ -60,7 +60,7 @@ ms.locfileid: "36126247"
  还可以将图像（如徽标）添加到报表的背景中，或添加到矩形、文本框、表、矩阵或某些图表部件中，或添加到表体和页部分。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [格式文本和占位符&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [设置数字和日期格式&#40;报表生成器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [设置文本框中文本的格式（报表生成器和 SSRS）](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [“填充”对话框（报表生成器和 SSRS）](../fill-dialog-box-report-builder-and-ssrs.md)  

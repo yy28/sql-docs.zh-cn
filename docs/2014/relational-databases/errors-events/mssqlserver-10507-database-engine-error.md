@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10507 (Database Engine error)
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc1510ff82b619ef4462be95b592ca89133eecdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7614a550b0a7e60ac1d8d355fa68299aa8812e90
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125857"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410126"
 ---
 # <a name="mssqlserver10507"></a>MSSQLSERVER_10507
     
@@ -34,7 +33,7 @@ ms.locfileid: "36125857"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_STMT_DOES_NOT_MATCH|  
-|消息正文|无法创建计划指南 ' %。\*ls 因为该语句指定`@stmt`和`@module_or_batch`，或通过`@plan_handle`和`@statement_start_offset`、 不符合指定的模块中任何语句或批处理。 请修改这些值以匹配模块或批中的语句。|  
+|消息正文|无法创建计划指南 ' %。\*ls' 指定的语句由于`@stmt`和`@module_or_batch`，或通过`@plan_handle`和`@statement_start_offset`、 不符合指定的模块中的任何语句或批处理。 请修改这些值以匹配模块或批中的语句。|  
   
 ## <a name="explanation"></a>解释  
  指定模块或批中的语句无法与指定的语句或语句偏移量值相匹配。  

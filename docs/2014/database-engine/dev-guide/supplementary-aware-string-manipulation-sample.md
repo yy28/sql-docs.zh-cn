@@ -1,5 +1,5 @@
 ---
-title: 补充感知的字符串操作示例 |Microsoft 文档
+title: 识别增补字符的字符串操作示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee5e76ee7d2d8d388da0d54182a80e24e71ca112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ef48666d6e7c73d530895e315cbc3a42b57599eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277093"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>能够识别增补字符的字符串操作示例
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 五个函数是 lens()，`lefts(), rights(), subs()`和`replace_s()`相当于内置函数`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字符串函数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 五个函数是 lens （）、`lefts(), rights(), subs()`并`replace_s()`，分别等同于内置函数`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字符串函数。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要创建和运行此项目，必须安装下列软件：  
@@ -53,7 +53,7 @@ ms.locfileid: "36126383"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，你必须`ALTER SETTINGS`服务器级别权限，该权限的成员隐式具有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36126383"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]测试到文件的命令脚本并将其保存为`test.sql`示例目录中。  
+7.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
   
 8.  使用以下命令执行测试脚本：  
   

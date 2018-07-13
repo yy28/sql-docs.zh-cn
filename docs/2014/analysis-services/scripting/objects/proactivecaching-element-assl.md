@@ -1,5 +1,5 @@
 ---
-title: ProactiveCaching 元素 (ASSL) |Microsoft 文档
+title: ProactiveCaching 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProactiveCaching element
 ms.assetid: 85f9ed44-2ede-406f-b0ca-237ab2f49722
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: daf0a3020932646bac1aae797c7ddbe247de5f78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e66238759e38f9f8b42ebf0604b739d74f851832
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211717"
 ---
 # <a name="proactivecaching-element-assl"></a>ProactiveCaching 元素 (ASSL)
   定义父元素的主动缓存设置。  
@@ -71,7 +71,7 @@ ms.locfileid: "36128622"
 |子元素|[AggregationStorage](../properties/aggregationstorage-element-assl.md)，[启用](../properties/enabled-element-assl.md)， [ForceRebuildInterval](../properties/forcerebuildinterval-element-assl.md)，[延迟](../properties/latency-element-assl.md)， [OnlineMode](../properties/onlinemode-element-assl.md)， [SilenceInterval](../properties/silenceinterval-element-assl.md)， [SilenceOverrideInterval](../properties/silenceoverrideinterval-element-assl.md)，[源](../properties/source-element-binding-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ProactiveCaching>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ProactiveCaching>。  
   
 ## <a name="see-also"></a>请参阅  
  [对象&#40;ASSL&#41;](objects-assl.md)  

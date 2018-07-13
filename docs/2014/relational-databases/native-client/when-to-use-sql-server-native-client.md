@@ -1,13 +1,11 @@
 ---
-title: 何时使用 SQL Server Native Client |Microsoft 文档
+title: 何时使用 SQL Server 本机客户端 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], about SQL Server Native Client
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5e27d76ee3e8cf4c19ba9f0f36a2b0c710134c1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bfeee539be2afb80596f5638bc0420616cfc95ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127066"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411676"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>何时使用 SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是可用于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据的一种技术。  有关不同的数据访问技术的讨论，请参阅[数据访问技术路线图](http://go.microsoft.com/fwlink/?LinkID=179186)  
@@ -35,11 +33,11 @@ ms.locfileid: "36127066"
   
  如果要开发基于 COM 的应用程序，且需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引入的新功能，则应当使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 如果不需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能，则可以继续使用 Windows 数据访问组件 (WDAC)。  
   
- 对于现有的 OLE DB 和 ODBC 应用程序，主要问题在于是否需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能。 如果已有不需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能的成熟应用程序，那么可以继续使用 WDAC。 但是，如果你需要访问这些新功能，例如[xml 数据类型](/sql/t-sql/xml/xml-transact-sql)，应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。  
+ 对于现有的 OLE DB 和 ODBC 应用程序，主要问题在于是否需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能。 如果已有不需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能的成熟应用程序，那么可以继续使用 WDAC。 但是，如果需要访问这些新功能，例如[xml 数据类型](/sql/t-sql/xml/xml-transact-sql)，则应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都支持使用行版本控制的已提交读事务隔离，但只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持快照事务隔离。 （在编程术语中，使用行版本控制的读取已提交的事务隔离是 Read Committed 事务相同。）  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都支持使用行版本控制的已提交读事务隔离，但只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持快照事务隔离。 （在编程术语中，使用行版本控制的已提交读的事务隔离等同于已提交读事务。）  
   
- 有关之间的差异信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端和 MDAC，请参阅[更新到 SQL Server Native Client 应用程序从 MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
+ 有关信息之间的差异[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 和 MDAC，请参阅[到 SQL Server Native Client 应用程序从 MDAC 更新](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 编程](../../relational-databases/native-client/sql-server-native-client-programming.md)   

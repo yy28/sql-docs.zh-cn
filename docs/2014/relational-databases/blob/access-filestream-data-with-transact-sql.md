@@ -5,23 +5,21 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0247063d6885706c5f7a7206be64b9fc7c7e8d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f28e4d17ca71432f8d3908c58ce6b689dc868acb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125914"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412696"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>使用 Transact-SQL 访问 FILESTREAM 数据
   本主题介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT、UPDATE 和 DELETE 语句来管理 FILESTREAM 数据。  
@@ -30,7 +28,7 @@ ms.locfileid: "36125914"
 >  本主题中的示例需要在 [创建启用 FILESTREAM 的数据库](create-a-filestream-enabled-database.md) 和 [创建表以存储 FILESTREAM 数据](create-a-table-for-storing-filestream-data.md)中创建的启用了 FILESTREAM 的数据库和表。  
   
 ##  <a name="ins"></a> 插入包含 FILESTREAM 数据的行  
- 若要在支持 FILESTREAM 数据的表中插入一行，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 语句。 将数据插入到 FILESTREAM 列中时，你可以将插入 NULL 或`varbinary(max)`值。  
+ 若要在支持 FILESTREAM 数据的表中插入一行，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 语句。 FILESTREAM 列中插入数据，可以插入 NULL 或`varbinary(max)`值。  
   
 ### <a name="inserting-null"></a>插入 NULL  
  下面的示例说明了如何插入 `NULL`。 如果 FILESTREAM 值为 `NULL`，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会在文件系统中创建文件。  

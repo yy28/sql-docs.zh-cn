@@ -1,5 +1,5 @@
 ---
-title: 设置或更改首选的连接方法 directquery |Microsoft 文档
+title: 设置或更改 DirectQuery 的首选的连接方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf6abf3e4576fb28155529ee1bdfd24520176010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149518"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>设置或更改 DirectQuery 的首选连接方法
   当您创建在 DirectQuery 模式下使用的模型时，必须首先对设计环境进行配置以便支持使用 DirectQuery。 若要执行此操作，请参阅[启用 DirectQuery 设计模式&#40;SSAS 表格&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "36128854"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>为 DirectQuery 模型设置首选连接方法  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，打开用于 DirectQuery 模型的解决方案文件。  
+1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，打开 DirectQuery 模型的解决方案文件。  
   
 2.  在 Visual Studio 中，从 **“项目”** 菜单中，选择 **“属性”**。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3df298cda1e6439d9c539c125689a3687cdc97f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 027ccec12f08efddc9b48c56ad7ed2f22ec5b15b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155748"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 函数（报表生成器和 SSRS）
   返回在递归层次结构中的当前深度级别。  
@@ -39,7 +39,7 @@ Level(scope)
  (`String`)（可选）。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
 ## <a name="return-type"></a>返回类型  
- 返回`Integer`。 如果*作用域*指定数据集或数据区域中，或指定的非递归分组 (即，没有分组`Parent`元素)，`Level`返回 0。 如果省略 *scope* ，则返回当前作用域的级别。  
+ 返回`Integer`。 如果*作用域*指定的数据集或数据区域，或指定非递归分组 (即，不使用的分组`Parent`元素)，`Level`返回 0。 如果省略 *scope* ，则返回当前作用域的级别。  
   
 ## <a name="remarks"></a>Remarks  
  `Level` 函数返回的值从 0 开始；即，层次结构中的第一级为 0。  

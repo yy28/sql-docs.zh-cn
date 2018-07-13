@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155738"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
   递阶报表可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
@@ -68,7 +68,7 @@ ms.locfileid: "36128918"
   
     2.  在“属性”窗格的 **“对齐”** 下，展开 **“填充”** 的属性。  
   
-    3.  有关**左**，键入新的填充值，例如`.5in`。 填充会在单元中按照您指定的值缩进文本。 默认空白大小为 2 磅。 填充属性的有效值是零或正数，后跟一个大小指示符。  
+    3.  有关**左侧**，键入一个新的填充值，如`.5in`。 填充会在单元中按照您指定的值缩进文本。 默认空白大小为 2 磅。 填充属性的有效值是零或正数，后跟一个大小指示符。  
   
          大小指示符有：  
   

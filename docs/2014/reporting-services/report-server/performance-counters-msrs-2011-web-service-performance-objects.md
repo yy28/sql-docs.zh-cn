@@ -1,5 +1,5 @@
 ---
-title: 用于 MSRS 2014 Web Service 和 MSRS 2014 Windows Service 性能对象 （本机模式） 的性能计数器 |Microsoft 文档
+title: MSRS 2014 Web Service 和 MSRS 2014 Windows Service 性能对象 （本机模式） 的性能计数器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -20,13 +20,13 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2606c760b03225a5cbb9d82db0aecd18ef4753ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99e19d3cf5ead97dca19e982b6d9255b296c8d93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150118"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web Service 和 MSRS 2014 Windows Service 性能对象的性能计数器（本机模式）
   本主题介绍 `MSRS 2014 Web Service` 和 `MSRS 2014 Windows Service` 性能对象的性能计数器  
@@ -38,7 +38,7 @@ ms.locfileid: "36128483"
   
  Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档，[运行时分析](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
- 与 SharePoint mode 性能计数器相关的信息，请参阅[MSRS 2014 Web Service SharePoint Mode 和 MSRS 2014 Windows Service SharePoint Mode 性能对象的性能计数器&#40;SharePoint 模式下&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ 有关与 SharePoint mode 性能计数器相关的信息，请参阅[MSRS 2014 Web Service SharePoint Mode 和 MSRS 2014 Windows Service SharePoint Mode 性能对象的性能计数器&#40;SharePoint 模式下&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
  **本主题内容：**  
   
@@ -49,9 +49,9 @@ ms.locfileid: "36128483"
 -   [使用 PowerShell Cmdlet 返回列表](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> MSRS 2014 Web Service 性能计数器  
- `MSRS 2014 Web Service` 性能对象监视报表服务器性能。 此性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 如果你设置了此计数器，可以将计数器应用于的所有实例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]或可以选择特定实例。 这些计数器将重置每当[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]停止报表服务器 Web 服务。  
+ `MSRS 2014 Web Service` 性能对象监视报表服务器性能。 此性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 如果设置了此计数器时，可以将此计数器应用于的所有实例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，也可以选择特定实例。 这些计数器将重置时[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]停止报表服务器 Web 服务。  
   
- 下表列出所含的计数器`MSRS 2014 Web Service`性能对象。  
+ 下表列出了所含的计数器`MSRS 2014 Web Service`性能对象。  
   
 |计数器|Description|  
 |-------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "36128483"
 |`Memory Cache Misses/Sec`|每秒从内存中缓存未检索到报表的次数。|  
 |`Next Session Requests/Sec`|对当前会话中打开的报表（例如通过会话快照呈现的报表）的每秒请求数。|  
 |`Report Requests`|当前处于活动状态且正由报表服务器管理的报表的数目。|  
-|`Reports Executed/Sec`|每秒成功执行报表的次数。 此计数器提供有关报表量的统计信息。 使用与此计数器`Request/Sec`要比较的报表可以从缓存中返回的请求的报表执行。|  
+|`Reports Executed/Sec`|每秒成功执行报表的次数。 此计数器提供有关报表量的统计信息。 使用此计数器与`Request/Sec`报表执行与可以从缓存返回的报表请求进行比较。|  
 |`Requests/Sec`|每秒向报表服务器发出的请求的次数。 此计数器可跟踪报表服务器管理的所有类型请求。|  
 |`Total Cache Hits`|服务启动后请求缓存报表的总次数。 只要 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
 |`Total Cache Hits (Semantic Models)`|服务启动后请求缓存中的模型的总次数。 只要 ASP.NET 停止报表服务器 Web 服务，此计数器就会重置。|  
@@ -79,7 +79,7 @@ ms.locfileid: "36128483"
 |`Total Requests`|服务启动后对报表服务器发出的全部请求的总数。 只要 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
   
 ##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows Service 性能计数器  
- `MSRS 2014 Windows Service`性能对象监视报表服务器 Windows 服务。 此性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作可以包括订阅和传递、报表执行快照和报表历史记录。 如果你设置了此计数器，可以将计数器应用于的所有实例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]或可以选择特定实例。  
+ `MSRS 2014 Windows Service`性能对象监视报表服务器 Windows 服务。 此性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作可以包括订阅和传递、报表执行快照和报表历史记录。 如果设置了此计数器时，可以将此计数器应用于的所有实例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，也可以选择特定实例。  
   
  下表列出了中包含的计数器`MSRS 2014 Windows Service`性能对象。  
   
@@ -132,7 +132,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>请参阅  
  [监视报表服务器性能](monitoring-report-server-performance.md)   
- [用于 MSRS 2014 Web Service SharePoint Mode 和 MSRS 2014 Windows Service SharePoint Mode 性能对象性能计数器&#40;SharePoint 模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2014 Windows Service SharePoint Mode 性能对象和 MSRS 2014 Web Service SharePoint Mode 性能计数器&#40;SharePoint 模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器](performance-counters-reportserver-service-performance-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DataSize 元素 (ASSL) |Microsoft 文档
+title: DataSize 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSize element
 ms.assetid: 4be79dbb-304e-4a65-9198-89fad407f775
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a79084349dfda487a4675d6963665980cc22e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34a8e8740e57bdcafbdd9ff1f3dce188e7d5e5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157148"
 ---
 # <a name="datasize-element-assl"></a>DataSize 元素 (ASSL)
   包含以字节为单位的大小[DataItem](../data-type/dataitem-data-type-assl.md)元素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36128621"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`DataSize`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DataItem>。  
+ 父级对应的元素`DataSize`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DataItem>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

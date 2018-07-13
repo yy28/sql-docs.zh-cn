@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3b93a2e3ca039fb0dbe30c0e88b55f5c321adc17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9dac8aa6a1671f6ef2972f76b66203c5efe0bd71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230167"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI 设备信息设置
   下表列出了以 RGDI 格式呈现时的设备信息设置。  

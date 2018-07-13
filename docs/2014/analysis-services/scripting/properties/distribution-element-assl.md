@@ -1,5 +1,5 @@
 ---
-title: 分发元素 (ASSL) |Microsoft 文档
+title: Distribution 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163538"
 ---
 # <a name="distribution-element-assl"></a>Distribution 元素 (ASSL)
-  包含一个提供程序特定值，描述如何标量值的列中分发[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
+  包含特定于提供程序的值，该值描述标量值的列中的分布[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36127985"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 可用于值`Distribution`元素，如*正常*或*统一，* 特定于每个挖掘算法提供程序。 有关有效 `Distribution` 值的详细信息，请参阅挖掘算法提供程序文档。  
+ 可用的值`Distribution`元素，如*Normal*或*统一，* 特定于每个挖掘算法提供程序。 有关有效 `Distribution` 值的详细信息，请参阅挖掘算法提供程序文档。  
   
- 对父级的对应的元素`Distribution`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 父级对应的元素`Distribution`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

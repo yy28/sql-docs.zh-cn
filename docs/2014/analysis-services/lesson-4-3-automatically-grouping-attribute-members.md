@@ -1,5 +1,5 @@
 ---
-title: 自动对属性成员进行分组 |Microsoft 文档
+title: 自动将属性成员分组 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183424"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自动将属性成员分组
   在浏览多维数据集时，通常根据一个属性层次结构的成员来确定另一个属性层次结构的成员的维度。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性，如果由 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性层次结构中的成员分布自动创建属性成员分组，将会很有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。  
@@ -48,11 +48,11 @@ ms.locfileid: "36127197"
   
 4.  在“属性”窗格中，选择“年收入”。  
   
-5.  在属性窗口中的值更改**DiscretizationMethod**属性**自动**和更改的值**DiscretizationBucketCount**属性到`5`。  
+5.  在属性窗口中的值更改**DiscretizationMethod**属性设置为**自动**和更改的值**DiscretizationBucketCount**属性到`5`。  
   
      下图显示了修改后的“年收入”属性。  
   
-     ![为 Yearly Income 修改属性](../../2014/tutorials/media/l4-discretizationmethod-1.gif "为 Yearly Income 修改属性")  
+     ![修改属性 Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "修改 Yearly Income 属性")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>为“雇员”维度中的属性层次结构成员分组  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36127197"
   
 4.  在“属性”窗格中，选择“病假时间”。  
   
-5.  在属性窗口中的值更改**DiscretizationMethod**属性**群集**和更改的值**DiscretizationBucketCount**属性`5`.  
+5.  在属性窗口中的值更改**DiscretizationMethod**属性设置为**群集**和更改的值**DiscretizationBucketCount**属性`5`.  
   
 6.  在“属性”窗格中，选择“休假时间”。  
   
-7.  在属性窗口中的值更改**DiscretizationMethod**属性**相等区域**和更改的值**DiscretizationBucketCount**属性到`5`。  
+7.  在属性窗口中的值更改**DiscretizationMethod**属性设置为**Equal Areas**和更改的值**DiscretizationBucketCount**属性到`5`。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>浏览已修改的属性层次结构  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36127197"
   
      下图显示了按雇员病假时数确定维度的销售。  
   
-     ![通过员工因病进行维度化的销售保留小时](../../2014/tutorials/media/l4-discretizationmethod-2.gif "销售员工因病的标注保留小时数")  
+     ![按雇员病假划分销售保留小时](../../2014/tutorials/media/l4-discretizationmethod-2.gif "按雇员病假划分销售保留小时")  
   
 10. 从“数据”窗格的列区域删除“病假时间”属性层次结构。  
   

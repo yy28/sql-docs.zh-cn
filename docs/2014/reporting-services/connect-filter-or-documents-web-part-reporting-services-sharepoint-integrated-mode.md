@@ -1,5 +1,5 @@
 ---
-title: 连接筛选器或文档 Web 部件 (SharePoint 集成模式下，Reporting Services) |Microsoft 文档
+title: 连接筛选器或文档 Web 部件 (SharePoint 集成模式下的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
 - SharePoint integration [Reporting Services], Web Parts
@@ -18,13 +18,13 @@ ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f43de4f4118ca7b43370eb8493fe56cd072db2a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 697726db338c9165bdd909b0c324ecf52a472013
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240157"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>连接筛选器或文档 Web 部件（SharePoint 集成模式下的 Reporting Services）
   如果在使用 SharePoint 产品，可以创建一个包含筛选器 Web 部件或文档 Web 部件和报表查看器 Web 部件的面板或 Web 部件页。 支持的版本为 [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]。 还支持 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] 或 [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007。 通过连接筛选器 Web 部件，在筛选器 Web 部件中选择筛选器值的用户可以将值发送至同一页中的参数化报表。 通过连接文档 Web 部件，在文档库中单击报表的用户可以在相邻的报表查看器 Web 部件中查看报表。  
@@ -51,7 +51,7 @@ ms.locfileid: "36127021"
   
 8.  单击 **“添加”**。 Web 部件将添加到区域的顶部。  
   
-9. 在包含 Web 部件的区域，单击 Web 部件**编辑**菜单上，指向**连接**，指向**发送筛选值到**，然后选择**报表查看器** - *报表名称*。  
+9. 在包含 Web 部件的区域，单击 Web 部件**编辑**菜单，依次指向**连接**，指向**发送筛选值到**，然后选择**报表查看器** - *报表名称*。  
   
 10. 签入更改并保存此页。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36127021"
 11. 签入更改并保存此页。  
   
 ## <a name="see-also"></a>请参阅  
- [将报表查看器 Web 部件添加到 Web 页&#40;的 Reporting Services SharePoint 集成模式&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [将报表查看器 Web 部件添加到 Web 页&#40;Reporting Services SharePoint 集成模式下&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [在 SharePoint 站点上的报表查看器 Web 部件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [自定义报表查看器 Web 部件](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   

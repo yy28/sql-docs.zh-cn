@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘设计器和对话框 |Microsoft 文档
+title: 数据挖掘设计器和对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services dialog boxes
 - Analysis Services designers
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 696378518b824f7ffcca6d0bfc85f47b353b2dc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 559712565fa32de560b5b9e793682253f4d80aa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159678"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>数据挖掘设计器和对话框
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了可用于创建、 查看、 测试和从数据挖掘模型创建预测的设计工具。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供可用于创建、 查看、 测试和通过数据挖掘模型创建预测的设计工具。  
   
  下表列出了针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的数据挖掘设计器和工具的参考主题。  
   

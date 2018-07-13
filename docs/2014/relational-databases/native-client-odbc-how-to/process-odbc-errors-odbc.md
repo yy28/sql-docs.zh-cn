@@ -1,31 +1,29 @@
 ---
-title: 处理 ODBC 错误 (ODBC) |Microsoft 文档
+title: 处理 ODBC 错误 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b925bc53c1427e1964b8d2487727994d39f24354
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124776"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423026"
 ---
 # <a name="process-odbc-errors-odbc"></a>处理 ODBC 错误 (ODBC)
-  可以使用两个 ODBC 函数调用以检索 ODBC 消息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)和[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 `SQLGetDiagField` 来检索。  
+  可以使用两个 ODBC 函数调用来检索 ODBC 消息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)并[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 `SQLGetDiagField` 来检索。  
   
  [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 通过 ODBC 驱动程序管理器进行处理，而不是通过单独的驱动程序进行处理。 在成功连接之前，ODBC 驱动程序管理器不会缓存特定于驱动程序的诊断字段。 在成功连接之前，无法针对特定于驱动程序的诊断字段调用 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 这包括 ODBC 连接命令，即使它们返回 SQL_SUCCESS_WITH_INFO 也是如此。 在进行下一次 ODBC 函数调用之前，特定于驱动程序的诊断字段不可用。  
   

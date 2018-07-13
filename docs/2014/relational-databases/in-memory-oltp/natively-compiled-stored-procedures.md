@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - natively compiled stored procedures
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 caps.latest.revision: 54
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b566be21bdd5756a4f37be09a436c65fe1565bb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 377aa0cd89ad794bb9efb3744cbf62723512d12c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148708"
 ---
 # <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程
   本机编译的存储过程是编译为访问内存优化表的本机代码的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 利用本机编译的存储过程，可在存储过程中高效执行查询和业务逻辑。 有关本机编译过程的更详细信息，请参阅 [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)。 有关将基于磁盘的存储过程迁移到本机编译的存储过程的详细信息，请参阅 [本机编译的存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)。  

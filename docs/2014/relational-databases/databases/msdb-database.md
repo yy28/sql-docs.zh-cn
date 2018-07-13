@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
 - alerts [SQL Server], msdb database
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27c7555a412fd536db632504ce6bcc82122fa8e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 33f5804831a0adb341d37f199556273842c00918
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154508"
 ---
 # <a name="msdb-database"></a>msdb 数据库
   **代理使用** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库来计划警报和作业， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和数据库邮件等其他功能也使用该数据库。  

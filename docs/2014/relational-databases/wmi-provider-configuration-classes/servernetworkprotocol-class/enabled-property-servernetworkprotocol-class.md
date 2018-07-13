@@ -1,5 +1,5 @@
 ---
-title: 启用属性 （ServerNetworkProtocol 类） |Microsoft 文档
+title: 启用属性 （ServerNetworkProtocol 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 538215095bb15aa34d95ecab70eec6894055ead0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0eab01e4ccc8eb0521186304be114264b951617f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278773"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled 属性（ServerNetworkProtocol 类）
   获取指定是否启用服务器网络协议的布尔值。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ServerNetworkProtocol 类](servernetworkprotocol-class.md)对象，表示的实例所使用的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个[ServerNetworkProtocol 类](servernetworkprotocol-class.md)对象，表示使用的实例的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定是否启用服务器网络协议的布尔值：如果启用服务器网络协议，则为 `true`；如果禁用服务器网络协议，则为 `false`。  

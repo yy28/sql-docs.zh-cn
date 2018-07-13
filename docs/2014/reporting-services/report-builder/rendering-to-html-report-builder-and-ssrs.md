@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1457c44ed95f09891bb8e8617968d2f9b9cbfbc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2776ccbb78346ad6243e5b6a4ed1e7c5827d31bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157828"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  
   
  在浏览器中查看报表时，包括报表在报表管理器中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。  
   
- 在浏览器中查看报表时，包括报表在报表管理器中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。 HTML 呈现扩展插件可以将 HTML 呈现为片段或完整的 HTML 文档。 如果 HTML 为片断形式， `HEAD`， `HTML`，和`BODY`删除标记的 HTML 文档。 只有 `BODY` 标记的内容才会呈现。 这在将此 HTML 片段嵌入其他应用程序生成的 HTML 时颇为有用。  
+ 在浏览器中查看报表时，包括报表在报表管理器中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。 HTML 呈现扩展插件可以将 HTML 呈现为片段或完整的 HTML 文档。 如果 HTML 为片断形式， `HEAD`， `HTML`，和`BODY`会删除 HTML 文档的标记。 只有 `BODY` 标记的内容才会呈现。 这在将此 HTML 片段嵌入其他应用程序生成的 HTML 时颇为有用。  
   
  在某些情况下，以 HTML 格式呈现报表时，报表参数可用于发起脚本注入攻击。 有关保护报表的详细信息，请参阅 [保护报表和资源](../security/secure-reports-and-resources.md)。  
   

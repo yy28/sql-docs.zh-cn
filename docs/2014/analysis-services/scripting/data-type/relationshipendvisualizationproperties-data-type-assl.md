@@ -1,5 +1,5 @@
 ---
-title: RelationshipEndVisualizationProperties 数据类型 (ASSL) |Microsoft 文档
+title: RelationshipEndVisualizationProperties 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 11f9a10f-d36c-4faf-b595-3fe969d1935e
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13bde90af2ecbb8aba03bea4d140139c8437a747
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58348251e9ea00c4f6eebc5fcec067683e49a3a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161268"
 ---
 # <a name="relationshipendvisualizationproperties-data-type-assl"></a>RelationshipEndVisualizationProperties 数据类型 (ASSL)
   定义一个基元数据类型，该类型表示关系中的关系方。  
@@ -57,6 +57,6 @@ ms.locfileid: "36126933"
 |派生元素||  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.RelationshipEnd>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.RelationshipEnd>。  
   
   

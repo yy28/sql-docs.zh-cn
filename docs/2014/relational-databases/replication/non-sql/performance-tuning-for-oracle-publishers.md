@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], performance tuning
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 523d1f40d27778b8aaa45f6b71873cf3cb69cc34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6325010f13ee758532729ea67d88760073f38e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150728"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 发布服务器性能优化
   Oracle 发布体系结构与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布体系结构类似。因此，Oracle 复制性能优化的第一步要求遵循 [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md)中提供的一般优化建议。  

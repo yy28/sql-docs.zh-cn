@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e677c9e02f452a486b9168f15c662362640ea86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ebf90710587c73206408dfda1429a90b58f39621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228837"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 函数（报表生成器和 SSRS）
   指示项的当前实例是否位于指定的作用域中。  
@@ -35,17 +35,17 @@ InScope(scope)
   
 #### <a name="parameters"></a>Parameters  
  *作用域*  
- (`String`) 的数据集、 数据区域中或指定作用域的组的名称。  
+ (`String`) 的数据集、 数据区域或指定某个作用域的组的名称。  
   
 ## <a name="return-type"></a>返回类型  
  返回`Boolean`。  
   
 ## <a name="remarks"></a>Remarks  
- `InScope`函数测试指定的作用域中的成员身份的报表项的当前实例的作用域*作用域*参数。  
+ `InScope`函数测试中指定的作用域的成员的当前实例的报表项作用域*作用域*参数。  
   
  *Scope* 不能是表达式。  
   
- 一个典型用途`InScope`函数在数据区域具有动态作用域。 例如，`InScope`可用数据区域单元中的钻取链接来提供不同的报表的参数取决于所单击的单元的名称和不同的集。 应用示例如下：  
+ 典型用法`InScope`函数具有动态的数据区域作用域中。 例如，`InScope`可用于在数据区域单元格的钻取链接提供不同的报表名称和不同的参数取决于所单击的单元集。 应用示例如下：  
   
 -   如果单击的单元格位于 `ProductDetail` 组，则以下在钻取链接中用作报表名称的表达式将打开 `Month` 报表；否则将打开 `ProductSummary` 报表。  
   
@@ -53,7 +53,7 @@ InScope(scope)
     =Iif(InScope("Month"), "ProductDetail", "ProductSummary")  
     ```  
   
--   下面的表达式中使用`Omit`属性的钻取报表参数，将到目标报表传递参数，仅当单击的单元格处于`Product`组。  
+-   下面的表达式中使用`Omit`钻取报表参数的属性会将参数传递到目标报表仅当单击的单元格处于`Product`组。  
   
     ```  
     =Not(InScope("Product"))  

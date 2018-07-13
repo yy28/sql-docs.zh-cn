@@ -1,5 +1,5 @@
 ---
-title: DefaultValue 元素 (ASSL) |Microsoft 文档
+title: DefaultValue 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultValue element
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a319f22dc353f860ca3b0fa3a8e4b0cf60f421ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4137e73097630d62358ea874a38afda6d90eb87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277843"
 ---
 # <a name="defaultvalue-element-assl"></a>DefaultValue 元素 (ASSL)
-  包含关联的只读的默认值[ServerProperty](../objects/serverproperty-element-assl.md)元素。  
+  包含关联的只读默认值[ServerProperty](../objects/serverproperty-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36126718"
 ## <a name="remarks"></a>Remarks  
  此元素包含的只读安装默认值`ServerProperty`的当前实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 该默认值由当前实例提供，并且通常不能更改。  
   
- 对应于的父元素`DefaultValue`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ServerProperty>。  
+ 父级对应的元素`DefaultValue`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>请参阅  
  [ServerProperties 元素&#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

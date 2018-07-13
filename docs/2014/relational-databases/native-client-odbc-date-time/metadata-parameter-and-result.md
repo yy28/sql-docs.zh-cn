@@ -1,28 +1,26 @@
 ---
-title: 参数和结果元数据 |Microsoft 文档
+title: 参数和结果元数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a898b9aa7a816b93afea875c8d304b520864f40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f07127b8ae80ff212f671d94f55a311584552c58
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125113"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420178"
 ---
 # <a name="parameter-and-result-metadata"></a>参数和结果元数据
   本主题介绍在日期和时间数据类型的实现参数描述符 (IPD) 和实现行描述符 (IRD) 字段中返回的内容。  
@@ -53,7 +51,7 @@ ms.locfileid: "36125113"
   
  SQL_CA_SS_VARIANT_SQL_TYPE 是一个新的描述符字段。 将此字段添加到 IRD 和 IPD 中是为了使应用程序能够指定与 `sqlvariant` (SQL_SSVARIANT) 列和参数关联的值类型。  
   
- SQL_CA_SS_SERVER_TYPE 是一个新的仅适用于 IPD 的字段，用于使应用程序能够控制如何将作为 SQL_TYPE_TYPETIMESTAMP（或具有 C 类型 SQL_C_TYPE_TIMESTAMP 的 SQL_SS_VARIANT）绑定的参数的值发送到服务器。 如果 SQL_DESC_CONCISE_TYPE SQL_TYPE_TIMESTAMP （或是 SQL_SS_VARIANT，C 类型是 SQL_C_TYPE_TIMESTAMP） 当 SQLExecute 或 SQLExecDirect 称为，SQL_CA_SS_SERVER_TYPE 值可确定表格格式数据流 (TDS) 类型的参数值，如下所示：  
+ SQL_CA_SS_SERVER_TYPE 是一个新的仅适用于 IPD 的字段，用于使应用程序能够控制如何将作为 SQL_TYPE_TYPETIMESTAMP（或具有 C 类型 SQL_C_TYPE_TIMESTAMP 的 SQL_SS_VARIANT）绑定的参数的值发送到服务器。 如果 SQL_DESC_CONCISE_TYPE 为 SQL_TYPE_TIMESTAMP （或为 SQL_SS_VARIANT 和 C 类型为 SQL_C_TYPE_TIMESTAMP） 当调用 SQLExecute 或 SQLExecDirect，SQL_CA_SS_SERVER_TYPE 的值可确定表格格式数据流 (TDS) 类型的参数值按如下所示：  
   
 |SQL_CA_SS_SERVER_TYPE 的值|SQL_DESC_PRECISION 的有效值|SQL_DESC_LENGTH 的有效值|TDS 类型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -67,11 +65,11 @@ ms.locfileid: "36125113"
   
 -   在准备或执行时间（当调用 SQLExecute、SQLExecDirect、SQLSetPos 或 SQLBulkOperations 时）。  
   
--   当通过调用与 SQLPrepare 非延迟准备应用程序强制延迟准备已禁用，或通过调用 SQLNumResultCols，SQLDescribeCol 或 SQLDescribeParam 但不是准备的语句执行。  
+-   当通过调用 SQLPrepare 与非延迟准备应用程序强制延迟准备已禁用，或通过调用 SQLNumResultCols，SQLDescribeCol 或 SQLDescribeParam 而不准备的语句执行。  
   
- 当 SQL_CA_SS_SERVER_TYPE 设置通过 SQLSetDescField 调用时，其值必须 SQL_SS_TYPE_DEFAULT、 SQL_SS_TYPE_SMALLDATETIME 或 SQL_SS_TYPE_DATETIME。 如果不是这样，将返回 SQL_ERROR 并生成具有 SQLState HY092 和消息“属性/选项标识符无效”的诊断记录。  
+ 通过调用 SQLSetDescField 设置 SQL_CA_SS_SERVER_TYPE 时，其值必须为 SQL_SS_TYPE_DEFAULT、 SQL_SS_TYPE_SMALLDATETIME 或 SQL_SS_TYPE_DATETIME。 如果不是这样，将返回 SQL_ERROR 并生成具有 SQLState HY092 和消息“属性/选项标识符无效”的诊断记录。  
   
- 依赖于 `datetime` 和 `smalldatetime` 而非 `datetime2` 支持的功能的应用程序可以使用 SQL_CA_SS_SERVER_TYPE 属性。 例如，`datetime2`需要使用`dateadd`和**datediif**函数，而`datetime`和`smalldatetime`还允许算术运算符。 大多数应用程序将不需要使用此属性，而且应当避免使用此属性。  
+ 依赖于 `datetime` 和 `smalldatetime` 而非 `datetime2` 支持的功能的应用程序可以使用 SQL_CA_SS_SERVER_TYPE 属性。 例如，`datetime2`需要使用`dateadd`并**datediif**函数，而`datetime`和`smalldatetime`也允许算术运算符。 大多数应用程序将不需要使用此属性，而且应当避免使用此属性。  
   
 ## <a name="information-returned-in-ird-fields"></a>在 IRD 字段中返回的信息  
  在 IRD 字段中返回以下信息：  

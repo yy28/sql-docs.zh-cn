@@ -1,5 +1,5 @@
 ---
-title: AggregationID 元素 (ASSL) |Microsoft 文档
+title: AggregationID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277813"
 ---
 # <a name="aggregationid-element-assl"></a>AggregationID 元素 (ASSL)
-  标识从聚合定义[AggregationDesign](../objects/aggregationdesign-element-assl.md)元素，用于创建聚合实例。  
+  标识从的聚合定义[AggregationDesign](../objects/aggregationdesign-element-assl.md)元素用来创建聚合实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36128407"
 ## <a name="remarks"></a>Remarks  
  如果缺少此元素或将此元素设置为空白字符串，则 `AggregationInstance` 表示一个用户定义的聚合。  
   
- 对应于的父元素`AggregationID`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AggregationInstance>。  
+ 父级对应的元素`AggregationID`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AggregationInstance>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

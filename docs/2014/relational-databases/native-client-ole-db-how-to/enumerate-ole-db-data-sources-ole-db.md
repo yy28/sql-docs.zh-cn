@@ -1,39 +1,37 @@
 ---
-title: 枚举 OLE DB 数据源 (OLE DB) |Microsoft 文档
+title: 枚举 OLE DB 数据源 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c989dbd2dd929fc8e971b6cd182a379950a2b2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a694707cb44c9cf26da6a1a747ad3096fbb9bec
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126836"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420896"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
   此示例显示如何使用枚举器对象列出可用数据源。  
   
- 若要列出对 SQLOLEDB 枚举器可见的数据源，使用者调用[ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312)方法。 此方法返回与当前可见数据源有关的信息的行集。  
+ 若要列出对 SQLOLEDB 枚举器可见的数据源，使用者调用[isourcesrowset:: Getsourcesrowset](http://go.microsoft.com/fwlink/?LinkId=120312)方法。 此方法返回与当前可见数据源有关的信息的行集。  
   
  根据所使用的网络库，将搜索相应的域以找到数据源。 对于命名管道，将搜索客户端登录到的域。 对于 AppleTalk，将搜索默认区域。 对于 SPX/IPX，将搜索在平构数据库中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的列表。 对于 Banyan VINES，将搜索在本地网络中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装。 不支持多协议和 TCP/IP 套接字。  
   
  在开关服务器时，可能需要几分钟来更新这些域中的信息。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例需要 AdventureWorks 示例数据库中，您可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -53,7 +51,7 @@ ms.locfileid: "36126836"
 6.  通过调用 `IRowset::GetData` 从行集中该行的副本检索数据，然后处理这些数据。  
   
 ## <a name="example"></a>示例  
- 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请更改连接字符串从"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
 ```  
 // compile with: ole32.lib  

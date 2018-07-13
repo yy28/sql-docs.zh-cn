@@ -1,28 +1,26 @@
 ---
-title: 使用数据在执行参数 (ODBC) |Microsoft 文档
+title: 使用执行时数据参数 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55216e04305194bf16be23b33122b5433a84c43f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 338d43146b1f782695025bb14470af58539b4bea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126296"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409576"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>使用执行时数据参数 (ODBC)
     
@@ -30,7 +28,7 @@ ms.locfileid: "36126296"
   
 1.  调用 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 以将程序缓冲区绑定到语句参数时：  
   
-    -   对于最后一个参数，使用 SQL_LEN_DATA_AT_EXEC (*长度*) 其中*长度*是的总长度`text`， `ntext`，或`image`以字节为单位的参数数据。  
+    -   对于最后一个参数，请使用 SQL_LEN_DATA_AT_EXEC (*长度*) 其中*长度*的总长度`text`， `ntext`，或`image`以字节为单位的参数数据。  
   
     -   使用程序定义参数标识符的 `rgbValue`（第 8 个参数）。  
   
@@ -227,6 +225,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [管理文本和图像列操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+ [管理 text 和 image 列操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

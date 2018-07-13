@@ -1,28 +1,26 @@
 ---
-title: 执行包含表值参数的命令 |Microsoft 文档
+title: 执行包含表值参数的命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89c31d3e0878a7e1eed0b5f0c5ce4d09a582a357
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 20b7c44bb8e1bb27978170a8ccced45a9f871169
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126837"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431586"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>执行包含表值参数的命令
   执行包含表值参数的命令需要两个阶段：  
@@ -34,12 +32,12 @@ ms.locfileid: "36126837"
 ## <a name="table-valued-parameter-specification"></a>指定表值参数  
  使用者可以指定表值参数的类型。 此信息包括表值参数的类型名称。 如果连接的当前默认架构中不存在该表值参数的用户定义表类型，则它还包括架构名称。 根据服务器的支持情况，使用者还可以指定可选的元数据信息（如列的排序），以及指定特定列的所有行都具有默认值。  
   
- 若要指定表值参数，使用者调用 ISSCommandWithParamter::SetParameterInfo，并根据需要调用 ISSCommandWithParameters::SetParameterProperties。 表值参数， *pwszDataSourceType* DBPARAMBINDINFO 结构中的字段具有 DBTYPE_TABLE 的值。 *UlParamSize*字段设置为 ~ 0 来指示该长度是未知。 可以通过 ISSCommandWithParameters::SetParameterProperties 设置表值参数，如架构名称、 类型名称、 列顺序和默认列的特定属性。  
+ 若要指定表值参数，使用者调用 ISSCommandWithParamter::SetParameterInfo，并可以选择调用 isscommandwithparameters:: Setparameterproperties。 对于表值参数， *pwszDataSourceType* DBPARAMBINDINFO 结构中的字段的值为 DBTYPE_TABLE。 *UlParamSize*字段设置为 ~ 0 以指示长度是未知。 可以通过 isscommandwithparameters:: Setparameterproperties 设置特定属性对于表值参数，如架构名称、 类型名称、 列顺序和默认列。  
   
 ## <a name="table-valued-parameter-binding"></a>绑定表值参数  
  表值参数可以是任意行集对象。 访问接口在执行期间从该对象中读取数据并将表值参数发送到服务器。  
   
- 若要绑定的表值参数，使用者调用 IAccessor::CreateAccessor。 *WType*的表值参数的 DBBINDING 结构的字段设置为 DBTYPE_TABLE。 *PObject* DBBINDING 结构中的成员为非 NULL，与*pObject*的*iid*成员设置为 IID_IRowset 或任何其他表值参数行集对象接口。 DBBINDING 结构中其余字段的设置方式应与流式 BLOB 的对应字段的设置方式相同。  
+ 若要绑定表值参数，使用者调用 iaccessor:: Createaccessor。 *WType*表值参数的 DBBINDING 结构的字段设置为 DBTYPE_TABLE。 *PObject* DBBINDING 结构中的成员为非 NULL，并且*pObject*的*iid*成员设置为 IID_IRowset 或任何其他表值参数行集对象接口。 DBBINDING 结构中其余字段的设置方式应与流式 BLOB 的对应字段的设置方式相同。  
   
  对于表值参数以及与表值参数关联的行集对象的绑定，存在如下限制：  
   
