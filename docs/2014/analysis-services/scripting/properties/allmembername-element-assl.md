@@ -1,5 +1,5 @@
 ---
-title: AllMemberName 元素 (ASSL) |Microsoft 文档
+title: AllMemberName 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberName element
 ms.assetid: 5fda5563-cb7a-4402-82ad-3d6c432b6a7e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: faf238e9d79d0ab8ef6b9dcb49db9338623917c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c2790a2c83111c45e09411c3ed4006b38a8195
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151418"
 ---
 # <a name="allmembername-element-assl"></a>AllMemberName 元素 (ASSL)
-  默认语言的标题中包含的所有成员的[层次结构](../objects/hierarchy-element-assl.md)元素。  
+  包含所有成员的默认语言的标题[层次结构](../objects/hierarchy-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36129777"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`AllMemberName`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Hierarchy>。  
+ 父级对应的元素`AllMemberName`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Hierarchy>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

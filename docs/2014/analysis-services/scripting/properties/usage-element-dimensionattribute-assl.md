@@ -1,5 +1,5 @@
 ---
-title: 使用情况元素 (DimensionAttribute) (ASSL) |Microsoft 文档
+title: Usage 元素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e7787edb562580eaaddc3cdaf1094958eec9742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7dea2cb3c0e928b5a1b0c80aa0ca526f5f8329
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183236"
 ---
 # <a name="usage-element-dimensionattribute-assl"></a>Usage 元素 (DimensionAttribute) (ASSL)
   说明如何使用属性。  
@@ -70,7 +70,7 @@ ms.locfileid: "36129342"
 |*Key*|该属性为键属性。|  
 |*Parent*|该属性为父属性。|  
   
- 对应于的允许值为枚举`Usage`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AttributeUsage>。  
+ 与允许的值相对应的枚举`Usage`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AttributeUsage>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

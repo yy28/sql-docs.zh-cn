@@ -1,5 +1,5 @@
 ---
-title: 选择数据源 |Microsoft 文档
+title: 选择数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155788"
 ---
 # <a name="select-the-data-source"></a>选择数据源
   使用报表向导的此页可为报表定义数据源。  
@@ -50,7 +50,7 @@ ms.locfileid: "36129821"
  选择此选项可将数据源以共享数据源形式存储在项目中，而不是存储在报表中。 这样，即可将其用作项目中其他报表的数据源。  
   
 ## <a name="see-also"></a>请参阅  
- [嵌入和共享数据连接或数据源&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [嵌入和共享的数据连接或数据源&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services 报表服务器](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner 配置文件](report-server/rsreportdesigner-configuration-file.md)   

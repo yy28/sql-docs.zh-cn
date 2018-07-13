@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 304e1f865c023d8edada929cb6b803d8331b4161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ca8c14c4daae046786bfcd78e04c0bd1b08139d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160558"
 ---
 # <a name="select-backup-destination"></a>选择备份目标
   使用 **“选择备份目标”** 对话框可以选择一个设备作为备份目标。 备份目标可以是磁盘，也可以是逻辑备份设备。  
@@ -44,7 +43,7 @@ ms.locfileid: "36128789"
   
 |||  
 |-|-|  
-|**文件名**|选择此选项，以在文本框中输入作为备份目标的本地文件或远程文件。<br /><br /> 若要指定本地文件，单击文本框右侧的浏览按钮并导航到运行服务器的计算机的固定驱动器上的文件或直接; 输入的完整路径和文件名例如， `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`。<br /><br /> 若要将远程文件指定为备份目标，请输入其完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。<br /><br /> **\*\* 重要说明 \*\*** 通过网络备份数据时可能会出现网络错误；因此，建议你在完成备份后验证备份操作。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)。|  
+|**文件名**|选择此选项，以在文本框中输入作为备份目标的本地文件或远程文件。<br /><br /> 若要指定本地文件，单击文本框右侧的浏览按钮并导航到运行服务器的计算机的固定驱动器上的文件或直接; 输入完整路径和文件名例如， `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`。<br /><br /> 若要将远程文件指定为备份目标，请输入其完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。<br /><br /> **\*\* 重要说明 \*\*** 通过网络备份数据时可能会出现网络错误；因此，建议你在完成备份后验证备份操作。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)。|  
 |**备份设备**|选择此选项以选择逻辑备份设备。<br /><br /> 注意：有关如何创建磁盘备份设备的详细信息，请参阅[为磁盘文件定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)。|  
   
  **磁带上的目标**  

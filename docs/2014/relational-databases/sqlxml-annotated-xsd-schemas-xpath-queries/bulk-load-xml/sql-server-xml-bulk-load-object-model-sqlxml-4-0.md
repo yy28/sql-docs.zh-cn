@@ -1,5 +1,5 @@
 ---
-title: SQL Server XML 大容量加载对象模型 (SQLXML 4.0) |Microsoft 文档
+title: SQL Server XML 大容量加载对象模型 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb60aaf57869dbbd108c0815ed3fc02b07ed4bf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1157095c31a62c86530f1e8ed669700357adf982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278883"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大容量加载对象模型包含 SQLXMLBulkLoad 对象。 该对象支持以下方法和属性。  
@@ -52,7 +52,7 @@ ms.locfileid: "36129645"
   
 ## <a name="properties"></a>属性  
  BulkLoad  
- 指定是否应执行大容量加载。 此属性是很有用，如果你想要生成仅 （请参阅按照 SchemaGen、 SGDropTables 和 SGUseID 属性） 的架构和不执行大容量加载。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将执行。 当此属性设置为 FALSE 时，XML 大容量加载将不执行。  
+ 指定是否应执行大容量加载。 此属性很有用，如果你想要只生成的架构 （请参阅按照 SchemaGen、 SGDropTables 和 SGUseID 属性），并且执行大容量加载。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将执行。 当此属性设置为 FALSE 时，XML 大容量加载将不执行。  
   
  默认值为 TRUE。  
   
@@ -62,21 +62,21 @@ ms.locfileid: "36129645"
  在此属性设置为 TRUE 时，XML 大容量加载检查每个插入的值的约束（这意味着约束冲突将导致错误）。  
   
 > [!NOTE]  
->  若要将此属性为 FALSE，你必须**ALTER TABLE**目标表的权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要将此属性为 FALSE，您必须具有**ALTER TABLE**目标表的权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  默认值是 FALSE。 在该值设置为 FALSE 时，XML 大容量加载在插入操作期间将忽略这些约束。 在当前实现中，您必须按照映射架构中的主键和外键关系的顺序定义表。 也就是说，具有主键的表必须在具有外键的相应表之前定义；否则，XML 大容量加载将失败。  
   
  请注意，如果 ID 传播正在进行，则此选项不适用并且约束检查将保持。 这将在 `KeepIdentity=False` 并且存在定义的关系（即，父级是标识字段并且在生成子级时值将提供给子级）发生。  
   
  ConnectionCommand  
- 标识 XML 大容量加载应使用的现有连接对象 （例如的 ADO 或 ICommand 命令对象）。 你可以使用 ConnectionCommand 属性，而不是与 ConnectionString 属性指定的连接字符串。 事务属性必须设置为 TRUE，如果你使用 ConnectionCommand。  
+ 标识 XML 大容量加载应使用现有连接对象 （例如，ADO 或 ICommand 命令对象）。 您可以使用 ConnectionCommand 属性而不是使用 ConnectionString 属性指定连接字符串。 事务属性必须设置为 TRUE，如果使用 ConnectionCommand。  
   
- 如果你使用了 ConnectionString 和 ConnectionCommand 属性，XML 大容量加载使用最后一个指定的属性。  
+ 如果使用 ConnectionString 和 ConnectionCommand 属性，XML 大容量加载使用最后指定的属性。  
   
  默认值为 NULL。  
   
  ConnectionString  
- 标识 OLE DB 连接字符串，该字符串提供建立与数据库实例的连接所必需的信息。 如果你使用了 ConnectionString 和 ConnectionCommand 属性，XML 大容量加载使用最后一个指定的属性。  
+ 标识 OLE DB 连接字符串，该字符串提供建立与数据库实例的连接所必需的信息。 如果使用 ConnectionString 和 ConnectionCommand 属性，XML 大容量加载使用最后指定的属性。  
   
  默认值为 NULL。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36129645"
  在设置为 TRUE 时，在插入操作期间触发器将照常触发。  
   
 > [!NOTE]  
->  若要将此属性为 FALSE，你必须**ALTER TABLE**目标表的权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要将此属性为 FALSE，您必须具有**ALTER TABLE**目标表的权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  请注意，如果 ID 传播正在进行，则此选项不适用并且触发器将保持。 这将在 `KeepIdentity=False` 并且存在定义的关系（即，父级是标识字段并且在生成子级时值将提供给子级）发生。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36129645"
  IgnoreDuplicateKeys  
  指定尝试在某一键列中插入重复值时应采取什么后续操作。 如果此属性设置为 TRUE 并且尝试在某一键列中插入具有重复值的记录，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将不插入该记录。 但它将插入随后的记录；这样，大容量加载操作将不会失败。 如果此属性设置为 FALSE，则尝试在某一键列中插入重复值时大容量加载将失败。  
   
- 当 IgnoreDuplicateKeys 属性设置为 TRUE 时，则 COMMIT 语句会发出的每个记录的表中插入。 这将降低性能。 该属性可以设置为 TRUE 仅事务属性设置为 FALSE，因为使用文件实现事务性行为。  
+ 当 IgnoreDuplicateKeys 属性设置为 TRUE 时，对于每个记录的表中插入发出 COMMIT 语句。 这将降低性能。 该属性可以设置为 TRUE，仅事务属性设置为 FALSE，因为事务行为使用文件实现。  
   
  默认值是 FALSE。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36129645"
  此属性的值适用于在大容量加载中涉及的所有列。 默认值为 TRUE。  
   
 > [!NOTE]  
->  若要将此属性为 TRUE，你必须**ALTER TABLE**目标表的权限。 否则，它必须设置为 FALSE 的值。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要将此属性为 TRUE，必须具有**ALTER TABLE**目标表的权限。 否则，它必须设置为 FALSE 的值。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  KeepNulls  
  指定哪些值将用于在 XML 文档中缺少相应属性或子元素的列。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将 Null 值分配给该列。 它并不分配在服务器上设置的该列的默认值（如果有）。 此属性的值适用于在大容量加载中涉及的所有列。  
@@ -123,32 +123,32 @@ ms.locfileid: "36129645"
  SchemaGen  
  指定是否在执行大容量加载操作前创建必需的表。 此属性是一个布尔属性。 如果该属性设置为 TRUE，则创建在映射架构中标识的表（数据库必须存在）。 如果数据库中已存在一个或多个表，SGDropTables 属性确定是否要删除并重新创建这些预先存在的表。  
   
- SchemaGen 属性的默认值为 FALSE。 SchemaGen 不会创建新创建的表的主键约束。 SchemaGen，但是，FOREIGN KEY 约束的数据库中创建如果它可以查找匹配`sql:relationship`和`sql:key-fields`映射架构中的批注和键字段如果包含的单个列。  
+ SchemaGen 属性的默认值为 FALSE。 SchemaGen 不会创建新创建的表的 PRIMARY KEY 约束。 SchemaGen，但是，FOREIGN KEY 约束在数据库中创建如果可以找到匹配`sql:relationship`和`sql:key-fields`映射架构中的批注并且键字段由单个列构成。  
   
- 请注意，是否 SchemaGen 属性设置为 TRUE 时，XML 大容量加载以下任务：  
+ 请注意，是否 SchemaGen 属性设置为 TRUE 时，XML 大容量加载将以下事项：  
   
 -   根据元素和属性名称创建必需的表。 因此，不采用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 保留字作为架构中的元素和属性名称十分重要。  
   
--   返回溢出数据的任何列指定使用[sql:overflow-字段](annotation-interpretation-sql-overflow-field.md)中[xml 数据类型](/sql/t-sql/xml/xml-transact-sql)格式。  
+-   返回溢出指定使用的任何列的数据[sql:overflow-字段](annotation-interpretation-sql-overflow-field.md)中[xml 数据类型](/sql/t-sql/xml/xml-transact-sql)格式。  
   
  SGDropTables  
- 指定是否应删除并重新创建现有表。 SchemaGen 属性设置为 TRUE 时，你可以使用此属性。 如果 SGDropTables 为 FALSE，则会保留现有的表。 在此属性为 TRUE 时，将删除并重新创建现有表。  
+ 指定是否应删除并重新创建现有表。 SchemaGen 属性设置为 TRUE 时使用此属性。 如果 SGDropTables 为 FALSE 时，会保留现有的表。 在此属性为 TRUE 时，将删除并重新创建现有表。  
   
  默认值是 FALSE。  
   
  SGUseID  
- 指定映射架构中作为 `id` 类型标识的属性是否可用于在创建表时创建 PRIMARY KEY 约束。 SchemaGen 属性设置为 TRUE 时，请使用此属性。 如果 SGUseID 为 TRUE，SchemaGen 实用程序为其使用属性`dt:type="id"`指定为主密钥列并添加适当的 PRIMARY KEY 约束创建表时。  
+ 指定映射架构中作为 `id` 类型标识的属性是否可用于在创建表时创建 PRIMARY KEY 约束。 SchemaGen 属性设置为 TRUE 时，请使用此属性。 SGUseID 为 TRUE，如果 SchemaGen 实用程序将使用特性为其`dt:type="id"`指定为主键列并添加相应的 PRIMARY KEY 约束创建表时。  
   
  默认值是 FALSE。  
   
  TempFilePath  
- 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （只有在 Transaction 属性设置为 TRUE 时，此属性才有用。）你必须确保[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
+ 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （只有在 Transaction 属性设置为 TRUE 时，此属性才有用。）您必须确保[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
   
  事务  
- 指定大容量加载是否应作为事务实现，在此情况下，如果大容量加载失败，则确保回滚。 此属性是一个布尔属性。 如果此属性设置为 TRUE，则大容量加载将在事务上下文中发生。 仅在事务设置为 TRUE，则 TempFilePath 属性十分有用。  
+ 指定大容量加载是否应作为事务实现，在此情况下，如果大容量加载失败，则确保回滚。 此属性是一个布尔属性。 如果此属性设置为 TRUE，则大容量加载将在事务上下文中发生。 仅当事务设置为 TRUE 时，TempFilePath 属性是很有用。  
   
 > [!NOTE]  
->  如果要加载二进制数据 (如 bin.hex，bin.base64 XML 数据类型为二进制，图像[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型)，事务属性必须设置为 FALSE。  
+>  如果在加载二进制数据 (例如，图像 bin.base64 XML 数据类型为二进制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型)，事务属性必须设置为 FALSE。  
   
  默认值是 FALSE。  
   

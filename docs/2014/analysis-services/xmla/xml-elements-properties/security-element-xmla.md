@@ -1,5 +1,5 @@
 ---
-title: 安全元素 (XMLA) |Microsoft 文档
+title: Security 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Security element
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4811ae03eb6f30c4b9f4557e791339920161b4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 138b93043cbfeba51472dfa61816cf9023a3f2c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155018"
 ---
 # <a name="security-element-xmla"></a>Security 元素 (XMLA)
-  指定如何备份或还原期间安全定义，如角色和权限，[备份](../xml-elements-commands/backup-element-xmla.md)或[还原](../xml-elements-commands/restore-element-xmla.md)命令。  
+  指定如何备份或还原期间的安全定义，如角色和权限[备份](../xml-elements-commands/backup-element-xmla.md)或[还原](../xml-elements-commands/restore-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36138501"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Security`元素确定的安全定义，如角色和权限，是否定义上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库是备份或还原期间，分别`Backup`或`Restore`命令。 此元素还确定定义为安全定义成员的 Windows 用户帐户和用户组是否包含在 `Backup` 或 `Restore` 命令中。  
+ `Security`元素可确定是否在上定义的安全定义，如角色和权限[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库备份或还原了在分别`Backup`或`Restore`命令。 此元素还确定定义为安全定义成员的 Windows 用户帐户和用户组是否包含在 `Backup` 或 `Restore` 命令中。  
   
  此元素的值限定为下表中列出的字符串之一。  
   

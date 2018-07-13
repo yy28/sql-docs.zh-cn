@@ -1,5 +1,5 @@
 ---
-title: 创建、 修改和删除标准订阅 (在纯模式下，Reporting Services) |Microsoft 文档
+title: 创建、 修改和删除标准订阅 (在本机模式下的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230387"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   标准订阅是由希望通过电子邮件传递报表或将报表传递到共享文件夹的各个用户所创建的订阅。 标准订阅始终通过其所基于的报表来定义。  
@@ -30,9 +30,9 @@ ms.locfileid: "36128721"
  创建订阅的用户拥有该订阅。 每个用户都可以修改或删除自己所拥有的订阅。  
   
 > [!NOTE]  
->  从开始[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可以以编程方式传输订阅的所有权。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  从开始[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可以以编程方式转移其所有权的订阅。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- 具体取决于**RSReportServer.config**配置文件设置，用户可能能够向订阅添加更多的用户 (例如，一个管理器添加他的电子邮件地址或她直接报告，以便每个接收的副本报表）。 是否支持此功能取决于在定义单独的订阅时“收件人:”字段是否可见。 有关详细信息，请参阅[针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+ 具体取决于**RSReportServer.config**配置文件设置，用户可能能够向订阅添加更多的用户 (例如，经理可以添加的电子邮件地址或其直接报告，以便他们会收到一份报表）。 是否支持此功能取决于在定义单独的订阅时“收件人:”字段是否可见。 有关详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
  本主题提供了由各个用户创建和管理的标准订阅的有关信息。 而数据驱动订阅具有不同的要求和步骤，将在另一个主题中进行讨论。 有关详细信息，请参阅[创建、 修改和删除数据驱动订阅](data-driven-subscriptions.md)。  
   
@@ -53,15 +53,15 @@ ms.locfileid: "36128721"
   
 -   本主题中的内容说明如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表管理器在本机模式报表服务器上创建订阅。 定义订阅之后，可以在报表管理器中通过“我的订阅”页或特定报表的 **“订阅”** 选项卡访问订阅。  
   
--   [创建和管理 SharePoint 模式报表服务器的订阅](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)说明如何使用在 SharePoint 站点中的应用程序页订阅在 SharePoint 集成模式下运行的报表服务器上的报表。  
+-   [创建和管理 SharePoint 模式报表服务器的订阅](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)介绍了如何使用 SharePoint 站点中的应用程序页订阅在 SharePoint 集成模式下运行的报表服务器上的报表。  
   
  本主题提供创建电子邮件订阅和文件共享传递订阅的说明。  
   
 -   若要使用电子邮件传递，在创建订阅之前，必须为 SMTP 服务器或网关连接配置报表服务器。  
   
--   若要使用文件共享传递，必须先定义目标文件夹。 有关详细信息，请参阅[针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+-   若要使用文件共享传递，必须先定义目标文件夹。 有关详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
- 必须先将报表数据源配置为使用存储的凭据或不使用凭据，然后才可以订阅报表。 有关详细信息，请参阅[将凭据存储在 Reporting Services 数据源](../report-data/store-credentials-in-a-reporting-services-data-source.md)。 否则， **“新建订阅”** 按钮将不可用。  
+ 必须先将报表数据源配置为使用存储的凭据或不使用凭据，然后才可以订阅报表。 有关详细信息，请参阅[在 Reporting Services 数据源中存储凭据](../report-data/store-credentials-in-a-reporting-services-data-source.md)。 否则， **“新建订阅”** 按钮将不可用。  
   
  本主题不介绍如何创建数据驱动订阅。 有关如何创建数据驱动的订阅的说明，请参阅[创建数据驱动订阅（SSRS 教程）](../create-a-data-driven-subscription-ssrs-tutorial.md)或在报表管理器中“创建数据驱动的订阅”页的联机帮助。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36128721"
   
 6.  选中 **“创建文件时添加文件扩展名”**。 选择此选项，将向文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
   
-7.  在**路径**文本框中，键入你想要将报表传递现有文件夹的通用命名约定 (UNC) 路径 (例如， \\ \\< servername\>\\<myreports\>)。 在路径开头包括双反斜杠字符。 在路径末尾不要使用反斜杠。  
+7.  在中**路径**文字框中，键入你想要将报表传递的现有文件夹的通用命名约定 (UNC) 路径 (例如， \\ \\< servername\>\\<myreports\>)。 在路径开头包括双反斜杠字符。 在路径末尾不要使用反斜杠。  
   
 8.  在“呈现格式”中，为文件传递选择一种报表输出格式。 选择与要用来打开报表的桌面应用程序相对应的格式。 避免使用不以单数据流呈现报表的格式，也不要使用引入静态文件不支持的交互的格式（例如 HTML 4.0）。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36128721"
   
 2.  单击 **“订阅”** 选项卡，再单击 **“新建订阅”**。  
   
-3.  在**通过其传递**，选择**电子邮件**。 如果此传递类型不可用，则您尚未为电子邮件订阅配置报表服务器。  
+3.  在中**传递方式**，选择**电子邮件**。 如果此传递类型不可用，则您尚未为电子邮件订阅配置报表服务器。  
   
-4.  在**收件人**文本框中，在收件人收件人的姓名： 字段自行转换为地址使用你的域用户帐户。 报表服务器配置设置确定是否**到**字段自行转换为地址与你的用户帐户。 有关更改配置设置电子邮件地址的详细信息，请参阅[针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+4.  在中**To**文本框中，在收件人的收件人姓名： 字段是使用您的域用户帐户自行填写地址。 报表服务器配置设置确定是否**到**字段是与你的用户帐户自行填写地址。 有关更改配置设置电子邮件地址的详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
     > [!NOTE]  
     >  根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址。 这要求您具有管理所有订阅的权限。  
@@ -119,7 +119,7 @@ ms.locfileid: "36128721"
   
     -   若要嵌入或附加报表副本，请选择 **“包括报表”**。 报表的格式由所选的呈现格式决定。 如果您认为报表大小会超过为电子邮件系统定义的限制，请不要选择此选项。  
   
-    -   若要在电子邮件的正文中包含指向报表的 URL，选择**包括链接**。  
+    -   若要在电子邮件的正文中包括指向报表的 URL，选择**包括链接**。  
   
     > [!NOTE]  
     >  如果清除这两个选项，则将只发送“主题”行中的通知文本。  

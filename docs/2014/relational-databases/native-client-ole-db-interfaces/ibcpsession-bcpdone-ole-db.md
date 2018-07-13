@@ -1,13 +1,11 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft 文档
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 099618fccdf11dba2acb56303e2fec2d7a496ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128534"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420706"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   提交要发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的剩余行。  
@@ -39,14 +37,14 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 可以在调用任何其他操作[IBCPSession](ibcpsession-ole-db.md)之后调用的接口**BCPDone**方法。 唯一方法就是调用[IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)方法可开始新的大容量复制操作。 这是类似于调用[IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md)方法。  
+ 可以调用任何其他操作[IBCPSession](ibcpsession-ole-db.md)界面后调用**BCPDone**方法。 唯一方法就是调用[ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md)方法以启动新的大容量复制操作。 这是类似于调用[irowsetfastload:: Commit](irowsetfastload-commit-ole-db.md)方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， **BCPInit**方法未调用此方法之前调用。  
+ 意外调用了该方法。 例如， **BCPInit**调用此方法之前，未调用方法。  
   
 ## <a name="example"></a>示例  
  此示例演示如何使用**IBCPSession**接口。  

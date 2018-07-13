@@ -1,5 +1,5 @@
 ---
-title: AssociatedMeasureGroupID 元素 (ASSL) |Microsoft 文档
+title: AssociatedMeasureGroupID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AssociatedMeasureGroupID element
 ms.assetid: a18ff25b-00a2-4ddf-abcc-ef4d52c8a462
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58a15e8a25e766ad59e36908e30de8c25db1a228
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad28fbc5023c06bdc260e301732bfb1567ce27f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155328"
 ---
 # <a name="associatedmeasuregroupid-element-assl"></a>AssociatedMeasureGroupID 元素 (ASSL)
-  包含 ID 的[MeasureGroup](../objects/group-element-assl.md)元素与关联[CalculationProperty](../objects/calculationproperty-element-assl.md)元素或[Kpi](../objects/kpi-element-assl.md)元素。  
+  包含的 ID [MeasureGroup](../objects/group-element-assl.md)元素与关联[CalculationProperty](../objects/calculationproperty-element-assl.md)元素或[Kpi](../objects/kpi-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,14 +62,14 @@ ms.locfileid: "36130215"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 当应用于`CalculationProperty`元素，`AssociatedMeasureGroupID`属性适用于具有元素[CalculationType](calculationtype-element-assl.md)的*成员*。  
+ 当应用于`CalculationProperty`元素，`AssociatedMeasureGroupID`属性将应用于元素具有[CalculationType](calculationtype-element-assl.md)的*成员*。  
   
- 对应的父级的元素`AssociatedMeasureGroupID`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Kpi>。  
+ 父级对应的元素`AssociatedMeasureGroupID`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Kpi>。  
   
 ## <a name="see-also"></a>请参阅  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [MdxScript 元素&#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Mdxscript 被元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [MdxScripts 元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Optionality 元素 (ASSL) |Microsoft 文档
+title: Optionality 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 971aaf70fe3cb2e239ace81d85f02d07374ce80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe204e2b8eed7b5629b9c6d6060295383371aa48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159358"
 ---
 # <a name="optionality-element-assl"></a>Optionality 元素 (ASSL)
-  指示成员的 optionality [AttributeRelationship](../objects/attributerelationship-element-assl.md)元素。  
+  指示成员的可选性[AttributeRelationship](../objects/attributerelationship-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36137621"
 |*必需*|相关属性中的每个成员必须与 `AttributeRelationship` 元素所属的属性中的至少一个成员关联。|  
 |*可选*|相关属性中的每个成员不必与 `AttributeRelationship` 元素所属的属性中的至少一个成员关联。|  
   
- 对应于的允许值为枚举`Cardinality`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Optionality>。  
+ 与允许的值相对应的枚举`Cardinality`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Optionality>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

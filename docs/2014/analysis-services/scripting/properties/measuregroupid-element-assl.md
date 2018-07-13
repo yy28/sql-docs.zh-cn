@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupID 元素 (ASSL) |Microsoft 文档
+title: MeasureGroupID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: 3b075f86-dbbc-4285-8d2d-61fa722181c7
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a6ab3a46de67deb375f74b30a0e802680a9d7ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45ec91eee187e7ea0264eded7c92954822b49810
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239637"
 ---
 # <a name="measuregroupid-element-assl"></a>MeasureGroupID 元素 (ASSL)
-  将相关联[MeasureGroup](../objects/group-element-assl.md)与父元素、 绑定或扩展的外部绑定。  
+  将相关联[MeasureGroup](../objects/group-element-assl.md)与父元素、 绑定或外部的绑定。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36129343"
 |[MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md)， [MeasureGroupBinding](../data-type/binding-data-type-assl.md)和[PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`MeasureGroupID`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupBinding>，和<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>。  
+ 父级对应的元素`MeasureGroupID`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupBinding>，和<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

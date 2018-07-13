@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
 - UPDATE statement [SQL Server], DML triggers
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11e879ddc8687bb7daeb7e20158bd4d65fcd0d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126487"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427636"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
   DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
@@ -74,7 +72,7 @@ ms.locfileid: "36126487"
   
 -   INSERT 语句必须为所有无 DEFAULT 约束的 NOT NULL 列提供值。  
   
--   对于除计算，标识任何列或`timestamp`列，或任何 NOT NULL 列具有 DEFAULT 定义的值都是可选的任何允许空值的列。  
+-   对于除计算，identity 之外的任何列或`timestamp`列值都是可选的任何允许空值的列或列具有 DEFAULT 定义的 NOT NULL。  
   
  当 INSERT、UPDATE 或 DELETE 语句引用具有 INSTEAD OF 触发器的视图时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将调用该触发器，而不是对任何表采取任何直接操作。 即使插入的和删除的表中为该视图生成的信息格式不同于基表中的数据格式，触发器也必须使用插入的和删除的表中的信息来生成实现基表中请求的操作所需的任何语句。  
   

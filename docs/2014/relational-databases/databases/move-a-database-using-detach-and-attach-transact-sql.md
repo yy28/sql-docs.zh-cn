@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160518"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](move-user-databases.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "36128782"
 3.  附加复制的文件。 有关详细信息，请参阅 [Attach a Database](attach-a-database.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例创建一份[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]在连接到附加到的服务器实例的查询编辑器窗口中执行的语句。  
+ 下面的示例创建一份[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]连接到附加到的服务器实例的查询编辑器窗口中执行语句。  
   
 1.  分离[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]语句：  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 升级顾问 |Microsoft 文档
+title: SQL Server 2014 升级顾问 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58debf76550d0a6c5a4c29727730f72fed8bfb41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 783be63a0aaf016c5f35645f3cd43909f6856faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150128"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 升级顾问
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问可分析的配置安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件，然后生成要使升级成功必须解决的问题的报表。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问分析的配置已安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件，然后生成一个要确保升级成功必须解决的问题的报告。  
   
  在安装媒体的 redist 文件夹中，或作为 [SQL 2014 功能包下载](http://www.microsoft.com/download/details.aspx?id=42295)的一部分来获取升级顾问安装文件 (sqlua.msi)。  
   

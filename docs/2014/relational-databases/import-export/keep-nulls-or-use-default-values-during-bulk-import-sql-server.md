@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258773"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或使用默认值 (SQL Server)
   默认情况下，将数据导入表中时， **bcp** 命令和 BULK INSERT 语句将使用为表中的列定义的默认值。 例如，如果数据文件中包含一个空字段，则会加载该列的默认值。 **bcp** 命令和 BULK INSERT 语句都允许指定保留空值。  
@@ -86,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|开关|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|参数|  
   
- <sup>1</sup>大容量插入，如果默认值不可用，表必须定义列来允许 null 值。  
+ <sup>1</sup>对于 BULK INSERT，如果默认值不可用，必须将表列定义为允许 null 值。  
   
 > [!NOTE]  
 >  这些限定符通过这些大容量导入命令禁止检查表上的 DEFAULT 定义。 然而，对于任何并发 INSERT 语句，都需要 DEFAULT 定义。  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- 要插入"`NULL`"而不是"`Default value of Col2`"，你需要使用`-k`开关或 KEEPNULL 选项，如在下面的示例所示**bcp**和 BULK INSERT 示例。  
+ 要插入"`NULL`"而不是 of"`Default value of Col2`"，您需要使用`-k`开关或 KEEPNULL 选项，如以下所示**bcp**和 BULK INSERT 示例。  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>使用 bcp 并保留空值  
  下列示例演示如何在 **bcp** 命令中保留 null 值。 **bcp** 命令包含以下开关：  

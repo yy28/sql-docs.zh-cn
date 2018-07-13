@@ -1,5 +1,5 @@
 ---
-title: 在管理中心中创建 PowerPivot 站点的受信任的位置 |Microsoft 文档
+title: 在管理中心中创建 PowerPivot 站点的受信任的位置 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56bc807ef54538a0d72bab8f3136df9304b6615e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5661842742c4f0f80b56186704a6b9ac967e8db8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153328"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
   通过 Excel Services，您可以指定哪些位置是您在 SharePoint 服务器上打开的工作簿的有效存储库。 这些位置称为“受信任位置”，您可以对您创建的每个受信任位置使用不同的配置设置。 对于部署 PowerPivot for SharePoint 而言，您可以考虑为包含 PowerPivot 工作簿的站点创建一个受信任位置，以便您可以应用最适合进行 PowerPivot 数据访问的设置，同时为场的剩余部分保留默认设置。  
@@ -29,7 +29,7 @@ ms.locfileid: "36129982"
 ## <a name="prerequisites"></a>必要條件  
  您必须是场或服务管理员才能将某一 URL 指定为受信任位置。  
   
- 您必须知道包含 PowerPivot 库或用于存储工作簿的其他库的 SharePoint 站点的 URL 地址。 若要获取的地址，打开包含库的站点，右键单击**PowerPivot 库**，选择**属性**，然后将复制的第一部分的地址 (URL)，其中包含的服务器名称和站点路径。  
+ 您必须知道包含 PowerPivot 库或用于存储工作簿的其他库的 SharePoint 站点的 URL 地址。 若要获取的地址，打开包含库的站点，右键单击**PowerPivot 库**，选择**属性**，然后将复制的第一部分的地址 (URL)，其中包含服务器名称和站点路径。  
   
 ##  <a name="overview"></a> 概述  
  初次安装 Excel Services 时会将“http://”指定为其受信任位置，这意味着可以在服务器上打开场中任何站点上的工作簿。 如果您需要更紧密地控制哪些位置被视为可信的，则可以创建新的受信任位置（这些位置映射到场中的特定站点），然后，改变每个位置的设置和权限。  
@@ -57,7 +57,7 @@ ms.locfileid: "36129982"
   
 7.  接受“会话管理”、“工作簿属性”和“计算行为”中的所有默认属性设置。  
   
-8.  在“工作簿属性”中，将 **“工作簿最大大小”** 设置为 **50**。 这会将工作簿文件大小的上限调整到用于文件上载到父 Web 应用程序的上限。 如果您的工作簿大小超过 50 MB，则必须进一步增加该文件大小限制。 有关详细信息，请参阅[配置最大文件上载大小&#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。  
+8.  在“工作簿属性”中，将 **“工作簿最大大小”** 设置为 **50**。 这会将工作簿文件大小的上限调整到用于文件上载到父 Web 应用程序的上限。 如果您的工作簿大小超过 50 MB，则必须进一步增加该文件大小限制。 有关详细信息，请参阅[配置最大文件上传大小&#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。  
   
 9. 在“外部数据”中，确认“允许外部数据”设置为 **“受信任的数据连接库和嵌入连接”**。 此设置是工作簿中 PowerPivot 数据访问所必需的。  
   

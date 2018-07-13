@@ -1,5 +1,5 @@
 ---
-title: 序列聚类分析群集特征选项卡 （挖掘模型查看器） |Microsoft 文档
+title: 序列聚类分析群集特征选项卡 （挖掘模型查看器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75601cb33f04eaacfdb3970f858dd8a359abd4bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4272975a16da0cf0d9db534df34d00e329dc5430
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153178"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类特征”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类特征”** 选项卡提供了定义序列分类的特征的详细列表。 这些特征可包括简单属性-值对以及状态间的转换。  
@@ -50,8 +50,8 @@ ms.locfileid: "36129766"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**变量**|此列指示特征是一个值还是一个转换。<br /><br /> 如果特征是一个值，**变量**列包含的属性名称。<br /><br /> 如果特征表示一个状态转换，**变量**列包含文本"转换"。|  
-|**值**|此列的值取决于特征是一个简单属性-值对，还是一个表示项或事件的常见序列的状态转换。<br /><br /> 如果特征是一个值，**值**列会包含状态。<br /><br /> 如果特征表示一个状态转换，**值**列包含状态转换的说明。|  
+|**变量**|此列指示特征是一个值还是一个转换。<br /><br /> 如果特征是一个值，**变量**列会包含属性名称。<br /><br /> 如果特征表示一个状态转换，**变量**列包含文本"转换"。|  
+|**值**|此列的值取决于特征是一个简单属性-值对，还是一个表示项或事件的常见序列的状态转换。<br /><br /> 如果特征是一个值，**值**列会包含状态。<br /><br /> 如果特征表示一个状态转换，**值**列会包含状态转换的说明。|  
 |**概率**|该列会显示一个栏，用于指示此特征（简单属性-值对或某些状态组合）是当前分类的成员的相对概率。<br /><br /> 可以将鼠标悬停在该栏的上方，来显示特征的频率值。|  
   
 ## <a name="see-also"></a>请参阅  

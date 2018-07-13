@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除索引 |Microsoft 文档
+title: 创建、 更改和删除索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7fbad26a835495958771ddd2d690668e3dcf64c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb90f4759e829526b53f38c4aa5714748b7ad62e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258463"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>创建、更改和删除索引
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 层次结构中，索引由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象表示。 索引列由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 对象的集合表示，而该对象由 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 属性表示。  
@@ -189,7 +189,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>在 Visual Basic 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是 XML 架构集合调用 MySampleCollection，在中创建[使用 XML 架构](using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是名为 MySampleCollection 中创建的 XML 架构集合[使用 XML 架构](using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -252,7 +252,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>在 Visual C# 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是 XML 架构集合调用 MySampleCollection，在中创建[使用 XML 架构](using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是名为 MySampleCollection 中创建的 XML 架构集合[使用 XML 架构](using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -315,7 +315,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>在 PowerShell 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是 XML 架构集合调用 MySampleCollection，在中创建[使用 XML 架构](using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是名为 MySampleCollection 中创建的 XML 架构集合[使用 XML 架构](using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

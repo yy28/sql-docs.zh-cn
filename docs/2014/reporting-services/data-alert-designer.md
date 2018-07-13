@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -20,13 +20,13 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d9da14f27b15da351263653d33616621cb4f7b84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155698"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
   使用数据警报设计器创建和编辑数据警报定义。 警报定义是元数据的一个集合，包括您感兴趣的报表数据、报表数据必须满足才能创建数据警报实例和发送数据警报消息的规则、警报消息的收件人等。  
@@ -74,7 +74,7 @@ ms.locfileid: "36138239"
 ### <a name="alert-name"></a>警报名称  
  默认情况下，警报定义具有与报表相同的名称。 您可以将此警报名称更改为更有意义的名称。 这便于您管理警报，以及确定要用于更新、删除等操作的警报。  
   
- 您可以对一个报表创建多个警报。 可以具有同名的多个警报定义，但建议您保持警报名称唯一。 这样可便于区分和管理警报定义。 您可以在数据警报管理器中查看所创建的所有警报的列表。 有关详细信息，请参阅[警报管理员的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)和[数据警报管理器中的管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
+ 您可以对一个报表创建多个警报。 可以具有同名的多个警报定义，但建议您保持警报名称唯一。 这样可便于区分和管理警报定义。 您可以在数据警报管理器中查看所创建的所有警报的列表。 有关详细信息，请参阅[向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)并[在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
   
 ### <a name="rules-and-clauses"></a>规则和子句  
  数据更改的作用域以及警报规则中的规则定义触发警报的数据更改。 数据更改的作用域如下：  

@@ -1,31 +1,29 @@
 ---
-title: 从 C 到 SQL 转换 |Microsoft 文档
+title: 从 C 到 SQL 转换 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2941f9d95c8513762e8f77f8a84fcd34f682eafe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129881"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410071"
 ---
 # <a name="conversions-from-c-to-sql"></a>由 C 转换为 SQL
-  本主题列出了需要考虑在 C 类型间转换的问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间类型。  
+  本主题列出了要考虑当你从 C 类型转换到的问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间类型。  
   
  下表中介绍的转换适用于在客户端上所进行的转换。 如果客户端指定的参数的秒小数部分精度不同于服务器上定义的精度，客户端转换可能成功，但是当调用 `SQLExecute` 或 `SQLExecuteDirect` 时，服务器将返回错误。 特别是，ODBC 将对秒的小数部分的任何截断视为错误，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则会进行舍入；例如，当从 `datetime2(6)` 转换到 `datetime2(2)` 时发生舍入。 Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
   
@@ -64,7 +62,7 @@ ms.locfileid: "36129881"
 |10|如果发生截断且丢失数据，将生成一条具有 SQLSTATE 22008 和消息“时间格式无效”的诊断记录。 如果值处于服务器使用的 UTC 范围可表示的范围外，也会发生此错误。|  
 |11|如果数据的字节长度不等于 SQL 类型所需的结构的大小，则生成具有 SQLSTATE 22003 和消息“数值超出了范围”的诊断记录。|  
 |12|如果数据的字节长度为 4 或 8，则采用原始 TDS smalldatetime 或 datetime 格式将数据发送到服务器。 如果数据的字节长度与 SQL_TIMESTAMP_STRUCT 大小完全匹配，则将该数据转换为 datetime2 的 TDS 格式。|  
-|13|如果发生截断且丢失数据，则生成具有 SQLSTATE 22001 和消息“字符串数据，右端被截断”的诊断记录。<br /><br /> 秒的小数部分位数 （缩放） 由根据以下目标列的大小：<br /><br /> **类型：** SQL_C_TYPE_TIMESTAMP<br /><br /> 暗指的小数位数<br /><br /> 0<br /><br /> 19<br /><br /> 暗指的小数位数<br /><br /> 1..9<br /><br /> 21..29<br /><br /> 但是，对于 SQL_C_TYPE_TIMESTAMP，如果秒的小数部分可以在不丢失数据的情况下由三位数表示，并且列大小为 23 或更大，则生成确切的三位数的秒小数部分。 此行为确保使用早期 ODBC 驱动程序开发的应用程序的向后兼容性。<br /><br /> 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许的秒的小数部分位数多达 9 位，这是 ODBC 允许的最大位数。<br /><br /> 列大小为零则暗指 ODBC 中可变长度字符类型的大小无限制（即 9 位，除非应用 SQL_C_TYPE_TIMESTAMP 的三位数规则）。 指定列大小为零且具有固定长度的字符类型是错误的。|  
+|13|如果发生截断且丢失数据，则生成具有 SQLSTATE 22001 和消息“字符串数据，右端被截断”的诊断记录。<br /><br /> 根据以下目标列的大小确定的秒的小数部分位数 （小数）：<br /><br /> **类型：** SQL_C_TYPE_TIMESTAMP<br /><br /> 暗指的小数位数<br /><br /> 0<br /><br /> 19<br /><br /> 暗指的小数位数<br /><br /> 1..9<br /><br /> 21..29<br /><br /> 但是，对于 SQL_C_TYPE_TIMESTAMP，如果秒的小数部分可以在不丢失数据的情况下由三位数表示，并且列大小为 23 或更大，则生成确切的三位数的秒小数部分。 此行为确保使用早期 ODBC 驱动程序开发的应用程序的向后兼容性。<br /><br /> 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许的秒的小数部分位数多达 9 位，这是 ODBC 允许的最大位数。<br /><br /> 列大小为零则暗指 ODBC 中可变长度字符类型的大小无限制（即 9 位，除非应用 SQL_C_TYPE_TIMESTAMP 的三位数规则）。 指定列大小为零且具有固定长度的字符类型是错误的。|  
 |N/A|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
   
 ## <a name="see-also"></a>请参阅  

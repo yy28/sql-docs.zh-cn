@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 00a8cfca7eff3a46e9276a36a9dbd803fa6f0cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 94291419e279c497b7d54c0d566caaaab45758c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163806"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隐藏项（报表生成器和 SSRS）
   如果希望基于报表参数或指定的某个其他表达式来有条件地隐藏项，则可以设置报表项的可见性。  
@@ -74,7 +74,7 @@ ms.locfileid: "36130204"
 3.  在 **“列可见性”** 对话框中，执行第一个过程中的步骤 3 和 4。  
   
 ## <a name="see-also"></a>请参阅  
- [深化操作&#40;报表生成器和 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [向下钻取操作&#40;报表生成器和 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [为项添加展开或折叠操作（报表生成器和 SSRS）](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

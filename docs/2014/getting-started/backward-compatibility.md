@@ -1,5 +1,5 @@
 ---
-title: 向后兼容性 |Microsoft 文档
+title: 向后兼容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Surface Area Configuration Tool
 - command prompt [SQL Server], discontinued parameters
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d7b874ed446e2a96dcc6ed2d67e807027585b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 631bdc9fe69f16e3cb5b98e85a62fe30eccbdc46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152678"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   下列各节包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件的向后兼容信息。 本内容包括有关不推荐使用的功能、废止的功能、重大更改和行为更改的信息。  

@@ -1,5 +1,5 @@
 ---
-title: 聚合设计向导的 F1 帮助 |Microsoft 文档
+title: 聚合设计向导的 F1 帮助 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregation Design Wizard
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc9101bf9f5d733ea00d50c90de1981c611d6aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9926d41c221356f89633d8b3130069c28181a32a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259693"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>聚合设计向导的 F1 帮助
   聚合允许 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接从多维数据集存储区中检索预先计算好的汇总数据，而不必为每一个查询从基础数据源重新计算数据，从而提高了性能。  

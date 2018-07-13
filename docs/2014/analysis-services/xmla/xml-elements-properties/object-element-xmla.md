@@ -1,5 +1,5 @@
 ---
-title: 对象元素 (XMLA) |Microsoft 文档
+title: 对象元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 02d27280ab74e907558c07ece457d114f8dcbd1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229577"
 ---
 # <a name="object-element-xmla"></a>Object 元素 (XMLA)
   包含父元素使用的对象引用。  
@@ -56,7 +56,7 @@ ms.locfileid: "36129964"
 |--------------------|-----------------|  
 |数据类型和长度|InclusionThresholdSetting|  
 |默认值|InclusionThresholdSetting|  
-|基数|祖先或父级： [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1： 一次，并且一次可以发生的可选元素。<br /><br /> 祖先或父级： 所有其他&#124;1-1： 发生一次，并且一次的必需的元素。|  
+|基数|祖先或父级： [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1： 可出现一次且仅一次出现的可选元素。<br /><br /> 祖先或父级： 所有其他&#124;1-1： 出现一次且仅一次出现的必需的元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36129964"
 ## <a name="remarks"></a>Remarks  
  标识符的显示顺序并不重要。  
   
- 有关`Alter`元素、 实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]如果用作默认对象`Object`未指定元素。  
+ 有关`Alter`元素、 的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]如果用作默认对象`Object`未指定元素。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

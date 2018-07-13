@@ -1,5 +1,5 @@
 ---
-title: ReportingFirstWeekOfMonth 元素 (ASSL) |Microsoft 文档
+title: ReportingFirstWeekOfMonth 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportingFirstWeekOfMonth element
 ms.assetid: 29818404-ad45-403f-8fd9-3e3246d301ad
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f1e3383fe311ca82ee85c5f72d0b56cc00503fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73251f225fc3fecc489ad9e2fb1ba85de15f9b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209887"
 ---
 # <a name="reportingfirstweekofmonth-element-assl"></a>ReportingFirstWeekOfMonth 元素 (ASSL)
-  定义报表一个月的第一周[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
+  定义的报表月的第一周[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36129543"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`ReportingFirstWeekOfMonth`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 父级对应的元素`ReportingFirstWeekOfMonth`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

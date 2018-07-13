@@ -1,27 +1,26 @@
 ---
-title: 新建搜索属性列表 |Microsoft 文档
+title: 新搜索属性列表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9d37bad141f61ceadafc03d883f36f422965996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3019133dd0fa326a1595f2815698e10eb9586427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159298"
 ---
 # <a name="new-search-property-list"></a>新建搜索属性列表
   使用此对话框可以创建搜索属性列表。  
@@ -52,7 +51,7 @@ ms.locfileid: "36138039"
  请参阅[创建搜索属性列表&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>使用 SQL Server Management Studio 管理搜索属性列表  
- 有关如何创建、 查看、 更改或删除搜索属性列表，以及有关如何配置用于属性搜索的全文索引的信息，请参阅[使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 有关如何创建、 查看、 更改或删除搜索属性列表，以及有关如何配置为属性搜索的全文索引的信息，请参阅[使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [CREATE SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/create-search-property-list-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: 从命令提示符安装 PowerPivot |Microsoft 文档
+title: 从命令提示符安装 PowerPivot |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 7adf6dfa581d10626c6513ecb2ee30d58c3bb6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60949c1ff0431daf988e2fd5d4a1d2b8ad41b524
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210787"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>从命令提示符安装 PowerPivot
   您可以从命令行运行安装程序以便安装 SQL Server PowerPivot for SharePoint。 您必须在命令中包含 `/ROLE` 参数并排除 `/FEATURES` 参数。  
@@ -31,7 +31,7 @@ ms.locfileid: "36137456"
   
  必须将计算机加入到 SharePoint 场所在的域中。  
   
-##  <a name="Commands"></a> / 基于角色的安装选项  
+##  <a name="Commands"></a> 基于 /ROLE 的安装选项  
  对于 PowerPivot for SharePoint 部署，用 `/ROLE` 参数代替 `/FEATURES` 参数。 有效值包括：  
   
 -   `SPI_AS_ExistingFarm`  
@@ -42,10 +42,10 @@ ms.locfileid: "36137456"
   
  “现有场”选项假定已经存在 SharePoint 场。 “新建场”选项假定您将创建一个新场；它支持在命令行语法中添加数据库引擎实例，以便可以将该数据库引擎实例作为场的数据库服务器。  
   
- 与以往的版本相比，所有的服务器配置任务都作为安装后的任务来执行。 如果要自动执行安装和配置步骤，则可以使用 PowerShell 来配置服务器。 有关详细信息，请参阅[PowerPivot 配置使用 Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
+ 与以往的版本相比，所有的服务器配置任务都作为安装后的任务来执行。 如果要自动执行安装和配置步骤，则可以使用 PowerShell 来配置服务器。 有关详细信息，请参阅[使用 Windows PowerShell 配置 PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
   
 ## <a name="example-commands"></a>示例命令  
- 下列示例说明了每个选项的用法。 示例 1 所示`SPI_AS_ExistingFarm`。  
+ 下列示例说明了每个选项的用法。 示例 1 显示了`SPI_AS_ExistingFarm`。  
   
 ```  
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -86,9 +86,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  替换的占位符\<域 \ 用户名 > 和\<StrongPassword > 使用有效的用户帐户和密码。  
+3.  替换为占位符\<域 \ 用户名 > 和\<StrongPassword > 使用有效的用户帐户和密码。  
   
-     `/assvaccount`和 **/assvcpassword**参数用于配置[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]应用程序服务器上的实例。 请使用有效的帐户信息替换这些占位符。  
+     `/assvaccount`并 **/assvcpassword**参数用于配置[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]应用程序服务器上的实例。 请使用有效的帐户信息替换这些占位符。  
   
      **/Assysadminaccounts**参数必须设置为运行 SQL Server 安装程序的用户的标识。 您必须至少指定一个系统管理员。 请注意，SQL Server 安装程序不再自动将 sysadmin 权限授予内置 Administrators 组的成员。  
   
@@ -100,7 +100,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 7.  导航到包含 SQL Server 安装介质的驱动器或共享文件夹。  
   
-8.  将修正后的命令粘贴到命令行中。 若要执行此操作，单击命令提示符窗口左上角中的图标，指向**编辑**，然后单击**粘贴**。  
+8.  将修正后的命令粘贴到命令行中。 若要执行此操作，单击命令提示符窗口的左上角中的图标，指向**编辑**，然后单击**粘贴**。  
   
 9. 按**Enter**运行命令。 等待安装程序完成。 您可以在命令提示符窗口中监视安装程序的进度。  
   

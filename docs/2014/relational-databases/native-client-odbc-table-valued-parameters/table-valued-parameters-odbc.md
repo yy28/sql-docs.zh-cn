@@ -1,13 +1,11 @@
 ---
-title: 表值参数 (ODBC) |Microsoft 文档
+title: 表值参数 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127701"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421786"
 ---
 # <a name="table-valued-parameters-odbc"></a>表值参数 (ODBC)
   针对表值参数的 ODBC 支持通过在一个调用中向服务器发送多个行，支持客户端应用程序更有效地向服务器发送参数化数据。  
@@ -32,9 +30,9 @@ ms.locfileid: "36127701"
   
  在 ODBC 中，向服务器发送表值参数有两种方式：  
   
--   在调用 SQLExecDirect 或 SQLExecute 时，表值参数的所有数据都可以在内存中。 如果表值中有多个行，此数据存储在数组中。  
+-   SQLExecDirect 或 SQLExecute 称为时，所有表值参数数据都可以在内存中。 如果表值中有多个行，此数据存储在数组中。  
   
--   调用 SQLExecDirect 或 SQLExecute 时，应用程序可以指定表值参数执行数据。 这种情况下，可以成批提供表值的各行数据，或者一次提供一行数据，以降低内存要求。  
+-   SQLExecDirect 或 SQLExecute 调用时，应用程序可以指定为表值参数执行数据。 这种情况下，可以成批提供表值的各行数据，或者一次提供一行数据，以降低内存要求。  
   
  第一个选项支持存储过程封装更多业务逻辑。 例如，将订单项作为表值参数传递时，单个存储过程可以封装整个订单输入事务。 由于只需与服务器往返一次，所以此选项非常有效。 或者，可以使用不同的过程分别处理订单头和订单项，这需要为客户端和服务器之间提供更多的代码和更复杂的合同。  
   
@@ -68,7 +66,7 @@ ms.locfileid: "36127701"
  说明应用程序如何获取准备的过程调用的元数据。  
   
  [其他表值参数的元数据](additional-table-valued-parameter-metadata.md)  
- 描述如何使用 SQLProcedureColumns、 SQLTables 和 SQLColumns 检索表值参数的元数据。  
+ 介绍如何使用 SQLProcedureColumns、 SQLTables 和 SQLColumns 检索表值参数的元数据。  
   
  [表值参数数据转换及其他错误和警告](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  说明如何处理表值参数列值的错误。  
@@ -83,7 +81,7 @@ ms.locfileid: "36127701"
  说明如何执行常见任务。  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [表值参数&#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [SQL Server 本机客户端&#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
+ [表值参数&#40;SQL Server 本机客户端&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

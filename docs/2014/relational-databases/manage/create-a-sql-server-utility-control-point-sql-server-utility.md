@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
 - SQL12.SWB.create.ucp.welcome.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c53827c1734926c2a316762de629680f1632d420
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ef278557bd1c06802e1889bdd068dcac98b4bea7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152438"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
   一个企业可以具有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，并且每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具可以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例和多个数据层应用程序。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具都具有一个且仅有一个实用工具控制点 (UCP)。 必须为每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具分别创建一个新的 UCP。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个托管实例以及每个数据层应用程序都是一个且只能是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的成员，并且由单个 UCP 管理。  
@@ -51,7 +51,7 @@ ms.locfileid: "36137990"
   
  在此版本中，UCP 必须满足以下要求：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   我们建议 UCP 由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的区分大小写的实例承载。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36137990"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具监视不支持 FILESTREAM 数据。  
   
- 有关详细信息，请参阅[Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)和[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 有关详细信息，请参阅[SQL Server 的最大容量规范](../../sql-server/maximum-capacity-specifications-for-sql-server.md)并[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>在安装新的实用工具控制点之前删除以前的实用工具控制点  
  如果您在某一 SQL Server 实例上安装实用工具控制点 (UCP)，并且该实例曾配置为 UCP，则必须在执行此操作前删除所有 SQL Server 托管实例并且删除该 UCP。 可以通过运行 **sp_sysutility_ucp_remove** 存储过程来执行此操作。  
@@ -165,7 +165,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |对于将创建实用工具控制点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，您必须具有管理员权限。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上，以具有管理员权限的帐户登录。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必须是 10.50 版或更高版本。|指定用于承载 UCP 的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|指定用于承载 UCP 的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|指定用于承载 UCP 的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不得是已向任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 注册的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。|指定用于承载 UCP 的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者从当前是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的 UCP 取消注册该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不能已是某一实用工具控制点的宿主。|指定用于承载 UCP 的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例应启用 TCP/IP。|为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例启用 TCP/IP。|  

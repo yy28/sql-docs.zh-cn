@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - authorization [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d889c606718bca0f917322cbf031f9c89c0ede3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260123"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的授权和身份验证子系统来确定哪些用户可以在报表服务器上执行操作和访问项。 基于角色的授权将角色分为用户或组可以执行的操作组。 身份验证基于内置的 Windows 身份验证或您提供的自定义身份验证模块。 您对这两种身份验证类型都可以使用预定义或自定义角色。  
@@ -72,13 +72,13 @@ ms.locfileid: "36128026"
 |工具|“任务”|  
 |----------|-----------|  
 |Management Studio - 用于查看、修改、创建和删除角色定义。|[创建、 删除或修改角色&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
-|报表管理器 - 用于为用户和组分配角色。|[授予用户对报表服务器访问权限&#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)|  
+|报表管理器 - 用于为用户和组分配角色。|[授予用户对报表服务器访问&#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [预定义的角色](role-definitions-predefined-roles.md)   
  [授予对 SharePoint 站点上的报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [针对报表服务器的身份验证](authentication-with-the-report-server.md)   
- (创建-和-管理的角色-assignments.md)   
+ (创建-和-管理-角色-assignments.md)   
  [Reporting Services 安全性和保护](reporting-services-security-and-protection.md)   
  [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
