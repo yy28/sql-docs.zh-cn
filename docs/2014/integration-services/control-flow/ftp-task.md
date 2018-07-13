@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ed0f6532cf3bdfcffaa5775be28851681f33b678
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605fe5f676b94d05a6f3da141ac59ced8b265282
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164799"
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
@@ -80,7 +80,7 @@ ms.locfileid: "36139128"
   
 ## <a name="see-also"></a>请参阅  
  [FTP 任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)   
- [FTP 任务编辑器&#40;文件传输页&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [FTP 任务编辑器&#40;文件传输页面&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

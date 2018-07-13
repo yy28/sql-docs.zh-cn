@@ -1,5 +1,5 @@
 ---
-title: 关系查询设计器 (SSAS) |Microsoft 文档
+title: 关系查询设计器 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 301653a9279cec3690ea0451fe96771342bec030
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259653"
 ---
 # <a name="relational-query-designer-ssas"></a>关系查询设计器 (SSAS)
   关系查询设计器可帮助你创建一个查询，以便指定要从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 关系数据库以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]中检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。  使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
@@ -84,7 +84,7 @@ ms.locfileid: "36137637"
   
  聚合功能可对数据进行汇总，并且数据也会进行分组，以支持传递汇总数据的聚合。 在查询中使用聚合时，查询返回的其他字段将自动进行分组，并且查询包括 SQL GROUP BY 子句。 可以通过仅在 **“分组和聚合”** 列表中使用 **“分组依据”** 选项来汇总数据，而不必添加聚合。 许多聚合都包括使用 DISTINCT 关键字的版本。 包括 DISTINCT 可消除重复的值。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用[!INCLUDE[tsql](../includes/tsql-md.md)]和[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用[!INCLUDE[tsql](../includes/tsql-md.md)]并[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
   
  有关 [!INCLUDE[tsql](../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36137637"
 -   **自动检测** ：切换可自动在表之间创建关系的自动检测功能。 如果启用自动检测，则查询设计器将根据表中的外键创建关系；否则，您必须手动创建关系。 当您在 **“数据库视图”** 窗格中选择表时，自动检测将尝试自动创建关系。 如果您在手动创建联接后启用自动检测，则这些联接将被丢弃。  
   
     > [!IMPORTANT]  
-    >  与一起使用时[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]不提供创建联接所需的元数据和无法自动检测关系。 如果您的查询从 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 中检索数据，则必须手动创建所有表联接。  
+    >  与一起使用时[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]未提供创建联接所需的元数据，而又不能自动检测到关系。 如果您的查询从 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 中检索数据，则必须手动创建所有表联接。  
   
 -   **添加关系** ：向 **“关系”** 列表中添加关系。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36137637"
   
 -   **左表** ：显示联接关系中第一个表的名称。  
   
--   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关类型的联接的详细信息，请参阅"加入基础知识"中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)msdn.microsoft.com 上...  
+-   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 Join 的类型的详细信息，请参阅"JOIN 基础知识"中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)msdn.microsoft.com 上...  
   
 -   **右表** ：显示联接关系中第二个表的名称。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36137637"
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。|  
 |![运行查询](media/rsqdicon-run.gif "运行查询")|运行查询并在“结果”窗格中显示结果集。|  
-|**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。<br /><br /> 请注意，是否存储的过程返回多个结果集，仅使用第一个结果集用于填充数据集。 另请注意， <br />                      **TableDirect**仅适用于数据源类型 OLE DB。|  
+|**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。<br /><br /> 请注意，是否存储的过程返回多个结果集，只将第一个结果集用于填充数据集。 另请注意， <br />                      **TableDirect**仅适用于数据源类型 OLE DB。|  
   
 #### <a name="command-type-text"></a>命令类型 Text  
  创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据集时，默认情况下，关系查询设计器将会打开。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
@@ -251,7 +251,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- 单击“运行”(**!**) 按钮。 下表提供了一种`uspGetWhereUsedProductID`为其提供中的值的参数**定义查询参数**对话框。  
+ 单击“运行”(**!**) 按钮。 下表提供的示例`uspGetWhereUsedProductID`为其提供中的值的参数**定义查询参数**对话框。  
   
 |||  
 |-|-|  
@@ -266,6 +266,6 @@ uspGetWhereUsedProductID
   
  `ContactType`  
   
- 在输入表名称`ContactType`，它是创建 SQL 语句的等效项`SELECT * FROM ContactType`。  
+ 在输入表名称`ContactType`，它等同于创建 SQL 语句`SELECT * FROM ContactType`。  
   
   

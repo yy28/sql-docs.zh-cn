@@ -1,13 +1,11 @@
 ---
-title: 使用 SQL Server Native Client 标头和库文件 |Microsoft 文档
+title: 使用 SQL Server Native Client 头文件和库文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +22,18 @@ helpviewer_keywords:
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f10805d7a28fbeb291244913ae602055f16a1462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cf209f7897aed59e32d648e0305f9c7ba0e119a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138417"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415067"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 头文件和库文件
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端，请参阅[安装 SQL Server Native Client](installing-sql-server-native-client.md)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，请参阅[安装 SQL Server Native Client](installing-sql-server-native-client.md)。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件安装在以下位置：  
   
@@ -79,7 +77,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  如果应用程序使用 OLE DB 和 ODBC Api，则应省略上面所示的代码的第一行。 此外，如果应用程序的 odbcss.h 具有 `#include` 语句，则应删除该语句。  
+>  如果应用程序使用 OLE DB 和 ODBC Api，应省略上面所示代码的第一行。 此外，如果应用程序的 odbcss.h 具有 `#include` 语句，则应删除该语句。  
   
  当通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 创建与数据源的连接时，请将“SQL Server Native Client 11.0”用作驱动程序名称字符串。  
   

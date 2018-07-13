@@ -5,32 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 782655aa435ba69a38f4de1d854c1ff9837a6778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137714"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414016"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE 自动化返回代码和错误信息
-  OLE 自动化系统存储过程返回`int`返回代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码的形式为十六进制 0x800*nnnnn*，但是当作为`int`中存储的过程返回代码，HRESULT 值具有的形式为 214*nnnnnnn*。  
+  OLE 自动化系统存储过程返回`int`返回代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码为十六进制 0x800*nnnnn*，但是当作为`int`中的存储的过程返回代码的 HRESULT 值具有的形式为 214*nnnnnnn*。  
   
- 例如，传递了无效的对象名称 (SQLDMO。Xyzzy) 为 sp_OACreate 将使该过程返回`int`HRESULT 的 2147221005，这是以十六进制表示的 0x800401f3。  
+ 例如，传递一个无效的对象名 (SQLDMO。Xyzzy) 为 sp_OACreate 将使该过程返回`int`的 2147221005，为 0x800401f3 十六进制的 HRESULT。  
   
- 可以使用 `CONVERT(binary(4), @hresult)` 将 `int` HRESULT 转换为 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 将产生一个不可读的字符串，因为 HRESULT 的每个字节都被转换成一个 ASCII 字符。 你可以使用下面的示例 HexToChar 存储过程将转换`int`到 HRESULT`char`包含可读十六进制字符串的值。  
+ 可以使用 `CONVERT(binary(4), @hresult)` 将 `int` HRESULT 转换为 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 将产生一个不可读的字符串，因为 HRESULT 的每个字节都被转换成一个 ASCII 字符。 可以使用以下示例 HexToChar 存储过程来转换`int`HRESULT 转换`char`值，该值包含可读十六进制字符串。  
   
 ```  
 USE AdventureWorks2012;  

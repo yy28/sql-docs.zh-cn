@@ -1,28 +1,26 @@
 ---
-title: 参数和行集元数据 |Microsoft 文档
+title: 参数和行集元数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8b3365cdf3a2773b6627dfd49edd20b839ef9a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d2f6d55777a6f11e968a75be0f3d5509294c484d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139058"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427856"
 ---
 # <a name="parameter-and-rowset-metadata"></a>参数和行集元数据
   本主题提供了与 OLE DB 日期和时间增强功能相关的以下类型和类型成员的相关信息。  
@@ -38,7 +36,7 @@ ms.locfileid: "36139058"
 -   `IColumnsInfo::GetColumnInfo`  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- 通过 DBPARAMINFO 结构中返回的以下信息*prgParamInfo*:  
+ 通过在 DBPARAMINFO 结构中返回以下信息*prgParamInfo*:  
   
 |参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
@@ -51,7 +49,7 @@ ms.locfileid: "36139058"
   
  请注意，在某些情况下，值范围不是连续的。 这是因为当小数精度大于零时添加了小数点。  
   
- 仅在 DBPARAMFLAGS_SS_ISVARIABLESCALE 时连接到时有效[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器。 DBPARAMFLAGS_SS_ISVARIABLESCALE 永远不会连接到下层的服务器时设置。  
+ DBPARAMFLAGS_SS_ISVARIABLESCALE 才有效时连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器。 连接到下级服务器时，永远不会设置 DBPARAMFLAGS_SS_ISVARIABLESCALE。  
   
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo 和隐含的参数类型  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
@@ -69,9 +67,9 @@ ms.locfileid: "36139058"
   
  *BPrecision*参数将被忽略。  
   
- 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于访问接口的类型名称 "`datetime`”和“`smalldatetime`”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型。 当连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器，"`datetime2`"将使用格式和隐式服务器转换时将发生，如有必要，类型名称是"`datetime2`"或"DBTYPE_DBTIMESTAMP"。 *bScale*如果特定于提供程序类型名称，则忽略"`datetime`"或"`smalldatetime`"使用。 否则，应用程序必须确保*bScale*正确设置。 应用程序从 MDAC 升级和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从本机客户端[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]"DBTYPE_DBTIMESTAMP"将会失败，如果它们没有设置该使用*bScale*正确。 连接到服务器实例时早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 *bScale* 0 或 3 的"DBTYPE_DBTIMESTAMP"以外的值是一个错误，将返回 E_FAIL。  
+ 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于访问接口的类型名称 "`datetime`”和“`smalldatetime`”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型。 当连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器，"`datetime2`"将使用格式和隐式服务器转换会时发生，如有必要，该类型名称是"`datetime2`"或"DBTYPE_DBTIMESTAMP"。 *bScale*如果提供程序特定于类型名称，则忽略"`datetime`"或"`smalldatetime`"使用。 否则，应用程序必须确保*bScale*已正确设置。 从 MDAC 升级的应用程序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用"DBTYPE_DBTIMESTAMP"，如果它们没有设置将失败*bScale*正确。 当连接到服务器实例早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 一个*bScale* 0 或 3 采用"DBTYPE_DBTIMESTAMP 以外的值是一个错误，将返回 E_FAIL。  
   
- 当不调用 ICommandWithParameters::SetParameterInfo 时，提供程序 imples 服务器键入从 IAccessor::CreateAccessor 中指定的绑定类型，如下所示：  
+ 不调用 icommandwithparameters:: Setparameterinfo 时，提供程序表示服务器类型 iaccessor:: Createaccessor 中指定的绑定类型，如下所示：  
   
 |绑定类型|*pwszDataSourceType*<br /><br /> （特定于访问接口）|  
 |------------------|----------------------------------------------------|  
@@ -114,7 +112,7 @@ ms.locfileid: "36139058"
   
  DBCOLUMN_FLAGS 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 DBCOLUMN_TYPE 为 DBTYPE_DBTIMESTAMP。 还必须使用 DBCOLUMN_SCALE 或 DBCOLUMN_DATETIMEPRECISION 标识服务器类型。  
   
- 仅在 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 时连接到时有效[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器。 当连接到下级服务器时，未定义 DBCOLUMNFLAGS_SS_ISVARIABLESCALE。  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE 才有效时连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器。 当连接到下级服务器时，未定义 DBCOLUMNFLAGS_SS_ISVARIABLESCALE。  
   
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 结构返回以下信息：  
@@ -128,7 +126,7 @@ ms.locfileid: "36139058"
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|将|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|将|  
   
- 在*dwFlags*、 DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 true 的日期/时间类型和以下标志均始终为 false:  
+ 在中*dwFlags*，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为日期/时间类型，则返回 true，而下列标志则始终为 false:  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -144,7 +142,7 @@ ms.locfileid: "36139058"
   
  可以设置其余标志（DBCOLUMNFLAGS_ISNULLABLE、DBCOLUMNFLAGS_MAYBENULL、DBCOLUMNFLAGS_WRITE 和 DBCOLUMNFLAGS_WRITEUNKNOWN）。  
   
- 新的标志中提供 DBCOLUMNFLAGS_SS_ISVARIABLESCALE *dwFlags*以允许应用程序确定的 server 类型的列，其中*wType*是 DBTYPE_DBTIMESTAMP。 *bScale*还必须使用来标识服务器类型。  
+ 新标志中提供 DBCOLUMNFLAGS_SS_ISVARIABLESCALE *dwFlags*以允许应用程序可以确定服务器类型的列，其中*wType*为 DBTYPE_DBTIMESTAMP。 *bScale*还必须使用标识服务器类型。  
   
 ## <a name="see-also"></a>请参阅  
  [元数据&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

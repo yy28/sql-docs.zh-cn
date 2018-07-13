@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149268"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
   自定义报表项设计时组件是一种可在 Visual Studio 报表设计器环境中使用的控件。 自定义报表项设计时组件可提供能接受拖放操作的激活的设计图面，可与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器集成，且可提供自定义属性编辑器。  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用修饰  
- 自定义报表项类还可实现 `Microsoft.ReportDesigner.Design.Adornment` 类。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 `Adornment`中定义的类[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]`Microsoft.ReportDesigner`命名空间是一种传递实现的<xref:System.Windows.Forms.Design.Behavior.Adorner>类在 Windows 窗体中找到。 有关完整文档`Adorner`类，请参阅[行为服务概述](http://go.microsoft.com/fwlink/?LinkId=116673)MSDN 库中。 有关示例代码，实现`Microsoft.ReportDesigner.Design.Adornment`类，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 自定义报表项类还可实现 `Microsoft.ReportDesigner.Design.Adornment` 类。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 `Adornment`中定义的类[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]`Microsoft.ReportDesigner`命名空间是传递实现<xref:System.Windows.Forms.Design.Behavior.Adorner>类在 Windows 窗体中找到。 有关完整文档`Adorner`类，请参阅[行为服务概述](http://go.microsoft.com/fwlink/?LinkId=116673)MSDN 库中。 有关实现的示例代码`Microsoft.ReportDesigner.Design.Adornment`类，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
   
  有关在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中如何对 Windows 窗体进行编程和使用 Windows 窗体的详细信息，请参见 MSDN Library 中的以下主题：  
   

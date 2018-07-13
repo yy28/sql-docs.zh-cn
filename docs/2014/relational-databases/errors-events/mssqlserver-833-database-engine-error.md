@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 833 (Database Engine error)
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53f86ad23c967f573e66251430579475e64a0714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e3e9519dce24bbe29f9cf30f89706fff9b42f9c7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138859"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428676"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -34,7 +33,7 @@ ms.locfileid: "36138859"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|BUF_LONG_IO|  
-|消息正文|SQL Server 遇到的 I/O 请求花费的时间比 %d 秒在数据库中完成对文件 [%ls] %d 次`[%ls] (%d)`。  OS 文件句柄是 0x%p。  最新的长时间 I/O 操作的偏移量是: %#016I64x。|  
+|消息正文|SQL Server 已遇到的 I/O 请求时间超过 %d 秒才能完成文件 [%ls] 数据库中的 %d 次`[%ls] (%d)`。  OS 文件句柄是 0x%p。  最新的长时间 I/O 操作的偏移量是: %#016I64x。|  
   
 ## <a name="explanation"></a>解释  
  该消息指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已从磁盘发出读取或写入请求，并且表明该请求返回所用的时间已超过 15 秒。 该错误由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报告，表明 IO 子系统有问题。  

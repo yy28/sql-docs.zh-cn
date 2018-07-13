@@ -1,13 +1,11 @@
 ---
-title: 记录的 vs。Unlogged 修改 |Microsoft 文档
+title: 记录的 vs。无日志记录的修改 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,20 +22,20 @@ helpviewer_keywords:
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5c73288c57a834008f4d09ad098ad1b41183e76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 34064aaa2e96a7d610f8709c1f5750bddd62b766
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138421"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420280"
 ---
-# <a name="logged-vs-unlogged-modifications"></a>记录的 vs。Unlogged 的修改
-  应用程序可以请求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序不日志**文本**， **ntext**，和**映像**修改。 但应慎用此选项。 它应仅可用于这些情况下其中**文本**， **ntext**，或**映像**数据并不重要，并且数据所有者愿意权衡取舍能够为恢复数据更高的性能。  
+# <a name="logged-vs-unlogged-modifications"></a>记录的 vs。无日志记录的修改
+  应用程序可以请求的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序不记录**文本**， **ntext**，并且**映像**的修改。 但应慎用此选项。 它应仅用于下列情况其中**文本**， **ntext**，或**图像**数据并不重要，并且数据所有者愿意放弃恢复数据的能力更高的性能。  
   
- 日志记录**文本**， **ntext**，和**映像**修改控制通过调用[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)与*属性*参数设置为 SQL_SOPT_SS_ TEXTPTR_LOGGING 和*ValuePtr*设置为 SQL_TL_ON 或 SQL_TL_OFF。  
+ 日志记录**文本**， **ntext**，并**图像**通过调用[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)与*特性*参数设置为 SQL_SOPT_SS_ TEXTPTR_LOGGING 以及*ValuePtr*设置为 SQL_TL_ON 或 SQL_TL_OFF。  
   
 ## <a name="see-also"></a>请参阅  
  [管理 Text 和 Image 列](managing-text-and-image-columns.md)  

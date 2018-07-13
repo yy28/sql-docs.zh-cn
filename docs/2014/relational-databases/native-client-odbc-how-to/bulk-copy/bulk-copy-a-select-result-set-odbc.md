@@ -1,13 +1,11 @@
 ---
-title: 大容量复制选择的结果集 (ODBC) |Microsoft 文档
+title: 大容量复制 SELECT 结果集 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d2163634fa84fc299a10c2bd608ec0da8e7aa87b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d537846035a35497404ec9a26557507b34d08a18
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137510"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428596"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大容量复制 SELECT 结果集 (ODBC)
   此示例显示如何使用大容量复制函数向外大容量复制 SELECT 语句的结果集。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
@@ -42,7 +40,7 @@ ms.locfileid: "36137510"
   
 4.  调用[bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)可设置的以下信息：  
   
-    -   指定 NULL 为*szTable*参数。  
+    -   指定为空， *szTable*参数。  
   
     -   接收结果集数据的数据文件的名称。  
   
@@ -50,11 +48,11 @@ ms.locfileid: "36137510"
   
     -   复制方向：DB_OUT。  
   
-5.  调用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)、 eOption 设 BCPHINTS 和置于 iValue 指向包含 SELECT 语句的 SQLTCHAR 数组的指针。  
+5.  调用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)，将 eOption 设置为 BCPHINTS，并在 iValue 中将指向包含该 SELECT 语句的 SQLTCHAR 数组的指针。  
   
-6.  调用[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)执行批量复制操作。  
+6.  调用[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以执行大容量复制操作。  
   
- 按以上步骤操作时文件是以本机格式创建的。 你可以通过使用转换为其他数据类型的数据值[bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 有关详细信息，请参阅[创建大容量复制格式化文件&#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)。  
+ 按以上步骤操作时文件是以本机格式创建的。 您可以通过使用数据值转换为其他数据类型[bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 有关详细信息，请参阅[创建大容量复制格式化文件&#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)。  
   
 ## <a name="example"></a>示例  
  需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  

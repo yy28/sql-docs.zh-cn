@@ -1,5 +1,5 @@
 ---
-title: 用于 Analysis Services 连接的数据提供程序 |Microsoft 文档
+title: 用于 Analysis Services 连接的数据提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7eb84d1a796268414c7f28e3c46e8a3de6cd295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157198"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用于 Analysis Services 连接的数据提供程序
   Analysis Services 为服务器和数据访问提供了三个数据访问接口。 连接到 Analysis Services 的所有应用程序均使用以下访问接口之一来进行数据访问操作。 ADOMD.NET 和 Analysis Services 管理对象 (AMO) 这两个访问接口为托管数据访问接口。 Analysis Services OLE DB 访问接口 (MSOLAP DLL) 为本地数据访问接口。  
@@ -45,7 +45,7 @@ ms.locfileid: "36138962"
   
 -   在 SQL Server Management Studio 中，连接到 Analysis Services 实例。 右键单击你想要检查，指向的实例**报表**，然后单击**常规**。 报表中显示版本类别和版本构建信息。  
   
- 主内部版本号的初始版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]为 12.0.2000.9。  
+ 初始版本的版本号[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]为 12.0.2000.9。  
   
  有关如何获取版本和构建信息的详细信息，请参阅 [如何确定 SQL Server 及其组件的版本和版本类别](http://support.microsoft.com/kb/321185)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36138962"
   
 1.  转到 \Program Files\Microsoft Analysis Services\AS OLEDB\120。  
   
-2.  右键单击为 msolap120.dll 然后单击**属性**。  
+2.  右键单击 msolap120.dll，然后单击**属性**。  
   
  如果在此位置找不到文件，或文件夹路径包含 AS OLEDB\110 或 AS OLEDB\90，则表示您在使用较旧的版本，现在必须安装较新的版本 (AS OLEDB\11) 来连接到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36138962"
   
  MSOLAP130.dll 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中附带的 Analysis Services OLE DB 提供程序版本。 其他最近早期版本有 MSOLAP10.dll（对于 SQL Server 2008 和 2008 R2）和 MSOLAP90.dll（对于 SQL Server 2005）。  
   
- OLE DB 访问接口经常在连接字符串上指定。 Analysis Services 连接字符串使用不同的命名法来引用的 OLE DB 访问接口： MSOLAP。\<版本 >.dll  
+ OLE DB 访问接口经常在连接字符串上指定。 Analysis Services 连接字符串使用不同的命名法来指代 OLE DB 提供程序： MSOLAP。\<版本 >.dll  
   
  MSOLAP.5.dll 是随 Excel 2013 安装的当前 Analysis Services OLE DB 访问接口。 以前的版本（如 MSOLAP.4.dll 或 MSOLAP.3.dll）经常可在运行早期 Excel 版本的工作站上找到。 一些 Analysis Services 功能（如 PowerPivot 外接程序）需要特定版本的 OLE DB 访问接口。 有关详细信息，请参阅[连接字符串属性 (Analysis Services)](connection-string-properties-analysis-services.md)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36138962"
   
  AMO 由 SQL Server 安装程序进行安装，SQL Server 客户端应用程序使用它来连接 Analysis Services。 在自定义代码中使用 AMO 时，还可以下载并手动安装它（请参阅本主题中的 [如何确定 Analysis Services 数据提供程序的版本](#bkmk_LibUpdate) ）。 AMO 可以在全局程序集高速缓存中找到，例如 `Microsoft.AnalysisServices`。  
   
- 使用 AMO 连接是通常最小，组成"数据源 =\<服务器名 >"。 在建立连接后，您使用 API 来处理数据库收集和主要对象。 SSDT 和 SSMS 使用 AMO 连接到 Analysis Services 实例。  
+ 使用 AMO 的连接是通常最小，包含的"数据源 =\<服务器名 >"。 在建立连接后，您使用 API 来处理数据库收集和主要对象。 SSDT 和 SSMS 使用 AMO 连接到 Analysis Services 实例。  
   
  有关以编程方式连接的详细信息，请参阅 [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)。  
   

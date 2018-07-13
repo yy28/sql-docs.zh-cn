@@ -1,13 +1,11 @@
 ---
-title: 大容量复制数据从程序变量 (ODBC) |Microsoft 文档
+title: 大容量复制数据从程序变量 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ef4b98997305cf1bd3232f51fd9d7ae0fb8a3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138259"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420586"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
   此示例演示如何通过 `bcp_bind` 和 `bcp_sendrow` 使用大容量复制函数将数据从程序变量大容量复制到 SQL Server。 （为简化此示例，已删除错误检查代码。）  
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
- **安全说明**尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果你必须保存凭据，应将它们与加密[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
+ **安全说明**如果可能，请使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应将它们与加密[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>直接在程序变量上使用大容量复制函数  
   
@@ -50,15 +48,15 @@ ms.locfileid: "36138259"
   
     -   副本的方向：DB_IN 从应用程序到视图或表，或 DB_OUT 从表或视图到应用程序。  
   
-5.  调用[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)大容量复制，可将列绑定到程序变量中的每列。  
+5.  调用[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)大容量复制来将列绑定到程序变量中的各列。  
   
-6.  填充数据，并调用程序变量[bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送数据行。  
+6.  提供数据，并调用填充程序变量[bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送一行数据。  
   
-7.  在发送多个行后，调用[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)为已发送的行的检查点。 很好的做法调用[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)至少一次每 1000年行。  
+7.  发送多个行后，调用[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)到检查点已发送的行。 它是调用的好办法[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)每 1000年行至少一次。  
   
-8.  已发送的所有行后，调用[bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成操作。  
+8.  已发送所有行后，调用[bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成操作。  
   
- 您可以改变的位置和长度的程序变量批量复制操作期间通过调用[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)设置各种大容量复制选项。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)发送`text`， `ntext`，和`image`到服务器的段中的数据。  
+ 您可能会因位置和长度的程序变量大容量复制操作期间调用[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)并[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)设置多个大容量复制选项。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)发送`text`， `ntext`，和`image`到服务器的段中的数据。  
   
 ## <a name="example"></a>示例  
  IA64 平台不支持此示例。  
@@ -71,7 +69,7 @@ ms.locfileid: "36138259"
   
  使用 odbc32.lib 和 odbcbcp.lib 编译第二个 (C++) 代码列表。 如果用 MSBuild.exe 生成示例，请先将 Bcpfmt.fmt 和 Bcpodbc.bcp 从项目目录复制到 .exe 文件所在的目录，然后调用 .exe。  
   
- 执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码段以删除使用示例表。  
+ 执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以删除该示例使用的表。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

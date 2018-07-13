@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
 - articles [SQL Server replication], dropping
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dfce55b3732c2e6715ad84e079c7c0707a243929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154078"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
   创建发布时，可以选择希望发布的表和其他数据库对象。 您可以使用复制来发布下列数据库对象。  
@@ -188,7 +188,7 @@ ms.locfileid: "36138835"
   
 -   通过 [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) 创建的绑定默认值（绑定默认值会对用 ALTER TABLE 或 CREATE TABLE 的关键字 DEFAULT 创建的默认值不利）将不复制。  
   
--   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 `NOEXPAND` 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 `NOEXPAND` 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，创建这些函数的脚本并使用交付脚本*@post_snapshot_script*参数`sp_addpublication`。  
+-   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 `NOEXPAND` 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 `NOEXPAND` 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，为这些函数创建脚本并使用提供该脚本*@post_snapshot_script*参数的`sp_addpublication`。  
   
 ### <a name="schemas-and-object-ownership"></a>架构和对象所有权  
  在新建发布向导中，复制在架构和对象所有权方面具有以下默认行为：  

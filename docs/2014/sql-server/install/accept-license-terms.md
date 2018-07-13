@@ -1,5 +1,5 @@
 ---
-title: 接受许可条款 |Microsoft 文档
+title: 接受许可条款 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260087"
 ---
 # <a name="accept-license-terms"></a>接受许可条款
   使用 **安装向导的** “接受许可条款” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以接受该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的许可条款。  
@@ -81,7 +81,7 @@ ms.locfileid: "36138338"
   
 -   复制  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 使用错误报告来改善[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能和对所有信息保密。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 利用错误报告来改进[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能和对所有信息保密。  
   
  有关错误的信息将通过安全 (https) 连接发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，在那里保存这些信息，且对其访问将受到限制。 另外，也可以将这些信息发送到您自己的“公司错误报告”服务器。  
   

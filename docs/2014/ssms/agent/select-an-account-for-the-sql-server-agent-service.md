@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, accounts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab05d53c3c9f989252ab248305f000033ff54ccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d82cf9589289c9646950174081a19f3449accb46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210477"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
   服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务选择一个帐户，可选帐户如下：  
@@ -87,13 +87,13 @@ ms.locfileid: "36138562"
 |本地系统帐户 (NT AUTHORITY\System)|支持<sup>2</sup>|不支持|支持<sup>2</sup>|  
 |本地服务帐户 (NT AUTHORITY\LocalService)|不支持|不支持|不支持|  
   
- <sup>1</sup>请参阅限制 1 下面。  
+ <sup>1</sup>请参阅下面的限制 1。  
   
- <sup>2</sup>请参阅限制 2 下面。  
+ <sup>2</sup>请参阅下面的限制 2。  
   
- <sup>3</sup>请参阅限制下面的 3。  
+ <sup>3</sup>请参阅下面的 3 的限制。  
   
- <sup>4</sup>请参阅下面的 4 限制。  
+ <sup>4</sup>请参阅下面的限制 4。  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：针对多服务器管理使用非管理帐户  
  目标服务器可能无法登记到主服务器，并出现以下错误信息：“登记操作失败”。  

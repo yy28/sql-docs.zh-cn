@@ -1,5 +1,5 @@
 ---
-title: （MDS 外接程序 excel） 加载之前筛选数据 |Microsoft 文档
+title: (MDS add-in for Excel) 加载前筛选数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 98cb43795b68a35aeb4b57dc3a70ab001ffbaf8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 56cec33d57fc78122bdae7fd6d64a774919b18f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182897"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>加载前筛选数据（用于 Excel 的 MDS 外接程序）
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，当你想要限制的大小或作用域加载到 Excel 的数据筛选数据。  
+  在中[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，当你想要限制的大小或要加载到 Excel 的数据的作用域筛选数据。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要执行此过程：  
@@ -49,10 +49,10 @@ ms.locfileid: "36139089"
   
     > [!NOTE]  
     >  -   只有前一百万个成员才能加载到 Excel 中。  
-    > -   约束的列表 （基于域的属性） 的列，加载只有前 1000 个的值。  
+    > -   在作为约束的列表 （基于域的属性） 的列，加载仅前 1000 个的值。  
   
 ## <a name="next-steps"></a>后续步骤  
- [发布到 MDS 数据从 Excel &#40;MDS add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [数据从 Excel 发布到 MDS &#40;MDS add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>请参阅  
  [加载数据&#40;MDS add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   

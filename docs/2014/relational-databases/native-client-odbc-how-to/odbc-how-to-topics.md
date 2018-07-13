@@ -1,29 +1,27 @@
 ---
-title: ODBC 操作指南主题 |Microsoft 文档
+title: ODBC 操作指南主题 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbc9b3b5bcb554bfbd774491d3181c042393ff2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 97ee08999f393423798cb57e13ff0b3c42203b29
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137730"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422286"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 操作指南主题
-  若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驱动程序，你必须能够创建 ODBC 数据源并确保服务器具有正确版本的目录存储过程。 若要为使用 SQL Server 的 ODBC 应用程序编码，您必须了解如何分配 ODBC 句柄、设置属性、连接到 SQL Server 实例、执行查询和处理结果。  
+  若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驱动程序，您必须能够创建 ODBC 数据源，并确保服务器具有正确版本的目录存储过程。 若要为使用 SQL Server 的 ODBC 应用程序编码，您必须了解如何分配 ODBC 句柄、设置属性、连接到 SQL Server 实例、执行查询和处理结果。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -41,7 +39,7 @@ ms.locfileid: "36137730"
   
 -   [运行存储的过程操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
--   [管理文本和图像列操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+-   [管理 text 和 image 列操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
 -   [分析 ODBC 驱动程序性能操作指南主题&#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   

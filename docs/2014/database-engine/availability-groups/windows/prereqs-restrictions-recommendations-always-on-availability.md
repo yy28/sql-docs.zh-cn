@@ -1,14 +1,13 @@
 ---
-title: 先决条件、 限制和建议的 AlwaysOn 可用性组 (SQL Server) |Microsoft 文档
+title: 先决条件、 限制和建议为 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], deploying
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: 146
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 299d93dbafce40b4e610258c6238d3b72b953f9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5dc25e9314abf9aa025f489a087fdcc8ae98be36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259543"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)
   本主题介绍在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时的注意事项，包括针对主机、Windows Server 故障转移群集 (WSFC) 群集、服务器实例和可用性组的先决条件、限制和建议。 对于上述各组件，还指出了安全注意事项和所需权限（如果有）。  
@@ -57,7 +56,7 @@ ms.locfileid: "36138287"
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保每台计算机正在运行 x86（非 WOW64）或 x64 Windows Server 2008 或更高版本。|WOW64（Windows 64 位上的 Windows 32 位）不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保每台计算机都是 Windows Server 故障转移群集 (WSFC) 群集中的节点。|[Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|请确保 WSFC 群集包含足够多的节点来支持您的可用性组配置。|对于某一给定可用性组，一个 WSFC 节点只能承载一个可用性副本。 在某一给定 WSFC 节点上， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的一个或多个实例可为许多可用性组承载可用性副本。<br /><br /> 询问您的数据库管理员，了解为支持计划的可用性组的可用性副本，需要多少个 WSFC 节点。<br /><br /> [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保 WSFC 群集中的每个节点上都安装了所有适用的 Window 修补程序。|**\*\* 重要\* \*** 需要或建议的 WSFC 节点在其上的群集的修补程序的大量[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]正在部署。 有关详细信息，请参阅本节后面的[支持 AlwaysOn 可用性组的 Windows 修补程序（Windows 系统）](#WinHotfixes)。|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保 WSFC 群集中的每个节点上都安装了所有适用的 Window 修补程序。|**\*\* 重要\* \*** 多修补程序要求或建议为 WSFC 群集的节点在其上[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]正在部署。 有关详细信息，请参阅本节后面的[支持 AlwaysOn 可用性组的 Windows 修补程序（Windows 系统）](#WinHotfixes)。|  
   
 > [!IMPORTANT]  
 >  另外，确保已正确配置了您的环境以连接到可用性组。 有关详细信息，请参阅[AlwaysOn 客户端连接 (SQL Server)](always-on-client-connectivity-sql-server.md)。  
@@ -69,9 +68,9 @@ ms.locfileid: "36138287"
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**配置最佳 WSFC 仲裁**|在每个 WSFC 节点上，确保安装了在知识库文章 2494036 中介绍的修补程序。<br /><br /> 此修补程序支持使用非自动故障转移目标配置最佳仲裁。 此功能通过使您可以选择哪些节点进行投票，改进了多站点群集。|KB 2494036：  [提供了一个修补程序，使您可以在 Windows Server 2008 和 Windows Server 2008 R2 中配置不具有仲裁投票的群集节点](http://support.microsoft.com/kb/2494036)<br /><br /> 有关仲裁投票的信息，请参阅 [WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**更有效地利用网络带宽**|在每个 WSFC 节点上，确保安装了在知识库文章 2616514 中介绍的修补程序。<br /><br /> 如果没有安装此修补程序，群集服务将在群集节点间发送不必要的注册表通知。 此行为会限制网络带宽，这对于 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]是很严重的问题。|KB 2616514：  [在 Windows Server 2008 或 Windows Server 2008 R2 中，群集服务在群集节点间发送不必要的注册表项更改通知](http://support.microsoft.com/kb/2616514)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||√|不适用|**执行 VPD 存储测试均不可用于所有 WSFC 节点的磁盘上**|如果某一 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，并且在未正确在处于联机状态的磁盘上运行且不可用于 WSFC 群集中的所有节点后“验证 SCSI 设备关键产品数据 (VPD)”存储测试失败，则安装在知识库文章 2531907 中介绍的修补程序。<br /><br /> 此修补程序可避免在磁盘处于联机状态时在验证报告中出现不恰当的警告或错误。|KB 2531907：[安装 Windows Server 2008 R2 SP1 后验证 SCSI 设备关键产品数据 (VPD) 测试失败](http://support.microsoft.com/kb/2531907)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||√|是|**更快的故障转移到本地副本**|如果某个 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，请确保安装了在知识库文章 2687741 中介绍的修补程序。<br /><br /> 此修补程序可以改进 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到本地副本的性能。|KB 2687741：  [为 Windows Server 2008 R2 提供了一个修补程序，可改进 SQL Server 2012 中“AlwaysOn 可用性组”功能的性能](http://support.microsoft.com/KB/2687741)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**非对称存储-为故障转移群集实例 (Fci)**|如果将为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用任何故障转移群集实例 (FCI)，则安装 Windows Server 2008 修补程序 976097。<br /><br /> 该修补程序将启用故障转移群集管理 Microsoft 管理控制台 (MMC) 管理单元，以便支持异步存储 - 仅在某些 WSFC 节点上可用的共享磁盘。|KB 976097：[向异步存储添加了修补程序以便支持运行 Windows Server 2008 或 Windows Server 2008 R2 的故障转移群集的故障转移群集管理 MMC 管理单元](http://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 体系结构指南： 使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](http://technet.microsoft.com/library/jj215886.aspx)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||√|不适用|**执行 VPD 存储测试不是用于所有 WSFC 节点的磁盘上**|如果某一 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，并且在未正确在处于联机状态的磁盘上运行且不可用于 WSFC 群集中的所有节点后“验证 SCSI 设备关键产品数据 (VPD)”存储测试失败，则安装在知识库文章 2531907 中介绍的修补程序。<br /><br /> 此修补程序可避免在磁盘处于联机状态时在验证报告中出现不恰当的警告或错误。|KB 2531907：[安装 Windows Server 2008 R2 SP1 后验证 SCSI 设备关键产品数据 (VPD) 测试失败](http://support.microsoft.com/kb/2531907)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||√|是|**更快故障转移到本地副本**|如果某个 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，请确保安装了在知识库文章 2687741 中介绍的修补程序。<br /><br /> 此修补程序可以改进 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到本地副本的性能。|KB 2687741：  [为 Windows Server 2008 R2 提供了一个修补程序，可改进 SQL Server 2012 中“AlwaysOn 可用性组”功能的性能](http://support.microsoft.com/KB/2687741)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**非对称存储 — 对于故障转移群集实例 (Fci)**|如果将为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用任何故障转移群集实例 (FCI)，则安装 Windows Server 2008 修补程序 976097。<br /><br /> 该修补程序将启用故障转移群集管理 Microsoft 管理控制台 (MMC) 管理单元，以便支持异步存储 - 仅在某些 WSFC 节点上可用的共享磁盘。|KB 976097：[向异步存储添加了修补程序以便支持运行 Windows Server 2008 或 Windows Server 2008 R2 的故障转移群集的故障转移群集管理 MMC 管理单元](http://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 体系结构指南： 使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](http://technet.microsoft.com/library/jj215886.aspx)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|不适用|**Internet 协议安全性 (IPsec)**|如果您的环境使用 IPsec 连接，则当客户端计算机与虚拟网络名称重新建立 IPsec 连接（在此上下文中将连接到可用性组侦听器）时，可能会出现长时间的延迟（约两到三分钟）。 如果使用 IPsec 连接，我们建议您查看知识库文章 (KB 980915) 中详述的特定应用场景。|KB 980915：  [从运行 Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7 或 Windows Server 2008 R2 的计算机重新建立 IPSec 连接时出现长时间延迟](http://support.microsoft.com/kb/980915)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**IPv6**|如果使用 IPv6，根据您的 Windows Server 操作系统，我们建议您查看知识库文章 2578103 或 2578113 中详述的特定应用场景。<br /><br /> 如果 Windows Server 拓扑使用 IP 版本 6 (IPv6)，则 WSFC 群集服务需要大约 30 秒的时间来对 IPv6 IP 地址进行故障转移。 这会导致客户端等待约 30 秒来重新连接该 IPv6 IP 地址。|KB 2578103 (Windows Server 2008)：[群集服务需要大约 30 秒对 Windows Server 2008 中的 IPv6 IP 地址进行故障转移](http://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2)：**Windows Server 2008 R2：**[群集服务需要大约 30 秒才能对 Windows Server 2008 R2 中的 IPv6 IP 地址进行故障转移](http://support.microsoft.com/kb/2578113)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**没有路由器之间群集和应用程序服务器**|如果故障转移群集与应用程序服务器之间不存在路由器，则群集服务对网络相关资源进行故障转移的速度会很慢。 这在可用性组执行故障转移之后会延迟客户端重新连接。 在缺少路由器时，我们建议您查看知识库文章 2582281 中详述的特定应用场景并安装该修补程序（如果适用于您的环境）。|KB 2582281：  [如果群集与应用程序服务器之间不存在路由器，则故障转移操作的速度会很慢](http://support.microsoft.com/kb/2582281)|  
@@ -101,7 +100,7 @@ ms.locfileid: "36138287"
   
 2.  导入 FailoverClusters 模块。  
   
-3.  使用`Get-ClusterResource`cmdlet 来查找网络名称资源，然后使用`Set-ClusterParameter`cmdlet 设置`HostRecordTTL`值，，如下所示：  
+3.  使用`Get-ClusterResource`cmdlet 查找网络名称资源，然后使用`Set-ClusterParameter`cmdlet，以设置`HostRecordTTL`值，按如下所示：  
   
      Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36138287"
     ```  
   
     > [!TIP]  
-    >  每次打开新的 PowerShell 窗口时，需要导入`FailoverClusters`模块。  
+    >  每次打开新的 PowerShell 窗口，需要导入`FailoverClusters`模块。  
   
 ##### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
@@ -148,9 +147,9 @@ ms.locfileid: "36138287"
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都必须正在运行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的 Enterprise Edition。|[SQL Server 2014 各个版本支持的功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为某一可用性组承载可用性副本的所有服务器实例必须都使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则。|[设置或更改服务器排序规则](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> **\*\* 重要提示 \*\*** 如果你删除并重新创建了 WSFC 群集，则必须在每个服务器实例上禁用并重新启用已在原始 WSFC 群集上为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> **\*\* 安全说明 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的传输安全性与数据库镜像的传输安全性相同。|[数据库镜像终结点 (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [针对数据库镜像和 AlwaysOn 可用性组传输安全&#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> **\*\* 安全说明 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的传输安全性与数据库镜像的传输安全性相同。|[数据库镜像终结点 (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果使用 FILESTREAM 的任何数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果任何包含的数据库将添加到可用性组中，确保`contained database authentication`服务器选项设置为`1`将承载可用性组的可用性副本的每个服务器实例上。|[contained database authentication 服务器配置选项](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../configure-windows/server-configuration-options-sql-server.md)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果任何包含的数据库将添加到可用性组，确保`contained database authentication`服务器选项设置为`1`将承载的可用性副本的可用性组的每个服务器实例上。|[contained database authentication 服务器配置选项](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="ThreadUsage"></a> 可用性组的线程使用情况  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的工作线程具有以下要求：  
@@ -202,7 +201,7 @@ ms.locfileid: "36138287"
  例如，要使可用性组支持自动故障转移，作为自动故障转移伙伴的辅助副本必须处于 SYNCHRONIZED 状态。 如果到此辅助副本的网络链接失败（甚至间歇性断开），副本将进入 UNSYNCHRONIZED 状态，并且在该链接恢复之前无法重新同步。 如果在该辅助副本不同步时，WSFC 群集请求自动故障转移，则不会发生自动故障转移。  
   
 ##  <a name="ClientConnSupport"></a> 客户端连接支持  
- 璝惠[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支持客户端连接，请参阅[AlwaysOn 客户端连接 (SQL Server)](always-on-client-connectivity-sql-server.md)。  
+ 璝惠[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]对客户端连接的支持，请参阅[AlwaysOn 客户端连接 (SQL Server)](always-on-client-connectivity-sql-server.md)。  
   
 ##  <a name="FciArLimitations"></a> 使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制  
  
@@ -325,7 +324,7 @@ ms.locfileid: "36138287"
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|不属于任何现有可用性组。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**group_database_id** = NULL)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|不是为数据库镜像配置的。|[sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) （如果数据库未参与镜像，则所有带有“mirroring_”前缀的列将为 NULL。）|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|在将使用 FILESTREAM 的数据库添加到某一可用性组之前，请确保在承载或将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|在将包含的数据库添加到可用性组中之前, 确保`contained database authentication`服务器选项设置为`1`上的每个服务器实例承载，或将承载的可用性副本的可用性组。|[contained database authentication 服务器配置选项](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../configure-windows/server-configuration-options-sql-server.md)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|在将包含的数据库添加到可用性组之前, 确保`contained database authentication`服务器选项设置为`1`上的每个服务器实例承载，或将承载的可用性副本的可用性组。|[contained database authentication 服务器配置选项](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可使用任何受支持的数据库兼容性级别。  
@@ -361,9 +360,9 @@ ms.locfileid: "36138287"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
 -   [AlwaysON-HADRON 学习系列： 启用了 HADRON 的工作线程池用法的数据库](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   

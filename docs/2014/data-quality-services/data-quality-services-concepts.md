@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1f6eb37de996e8956468efb54fa74535e419f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16ca3b28e9b19c0f7935f2938d054939f0cc57a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155388"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本文简要概括知识管理、数据质量项目和数据质量管理中的 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念。  
@@ -79,7 +79,7 @@ ms.locfileid: "36138722"
   
  配置选项支持您：  
   
--   配置引用数据服务设置。 有关详细信息，请参阅[Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)。  
+-   配置引用数据服务设置。 有关详细信息，请参阅[配置 DQS 以使用引用数据](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
 -   设置清理和匹配活动的阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36138722"
   
  **DQS 安全性**  
   
- 您可以使用 SQL Server 安全机制中的角色来确保 DQS 安全。 有三种 DQS 角色决定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中用户的访问级别：dqs_administrator、dqs_kb_editor 和 dqs_kb_operator。 您不能使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序向用户授予角色；角色是通过 SQL Server Management Studio 授予的。 有关详细信息，请参阅[DQS Security](../../2014/data-quality-services/dqs-security.md)。  
+ 您可以使用 SQL Server 安全机制中的角色来确保 DQS 安全。 有三种 DQS 角色决定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中用户的访问级别：dqs_administrator、dqs_kb_editor 和 dqs_kb_operator。 您不能使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序向用户授予角色；角色是通过 SQL Server Management Studio 授予的。 有关详细信息，请参阅[DQS 安全性](../../2014/data-quality-services/dqs-security.md)。  
   
  有关 DQS 管理的详细信息，请参阅[DQS 管理](../../2014/data-quality-services/dqs-administration.md)。  
   

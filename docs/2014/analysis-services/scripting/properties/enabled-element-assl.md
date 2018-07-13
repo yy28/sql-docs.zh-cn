@@ -1,5 +1,5 @@
 ---
-title: 启用元素 (ASSL) |Microsoft 文档
+title: 启用元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Enabled element
 ms.assetid: dbe57903-75c0-4060-a2b3-eab241d7469f
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 917116f506c89ad5f0f0b2c2bee18a234f253665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd8206bbf0dffe84a1012a0e47b4c261b15fb4ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211657"
 ---
 # <a name="enabled-element-assl"></a>Enabled 元素 (ASSL)
   指示是否启用了父元素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36138504"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`Enabled`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.CubeHierarchy>和<xref:Microsoft.AnalysisServices.ProactiveCaching>。  
+ 父级对应的元素`Enabled`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.CubeHierarchy>和<xref:Microsoft.AnalysisServices.ProactiveCaching>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

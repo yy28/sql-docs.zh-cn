@@ -1,13 +1,11 @@
 ---
-title: 使用语句参数 |Microsoft 文档
+title: 使用语句参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c359db9f39f659ac497adcf3bc6e343e1dd6796
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 41fcbf9534f8d9b1accc424dd873609a6a357ade
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138851"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422746"
 ---
 # <a name="using-statement-parameters"></a>使用语句参数
   参数在 SQL 语句中是一种变量，它使 ODBC 应用程序能够：  
@@ -37,9 +35,9 @@ ms.locfileid: "36138851"
   
 -   在构造查询条件时增强用户交互。  
   
--   管理**文本**， **ntext**，和**映像**数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定 C 数据类型。  
+-   管理**文本**， **ntext**，并**图像**数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定的 C 数据类型。  
   
- 例如，**部件**表具有名为的列**PartID**，**说明**，和**价格**。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
+ 例如，**部件**表中包含名为的列**PartID**，**说明**，以及**价格**。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], synchronizing
 - synchronization [SQL Server replication], pull subscriptions
 - subscriptions [SQL Server replication], pull
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6e48ccd3d01d24ca84db923f3c56593621960105
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9143c943f18c793ce7b89be8891025b20be2e092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160358"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步请求订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]复制代理 [或复制管理对象 (RMO) 在](agents/replication-agents-overview.md)中同步请求订阅。  
@@ -167,7 +167,7 @@ ms.locfileid: "36138829"
   
     -   在步骤 1 中为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取其他订阅属性。 如果此方法返回`false`，请验证订阅是否存在。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取其他订阅属性。 如果此方法返回`false`，验证订阅是否存在。  
   
 4.  使用下列方法之一在订阅服务器中启动分发代理：  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36138829"
     -   获取 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 属性中 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 类的实例，然后调用 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动代理，并且控制权仍属于运行代理作业。 在执行同步期间，您可以在代理仍旧运行的情况下处理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 事件。  
   
         > [!NOTE]  
-        >  如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值） 时创建请求订阅，还需要指定<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>，和 （可选）<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A>和<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>由于相关的代理作业订阅的元数据中没有[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
+        >  如果指定的值`false`有关<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值） 时创建请求订阅，还需要指定<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>，和 （可选）<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A>和<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>由于相关的代理作业订阅的元数据中不可用[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>将请求订阅与合并发布进行同步  
   
@@ -194,7 +194,7 @@ ms.locfileid: "36138829"
   
     -   在步骤 1 中为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取其他订阅属性。 如果此方法返回`false`，请验证订阅是否存在。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取其他订阅属性。 如果此方法返回`false`，验证订阅是否存在。  
   
 4.  使用下列方法之一在订阅服务器中启动合并代理：  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36138829"
     -   获取 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 属性中 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 类的实例，然后调用 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动合并代理，并且控件仍属于运行代理作业。 在执行同步期间，您可以在代理仍旧运行的情况下处理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   
         > [!NOTE]  
-        >  如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值） 时创建请求订阅，还需要指定<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>，和（可选) <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>，和<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>因为代理作业相关的元数据的订阅中没有[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
+        >  如果指定的值`false`有关<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>（默认值） 时创建请求订阅，还需要指定<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>，和可以选择<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>，和<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>因为订阅中不可用与代理作业相关的元数据[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  该示例将请求订阅与事务发布进行同步，其中，代理使用代理作业进行异步启动。  

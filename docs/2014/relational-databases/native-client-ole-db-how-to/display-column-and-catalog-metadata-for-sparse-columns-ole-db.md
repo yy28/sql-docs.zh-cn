@@ -1,34 +1,32 @@
 ---
-title: 显示列和稀疏列 (OLE DB) 的目录元数据 |Microsoft 文档
+title: 显示列和目录元数据对稀疏列 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7145bc647411817996cbef9dffce406f37d4375d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 22b1e8512a1a6bd92416504ee48883715cef9a3b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138831"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411546"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
   此示例将创建具有三个列的表，包括一个稀疏列、一个非稀疏列和一个列集列。 随后示例将显示 OLE DB 标志，指示非稀疏列和列集列的列及目录元数据。  
   
- 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 有关稀疏列的详细信息，请参阅[中 SQL Server Native Client 的稀疏列支持](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>示例  
- 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
 ```  
 #include <stddef.h>  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
 - datasets [Reporting Services], with DMX queries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1e9d492d5c01f4445a7f8ed79a9b386eaa5b5ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7755e5026dc99e13f27de9619bb619e5f9e22db7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152238"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>从数据挖掘模型检索数据 (DMX) (SSRS)
   若要在报表中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据挖掘模型中的数据，则必须定义 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源以及一个或多个报表数据集。 创建数据源定义时，必须指定连接字符串和凭据，以便能够从客户端计算机访问该数据源。  
   
  可以创建供单个报表使用的嵌入数据源定义，也可以创建可由多个报表使用的共享数据源定义。 本主题中的过程介绍如何创建嵌入数据源。 有关共享数据源的详细信息，请参阅[嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)和[创建、修改和删除共享数据源 (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 在创建后[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源，你可以创建一个或多个数据集。 对于每个数据集，您都可以使用数据挖掘预测表达式 (DMX) 查询设计器来创建指定字段集合的 DMX 查询。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](analysis-services-dmx-query-designer-user-interface.md)。  
+ 在创建后[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源，可以创建一个或多个数据集。 对于每个数据集，您都可以使用数据挖掘预测表达式 (DMX) 查询设计器来创建指定字段集合的 DMX 查询。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](analysis-services-dmx-query-designer-user-interface.md)。  
   
  创建数据集后，数据集的名称将在“报表数据”窗格中该数据集的数据源节点下显示为节点。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36138796"
   
 2.  在 **“数据集属性”** 对话框的 **“名称”** 文本框中键入名称。  
   
-3.  在**数据源对话框中**，请验证名称是否连接到数据源的名称[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源。  
+3.  在中**的数据源中**，确保该名称是连接到数据源的名称[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源。  
   
 4.  单击 **“查询设计器”** 打开图形查询设计器，从而以交互方式生成查询。 如果查询设计器以 MDX 模式打开，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")）以切换到数据挖掘查询设计器。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](analysis-services-dmx-query-designer-user-interface.md)。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36138796"
      数据集及其字段集合显示在“报表数据”窗格的数据源节点下。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 连接类型为 DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [针对 DMX 的 analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

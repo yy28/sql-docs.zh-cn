@@ -1,5 +1,5 @@
 ---
-title: 索引 (DTA) 的名称元素 |Microsoft 文档
+title: 命名元素的索引 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 86c843e5c69f1fc433d5d035e516c2d1deaa9d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 26e35777540e98b63c6b676778d8a04f26a62e97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278163"
 ---
 # <a name="name-element-for-index-dta"></a>索引的名称元素 (DTA)
   在用户指定的配置中为索引指定一个名称。  
@@ -43,7 +43,7 @@ ms.locfileid: "36137658"
 |--------------------|-----------------|  
 |**数据类型和长度**|`string`长度没有限制。|  
 |**默认值**|无。|  
-|**出现次数**|必须为每个使用一次`Index`元素。|  
+|**出现次数**|必须出现一次为每个`Index`元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

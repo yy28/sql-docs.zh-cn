@@ -1,5 +1,5 @@
 ---
-title: 用于数据挖掘分析 UI 向导 |Microsoft 文档
+title: 数据挖掘分析中的用户界面向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81fdccdf00ddda9ab92421703001cedb6b1dca1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44737c26f9940b34866406f7fe8fbfb50a112a93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151398"
 ---
-# <a name="ui-wizards-for-data-mining-analysis"></a>用于数据挖掘分析 UI 向导
+# <a name="ui-wizards-for-data-mining-analysis"></a>数据挖掘分析中的用户界面向导
 
-本部分包含有关用于数据挖掘分析的用户界面 (UI) 向导的文档。
+本部分包含有关数据挖掘分析中的用户界面 (UI) 向导的文档。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,5 +1,5 @@
 ---
-title: MiningStructures 元素 (ASSL) |Microsoft 文档
+title: MiningStructures 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructures element
 ms.assetid: d8144b85-c836-4dcf-96b4-36b9dfd4211d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cfae95ff6689f06f4aa61a2e31a16521fe94539b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06e0bf164d4e318b7451dc4a364b26b89fef7379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165278"
 ---
 # <a name="miningstructures-element-assl"></a>MiningStructures 元素 (ASSL)
   包含的集合[MiningStructure](../objects/miningstructure-element-assl.md)中的元素[数据库](../objects/database-element-assl.md)元素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36138292"
 |子元素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructureCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructureCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240397"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>呈现报表项（报表生成器和 SSRS）
   报表项的数量、大小和位置会影响呈现器对表体的分页方式。 下面说明了各种报表项的呈现方式。  
@@ -81,13 +81,13 @@ ms.locfileid: "36138152"
   
 -   重复的列标题和行标题。  
   
-     表头优先于表尾。 内部重复的组优先于外部组。 项`RepeatWith`属性设置的更接近于目标数据区域会优先于较远的数据区域的项。  
+     表头优先于表尾。 内部重复的组优先于外部组。 项`RepeatWith`属性设置的更接近于目标数据区域会优先于距离数据区域较远的项。  
   
--   小报表项，例如文本框或矩形，具有显式的 KeepTogether 属性设置为`true`。  
+-   小型报表项，例如文本框或矩形，其显式 KeepTogether 属性设置为`true`。  
   
--   大型报表项，例如子报表或非最内层 tablix 成员，显式的 KeepTogether 属性设置为`true`。  
+-   大型报表项，例如子报表或非最内部的 tablix 成员，其显式 KeepTogether 属性设置为`true`。  
   
--   Tablix 数据区域具有显式 KeepTogether 属性设置为`true`。  
+-   Tablix 数据区域，其显式 KeepTogether 属性设置为`true`。  
   
 ### <a name="subreports"></a>子报表  
  子报表呈现为一个包含在单独的报表 .rdl 文件中定义的另一报表的矩形。 子报表文件必须先发布到报表服务器，之后才能由父报表进行访问。  

@@ -1,5 +1,5 @@
 ---
-title: 为仪表 （报表生成器和 SSRS） 上的指针指定图像 |Microsoft 文档
+title: 指定一个图像作为仪表 （报表生成器和 SSRS） 的指针 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bce410684b433d8a444d36affa91f8134673432d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d96efa70219c841abae8d0129716810645d283d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230137"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>指定图像作为仪表的指针（报表生成器和 SSRS）
   仪表包含三个可用于自定义指针外观的内置样式。 对于径向仪表，内置样式为：针、标记和图条。 对于线性仪表，内置样式为：标记、图条和温度计。 如果需要一个唯一指针，则用户可以创建一个图像并指定其作为全功能指针。  
@@ -41,7 +41,7 @@ ms.locfileid: "36138132"
   
 2.  （可选）如果没有指针存在仪表上，右键单击仪表并选择**添加指针**。 此时将会有一个指针添加到仪表上。  
   
-3.  单击**插入**功能区上选项卡上，双击图像图标。 将打开“图像属性”对话框。  
+3.  单击**插入**功能区上选项卡，然后双击图像图标。 将打开“图像属性”对话框。  
   
 4.  向报表添加图像。 有关详细信息，请参阅[在报表中嵌入图像&#40;报表生成器和 SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)。  
   
@@ -51,14 +51,14 @@ ms.locfileid: "36138132"
   
 7.  展开 PointerImage 节点。  
   
-8.  在**源**，选择**嵌入**从下拉列表。  
+8.  在中**源**，选择**嵌入**从下拉列表。  
   
     > [!NOTE]  
-    >  如果图像存储在数据库中或 Web 上，则可以为此属性指定适当的选项。 有关详细信息，请参阅[映像属性对话框中，常规&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)。  
+    >  如果图像存储在数据库中或 Web 上，则可以为此属性指定适当的选项。 有关详细信息，请参阅[图像属性对话框，常规&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)。  
   
-9. 在**值**，从下拉列表中选择你的映像的名称。  
+9. 在中**值**，从下拉列表中选择映像的名称。  
   
-10. 在**TransparentColor**，选取一个颜色值，你想要从映像中删除。 这将使指针的外观无缝地融入仪表。  
+10. 在中**TransparentColor**，选择你想要从映像中删除的颜色值。 这将使指针的外观无缝地融入仪表。  
   
 ## <a name="see-also"></a>请参阅  
  [设置仪表上指针的格式（报表生成器和 SSRS）](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
