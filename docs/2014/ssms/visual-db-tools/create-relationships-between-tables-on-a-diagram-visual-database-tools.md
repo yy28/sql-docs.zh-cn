@@ -1,5 +1,5 @@
 ---
-title: 创建在关系图 (Visual Database Tools) 上的表之间的关系 |Microsoft 文档
+title: 创建关系表间的关系图 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80aff8b6f574b21bf5287e8388201e959f65765d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14d6a6334c4d618cf48b73e1bfa84f7dac517983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168030"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
   您可以在关系图设计器中通过在各个表之间拖动列来创建不同表的列之间的关系。  
@@ -51,7 +51,7 @@ ms.locfileid: "36015615"
      数据库设计器将显示所选列之间的关系。  
   
 ## <a name="see-also"></a>请参阅  
- [表和列对话框&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [表和列对话框&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [唯一约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [使用数据库关系图中的表 (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)  
   

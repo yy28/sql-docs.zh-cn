@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68e220c2f80260359234fb80869844c531744bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f26531b3b4e783c70e1a3b060e803908cbf275b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191927"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
   了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 来管理您组织的主数据。 了解如何创建和操作模型对象（数据的容器）。 了解如何组织和维护主数据本身。 了解如何导入和导出主数据，以及在测试环境和生产环境之间共享模型。 最后，了解如何开发用于访问 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务的自定义应用程序。  
@@ -38,7 +38,7 @@ ms.locfileid: "36015499"
   
 ## <a name="maintain-master-data"></a>维护主数据  
   
--   [Master Data Services 外接程序 Microsoft excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services add-in for Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [成员&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36015499"
   
 -   [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
--   [导出数据&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [将数据导出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
 -   [部署模型&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   

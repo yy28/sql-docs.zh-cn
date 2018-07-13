@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abc9d5df546baf36bdf566e4669faf6a2611a612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9005404601b3600da088678741434bd192d0579
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237997"
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”菜单上的“选项”配置对象资源管理器选项。  
@@ -33,7 +33,7 @@ ms.locfileid: "36014008"
 ## <a name="see-also"></a>请参阅  
  [对象资源管理器](object-explorer.md)   
  [从对象资源管理器连接到实例](connect-to-an-instance-from-object-explorer.md)   
- [通过使用对象资源管理器管理对象](manage-objects-by-using-object-explorer.md)   
+ [使用对象资源管理器管理对象](manage-objects-by-using-object-explorer.md)   
  [对象资源管理器详细信息窗格](object-explorer-details-pane.md)   
  [Management Studio 中的自定义报告](custom-reports-in-management-studio.md)  
   

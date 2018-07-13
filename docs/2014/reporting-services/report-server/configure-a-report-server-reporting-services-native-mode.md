@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
@@ -16,13 +16,13 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ec1501c32505b760fba2ec88e21140de1cf0211
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200787"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>配置报表服务器（Reporting Services 本机模式）
   报表服务器可能需要进行其他配置后才能使用，具体取决于安装过程中所选的选项。 至少，报表服务器配置应包含以下内容：  
@@ -60,7 +60,7 @@ ms.locfileid: "36015189"
   
  如果使用的是 Windows Vista 或 Windows Server 2008，则可能需要执行其他步骤，才能在本地打开报表管理器。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
- 通过创建文件夹、上载项和运行报表来验证您的安装。 按照中的说明[验证 Reporting Services 安装](../install-windows/verify-a-reporting-services-installation.md)以验证你的安装。  
+ 通过创建文件夹、上载项和运行报表来验证您的安装。 按照中的说明[验证 Reporting Services 安装](../install-windows/verify-a-reporting-services-installation.md)来验证安装。  
   
 ## <a name="see-also"></a>请参阅  
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)   

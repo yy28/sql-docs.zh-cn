@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX 教程 |Microsoft 文档
+title: 自行车购买者 DMX 教程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -19,13 +19,13 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fc1676f55d2d920c90d56f552973cf7e2a1d3942
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187664"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>自行车购买者 DMX 教程
   在本教程中，您将学习如何使用数据挖掘扩展插件 (DMX) 查询语言来创建、定型和浏览挖掘模型。 然后，您将使用这些挖掘模型创建预测，确定客户是否将购买自行车。  
@@ -43,7 +43,7 @@ ms.locfileid: "36312955"
   
  此外，市场部还请求了将现有客户根据各种特征（例如，他们的居住地、孩子个数以及上下班路程）分组到不同类别中。 他们要查看这些群集是否可用于帮助确定特定的客户类型。 这将需要另外的挖掘模型。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了一些可用于完成这些任务的工具：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了可用于完成这些任务的几个工具：  
   
 -   DMX 查询语言  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36312955"
   
  **有关详细信息**  
   
- [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)，[了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)，[结构和使用情况的 DMX 预测查询](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)，[了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)， [DMX 预测查询的结构和用法](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  本教程分为以下几课：  
@@ -105,10 +105,10 @@ ms.locfileid: "36312955"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)][!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]， [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]，或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库。 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的官方示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请访问[Microsoft SQL 示例数据库](http://go.microsoft.com/fwlink/?LinkId=88417)页，选择你想要安装的数据库...  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库。 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的正式示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请访问[Microsoft SQL 示例数据库](http://go.microsoft.com/fwlink/?LinkId=88417)页上，选择你想要安装的数据库...  
   
 > [!NOTE]  
->  当你查看教程时，我们建议你添加**下一主题**和**上一步主题**到文档查看器工具栏按钮。  
+>  在阅读教程时，我们建议您将添加**下一主题**并**上一个主题**到文档查看器工具栏按钮。  
   
 ## <a name="see-also"></a>请参阅  
  [市场篮 DMX 教程](../../2014/tutorials/market-basket-dmx-tutorial.md)   

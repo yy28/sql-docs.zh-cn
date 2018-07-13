@@ -1,5 +1,5 @@
 ---
-title: 使用 DRILLTHROUGH 检索源数据 (MDX) |Microsoft 文档
+title: 使用 DRILLTHROUGH 检索源数据 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9869be182f398df326c0c81b7e00e869f0b3eae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204417"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>使用 DRILLTHROUGH 检索源数据 (MDX)
   多维表达式 (MDX) 使用 [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)语句从多维数据集单元的源数据中检索行集。  
@@ -41,7 +41,7 @@ ms.locfileid: "36013930"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- `SELECT`子句标识包含要检索的源数据的多维数据集单元格。 此 `SELECT` 子句与普通 MDX `SELECT` 语句基本相同，不同之处在于在 `SELECT` 子句中，只能在每个轴上指定一个成员。 如果在一个轴上指定了多个成员，则会发生错误。  
+ `SELECT`子句标识包含要检索的源数据的多维数据集单元。 此 `SELECT` 子句与普通 MDX `SELECT` 语句基本相同，不同之处在于在 `SELECT` 子句中，只能在每个轴上指定一个成员。 如果在一个轴上指定了多个成员，则会发生错误。  
   
  `<Max_Rows>` 语法指定返回的每个行集中的最大行数。 如果用于连接数据源的 OLE DB 访问接口不支持 `DBPROP_MAXROWS`，`<Max_Rows>` 设置将被忽略。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36013930"
  `<Return_Columns>` 语法标识要返回的基础数据库列。  
   
 ## <a name="drillthrough-statement-example"></a>DRILLTHROUGH 语句的示例  
- 下面的示例演示了利用`DRILLTHROUGH`语句。 在此示例中，DRILLTHROUGH 语句沿着 Stores 维度（切片器轴）查询 Store 维度、Product 维度和 Time 维度的叶，然后返回部门度量值组、部门 ID 和员工的名字。  
+ 下面的示例演示如何将`DRILLTHROUGH`语句。 在此示例中，DRILLTHROUGH 语句沿着 Stores 维度（切片器轴）查询 Store 维度、Product 维度和 Time 维度的叶，然后返回部门度量值组、部门 ID 和员工的名字。  
   
 ```  
 DRILLTHROUGH  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7cc723b2a3af365e03bfd87626fdc834302b9cc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4cb94faf5f2337097d313b22c7a11c47f618f4e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190537"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>删除订阅视图 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要某订阅视图时，可以删除它。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中删除订阅视图后，将从 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中删除此视图。  
@@ -48,6 +48,6 @@ ms.locfileid: "36015475"
   
 ## <a name="see-also"></a>请参阅  
  [创建订阅视图&#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
- [导出数据&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+ [将数据导出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

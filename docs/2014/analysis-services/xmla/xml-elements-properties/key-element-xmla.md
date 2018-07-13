@@ -1,5 +1,5 @@
 ---
-title: 密钥元素 (XMLA) |Microsoft 文档
+title: 密钥元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Key element
 ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d6ec30e8c55648975294f82a7c927b3815b00471
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1f98ae6863f0aab25149ee4f8a69ef13b65da974
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213757"
 ---
 # <a name="key-element-xmla"></a>Key 元素 (XMLA)
   包含属性成员的成员键值。  
@@ -69,10 +69,10 @@ ms.locfileid: "36014616"
 ## <a name="see-also"></a>请参阅  
  [属性元素&#40;XMLA&#41;](attribute-element-xmla.md)   
  [AttributeName 元素&#40;XMLA&#41;](name-element-xmla.md)   
- [删除元素&#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   
+ [Drop 元素&#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   
  [插入元素&#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [KeyColumn 元素&#40;ASSL&#41;](../../scripting/objects/column-element-assl.md)   
- [更新元素&#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
+ [Update 元素&#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [其中元素&#40;XMLA&#41;](where-element-xmla.md)   
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  
   

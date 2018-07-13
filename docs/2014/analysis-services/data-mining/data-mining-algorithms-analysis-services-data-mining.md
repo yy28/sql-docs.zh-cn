@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘算法 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 数据挖掘算法 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - clustering [Data Mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 caps.latest.revision: 72
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f0c797ed300d90416e92f3dd85f575db3a08aa8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243747"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
-  A*数据挖掘算法*是一组启发式技术并计算，数据创建数据挖掘模型。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析的结果来定义用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
+  一个*数据挖掘算法*是一组试探法和计算的数据创建数据挖掘模型。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析的结果来定义用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
   
  算法根据您的数据创建的挖掘模型可以采用多种形式，这包括：  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36014212"
   
 -   说明在事务中如何将产品分组到一起的一组规则，以及一起购买产品的概率。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于数据挖掘解决方案中的多个算法。 这些算法是在数据挖掘中使用的一些最流行方法的实现方式。 通过使用提供的 API 或者使用 SQL Server Integration Services 中的数据挖掘组件，所有 Microsoft 数据挖掘算法都是可以自定义且完全可编程的。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在数据挖掘解决方案中使用，提供了多个算法。 这些算法是在数据挖掘中使用的一些最流行方法的实现方式。 通过使用提供的 API 或者使用 SQL Server Integration Services 中的数据挖掘组件，所有 Microsoft 数据挖掘算法都是可以自定义且完全可编程的。  
   
- 也可以对数据挖掘的规范，与 OLE DB 使用符合的第三方算法或开发自定义算法，可以注册为服务，然后使用在 SQL Server 数据挖掘的框架中。  
+ 此外可以使用第三方符合算法用于 OLE DB for Data Mining 规范，或开发可注册为服务、 然后使用在 SQL Server 数据挖掘框架中的自定义算法。  
   
 ## <a name="choosing-the-right-algorithm"></a>选择正确的算法  
  为特定的分析任务选择最佳算法很有挑战性。 您可以使用不同的算法来执行同样的业务任务，每个算法会生成不同的结果，而某些算法还会生成多种类型的结果。 例如，您不仅可以将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策数算法用于预测，而且还可以将它用作一种减少数据集的列数的方法，因为决策树能够识别出不影响最终挖掘模型的列。  
@@ -63,7 +63,7 @@ ms.locfileid: "36014212"
   
 -    “关联算法”查找数据集中不同属性之间的相关性。 这类算法最常见的应用是创建可用于市场篮分析的关联规则。  
   
--   **顺序分析算法**总结了频繁序列或数据，例如 Web 路径流程中的段数。  
+-   **顺序分析算法**汇总常见顺序或事件中的数据，如 Web 路径流。  
   
  但是，限制为您的解决方案中的一种算法是没有必要的。 有经验的分析人员有时候将使用一种算法来确定最高效的输入（即变量），然后应用其他算法以便基于这些数据预测特定结果。 SQL Server 数据挖掘使您可以在单个挖掘结构的基础上生成多个模型，这样，在单个数据挖掘解决方案内，您可以使用聚类分析算法、决策树模型和 naïve Bayes 模型来针对您的数据获取不同视图。 您还可以在单个解决方案内使用多种算法来执行单独的任务：例如，您可以使用回归来获取财务预测，并且使用神经网络算法执行销售影响因素分析。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36014212"
 |-----------------------|---------------------------------|  
 |**预测离散属性**<br /><br /> 将预期购买者列表中的客户标记为好或差的潜在客户。<br /><br /> 计算服务器在未来 6 个月内将出现故障的概率。<br /><br /> 将患者结果分类并探讨相关因素。|[Microsoft 决策树算法](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft Naive Bayes 算法](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft 神经网络算法](microsoft-neural-network-algorithm.md)|  
 |**预测连续属性**<br /><br /> 预测下一年的销售额。<br /><br /> 根据过去的历史信息和季节趋势，预测网站访问者。<br /><br /> 根据人口统计信息生成风险评分。|[Microsoft 决策树算法](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft 时序算法](microsoft-time-series-algorithm.md)<br /><br /> [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)|  
-|**预测序列**<br /><br /> 执行公司网站的点击流分析。<br /><br /> 分析导致服务器故障的因素。<br /><br /> 捕获和分析门诊访问期间活动的顺序，以便围绕一般的活动形成最佳做法。|[Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)|  
-|**在事务中查找组的通用项**<br /><br /> 使用市场篮分析来确定产品摆放。<br /><br /> 建议客户购买其他产品。<br /><br /> 分析来自事件访问者的调查数据，确定哪些活动或展台是相关的，以便计划将来的活动。|[Microsoft 关联算法](microsoft-association-algorithm.md)<br /><br /> [Microsoft 决策树算法](microsoft-decision-trees-algorithm.md)|  
-|**查找相似的项目组**<br /><br /> 基于人口统计信息和行为之类的属性，创建患者风险配置文件组。<br /><br /> 按照浏览和购买模式分析用户。<br /><br /> 标识具有相似使用特性的服务器。|[Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)|  
+|**预测顺序**<br /><br /> 执行公司网站的点击流分析。<br /><br /> 分析导致服务器故障的因素。<br /><br /> 捕获和分析门诊访问期间活动的顺序，以便围绕一般的活动形成最佳做法。|[Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)|  
+|**查找事务中常见项的组**<br /><br /> 使用市场篮分析来确定产品摆放。<br /><br /> 建议客户购买其他产品。<br /><br /> 分析来自事件访问者的调查数据，确定哪些活动或展台是相关的，以便计划将来的活动。|[Microsoft 关联算法](microsoft-association-algorithm.md)<br /><br /> [Microsoft 决策树算法](microsoft-decision-trees-algorithm.md)|  
+|**查找相似项的组**<br /><br /> 基于人口统计信息和行为之类的属性，创建患者风险配置文件组。<br /><br /> 按照浏览和购买模式分析用户。<br /><br /> 标识具有相似使用特性的服务器。|[Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)|  
   
 ## <a name="related-content"></a>相关内容  
  下表提供指向一些学习资源的链接，这些学习资源针对在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的各数据挖掘算法：  

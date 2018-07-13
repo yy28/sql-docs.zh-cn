@@ -1,5 +1,5 @@
 ---
-title: 编程示例的链接 |Microsoft 文档
+title: 链接到编程示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df2b9636b3edb5ebb9ef45530204db543e204312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215007"
 ---
 # <a name="link-to-programming-samples"></a>链接到编程示例
-  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目录中的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理对象 (SMO) 编程示例。 这些示例都提供[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
+  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目录中的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理对象 (SMO) 编程示例。 这些示例中均提供[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
   
  有关如何安装示例的详细信息，请参阅[AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36014749"
 |DatabaseSearch|显示数据库中的所有对象。|  
 |DependencyExplorer|实现依赖关系树和属性显示窗口。|  
 |IndexSizes|显示所选数据库的索引名称和大小。|  
-|LoadRegAssembly|演示如何加载和注册[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET 程序集到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 UtilityConversion 程序集。|  
+|LoadRegAssembly|演示如何加载和注册[!INCLUDE[msCoName](../../includes/msconame-md.md)]到.NET 程序集[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 UtilityConversion 程序集。|  
 |ManageDatabases|说明如何创建、更改和删除数据库。 包括添加新的文件组和日志文件。|  
 |ManageDatabaseUsers|说明如何添加、修改和删除用户。|  
 |ManageTables|说明如何创建、更改和删除表。|  
@@ -48,7 +48,7 @@ ms.locfileid: "36014749"
 |ServerConnect|说明如何连接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。|  
 |ServerInfo|显示所选 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示例的服务器和连接属性列表。|  
 |SMOPing|连接至所选 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和转储所选属性的控制台应用程序。 可以用于检查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接。|  
-|SQLServerList|枚举列表的可用实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|SQLServerList|枚举的可用实例列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |SQLService|显示可以启动、停止、暂停和继续的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。|  
 |Tracer|读取和显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的跟踪信息。|  
 |触发器|显示数据库触发器。|  

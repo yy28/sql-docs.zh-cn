@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f673ebfb9034511dc6023cc34d9c3670237d35d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5859430b9a928b79697e53873ef549173963a90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268513"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、报表管理器或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
@@ -37,13 +37,13 @@ ms.locfileid: "36014490"
 3.  对于大多数的导出报表，报表打印输出包括报表上的所有可见内容，与用户在计算机监视器上看到的内容没有分别。 而报表设计图面中的空白区域将会保留。 若要以水平方式添加或删除额外的空白页，请更改报表页面宽度。  
   
 > [!NOTE]  
->  如果使用浏览器的“打印”命令，则 HTML 报表打印输出可能仅包含第一页中的内容。 如果使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 客户端打印功能打印 HTML 报表，效果将更加出色。 有关详细信息，请参阅[中使用打印控件的浏览器的打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)。  
+>  如果使用浏览器的“打印”命令，则 HTML 报表打印输出可能仅包含第一页中的内容。 如果使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 客户端打印功能打印 HTML 报表，效果将更加出色。 有关详细信息，请参阅[从使用打印控件的浏览器中打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>本节内容  
- [从浏览器使用打印控件中打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [使用打印控件的浏览器打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  介绍如何使用客户端打印功能通过 Web 浏览器或报表管理器打印报表。  
   
  [从其他应用程序打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  

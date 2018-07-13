@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 96
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 421c743456b6a0a2303b2ec0407af566c77ab39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227737"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
   可以分离数据库的数据和事务日志文件，然后将它们重新附加到同一或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 如果要将数据库更改到同一计算机的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或要移动数据库，分离和附加数据库会很有用。  
@@ -89,14 +89,14 @@ ms.locfileid: "36014775"
 3.  再次分离数据库。  
   
 ##  <a name="AttachDb"></a> 附加数据库  
- 您可以附加复制的或分离的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 当你将连接[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]服务器实例，会将目录文件从其以前的位置，以及其他数据库文件中的相同附加[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关详细信息，请参阅 [全文搜索升级](../search/upgrade-full-text-search.md)。  
+ 您可以附加复制的或分离的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 在附加时[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]服务器实例、 目录文件从原位置与其他数据库文件中的相同[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关详细信息，请参阅 [全文搜索升级](../search/upgrade-full-text-search.md)。  
   
  附加数据库时，所有数据文件（MDF 文件和 NDF 文件）都必须可用。 如果任何数据文件的路径不同于首次创建数据库或上次附加数据库时的路径，则必须指定文件的当前路径。  
   
 > [!NOTE]  
 >  如果附加的主数据文件是只读的，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假定数据库也是只读的。  
   
- 当第一次加密的数据库附加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，数据库所有者必须通过执行以下语句打开数据库主密钥： OPEN MASTER KEY DECRYPTION 发送 BY PASSWORD =  ***`password`*'**. 建议您通过执行下面的语句对主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 有关详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)。  
+ 当加密的数据库首次附加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，数据库所有者必须通过执行以下语句打开数据库主密钥： OPEN MASTER KEY DECRYPTION 转换 BY PASSWORD =  ***`password`*'**. 建议您通过执行下面的语句对主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 有关详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)。  
   
  附加日志文件的要求在某些方面取决于数据库是读写的还是只读的，如下所示：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36014775"
   
      如果读写数据库具有单个日志文件，并且您没有为该日志文件指定新位置，附加操作将在旧位置中查找该文件。 如果找到了旧日志文件，则无论数据库上次是否完全关闭，都将使用该文件。 但是，如果未找到旧文件日志，数据库上次是完全关闭且现在没有活动日志链，则附加操作将尝试为数据库创建新的日志文件。  
   
--   如果附加的主数据文件是只读的[!INCLUDE[ssDE](../../includes/ssnoversion-md.md)]无法更新主文件中存储的日志位置。  
+-   如果要附加的主数据文件是只读的[!INCLUDE[ssDE](../../includes/ssnoversion-md.md)]无法更新主文件中存储的日志位置。  
   
   
   

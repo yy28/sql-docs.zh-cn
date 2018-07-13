@@ -1,5 +1,5 @@
 ---
-title: 运行升级顾问 （用户界面） |Microsoft 文档
+title: 运行升级顾问 （用户界面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - Upgrade Advisor [SQL Server], running
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, running
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 36a31e74e95b966137df96f5e3f2ab05fa7a991f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216587"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>运行升级顾问（用户界面）
   在升级计划期间，可运行升级顾问来分析本地或远程组件。 升级顾问为分析的每个组件和实例生成一个报表。  
@@ -34,7 +34,7 @@ ms.locfileid: "36014229"
 > [!IMPORTANT]  
 >  升级顾问不分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的远程实例。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 实例，升级顾问必须安装在安装 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 的计算机上。  
 >   
->  若要分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services，你必须具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]安装和[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]安装在同一台计算机上。  
+>  若要分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services，您必须具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]安装和[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]安装在同一台计算机上。  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>运行升级顾问分析向导  
  运行升级顾问分析向导的过程包含以下六个步骤：  
@@ -53,10 +53,10 @@ ms.locfileid: "36014229"
   
  有关升级顾问分析向导的详细信息，请参阅[如何： 运行升级顾问分析向导](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)。  
   
- 每个步骤需要的特定信息，请参阅[升级顾问用户界面参考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)。  
+ 为每个步骤所需的特定信息，请参阅[升级顾问用户界面参考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)。  
   
 ## <a name="running-the-upgrade-advisor-report-viewer"></a>运行升级顾问报表查看器  
- 升级顾问报表查看器用于查看由升级顾问分析向导生成的报表。 加载该报表后，可按照以下条件筛选报表内容：  
+ 使用升级顾问报表查看器来查看由升级顾问分析向导生成的报表。 加载该报表后，可按照以下条件筛选报表内容：  
   
 -   所有问题  
   
@@ -72,11 +72,11 @@ ms.locfileid: "36014229"
   
  有关使用报表查看器的分步说明，请参阅以下主题：  
   
--   [如何： 查看升级顾问报表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [如何查看升级顾问报表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [如何： 筛选报告](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [如何筛选报表](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [如何： 导出报表](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [如何导出报表](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>请参阅  
  [如何： 运行升级顾问分析向导](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   

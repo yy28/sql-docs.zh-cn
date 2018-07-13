@@ -1,5 +1,5 @@
 ---
-title: 主题区域数据库架构选项 （架构生成向导） (Analysis Services-多维数据) |Microsoft 文档
+title: 主题区域数据库架构选项 （架构生成向导） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce756687e73e628d1b66a797e19711a3d6889eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb617bca3a906162f372ce482269d3fca386acec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235587"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>主题区域数据库架构选项（架构生成向导）（Analysis Services - 多维数据）
   可以使用 **“主题区域数据库架构选项”** 页，控制如何生成架构以及定义如何保留数据。  
@@ -30,7 +30,7 @@ ms.locfileid: "36014618"
  **所属架构**  
  指定新主题区域数据库中的架构的名称。  
   
- **在维度表上创建主键**  
+ **维度表创建主键**  
  在生成的架构中为维度表创建主键。 如果不选择此选项，则不会生成任何索引。  
   
 > [!NOTE]  
@@ -39,10 +39,10 @@ ms.locfileid: "36014618"
  **创建索引**  
  在生成的架构中为外键列创建索引。  
   
- **强制引用完整性**  
+ **强制实施引用完整性**  
  在生成的架构中强制引用完整性。 如果不选择此选项，将创建关系但不会强制执行。  
   
- **保留重新生成数据**  
+ **保留上重新生成的数据**  
  向导完成时，在主题区域数据库中保留数据。 如果不选择此选项，则可能在无警告的情况下清除主题区域数据库中的所有数据。  
   
  **填充时间表**  

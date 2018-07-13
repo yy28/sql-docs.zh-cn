@@ -1,5 +1,5 @@
 ---
-title: 任务 4： 将结果导出从匹配活动到 Excel 文件 |Microsoft 文档
+title: 任务 4： 将结果导出匹配到 Excel 文件的活动 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,47 +10,47 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 440e8c0db00d5087334746f4094c61de52bf1bc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13fcd1b697be6ad7aeebd933da1059955dc0649f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178978"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>任务 4：将匹配活动的结果导出到 Excel 文件
   在本任务中，您将匹配活动的结果导出到 Excel 文件。  
   
-1.  在**导出**页上，选择**Excel 文件**为**目标类型**。  
+1.  在中**导出**页上，选择**Excel 文件**有关**目标类型**。  
   
 2.  选择**存活结果**选项。 在存活过程中，DQS 确定基于每个群集的存活记录**存活规则**所选。  
   
-3.  单击**浏览**和导航到要用于存储输出文件的文件夹。  
+3.  单击**浏览**并导航到要存储输出文件的文件夹。  
   
-4.  类型**Cleansed 和匹配 Suppliers.xls**的名称，然后单击**打开**。  
+4.  类型**Cleansed and Matched Suppliers.xls**的名称，然后单击**打开**。  
   
-5.  确认**透视记录**为选择**存活规则**。 当您选择此选项时，为分类的输出选择每个分类的透视记录。 存留规则的其他选项有：  
+5.  确认**透视记录**选择了**存活规则**。 当您选择此选项时，为分类的输出选择每个分类的透视记录。 存留规则的其他选项有：  
   
-    1.  **最完整记录：** 存活记录是一个具有最大填充字段数。  
+    1.  **最完整记录：** 存活记录是具有最大填充字段数。  
   
-    2.  **最长记录：** 存活记录是与源字段中的词的最大数目。  
+    2.  **最长记录：** 存活记录是具有源字段中的词的最大数目。  
   
-    3.  **最完整且最长的记录：** 存活记录都是一个具有最大填充字段数并且在每个字段中具有的词的最大数目。  
+    3.  **最完整且最长记录：** 存活记录是具有的最大填充字段数且在每个字段中具有的词的最大数目。  
   
-     ![将结果导出从匹配页](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "从匹配页中导出结果")  
+     ![从匹配页导出结果](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "从匹配页导出结果")  
   
 6.  单击**导出**将结果导出到 Excel 文件。  
   
-7.  单击**关闭**关闭**匹配导出**对话框。  
+7.  单击**关闭**以关闭**匹配的导出**对话框。  
   
-8.  单击**完成**完成匹配活动。  
+8.  单击**完成**以完成匹配活动。  
   
-9. 打开**Cleansed 和匹配 Suppliers.xlsx**文件并确认你未看到任何重复项 (供应商 Id)。  
+9. 打开**Cleansed and Matched Suppliers.xlsx**文件并确认未看到任何重复项 (SupplierID)。  
   
  现在，您的供应商数据已经过清理和匹配，删除了重复项。  
   

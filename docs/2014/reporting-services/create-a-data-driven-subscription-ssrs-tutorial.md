@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181524"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供数据驱动订阅功能，这样您便可根据动态订阅服务器数据自定义报表的分发。 数据驱动订阅专门用于下列情况：  
@@ -49,17 +49,17 @@ ms.locfileid: "36014734"
 ## <a name="requirements"></a>要求  
  数据驱动订阅通常由报表服务器管理员创建和维护。 要创建数据驱动订阅，必须要具备生成查询的专业技术，了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
   
- 本教程将使用在本教程中创建报表[创建基本表报表&#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)和数据从 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ 本教程将使用在本教程中创建的报表[创建基本表报表&#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)和中的数据 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  若要使用本教程，您的系统必须安装以下组件：  
   
--   支持数据驱动订阅的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 有关详细信息，请参阅[版本和 SQL Server 2014 的组件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
+-   支持数据驱动订阅的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 -   必须在本机模式下运行报表服务器。 本教程中介绍的用户界面基于本机模式报表服务器。 在 SharePoint 模式报表服务器上支持订阅，但用户界面将不同于在本教程中介绍的用户界面。  
   
 -   必须运行 SQL Server 代理服务。  
   
--   包含参数的报表。 本教程假定示例报表，`Sales Orders`使用本教程创建[创建基本表报表&#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)。  
+-   包含参数的报表。 本教程假定示例报表`Sales Orders`，使用本教程来创建[创建基本表报表&#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)。  
   
 -   向示例报表提供数据的 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库。  
   

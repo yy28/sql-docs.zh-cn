@@ -1,37 +1,36 @@
 ---
-title: SQL Server 备份和还原与 Windows Azure Blob 存储服务 |Microsoft 文档
+title: SQL Server 备份和还原使用 Windows Azure Blob 存储服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98f774809a3b6bb1d37836c3e7c216f1058a9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 38e20e433b7fed2e34750c300ee7e1489d6df665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193547"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>使用 Windows Azure Blob 存储服务进行 SQL Server 备份和还原
-  本主题介绍[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到的备份和还原从[Windows Azure Blob 存储服务](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 它还总结了使用 Windows Azure Blob 服务存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处。  
+  本主题介绍[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份和还原从[Windows Azure Blob 存储服务](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 它还总结了使用 Windows Azure Blob 服务存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处。  
   
  SQL Server 支持通过以下方式将备份存储到 Windows Azure Blob 存储服务：  
   
--   **管理你的备份到 Windows Azure:** 使用相同的方法用于备份到磁盘和磁带，你现在可备份到 Windows Azure 存储空间的指定 URL 作为备份目标。  可使用此功能手动备份或配置自己的备份策略，如同对于本地存储或其他站点外选项所做的一样。 此功能也称为 **SQL Server 备份到 URL**。 有关详细信息，请参阅 [SQL Server Backup to URL](sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更高版本中提供此功能。  
+-   **管理向 Windows Azure 的备份：** 使用相同的方法用于备份到磁盘和磁带，你现在可备份到 Windows Azure 存储通过指定 URL 作为备份目标。  可使用此功能手动备份或配置自己的备份策略，如同对于本地存储或其他站点外选项所做的一样。 此功能也称为 **SQL Server 备份到 URL**。 有关详细信息，请参阅 [SQL Server Backup to URL](sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更高版本中提供此功能。  
   
     > [!NOTE]  
     >  对于版本低于 SQL Server 2014 的 SQL Server，可使用外接程序“SQL Server 备份到 Windows Azure 工具”快速而轻松地向 Windows Azure 存储创建备份。 有关详细信息，请参阅 [下载中心](http://go.microsoft.com/fwlink/?LinkID=324399)。  
   
--   **让 SQL Server 管理向 Windows Azure 备份：** 配置 SQL Server 以管理备份策略和计划备份单个数据库或多个数据库，或在实例级别设置默认值。 此功能被称为**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**。 有关详细信息请参阅[SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更高版本中提供此功能。  
+-   **让 SQL Server 管理向 Windows Azure 备份：** 配置 SQL Server 以管理备份策略和计划备份为单个数据库或多个数据库，或在实例级别设置默认值。 此功能被称为**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**。 有关详细信息请参阅[SQL Server 托管备份到 Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更高版本中提供此功能。  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>将 Windows Azure Blob 服务用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处  
   
@@ -45,7 +44,7 @@ ms.locfileid: "36014575"
   
      此外，现在在 Windows Azure Blob 存储服务中存储的备份文件直接可用于内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或在 Windows Azure 虚拟机中运行的另一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不需要进行数据库附加/分离或下载并附加 VHD。  
   
--   成本优势：仅对使用的服务付费。 可以作为经济合算的站点外备份存档方案。 请参阅[Windows Azure 计费注意事项](#Billing)有关详细信息和链接的部分。  
+-   成本优势：仅对使用的服务付费。 可以作为经济合算的站点外备份存档方案。 请参阅[Windows Azure 计费注意事项](#Billing)部分，了解详细信息和链接。  
   
 ##  <a name="Billing"></a> Windows Azure 计费注意事项：  
  了解 Windows Azure 存储成本使您能够预测在 Windows Azure 中创建和存储备份的成本。  
@@ -54,7 +53,7 @@ ms.locfileid: "36014575"
   
  **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅 **定价详细信息** 文章中的[“数据管理”](http://go.microsoft.com/fwlink/?LinkId=277059) 一节。  
   
- **数据传输：** 到 Windows Azure 的入站的数据传输是免费。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](http://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
+ **数据传输：** 入站的数据传输到 Windows Azure 是免费。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](http://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 备份到 URL 最佳实践和故障排除](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   

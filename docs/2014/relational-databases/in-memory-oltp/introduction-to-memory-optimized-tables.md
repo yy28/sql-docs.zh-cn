@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: bee3e33f3695b89ff4ca84b0ab6e6b657fc3e810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209077"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
   内存优化表是使用 [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) 创建的表。  
@@ -62,7 +62,7 @@ ms.locfileid: "36014298"
 |[内存优化表变量](../../database-engine/memory-optimized-table-variables.md)|是|是|“否”|  
 |[本机编译的存储过程](http://msdn.microsoft.com/library/dn133184.aspx)|无法使用 EXECUTE 语句从本机编译的存储过程执行任意存储过程。|是|否 <sup>1</sup>|  
   
- <sup>1</sup>无法从上下文连接访问内存优化表或本机编译存储的过程 (从连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]执行 CLR 模块时)。 但是，可以创建和打开能够访问内存优化的表和本机编译的存储过程的其他连接。 有关详细信息，请参阅[正则 vs。上下文连接](../clr-integration/data-access/context-connections-vs-regular-connections.md)。  
+ <sup>1</sup>无法从上下文连接访问内存优化表或本机编译存储的过程 (从连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]执行 CLR 模块时)。 但是，可以创建和打开能够访问内存优化的表和本机编译的存储过程的其他连接。 有关详细信息，请参阅[常规 vs。上下文连接](../clr-integration/data-access/context-connections-vs-regular-connections.md)。  
   
 ## <a name="performance-and-scalability"></a>性能和可伸缩性  
  以下因素会影响可以通过内存中 OLTP 实现的性能提升：  

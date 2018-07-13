@@ -1,5 +1,5 @@
 ---
-title: 模型筛选器语法和示例 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 模型筛选器语法和示例 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236337"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
   本节提供有关模型筛选器语法的详细信息以及示例表达式。  
@@ -34,7 +34,7 @@ ms.locfileid: "36014659"
 ##  <a name="bkmk_Syntax"></a> Filter Syntax  
  筛选表达式通常等同于 WHERE 子句的内容。 您可以使用逻辑运算符 `AND`、`OR` 和 `NOT` 连接多个条件。  
   
- 在嵌套表，你还可以使用`EXISTS`和`NOT EXISTS`运算符。 如果子查询至少返回一行，则 `EXISTS` 条件的计算结果为 `true`。 当您要将模型限制为包含嵌套表中的特殊值的事例时，这将非常有用。例如，客户至少购买过一次某种物品。  
+ 在嵌套表中，可以使用`EXISTS`和`NOT EXISTS`运算符。 如果子查询至少返回一行，则 `EXISTS` 条件的计算结果为 `true`。 当您要将模型限制为包含嵌套表中的特殊值的事例时，这将非常有用。例如，客户至少购买过一次某种物品。  
   
  如果在子查询中指定的 `NOT EXISTS` 条件不存在，则该条件的计算结果为 `true`。 其中一个例子就是您要将模型限制为从未购买过某种特殊物品的客户。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36014659"
 -   **\<=** （小于或等于）  
   
 > [!NOTE]  
->  不管哪种数据类型，这些运算符不能应用于具有类型的列`Discrete`， `Discretized`，或`Key`。  
+>  无论是什么数据类型，这些运算符不能应用于具有类型的列`Discrete`， `Discretized`，或`Key`。  
   
  使用以下任何运算符的表达式可以应用到连续、离散、离散化或键列中：  
   
@@ -242,9 +242,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="bkmk_Ex7"></a> 示例 7：复杂的筛选器组合  
- 此模型的应用场景类似于示例 4，但比示例 4 要复杂得多。 嵌套的表， **ProductsOnSale**，具有筛选器条件`(OnSale)`的值，表示**OnSale**必须`true`中列出的产品**ProductName**. 此处 **OnSale** 是一个结构列。  
+ 此模型的应用场景类似于示例 4，但比示例 4 要复杂得多。 嵌套的表**ProductsOnSale**，筛选器条件`(OnSale)`表示该参数的值**OnSale**必须是`true`中列出的产品**ProductName**. 此处 **OnSale** 是一个结构列。  
   
- 筛选器，第二部分为**ProductsNotOnSale**，重复此语法，但可筛选为其产品的值**OnSale**是`not true``(!OnSale)`。  
+ 第二部分筛选器中，对于**ProductsNotOnSale**，语法，但筛选器上为其产品的值**OnSale**是`not true``(!OnSale)`。  
   
  最后，这些条件将组合在一起，同时另一个限制将添加到事例表中。 结果是可以对年龄在 25 岁以上的所有客户根据在 **ProductsOnSale** 列表中包含的事例预测其在 **ProductsNotOnSale** 列表中的产品的购买情况。  
   
@@ -287,7 +287,7 @@ FILTER (EXISTS (Products))
 ###  <a name="bkmk_Ex8"></a> 示例 8：对日期进行筛选  
  您可以像对任何其他数据一样，按日期筛选输入列。 在日期/时间类型的列中包含的日期是连续值；因此，您可以通过使用大于号 (>) 或小于号 (<) 之类的运算符指定日期范围。 如果您的数据源不是按连续数据类型表示日期的，而是将日期表示为离散值或文本值，则不能对日期范围进行筛选，而必须指定单独的离散值。  
   
- 但是，如果用于筛选器的日期列也是用于模型的键列，则不能对时序模型中的日期列创建筛选器。 这是因为，在时序模型和聚类分析模型的序列中，日期列可能会处理作为类型`KeyTime`或`KeySequence`。  
+ 但是，如果用于筛选器的日期列也是用于模型的键列，则不能对时序模型中的日期列创建筛选器。 这是因为，在时序模型和序列聚类分析模型中，日期列可能会处理作为类型`KeyTime`或`KeySequence`。  
   
  如果您需要对时序模型中的连续日期进行筛选，则可以在挖掘结构中创建该列的一个副本，然后对这个新列筛选该模型。  
   
@@ -296,9 +296,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  请注意，添加到模型的任何附加列都可能会影响结果。 因此，如果您不希望该列用于序列的计算，则应该仅将该列添加到挖掘结构，而不是添加到模型。 此外可以在列上设置的模型标志`PredictOnly`或`Ignore`。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
+>  请注意，添加到模型的任何附加列都可能会影响结果。 因此，如果您不希望该列用于序列的计算，则应该仅将该列添加到挖掘结构，而不是添加到模型。 此外可以为列设置建模标志`PredictOnly`或`Ignore`。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
   
- 对于其他模型类型，您可以将日期用作输入条件或筛选条件，将像在任何其他列中一样。 但是，如果你需要使用特定级别的不支持的粒度`Continuous`数据类型，你可以创建派生的值在数据源中通过使用表达式提取要在筛选和分析中使用的单元。  
+ 对于其他模型类型，您可以将日期用作输入条件或筛选条件，将像在任何其他列中一样。 但是，如果您需要使用特定级别的粒度不受`Continuous`数据类型，您可以创建派生的值的数据源中使用表达式提取要在筛选和分析中使用的单位。  
   
 > [!WARNING]  
 >  指定日期作为筛选条件时，必须使用以下格式，而与当前操作系统的日期格式无关： `mm/dd/yyyy`。 其他任何格式都会导致错误。  

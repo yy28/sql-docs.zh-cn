@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
 caps.latest.revision: 4
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de886603ed436918fb1fa93dd63224451f2b8ca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f7b541ddbc8c0100fe0ed54e705677c185c15a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219797"
 ---
 # <a name="database-engine-cross-instance-features"></a>数据库引擎跨实例功能
   本节介绍了与管理和监视服务器以及数据库实例相关的工具和任务。  

@@ -1,5 +1,5 @@
 ---
-title: 计算成员生成器对话框 (Analysis Services-多维数据) |Microsoft 文档
+title: 计算成员生成器对话框 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.calculatedmemberbuilderdialog.f1
 ms.assetid: 73b89a9f-f403-4ab8-99f7-e3ceb870c260
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 471f90f9caf9fbe3c6b8bf8463ab458e24a938ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b2df3f9bdb11a344d332a50580a992680118afa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220497"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>“计算成员生成器”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “计算成员生成器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框生成计算成员。  
@@ -32,7 +32,7 @@ ms.locfileid: "36015133"
 |----------|----------------|  
 |**名称**|键入计算成员的名称。|  
 |**父层次结构**|选择要在其中创建计算成员的层次结构。|  
-|**父成员**|如果你选择父层次结构启用此选项 (以外`Measures`维度) 具有多个级别。 单击省略号 (**…**) 按钮可以选择父成员。 父成员确定计算成员在维度结构中的位置。|  
+|**父成员**|如果您选择的父层次结构启用此选项 (而不`Measures`维度) 具有多个级别。 单击省略号 (**…**) 按钮可以选择父成员。 父成员确定计算成员在维度结构中的位置。|  
 |**表达式**|键入要使用的 MDX 表达式。|  
 |**检查**|单击 **“检查”** 可以测试 **“表达式”** 中定义的 MDX 表达式。|  
 |**元数据**|显示可以包含在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] “表达式” **中所定义的 MDX 表达式中的当前**对象的元数据。<br /><br /> 通过右键单击所选项，然后选择“复制”，或者将所选项拖到“表达式”，可以复制所选项的 MDX 语法。|  

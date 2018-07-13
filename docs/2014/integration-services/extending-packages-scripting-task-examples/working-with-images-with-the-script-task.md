@@ -27,13 +27,13 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 614e925a7481c574bce63c0815b587e4984604df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a9a34f810805817075651cfe148f2d5de252c91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242997"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
   除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 `System.Drawing` 命名空间提供用于操作图像的类。  
@@ -52,7 +52,7 @@ ms.locfileid: "36014104"
   
 1.  创建一个名为 `CurrentImageFile` 的字符串变量，并将其值设置为一个现有图像文件的路径和名称。  
   
-2.  上**脚本**页**脚本任务编辑器**，添加`CurrentImageFile`变量`ReadOnlyVariables`属性。  
+2.  上**脚本**页**脚本任务编辑器**，将添加`CurrentImageFile`变量`ReadOnlyVariables`属性。  
   
 3.  在脚本项目中，设置一个对 `System.Drawing` 命名空间的引用。  
   
@@ -163,7 +163,7 @@ End Function
   
 2.  再创建整数变量 `MaxThumbSize`，并赋值（单位为像素），例如 100。  
   
-3.  上**脚本**页**脚本任务编辑器**，添加到两个变量`ReadOnlyVariables`属性。  
+3.  上**脚本**页**脚本任务编辑器**，将添加到这两个变量`ReadOnlyVariables`属性。  
   
 4.  在脚本项目中，设置一个对 `System.Drawing` 命名空间的引用。  
   
@@ -294,6 +294,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

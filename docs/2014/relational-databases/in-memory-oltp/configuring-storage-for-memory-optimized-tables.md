@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4d13b8b46066eb6c2c8c855859fdab0114269700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8b5a9f50c30cccb7a0e24799ca59105294aba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236767"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
   您需要配置存储容量和每秒输入/输出操作数 (IOPS)。  
@@ -34,7 +34,7 @@ ms.locfileid: "36014067"
   
 -   内存优化表保留在跨一个或多个容器分布的文件中。 通常，每个容器均应映射到其自己的主轴，并用于增加的存储容量和改进的性能。 您需要确保存储介质的顺序 IOPS 可支持事务日志吞吐量的 3 倍增长。  
   
-     例如，如果内存优化表在事务日志中生成 500 MB/秒的活动，内存优化表的存储必须支持 1.5 g B/秒。需要支持的 3 倍增加事务日志吞吐量来自观测到的数据和差异文件对首先将被写入与初始数据，然后需要可读取/重新写入作为合并操作的一部分。  
+     例如，如果内存优化表在事务日志中生成 500MB/秒的活动，内存优化表的存储必须支持 1.5 g B/秒。需要支持的 3 倍增加事务日志吞吐量的来自观测到的数据和差异文件对先与初始数据一起写入，然后需要将读取/重新写入作为合并操作的一部分。  
   
      估计存储的吞吐量时要考虑的另一个因素是内存优化表的恢复时间。 在使数据库对应用程序可用前，必须将持久表中的数据读取到内存中。 通常，可按 IOPS 速度将数据加载到内存优化表中。 如果持久内存优化表的总存储为 60 GB，并且您希望能够在 1 分钟内加载此数据，则存储的 IOPS 必须设置为 1 GB/秒。  
   

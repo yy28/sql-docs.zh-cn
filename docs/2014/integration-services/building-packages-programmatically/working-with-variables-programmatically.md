@@ -26,13 +26,13 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f2f8a1e936199869f404eddae921bfff8a6a5fc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8a6c3b3624fc06f650179610778b75de5ef63cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219697"
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
   变量提供一种在包、容器、任务和事件处理程序中动态设置值和控制进程的方式。 优先约束还可使用变量来控制数据流流向不同任务的方向。 变量具有多种用途：  
@@ -233,7 +233,7 @@ End Module
 ## <a name="configuration-files"></a>配置文件  
  如果配置文件中包含自定义变量，则该变量可在运行时更新。 这意味着，当包运行时，配置文件中的新值会替换包中的原始变量值。 将包部署到需要不同变量值的多个服务器时，此替换技术将会很有用。 例如，变量可指定 Foreach 循环容器重复其工作流的次数、列出引发错误时接收事件处理程序发送的电子邮件的收件人、或者更改包失败前可能发生的错误的数量。 对于每种环境，这些变量都以编程方式在配置文件中动态提供。 因此，配置文件中只允许读/写变量。 有关详细信息，请参阅[创建包配置](../create-package-configurations.md)。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services &#40;SSIS&#41;变量](../integration-services-ssis-variables.md)   

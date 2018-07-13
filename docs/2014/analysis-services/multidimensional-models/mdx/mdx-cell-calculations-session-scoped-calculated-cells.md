@@ -1,5 +1,5 @@
 ---
-title: 创建会话作用域计算单元格 |Microsoft 文档
+title: 创建会话作用域的计算单元格 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6cf66b12594d83e315e5cd1f633f0a4261e095e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1df213e83122d3d93a57c2bbdd131741043ffe7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232087"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>创建会话作用域的计算单元
     
@@ -83,8 +83,8 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
-|级别成员集|解析为单个级别的成员的 MDX 集表达式。 此示例是*Level_Expression*。`Members` MDX 函数。 若要包含计算的成员，使用*Level_Expression*。`AllMembers` MDX 函数。<br /><br /> 有关详细信息，请参阅 [AllMembers (MDX)](/sql/mdx/allmembers-mdx)。|  
-|后代集|解析为指定成员的后代的 MDX 集表达式。 此示例是`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函数。<br /><br /> 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
+|级别成员集|解析为单个级别的成员的 MDX 集表达式。 这就*Level_Expression*。`Members` MDX 函数。 若要包括计算的成员，请使用*Level_Expression*。`AllMembers` MDX 函数。<br /><br /> 有关详细信息，请参阅 [AllMembers (MDX)](/sql/mdx/allmembers-mdx)。|  
+|后代集|解析为指定成员的后代的 MDX 集表达式。 这就`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函数。<br /><br /> 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
   
 ## <a name="see-also"></a>请参阅  
  [构建在 MDX 中的单元格计算&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  

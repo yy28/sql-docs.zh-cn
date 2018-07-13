@@ -1,5 +1,5 @@
 ---
-title: 指定源信息 （维度向导） |Microsoft 文档
+title: 指定源信息 （维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionmaintable.f1
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1543e73d06d6adaf70f78a5c6c13fdcd748f467a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe54261f04a7e4064bca482c31149a558e1ea779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181024"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>指定源信息（维度向导）
   可以使用 **“选择主维度表”** 页，为要创建的维度选择数据源视图、主维度表、键列和成员名列。  

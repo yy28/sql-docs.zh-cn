@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d341b6c2320dfe5a7cc3645396434fa46b0779c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e227f0a3c19385f8b6eaedd747dbe63895b19298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203997"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 源编辑器（“高级”页）
   使用“SAP BW 源编辑器”的“高级”页指定字符串转换规则和超时时间，还可重置特定请求 ID 的状态。  
@@ -50,7 +50,7 @@ ms.locfileid: "36016887"
   
 |选项|Description|  
 |------------|-----------------|  
-|**自动字符串转换**|所有将字符串转换为`nvarchar`当 SAP Netweaver BW 系统为 Unicode 系统时。 否则，将转换到的所有字符串`varchar`。|  
+|**自动字符串转换**|所有将字符串转换为`nvarchar`当 SAP Netweaver BW 系统为 Unicode 系统时。 否则，将转换所有字符串转换为`varchar`。|  
 |**将字符串转换为 varchar**|将所有字符串转换为 `varchar`。|  
 |**将字符串转换为 nvarchar**|将所有字符串转换为 `nvarchar`。|  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sa account
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e4a6f1d769833a451f7360c747249cb28d0d0c12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 40950fec562e5f313f6a16302ea714aaef522fa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267173"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server
   本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
@@ -65,9 +65,9 @@ ms.locfileid: "36014605"
 5.  上**启动参数**选项卡上，在**指定启动参数**框中，键入`-m`，然后单击`Add`。 （这是短划线后跟小写字母 m。）  
   
     > [!NOTE]  
-    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 请注意不要更改任何现有参数。 在最后，添加一个新的参数`;-m`，然后单击`OK`。 （这是一个分号，后跟短划线和小写字母 m。）  
+    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 请注意不要更改任何现有参数。 最后，在添加新参数`;-m`，然后单击`OK`。 （这是一个分号，后跟短划线和小写字母 m。）  
   
-6.  单击`OK`，并重新启动的消息，显示后右键单击你的服务器名称，然后单击**重新启动**。  
+6.  单击`OK`，右键单击服务器名称，并重新启动的消息，显示后，然后单击**重新启动**。  
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启之后，你的服务器将处于单用户模式。 请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理未在运行。 如果启动，它将占用您唯一的连接。  
   
@@ -80,14 +80,14 @@ ms.locfileid: "36014605"
   
     1.  使用 Windows 身份验证（包括您的管理员凭据）与对象资源管理器连接。 依次展开“安全性”和“登录名”，然后双击你自己的登录名。 上**服务器角色**页上，选择`sysadmin`，然后单击`OK`。  
   
-    2.  使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接，而非与对象资源管理器连接。 （如果未与对象资源管理器连接，则只能这样连接）。执行类似以下几点，以添加新的 Windows 身份验证登录是成员的代码，`sysadmin`固定的服务器角色。 以下示例添加名为 `CONTOSO\PatK`的域用户。  
+    2.  使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接，而非与对象资源管理器连接。 （如果未与对象资源管理器连接，则只能这样连接）。执行类似以下内容，以添加新的 Windows 身份验证登录名是成员的代码，`sysadmin`固定的服务器角色。 以下示例添加名为 `CONTOSO\PatK`的域用户。  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在混合身份验证模式下运行，请使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接。 执行类似以下几点，以创建一个新的代码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的成员身份验证登录名`sysadmin`固定的服务器角色。  
+    3.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在混合身份验证模式下运行，请使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接。 执行类似以下内容，以创建一个新的代码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的成员身份验证登录名`sysadmin`固定的服务器角色。  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -97,7 +97,7 @@ ms.locfileid: "36014605"
         > [!WARNING]  
         >  使用强密码替换 ************。  
   
-    4.  如果你[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在运行混合身份验证模式，并且你想要重置的密码`sa`帐户，一个查询窗口，使用 Windows 身份验证 （其中包括你的管理员凭据） 连接。 更改的密码`sa`帐户具有以下语法。  
+    4.  如果你[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在混合身份验证模式，并且你想要重置的密码`sa`帐户，请使用 Windows 身份验证 （其中包括你的管理员凭据） 的查询窗口连接。 更改的密码`sa`帐户使用以下语法。  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -113,7 +113,7 @@ ms.locfileid: "36014605"
 11. 上**启动参数**选项卡上，在**现有参数**框中，选择`-m`，然后单击`Remove`。  
   
     > [!NOTE]  
-    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 删除`;-m`以你添加更早版本，然后单击`OK`。  
+    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 删除`;-m`的前面，添加，然后单击`OK`。  
   
 12. 右键单击你的服务器名称，然后单击“重启”。  
   

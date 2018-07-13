@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
@@ -17,13 +17,13 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d5cb3dfa73f2636acbc2189b54b5cfb55f22b0e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 021cb357b85b7e75ec2d4594300c096b8f09fda8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184674"
 ---
 # <a name="configure-dialog-box"></a>配置对话框
   使用 **“配置”** 对话框可为包和项目配置参数、连接管理器和对环境的引用。  

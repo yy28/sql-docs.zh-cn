@@ -1,5 +1,5 @@
 ---
-title: 选项 (查询执行： SQL Server： 高级页) |Microsoft 文档
+title: '选项 (查询执行： SQL Server: 高级页) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 679c6d8f5a6abf931eb28d0f2f8116ac9f551d91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187234"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>选项 (查询执行： SQL Server： 高级页)
+# <a name="options-query-executionsql-serveradvanced-page"></a>选项 (查询执行： SQL Server: 高级页)
   有几个使用 SET 命令的选项。 使用此页可以指定在 SQL Server 查询编辑器中运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询时的 **set** 选项。 这些选项对其他代码编辑器不起任何作用。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请单击 **“查询”** 菜单或 **查询窗口中快捷菜单上的** “查询选项” [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 在 **“执行”** 下，单击 **“高级”**。 有关每个选项的详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  
   
 ## <a name="options"></a>“常规”  

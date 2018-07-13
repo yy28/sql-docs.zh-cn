@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - viewing operators
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdabd9ef6382066fad31154dad126e30ced0d8d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2a66bc4a276b425d8ec0ffeebf260dafcef7ff0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220789"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员的信息。  
@@ -72,9 +72,9 @@ ms.locfileid: "36014928"
   
      若要深入了解“operator_name属性”对话框包含的可用选项，请参阅：  
   
-    -   [操作员属性和 New 运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [操作员属性和新运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [操作员属性： New 运算符&#40;通知页&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [运算符属性： 新建操作员&#40;通知页&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [操作员属性（“历史记录”页）](operator-properties-history-page.md)  
   

@@ -5,10 +5,9 @@ ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7e1f31b2cfced2f94ecf0417a4cf8b62f53fbb15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236597"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
   *透明数据加密* (TDE) 加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 数据文件，称为加密空闲数据。 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，如果遇到物理介质（如驱动器或备份磁带）被盗的情况，恶意破坏方只需还原或附加数据库即可浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -234,9 +233,9 @@ GO
  可在拥有内存中 OLTP 对象的数据库上启用 TDE。 如果启用 TDE，则内存中 OLTP 日志记录会被加密。 如果启用了 TDE，则不对 MEMORY_OPTIMIZED_DATA 文件组中的数据进行加密。  
   
 ## <a name="see-also"></a>请参阅  
- [将受 TDE 保护的数据库添加到另一个 SQL Server 移](move-a-tde-protected-database-to-another-sql-server.md)   
+ [移动受 TDE 保护的数据库添加到另一台 SQL 服务器](move-a-tde-protected-database-to-another-sql-server.md)   
  [使用 EKM 启用 TDE](enable-tde-on-sql-server-using-ekm.md)   
- [借助 Azure SQL 数据库实现透明数据加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [使用 Azure SQL 数据库透明数据加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server 加密](sql-server-encryption.md)   
  [SQL Server 和数据库加密密钥（数据库引擎）](sql-server-and-database-encryption-keys-database-engine.md)   
  [SQL Server 数据库引擎和 Azure SQL 数据库的安全中心](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

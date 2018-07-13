@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - renaming databases
@@ -20,13 +20,13 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ee0c8711727a4661a9f9ac7a75d9739d98afc1b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef8be1c1777e51b14a0db38a15a5ff806a83443d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198757"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理报表服务器数据库（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库用作内部存储。 默认情况下，这两个数据库分别命名为 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 随报表服务器主数据库一同创建，用于存储临时数据、会话信息和缓存的报表。  
@@ -48,7 +48,7 @@ ms.locfileid: "36015169"
   
  系统会自动为您指定的帐户创建一个用来登录报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录。  
   
- 数据库权限也是自动配置的。 Reporting Services 配置工具将分配到用户帐户或数据库`Public`和`RSExecRole`报表服务器数据库的角色。 `RSExecRole` 提供了用于访问数据库表和执行存储过程的权限。 `RSExecRole`创建报表服务器数据库时，master 和 msdb 中创建。 `RSExecRole` 是报表服务器数据库 `db_owner` 角色的成员，它允许报表服务器更新其架构以支持自动升级过程。  
+ 数据库权限也是自动配置的。 Reporting Services 配置工具将向帐户或数据库用户授予`Public`和`RSExecRole`报表服务器数据库的角色。 `RSExecRole` 提供了用于访问数据库表和执行存储过程的权限。 `RSExecRole`创建报表服务器数据库时在 master 和 msdb 中创建。 `RSExecRole` 是报表服务器数据库 `db_owner` 角色的成员，它允许报表服务器更新其架构以支持自动升级过程。  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>报表服务器数据库的命名约定  
  创建主数据库时，数据库名称必须遵循为 [数据库标识符](../../relational-databases/databases/database-identifiers.md)指定的规则。 临时数据库名称始终与报表服务器主数据库的名称相同，但是带有 Tempdb 后缀。 您不能为临时数据库选择其他名称。  
@@ -80,7 +80,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>关于数据库版本  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，未提供有关数据库版本的显式信息。 但是，由于数据库版本始终与产品版本同步，因此可以使用产品版本信息来了解数据库版本的更改时间。 产品版本信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]指示通过文件版本信息，显示在中的所有 SOAP 调用，标头的日志文件，并且当您连接到报表服务器 URL (例如，当打开浏览器到http://localhost/reportserver)。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，未提供有关数据库版本的显式信息。 但是，由于数据库版本始终与产品版本同步，因此可以使用产品版本信息来了解数据库版本的更改时间。 产品版本信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]通过在日志文件、 所有 SOAP 调用的标头中显示以及当您连接到报表服务器 URL 的文件版本信息指示 (例如，当打开浏览器到http://localhost/reportserver)。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 配置管理器&#40;本机模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

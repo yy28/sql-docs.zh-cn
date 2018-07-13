@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
 - sql12.swb.maint.maintplanproperties.logbackup.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dfdc915b799219a1b9ce3777ef64b8975a86a54c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9c916f4bbf22b856056aad4ae61ad23c76f7d864
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179876"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>“备份数据库”任务（维护计划）
   使用 **“‘备份数据库’任务”** 对话框可以将备份任务添加到维护计划。 备份数据库非常重要，因为当发生系统或硬件故障（或用户错误）对数据库造成某种破坏时，就需要用备份副本来还原数据。 此任务可用于执行完整备份、差异备份、文件和文件组备份以及事务日志备份。  

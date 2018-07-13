@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6669b33697e573ef0cff9de86adf39aa98301ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2cb2709d0296ce83a842086329f64d5cf0812560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171048"
 ---
 # <a name="data-collection"></a>“数据收集”
   数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
@@ -64,7 +64,7 @@ ms.locfileid: "36015704"
   
 ## <a name="data-collector-terminology"></a>数据收集器术语  
  target  
- 支持数据收集的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关受支持版本的详细信息，请参阅的"可管理性"部分[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 支持数据收集的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关受支持版本的详细信息，请参阅的"可管理性"部分[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  “目标根目录  ”定义目标层次结构中的子树。 “目标集  ”是通过将筛选器应用到目标根目录定义的子树上而得到的目标组。 目标根目录可以是数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或计算机实例。  
   

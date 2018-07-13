@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 中的 SQL Server Reporting Services 的行为更改 |Microsoft 文档
+title: SQL Server 2014 中的 SQL Server Reporting Services 的行为更改 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - rows [Reporting Services], heights
@@ -26,13 +26,13 @@ ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8f65fa1694cade07cbf33eec3a8b7afdc1c93280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 440066046c13629409eb4c2d332d4543ccd07c57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216947"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 的行为更改
   本主题介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
@@ -59,39 +59,39 @@ ms.locfileid: "36016314"
  有关 SharePoint 权限级别的详细信息，请参阅 [用户权限和权限级别](http://technet.microsoft.com/library/cc721640.aspx)。  
   
 ### <a name="report-server-trace-logs-are-in-a-new-location-for-sharepoint-mode-sharepoint-mode"></a>报表服务器跟踪日志位于 SharePoint 模式的新位置（SharePoint 模式）  
- **新行为：** 对于在 SharePoint 模式下安装的报表服务器，报表服务器跟踪日志将在 %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles 下。  
+ **新行为：** 对于在 SharePoint 模式下安装的报表服务器，报表服务器跟踪日志将位于 %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web services\reportserver\logfiles。  
   
- **以前的行为：** 类似于以下路径下找到报表服务器跟踪日志： %Programfilesdir%\Microsoft SQL Server\\< RS_instance > \Reporting Services\LogFiles  
+ **以前的行为：** 报表服务器跟踪日志找到类似于以下路径下： %Programfilesdir%\Microsoft SQL Server\\< RS_instance > services\logfiles  
   
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>GetServerConfigInfo SOAP API 不再受支持（SharePoint 模式）  
- **新行为**： 使用 PowerShell cmdlet"Get SPRSServiceApplicationServers"  
+ **新行为**： 使用 PowerShell cmdlet"Get-sprsserviceapplicationservers"  
   
- **以前的行为：** 客户可以开发 SOAP 客户端代码可以直接与通信[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]终结点，并调用 GetReportServerConfigInfo()。  
+ **以前的行为：** 客户可以开发 SOAP 客户端代码以便直接与通信[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]终结点，并调用 getreportserverconfiginfo （）。  
   
 ### <a name="report-server-configuration-and-management-tools"></a>报表服务器配置和管理工具  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>配置管理器不用于 SharePoint 模式  
- **新行为：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager 不再支持 SharePoint 模式报表服务器。 配置[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]现在可以通过使用 SharePoint 管理中心完成 SharePoint 模式，因此[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Configuration Manager 不再支持 SharePoint 模式。 配置管理器现在仅用于本机模式报表服务器。  
+ **新行为：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager 不再支持 SharePoint 模式报表服务器。 配置[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]现在可以通过使用 SharePoint 管理中心完成 SharePoint 模式下，因此[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Configuration Manager 不再支持 SharePoint 模式。 配置管理器现在仅用于本机模式报表服务器。  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>无法将服务器从一种模式更改为另一种模式  
  **新行为：** 无法更改服务器模式。 如果您以本机模式安装了报表服务器，则无法将其更改或重新配置为 SharePoint 模式。 如果在 SharePoint 模式中进行安装，则可以将报表服务器更改为本机模式。  
   
- **以前的行为：** 客户安装[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]处于 SharePoint 模式报表服务器。 如果客户想要将报表服务器切换为本机模式，可以打开 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器，通过创建新的本机模式数据库或连接到现有的本机模式数据库，来切换为本机模式。 客户还可以使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Configuration Manager 从 SharePoint 模式切换到纯模式。  
+ **以前的行为：** 客户安装[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在 SharePoint 模式下的报表服务器。 如果客户想要将报表服务器切换为本机模式，可以打开 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器，通过创建新的本机模式数据库或连接到现有的本机模式数据库，来切换为本机模式。 客户还可以使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]配置管理器从 SharePoint 模式切换到纯模式。  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services 行为更改  
- 本部分介绍了中的行为更改[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
+ 本部分介绍中的行为更改[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
   
 > [!NOTE]  
 >  因为 SQL Server 2008 R2 是 SQL Server 2008 的次版本升级，所以，我们建议您也查看 SQL Server 2008 部分的内容。  
   
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Reporting Services WMI 提供程序库中的 SecureConnectionLevel 属性  
- WMI 提供程序库中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、 **SecureConnectionLevel**属性允许的值`0`，`1`，`2`，`3`，与`0`该值指示安全套接字层 (SSL) 不需要任何 Web 服务方法， `3` ，该值指示是否对于所有 Web 服务方法，需要 SSL 和`1`和`2`指示 Web 服务方法的子集需要 SSL。 在[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，这些值将为仅有两个可能的含义：  
+ WMI 提供程序库中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，则**SecureConnectionLevel**属性允许的值`0`，`1`，`2`，`3`，与`0`该值指示安全套接字层 (SSL) 不需要任何 Web 服务方法， `3` ，指示 SSL 必需的所有 Web 服务方法，并`1`和`2`指示 Web 服务方法的子集这需要 SSL。 在中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，这些值将有只有两个可能的含义：  
   
 -   `0` 指示对于任何 Web 服务方法均不需要 SSL。  
   
 -   正整数指示对于所有 Web 服务方法均需要 SSL。  
   
- 此更改将影响报表服务器响应 Web 服务调用的方式。 例如，<xref:ReportService2005.ReportingService2005.ListSecureMethods%2A>现在会返回任何内容如果**SecureConnectionLevel**设置为 0 和中的所有方法<xref:ReportService2005.ReportingService2005>如果**SecureConnectionLevel**设置为`1`， `2`，或`3`。  
+ 此更改将影响报表服务器响应 Web 服务调用的方式。 例如，<xref:ReportService2005.ReportingService2005.ListSecureMethods%2A>现在不返回任何内容如果**SecureConnectionLevel**设置为 0 中的所有方法<xref:ReportService2005.ReportingService2005>如果**SecureConnectionLevel**设置为`1`， `2`，或`3`。  
   
 ## <a name="see-also"></a>请参阅  
  [新增功能&#40;Reporting Services&#41;](what-s-new-reporting-services.md)   

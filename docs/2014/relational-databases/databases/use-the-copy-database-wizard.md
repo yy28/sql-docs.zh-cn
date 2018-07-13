@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199547"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
-  通过复制数据库向导，可以方便地将数据库及其对象从一台服务器移动或复制到另一台服务器，而服务器无需停机。 此外可以从以前升级数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此向导可执行以下操作：  
+  通过复制数据库向导，可以方便地将数据库及其对象从一台服务器移动或复制到另一台服务器，而服务器无需停机。 此外可以从以前升级的数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此向导可执行以下操作：  
   
 -   选取源服务器和目标服务器。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36015265"
   
      [复制、 移动或升级数据库](#Copy_Move)  
   
--   **跟进，升级后：**  
+-   **升级后，请按照，操作：**  
   
      [在升级 SQL Server 数据库之后](#FollowUp)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36015265"
   
 ##  <a name="Copy_Move"></a> 复制、 移动或升级数据库  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，展开**数据库**，右键单击某个数据库，指向**任务**，然后单击**复制数据库**。  
+1.  在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，展开**数据库**，右键单击某个数据库，指向**任务**，然后单击**复制数据库**。  
   
 2.  从 **“选择源服务器”** 页，指定要移动或复制的数据库所在的服务器并输入登录信息。 在选择身份验证方法并输入登录信息之后，单击 **“下一步”** 即可与源服务器建立连接。 此连接会在整个会话过程中保持打开状态。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36015265"
      允许用户通过提供连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证用户名和密码。  
   
      **用户名**  
-     输入连接所使用的用户名。 此选项才可用，如果选择了使用进行连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+     输入连接所使用的用户名。 此选项才可用，如果您已选择使用连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
   
      **密码**  
      输入登录名的密码。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接时，此选项才可用。  
@@ -136,7 +136,7 @@ ms.locfileid: "36015265"
 3.  从 **“选择目标服务器”** 页，指定数据库移动或复制的目标服务器。 如果将源服务器和目标服务器设置为同一个服务器实例，则将会创建一个数据库的副本。 在此情况下，必须稍后在向导中重命名数据库。 仅当目标服务器上不存在名称冲突时，源数据库名称才能用于复制或移动的数据库。 如果存在名称冲突，则必须在目标服务器上手动解决冲突问题，然后才能在此处使用源数据库名称。  
   
      **目标服务器**  
-     选择的服务器向其或多个数据库将被移动或复制，或单击浏览的名称 (**...**) 按钮以找到目标服务器。  
+     选择向其或多个数据库将被移动或复制，或单击浏览的服务器的名称 (**...**) 按钮以找到目标服务器。  
   
     > [!NOTE]  
     >  可以使用群集服务器作为目标；复制数据库向导将确保您只选择群集目标服务器上的共享驱动器。  
@@ -201,7 +201,7 @@ ms.locfileid: "36015265"
      在移动或复制操作中包括登录名。 默认为选中状态。  
   
      **master 数据库中的存储过程**  
-     包括存储的过程从**master**移动或复制操作中的数据库。  
+     包含从存储的过程**主**移动或复制操作中的数据库。  
   
     > [!NOTE]  
     >  不能对扩展存储过程及其相关的 DLL 进行自动复制。  
@@ -239,7 +239,7 @@ ms.locfileid: "36015265"
   
      例如:"\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\Data  
   
-9. 复制数据库向导将创建[!INCLUDE[ssIS](../../includes/ssis-md.md)]包以传输中的数据库**配置包**页上，根据自定义的包。  
+9. 复制数据库向导将创建[!INCLUDE[ssIS](../../includes/ssis-md.md)]包以传输中的数据库**将包配置**页上，如果相应自定义的包。  
   
      **包位置**  
      显示 where[!INCLUDE[ssIS](../../includes/ssis-md.md)]包的写入。  
@@ -256,7 +256,7 @@ ms.locfileid: "36015265"
 10. 从 **“安排运行包”** 页，指定希望何时启动移动操作或复制操作。 如果你不是系统管理员，你必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有权访问的代理的代理帐户[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 包执行子系统。  
   
      **Run immediately**  
-     启动移动或复制操作，则在单击后**下一步**。  
+     启动移动或复制操作，在单击后**下一步**。  
   
      **“计划”**  
      以后启动移动操作或复制操作。 当前的计划设置显示在说明框中。 若要更改该计划，请单击 **“更改”**。  
@@ -267,7 +267,7 @@ ms.locfileid: "36015265"
      **Integration Services 代理帐户**  
      选择可用的代理帐户。 若要计划传输，则必须至少有一个代理帐户可供用户使用，而且必须将该帐户配置为拥有对 **“SQL Server Integration Services 包执行”** 子系统的权限。  
   
-     若要创建的代理帐户[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行，在对象资源管理器中的，展开**SQL Server 代理**，展开**代理**，右键单击**SSIS 包执行**，然后单击**新代理**。  
+     若要创建的代理帐户[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行，在对象资源管理器中的，展开**SQL Server 代理**，展开**代理**，右键单击**SSIS 包执行**，然后依次**新的代理**。  
   
      **sysadmin** 固定服务器角色的成员可以选择 **“SQL Server 代理服务帐户”**，该帐户拥有必要的权限。  
   

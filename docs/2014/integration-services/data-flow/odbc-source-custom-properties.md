@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eb1f44263465197cd18ce25f2281b12627a90503
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 876ace661fe3eeacc5f78f4d3ca0e0ac2165b4d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231497"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   下表介绍 ODBC 源的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  
@@ -35,7 +35,7 @@ ms.locfileid: "36016637"
 |ExposeCharColumnsAsUnicode|Boolean|此属性确定组件如何公开 CHAR 列。 默认值为 False，指示 CHAR 列作为多字节字符串 (DT_STR) 公开。 如果为 True，则 CHAR 列将作为宽字符串 (DT_WSTR) 公开。<br /><br /> **注意**：此属性未在 **“OLE 源编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。|  
 |FetchMethod|Integer（枚举）|用于获取数据的方法。 可能的选项为逐行 (0) 和批处理 (1)。 默认值为批处理 (1)。<br /><br /> 有关这些选项的详细信息，请参阅 [ODBC Source](odbc-source.md)。<br /><br /> **注意**：此属性未在 **“OLE 源编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。|  
 |SqlCommand|String|在 AccessMode 设置为“SQL 命令”时要执行的 SQL 命令。|  
-|StatementTimeout|Integer|在无错返回应用程序之前等待 SQL 语句执行的秒数。 默认值为 120。 值为 0 时指示系统不会超时。|  
+|StatementTimeout|Integer|在无错返回应用程序之前等待 SQL 语句执行的秒数。 默认值为 0。 值为 0 时指示系统不会超时。|  
 |TableName|String|具有在 AccessMode 设置为“表名”时要使用的数据的表的名称。|  
 |LobChunckSize|Integer|针对 LOB 列的块大小分配。|  
 ||||  

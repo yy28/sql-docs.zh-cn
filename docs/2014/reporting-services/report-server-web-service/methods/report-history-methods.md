@@ -16,15 +16,15 @@ helpviewer_keywords:
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d531723fbc6677213b16a9c5515f42a454873b7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 767608e7eb4ee9bafdae4a7245bc73f2d938d0a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236137"
 ---
 # <a name="report-history-methods"></a>报表历史记录方法
   可以使用这些方法来创建和管理项历史记录快照。  

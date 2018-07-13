@@ -1,5 +1,5 @@
 ---
-title: 向维度中添加自定义聚合 |Microsoft 文档
+title: 向维度中添加自定义聚合 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
 - Business Intelligence enhancements [Analysis Services], custom aggregations
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom aggregations [Analysis Services]
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f6d9b77272272eadd2844a1ab5da18ec1cfd7a41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8567e17759af61b151a3fc27c05df0ed1df49b63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243947"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>向维度中添加自定义聚合
   在多维数据集或维度中添加自定义聚合增强功能，以使用其他一元运算符替换与维度成员关联的默认聚合。 这种增强功能指定维度表中定义父子层次结构中的成员汇总的一元运算符列。 一元运算符对父子层次结构中的父属性进行操作。  
@@ -42,8 +42,8 @@ ms.locfileid: "36014193"
  在向导的第一个 **“指定一元运算符”** 页中，指定要应用自定义聚合的维度。 已添加到该选定维度中的自定义聚合将会使维度发生更改。 所有包含选定维度的多维数据集都将继承这些更改。  
   
 ## <a name="adding-custom-aggregation-unary-operator"></a>添加自定义聚合（一元运算符）  
- 在第二个 **“指定一元运算符”** 页中，为自定义聚合指定所需的父属性，并为一元运算符指定维度表中的源列。 **父属性**列出拥有属性其`Usage`属性设置为`Parent`。 如果具有多个父属性，则选择对应于要使用的父子关系的父属性。 如果没有列出父属性，则维度不存在有效的父子层次结构。  
+ 在第二个 **“指定一元运算符”** 页中，为自定义聚合指定所需的父属性，并为一元运算符指定维度表中的源列。 **父属性**列出了具有的属性及其`Usage`属性设置为`Parent`。 如果具有多个父属性，则选择对应于要使用的父子关系的父属性。 如果没有列出父属性，则维度不存在有效的父子层次结构。  
   
- 在 **“源列”** 中，选择包含一元运算符的字符串列。 (此选择用于设置`UnaryOperatorColumn`对父属性的属性。)维度表还应具有指定一元汇总运算符的字符串列。 该列中的字符串值应包含有效的聚合运算符。 如果某行为空，则通常计算对应的成员。 如果列中的公式无效，则当检索使用成员的单元值时，会出现运行时错误。 有关详细信息，请参阅 [父子维度中的一元运算符](parent-child-dimension-attributes-unary-operators.md)。  
+ 在 **“源列”** 中，选择包含一元运算符的字符串列。 (该选择将设置`UnaryOperatorColumn`父特性的属性。)维度表还应具有指定一元汇总运算符的字符串列。 该列中的字符串值应包含有效的聚合运算符。 如果某行为空，则通常计算对应的成员。 如果列中的公式无效，则当检索使用成员的单元值时，会出现运行时错误。 有关详细信息，请参阅 [父子维度中的一元运算符](parent-child-dimension-attributes-unary-operators.md)。  
   
   

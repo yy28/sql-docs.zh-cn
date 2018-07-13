@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,19 +19,21 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266083"
 ---
 # <a name="authentication-with-the-report-server"></a>针对报表服务器的身份验证
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供若干可配置的选项以便根据报表服务器对用户和客户端应用程序进行身份验证。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供若干可配置的选项以便根据报表服务器对用户和客户端应用程序进行身份验证。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的早期版本中，所有身份验证支持都是由 IIS 提供的。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本开始，不再使用 IIS。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内部处理所有身份验证请求。  
+>  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的早期版本中，所有身份验证支持都是由 IIS 提供的。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本开始，不再使用 IIS。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在内部处理所有身份验证请求。  
   
  请求对报表服务器内容或操作进行访问的所有用户或应用程序都必须首先进行身份验证，然后才允许访问。  
   
@@ -57,7 +59,7 @@ ms.locfileid: "36016296"
 |摘要|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支持。|  
   
 ## <a name="configuration-of-authentication-settings"></a>身份验证设置的配置  
- 保留报表服务器 URL 后，身份验证设置将配置为使用默认的安全设置。 如果错误地修改了这些设置，则报表服务器将返回 HTTP 401 拒绝访问错误，该错误针对无法通过身份验证的 HTTP 请求。 选择身份验证类型要求您已了解在网络中是如何支持 Windows 身份验证。 必须指定至少一种身份验证类型。 可为 RSWindows 指定多种身份验证类型。 RSWindows 身份验证类型 (即， `RSWindowsBasic`， `RSWindowsNTLM`， `RSWindowsKerberos`，和**RSWindowsNegotiate**) 使用的自定义相互排斥。  
+ 保留报表服务器 URL 后，身份验证设置将配置为使用默认的安全设置。 如果错误地修改了这些设置，则报表服务器将返回 HTTP 401 拒绝访问错误，该错误针对无法通过身份验证的 HTTP 请求。 选择身份验证类型要求您已了解在网络中是如何支持 Windows 身份验证。 必须指定至少一种身份验证类型。 可为 RSWindows 指定多种身份验证类型。 RSWindows 身份验证类型 (即`RSWindowsBasic`， `RSWindowsNTLM`， `RSWindowsKerberos`，和**RSWindowsNegotiate**) 使用的自定义互相排斥。  
   
 > [!IMPORTANT]  
 >  Reporting Services 不验证您指定的设置以确定它们对于您的计算环境来说是否正确。 有可能默认安全设置将对您的安装无效，也有可能将指定对安全基础结构无效的配置设置。 因此，使报表服务器部署在较大的单位中可用之前，先在受控的测试环境中仔细测试该报表服务器部署非常重要。  
@@ -86,11 +88,11 @@ ms.locfileid: "36016296"
 ## <a name="see-also"></a>请参阅  
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
- (创建-和-管理的角色-assignments.md)   
+ (创建-和-管理-角色-assignments.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [实现安全扩展插件](../extensions/security-extension/implementing-a-security-extension.md)   
  [在本机模式报表服务器上配置 SSL 连接](configure-ssl-connections-on-a-native-mode-report-server.md)   
- [配置报表生成器访问权](../report-server/configure-report-builder-access.md)   
+ [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)   
  [安全扩展插件概述](../extensions/security-extension/security-extensions-overview.md)   
  [Reporting Services 中的身份验证](../extensions/security-extension/authentication-in-reporting-services.md)   
  [Reporting Services 中的授权](../extensions/security-extension/authorization-in-reporting-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: 第 10 课： 创建层次结构 |Microsoft 文档
+title: 第 10 课： 创建层次结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ea741676f07020291c2aa94d130c2f595a50f323
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b8b1b0b3c38374061361df9980c74cfb6e5cbf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247817"
 ---
 # <a name="lesson-10-create-hierarchies"></a>第 10 课：创建层次结构
   在本课中，您将创建层次结构。 层次结构是按级别排列的列的分组；例如，地理层次结构可能具有针对国家/地区、省/市/自治区、县和市的子级别。 层次结构可独立于报表客户端应用程序字段列表中的其他列出现，使客户端用户可以更方便地在报表中导航和包含数据。 若要了解详细信息，请参阅[层次结构（SSAS 表格）](tabular-models/hierarchies-ssas-tabular.md)。  
@@ -35,27 +35,27 @@ ms.locfileid: "36014421"
   
 #### <a name="to-create-a-category-hierarchy-in-the-product-table"></a>在 Product 表中创建类别层次结构  
   
-1.  在模型设计器中，单击`Model`菜单，然后指向**模型视图**，然后单击**图示视图**。  
+1.  在模型设计器中，单击`Model`菜单，然后指向**模型视图**，然后单击**关系图视图**。  
   
     > [!TIP]  
     >  使用位于模型设计器右上角的 Minimap 控件可更改您在关系图视图中查看对象的方式。 如果您在关系图视图中重新定位对象，则当您保存项目时，将保留该视图。  
   
-2.  在模型设计器中，右键单击`Product`表，并依次**创建层次结构**。 一个新的层次结构将出现在表窗口的底部。  
+2.  在模型设计器中，右键单击`Product`表，并单击**创建层次结构**。 一个新的层次结构将出现在表窗口的底部。  
   
-3.  在层次结构名称，将重命名层次结构通过键入`Category`，然后按 ENTER。  
+3.  在层次结构名称中，通过重命名层次结构键入`Category`，然后按 ENTER。  
   
-4.  在`Product`表，再单击**Product Category Name**列，然后将其拖到`Category`层次结构，然后版本之上的`Category`名称。  
+4.  在中`Product`表中，单击**Product Category Name**列中，然后将其拖到`Category`层次结构，然后松开的`Category`名称。  
   
-5.  在`Category`层次结构中，右键单击**Product Category Name**列，然后单击**重命名**，然后键入`Category`。  
+5.  在中`Category`层次结构中，右键单击**Product Category Name**列中，然后单击**重命名**，然后键入`Category`。  
   
     > [!NOTE]  
     >  重命名层次结构中的某列时，不重命名表中的该列。 层次结构中的列只是表中该列的表示形式。  
   
-6.  在`Product`表中，右键单击**产品子类别名称**列，然后在上下文菜单中，指向**将添加到层次结构**，然后单击`Category`。  
+6.  在`Product`表中，右键单击**Product Subcategory Name**列中，然后在上下文菜单中，依次指向**添加到层次结构**，然后单击`Category`。  
   
-7.  重命名**产品子类别名称**到`Subcategory`。  
+7.  重命名**Product Subcategory Name**到`Subcategory`。  
   
-8.  通过使用单击并拖动，或使用**将添加到层次结构**命令在上下文菜单中，添加**模型名称**和**产品名称**（按顺序） 的列并将其下方放置**产品子类别名称**列。 重命名这些列`Model`和`Product`分别。  
+8.  通过单击和拖动，或通过使用**添加到层次结构**命令的上下文菜单中，添加**模型名称**并**产品名称**（按顺序） 的列并将其下放置**Product Subcategory Name**列。 重命名这些列`Model`和`Product`分别。  
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>在 Date 表中创建层次结构  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用报表管理器创建模型 |Microsoft 文档
+title: 使用报表管理器创建模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175086"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用报表管理器创建模型
   您可以使用报表管理器从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库或 Oracle 数据库生成模型。 报表模型是从已发布到报表服务器上的共享数据源中生成。 如果尚未拥有共享数据源，则必须先创建一个。  
@@ -30,7 +30,7 @@ ms.locfileid: "36016102"
  生成的报表模型完全基于共享数据源的架构。 您无法选择将数据源的哪些部分包含在模型中，也无法编辑所生成模型的规则或元数据。 不过，您可以在模型生成之后设置其属性，并定义用来限制访问整个或部分模型的角色分配。  
   
 > [!NOTE]  
->  使用报表管理器生成了基于 Oracle 的模型或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007年[!INCLUDE[SPS2010](../includes/sps2010-md.md)]将包括属于用来连接到 Oracle 数据源的用户帐户的架构的数据库对象。 该用户帐户名在数据源属性凭据中指定。  
+>  使用报表管理器生成了基于 Oracle 的模型或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007年[!INCLUDE[SPS2010](../includes/sps2010-md.md)]将包括属于用来连接到 Oracle 数据源的用户帐户架构的数据库对象。 该用户帐户名在数据源属性凭据中指定。  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>使用报表管理器为报表模型创建新数据源  
   

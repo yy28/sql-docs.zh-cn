@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
 - columns [SQL Server], adding
 - adding columns
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08e262af1a2e424f497aa39e7b136c62cb5ac09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3f71832822b93dfaf514ef13c1efed641a626333
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264263"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向表添加新列。  
@@ -72,7 +72,7 @@ ms.locfileid: "36016100"
     > [!NOTE]  
     >  列属性的默认值在你创建新列时添加，但你可以在“列属性”选项卡中更改这些值。  
   
-6.  当你添加完列后，从**文件**菜单上，选择 **保存 * * * 表名*。  
+6.  在你添加完列，从**文件**菜单中，选择 **保存 * * * 表名*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

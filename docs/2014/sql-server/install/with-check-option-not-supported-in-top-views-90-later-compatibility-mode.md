@@ -1,5 +1,5 @@
 ---
-title: WITH CHECK OPTION 中不支持在 90 或更高兼容模式下包含 TOP 的视图 |Microsoft 文档
+title: WITH CHECK OPTION 不支持在 90 或更高版本的兼容模式下，包含 TOP 的视图 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TOP clause
 - WITH CHECK OPTION clause
 ms.assetid: 1b9581d0-bad9-43e0-b8fc-f32d8a8a04ca
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0dde9e879d278455544d4f323a8f3ffdd492760d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c8c64ce7395b5ecbb33530672d93817f7938db6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243987"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>在 90 或更高的兼容模式下，包含 TOP 的视图不支持 WITH CHECK OPTION
   升级顾问检测到了使用 WITH CHECK OPTION 的视图，并在该视图或者被引用视图的 SELECT 语句中检测到了 TOP 子句。 当数据库兼容模式设置为 80 或更低时，用此方式定义的视图会错误地允许通过视图修改数据，从而产生不准确的结果。 如果使用 WITH CHECK OPTION 的视图或者被引用视图使用了 TOP 子句，且数据库兼容模式设置为 90 或更高，则无法通过该视图插入或更新数据。  

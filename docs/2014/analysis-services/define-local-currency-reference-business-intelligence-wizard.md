@@ -1,5 +1,5 @@
 ---
-title: 定义本地货币引用 （商业智能向导） |Microsoft 文档
+title: 定义本地货币引用 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10810e19ec00aa77a14cb5a21789dfee1f9ae09a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206277"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定义本地货币引用（商业智能向导）
   可以使用“定义本地货币引用”页，为涉及“选择换算类型”页中指定的多对多或多对一换算类型的货币换算功能定义本地货币。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。  
@@ -31,12 +31,12 @@ ms.locfileid: "36014657"
   
 ## <a name="options"></a>“常规”  
  **事实数据表中的标识符**  
- 对于包含“选择度量值”页中所选度量值的事实数据表所引用的货币维度，选择此选项可指定为该货币维度中的本地货币提供货币标识符的属性。 (一种货币维度中一个其`Type`属性设置为*货币*。)  
+ 对于包含“选择度量值”页中所选度量值的事实数据表所引用的货币维度，选择此选项可指定为该货币维度中的本地货币提供货币标识符的属性。 (的货币维度中一个其`Type`属性设置为*货币*。)  
   
  在由事务本身确定事务的本地货币时使用此选项。 例如，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 示例数据库[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]中，“互联网销售”度量值组有一个到“货币”维度的常规维度关系。 该度量值组的事实数据表包含一个外键列，该外键列引用该维度的维度表中的货币标识符。  
   
  **货币维度和事实数据引用的属性**  
- 在成员表示本地货币的货币标识符的货币维度中选择货币属性。 (货币特性是其`Type`属性设置为*货币*。)  
+ 在成员表示本地货币的货币标识符的货币维度中选择货币属性。 (货币属性是其`Type`属性设置为*货币*。)  
   
 > [!NOTE]  
 >  如果未选择“事实数据表中的标识符”选项，则此选项不可用。  

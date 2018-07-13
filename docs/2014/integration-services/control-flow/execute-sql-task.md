@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231547"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -84,7 +84,7 @@ ms.locfileid: "36014109"
 -   如果任务使用参数绑定，则批中的所有查询都必须具有相同数量和类型的参数。  
   
 ## <a name="running-parameterized-sql-commands"></a>运行参数化 SQL 命令  
- SQL 语句和存储过程常常使用输入参数、输出参数和返回代码。 执行 SQL 任务支持`Input`， `Output`，和`ReturnValue`参数类型。 你使用`Input`类型用于输入参数，`Output`对于输出参数，和`ReturnValue`返回代码的。  
+ SQL 语句和存储过程常常使用输入参数、输出参数和返回代码。 执行 SQL 任务支持`Input`， `Output`，和`ReturnValue`参数类型。 您使用`Input`类型用于输入参数`Output`输出参数和`ReturnValue`返回代码的。  
   
 > [!NOTE]  
 >  只有数据访问接口支持这些参数时，才可在执行 SQL 任务中使用它们。  
@@ -99,7 +99,7 @@ ms.locfileid: "36014109"
 ## <a name="troubleshooting-the-execute-sql-task"></a>执行 SQL 任务故障排除  
  可以记录执行 SQL 任务对外部数据访问接口的调用。 您可以使用这项日志记录功能对执行 SQL 任务运行的 SQL 命令进行故障排除。 若要记录执行 SQL 任务对外部数据访问接口的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅[包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
- 有时，SQL 命令或存储过程会返回多个结果集。 这些结果集包含不只是结果的行集`SELECT`查询，但是错误的结果的单个值`RAISERROR`或`PRINT`语句。 该任务是否忽略第一个结果集之后出现的结果集中的错误，取决于所用的连接管理器类型：  
+ 有时，SQL 命令或存储过程会返回多个结果集。 这些结果集包含不只是结果的行集`SELECT`查询，但错误的结果的单个值`RAISERROR`或`PRINT`语句。 该任务是否忽略第一个结果集之后出现的结果集中的错误，取决于所用的连接管理器类型：  
   
 -   在您使用 OLE DB 和 ADO 连接管理器时，该任务会忽略在第一个结果集之后出现的结果集。 因此，使用这些连接管理器，当错误不属于第一个结果集时，该任务会忽略 SQL 命令或存储过程返回的错误。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36014109"
   
 -   指明任务是否跳过 SQL 语句的准备阶段。  
   
--   如果使用 ADO 连接类型，则必须指明 SQL 语句是否为存储过程。 对于其他连接类型，此属性是只读的其值始终为`false`。  
+-   如果使用 ADO 连接类型，则必须指明 SQL 语句是否为存储过程。 对于其他的连接类型，此属性是只读的其值始终为`false`。  
   
  可以采用编程方式或通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器来设置属性。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36014109"
   
 -   [执行 SQL 任务编辑器&#40;参数映射页&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [执行 SQL 任务编辑器&#40;结果设置页&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [执行 SQL 任务编辑器&#40;结果集页&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

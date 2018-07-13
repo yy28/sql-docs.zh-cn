@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], about
 - replication [SQL Server]
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e2e6c94d70c3e4fc469653ff5abba17a2b7c22c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ab832622e831b63f9487fea2187151d7a1ddd1b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253769"
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
   复制是一组技术，它将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以保持一致性。 使用复制，可以在局域网和广域网、拨号连接、无线连接和 Internet 上将数据分发到不同位置以及分发给远程或移动用户。  
@@ -32,12 +32,12 @@ ms.locfileid: "36014269"
  除了复制以外，还可以使用 Microsoft Sync Framework 来同步数据库。 Sync Framework 提供了相关的组件和一个直观且灵活的 API，使得在 SQL Server、SQL Server Express、SQL Server Compact 和 SQL Azure 数据库之间进行同步变得非常轻松。 Sync Framework 还包括一些类，它们可改写为在 SQL Server 数据库和任何其他与 ADO.NET 兼容的数据库之间进行同步。 有关 Sync Framework 数据库同步组件的详细文档，请参阅 [同步数据库](http://go.microsoft.com/fwlink/?LinkId=209079)。 有关 Sync Framework 的概述，请参阅 [Microsoft Sync Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=209078)。 有关 Sync Framework 与合并复制的比较，请参阅 [同步数据库概述](http://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
  **按区域浏览内容**  
- ![较小的文件的文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[新增功能](what-s-new-replication.md)  
+ ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[新增功能](what-s-new-replication.md)  
   
- ![较小的文件的文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[向后兼容性](replication-backward-compatibility.md)  
+ ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[向后兼容性](replication-backward-compatibility.md)  
   
- ![较小的文件的文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[复制功能和任务](replication-features-and-tasks.md)  
+ ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[复制功能和任务](replication-features-and-tasks.md)  
   
- ![较小的文件的文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[技术参考](technical-reference-replication.md)  
+ ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")[技术参考](technical-reference-replication.md)  
   
   

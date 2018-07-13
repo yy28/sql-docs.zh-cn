@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.dtsserver.f1
 ms.assetid: 5be897bd-f36c-4c6a-a91a-13d0d016f8b6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38102ce976d5b85a89a68c042f926b062cd6338b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99c9204d48a48252eacabe1d704eeea202901f26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289407"
 ---
 # <a name="connect-to-server-integration-services"></a>连接到服务器 (Integration Services)
   连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 时，可使用此对话框查看或指定选项。  
@@ -34,7 +34,7 @@ ms.locfileid: "36013893"
  选择要连接到的服务器。 默认情况下，显示上次连接到的服务器实例。  
   
 > [!NOTE]  
->  不要使用 *\<servername >*\\*\<instancename >*，这是因为[!INCLUDE[ssIS](../includes/ssis-md.md)]不支持的计算机上的多个实例。  
+>  不要使用*\<服务器名 >*\\*\<实例名 >*，因为[!INCLUDE[ssIS](../includes/ssis-md.md)]不支持计算机上的多个实例。  
   
  **身份验证**  
  只有 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证可用于 [!INCLUDE[ssIS](../includes/ssis-md.md)]。 Windows 身份验证模式允许用户通过 Windows 用户帐户进行连接。  

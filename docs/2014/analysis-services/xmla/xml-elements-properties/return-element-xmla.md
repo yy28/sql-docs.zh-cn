@@ -1,5 +1,5 @@
 ---
-title: 返回元素 (XMLA) |Microsoft 文档
+title: return 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - return element
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1a4468ce3d4b14ff9cd9db7c9373083aad75d3eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4808372fbf80b2b3a79bc11e3f2423511eb717be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192397"
 ---
 # <a name="return-element-xmla"></a>return 元素 (XMLA)
-  包含返回的信息[DiscoverResponse](../xml-elements-objects-discoverresponse.md)到响应中的元素[发现](../xml-elements-methods-discover.md)方法调用或[ExecuteResponse](../xml-elements-objects-executeresponse.md) 到响应中的元素[执行](../xml-elements-methods-execute.md)方法调用。  
+  包含返回的信息[DiscoverResponse](../xml-elements-objects-discoverresponse.md)元素为响应[Discover](../xml-elements-methods-discover.md)方法调用或[ExecuteResponse](../xml-elements-objects-executeresponse.md)元素为响应[Execute](../xml-elements-methods-execute.md)方法调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36013900"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DiscoverResponse](../xml-elements-objects-discoverresponse.md)， [ExecuteResponse](../xml-elements-objects-executeresponse.md)|  
-|上级：[DiscoverResponse](../xml-elements-objects-discoverresponse.md)|子： <br />                        [根](root-element-xmla.md)|  
+|上级：[DiscoverResponse](../xml-elements-objects-discoverresponse.md)|子项： <br />                        [根](root-element-xmla.md)|  
 |祖先： <br />                        [ExecuteResponse](../xml-elements-objects-executeresponse.md)|子：[根](root-element-xmla.md)或[结果](results-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

@@ -1,5 +1,5 @@
 ---
-title: 密码元素 (ASSL) |Microsoft 文档
+title: Password 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197737"
 ---
 # <a name="password-element-assl"></a>Password 元素 (ASSL)
   包含的用户帐户的密码[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)元素。  
@@ -60,7 +60,7 @@ ms.locfileid: "36014619"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 值`Password`元素，以及值[帐户](account-element-impersonationinfo-assl.md)元素，用于模拟目的如果的值[ImpersonationMode](impersonationmode-element-assl.md)任何元素的元素派生自`ImpersonationInfo`数据类型设置为*ImpersonateAccount*。  
+ 值`Password`元素，以及的值[帐户](account-element-impersonationinfo-assl.md)元素，用于模拟目的如果的值[ImpersonationMode](impersonationmode-element-assl.md)任何元素派生自`ImpersonationInfo`数据类型设置为*ImpersonateAccount*。  
   
  只有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的服务器管理员角色的成员可以提供 `Password` 元素的空白值  
   

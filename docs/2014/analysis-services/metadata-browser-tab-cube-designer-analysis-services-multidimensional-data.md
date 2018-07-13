@@ -1,5 +1,5 @@
 ---
-title: 元数据 （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 元数据 （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8469a144844e7b4bb7c02ea7fa5255a04654a34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3d3c2c707e42204fe3ae3eb75ea90b28525f2b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241687"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>元数据（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器中，可以使用 **“浏览器”** 选项卡上的 **“元数据”** 窗格浏览多维数据集的结构，以查看相关度量值，以及查看和创建维度。 您可以深化到层次结构中，查看可用度量值和 KPI 的列表，并复制对象的完全限定名称。  
@@ -50,7 +50,7 @@ ms.locfileid: "36015341"
 |选项|Description|  
 |------------|-----------------|  
 |**将添加到查询**|单击此选项可以将选定的对象添加到查询生成区域的下部窗格中。|  
-|**将添加到筛选器**|单击此选项可以将所选的维度、属性、层次结构或级别添加至 **“浏览器”** 的筛选区域。<br /><br /> 注意：只有在选择了维度、属性、层次结构或级别时，才会启用此选项。|  
+|**添加到筛选器**|单击此选项可以将所选的维度、属性、层次结构或级别添加至 **“浏览器”** 的筛选区域。<br /><br /> 注意：只有在选择了维度、属性、层次结构或级别时，才会启用此选项。|  
 |**复制**|单击此选项可以将所选项添加到剪贴板。<br /><br /> 注意：此选项复制对象的完全限定名称。|  
   
 ## <a name="see-also"></a>请参阅  

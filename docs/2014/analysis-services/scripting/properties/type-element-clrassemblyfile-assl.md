@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (ClrAssemblyFile) (ASSL) |Microsoft 文档
+title: Type 元素 (ClrAssemblyFile) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218017"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Type 元素 (ClrAssemblyFile) (ASSL)
   指定一个属于文件的文件类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 程序集。  
@@ -70,16 +70,16 @@ ms.locfileid: "36014390"
 |*依赖*|指定的文件为程序集中的依赖文件。|  
 |*调试*|指定的文件包含调试信息。|  
   
- 对应于的允许值为枚举`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ClrAssemblyFileType>。  
+ 与允许的值相对应的枚举`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFileType>。  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>请参阅  
  [文件元素&#40;ASSL&#41;](../objects/file-element-assl.md)   
  [文件元素&#40;ASSL&#41;](../collections/files-element-assl.md)   
  [ClrAssembly 数据类型&#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
  [Assembly 元素&#40;ASSL&#41;](../objects/assembly-element-assl.md)   
- [Assemblies 元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
+ [程序集元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, monitoring
 - jobs [SQL Server Agent], monitoring
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - current activity
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e7c076d8351098d554951c61ac9b32c7d1e534a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a2def2f3a586ef425357135e1fdb1c03e0838247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241947"
 ---
 # <a name="monitor-job-activity"></a>监视作业活动
   可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业活动监视器监视在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中定义的所有作业的当前活动。  
@@ -68,6 +68,6 @@ ms.locfileid: "36015625"
  [查看作业活动](view-job-activity.md)   
  [dbo.sysjobactivity &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
  [dbo.syssessions &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
- [sp_help_jobactivity &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
+ [sp_help_jobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

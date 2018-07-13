@@ -1,5 +1,5 @@
 ---
-title: 升级到 SQL Server 2014 |Microsoft 文档
+title: 升级到 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9cc1e34ab957e869996d5c8e190de6e0a78979b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b5c7262807cddc848c12e08988e1d28cb0965279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203939"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>升级到 SQL Server 2014
   您可以将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]前，查看 [SQL Server 2014 升级技术指南](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) （PDF 下载），查看此节中有关升级过程的主题，然后阅读 [SQL Server 2014 发布说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36014364"
  [升级 Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [升级复制的数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [升级 Master Data Services](upgrade-master-data-services.md)   
- [SQL Server 2005 最佳做法分析器](http://go.microsoft.com/fwlink/?LinkId=197134)   
+ [SQL Server 2005 最佳实践分析工具](http://go.microsoft.com/fwlink/?LinkId=197134)   
  [SQL Server 2008 R2 最佳做法分析器](http://go.microsoft.com/fwlink/?LinkId=197135)   
  [后向兼容性](../../../2014/getting-started/backward-compatibility.md)  
   

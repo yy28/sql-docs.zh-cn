@@ -1,5 +1,5 @@
 ---
-title: 设置的优先约束属性 |Microsoft 文档
+title: 设置优先约束的属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344dbadc0aeabbce3b2a554d4ff15370eeadd1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e20290eb9499191307c7afb146e9242603c3ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271343"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>设置优先约束的属性
   若要设置优先约束属性，您可以使用下列工具之一：  
@@ -49,12 +49,12 @@ ms.locfileid: "36014836"
   
 6.  在`Value`下拉列表中，选择优先可执行文件的执行结果。  
   
-7.  如果求值运算中使用表达式，`Expression`框中，键入一个表达式，然后单击**测试**计算表达式的值。  
+7.  如果求值运算使用表达式，在`Expression`框中，键入一个表达式，然后单击**测试**计算表达式的值。  
   
     > [!NOTE]  
     >  变量名称区分大小写。  
   
-8.  如果有多个任务或容器连接到受约束的可执行文件中，选择**逻辑和**若要指定所有前面的可执行文件的执行结果必须为`true`。 选择**逻辑或**以指定只有一个执行结果必须为`true`。  
+8.  如果多个任务或容器连接到受约束的可执行文件中，选择**逻辑和**若要指定所有前面的可执行文件的执行结果必须为`true`。 选择**逻辑或**以指定只有一个执行结果必须为`true`。  
   
 9. 单击 **“确定”** ，关闭 **“优先约束编辑器”**。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "36014836"
     |读/写属性|配置操作|  
     |--------------------------|--------------------------|  
     |Description|提供说明。|  
-    |EvalOp|选择一个求值运算。 如果`Expression`， **ExpressionAndConstant**，或**ExpressionOrConstant**选择操作后，你可以指定的表达式。|  
+    |EvalOp|选择一个求值运算。 如果`Expression`， **ExpressionAndConstant**，或**ExpressionOrConstant**选择操作，可以指定一个表达式。|  
     |表达式|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)。|  
-    |LogicalAnd|设置`LogicalAnd`以指定是否在多个可执行文件优先于并且链接到受约束的可执行文件时，与其他优先约束一起计算优先约束|  
+    |LogicalAnd|设置`LogicalAnd`可以指定多个可执行文件前加上并链接到受约束的可执行文件时是否在与其他优先约束，计算优先约束|  
     |“属性”|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
     |ReplTest1|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  

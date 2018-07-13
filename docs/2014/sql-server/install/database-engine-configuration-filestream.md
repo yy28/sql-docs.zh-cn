@@ -1,5 +1,5 @@
 ---
-title: 数据库引擎配置-Filestream |Microsoft 文档
+title: 数据库引擎配置-Filestream |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], about FILESTREAM
 ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 99fb929a9a3fdbdb643edeaf041d4cd74d64c75c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 82bf651e6242be7e1835caac7fd7d3419b51cf31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187694"
 ---
 # <a name="database-engine-configuration---filestream"></a>数据库引擎配置 - 文件流
-  使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 集成[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用 NTFS 文件系统通过将存储`varbinary(max)`二进制大型对象 (BLOB) 数据作为文件系统上的文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
+  使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 使[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用 NTFS 文件系统通过将存储`varbinary(max)`二进制大型对象 (BLOB) 数据作为文件系统上的文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **针对 Transact-SQL 访问启用 FILESTREAM**  

@@ -1,5 +1,5 @@
 ---
-title: 数据源属性页 （报表管理器） |Microsoft 文档
+title: 数据源属性页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 68279fffed6d42fd60ce6a3665eeaf3b0590aae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179554"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>“数据源”属性页（报表管理器）
   使用“数据源”属性页可以定义当前报表连接到外部数据源的方式。 您可以覆盖原先与报表一起发布的数据源连接信息。 如果一个报表有多个数据源，则每个数据源在属性页中都有其自己的特定区域。 数据源按照在报表中定义的顺序列出。  
@@ -52,7 +52,7 @@ ms.locfileid: "36016308"
  下列选项用于指定自定义数据源连接：  
   
  **数据源类型**  
- 指定用于处理数据源中数据的数据处理扩展插件。 内置数据扩展插件的列表，请参阅[Reporting services 支持的数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。 其他数据处理扩展插件可能由第三方供应商提供。  
+ 指定用于处理数据源中数据的数据处理扩展插件。 有关内置数据扩展插件的列表，请参阅[支持的 Reporting Services 数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。 其他数据处理扩展插件可能由第三方供应商提供。  
   
  **连接字符串**  
  指定报表服务器用于连接到数据源的连接字符串。 连接类型确定应使用的语法。 例如，XML 数据处理扩展插件的连接字符串是 XML 文档的 URL。 在大多数情况下，常见的连接字符串指定数据库服务器和数据文件。 以下示例演示用于连接到名为 MyData 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的连接字符串：  
@@ -67,20 +67,20 @@ ms.locfileid: "36016308"
 > [!IMPORTANT]  
 >  如果连接字符串中提供了凭据，则忽略此部分中提供的选项和值。 请注意，如果在连接字符串中指定了凭据，则会向浏览此页的所有用户以明文显示这些值。  
   
- **运行报表的用户提供的凭据**  
+ **运行该报表的用户提供的凭据**  
  每一名用户都必须键入用户名和密码以访问数据源。 可以定义请求用户凭据的提示文本。 默认的文本字符串为“输入用户名和密码以访问数据源”。  
   
- 如果用户提供的凭据为 Windows 身份验证凭据，请选择“在与数据源建立连接时用作 Windows 凭据”  。 如果你使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
+ 如果用户提供的凭据为 Windows 身份验证凭据，请选择“在与数据源建立连接时用作 Windows 凭据”  。 如果使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
   
- **安全存储在报表服务器中的凭据**  
- 在报表服务器数据库中存储加密的用户名和密码。 选择此选项可在无人参与的模式下运行报表（例如，通过计划或事件而不是用户操作来启动报表）。 如果使用默认安全性，则用户名必须为 Windows 域帐户。 按以下格式指定的帐户：\<域 >\\< 用户名\>。 指定的帐户对于用来承载报表所用数据源的计算机必须具有本地登录权限。  
+ **在报表服务器中安全地存储凭据**  
+ 在报表服务器数据库中存储加密的用户名和密码。 选择此选项可在无人参与的模式下运行报表（例如，通过计划或事件而不是用户操作来启动报表）。 如果使用默认安全性，则用户名必须为 Windows 域帐户。 按以下格式指定帐户：\<域 >\\< 用户名\>。 指定的帐户对于用来承载报表所用数据源的计算机必须具有本地登录权限。  
   
- 如果凭据为 Windows 身份验证凭据，请选中 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果你使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
+ 如果凭据为 Windows 身份验证凭据，请选中 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
   
  选中 **“与数据源建立连接之后模拟经过身份验证的用户”** 可允许委托凭据，但是只有当数据源支持模拟时才能这样做。 有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库，此选项将设置 SETUSER 函数。  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]仅支持 Windows 帐户凭据。 因此选择这两种选项"连接到数据源时用作 Windows 凭据使用"和"模拟经过身份验证的用户到数据源建立连接之后"[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]仅支持 Windows 帐户凭据。 因此选择选项"用作 Windows 凭据连接到数据源时"和"经过身份验证之后模拟的用户具有与数据源建立连接"的同时[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源。  
   
  **Windows 集成的安全性**  
  使用当前用户的 Windows 凭据来访问数据源。 如果用于访问数据源的凭据与用于登录到网络域的凭据相同，请选择此选项。 如果您的域启用了 Kerberos 身份验证或者数据源与报表服务器位于同一台计算机上，则此选项最为有效。 如果未启用 Kerberos，则 Windows 凭据可能会传递到其他计算机上。 如果需要其他计算机连接，您将得到错误提示而不是所需的数据。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c90a2afb20e7757e8797aaf5849c5fe4449b1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 796f417d3dae943334b6cdadc62c633dcbe18baf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213017"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
   **Auto Stats** 事件类指示索引和列统计信息自动更新事件的发生。  
@@ -41,7 +41,7 @@ ms.locfileid: "36014093"
 |**错误**|**int**|给定事件的错误号。 通常是 **sys.messages** 目录视图中存储的错误号。|31|是|  
 |**EventClass**|**int**|事件类型 = 58。|27|“否”|  
 |**EventSequence**|**int**|给定事件在请求中的顺序。|51|“否”|  
-|**EventSubClass**|**int**|事件子类的类型：<br /><br /> 1： 更新统计信息创建/同步进行;**TextData**列指示哪些统计信息并指示它们已创建或更新。<br /><br /> 2: 异步统计信息更新；作业已排队。<br /><br /> 3: 异步统计信息更新；作业已开始。<br /><br /> 4: 异步统计信息更新；作业已完成。|21|是|  
+|**EventSubClass**|**int**|事件子类的类型：<br /><br /> 1： 统计信息同步创建/更新;**TextData**列指示哪些统计信息，以及是否创建或更新它们。<br /><br /> 2: 异步统计信息更新；作业已排队。<br /><br /> 3: 异步统计信息更新；作业已开始。<br /><br /> 4: 异步统计信息更新；作业已完成。|21|是|  
 |**GroupID**|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IndexID**|**int**|受事件影响的对象上的索引/统计信息项 ID。 若要确定对象的索引 ID，请使用 **sys.indexes** 目录视图的 **index_id** 列。|24|是|  

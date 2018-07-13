@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: efaa7da1a6e198f4e8fc122df0b7fe0360f625b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 48bb2922f8f86712a838de95b31a3be2b08c3150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282893"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>示例：指定 ID 和 IDREFS 指令
-  元素属性可以指定为`ID`类型属性，与`IDREFS`然后可以使用属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  
+  可以将元素属性指定为`ID`类型的属性，并`IDREFS`然后可以使用属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  
   
  此示例说明如何使用 `ID` 和 `IDREFS` 指令来创建 `ID` 和 `IDREFS` 类型的属性。 因为 ID 不能是整数值，所以对此示例中的 ID 值进行了转换。 也就是说，它们进行了类型转换。 ID 值中使用了前缀。  
   

@@ -1,5 +1,5 @@
 ---
-title: 选择度量值组表 （多维数据集向导） |Microsoft 文档
+title: 选择度量值组表 （多维数据集向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.mgtableselection.f1
 ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7226745d8b192366b0b811738fea599cd9fa3d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cde02ccb771ba34fcd8614c5de9f9107c2fcc80f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250848"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>选择度量值组表（多维数据集向导）
   可以使用 **“选择度量值组表”** 页指定数据源视图以及为多维数据集选择度量值组表。  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_errors (Transact SQL) |Microsoft 文档
+title: sys.dm_pdw_errors (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,45 +7,44 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31f94e0424cbeafac484320adb86b0f5b6849b10
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: b2d30e75abee53998df535f227a6bcce228a9586
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467563"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926308"
 ---
-# <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (TRANSACT-SQL)
+# <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  包含有关请求或查询的执行过程中遇到的所有错误的信息。  
+  保存所有请求或查询的执行过程中遇到的错误有关的信息。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|此视图的键。<br /><br /> 与错误关联的唯一数字 id。|跨系统中的所有查询错误唯一。|  
+|error_id|**nvarchar(36)**|此视图的键。<br /><br /> 与错误关联的唯一数字 id。|跨系统中的所有查询错误是唯一的。|  
 |源 (source)|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |type|**nvarchar(4000)**|发生的错误的类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|create_time|**datetime**|发生了错误的时间。|小于或等于当前时间。|  
+|create_time|**datetime**|发生错误的时间。|小于或等于当前时间。|  
 |pwd_node_id|**int**|如果任何涉及的特定节点的标识符。 节点 id 的其他信息，请参阅[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。||  
-|session_id|**nvarchar(32)**|如果任何涉及会话标识符。 会话 id 的其他信息，请参阅[sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  
-|request_id|**nvarchar(32)**|如果任何涉及的请求标识符。 请求 id 的其他信息，请参阅[sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。||  
-|spid|**int**|涉及，如果任何 SQL Server 会话的 spid。||  
+|session_id|**nvarchar(32)**|如果任何涉及的会话标识符。 会话 id 的其他信息，请参阅[sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  
+|request_id|**nvarchar(32)**|如果任何涉及请求的标识符。 请求 id 的其他信息，请参阅[sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。||  
+|spid|**int**|如果任何涉及 SQL Server 会话的 spid。||  
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|详细信息|**nvarchar(4000)**|包含完整的错误文本说明。||  
+|详细信息|**nvarchar(4000)**|保存完整的错误文本说明。||  
   
- 有关通过此视图保留最大行数的信息，请参阅中的最大的系统视图值部分[最小值和最大值 (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)主题。  
+ 此视图按保留的最大行有关的信息，请参阅中的系统视图的最大值部分[最小和最大值 (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ReportParameters 元素 (ASSL) |Microsoft 文档
+title: ReportParameters 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportParameters element
 ms.assetid: 0e138e8f-8313-47f2-96e1-cd189eec26bb
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96337ac9f31e654d88bef1b0ae077f7a73171ec2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 004b23b3cbd2aa22dff73514b03257ac50dddd8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282103"
 ---
 # <a name="reportparameters-element-assl"></a>ReportParameters 元素 (ASSL)
   包含的集合[ReportParameter](../objects/reportparameter-element-assl.md)元素[ReportAction](../data-type/action-data-type-assl.md)元素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36015517"
 |子元素|[ReportParameter](../objects/reportparameter-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ReportParameterCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ReportParameterCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

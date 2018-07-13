@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98ee5b7ecc2f2705278211df9432db1020b224bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a068ccc8c24d8dc75fd0ec35b7b99adb4d6d875a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203527"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 事件类
   **为分布式查询和远程存储过程调用 OLE DB 访问接口时，会发生** OLEDB Call [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件类。  
@@ -55,7 +55,7 @@ ms.locfileid: "36015037"
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
 |ProviderName|`nvarchar`|OLE DB 访问接口的名称。|46|是|  
 |RequestID|`Int`|包含该语句的请求的 ID。|49|是|  
-|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果你连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 并以 login2 的身份，执行语句`SessionLoginName`显示 Login1 和`LoginName`将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 并以 login2 的身份，执行语句`SessionLoginName`显示 Login1 和`LoginName`显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`Int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
 |TextData|`nvarchar`|在 OLE DB 调用中发送和接收的参数。|@shouldalert|“否”|  

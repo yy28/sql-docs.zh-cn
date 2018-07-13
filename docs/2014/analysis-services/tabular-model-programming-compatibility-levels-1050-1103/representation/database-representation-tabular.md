@@ -1,5 +1,5 @@
 ---
-title: 数据库 Representation(Tabular) |Microsoft 文档
+title: 数据库 Representation(Tabular) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 653395b2733fc6af8df7b19a746bb04edc3d7f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e288ccfb3cee35ef1506fe46d2128dd6ab43480a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197767"
 ---
 # <a name="database-representationtabular"></a>数据库表示形式（表格）
   在表格模式下，数据库为表格模型中所有对象的容器。  
@@ -91,6 +91,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 有关如何使用 AMO 来创建和操作数据库表示形式之间实现更实用的角度理解，请参阅表格 AMO 2012 示例中; 中的源代码具体查看以下源文件： Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
+ 实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅此表格 AMO 2012 示例; 中的源代码具体查看以下源文件： Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
   
   

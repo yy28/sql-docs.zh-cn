@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4f376b2ba1e707afdba55b6fc7443d9d8be257e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 00ee8c2e88f571e3e9fcf5455a6627c0d7ff65cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204847"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
   可以将参数添加到报表，以允许用户为参数选择多个值。  
   
- 您可以在报表 URL 中将多个参数值传递给报表。 有关 URL 示例包含多值参数，请参阅[传递报表 Parameter Within a URL](../pass-a-report-parameter-within-a-url.md)。  
+ 您可以在报表 URL 中将多个参数值传递给报表。 有关 URL 示例包含一个多值参数，请参阅[报表参数在 URL 内传递](../pass-a-report-parameter-within-a-url.md)。  
   
  有关如何将多个参数值传递给存储过程的信息，请参阅 mssqltips.com 上的 [使用 SSRS 报表的多选参数](http://go.microsoft.com/fwlink/?LinkId=321529) 。  
   

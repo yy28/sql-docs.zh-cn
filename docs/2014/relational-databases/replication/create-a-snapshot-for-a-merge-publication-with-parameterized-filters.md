@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
 - snapshots [SQL Server replication], parameterized filters and
 - filters [SQL Server replication], parameterized
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9ee83b25591d336a5be02197b9de2e79b2d282d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5de6e6d274ccaf030e900ce9448b2713091d9a79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179854"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>为包含参数化筛选器的合并发布创建快照
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中通过参数化筛选器为合并发布创建快照。  
@@ -100,11 +100,11 @@ ms.locfileid: "36016360"
   
     -   将 **@publication**。  
   
-    -   值为`true`为**@allow_subscriber_initiated_snapshot**，从而使订阅服务器启动快照进程。  
+    -   值为`true`有关**@allow_subscriber_initiated_snapshot**，这可使订阅服务器启动快照进程。  
   
     -   （可选）将 **@max_concurrent_dynamic_snapshots**。 如果正在运行的进程数达到了最大值，并且订阅服务器尝试生成快照，则该进程将被置于队列中。 默认情况下，并发进程的数量不受限制。  
   
-2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定使用在步骤 1 中的发布名称**@publication**和[!INCLUDE[msCoName](../../includes/msconame-md.md)]在其下的 Windows 凭据[复制快照代理](agents/replication-snapshot-agent.md)身份验证来连接到发布服务器，你还必须指定的值**0**为**@publisher_security_mode**和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录信息**@publisher_login**和**@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)。  
+2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定在步骤 1 中使用的发布名称**@publication**并且[!INCLUDE[msCoName](../../includes/msconame-md.md)]依据的 Windows 凭据[复制快照代理](agents/replication-snapshot-agent.md)身份验证来连接到发布服务器上，必须还指定的值**0**有关**@publisher_security_mode**并[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录信息**@publisher_login**并**@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -268,7 +268,7 @@ PAUSE
   
 2.  为发布数据库创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例，将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的实例，然后调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 返回 `false`，请确认该数据库是否存在。  
   
-3.  如果<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>属性是`false`，将其设置为`true`并调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
+3.  如果<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>属性是`false`，将其设置为`true`，并调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
   
 4.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例，并设置此对象的以下属性：  
   
@@ -280,7 +280,7 @@ PAUSE
   
     -   将 <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>设置为要运行的动态快照作业的最大数目。 因为订阅服务器启动的快照请求随时都可以发生，所以在多个订阅服务器同时请求其分区快照时，此属性会限制可以同时运行的快照代理作业的数目。 运行的作业达到最大数目时，其他分区快照请求会进行排队，直到其前面的一个作业运行完才开始运行。  
   
-    -   使用按位逻辑 OR (`|`在 Visual C# 和`Or`在 Visual Basic 中) 运算符来将值添加<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot>到<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>。  
+    -   使用按位逻辑 OR (`|`在 Visual C# 和`Or`在 Visual Basic 中) 运算符将值<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot>到<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>。  
   
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 字段和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 字段，用于提供快照代理作业运行时所用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。  
   
@@ -294,7 +294,7 @@ PAUSE
   
 6.  使用 <xref:Microsoft.SqlServer.Replication.MergeArticle> 属性将项目添加到发布。 至少为一个项目指定 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 属性以定义参数化筛选器。 （可选）创建 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 对象以定义项目之间的联接筛选器。 有关详细信息，请参阅 [定义项目](publish/define-an-article.md)。  
   
-7.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>创建此发布的初始快照代理作业。  
+7.  如果的值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>来创建此发布的初始快照代理作业。  
   
 8.  调用在步骤 4 中创建的 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 对象的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 这将启动生成初始快照的代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)。  
   
@@ -308,11 +308,11 @@ PAUSE
   
 2.  使用 <xref:Microsoft.SqlServer.Replication.MergeArticle> 属性将项目添加到发布。 至少为一个项目指定 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 属性以定义参数化筛选器，然后创建任何 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 对象以定义项目之间的联接筛选器。 有关详细信息，请参阅 [定义项目](publish/define-an-article.md)。  
   
-3.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>创建此发布的快照代理作业。  
+3.  如果的值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>若要创建此发布的快照代理作业。  
   
 4.  调用在步骤 1 中创建的 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 对象的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 此方法启动生成初始快照的代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [创建并应用初始快照](create-and-apply-the-initial-snapshot.md)。  
   
-5.  检查值是否为`true`为<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>属性来确定初始快照何时可供使用。  
+5.  检查的值`true`为<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>属性，以确定初始快照何时可以使用。  
   
 6.  创建 <xref:Microsoft.SqlServer.Replication.MergePartition> 类的实例，然后使用下列属性的一个或两个设置订阅服务器的参数化筛选条件：  
   

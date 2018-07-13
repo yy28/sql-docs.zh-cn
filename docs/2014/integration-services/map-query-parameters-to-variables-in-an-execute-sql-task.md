@@ -1,5 +1,5 @@
 ---
-title: 将查询参数映射到变量中执行 SQL 任务 |Microsoft 文档
+title: 将查询参数映射到变量中执行 SQL 任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameterized SQL commands [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6427fe7773569abc5d3989e6ca830c0999a962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233387"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将查询参数映射到变量
   本主题介绍如何在执行 SQL 任务中使用参数化 SQL 语句以及在 SQL 语句的变量和参数之间创建映射。  

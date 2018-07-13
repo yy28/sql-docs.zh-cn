@@ -1,5 +1,5 @@
 ---
-title: 数据导入 (Master Data Services) |Microsoft 文档
+title: 数据导入 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d386070df790164e11763d0dfc459cb7de2c1a95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162828"
 ---
 # <a name="data-import-master-data-services"></a>数据导入 (Master Data Services)
-  中为数据创建模型后[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，你可以开始添加数据并对中的数据进行更改[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库。   你使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 临时表、存储过程和主数据管理器。  
+  创建一个模型中用于存储数据后[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，可以开始添加数据并对中的数据进行更改[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库。   你使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 临时表、存储过程和主数据管理器。  
   
- 你还可以使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、 将数据添加到 MDS 存储库 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库)。 有关详细信息，请参阅[发布数据&#40;MDS add-in for Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+ 此外可以使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，以将数据添加到 MDS 存储库 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库)。 有关详细信息，请参阅[发布的数据&#40;MDS 外接程序 excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
   
  在添加和更新数据时，你可以执行以下操作。  
   

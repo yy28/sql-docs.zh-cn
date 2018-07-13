@@ -1,5 +1,5 @@
 ---
-title: 同步 Analysis Services 数据库 |Microsoft 文档
+title: 同步 Analysis Services 数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
 - deploying [Analysis Services], Synchronize Database Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 193368b32f32941c5da99b134ce02b00b0b4c7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216197"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
@@ -47,11 +47,11 @@ ms.locfileid: "36016698"
 >  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅 [使用 Analysis Services 缩放查询](http://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用只读数据库缩放 Analysis Services 查询](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
 ## <a name="prerequisites"></a>必要條件  
- 在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授予数据库权限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。  
+ 在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)并[授予数据库权限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。  
   
  两个服务器上的 TCP 端口 2383 必须都打开，默认实例之间才能建立远程连接。 有关在 Windows 防火墙中创建例外的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
- 源和目标服务器必须是相同的版本和 service pack。 因为模型元数据也同步的以确保生成的兼容性的两个服务器的数量应相同。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 有关每个版本中的功能的详细信息，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 源和目标服务器必须是相同的版本和 service pack。 因为模型元数据，还会同步，以确保生成的兼容性这两个服务器的数量应相同。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 每个版本中功能的详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  每个服务器上的服务器配置模式都必须相同。 如果同步的数据库是多维数据库，则必须针对多维服务器模式配置源服务器和目标服务器。 有关部署模式的详细信息，请参阅 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36016698"
  如果未同步角色或成员身份，请注意立即指定对目标数据库的用户访问权限。  
   
 ## <a name="see-also"></a>请参阅  
- [同步元素&#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize 元素&#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [使用 XMLA 部署模型解决方案](deploy-model-solutions-using-xmla.md)   
  [使用部署向导部署模型解决方案](deploy-model-solutions-using-the-deployment-wizard.md)  
   

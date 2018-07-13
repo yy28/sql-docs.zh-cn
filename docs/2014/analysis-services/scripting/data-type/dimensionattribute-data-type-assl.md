@@ -1,5 +1,5 @@
 ---
-title: DimensionAttribute 数据类型 (ASSL) |Microsoft 文档
+title: DimensionAttribute 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionAttribute data type
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d022a0bfb5c11efe38694b614bd65676fb3ee28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9e07d7b7c313c4d9d21e8e562f2ed6893a08b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194287"
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute 数据类型 (ASSL)
   定义一个基元数据类型，该类型表示维度中的属性。  
@@ -91,8 +91,8 @@ ms.locfileid: "36014636"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
-|子元素|[Annotations](../collections/annotations-element-assl.md), [AttributeHierarchyDisplayFolder](../properties/displayfolder-element-assl.md), [AttributeHierarchyEnabled](../properties/enabled-element-assl.md), [AttributeHierarchyOptimizedState](../properties/state-element-assl.md), [AttributeHierarchyOrdered](../properties/attributehierarchyordered-element-assl.md), [AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeRelationships](../collections/relationships-element-assl.md), [CustomRollupColumn](../objects/column-element-assl.md), [CustomRollupPropertiesColumn](../objects/customrolluppropertiescolumn-element-assl.md), [DefaultMember](../objects/member-element-assl.md), [Description](../properties/description-element-assl.md), [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md), [DiscretizationMethod](../properties/discretizationmethod-element-assl.md), [EstimatedCount](../properties/estimatedcount-element-assl.md), [ID](../properties/id-element-assl.md), [InstanceSelection](../properties/instanceselection-element-assl.md), [IsAggregatable](../properties/isaggregatable-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [KeyUniquenessGuarantee](../properties/keyuniquenessguarantee-element-assl.md), [MemberNamesUnique](../properties/membernamesunique-element-assl.md), [MembersWithData](../objects/data-element-assl.md), [MembersWithDataCaption](../properties/caption-element-assl.md), [Name](../properties/name-element-assl.md), [NameColumn](../objects/namecolumn-element-assl.md), [NamingTemplate](../properties/namingtemplate-element-assl.md), [NamingTemplateTranslations](../collections/translations-element-assl.md), [OrderBy](../properties/orderby-element-assl.md), [OrderByAttributeID](../properties/attributeid-element-assl.md), [RootMemberIf](../properties/rootmemberif-element-assl.md), [SkippedLevelsColumn](../objects/skippedlevelscolumn-element-assl.md), [Source](../properties/source-element-binding-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-dimensionattribute-assl.md), [UnaryOperatorColumn](../objects/unaryoperatorcolumn-element-assl.md), [Usage](../properties/usage-element-dimensionattribute-assl.md), [ValueColumn](../objects/valuecolumn-element-assl.md)|  
-|派生元素|[属性](../objects/attribute-element-assl.md)([属性](../collections/attributes-element-assl.md)集合[维度](../objects/dimension-element-assl.md))|  
+|子元素|[批注](../collections/annotations-element-assl.md)， [AttributeHierarchyDisplayFolder](../properties/displayfolder-element-assl.md)， [AttributeHierarchyEnabled](../properties/enabled-element-assl.md)， [AttributeHierarchyOptimizedState](../properties/state-element-assl.md)， [AttributeHierarchyOrdered](../properties/attributehierarchyordered-element-assl.md)， [AttributeHierarchyVisible](../properties/visible-element-assl.md)， [AttributeRelationships](../collections/relationships-element-assl.md)， [CustomRollupColumn](../objects/column-element-assl.md)， [CustomRollupPropertiesColumn](../objects/customrolluppropertiescolumn-element-assl.md)， [DefaultMember](../objects/member-element-assl.md)，[说明](../properties/description-element-assl.md)， [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md)， [DiscretizationMethod](../properties/discretizationmethod-element-assl.md)， [EstimatedCount](../properties/estimatedcount-element-assl.md)， [ID](../properties/id-element-assl.md)， [InstanceSelection](../properties/instanceselection-element-assl.md)， [IsAggregatable](../properties/isaggregatable-element-assl.md)，[KeyColumns](../collections/columns-element-assl.md)， [KeyUniquenessGuarantee](../properties/keyuniquenessguarantee-element-assl.md)， [MemberNamesUnique](../properties/membernamesunique-element-assl.md)， [MembersWithData](../objects/data-element-assl.md)， [MembersWithDataCaption](../properties/caption-element-assl.md)，[名称](../properties/name-element-assl.md)， [NameColumn](../objects/namecolumn-element-assl.md)， [NamingTemplate](../properties/namingtemplate-element-assl.md)， [NamingTemplateTranslations](../collections/translations-element-assl.md)， [OrderBy](../properties/orderby-element-assl.md)， [OrderByAttributeID](../properties/attributeid-element-assl.md)， [RootMemberIf](../properties/rootmemberif-element-assl.md)， [SkippedLevelsColumn](../objects/skippedlevelscolumn-element-assl.md)，[源](../properties/source-element-binding-assl.md)，[翻译](../collections/translations-element-assl.md)，[类型](../properties/type-element-dimensionattribute-assl.md)， [UnaryOperatorColumn](../objects/unaryoperatorcolumn-element-assl.md)，[使用情况](../properties/usage-element-dimensionattribute-assl.md)， [ValueColumn](../objects/valuecolumn-element-assl.md)|  
+|派生元素|[特性](../objects/attribute-element-assl.md)([特性](../collections/attributes-element-assl.md)的集合[维度](../objects/dimension-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  在 DeploymentMode 配置属性值为 1 和 2（SharePoint 和表格模式，用于运行 PowerPivot 和表格模型数据库）的情况下运行服务时，具有以下限制：  
@@ -145,7 +145,7 @@ ms.locfileid: "36014636"
   
 -   UnaryOperatorColumn  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Verify a PowerPivot for SharePoint 安装 |Microsoft 文档
+title: 验证 PowerPivot for SharePoint 安装 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 10
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 84457199c37eea8445911e25706928305db0d380
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7116c698e987ca86da83763dd1994c098a99026d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189374"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>验证 PowerPivot for SharePoint 安装
   您在 SharePoint 场中安装的 PowerPivot for SharePoint 实例通过 SharePoint 管理中心进行管理。 至少，您可以检查管理中心和 SharePoint 网站上的页面以便确认 PowerPivot 服务器组件和功能可用。 但是，若要完全验证某一安装，您必须具有可发布到 SharePoint 并从库中访问的 PowerPivot 工作簿。 出于测试目的，您可以发布已包含 PowerPivot 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
@@ -27,7 +27,7 @@ ms.locfileid: "36014931"
 ##  <a name="verifyinstall"></a> 验证管理中心集成  
  若要验证 PowerPivot 与管理中心的集成，请执行以下操作：  
   
-1.  在开始菜单中，单击**所有程序**，打开 Microsoft SharePoint 2010 产品，然后单击**SharePoint 2010 管理中心**。  
+1.  在开始菜单上单击**所有程序**，打开 Microsoft SharePoint 2010 产品，然后单击**SharePoint 2010 管理中心**。  
   
 2.  输入您的用户名和密码，然后单击 **“确定”**。  
   
@@ -58,18 +58,18 @@ ms.locfileid: "36014931"
   
 8.  单击**默认 PowerPivot 服务应用程序**若要为此应用程序打开 PowerPivot 管理面板。 第一次使用时，面板要花几分钟的加载时间。  
   
-     或者，单击空白区域旁边**默认 PowerPivot 服务应用程序**来选择行，然后单击**属性**若要查看此服务应用程序的配置设置。 您可以修改配置设置和应用程序属性以更改服务器配置。 有关这些设置的详细信息，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+     或者，单击空白区域旁边**默认 PowerPivot 服务应用程序**以选择该行，然后单击**属性**若要查看此服务应用程序的配置设置。 您可以修改配置设置和应用程序属性以更改服务器配置。 有关这些设置的详细信息，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心内](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ## <a name="verify-integration-at-the-site-level"></a>验证网站级别的集成  
  若要验证 PowerPivot 与 SharePoint 网站的集成，请执行以下操作：  
   
-1.  在浏览器中，打开您创建的 Web 应用程序。 如果你使用默认值，则可以指定 http://\<您的计算机名称 > 在 URL 地址。  
+1.  在浏览器中，打开您创建的 Web 应用程序。 如果你使用默认值，则可以指定 http://\<您的计算机名称 > 中的 URL 地址。  
   
 2.  验证 PowerPivot 数据访问和处理功能在应用程序中可用。 您可以通过验证 PowerPivot 提供的库模板是否存在来验证此可用性：  
   
     1.  在站点操作，单击**更多选项...**.  
   
-    2.  在库中，你应看到**数据馈送库**和**PowerPivot 库**。 这些库模板由 PowerPivot 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
+    2.  在库中，你应看到**数据馈送库**并**PowerPivot 库**。 这些库模板由 PowerPivot 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
   
 ## <a name="verify-data-access-on-the-server"></a>验证服务器上的数据访问。  
  若要验证服务器上的 PowerPivot 数据访问，请执行以下操作：  
@@ -90,12 +90,12 @@ ms.locfileid: "36014931"
   
 7.  在“服务器类型”中，选择 **“Analysis Services”**。  
   
-8.  在服务器名称，输入**\<服务器名称 > \powerpivot**，其中**\<服务器名称 >** 是 PowerPivot for SharePoint 安装的计算机的名称。  
+8.  在服务器名称，输入**\<服务器名称 > \powerpivot**，其中**\<服务器名称 >** 是具有 PowerPivot for SharePoint 安装的计算机的名称。  
   
 9. 单击 **“连接”**。 这将验证 Analysis Services 服务器是否可用。  
   
-10. 在对象资源管理器，可以单击**数据库**若要查看加载的 PowerPivot 数据文件的列表。  
+10. 在对象资源管理器，您可以单击**数据库**查看加载的 PowerPivot 数据文件的列表。  
   
-11. 在计算机文件系统上，检查以下文件夹以便确定文件是否已缓存到磁盘。 存在缓存文件将进一步证实您的部署正常工作。 若要查看文件缓存，请转到\<驱动器 >: files\microsoft SQL Server\MSAS11。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 服务应用程序文件夹。 每个缓存数据库均存储在自己的文件夹中，可使用基于 GUID 的命名约定来确保唯一名称。  
+11. 在计算机文件系统上，检查以下文件夹以便确定文件是否已缓存到磁盘。 存在缓存文件将进一步证实您的部署正常工作。 若要查看文件缓存，请转到\<驱动器 >: \Program Files\Microsoft SQL Server\MSAS11。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 服务应用程序的文件夹。 每个缓存数据库均存储在自己的文件夹中，可使用基于 GUID 的命名约定来确保唯一名称。  
   
   

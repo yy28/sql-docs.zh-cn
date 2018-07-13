@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc8344f54b19d042082d1f9649ef0e883cc7a57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2ad64e98e5dbee5661554272f498bf5cde0164
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213947"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。  
@@ -37,7 +37,7 @@ ms.locfileid: "36015102"
 -   基于在将域与引用数据服务进行映射的过程中指定的 **“自动更正阈值”** 和 **“最低置信度”** 值，将根据置信度自动更正或建议域值。  
   
     > [!NOTE]  
-    >  您在将域映射到引用数据服务过程中指定的阈值在使用引用数据服务中的知识清理数据时同样适用，但在 **“常规设置”** 选项卡的 **“配置”** 部分中指定的阈值则不适用。 有关指定的引用数据清理阈值的信息，请参阅步骤 9 中的[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
+    >  您在将域映射到引用数据服务过程中指定的阈值在使用引用数据服务中的知识清理数据时同样适用，但在 **“常规设置”** 选项卡的 **“配置”** 部分中指定的阈值则不适用。 有关为引用数据清理指定阈值的信息，请参阅中的步骤 9[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
   
 -   域值划分为以下几个类别： **“建议”**、 **“新建”**、 **“无效”**、 **“已更正”** 和 **“正确”**。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36015102"
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色，才能执行数据清理。  
   
 ##  <a name="Cleanse"></a> 使用引用数据知识清理您的数据  
- 我们将继续使用我们在上一主题中，将映射的域的相同示例[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)，Windows Azure 应用商店中的 Melissa Data 服务。 现在，我们将使用相同的域来清理一些示例美国地址。 清理数据的步骤与[使用 DQS（内部）知识清理数据](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中介绍的步骤相同。 但是，我们在该过程中将会在需要时提醒您注意。  
+ 我们将继续以同一个示例使用在上一主题中，我们映射的域[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)，与 Windows Azure marketplace 的 Melissa Data 服务。 现在，我们将使用相同的域来清理一些示例美国地址。 清理数据的步骤与[使用 DQS（内部）知识清理数据](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中介绍的步骤相同。 但是，我们在该过程中将会在需要时提醒您注意。  
   
 1.  创建一个数据质量项目，并且选择 **“清理”** 活动。 请参阅[创建数据质量项目](../../2014/data-quality-services/create-a-data-quality-project.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: Integration Services 功能和任务 |Microsoft 文档
+title: Integration Services 功能和任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 611219cbefc037bc0719b1f48b46178d6eef8af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 451b29e05d7bcb3dfca26a1f6c5287bf47e20f90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186624"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 功能和任务
-  查找任何人员的信息 — 设计器、 开发人员、 分析员或管理员-创建和开发所需要[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包。 然后，了解如何将这些包合并到您的应用程序和网站中。  
+  查找任何人员的信息，设计器、 开发人员、 分析员或管理员-创建和开发[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包。 然后，了解如何将这些包合并到您的应用程序和网站中。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Integration Services &#40;SSIS&#41;和 Studio 环境](integration-services-ssis-development-and-management-tools.md)  
   
  [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)  
   
- [Integration Services &#40;SSIS&#41;连接](connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41;的连接](connection-manager/integration-services-ssis-connections.md)  
   
  [Integration Services &#40;SSIS&#41;项目](integration-services-ssis-projects-and-solutions.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36013879"
   
  [监视包执行和其他操作](performance/monitor-running-packages-and-other-operations.md)  
   
- [安全概述&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)  
   
  [Azure 功能包](azure-feature-pack-for-integration-services-ssis.md)  
   

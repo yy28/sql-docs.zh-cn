@@ -1,5 +1,5 @@
 ---
-title: 选项 （查询结果和依赖关系服务页） |Microsoft 文档
+title: 选项 （查询结果和依赖关系服务页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 caps.latest.revision: 6
-author: douglaslM
+author: mashamsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f5cabf63916602f3a269b24b1e43e24e42f9082
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecc1b6d238189ca0b9c33dd97d136d3283f1ae6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192097"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>选项 （查询结果和依赖关系服务页）
-  使用此页可为依赖关系服务指定要连接的服务器。 通过依赖关系服务，您可以提取与在不同服务器上存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象之间的依赖关系有关的信息。 通过查看对象依赖关系**对象依赖关系**中的对话框[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
+  使用此页可为依赖关系服务指定要连接的服务器。 通过依赖关系服务，您可以提取与在不同服务器上存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象之间的依赖关系有关的信息。 通过查看对象依赖关系**对象依赖关系**对话框中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
  **您希望做什么？**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36015295"
   
 ##  <a name="open_dialog"></a> 打开选项 （查询结果/依赖关系服务页） 对话框  
   
-1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，单击**选项**上**工具**菜单。  
+1.  在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，单击**选项**上**工具**菜单。  
   
 2.  展开“查询结果”，然后单击“依赖关系服务”。  
   

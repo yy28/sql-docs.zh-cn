@@ -1,5 +1,5 @@
 ---
-title: CInstance Class |Microsoft 文档
+title: CInstance 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - CInstance class
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7e5efbc10988458f1e111d0aad33e2391c46f3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a4302c4435ce72237d6ce9885162011cc1224ff4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215507"
 ---
-# <a name="cinstance-class"></a>CInstance Class
-  [CInstance Class](cinstance-class.md)表示的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端。  
+# <a name="cinstance-class"></a>CInstance 类
+  [CInstance 类](cinstance-class.md)表示的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端。  
   
  此类可用于管理与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例关联的协议和网络库。  
   

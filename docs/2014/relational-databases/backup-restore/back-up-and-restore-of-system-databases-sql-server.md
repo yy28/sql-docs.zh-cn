@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
 - restoring system databases [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39266ab9ca20c174ee61a1ed2e52c33fb0d4b5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197547"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系统数据库的备份和还原 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护一组系统级数据库（称为“系统数据库”），这些数据库对于服务器实例的运行至关重要。 每次进行大量更新后，都必须备份多个系统数据库。 必须备份的系统数据库包括 **msdb**、 **master**和 **model**。 如果有任何数据库在服务器实例上使用了复制，则还必须备份 **distribution** 系统数据库。 备份这些系统数据库，就可以在发生系统故障（例如硬盘丢失）时还原和恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。  
@@ -41,11 +40,11 @@ ms.locfileid: "36014800"
 |[tempdb](../databases/tempdb-database.md)|用于保存临时或中间结果集的工作空间。 每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时都会重新创建此数据库。 服务器实例关闭时，将永久删除 **tempdb** 中的所有数据。|“否”|Simple|无法备份 **tempdb** 系统数据库。|  
 |[配置分发](../replication/configure-distribution.md)|只有将服务器配置为复制分发服务器时才存在此数据库。 此数据库存储元数据、各种复制的历史记录数据以及用于事务复制的事务。|是|Simple|有关何时备份 **distribution** 数据库的信息，请参阅[备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)。|  
   
- <sup>1</sup>若要了解模型的当前恢复模式，请参阅[查看或更改数据库的恢复模型&#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>若要了解模型的当前恢复模式，请参阅[查看或更改数据库的恢复模式&#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;-&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
 ## <a name="limitations-on-restoring-system-databases"></a>对还原系统数据库的限制  
   
--   只能从在服务器实例当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上创建的备份中还原系统数据库。 例如，若要还原运行的服务器实例上的系统数据库[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1。  
+-   只能从在服务器实例当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上创建的备份中还原系统数据库。 例如，若要还原系统数据库运行的服务器实例上[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1。  
   
 -   若要还原任何数据库，必须运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库可供访问且至少部分可用时，才能启动** 实例。 如果 **master** 数据库不可用，则可以通过下列两种方式之一将该数据库返回到可用状态：  
   

@@ -1,5 +1,5 @@
 ---
-title: 创建 OLAP 挖掘结构 |Microsoft 文档
+title: 创建 OLAP 挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71efb42dd17c6b959fedab50841d09625f62f458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232427"
 ---
 # <a name="create-an-olap-mining-structure"></a>创建 OLAP 挖掘结构
   基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
@@ -117,7 +117,7 @@ ms.locfileid: "36014420"
 |查找受关注的或异常的单元|标识随时间变化而呈典型趋势的商店销售额。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法|  
 |查找相关性|确定导致服务器停机的因素，包括区域、计算机类型、操作系或购买日期。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes 算法|  
   
-##  <a name="bkmk_Filters"></a> 进行切片多维数据集 vs。对模型进行筛选  
+##  <a name="bkmk_Filters"></a> 对多维数据集 vs 进行切片。对模型进行筛选  
  在您生成模型时对多维数据集进行切片类似于在关系挖掘模型上创建筛选器。 在关系模型上，数据源上的筛选器将定义为 SQL 语句中的 WHERE 子句；在多维数据集中，使用编辑器来通过 MDX 创建筛选器语句。  
   
  例如，一个多维数据集可能包含与在全球购买产品有关的信息，但对于您的市场活动，您要基于在英国居住、年龄超过 30 岁的女性客户的分析创建一个模型。  

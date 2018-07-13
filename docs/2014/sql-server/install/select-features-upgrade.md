@@ -1,5 +1,5 @@
 ---
-title: 选择功能 （升级） |Microsoft 文档
+title: 选择 （升级） 的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - features to upgrade
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0d9a43035a293e28f6e368a48436624f3a199c0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f308bd39c805a2d53f86d887481295d12ce11aca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175116"
 ---
 # <a name="select-features-upgrade"></a>选择功能（升级）
   使用 **安装向导的** “选择功能” [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 页可以查看要升级至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的功能。  

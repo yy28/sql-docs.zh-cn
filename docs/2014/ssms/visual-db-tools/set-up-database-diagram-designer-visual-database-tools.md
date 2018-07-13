@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.diagnostic.InstallSqlDiagramSupport
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f0b95fb47be883d6c30cd6a525716577020ca7b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: eda956d955756b9617a609b9954e0ad1881b6b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232437"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>设置数据库关系图设计器 (Visual Database Tools)
   若要使用数据库关系图设计器，必须首先由 **db_owner** 角色的成员对其进行设置，以控制对关系图的访问。  
@@ -62,8 +62,8 @@ ms.locfileid: "36014438"
     9. sp_upgraddiagrams 存储过程  
   
 ## <a name="see-also"></a>请参阅  
- [了解数据库关系图所属权&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [从早期版本升级数据库关系图&#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+ [了解数据库关系图所有权&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [从以前的版本升级数据库关系图&#40;可视化数据库工具&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

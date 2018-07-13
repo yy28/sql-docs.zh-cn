@@ -1,5 +1,5 @@
 ---
-title: Reporting Services to SharePoint Groups and Permissions 中的角色和任务比较 |Microsoft 文档
+title: Reporting Services 与 SharePoint 组和权限中的角色和任务比较 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - security [Reporting Services], tasks
@@ -21,13 +21,13 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 181985b908c1ab5f2556d8fb58b7d54efa6bcb27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01e24a3aaa994a5e186634221fc4b64f396a8a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204889"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
   本主题将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  
@@ -47,7 +47,7 @@ ms.locfileid: "36015406"
 ##  <a name="bkmk_compare_tools_terms"></a> 比较权限工具和术语  
  **本机模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式权限对象（角色和任务）在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中创建并在报表管理器中为各用户配置。  
   
- **SharePoint 模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
+ **SharePoint 模式下：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式下使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
   
  下表比较 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式与 SharePoint 之间权限相关的对象和概念。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36015406"
 |查看共享计划|系统|打开项。|  
   
 ## <a name="see-also"></a>请参阅  
- [SharePoint 站点上为报表服务器项设置权限&#40;的 Reporting Services SharePoint 集成模式&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [SharePoint 站点上为报表服务器项设置权限&#40;Reporting Services SharePoint 集成模式下&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [在 SharePoint Web 应用程序中设置报表服务器操作的权限](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [授予对 SharePoint 站点上的报表服务器项的权限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定义](security/role-definitions.md)   

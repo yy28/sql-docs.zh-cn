@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - saving database diagrams
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d66340b5f095fc8e2d4640daad22fc78c70e0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f2fd6fd4690c8b58c0c7c022e0b1e19c41c76db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222287"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>保存数据库关系图 (Visual Database Tools)
   通过保存数据库关系图，可以保存对其所做的所有更改，包括对表、列和其他数据库对象所做的任何更改。  
   
 ### <a name="to-save-the-database-diagram"></a>保存数据库关系图  
   
-1.  从**文件**菜单上，选择**保存 <*`tablename`*>**。  
+1.  从**文件**菜单中，选择**保存 <*`tablename`*>**。  
   
 2.  如果这是一个以前从未保存过的新关系图，则将显示“另存为”对话框。 键入关系图的名称。  
   

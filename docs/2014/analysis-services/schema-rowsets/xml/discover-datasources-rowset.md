@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_DATASOURCES 行集 |Microsoft 文档
+title: DISCOVER_DATASOURCES 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185254"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行集
   返回服务器或 Web 服务上可用的 XML for Analysis (XMLA) 访问接口数据源的列表。 发布的数据源从应用程序 Web 服务器的 URL 返回。 客户端可以连接到该列表中的一个数据源。  
   
- 如果调用[发现](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_DATASOURCES`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法返回`DISCOVER_DATASOURCES`行集。  
+ 如果您调用[Discover](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_DATASOURCES`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法将返回`DISCOVER_DATASOURCES`行集。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- 客户端通过设置中选择数据源`DataSourceInfo`中的属性[属性](../../xmla/xml-elements-properties/properties-element-xmla.md)一起发送的元素[命令](../../xmla/xml-elements-properties/command-element-xmla.md)元素[执行](../../xmla/xml-elements-methods-execute.md)方法。 客户端不应将构造的 `DataSourceInfo` 属性的内容发送到服务器， 而是应使用 `Discover` 方法查找访问接口支持的数据源， 然后，再将从 `DataSourceInfo` 行集获取的同一 `DISCOVER_DATASOURCES` 属性值发回。  
+ 客户端通过设置选择数据源`DataSourceInfo`中的属性[属性](../../xmla/xml-elements-properties/properties-element-xmla.md)元素以及发送[命令](../../xmla/xml-elements-properties/command-element-xmla.md)元素的[Execute](../../xmla/xml-elements-methods-execute.md)方法。 客户端不应将构造的 `DataSourceInfo` 属性的内容发送到服务器， 而是应使用 `Discover` 方法查找访问接口支持的数据源， 然后，再将从 `DataSourceInfo` 行集获取的同一 `DISCOVER_DATASOURCES` 属性值发回。  
   
- `DISCOVER_DATASOURCES`行集包含以下各列。  
+ `DISCOVER_DATASOURCES`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除存储的过程 |Microsoft 文档
+title: 创建、 更改和删除存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,31 +14,31 @@ helpviewer_keywords:
 - stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18ab85b6ea304660e412e0e0156fcc1cc9491fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d7e4ddf95dc9fa08e52c9a312d3cc83c3c04bd05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223177"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>创建、更改和删除存储过程
-  在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO)，由表示存储的过程<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
+  在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 中，存储的过程由表示<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
   
- 创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义该存储的过程的脚本。 这些参数需要 @ 前缀，必须分别使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象创建并且将其添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合中。  
+ 创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性设置为[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义存储的过程的脚本。 这些参数需要 @ 前缀，必须分别使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象创建并且将其添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合中。  
   
 ## <a name="example"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除存储过程  
- 此代码示例演示如何创建一个存储的过程作为[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 如果提供了雇员的 ID 号，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  
+ 此代码示例演示如何创建用于存储的过程[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 如果提供了雇员的 ID 号，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBStoredProcs1](SMO How to#SMO_VBStoredProcs1)]  -->  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-c"></a>在 Visual C# 中创建、更改和删除存储过程  
- 此代码示例演示如何创建一个存储的过程作为[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 如果提供了雇员的 ID 号 (`BusinessEntityID`)，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  
+ 此代码示例演示如何创建用于存储的过程[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 如果提供了雇员的 ID 号 (`BusinessEntityID`)，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  
   
 ```  
 {  
@@ -78,7 +78,7 @@ ms.locfileid: "36015194"
 ```  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-powershell"></a>在 PowerShell 中创建、更改和删除存储过程  
- 此代码示例演示如何创建一个存储的过程作为[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 如果提供了雇员的 ID 号 (`BusinessEntityID`)，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  
+ 此代码示例演示如何创建用于存储的过程[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 如果提供了雇员的 ID 号 (`BusinessEntityID`)，则将返回该雇员的姓氏。 存储过程需要一个输入参数来指定雇员的 ID 号，需要一个输出参数来返回该雇员的姓氏。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

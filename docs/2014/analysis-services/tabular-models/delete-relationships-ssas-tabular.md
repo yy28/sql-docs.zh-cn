@@ -1,5 +1,5 @@
 ---
-title: 删除关系 (SSAS 表格) |Microsoft 文档
+title: 删除关系 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e39f2f74824550940fbe206ee2185212abf7dd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249167"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>删除关系（SSAS 表格）
-  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用的关系的信息，请参阅[关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)。  
+  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的信息，请参阅[关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)。  
   
 ## <a name="considerations-for-deleting-relationships"></a>删除关系时的注意事项  
  决定是否删除关系时要注意下列问题：  

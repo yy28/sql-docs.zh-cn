@@ -1,5 +1,5 @@
 ---
-title: 分区向导的 F1 帮助 (Analysis Services-多维数据) |Microsoft 文档
+title: 分区向导的 F1 帮助 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 000e6d0cd8dcaab6aab55de6394527c118396ea9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245689"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>分区向导的 F1 帮助（Analysis Services - 多维数据）
   可以使用分区向导为多维数据集中的度量值组定义分区。 默认情况下，会对多维数据集中每个度量值组定义单个分区。 不过，如果是大型分区，这样将会降低访问和处理性能。 通过创建多个分区，使每个分区都包含度量值组的一部分数据，这样可以提高该度量值组的访问和处理性能。  
@@ -45,7 +45,7 @@ ms.locfileid: "36015333"
   
 -   [限制行&#40;分区向导&#41;](restrict-rows-partition-wizard.md)  
   
--   [处理位置和存储位置&#40;分区向导&#41;](processing-and-storage-locations-partition-wizard.md)  
+-   [处理和存储位置&#40;分区向导&#41;](processing-and-storage-locations-partition-wizard.md)  
   
 -   [完成向导&#40;分区向导&#41;](completing-the-wizard-partition-wizard.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:100644
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6f77da9093a27456014f78ca6285a33d3c565bf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3eec42b02744209860c19d58a6965737823ef95e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226557"
 ---
 # <a name="verify-queries-visual-database-tools"></a>验证查询 (Visual Database Tools)
   为了避免问题，可以对所生成的查询进行检查以确保其语法正确。 在 [SQL 窗格](visual-database-tools.md)中输入语句时，此选项尤其有用。  
@@ -43,7 +43,7 @@ ms.locfileid: "36014214"
 -   右键单击“SQL 窗格”，然后从快捷菜单中选择“验证 SQL 语法”。  
   
 ## <a name="see-also"></a>请参阅  
- [运行查询&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+ [运行查询&#40;可视化数据库工具&#41;](run-queries-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 635632db245b37e068b7d9f16a1b352be1cc1d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e83826d17c1e7ac7ad5840626d3d61aa5224a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192607"
 ---
 # <a name="data-quality-projects-dqs"></a>数据质量项目 (DQS)
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据质量项目就是使用知识库，通过执行“数据清理”  和  “数据匹配”活动改进源数据的质量，然后将结果数据导出到 SQL Server 数据库或 .csv 文件。 您可以将数据质量项目创建为一个清理项目或匹配项目，以执行相应的任务。 可以通过使用同一个知识库运行清理项目和匹配项目，因为用于数据清理和匹配的知识可以内置于同一个知识库中。  
@@ -60,7 +60,7 @@ ms.locfileid: "36017404"
 |任务说明|主题|  
 |----------------------|-----------|  
 |描述如何创建数据质量项目。|[创建数据质量项目](../../2014/data-quality-services/create-a-data-quality-project.md)|  
-|描述如何管理（打开、解锁、重命名和删除）数据质量项目。|[管理&#40;打开、 解锁、 重命名，并删除&#41;数据质量项目](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
+|描述如何管理（打开、解锁、重命名和删除）数据质量项目。|[管理&#40;打开、 解锁、 重命名，并删除&#41;的数据质量项目](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |描述如何在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中打开 Integration Services 项目。|[在 Data Quality Client 中打开 Integration Services 项目](../../2014/data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>请参阅  

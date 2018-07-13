@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_class_type_map (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_audit_class_type_map (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,28 +22,28 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a40f06ca9d012553556c68fca238f6f9a609f04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465173"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957610"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   返回一个表，将审核日志中的 class_type 字段映射到 sys.dm_audit_actions 中的 class_desc 字段。 有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]审核，请参阅[SQL Server Audit&#40;数据库引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|审核的实体的类类型。 映射到 class_type 写入审核日志，并返回**get_audit_file()** 函数。 不可为 null。|  
+|**class_type**|**char(2)**|审核的实体的类类型。 映射到写入审核日志，并返回的 class_type **get_audit_file （)** 函数。 不可为 null。|  
 |**class_type_desc**|**nvarchar(120)**|可审核实体的名称。 不可为 null。|  
 |**securable_class_desc**|**nvarchar(120)**|映射到要审核的 class_type 的安全对象。 如果 class_type 不映射到安全对象，则为 NULL。 可以与 sys.dm_audit_actions 中的 class_desc 相关。|  
   
 ## <a name="permissions"></a>权限  
- 主体必须拥有**选择**权限。 默认情况下，此权限授予 Public。  
+ 主体必须具有**选择**权限。 默认情况下，此权限授予 Public。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

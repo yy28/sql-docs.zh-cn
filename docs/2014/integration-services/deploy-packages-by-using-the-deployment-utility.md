@@ -1,5 +1,5 @@
 ---
-title: 使用部署实用工具部署包 |Microsoft 文档
+title: 使用部署实用工具部署包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], installing
 - installing packages
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 caps.latest.revision: 56
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8674256ca22d0327987d0219141b254260173c8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fe699eade5daa76a8d6f2a77e63a2c5019b815
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203927"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>使用部署实用工具部署包
   如果要使用所生成的部署实用工具将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包安装到与生成该工具的计算机不同的其他计算机上，则必须首先将部署文件夹复制到目标计算机上。  
@@ -69,6 +69,6 @@ ms.locfileid: "36013882"
 8.  如果选择了在安装之后验证包，请查看所部署的包的验证结果。  
   
 ## <a name="see-also"></a>请参阅  
- [包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

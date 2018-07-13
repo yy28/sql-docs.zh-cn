@@ -1,5 +1,5 @@
 ---
-title: 数据库元素 (XMLA) |Microsoft 文档
+title: 数据库元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Database element
 ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f1b643a12ab1dbf2dc151fe91a8663b138e581ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 22e385380b2757427b5fa3a33725f6c25e8dde36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249427"
 ---
 # <a name="database-element-xmla"></a>Database 元素 (XMLA)
-  标识包含由父维度的数据库[对象](object-element-dimension-xmla.md)元素。  
+  标识包含父对象表示的维度的数据库[对象](object-element-dimension-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

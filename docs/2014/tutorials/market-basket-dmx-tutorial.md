@@ -1,5 +1,5 @@
 ---
-title: 市场篮 DMX 教程 |Microsoft 文档
+title: 市场篮 DMX 教程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,13 +21,13 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220577"
 ---
 # <a name="market-basket-dmx-tutorial"></a>市场篮 DMX 教程
   在本教程中，您将学习如何使用数据挖掘扩展插件 (DMX) 查询语言来创建、定型和浏览挖掘模型。 然后，您将使用这些挖掘模型创建预测，说明可能同时购买的产品。  
@@ -37,7 +37,7 @@ ms.locfileid: "36312925"
 ## <a name="tutorial-scenario"></a>教程方案  
  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 决定创建使用数据挖掘功能的自定义应用程序来预测其客户想要同时购买的产品类型。 该自定义应用程序的目的是能够指定一组产品，并预测另外还有哪些产品将与指定的产品一同购买。 然后，[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 将使用此信息在其网站中添加“建议”功能，并更好地组织向客户提供信息的方式。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了一些可以用来完成此任务的工具：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了可用于完成此任务的几个工具：  
   
 -   DMX 查询语言  
   
@@ -45,14 +45,14 @@ ms.locfileid: "36312925"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的查询编辑器  
   
- 数据挖掘扩展插件 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一种查询语言，可以使用它来创建和处理挖掘模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)]关联算法创建模型，以便预测倾向于集中购买的产品。  
+ 数据挖掘扩展插件 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一种查询语言，可以使用它来创建和处理挖掘模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)]关联算法创建模型，以便预测可能会一起购买的产品。  
   
  本教程的目的是提供将在自定义应用程序中使用的 DMX 查询。  
   
  **有关详细信息：** [数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>挖掘结构和挖掘模型  
- 开始创建 DMX 语句之前，了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的主要对象十分重要。 *挖掘结构*是定义从中生成挖掘模型的数据域的数据结构。 单个挖掘结构可以包含多个*挖掘模型*共享同一个域。 挖掘模型可向挖掘结构所代表的数据应用挖掘模型算法。  
+ 开始创建 DMX 语句之前，了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的主要对象十分重要。 *挖掘结构*是一种数据结构，它定义从中生成挖掘模型的数据域。 单个挖掘结构可以包含多个*挖掘模型*共享同一个域。 挖掘模型可向挖掘结构所代表的数据应用挖掘模型算法。  
   
  挖掘结构的构造块是挖掘结构列，这些列对数据源所包含的数据进行说明。 这些列包含诸如数据类型、内容类型以及数据分发方式等信息。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36312925"
   
  **有关详细信息**  
   
- [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)，[了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)，[结构和使用情况的 DMX 预测查询](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)，[了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)， [DMX 预测查询的结构和用法](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  本教程分为以下几课：  
@@ -97,7 +97,7 @@ ms.locfileid: "36312925"
  在本课中，您将学习如何使用 `ALTER` 语句向挖掘结构中添加挖掘模型。  
   
  [第 3 课：处理市场篮挖掘结构](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
- 在本课程中，您将学习如何使用`INSERT INTO`语句来处理挖掘结构和其关联的挖掘模型。  
+ 在本课程中，您将学习如何使用`INSERT INTO`语句处理挖掘结构及其关联的挖掘模型。  
   
  [第 4 课：执行市场篮预测](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  在本课中，您将学习如何使用 `PREDICTION JOIN` 语句根据挖掘模型创建预测。  
@@ -111,14 +111,14 @@ ms.locfileid: "36312925"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库  
   
- 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的官方示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请转到[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server 示例和社区项目主页上，以在 Microsoft SQL Server 产品示例部分。 单击**数据库**，然后单击**版本**选项卡并选择所需的数据库。  
+ 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的正式示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请转到[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server 示例和社区项目主页上，以在 Microsoft SQL Server 产品示例部分。 单击**数据库**，然后单击**版本**选项卡上，选择所需的数据库。  
   
 > [!NOTE]  
->  当你查看教程时，我们建议你添加**下一主题**和**上一步主题**到文档查看器工具栏按钮。  
+>  在阅读教程时，我们建议您将添加**下一主题**并**上一个主题**到文档查看器工具栏按钮。  
   
 ## <a name="see-also"></a>请参阅  
- [Bike Buyer DMX 教程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
+ [自行车购买者 DMX 教程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [第 3 课： 生成市场篮方案&#40;中间数据挖掘教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
 - scheduling jobs [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77f1f09ddb3d978d1308d4c7ec70bf5d8d177812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f85e651f67b6553f597fab920bde7cc05ca37167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192867"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>创建计划并将计划附加到作业
   计划 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业就是定义使作业在没有用户交互的情况下开始运行的条件。 通过为作业创建新计划或将现有计划附加到作业可以将作业计划为自动运行。  
@@ -83,7 +83,7 @@ ms.locfileid: "36015619"
   
  将作业定义为在 CPU 空闲时间运行之前，应确定正常处理过程中 CPU 的负荷。 若要执行此操作，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或性能监视器来监视服务器流量并收集统计信息。 然后，利用收集到的信息设置 CPU 空闲时间百分比和持续时间。  
   
- 将 CPU 空闲条件定义为一个百分比，在该百分比以下，CPU 使用率必须持续指定的时间。 然后，设置持续时间长度。 如果 CPU 使用率在指定时间内低于指定的百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将启动具有 CPU 空闲时间计划的所有作业。 有关详细信息使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或性能监视器来监视 CPU 使用率，请参阅[监视 CPU 使用情况](../../relational-databases/performance-monitor/monitor-cpu-usage.md)。  
+ 将 CPU 空闲条件定义为一个百分比，在该百分比以下，CPU 使用率必须持续指定的时间。 然后，设置持续时间长度。 如果 CPU 使用率在指定时间内低于指定的百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将启动具有 CPU 空闲时间计划的所有作业。 有关使用的详细信息[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或性能监视器来监视 CPU 使用率，请参阅[监视 CPU 使用情况](../../relational-databases/performance-monitor/monitor-cpu-usage.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36015619"
 |说明如何定义服务器的 CPU 空闲条件。|[设置 CPU 空闲时间和持续时间 (SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [sp_help_jobschedule &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
+ [sp_help_jobschedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
  [dbo.sysjobschedules &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fdbe801bc58296f0cbfa116056615c341ec3e1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181626"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是较小的简单图表，它们可以在很小的空间中传递很多信息，并且常常与文本并排。 迷你图和数据条通常用于表和矩阵中。 其影响来自于将它们一起进行查看并且能够快速对它们进行相互比较，而不是单独查看它们。 这样可以便于看到离群值，即不像其他项那样执行的行。 尽管较小，但每个迷你图通常表示一段时间中的多个数据点。 数据条可表示多个数据点，但通常只说明一个。 每个迷你图通常展示单个序列。 不能将迷你图添加到表的详细信息组中。 因为迷你图显示聚合数据，所以它们必须处于与某一组相关联的单元中。 迷你图和数据条具有相同的基本图表元素类别、序列和值，但没有图例、轴线、标签或刻度线。  
@@ -90,16 +90,16 @@ ms.locfileid: "36016544"
 ##  <a name="HowTo"></a> 操作指南主题  
  [添加迷你图和数据条&#40;报表生成器和 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [对齐表或矩阵中的图表中的数据&#40;报表生成器和 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [表或矩阵中的图表中对齐数据&#40;报表生成器和 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>针对图表的其他操作指南主题  
  因为迷你图和数据条为图表类型，所以，您可能还会发现以下针对图表的操作指南主题既对您很有帮助，又颇具针对性：  
   
  [向报表添加图表&#40;报表生成器和 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
- [向图表中添加空点&#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
+ [向图表添加空点&#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [添加或从图表中删除边距&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [添加或删除边距在图表中&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
  [更改图表类型&#40;报表生成器和 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
@@ -117,6 +117,6 @@ ms.locfileid: "36016544"
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [教程： 向报表添加迷你图&#40;报表生成器&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [迷你图、 条形图和指示器在报表生成器 （视频）](http://technet.microsoft.com/bi/video/ff877165)   
- [如何： 创建表 （视频） 中的迷你图](http://go.microsoft.com/fwlink/?LinkId=197092)  
+ [如何： 为表 （视频） 中创建迷你图](http://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

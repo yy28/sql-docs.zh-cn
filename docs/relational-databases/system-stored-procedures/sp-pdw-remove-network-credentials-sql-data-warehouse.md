@@ -1,35 +1,32 @@
 ---
-title: sp_pdw_remove_network_credentials （SQL 数据仓库） |Microsoft 文档
+title: sp_pdw_remove_network_credentials （SQL 数据仓库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78f4dd7ad5c76159413c7dbdd382f6c6cecc3807
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: c44633ebcfb79b433a7420055343faf36774da39
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33700230"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926948"
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  这将删除存储在中的网络凭据[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]访问的网络文件共享。 例如，使用此存储的过程来删除权限[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]执行备份和还原位于您自己的网络内的服务器上的操作。  
+  这会删除存储中的网络凭据[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]访问网络文件共享。 例如，使用此存储的过程来删除权限[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]执行备份和还原操作，驻留在您自己的网络内的服务器。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,23 +48,23 @@ sp_pdw_remove_network_credentials 'target_server_name'
  0（成功）或 1（失败）  
   
 ## <a name="permissions"></a>权限  
- 需要**更改服务器状态**权限。  
+ 需要**ALTER SERVER STATE**权限。  
   
 ## <a name="error-handling"></a>错误处理  
- 如果删除凭据将不会成功在管理节点和所有计算节点上，则会发生错误。  
+ 如果在控制节点和所有计算节点上未成功删除凭据，就会出错。  
   
 ## <a name="general-remarks"></a>一般备注  
- 此存储的过程从的 NetworkService 帐户中删除网络凭据[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 NetworkService 帐户运行每个实例的 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]控制节点和计算节点上。 例如，备份操作运行时，管理节点和每个计算节点将使用 NetworkService 帐户凭据来访问目标服务器。  
+ 此存储的过程删除网络凭据从的 NetworkService 帐户[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 NetworkService 帐户运行每个实例 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]控制节点和计算节点上。 例如，备份操作运行时，控制节点和每个计算节点将使用 NetworkService 帐户凭据来访问目标服务器。  
   
 ## <a name="metadata"></a>元数据  
- 若要列出所有凭据并验证是否已删除的凭据，请使用[sys.dm_pdw_network_credentials &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。  
+ 若要列出所有凭据并验证是否已删除凭据，请使用[sys.dm_pdw_network_credentials &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。  
   
- 若要添加凭据，使用[sp_pdw_add_network_credentials &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
+ 若要添加凭据，请使用[sp_pdw_add_network_credentials &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. 删除用于执行数据库备份的凭据  
- 下面的示例删除用于访问目标服务器，它具有 10.192.147.63 的 IP 地址的用户名和密码凭据。  
+### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. 删除执行数据库备份的凭据  
+ 以下示例删除用于访问目标服务器的 IP 地址为 10.192.147.63 的用户名和密码凭据。  
   
 ```  
 EXEC sp_pdw_remove_network_credentials '10.192.147.63';  

@@ -1,5 +1,5 @@
 ---
-title: 指定维度类型 （维度向导） |Microsoft 文档
+title: 指定维度类型 （维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185314"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>指定维度类型（维度向导）
   可以定使用 **“指定维度类型”** 页义维度类型，以及将与所选维度类型关联的特殊属性类型添加到维度中。  
@@ -36,7 +36,7 @@ ms.locfileid: "36017622"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**帐户**|帐户维度包含了表示帐户列表的数据和元数据。<br /><br /> 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。|  
-|**物料清单**|物料清单（或 BOM）维度为常规维度，其中的数据和元数据表示库存信息或生产信息，例如产品的零件列表。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
+|**BillOfMaterials**|物料清单（或 BOM）维度为常规维度，其中的数据和元数据表示库存信息或生产信息，例如产品的零件列表。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**Channel**|渠道维度为常规维度，其中的数据和元数据表示渠道信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**货币**|货币维度包含表示货币信息的数据和元数据。<br /><br /> 有关货币维度的详细信息，请参阅 [创建货币类型维度](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。|  
 |**Customers**|客户维度为常规维度，其中的数据和元数据表示客户信息或联系信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
@@ -59,7 +59,7 @@ ms.locfileid: "36017622"
  **包括**  
  选中此选项将包括维度中的属性类型。  
   
- **特性类型**  
+ **属性类型**  
  显示与“维度类型”中所选维度类型相关联的属性类型。 有关属性类型的详细信息，请参阅[类型元素（维度属性）(ASSL)](scripting/properties/type-element-dimensionattribute-assl.md)。  
   
  **维度属性**  

@@ -1,5 +1,5 @@
 ---
-title: AttributeHierarchyOptimizedState 元素 (ASSL) |Microsoft 文档
+title: AttributeHierarchyOptimizedState 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyOptimizedState element
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 027bd8713038fd1b090697d8891f93eaabc11f9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b2036773b516d3ea79cda06c51502a9d096cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247237"
 ---
 # <a name="attributehierarchyoptimizedstate-element-assl"></a>AttributeHierarchyOptimizedState 元素 (ASSL)
   确定应用于属性层次结构的优化级别。  
@@ -70,7 +70,7 @@ ms.locfileid: "36013910"
 |*FullyOptimized*|实例为属性层次结构生成索引以提高查询性能。|  
 |*NotOptimized*|实例未生成其他索引。|  
   
- 对应的允许值为枚举`AttributeHierarchyOptimizedState`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.OptimizationType>。 对应的父级的元素`AttributeHierarchyOptimizedState`AMO 对象模型中是<xref:Microsoft.AnalysisServices.CubeAttribute>和<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 对应的允许值的枚举`AttributeHierarchyOptimizedState`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.OptimizationType>。 父级对应的元素`AttributeHierarchyOptimizedState`AMO 对象模型中都<xref:Microsoft.AnalysisServices.CubeAttribute>和<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

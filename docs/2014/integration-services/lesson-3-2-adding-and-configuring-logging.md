@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 caps.latest.revision: 22
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d0bd778d04b00c2d90da3cd6a77ca1bf8f9c830
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c8aeee9c6d0d11ba5dbb482e02595802c5d76fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281363"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>步骤 2：添加并配置日志记录
   在本任务中，将为 Lesson 3.dtsx 包中的数据流启用日志记录。 然后，将配置一个文本文件日志提供程序，以记录 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 该文本文件日志提供程序可以创建便于查看并可轻松传输的日志。 由于便于使用，因此，这些日志文件在包的基本测试阶段非常有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的“日志事件”窗口中查看日志条目。  
@@ -34,15 +34,15 @@ ms.locfileid: "36015718"
   
      Integration Services 将向包中添加一个默认名称为“用于文本文件的 SSIS 日志提供程序”的新文本文件日志提供程序。 现在便可对新的日志提供程序进行配置。  
   
-4.  在**名称**列中，键入`Lesson 3 Log File`。  
+4.  在中**名称**列中，键入`Lesson 3 Log File`。  
   
 5.  也可以修改“说明”。  
   
-6.  在**配置**列中，单击**\<新连接 >** 以指定的目标写入的日志信息。  
+6.  在中**配置**列中，单击**\<新建连接 >** 以指定的日志信息写入到的目标。  
   
      在“文件连接管理器编辑器”对话框中，对“使用类型”选择“创建文件”，然后单击“浏览”。 默认情况下，“选择文件”对话框将打开项目文件夹，但你可以将日志信息保存到任何位置。  
   
-7.  在**选择文件**对话框中，在**文件名**框中，键入`TutorialLog.log`，然后单击**打开**。  
+7.  在**选择文件**对话框中**文件名**框中，键入`TutorialLog.log`，然后单击**打开**。  
   
 8.  单击“确定”关闭“文件连接管理器编辑器”对话框。  
   

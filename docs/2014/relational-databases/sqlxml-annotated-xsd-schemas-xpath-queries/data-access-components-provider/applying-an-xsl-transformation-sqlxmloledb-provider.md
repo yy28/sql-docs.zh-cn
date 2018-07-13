@@ -1,5 +1,5 @@
 ---
-title: 应用 XSL 转换 (SQLXMLOLEDB Provider) |Microsoft 文档
+title: 应用 XSL 转换 （SQLXMLOLEDB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 170bed8eece89add964d3f8f0b3ab3fe46552b26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0631033305d05252eb9253fb24614485a5ebccbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268483"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>应用 XSL 转换（SQLXMLOLEDB 访问接口）
-  在此示例 ADO 应用程序中，将执行 SQL 查询并将 XSL 转换应用到结果。 ClientSideXML 属性设置为 True，则强制执行客户端上的行集的处理。 将命令方言设置为 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因为在模板中指定 SQL 查询且在执行模板时必须指定此方言。 Xsl 属性指定要用于应用转换的 XSL 文件。 基路径属性的值用于搜索的 XSL 文件。 如果 xsl 属性的值中指定路径，该路径是相对的基路径属性中指定的路径。  
+  在此示例 ADO 应用程序中，将执行 SQL 查询并将 XSL 转换应用到结果。 ClientSideXML 属性设置为 True，则强制实施客户端上的行集的处理。 将命令方言设置为 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因为在模板中指定 SQL 查询且在执行模板时必须指定此方言。 Xsl 属性指定要使用应用转换的 XSL 文件。 基路径属性的值用于搜索 XSL 文件。 如果 xsl 属性的值中指定的路径，路径是相对于基路径属性中指定的路径。  
   
  此示例显示如何使用以下 SQLXMLOLEDB 访问接口特定的属性：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36014046"
   
  因为 ClientSideXML 属性设置为 True，则将不带 FOR XML 子句的 SELECT 语句发送到服务器。 服务器执行该查询并将一个行集返回给客户端。 客户端然后将 FOR XML 转换应用到该行集并生成 XML 文档。  
   
- 在该应用程序; 中指定的 xsl 属性因此，XSL 转换应用于 XML 文档生成客户端，并且结果是两个列的表。  
+ 在应用程序; 中指定的 xsl 属性因此，对在客户端生成的 XML 文档应用 XSL 转换，并且结果是两个列的表。  
   
  为了执行模板命令，必须指定 XML 模板方言 {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   

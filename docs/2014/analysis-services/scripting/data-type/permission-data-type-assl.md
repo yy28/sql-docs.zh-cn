@@ -1,5 +1,5 @@
 ---
-title: 权限数据类型 (ASSL) |Microsoft 文档
+title: Permission 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233947"
 ---
 # <a name="permission-data-type-assl"></a>Permission 数据类型 (ASSL)
   定义一个抽象的基元数据类型，该类型表示单个权限的相关信息。  
@@ -66,23 +66,23 @@ ms.locfileid: "36014622"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
-|子元素|[批注](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)，[说明](../properties/description-element-assl.md)， [ID](../properties/id-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名称](../properties/name-element-assl.md)，[过程](../properties/process-element-assl.md)，[读取](../properties/read-element-assl.md)， [ReadDefinition](../properties/readdefinition-element-assl.md)， [RoleID](../properties/roleid-element-assl.md)，[编写](../properties/write-element-assl.md)|  
+|子元素|[批注](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)，[说明](../properties/description-element-assl.md)， [ID](../properties/id-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名称](../properties/name-element-assl.md)，[进程](../properties/process-element-assl.md)，[读取](../properties/read-element-assl.md)， [ReadDefinition](../properties/readdefinition-element-assl.md)， [RoleID](../properties/roleid-element-assl.md)，[编写](../properties/write-element-assl.md)|  
 |派生元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Permission` 用作派生的权限类型的实例中使用大量的抽象基类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+ `Permission` 充当多个派生的权限类型的实例中使用的抽象基类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  此数据类型在 DeploymentMode 值 2（表格服务器模式）下具有以下验证。  
   
--   *进程*属性默认值设置为`False`，当用户具有除**刷新**权限。 具有的用户**刷新**权限*过程*属性值设置为`True`。  
+-   *进程*属性默认值设置为`False`，除非用户具有**刷新**权限。 具有的用户**刷新**权限*进程*属性值设置为`True`。  
   
--   *ReadDefinition*属性值设置为`None`; 任何其他值生成一个错误。  
+-   *ReadDefinition*属性值设置为`None`; 任何其他值将生成错误。  
   
--   *读取*属性值设置为`Allowed`具有的用户**用户**权限并对其`None`时将用户分配给**刷新**权限; 如果用户具有**用户**和**刷新**权限，则该属性设置为`Allowed`。 对于具有管理权限的用户，属性值设置为 `Allowed`。  
+-   *读取*属性值设置为`Allowed`具有的用户**用户**权限并对其`None`向用户分配**刷新**权限; 如果用户已**用户**并**刷新**权限，则该属性设置为`Allowed`。 对于具有管理权限的用户，属性值设置为 `Allowed`。  
   
--   *编写*属性值设置为`None`; 任何其他值生成一个错误。  
+-   *编写*属性值设置为`None`; 任何其他值将生成错误。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Permission>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Permission>。  
   
 ## <a name="see-also"></a>请参阅  
  [Role 元素&#40;ASSL&#41;](../objects/role-element-assl.md)   

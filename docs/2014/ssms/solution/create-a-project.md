@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.newproject
 - vs.addnewproject
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d1e3ae0c46b8ad7f56ebb71ee0a416670aa56fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8ee87fea9b2586b8da9c54b2d074228b93a97e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191197"
 ---
 # <a name="create-a-project"></a>创建项目
   可以在现有解决方案中创建一个或多个项目。  
@@ -102,9 +102,9 @@ ms.locfileid: "36015821"
   
 ## <a name="see-also"></a>请参阅  
  [解决方案资源管理器](solution-explorer.md)   
- [将现有项目添加到解决方案](add-an-existing-project-to-a-solution.md)   
+ [向解决方案添加现有项目](add-an-existing-project-to-a-solution.md)   
  [向项目添加新项](add-new-items-to-a-project.md)   
- [将现有项添加到项目](add-existing-items-to-a-project.md)   
+ [向项目添加现有项](add-existing-items-to-a-project.md)   
  [更改项目的默认位置](change-the-default-location-for-projects.md)   
  [移除或删除项或项目](remove-or-delete-an-item-or-project.md)   
  [删除解决方案](delete-a-solution.md)  

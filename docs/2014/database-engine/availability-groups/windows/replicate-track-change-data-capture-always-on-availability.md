@@ -1,14 +1,13 @@
 ---
-title: 复制、 更改跟踪、 更改数据捕获和 AlwaysOn 可用性组 (SQL Server) |Microsoft 文档
+title: 复制、 更改跟踪、 更改数据捕获和 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204023"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
@@ -160,7 +159,7 @@ ms.locfileid: "36016924"
   
      可用性组侦听器名称或显式节点名称都可用来查找辅助副本。 如果使用可用性组侦听器名称，则会将访问定向到任何合适的辅助副本。  
   
-     当`sp_addlinkedserver`用于创建链接的服务器以访问辅助数据库， *@datasrc*参数用于可用性组侦听器名称或显式服务器名称，与 *@provstr*参数用于指定只读意向。  
+     当`sp_addlinkedserver`用于创建链接的服务器以访问辅助副本时， *@datasrc*参数用于可用性组侦听器名称或显式服务器名称，并 *@provstr*参数用于指定只读意向。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -214,7 +213,7 @@ ms.locfileid: "36016924"
 |**合并**|是|“否”|是<sup>2</sup>|  
 |**快照**|是|“否”|是<sup>2</sup>|  
   
- <sup>1</sup>不包括对双向和相互事务复制支持。  
+ <sup>1</sup>不包括对双向和相互事务复制的支持。  
   
  <sup>2</sup>故障转移到副本数据库是一个手动过程。 不提供自动故障转移。  
   
@@ -255,7 +254,7 @@ ms.locfileid: "36016924"
   
 ## <a name="see-also"></a>请参阅  
  [复制订阅服务器和 AlwaysOn 可用性组&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组： 互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [关于变更数据捕获 (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   

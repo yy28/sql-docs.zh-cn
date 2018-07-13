@@ -1,5 +1,5 @@
 ---
-title: 点击链接型报表页 （报表管理器） |Microsoft 文档
+title: 点击链接型报表页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0e9deeb0187814b89a4445ae13edaf9e1e5a5a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244347"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>“点击链接型报表”页（报表管理器）
   当您单击报表中所包含的交互式数据时，点击链接型报表显示相关的数据表。 这些报表由报表服务器基于用来创建报表的模型中所包含的信息来生成。 如果您不想使用由报表服务器生成的点击链接型报表，则可以创建自定义报表，将其发布到报表服务器并映射到在模型中定义的交互式数据点。 必须在报表生成器中从同一模型创建自定义报表，然后再发布到报表服务器。 若要将自定义报表映射到模型中的项，请使用报表管理器中的“点击链接型报表”页。  
@@ -35,7 +35,7 @@ ms.locfileid: "36014251"
  尽管您可以选择任何可访问的报表，但请仅选择专门为您正在配置的模型创建的报表。  
   
 > [!NOTE]  
->  点击链接型报表不可用的每个版本[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
+>  点击链接型报表中的每个版本不可[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  

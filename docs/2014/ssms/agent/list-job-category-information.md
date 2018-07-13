@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 231143d7b7fb90f8da6a614d047b98f9da22dbb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 33cf862e752618b35c56d2e5c58f534ca03a347d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280813"
 ---
 # <a name="list-job-category-information"></a>列出作业类别信息
-  如何列出作业类别信息中的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象。  
+  如何列出中的作业类别信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象。  
 
   
 ##  <a name="Security"></a> 安全性  
@@ -55,7 +55,7 @@ ms.locfileid: "36014020"
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **列出作业类别信息**  
   
- 使用`JobCategory`通过使用一种选择，如 Visual Basic、 Visual C# 或 PowerShell 编程语言的类... 有关详细信息，请参阅[SQL Server 管理对象&#40;SMO&#41;编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
+ 使用`JobCategory`类通过使用所选择，如 Visual Basic、 Visual C# 或 PowerShell 编程语言... 有关详细信息，请参阅[SQL Server 管理对象&#40;SMO&#41;编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
   
   
   

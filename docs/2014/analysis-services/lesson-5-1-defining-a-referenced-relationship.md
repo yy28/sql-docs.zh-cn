@@ -1,5 +1,5 @@
 ---
-title: 定义被引用的关系 |Microsoft 文档
+title: 定义引用的关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200377"
 ---
 # <a name="defining-a-referenced-relationship"></a>定义引用关系
   在本教程中到目前为止，您定义的每个多维数据集维度都基于一个按主键到外键的关系直接链接到度量值组事实数据表的表。 在本主题的各任务中，你会将“地域”维度通过一个称为“引用维度”的“分销商”维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "36014649"
   
      请注意，“分销商销售-销售额”度量值并未按照“区域”层次结构中的“国家/地区-区域”属性成员正确确定维度。 对于每个“国家/地区-区域”属性成员都重复“分销商销售-销售额”的值。  
   
-     ![分销商销售 Sales Amount 度量值进行维度化](../../2014/tutorials/media/l5-referencedrelationship-1.gif "进行维度化分销商销售 Sales Amount 度量值")  
+     ![确定维度分销商销售-销售额度量值](../../2014/tutorials/media/l5-referencedrelationship-1.gif "确定了维度分销商销售-销售额度量值")  
   
 4.  打开 **Adventure Works DW 2012** 数据源视图的数据源视图设计器。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36014649"
   
      下图显示了“定义关系”对话框，其中常规关系是 **DimCustomer** 维度表和 **FactInternetSales** 度量值组表之间的关系。  
   
-     ![定义关系对话框](../../2014/tutorials/media/l5-referencedrelationship-4.gif "定义关系对话框中")  
+     ![定义关系对话框](../../2014/tutorials/media/l5-referencedrelationship-4.gif "定义关系对话框")  
   
 9. 单击“取消”。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36014649"
   
 9. 在“维度用法”选项卡上的“维度”列表中，右键单击“地域”，然后单击“重命名”。  
   
-10. 更改到此多维数据集维度的名称`Reseller Geography`。  
+10. 更改到该多维数据集维度的名称`Reseller Geography`。  
   
      由于该多维数据集维度现在已链接到“分销商销售”度量值组，所以用户可以从显式定义它在多维数据集中的用法中受益，避免可能造成的用户混淆。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "36014649"
   
 2.  在部署成功完成后，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”选项卡，再单击“重新连接”按钮。  
   
-3.  在元数据窗格中，展开`Reseller Geography`，右键单击**地理区域**，然后单击**将添加到行区域**。  
+3.  在元数据窗格中，展开`Reseller Geography`，右键单击**地理区域**，然后单击**添加到行区域**。  
   
      请注意，“分销商销售-销售额”度量值现在已按照“区域”用户定义层次结构中的“国家/地区-区域”属性正确确定了维度，如下图所示。  
   
-     ![定义关系对话框](../../2014/tutorials/media/l5-referencedrelationship-5.gif "定义关系对话框中")  
+     ![定义关系对话框](../../2014/tutorials/media/l5-referencedrelationship-5.gif "定义关系对话框")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义事实关系](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 88956c9f24b265722e60bd53039ff4c94d082333
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f9593683890822babc7a35e057c5edb70cfb4036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274763"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>在内存优化的表中实现 SQL_VARIANT
-  考虑一个表，其中一个示例`SQL_VARIANT`列：  
+  使用表的示例，请考虑`SQL_VARIANT`列：  
   
 ```tsql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  

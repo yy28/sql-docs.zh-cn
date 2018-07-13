@@ -1,5 +1,5 @@
 ---
-title: ProactiveCachingInheritedBinding 数据类型 (ASSL) |Microsoft 文档
+title: ProactiveCachingInheritedBinding 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingInheritedBinding data type
 ms.assetid: 913fa19f-1ecb-4fca-897e-12f0fb02cf8b
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97013002cc5fd57e8239ee1f4b1769d52279c5af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c97f39574e6df202104bef0b34ab850f6cefdd6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250979"
 ---
 # <a name="proactivecachinginheritedbinding-data-type-assl"></a>ProactiveCachingInheritedBinding 数据类型 (ASSL)
-  定义一个派生的数据类型，表示信息，用以[ProactiveCaching](../objects/proactivecaching-element-assl.md)有关数据源所更改的表和视图需要重新生成缓存的现有数据绑定通过标识的元素。  
+  定义一个派生的数据类型，表示信息，用以[ProactiveCaching](../objects/proactivecaching-element-assl.md)有关表和视图需要重新生成缓存的现有数据绑定通过标识中的数据源更改的元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36014403"
 |派生元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关详细信息`ProactiveCachingBinding`类型，包括的继承层次结构的表`ProactiveCachingBinding`类型，请参阅[ProactiveCachingBinding 数据类型&#40;ASSL&#41;](proactivecachingbinding-data-type-assl.md)。  
+ 有关详细信息`ProactiveCachingBinding`类型，包括继承层次结构的表`ProactiveCachingBinding`类型，请参阅[ProactiveCachingBinding 数据类型&#40;ASSL&#41;](proactivecachingbinding-data-type-assl.md)。  
   
- 有关详细信息`Binding`类型，包括表的 Analysis Services 脚本语言 (ASSL) 对象`Binding`类型和继承层次结构的`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 有关详细信息`Binding`类型，包括 Analysis Services 脚本语言 (ASSL) 对象的表`Binding`类型和继承层次结构`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ProactiveCachingInheritedBinding>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ProactiveCachingInheritedBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 处理要求和注意事项 （数据挖掘） |Microsoft 文档
+title: 处理要求和注意事项 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232387"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>处理要求和注意事项（数据挖掘）
   本主题介绍了一些处理数据挖掘对象时要记住的技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](processing-data-mining-objects.md)。  
@@ -39,11 +39,11 @@ ms.locfileid: "36014425"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器向提供原始数据的数据库发出查询。 此数据库可能是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 数据库引擎早期版本的实例。 处理数据挖掘结构时，源中的数据传输到挖掘结构，并在磁盘上保存为一种新的压缩格式。 并不会处理数据源中的每个列，而仅会处理绑定所定义的挖掘结构中包含的列。  
   
- 使用此数据， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 生成所有数据和离散化列的索引，并对连续列创建单独索引。 针对每个嵌套表发出一个查询以创建索引，并根据每个嵌套表生成一个额外查询，以处理每对嵌套表和事例表之间的关系。 创建多个查询的原因在于处理特殊的内部多维数据存储区。 你可以限制的查询数，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过设置服务器属性中，将发送到关系存储`DatabaseConnectionPoolMax`。 有关详细信息，请参阅 [OLAP Properties](../server-properties/olap-properties.md)。  
+ 使用此数据， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 生成所有数据和离散化列的索引，并对连续列创建单独索引。 针对每个嵌套表发出一个查询以创建索引，并根据每个嵌套表生成一个额外查询，以处理每对嵌套表和事例表之间的关系。 创建多个查询的原因在于处理特殊的内部多维数据存储区。 您可以限制的查询数，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过设置服务器属性，将发送到关系存储区`DatabaseConnectionPoolMax`。 有关详细信息，请参阅 [OLAP Properties](../server-properties/olap-properties.md)。  
   
  处理模型时，模型不会从数据源中重新读取数据，而从挖掘结构获取数据摘要。 服务器将使用创建的多维数据集以及缓存的索引和事例数据来创建独立的线程，以便为模型定型。  
   
- 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支持并行模型处理，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+ 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持并行模型处理，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ##  <a name="bkmk_ProcessStructures"></a> 处理挖掘结构  
  可以一起处理所有相关模型的挖掘结构，也可以单独进行处理。 在预期某些模型要用较长时间进行处理并且您想要延迟该操作时，从各模型单独处理挖掘结构可能会很有用。  

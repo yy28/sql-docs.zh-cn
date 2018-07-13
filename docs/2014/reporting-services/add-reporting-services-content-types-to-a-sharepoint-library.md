@@ -1,5 +1,5 @@
 ---
-title: 将报表服务器内容类型添加到库 (中 Reporting Services SharePoint 集成模式下) |Microsoft 文档
+title: 将报表服务器内容类型添加到库 (SharePoint 集成模式下，Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177544"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>将报表服务器内容类型添加到库中（SharePoint 集成模式下的 Reporting Services）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供用于管理共享的数据源 (.rsds) 文件、 报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件的预定义的 SharePoint 内容类型。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。  
@@ -28,12 +28,12 @@ ms.locfileid: "36013830"
   
  若要将内容类型添加到库，您必须为站点管理员或拥有“完全控制”级权限。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型和内容类型管理将自动启用创建从以下现有网站集中的所有文档库中**商业智能中心**站点模板。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型和内容类型管理将自动启用从下列选项创建的现有网站集中的所有文档库**商业智能中心**站点模板。  
   
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 集成之后创建的站点将不启用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型。  
   
 > [!TIP]  
->  如果你有**不**以前配置的内容类型库，则应先启用管理的内容类型，然后启用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型。 请参阅在单个文档库中启用内容类型管理的过程。  
+>  如果有**不**内容类型的库，首先启用内容类型管理，然后启用以前配置[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型。 请参阅在单个文档库中启用内容类型管理的过程。  
   
  **短视频：** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36013830"
 4.  单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [SharePoint 站点和列表权限参考为报表服务器项](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [SharePoint 站点和列表权限参考，为报表服务器项](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [启动报表生成器&#40;报表生成器&#41;](report-builder/start-report-builder.md)  
   
   

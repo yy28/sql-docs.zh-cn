@@ -1,5 +1,5 @@
 ---
-title: 分类矩阵选项卡 （挖掘准确性图表视图） |Microsoft 文档
+title: 分类矩阵选项卡 （挖掘准确性图表视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4e2f9a8d361cdb400867c08e83be9347d076f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251509"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>“分类矩阵”选项卡（“挖掘准确性图表”视图）
-  **“分类矩阵”** 选项卡为在 **“列映射”** 选项卡的模型网格中选择的每个模型显示分类矩阵。只有当在 **“列映射”** 选项卡中选择的可预测列不连续时，分类矩阵才可用。 有关的更多详细说明**分类矩阵**选项卡上，请参阅[测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)。  
+  **“分类矩阵”** 选项卡为在 **“列映射”** 选项卡的模型网格中选择的每个模型显示分类矩阵。只有当在 **“列映射”** 选项卡中选择的可预测列不连续时，分类矩阵才可用。 有关更详细的说明**分类矩阵**选项卡上，请参阅[测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)。  
   
 ## <a name="options"></a>“常规”  
  **复制**  

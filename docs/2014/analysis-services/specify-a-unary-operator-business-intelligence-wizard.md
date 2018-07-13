@@ -1,5 +1,5 @@
 ---
-title: 指定一元运算符 （商业智能向导） |Microsoft 文档
+title: 指定一元运算符 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.addcustomaggregation.customrollups.f1
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4edbf414a962f5ed057c68fe824d09200f4ea3be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc5c8210dee9960dbb40320d1923d8e8681b4988
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237317"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>指定一元运算符（商业智能向导）
   可以使用“指定一元运算符”页指定特定列的父子关系，该列包含一元运算符（用于常规聚合）或表示加权系数的值（用于加权聚合）。有关常规聚合和加权聚合的详细信息，请参阅[聚合和聚合设计](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67bf7427229a117ff541ae353c222839e27a8aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 142606e6d344fc1431bc287771fc429d6e05e056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198819"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -95,7 +95,7 @@ ms.locfileid: "36015267"
   
     -   设置一些范围限制  
   
-     “控制面板”中的 **“Windows 防火墙”** 项最适合于防火墙配置经验不足的用户以及要为非移动的计算机配置基本防火墙选项的用户。 你也可以打开**Windows 防火墙**从控制面板中的项`run`命令通过使用以下过程：  
+     “控制面板”中的 **“Windows 防火墙”** 项最适合于防火墙配置经验不足的用户以及要为非移动的计算机配置基本防火墙选项的用户。 此外可以打开**Windows 防火墙**从控制面板中`run`命令通过使用以下过程：  
   
     #### <a name="to-open-the-windows-firewall-item"></a>打开“Windows 防火墙”项  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36015267"
   
 1.  在“控制面板”中的 **“Windows 防火墙”** 项的 **“例外”** 选项卡上，单击 **“添加程序”**。  
   
-2.  浏览到的实例的位置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]你想要允许通过防火墙，例如**C:\Program Files\Microsoft SQL Server\MSSQL12。 < 实例名称 > \MSSQL\Binn**，选择**sqlservr.exe**，然后单击**打开**。  
+2.  浏览到的实例的位置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]想要允许其通过防火墙，例如**C:\Program Files\Microsoft SQL Server\MSSQL12.< 实例名称 > \MSSQL\Binn**，选择**sqlservr.exe**，然后单击**打开**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

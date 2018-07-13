@@ -1,5 +1,5 @@
 ---
-title: sql:relationship 和键排序规则 (SQLXML 4.0) |Microsoft 文档
+title: 'sql: relationship 和键排序规则 (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82ac5e6fb6abc886da542d7948b01fbf9437388b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ed5cf8e5362e868f581a80da6dd60092dcd9ef54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204917"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship 和键排序规则 (SQLXML 4.0)
   由于 XML 大容量加载在其节点进入作用域时会生成记录，并在其节点退出作用域时会将这些记录发送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，因此，有关记录的数据必须存在于节点的作用域中。  
   
- 请考虑以下 XSD 架构中的，在其中之间的一个对多关系**\<客户 >** 和**\<顺序 >** （一个客户可以有多个订单） 的元素是使用指定`<sql:relationship>`元素：  
+ 请看以下 XSD 架构，在其中之间的一个对多关系**\<客户 >** 并**\<顺序 >** （一个客户可以下多个订单） 的元素是使用指定的`<sql:relationship>`元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -63,7 +63,7 @@ ms.locfileid: "36017044"
 </xsd:schema>  
 ```  
   
- 作为**\<客户 >** 元素节点就会进入作用域时，XML 大容量加载生成的客户记录。 XML 大容量加载读取之前可以一直保持此记录 **\</Customer >**。 在处理过程中**\<顺序 >** 元素节点，XML 大容量加载使用`<sql:relationship>`来获取从 CustOrder 表 CustomerID 外键列的值**\<客户 >** 父元素，因为**\<顺序 >** 元素并不指定**CustomerID**属性。 这意味着，在定义**\<客户 >** 元素中，你必须指定**CustomerID**中之前你指定的架构属性`<sql:relationship>`。 否则为在**\<顺序 >** 元素进入到作用域、 XML 大容量加载生成 CustOrder 表中，记录和 XML 大容量时负载达到 **\</order >** 结束标记，它将发送到记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不包含 CustomerID 外键列值。  
+ 作为**\<客户 >** 元素节点进入作用域，则 XML 大容量加载将生成客户记录。 此记录一直保持，直到 XML 大容量加载读取 **\</Customer >**。 在处理过程中**\<顺序 >** 元素节点，XML 大容量加载使用`<sql:relationship>`以获取从 CustOrder 表的 CustomerID 外键列的值**\<客户 >** 父元素，因为**\<顺序 >** 元素不指定**CustomerID**属性。 这意味着该中定义**\<客户 >** 元素中，您必须指定**CustomerID**中指定的架构属性`<sql:relationship>`。 否则为当**\<顺序 >** 元素进入作用域、 XML 大容量加载将生成 CustOrder 表的记录和当 XML 大容量加载到达 **\</o >** 结束标记时，它将发送到记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]而无需 CustomerID 外键列的值。  
   
  将在该示例中提供的架构另存为 SampleSchema.xml。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "36017044"
     set objBL=Nothing  
     ```  
   
-     结果是 XML 大容量加载在 CustOrder 表的 CustomerID 外键列中插入一个 NULL 值。 如果要修改的 XML 示例数据，以便 **\<CustomerID >** 子元素出现在之前**\<顺序 >** 子元素，可以获得预期的结果： XML 大容量加载将指定的外键值插入到列。  
+     结果是 XML 大容量加载在 CustOrder 表的 CustomerID 外键列中插入一个 NULL 值。 如果要修改的 XML 示例数据，以便 **\<CustomerID >** 子元素出现之前**\<顺序 >** 子元素，您将得到预期的结果： XML 大容量加载将指定的外键值插入到列。  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  

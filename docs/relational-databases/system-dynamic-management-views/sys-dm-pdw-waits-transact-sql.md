@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_waits (Transact SQL) |Microsoft 文档
+title: sys.dm_pdw_waits (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,44 +7,43 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e6f94590f63366e8483ac6bfcb493327f38f714
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 217d79e5730a58ce8c50ccc894e36650d7d32756
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466543"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36848765"
 ---
-# <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits (TRANSACT-SQL)
+# <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  包含所有相关信息等待状态的请求的执行过程中遇到或查询，包括锁将一直等待传输队列中，依次类推。  
+  保存所有信息都等待请求的执行过程中遇到的状态或查询，其中包括锁等待传输队列中，依次类推。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**bigint**|与等待状态相关联的唯一数字 id。<br /><br /> 此视图的键。|跨系统中的所有等待唯一。|  
-|session_id|**nvarchar(32)**|在其发生等待状态的会话 ID。|请参阅中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
+|wait_id|**bigint**|与等待状态相关联的唯一数字 id。<br /><br /> 此视图的键。|跨系统中的所有等待是唯一的。|  
+|session_id|**nvarchar(32)**|在其发生的等待状态的会话 ID。|请参阅中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
 |type|**nvarchar(255)**|等待此条目表示的类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|object_type|**nvarchar(255)**|通过在等待受影响的对象类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|object_type|**nvarchar(255)**|等待受影响的对象的类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar(386)**|名称或 GUID 指定等待受影响的对象。||  
-|request_id|**nvarchar(32)**|在其发生等待状态的请求的 ID。|请参阅中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
-|request_time|**datetime**|从该处请求等待状态的时间。||  
-|acquire_time|**datetime**|获取锁或资源的时间。||  
+|request_id|**nvarchar(32)**|在其发生的等待状态的请求 ID。|请参阅中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|request_time|**datetime**|在该请求的等待状态的时间。||  
+|acquire_time|**datetime**|获取的锁或资源的时间。||  
 |state|**nvarchar(50)**|等待状态的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|等待项的优先级。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_wait_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
+ [sys.dm_pdw_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
   
